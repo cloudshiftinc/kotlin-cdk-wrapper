@@ -1,0 +1,26 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.location
+
+import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import software.amazon.awscdk.services.location.CfnGeofenceCollectionProps
+
+@CdkDslMarker
+public class CfnGeofenceCollectionPropsDsl {
+  private val cdkBuilder: CfnGeofenceCollectionProps.Builder = CfnGeofenceCollectionProps.builder()
+
+  public fun collectionName(collectionName: String) {
+    cdkBuilder.collectionName(collectionName)
+  }
+
+  public fun description(description: String) {
+    cdkBuilder.description(description)
+  }
+
+  public fun kmsKeyId(kmsKeyId: String) {
+    cdkBuilder.kmsKeyId(kmsKeyId)
+  }
+
+  public fun build(): CfnGeofenceCollectionProps = cdkBuilder.build()
+}

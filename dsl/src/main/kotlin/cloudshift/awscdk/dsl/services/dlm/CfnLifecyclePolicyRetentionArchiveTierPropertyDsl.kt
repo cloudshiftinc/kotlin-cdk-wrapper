@@ -1,0 +1,28 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.dlm
+
+import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
+import kotlin.String
+import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
+
+@CdkDslMarker
+public class CfnLifecyclePolicyRetentionArchiveTierPropertyDsl {
+  private val cdkBuilder: CfnLifecyclePolicy.RetentionArchiveTierProperty.Builder =
+      CfnLifecyclePolicy.RetentionArchiveTierProperty.builder()
+
+  public fun count(count: Number) {
+    cdkBuilder.count(count)
+  }
+
+  public fun interval(interval: Number) {
+    cdkBuilder.interval(interval)
+  }
+
+  public fun intervalUnit(intervalUnit: String) {
+    cdkBuilder.intervalUnit(intervalUnit)
+  }
+
+  public fun build(): CfnLifecyclePolicy.RetentionArchiveTierProperty = cdkBuilder.build()
+}

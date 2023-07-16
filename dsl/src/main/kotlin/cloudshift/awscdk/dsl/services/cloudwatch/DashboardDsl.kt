@@ -1,0 +1,57 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.cloudwatch
+
+import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.List
+import kotlin.collections.MutableList
+import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.cloudwatch.Dashboard
+import software.amazon.awscdk.services.cloudwatch.IWidget
+import software.amazon.awscdk.services.cloudwatch.PeriodOverride
+import software.constructs.Construct
+
+@CdkDslMarker
+public class DashboardDsl(
+  scope: Construct,
+  id: String,
+) {
+  private val cdkBuilder: Dashboard.Builder = Dashboard.Builder.create(scope, id)
+
+  private val _widgets: MutableList<List<out IWidget>> = mutableListOf()
+
+  public fun dashboardName(dashboardName: String) {
+    cdkBuilder.dashboardName(dashboardName)
+  }
+
+  public fun defaultInterval(defaultInterval: Duration) {
+    cdkBuilder.defaultInterval(defaultInterval)
+  }
+
+  public fun end(end: String) {
+    cdkBuilder.end(end)
+  }
+
+  public fun periodOverride(periodOverride: PeriodOverride) {
+    cdkBuilder.periodOverride(periodOverride)
+  }
+
+  public fun start(start: String) {
+    cdkBuilder.start(start)
+  }
+
+  public fun widgets(vararg widgets: List<out IWidget>) {
+    _widgets.addAll(listOf(*widgets))
+  }
+
+  public fun widgets(widgets: Collection<List<out IWidget>>) {
+    _widgets.addAll(widgets)
+  }
+
+  public fun build(): Dashboard {
+    if(_widgets.isNotEmpty()) cdkBuilder.widgets(_widgets)
+    return cdkBuilder.build()
+  }
+}

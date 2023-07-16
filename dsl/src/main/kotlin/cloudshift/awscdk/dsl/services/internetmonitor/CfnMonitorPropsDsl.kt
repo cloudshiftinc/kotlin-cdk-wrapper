@@ -1,0 +1,93 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.internetmonitor
+
+import cloudshift.awscdk.common.CdkDslMarker
+import cloudshift.awscdk.dsl.CfnTagDsl
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.internetmonitor.CfnMonitor
+import software.amazon.awscdk.services.internetmonitor.CfnMonitorProps
+
+@CdkDslMarker
+public class CfnMonitorPropsDsl {
+  private val cdkBuilder: CfnMonitorProps.Builder = CfnMonitorProps.builder()
+
+  private val _resources: MutableList<String> = mutableListOf()
+
+  private val _resourcesToAdd: MutableList<String> = mutableListOf()
+
+  private val _resourcesToRemove: MutableList<String> = mutableListOf()
+
+  private val _tags: MutableList<CfnTag> = mutableListOf()
+
+  public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
+    cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery)
+  }
+
+  public
+      fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty) {
+    cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery)
+  }
+
+  public fun maxCityNetworksToMonitor(maxCityNetworksToMonitor: Number) {
+    cdkBuilder.maxCityNetworksToMonitor(maxCityNetworksToMonitor)
+  }
+
+  public fun monitorName(monitorName: String) {
+    cdkBuilder.monitorName(monitorName)
+  }
+
+  public fun resources(vararg resources: String) {
+    _resources.addAll(listOf(*resources))
+  }
+
+  public fun resources(resources: Collection<String>) {
+    _resources.addAll(resources)
+  }
+
+  public fun resourcesToAdd(vararg resourcesToAdd: String) {
+    _resourcesToAdd.addAll(listOf(*resourcesToAdd))
+  }
+
+  public fun resourcesToAdd(resourcesToAdd: Collection<String>) {
+    _resourcesToAdd.addAll(resourcesToAdd)
+  }
+
+  public fun resourcesToRemove(vararg resourcesToRemove: String) {
+    _resourcesToRemove.addAll(listOf(*resourcesToRemove))
+  }
+
+  public fun resourcesToRemove(resourcesToRemove: Collection<String>) {
+    _resourcesToRemove.addAll(resourcesToRemove)
+  }
+
+  public fun status(status: String) {
+    cdkBuilder.status(status)
+  }
+
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
+
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
+
+  public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
+    cdkBuilder.trafficPercentageToMonitor(trafficPercentageToMonitor)
+  }
+
+  public fun build(): CfnMonitorProps {
+    if(_resources.isNotEmpty()) cdkBuilder.resources(_resources)
+    if(_resourcesToAdd.isNotEmpty()) cdkBuilder.resourcesToAdd(_resourcesToAdd)
+    if(_resourcesToRemove.isNotEmpty()) cdkBuilder.resourcesToRemove(_resourcesToRemove)
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
+}

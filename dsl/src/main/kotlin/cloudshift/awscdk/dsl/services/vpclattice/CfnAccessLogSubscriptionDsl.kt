@@ -1,0 +1,45 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.vpclattice
+
+import cloudshift.awscdk.common.CdkDslMarker
+import cloudshift.awscdk.dsl.CfnTagDsl
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription
+import software.constructs.Construct
+
+@CdkDslMarker
+public class CfnAccessLogSubscriptionDsl(
+  scope: Construct,
+  id: String,
+) {
+  private val cdkBuilder: CfnAccessLogSubscription.Builder =
+      CfnAccessLogSubscription.Builder.create(scope, id)
+
+  private val _tags: MutableList<CfnTag> = mutableListOf()
+
+  public fun destinationArn(destinationArn: String) {
+    cdkBuilder.destinationArn(destinationArn)
+  }
+
+  public fun resourceIdentifier(resourceIdentifier: String) {
+    cdkBuilder.resourceIdentifier(resourceIdentifier)
+  }
+
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
+
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
+
+  public fun build(): CfnAccessLogSubscription {
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
+}

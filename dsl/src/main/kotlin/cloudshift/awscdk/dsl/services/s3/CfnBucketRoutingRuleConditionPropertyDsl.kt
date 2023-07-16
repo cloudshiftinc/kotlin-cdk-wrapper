@@ -1,0 +1,23 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.s3
+
+import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import software.amazon.awscdk.services.s3.CfnBucket
+
+@CdkDslMarker
+public class CfnBucketRoutingRuleConditionPropertyDsl {
+  private val cdkBuilder: CfnBucket.RoutingRuleConditionProperty.Builder =
+      CfnBucket.RoutingRuleConditionProperty.builder()
+
+  public fun httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals: String) {
+    cdkBuilder.httpErrorCodeReturnedEquals(httpErrorCodeReturnedEquals)
+  }
+
+  public fun keyPrefixEquals(keyPrefixEquals: String) {
+    cdkBuilder.keyPrefixEquals(keyPrefixEquals)
+  }
+
+  public fun build(): CfnBucket.RoutingRuleConditionProperty = cdkBuilder.build()
+}

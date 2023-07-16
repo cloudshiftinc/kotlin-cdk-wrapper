@@ -1,0 +1,34 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl
+
+import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import software.amazon.awscdk.CfnHookTypeConfig
+import software.constructs.Construct
+
+@CdkDslMarker
+public class CfnHookTypeConfigDsl(
+  scope: Construct,
+  id: String,
+) {
+  private val cdkBuilder: CfnHookTypeConfig.Builder = CfnHookTypeConfig.Builder.create(scope, id)
+
+  public fun configuration(configuration: String) {
+    cdkBuilder.configuration(configuration)
+  }
+
+  public fun configurationAlias(configurationAlias: String) {
+    cdkBuilder.configurationAlias(configurationAlias)
+  }
+
+  public fun typeArn(typeArn: String) {
+    cdkBuilder.typeArn(typeArn)
+  }
+
+  public fun typeName(typeName: String) {
+    cdkBuilder.typeName(typeName)
+  }
+
+  public fun build(): CfnHookTypeConfig = cdkBuilder.build()
+}

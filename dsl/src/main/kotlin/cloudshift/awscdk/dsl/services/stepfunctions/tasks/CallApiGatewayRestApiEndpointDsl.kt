@@ -1,0 +1,119 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package cloudshift.awscdk.dsl.services.stepfunctions.tasks
+
+import cloudshift.awscdk.common.CdkDslMarker
+import cloudshift.awscdk.common.MapBuilder
+import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Map
+import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.apigateway.IRestApi
+import software.amazon.awscdk.services.stepfunctions.Credentials
+import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
+import software.amazon.awscdk.services.stepfunctions.TaskInput
+import software.amazon.awscdk.services.stepfunctions.Timeout
+import software.amazon.awscdk.services.stepfunctions.tasks.AuthType
+import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpoint
+import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
+import software.constructs.Construct
+
+@CdkDslMarker
+public class CallApiGatewayRestApiEndpointDsl(
+  scope: Construct,
+  id: String,
+) {
+  private val cdkBuilder: CallApiGatewayRestApiEndpoint.Builder =
+      CallApiGatewayRestApiEndpoint.Builder.create(scope, id)
+
+  public fun api(api: IRestApi) {
+    cdkBuilder.api(api)
+  }
+
+  public fun apiPath(apiPath: String) {
+    cdkBuilder.apiPath(apiPath)
+  }
+
+  public fun authType(authType: AuthType) {
+    cdkBuilder.authType(authType)
+  }
+
+  public fun comment(comment: String) {
+    cdkBuilder.comment(comment)
+  }
+
+  public fun credentials(block: CredentialsDsl.() -> Unit = {}) {
+    val builder = CredentialsDsl()
+    builder.apply(block)
+    cdkBuilder.credentials(builder.build())
+  }
+
+  public fun credentials(credentials: Credentials) {
+    cdkBuilder.credentials(credentials)
+  }
+
+  public fun headers(headers: TaskInput) {
+    cdkBuilder.headers(headers)
+  }
+
+  public fun heartbeat(heartbeat: Duration) {
+    cdkBuilder.heartbeat(heartbeat)
+  }
+
+  public fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+    cdkBuilder.heartbeatTimeout(heartbeatTimeout)
+  }
+
+  public fun inputPath(inputPath: String) {
+    cdkBuilder.inputPath(inputPath)
+  }
+
+  public fun integrationPattern(integrationPattern: IntegrationPattern) {
+    cdkBuilder.integrationPattern(integrationPattern)
+  }
+
+  public fun method(method: HttpMethod) {
+    cdkBuilder.method(method)
+  }
+
+  public fun outputPath(outputPath: String) {
+    cdkBuilder.outputPath(outputPath)
+  }
+
+  public fun queryParameters(queryParameters: TaskInput) {
+    cdkBuilder.queryParameters(queryParameters)
+  }
+
+  public fun requestBody(requestBody: TaskInput) {
+    cdkBuilder.requestBody(requestBody)
+  }
+
+  public fun resultPath(resultPath: String) {
+    cdkBuilder.resultPath(resultPath)
+  }
+
+  public fun resultSelector(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.resultSelector(builder.map)
+  }
+
+  public fun resultSelector(resultSelector: Map<String, *>) {
+    cdkBuilder.resultSelector(resultSelector)
+  }
+
+  public fun stageName(stageName: String) {
+    cdkBuilder.stageName(stageName)
+  }
+
+  public fun taskTimeout(taskTimeout: Timeout) {
+    cdkBuilder.taskTimeout(taskTimeout)
+  }
+
+  public fun timeout(timeout: Duration) {
+    cdkBuilder.timeout(timeout)
+  }
+
+  public fun build(): CallApiGatewayRestApiEndpoint = cdkBuilder.build()
+}

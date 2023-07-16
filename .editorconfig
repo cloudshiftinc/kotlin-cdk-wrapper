@@ -1,0 +1,39 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_size = 2
+indent_style = space
+max_line_length = 120
+
+
+[{*.kts,*.kt}]
+indent_size = 4
+ij_kotlin_keep_line_breaks = true
+ij_kotlin_allow_trailing_comma = false
+ij_kotlin_allow_trailing_comma_on_call_site = false
+ij_kotlin_keep_blank_lines_before_right_brace = 2
+ij_kotlin_keep_blank_lines_in_code = 2
+ij_kotlin_keep_blank_lines_in_declarations = 2
+ij_kotlin_method_parameters_wrap = normal
+
+# as recommended by ktlint for consistency w/ IntelliJ: https://pinterest.github.io/ktlint/rules/configuration-intellij-idea/
+ij_kotlin_packages_to_use_import_on_demand = java.util.*
+ij_kotlin_name_count_to_use_star_import = 2147483647
+ij_kotlin_name_count_to_use_star_import_for_members = 2147483647
+ij_kotlin_code_style_defaults = KOTLIN_OFFICIAL
+
+# ktlint configuration https://pinterest.github.io/ktlint/rules/configuration-ktlint/
+ktlint_code_style = official
+
+[*.java]
+indent_size = 4
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.gradle.kts]
+ktlint_disabled_rules = no-wildcard-imports
+
