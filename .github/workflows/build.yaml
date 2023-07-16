@@ -37,5 +37,5 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build check publish --info --stacktrace'
+        arguments: 'build --info --stacktrace'
         gradle-home-cache-cleanup: 'true'
