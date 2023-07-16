@@ -6,6 +6,11 @@ name: 'Build Kotlin AWS CDK DSL'
 on:
   push: {}
   pull_request: {}
+env:
+  ORG_GRADLE_PROJECT_signingKey: '${{ secrets.SIGNING_KEY }}'
+  ORG_GRADLE_PROJECT_signingPassword: '${{ secrets.SIGNING_PASSWORD }}'
+  ORG_GRADLE_PROJECT_sonatypeUsername: '${{ secrets.SONATYPEUSERNAME }}'
+  ORG_GRADLE_PROJECT_sonatypePassword: '${{ secrets.SONATYPEPASSWORD }}'
 jobs:
   check_yaml_consistency:
     name: 'Check YAML consistency'
@@ -47,5 +52,5 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build --info --stacktrace'
+        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache'
         gradle-home-cache-cleanup: 'true'

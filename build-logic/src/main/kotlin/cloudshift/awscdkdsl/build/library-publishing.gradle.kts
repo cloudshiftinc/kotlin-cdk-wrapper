@@ -47,3 +47,22 @@ signing {
     sign(publishing.publications["mavenJava"])
 }
 
+val publishingPredicate = provider {
+    val ci = System.getenv()["CI"] == "true"
+    System.getenv().filter { it.key.startsWith("GITHUB_") }.forEach {
+        println("Publishing env: ${it.key} -> ${it.value}")
+    }
+    ci
+}
+
+tasks.withType<PublishToMavenRepository>().configureEach {
+    onlyIf("Publishing only allowed on CI") {
+        publishingPredicate.get()
+    }
+}
+
+tasks.named("publishToSonatype") {
+    onlyIf("Publishing only allowed on CI") {
+        publishingPredicate.get()
+    }
+}
