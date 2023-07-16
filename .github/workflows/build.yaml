@@ -30,6 +30,12 @@ jobs:
       name: 'checkout'
       uses: 'actions/checkout@v3'
     - id: 'step-1'
+      name: 'Set up JDK'
+      uses: 'actions/setup-java@v3'
+      with:
+        java-version: '17'
+        distribution: 'corretto'
+    - id: 'step-2'
       name: 'build'
       uses: 'gradle/gradle-build-action@v2'
       with:

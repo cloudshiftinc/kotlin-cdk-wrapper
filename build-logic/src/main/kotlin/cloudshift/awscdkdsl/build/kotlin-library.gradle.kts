@@ -3,6 +3,7 @@ package cloudshift.awscdkdsl.build
 import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
+import org.gradle.internal.jvm.inspection.JvmVendor
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -97,5 +98,8 @@ configurations {
 
 kotlin {
     explicitApi()
-    jvmToolchain(17)
+    jvmToolchain{
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.AMAZON
+    }
 }

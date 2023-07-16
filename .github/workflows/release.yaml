@@ -1,4 +1,4 @@
-# This file was generated using Kotlin DSL (.github/workflows/publish.main.kts).
+# This file was generated using Kotlin DSL (.github/workflows/release.main.kts).
 # If you want to modify the workflow, please change the Kotlin file and regenerate this YAML file.
 # Generated with https://github.com/typesafegithub/github-workflows-kt
 
@@ -20,12 +20,13 @@ jobs:
       uses: 'actions/checkout@v3'
     - id: 'step-1'
       name: 'Execute script'
-      run: 'rm ''.github/workflows/publish.yaml'' && ''.github/workflows/publish.main.kts'''
+      run: 'rm ''.github/workflows/release.yaml'' && ''.github/workflows/release.main.kts'''
     - id: 'step-2'
       name: 'Consistency check'
-      run: 'git diff --exit-code ''.github/workflows/publish.yaml'''
+      run: 'git diff --exit-code ''.github/workflows/release.yaml'''
   build:
-    runs-on: 'ubuntu-latest'
+    runs-on:
+    - 'Large_Runner'
     needs:
     - 'check_yaml_consistency'
     steps:
@@ -33,6 +34,12 @@ jobs:
       name: 'checkout'
       uses: 'actions/checkout@v3'
     - id: 'step-1'
+      name: 'Set up JDK'
+      uses: 'actions/setup-java@v3'
+      with:
+        java-version: '17'
+        distribution: 'corretto'
+    - id: 'step-2'
       name: 'build'
       uses: 'gradle/gradle-build-action@v2'
       with:
@@ -41,5 +48,5 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'publishToSonatype --info --stacktrace'
+        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace'
         gradle-home-cache-cleanup: 'true'
