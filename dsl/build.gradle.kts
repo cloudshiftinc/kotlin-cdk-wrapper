@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("cloudshift.awscdkdsl.build.kotlin-library")
+    id("cloudshift.awscdkdsl.build.library-publishing")
 }
 
 dependencies {
@@ -13,6 +14,7 @@ dependencies {
 
 tasks.withType<KotlinCompile>().configureEach {
     onlyIf {
+        // don't compile DSL code when in IntelliJ as it's large and takes considerable time
         when {
             System.getenv("XPC_SERVICE_NAME")?.contains("intellij") ?: false -> false
             System.getenv("IDEA_INITIAL_DIRECTORY") != null -> false

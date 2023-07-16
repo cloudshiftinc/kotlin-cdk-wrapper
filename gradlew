@@ -85,9 +85,6 @@ done
 APP_BASE_NAME=${0##*/}
 APP_HOME=$( cd "${APP_HOME:-./}" && pwd -P ) || exit
 
-# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
-
 # Use the maximum available, or set MAX_FD != -1 to use that value.
 MAX_FD=maximum
 
@@ -133,10 +130,13 @@ location of your Java installation."
     fi
 else
     JAVACMD=java
-    which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+    if ! command -v java >/dev/null 2>&1
+    then
+        die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
 
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
+    fi
 fi
 
 # Increase the maximum file descriptors if we can.
@@ -144,7 +144,7 @@ if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
     case $MAX_FD in #(
       max*)
         # In POSIX sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
-        # shellcheck disable=SC3045 
+        # shellcheck disable=SC3045
         MAX_FD=$( ulimit -H -n ) ||
             warn "Could not query maximum file descriptor limit"
     esac
@@ -152,7 +152,7 @@ if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
       '' | soft) :;; #(
       *)
         # In POSIX sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
-        # shellcheck disable=SC3045 
+        # shellcheck disable=SC3045
         ulimit -n "$MAX_FD" ||
             warn "Could not set maximum file descriptor limit to $MAX_FD"
     esac
@@ -197,6 +197,10 @@ if "$cygwin" || "$msys" ; then
     done
 fi
 
+
+# Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+
 # Collect all arguments for the java command;
 #   * $DEFAULT_JVM_OPTS, $JAVA_OPTS, and $GRADLE_OPTS can contain fragments of
 #     shell script including quotes and variable substitutions, so put them in
@@ -240,109 +244,5 @@ eval "set -- $(
         sed ' s~[^-[:alnum:]+,./:=@_]~\\&~g; ' |
         tr '\n' ' '
     )" '"$@"'
-#!/bin/sh
-#
-# Start of CloudShift Gradle distribution download snippet
-#
-# This is added into ./gradlew
-#
 
-# uncomment for diagnostics
-#set -x
-
-#
-# CloudShift custom Gradle distribution download
-#
-# Download custom distribution securely from S3 before executing wrapper (if not already installed)
-# The wrapper will complete the installation (unzip, verification, marker file) and then execute the wrapper
-#
-GRADLE_HOME=$HOME/.gradle
-GRADLE_WRAPPER_PROPERTIES_FILE=gradle/wrapper/gradle-wrapper.properties
-
-# extract distribution path from gradle properties
-DIST_PATH=$(grep "^distributionPath" <$GRADLE_WRAPPER_PROPERTIES_FILE | cut -d'=' -f2)
-
-# extract distribution URL from gradle properties file (and unescape it - ':' is escaped as '\:' in properties files)
-DIST_URL=$(grep "^distributionUrl" <$GRADLE_WRAPPER_PROPERTIES_FILE | cut -d'=' -f2 | sed -e 's/\\//g')
-
-# Distribution ZIP is filename of URL
-DIST_ZIP=${DIST_URL##*/}
-
-MANIFEST_FILE="$DIST_ZIP".manifest.json
-
-# Distribution name is ZIP w/o extension
-DIST_NAME=${DIST_ZIP%*.zip}
-
-DIST_HASH=$(printf '%s' "$DIST_URL" | $MD5)
-
-case "$( uname )" in
-  Darwin* )         DIST_HASH=$(printf '%s' "$DIST_URL" | md5) ;;
-  *)                DIST_HASH=$(printf '%s' "$DIST_URL" | md5sum | sed -e 's/\s.*//g') ;;
-esac
-
-DIST_BASE="$GRADLE_HOME/$DIST_PATH/$DIST_NAME"
-DIST_INST_DIR="$DIST_BASE/$DIST_HASH"
-DIST_MARKER_FILE="$DIST_INST_DIR"/"$DIST_ZIP".ok
-
-if case $DIST_NAME in *SNAPSHOT) true;; *) false;; esac; then
-  # remove SNAPSHOT versions of our Gradle distribution so they'll be downloaded again
-  # i.e. don't cache SNAPSHOT versions
-
-  # remove the expanded distribution and marker file, while retaining downloaded ZIP
-  # we do this to prevent re-downloading if the ZIP hasn't changed
-  echo "Removing cached distribution snapshot: ${DIST_NAME}"
-
-  # remove expanded distribution
-  rm -rf "${DIST_INST_DIR:?}/$DIST_NAME" 2>/dev/null || true
-
-  # remove marker file
-  rm -f "$DIST_MARKER_FILE" 2>/dev/null || true
-fi
-
-# check if marker file exists; it won't if this distribution is not installed
-if [ ! -f "$DIST_MARKER_FILE" ]; then
-  #
-  # Distribution not installed; download the zip and let the wrapper install it
-  #
-  AWS=aws
-  if [ "${CI:-false}" = "false" ]; then
-    # for local builds use aws-vault
-    AWS="aws-vault exec ${GRADLEW_AWS_PROFILE:-cloudshift-devtools} -- aws"
-  fi
-
-  echo "$DIST_NAME not found; installing from $DIST_URL"
-  mkdir -p "$DIST_INST_DIR" 2>/dev/null || true
-  $AWS s3 sync "${DIST_URL%/*}/" "$DIST_INST_DIR" --exclude "*" --include "$DIST_ZIP" --include "$MANIFEST_FILE" --quiet || die "Failed to download Gradle distribution from $DIST_URL"
-
-  if [ ! -f "$DIST_INST_DIR"/"$DIST_ZIP" ]; then
-    die "$DIST_URL not found"
-  fi
-
-  # terminate running Gradle daemons for this distribution as we may have removed/replaced the underlying installation...
-  pkill -f "$DIST_NAME.*GradleDaemon" || true
-fi
-
-# NOTE: due to oddness in the Gradle wrapper code it's challenging to determine the intermediate
-# directory name here as it's a convoluted MD5 hash of the URL (treated as a number which omits leading zeros,
-# and oddly in base 36).  See org.gradle.wrapper.PathAssembler.getHash for the implementation, if you dare...
-#
-# So instead we create a manifest when the distribution is published and pull the hash from there
-
-# create a symlink from the funky-Gradle-hash dir to our install dir
-DIST_URL_HASH=$(jq '.distributionUrlHash' -r <"$DIST_INST_DIR/$MANIFEST_FILE" || die "Manifest file not found")
-rm -rf "${DIST_BASE:?}/$DIST_URL_HASH" 2>/dev/null || true
-ln -s "$DIST_INST_DIR" "$DIST_BASE/$DIST_URL_HASH" || die "Failed to install Gradle distribution"
-
-# remove symlink on CI to prevent double-caching
-if [ "${CI}" = "true" ]; then
-  "$JAVACMD" "$@"
-  EXIT=$?
-  rm -f "${DIST_BASE:?}/$DIST_URL_HASH" 2>/dev/null || true
-  exit $EXIT
-else
-  exec "$JAVACMD" "$@"
-fi
-
-#
-# End of CloudShift Gradle distribution download snippet
-#
+exec "$JAVACMD" "$@"
