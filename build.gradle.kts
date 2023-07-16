@@ -12,10 +12,6 @@ nexusPublishing {
             snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
         }
     }
-
-    val sonatypeUsername : String? by project
-    val sonatypePassword: String? by project
-    println("User: '${sonatypeUsername?.uppercase()}' : '${sonatypePassword?.uppercase()}'")
 }
 
 val awscdk: Configuration by configurations.creating
