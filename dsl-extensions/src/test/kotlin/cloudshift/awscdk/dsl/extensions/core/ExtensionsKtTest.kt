@@ -1,5 +1,6 @@
 package cloudshift.awscdk.dsl.extensions.core
 
+import cloudshift.awscdk.dsl.extensions.iam.action
 import cloudshift.awscdk.dsl.services.iam.iam
 import cloudshift.awscdk.dsl.extensions.iam.allow
 import cloudshift.awscdk.dsl.extensions.iam.anyResource
@@ -11,14 +12,10 @@ class ExtensionsKtTest : FunSpec({
     test("it") {
         val policyStatements = iam.policyStatements {
             policyStatement {
-                sid("abc")
+                sid("Something")
+                action("s3:GetObject")
                 allow()
                 anyResource()
-                conditions {
-                    "abc" {
-                        "aaa" to "def"
-                    }
-                }
             }
         }
     }

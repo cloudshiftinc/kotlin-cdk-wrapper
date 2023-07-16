@@ -1,9 +1,9 @@
 #!/usr/bin/env kotlin
 
 @file:DependsOn("io.github.typesafegithub:github-workflows-kt:0.47.0")
-@file:Import("_shared.main.kts")
 
 import io.github.typesafegithub.workflows.actions.actions.CheckoutV3
+import io.github.typesafegithub.workflows.actions.actions.SetupJavaV3
 import io.github.typesafegithub.workflows.actions.gradle.GradleBuildActionV2
 import io.github.typesafegithub.workflows.domain.RunnerType
 import io.github.typesafegithub.workflows.domain.triggers.PullRequest
@@ -25,7 +25,13 @@ workflow(
 ) {
     job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
         uses(name = "checkout", action = CheckoutV3())
-        setupJava()
+        uses(
+            name = "Set up JDK", action = SetupJavaV3(
+                javaVersion = "17",
+                distribution = SetupJavaV3.Distribution.Corretto,
+                checkLatest = true
+            )
+        )
         uses(
             name = "build", action = GradleBuildActionV2(
                 gradleVersion = "wrapper",
