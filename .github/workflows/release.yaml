@@ -41,6 +41,8 @@ jobs:
         distribution: 'corretto'
         check-latest: 'true'
     - id: 'step-2'
+      run: 'set'
+    - id: 'step-3'
       name: 'build'
       uses: 'gradle/gradle-build-action@v2'
       with:
@@ -49,5 +51,5 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache'
+        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --debug --stacktrace --no-configuration-cache'
         gradle-home-cache-cleanup: 'true'

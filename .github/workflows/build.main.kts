@@ -10,6 +10,7 @@ import io.github.typesafegithub.workflows.domain.triggers.PullRequest
 import io.github.typesafegithub.workflows.domain.triggers.Push
 import io.github.typesafegithub.workflows.dsl.workflow
 import io.github.typesafegithub.workflows.yaml.writeToFile
+import java.awt.Event.HOME
 
 workflow(
     name = "Build Kotlin AWS CDK DSL",
@@ -19,7 +20,7 @@ workflow(
     job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
         uses(name = "checkout", action = CheckoutV3())
         setupJava()
-        run(command = "set")
+        run(command = "rm -rf \$HOME/.gradle/jdks/eclipse*")
         uses(name = "build", action = GradleBuildActionV2(
             gradleVersion = "wrapper",
             gradleHomeCacheCleanup = true,

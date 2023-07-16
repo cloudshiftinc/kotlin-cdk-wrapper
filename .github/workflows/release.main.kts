@@ -27,11 +27,12 @@ workflow(
     job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
         uses(name = "checkout", action = CheckoutV3())
         setupJava()
+        run(command = "set")
         uses(name = "build", action = GradleBuildActionV2(
             gradleVersion = "wrapper",
             gradleHomeCacheCleanup = true,
             gradleHomeCacheIncludes = listOf("jdks", "caches", "notifications"),
-            arguments = "build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache"
+            arguments = "build publishToSonatype closeAndReleaseSonatypeStagingRepository --debug --stacktrace --no-configuration-cache"
         ))
     }
 }.writeToFile()
