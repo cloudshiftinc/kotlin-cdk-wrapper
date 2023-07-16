@@ -27,7 +27,7 @@ workflow(
     job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
         uses(name = "checkout", action = CheckoutV3())
         setupJava()
-        run(command = "set")
+        run(command = "rm -rf \$HOME/.gradle/jdks/eclipse*")
         uses(name = "build", action = GradleBuildActionV2(
             gradleVersion = "wrapper",
             gradleHomeCacheCleanup = true,
