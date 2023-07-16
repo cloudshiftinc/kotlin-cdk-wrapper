@@ -63,7 +63,6 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    implementation(libs.oshai.kotlinLogging)
     implementation(libs.guava)
 //    implementation(libs.pearx.kasechange)
 

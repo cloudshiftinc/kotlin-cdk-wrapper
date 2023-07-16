@@ -33,5 +33,5 @@ kotest-extensions-spring = { module = "io.kotest.extensions:kotest-extensions-sp
 #
 #
 guava = { module = "com.google.guava:guava", version = "32.1.1-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.87.0"}
-oshai-kotlinLogging = { module = "io.github.oshai:kotlin-logging-jvm", version = "5.0.0-beta-02" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.87.0" }
+squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.14.2" }
