@@ -31,7 +31,7 @@ workflow(
             gradleVersion = "wrapper",
             gradleHomeCacheCleanup = true,
             gradleHomeCacheIncludes = listOf("jdks", "caches", "notifications"),
-            arguments = "build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace"
+            arguments = "build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache"
         ))
     }
 }.writeToFile()
