@@ -1,9 +1,8 @@
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
-import io.github.gradlenexus.publishplugin.NexusPublishExtension
 
 plugins {
     id("cloudshift.awscdkdsl.build.base")
-    id("io.github.gradle-nexus.publish-plugin") version("2.0.0-rc-1")
+    id("io.github.gradle-nexus.publish-plugin") version("2.0.0-rc-1")  // only on root project
 }
 
 nexusPublishing {
