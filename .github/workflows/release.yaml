@@ -51,5 +51,5 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --debug --stacktrace --no-configuration-cache'
+        arguments: 'build publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache'
         gradle-home-cache-cleanup: 'true'

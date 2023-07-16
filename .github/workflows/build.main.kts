@@ -10,7 +10,6 @@ import io.github.typesafegithub.workflows.domain.triggers.PullRequest
 import io.github.typesafegithub.workflows.domain.triggers.Push
 import io.github.typesafegithub.workflows.dsl.workflow
 import io.github.typesafegithub.workflows.yaml.writeToFile
-import java.awt.Event.HOME
 
 workflow(
     name = "Build Kotlin AWS CDK DSL",
