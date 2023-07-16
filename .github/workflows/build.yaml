@@ -42,8 +42,6 @@ jobs:
         distribution: 'corretto'
         check-latest: 'true'
     - id: 'step-2'
-      run: 'rm -rf $HOME/.gradle/jdks/eclipse*'
-    - id: 'step-3'
       name: 'build'
       uses: 'gradle/gradle-build-action@v2'
       with:
