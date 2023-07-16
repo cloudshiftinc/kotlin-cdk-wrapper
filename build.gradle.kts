@@ -15,7 +15,7 @@ nexusPublishing {
 
     val sonatypeUsername : String? by project
     val sonatypePassword: String? by project
-    println("User: '${sonatypeUsername.uppercase()}' : '${sonatypePassword.uppercase()}'")
+    println("User: '${sonatypeUsername?.uppercase()}' : '${sonatypePassword?.uppercase()}'")
 }
 
 val awscdk: Configuration by configurations.creating
