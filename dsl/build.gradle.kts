@@ -12,7 +12,7 @@ dependencies {
 
 }
 
-tasks.withType<KotlinCompile>().configureEach {
+tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {
         // don't compile DSL code when in IntelliJ as it's large and takes considerable time
         when {

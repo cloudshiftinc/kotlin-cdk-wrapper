@@ -4,6 +4,7 @@
 
 import io.github.typesafegithub.workflows.actions.actions.CheckoutV3
 import io.github.typesafegithub.workflows.actions.gradle.GradleBuildActionV2
+import io.github.typesafegithub.workflows.domain.RunnerType
 import io.github.typesafegithub.workflows.domain.RunnerType.UbuntuLatest
 import io.github.typesafegithub.workflows.domain.triggers.PullRequest
 import io.github.typesafegithub.workflows.domain.triggers.Push
@@ -22,7 +23,7 @@ workflow(
         "ORG_GRADLE_PROJECT_sonatypePassword" to expr("secrets.SONATYPEPASSWORD"),
     ),
 ) {
-    job(id = "build", runsOn = UbuntuLatest) {
+    job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
         uses(name = "checkout", action = CheckoutV3())
         uses(name = "build", action = GradleBuildActionV2(
             gradleVersion = "wrapper",
