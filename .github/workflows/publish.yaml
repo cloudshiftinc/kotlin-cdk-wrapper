@@ -27,8 +27,7 @@ jobs:
       name: 'Consistency check'
       run: 'git diff --exit-code ''.github/workflows/publish.yaml'''
   build:
-    runs-on:
-    - 'Large_Runner'
+    runs-on: 'ubuntu-latest'
     needs:
     - 'check_yaml_consistency'
     steps:

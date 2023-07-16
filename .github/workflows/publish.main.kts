@@ -14,7 +14,8 @@ import io.github.typesafegithub.workflows.yaml.writeToFile
 
 workflow(
     name = "Publish Kotlin AWS CDK DSL to Maven Central",
-    on = listOf(Push(tags = listOf("*"))),
+//    on = listOf(Push(tags = listOf("*"))),
+    on = listOf(Push()),
     sourceFile = __FILE__.toPath(),
     env = linkedMapOf(
         "ORG_GRADLE_PROJECT_signingKey" to expr("secrets.SIGNING_KEY"),
@@ -23,7 +24,7 @@ workflow(
         "ORG_GRADLE_PROJECT_sonatypePassword" to expr("secrets.SONATYPEPASSWORD"),
     ),
 ) {
-    job(id = "build", runsOn = RunnerType.Labelled("Large_Runner")) {
+    job(id = "build", runsOn = UbuntuLatest) {
         uses(name = "checkout", action = CheckoutV3())
         uses(name = "build", action = GradleBuildActionV2(
             gradleVersion = "wrapper",
