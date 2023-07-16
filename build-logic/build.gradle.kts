@@ -13,6 +13,7 @@ dependencies {
     implementation(libs.guava)
     implementation(libs.squareup.kotlinpoet)
     implementation(plugin(libs.plugins.kotlin.jvm))
+//    compileOnly(plugin("io.github.gradle-nexus.publish-plugin", "2.0.0-rc-1"))
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 
