@@ -17,6 +17,7 @@ workflow(
     on = listOf(Push(), PullRequest()),
     sourceFile = __FILE__.toPath(),
     env = linkedMapOf(
+        "GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED" to "true",
         "ORG_GRADLE_PROJECT_signingKey" to expr("secrets.SIGNING_KEY"),
         "ORG_GRADLE_PROJECT_signingPassword" to expr("secrets.SIGNING_PASSWORD"),
         "ORG_GRADLE_PROJECT_sonatypeUsername" to expr("secrets.SONATYPEUSERNAME"),
@@ -37,7 +38,7 @@ workflow(
                 gradleVersion = "wrapper",
                 gradleHomeCacheCleanup = true,
                 gradleHomeCacheIncludes = listOf("jdks", "caches", "notifications"),
-                arguments = "build --stacktrace"
+                arguments = "build --scan --stacktrace"
             )
         )
         uses(

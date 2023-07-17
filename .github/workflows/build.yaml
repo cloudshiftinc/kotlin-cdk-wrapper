@@ -7,6 +7,7 @@ on:
   push: {}
   pull_request: {}
 env:
+  GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED: 'true'
   ORG_GRADLE_PROJECT_signingKey: '${{ secrets.SIGNING_KEY }}'
   ORG_GRADLE_PROJECT_signingPassword: '${{ secrets.SIGNING_PASSWORD }}'
   ORG_GRADLE_PROJECT_sonatypeUsername: '${{ secrets.SONATYPEUSERNAME }}'
@@ -50,7 +51,7 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build --stacktrace'
+        arguments: 'build --scan --stacktrace'
         gradle-home-cache-cleanup: 'true'
     - id: 'step-3'
       name: 'publish'
