@@ -38,15 +38,16 @@ workflow(
                 gradleVersion = "wrapper",
                 gradleHomeCacheCleanup = true,
                 gradleHomeCacheIncludes = listOf("jdks", "caches", "notifications"),
-                arguments = "build --scan --stacktrace"
+                arguments = "build --info --scan --stacktrace"
             )
         )
         uses(
             name = "publish", action = GradleBuildActionV2(
                 gradleVersion = "wrapper",
-                arguments = "publishToSonatype closeAndReleaseSonatypeStagingRepository --stacktrace --no-configuration-cache"
+                arguments = "publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache"
             )
         )
+        run(command = "rm -rf \$HOME/.gradle/jdks/eclipse-*")
     }
 }.writeToFile()
 

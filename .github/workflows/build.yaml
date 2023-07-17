@@ -51,11 +51,13 @@ jobs:
           jdks
           caches
           notifications
-        arguments: 'build --scan --stacktrace'
+        arguments: 'build --info --scan --stacktrace'
         gradle-home-cache-cleanup: 'true'
     - id: 'step-3'
       name: 'publish'
       uses: 'gradle/gradle-build-action@v2'
       with:
         gradle-version: 'wrapper'
-        arguments: 'publishToSonatype closeAndReleaseSonatypeStagingRepository --stacktrace --no-configuration-cache'
+        arguments: 'publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache'
+    - id: 'step-4'
+      run: 'rm -rf $HOME/.gradle/jdks/eclipse-*'
