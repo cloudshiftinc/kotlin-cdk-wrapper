@@ -49,6 +49,7 @@ public fun IConstruct.allChildren(): List<IConstruct> {
     return list.sortedBy { it.node.path }
 }
 
+@JvmName("constructArn")
 public inline fun IConstruct.arn(block: (ArnComponentsDsl).() -> Unit): String = arn(this, block)
 
 public inline fun arn(scope: IConstruct, block: (ArnComponentsDsl).() -> Unit): String {
