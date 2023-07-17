@@ -1,6 +1,5 @@
 package cloudshift.awscdkdsl.build.dsl
 
-import cloudshift.awscdkdsl.build.dsl.BuildableLastArgumentExtensionGenerator
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
 import com.google.common.reflect.ClassPath
@@ -13,6 +12,7 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.FileSystemOperations
 import org.gradle.api.provider.SetProperty
+import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
@@ -20,6 +20,7 @@ import java.io.File
 import java.net.URLClassLoader
 import javax.inject.Inject
 
+@CacheableTask
 abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOperations) : DefaultTask() {
 
     @get:Input

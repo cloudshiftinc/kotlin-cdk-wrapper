@@ -11,10 +11,7 @@ plugins {
     kotlin("jvm")
 }
 
-val precommit by tasks.registering {
-    group = "verification"
-    dependsOn(tasks.named("check"))
-}
+
 
 tasks.withType<AbstractArchiveTask>().configureEach {
     isPreserveFileTimestamps = false

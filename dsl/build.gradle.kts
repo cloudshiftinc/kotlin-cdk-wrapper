@@ -12,6 +12,11 @@ dependencies {
 
 }
 
+// lots of generated Kotlin drives memory requirement
+kotlin {
+    kotlinDaemonJvmArgs = listOf("-Xms8g", "-Xmx8g")
+}
+
 tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {
         // don't compile DSL code when in IntelliJ as it's large and takes considerable time

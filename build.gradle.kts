@@ -21,9 +21,13 @@ dependencies {
 }
 
 tasks {
-    register<GenerateDslTask>("generateDsl") {
+    val generateDsl = register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
+    }
+
+    named("check") {
+        dependsOn(generateDsl)
     }
 }
 
