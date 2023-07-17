@@ -1,8 +1,9 @@
 package cloudshift.awscdk.dsl.extensions.core
 
 import cloudshift.awscdk.dsl.ArnComponentsDsl
-import cloudshift.awscdk.dsl.awscdk
-import cloudshift.awscdk.dsl.formatArn
+import software.amazon.awscdk.Arn
+import software.amazon.awscdk.ArnComponents
+import software.amazon.awscdk.ArnFormat
 import software.amazon.awscdk.CfnResource
 import software.amazon.awscdk.Stack
 import software.amazon.awscdk.Tags
@@ -48,12 +49,16 @@ public fun IConstruct.allChildren(): List<IConstruct> {
     return list.sortedBy { it.node.path }
 }
 
-public fun awscdk.resourceArn(
-    scope: Construct,
-    block: (ArnComponentsDsl).() -> Unit
-): String = Stack.of(scope).formatArn(block)
+public inline fun IConstruct.arn(block: (ArnComponentsDsl).() -> Unit): String = arn(this, block)
 
-public fun awscdk.anyResource(): String = "*"
+public inline fun arn(scope: IConstruct, block: (ArnComponentsDsl).() -> Unit): String {
+    val builder = ArnComponentsDsl()
+    builder.apply(block)
+    return Arn.format(builder.build(), Stack.of(scope))
+}
+
+public fun String.toArnComponents(format: ArnFormat = ArnFormat.SLASH_RESOURCE_NAME): ArnComponents =
+    Arn.split(this, format)
 
 public inline fun <reified T : Construct> Construct.withSingleton(id: String, block: (String) -> T): T {
     return allChildren().filterIsInstance<T>().firstOrNull { it.node.id == id } ?: block(id)

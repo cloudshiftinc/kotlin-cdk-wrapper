@@ -53,7 +53,7 @@ tasks.withType<Test>().configureEach {
 
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions {
-        freeCompilerArgs += "-Xjsr305=strict"
+        freeCompilerArgs += listOf("-Xjsr305=strict", "-Xcontext-receivers")
     }
     compilerOptions {
 
