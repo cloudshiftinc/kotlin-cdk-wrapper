@@ -47,7 +47,7 @@ workflow(
                 arguments = "publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache"
             )
         )
-        run(command = "rm -rf \$HOME/.gradle/jdks/eclipse-*")
+        run(command = "rm -rf \$HOME/.gradle/jdks/eclipse*")
     }
 }.writeToFile()
 

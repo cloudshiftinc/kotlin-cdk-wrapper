@@ -60,4 +60,4 @@ jobs:
         gradle-version: 'wrapper'
         arguments: 'publishToSonatype closeAndReleaseSonatypeStagingRepository --info --stacktrace --no-configuration-cache'
     - id: 'step-4'
-      run: 'rm -rf $HOME/.gradle/jdks/eclipse-*'
+      run: 'rm -rf $HOME/.gradle/jdks/eclipse*'
