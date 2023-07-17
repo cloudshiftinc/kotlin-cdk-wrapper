@@ -25,8 +25,9 @@ class ExtensionsKtTest : FunSpec({
                 action("s3:GetObject")
                 allow()
                 anyResource()
-                resource(arn(stack) {
-
+                resources(arn(stack) {
+                    service("s3")
+                    resource("myBucket")
                 })
             }
         }
@@ -42,7 +43,8 @@ private class MyConstruct(scope : Construct, id : String) : Construct(scope, id)
                 allow()
                 resource(
                     arn {
-
+                        service("s3")
+                        resource("myBucket")
                     }
                 )
             }
