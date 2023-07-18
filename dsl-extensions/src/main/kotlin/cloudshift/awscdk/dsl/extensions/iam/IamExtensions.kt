@@ -13,7 +13,6 @@ public fun PolicyStatementDsl.deny() {
     effect(Effect.DENY)
 }
 
-
 public fun PolicyStatementDsl.action(action: String) {
     actions(action)
 }

@@ -10,6 +10,7 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KParameter
 import kotlin.reflect.KType
 import kotlin.reflect.KVisibility
+import kotlin.reflect.full.findAnnotations
 import kotlin.reflect.full.memberFunctions
 import kotlin.reflect.full.staticFunctions
 import kotlin.reflect.full.valueParameters
@@ -124,7 +125,9 @@ internal data class CdkClassRegistry(
         }
         return builderClass.kClass.memberFunctions
             .filter { it.name !in excludedMembers && it.valueParameters.isNotEmpty() }
-            .map { it.toString() to BuilderProperty(it.name, it.valueParameters[0].type) }
+            .map {
+                val parameter = it.valueParameters[0]
+                it.toString() to BuilderProperty(it.name,parameter.type) }
             .sortedBy { it.first }
             .map { it.second }
     }

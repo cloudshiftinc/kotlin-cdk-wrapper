@@ -106,33 +106,6 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
         builderClassBuilder.addFunction(buildFnBuilder.build())
     }
 
-    private fun BuilderProperty.isList() =
-        (type.classifier as KClass<*>).isSubclassOf(List::class)
-
-    private fun BuilderProperty.typeArgument() =
-        type.arguments[0].type?.asTypeName() ?: ANY
-
-    private fun BuilderProperty.isListOfBuildable(registry: CdkClassRegistry) =
-        isList() && type.arguments[0].type != null && registry.isBuildable(type.arguments[0].type!!)
-
-    private fun BuilderProperty.isObjectMap(): Boolean {
-        val kClass = type.classifier as KClass<*>
-        if (!kClass.isSubclassOf(Map::class)) {
-            return false
-        }
-
-        if (type.arguments.size != 2) {
-            return false
-        }
-
-        if (!type.arguments[0].toString().startsWith("kotlin.String")) {
-            return false
-        }
-        return type.arguments[1].toString().startsWith("*")
-    }
-
-    private fun BuilderProperty.isObject() = type.toString().startsWith("kotlin.Any")
-
     private fun handleObjectProperty(
         prop: BuilderProperty,
         builderClassBuilder: TypeSpec.Builder
@@ -160,7 +133,7 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
         // existing setter
         builderClassBuilder.addFunction(
             FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.type.asTypeName())
+                .addParameter(prop.name, prop.typeName())
                 .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
                 .build()
         )
@@ -200,7 +173,7 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
         // setter as specified in CDK builder
         builderClassBuilder.addFunction(
             FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.type.asTypeName())
+                .addParameter(prop.name, prop.typeName())
                 .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
                 .build()
         )
@@ -214,7 +187,7 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
         // setter as specified in the CDK builder
         builderClassBuilder.addFunction(
             FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.type.asTypeName())
+                .addParameter(prop.name, prop.typeName())
                 .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
                 .build()
         )
