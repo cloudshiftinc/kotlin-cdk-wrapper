@@ -33,9 +33,13 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Me
             if (genericParams.isNotEmpty()) {
                 theType = genericParams[index]
             }
+
+            // TODO - there don't appear to be any builder methods that use nullability annotations
+            // if we find a use for these annotations we have them...
+//            val annotations = (delegate.visibleParameterAnnotations?.get(index) ?: emptyList())+
+//                (delegate.invisibleParameterAnnotations?.get(index) ?: emptyList())
+
             AsmParameterAdapter(
-                visibleAnnotations = delegate.visibleParameterAnnotations?.get(index) ?: emptyList(),
-                invisibleAnnotations = delegate.invisibleParameterAnnotations?.get(index) ?: emptyList(),
                 _parameterName = parameterName,
                 _type = theType,
             )

@@ -6,8 +6,6 @@ import org.objectweb.asm.tree.AnnotationNode
 
 @Suppress("LocalVariableName")
 internal class AsmParameterAdapter(
-    private val visibleAnnotations: List<AnnotationNode>,
-    private val invisibleAnnotations: List<AnnotationNode>,
     _type: TypeName,
     _parameterName: String,
 ) : CdkClass2.Method.Parameter {
