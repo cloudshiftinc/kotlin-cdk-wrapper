@@ -57,11 +57,11 @@ public class MethodOptionsDsl {
     cdkBuilder.operationName(operationName)
   }
 
-  public fun requestModels(requestModels: Map<String, out IModel>) {
+  public fun requestModels(requestModels: Map<String, IModel>) {
     cdkBuilder.requestModels(requestModels)
   }
 
-  public fun requestParameters(requestParameters: Map<String, out Boolean>) {
+  public fun requestParameters(requestParameters: Map<String, Boolean>) {
     cdkBuilder.requestParameters(requestParameters)
   }
 

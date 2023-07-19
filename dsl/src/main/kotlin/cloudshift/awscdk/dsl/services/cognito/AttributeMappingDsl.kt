@@ -20,7 +20,7 @@ public class AttributeMappingDsl {
     cdkBuilder.birthdate(birthdate)
   }
 
-  public fun custom(custom: Map<String, out ProviderAttribute>) {
+  public fun custom(custom: Map<String, ProviderAttribute>) {
     cdkBuilder.custom(custom)
   }
 

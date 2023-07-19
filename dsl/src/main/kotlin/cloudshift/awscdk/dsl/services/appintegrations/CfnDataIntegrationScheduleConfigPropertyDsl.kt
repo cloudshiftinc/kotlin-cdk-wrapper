@@ -11,12 +11,12 @@ public class CfnDataIntegrationScheduleConfigPropertyDsl {
   private val cdkBuilder: CfnDataIntegration.ScheduleConfigProperty.Builder =
       CfnDataIntegration.ScheduleConfigProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun firstExecutionFrom(firstExecutionFrom: String) {
     cdkBuilder.firstExecutionFrom(firstExecutionFrom)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun scheduleExpression(scheduleExpression: String) {

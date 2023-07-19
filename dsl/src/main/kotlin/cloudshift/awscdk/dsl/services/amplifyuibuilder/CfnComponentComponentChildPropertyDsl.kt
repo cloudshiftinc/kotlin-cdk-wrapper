@@ -42,7 +42,7 @@ public class CfnComponentComponentChildPropertyDsl {
     cdkBuilder.events(builder.map)
   }
 
-  public fun events(events: Map<String, *>) {
+  public fun events(events: Map<String, Any>) {
     cdkBuilder.events(events)
   }
 
@@ -60,7 +60,7 @@ public class CfnComponentComponentChildPropertyDsl {
     cdkBuilder.properties(builder.map)
   }
 
-  public fun properties(properties: Map<String, *>) {
+  public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 

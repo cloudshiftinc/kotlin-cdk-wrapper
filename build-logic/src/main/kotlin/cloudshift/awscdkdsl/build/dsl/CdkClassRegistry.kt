@@ -28,7 +28,6 @@ internal data class CdkClassRegistry(
             val buildableMap = classes.asSequence()
                 .filter { it.simpleBuilder() }
                 .map {
-                    it.builderType()
                     Pair(
                         it,
                         typeMap[it.builderType()]!!

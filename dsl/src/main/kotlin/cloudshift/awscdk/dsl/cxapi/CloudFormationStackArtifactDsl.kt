@@ -19,11 +19,11 @@ import software.amazon.awscdk.cxapi.CloudFormationStackArtifact
 
 @CdkDslMarker
 public class CloudFormationStackArtifactDsl(
-  arg0: CloudAssembly,
-  arg1: String,
+  assembly: CloudAssembly,
+  artifactId: String,
 ) {
   private val cdkBuilder: CloudFormationStackArtifact.Builder =
-      CloudFormationStackArtifact.Builder.create(arg0, arg1)
+      CloudFormationStackArtifact.Builder.create(assembly, artifactId)
 
   private val _dependencies: MutableList<String> = mutableListOf()
 
@@ -43,7 +43,7 @@ public class CloudFormationStackArtifactDsl(
     cdkBuilder.environment(environment)
   }
 
-  public fun metadata(metadata: Map<String, out List<out MetadataEntry>>) {
+  public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
     cdkBuilder.metadata(metadata)
   }
 

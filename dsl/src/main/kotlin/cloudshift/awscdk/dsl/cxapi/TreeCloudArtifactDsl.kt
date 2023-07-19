@@ -19,10 +19,11 @@ import software.amazon.awscdk.cxapi.TreeCloudArtifact
 
 @CdkDslMarker
 public class TreeCloudArtifactDsl(
-  arg0: CloudAssembly,
-  arg1: String,
+  assembly: CloudAssembly,
+  name: String,
 ) {
-  private val cdkBuilder: TreeCloudArtifact.Builder = TreeCloudArtifact.Builder.create(arg0, arg1)
+  private val cdkBuilder: TreeCloudArtifact.Builder = TreeCloudArtifact.Builder.create(assembly,
+      name)
 
   private val _dependencies: MutableList<String> = mutableListOf()
 
@@ -42,7 +43,7 @@ public class TreeCloudArtifactDsl(
     cdkBuilder.environment(environment)
   }
 
-  public fun metadata(metadata: Map<String, out List<out MetadataEntry>>) {
+  public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
     cdkBuilder.metadata(metadata)
   }
 

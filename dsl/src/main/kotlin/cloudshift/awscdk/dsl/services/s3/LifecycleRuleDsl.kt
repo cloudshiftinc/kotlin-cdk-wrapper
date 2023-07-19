@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.s3
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import java.time.Instant
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -86,7 +87,7 @@ public class LifecycleRuleDsl {
     cdkBuilder.tagFilters(builder.map)
   }
 
-  public fun tagFilters(tagFilters: Map<String, *>) {
+  public fun tagFilters(tagFilters: Map<String, Any>) {
     cdkBuilder.tagFilters(tagFilters)
   }
 

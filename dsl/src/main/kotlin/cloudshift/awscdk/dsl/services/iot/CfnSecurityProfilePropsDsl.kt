@@ -45,7 +45,7 @@ public class CfnSecurityProfilePropsDsl {
     cdkBuilder.alertTargets(builder.map)
   }
 
-  public fun alertTargets(alertTargets: Map<String, *>) {
+  public fun alertTargets(alertTargets: Map<String, Any>) {
     cdkBuilder.alertTargets(alertTargets)
   }
 

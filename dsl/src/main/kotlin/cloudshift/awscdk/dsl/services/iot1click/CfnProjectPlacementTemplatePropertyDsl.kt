@@ -32,7 +32,7 @@ public class CfnProjectPlacementTemplatePropertyDsl {
     cdkBuilder.deviceTemplates(builder.map)
   }
 
-  public fun deviceTemplates(deviceTemplates: Map<String, *>) {
+  public fun deviceTemplates(deviceTemplates: Map<String, Any>) {
     cdkBuilder.deviceTemplates(deviceTemplates)
   }
 

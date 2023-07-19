@@ -10,11 +10,12 @@ import software.amazon.awscdk.TagType
 
 @CdkDslMarker
 public class TagManagerDsl(
-  arg0: TagType,
-  arg1: String,
-  arg2: Any,
+  tagType: TagType,
+  resourceTypeName: String,
+  initialTags: Any,
 ) {
-  private val cdkBuilder: TagManager.Builder = TagManager.Builder.create(arg0, arg1, arg2)
+  private val cdkBuilder: TagManager.Builder = TagManager.Builder.create(tagType, resourceTypeName,
+      initialTags)
 
   public fun tagPropertyName(tagPropertyName: String) {
     cdkBuilder.tagPropertyName(tagPropertyName)

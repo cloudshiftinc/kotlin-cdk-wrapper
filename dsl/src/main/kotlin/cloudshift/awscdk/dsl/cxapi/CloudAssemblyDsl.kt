@@ -9,9 +9,9 @@ import software.amazon.awscdk.cxapi.CloudAssembly
 
 @CdkDslMarker
 public class CloudAssemblyDsl(
-  arg0: String,
+  directory: String,
 ) {
-  private val cdkBuilder: CloudAssembly.Builder = CloudAssembly.Builder.create(arg0)
+  private val cdkBuilder: CloudAssembly.Builder = CloudAssembly.Builder.create(directory)
 
   public fun skipEnumCheck(skipEnumCheck: Boolean) {
     cdkBuilder.skipEnumCheck(skipEnumCheck)

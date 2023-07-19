@@ -149,7 +149,7 @@ public class QueueProcessingServiceBasePropsDsl {
     _scalingSteps.addAll(scalingSteps)
   }
 
-  public fun secrets(secrets: Map<String, out Secret>) {
+  public fun secrets(secrets: Map<String, Secret>) {
     cdkBuilder.secrets(secrets)
   }
 

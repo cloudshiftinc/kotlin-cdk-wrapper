@@ -29,9 +29,9 @@ import software.amazon.awscdk.services.iam.PolicyStatement
 
 @CdkDslMarker
 public class CodeBuildStepDsl(
-  arg0: String,
+  id: String,
 ) {
-  private val cdkBuilder: CodeBuildStep.Builder = CodeBuildStep.Builder.create(arg0)
+  private val cdkBuilder: CodeBuildStep.Builder = CodeBuildStep.Builder.create(id)
 
   private val _commands: MutableList<String> = mutableListOf()
 
@@ -47,7 +47,7 @@ public class CodeBuildStepDsl(
     cdkBuilder.actionRole(actionRole)
   }
 
-  public fun additionalInputs(additionalInputs: Map<String, out IFileSetProducer>) {
+  public fun additionalInputs(additionalInputs: Map<String, IFileSetProducer>) {
     cdkBuilder.additionalInputs(additionalInputs)
   }
 
@@ -77,7 +77,7 @@ public class CodeBuildStepDsl(
     cdkBuilder.env(env)
   }
 
-  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, out CfnOutput>) {
+  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, CfnOutput>) {
     cdkBuilder.envFromCfnOutputs(envFromCfnOutputs)
   }
 

@@ -13,12 +13,13 @@ import software.constructs.IConstruct
 
 @CdkDslMarker
 public class BatchJobDsl(
-  arg0: String,
-  arg1: IConstruct,
-  arg2: String,
-  arg3: IConstruct,
+  jobQueueArn: String,
+  jobQueueScope: IConstruct,
+  jobDefinitionArn: String,
+  jobDefinitionScope: IConstruct,
 ) {
-  private val cdkBuilder: BatchJob.Builder = BatchJob.Builder.create(arg0, arg1, arg2, arg3)
+  private val cdkBuilder: BatchJob.Builder = BatchJob.Builder.create(jobQueueArn, jobQueueScope,
+      jobDefinitionArn, jobDefinitionScope)
 
   public fun attempts(attempts: Number) {
     cdkBuilder.attempts(attempts)

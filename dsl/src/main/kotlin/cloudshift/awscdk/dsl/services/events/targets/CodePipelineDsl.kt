@@ -12,9 +12,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class CodePipelineDsl(
-  arg0: IPipeline,
+  pipeline: IPipeline,
 ) {
-  private val cdkBuilder: CodePipeline.Builder = CodePipeline.Builder.create(arg0)
+  private val cdkBuilder: CodePipeline.Builder = CodePipeline.Builder.create(pipeline)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

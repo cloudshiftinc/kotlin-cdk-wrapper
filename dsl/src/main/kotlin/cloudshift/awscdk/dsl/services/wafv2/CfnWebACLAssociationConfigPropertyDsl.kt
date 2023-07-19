@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.wafv2
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class CfnWebACLAssociationConfigPropertyDsl {
     cdkBuilder.requestBody(builder.map)
   }
 
-  public fun requestBody(requestBody: Map<String, *>) {
+  public fun requestBody(requestBody: Map<String, Any>) {
     cdkBuilder.requestBody(requestBody)
   }
 

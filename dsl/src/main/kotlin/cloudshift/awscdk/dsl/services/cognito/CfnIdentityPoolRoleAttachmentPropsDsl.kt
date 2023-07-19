@@ -26,7 +26,7 @@ public class CfnIdentityPoolRoleAttachmentPropsDsl {
     cdkBuilder.roleMappings(builder.map)
   }
 
-  public fun roleMappings(roleMappings: Map<String, *>) {
+  public fun roleMappings(roleMappings: Map<String, Any>) {
     cdkBuilder.roleMappings(roleMappings)
   }
 

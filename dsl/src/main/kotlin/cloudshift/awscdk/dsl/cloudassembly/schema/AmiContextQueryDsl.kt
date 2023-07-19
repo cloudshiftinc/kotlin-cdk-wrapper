@@ -20,7 +20,7 @@ public class AmiContextQueryDsl {
     cdkBuilder.account(account)
   }
 
-  public fun filters(filters: Map<String, out List<String>>) {
+  public fun filters(filters: Map<String, List<String>>) {
     cdkBuilder.filters(filters)
   }
 

@@ -32,7 +32,7 @@ public class DistributionDsl(
 
   private val _errorResponses: MutableList<ErrorResponse> = mutableListOf()
 
-  public fun additionalBehaviors(additionalBehaviors: Map<String, out BehaviorOptions>) {
+  public fun additionalBehaviors(additionalBehaviors: Map<String, BehaviorOptions>) {
     cdkBuilder.additionalBehaviors(additionalBehaviors)
   }
 

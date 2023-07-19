@@ -11,9 +11,9 @@ import software.amazon.awscdk.pipelines.Wave
 
 @CdkDslMarker
 public class WaveDsl(
-  arg0: String,
+  id: String,
 ) {
-  private val cdkBuilder: Wave.Builder = Wave.Builder.create(arg0)
+  private val cdkBuilder: Wave.Builder = Wave.Builder.create(id)
 
   private val _post: MutableList<Step> = mutableListOf()
 

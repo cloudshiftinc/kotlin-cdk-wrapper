@@ -11,9 +11,9 @@ import software.amazon.awscdk.services.lambda.EcrImageCode
 
 @CdkDslMarker
 public class EcrImageCodeDsl(
-  arg0: IRepository,
+  repository: IRepository,
 ) {
-  private val cdkBuilder: EcrImageCode.Builder = EcrImageCode.Builder.create(arg0)
+  private val cdkBuilder: EcrImageCode.Builder = EcrImageCode.Builder.create(repository)
 
   private val _cmd: MutableList<String> = mutableListOf()
 

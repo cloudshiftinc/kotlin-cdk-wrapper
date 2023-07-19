@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.iam
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -11,9 +12,9 @@ import software.amazon.awscdk.services.iam.ServicePrincipal
 
 @CdkDslMarker
 public class ServicePrincipalDsl(
-  arg0: String,
+  service: String,
 ) {
-  private val cdkBuilder: ServicePrincipal.Builder = ServicePrincipal.Builder.create(arg0)
+  private val cdkBuilder: ServicePrincipal.Builder = ServicePrincipal.Builder.create(service)
 
   public fun conditions(block: MapBuilder.() -> Unit = {}) {
     val builder = MapBuilder()
@@ -21,7 +22,7 @@ public class ServicePrincipalDsl(
     cdkBuilder.conditions(builder.map)
   }
 
-  public fun conditions(conditions: Map<String, *>) {
+  public fun conditions(conditions: Map<String, Any>) {
     cdkBuilder.conditions(conditions)
   }
 

@@ -8,9 +8,9 @@ import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 
 @CdkDslMarker
 public class CloudAssemblyBuilderDsl(
-  arg0: String,
+  outdir: String,
 ) {
-  private val cdkBuilder: CloudAssemblyBuilder.Builder = CloudAssemblyBuilder.Builder.create(arg0)
+  private val cdkBuilder: CloudAssemblyBuilder.Builder = CloudAssemblyBuilder.Builder.create(outdir)
 
   public fun assetOutdir(assetOutdir: String) {
     cdkBuilder.assetOutdir(assetOutdir)

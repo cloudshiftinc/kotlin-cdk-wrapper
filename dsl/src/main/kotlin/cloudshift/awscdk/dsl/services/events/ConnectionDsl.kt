@@ -21,7 +21,7 @@ public class ConnectionDsl(
     cdkBuilder.authorization(authorization)
   }
 
-  public fun bodyParameters(bodyParameters: Map<String, out HttpParameter>) {
+  public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
     cdkBuilder.bodyParameters(bodyParameters)
   }
 
@@ -33,11 +33,11 @@ public class ConnectionDsl(
     cdkBuilder.description(description)
   }
 
-  public fun headerParameters(headerParameters: Map<String, out HttpParameter>) {
+  public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
     cdkBuilder.headerParameters(headerParameters)
   }
 
-  public fun queryStringParameters(queryStringParameters: Map<String, out HttpParameter>) {
+  public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
     cdkBuilder.queryStringParameters(queryStringParameters)
   }
 

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -19,7 +20,7 @@ public class TaskMetricsConfigDsl {
     cdkBuilder.metricDimensions(builder.map)
   }
 
-  public fun metricDimensions(metricDimensions: Map<String, *>) {
+  public fun metricDimensions(metricDimensions: Map<String, Any>) {
     cdkBuilder.metricDimensions(metricDimensions)
   }
 

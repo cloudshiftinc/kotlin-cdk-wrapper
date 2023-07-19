@@ -10,10 +10,11 @@ import software.constructs.Construct
 
 @CdkDslMarker
 public class BackupResourceDsl(
-  arg0: String,
-  arg1: Construct,
+  resource: String,
+  construct: Construct,
 ) {
-  private val cdkBuilder: BackupResource.Builder = BackupResource.Builder.create(arg0, arg1)
+  private val cdkBuilder: BackupResource.Builder = BackupResource.Builder.create(resource,
+      construct)
 
   public fun key(key: String) {
     cdkBuilder.key(key)

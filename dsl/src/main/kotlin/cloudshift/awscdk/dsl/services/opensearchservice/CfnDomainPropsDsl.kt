@@ -104,7 +104,7 @@ public class CfnDomainPropsDsl {
     cdkBuilder.logPublishingOptions(builder.map)
   }
 
-  public fun logPublishingOptions(logPublishingOptions: Map<String, *>) {
+  public fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
     cdkBuilder.logPublishingOptions(logPublishingOptions)
   }
 

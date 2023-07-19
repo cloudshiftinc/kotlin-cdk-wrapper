@@ -10,9 +10,9 @@ import software.amazon.awscdk.SecretValue
 
 @CdkDslMarker
 public class SecretValueDsl(
-  arg0: Any,
+  protectedValue: Any,
 ) {
-  private val cdkBuilder: SecretValue.Builder = SecretValue.Builder.create(arg0)
+  private val cdkBuilder: SecretValue.Builder = SecretValue.Builder.create(protectedValue)
 
   public fun stackTrace(stackTrace: Boolean) {
     cdkBuilder.stackTrace(stackTrace)

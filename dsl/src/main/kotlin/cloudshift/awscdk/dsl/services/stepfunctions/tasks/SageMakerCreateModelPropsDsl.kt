@@ -6,6 +6,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -93,7 +94,7 @@ public class SageMakerCreateModelPropsDsl {
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

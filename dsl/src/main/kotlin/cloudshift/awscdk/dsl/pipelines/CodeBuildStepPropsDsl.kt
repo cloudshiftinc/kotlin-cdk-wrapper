@@ -45,7 +45,7 @@ public class CodeBuildStepPropsDsl {
     cdkBuilder.actionRole(actionRole)
   }
 
-  public fun additionalInputs(additionalInputs: Map<String, out IFileSetProducer>) {
+  public fun additionalInputs(additionalInputs: Map<String, IFileSetProducer>) {
     cdkBuilder.additionalInputs(additionalInputs)
   }
 
@@ -75,7 +75,7 @@ public class CodeBuildStepPropsDsl {
     cdkBuilder.env(env)
   }
 
-  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, out CfnOutput>) {
+  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, CfnOutput>) {
     cdkBuilder.envFromCfnOutputs(envFromCfnOutputs)
   }
 

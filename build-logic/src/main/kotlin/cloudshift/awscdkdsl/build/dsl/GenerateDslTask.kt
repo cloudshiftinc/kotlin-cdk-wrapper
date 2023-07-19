@@ -1,8 +1,8 @@
 package cloudshift.awscdkdsl.build.dsl
 
+import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
 import com.google.common.collect.ImmutableMultimap
 import com.google.common.collect.Multimap
-import com.google.common.reflect.ClassPath
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
@@ -12,17 +12,17 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.FileSystemOperations
 import org.gradle.api.provider.SetProperty
-import org.gradle.api.tasks.CacheableTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
-import java.net.URLClassLoader
 import javax.inject.Inject
 
-@CacheableTask
 abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOperations) : DefaultTask() {
 
+    init {
+        outputs.upToDateWhen { false }
+    }
     @get:Input
     abstract val classpath: SetProperty<File>
 
@@ -39,43 +39,29 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
 
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
 
-        // create custom classloader for CDK classes that will be discarded, to avoid
-        // polluting Gradle classloaders
-        val loader = URLClassLoader(
-            classpath.get().map { it.toURI().toURL() }.toTypedArray(),
-            Thread.currentThread().contextClassLoader
-        )
-        val builderSuperClass = loader.loadClass("software.amazon.jsii.Builder").kotlin
+        val cdkClasses = AsmClassLoader.loadClasses(classpath.get())
+        val cdkModel = CdkModelFactory.createModel(cdkClasses)
 
-        val cdkClasses =
-            ClassPath.from(loader).allClasses.asSequence()
-                .filter {
-                    it.packageName.startsWith("software.amazon.awscdk")
-                        && !it.name.contains("Jsii\$")
-                }
-                .map { CdkClass.from(it, builderSuperClass) }
-                .toList()
-
-        logger.lifecycle("Building CDK class registry...")
-        val classRegistry = CdkClassRegistry.create(cdkClasses)
+        val classRegistry = CdkModelLoaderImpl.loadModel(classpath.get())
 
         val outDir = dslDir.get().asFile
 
         logger.lifecycle("Generating builders...")
         val builders = classRegistry.allBuilders()
-        BuilderGenerator(classRegistry).generate(builders).forEach {
+
+        BuilderGenerator2.generate(cdkModel.builders).forEach {
             it.writeTo(outDir)
         }
 
         logger.lifecycle("Generating namespace objects...")
         writeObjects(
-            NamespaceObjectGenerator().generate(builders)
+            NamespaceObjectGenerator().generate(builders),
         )
 
         logger.lifecycle("Generating extension functions...")
         writeExtensionFunctions(
             BuildableLastArgumentExtensionGenerator(classRegistry).generate(),
-            "_BuildableLastArgumentExtensions"
+            "_BuildableLastArgumentExtensions",
         )
 
 
@@ -101,7 +87,7 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
 
     private fun writeExtensionFunctions(
         extensionFunctions: Multimap<String, ExtensionFunctionSpec>,
-        targetFile: String
+        targetFile: String,
     ) {
         extensionFunctions.asMap().forEach { (packageName, funSpecs) ->
             val builder = FileSpec.builder(packageName, targetFile)
@@ -112,8 +98,6 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
             builder.build().writeTo(dslDir.get().asFile)
         }
     }
-
-
 }
 
 internal val SUPPRESSIONS = setOf(
@@ -124,7 +108,7 @@ internal val SUPPRESSIONS = setOf(
     "UnusedImport",
     "ClassName",
     "REDUNDANT_PROJECTION",
-    "DEPRECATION"
+    "DEPRECATION",
 )
 
 
@@ -137,7 +121,7 @@ internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): F
     addAnnotation(
         AnnotationSpec.builder(ClassName("", "Suppress"))
             .addMember(format, *types.toTypedArray())
-            .build()
+            .build(),
     )
     return this
 }

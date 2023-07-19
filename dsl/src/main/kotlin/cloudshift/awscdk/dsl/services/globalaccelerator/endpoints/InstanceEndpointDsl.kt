@@ -10,9 +10,9 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpo
 
 @CdkDslMarker
 public class InstanceEndpointDsl(
-  arg0: IInstance,
+  instance: IInstance,
 ) {
-  private val cdkBuilder: InstanceEndpoint.Builder = InstanceEndpoint.Builder.create(arg0)
+  private val cdkBuilder: InstanceEndpoint.Builder = InstanceEndpoint.Builder.create(instance)
 
   public fun preserveClientIp(preserveClientIp: Boolean) {
     cdkBuilder.preserveClientIp(preserveClientIp)

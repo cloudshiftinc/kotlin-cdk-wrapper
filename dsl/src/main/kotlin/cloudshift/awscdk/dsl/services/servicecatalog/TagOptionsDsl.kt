@@ -16,7 +16,7 @@ public class TagOptionsDsl(
 ) {
   private val cdkBuilder: TagOptions.Builder = TagOptions.Builder.create(scope, id)
 
-  public fun allowedValuesForTags(allowedValuesForTags: Map<String, out List<String>>) {
+  public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
     cdkBuilder.allowedValuesForTags(allowedValuesForTags)
   }
 

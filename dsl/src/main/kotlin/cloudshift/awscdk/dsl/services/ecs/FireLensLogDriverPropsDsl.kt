@@ -42,7 +42,7 @@ public class FireLensLogDriverPropsDsl {
     cdkBuilder.options(options)
   }
 
-  public fun secretOptions(secretOptions: Map<String, out Secret>) {
+  public fun secretOptions(secretOptions: Map<String, Secret>) {
     cdkBuilder.secretOptions(secretOptions)
   }
 

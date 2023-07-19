@@ -35,7 +35,7 @@ public class GetContextValueOptionsDsl {
     cdkBuilder.props(builder.map)
   }
 
-  public fun props(props: Map<String, *>) {
+  public fun props(props: Map<String, Any>) {
     cdkBuilder.props(props)
   }
 

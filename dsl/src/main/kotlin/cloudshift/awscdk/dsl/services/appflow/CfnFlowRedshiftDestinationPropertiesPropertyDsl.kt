@@ -12,10 +12,6 @@ public class CfnFlowRedshiftDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.RedshiftDestinationPropertiesProperty.Builder =
       CfnFlow.RedshiftDestinationPropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun bucketPrefix(bucketPrefix: String) {
     cdkBuilder.bucketPrefix(bucketPrefix)
   }
@@ -30,6 +26,10 @@ public class CfnFlowRedshiftDestinationPropertiesPropertyDsl {
 
   public fun intermediateBucketName(intermediateBucketName: String) {
     cdkBuilder.intermediateBucketName(intermediateBucketName)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnFlow.RedshiftDestinationPropertiesProperty = cdkBuilder.build()

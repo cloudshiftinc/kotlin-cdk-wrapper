@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.iottwinmaker
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -41,7 +42,7 @@ public class CfnComponentTypePropsDsl {
     cdkBuilder.functions(builder.map)
   }
 
-  public fun functions(functions: Map<String, *>) {
+  public fun functions(functions: Map<String, Any>) {
     cdkBuilder.functions(functions)
   }
 
@@ -63,7 +64,7 @@ public class CfnComponentTypePropsDsl {
     cdkBuilder.propertyDefinitions(builder.map)
   }
 
-  public fun propertyDefinitions(propertyDefinitions: Map<String, *>) {
+  public fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
     cdkBuilder.propertyDefinitions(propertyDefinitions)
   }
 
@@ -77,7 +78,7 @@ public class CfnComponentTypePropsDsl {
     cdkBuilder.propertyGroups(builder.map)
   }
 
-  public fun propertyGroups(propertyGroups: Map<String, *>) {
+  public fun propertyGroups(propertyGroups: Map<String, Any>) {
     cdkBuilder.propertyGroups(propertyGroups)
   }
 

@@ -16,10 +16,6 @@ public class CfnFlowZendeskDestinationPropertiesPropertyDsl {
 
   private val _idFieldNames: MutableList<String> = mutableListOf()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
     cdkBuilder.errorHandlingConfig(errorHandlingConfig)
   }
@@ -34,6 +30,10 @@ public class CfnFlowZendeskDestinationPropertiesPropertyDsl {
 
   public fun idFieldNames(idFieldNames: Collection<String>) {
     _idFieldNames.addAll(idFieldNames)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun writeOperationType(writeOperationType: String) {

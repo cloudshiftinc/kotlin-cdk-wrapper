@@ -26,12 +26,11 @@ public class TopicSubscriptionConfigDsl {
     cdkBuilder.endpoint(endpoint)
   }
 
-  public fun filterPolicy(filterPolicy: Map<String, out SubscriptionFilter>) {
+  public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
     cdkBuilder.filterPolicy(filterPolicy)
   }
 
-  public
-      fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, out FilterOrPolicy>) {
+  public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
     cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody)
   }
 

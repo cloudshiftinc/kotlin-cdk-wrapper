@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.lambda.nodejs
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.DockerVolumeDsl
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -99,7 +100,7 @@ public class BundlingOptionsDsl {
     cdkBuilder.esbuildArgs(builder.map)
   }
 
-  public fun esbuildArgs(esbuildArgs: Map<String, *>) {
+  public fun esbuildArgs(esbuildArgs: Map<String, Any>) {
     cdkBuilder.esbuildArgs(esbuildArgs)
   }
 

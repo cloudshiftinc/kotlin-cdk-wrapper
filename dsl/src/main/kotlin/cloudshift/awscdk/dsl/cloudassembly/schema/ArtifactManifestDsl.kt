@@ -38,7 +38,7 @@ public class ArtifactManifestDsl {
     cdkBuilder.environment(environment)
   }
 
-  public fun metadata(metadata: Map<String, out List<out MetadataEntry>>) {
+  public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
     cdkBuilder.metadata(metadata)
   }
 

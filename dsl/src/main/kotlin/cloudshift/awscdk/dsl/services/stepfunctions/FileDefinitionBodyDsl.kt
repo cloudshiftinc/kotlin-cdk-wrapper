@@ -18,9 +18,9 @@ import software.amazon.awscdk.services.stepfunctions.FileDefinitionBody
 
 @CdkDslMarker
 public class FileDefinitionBodyDsl(
-  arg0: String,
+  path: String,
 ) {
-  private val cdkBuilder: FileDefinitionBody.Builder = FileDefinitionBody.Builder.create(arg0)
+  private val cdkBuilder: FileDefinitionBody.Builder = FileDefinitionBody.Builder.create(path)
 
   private val _exclude: MutableList<String> = mutableListOf()
 

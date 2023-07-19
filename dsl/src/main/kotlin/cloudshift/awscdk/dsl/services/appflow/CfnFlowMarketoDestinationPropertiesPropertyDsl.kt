@@ -12,16 +12,16 @@ public class CfnFlowMarketoDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.MarketoDestinationPropertiesProperty.Builder =
       CfnFlow.MarketoDestinationPropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
     cdkBuilder.errorHandlingConfig(errorHandlingConfig)
   }
 
   public fun errorHandlingConfig(errorHandlingConfig: CfnFlow.ErrorHandlingConfigProperty) {
     cdkBuilder.errorHandlingConfig(errorHandlingConfig)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnFlow.MarketoDestinationPropertiesProperty = cdkBuilder.build()

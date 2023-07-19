@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.connect
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -32,7 +33,7 @@ public class CfnRuleTaskActionPropertyDsl {
     cdkBuilder.references(builder.map)
   }
 
-  public fun references(references: Map<String, *>) {
+  public fun references(references: Map<String, Any>) {
     cdkBuilder.references(references)
   }
 

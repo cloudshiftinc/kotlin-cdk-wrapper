@@ -89,7 +89,7 @@ public class CfnMethodPropsDsl {
     cdkBuilder.requestParameters(builder.map)
   }
 
-  public fun requestParameters(requestParameters: Map<String, *>) {
+  public fun requestParameters(requestParameters: Map<String, Any>) {
     cdkBuilder.requestParameters(requestParameters)
   }
 

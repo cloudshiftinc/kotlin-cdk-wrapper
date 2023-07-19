@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.logs.destinations.KinesisDestination
 
 @CdkDslMarker
 public class KinesisDestinationDsl(
-  arg0: IStream,
+  stream: IStream,
 ) {
-  private val cdkBuilder: KinesisDestination.Builder = KinesisDestination.Builder.create(arg0)
+  private val cdkBuilder: KinesisDestination.Builder = KinesisDestination.Builder.create(stream)
 
   public fun role(role: IRole) {
     cdkBuilder.role(role)

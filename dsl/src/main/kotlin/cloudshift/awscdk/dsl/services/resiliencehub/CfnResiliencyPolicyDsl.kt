@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.resiliencehub
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -29,7 +30,7 @@ public class CfnResiliencyPolicyDsl(
     cdkBuilder.policy(builder.map)
   }
 
-  public fun policy(policy: Map<String, *>) {
+  public fun policy(policy: Map<String, Any>) {
     cdkBuilder.policy(policy)
   }
 

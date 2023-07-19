@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -90,7 +91,7 @@ public class CallApiGatewayEndpointBasePropsDsl {
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

@@ -16,9 +16,9 @@ import software.amazon.awscdk.services.cloudfront.origins.HttpOrigin
 
 @CdkDslMarker
 public class HttpOriginDsl(
-  arg0: String,
+  domainName: String,
 ) {
-  private val cdkBuilder: HttpOrigin.Builder = HttpOrigin.Builder.create(arg0)
+  private val cdkBuilder: HttpOrigin.Builder = HttpOrigin.Builder.create(domainName)
 
   private val _originSslProtocols: MutableList<OriginSslPolicy> = mutableListOf()
 

@@ -10,10 +10,10 @@ import software.amazon.awscdk.services.sns.ITopic
 
 @CdkDslMarker
 public class ConfirmPermissionsBroadeningDsl(
-  arg0: String,
+  id: String,
 ) {
   private val cdkBuilder: ConfirmPermissionsBroadening.Builder =
-      ConfirmPermissionsBroadening.Builder.create(arg0)
+      ConfirmPermissionsBroadening.Builder.create(id)
 
   public fun notificationTopic(notificationTopic: ITopic) {
     cdkBuilder.notificationTopic(notificationTopic)

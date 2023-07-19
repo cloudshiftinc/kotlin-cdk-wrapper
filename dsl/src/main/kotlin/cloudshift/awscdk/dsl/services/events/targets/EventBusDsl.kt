@@ -10,9 +10,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class EventBusDsl(
-  arg0: IEventBus,
+  eventBus: IEventBus,
 ) {
-  private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(arg0)
+  private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(eventBus)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

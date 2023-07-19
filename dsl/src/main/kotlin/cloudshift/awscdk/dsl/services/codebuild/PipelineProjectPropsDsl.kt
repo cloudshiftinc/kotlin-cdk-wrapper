@@ -75,7 +75,7 @@ public class PipelineProjectPropsDsl {
     cdkBuilder.environment(environment)
   }
 
-  public fun environmentVariables(environmentVariables: Map<String, out BuildEnvironmentVariable>) {
+  public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
     cdkBuilder.environmentVariables(environmentVariables)
   }
 

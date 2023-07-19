@@ -19,11 +19,11 @@ import software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact
 
 @CdkDslMarker
 public class NestedCloudAssemblyArtifactDsl(
-  arg0: CloudAssembly,
-  arg1: String,
+  assembly: CloudAssembly,
+  name: String,
 ) {
   private val cdkBuilder: NestedCloudAssemblyArtifact.Builder =
-      NestedCloudAssemblyArtifact.Builder.create(arg0, arg1)
+      NestedCloudAssemblyArtifact.Builder.create(assembly, name)
 
   private val _dependencies: MutableList<String> = mutableListOf()
 
@@ -43,7 +43,7 @@ public class NestedCloudAssemblyArtifactDsl(
     cdkBuilder.environment(environment)
   }
 
-  public fun metadata(metadata: Map<String, out List<out MetadataEntry>>) {
+  public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
     cdkBuilder.metadata(metadata)
   }
 

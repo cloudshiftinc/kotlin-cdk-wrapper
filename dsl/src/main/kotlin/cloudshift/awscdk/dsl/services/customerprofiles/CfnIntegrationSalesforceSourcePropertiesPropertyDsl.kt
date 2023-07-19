@@ -13,10 +13,6 @@ public class CfnIntegrationSalesforceSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.SalesforceSourcePropertiesProperty.Builder =
       CfnIntegration.SalesforceSourcePropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: Boolean) {
     cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate)
   }
@@ -31,6 +27,10 @@ public class CfnIntegrationSalesforceSourcePropertiesPropertyDsl {
 
   public fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
     cdkBuilder.includeDeletedRecords(includeDeletedRecords)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnIntegration.SalesforceSourcePropertiesProperty = cdkBuilder.build()

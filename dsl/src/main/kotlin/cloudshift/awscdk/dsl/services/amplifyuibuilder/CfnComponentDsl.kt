@@ -35,7 +35,7 @@ public class CfnComponentDsl(
     cdkBuilder.bindingProperties(builder.map)
   }
 
-  public fun bindingProperties(bindingProperties: Map<String, *>) {
+  public fun bindingProperties(bindingProperties: Map<String, Any>) {
     cdkBuilder.bindingProperties(bindingProperties)
   }
 
@@ -61,7 +61,7 @@ public class CfnComponentDsl(
     cdkBuilder.collectionProperties(builder.map)
   }
 
-  public fun collectionProperties(collectionProperties: Map<String, *>) {
+  public fun collectionProperties(collectionProperties: Map<String, Any>) {
     cdkBuilder.collectionProperties(collectionProperties)
   }
 
@@ -83,7 +83,7 @@ public class CfnComponentDsl(
     cdkBuilder.events(builder.map)
   }
 
-  public fun events(events: Map<String, *>) {
+  public fun events(events: Map<String, Any>) {
     cdkBuilder.events(events)
   }
 
@@ -111,7 +111,7 @@ public class CfnComponentDsl(
     cdkBuilder.properties(builder.map)
   }
 
-  public fun properties(properties: Map<String, *>) {
+  public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 

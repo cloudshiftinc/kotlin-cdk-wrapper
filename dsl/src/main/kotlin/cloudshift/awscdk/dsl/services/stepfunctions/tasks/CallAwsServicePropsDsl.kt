@@ -6,6 +6,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -90,7 +91,7 @@ public class CallAwsServicePropsDsl {
     cdkBuilder.parameters(builder.map)
   }
 
-  public fun parameters(parameters: Map<String, *>) {
+  public fun parameters(parameters: Map<String, Any>) {
     cdkBuilder.parameters(parameters)
   }
 
@@ -104,7 +105,7 @@ public class CallAwsServicePropsDsl {
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.s3.deployment
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -24,7 +25,7 @@ public class SourceConfigDsl {
     cdkBuilder.markers(builder.map)
   }
 
-  public fun markers(markers: Map<String, *>) {
+  public fun markers(markers: Map<String, Any>) {
     cdkBuilder.markers(markers)
   }
 

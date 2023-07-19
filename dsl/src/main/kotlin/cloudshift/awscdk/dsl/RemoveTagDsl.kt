@@ -12,9 +12,9 @@ import software.amazon.awscdk.RemoveTag
 
 @CdkDslMarker
 public class RemoveTagDsl(
-  arg0: String,
+  key: String,
 ) {
-  private val cdkBuilder: RemoveTag.Builder = RemoveTag.Builder.create(arg0)
+  private val cdkBuilder: RemoveTag.Builder = RemoveTag.Builder.create(key)
 
   private val _excludeResourceTypes: MutableList<String> = mutableListOf()
 

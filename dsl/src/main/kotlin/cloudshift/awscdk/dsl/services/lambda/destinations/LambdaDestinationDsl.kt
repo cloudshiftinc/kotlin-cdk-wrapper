@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.lambda.destinations.LambdaDestination
 
 @CdkDslMarker
 public class LambdaDestinationDsl(
-  arg0: IFunction,
+  fn: IFunction,
 ) {
-  private val cdkBuilder: LambdaDestination.Builder = LambdaDestination.Builder.create(arg0)
+  private val cdkBuilder: LambdaDestination.Builder = LambdaDestination.Builder.create(fn)
 
   public fun responseOnly(responseOnly: Boolean) {
     cdkBuilder.responseOnly(responseOnly)

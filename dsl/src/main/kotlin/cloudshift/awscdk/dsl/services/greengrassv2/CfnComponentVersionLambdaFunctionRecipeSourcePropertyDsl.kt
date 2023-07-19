@@ -26,7 +26,7 @@ public class CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl {
     cdkBuilder.componentDependencies(builder.map)
   }
 
-  public fun componentDependencies(componentDependencies: Map<String, *>) {
+  public fun componentDependencies(componentDependencies: Map<String, Any>) {
     cdkBuilder.componentDependencies(componentDependencies)
   }
 

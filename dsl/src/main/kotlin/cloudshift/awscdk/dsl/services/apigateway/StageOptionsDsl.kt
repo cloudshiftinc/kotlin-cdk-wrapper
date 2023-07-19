@@ -66,7 +66,7 @@ public class StageOptionsDsl {
     cdkBuilder.loggingLevel(loggingLevel)
   }
 
-  public fun methodOptions(methodOptions: Map<String, out MethodDeploymentOptions>) {
+  public fun methodOptions(methodOptions: Map<String, MethodDeploymentOptions>) {
     cdkBuilder.methodOptions(methodOptions)
   }
 

@@ -20,9 +20,9 @@ import software.amazon.awscdk.services.ecs.AssetImage
 
 @CdkDslMarker
 public class AssetImageDsl(
-  arg0: String,
+  directory: String,
 ) {
-  private val cdkBuilder: AssetImage.Builder = AssetImage.Builder.create(arg0)
+  private val cdkBuilder: AssetImage.Builder = AssetImage.Builder.create(directory)
 
   private val _cacheFrom: MutableList<DockerCacheOption> = mutableListOf()
 

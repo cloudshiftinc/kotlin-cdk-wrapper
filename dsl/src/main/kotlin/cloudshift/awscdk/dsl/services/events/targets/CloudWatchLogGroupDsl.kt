@@ -13,9 +13,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class CloudWatchLogGroupDsl(
-  arg0: ILogGroup,
+  logGroup: ILogGroup,
 ) {
-  private val cdkBuilder: CloudWatchLogGroup.Builder = CloudWatchLogGroup.Builder.create(arg0)
+  private val cdkBuilder: CloudWatchLogGroup.Builder = CloudWatchLogGroup.Builder.create(logGroup)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

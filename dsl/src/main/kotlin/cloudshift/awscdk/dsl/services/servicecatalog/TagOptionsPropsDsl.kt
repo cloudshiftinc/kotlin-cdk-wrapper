@@ -12,7 +12,7 @@ import software.amazon.awscdk.services.servicecatalog.TagOptionsProps
 public class TagOptionsPropsDsl {
   private val cdkBuilder: TagOptionsProps.Builder = TagOptionsProps.builder()
 
-  public fun allowedValuesForTags(allowedValuesForTags: Map<String, out List<String>>) {
+  public fun allowedValuesForTags(allowedValuesForTags: Map<String, List<String>>) {
     cdkBuilder.allowedValuesForTags(allowedValuesForTags)
   }
 

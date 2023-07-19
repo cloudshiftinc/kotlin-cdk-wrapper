@@ -13,9 +13,9 @@ import software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin
 
 @CdkDslMarker
 public class RestApiOriginDsl(
-  arg0: RestApi,
+  restApi: RestApi,
 ) {
-  private val cdkBuilder: RestApiOrigin.Builder = RestApiOrigin.Builder.create(arg0)
+  private val cdkBuilder: RestApiOrigin.Builder = RestApiOrigin.Builder.create(restApi)
 
   public fun connectionAttempts(connectionAttempts: Number) {
     cdkBuilder.connectionAttempts(connectionAttempts)

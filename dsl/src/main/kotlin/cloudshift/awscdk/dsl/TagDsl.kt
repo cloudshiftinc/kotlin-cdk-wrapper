@@ -12,10 +12,10 @@ import software.amazon.awscdk.Tag
 
 @CdkDslMarker
 public class TagDsl(
-  arg0: String,
-  arg1: String,
+  key: String,
+  `value`: String,
 ) {
-  private val cdkBuilder: Tag.Builder = Tag.Builder.create(arg0, arg1)
+  private val cdkBuilder: Tag.Builder = Tag.Builder.create(key, value)
 
   private val _excludeResourceTypes: MutableList<String> = mutableListOf()
 

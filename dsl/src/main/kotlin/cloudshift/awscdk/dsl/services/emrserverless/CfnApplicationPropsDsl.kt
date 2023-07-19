@@ -110,7 +110,7 @@ public class CfnApplicationPropsDsl {
     cdkBuilder.workerTypeSpecifications(builder.map)
   }
 
-  public fun workerTypeSpecifications(workerTypeSpecifications: Map<String, *>) {
+  public fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
     cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
   }
 

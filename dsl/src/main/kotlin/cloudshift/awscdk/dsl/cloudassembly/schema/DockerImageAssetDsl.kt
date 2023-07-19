@@ -14,7 +14,7 @@ import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 public class DockerImageAssetDsl {
   private val cdkBuilder: DockerImageAsset.Builder = DockerImageAsset.builder()
 
-  public fun destinations(destinations: Map<String, out DockerImageDestination>) {
+  public fun destinations(destinations: Map<String, DockerImageDestination>) {
     cdkBuilder.destinations(destinations)
   }
 

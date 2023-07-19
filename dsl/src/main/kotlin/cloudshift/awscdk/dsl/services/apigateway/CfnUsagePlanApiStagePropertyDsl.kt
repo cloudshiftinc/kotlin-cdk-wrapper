@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.apigateway
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -29,7 +30,7 @@ public class CfnUsagePlanApiStagePropertyDsl {
     cdkBuilder.throttle(builder.map)
   }
 
-  public fun throttle(throttle: Map<String, *>) {
+  public fun throttle(throttle: Map<String, Any>) {
     cdkBuilder.throttle(throttle)
   }
 

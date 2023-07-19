@@ -111,7 +111,7 @@ public class CfnFunctionPropsDsl {
     cdkBuilder.events(builder.map)
   }
 
-  public fun events(events: Map<String, *>) {
+  public fun events(events: Map<String, Any>) {
     cdkBuilder.events(events)
   }
 

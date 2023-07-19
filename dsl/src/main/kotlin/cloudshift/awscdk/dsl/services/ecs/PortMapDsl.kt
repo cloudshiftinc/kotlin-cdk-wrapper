@@ -12,9 +12,9 @@ import software.amazon.awscdk.services.ecs.Protocol
 
 @CdkDslMarker
 public class PortMapDsl(
-  arg0: NetworkMode,
+  networkmode: NetworkMode,
 ) {
-  private val cdkBuilder: PortMap.Builder = PortMap.Builder.create(arg0)
+  private val cdkBuilder: PortMap.Builder = PortMap.Builder.create(networkmode)
 
   public fun appProtocol(appProtocol: AppProtocol) {
     cdkBuilder.appProtocol(appProtocol)

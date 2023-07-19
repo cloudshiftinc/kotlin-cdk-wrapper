@@ -9,11 +9,11 @@ import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 
 @CdkDslMarker
 public class SecretRotationApplicationDsl(
-  arg0: String,
-  arg1: String,
+  applicationId: String,
+  semanticVersion: String,
 ) {
   private val cdkBuilder: SecretRotationApplication.Builder =
-      SecretRotationApplication.Builder.create(arg0, arg1)
+      SecretRotationApplication.Builder.create(applicationId, semanticVersion)
 
   public fun isMultiUser(isMultiUser: Boolean) {
     cdkBuilder.isMultiUser(isMultiUser)

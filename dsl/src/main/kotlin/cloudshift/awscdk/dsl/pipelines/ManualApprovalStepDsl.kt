@@ -8,9 +8,9 @@ import software.amazon.awscdk.pipelines.ManualApprovalStep
 
 @CdkDslMarker
 public class ManualApprovalStepDsl(
-  arg0: String,
+  id: String,
 ) {
-  private val cdkBuilder: ManualApprovalStep.Builder = ManualApprovalStep.Builder.create(arg0)
+  private val cdkBuilder: ManualApprovalStep.Builder = ManualApprovalStep.Builder.create(id)
 
   public fun comment(comment: String) {
     cdkBuilder.comment(comment)

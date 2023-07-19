@@ -11,9 +11,9 @@ import software.amazon.awscdk.services.apigateway.IntegrationOptions
 
 @CdkDslMarker
 public class HttpIntegrationDsl(
-  arg0: String,
+  url: String,
 ) {
-  private val cdkBuilder: HttpIntegration.Builder = HttpIntegration.Builder.create(arg0)
+  private val cdkBuilder: HttpIntegration.Builder = HttpIntegration.Builder.create(url)
 
   public fun httpMethod(httpMethod: String) {
     cdkBuilder.httpMethod(httpMethod)

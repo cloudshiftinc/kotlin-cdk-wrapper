@@ -13,10 +13,6 @@ public class CfnFlowVeevaSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.VeevaSourcePropertiesProperty.Builder =
       CfnFlow.VeevaSourcePropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun documentType(documentType: String) {
     cdkBuilder.documentType(documentType)
   }
@@ -43,6 +39,10 @@ public class CfnFlowVeevaSourcePropertiesPropertyDsl {
 
   public fun includeSourceFiles(includeSourceFiles: IResolvable) {
     cdkBuilder.includeSourceFiles(includeSourceFiles)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnFlow.VeevaSourcePropertiesProperty = cdkBuilder.build()

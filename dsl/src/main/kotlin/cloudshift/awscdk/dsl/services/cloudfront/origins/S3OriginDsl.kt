@@ -14,9 +14,9 @@ import software.amazon.awscdk.services.s3.IBucket
 
 @CdkDslMarker
 public class S3OriginDsl(
-  arg0: IBucket,
+  bucket: IBucket,
 ) {
-  private val cdkBuilder: S3Origin.Builder = S3Origin.Builder.create(arg0)
+  private val cdkBuilder: S3Origin.Builder = S3Origin.Builder.create(bucket)
 
   public fun connectionAttempts(connectionAttempts: Number) {
     cdkBuilder.connectionAttempts(connectionAttempts)

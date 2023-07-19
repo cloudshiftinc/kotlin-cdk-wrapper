@@ -10,9 +10,9 @@ import software.amazon.awscdk.services.kinesis.IStream
 
 @CdkDslMarker
 public class KinesisStreamDsl(
-  arg0: IStream,
+  stream: IStream,
 ) {
-  private val cdkBuilder: KinesisStream.Builder = KinesisStream.Builder.create(arg0)
+  private val cdkBuilder: KinesisStream.Builder = KinesisStream.Builder.create(stream)
 
   public fun message(message: RuleTargetInput) {
     cdkBuilder.message(message)

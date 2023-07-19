@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.mediatailor
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -57,7 +58,7 @@ public class CfnPlaybackConfigurationPropsDsl {
     cdkBuilder.configurationAliases(builder.map)
   }
 
-  public fun configurationAliases(configurationAliases: Map<String, *>) {
+  public fun configurationAliases(configurationAliases: Map<String, Any>) {
     cdkBuilder.configurationAliases(configurationAliases)
   }
 

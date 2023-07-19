@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.networkfirewall
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class CfnRuleGroupReferenceSetsPropertyDsl {
     cdkBuilder.ipSetReferences(builder.map)
   }
 
-  public fun ipSetReferences(ipSetReferences: Map<String, *>) {
+  public fun ipSetReferences(ipSetReferences: Map<String, Any>) {
     cdkBuilder.ipSetReferences(ipSetReferences)
   }
 

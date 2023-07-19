@@ -101,7 +101,7 @@ public class CfnDataSetDsl(
     cdkBuilder.fieldFolders(builder.map)
   }
 
-  public fun fieldFolders(fieldFolders: Map<String, *>) {
+  public fun fieldFolders(fieldFolders: Map<String, Any>) {
     cdkBuilder.fieldFolders(fieldFolders)
   }
 
@@ -127,7 +127,7 @@ public class CfnDataSetDsl(
     cdkBuilder.logicalTableMap(builder.map)
   }
 
-  public fun logicalTableMap(logicalTableMap: Map<String, *>) {
+  public fun logicalTableMap(logicalTableMap: Map<String, Any>) {
     cdkBuilder.logicalTableMap(logicalTableMap)
   }
 
@@ -157,7 +157,7 @@ public class CfnDataSetDsl(
     cdkBuilder.physicalTableMap(builder.map)
   }
 
-  public fun physicalTableMap(physicalTableMap: Map<String, *>) {
+  public fun physicalTableMap(physicalTableMap: Map<String, Any>) {
     cdkBuilder.physicalTableMap(physicalTableMap)
   }
 

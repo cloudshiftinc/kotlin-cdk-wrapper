@@ -16,10 +16,6 @@ public class CfnFlowSalesforceDestinationPropertiesPropertyDsl {
 
   private val _idFieldNames: MutableList<String> = mutableListOf()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun dataTransferApi(dataTransferApi: String) {
     cdkBuilder.dataTransferApi(dataTransferApi)
   }
@@ -38,6 +34,10 @@ public class CfnFlowSalesforceDestinationPropertiesPropertyDsl {
 
   public fun idFieldNames(idFieldNames: Collection<String>) {
     _idFieldNames.addAll(idFieldNames)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun writeOperationType(writeOperationType: String) {

@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.lambda.eventsources
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -18,7 +19,7 @@ import software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourcePro
 public class KinesisEventSourcePropsDsl {
   private val cdkBuilder: KinesisEventSourceProps.Builder = KinesisEventSourceProps.builder()
 
-  private val _filters: MutableList<Map<String, *>> = mutableListOf()
+  private val _filters: MutableList<Map<String, Any>> = mutableListOf()
 
   public fun batchSize(batchSize: Number) {
     cdkBuilder.batchSize(batchSize)
@@ -32,11 +33,11 @@ public class KinesisEventSourcePropsDsl {
     cdkBuilder.enabled(enabled)
   }
 
-  public fun filters(vararg filters: Map<String, *>) {
+  public fun filters(vararg filters: Map<String, Any>) {
     _filters.addAll(listOf(*filters))
   }
 
-  public fun filters(filters: Collection<Map<String, *>>) {
+  public fun filters(filters: Collection<Map<String, Any>>) {
     _filters.addAll(filters)
   }
 

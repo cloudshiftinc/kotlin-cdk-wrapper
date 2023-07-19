@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -61,7 +62,7 @@ public class TaskStateBasePropsDsl {
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

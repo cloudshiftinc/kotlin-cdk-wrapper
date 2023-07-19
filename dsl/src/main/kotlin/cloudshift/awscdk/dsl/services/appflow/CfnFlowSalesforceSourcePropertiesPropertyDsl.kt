@@ -13,10 +13,6 @@ public class CfnFlowSalesforceSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SalesforceSourcePropertiesProperty.Builder =
       CfnFlow.SalesforceSourcePropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun dataTransferApi(dataTransferApi: String) {
     cdkBuilder.dataTransferApi(dataTransferApi)
   }
@@ -35,6 +31,10 @@ public class CfnFlowSalesforceSourcePropertiesPropertyDsl {
 
   public fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
     cdkBuilder.includeDeletedRecords(includeDeletedRecords)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnFlow.SalesforceSourcePropertiesProperty = cdkBuilder.build()

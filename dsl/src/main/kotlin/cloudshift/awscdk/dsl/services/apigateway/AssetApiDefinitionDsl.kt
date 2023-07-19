@@ -18,9 +18,9 @@ import software.amazon.awscdk.services.iam.IGrantable
 
 @CdkDslMarker
 public class AssetApiDefinitionDsl(
-  arg0: String,
+  path: String,
 ) {
-  private val cdkBuilder: AssetApiDefinition.Builder = AssetApiDefinition.Builder.create(arg0)
+  private val cdkBuilder: AssetApiDefinition.Builder = AssetApiDefinition.Builder.create(path)
 
   private val _exclude: MutableList<String> = mutableListOf()
 

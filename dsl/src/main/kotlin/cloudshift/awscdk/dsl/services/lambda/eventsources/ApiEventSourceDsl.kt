@@ -21,10 +21,10 @@ import software.amazon.awscdk.services.lambda.eventsources.ApiEventSource
 
 @CdkDslMarker
 public class ApiEventSourceDsl(
-  arg0: String,
-  arg1: String,
+  method: String,
+  path: String,
 ) {
-  private val cdkBuilder: ApiEventSource.Builder = ApiEventSource.Builder.create(arg0, arg1)
+  private val cdkBuilder: ApiEventSource.Builder = ApiEventSource.Builder.create(method, path)
 
   private val _authorizationScopes: MutableList<String> = mutableListOf()
 
@@ -62,11 +62,11 @@ public class ApiEventSourceDsl(
     cdkBuilder.operationName(operationName)
   }
 
-  public fun requestModels(requestModels: Map<String, out IModel>) {
+  public fun requestModels(requestModels: Map<String, IModel>) {
     cdkBuilder.requestModels(requestModels)
   }
 
-  public fun requestParameters(requestParameters: Map<String, out Boolean>) {
+  public fun requestParameters(requestParameters: Map<String, Boolean>) {
     cdkBuilder.requestParameters(requestParameters)
   }
 

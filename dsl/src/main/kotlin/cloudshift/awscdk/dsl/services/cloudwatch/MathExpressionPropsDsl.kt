@@ -37,7 +37,7 @@ public class MathExpressionPropsDsl {
     cdkBuilder.searchRegion(searchRegion)
   }
 
-  public fun usingMetrics(usingMetrics: Map<String, out IMetric>) {
+  public fun usingMetrics(usingMetrics: Map<String, IMetric>) {
     cdkBuilder.usingMetrics(usingMetrics)
   }
 

@@ -14,7 +14,7 @@ import software.amazon.awscdk.cloudassembly.schema.FileSource
 public class FileAssetDsl {
   private val cdkBuilder: FileAsset.Builder = FileAsset.builder()
 
-  public fun destinations(destinations: Map<String, out FileDestination>) {
+  public fun destinations(destinations: Map<String, FileDestination>) {
     cdkBuilder.destinations(destinations)
   }
 

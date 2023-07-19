@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
@@ -20,7 +21,7 @@ public class CfnMappingDsl(
     cdkBuilder.lazy(lazy)
   }
 
-  public fun mapping(mapping: Map<String, out Map<String, *>>) {
+  public fun mapping(mapping: Map<String, Map<String, Any>>) {
     cdkBuilder.mapping(mapping)
   }
 

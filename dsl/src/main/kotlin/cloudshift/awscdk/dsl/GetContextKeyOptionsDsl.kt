@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -24,7 +25,7 @@ public class GetContextKeyOptionsDsl {
     cdkBuilder.props(builder.map)
   }
 
-  public fun props(props: Map<String, *>) {
+  public fun props(props: Map<String, Any>) {
     cdkBuilder.props(props)
   }
 

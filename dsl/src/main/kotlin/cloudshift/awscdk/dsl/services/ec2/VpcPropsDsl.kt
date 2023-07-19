@@ -54,11 +54,11 @@ public class VpcPropsDsl {
     cdkBuilder.enableDnsSupport(enableDnsSupport)
   }
 
-  public fun flowLogs(flowLogs: Map<String, out FlowLogOptions>) {
+  public fun flowLogs(flowLogs: Map<String, FlowLogOptions>) {
     cdkBuilder.flowLogs(flowLogs)
   }
 
-  public fun gatewayEndpoints(gatewayEndpoints: Map<String, out GatewayVpcEndpointOptions>) {
+  public fun gatewayEndpoints(gatewayEndpoints: Map<String, GatewayVpcEndpointOptions>) {
     cdkBuilder.gatewayEndpoints(gatewayEndpoints)
   }
 
@@ -108,7 +108,7 @@ public class VpcPropsDsl {
     cdkBuilder.vpcName(vpcName)
   }
 
-  public fun vpnConnections(vpnConnections: Map<String, out VpnConnectionOptions>) {
+  public fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>) {
     cdkBuilder.vpnConnections(vpnConnections)
   }
 

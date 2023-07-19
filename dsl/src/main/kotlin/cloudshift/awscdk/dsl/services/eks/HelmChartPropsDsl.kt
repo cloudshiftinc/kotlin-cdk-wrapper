@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.eks
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -59,7 +60,7 @@ public class HelmChartPropsDsl {
     cdkBuilder.values(builder.map)
   }
 
-  public fun values(values: Map<String, *>) {
+  public fun values(values: Map<String, Any>) {
     cdkBuilder.values(values)
   }
 

@@ -36,7 +36,7 @@ public class CodeBuildActionPropsDsl {
     cdkBuilder.combineBatchBuildArtifacts(combineBatchBuildArtifacts)
   }
 
-  public fun environmentVariables(environmentVariables: Map<String, out BuildEnvironmentVariable>) {
+  public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
     cdkBuilder.environmentVariables(environmentVariables)
   }
 

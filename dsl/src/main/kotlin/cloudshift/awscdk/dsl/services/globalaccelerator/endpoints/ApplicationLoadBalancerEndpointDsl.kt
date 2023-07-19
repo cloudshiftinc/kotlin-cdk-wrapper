@@ -10,10 +10,10 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLo
 
 @CdkDslMarker
 public class ApplicationLoadBalancerEndpointDsl(
-  arg0: IApplicationLoadBalancer,
+  loadBalancer: IApplicationLoadBalancer,
 ) {
   private val cdkBuilder: ApplicationLoadBalancerEndpoint.Builder =
-      ApplicationLoadBalancerEndpoint.Builder.create(arg0)
+      ApplicationLoadBalancerEndpoint.Builder.create(loadBalancer)
 
   public fun preserveClientIp(preserveClientIp: Boolean) {
     cdkBuilder.preserveClientIp(preserveClientIp)

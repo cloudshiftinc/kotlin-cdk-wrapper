@@ -19,7 +19,7 @@ public class AssemblyManifestDsl {
 
   private val _missing: MutableList<MissingContext> = mutableListOf()
 
-  public fun artifacts(artifacts: Map<String, out ArtifactManifest>) {
+  public fun artifacts(artifacts: Map<String, ArtifactManifest>) {
     cdkBuilder.artifacts(artifacts)
   }
 

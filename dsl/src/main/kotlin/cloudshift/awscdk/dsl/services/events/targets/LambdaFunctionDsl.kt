@@ -12,9 +12,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class LambdaFunctionDsl(
-  arg0: IFunction,
+  handler: IFunction,
 ) {
-  private val cdkBuilder: LambdaFunction.Builder = LambdaFunction.Builder.create(arg0)
+  private val cdkBuilder: LambdaFunction.Builder = LambdaFunction.Builder.create(handler)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

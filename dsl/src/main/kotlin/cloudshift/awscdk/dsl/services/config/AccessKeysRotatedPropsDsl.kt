@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.config
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -30,7 +31,7 @@ public class AccessKeysRotatedPropsDsl {
     cdkBuilder.inputParameters(builder.map)
   }
 
-  public fun inputParameters(inputParameters: Map<String, *>) {
+  public fun inputParameters(inputParameters: Map<String, Any>) {
     cdkBuilder.inputParameters(inputParameters)
   }
 

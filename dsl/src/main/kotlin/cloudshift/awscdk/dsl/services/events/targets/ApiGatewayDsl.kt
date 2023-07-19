@@ -17,9 +17,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class ApiGatewayDsl(
-  arg0: RestApi,
+  restApi: RestApi,
 ) {
-  private val cdkBuilder: ApiGateway.Builder = ApiGateway.Builder.create(arg0)
+  private val cdkBuilder: ApiGateway.Builder = ApiGateway.Builder.create(restApi)
 
   private val _pathParameterValues: MutableList<String> = mutableListOf()
 

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.codepipeline.actions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -61,7 +62,7 @@ public class LambdaInvokeActionPropsDsl {
     cdkBuilder.userParameters(builder.map)
   }
 
-  public fun userParameters(userParameters: Map<String, *>) {
+  public fun userParameters(userParameters: Map<String, Any>) {
     cdkBuilder.userParameters(userParameters)
   }
 

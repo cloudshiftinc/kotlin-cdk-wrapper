@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -44,7 +45,7 @@ public class MapDsl(
     cdkBuilder.parameters(builder.map)
   }
 
-  public fun parameters(parameters: CollectionsMap<String, *>) {
+  public fun parameters(parameters: CollectionsMap<String, Any>) {
     cdkBuilder.parameters(parameters)
   }
 
@@ -58,7 +59,7 @@ public class MapDsl(
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: CollectionsMap<String, *>) {
+  public fun resultSelector(resultSelector: CollectionsMap<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

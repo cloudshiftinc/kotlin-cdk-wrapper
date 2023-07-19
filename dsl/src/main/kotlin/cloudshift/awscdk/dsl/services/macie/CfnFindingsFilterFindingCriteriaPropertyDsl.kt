@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.macie
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class CfnFindingsFilterFindingCriteriaPropertyDsl {
     cdkBuilder.criterion(builder.map)
   }
 
-  public fun criterion(criterion: Map<String, *>) {
+  public fun criterion(criterion: Map<String, Any>) {
     cdkBuilder.criterion(criterion)
   }
 

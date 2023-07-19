@@ -18,7 +18,7 @@ public class LookupMachineImageDsl {
 
   private val _owners: MutableList<String> = mutableListOf()
 
-  public fun filters(filters: Map<String, out List<String>>) {
+  public fun filters(filters: Map<String, List<String>>) {
     cdkBuilder.filters(filters)
   }
 

@@ -35,7 +35,7 @@ public class BuildEnvironmentDsl {
     cdkBuilder.computeType(computeType)
   }
 
-  public fun environmentVariables(environmentVariables: Map<String, out BuildEnvironmentVariable>) {
+  public fun environmentVariables(environmentVariables: Map<String, BuildEnvironmentVariable>) {
     cdkBuilder.environmentVariables(environmentVariables)
   }
 

@@ -10,9 +10,9 @@ import software.amazon.awscdk.services.ec2.UserData
 
 @CdkDslMarker
 public class GenericLinuxImageDsl(
-  arg0: Map<String, String>,
+  amiMap: Map<String, String>,
 ) {
-  private val cdkBuilder: GenericLinuxImage.Builder = GenericLinuxImage.Builder.create(arg0)
+  private val cdkBuilder: GenericLinuxImage.Builder = GenericLinuxImage.Builder.create(amiMap)
 
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)

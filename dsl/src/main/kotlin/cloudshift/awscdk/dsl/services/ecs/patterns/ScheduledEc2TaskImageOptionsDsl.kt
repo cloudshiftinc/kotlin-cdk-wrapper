@@ -52,7 +52,7 @@ public class ScheduledEc2TaskImageOptionsDsl {
     cdkBuilder.memoryReservationMiB(memoryReservationMiB)
   }
 
-  public fun secrets(secrets: Map<String, out Secret>) {
+  public fun secrets(secrets: Map<String, Secret>) {
     cdkBuilder.secrets(secrets)
   }
 

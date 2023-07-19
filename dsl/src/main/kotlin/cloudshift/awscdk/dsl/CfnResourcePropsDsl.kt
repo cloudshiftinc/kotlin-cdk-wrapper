@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -19,7 +20,7 @@ public class CfnResourcePropsDsl {
     cdkBuilder.properties(builder.map)
   }
 
-  public fun properties(properties: Map<String, *>) {
+  public fun properties(properties: Map<String, Any>) {
     cdkBuilder.properties(properties)
   }
 

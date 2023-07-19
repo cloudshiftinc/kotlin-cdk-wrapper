@@ -56,7 +56,7 @@ public class CfnBotPromptSpecificationPropertyDsl {
     cdkBuilder.promptAttemptsSpecification(builder.map)
   }
 
-  public fun promptAttemptsSpecification(promptAttemptsSpecification: Map<String, *>) {
+  public fun promptAttemptsSpecification(promptAttemptsSpecification: Map<String, Any>) {
     cdkBuilder.promptAttemptsSpecification(promptAttemptsSpecification)
   }
 

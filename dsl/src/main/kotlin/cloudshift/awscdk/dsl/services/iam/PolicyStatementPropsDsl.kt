@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.iam
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -43,7 +44,7 @@ public class PolicyStatementPropsDsl {
     cdkBuilder.conditions(builder.map)
   }
 
-  public fun conditions(conditions: Map<String, *>) {
+  public fun conditions(conditions: Map<String, Any>) {
     cdkBuilder.conditions(conditions)
   }
 

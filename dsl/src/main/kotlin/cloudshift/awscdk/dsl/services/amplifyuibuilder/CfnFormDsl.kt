@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.amplifyuibuilder
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -48,7 +49,7 @@ public class CfnFormDsl(
     cdkBuilder.fields(builder.map)
   }
 
-  public fun fields(fields: Map<String, *>) {
+  public fun fields(fields: Map<String, Any>) {
     cdkBuilder.fields(fields)
   }
 
@@ -78,7 +79,7 @@ public class CfnFormDsl(
     cdkBuilder.sectionalElements(builder.map)
   }
 
-  public fun sectionalElements(sectionalElements: Map<String, *>) {
+  public fun sectionalElements(sectionalElements: Map<String, Any>) {
     cdkBuilder.sectionalElements(sectionalElements)
   }
 

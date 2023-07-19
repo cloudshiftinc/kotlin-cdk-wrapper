@@ -13,11 +13,11 @@ import software.amazon.awscdk.services.apigateway.MethodResponse
 public class MethodResponseDsl {
   private val cdkBuilder: MethodResponse.Builder = MethodResponse.builder()
 
-  public fun responseModels(responseModels: Map<String, out IModel>) {
+  public fun responseModels(responseModels: Map<String, IModel>) {
     cdkBuilder.responseModels(responseModels)
   }
 
-  public fun responseParameters(responseParameters: Map<String, out Boolean>) {
+  public fun responseParameters(responseParameters: Map<String, Boolean>) {
     cdkBuilder.responseParameters(responseParameters)
   }
 

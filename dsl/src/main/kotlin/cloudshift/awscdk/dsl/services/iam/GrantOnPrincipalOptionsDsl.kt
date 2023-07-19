@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.iam
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.Map
@@ -27,7 +28,7 @@ public class GrantOnPrincipalOptionsDsl {
     _actions.addAll(actions)
   }
 
-  public fun conditions(conditions: Map<String, out Map<String, *>>) {
+  public fun conditions(conditions: Map<String, Map<String, Any>>) {
     cdkBuilder.conditions(conditions)
   }
 

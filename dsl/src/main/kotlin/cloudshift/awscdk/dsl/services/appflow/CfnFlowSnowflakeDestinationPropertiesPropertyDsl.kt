@@ -12,10 +12,6 @@ public class CfnFlowSnowflakeDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SnowflakeDestinationPropertiesProperty.Builder =
       CfnFlow.SnowflakeDestinationPropertiesProperty.builder()
 
-  public fun `object`(`object`: String) {
-    cdkBuilder.`object`(`object`)
-  }
-
   public fun bucketPrefix(bucketPrefix: String) {
     cdkBuilder.bucketPrefix(bucketPrefix)
   }
@@ -30,6 +26,10 @@ public class CfnFlowSnowflakeDestinationPropertiesPropertyDsl {
 
   public fun intermediateBucketName(intermediateBucketName: String) {
     cdkBuilder.intermediateBucketName(intermediateBucketName)
+  }
+
+  public fun `object`(`object`: String) {
+    cdkBuilder.`object`(`object`)
   }
 
   public fun build(): CfnFlow.SnowflakeDestinationPropertiesProperty = cdkBuilder.build()

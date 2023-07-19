@@ -18,9 +18,9 @@ import software.amazon.awscdk.services.iam.IGrantable
 
 @CdkDslMarker
 public class AssetEnvironmentFileDsl(
-  arg0: String,
+  path: String,
 ) {
-  private val cdkBuilder: AssetEnvironmentFile.Builder = AssetEnvironmentFile.Builder.create(arg0)
+  private val cdkBuilder: AssetEnvironmentFile.Builder = AssetEnvironmentFile.Builder.create(path)
 
   private val _exclude: MutableList<String> = mutableListOf()
 

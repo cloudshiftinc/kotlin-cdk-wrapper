@@ -18,7 +18,7 @@ public class OAuthAuthorizationPropsDsl {
     cdkBuilder.authorizationEndpoint(authorizationEndpoint)
   }
 
-  public fun bodyParameters(bodyParameters: Map<String, out HttpParameter>) {
+  public fun bodyParameters(bodyParameters: Map<String, HttpParameter>) {
     cdkBuilder.bodyParameters(bodyParameters)
   }
 
@@ -30,7 +30,7 @@ public class OAuthAuthorizationPropsDsl {
     cdkBuilder.clientSecret(clientSecret)
   }
 
-  public fun headerParameters(headerParameters: Map<String, out HttpParameter>) {
+  public fun headerParameters(headerParameters: Map<String, HttpParameter>) {
     cdkBuilder.headerParameters(headerParameters)
   }
 
@@ -38,7 +38,7 @@ public class OAuthAuthorizationPropsDsl {
     cdkBuilder.httpMethod(httpMethod)
   }
 
-  public fun queryStringParameters(queryStringParameters: Map<String, out HttpParameter>) {
+  public fun queryStringParameters(queryStringParameters: Map<String, HttpParameter>) {
     cdkBuilder.queryStringParameters(queryStringParameters)
   }
 

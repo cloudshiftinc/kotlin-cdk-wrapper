@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.codepipeline.actions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -72,7 +73,7 @@ public class CloudFormationCreateUpdateStackActionDsl {
     cdkBuilder.parameterOverrides(builder.map)
   }
 
-  public fun parameterOverrides(parameterOverrides: Map<String, *>) {
+  public fun parameterOverrides(parameterOverrides: Map<String, Any>) {
     cdkBuilder.parameterOverrides(parameterOverrides)
   }
 

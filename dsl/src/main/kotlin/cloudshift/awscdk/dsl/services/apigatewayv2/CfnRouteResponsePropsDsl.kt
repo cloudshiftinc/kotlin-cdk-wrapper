@@ -39,7 +39,7 @@ public class CfnRouteResponsePropsDsl {
     cdkBuilder.responseParameters(builder.map)
   }
 
-  public fun responseParameters(responseParameters: Map<String, *>) {
+  public fun responseParameters(responseParameters: Map<String, Any>) {
     cdkBuilder.responseParameters(responseParameters)
   }
 

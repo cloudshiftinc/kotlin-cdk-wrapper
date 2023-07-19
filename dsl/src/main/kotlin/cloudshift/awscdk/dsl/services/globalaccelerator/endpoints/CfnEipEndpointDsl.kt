@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoin
 
 @CdkDslMarker
 public class CfnEipEndpointDsl(
-  arg0: CfnEIP,
+  eip: CfnEIP,
 ) {
-  private val cdkBuilder: CfnEipEndpoint.Builder = CfnEipEndpoint.Builder.create(arg0)
+  private val cdkBuilder: CfnEipEndpoint.Builder = CfnEipEndpoint.Builder.create(eip)
 
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)

@@ -17,9 +17,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class ApiDestinationDsl(
-  arg0: IApiDestination,
+  apiDestination: IApiDestination,
 ) {
-  private val cdkBuilder: ApiDestination.Builder = ApiDestination.Builder.create(arg0)
+  private val cdkBuilder: ApiDestination.Builder = ApiDestination.Builder.create(apiDestination)
 
   private val _pathParameterValues: MutableList<String> = mutableListOf()
 

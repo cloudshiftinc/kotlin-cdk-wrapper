@@ -36,7 +36,7 @@ public class CfnComponentComponentPropertyPropertyDsl {
     cdkBuilder.bindings(builder.map)
   }
 
-  public fun bindings(bindings: Map<String, *>) {
+  public fun bindings(bindings: Map<String, Any>) {
     cdkBuilder.bindings(bindings)
   }
 

@@ -13,11 +13,11 @@ import software.amazon.awscdk.services.ec2.InitConfig
 public class ConfigSetPropsDsl {
   private val cdkBuilder: ConfigSetProps.Builder = ConfigSetProps.builder()
 
-  public fun configSets(configSets: Map<String, out List<String>>) {
+  public fun configSets(configSets: Map<String, List<String>>) {
     cdkBuilder.configSets(configSets)
   }
 
-  public fun configs(configs: Map<String, out InitConfig>) {
+  public fun configs(configs: Map<String, InitConfig>) {
     cdkBuilder.configs(configs)
   }
 

@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -56,7 +57,7 @@ public class SnsPublishPropsDsl {
     cdkBuilder.message(message)
   }
 
-  public fun messageAttributes(messageAttributes: Map<String, out MessageAttribute>) {
+  public fun messageAttributes(messageAttributes: Map<String, MessageAttribute>) {
     cdkBuilder.messageAttributes(messageAttributes)
   }
 
@@ -78,7 +79,7 @@ public class SnsPublishPropsDsl {
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

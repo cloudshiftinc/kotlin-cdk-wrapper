@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.omics
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -45,7 +46,7 @@ public class CfnWorkflowDsl(
     cdkBuilder.parameterTemplate(builder.map)
   }
 
-  public fun parameterTemplate(parameterTemplate: Map<String, *>) {
+  public fun parameterTemplate(parameterTemplate: Map<String, Any>) {
     cdkBuilder.parameterTemplate(parameterTemplate)
   }
 

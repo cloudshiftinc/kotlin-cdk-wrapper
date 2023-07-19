@@ -13,9 +13,9 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class CodeBuildProjectDsl(
-  arg0: IProject,
+  project: IProject,
 ) {
-  private val cdkBuilder: CodeBuildProject.Builder = CodeBuildProject.Builder.create(arg0)
+  private val cdkBuilder: CodeBuildProject.Builder = CodeBuildProject.Builder.create(project)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

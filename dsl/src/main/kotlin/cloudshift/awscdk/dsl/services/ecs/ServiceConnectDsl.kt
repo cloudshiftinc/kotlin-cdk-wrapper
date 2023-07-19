@@ -12,9 +12,9 @@ import software.amazon.awscdk.services.ecs.ServiceConnect
 
 @CdkDslMarker
 public class ServiceConnectDsl(
-  arg0: NetworkMode,
+  networkmode: NetworkMode,
 ) {
-  private val cdkBuilder: ServiceConnect.Builder = ServiceConnect.Builder.create(arg0)
+  private val cdkBuilder: ServiceConnect.Builder = ServiceConnect.Builder.create(networkmode)
 
   public fun appProtocol(appProtocol: AppProtocol) {
     cdkBuilder.appProtocol(appProtocol)

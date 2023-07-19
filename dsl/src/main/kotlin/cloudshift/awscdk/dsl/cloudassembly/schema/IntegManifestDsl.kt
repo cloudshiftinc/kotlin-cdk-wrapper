@@ -21,7 +21,7 @@ public class IntegManifestDsl {
     cdkBuilder.synthContext(synthContext)
   }
 
-  public fun testCases(testCases: Map<String, out TestCase>) {
+  public fun testCases(testCases: Map<String, TestCase>) {
     cdkBuilder.testCases(testCases)
   }
 

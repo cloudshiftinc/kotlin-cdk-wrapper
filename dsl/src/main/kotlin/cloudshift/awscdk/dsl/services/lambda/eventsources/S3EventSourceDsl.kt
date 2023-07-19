@@ -14,9 +14,9 @@ import software.amazon.awscdk.services.s3.NotificationKeyFilter
 
 @CdkDslMarker
 public class S3EventSourceDsl(
-  arg0: Bucket,
+  bucket: Bucket,
 ) {
-  private val cdkBuilder: S3EventSource.Builder = S3EventSource.Builder.create(arg0)
+  private val cdkBuilder: S3EventSource.Builder = S3EventSource.Builder.create(bucket)
 
   private val _events: MutableList<EventType> = mutableListOf()
 

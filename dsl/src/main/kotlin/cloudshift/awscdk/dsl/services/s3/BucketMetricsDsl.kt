@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.s3
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -27,7 +28,7 @@ public class BucketMetricsDsl {
     cdkBuilder.tagFilters(builder.map)
   }
 
-  public fun tagFilters(tagFilters: Map<String, *>) {
+  public fun tagFilters(tagFilters: Map<String, Any>) {
     cdkBuilder.tagFilters(tagFilters)
   }
 

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.events
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -45,7 +46,7 @@ public class EventPatternDsl {
     cdkBuilder.detail(builder.map)
   }
 
-  public fun detail(detail: Map<String, *>) {
+  public fun detail(detail: Map<String, Any>) {
     cdkBuilder.detail(detail)
   }
 

@@ -76,7 +76,7 @@ public class ApplicationLoadBalancedTaskImageOptionsDsl {
     cdkBuilder.logDriver(logDriver)
   }
 
-  public fun secrets(secrets: Map<String, out Secret>) {
+  public fun secrets(secrets: Map<String, Secret>) {
     cdkBuilder.secrets(secrets)
   }
 

@@ -32,8 +32,7 @@ public class PipelineDsl(
     cdkBuilder.crossAccountKeys(crossAccountKeys)
   }
 
-  public
-      fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, out IBucket>) {
+  public fun crossRegionReplicationBuckets(crossRegionReplicationBuckets: Map<String, IBucket>) {
     cdkBuilder.crossRegionReplicationBuckets(crossRegionReplicationBuckets)
   }
 

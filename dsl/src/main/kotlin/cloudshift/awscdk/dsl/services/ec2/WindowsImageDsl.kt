@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.ec2.WindowsVersion
 
 @CdkDslMarker
 public class WindowsImageDsl(
-  arg0: WindowsVersion,
+  version: WindowsVersion,
 ) {
-  private val cdkBuilder: WindowsImage.Builder = WindowsImage.Builder.create(arg0)
+  private val cdkBuilder: WindowsImage.Builder = WindowsImage.Builder.create(version)
 
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)

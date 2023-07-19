@@ -10,9 +10,9 @@ import software.amazon.awscdk.ResolutionTypeHint
 
 @CdkDslMarker
 public class IntrinsicDsl(
-  arg0: Any,
+  `value`: Any,
 ) {
-  private val cdkBuilder: Intrinsic.Builder = Intrinsic.Builder.create(arg0)
+  private val cdkBuilder: Intrinsic.Builder = Intrinsic.Builder.create(value)
 
   public fun stackTrace(stackTrace: Boolean) {
     cdkBuilder.stackTrace(stackTrace)

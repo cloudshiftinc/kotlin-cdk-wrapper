@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 
 @CdkDslMarker
 public class RepositoryImageDsl(
-  arg0: String,
+  imageName: String,
 ) {
-  private val cdkBuilder: RepositoryImage.Builder = RepositoryImage.Builder.create(arg0)
+  private val cdkBuilder: RepositoryImage.Builder = RepositoryImage.Builder.create(imageName)
 
   public fun credentials(credentials: ISecret) {
     cdkBuilder.credentials(credentials)

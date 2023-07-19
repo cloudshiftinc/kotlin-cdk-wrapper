@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.eks
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class KubernetesPatchPropsDsl {
     cdkBuilder.applyPatch(builder.map)
   }
 
-  public fun applyPatch(applyPatch: Map<String, *>) {
+  public fun applyPatch(applyPatch: Map<String, Any>) {
     cdkBuilder.applyPatch(applyPatch)
   }
 
@@ -47,7 +48,7 @@ public class KubernetesPatchPropsDsl {
     cdkBuilder.restorePatch(builder.map)
   }
 
-  public fun restorePatch(restorePatch: Map<String, *>) {
+  public fun restorePatch(restorePatch: Map<String, Any>) {
     cdkBuilder.restorePatch(restorePatch)
   }
 

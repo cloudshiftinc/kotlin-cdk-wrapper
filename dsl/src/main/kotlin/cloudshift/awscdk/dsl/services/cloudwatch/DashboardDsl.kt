@@ -20,7 +20,7 @@ public class DashboardDsl(
 ) {
   private val cdkBuilder: Dashboard.Builder = Dashboard.Builder.create(scope, id)
 
-  private val _widgets: MutableList<List<out IWidget>> = mutableListOf()
+  private val _widgets: MutableList<List<IWidget>> = mutableListOf()
 
   public fun dashboardName(dashboardName: String) {
     cdkBuilder.dashboardName(dashboardName)
@@ -42,11 +42,11 @@ public class DashboardDsl(
     cdkBuilder.start(start)
   }
 
-  public fun widgets(vararg widgets: List<out IWidget>) {
+  public fun widgets(vararg widgets: List<IWidget>) {
     _widgets.addAll(listOf(*widgets))
   }
 
-  public fun widgets(widgets: Collection<List<out IWidget>>) {
+  public fun widgets(widgets: Collection<List<IWidget>>) {
     _widgets.addAll(widgets)
   }
 

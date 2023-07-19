@@ -53,7 +53,7 @@ public class UserPoolDsl(
     cdkBuilder.autoVerify(autoVerify)
   }
 
-  public fun customAttributes(customAttributes: Map<String, out ICustomAttribute>) {
+  public fun customAttributes(customAttributes: Map<String, ICustomAttribute>) {
     cdkBuilder.customAttributes(customAttributes)
   }
 

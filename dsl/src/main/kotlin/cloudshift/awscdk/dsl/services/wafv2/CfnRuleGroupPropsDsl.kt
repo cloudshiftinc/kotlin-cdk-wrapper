@@ -63,7 +63,7 @@ public class CfnRuleGroupPropsDsl {
     cdkBuilder.customResponseBodies(builder.map)
   }
 
-  public fun customResponseBodies(customResponseBodies: Map<String, *>) {
+  public fun customResponseBodies(customResponseBodies: Map<String, Any>) {
     cdkBuilder.customResponseBodies(customResponseBodies)
   }
 

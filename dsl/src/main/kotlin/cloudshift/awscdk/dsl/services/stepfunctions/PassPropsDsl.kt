@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -32,7 +33,7 @@ public class PassPropsDsl {
     cdkBuilder.parameters(builder.map)
   }
 
-  public fun parameters(parameters: Map<String, *>) {
+  public fun parameters(parameters: Map<String, Any>) {
     cdkBuilder.parameters(parameters)
   }
 

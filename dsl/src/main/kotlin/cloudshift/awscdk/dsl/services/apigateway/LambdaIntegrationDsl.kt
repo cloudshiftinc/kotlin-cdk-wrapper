@@ -21,9 +21,9 @@ import software.amazon.awscdk.services.lambda.IFunction
 
 @CdkDslMarker
 public class LambdaIntegrationDsl(
-  arg0: IFunction,
+  handler: IFunction,
 ) {
-  private val cdkBuilder: LambdaIntegration.Builder = LambdaIntegration.Builder.create(arg0)
+  private val cdkBuilder: LambdaIntegration.Builder = LambdaIntegration.Builder.create(handler)
 
   private val _cacheKeyParameters: MutableList<String> = mutableListOf()
 

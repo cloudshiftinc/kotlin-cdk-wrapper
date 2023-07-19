@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -50,7 +51,7 @@ public class DynamoPutItemDsl(
   }
 
   public
-      fun expressionAttributeValues(expressionAttributeValues: Map<String, out DynamoAttributeValue>) {
+      fun expressionAttributeValues(expressionAttributeValues: Map<String, DynamoAttributeValue>) {
     cdkBuilder.expressionAttributeValues(expressionAttributeValues)
   }
 
@@ -70,7 +71,7 @@ public class DynamoPutItemDsl(
     cdkBuilder.integrationPattern(integrationPattern)
   }
 
-  public fun item(item: Map<String, out DynamoAttributeValue>) {
+  public fun item(item: Map<String, DynamoAttributeValue>) {
     cdkBuilder.item(item)
   }
 
@@ -88,7 +89,7 @@ public class DynamoPutItemDsl(
     cdkBuilder.resultSelector(builder.map)
   }
 
-  public fun resultSelector(resultSelector: Map<String, *>) {
+  public fun resultSelector(resultSelector: Map<String, Any>) {
     cdkBuilder.resultSelector(resultSelector)
   }
 

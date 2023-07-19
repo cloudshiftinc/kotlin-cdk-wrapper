@@ -9,9 +9,10 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 @CdkDslMarker
 public class KinesisFirehoseStreamDsl(
-  arg0: CfnDeliveryStream,
+  stream: CfnDeliveryStream,
 ) {
-  private val cdkBuilder: KinesisFirehoseStream.Builder = KinesisFirehoseStream.Builder.create(arg0)
+  private val cdkBuilder: KinesisFirehoseStream.Builder =
+      KinesisFirehoseStream.Builder.create(stream)
 
   public fun message(message: RuleTargetInput) {
     cdkBuilder.message(message)

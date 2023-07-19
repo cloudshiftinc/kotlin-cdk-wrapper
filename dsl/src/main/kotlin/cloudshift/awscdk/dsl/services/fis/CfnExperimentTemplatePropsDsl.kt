@@ -26,7 +26,7 @@ public class CfnExperimentTemplatePropsDsl {
     cdkBuilder.actions(builder.map)
   }
 
-  public fun actions(actions: Map<String, *>) {
+  public fun actions(actions: Map<String, Any>) {
     cdkBuilder.actions(actions)
   }
 
@@ -73,7 +73,7 @@ public class CfnExperimentTemplatePropsDsl {
     cdkBuilder.targets(builder.map)
   }
 
-  public fun targets(targets: Map<String, *>) {
+  public fun targets(targets: Map<String, Any>) {
     cdkBuilder.targets(targets)
   }
 

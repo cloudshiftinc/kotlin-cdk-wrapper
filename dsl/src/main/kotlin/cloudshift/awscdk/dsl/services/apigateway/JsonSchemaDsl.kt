@@ -92,7 +92,7 @@ public class JsonSchemaDsl {
     cdkBuilder.defaultValue(defaultValue)
   }
 
-  public fun definitions(definitions: Map<String, out JsonSchema>) {
+  public fun definitions(definitions: Map<String, JsonSchema>) {
     cdkBuilder.definitions(definitions)
   }
 
@@ -102,7 +102,7 @@ public class JsonSchemaDsl {
     cdkBuilder.dependencies(builder.map)
   }
 
-  public fun dependencies(dependencies: Map<String, *>) {
+  public fun dependencies(dependencies: Map<String, Any>) {
     cdkBuilder.dependencies(dependencies)
   }
 
@@ -204,11 +204,11 @@ public class JsonSchemaDsl {
     cdkBuilder.pattern(pattern)
   }
 
-  public fun patternProperties(patternProperties: Map<String, out JsonSchema>) {
+  public fun patternProperties(patternProperties: Map<String, JsonSchema>) {
     cdkBuilder.patternProperties(patternProperties)
   }
 
-  public fun properties(properties: Map<String, out JsonSchema>) {
+  public fun properties(properties: Map<String, JsonSchema>) {
     cdkBuilder.properties(properties)
   }
 

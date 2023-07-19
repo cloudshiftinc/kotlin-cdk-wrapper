@@ -13,9 +13,9 @@ import software.amazon.awscdk.services.stepfunctions.IStateMachine
 
 @CdkDslMarker
 public class SfnStateMachineDsl(
-  arg0: IStateMachine,
+  machine: IStateMachine,
 ) {
-  private val cdkBuilder: SfnStateMachine.Builder = SfnStateMachine.Builder.create(arg0)
+  private val cdkBuilder: SfnStateMachine.Builder = SfnStateMachine.Builder.create(machine)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)

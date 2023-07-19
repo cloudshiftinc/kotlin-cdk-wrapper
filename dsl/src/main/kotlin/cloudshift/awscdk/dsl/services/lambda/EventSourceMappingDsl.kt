@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.lambda
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -25,7 +26,7 @@ public class EventSourceMappingDsl(
 ) {
   private val cdkBuilder: EventSourceMapping.Builder = EventSourceMapping.Builder.create(scope, id)
 
-  private val _filters: MutableList<Map<String, *>> = mutableListOf()
+  private val _filters: MutableList<Map<String, Any>> = mutableListOf()
 
   private val _kafkaBootstrapServers: MutableList<String> = mutableListOf()
 
@@ -47,11 +48,11 @@ public class EventSourceMappingDsl(
     cdkBuilder.eventSourceArn(eventSourceArn)
   }
 
-  public fun filters(vararg filters: Map<String, *>) {
+  public fun filters(vararg filters: Map<String, Any>) {
     _filters.addAll(listOf(*filters))
   }
 
-  public fun filters(filters: Collection<Map<String, *>>) {
+  public fun filters(filters: Collection<Map<String, Any>>) {
     _filters.addAll(filters)
   }
 

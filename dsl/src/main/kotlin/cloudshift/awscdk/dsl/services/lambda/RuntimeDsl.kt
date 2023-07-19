@@ -10,10 +10,10 @@ import software.amazon.awscdk.services.lambda.RuntimeFamily
 
 @CdkDslMarker
 public class RuntimeDsl(
-  arg0: String,
-  arg1: RuntimeFamily,
+  name: String,
+  family: RuntimeFamily,
 ) {
-  private val cdkBuilder: Runtime.Builder = Runtime.Builder.create(arg0, arg1)
+  private val cdkBuilder: Runtime.Builder = Runtime.Builder.create(name, family)
 
   public fun bundlingDockerImage(bundlingDockerImage: String) {
     cdkBuilder.bundlingDockerImage(bundlingDockerImage)

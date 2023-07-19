@@ -10,9 +10,9 @@ import software.amazon.awscdk.services.ec2.UserData
 
 @CdkDslMarker
 public class GenericWindowsImageDsl(
-  arg0: Map<String, String>,
+  amiMap: Map<String, String>,
 ) {
-  private val cdkBuilder: GenericWindowsImage.Builder = GenericWindowsImage.Builder.create(arg0)
+  private val cdkBuilder: GenericWindowsImage.Builder = GenericWindowsImage.Builder.create(amiMap)
 
   public fun userData(userData: UserData) {
     cdkBuilder.userData(userData)

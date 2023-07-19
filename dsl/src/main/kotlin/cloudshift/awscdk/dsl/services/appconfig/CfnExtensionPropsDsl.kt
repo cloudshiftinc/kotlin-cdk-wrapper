@@ -50,7 +50,7 @@ public class CfnExtensionPropsDsl {
     cdkBuilder.parameters(builder.map)
   }
 
-  public fun parameters(parameters: Map<String, *>) {
+  public fun parameters(parameters: Map<String, Any>) {
     cdkBuilder.parameters(parameters)
   }
 

@@ -13,20 +13,19 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class SqsSubscriptionDsl(
-  arg0: IQueue,
+  queue: IQueue,
 ) {
-  private val cdkBuilder: SqsSubscription.Builder = SqsSubscription.Builder.create(arg0)
+  private val cdkBuilder: SqsSubscription.Builder = SqsSubscription.Builder.create(queue)
 
   public fun deadLetterQueue(deadLetterQueue: IQueue) {
     cdkBuilder.deadLetterQueue(deadLetterQueue)
   }
 
-  public fun filterPolicy(filterPolicy: Map<String, out SubscriptionFilter>) {
+  public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
     cdkBuilder.filterPolicy(filterPolicy)
   }
 
-  public
-      fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, out FilterOrPolicy>) {
+  public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
     cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody)
   }
 

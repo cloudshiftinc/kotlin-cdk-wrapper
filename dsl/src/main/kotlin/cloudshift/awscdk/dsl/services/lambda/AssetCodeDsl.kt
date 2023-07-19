@@ -18,9 +18,9 @@ import software.amazon.awscdk.services.lambda.AssetCode
 
 @CdkDslMarker
 public class AssetCodeDsl(
-  arg0: String,
+  path: String,
 ) {
-  private val cdkBuilder: AssetCode.Builder = AssetCode.Builder.create(arg0)
+  private val cdkBuilder: AssetCode.Builder = AssetCode.Builder.create(path)
 
   private val _exclude: MutableList<String> = mutableListOf()
 

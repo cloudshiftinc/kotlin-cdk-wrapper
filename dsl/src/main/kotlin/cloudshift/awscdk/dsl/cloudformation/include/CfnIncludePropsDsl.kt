@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.cloudformation.include
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -18,7 +19,7 @@ public class CfnIncludePropsDsl {
     cdkBuilder.allowCyclicalReferences(allowCyclicalReferences)
   }
 
-  public fun loadNestedStacks(loadNestedStacks: Map<String, out CfnIncludeProps>) {
+  public fun loadNestedStacks(loadNestedStacks: Map<String, CfnIncludeProps>) {
     cdkBuilder.loadNestedStacks(loadNestedStacks)
   }
 
@@ -28,7 +29,7 @@ public class CfnIncludePropsDsl {
     cdkBuilder.parameters(builder.map)
   }
 
-  public fun parameters(parameters: Map<String, *>) {
+  public fun parameters(parameters: Map<String, Any>) {
     cdkBuilder.parameters(parameters)
   }
 

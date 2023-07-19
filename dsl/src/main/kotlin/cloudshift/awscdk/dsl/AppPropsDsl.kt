@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -34,7 +35,7 @@ public class AppPropsDsl {
     cdkBuilder.context(builder.map)
   }
 
-  public fun context(context: Map<String, *>) {
+  public fun context(context: Map<String, Any>) {
     cdkBuilder.context(context)
   }
 
@@ -61,7 +62,7 @@ public class AppPropsDsl {
     cdkBuilder.postCliContext(builder.map)
   }
 
-  public fun postCliContext(postCliContext: Map<String, *>) {
+  public fun postCliContext(postCliContext: Map<String, Any>) {
     cdkBuilder.postCliContext(postCliContext)
   }
 

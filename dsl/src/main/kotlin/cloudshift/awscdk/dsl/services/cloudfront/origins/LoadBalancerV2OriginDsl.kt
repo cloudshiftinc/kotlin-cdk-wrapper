@@ -17,9 +17,10 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2
 
 @CdkDslMarker
 public class LoadBalancerV2OriginDsl(
-  arg0: ILoadBalancerV2,
+  loadBalancer: ILoadBalancerV2,
 ) {
-  private val cdkBuilder: LoadBalancerV2Origin.Builder = LoadBalancerV2Origin.Builder.create(arg0)
+  private val cdkBuilder: LoadBalancerV2Origin.Builder =
+      LoadBalancerV2Origin.Builder.create(loadBalancer)
 
   private val _originSslProtocols: MutableList<OriginSslPolicy> = mutableListOf()
 

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.greengrassv2
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class CfnDeploymentPropsDsl {
     cdkBuilder.components(builder.map)
   }
 
-  public fun components(components: Map<String, *>) {
+  public fun components(components: Map<String, Any>) {
     cdkBuilder.components(components)
   }
 

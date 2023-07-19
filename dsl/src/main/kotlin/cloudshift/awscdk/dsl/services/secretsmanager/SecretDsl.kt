@@ -60,7 +60,7 @@ public class SecretDsl(
     cdkBuilder.secretName(secretName)
   }
 
-  public fun secretObjectValue(secretObjectValue: Map<String, out SecretValue>) {
+  public fun secretObjectValue(secretObjectValue: Map<String, SecretValue>) {
     cdkBuilder.secretObjectValue(secretObjectValue)
   }
 

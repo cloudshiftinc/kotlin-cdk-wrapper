@@ -9,10 +9,10 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
 
 @CdkDslMarker
 public class NetworkLoadBalancerEndpointDsl(
-  arg0: INetworkLoadBalancer,
+  loadBalancer: INetworkLoadBalancer,
 ) {
   private val cdkBuilder: NetworkLoadBalancerEndpoint.Builder =
-      NetworkLoadBalancerEndpoint.Builder.create(arg0)
+      NetworkLoadBalancerEndpoint.Builder.create(loadBalancer)
 
   public fun weight(weight: Number) {
     cdkBuilder.weight(weight)

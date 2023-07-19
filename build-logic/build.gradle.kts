@@ -16,6 +16,13 @@ dependencies {
     implementation(libs.guava)
     implementation(libs.squareup.kotlinpoet)
     implementation(plugin(libs.plugins.kotlin.jvm))
+    implementation("org.ow2.asm:asm:9.5")
+    implementation("org.ow2.asm:asm-tree:9.5")
+    implementation("org.ow2.asm:asm-util:9.5")
+    implementation("com.github.ben-manes.caffeine:caffeine:3.1.6")
+    implementation("org.aspectj:aspectjtools:1.9.19")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:$embeddedKotlinVersion")
+
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 

@@ -188,7 +188,7 @@ public class ContainerDefinitionOptionsDsl {
     cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
   }
 
-  public fun secrets(secrets: Map<String, out Secret>) {
+  public fun secrets(secrets: Map<String, Secret>) {
     cdkBuilder.secrets(secrets)
   }
 

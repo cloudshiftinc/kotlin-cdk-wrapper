@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.eks
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Collection
@@ -20,7 +21,7 @@ public class KubernetesManifestDsl(
 ) {
   private val cdkBuilder: KubernetesManifest.Builder = KubernetesManifest.Builder.create(scope, id)
 
-  private val _manifest: MutableList<Map<String, *>> = mutableListOf()
+  private val _manifest: MutableList<Map<String, Any>> = mutableListOf()
 
   public fun cluster(cluster: ICluster) {
     cdkBuilder.cluster(cluster)
@@ -34,11 +35,11 @@ public class KubernetesManifestDsl(
     cdkBuilder.ingressAlbScheme(ingressAlbScheme)
   }
 
-  public fun manifest(vararg manifest: Map<String, *>) {
+  public fun manifest(vararg manifest: Map<String, Any>) {
     _manifest.addAll(listOf(*manifest))
   }
 
-  public fun manifest(manifest: Collection<Map<String, *>>) {
+  public fun manifest(manifest: Collection<Map<String, Any>>) {
     _manifest.addAll(manifest)
   }
 

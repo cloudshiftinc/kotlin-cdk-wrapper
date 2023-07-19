@@ -21,16 +21,16 @@ public class MetadataEntryResultDsl {
 
   private val _trace: MutableList<String> = mutableListOf()
 
+  public fun `data`(`data`: String) {
+    cdkBuilder.`data`(`data`)
+  }
+
   public fun `data`(`data`: TagDsl.() -> Unit) {
     _data.add(TagDsl().apply(`data`).build())
   }
 
   public fun `data`(`data`: Collection<Tag>) {
     _data.addAll(`data`)
-  }
-
-  public fun `data`(`data`: String) {
-    cdkBuilder.`data`(`data`)
   }
 
   public fun `data`(`data`: ContainerImageAssetMetadataEntry) {

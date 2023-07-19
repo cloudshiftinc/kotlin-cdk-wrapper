@@ -13,11 +13,11 @@ import software.amazon.awscdk.cloudassembly.schema.FileAsset
 public class AssetManifestDsl {
   private val cdkBuilder: AssetManifest.Builder = AssetManifest.builder()
 
-  public fun dockerImages(dockerImages: Map<String, out DockerImageAsset>) {
+  public fun dockerImages(dockerImages: Map<String, DockerImageAsset>) {
     cdkBuilder.dockerImages(dockerImages)
   }
 
-  public fun files(files: Map<String, out FileAsset>) {
+  public fun files(files: Map<String, FileAsset>) {
     cdkBuilder.files(files)
   }
 

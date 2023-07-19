@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.cloudwatch
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -41,7 +42,7 @@ public class MetricConfigDsl {
     cdkBuilder.renderingProperties(builder.map)
   }
 
-  public fun renderingProperties(renderingProperties: Map<String, *>) {
+  public fun renderingProperties(renderingProperties: Map<String, Any>) {
     cdkBuilder.renderingProperties(renderingProperties)
   }
 

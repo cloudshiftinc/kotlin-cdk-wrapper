@@ -18,7 +18,7 @@ public class CertificationValidationPropsDsl {
     cdkBuilder.hostedZone(hostedZone)
   }
 
-  public fun hostedZones(hostedZones: Map<String, out IHostedZone>) {
+  public fun hostedZones(hostedZones: Map<String, IHostedZone>) {
     cdkBuilder.hostedZones(hostedZones)
   }
 

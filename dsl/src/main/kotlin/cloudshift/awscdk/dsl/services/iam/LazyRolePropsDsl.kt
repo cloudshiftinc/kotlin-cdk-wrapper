@@ -37,7 +37,7 @@ public class LazyRolePropsDsl {
     _externalIds.addAll(externalIds)
   }
 
-  public fun inlinePolicies(inlinePolicies: Map<String, out PolicyDocument>) {
+  public fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>) {
     cdkBuilder.inlinePolicies(inlinePolicies)
   }
 

@@ -64,7 +64,7 @@ public class CfnComponentTypeDataValuePropertyDsl {
     cdkBuilder.mapValue(builder.map)
   }
 
-  public fun mapValue(mapValue: Map<String, *>) {
+  public fun mapValue(mapValue: Map<String, Any>) {
     cdkBuilder.mapValue(mapValue)
   }
 

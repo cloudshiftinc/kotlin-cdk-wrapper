@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.apigateway
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -29,7 +30,7 @@ public class CfnMethodMethodResponsePropertyDsl {
     cdkBuilder.responseParameters(builder.map)
   }
 
-  public fun responseParameters(responseParameters: Map<String, *>) {
+  public fun responseParameters(responseParameters: Map<String, Any>) {
     cdkBuilder.responseParameters(responseParameters)
   }
 

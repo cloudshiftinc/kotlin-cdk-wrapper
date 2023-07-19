@@ -13,15 +13,15 @@ import software.amazon.awscdk.pipelines.ShellStep
 
 @CdkDslMarker
 public class ShellStepDsl(
-  arg0: String,
+  id: String,
 ) {
-  private val cdkBuilder: ShellStep.Builder = ShellStep.Builder.create(arg0)
+  private val cdkBuilder: ShellStep.Builder = ShellStep.Builder.create(id)
 
   private val _commands: MutableList<String> = mutableListOf()
 
   private val _installCommands: MutableList<String> = mutableListOf()
 
-  public fun additionalInputs(additionalInputs: Map<String, out IFileSetProducer>) {
+  public fun additionalInputs(additionalInputs: Map<String, IFileSetProducer>) {
     cdkBuilder.additionalInputs(additionalInputs)
   }
 
@@ -37,7 +37,7 @@ public class ShellStepDsl(
     cdkBuilder.env(env)
   }
 
-  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, out CfnOutput>) {
+  public fun envFromCfnOutputs(envFromCfnOutputs: Map<String, CfnOutput>) {
     cdkBuilder.envFromCfnOutputs(envFromCfnOutputs)
   }
 

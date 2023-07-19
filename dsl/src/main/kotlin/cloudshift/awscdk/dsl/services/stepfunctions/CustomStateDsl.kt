@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -23,7 +24,7 @@ public class CustomStateDsl(
     cdkBuilder.stateJson(builder.map)
   }
 
-  public fun stateJson(stateJson: Map<String, *>) {
+  public fun stateJson(stateJson: Map<String, Any>) {
     cdkBuilder.stateJson(stateJson)
   }
 

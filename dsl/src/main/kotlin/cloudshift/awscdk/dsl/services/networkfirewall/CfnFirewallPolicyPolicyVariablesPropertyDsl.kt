@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.networkfirewall
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -21,7 +22,7 @@ public class CfnFirewallPolicyPolicyVariablesPropertyDsl {
     cdkBuilder.ruleVariables(builder.map)
   }
 
-  public fun ruleVariables(ruleVariables: Map<String, *>) {
+  public fun ruleVariables(ruleVariables: Map<String, Any>) {
     cdkBuilder.ruleVariables(ruleVariables)
   }
 
