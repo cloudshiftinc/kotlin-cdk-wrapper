@@ -70,7 +70,7 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Met
     }
 
     override fun toString(): String {
-        return "MethodNodeAdapter(name=${name}; desc=${delegate.desc})"
+        return "AsmMethodAdapter(name=${name}; desc=${delegate.desc})"
     }
 
     private fun TypeSignature.toTypeName(): TypeName {

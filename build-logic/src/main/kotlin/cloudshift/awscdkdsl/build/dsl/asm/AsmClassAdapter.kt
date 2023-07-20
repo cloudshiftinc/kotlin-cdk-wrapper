@@ -47,7 +47,7 @@ internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass {
     override fun implementsInterface(name: ClassName) = name in interfaces
 
     override fun toString(): String {
-        return "ClassNodeAdapter(className=$className)"
+        return "AsmClassAdapter(className=$className)"
     }
 }
 

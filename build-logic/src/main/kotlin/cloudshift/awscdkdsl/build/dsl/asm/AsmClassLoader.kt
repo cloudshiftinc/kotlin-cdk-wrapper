@@ -9,6 +9,7 @@ import org.objectweb.asm.util.Textifier
 import org.objectweb.asm.util.TraceClassVisitor
 import java.io.File
 import java.io.PrintWriter
+import java.util.jar.JarEntry
 import java.util.jar.JarFile
 import kotlin.streams.asSequence
 
@@ -28,32 +29,41 @@ internal object AsmClassLoader : CdkClassLoader {
             JarFile(file).use { jar ->
                 jar.stream().use { jarStream ->
                     jarStream.asSequence().mapNotNull { entry ->
-                        val name = entry.name
-                        when {
-                            !name.endsWith(".class") -> null
-                            cdkClassPredicate(name.removeSuffix(".class")) -> {
-                                val classBytes = jar.getInputStream(entry).use { it.readAllBytes() }
-                                val classReader = ClassReader(classBytes)
-                                val classNode = ClassNode()
-                                classReader.accept(classNode, ClassReader.SKIP_FRAMES)
-                                if (classNode.access and Opcodes.ACC_PUBLIC != 0) {
-                                    if (toTrace.any { name.contains(it) }) {
-                                        val textifier = Textifier()
-                                        val traceClassVisitor =
-                                            TraceClassVisitor(null, textifier, PrintWriter(System.out))
-                                        classReader.accept(traceClassVisitor, ClassReader.SKIP_FRAMES)
-                                    }
-                                    classNode
-                                } else {
-                                    null
-                                }
-                            }
-
-                            else -> null
-                        }
+                        maybeLoadJarEntry(entry, cdkClassPredicate, jar, toTrace)
                     }.toList()
                 }
             }
+        }
+    }
+
+    private fun maybeLoadJarEntry(
+        entry: JarEntry,
+        cdkClassPredicate: (String) -> Boolean,
+        jar: JarFile,
+        toTrace: Set<String>
+    ): ClassNode? {
+        val name = entry.name
+        return when {
+            !name.endsWith(".class") -> null
+            cdkClassPredicate(name.removeSuffix(".class")) -> {
+                val classBytes = jar.getInputStream(entry).use { it.readAllBytes() }
+                val classReader = ClassReader(classBytes)
+                val classNode = ClassNode()
+                classReader.accept(classNode, ClassReader.SKIP_FRAMES)
+                if (classNode.access and Opcodes.ACC_PUBLIC != 0) {
+                    if (toTrace.any { name.contains(it) }) {
+                        val textifier = Textifier()
+                        val traceClassVisitor =
+                            TraceClassVisitor(null, textifier, PrintWriter(System.out))
+                        classReader.accept(traceClassVisitor, ClassReader.SKIP_FRAMES)
+                    }
+                    classNode
+                } else {
+                    null
+                }
+            }
+
+            else -> null
         }
     }
 }

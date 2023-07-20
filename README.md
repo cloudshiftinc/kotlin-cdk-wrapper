@@ -22,11 +22,11 @@ This provides the basis for powerful Kotlin extensions to the DSL to supercharge
 
 # Getting Started
 
-For the core DSL pull add this dependency to your Gradle script:
+For the core DSL add this dependency to your Gradle script:
 
 `implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:<version>")`
 
-Alternately, to use the extensions (recommended) use this dependency instead:
+Alternately, to use the extensions (recommended), use this dependency instead:
 
 `implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:<version>")`
 
@@ -52,8 +52,5 @@ val policyStatements = iam.policyStatements {
 
 # Known issues
 
-* Argument names are 'arg0' etc due to Java CDK library not exposing argument names.  Aside from `scope` and `id` argument names (which are inferred).  Issue #1;
 * JavaDoc comments are not pulled across;
-* Deprecation annotation are not pulled across;
-* Overloaded arguments are skipped as they aren't readily mapped to Kotlin;
 
