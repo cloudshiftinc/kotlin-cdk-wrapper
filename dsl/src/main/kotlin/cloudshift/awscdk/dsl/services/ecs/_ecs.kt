@@ -192,15 +192,16 @@ public object ecs {
     return builder.build()
   }
 
-  public inline fun assetEnvironmentFile(arg0: String, block: AssetEnvironmentFileDsl.() -> Unit =
+  public inline fun assetEnvironmentFile(path: String, block: AssetEnvironmentFileDsl.() -> Unit =
       {}): AssetEnvironmentFile {
-    val builder = AssetEnvironmentFileDsl(arg0)
+    val builder = AssetEnvironmentFileDsl(path)
     builder.apply(block)
     return builder.build()
   }
 
-  public inline fun assetImage(arg0: String, block: AssetImageDsl.() -> Unit = {}): AssetImage {
-    val builder = AssetImageDsl(arg0)
+  public inline fun assetImage(directory: String, block: AssetImageDsl.() -> Unit = {}):
+      AssetImage {
+    val builder = AssetImageDsl(directory)
     builder.apply(block)
     return builder.build()
   }
@@ -1379,8 +1380,8 @@ public object ecs {
     return builder.build()
   }
 
-  public inline fun portMap(arg0: NetworkMode, block: PortMapDsl.() -> Unit = {}): PortMap {
-    val builder = PortMapDsl(arg0)
+  public inline fun portMap(networkmode: NetworkMode, block: PortMapDsl.() -> Unit = {}): PortMap {
+    val builder = PortMapDsl(networkmode)
     builder.apply(block)
     return builder.build()
   }
@@ -1391,9 +1392,9 @@ public object ecs {
     return builder.build()
   }
 
-  public inline fun repositoryImage(arg0: String, block: RepositoryImageDsl.() -> Unit = {}):
+  public inline fun repositoryImage(imageName: String, block: RepositoryImageDsl.() -> Unit = {}):
       RepositoryImage {
-    val builder = RepositoryImageDsl(arg0)
+    val builder = RepositoryImageDsl(imageName)
     builder.apply(block)
     return builder.build()
   }
@@ -1448,9 +1449,9 @@ public object ecs {
     return builder.build()
   }
 
-  public inline fun serviceConnect(arg0: NetworkMode, block: ServiceConnectDsl.() -> Unit = {}):
-      ServiceConnect {
-    val builder = ServiceConnectDsl(arg0)
+  public inline fun serviceConnect(networkmode: NetworkMode, block: ServiceConnectDsl.() -> Unit =
+      {}): ServiceConnect {
+    val builder = ServiceConnectDsl(networkmode)
     builder.apply(block)
     return builder.build()
   }

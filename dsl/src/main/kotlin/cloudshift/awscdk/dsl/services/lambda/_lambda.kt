@@ -123,15 +123,15 @@ public object lambda {
     return builder.build()
   }
 
-  public inline fun assetCode(arg0: String, block: AssetCodeDsl.() -> Unit = {}): AssetCode {
-    val builder = AssetCodeDsl(arg0)
+  public inline fun assetCode(path: String, block: AssetCodeDsl.() -> Unit = {}): AssetCode {
+    val builder = AssetCodeDsl(path)
     builder.apply(block)
     return builder.build()
   }
 
-  public inline fun assetImageCode(arg0: String, block: AssetImageCodeDsl.() -> Unit = {}):
+  public inline fun assetImageCode(directory: String, block: AssetImageCodeDsl.() -> Unit = {}):
       AssetImageCode {
-    val builder = AssetImageCodeDsl(arg0)
+    val builder = AssetImageCodeDsl(directory)
     builder.apply(block)
     return builder.build()
   }
@@ -664,9 +664,9 @@ public object lambda {
     return builder.build()
   }
 
-  public inline fun ecrImageCode(arg0: IRepository, block: EcrImageCodeDsl.() -> Unit = {}):
+  public inline fun ecrImageCode(repository: IRepository, block: EcrImageCodeDsl.() -> Unit = {}):
       EcrImageCode {
-    val builder = EcrImageCodeDsl(arg0)
+    val builder = EcrImageCodeDsl(repository)
     builder.apply(block)
     return builder.build()
   }
@@ -871,11 +871,11 @@ public object lambda {
   }
 
   public inline fun runtime(
-    arg0: String,
-    arg1: RuntimeFamily,
+    name: String,
+    family: RuntimeFamily,
     block: RuntimeDsl.() -> Unit = {},
   ): Runtime {
-    val builder = RuntimeDsl(arg0, arg1)
+    val builder = RuntimeDsl(name, family)
     builder.apply(block)
     return builder.build()
   }

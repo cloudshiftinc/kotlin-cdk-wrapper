@@ -19,7 +19,6 @@ import com.squareup.kotlinpoet.UNIT
 import com.squareup.kotlinpoet.asTypeName
 
 internal object BuilderGenerator2 {
-    private val Deprecated = Deprecated::class.asTypeName()
     fun generate(builders: List<CdkBuilder>): List<FileSpec> {
         return builders.map { generate(it) }
     }
@@ -30,9 +29,7 @@ internal object BuilderGenerator2 {
         val builderClassBuilder = TypeSpec.classBuilder(builderClassName)
         builderClassBuilder.addAnnotation(CdkDsl.DslMarkerAnnotation)
         if (builder.cdkBuilderClass.deprecated) {
-            builderClassBuilder.addAnnotation(
-                AnnotationSpec.builder(Deprecated).addMember("message = %S", "deprecated in CDK").build(),
-            )
+            builderClassBuilder.addAnnotation(Annotations.Deprecated)
         }
 
         if (builder.builderFactoryFunction.parameters.isNotEmpty()) {
@@ -101,15 +98,6 @@ internal object BuilderGenerator2 {
         // finish off build() function
         buildFnBuilder.addStatement("return cdkBuilder.build()")
         builderClassBuilder.addFunction(buildFnBuilder.build())
-    }
-
-    private fun dslFunctionSpec(prop: BuilderProperty2, block: FunSpec.Builder.() -> Unit): FunSpec {
-        val builder = FunSpec.builder(prop.name)
-        builder.apply(block)
-        if (prop.deprecated) builder.addAnnotation(
-            AnnotationSpec.builder(Deprecated).addMember("message = %S", "deprecated in CDK").build(),
-        )
-        return builder.build()
     }
 
     private fun handleObjectProperty(

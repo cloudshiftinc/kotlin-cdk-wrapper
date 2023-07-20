@@ -15,7 +15,7 @@ internal object CdkModelFactory {
 
         val builderClasses = cdkClasses.filter { cdkClass ->
             cdkClass.implementsInterface(BuilderInterface)
-        }
+        }.sortedBy { it.className }
 
         val buildableClasses = builderClasses.associate { builderClass ->
             val buildMethod = builderClass.publicMemberFunctions.single {
@@ -37,6 +37,7 @@ internal object CdkModelFactory {
             val buildableClass =
                 buildableClasses[builderClass.className] ?: error("Cannot find buildable for ${builderClass.className}")
             val builderFactoryFunction = findBuilderFactoryFunction(builderClass, buildableClass)
+
             CdkBuilder(
                 buildableClass = buildableClass,
                 cdkBuilderClass = builderClass,

@@ -536,9 +536,9 @@ public object iam {
     return builder.build()
   }
 
-  public inline fun servicePrincipal(arg0: String, block: ServicePrincipalDsl.() -> Unit = {}):
+  public inline fun servicePrincipal(service: String, block: ServicePrincipalDsl.() -> Unit = {}):
       ServicePrincipal {
-    val builder = ServicePrincipalDsl(arg0)
+    val builder = ServicePrincipalDsl(service)
     builder.apply(block)
     return builder.build()
   }

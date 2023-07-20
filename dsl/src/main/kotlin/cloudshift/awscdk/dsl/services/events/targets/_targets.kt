@@ -55,9 +55,9 @@ import software.amazon.awscdk.services.stepfunctions.IStateMachine
 import software.constructs.IConstruct
 
 public object targets {
-  public inline fun apiDestination(arg0: IApiDestination, block: ApiDestinationDsl.() -> Unit = {}):
-      ApiDestination {
-    val builder = ApiDestinationDsl(arg0)
+  public inline fun apiDestination(apiDestination: IApiDestination,
+      block: ApiDestinationDsl.() -> Unit = {}): ApiDestination {
+    val builder = ApiDestinationDsl(apiDestination)
     builder.apply(block)
     return builder.build()
   }
@@ -69,8 +69,8 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun apiGateway(arg0: RestApi, block: ApiGatewayDsl.() -> Unit = {}): ApiGateway {
-    val builder = ApiGatewayDsl(arg0)
+  public inline fun apiGateway(restApi: RestApi, block: ApiGatewayDsl.() -> Unit = {}): ApiGateway {
+    val builder = ApiGatewayDsl(restApi)
     builder.apply(block)
     return builder.build()
   }
@@ -100,13 +100,13 @@ public object targets {
   }
 
   public inline fun batchJob(
-    arg0: String,
-    arg1: IConstruct,
-    arg2: String,
-    arg3: IConstruct,
+    jobQueueArn: String,
+    jobQueueScope: IConstruct,
+    jobDefinitionArn: String,
+    jobDefinitionScope: IConstruct,
     block: BatchJobDsl.() -> Unit = {},
   ): BatchJob {
-    val builder = BatchJobDsl(arg0, arg1, arg2, arg3)
+    val builder = BatchJobDsl(jobQueueArn, jobQueueScope, jobDefinitionArn, jobDefinitionScope)
     builder.apply(block)
     return builder.build()
   }
@@ -117,16 +117,16 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun cloudWatchLogGroup(arg0: ILogGroup, block: CloudWatchLogGroupDsl.() -> Unit =
-      {}): CloudWatchLogGroup {
-    val builder = CloudWatchLogGroupDsl(arg0)
+  public inline fun cloudWatchLogGroup(logGroup: ILogGroup, block: CloudWatchLogGroupDsl.() -> Unit
+      = {}): CloudWatchLogGroup {
+    val builder = CloudWatchLogGroupDsl(logGroup)
     builder.apply(block)
     return builder.build()
   }
 
-  public inline fun codeBuildProject(arg0: IProject, block: CodeBuildProjectDsl.() -> Unit = {}):
+  public inline fun codeBuildProject(project: IProject, block: CodeBuildProjectDsl.() -> Unit = {}):
       CodeBuildProject {
-    val builder = CodeBuildProjectDsl(arg0)
+    val builder = CodeBuildProjectDsl(project)
     builder.apply(block)
     return builder.build()
   }
@@ -138,9 +138,9 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun codePipeline(arg0: IPipeline, block: CodePipelineDsl.() -> Unit = {}):
+  public inline fun codePipeline(pipeline: IPipeline, block: CodePipelineDsl.() -> Unit = {}):
       CodePipeline {
-    val builder = CodePipelineDsl(arg0)
+    val builder = CodePipelineDsl(pipeline)
     builder.apply(block)
     return builder.build()
   }
@@ -171,8 +171,8 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun eventBus(arg0: IEventBus, block: EventBusDsl.() -> Unit = {}): EventBus {
-    val builder = EventBusDsl(arg0)
+  public inline fun eventBus(eventBus: IEventBus, block: EventBusDsl.() -> Unit = {}): EventBus {
+    val builder = EventBusDsl(eventBus)
     builder.apply(block)
     return builder.build()
   }
@@ -183,9 +183,9 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun kinesisFirehoseStream(arg0: CfnDeliveryStream,
+  public inline fun kinesisFirehoseStream(stream: CfnDeliveryStream,
       block: KinesisFirehoseStreamDsl.() -> Unit = {}): KinesisFirehoseStream {
-    val builder = KinesisFirehoseStreamDsl(arg0)
+    val builder = KinesisFirehoseStreamDsl(stream)
     builder.apply(block)
     return builder.build()
   }
@@ -197,9 +197,9 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun kinesisStream(arg0: IStream, block: KinesisStreamDsl.() -> Unit = {}):
+  public inline fun kinesisStream(stream: IStream, block: KinesisStreamDsl.() -> Unit = {}):
       KinesisStream {
-    val builder = KinesisStreamDsl(arg0)
+    val builder = KinesisStreamDsl(stream)
     builder.apply(block)
     return builder.build()
   }
@@ -211,9 +211,9 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun lambdaFunction(arg0: IFunction, block: LambdaFunctionDsl.() -> Unit = {}):
+  public inline fun lambdaFunction(handler: IFunction, block: LambdaFunctionDsl.() -> Unit = {}):
       LambdaFunction {
-    val builder = LambdaFunctionDsl(arg0)
+    val builder = LambdaFunctionDsl(handler)
     builder.apply(block)
     return builder.build()
   }
@@ -238,9 +238,9 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun sfnStateMachine(arg0: IStateMachine, block: SfnStateMachineDsl.() -> Unit = {}):
-      SfnStateMachine {
-    val builder = SfnStateMachineDsl(arg0)
+  public inline fun sfnStateMachine(machine: IStateMachine, block: SfnStateMachineDsl.() -> Unit =
+      {}): SfnStateMachine {
+    val builder = SfnStateMachineDsl(machine)
     builder.apply(block)
     return builder.build()
   }
@@ -252,8 +252,8 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun snsTopic(arg0: ITopic, block: SnsTopicDsl.() -> Unit = {}): SnsTopic {
-    val builder = SnsTopicDsl(arg0)
+  public inline fun snsTopic(topic: ITopic, block: SnsTopicDsl.() -> Unit = {}): SnsTopic {
+    val builder = SnsTopicDsl(topic)
     builder.apply(block)
     return builder.build()
   }
@@ -264,8 +264,8 @@ public object targets {
     return builder.build()
   }
 
-  public inline fun sqsQueue(arg0: IQueue, block: SqsQueueDsl.() -> Unit = {}): SqsQueue {
-    val builder = SqsQueueDsl(arg0)
+  public inline fun sqsQueue(queue: IQueue, block: SqsQueueDsl.() -> Unit = {}): SqsQueue {
+    val builder = SqsQueueDsl(queue)
     builder.apply(block)
     return builder.build()
   }

@@ -274,9 +274,9 @@ public object stepfunctions {
     return builder.build()
   }
 
-  public inline fun fileDefinitionBody(arg0: String, block: FileDefinitionBodyDsl.() -> Unit = {}):
+  public inline fun fileDefinitionBody(path: String, block: FileDefinitionBodyDsl.() -> Unit = {}):
       FileDefinitionBody {
-    val builder = FileDefinitionBodyDsl(arg0)
+    val builder = FileDefinitionBodyDsl(path)
     builder.apply(block)
     return builder.build()
   }

@@ -17,9 +17,9 @@ import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBa
 import software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpointProps
 
 public object endpoints {
-  public inline fun applicationLoadBalancerEndpoint(arg0: IApplicationLoadBalancer,
+  public inline fun applicationLoadBalancerEndpoint(loadBalancer: IApplicationLoadBalancer,
       block: ApplicationLoadBalancerEndpointDsl.() -> Unit = {}): ApplicationLoadBalancerEndpoint {
-    val builder = ApplicationLoadBalancerEndpointDsl(arg0)
+    val builder = ApplicationLoadBalancerEndpointDsl(loadBalancer)
     builder.apply(block)
     return builder.build()
   }
@@ -32,9 +32,9 @@ public object endpoints {
     return builder.build()
   }
 
-  public inline fun cfnEipEndpoint(arg0: CfnEIP, block: CfnEipEndpointDsl.() -> Unit = {}):
+  public inline fun cfnEipEndpoint(eip: CfnEIP, block: CfnEipEndpointDsl.() -> Unit = {}):
       CfnEipEndpoint {
-    val builder = CfnEipEndpointDsl(arg0)
+    val builder = CfnEipEndpointDsl(eip)
     builder.apply(block)
     return builder.build()
   }
@@ -46,9 +46,9 @@ public object endpoints {
     return builder.build()
   }
 
-  public inline fun instanceEndpoint(arg0: IInstance, block: InstanceEndpointDsl.() -> Unit = {}):
-      InstanceEndpoint {
-    val builder = InstanceEndpointDsl(arg0)
+  public inline fun instanceEndpoint(instance: IInstance, block: InstanceEndpointDsl.() -> Unit =
+      {}): InstanceEndpoint {
+    val builder = InstanceEndpointDsl(instance)
     builder.apply(block)
     return builder.build()
   }
@@ -60,9 +60,9 @@ public object endpoints {
     return builder.build()
   }
 
-  public inline fun networkLoadBalancerEndpoint(arg0: INetworkLoadBalancer,
+  public inline fun networkLoadBalancerEndpoint(loadBalancer: INetworkLoadBalancer,
       block: NetworkLoadBalancerEndpointDsl.() -> Unit = {}): NetworkLoadBalancerEndpoint {
-    val builder = NetworkLoadBalancerEndpointDsl(arg0)
+    val builder = NetworkLoadBalancerEndpointDsl(loadBalancer)
     builder.apply(block)
     return builder.build()
   }

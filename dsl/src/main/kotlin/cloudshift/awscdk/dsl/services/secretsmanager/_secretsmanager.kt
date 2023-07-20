@@ -237,11 +237,11 @@ public object secretsmanager {
   }
 
   public inline fun secretRotationApplication(
-    arg0: String,
-    arg1: String,
+    applicationId: String,
+    semanticVersion: String,
     block: SecretRotationApplicationDsl.() -> Unit = {},
   ): SecretRotationApplication {
-    val builder = SecretRotationApplicationDsl(arg0, arg1)
+    val builder = SecretRotationApplicationDsl(applicationId, semanticVersion)
     builder.apply(block)
     return builder.build()
   }

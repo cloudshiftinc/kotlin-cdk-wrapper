@@ -2,6 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.codedeploy.AutoRollbackConfig
@@ -368,6 +369,7 @@ public object codedeploy {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun customLambdaDeploymentConfig(
     scope: Construct,
     id: String,
@@ -378,6 +380,7 @@ public object codedeploy {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline
       fun customLambdaDeploymentConfigProps(block: CustomLambdaDeploymentConfigPropsDsl.() -> Unit =
       {}): CustomLambdaDeploymentConfigProps {

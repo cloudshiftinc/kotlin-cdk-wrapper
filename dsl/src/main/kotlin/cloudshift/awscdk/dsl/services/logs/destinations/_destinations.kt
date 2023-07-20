@@ -11,9 +11,9 @@ import software.amazon.awscdk.services.logs.destinations.LambdaDestination
 import software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions
 
 public object destinations {
-  public inline fun kinesisDestination(arg0: IStream, block: KinesisDestinationDsl.() -> Unit = {}):
-      KinesisDestination {
-    val builder = KinesisDestinationDsl(arg0)
+  public inline fun kinesisDestination(stream: IStream, block: KinesisDestinationDsl.() -> Unit =
+      {}): KinesisDestination {
+    val builder = KinesisDestinationDsl(stream)
     builder.apply(block)
     return builder.build()
   }
@@ -25,9 +25,9 @@ public object destinations {
     return builder.build()
   }
 
-  public inline fun lambdaDestination(arg0: IFunction, block: LambdaDestinationDsl.() -> Unit = {}):
+  public inline fun lambdaDestination(fn: IFunction, block: LambdaDestinationDsl.() -> Unit = {}):
       LambdaDestination {
-    val builder = LambdaDestinationDsl(arg0)
+    val builder = LambdaDestinationDsl(fn)
     builder.apply(block)
     return builder.build()
   }

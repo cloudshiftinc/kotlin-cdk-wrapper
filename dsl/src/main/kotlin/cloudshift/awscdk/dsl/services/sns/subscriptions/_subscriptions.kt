@@ -19,9 +19,9 @@ import software.amazon.awscdk.services.sns.subscriptions.UrlSubscriptionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
 public object subscriptions {
-  public inline fun emailSubscription(arg0: String, block: EmailSubscriptionDsl.() -> Unit = {}):
-      EmailSubscription {
-    val builder = EmailSubscriptionDsl(arg0)
+  public inline fun emailSubscription(emailAddress: String, block: EmailSubscriptionDsl.() -> Unit =
+      {}): EmailSubscription {
+    val builder = EmailSubscriptionDsl(emailAddress)
     builder.apply(block)
     return builder.build()
   }
@@ -33,9 +33,9 @@ public object subscriptions {
     return builder.build()
   }
 
-  public inline fun lambdaSubscription(arg0: IFunction, block: LambdaSubscriptionDsl.() -> Unit =
-      {}): LambdaSubscription {
-    val builder = LambdaSubscriptionDsl(arg0)
+  public inline fun lambdaSubscription(fn: IFunction, block: LambdaSubscriptionDsl.() -> Unit = {}):
+      LambdaSubscription {
+    val builder = LambdaSubscriptionDsl(fn)
     builder.apply(block)
     return builder.build()
   }
@@ -47,9 +47,9 @@ public object subscriptions {
     return builder.build()
   }
 
-  public inline fun smsSubscription(arg0: String, block: SmsSubscriptionDsl.() -> Unit = {}):
+  public inline fun smsSubscription(phoneNumber: String, block: SmsSubscriptionDsl.() -> Unit = {}):
       SmsSubscription {
-    val builder = SmsSubscriptionDsl(arg0)
+    val builder = SmsSubscriptionDsl(phoneNumber)
     builder.apply(block)
     return builder.build()
   }
@@ -61,9 +61,9 @@ public object subscriptions {
     return builder.build()
   }
 
-  public inline fun sqsSubscription(arg0: IQueue, block: SqsSubscriptionDsl.() -> Unit = {}):
+  public inline fun sqsSubscription(queue: IQueue, block: SqsSubscriptionDsl.() -> Unit = {}):
       SqsSubscription {
-    val builder = SqsSubscriptionDsl(arg0)
+    val builder = SqsSubscriptionDsl(queue)
     builder.apply(block)
     return builder.build()
   }
@@ -82,9 +82,9 @@ public object subscriptions {
     return builder.build()
   }
 
-  public inline fun urlSubscription(arg0: String, block: UrlSubscriptionDsl.() -> Unit = {}):
+  public inline fun urlSubscription(url: String, block: UrlSubscriptionDsl.() -> Unit = {}):
       UrlSubscription {
-    val builder = UrlSubscriptionDsl(arg0)
+    val builder = UrlSubscriptionDsl(url)
     builder.apply(block)
     return builder.build()
   }

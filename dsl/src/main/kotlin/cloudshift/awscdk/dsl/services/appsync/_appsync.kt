@@ -2,6 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.appsync
 
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.appsync.ApiKeyConfig
@@ -105,8 +106,8 @@ public object appsync {
     return builder.build()
   }
 
-  public inline fun assetCode(arg0: String, block: AssetCodeDsl.() -> Unit = {}): AssetCode {
-    val builder = AssetCodeDsl(arg0)
+  public inline fun assetCode(path: String, block: AssetCodeDsl.() -> Unit = {}): AssetCode {
+    val builder = AssetCodeDsl(path)
     builder.apply(block)
     return builder.build()
   }
@@ -576,6 +577,7 @@ public object appsync {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun elasticsearchDataSource(
     scope: Construct,
     id: String,
@@ -586,6 +588,7 @@ public object appsync {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun elasticsearchDataSourceProps(block: ElasticsearchDataSourcePropsDsl.() -> Unit =
       {}): ElasticsearchDataSourceProps {
     val builder = ElasticsearchDataSourcePropsDsl()

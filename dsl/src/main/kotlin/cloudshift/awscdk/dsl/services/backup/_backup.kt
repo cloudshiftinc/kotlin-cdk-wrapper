@@ -67,11 +67,11 @@ public object backup {
   }
 
   public inline fun backupResource(
-    arg0: String,
-    arg1: Construct,
+    resource: String,
+    construct: Construct,
     block: BackupResourceDsl.() -> Unit = {},
   ): BackupResource {
-    val builder = BackupResourceDsl(arg0, arg1)
+    val builder = BackupResourceDsl(resource, construct)
     builder.apply(block)
     return builder.build()
   }

@@ -35,11 +35,11 @@ public object cxapi {
   }
 
   public inline fun assetManifestArtifact(
-    arg0: CloudAssembly,
-    arg1: String,
+    assembly: CloudAssembly,
+    name: String,
     block: AssetManifestArtifactDsl.() -> Unit = {},
   ): AssetManifestArtifact {
-    val builder = AssetManifestArtifactDsl(arg0, arg1)
+    val builder = AssetManifestArtifactDsl(assembly, name)
     builder.apply(block)
     return builder.build()
   }
@@ -52,16 +52,16 @@ public object cxapi {
     return builder.build()
   }
 
-  public inline fun cloudAssembly(arg0: String, block: CloudAssemblyDsl.() -> Unit = {}):
+  public inline fun cloudAssembly(directory: String, block: CloudAssemblyDsl.() -> Unit = {}):
       CloudAssembly {
-    val builder = CloudAssemblyDsl(arg0)
+    val builder = CloudAssemblyDsl(directory)
     builder.apply(block)
     return builder.build()
   }
 
-  public inline fun cloudAssemblyBuilder(arg0: String, block: CloudAssemblyBuilderDsl.() -> Unit =
+  public inline fun cloudAssemblyBuilder(outdir: String, block: CloudAssemblyBuilderDsl.() -> Unit =
       {}): CloudAssemblyBuilder {
-    val builder = CloudAssemblyBuilderDsl(arg0)
+    val builder = CloudAssemblyBuilderDsl(outdir)
     builder.apply(block)
     return builder.build()
   }
@@ -74,11 +74,11 @@ public object cxapi {
   }
 
   public inline fun cloudFormationStackArtifact(
-    arg0: CloudAssembly,
-    arg1: String,
+    assembly: CloudAssembly,
+    artifactId: String,
     block: CloudFormationStackArtifactDsl.() -> Unit = {},
   ): CloudFormationStackArtifact {
-    val builder = CloudFormationStackArtifactDsl(arg0, arg1)
+    val builder = CloudFormationStackArtifactDsl(assembly, artifactId)
     builder.apply(block)
     return builder.build()
   }
@@ -134,11 +134,11 @@ public object cxapi {
   }
 
   public inline fun nestedCloudAssemblyArtifact(
-    arg0: CloudAssembly,
-    arg1: String,
+    assembly: CloudAssembly,
+    name: String,
     block: NestedCloudAssemblyArtifactDsl.() -> Unit = {},
   ): NestedCloudAssemblyArtifact {
-    val builder = NestedCloudAssemblyArtifactDsl(arg0, arg1)
+    val builder = NestedCloudAssemblyArtifactDsl(assembly, name)
     builder.apply(block)
     return builder.build()
   }
@@ -157,11 +157,11 @@ public object cxapi {
   }
 
   public inline fun treeCloudArtifact(
-    arg0: CloudAssembly,
-    arg1: String,
+    assembly: CloudAssembly,
+    name: String,
     block: TreeCloudArtifactDsl.() -> Unit = {},
   ): TreeCloudArtifact {
-    val builder = TreeCloudArtifactDsl(arg0, arg1)
+    val builder = TreeCloudArtifactDsl(assembly, name)
     builder.apply(block)
     return builder.build()
   }

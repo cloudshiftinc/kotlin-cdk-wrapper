@@ -191,9 +191,9 @@ public object apigateway {
     return builder.build()
   }
 
-  public inline fun assetApiDefinition(arg0: String, block: AssetApiDefinitionDsl.() -> Unit = {}):
+  public inline fun assetApiDefinition(path: String, block: AssetApiDefinitionDsl.() -> Unit = {}):
       AssetApiDefinition {
-    val builder = AssetApiDefinitionDsl(arg0)
+    val builder = AssetApiDefinitionDsl(path)
     builder.apply(block)
     return builder.build()
   }
@@ -805,9 +805,9 @@ public object apigateway {
     return builder.build()
   }
 
-  public inline fun httpIntegration(arg0: String, block: HttpIntegrationDsl.() -> Unit = {}):
+  public inline fun httpIntegration(url: String, block: HttpIntegrationDsl.() -> Unit = {}):
       HttpIntegration {
-    val builder = HttpIntegrationDsl(arg0)
+    val builder = HttpIntegrationDsl(url)
     builder.apply(block)
     return builder.build()
   }
@@ -872,9 +872,9 @@ public object apigateway {
     return builder.build()
   }
 
-  public inline fun lambdaIntegration(arg0: IFunction, block: LambdaIntegrationDsl.() -> Unit = {}):
-      LambdaIntegration {
-    val builder = LambdaIntegrationDsl(arg0)
+  public inline fun lambdaIntegration(handler: IFunction, block: LambdaIntegrationDsl.() -> Unit =
+      {}): LambdaIntegration {
+    val builder = LambdaIntegrationDsl(handler)
     builder.apply(block)
     return builder.build()
   }

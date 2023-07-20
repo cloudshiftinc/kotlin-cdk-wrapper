@@ -49,9 +49,9 @@ public object pipelines {
     return builder.build()
   }
 
-  public inline fun codeBuildStep(arg0: String, block: CodeBuildStepDsl.() -> Unit = {}):
+  public inline fun codeBuildStep(id: String, block: CodeBuildStepDsl.() -> Unit = {}):
       CodeBuildStep {
-    val builder = CodeBuildStepDsl(arg0)
+    val builder = CodeBuildStepDsl(id)
     builder.apply(block)
     return builder.build()
   }
@@ -95,9 +95,9 @@ public object pipelines {
     return builder.build()
   }
 
-  public inline fun confirmPermissionsBroadening(arg0: String,
+  public inline fun confirmPermissionsBroadening(id: String,
       block: ConfirmPermissionsBroadeningDsl.() -> Unit = {}): ConfirmPermissionsBroadening {
-    val builder = ConfirmPermissionsBroadeningDsl(arg0)
+    val builder = ConfirmPermissionsBroadeningDsl(id)
     builder.apply(block)
     return builder.build()
   }
@@ -143,9 +143,9 @@ public object pipelines {
     return builder.build()
   }
 
-  public inline fun manualApprovalStep(arg0: String, block: ManualApprovalStepDsl.() -> Unit = {}):
+  public inline fun manualApprovalStep(id: String, block: ManualApprovalStepDsl.() -> Unit = {}):
       ManualApprovalStep {
-    val builder = ManualApprovalStepDsl(arg0)
+    val builder = ManualApprovalStepDsl(id)
     builder.apply(block)
     return builder.build()
   }
@@ -185,8 +185,8 @@ public object pipelines {
     return builder.build()
   }
 
-  public inline fun shellStep(arg0: String, block: ShellStepDsl.() -> Unit = {}): ShellStep {
-    val builder = ShellStepDsl(arg0)
+  public inline fun shellStep(id: String, block: ShellStepDsl.() -> Unit = {}): ShellStep {
+    val builder = ShellStepDsl(id)
     builder.apply(block)
     return builder.build()
   }
@@ -223,8 +223,8 @@ public object pipelines {
     return builder.build()
   }
 
-  public inline fun wave(arg0: String, block: WaveDsl.() -> Unit = {}): Wave {
-    val builder = WaveDsl(arg0)
+  public inline fun wave(id: String, block: WaveDsl.() -> Unit = {}): Wave {
+    val builder = WaveDsl(id)
     builder.apply(block)
     return builder.build()
   }

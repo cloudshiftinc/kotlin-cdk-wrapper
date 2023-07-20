@@ -2,6 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.elasticsearch
 
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.elasticsearch.AdvancedSecurityOptions
@@ -20,6 +21,7 @@ import software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig
 import software.constructs.Construct
 
 public object elasticsearch {
+  @Deprecated(message = "deprecated in CDK")
   public inline fun advancedSecurityOptions(block: AdvancedSecurityOptionsDsl.() -> Unit = {}):
       AdvancedSecurityOptions {
     val builder = AdvancedSecurityOptionsDsl()
@@ -27,6 +29,7 @@ public object elasticsearch {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun capacityConfig(block: CapacityConfigDsl.() -> Unit = {}): CapacityConfig {
     val builder = CapacityConfigDsl()
     builder.apply(block)
@@ -151,12 +154,14 @@ public object elasticsearch {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun cognitoOptions(block: CognitoOptionsDsl.() -> Unit = {}): CognitoOptions {
     val builder = CognitoOptionsDsl()
     builder.apply(block)
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun customEndpointOptions(block: CustomEndpointOptionsDsl.() -> Unit = {}):
       CustomEndpointOptions {
     val builder = CustomEndpointOptionsDsl()
@@ -164,6 +169,7 @@ public object elasticsearch {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun domain(
     scope: Construct,
     id: String,
@@ -174,24 +180,28 @@ public object elasticsearch {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun domainAttributes(block: DomainAttributesDsl.() -> Unit = {}): DomainAttributes {
     val builder = DomainAttributesDsl()
     builder.apply(block)
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun domainProps(block: DomainPropsDsl.() -> Unit = {}): DomainProps {
     val builder = DomainPropsDsl()
     builder.apply(block)
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun ebsOptions(block: EbsOptionsDsl.() -> Unit = {}): EbsOptions {
     val builder = EbsOptionsDsl()
     builder.apply(block)
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun encryptionAtRestOptions(block: EncryptionAtRestOptionsDsl.() -> Unit = {}):
       EncryptionAtRestOptions {
     val builder = EncryptionAtRestOptionsDsl()
@@ -199,12 +209,14 @@ public object elasticsearch {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun loggingOptions(block: LoggingOptionsDsl.() -> Unit = {}): LoggingOptions {
     val builder = LoggingOptionsDsl()
     builder.apply(block)
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun zoneAwarenessConfig(block: ZoneAwarenessConfigDsl.() -> Unit = {}):
       ZoneAwarenessConfig {
     val builder = ZoneAwarenessConfigDsl()

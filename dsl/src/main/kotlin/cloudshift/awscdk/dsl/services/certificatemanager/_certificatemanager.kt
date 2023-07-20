@@ -2,6 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.certificatemanager
 
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.certificatemanager.Certificate
@@ -90,6 +91,7 @@ public object certificatemanager {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun dnsValidatedCertificate(
     scope: Construct,
     id: String,

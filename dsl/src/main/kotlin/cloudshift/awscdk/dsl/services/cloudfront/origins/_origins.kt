@@ -19,8 +19,9 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2
 import software.amazon.awscdk.services.s3.IBucket
 
 public object origins {
-  public inline fun httpOrigin(arg0: String, block: HttpOriginDsl.() -> Unit = {}): HttpOrigin {
-    val builder = HttpOriginDsl(arg0)
+  public inline fun httpOrigin(domainName: String, block: HttpOriginDsl.() -> Unit = {}):
+      HttpOrigin {
+    val builder = HttpOriginDsl(domainName)
     builder.apply(block)
     return builder.build()
   }
@@ -31,9 +32,9 @@ public object origins {
     return builder.build()
   }
 
-  public inline fun loadBalancerV2Origin(arg0: ILoadBalancerV2,
+  public inline fun loadBalancerV2Origin(loadBalancer: ILoadBalancerV2,
       block: LoadBalancerV2OriginDsl.() -> Unit = {}): LoadBalancerV2Origin {
-    val builder = LoadBalancerV2OriginDsl(arg0)
+    val builder = LoadBalancerV2OriginDsl(loadBalancer)
     builder.apply(block)
     return builder.build()
   }
@@ -57,9 +58,9 @@ public object origins {
     return builder.build()
   }
 
-  public inline fun restApiOrigin(arg0: RestApi, block: RestApiOriginDsl.() -> Unit = {}):
+  public inline fun restApiOrigin(restApi: RestApi, block: RestApiOriginDsl.() -> Unit = {}):
       RestApiOrigin {
-    val builder = RestApiOriginDsl(arg0)
+    val builder = RestApiOriginDsl(restApi)
     builder.apply(block)
     return builder.build()
   }
@@ -71,8 +72,8 @@ public object origins {
     return builder.build()
   }
 
-  public inline fun s3Origin(arg0: IBucket, block: S3OriginDsl.() -> Unit = {}): S3Origin {
-    val builder = S3OriginDsl(arg0)
+  public inline fun s3Origin(bucket: IBucket, block: S3OriginDsl.() -> Unit = {}): S3Origin {
+    val builder = S3OriginDsl(bucket)
     builder.apply(block)
     return builder.build()
   }

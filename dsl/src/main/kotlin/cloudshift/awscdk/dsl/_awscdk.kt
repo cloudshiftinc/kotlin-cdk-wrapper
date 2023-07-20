@@ -1029,8 +1029,8 @@ public object awscdk {
     return builder.build()
   }
 
-  public inline fun intrinsic(arg0: Any, block: IntrinsicDsl.() -> Unit = {}): Intrinsic {
-    val builder = IntrinsicDsl(arg0)
+  public inline fun intrinsic(`value`: Any, block: IntrinsicDsl.() -> Unit = {}): Intrinsic {
+    val builder = IntrinsicDsl(value)
     builder.apply(block)
     return builder.build()
   }
@@ -1115,8 +1115,8 @@ public object awscdk {
     return builder.build()
   }
 
-  public inline fun removeTag(arg0: String, block: RemoveTagDsl.() -> Unit = {}): RemoveTag {
-    val builder = RemoveTagDsl(arg0)
+  public inline fun removeTag(key: String, block: RemoveTagDsl.() -> Unit = {}): RemoveTag {
+    val builder = RemoveTagDsl(key)
     builder.apply(block)
     return builder.build()
   }
@@ -1159,8 +1159,9 @@ public object awscdk {
     return builder.build()
   }
 
-  public inline fun secretValue(arg0: Any, block: SecretValueDsl.() -> Unit = {}): SecretValue {
-    val builder = SecretValueDsl(arg0)
+  public inline fun secretValue(protectedValue: Any, block: SecretValueDsl.() -> Unit = {}):
+      SecretValue {
+    val builder = SecretValueDsl(protectedValue)
     builder.apply(block)
     return builder.build()
   }
@@ -1227,22 +1228,22 @@ public object awscdk {
   }
 
   public inline fun tag(
-    arg0: String,
-    arg1: String,
+    key: String,
+    `value`: String,
     block: TagDsl.() -> Unit = {},
   ): Tag {
-    val builder = TagDsl(arg0, arg1)
+    val builder = TagDsl(key, value)
     builder.apply(block)
     return builder.build()
   }
 
   public inline fun tagManager(
-    arg0: TagType,
-    arg1: String,
-    arg2: Any,
+    tagType: TagType,
+    resourceTypeName: String,
+    initialTags: Any,
     block: TagManagerDsl.() -> Unit = {},
   ): TagManager {
-    val builder = TagManagerDsl(arg0, arg1, arg2)
+    val builder = TagManagerDsl(tagType, resourceTypeName, initialTags)
     builder.apply(block)
     return builder.build()
   }

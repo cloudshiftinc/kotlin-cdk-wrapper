@@ -2,6 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.s3.deployment
 
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.s3.deployment.BucketDeployment
@@ -62,6 +63,7 @@ public object deployment {
     return builder.build()
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public inline fun userDefinedObjectMetadata(block: UserDefinedObjectMetadataDsl.() -> Unit = {}):
       UserDefinedObjectMetadata {
     val builder = UserDefinedObjectMetadataDsl()

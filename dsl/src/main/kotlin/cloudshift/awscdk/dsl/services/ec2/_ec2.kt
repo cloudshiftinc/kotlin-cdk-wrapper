@@ -3634,9 +3634,9 @@ public object ec2 {
     return builder.build()
   }
 
-  public inline fun genericLinuxImage(arg0: Map<String, String>,
+  public inline fun genericLinuxImage(amiMap: Map<String, String>,
       block: GenericLinuxImageDsl.() -> Unit = {}): GenericLinuxImage {
-    val builder = GenericLinuxImageDsl(arg0)
+    val builder = GenericLinuxImageDsl(amiMap)
     builder.apply(block)
     return builder.build()
   }
@@ -3648,9 +3648,9 @@ public object ec2 {
     return builder.build()
   }
 
-  public inline fun genericWindowsImage(arg0: Map<String, String>,
+  public inline fun genericWindowsImage(amiMap: Map<String, String>,
       block: GenericWindowsImageDsl.() -> Unit = {}): GenericWindowsImage {
-    val builder = GenericWindowsImageDsl(arg0)
+    val builder = GenericWindowsImageDsl(amiMap)
     builder.apply(block)
     return builder.build()
   }
@@ -4290,9 +4290,9 @@ public object ec2 {
     return builder.build()
   }
 
-  public inline fun windowsImage(arg0: WindowsVersion, block: WindowsImageDsl.() -> Unit = {}):
+  public inline fun windowsImage(version: WindowsVersion, block: WindowsImageDsl.() -> Unit = {}):
       WindowsImage {
-    val builder = WindowsImageDsl(arg0)
+    val builder = WindowsImageDsl(version)
     builder.apply(block)
     return builder.build()
   }

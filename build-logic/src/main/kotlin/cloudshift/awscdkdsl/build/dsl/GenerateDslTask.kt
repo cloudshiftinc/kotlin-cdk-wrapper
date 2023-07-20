@@ -47,7 +47,6 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
         val outDir = dslDir.get().asFile
 
         logger.lifecycle("Generating builders...")
-        val builders = classRegistry.allBuilders()
 
         BuilderGenerator2.generate(cdkModel.builders).forEach {
             it.writeTo(outDir)
@@ -55,7 +54,7 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
 
         logger.lifecycle("Generating namespace objects...")
         writeObjects(
-            NamespaceObjectGenerator().generate(builders),
+            NamespaceObjectGenerator().generate(cdkModel.builders),
         )
 
         logger.lifecycle("Generating extension functions...")
@@ -72,13 +71,13 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
          */
     }
 
-    private fun writeObjects(functionMap: ImmutableMultimap<ClassName, FunSpec>) {
-        functionMap.asMap().forEach { (objectName, funSpecs) ->
+    private fun writeObjects(functionMap: Map<ClassName, List<NamespaceObjectGenerator.NamespacedBuilderFunction>>) {
+        functionMap.forEach { (objectName, builderFunctions) ->
             val builder = FileSpec.builder(objectName.packageName, "_${objectName.simpleName}")
             builder.suppressWarningTypes(SUPPRESSIONS)
             val objectBuilder = TypeSpec.objectBuilder(objectName)
-            funSpecs.sortedBy { it.toString() }.forEach { funSpec ->
-                objectBuilder.addFunction(funSpec)
+            builderFunctions.forEach { builderFn ->
+                objectBuilder.addFunction(builderFn.funSpec)
             }
             builder.addType(objectBuilder.build())
             builder.build().writeTo(dslDir.get().asFile)

@@ -30,11 +30,11 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 public object eventsources {
   public inline fun apiEventSource(
-    arg0: String,
-    arg1: String,
+    method: String,
+    path: String,
     block: ApiEventSourceDsl.() -> Unit = {},
   ): ApiEventSource {
-    val builder = ApiEventSourceDsl(arg0, arg1)
+    val builder = ApiEventSourceDsl(method, path)
     builder.apply(block)
     return builder.build()
   }
@@ -46,9 +46,9 @@ public object eventsources {
     return builder.build()
   }
 
-  public inline fun dynamoEventSource(arg0: ITable, block: DynamoEventSourceDsl.() -> Unit = {}):
+  public inline fun dynamoEventSource(table: ITable, block: DynamoEventSourceDsl.() -> Unit = {}):
       DynamoEventSource {
-    val builder = DynamoEventSourceDsl(arg0)
+    val builder = DynamoEventSourceDsl(table)
     builder.apply(block)
     return builder.build()
   }
@@ -67,9 +67,9 @@ public object eventsources {
     return builder.build()
   }
 
-  public inline fun kinesisEventSource(arg0: IStream, block: KinesisEventSourceDsl.() -> Unit = {}):
-      KinesisEventSource {
-    val builder = KinesisEventSourceDsl(arg0)
+  public inline fun kinesisEventSource(stream: IStream, block: KinesisEventSourceDsl.() -> Unit =
+      {}): KinesisEventSource {
+    val builder = KinesisEventSourceDsl(stream)
     builder.apply(block)
     return builder.build()
   }
@@ -95,9 +95,9 @@ public object eventsources {
     return builder.build()
   }
 
-  public inline fun s3EventSource(arg0: Bucket, block: S3EventSourceDsl.() -> Unit = {}):
+  public inline fun s3EventSource(bucket: Bucket, block: S3EventSourceDsl.() -> Unit = {}):
       S3EventSource {
-    val builder = S3EventSourceDsl(arg0)
+    val builder = S3EventSourceDsl(bucket)
     builder.apply(block)
     return builder.build()
   }
@@ -124,9 +124,9 @@ public object eventsources {
     return builder.build()
   }
 
-  public inline fun snsEventSource(arg0: ITopic, block: SnsEventSourceDsl.() -> Unit = {}):
+  public inline fun snsEventSource(topic: ITopic, block: SnsEventSourceDsl.() -> Unit = {}):
       SnsEventSource {
-    val builder = SnsEventSourceDsl(arg0)
+    val builder = SnsEventSourceDsl(topic)
     builder.apply(block)
     return builder.build()
   }
@@ -138,9 +138,9 @@ public object eventsources {
     return builder.build()
   }
 
-  public inline fun sqsEventSource(arg0: IQueue, block: SqsEventSourceDsl.() -> Unit = {}):
+  public inline fun sqsEventSource(queue: IQueue, block: SqsEventSourceDsl.() -> Unit = {}):
       SqsEventSource {
-    val builder = SqsEventSourceDsl(arg0)
+    val builder = SqsEventSourceDsl(queue)
     builder.apply(block)
     return builder.build()
   }
