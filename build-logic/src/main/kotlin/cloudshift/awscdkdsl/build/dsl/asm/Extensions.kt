@@ -12,7 +12,7 @@ import org.objectweb.asm.tree.MethodNode
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap
 
 internal object Asm {
-    val ConstructorMethodName = "<init>"
+    const val ConstructorMethodName = "<init>"
 }
 
 internal fun MethodNode.isConstructor() = name == Asm.ConstructorMethodName

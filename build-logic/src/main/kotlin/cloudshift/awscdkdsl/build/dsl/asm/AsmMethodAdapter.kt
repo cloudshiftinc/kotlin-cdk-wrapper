@@ -12,7 +12,6 @@ import org.aspectj.util.GenericSignature.TypeArgument
 import org.aspectj.util.GenericSignature.TypeSignature
 import org.aspectj.util.GenericSignatureParser
 import org.gradle.kotlin.dsl.provideDelegate
-import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
@@ -39,15 +38,13 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Met
             check(genericParams.size == argumentTypes.size) { "Mismatch generic params size <> argument types size; method = ${delegate.name} arg types = ${argumentTypes.map { it.toTypeName() }}; params = ${params.map { it.javaClass }}; generic params = $genericParams}; desc = ${delegate.desc}; signature = ${delegate.signature}" }
         }
 
-        val isStaticMethod = delegate.access and Opcodes.ACC_STATIC != 0
-
         argumentTypes.mapIndexed { index: Int, type: Type ->
             val parameterName = when {
                 delegate.parameters != null -> delegate.parameters[index].name
                 delegate.localVariables != null -> when {
-                    isStaticMethod -> delegate.localVariables[index].name
+                    delegate.accessFlags.isStatic() -> delegate.localVariables[index].name
 
-                    // first index is 'this' for instance methods
+                    // first index is 'this' for instance methods, skip it
                     else -> delegate.localVariables[index + 1].name
                 }
 
@@ -60,16 +57,11 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Met
 
             // TODO - there don't appear to be any builder methods that use nullability annotations
             //   if we find a use for these annotations we have them...
-            //   also not seeing @Deprecated annotations
-//            val annotations = (delegate.visibleParameterAnnotations?.get(index) ?: emptyList())+
-//                (delegate.invisibleParameterAnnotations?.get(index) ?: emptyList())
 
-            AsmParameterAdapter(
-                _parameterName = parameterName,
-                _type = theType,
-            )
+            AsmParameterAdapter(name = parameterName, type = theType)
         }
     }
+
     override val returnType: TypeName by lazy(LazyThreadSafetyMode.NONE) {
         when (delegate.signature) {
             null -> Type.getReturnType(delegate.desc).toTypeName()
@@ -102,9 +94,8 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Met
     }
 
     private fun TypeArgument.toTypeName(): TypeName = signature.toTypeName()
+
+    private val MethodNode.allAnnotations: List<AnnotationNode>
+        get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())
 }
-
-
-private val MethodNode.allAnnotations: List<AnnotationNode>
-    get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())
 

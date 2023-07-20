@@ -3,8 +3,6 @@ package cloudshift.awscdkdsl.build.dsl.asm
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import com.squareup.kotlinpoet.ClassName
 import org.gradle.kotlin.dsl.provideDelegate
-import org.objectweb.asm.Opcodes.ACC_BRIDGE
-import org.objectweb.asm.Opcodes.ACC_SYNTHETIC
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
@@ -50,19 +48,6 @@ internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass {
 
     override fun toString(): String {
         return "ClassNodeAdapter(className=$className)"
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as AsmClassAdapter
-
-        return className == other.className
-    }
-
-    override fun hashCode(): Int {
-        return className.hashCode()
     }
 }
 

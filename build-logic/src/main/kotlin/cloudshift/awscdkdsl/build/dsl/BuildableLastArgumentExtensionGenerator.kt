@@ -12,17 +12,6 @@ import com.squareup.kotlinpoet.UNIT
 internal class BuildableLastArgumentExtensionGenerator {
 
     fun generate(cdkModel: CdkModel): Map<String, List<ExtensionFunctionSpec>> {
-        /*
-            // find member functions that have buildable types as their last parameter
-    fun functionsWithBuildableLastArgument(registry: CdkClassRegistry): List<KFunction<*>> {
-
-        return kClass.memberFunctions.filter { fn ->
-            fn.visibility == KVisibility.PUBLIC &&
-                fn.valueParameters.isNotEmpty() &&
-                registry.isBuildable(fn.valueParameters.last().type)
-        }
-    }
-         */
         // add extension function to allow DSL builder
         val extensions = cdkModel.classes.asSequence().filterNot { it.isBuilder() }
             .flatMap { cdkClass ->
@@ -40,21 +29,6 @@ internal class BuildableLastArgumentExtensionGenerator {
                     )
                 }
             }.sorted().groupBy { it.packageName }
-
-//        registry.classes.asSequence()
-//            .filter { !it.builder }
-//            .flatMap { it.functionsWithBuildableLastArgument(registry) }
-//            .forEach { fn ->
-//                val buildableType = registry.lookup(fn.valueParameters.last().type)!!
-//                val builderClass = registry.builderTypeFor(buildableType)
-//                val receiverClass = registry.lookup(fn.instanceParameter?.type!!)!!
-//                val funSpec = generateExtensionForBuildableArg(
-//                    fn,
-//                    receiverClass,
-//                    builderClass,
-//                )
-//                extensionFunctionMap.put(receiverClass.dslClassName().packageName, funSpec)
-//            }
 
         // adjust overrides that now class as the sole argument is always the configuration lambda
         return fixOverrides(extensions)

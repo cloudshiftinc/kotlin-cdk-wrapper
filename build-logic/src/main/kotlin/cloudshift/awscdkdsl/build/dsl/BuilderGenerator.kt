@@ -41,10 +41,7 @@ internal object BuilderGenerator {
             builderClassBuilder.primaryConstructor(constructorBuilder.build())
         }
 
-        generateBuilderDsl(
-            builder,
-            builderClassBuilder,
-        )
+        generateBuilderDsl(builder, builderClassBuilder)
 
         return FileSpec.builder(builderClassName.packageName, builderName)
             .addType(builderClassBuilder.build())
@@ -52,10 +49,7 @@ internal object BuilderGenerator {
             .build()
     }
 
-    private fun generateBuilderDsl(
-        builder: CdkBuilder,
-        builderClassBuilder: TypeSpec.Builder,
-    ) {
+    private fun generateBuilderDsl(builder: CdkBuilder, builderClassBuilder: TypeSpec.Builder) {
         builderClassBuilder.addProperty(
             PropertySpec.builder(
                 "cdkBuilder",
@@ -99,10 +93,7 @@ internal object BuilderGenerator {
         builderClassBuilder.addFunction(buildFnBuilder.build())
     }
 
-    private fun handleObjectProperty(
-        prop: BuilderProperty,
-        builderClassBuilder: TypeSpec.Builder,
-    ) {
+    private fun handleObjectProperty(prop: BuilderProperty, builderClassBuilder: TypeSpec.Builder) {
         val mapBuilderClass = ClassName("cloudshift.awscdk.common", "MapBuilder")
         val lambdaTypeName = LambdaTypeName.get(
             mapBuilderClass,
@@ -139,10 +130,7 @@ internal object BuilderGenerator {
     ) {
         val builderClass = prop.builderClass ?: error("Expected builder class")
         val dslBuilderClass = builderClass.className.dslClassName()
-        val lambdaTypeName = LambdaTypeName.get(
-            dslBuilderClass,
-            returnType = UNIT,
-        )
+        val lambdaTypeName = LambdaTypeName.get(receiver = dslBuilderClass, returnType = UNIT)
 
         // DSL setter
         if (!overloaded) {
@@ -228,10 +216,12 @@ internal object BuilderGenerator {
             )
         }
 
-        builderClassBuilder.addFunction(dslFunctionSpec(prop) {
-            addParameter(prop.name, COLLECTION.parameterizedBy(type.typeArguments))
-            addStatement("%N.addAll(%N)", collectionName, prop.name)
-        })
+        builderClassBuilder.addFunction(
+            dslFunctionSpec(prop) {
+                addParameter(prop.name, COLLECTION.parameterizedBy(type.typeArguments))
+                addStatement("%N.addAll(%N)", collectionName, prop.name)
+            },
+        )
 
         // delegate to CDK builder
         buildFnBuilder

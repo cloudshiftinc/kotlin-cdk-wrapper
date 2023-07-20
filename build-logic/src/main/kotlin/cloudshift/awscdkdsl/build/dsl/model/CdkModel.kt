@@ -1,7 +1,5 @@
 package cloudshift.awscdkdsl.build.dsl.model
 
-import cloudshift.awscdkdsl.build.dsl.model.CdkBuilder
-import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.TypeName
 
