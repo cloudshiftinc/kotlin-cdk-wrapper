@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
+import kotlin.String
 
 @CdkDslMarker
 public class CfnGlobalTableKeySchemaPropertyDsl {
-  private val cdkBuilder: CfnGlobalTable.KeySchemaProperty.Builder =
-      CfnGlobalTable.KeySchemaProperty.builder()
+    private val cdkBuilder: CfnGlobalTable.KeySchemaProperty.Builder =
+        CfnGlobalTable.KeySchemaProperty.builder()
 
-  public fun attributeName(attributeName: String) {
-    cdkBuilder.attributeName(attributeName)
-  }
+    public fun attributeName(attributeName: String) {
+        cdkBuilder.attributeName(attributeName)
+    }
 
-  public fun keyType(keyType: String) {
-    cdkBuilder.keyType(keyType)
-  }
+    public fun keyType(keyType: String) {
+        cdkBuilder.keyType(keyType)
+    }
 
-  public fun build(): CfnGlobalTable.KeySchemaProperty = cdkBuilder.build()
+    public fun build(): CfnGlobalTable.KeySchemaProperty = cdkBuilder.build()
 }

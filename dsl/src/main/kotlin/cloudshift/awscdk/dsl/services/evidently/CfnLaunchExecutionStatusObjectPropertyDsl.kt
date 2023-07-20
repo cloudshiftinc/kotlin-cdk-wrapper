@@ -1,27 +1,36 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.evidently
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnLaunch
+import kotlin.String
 
 @CdkDslMarker
 public class CfnLaunchExecutionStatusObjectPropertyDsl {
-  private val cdkBuilder: CfnLaunch.ExecutionStatusObjectProperty.Builder =
-      CfnLaunch.ExecutionStatusObjectProperty.builder()
+    private val cdkBuilder: CfnLaunch.ExecutionStatusObjectProperty.Builder =
+        CfnLaunch.ExecutionStatusObjectProperty.builder()
 
-  public fun desiredState(desiredState: String) {
-    cdkBuilder.desiredState(desiredState)
-  }
+    public fun desiredState(desiredState: String) {
+        cdkBuilder.desiredState(desiredState)
+    }
 
-  public fun reason(reason: String) {
-    cdkBuilder.reason(reason)
-  }
+    public fun reason(reason: String) {
+        cdkBuilder.reason(reason)
+    }
 
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  public fun build(): CfnLaunch.ExecutionStatusObjectProperty = cdkBuilder.build()
+    public fun build(): CfnLaunch.ExecutionStatusObjectProperty = cdkBuilder.build()
 }

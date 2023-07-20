@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.kinesisanalytics
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
+import kotlin.String
 
 @CdkDslMarker
 public class CfnApplicationOutputV2LambdaOutputPropertyDsl {
-  private val cdkBuilder: CfnApplicationOutputV2.LambdaOutputProperty.Builder =
-      CfnApplicationOutputV2.LambdaOutputProperty.builder()
+    private val cdkBuilder: CfnApplicationOutputV2.LambdaOutputProperty.Builder =
+        CfnApplicationOutputV2.LambdaOutputProperty.builder()
 
-  public fun resourceArn(resourceArn: String) {
-    cdkBuilder.resourceArn(resourceArn)
-  }
+    public fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+    }
 
-  public fun build(): CfnApplicationOutputV2.LambdaOutputProperty = cdkBuilder.build()
+    public fun build(): CfnApplicationOutputV2.LambdaOutputProperty = cdkBuilder.build()
 }

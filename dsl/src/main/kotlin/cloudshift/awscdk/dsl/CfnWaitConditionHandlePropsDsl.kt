@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl
 
@@ -7,8 +16,8 @@ import software.amazon.awscdk.CfnWaitConditionHandleProps
 
 @CdkDslMarker
 public class CfnWaitConditionHandlePropsDsl {
-  private val cdkBuilder: CfnWaitConditionHandleProps.Builder =
-      CfnWaitConditionHandleProps.builder()
+    private val cdkBuilder: CfnWaitConditionHandleProps.Builder =
+        CfnWaitConditionHandleProps.builder()
 
-  public fun build(): CfnWaitConditionHandleProps = cdkBuilder.build()
+    public fun build(): CfnWaitConditionHandleProps = cdkBuilder.build()
 }

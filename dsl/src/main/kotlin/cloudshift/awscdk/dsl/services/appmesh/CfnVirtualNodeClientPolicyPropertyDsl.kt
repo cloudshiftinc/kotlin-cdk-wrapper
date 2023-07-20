@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
 @CdkDslMarker
 public class CfnVirtualNodeClientPolicyPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.ClientPolicyProperty.Builder =
-      CfnVirtualNode.ClientPolicyProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.ClientPolicyProperty.Builder =
+        CfnVirtualNode.ClientPolicyProperty.builder()
 
-  public fun tls(tls: IResolvable) {
-    cdkBuilder.tls(tls)
-  }
+    public fun tls(tls: IResolvable) {
+        cdkBuilder.tls(tls)
+    }
 
-  public fun tls(tls: CfnVirtualNode.ClientPolicyTlsProperty) {
-    cdkBuilder.tls(tls)
-  }
+    public fun tls(tls: CfnVirtualNode.ClientPolicyTlsProperty) {
+        cdkBuilder.tls(tls)
+    }
 
-  public fun build(): CfnVirtualNode.ClientPolicyProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.ClientPolicyProperty = cdkBuilder.build()
 }

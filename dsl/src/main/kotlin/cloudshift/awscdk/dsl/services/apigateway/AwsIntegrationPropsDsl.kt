@@ -1,60 +1,69 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.apigateway
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.apigateway.AwsIntegrationProps
+import software.amazon.awscdk.services.apigateway.IntegrationOptions
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
-import software.amazon.awscdk.services.apigateway.AwsIntegrationProps
-import software.amazon.awscdk.services.apigateway.IntegrationOptions
 
 @CdkDslMarker
 public class AwsIntegrationPropsDsl {
-  private val cdkBuilder: AwsIntegrationProps.Builder = AwsIntegrationProps.builder()
+    private val cdkBuilder: AwsIntegrationProps.Builder = AwsIntegrationProps.builder()
 
-  public fun action(action: String) {
-    cdkBuilder.action(action)
-  }
+    public fun action(action: String) {
+        cdkBuilder.action(action)
+    }
 
-  public fun actionParameters(actionParameters: Map<String, String>) {
-    cdkBuilder.actionParameters(actionParameters)
-  }
+    public fun actionParameters(actionParameters: Map<String, String>) {
+        cdkBuilder.actionParameters(actionParameters)
+    }
 
-  public fun integrationHttpMethod(integrationHttpMethod: String) {
-    cdkBuilder.integrationHttpMethod(integrationHttpMethod)
-  }
+    public fun integrationHttpMethod(integrationHttpMethod: String) {
+        cdkBuilder.integrationHttpMethod(integrationHttpMethod)
+    }
 
-  public fun options(block: IntegrationOptionsDsl.() -> Unit = {}) {
-    val builder = IntegrationOptionsDsl()
-    builder.apply(block)
-    cdkBuilder.options(builder.build())
-  }
+    public fun options(block: IntegrationOptionsDsl.() -> Unit = {}) {
+        val builder = IntegrationOptionsDsl()
+        builder.apply(block)
+        cdkBuilder.options(builder.build())
+    }
 
-  public fun options(options: IntegrationOptions) {
-    cdkBuilder.options(options)
-  }
+    public fun options(options: IntegrationOptions) {
+        cdkBuilder.options(options)
+    }
 
-  public fun path(path: String) {
-    cdkBuilder.path(path)
-  }
+    public fun path(path: String) {
+        cdkBuilder.path(path)
+    }
 
-  public fun proxy(proxy: Boolean) {
-    cdkBuilder.proxy(proxy)
-  }
+    public fun proxy(proxy: Boolean) {
+        cdkBuilder.proxy(proxy)
+    }
 
-  public fun region(region: String) {
-    cdkBuilder.region(region)
-  }
+    public fun region(region: String) {
+        cdkBuilder.region(region)
+    }
 
-  public fun service(service: String) {
-    cdkBuilder.service(service)
-  }
+    public fun service(service: String) {
+        cdkBuilder.service(service)
+    }
 
-  public fun subdomain(subdomain: String) {
-    cdkBuilder.subdomain(subdomain)
-  }
+    public fun subdomain(subdomain: String) {
+        cdkBuilder.subdomain(subdomain)
+    }
 
-  public fun build(): AwsIntegrationProps = cdkBuilder.build()
+    public fun build(): AwsIntegrationProps = cdkBuilder.build()
 }

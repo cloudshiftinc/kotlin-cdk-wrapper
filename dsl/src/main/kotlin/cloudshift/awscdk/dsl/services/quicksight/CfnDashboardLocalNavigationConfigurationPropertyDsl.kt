@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDashboardLocalNavigationConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDashboard.LocalNavigationConfigurationProperty.Builder =
-      CfnDashboard.LocalNavigationConfigurationProperty.builder()
+    private val cdkBuilder: CfnDashboard.LocalNavigationConfigurationProperty.Builder =
+        CfnDashboard.LocalNavigationConfigurationProperty.builder()
 
-  public fun targetSheetId(targetSheetId: String) {
-    cdkBuilder.targetSheetId(targetSheetId)
-  }
+    public fun targetSheetId(targetSheetId: String) {
+        cdkBuilder.targetSheetId(targetSheetId)
+    }
 
-  public fun build(): CfnDashboard.LocalNavigationConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.LocalNavigationConfigurationProperty = cdkBuilder.build()
 }

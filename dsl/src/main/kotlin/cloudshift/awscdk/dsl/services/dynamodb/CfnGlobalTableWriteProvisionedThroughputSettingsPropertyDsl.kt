@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
@@ -8,17 +17,16 @@ import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
 @CdkDslMarker
 public class CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl {
-  private val cdkBuilder: CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.Builder =
-      CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.builder()
+    private val cdkBuilder: CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.Builder =
+        CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.builder()
 
-  public fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: IResolvable) {
-    cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)
-  }
+    public fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: IResolvable) {
+        cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)
+    }
 
-  public
-      fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty) {
-    cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)
-  }
+    public fun writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings: CfnGlobalTable.CapacityAutoScalingSettingsProperty) {
+        cdkBuilder.writeCapacityAutoScalingSettings(writeCapacityAutoScalingSettings)
+    }
 
-  public fun build(): CfnGlobalTable.WriteProvisionedThroughputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnGlobalTable.WriteProvisionedThroughputSettingsProperty = cdkBuilder.build()
 }

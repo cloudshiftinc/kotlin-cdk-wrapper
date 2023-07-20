@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -9,17 +18,16 @@ import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicyP
 
 @CdkDslMarker
 public class CfnContinuousDeploymentPolicyPropsDsl {
-  private val cdkBuilder: CfnContinuousDeploymentPolicyProps.Builder =
-      CfnContinuousDeploymentPolicyProps.builder()
+    private val cdkBuilder: CfnContinuousDeploymentPolicyProps.Builder =
+        CfnContinuousDeploymentPolicyProps.builder()
 
-  public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  public
-      fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
-    cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
-  }
+    public fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
+        cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig)
+    }
 
-  public fun build(): CfnContinuousDeploymentPolicyProps = cdkBuilder.build()
+    public fun build(): CfnContinuousDeploymentPolicyProps = cdkBuilder.build()
 }

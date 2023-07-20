@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 @CdkDslMarker
 public class CfnDeliveryStreamInputFormatConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDeliveryStream.InputFormatConfigurationProperty.Builder =
-      CfnDeliveryStream.InputFormatConfigurationProperty.builder()
+    private val cdkBuilder: CfnDeliveryStream.InputFormatConfigurationProperty.Builder =
+        CfnDeliveryStream.InputFormatConfigurationProperty.builder()
 
-  public fun deserializer(deserializer: IResolvable) {
-    cdkBuilder.deserializer(deserializer)
-  }
+    public fun deserializer(deserializer: IResolvable) {
+        cdkBuilder.deserializer(deserializer)
+    }
 
-  public fun deserializer(deserializer: CfnDeliveryStream.DeserializerProperty) {
-    cdkBuilder.deserializer(deserializer)
-  }
+    public fun deserializer(deserializer: CfnDeliveryStream.DeserializerProperty) {
+        cdkBuilder.deserializer(deserializer)
+    }
 
-  public fun build(): CfnDeliveryStream.InputFormatConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDeliveryStream.InputFormatConfigurationProperty = cdkBuilder.build()
 }

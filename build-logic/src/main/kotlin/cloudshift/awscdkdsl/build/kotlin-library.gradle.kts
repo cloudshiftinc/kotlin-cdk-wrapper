@@ -5,13 +5,14 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.gradle.internal.jvm.inspection.JvmVendor
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jlleitschuh.gradle.ktlint.KtlintExtension
 
 plugins {
     `java-library`
     kotlin("jvm")
+    id("org.jlleitschuh.gradle.ktlint")
+    id("cloudshift.awscdkdsl.build.base")
 }
-
-
 
 tasks.withType<AbstractArchiveTask>().configureEach {
     isPreserveFileTimestamps = false
@@ -99,4 +100,14 @@ kotlin {
         languageVersion = JavaLanguageVersion.of(17)
         vendor = JvmVendorSpec.AMAZON
     }
+}
+
+configure<KtlintExtension> {
+    version = "0.50.0"
+    verbose = true
+    debug = true
+}
+
+tasks.named("precommit") {
+    dependsOn("ktlintFormat", "ktlintCheck")
 }

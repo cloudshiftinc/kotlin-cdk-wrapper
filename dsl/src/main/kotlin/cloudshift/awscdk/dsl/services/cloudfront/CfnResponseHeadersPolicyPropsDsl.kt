@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -9,17 +18,16 @@ import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps
 
 @CdkDslMarker
 public class CfnResponseHeadersPolicyPropsDsl {
-  private val cdkBuilder: CfnResponseHeadersPolicyProps.Builder =
-      CfnResponseHeadersPolicyProps.builder()
+    private val cdkBuilder: CfnResponseHeadersPolicyProps.Builder =
+        CfnResponseHeadersPolicyProps.builder()
 
-  public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  public
-      fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
-    cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
-  }
+    public fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
+        cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig)
+    }
 
-  public fun build(): CfnResponseHeadersPolicyProps = cdkBuilder.build()
+    public fun build(): CfnResponseHeadersPolicyProps = cdkBuilder.build()
 }

@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jlleitschuh.gradle.ktlint.tasks.BaseKtLintCheckTask
 
 plugins {
     id("cloudshift.awscdkdsl.build.kotlin-library")
@@ -8,8 +9,6 @@ plugins {
 dependencies {
     api(libs.awscdk)
     api(projects.common)
-
-
 }
 
 // lots of generated Kotlin drives memory requirement
@@ -28,3 +27,6 @@ tasks.named<KotlinCompile>("compileKotlin") {
     }
 }
 
+tasks.withType<BaseKtLintCheckTask> {
+    workerMaxHeapSize.set("512m")
+}

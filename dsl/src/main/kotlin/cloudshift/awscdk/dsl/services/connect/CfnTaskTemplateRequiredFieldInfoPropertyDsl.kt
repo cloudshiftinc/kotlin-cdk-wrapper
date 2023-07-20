@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.connect
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.connect.CfnTaskTemplate
 
 @CdkDslMarker
 public class CfnTaskTemplateRequiredFieldInfoPropertyDsl {
-  private val cdkBuilder: CfnTaskTemplate.RequiredFieldInfoProperty.Builder =
-      CfnTaskTemplate.RequiredFieldInfoProperty.builder()
+    private val cdkBuilder: CfnTaskTemplate.RequiredFieldInfoProperty.Builder =
+        CfnTaskTemplate.RequiredFieldInfoProperty.builder()
 
-  public fun id(id: IResolvable) {
-    cdkBuilder.id(id)
-  }
+    public fun id(id: IResolvable) {
+        cdkBuilder.id(id)
+    }
 
-  public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
-    cdkBuilder.id(id)
-  }
+    public fun id(id: CfnTaskTemplate.FieldIdentifierProperty) {
+        cdkBuilder.id(id)
+    }
 
-  public fun build(): CfnTaskTemplate.RequiredFieldInfoProperty = cdkBuilder.build()
+    public fun build(): CfnTaskTemplate.RequiredFieldInfoProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -8,12 +17,12 @@ import software.amazon.awscdk.services.rds.SqlServerEngineVersion
 
 @CdkDslMarker
 public class SqlServerEeInstanceEnginePropsDsl {
-  private val cdkBuilder: SqlServerEeInstanceEngineProps.Builder =
-      SqlServerEeInstanceEngineProps.builder()
+    private val cdkBuilder: SqlServerEeInstanceEngineProps.Builder =
+        SqlServerEeInstanceEngineProps.builder()
 
-  public fun version(version: SqlServerEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    public fun version(version: SqlServerEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): SqlServerEeInstanceEngineProps = cdkBuilder.build()
+    public fun build(): SqlServerEeInstanceEngineProps = cdkBuilder.build()
 }

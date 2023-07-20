@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -8,12 +17,12 @@ import software.amazon.awscdk.services.rds.OracleEngineVersion
 
 @CdkDslMarker
 public class OracleEeCdbInstanceEnginePropsDsl {
-  private val cdkBuilder: OracleEeCdbInstanceEngineProps.Builder =
-      OracleEeCdbInstanceEngineProps.builder()
+    private val cdkBuilder: OracleEeCdbInstanceEngineProps.Builder =
+        OracleEeCdbInstanceEngineProps.builder()
 
-  public fun version(version: OracleEngineVersion) {
-    cdkBuilder.version(version)
-  }
+    public fun version(version: OracleEngineVersion) {
+        cdkBuilder.version(version)
+    }
 
-  public fun build(): OracleEeCdbInstanceEngineProps = cdkBuilder.build()
+    public fun build(): OracleEeCdbInstanceEngineProps = cdkBuilder.build()
 }

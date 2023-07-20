@@ -1,33 +1,42 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.route53
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnRecordSetGroup
+import kotlin.Boolean
+import kotlin.String
 
 @CdkDslMarker
 public class CfnRecordSetGroupAliasTargetPropertyDsl {
-  private val cdkBuilder: CfnRecordSetGroup.AliasTargetProperty.Builder =
-      CfnRecordSetGroup.AliasTargetProperty.builder()
+    private val cdkBuilder: CfnRecordSetGroup.AliasTargetProperty.Builder =
+        CfnRecordSetGroup.AliasTargetProperty.builder()
 
-  public fun dnsName(dnsName: String) {
-    cdkBuilder.dnsName(dnsName)
-  }
+    public fun dnsName(dnsName: String) {
+        cdkBuilder.dnsName(dnsName)
+    }
 
-  public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
-    cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-  }
+    public fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+    }
 
-  public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-    cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
-  }
+    public fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
+    }
 
-  public fun hostedZoneId(hostedZoneId: String) {
-    cdkBuilder.hostedZoneId(hostedZoneId)
-  }
+    public fun hostedZoneId(hostedZoneId: String) {
+        cdkBuilder.hostedZoneId(hostedZoneId)
+    }
 
-  public fun build(): CfnRecordSetGroup.AliasTargetProperty = cdkBuilder.build()
+    public fun build(): CfnRecordSetGroup.AliasTargetProperty = cdkBuilder.build()
 }

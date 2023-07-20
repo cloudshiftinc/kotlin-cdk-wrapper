@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDashboardBoxPlotStyleOptionsPropertyDsl {
-  private val cdkBuilder: CfnDashboard.BoxPlotStyleOptionsProperty.Builder =
-      CfnDashboard.BoxPlotStyleOptionsProperty.builder()
+    private val cdkBuilder: CfnDashboard.BoxPlotStyleOptionsProperty.Builder =
+        CfnDashboard.BoxPlotStyleOptionsProperty.builder()
 
-  public fun fillStyle(fillStyle: String) {
-    cdkBuilder.fillStyle(fillStyle)
-  }
+    public fun fillStyle(fillStyle: String) {
+        cdkBuilder.fillStyle(fillStyle)
+    }
 
-  public fun build(): CfnDashboard.BoxPlotStyleOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.BoxPlotStyleOptionsProperty = cdkBuilder.build()
 }

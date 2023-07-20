@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
 @CdkDslMarker
 public class CfnVirtualNodeTcpTimeoutPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.TcpTimeoutProperty.Builder =
-      CfnVirtualNode.TcpTimeoutProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.TcpTimeoutProperty.Builder =
+        CfnVirtualNode.TcpTimeoutProperty.builder()
 
-  public fun idle(idle: IResolvable) {
-    cdkBuilder.idle(idle)
-  }
+    public fun idle(idle: IResolvable) {
+        cdkBuilder.idle(idle)
+    }
 
-  public fun idle(idle: CfnVirtualNode.DurationProperty) {
-    cdkBuilder.idle(idle)
-  }
+    public fun idle(idle: CfnVirtualNode.DurationProperty) {
+        cdkBuilder.idle(idle)
+    }
 
-  public fun build(): CfnVirtualNode.TcpTimeoutProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.TcpTimeoutProperty = cdkBuilder.build()
 }

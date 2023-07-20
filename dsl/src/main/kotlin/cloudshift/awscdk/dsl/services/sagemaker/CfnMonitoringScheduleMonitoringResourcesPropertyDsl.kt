@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
 @CdkDslMarker
 public class CfnMonitoringScheduleMonitoringResourcesPropertyDsl {
-  private val cdkBuilder: CfnMonitoringSchedule.MonitoringResourcesProperty.Builder =
-      CfnMonitoringSchedule.MonitoringResourcesProperty.builder()
+    private val cdkBuilder: CfnMonitoringSchedule.MonitoringResourcesProperty.Builder =
+        CfnMonitoringSchedule.MonitoringResourcesProperty.builder()
 
-  public fun clusterConfig(clusterConfig: IResolvable) {
-    cdkBuilder.clusterConfig(clusterConfig)
-  }
+    public fun clusterConfig(clusterConfig: IResolvable) {
+        cdkBuilder.clusterConfig(clusterConfig)
+    }
 
-  public fun clusterConfig(clusterConfig: CfnMonitoringSchedule.ClusterConfigProperty) {
-    cdkBuilder.clusterConfig(clusterConfig)
-  }
+    public fun clusterConfig(clusterConfig: CfnMonitoringSchedule.ClusterConfigProperty) {
+        cdkBuilder.clusterConfig(clusterConfig)
+    }
 
-  public fun build(): CfnMonitoringSchedule.MonitoringResourcesProperty = cdkBuilder.build()
+    public fun build(): CfnMonitoringSchedule.MonitoringResourcesProperty = cdkBuilder.build()
 }

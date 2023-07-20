@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -7,8 +16,8 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 
 @CdkDslMarker
 public class CfnChannelMediaPackageOutputSettingsPropertyDsl {
-  private val cdkBuilder: CfnChannel.MediaPackageOutputSettingsProperty.Builder =
-      CfnChannel.MediaPackageOutputSettingsProperty.builder()
+    private val cdkBuilder: CfnChannel.MediaPackageOutputSettingsProperty.Builder =
+        CfnChannel.MediaPackageOutputSettingsProperty.builder()
 
-  public fun build(): CfnChannel.MediaPackageOutputSettingsProperty = cdkBuilder.build()
+    public fun build(): CfnChannel.MediaPackageOutputSettingsProperty = cdkBuilder.build()
 }

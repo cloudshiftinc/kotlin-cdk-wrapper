@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
 @CdkDslMarker
 public class CfnSpotFleetSpotMaintenanceStrategiesPropertyDsl {
-  private val cdkBuilder: CfnSpotFleet.SpotMaintenanceStrategiesProperty.Builder =
-      CfnSpotFleet.SpotMaintenanceStrategiesProperty.builder()
+    private val cdkBuilder: CfnSpotFleet.SpotMaintenanceStrategiesProperty.Builder =
+        CfnSpotFleet.SpotMaintenanceStrategiesProperty.builder()
 
-  public fun capacityRebalance(capacityRebalance: IResolvable) {
-    cdkBuilder.capacityRebalance(capacityRebalance)
-  }
+    public fun capacityRebalance(capacityRebalance: IResolvable) {
+        cdkBuilder.capacityRebalance(capacityRebalance)
+    }
 
-  public fun capacityRebalance(capacityRebalance: CfnSpotFleet.SpotCapacityRebalanceProperty) {
-    cdkBuilder.capacityRebalance(capacityRebalance)
-  }
+    public fun capacityRebalance(capacityRebalance: CfnSpotFleet.SpotCapacityRebalanceProperty) {
+        cdkBuilder.capacityRebalance(capacityRebalance)
+    }
 
-  public fun build(): CfnSpotFleet.SpotMaintenanceStrategiesProperty = cdkBuilder.build()
+    public fun build(): CfnSpotFleet.SpotMaintenanceStrategiesProperty = cdkBuilder.build()
 }

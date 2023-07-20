@@ -1,76 +1,85 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.pipes
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
-import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 import software.constructs.Construct
+import kotlin.String
+import kotlin.collections.Map
 
 @CdkDslMarker
 public class CfnPipeDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnPipe.Builder = CfnPipe.Builder.create(scope, id)
+    private val cdkBuilder: CfnPipe.Builder = CfnPipe.Builder.create(scope, id)
 
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun desiredState(desiredState: String) {
-    cdkBuilder.desiredState(desiredState)
-  }
+    public fun desiredState(desiredState: String) {
+        cdkBuilder.desiredState(desiredState)
+    }
 
-  public fun enrichment(enrichment: String) {
-    cdkBuilder.enrichment(enrichment)
-  }
+    public fun enrichment(enrichment: String) {
+        cdkBuilder.enrichment(enrichment)
+    }
 
-  public fun enrichmentParameters(enrichmentParameters: IResolvable) {
-    cdkBuilder.enrichmentParameters(enrichmentParameters)
-  }
+    public fun enrichmentParameters(enrichmentParameters: IResolvable) {
+        cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
 
-  public fun enrichmentParameters(enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty) {
-    cdkBuilder.enrichmentParameters(enrichmentParameters)
-  }
+    public fun enrichmentParameters(enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty) {
+        cdkBuilder.enrichmentParameters(enrichmentParameters)
+    }
 
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  public fun source(source: String) {
-    cdkBuilder.source(source)
-  }
+    public fun source(source: String) {
+        cdkBuilder.source(source)
+    }
 
-  public fun sourceParameters(sourceParameters: IResolvable) {
-    cdkBuilder.sourceParameters(sourceParameters)
-  }
+    public fun sourceParameters(sourceParameters: IResolvable) {
+        cdkBuilder.sourceParameters(sourceParameters)
+    }
 
-  public fun sourceParameters(sourceParameters: CfnPipe.PipeSourceParametersProperty) {
-    cdkBuilder.sourceParameters(sourceParameters)
-  }
+    public fun sourceParameters(sourceParameters: CfnPipe.PipeSourceParametersProperty) {
+        cdkBuilder.sourceParameters(sourceParameters)
+    }
 
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun target(target: String) {
-    cdkBuilder.target(target)
-  }
+    public fun target(target: String) {
+        cdkBuilder.target(target)
+    }
 
-  public fun targetParameters(targetParameters: IResolvable) {
-    cdkBuilder.targetParameters(targetParameters)
-  }
+    public fun targetParameters(targetParameters: IResolvable) {
+        cdkBuilder.targetParameters(targetParameters)
+    }
 
-  public fun targetParameters(targetParameters: CfnPipe.PipeTargetParametersProperty) {
-    cdkBuilder.targetParameters(targetParameters)
-  }
+    public fun targetParameters(targetParameters: CfnPipe.PipeTargetParametersProperty) {
+        cdkBuilder.targetParameters(targetParameters)
+    }
 
-  public fun build(): CfnPipe = cdkBuilder.build()
+    public fun build(): CfnPipe = cdkBuilder.build()
 }

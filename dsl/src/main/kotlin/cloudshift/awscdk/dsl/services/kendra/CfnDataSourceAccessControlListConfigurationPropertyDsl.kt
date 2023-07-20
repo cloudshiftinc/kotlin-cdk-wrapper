@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.kendra
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDataSourceAccessControlListConfigurationPropertyDsl {
-  private val cdkBuilder: CfnDataSource.AccessControlListConfigurationProperty.Builder =
-      CfnDataSource.AccessControlListConfigurationProperty.builder()
+    private val cdkBuilder: CfnDataSource.AccessControlListConfigurationProperty.Builder =
+        CfnDataSource.AccessControlListConfigurationProperty.builder()
 
-  public fun keyPath(keyPath: String) {
-    cdkBuilder.keyPath(keyPath)
-  }
+    public fun keyPath(keyPath: String) {
+        cdkBuilder.keyPath(keyPath)
+    }
 
-  public fun build(): CfnDataSource.AccessControlListConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.AccessControlListConfigurationProperty = cdkBuilder.build()
 }

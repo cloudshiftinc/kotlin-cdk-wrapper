@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.ses
 
@@ -9,15 +18,15 @@ import software.amazon.awscdk.services.ses.CfnReceiptFilterProps
 
 @CdkDslMarker
 public class CfnReceiptFilterPropsDsl {
-  private val cdkBuilder: CfnReceiptFilterProps.Builder = CfnReceiptFilterProps.builder()
+    private val cdkBuilder: CfnReceiptFilterProps.Builder = CfnReceiptFilterProps.builder()
 
-  public fun filter(filter: IResolvable) {
-    cdkBuilder.filter(filter)
-  }
+    public fun filter(filter: IResolvable) {
+        cdkBuilder.filter(filter)
+    }
 
-  public fun filter(filter: CfnReceiptFilter.FilterProperty) {
-    cdkBuilder.filter(filter)
-  }
+    public fun filter(filter: CfnReceiptFilter.FilterProperty) {
+        cdkBuilder.filter(filter)
+    }
 
-  public fun build(): CfnReceiptFilterProps = cdkBuilder.build()
+    public fun build(): CfnReceiptFilterProps = cdkBuilder.build()
 }

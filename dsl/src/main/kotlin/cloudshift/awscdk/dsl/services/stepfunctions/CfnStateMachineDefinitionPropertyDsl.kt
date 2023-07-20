@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions
 
@@ -7,8 +16,8 @@ import software.amazon.awscdk.services.stepfunctions.CfnStateMachine
 
 @CdkDslMarker
 public class CfnStateMachineDefinitionPropertyDsl {
-  private val cdkBuilder: CfnStateMachine.DefinitionProperty.Builder =
-      CfnStateMachine.DefinitionProperty.builder()
+    private val cdkBuilder: CfnStateMachine.DefinitionProperty.Builder =
+        CfnStateMachine.DefinitionProperty.builder()
 
-  public fun build(): CfnStateMachine.DefinitionProperty = cdkBuilder.build()
+    public fun build(): CfnStateMachine.DefinitionProperty = cdkBuilder.build()
 }

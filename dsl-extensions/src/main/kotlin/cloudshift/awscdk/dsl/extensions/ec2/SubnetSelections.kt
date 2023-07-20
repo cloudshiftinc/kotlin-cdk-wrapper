@@ -20,5 +20,5 @@ private object SubnetSelectionsImpl : SubnetSelections {
     override val IsolatedSubnets: SubnetSelection = ec2.subnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
 }
 
-public val ec2.SubnetSelections : SubnetSelections
+public val ec2.SubnetSelections: SubnetSelections
     get() = SubnetSelectionsImpl

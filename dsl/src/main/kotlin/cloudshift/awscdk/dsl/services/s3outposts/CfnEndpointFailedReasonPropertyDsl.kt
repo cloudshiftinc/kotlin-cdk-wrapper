@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.s3outposts
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
+import kotlin.String
 
 @CdkDslMarker
 public class CfnEndpointFailedReasonPropertyDsl {
-  private val cdkBuilder: CfnEndpoint.FailedReasonProperty.Builder =
-      CfnEndpoint.FailedReasonProperty.builder()
+    private val cdkBuilder: CfnEndpoint.FailedReasonProperty.Builder =
+        CfnEndpoint.FailedReasonProperty.builder()
 
-  public fun errorCode(errorCode: String) {
-    cdkBuilder.errorCode(errorCode)
-  }
+    public fun errorCode(errorCode: String) {
+        cdkBuilder.errorCode(errorCode)
+    }
 
-  public fun message(message: String) {
-    cdkBuilder.message(message)
-  }
+    public fun message(message: String) {
+        cdkBuilder.message(message)
+    }
 
-  public fun build(): CfnEndpoint.FailedReasonProperty = cdkBuilder.build()
+    public fun build(): CfnEndpoint.FailedReasonProperty = cdkBuilder.build()
 }

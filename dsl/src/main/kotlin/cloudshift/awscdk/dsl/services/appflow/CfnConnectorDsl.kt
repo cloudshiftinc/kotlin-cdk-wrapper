@@ -1,40 +1,48 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnector
 import software.constructs.Construct
+import kotlin.String
 
 @CdkDslMarker
 public class CfnConnectorDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnConnector.Builder = CfnConnector.Builder.create(scope, id)
+    private val cdkBuilder: CfnConnector.Builder = CfnConnector.Builder.create(scope, id)
 
-  public fun connectorLabel(connectorLabel: String) {
-    cdkBuilder.connectorLabel(connectorLabel)
-  }
+    public fun connectorLabel(connectorLabel: String) {
+        cdkBuilder.connectorLabel(connectorLabel)
+    }
 
-  public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
-    cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
-  }
+    public fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
+        cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
+    }
 
-  public
-      fun connectorProvisioningConfig(connectorProvisioningConfig: CfnConnector.ConnectorProvisioningConfigProperty) {
-    cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
-  }
+    public fun connectorProvisioningConfig(connectorProvisioningConfig: CfnConnector.ConnectorProvisioningConfigProperty) {
+        cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig)
+    }
 
-  public fun connectorProvisioningType(connectorProvisioningType: String) {
-    cdkBuilder.connectorProvisioningType(connectorProvisioningType)
-  }
+    public fun connectorProvisioningType(connectorProvisioningType: String) {
+        cdkBuilder.connectorProvisioningType(connectorProvisioningType)
+    }
 
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun build(): CfnConnector = cdkBuilder.build()
+    public fun build(): CfnConnector = cdkBuilder.build()
 }

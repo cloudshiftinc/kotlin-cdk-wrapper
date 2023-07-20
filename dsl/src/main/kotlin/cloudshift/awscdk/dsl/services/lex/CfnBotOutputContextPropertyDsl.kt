@@ -1,28 +1,37 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.lex
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.lex.CfnBot
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.lex.CfnBot
 
 @CdkDslMarker
 public class CfnBotOutputContextPropertyDsl {
-  private val cdkBuilder: CfnBot.OutputContextProperty.Builder =
-      CfnBot.OutputContextProperty.builder()
+    private val cdkBuilder: CfnBot.OutputContextProperty.Builder =
+        CfnBot.OutputContextProperty.builder()
 
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun timeToLiveInSeconds(timeToLiveInSeconds: Number) {
-    cdkBuilder.timeToLiveInSeconds(timeToLiveInSeconds)
-  }
+    public fun timeToLiveInSeconds(timeToLiveInSeconds: Number) {
+        cdkBuilder.timeToLiveInSeconds(timeToLiveInSeconds)
+    }
 
-  public fun turnsToLive(turnsToLive: Number) {
-    cdkBuilder.turnsToLive(turnsToLive)
-  }
+    public fun turnsToLive(turnsToLive: Number) {
+        cdkBuilder.turnsToLive(turnsToLive)
+    }
 
-  public fun build(): CfnBot.OutputContextProperty = cdkBuilder.build()
+    public fun build(): CfnBot.OutputContextProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.codepipeline.actions
 
@@ -8,12 +17,12 @@ import software.amazon.awscdk.services.codepipeline.actions.StackSetOrganization
 
 @CdkDslMarker
 public class OrganizationsDeploymentPropsDsl {
-  private val cdkBuilder: OrganizationsDeploymentProps.Builder =
-      OrganizationsDeploymentProps.builder()
+    private val cdkBuilder: OrganizationsDeploymentProps.Builder =
+        OrganizationsDeploymentProps.builder()
 
-  public fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment) {
-    cdkBuilder.autoDeployment(autoDeployment)
-  }
+    public fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment) {
+        cdkBuilder.autoDeployment(autoDeployment)
+    }
 
-  public fun build(): OrganizationsDeploymentProps = cdkBuilder.build()
+    public fun build(): OrganizationsDeploymentProps = cdkBuilder.build()
 }

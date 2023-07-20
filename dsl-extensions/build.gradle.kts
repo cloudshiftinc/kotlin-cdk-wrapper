@@ -4,9 +4,6 @@ plugins {
     id("cloudshift.awscdkdsl.build.library-publishing")
 }
 
-
 dependencies {
     api(projects.dsl)
 }
-
-

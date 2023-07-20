@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.databrew
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.databrew.CfnJob
 
 @CdkDslMarker
 public class CfnJobOutputFormatOptionsPropertyDsl {
-  private val cdkBuilder: CfnJob.OutputFormatOptionsProperty.Builder =
-      CfnJob.OutputFormatOptionsProperty.builder()
+    private val cdkBuilder: CfnJob.OutputFormatOptionsProperty.Builder =
+        CfnJob.OutputFormatOptionsProperty.builder()
 
-  public fun csv(csv: IResolvable) {
-    cdkBuilder.csv(csv)
-  }
+    public fun csv(csv: IResolvable) {
+        cdkBuilder.csv(csv)
+    }
 
-  public fun csv(csv: CfnJob.CsvOutputOptionsProperty) {
-    cdkBuilder.csv(csv)
-  }
+    public fun csv(csv: CfnJob.CsvOutputOptionsProperty) {
+        cdkBuilder.csv(csv)
+    }
 
-  public fun build(): CfnJob.OutputFormatOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnJob.OutputFormatOptionsProperty = cdkBuilder.build()
 }

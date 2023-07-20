@@ -1,57 +1,66 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualService
 import software.constructs.Construct
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class CfnVirtualServiceDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnVirtualService.Builder = CfnVirtualService.Builder.create(scope, id)
+    private val cdkBuilder: CfnVirtualService.Builder = CfnVirtualService.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun meshName(meshName: String) {
-    cdkBuilder.meshName(meshName)
-  }
+    public fun meshName(meshName: String) {
+        cdkBuilder.meshName(meshName)
+    }
 
-  public fun meshOwner(meshOwner: String) {
-    cdkBuilder.meshOwner(meshOwner)
-  }
+    public fun meshOwner(meshOwner: String) {
+        cdkBuilder.meshOwner(meshOwner)
+    }
 
-  public fun spec(spec: IResolvable) {
-    cdkBuilder.spec(spec)
-  }
+    public fun spec(spec: IResolvable) {
+        cdkBuilder.spec(spec)
+    }
 
-  public fun spec(spec: CfnVirtualService.VirtualServiceSpecProperty) {
-    cdkBuilder.spec(spec)
-  }
+    public fun spec(spec: CfnVirtualService.VirtualServiceSpecProperty) {
+        cdkBuilder.spec(spec)
+    }
 
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun virtualServiceName(virtualServiceName: String) {
-    cdkBuilder.virtualServiceName(virtualServiceName)
-  }
+    public fun virtualServiceName(virtualServiceName: String) {
+        cdkBuilder.virtualServiceName(virtualServiceName)
+    }
 
-  public fun build(): CfnVirtualService {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVirtualService {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

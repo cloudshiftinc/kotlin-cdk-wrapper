@@ -1,38 +1,47 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
 @CdkDslMarker
 public class CfnPipelineRemoveAttributesPropertyDsl {
-  private val cdkBuilder: CfnPipeline.RemoveAttributesProperty.Builder =
-      CfnPipeline.RemoveAttributesProperty.builder()
+    private val cdkBuilder: CfnPipeline.RemoveAttributesProperty.Builder =
+        CfnPipeline.RemoveAttributesProperty.builder()
 
-  private val _attributes: MutableList<String> = mutableListOf()
+    private val _attributes: MutableList<String> = mutableListOf()
 
-  public fun attributes(vararg attributes: String) {
-    _attributes.addAll(listOf(*attributes))
-  }
+    public fun attributes(vararg attributes: String) {
+        _attributes.addAll(listOf(*attributes))
+    }
 
-  public fun attributes(attributes: Collection<String>) {
-    _attributes.addAll(attributes)
-  }
+    public fun attributes(attributes: Collection<String>) {
+        _attributes.addAll(attributes)
+    }
 
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun next(next: String) {
-    cdkBuilder.next(next)
-  }
+    public fun next(next: String) {
+        cdkBuilder.next(next)
+    }
 
-  public fun build(): CfnPipeline.RemoveAttributesProperty {
-    if(_attributes.isNotEmpty()) cdkBuilder.attributes(_attributes)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnPipeline.RemoveAttributesProperty {
+        if (_attributes.isNotEmpty()) cdkBuilder.attributes(_attributes)
+        return cdkBuilder.build()
+    }
 }

@@ -1,40 +1,49 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.sam
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
+import software.amazon.awscdk.services.sam.CfnStateMachine
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.services.sam.CfnStateMachine
 
 @CdkDslMarker
 public class CfnStateMachineEventBridgeRuleEventPropertyDsl {
-  private val cdkBuilder: CfnStateMachine.EventBridgeRuleEventProperty.Builder =
-      CfnStateMachine.EventBridgeRuleEventProperty.builder()
+    private val cdkBuilder: CfnStateMachine.EventBridgeRuleEventProperty.Builder =
+        CfnStateMachine.EventBridgeRuleEventProperty.builder()
 
-  public fun eventBusName(eventBusName: String) {
-    cdkBuilder.eventBusName(eventBusName)
-  }
+    public fun eventBusName(eventBusName: String) {
+        cdkBuilder.eventBusName(eventBusName)
+    }
 
-  public fun input(input: String) {
-    cdkBuilder.input(input)
-  }
+    public fun input(input: String) {
+        cdkBuilder.input(input)
+    }
 
-  public fun inputPath(inputPath: String) {
-    cdkBuilder.inputPath(inputPath)
-  }
+    public fun inputPath(inputPath: String) {
+        cdkBuilder.inputPath(inputPath)
+    }
 
-  public fun pattern(block: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(block)
-    cdkBuilder.pattern(builder.map)
-  }
+    public fun pattern(block: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(block)
+        cdkBuilder.pattern(builder.map)
+    }
 
-  public fun pattern(pattern: Any) {
-    cdkBuilder.pattern(pattern)
-  }
+    public fun pattern(pattern: Any) {
+        cdkBuilder.pattern(pattern)
+    }
 
-  public fun build(): CfnStateMachine.EventBridgeRuleEventProperty = cdkBuilder.build()
+    public fun build(): CfnStateMachine.EventBridgeRuleEventProperty = cdkBuilder.build()
 }

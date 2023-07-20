@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.msk.CfnCluster
 
 @CdkDslMarker
 public class CfnClusterStorageInfoPropertyDsl {
-  private val cdkBuilder: CfnCluster.StorageInfoProperty.Builder =
-      CfnCluster.StorageInfoProperty.builder()
+    private val cdkBuilder: CfnCluster.StorageInfoProperty.Builder =
+        CfnCluster.StorageInfoProperty.builder()
 
-  public fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
-    cdkBuilder.ebsStorageInfo(ebsStorageInfo)
-  }
+    public fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo)
+    }
 
-  public fun ebsStorageInfo(ebsStorageInfo: CfnCluster.EBSStorageInfoProperty) {
-    cdkBuilder.ebsStorageInfo(ebsStorageInfo)
-  }
+    public fun ebsStorageInfo(ebsStorageInfo: CfnCluster.EBSStorageInfoProperty) {
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo)
+    }
 
-  public fun build(): CfnCluster.StorageInfoProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.StorageInfoProperty = cdkBuilder.build()
 }

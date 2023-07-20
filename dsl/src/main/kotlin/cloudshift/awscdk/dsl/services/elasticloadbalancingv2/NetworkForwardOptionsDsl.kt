@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -8,11 +17,11 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOpti
 
 @CdkDslMarker
 public class NetworkForwardOptionsDsl {
-  private val cdkBuilder: NetworkForwardOptions.Builder = NetworkForwardOptions.builder()
+    private val cdkBuilder: NetworkForwardOptions.Builder = NetworkForwardOptions.builder()
 
-  public fun stickinessDuration(stickinessDuration: Duration) {
-    cdkBuilder.stickinessDuration(stickinessDuration)
-  }
+    public fun stickinessDuration(stickinessDuration: Duration) {
+        cdkBuilder.stickinessDuration(stickinessDuration)
+    }
 
-  public fun build(): NetworkForwardOptions = cdkBuilder.build()
+    public fun build(): NetworkForwardOptions = cdkBuilder.build()
 }

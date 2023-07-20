@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 @CdkDslMarker
 public class CfnAnalysisTableFieldImageConfigurationPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.TableFieldImageConfigurationProperty.Builder =
-      CfnAnalysis.TableFieldImageConfigurationProperty.builder()
+    private val cdkBuilder: CfnAnalysis.TableFieldImageConfigurationProperty.Builder =
+        CfnAnalysis.TableFieldImageConfigurationProperty.builder()
 
-  public fun sizingOptions(sizingOptions: IResolvable) {
-    cdkBuilder.sizingOptions(sizingOptions)
-  }
+    public fun sizingOptions(sizingOptions: IResolvable) {
+        cdkBuilder.sizingOptions(sizingOptions)
+    }
 
-  public fun sizingOptions(sizingOptions: CfnAnalysis.TableCellImageSizingConfigurationProperty) {
-    cdkBuilder.sizingOptions(sizingOptions)
-  }
+    public fun sizingOptions(sizingOptions: CfnAnalysis.TableCellImageSizingConfigurationProperty) {
+        cdkBuilder.sizingOptions(sizingOptions)
+    }
 
-  public fun build(): CfnAnalysis.TableFieldImageConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.TableFieldImageConfigurationProperty = cdkBuilder.build()
 }

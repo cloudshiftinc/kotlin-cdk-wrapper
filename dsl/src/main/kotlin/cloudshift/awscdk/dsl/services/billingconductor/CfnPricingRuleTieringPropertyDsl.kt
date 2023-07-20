@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.billingconductor
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.billingconductor.CfnPricingRule
 
 @CdkDslMarker
 public class CfnPricingRuleTieringPropertyDsl {
-  private val cdkBuilder: CfnPricingRule.TieringProperty.Builder =
-      CfnPricingRule.TieringProperty.builder()
+    private val cdkBuilder: CfnPricingRule.TieringProperty.Builder =
+        CfnPricingRule.TieringProperty.builder()
 
-  public fun freeTier(freeTier: IResolvable) {
-    cdkBuilder.freeTier(freeTier)
-  }
+    public fun freeTier(freeTier: IResolvable) {
+        cdkBuilder.freeTier(freeTier)
+    }
 
-  public fun freeTier(freeTier: CfnPricingRule.FreeTierProperty) {
-    cdkBuilder.freeTier(freeTier)
-  }
+    public fun freeTier(freeTier: CfnPricingRule.FreeTierProperty) {
+        cdkBuilder.freeTier(freeTier)
+    }
 
-  public fun build(): CfnPricingRule.TieringProperty = cdkBuilder.build()
+    public fun build(): CfnPricingRule.TieringProperty = cdkBuilder.build()
 }

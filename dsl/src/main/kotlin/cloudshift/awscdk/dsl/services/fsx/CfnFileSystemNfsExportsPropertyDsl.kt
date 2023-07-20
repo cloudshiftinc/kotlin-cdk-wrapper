@@ -1,35 +1,44 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.fsx
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.fsx.CfnFileSystem
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.fsx.CfnFileSystem
 
 @CdkDslMarker
 public class CfnFileSystemNfsExportsPropertyDsl {
-  private val cdkBuilder: CfnFileSystem.NfsExportsProperty.Builder =
-      CfnFileSystem.NfsExportsProperty.builder()
+    private val cdkBuilder: CfnFileSystem.NfsExportsProperty.Builder =
+        CfnFileSystem.NfsExportsProperty.builder()
 
-  private val _clientConfigurations: MutableList<Any> = mutableListOf()
+    private val _clientConfigurations: MutableList<Any> = mutableListOf()
 
-  public fun clientConfigurations(vararg clientConfigurations: Any) {
-    _clientConfigurations.addAll(listOf(*clientConfigurations))
-  }
+    public fun clientConfigurations(vararg clientConfigurations: Any) {
+        _clientConfigurations.addAll(listOf(*clientConfigurations))
+    }
 
-  public fun clientConfigurations(clientConfigurations: Collection<Any>) {
-    _clientConfigurations.addAll(clientConfigurations)
-  }
+    public fun clientConfigurations(clientConfigurations: Collection<Any>) {
+        _clientConfigurations.addAll(clientConfigurations)
+    }
 
-  public fun clientConfigurations(clientConfigurations: IResolvable) {
-    cdkBuilder.clientConfigurations(clientConfigurations)
-  }
+    public fun clientConfigurations(clientConfigurations: IResolvable) {
+        cdkBuilder.clientConfigurations(clientConfigurations)
+    }
 
-  public fun build(): CfnFileSystem.NfsExportsProperty {
-    if(_clientConfigurations.isNotEmpty()) cdkBuilder.clientConfigurations(_clientConfigurations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnFileSystem.NfsExportsProperty {
+        if (_clientConfigurations.isNotEmpty()) cdkBuilder.clientConfigurations(_clientConfigurations)
+        return cdkBuilder.build()
+    }
 }

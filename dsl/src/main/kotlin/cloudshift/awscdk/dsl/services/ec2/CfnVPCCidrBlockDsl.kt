@@ -1,61 +1,70 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.Number
-import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCCidrBlock
 import software.constructs.Construct
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
 
 @CdkDslMarker
 public class CfnVPCCidrBlockDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnVPCCidrBlock.Builder = CfnVPCCidrBlock.Builder.create(scope, id)
+    private val cdkBuilder: CfnVPCCidrBlock.Builder = CfnVPCCidrBlock.Builder.create(scope, id)
 
-  public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
-    cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock)
-  }
+    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: Boolean) {
+        cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock)
+    }
 
-  public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
-    cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock)
-  }
+    public fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
+        cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock)
+    }
 
-  public fun cidrBlock(cidrBlock: String) {
-    cdkBuilder.cidrBlock(cidrBlock)
-  }
+    public fun cidrBlock(cidrBlock: String) {
+        cdkBuilder.cidrBlock(cidrBlock)
+    }
 
-  public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
-    cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
-  }
+    public fun ipv4IpamPoolId(ipv4IpamPoolId: String) {
+        cdkBuilder.ipv4IpamPoolId(ipv4IpamPoolId)
+    }
 
-  public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
-    cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
-  }
+    public fun ipv4NetmaskLength(ipv4NetmaskLength: Number) {
+        cdkBuilder.ipv4NetmaskLength(ipv4NetmaskLength)
+    }
 
-  public fun ipv6CidrBlock(ipv6CidrBlock: String) {
-    cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
-  }
+    public fun ipv6CidrBlock(ipv6CidrBlock: String) {
+        cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
+    }
 
-  public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
-    cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
-  }
+    public fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
+        cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
+    }
 
-  public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
-    cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
-  }
+    public fun ipv6NetmaskLength(ipv6NetmaskLength: Number) {
+        cdkBuilder.ipv6NetmaskLength(ipv6NetmaskLength)
+    }
 
-  public fun ipv6Pool(ipv6Pool: String) {
-    cdkBuilder.ipv6Pool(ipv6Pool)
-  }
+    public fun ipv6Pool(ipv6Pool: String) {
+        cdkBuilder.ipv6Pool(ipv6Pool)
+    }
 
-  public fun vpcId(vpcId: String) {
-    cdkBuilder.vpcId(vpcId)
-  }
+    public fun vpcId(vpcId: String) {
+        cdkBuilder.vpcId(vpcId)
+    }
 
-  public fun build(): CfnVPCCidrBlock = cdkBuilder.build()
+    public fun build(): CfnVPCCidrBlock = cdkBuilder.build()
 }

@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
+import kotlin.String
 
 @CdkDslMarker
 public class CfnAnalysisColumnIdentifierPropertyDsl {
-  private val cdkBuilder: CfnAnalysis.ColumnIdentifierProperty.Builder =
-      CfnAnalysis.ColumnIdentifierProperty.builder()
+    private val cdkBuilder: CfnAnalysis.ColumnIdentifierProperty.Builder =
+        CfnAnalysis.ColumnIdentifierProperty.builder()
 
-  public fun columnName(columnName: String) {
-    cdkBuilder.columnName(columnName)
-  }
+    public fun columnName(columnName: String) {
+        cdkBuilder.columnName(columnName)
+    }
 
-  public fun dataSetIdentifier(dataSetIdentifier: String) {
-    cdkBuilder.dataSetIdentifier(dataSetIdentifier)
-  }
+    public fun dataSetIdentifier(dataSetIdentifier: String) {
+        cdkBuilder.dataSetIdentifier(dataSetIdentifier)
+    }
 
-  public fun build(): CfnAnalysis.ColumnIdentifierProperty = cdkBuilder.build()
+    public fun build(): CfnAnalysis.ColumnIdentifierProperty = cdkBuilder.build()
 }

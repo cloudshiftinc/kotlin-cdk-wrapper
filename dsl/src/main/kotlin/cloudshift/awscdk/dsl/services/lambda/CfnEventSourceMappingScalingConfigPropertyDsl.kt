@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
+import kotlin.Number
 
 @CdkDslMarker
 public class CfnEventSourceMappingScalingConfigPropertyDsl {
-  private val cdkBuilder: CfnEventSourceMapping.ScalingConfigProperty.Builder =
-      CfnEventSourceMapping.ScalingConfigProperty.builder()
+    private val cdkBuilder: CfnEventSourceMapping.ScalingConfigProperty.Builder =
+        CfnEventSourceMapping.ScalingConfigProperty.builder()
 
-  public fun maximumConcurrency(maximumConcurrency: Number) {
-    cdkBuilder.maximumConcurrency(maximumConcurrency)
-  }
+    public fun maximumConcurrency(maximumConcurrency: Number) {
+        cdkBuilder.maximumConcurrency(maximumConcurrency)
+    }
 
-  public fun build(): CfnEventSourceMapping.ScalingConfigProperty = cdkBuilder.build()
+    public fun build(): CfnEventSourceMapping.ScalingConfigProperty = cdkBuilder.build()
 }

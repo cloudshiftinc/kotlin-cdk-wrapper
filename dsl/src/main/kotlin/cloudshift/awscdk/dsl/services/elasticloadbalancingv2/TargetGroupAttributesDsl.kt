@@ -1,22 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes
+import kotlin.String
 
 @CdkDslMarker
 public class TargetGroupAttributesDsl {
-  private val cdkBuilder: TargetGroupAttributes.Builder = TargetGroupAttributes.builder()
+    private val cdkBuilder: TargetGroupAttributes.Builder = TargetGroupAttributes.builder()
 
-  public fun loadBalancerArns(loadBalancerArns: String) {
-    cdkBuilder.loadBalancerArns(loadBalancerArns)
-  }
+    public fun loadBalancerArns(loadBalancerArns: String) {
+        cdkBuilder.loadBalancerArns(loadBalancerArns)
+    }
 
-  public fun targetGroupArn(targetGroupArn: String) {
-    cdkBuilder.targetGroupArn(targetGroupArn)
-  }
+    public fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
+    }
 
-  public fun build(): TargetGroupAttributes = cdkBuilder.build()
+    public fun build(): TargetGroupAttributes = cdkBuilder.build()
 }

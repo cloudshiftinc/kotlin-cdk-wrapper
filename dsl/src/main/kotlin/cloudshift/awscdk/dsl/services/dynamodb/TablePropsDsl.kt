@@ -1,14 +1,17 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.dynamodb
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.Number
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.dynamodb.Attribute
@@ -19,107 +22,113 @@ import software.amazon.awscdk.services.dynamodb.TableEncryption
 import software.amazon.awscdk.services.dynamodb.TableProps
 import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.kms.IKey
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class TablePropsDsl {
-  private val cdkBuilder: TableProps.Builder = TableProps.builder()
+    private val cdkBuilder: TableProps.Builder = TableProps.builder()
 
-  private val _replicationRegions: MutableList<String> = mutableListOf()
+    private val _replicationRegions: MutableList<String> = mutableListOf()
 
-  public fun billingMode(billingMode: BillingMode) {
-    cdkBuilder.billingMode(billingMode)
-  }
+    public fun billingMode(billingMode: BillingMode) {
+        cdkBuilder.billingMode(billingMode)
+    }
 
-  public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
-    cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
-  }
+    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
+        cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
+    }
 
-  public fun deletionProtection(deletionProtection: Boolean) {
-    cdkBuilder.deletionProtection(deletionProtection)
-  }
+    public fun deletionProtection(deletionProtection: Boolean) {
+        cdkBuilder.deletionProtection(deletionProtection)
+    }
 
-  public fun encryption(encryption: TableEncryption) {
-    cdkBuilder.encryption(encryption)
-  }
+    public fun encryption(encryption: TableEncryption) {
+        cdkBuilder.encryption(encryption)
+    }
 
-  public fun encryptionKey(encryptionKey: IKey) {
-    cdkBuilder.encryptionKey(encryptionKey)
-  }
+    public fun encryptionKey(encryptionKey: IKey) {
+        cdkBuilder.encryptionKey(encryptionKey)
+    }
 
-  public fun kinesisStream(kinesisStream: IStream) {
-    cdkBuilder.kinesisStream(kinesisStream)
-  }
+    public fun kinesisStream(kinesisStream: IStream) {
+        cdkBuilder.kinesisStream(kinesisStream)
+    }
 
-  public fun partitionKey(block: AttributeDsl.() -> Unit = {}) {
-    val builder = AttributeDsl()
-    builder.apply(block)
-    cdkBuilder.partitionKey(builder.build())
-  }
+    public fun partitionKey(block: AttributeDsl.() -> Unit = {}) {
+        val builder = AttributeDsl()
+        builder.apply(block)
+        cdkBuilder.partitionKey(builder.build())
+    }
 
-  public fun partitionKey(partitionKey: Attribute) {
-    cdkBuilder.partitionKey(partitionKey)
-  }
+    public fun partitionKey(partitionKey: Attribute) {
+        cdkBuilder.partitionKey(partitionKey)
+    }
 
-  public fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
-    cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
-  }
+    public fun pointInTimeRecovery(pointInTimeRecovery: Boolean) {
+        cdkBuilder.pointInTimeRecovery(pointInTimeRecovery)
+    }
 
-  public fun readCapacity(readCapacity: Number) {
-    cdkBuilder.readCapacity(readCapacity)
-  }
+    public fun readCapacity(readCapacity: Number) {
+        cdkBuilder.readCapacity(readCapacity)
+    }
 
-  public fun removalPolicy(removalPolicy: RemovalPolicy) {
-    cdkBuilder.removalPolicy(removalPolicy)
-  }
+    public fun removalPolicy(removalPolicy: RemovalPolicy) {
+        cdkBuilder.removalPolicy(removalPolicy)
+    }
 
-  public fun replicationRegions(vararg replicationRegions: String) {
-    _replicationRegions.addAll(listOf(*replicationRegions))
-  }
+    public fun replicationRegions(vararg replicationRegions: String) {
+        _replicationRegions.addAll(listOf(*replicationRegions))
+    }
 
-  public fun replicationRegions(replicationRegions: Collection<String>) {
-    _replicationRegions.addAll(replicationRegions)
-  }
+    public fun replicationRegions(replicationRegions: Collection<String>) {
+        _replicationRegions.addAll(replicationRegions)
+    }
 
-  public fun replicationTimeout(replicationTimeout: Duration) {
-    cdkBuilder.replicationTimeout(replicationTimeout)
-  }
+    public fun replicationTimeout(replicationTimeout: Duration) {
+        cdkBuilder.replicationTimeout(replicationTimeout)
+    }
 
-  public fun sortKey(block: AttributeDsl.() -> Unit = {}) {
-    val builder = AttributeDsl()
-    builder.apply(block)
-    cdkBuilder.sortKey(builder.build())
-  }
+    public fun sortKey(block: AttributeDsl.() -> Unit = {}) {
+        val builder = AttributeDsl()
+        builder.apply(block)
+        cdkBuilder.sortKey(builder.build())
+    }
 
-  public fun sortKey(sortKey: Attribute) {
-    cdkBuilder.sortKey(sortKey)
-  }
+    public fun sortKey(sortKey: Attribute) {
+        cdkBuilder.sortKey(sortKey)
+    }
 
-  public fun stream(stream: StreamViewType) {
-    cdkBuilder.stream(stream)
-  }
+    public fun stream(stream: StreamViewType) {
+        cdkBuilder.stream(stream)
+    }
 
-  public fun tableClass(tableClass: TableClass) {
-    cdkBuilder.tableClass(tableClass)
-  }
+    public fun tableClass(tableClass: TableClass) {
+        cdkBuilder.tableClass(tableClass)
+    }
 
-  public fun tableName(tableName: String) {
-    cdkBuilder.tableName(tableName)
-  }
+    public fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+    }
 
-  public fun timeToLiveAttribute(timeToLiveAttribute: String) {
-    cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)
-  }
+    public fun timeToLiveAttribute(timeToLiveAttribute: String) {
+        cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)
+    }
 
-  public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
-    cdkBuilder.waitForReplicationToFinish(waitForReplicationToFinish)
-  }
+    public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
+        cdkBuilder.waitForReplicationToFinish(waitForReplicationToFinish)
+    }
 
-  public fun writeCapacity(writeCapacity: Number) {
-    cdkBuilder.writeCapacity(writeCapacity)
-  }
+    public fun writeCapacity(writeCapacity: Number) {
+        cdkBuilder.writeCapacity(writeCapacity)
+    }
 
-  public fun build(): TableProps {
-    if(_replicationRegions.isNotEmpty()) cdkBuilder.replicationRegions(_replicationRegions)
-    return cdkBuilder.build()
-  }
+    public fun build(): TableProps {
+        if (_replicationRegions.isNotEmpty()) cdkBuilder.replicationRegions(_replicationRegions)
+        return cdkBuilder.build()
+    }
 }

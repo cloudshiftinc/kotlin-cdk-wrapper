@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.opsworks
 
@@ -8,17 +17,16 @@ import software.amazon.awscdk.services.opsworks.CfnLayer
 
 @CdkDslMarker
 public class CfnLayerLifecycleEventConfigurationPropertyDsl {
-  private val cdkBuilder: CfnLayer.LifecycleEventConfigurationProperty.Builder =
-      CfnLayer.LifecycleEventConfigurationProperty.builder()
+    private val cdkBuilder: CfnLayer.LifecycleEventConfigurationProperty.Builder =
+        CfnLayer.LifecycleEventConfigurationProperty.builder()
 
-  public fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
-    cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)
-  }
+    public fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
+        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)
+    }
 
-  public
-      fun shutdownEventConfiguration(shutdownEventConfiguration: CfnLayer.ShutdownEventConfigurationProperty) {
-    cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)
-  }
+    public fun shutdownEventConfiguration(shutdownEventConfiguration: CfnLayer.ShutdownEventConfigurationProperty) {
+        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration)
+    }
 
-  public fun build(): CfnLayer.LifecycleEventConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnLayer.LifecycleEventConfigurationProperty = cdkBuilder.build()
 }

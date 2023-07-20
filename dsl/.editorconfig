@@ -1,0 +1,4 @@
+
+[*.{kt,kts}]
+ktlint_standard_filename = disabled
+ktlint_standard_max-line-length = disabled

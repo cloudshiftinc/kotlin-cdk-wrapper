@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDashboardExportToCSVOptionPropertyDsl {
-  private val cdkBuilder: CfnDashboard.ExportToCSVOptionProperty.Builder =
-      CfnDashboard.ExportToCSVOptionProperty.builder()
+    private val cdkBuilder: CfnDashboard.ExportToCSVOptionProperty.Builder =
+        CfnDashboard.ExportToCSVOptionProperty.builder()
 
-  public fun availabilityStatus(availabilityStatus: String) {
-    cdkBuilder.availabilityStatus(availabilityStatus)
-  }
+    public fun availabilityStatus(availabilityStatus: String) {
+        cdkBuilder.availabilityStatus(availabilityStatus)
+    }
 
-  public fun build(): CfnDashboard.ExportToCSVOptionProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.ExportToCSVOptionProperty = cdkBuilder.build()
 }

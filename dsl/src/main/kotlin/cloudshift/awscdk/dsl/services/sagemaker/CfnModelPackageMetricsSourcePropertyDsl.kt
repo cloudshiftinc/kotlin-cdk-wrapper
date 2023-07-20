@@ -1,27 +1,36 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
+import kotlin.String
 
 @CdkDslMarker
 public class CfnModelPackageMetricsSourcePropertyDsl {
-  private val cdkBuilder: CfnModelPackage.MetricsSourceProperty.Builder =
-      CfnModelPackage.MetricsSourceProperty.builder()
+    private val cdkBuilder: CfnModelPackage.MetricsSourceProperty.Builder =
+        CfnModelPackage.MetricsSourceProperty.builder()
 
-  public fun contentDigest(contentDigest: String) {
-    cdkBuilder.contentDigest(contentDigest)
-  }
+    public fun contentDigest(contentDigest: String) {
+        cdkBuilder.contentDigest(contentDigest)
+    }
 
-  public fun contentType(contentType: String) {
-    cdkBuilder.contentType(contentType)
-  }
+    public fun contentType(contentType: String) {
+        cdkBuilder.contentType(contentType)
+    }
 
-  public fun s3Uri(s3Uri: String) {
-    cdkBuilder.s3Uri(s3Uri)
-  }
+    public fun s3Uri(s3Uri: String) {
+        cdkBuilder.s3Uri(s3Uri)
+    }
 
-  public fun build(): CfnModelPackage.MetricsSourceProperty = cdkBuilder.build()
+    public fun build(): CfnModelPackage.MetricsSourceProperty = cdkBuilder.build()
 }

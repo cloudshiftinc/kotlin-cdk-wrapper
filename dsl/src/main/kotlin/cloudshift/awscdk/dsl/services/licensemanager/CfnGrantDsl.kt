@@ -1,60 +1,69 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.licensemanager.CfnGrant
+import software.constructs.Construct
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.services.licensemanager.CfnGrant
-import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnGrantDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnGrant.Builder = CfnGrant.Builder.create(scope, id)
+    private val cdkBuilder: CfnGrant.Builder = CfnGrant.Builder.create(scope, id)
 
-  private val _allowedOperations: MutableList<String> = mutableListOf()
+    private val _allowedOperations: MutableList<String> = mutableListOf()
 
-  private val _principals: MutableList<String> = mutableListOf()
+    private val _principals: MutableList<String> = mutableListOf()
 
-  public fun allowedOperations(vararg allowedOperations: String) {
-    _allowedOperations.addAll(listOf(*allowedOperations))
-  }
+    public fun allowedOperations(vararg allowedOperations: String) {
+        _allowedOperations.addAll(listOf(*allowedOperations))
+    }
 
-  public fun allowedOperations(allowedOperations: Collection<String>) {
-    _allowedOperations.addAll(allowedOperations)
-  }
+    public fun allowedOperations(allowedOperations: Collection<String>) {
+        _allowedOperations.addAll(allowedOperations)
+    }
 
-  public fun grantName(grantName: String) {
-    cdkBuilder.grantName(grantName)
-  }
+    public fun grantName(grantName: String) {
+        cdkBuilder.grantName(grantName)
+    }
 
-  public fun homeRegion(homeRegion: String) {
-    cdkBuilder.homeRegion(homeRegion)
-  }
+    public fun homeRegion(homeRegion: String) {
+        cdkBuilder.homeRegion(homeRegion)
+    }
 
-  public fun licenseArn(licenseArn: String) {
-    cdkBuilder.licenseArn(licenseArn)
-  }
+    public fun licenseArn(licenseArn: String) {
+        cdkBuilder.licenseArn(licenseArn)
+    }
 
-  public fun principals(vararg principals: String) {
-    _principals.addAll(listOf(*principals))
-  }
+    public fun principals(vararg principals: String) {
+        _principals.addAll(listOf(*principals))
+    }
 
-  public fun principals(principals: Collection<String>) {
-    _principals.addAll(principals)
-  }
+    public fun principals(principals: Collection<String>) {
+        _principals.addAll(principals)
+    }
 
-  public fun status(status: String) {
-    cdkBuilder.status(status)
-  }
+    public fun status(status: String) {
+        cdkBuilder.status(status)
+    }
 
-  public fun build(): CfnGrant {
-    if(_allowedOperations.isNotEmpty()) cdkBuilder.allowedOperations(_allowedOperations)
-    if(_principals.isNotEmpty()) cdkBuilder.principals(_principals)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnGrant {
+        if (_allowedOperations.isNotEmpty()) cdkBuilder.allowedOperations(_allowedOperations)
+        if (_principals.isNotEmpty()) cdkBuilder.principals(_principals)
+        return cdkBuilder.build()
+    }
 }

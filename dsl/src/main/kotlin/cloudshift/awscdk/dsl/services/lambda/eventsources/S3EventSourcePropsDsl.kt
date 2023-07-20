@@ -1,43 +1,52 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.lambda.eventsources
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.s3.NotificationKeyFilterDsl
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps
 import software.amazon.awscdk.services.s3.EventType
 import software.amazon.awscdk.services.s3.NotificationKeyFilter
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class S3EventSourcePropsDsl {
-  private val cdkBuilder: S3EventSourceProps.Builder = S3EventSourceProps.builder()
+    private val cdkBuilder: S3EventSourceProps.Builder = S3EventSourceProps.builder()
 
-  private val _events: MutableList<EventType> = mutableListOf()
+    private val _events: MutableList<EventType> = mutableListOf()
 
-  private val _filters: MutableList<NotificationKeyFilter> = mutableListOf()
+    private val _filters: MutableList<NotificationKeyFilter> = mutableListOf()
 
-  public fun events(vararg events: EventType) {
-    _events.addAll(listOf(*events))
-  }
+    public fun events(vararg events: EventType) {
+        _events.addAll(listOf(*events))
+    }
 
-  public fun events(events: Collection<EventType>) {
-    _events.addAll(events)
-  }
+    public fun events(events: Collection<EventType>) {
+        _events.addAll(events)
+    }
 
-  public fun filters(filters: NotificationKeyFilterDsl.() -> Unit) {
-    _filters.add(NotificationKeyFilterDsl().apply(filters).build())
-  }
+    public fun filters(filters: NotificationKeyFilterDsl.() -> Unit) {
+        _filters.add(NotificationKeyFilterDsl().apply(filters).build())
+    }
 
-  public fun filters(filters: Collection<NotificationKeyFilter>) {
-    _filters.addAll(filters)
-  }
+    public fun filters(filters: Collection<NotificationKeyFilter>) {
+        _filters.addAll(filters)
+    }
 
-  public fun build(): S3EventSourceProps {
-    if(_events.isNotEmpty()) cdkBuilder.events(_events)
-    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
-    return cdkBuilder.build()
-  }
+    public fun build(): S3EventSourceProps {
+        if (_events.isNotEmpty()) cdkBuilder.events(_events)
+        if (_filters.isNotEmpty()) cdkBuilder.filters(_filters)
+        return cdkBuilder.build()
+    }
 }

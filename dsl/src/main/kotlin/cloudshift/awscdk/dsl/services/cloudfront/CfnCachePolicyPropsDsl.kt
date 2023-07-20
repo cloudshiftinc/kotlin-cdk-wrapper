@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -9,15 +18,15 @@ import software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps
 
 @CdkDslMarker
 public class CfnCachePolicyPropsDsl {
-  private val cdkBuilder: CfnCachePolicyProps.Builder = CfnCachePolicyProps.builder()
+    private val cdkBuilder: CfnCachePolicyProps.Builder = CfnCachePolicyProps.builder()
 
-  public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    public fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
-    cdkBuilder.cachePolicyConfig(cachePolicyConfig)
-  }
+    public fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
+        cdkBuilder.cachePolicyConfig(cachePolicyConfig)
+    }
 
-  public fun build(): CfnCachePolicyProps = cdkBuilder.build()
+    public fun build(): CfnCachePolicyProps = cdkBuilder.build()
 }

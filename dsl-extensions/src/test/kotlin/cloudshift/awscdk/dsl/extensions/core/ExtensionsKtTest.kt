@@ -2,11 +2,11 @@ package cloudshift.awscdk.dsl.extensions.core
 
 import cloudshift.awscdk.dsl.awscdk
 import cloudshift.awscdk.dsl.extensions.iam.action
-import cloudshift.awscdk.dsl.services.iam.iam
 import cloudshift.awscdk.dsl.extensions.iam.allow
 import cloudshift.awscdk.dsl.extensions.iam.anyResource
 import cloudshift.awscdk.dsl.extensions.iam.policyStatements
 import cloudshift.awscdk.dsl.extensions.iam.resource
+import cloudshift.awscdk.dsl.services.iam.iam
 import cloudshift.awscdk.dsl.services.s3.s3
 import io.kotest.core.spec.style.FunSpec
 import software.constructs.Construct
@@ -25,16 +25,18 @@ class ExtensionsKtTest : FunSpec({
                 action("s3:GetObject")
                 allow()
                 anyResource()
-                resources(arn(stack) {
-                    service("s3")
-                    resource("myBucket")
-                })
+                resources(
+                    arn(stack) {
+                        service("s3")
+                        resource("myBucket")
+                    },
+                )
             }
         }
     }
 })
 
-private class MyConstruct(scope : Construct, id : String) : Construct(scope, id) {
+private class MyConstruct(scope: Construct, id: String) : Construct(scope, id) {
     init {
         val policyStatements = iam.policyStatements {
             policyStatement {
@@ -45,7 +47,7 @@ private class MyConstruct(scope : Construct, id : String) : Construct(scope, id)
                     arn {
                         service("s3")
                         resource("myBucket")
-                    }
+                    },
                 )
             }
         }

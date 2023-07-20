@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.robomaker
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps
+import kotlin.String
 
 @CdkDslMarker
 public class CfnRobotApplicationVersionPropsDsl {
-  private val cdkBuilder: CfnRobotApplicationVersionProps.Builder =
-      CfnRobotApplicationVersionProps.builder()
+    private val cdkBuilder: CfnRobotApplicationVersionProps.Builder =
+        CfnRobotApplicationVersionProps.builder()
 
-  public fun application(application: String) {
-    cdkBuilder.application(application)
-  }
+    public fun application(application: String) {
+        cdkBuilder.application(application)
+    }
 
-  public fun currentRevisionId(currentRevisionId: String) {
-    cdkBuilder.currentRevisionId(currentRevisionId)
-  }
+    public fun currentRevisionId(currentRevisionId: String) {
+        cdkBuilder.currentRevisionId(currentRevisionId)
+    }
 
-  public fun build(): CfnRobotApplicationVersionProps = cdkBuilder.build()
+    public fun build(): CfnRobotApplicationVersionProps = cdkBuilder.build()
 }

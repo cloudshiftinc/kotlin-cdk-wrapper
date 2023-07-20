@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
+import kotlin.String
 
 @CdkDslMarker
 public class CfnFirewallPolicyStatefulEngineOptionsPropertyDsl {
-  private val cdkBuilder: CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder =
-      CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
+    private val cdkBuilder: CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder =
+        CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
 
-  public fun ruleOrder(ruleOrder: String) {
-    cdkBuilder.ruleOrder(ruleOrder)
-  }
+    public fun ruleOrder(ruleOrder: String) {
+        cdkBuilder.ruleOrder(ruleOrder)
+    }
 
-  public fun streamExceptionPolicy(streamExceptionPolicy: String) {
-    cdkBuilder.streamExceptionPolicy(streamExceptionPolicy)
-  }
+    public fun streamExceptionPolicy(streamExceptionPolicy: String) {
+        cdkBuilder.streamExceptionPolicy(streamExceptionPolicy)
+    }
 
-  public fun build(): CfnFirewallPolicy.StatefulEngineOptionsProperty = cdkBuilder.build()
+    public fun build(): CfnFirewallPolicy.StatefulEngineOptionsProperty = cdkBuilder.build()
 }

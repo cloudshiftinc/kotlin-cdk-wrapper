@@ -1,56 +1,65 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.neptune
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps
 
 @CdkDslMarker
 public class CfnDBParameterGroupPropsDsl {
-  private val cdkBuilder: CfnDBParameterGroupProps.Builder = CfnDBParameterGroupProps.builder()
+    private val cdkBuilder: CfnDBParameterGroupProps.Builder = CfnDBParameterGroupProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun family(family: String) {
-    cdkBuilder.family(family)
-  }
+    public fun family(family: String) {
+        cdkBuilder.family(family)
+    }
 
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun parameters(block: MapBuilder.() -> Unit = {}) {
-    val builder = MapBuilder()
-    builder.apply(block)
-    cdkBuilder.parameters(builder.map)
-  }
+    public fun parameters(block: MapBuilder.() -> Unit = {}) {
+        val builder = MapBuilder()
+        builder.apply(block)
+        cdkBuilder.parameters(builder.map)
+    }
 
-  public fun parameters(parameters: Any) {
-    cdkBuilder.parameters(parameters)
-  }
+    public fun parameters(parameters: Any) {
+        cdkBuilder.parameters(parameters)
+    }
 
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnDBParameterGroupProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnDBParameterGroupProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

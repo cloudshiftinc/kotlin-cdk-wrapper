@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 @CdkDslMarker
 public class CfnDashboardBodySectionContentPropertyDsl {
-  private val cdkBuilder: CfnDashboard.BodySectionContentProperty.Builder =
-      CfnDashboard.BodySectionContentProperty.builder()
+    private val cdkBuilder: CfnDashboard.BodySectionContentProperty.Builder =
+        CfnDashboard.BodySectionContentProperty.builder()
 
-  public fun layout(layout: IResolvable) {
-    cdkBuilder.layout(layout)
-  }
+    public fun layout(layout: IResolvable) {
+        cdkBuilder.layout(layout)
+    }
 
-  public fun layout(layout: CfnDashboard.SectionLayoutConfigurationProperty) {
-    cdkBuilder.layout(layout)
-  }
+    public fun layout(layout: CfnDashboard.SectionLayoutConfigurationProperty) {
+        cdkBuilder.layout(layout)
+    }
 
-  public fun build(): CfnDashboard.BodySectionContentProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.BodySectionContentProperty = cdkBuilder.build()
 }

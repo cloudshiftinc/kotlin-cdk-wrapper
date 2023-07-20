@@ -1,32 +1,41 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
+import kotlin.Unit
 
 @CdkDslMarker
 public class EmrCreateClusterScalingActionPropertyDsl {
-  private val cdkBuilder: EmrCreateCluster.ScalingActionProperty.Builder =
-      EmrCreateCluster.ScalingActionProperty.builder()
+    private val cdkBuilder: EmrCreateCluster.ScalingActionProperty.Builder =
+        EmrCreateCluster.ScalingActionProperty.builder()
 
-  public fun market(market: EmrCreateCluster.InstanceMarket) {
-    cdkBuilder.market(market)
-  }
+    public fun market(market: EmrCreateCluster.InstanceMarket) {
+        cdkBuilder.market(market)
+    }
 
-  public
-      fun simpleScalingPolicyConfiguration(block: EmrCreateClusterSimpleScalingPolicyConfigurationPropertyDsl.() -> Unit
-      = {}) {
-    val builder = EmrCreateClusterSimpleScalingPolicyConfigurationPropertyDsl()
-    builder.apply(block)
-    cdkBuilder.simpleScalingPolicyConfiguration(builder.build())
-  }
+    public fun simpleScalingPolicyConfiguration(
+        block: EmrCreateClusterSimpleScalingPolicyConfigurationPropertyDsl.() -> Unit =
+            {},
+    ) {
+        val builder = EmrCreateClusterSimpleScalingPolicyConfigurationPropertyDsl()
+        builder.apply(block)
+        cdkBuilder.simpleScalingPolicyConfiguration(builder.build())
+    }
 
-  public
-      fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: EmrCreateCluster.SimpleScalingPolicyConfigurationProperty) {
-    cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration)
-  }
+    public fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: EmrCreateCluster.SimpleScalingPolicyConfigurationProperty) {
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration)
+    }
 
-  public fun build(): EmrCreateCluster.ScalingActionProperty = cdkBuilder.build()
+    public fun build(): EmrCreateCluster.ScalingActionProperty = cdkBuilder.build()
 }

@@ -1,28 +1,37 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.dlm
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
 @CdkDslMarker
 public class CfnLifecyclePolicyDeprecateRulePropertyDsl {
-  private val cdkBuilder: CfnLifecyclePolicy.DeprecateRuleProperty.Builder =
-      CfnLifecyclePolicy.DeprecateRuleProperty.builder()
+    private val cdkBuilder: CfnLifecyclePolicy.DeprecateRuleProperty.Builder =
+        CfnLifecyclePolicy.DeprecateRuleProperty.builder()
 
-  public fun count(count: Number) {
-    cdkBuilder.count(count)
-  }
+    public fun count(count: Number) {
+        cdkBuilder.count(count)
+    }
 
-  public fun interval(interval: Number) {
-    cdkBuilder.interval(interval)
-  }
+    public fun interval(interval: Number) {
+        cdkBuilder.interval(interval)
+    }
 
-  public fun intervalUnit(intervalUnit: String) {
-    cdkBuilder.intervalUnit(intervalUnit)
-  }
+    public fun intervalUnit(intervalUnit: String) {
+        cdkBuilder.intervalUnit(intervalUnit)
+    }
 
-  public fun build(): CfnLifecyclePolicy.DeprecateRuleProperty = cdkBuilder.build()
+    public fun build(): CfnLifecyclePolicy.DeprecateRuleProperty = cdkBuilder.build()
 }

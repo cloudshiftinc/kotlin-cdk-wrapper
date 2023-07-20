@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -8,24 +17,24 @@ import software.amazon.awscdk.services.codebuild.CfnProject
 
 @CdkDslMarker
 public class CfnProjectLogsConfigPropertyDsl {
-  private val cdkBuilder: CfnProject.LogsConfigProperty.Builder =
-      CfnProject.LogsConfigProperty.builder()
+    private val cdkBuilder: CfnProject.LogsConfigProperty.Builder =
+        CfnProject.LogsConfigProperty.builder()
 
-  public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-    cdkBuilder.cloudWatchLogs(cloudWatchLogs)
-  }
+    public fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs)
+    }
 
-  public fun cloudWatchLogs(cloudWatchLogs: CfnProject.CloudWatchLogsConfigProperty) {
-    cdkBuilder.cloudWatchLogs(cloudWatchLogs)
-  }
+    public fun cloudWatchLogs(cloudWatchLogs: CfnProject.CloudWatchLogsConfigProperty) {
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs)
+    }
 
-  public fun s3Logs(s3Logs: IResolvable) {
-    cdkBuilder.s3Logs(s3Logs)
-  }
+    public fun s3Logs(s3Logs: IResolvable) {
+        cdkBuilder.s3Logs(s3Logs)
+    }
 
-  public fun s3Logs(s3Logs: CfnProject.S3LogsConfigProperty) {
-    cdkBuilder.s3Logs(s3Logs)
-  }
+    public fun s3Logs(s3Logs: CfnProject.S3LogsConfigProperty) {
+        cdkBuilder.s3Logs(s3Logs)
+    }
 
-  public fun build(): CfnProject.LogsConfigProperty = cdkBuilder.build()
+    public fun build(): CfnProject.LogsConfigProperty = cdkBuilder.build()
 }

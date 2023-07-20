@@ -17,7 +17,7 @@ public fun PolicyStatementDsl.action(action: String) {
     actions(action)
 }
 
-public fun PolicyStatementDsl.resource(arn : String) {
+public fun PolicyStatementDsl.resource(arn: String) {
     resources(arn)
 }
 

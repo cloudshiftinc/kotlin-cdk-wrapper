@@ -1,19 +1,28 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.Number
 
 @CdkDslMarker
 public class CfnTemplatePercentileAggregationPropertyDsl {
-  private val cdkBuilder: CfnTemplate.PercentileAggregationProperty.Builder =
-      CfnTemplate.PercentileAggregationProperty.builder()
+    private val cdkBuilder: CfnTemplate.PercentileAggregationProperty.Builder =
+        CfnTemplate.PercentileAggregationProperty.builder()
 
-  public fun percentileValue(percentileValue: Number) {
-    cdkBuilder.percentileValue(percentileValue)
-  }
+    public fun percentileValue(percentileValue: Number) {
+        cdkBuilder.percentileValue(percentileValue)
+    }
 
-  public fun build(): CfnTemplate.PercentileAggregationProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.PercentileAggregationProperty = cdkBuilder.build()
 }

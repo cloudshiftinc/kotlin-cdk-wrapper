@@ -21,8 +21,7 @@ dependencies {
     implementation("org.ow2.asm:asm-util:9.5")
     implementation("com.github.ben-manes.caffeine:caffeine:3.1.6")
     implementation("org.aspectj:aspectjtools:1.9.19")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:$embeddedKotlinVersion")
-
+    implementation(plugin("org.jlleitschuh.gradle.ktlint", "11.5.0"))
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 }
 

@@ -1,23 +1,32 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.kendra
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnIndex
+import kotlin.String
 
 @CdkDslMarker
 public class CfnIndexJsonTokenTypeConfigurationPropertyDsl {
-  private val cdkBuilder: CfnIndex.JsonTokenTypeConfigurationProperty.Builder =
-      CfnIndex.JsonTokenTypeConfigurationProperty.builder()
+    private val cdkBuilder: CfnIndex.JsonTokenTypeConfigurationProperty.Builder =
+        CfnIndex.JsonTokenTypeConfigurationProperty.builder()
 
-  public fun groupAttributeField(groupAttributeField: String) {
-    cdkBuilder.groupAttributeField(groupAttributeField)
-  }
+    public fun groupAttributeField(groupAttributeField: String) {
+        cdkBuilder.groupAttributeField(groupAttributeField)
+    }
 
-  public fun userNameAttributeField(userNameAttributeField: String) {
-    cdkBuilder.userNameAttributeField(userNameAttributeField)
-  }
+    public fun userNameAttributeField(userNameAttributeField: String) {
+        cdkBuilder.userNameAttributeField(userNameAttributeField)
+    }
 
-  public fun build(): CfnIndex.JsonTokenTypeConfigurationProperty = cdkBuilder.build()
+    public fun build(): CfnIndex.JsonTokenTypeConfigurationProperty = cdkBuilder.build()
 }

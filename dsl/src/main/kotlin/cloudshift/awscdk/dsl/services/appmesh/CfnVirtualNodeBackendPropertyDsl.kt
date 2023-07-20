@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
 @CdkDslMarker
 public class CfnVirtualNodeBackendPropertyDsl {
-  private val cdkBuilder: CfnVirtualNode.BackendProperty.Builder =
-      CfnVirtualNode.BackendProperty.builder()
+    private val cdkBuilder: CfnVirtualNode.BackendProperty.Builder =
+        CfnVirtualNode.BackendProperty.builder()
 
-  public fun virtualService(virtualService: IResolvable) {
-    cdkBuilder.virtualService(virtualService)
-  }
+    public fun virtualService(virtualService: IResolvable) {
+        cdkBuilder.virtualService(virtualService)
+    }
 
-  public fun virtualService(virtualService: CfnVirtualNode.VirtualServiceBackendProperty) {
-    cdkBuilder.virtualService(virtualService)
-  }
+    public fun virtualService(virtualService: CfnVirtualNode.VirtualServiceBackendProperty) {
+        cdkBuilder.virtualService(virtualService)
+    }
 
-  public fun build(): CfnVirtualNode.BackendProperty = cdkBuilder.build()
+    public fun build(): CfnVirtualNode.BackendProperty = cdkBuilder.build()
 }

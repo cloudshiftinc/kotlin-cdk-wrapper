@@ -1,31 +1,40 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.iotwireless
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
+import kotlin.String
 
 @CdkDslMarker
 public class CfnWirelessDeviceSessionKeysAbpV11PropertyDsl {
-  private val cdkBuilder: CfnWirelessDevice.SessionKeysAbpV11Property.Builder =
-      CfnWirelessDevice.SessionKeysAbpV11Property.builder()
+    private val cdkBuilder: CfnWirelessDevice.SessionKeysAbpV11Property.Builder =
+        CfnWirelessDevice.SessionKeysAbpV11Property.builder()
 
-  public fun appSKey(appSKey: String) {
-    cdkBuilder.appSKey(appSKey)
-  }
+    public fun appSKey(appSKey: String) {
+        cdkBuilder.appSKey(appSKey)
+    }
 
-  public fun fNwkSIntKey(fNwkSIntKey: String) {
-    cdkBuilder.fNwkSIntKey(fNwkSIntKey)
-  }
+    public fun fNwkSIntKey(fNwkSIntKey: String) {
+        cdkBuilder.fNwkSIntKey(fNwkSIntKey)
+    }
 
-  public fun nwkSEncKey(nwkSEncKey: String) {
-    cdkBuilder.nwkSEncKey(nwkSEncKey)
-  }
+    public fun nwkSEncKey(nwkSEncKey: String) {
+        cdkBuilder.nwkSEncKey(nwkSEncKey)
+    }
 
-  public fun sNwkSIntKey(sNwkSIntKey: String) {
-    cdkBuilder.sNwkSIntKey(sNwkSIntKey)
-  }
+    public fun sNwkSIntKey(sNwkSIntKey: String) {
+        cdkBuilder.sNwkSIntKey(sNwkSIntKey)
+    }
 
-  public fun build(): CfnWirelessDevice.SessionKeysAbpV11Property = cdkBuilder.build()
+    public fun build(): CfnWirelessDevice.SessionKeysAbpV11Property = cdkBuilder.build()
 }

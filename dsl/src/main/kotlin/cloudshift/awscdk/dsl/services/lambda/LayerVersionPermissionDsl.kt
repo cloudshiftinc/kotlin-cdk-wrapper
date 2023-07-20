@@ -1,22 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.lambda
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.lambda.LayerVersionPermission
+import kotlin.String
 
 @CdkDslMarker
 public class LayerVersionPermissionDsl {
-  private val cdkBuilder: LayerVersionPermission.Builder = LayerVersionPermission.builder()
+    private val cdkBuilder: LayerVersionPermission.Builder = LayerVersionPermission.builder()
 
-  public fun accountId(accountId: String) {
-    cdkBuilder.accountId(accountId)
-  }
+    public fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+    }
 
-  public fun organizationId(organizationId: String) {
-    cdkBuilder.organizationId(organizationId)
-  }
+    public fun organizationId(organizationId: String) {
+        cdkBuilder.organizationId(organizationId)
+    }
 
-  public fun build(): LayerVersionPermission = cdkBuilder.build()
+    public fun build(): LayerVersionPermission = cdkBuilder.build()
 }

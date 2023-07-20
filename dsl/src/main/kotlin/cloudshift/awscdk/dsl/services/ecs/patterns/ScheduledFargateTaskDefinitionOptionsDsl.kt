@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.ecs.patterns
 
@@ -8,12 +17,12 @@ import software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefiniti
 
 @CdkDslMarker
 public class ScheduledFargateTaskDefinitionOptionsDsl {
-  private val cdkBuilder: ScheduledFargateTaskDefinitionOptions.Builder =
-      ScheduledFargateTaskDefinitionOptions.builder()
+    private val cdkBuilder: ScheduledFargateTaskDefinitionOptions.Builder =
+        ScheduledFargateTaskDefinitionOptions.builder()
 
-  public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-    cdkBuilder.taskDefinition(taskDefinition)
-  }
+    public fun taskDefinition(taskDefinition: FargateTaskDefinition) {
+        cdkBuilder.taskDefinition(taskDefinition)
+    }
 
-  public fun build(): ScheduledFargateTaskDefinitionOptions = cdkBuilder.build()
+    public fun build(): ScheduledFargateTaskDefinitionOptions = cdkBuilder.build()
 }

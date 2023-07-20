@@ -1,22 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Number
 import software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig
+import kotlin.Number
 
 @CdkDslMarker
 public class CanaryTrafficRoutingConfigDsl {
-  private val cdkBuilder: CanaryTrafficRoutingConfig.Builder = CanaryTrafficRoutingConfig.builder()
+    private val cdkBuilder: CanaryTrafficRoutingConfig.Builder = CanaryTrafficRoutingConfig.builder()
 
-  public fun canaryInterval(canaryInterval: Number) {
-    cdkBuilder.canaryInterval(canaryInterval)
-  }
+    public fun canaryInterval(canaryInterval: Number) {
+        cdkBuilder.canaryInterval(canaryInterval)
+    }
 
-  public fun canaryPercentage(canaryPercentage: Number) {
-    cdkBuilder.canaryPercentage(canaryPercentage)
-  }
+    public fun canaryPercentage(canaryPercentage: Number) {
+        cdkBuilder.canaryPercentage(canaryPercentage)
+    }
 
-  public fun build(): CanaryTrafficRoutingConfig = cdkBuilder.build()
+    public fun build(): CanaryTrafficRoutingConfig = cdkBuilder.build()
 }

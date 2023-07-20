@@ -1,28 +1,37 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.quicksight.CfnDashboard
 import kotlin.Number
 import kotlin.String
-import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 @CdkDslMarker
 public class CfnDashboardWhatIfRangeScenarioPropertyDsl {
-  private val cdkBuilder: CfnDashboard.WhatIfRangeScenarioProperty.Builder =
-      CfnDashboard.WhatIfRangeScenarioProperty.builder()
+    private val cdkBuilder: CfnDashboard.WhatIfRangeScenarioProperty.Builder =
+        CfnDashboard.WhatIfRangeScenarioProperty.builder()
 
-  public fun endDate(endDate: String) {
-    cdkBuilder.endDate(endDate)
-  }
+    public fun endDate(endDate: String) {
+        cdkBuilder.endDate(endDate)
+    }
 
-  public fun startDate(startDate: String) {
-    cdkBuilder.startDate(startDate)
-  }
+    public fun startDate(startDate: String) {
+        cdkBuilder.startDate(startDate)
+    }
 
-  public fun `value`(`value`: Number) {
-    cdkBuilder.`value`(`value`)
-  }
+    public fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+    }
 
-  public fun build(): CfnDashboard.WhatIfRangeScenarioProperty = cdkBuilder.build()
+    public fun build(): CfnDashboard.WhatIfRangeScenarioProperty = cdkBuilder.build()
 }

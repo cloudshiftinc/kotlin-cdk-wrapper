@@ -1,66 +1,75 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Boolean
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Map
 import software.amazon.awscdk.Environment
 import software.amazon.awscdk.IStackSynthesizer
 import software.amazon.awscdk.PermissionsBoundary
 import software.amazon.awscdk.StackProps
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Map
 
 @CdkDslMarker
 public class StackPropsDsl {
-  private val cdkBuilder: StackProps.Builder = StackProps.builder()
+    private val cdkBuilder: StackProps.Builder = StackProps.builder()
 
-  public fun analyticsReporting(analyticsReporting: Boolean) {
-    cdkBuilder.analyticsReporting(analyticsReporting)
-  }
+    public fun analyticsReporting(analyticsReporting: Boolean) {
+        cdkBuilder.analyticsReporting(analyticsReporting)
+    }
 
-  public fun crossRegionReferences(crossRegionReferences: Boolean) {
-    cdkBuilder.crossRegionReferences(crossRegionReferences)
-  }
+    public fun crossRegionReferences(crossRegionReferences: Boolean) {
+        cdkBuilder.crossRegionReferences(crossRegionReferences)
+    }
 
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun env(block: EnvironmentDsl.() -> Unit = {}) {
-    val builder = EnvironmentDsl()
-    builder.apply(block)
-    cdkBuilder.env(builder.build())
-  }
+    public fun env(block: EnvironmentDsl.() -> Unit = {}) {
+        val builder = EnvironmentDsl()
+        builder.apply(block)
+        cdkBuilder.env(builder.build())
+    }
 
-  public fun env(env: Environment) {
-    cdkBuilder.env(env)
-  }
+    public fun env(env: Environment) {
+        cdkBuilder.env(env)
+    }
 
-  public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-    cdkBuilder.permissionsBoundary(permissionsBoundary)
-  }
+    public fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
+        cdkBuilder.permissionsBoundary(permissionsBoundary)
+    }
 
-  public fun stackName(stackName: String) {
-    cdkBuilder.stackName(stackName)
-  }
+    public fun stackName(stackName: String) {
+        cdkBuilder.stackName(stackName)
+    }
 
-  public fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean) {
-    cdkBuilder.suppressTemplateIndentation(suppressTemplateIndentation)
-  }
+    public fun suppressTemplateIndentation(suppressTemplateIndentation: Boolean) {
+        cdkBuilder.suppressTemplateIndentation(suppressTemplateIndentation)
+    }
 
-  public fun synthesizer(synthesizer: IStackSynthesizer) {
-    cdkBuilder.synthesizer(synthesizer)
-  }
+    public fun synthesizer(synthesizer: IStackSynthesizer) {
+        cdkBuilder.synthesizer(synthesizer)
+    }
 
-  public fun tags(tags: Map<String, String>) {
-    cdkBuilder.tags(tags)
-  }
+    public fun tags(tags: Map<String, String>) {
+        cdkBuilder.tags(tags)
+    }
 
-  public fun terminationProtection(terminationProtection: Boolean) {
-    cdkBuilder.terminationProtection(terminationProtection)
-  }
+    public fun terminationProtection(terminationProtection: Boolean) {
+        cdkBuilder.terminationProtection(terminationProtection)
+    }
 
-  public fun build(): StackProps = cdkBuilder.build()
+    public fun build(): StackProps = cdkBuilder.build()
 }

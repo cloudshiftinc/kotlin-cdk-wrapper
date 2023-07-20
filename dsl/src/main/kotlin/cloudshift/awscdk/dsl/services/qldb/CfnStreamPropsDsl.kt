@@ -1,62 +1,71 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.qldb
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnStream
 import software.amazon.awscdk.services.qldb.CfnStreamProps
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class CfnStreamPropsDsl {
-  private val cdkBuilder: CfnStreamProps.Builder = CfnStreamProps.builder()
+    private val cdkBuilder: CfnStreamProps.Builder = CfnStreamProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun exclusiveEndTime(exclusiveEndTime: String) {
-    cdkBuilder.exclusiveEndTime(exclusiveEndTime)
-  }
+    public fun exclusiveEndTime(exclusiveEndTime: String) {
+        cdkBuilder.exclusiveEndTime(exclusiveEndTime)
+    }
 
-  public fun inclusiveStartTime(inclusiveStartTime: String) {
-    cdkBuilder.inclusiveStartTime(inclusiveStartTime)
-  }
+    public fun inclusiveStartTime(inclusiveStartTime: String) {
+        cdkBuilder.inclusiveStartTime(inclusiveStartTime)
+    }
 
-  public fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
-    cdkBuilder.kinesisConfiguration(kinesisConfiguration)
-  }
+    public fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
+        cdkBuilder.kinesisConfiguration(kinesisConfiguration)
+    }
 
-  public fun kinesisConfiguration(kinesisConfiguration: CfnStream.KinesisConfigurationProperty) {
-    cdkBuilder.kinesisConfiguration(kinesisConfiguration)
-  }
+    public fun kinesisConfiguration(kinesisConfiguration: CfnStream.KinesisConfigurationProperty) {
+        cdkBuilder.kinesisConfiguration(kinesisConfiguration)
+    }
 
-  public fun ledgerName(ledgerName: String) {
-    cdkBuilder.ledgerName(ledgerName)
-  }
+    public fun ledgerName(ledgerName: String) {
+        cdkBuilder.ledgerName(ledgerName)
+    }
 
-  public fun roleArn(roleArn: String) {
-    cdkBuilder.roleArn(roleArn)
-  }
+    public fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+    }
 
-  public fun streamName(streamName: String) {
-    cdkBuilder.streamName(streamName)
-  }
+    public fun streamName(streamName: String) {
+        cdkBuilder.streamName(streamName)
+    }
 
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnStreamProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnStreamProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

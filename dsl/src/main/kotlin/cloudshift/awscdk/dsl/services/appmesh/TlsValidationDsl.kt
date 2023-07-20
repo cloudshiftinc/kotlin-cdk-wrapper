@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -9,15 +18,15 @@ import software.amazon.awscdk.services.appmesh.TlsValidationTrust
 
 @CdkDslMarker
 public class TlsValidationDsl {
-  private val cdkBuilder: TlsValidation.Builder = TlsValidation.builder()
+    private val cdkBuilder: TlsValidation.Builder = TlsValidation.builder()
 
-  public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
-    cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
-  }
+    public fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
+    }
 
-  public fun trust(trust: TlsValidationTrust) {
-    cdkBuilder.trust(trust)
-  }
+    public fun trust(trust: TlsValidationTrust) {
+        cdkBuilder.trust(trust)
+    }
 
-  public fun build(): TlsValidation = cdkBuilder.build()
+    public fun build(): TlsValidation = cdkBuilder.build()
 }

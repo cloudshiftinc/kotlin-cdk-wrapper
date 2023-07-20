@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
 
 @CdkDslMarker
 public class CfnPublicDnsNamespacePublicDnsPropertiesMutablePropertyDsl {
-  private val cdkBuilder: CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty.Builder =
-      CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty.builder()
+    private val cdkBuilder: CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty.Builder =
+        CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty.builder()
 
-  public fun soa(soa: IResolvable) {
-    cdkBuilder.soa(soa)
-  }
+    public fun soa(soa: IResolvable) {
+        cdkBuilder.soa(soa)
+    }
 
-  public fun soa(soa: CfnPublicDnsNamespace.SOAProperty) {
-    cdkBuilder.soa(soa)
-  }
+    public fun soa(soa: CfnPublicDnsNamespace.SOAProperty) {
+        cdkBuilder.soa(soa)
+    }
 
-  public fun build(): CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty = cdkBuilder.build()
+    public fun build(): CfnPublicDnsNamespace.PublicDnsPropertiesMutableProperty = cdkBuilder.build()
 }

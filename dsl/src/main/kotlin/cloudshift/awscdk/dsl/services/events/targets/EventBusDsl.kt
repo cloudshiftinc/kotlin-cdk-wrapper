@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.events.targets
 
@@ -10,17 +19,17 @@ import software.amazon.awscdk.services.sqs.IQueue
 
 @CdkDslMarker
 public class EventBusDsl(
-  eventBus: IEventBus,
+    eventBus: IEventBus,
 ) {
-  private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(eventBus)
+    private val cdkBuilder: EventBus.Builder = EventBus.Builder.create(eventBus)
 
-  public fun deadLetterQueue(deadLetterQueue: IQueue) {
-    cdkBuilder.deadLetterQueue(deadLetterQueue)
-  }
+    public fun deadLetterQueue(deadLetterQueue: IQueue) {
+        cdkBuilder.deadLetterQueue(deadLetterQueue)
+    }
 
-  public fun role(role: IRole) {
-    cdkBuilder.role(role)
-  }
+    public fun role(role: IRole) {
+        cdkBuilder.role(role)
+    }
 
-  public fun build(): EventBus = cdkBuilder.build()
+    public fun build(): EventBus = cdkBuilder.build()
 }

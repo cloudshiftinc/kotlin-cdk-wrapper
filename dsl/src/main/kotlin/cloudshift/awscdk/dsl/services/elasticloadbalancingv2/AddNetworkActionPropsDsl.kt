@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancingv2
 
@@ -8,11 +17,11 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAct
 
 @CdkDslMarker
 public class AddNetworkActionPropsDsl {
-  private val cdkBuilder: AddNetworkActionProps.Builder = AddNetworkActionProps.builder()
+    private val cdkBuilder: AddNetworkActionProps.Builder = AddNetworkActionProps.builder()
 
-  public fun action(action: NetworkListenerAction) {
-    cdkBuilder.action(action)
-  }
+    public fun action(action: NetworkListenerAction) {
+        cdkBuilder.action(action)
+    }
 
-  public fun build(): AddNetworkActionProps = cdkBuilder.build()
+    public fun build(): AddNetworkActionProps = cdkBuilder.build()
 }

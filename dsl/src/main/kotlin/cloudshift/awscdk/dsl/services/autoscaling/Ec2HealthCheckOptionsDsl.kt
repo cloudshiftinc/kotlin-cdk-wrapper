@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.autoscaling
 
@@ -8,11 +17,11 @@ import software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions
 
 @CdkDslMarker
 public class Ec2HealthCheckOptionsDsl {
-  private val cdkBuilder: Ec2HealthCheckOptions.Builder = Ec2HealthCheckOptions.builder()
+    private val cdkBuilder: Ec2HealthCheckOptions.Builder = Ec2HealthCheckOptions.builder()
 
-  public fun grace(grace: Duration) {
-    cdkBuilder.grace(grace)
-  }
+    public fun grace(grace: Duration) {
+        cdkBuilder.grace(grace)
+    }
 
-  public fun build(): Ec2HealthCheckOptions = cdkBuilder.build()
+    public fun build(): Ec2HealthCheckOptions = cdkBuilder.build()
 }

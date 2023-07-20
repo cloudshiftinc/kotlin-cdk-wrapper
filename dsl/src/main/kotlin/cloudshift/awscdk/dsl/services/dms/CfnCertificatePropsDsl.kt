@@ -1,26 +1,35 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.dms
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.dms.CfnCertificateProps
+import kotlin.String
 
 @CdkDslMarker
 public class CfnCertificatePropsDsl {
-  private val cdkBuilder: CfnCertificateProps.Builder = CfnCertificateProps.builder()
+    private val cdkBuilder: CfnCertificateProps.Builder = CfnCertificateProps.builder()
 
-  public fun certificateIdentifier(certificateIdentifier: String) {
-    cdkBuilder.certificateIdentifier(certificateIdentifier)
-  }
+    public fun certificateIdentifier(certificateIdentifier: String) {
+        cdkBuilder.certificateIdentifier(certificateIdentifier)
+    }
 
-  public fun certificatePem(certificatePem: String) {
-    cdkBuilder.certificatePem(certificatePem)
-  }
+    public fun certificatePem(certificatePem: String) {
+        cdkBuilder.certificatePem(certificatePem)
+    }
 
-  public fun certificateWallet(certificateWallet: String) {
-    cdkBuilder.certificateWallet(certificateWallet)
-  }
+    public fun certificateWallet(certificateWallet: String) {
+        cdkBuilder.certificateWallet(certificateWallet)
+    }
 
-  public fun build(): CfnCertificateProps = cdkBuilder.build()
+    public fun build(): CfnCertificateProps = cdkBuilder.build()
 }

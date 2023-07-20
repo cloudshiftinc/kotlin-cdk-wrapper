@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.opensearchservice
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
 @CdkDslMarker
 public class CfnDomainOffPeakWindowPropertyDsl {
-  private val cdkBuilder: CfnDomain.OffPeakWindowProperty.Builder =
-      CfnDomain.OffPeakWindowProperty.builder()
+    private val cdkBuilder: CfnDomain.OffPeakWindowProperty.Builder =
+        CfnDomain.OffPeakWindowProperty.builder()
 
-  public fun windowStartTime(windowStartTime: IResolvable) {
-    cdkBuilder.windowStartTime(windowStartTime)
-  }
+    public fun windowStartTime(windowStartTime: IResolvable) {
+        cdkBuilder.windowStartTime(windowStartTime)
+    }
 
-  public fun windowStartTime(windowStartTime: CfnDomain.WindowStartTimeProperty) {
-    cdkBuilder.windowStartTime(windowStartTime)
-  }
+    public fun windowStartTime(windowStartTime: CfnDomain.WindowStartTimeProperty) {
+        cdkBuilder.windowStartTime(windowStartTime)
+    }
 
-  public fun build(): CfnDomain.OffPeakWindowProperty = cdkBuilder.build()
+    public fun build(): CfnDomain.OffPeakWindowProperty = cdkBuilder.build()
 }

@@ -1,22 +1,31 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.lightsail
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnDisk
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDiskLocationPropertyDsl {
-  private val cdkBuilder: CfnDisk.LocationProperty.Builder = CfnDisk.LocationProperty.builder()
+    private val cdkBuilder: CfnDisk.LocationProperty.Builder = CfnDisk.LocationProperty.builder()
 
-  public fun availabilityZone(availabilityZone: String) {
-    cdkBuilder.availabilityZone(availabilityZone)
-  }
+    public fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+    }
 
-  public fun regionName(regionName: String) {
-    cdkBuilder.regionName(regionName)
-  }
+    public fun regionName(regionName: String) {
+        cdkBuilder.regionName(regionName)
+    }
 
-  public fun build(): CfnDisk.LocationProperty = cdkBuilder.build()
+    public fun build(): CfnDisk.LocationProperty = cdkBuilder.build()
 }

@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.events.targets
 
@@ -8,11 +17,11 @@ import software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps
 
 @CdkDslMarker
 public class KinesisFirehoseStreamPropsDsl {
-  private val cdkBuilder: KinesisFirehoseStreamProps.Builder = KinesisFirehoseStreamProps.builder()
+    private val cdkBuilder: KinesisFirehoseStreamProps.Builder = KinesisFirehoseStreamProps.builder()
 
-  public fun message(message: RuleTargetInput) {
-    cdkBuilder.message(message)
-  }
+    public fun message(message: RuleTargetInput) {
+        cdkBuilder.message(message)
+    }
 
-  public fun build(): KinesisFirehoseStreamProps = cdkBuilder.build()
+    public fun build(): KinesisFirehoseStreamProps = cdkBuilder.build()
 }

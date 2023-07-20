@@ -1,24 +1,33 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appflow
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
+import kotlin.String
 
 @CdkDslMarker
 public class CfnConnectorProfileRedshiftConnectorProfileCredentialsPropertyDsl {
-  private val cdkBuilder: CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.Builder =
-      CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.builder()
+    private val cdkBuilder: CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.Builder =
+        CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty.builder()
 
-  public fun password(password: String) {
-    cdkBuilder.password(password)
-  }
+    public fun password(password: String) {
+        cdkBuilder.password(password)
+    }
 
-  public fun username(username: String) {
-    cdkBuilder.username(username)
-  }
+    public fun username(username: String) {
+        cdkBuilder.username(username)
+    }
 
-  public fun build(): CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty =
-      cdkBuilder.build()
+    public fun build(): CfnConnectorProfile.RedshiftConnectorProfileCredentialsProperty =
+        cdkBuilder.build()
 }

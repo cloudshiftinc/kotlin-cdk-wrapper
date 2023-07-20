@@ -1,58 +1,67 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.services.amazonmq.CfnConfiguration
+import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.services.amazonmq.CfnConfiguration
-import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnConfigurationDsl(
-  scope: Construct,
-  id: String,
+    scope: Construct,
+    id: String,
 ) {
-  private val cdkBuilder: CfnConfiguration.Builder = CfnConfiguration.Builder.create(scope, id)
+    private val cdkBuilder: CfnConfiguration.Builder = CfnConfiguration.Builder.create(scope, id)
 
-  private val _tags: MutableList<CfnConfiguration.TagsEntryProperty> = mutableListOf()
+    private val _tags: MutableList<CfnConfiguration.TagsEntryProperty> = mutableListOf()
 
-  public fun authenticationStrategy(authenticationStrategy: String) {
-    cdkBuilder.authenticationStrategy(authenticationStrategy)
-  }
+    public fun authenticationStrategy(authenticationStrategy: String) {
+        cdkBuilder.authenticationStrategy(authenticationStrategy)
+    }
 
-  public fun `data`(`data`: String) {
-    cdkBuilder.`data`(`data`)
-  }
+    public fun `data`(`data`: String) {
+        cdkBuilder.`data`(`data`)
+    }
 
-  public fun description(description: String) {
-    cdkBuilder.description(description)
-  }
+    public fun description(description: String) {
+        cdkBuilder.description(description)
+    }
 
-  public fun engineType(engineType: String) {
-    cdkBuilder.engineType(engineType)
-  }
+    public fun engineType(engineType: String) {
+        cdkBuilder.engineType(engineType)
+    }
 
-  public fun engineVersion(engineVersion: String) {
-    cdkBuilder.engineVersion(engineVersion)
-  }
+    public fun engineVersion(engineVersion: String) {
+        cdkBuilder.engineVersion(engineVersion)
+    }
 
-  public fun name(name: String) {
-    cdkBuilder.name(name)
-  }
+    public fun name(name: String) {
+        cdkBuilder.name(name)
+    }
 
-  public fun tags(tags: CfnConfigurationTagsEntryPropertyDsl.() -> Unit) {
-    _tags.add(CfnConfigurationTagsEntryPropertyDsl().apply(tags).build())
-  }
+    public fun tags(tags: CfnConfigurationTagsEntryPropertyDsl.() -> Unit) {
+        _tags.add(CfnConfigurationTagsEntryPropertyDsl().apply(tags).build())
+    }
 
-  public fun tags(tags: Collection<CfnConfiguration.TagsEntryProperty>) {
-    _tags.addAll(tags)
-  }
+    public fun tags(tags: Collection<CfnConfiguration.TagsEntryProperty>) {
+        _tags.addAll(tags)
+    }
 
-  public fun build(): CfnConfiguration {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnConfiguration {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

@@ -1,54 +1,63 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appmesh
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouterProps
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class CfnVirtualRouterPropsDsl {
-  private val cdkBuilder: CfnVirtualRouterProps.Builder = CfnVirtualRouterProps.builder()
+    private val cdkBuilder: CfnVirtualRouterProps.Builder = CfnVirtualRouterProps.builder()
 
-  private val _tags: MutableList<CfnTag> = mutableListOf()
+    private val _tags: MutableList<CfnTag> = mutableListOf()
 
-  public fun meshName(meshName: String) {
-    cdkBuilder.meshName(meshName)
-  }
+    public fun meshName(meshName: String) {
+        cdkBuilder.meshName(meshName)
+    }
 
-  public fun meshOwner(meshOwner: String) {
-    cdkBuilder.meshOwner(meshOwner)
-  }
+    public fun meshOwner(meshOwner: String) {
+        cdkBuilder.meshOwner(meshOwner)
+    }
 
-  public fun spec(spec: IResolvable) {
-    cdkBuilder.spec(spec)
-  }
+    public fun spec(spec: IResolvable) {
+        cdkBuilder.spec(spec)
+    }
 
-  public fun spec(spec: CfnVirtualRouter.VirtualRouterSpecProperty) {
-    cdkBuilder.spec(spec)
-  }
+    public fun spec(spec: CfnVirtualRouter.VirtualRouterSpecProperty) {
+        cdkBuilder.spec(spec)
+    }
 
-  public fun tags(tags: CfnTagDsl.() -> Unit) {
-    _tags.add(CfnTagDsl().apply(tags).build())
-  }
+    public fun tags(tags: CfnTagDsl.() -> Unit) {
+        _tags.add(CfnTagDsl().apply(tags).build())
+    }
 
-  public fun tags(tags: Collection<CfnTag>) {
-    _tags.addAll(tags)
-  }
+    public fun tags(tags: Collection<CfnTag>) {
+        _tags.addAll(tags)
+    }
 
-  public fun virtualRouterName(virtualRouterName: String) {
-    cdkBuilder.virtualRouterName(virtualRouterName)
-  }
+    public fun virtualRouterName(virtualRouterName: String) {
+        cdkBuilder.virtualRouterName(virtualRouterName)
+    }
 
-  public fun build(): CfnVirtualRouterProps {
-    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnVirtualRouterProps {
+        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+        return cdkBuilder.build()
+    }
 }

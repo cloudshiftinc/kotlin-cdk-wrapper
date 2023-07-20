@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -8,16 +17,16 @@ import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
 @CdkDslMarker
 public class CfnDistributionRestrictionsPropertyDsl {
-  private val cdkBuilder: CfnDistribution.RestrictionsProperty.Builder =
-      CfnDistribution.RestrictionsProperty.builder()
+    private val cdkBuilder: CfnDistribution.RestrictionsProperty.Builder =
+        CfnDistribution.RestrictionsProperty.builder()
 
-  public fun geoRestriction(geoRestriction: IResolvable) {
-    cdkBuilder.geoRestriction(geoRestriction)
-  }
+    public fun geoRestriction(geoRestriction: IResolvable) {
+        cdkBuilder.geoRestriction(geoRestriction)
+    }
 
-  public fun geoRestriction(geoRestriction: CfnDistribution.GeoRestrictionProperty) {
-    cdkBuilder.geoRestriction(geoRestriction)
-  }
+    public fun geoRestriction(geoRestriction: CfnDistribution.GeoRestrictionProperty) {
+        cdkBuilder.geoRestriction(geoRestriction)
+    }
 
-  public fun build(): CfnDistribution.RestrictionsProperty = cdkBuilder.build()
+    public fun build(): CfnDistribution.RestrictionsProperty = cdkBuilder.build()
 }

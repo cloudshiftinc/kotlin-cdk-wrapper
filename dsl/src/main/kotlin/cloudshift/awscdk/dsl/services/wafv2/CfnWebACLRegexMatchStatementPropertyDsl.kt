@@ -1,48 +1,57 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.wafv2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.wafv2.CfnWebACL
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.wafv2.CfnWebACL
 
 @CdkDslMarker
 public class CfnWebACLRegexMatchStatementPropertyDsl {
-  private val cdkBuilder: CfnWebACL.RegexMatchStatementProperty.Builder =
-      CfnWebACL.RegexMatchStatementProperty.builder()
+    private val cdkBuilder: CfnWebACL.RegexMatchStatementProperty.Builder =
+        CfnWebACL.RegexMatchStatementProperty.builder()
 
-  private val _textTransformations: MutableList<Any> = mutableListOf()
+    private val _textTransformations: MutableList<Any> = mutableListOf()
 
-  public fun fieldToMatch(fieldToMatch: IResolvable) {
-    cdkBuilder.fieldToMatch(fieldToMatch)
-  }
+    public fun fieldToMatch(fieldToMatch: IResolvable) {
+        cdkBuilder.fieldToMatch(fieldToMatch)
+    }
 
-  public fun fieldToMatch(fieldToMatch: CfnWebACL.FieldToMatchProperty) {
-    cdkBuilder.fieldToMatch(fieldToMatch)
-  }
+    public fun fieldToMatch(fieldToMatch: CfnWebACL.FieldToMatchProperty) {
+        cdkBuilder.fieldToMatch(fieldToMatch)
+    }
 
-  public fun regexString(regexString: String) {
-    cdkBuilder.regexString(regexString)
-  }
+    public fun regexString(regexString: String) {
+        cdkBuilder.regexString(regexString)
+    }
 
-  public fun textTransformations(vararg textTransformations: Any) {
-    _textTransformations.addAll(listOf(*textTransformations))
-  }
+    public fun textTransformations(vararg textTransformations: Any) {
+        _textTransformations.addAll(listOf(*textTransformations))
+    }
 
-  public fun textTransformations(textTransformations: Collection<Any>) {
-    _textTransformations.addAll(textTransformations)
-  }
+    public fun textTransformations(textTransformations: Collection<Any>) {
+        _textTransformations.addAll(textTransformations)
+    }
 
-  public fun textTransformations(textTransformations: IResolvable) {
-    cdkBuilder.textTransformations(textTransformations)
-  }
+    public fun textTransformations(textTransformations: IResolvable) {
+        cdkBuilder.textTransformations(textTransformations)
+    }
 
-  public fun build(): CfnWebACL.RegexMatchStatementProperty {
-    if(_textTransformations.isNotEmpty()) cdkBuilder.textTransformations(_textTransformations)
-    return cdkBuilder.build()
-  }
+    public fun build(): CfnWebACL.RegexMatchStatementProperty {
+        if (_textTransformations.isNotEmpty()) cdkBuilder.textTransformations(_textTransformations)
+        return cdkBuilder.build()
+    }
 }

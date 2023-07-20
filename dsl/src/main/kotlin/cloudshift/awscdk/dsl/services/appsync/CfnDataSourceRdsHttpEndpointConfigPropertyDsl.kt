@@ -1,35 +1,44 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.appsync
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnDataSource
+import kotlin.String
 
 @CdkDslMarker
 public class CfnDataSourceRdsHttpEndpointConfigPropertyDsl {
-  private val cdkBuilder: CfnDataSource.RdsHttpEndpointConfigProperty.Builder =
-      CfnDataSource.RdsHttpEndpointConfigProperty.builder()
+    private val cdkBuilder: CfnDataSource.RdsHttpEndpointConfigProperty.Builder =
+        CfnDataSource.RdsHttpEndpointConfigProperty.builder()
 
-  public fun awsRegion(awsRegion: String) {
-    cdkBuilder.awsRegion(awsRegion)
-  }
+    public fun awsRegion(awsRegion: String) {
+        cdkBuilder.awsRegion(awsRegion)
+    }
 
-  public fun awsSecretStoreArn(awsSecretStoreArn: String) {
-    cdkBuilder.awsSecretStoreArn(awsSecretStoreArn)
-  }
+    public fun awsSecretStoreArn(awsSecretStoreArn: String) {
+        cdkBuilder.awsSecretStoreArn(awsSecretStoreArn)
+    }
 
-  public fun databaseName(databaseName: String) {
-    cdkBuilder.databaseName(databaseName)
-  }
+    public fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+    }
 
-  public fun dbClusterIdentifier(dbClusterIdentifier: String) {
-    cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
-  }
+    public fun dbClusterIdentifier(dbClusterIdentifier: String) {
+        cdkBuilder.dbClusterIdentifier(dbClusterIdentifier)
+    }
 
-  public fun schema(schema: String) {
-    cdkBuilder.schema(schema)
-  }
+    public fun schema(schema: String) {
+        cdkBuilder.schema(schema)
+    }
 
-  public fun build(): CfnDataSource.RdsHttpEndpointConfigProperty = cdkBuilder.build()
+    public fun build(): CfnDataSource.RdsHttpEndpointConfigProperty = cdkBuilder.build()
 }

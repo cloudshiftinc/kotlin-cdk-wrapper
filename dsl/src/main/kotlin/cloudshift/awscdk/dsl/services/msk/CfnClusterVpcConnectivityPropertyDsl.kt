@@ -1,4 +1,13 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.msk
 
@@ -8,17 +17,16 @@ import software.amazon.awscdk.services.msk.CfnCluster
 
 @CdkDslMarker
 public class CfnClusterVpcConnectivityPropertyDsl {
-  private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =
-      CfnCluster.VpcConnectivityProperty.builder()
+    private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =
+        CfnCluster.VpcConnectivityProperty.builder()
 
-  public fun clientAuthentication(clientAuthentication: IResolvable) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    public fun clientAuthentication(clientAuthentication: IResolvable) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  public
-      fun clientAuthentication(clientAuthentication: CfnCluster.VpcConnectivityClientAuthenticationProperty) {
-    cdkBuilder.clientAuthentication(clientAuthentication)
-  }
+    public fun clientAuthentication(clientAuthentication: CfnCluster.VpcConnectivityClientAuthenticationProperty) {
+        cdkBuilder.clientAuthentication(clientAuthentication)
+    }
 
-  public fun build(): CfnCluster.VpcConnectivityProperty = cdkBuilder.build()
+    public fun build(): CfnCluster.VpcConnectivityProperty = cdkBuilder.build()
 }

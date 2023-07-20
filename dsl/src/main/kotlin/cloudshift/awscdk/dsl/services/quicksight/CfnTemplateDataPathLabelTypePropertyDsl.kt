@@ -1,27 +1,36 @@
-@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+@file:Suppress(
+    "RedundantVisibilityModifier",
+    "RedundantUnitReturnType",
+    "RemoveRedundantQualifierName",
+    "unused",
+    "UnusedImport",
+    "ClassName",
+    "REDUNDANT_PROJECTION",
+    "DEPRECATION",
+)
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
+import kotlin.String
 
 @CdkDslMarker
 public class CfnTemplateDataPathLabelTypePropertyDsl {
-  private val cdkBuilder: CfnTemplate.DataPathLabelTypeProperty.Builder =
-      CfnTemplate.DataPathLabelTypeProperty.builder()
+    private val cdkBuilder: CfnTemplate.DataPathLabelTypeProperty.Builder =
+        CfnTemplate.DataPathLabelTypeProperty.builder()
 
-  public fun fieldId(fieldId: String) {
-    cdkBuilder.fieldId(fieldId)
-  }
+    public fun fieldId(fieldId: String) {
+        cdkBuilder.fieldId(fieldId)
+    }
 
-  public fun fieldValue(fieldValue: String) {
-    cdkBuilder.fieldValue(fieldValue)
-  }
+    public fun fieldValue(fieldValue: String) {
+        cdkBuilder.fieldValue(fieldValue)
+    }
 
-  public fun visibility(visibility: String) {
-    cdkBuilder.visibility(visibility)
-  }
+    public fun visibility(visibility: String) {
+        cdkBuilder.visibility(visibility)
+    }
 
-  public fun build(): CfnTemplate.DataPathLabelTypeProperty = cdkBuilder.build()
+    public fun build(): CfnTemplate.DataPathLabelTypeProperty = cdkBuilder.build()
 }
