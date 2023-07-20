@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.ec2.VpnTunnelOption
@@ -11,6 +12,7 @@ import software.amazon.awscdk.services.ec2.VpnTunnelOption
 public class VpnTunnelOptionDsl {
   private val cdkBuilder: VpnTunnelOption.Builder = VpnTunnelOption.builder()
 
+  @Deprecated(message = "deprecated in CDK")
   public fun preSharedKey(preSharedKey: String) {
     cdkBuilder.preSharedKey(preSharedKey)
   }

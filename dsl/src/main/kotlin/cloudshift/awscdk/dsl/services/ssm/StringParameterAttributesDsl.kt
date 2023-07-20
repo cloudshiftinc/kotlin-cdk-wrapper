@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.ssm
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ssm.ParameterType
@@ -26,6 +27,7 @@ public class StringParameterAttributesDsl {
     cdkBuilder.simpleName(simpleName)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun type(type: ParameterType) {
     cdkBuilder.type(type)
   }

@@ -8,6 +8,7 @@ import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -69,6 +70,7 @@ public class EcsRunTaskDsl(
     cdkBuilder.credentials(credentials)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
@@ -141,6 +143,7 @@ public class EcsRunTaskDsl(
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

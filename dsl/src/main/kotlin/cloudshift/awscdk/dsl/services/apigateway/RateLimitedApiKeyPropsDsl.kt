@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.apigateway
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -96,10 +97,12 @@ public class RateLimitedApiKeyPropsDsl {
     cdkBuilder.quota(quota)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun resources(vararg resources: IRestApi) {
     _resources.addAll(listOf(*resources))
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun resources(resources: Collection<IRestApi>) {
     _resources.addAll(resources)
   }

@@ -7,12 +7,20 @@ import com.squareup.kotlinpoet.TypeName
 import org.aspectj.util.GenericSignature.ClassTypeSignature
 import org.aspectj.util.GenericSignature.TypeArgument
 import org.aspectj.util.GenericSignatureParser
+import org.gradle.kotlin.dsl.provideDelegate
+import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.MethodNode
 
 internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Method {
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
+    private val annotations : List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
+        convertAnnotations(delegate.visibleAnnotations, delegate.invisibleAnnotations)
+    }
+
+    override val deprecated : Boolean = annotations.any { it.toString().contains("Deprecated") }
+
     override val parameters: List<CdkClass2.Method.Parameter> by lazy(LazyThreadSafetyMode.NONE) {
 
         // handle generics from the method signature
@@ -23,10 +31,18 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Me
                 .parameters.filterIsInstance<ClassTypeSignature>().map { it.toTypeName() }
         }
         val argumentTypes = Type.getMethodType(delegate.desc).argumentTypes
+
+        val isStaticMethod = delegate.access and Opcodes.ACC_STATIC != 0
+
         argumentTypes.mapIndexed { index: Int, type: Type ->
             val parameterName = when {
                 delegate.parameters != null -> delegate.parameters[index].name
-                delegate.localVariables != null -> delegate.localVariables[index].name
+                delegate.localVariables != null -> when {
+                    isStaticMethod -> delegate.localVariables[index].name
+
+                    // first index is 'this' for instance methods
+                    else -> delegate.localVariables[index + 1].name
+                }
                 else -> "arg${index}"
             }
             var theType: TypeName = type.toTypeName()
@@ -35,7 +51,8 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Me
             }
 
             // TODO - there don't appear to be any builder methods that use nullability annotations
-            // if we find a use for these annotations we have them...
+            //   if we find a use for these annotations we have them...
+            //   also not seeing @Deprecated annotations
 //            val annotations = (delegate.visibleParameterAnnotations?.get(index) ?: emptyList())+
 //                (delegate.invisibleParameterAnnotations?.get(index) ?: emptyList())
 

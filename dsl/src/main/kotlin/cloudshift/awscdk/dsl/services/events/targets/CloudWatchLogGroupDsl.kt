@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.events.targets
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.events.RuleTargetInput
@@ -21,6 +22,7 @@ public class CloudWatchLogGroupDsl(
     cdkBuilder.deadLetterQueue(deadLetterQueue)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun event(event: RuleTargetInput) {
     cdkBuilder.event(event)
   }

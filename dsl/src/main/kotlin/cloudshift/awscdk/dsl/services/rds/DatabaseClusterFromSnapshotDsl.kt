@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.rds
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -90,6 +91,7 @@ public class DatabaseClusterFromSnapshotDsl(
     cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun credentials(credentials: Credentials) {
     cdkBuilder.credentials(credentials)
   }
@@ -114,12 +116,14 @@ public class DatabaseClusterFromSnapshotDsl(
     cdkBuilder.instanceIdentifierBase(instanceIdentifierBase)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun instanceProps(block: InstancePropsDsl.() -> Unit = {}) {
     val builder = InstancePropsDsl()
     builder.apply(block)
     cdkBuilder.instanceProps(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun instanceProps(instanceProps: InstanceProps) {
     cdkBuilder.instanceProps(instanceProps)
   }
@@ -128,6 +132,7 @@ public class DatabaseClusterFromSnapshotDsl(
     cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun instances(instances: Number) {
     cdkBuilder.instances(instances)
   }

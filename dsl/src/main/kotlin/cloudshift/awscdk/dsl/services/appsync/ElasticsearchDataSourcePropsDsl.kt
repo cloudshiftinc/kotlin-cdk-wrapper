@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.appsync
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps
 import software.amazon.awscdk.services.appsync.IGraphqlApi
@@ -10,6 +11,7 @@ import software.amazon.awscdk.services.elasticsearch.IDomain
 import software.amazon.awscdk.services.iam.IRole
 
 @CdkDslMarker
+@Deprecated(message = "deprecated in CDK")
 public class ElasticsearchDataSourcePropsDsl {
   private val cdkBuilder: ElasticsearchDataSourceProps.Builder =
       ElasticsearchDataSourceProps.builder()
@@ -22,6 +24,7 @@ public class ElasticsearchDataSourcePropsDsl {
     cdkBuilder.description(description)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun domain(domain: IDomain) {
     cdkBuilder.domain(domain)
   }

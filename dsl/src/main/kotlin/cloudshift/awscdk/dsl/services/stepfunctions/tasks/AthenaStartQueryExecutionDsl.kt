@@ -6,6 +6,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -44,6 +45,7 @@ public class AthenaStartQueryExecutionDsl(
     cdkBuilder.credentials(credentials)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
@@ -106,6 +108,7 @@ public class AthenaStartQueryExecutionDsl(
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

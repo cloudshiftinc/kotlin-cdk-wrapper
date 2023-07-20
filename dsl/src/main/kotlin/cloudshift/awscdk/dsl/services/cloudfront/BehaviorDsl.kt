@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.cloudfront
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -98,10 +99,12 @@ public class BehaviorDsl {
     _trustedKeyGroups.addAll(trustedKeyGroups)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun trustedSigners(vararg trustedSigners: String) {
     _trustedSigners.addAll(listOf(*trustedSigners))
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun trustedSigners(trustedSigners: Collection<String>) {
     _trustedSigners.addAll(trustedSigners)
   }

@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.s3
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
@@ -37,6 +38,7 @@ public class BucketAttributesDsl {
     cdkBuilder.bucketRegionalDomainName(bucketRegionalDomainName)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun bucketWebsiteNewUrlFormat(bucketWebsiteNewUrlFormat: Boolean) {
     cdkBuilder.bucketWebsiteNewUrlFormat(bucketWebsiteNewUrlFormat)
   }

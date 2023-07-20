@@ -8,6 +8,7 @@ import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -61,6 +62,7 @@ public class SageMakerCreateModelDsl(
     cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
@@ -125,6 +127,7 @@ public class SageMakerCreateModelDsl(
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

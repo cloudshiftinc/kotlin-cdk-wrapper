@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.appsync
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnDataSource
@@ -20,10 +21,12 @@ public class ExtendedDataSourcePropsDsl {
     cdkBuilder.dynamoDbConfig(dynamoDbConfig)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
     cdkBuilder.elasticsearchConfig(elasticsearchConfig)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun elasticsearchConfig(elasticsearchConfig: CfnDataSource.ElasticsearchConfigProperty) {
     cdkBuilder.elasticsearchConfig(elasticsearchConfig)
   }

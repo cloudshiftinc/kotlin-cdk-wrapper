@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.apigateway
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.iam.PolicyDocumentDsl
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -144,6 +145,7 @@ public class RestApiPropsDsl {
     cdkBuilder.minCompressionSize(minCompressionSize)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun minimumCompressionSize(minimumCompressionSize: Number) {
     cdkBuilder.minimumCompressionSize(minimumCompressionSize)
   }

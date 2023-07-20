@@ -6,6 +6,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -31,6 +32,7 @@ import software.amazon.awscdk.services.iam.PolicyStatement
 import software.constructs.Construct
 
 @CdkDslMarker
+@Deprecated(message = "deprecated in CDK")
 public class DomainDsl(
   scope: Construct,
   id: String,
@@ -43,150 +45,183 @@ public class DomainDsl(
 
   private val _vpcSubnets: MutableList<SubnetSelection> = mutableListOf()
 
+  @Deprecated(message = "deprecated in CDK")
   public fun accessPolicies(accessPolicies: PolicyStatementDsl.() -> Unit) {
     _accessPolicies.add(PolicyStatementDsl().apply(accessPolicies).build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun accessPolicies(accessPolicies: Collection<PolicyStatement>) {
     _accessPolicies.addAll(accessPolicies)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun advancedOptions(advancedOptions: Map<String, String>) {
     cdkBuilder.advancedOptions(advancedOptions)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number) {
     cdkBuilder.automatedSnapshotStartHour(automatedSnapshotStartHour)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun capacity(block: CapacityConfigDsl.() -> Unit = {}) {
     val builder = CapacityConfigDsl()
     builder.apply(block)
     cdkBuilder.capacity(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun capacity(capacity: CapacityConfig) {
     cdkBuilder.capacity(capacity)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun cognitoKibanaAuth(block: CognitoOptionsDsl.() -> Unit = {}) {
     val builder = CognitoOptionsDsl()
     builder.apply(block)
     cdkBuilder.cognitoKibanaAuth(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
     cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun customEndpoint(block: CustomEndpointOptionsDsl.() -> Unit = {}) {
     val builder = CustomEndpointOptionsDsl()
     builder.apply(block)
     cdkBuilder.customEndpoint(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun customEndpoint(customEndpoint: CustomEndpointOptions) {
     cdkBuilder.customEndpoint(customEndpoint)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun domainName(domainName: String) {
     cdkBuilder.domainName(domainName)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun ebs(block: EbsOptionsDsl.() -> Unit = {}) {
     val builder = EbsOptionsDsl()
     builder.apply(block)
     cdkBuilder.ebs(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun ebs(ebs: EbsOptions) {
     cdkBuilder.ebs(ebs)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun enableVersionUpgrade(enableVersionUpgrade: Boolean) {
     cdkBuilder.enableVersionUpgrade(enableVersionUpgrade)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun encryptionAtRest(block: EncryptionAtRestOptionsDsl.() -> Unit = {}) {
     val builder = EncryptionAtRestOptionsDsl()
     builder.apply(block)
     cdkBuilder.encryptionAtRest(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
     cdkBuilder.encryptionAtRest(encryptionAtRest)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun enforceHttps(enforceHttps: Boolean) {
     cdkBuilder.enforceHttps(enforceHttps)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun fineGrainedAccessControl(block: AdvancedSecurityOptionsDsl.() -> Unit = {}) {
     val builder = AdvancedSecurityOptionsDsl()
     builder.apply(block)
     cdkBuilder.fineGrainedAccessControl(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
     cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun logging(block: LoggingOptionsDsl.() -> Unit = {}) {
     val builder = LoggingOptionsDsl()
     builder.apply(block)
     cdkBuilder.logging(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun logging(logging: LoggingOptions) {
     cdkBuilder.logging(logging)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun nodeToNodeEncryption(nodeToNodeEncryption: Boolean) {
     cdkBuilder.nodeToNodeEncryption(nodeToNodeEncryption)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun removalPolicy(removalPolicy: RemovalPolicy) {
     cdkBuilder.removalPolicy(removalPolicy)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun securityGroups(vararg securityGroups: ISecurityGroup) {
     _securityGroups.addAll(listOf(*securityGroups))
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
     _securityGroups.addAll(securityGroups)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
     cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun useUnsignedBasicAuth(useUnsignedBasicAuth: Boolean) {
     cdkBuilder.useUnsignedBasicAuth(useUnsignedBasicAuth)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun version(version: ElasticsearchVersion) {
     cdkBuilder.version(version)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun vpc(vpc: IVpc) {
     cdkBuilder.vpc(vpc)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun vpcSubnets(vpcSubnets: SubnetSelectionDsl.() -> Unit) {
     _vpcSubnets.add(SubnetSelectionDsl().apply(vpcSubnets).build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun vpcSubnets(vpcSubnets: Collection<SubnetSelection>) {
     _vpcSubnets.addAll(vpcSubnets)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun zoneAwareness(block: ZoneAwarenessConfigDsl.() -> Unit = {}) {
     val builder = ZoneAwarenessConfigDsl()
     builder.apply(block)
     cdkBuilder.zoneAwareness(builder.build())
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
     cdkBuilder.zoneAwareness(zoneAwareness)
   }

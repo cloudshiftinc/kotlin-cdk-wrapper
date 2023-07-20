@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.cognito
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -37,6 +38,7 @@ public class UserPoolIdentityProviderGoogleDsl(
     cdkBuilder.clientId(clientId)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun clientSecret(clientSecret: String) {
     cdkBuilder.clientSecret(clientSecret)
   }

@@ -3,6 +3,7 @@ package cloudshift.awscdkdsl.build.dsl.asm
 import com.github.benmanes.caffeine.cache.Caffeine
 import com.squareup.kotlinpoet.ClassName
 import org.objectweb.asm.Type
+import org.objectweb.asm.tree.AnnotationNode
 import kotlin.reflect.jvm.internal.impl.builtins.jvm.JavaToKotlinClassMap
 
 internal fun Type.toTypeName(): ClassName {
@@ -27,4 +28,10 @@ private fun normalizeBinaryClassName(binaryClassName: String): ClassName {
     val className = binaryClassName.substringAfterLast("/")
     val packageName = binaryClassName.removeSuffix(className).dropLast(1)
     return ClassName(packageName.replace('/', '.'), className.split("$"))
+}
+
+internal fun convertAnnotations(visibleAnnotations : List<AnnotationNode>?, invisibleAnnotations : List<AnnotationNode>?): List<ClassName> {
+    return ((invisibleAnnotations ?: emptyList()) + (visibleAnnotations ?: emptyList())).map {
+        Type.getType(it.desc).toTypeName()
+    }
 }

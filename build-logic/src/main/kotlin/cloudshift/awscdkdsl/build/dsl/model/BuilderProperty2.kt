@@ -5,6 +5,7 @@ import com.squareup.kotlinpoet.*
 internal data class BuilderProperty2(
     val name: String,
     val type: TypeName,
+    val deprecated : Boolean,
     val builderClass: CdkClass2?,
     val methodSignature: String,
 ) {

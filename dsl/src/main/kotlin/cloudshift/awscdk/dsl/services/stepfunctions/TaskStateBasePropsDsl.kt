@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -32,6 +33,7 @@ public class TaskStateBasePropsDsl {
     cdkBuilder.credentials(credentials)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
@@ -70,6 +72,7 @@ public class TaskStateBasePropsDsl {
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

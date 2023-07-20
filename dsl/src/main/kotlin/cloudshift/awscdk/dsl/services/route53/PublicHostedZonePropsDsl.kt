@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.route53
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.iam.IPrincipal
 import software.amazon.awscdk.services.route53.PublicHostedZoneProps
@@ -24,10 +25,12 @@ public class PublicHostedZonePropsDsl {
     cdkBuilder.comment(comment)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal) {
     cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName: String) {
     cdkBuilder.crossAccountZoneDelegationRoleName(crossAccountZoneDelegationRoleName)
   }

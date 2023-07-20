@@ -38,9 +38,8 @@ internal object CdkModelFactory {
                 buildableClasses[builderClass.className] ?: error("Cannot find buildable for ${builderClass.className}")
             val builderFactoryFunction = findBuilderFactoryFunction(builderClass, buildableClass)
             CdkBuilder(
-                buildableClass = buildableClass.className,
-                cdkBuilderClass = builderClass.className,
-                dslBuilderClass = builderClass.className.dslClassName(),
+                buildableClass = buildableClass,
+                cdkBuilderClass = builderClass,
                 builderFactoryFunction = builderFactoryFunction,
                 properties = findBuilderProperties(builderClass, buildersForBuildable),
             )
@@ -113,12 +112,11 @@ private fun findBuilderProperties(
         val propertyBuilderClass = buildersForBuildable[actualType]
 
         "${method.name}/${parameter.type}" to BuilderProperty2(
-            name = method.name,
+            name = parameter.name,
             type = parameter.type,
-
-            // we can only construct objects that have no-arg constructors
             builderClass = propertyBuilderClass,
             methodSignature = method.signature,
+            deprecated = method.deprecated
         )
     }.sortedBy { it.first }.map { it.second }
 }

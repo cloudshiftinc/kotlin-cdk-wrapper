@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -60,6 +61,7 @@ public class SecretPropsDsl {
     cdkBuilder.secretObjectValue(secretObjectValue)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
     cdkBuilder.secretStringBeta1(secretStringBeta1)
   }

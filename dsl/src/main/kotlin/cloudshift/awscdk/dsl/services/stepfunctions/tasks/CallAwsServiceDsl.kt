@@ -7,6 +7,7 @@ import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import cloudshift.awscdk.dsl.services.stepfunctions.CredentialsDsl
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -57,6 +58,7 @@ public class CallAwsServiceDsl(
     cdkBuilder.credentials(credentials)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun heartbeat(heartbeat: Duration) {
     cdkBuilder.heartbeat(heartbeat)
   }
@@ -121,6 +123,7 @@ public class CallAwsServiceDsl(
     cdkBuilder.taskTimeout(taskTimeout)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun timeout(timeout: Duration) {
     cdkBuilder.timeout(timeout)
   }

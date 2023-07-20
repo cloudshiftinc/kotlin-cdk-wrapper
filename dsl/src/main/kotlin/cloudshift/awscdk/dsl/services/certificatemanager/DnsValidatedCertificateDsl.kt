@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.certificatemanager
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
@@ -14,6 +15,7 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
 @CdkDslMarker
+@Deprecated(message = "deprecated in CDK")
 public class DnsValidatedCertificateDsl(
   scope: Construct,
   id: String,

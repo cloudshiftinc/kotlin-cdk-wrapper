@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.stepfunctions
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -24,6 +25,7 @@ public class StateMachineDsl(
 ) {
   private val cdkBuilder: StateMachine.Builder = StateMachine.Builder.create(scope, id)
 
+  @Deprecated(message = "deprecated in CDK")
   public fun definition(definition: IChainable) {
     cdkBuilder.definition(definition)
   }

@@ -7,10 +7,16 @@ import org.objectweb.asm.Opcodes.ACC_BRIDGE
 import org.objectweb.asm.Opcodes.ACC_PUBLIC
 import org.objectweb.asm.Opcodes.ACC_STATIC
 import org.objectweb.asm.Opcodes.ACC_SYNTHETIC
+import org.objectweb.asm.Type
 import org.objectweb.asm.tree.ClassNode
 
 internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass2 {
     override val className: ClassName by lazy(LazyThreadSafetyMode.NONE) { ClassName.fromAsmClassName(delegate.name) }
+
+    private val annotations : List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
+        convertAnnotations(delegate.visibleAnnotations, delegate.invisibleAnnotations)
+    }
+    override val deprecated : Boolean = annotations.any { it.toString().contains("Deprecated") }
 
     override val publicMemberFunctions: List<CdkClass2.Method> by lazy(LazyThreadSafetyMode.NONE) {
         delegate.methods.filter {

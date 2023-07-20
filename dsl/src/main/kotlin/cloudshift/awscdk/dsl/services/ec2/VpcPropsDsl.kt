@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -38,6 +39,7 @@ public class VpcPropsDsl {
     _availabilityZones.addAll(availabilityZones)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun cidr(cidr: String) {
     cdkBuilder.cidr(cidr)
   }

@@ -3,9 +3,11 @@
 package cloudshift.awscdk.dsl.services.s3.deployment
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata
 
 @CdkDslMarker
+@Deprecated(message = "deprecated in CDK")
 public class UserDefinedObjectMetadataDsl {
   private val cdkBuilder: UserDefinedObjectMetadata.Builder = UserDefinedObjectMetadata.builder()
 

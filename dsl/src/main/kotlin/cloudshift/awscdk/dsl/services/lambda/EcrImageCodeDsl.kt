@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.lambda
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
@@ -35,6 +36,7 @@ public class EcrImageCodeDsl(
     _entrypoint.addAll(entrypoint)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun tag(tag: String) {
     cdkBuilder.tag(tag)
   }

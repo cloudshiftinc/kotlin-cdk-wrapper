@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.logs
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
@@ -31,6 +32,7 @@ public class QueryStringDsl {
     _fields.addAll(fields)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun filter(filter: String) {
     cdkBuilder.filter(filter)
   }
@@ -47,6 +49,7 @@ public class QueryStringDsl {
     cdkBuilder.limit(limit)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun parse(parse: String) {
     cdkBuilder.parse(parse)
   }
