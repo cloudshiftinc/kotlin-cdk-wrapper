@@ -2,167 +2,22 @@
 
 package cloudshift.awscdk.dsl.services.datasync
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.datasync.CfnAgent
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
-import software.amazon.awscdk.services.datasync.CfnLocationFSxLustre
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
-import software.amazon.awscdk.services.datasync.CfnLocationFSxWindows
 import software.amazon.awscdk.services.datasync.CfnLocationHDFS
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
-import software.amazon.awscdk.services.datasync.CfnLocationObjectStorage
 import software.amazon.awscdk.services.datasync.CfnLocationS3
 import software.amazon.awscdk.services.datasync.CfnLocationSMB
 import software.amazon.awscdk.services.datasync.CfnStorageSystem
 import software.amazon.awscdk.services.datasync.CfnTask
-
-public inline fun CfnAgent.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLocationEFS.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline fun CfnLocationEFS.setEc2Config(block: CfnLocationEFSEc2ConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnLocationEFSEc2ConfigPropertyDsl()
   builder.apply(block)
   return setEc2Config(builder.build())
-}
-
-public inline fun CfnLocationFSxLustre.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLocationFSxONTAP.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnLocationFSxONTAP.setProtocol(block: CfnLocationFSxONTAPProtocolPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLocationFSxONTAPProtocolPropertyDsl()
-  builder.apply(block)
-  return setProtocol(builder.build())
-}
-
-public inline fun CfnLocationFSxOpenZFS.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnLocationFSxOpenZFS.setProtocol(block: CfnLocationFSxOpenZFSProtocolPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnLocationFSxOpenZFSProtocolPropertyDsl()
-  builder.apply(block)
-  return setProtocol(builder.build())
-}
-
-public inline fun CfnLocationFSxWindows.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLocationHDFS.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnLocationHDFS.setQopConfiguration(block: CfnLocationHDFSQopConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnLocationHDFSQopConfigurationPropertyDsl()
-  builder.apply(block)
-  return setQopConfiguration(builder.build())
-}
-
-public inline fun CfnLocationNFS.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnLocationNFS.setMountOptions(block: CfnLocationNFSMountOptionsPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLocationNFSMountOptionsPropertyDsl()
-  builder.apply(block)
-  return setMountOptions(builder.build())
-}
-
-public inline
-    fun CfnLocationNFS.setOnPremConfig(block: CfnLocationNFSOnPremConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLocationNFSOnPremConfigPropertyDsl()
-  builder.apply(block)
-  return setOnPremConfig(builder.build())
-}
-
-public inline fun CfnLocationObjectStorage.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLocationS3.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLocationS3.setS3Config(block: CfnLocationS3S3ConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLocationS3S3ConfigPropertyDsl()
-  builder.apply(block)
-  return setS3Config(builder.build())
-}
-
-public inline fun CfnLocationSMB.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnLocationSMB.setMountOptions(block: CfnLocationSMBMountOptionsPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLocationSMBMountOptionsPropertyDsl()
-  builder.apply(block)
-  return setMountOptions(builder.build())
-}
-
-public inline fun CfnStorageSystem.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -181,11 +36,27 @@ public inline
   return setServerCredentials(builder.build())
 }
 
-public inline fun CfnTask.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun CfnLocationS3.setS3Config(block: CfnLocationS3S3ConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLocationS3S3ConfigPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setS3Config(builder.build())
+}
+
+public inline
+    fun CfnLocationFSxOpenZFS.setProtocol(block: CfnLocationFSxOpenZFSProtocolPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnLocationFSxOpenZFSProtocolPropertyDsl()
+  builder.apply(block)
+  return setProtocol(builder.build())
+}
+
+public inline
+    fun CfnLocationSMB.setMountOptions(block: CfnLocationSMBMountOptionsPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLocationSMBMountOptionsPropertyDsl()
+  builder.apply(block)
+  return setMountOptions(builder.build())
 }
 
 public inline fun CfnTask.setOptions(block: CfnTaskOptionsPropertyDsl.() -> Unit = {}) {
@@ -198,4 +69,36 @@ public inline fun CfnTask.setSchedule(block: CfnTaskTaskSchedulePropertyDsl.() -
   val builder = CfnTaskTaskSchedulePropertyDsl()
   builder.apply(block)
   return setSchedule(builder.build())
+}
+
+public inline
+    fun CfnLocationHDFS.setQopConfiguration(block: CfnLocationHDFSQopConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnLocationHDFSQopConfigurationPropertyDsl()
+  builder.apply(block)
+  return setQopConfiguration(builder.build())
+}
+
+public inline
+    fun CfnLocationNFS.setOnPremConfig(block: CfnLocationNFSOnPremConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLocationNFSOnPremConfigPropertyDsl()
+  builder.apply(block)
+  return setOnPremConfig(builder.build())
+}
+
+public inline
+    fun CfnLocationNFS.setMountOptions(block: CfnLocationNFSMountOptionsPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLocationNFSMountOptionsPropertyDsl()
+  builder.apply(block)
+  return setMountOptions(builder.build())
+}
+
+public inline
+    fun CfnLocationFSxONTAP.setProtocol(block: CfnLocationFSxONTAPProtocolPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLocationFSxONTAPProtocolPropertyDsl()
+  builder.apply(block)
+  return setProtocol(builder.build())
 }

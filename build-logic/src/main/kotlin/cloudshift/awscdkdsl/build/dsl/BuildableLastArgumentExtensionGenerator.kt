@@ -1,56 +1,72 @@
 package cloudshift.awscdkdsl.build.dsl
 
-import com.google.common.collect.ArrayListMultimap
-import com.google.common.collect.ImmutableMultimap
-import com.google.common.collect.Multimap
+import cloudshift.awscdkdsl.build.dsl.model.CdkClass
+import cloudshift.awscdkdsl.build.dsl.model.CdkModel
 import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.LambdaTypeName
 import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.UNIT
-import com.squareup.kotlinpoet.asTypeName
-import kotlin.reflect.KFunction
-import kotlin.reflect.full.instanceParameter
-import kotlin.reflect.full.valueParameters
 
-internal class BuildableLastArgumentExtensionGenerator(private val registry: CdkClassRegistry) {
+internal class BuildableLastArgumentExtensionGenerator {
 
-    fun generate(): ImmutableMultimap<String, ExtensionFunctionSpec> {
-        val extensionFunctionMap = ArrayListMultimap.create<String, ExtensionFunctionSpec>()
+    fun generate(cdkModel: CdkModel): Map<String, List<ExtensionFunctionSpec>> {
+        /*
+            // find member functions that have buildable types as their last parameter
+    fun functionsWithBuildableLastArgument(registry: CdkClassRegistry): List<KFunction<*>> {
 
+        return kClass.memberFunctions.filter { fn ->
+            fn.visibility == KVisibility.PUBLIC &&
+                fn.valueParameters.isNotEmpty() &&
+                registry.isBuildable(fn.valueParameters.last().type)
+        }
+    }
+         */
         // add extension function to allow DSL builder
-        registry.classes.asSequence()
-            .filter { !it.builder }
-            .flatMap { it.functionsWithBuildableLastArgument(registry) }
-            .forEach { fn ->
-                val buildableType = registry.lookup(fn.valueParameters.last().type)!!
-                val builderClass = registry.builderTypeFor(buildableType)
-                val receiverClass = registry.lookup(fn.instanceParameter?.type!!)!!
-                val funSpec = generateExtensionForBuildableArg(
-                    fn,
-                    receiverClass,
-                    builderClass
-                )
-                extensionFunctionMap.put(receiverClass.dslClassName().packageName, funSpec)
-            }
+        val extensions = cdkModel.classes.asSequence().filterNot { it.isBuilder() }
+            .flatMap { cdkClass ->
+                cdkClass.publicMemberFunctions.filter { method ->
+                    method.parameters.isNotEmpty()
+                }.mapNotNull {
+                    val lastParam = it.parameters.last()
+                    val builderClass = cdkModel.builderClassFor(lastParam.type) ?: return@mapNotNull null
+                    if( !builderClass.canInstantiate()) return@mapNotNull null
+                    val funSpec = generateExtensionForBuildableArg(builderClass, cdkClass, it)
+                    ExtensionFunctionSpec(
+                        packageName = cdkClass.className.dslClassName().packageName,
+                        funSpec = funSpec,
+                        builderClass = builderClass
+                    )
+                }
+            }.sorted().groupBy { it.packageName }
+
+//        registry.classes.asSequence()
+//            .filter { !it.builder }
+//            .flatMap { it.functionsWithBuildableLastArgument(registry) }
+//            .forEach { fn ->
+//                val buildableType = registry.lookup(fn.valueParameters.last().type)!!
+//                val builderClass = registry.builderTypeFor(buildableType)
+//                val receiverClass = registry.lookup(fn.instanceParameter?.type!!)!!
+//                val funSpec = generateExtensionForBuildableArg(
+//                    fn,
+//                    receiverClass,
+//                    builderClass,
+//                )
+//                extensionFunctionMap.put(receiverClass.dslClassName().packageName, funSpec)
+//            }
 
         // adjust overrides that now class as the sole argument is always the configuration lambda
-        val fixedMap = fixOverrides(extensionFunctionMap)
-
-        return ImmutableMultimap.copyOf(fixedMap)
+        return fixOverrides(extensions)
     }
 
-    private fun fixOverrides(extensionFunctionMap: Multimap<String, ExtensionFunctionSpec>): Multimap<String, ExtensionFunctionSpec> {
-        val newMap = ArrayListMultimap.create<String, ExtensionFunctionSpec>()
-        extensionFunctionMap.asMap().forEach { (packageName, funSpecs) ->
-            newMap.putAll(packageName, fixOverrides(funSpecs))
+    private fun fixOverrides(extensions: Map<String, List<ExtensionFunctionSpec>>): Map<String, List<ExtensionFunctionSpec>> {
+        return extensions.mapValues {
+            fixOverrides(it.value)
         }
-
-        return newMap
     }
 
-    private fun fixOverrides(funSpecs: Collection<ExtensionFunctionSpec>): Collection<ExtensionFunctionSpec> {
+    private fun fixOverrides(funSpecs: List<ExtensionFunctionSpec>): List<ExtensionFunctionSpec> {
         if (funSpecs.size == 1) {
             // nothing to do
             return funSpecs
@@ -66,7 +82,7 @@ internal class BuildableLastArgumentExtensionGenerator(private val registry: Cdk
         groupedSpecs.filter { it.value.size > 1 }.forEach { (_, u) ->
             // rename each of these
             u.forEach { spec ->
-                val builderClass = spec.builderClass!!
+                val builderClass = spec.builderClass
                 val newName =
                     spec.funSpec.name + when (builderClass.className.simpleNames.size) {
                         1 -> builderClass.className.simpleName
@@ -82,46 +98,58 @@ internal class BuildableLastArgumentExtensionGenerator(private val registry: Cdk
     }
 
     private fun generateExtensionForBuildableArg(
-        function: KFunction<*>,
+        builderClass: CdkClass,
         receiverClass: CdkClass,
-        builderClass: CdkClass
-    ): ExtensionFunctionSpec {
+        method: CdkClass.Method,
+    ): FunSpec {
 
-        val builder = FunSpec.builder(function.name)
+        val builder = FunSpec.builder(method.name)
             .addModifiers(KModifier.INLINE)
             .receiver(receiverClass.className)
-            .returns(function.returnType.asTypeName())
+            .returns(method.returnType)
 
         val args = mutableListOf<String>()
-        function.valueParameters.dropLast(1).forEach {
-            builder.addParameter(it.name!!, it.type.asTypeName())
-            args.add(it.name!!)
+        method.parameters.dropLast(1).forEach {
+            builder.addParameter(it.name, it.type)
+            args.add(it.name)
         }
         args.add("builder.build()")
 
         // enable builder DSL
         val lambdaTypeName = LambdaTypeName.get(
-            builderClass.dslClassName(),
-            returnType = UNIT
+            builderClass.className.dslClassName(),
+            returnType = UNIT,
         )
         builder.addParameter(
             ParameterSpec.builder("block", lambdaTypeName)
                 .defaultValue("{}")
-                .build()
+                .build(),
         )
 
         val codeBlockBuilder = CodeBlock.builder()
         builder.addStatement(
             "val builder = %T()",
-            builderClass.dslClassName()
+            builderClass.className.dslClassName(),
         )
         codeBlockBuilder.addStatement("builder.apply(block)")
-            .addStatement("return %L(%L)", function.name, args.joinToString(","))
+            .addStatement("return %L(%L)", method.name, args.joinToString(", "))
         builder.addCode(codeBlockBuilder.build())
 
-        return ExtensionFunctionSpec(
-            builder.build(),
-            builderClass
-        )
+        return builder.build()
+    }
+}
+
+internal data class ExtensionFunctionSpec(
+    val packageName: String,
+    val funSpec: FunSpec,
+    val builderClass : CdkClass
+) : Comparable<ExtensionFunctionSpec> {
+
+    fun qualifiedName(): String {
+        return "${funSpec.receiverType}.${funSpec.name}"
+    }
+
+    override fun compareTo(other: ExtensionFunctionSpec): Int {
+        return compareValuesBy(this, other, { packageName }, { "${funSpec.receiverType}.${funSpec.name}" })
     }
 }

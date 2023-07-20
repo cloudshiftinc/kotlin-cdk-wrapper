@@ -1,7 +1,7 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
-import cloudshift.awscdkdsl.build.dsl.model.CdkClass2
-import cloudshift.awscdkdsl.build.dsl.CdkClassLoader
+import cloudshift.awscdkdsl.build.dsl.model.CdkClass
+import cloudshift.awscdkdsl.build.dsl.model.CdkClassLoader
 import org.objectweb.asm.ClassReader
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.tree.ClassNode
@@ -13,7 +13,7 @@ import java.util.jar.JarFile
 import kotlin.streams.asSequence
 
 internal object AsmClassLoader : CdkClassLoader {
-    override fun loadClasses(classpath: Set<File>): List<CdkClass2> = loadCdkClasses(classpath).map { AsmClassAdapter(it) }
+    override fun loadClasses(classpath: Set<File>): List<CdkClass> = loadCdkClasses(classpath).map { AsmClassAdapter(it) }
 
     private fun loadCdkClasses(classpath: Set<File>): List<ClassNode> {
         val cdkClassPredicate =

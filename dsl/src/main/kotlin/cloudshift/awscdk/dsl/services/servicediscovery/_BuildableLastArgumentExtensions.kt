@@ -2,12 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.servicediscovery
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace
-import software.amazon.awscdk.services.servicediscovery.CfnInstance
 import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.CfnService
@@ -17,25 +13,26 @@ import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.Service
 
-public inline fun CfnHttpNamespace.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnPublicDnsNamespace.setProperties(block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setProperties(builder.build())
 }
 
-public inline fun CfnInstance.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun PublicDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
+    = {}): Service {
+  val builder = DnsServicePropsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return createService(id, builder.build())
 }
 
-public inline fun CfnPrivateDnsNamespace.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun PrivateDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
+    = {}): Service {
+  val builder = DnsServicePropsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return createService(id, builder.build())
 }
 
 public inline
@@ -46,26 +43,11 @@ public inline
   return setProperties(builder.build())
 }
 
-public inline fun CfnPublicDnsNamespace.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun HttpNamespace.createService(id: String, block: BaseServicePropsDsl.() -> Unit =
+    {}): Service {
+  val builder = BaseServicePropsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnPublicDnsNamespace.setProperties(block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
-  builder.apply(block)
-  return setProperties(builder.build())
-}
-
-public inline fun CfnService.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return createService(id, builder.build())
 }
 
 public inline fun CfnService.setDnsConfig(block: CfnServiceDnsConfigPropertyDsl.() -> Unit = {}) {
@@ -90,44 +72,23 @@ public inline
   return setHealthCheckCustomConfig(builder.build())
 }
 
-public inline fun HttpNamespace.createService(arg0: String, block: BaseServicePropsDsl.() -> Unit =
-    {}): Service {
-  val builder = BaseServicePropsDsl()
-  builder.apply(block)
-  return createService(arg0,builder.build())
-}
-
-public inline fun PrivateDnsNamespace.createService(arg0: String,
-    block: DnsServicePropsDsl.() -> Unit = {}): Service {
-  val builder = DnsServicePropsDsl()
-  builder.apply(block)
-  return createService(arg0,builder.build())
-}
-
-public inline fun PublicDnsNamespace.createService(arg0: String,
-    block: DnsServicePropsDsl.() -> Unit = {}): Service {
-  val builder = DnsServicePropsDsl()
-  builder.apply(block)
-  return createService(arg0,builder.build())
-}
-
-public inline fun Service.registerCnameInstance(arg0: String,
+public inline fun Service.registerCnameInstance(id: String,
     block: CnameInstanceBasePropsDsl.() -> Unit = {}): IInstance {
   val builder = CnameInstanceBasePropsDsl()
   builder.apply(block)
-  return registerCnameInstance(arg0,builder.build())
+  return registerCnameInstance(id, builder.build())
 }
 
-public inline fun Service.registerIpInstance(arg0: String, block: IpInstanceBasePropsDsl.() -> Unit
-    = {}): IInstance {
+public inline fun Service.registerIpInstance(id: String, block: IpInstanceBasePropsDsl.() -> Unit =
+    {}): IInstance {
   val builder = IpInstanceBasePropsDsl()
   builder.apply(block)
-  return registerIpInstance(arg0,builder.build())
+  return registerIpInstance(id, builder.build())
 }
 
-public inline fun Service.registerNonIpInstance(arg0: String,
+public inline fun Service.registerNonIpInstance(id: String,
     block: NonIpInstanceBasePropsDsl.() -> Unit = {}): IInstance {
   val builder = NonIpInstanceBasePropsDsl()
   builder.apply(block)
-  return registerNonIpInstance(arg0,builder.build())
+  return registerNonIpInstance(id, builder.build())
 }

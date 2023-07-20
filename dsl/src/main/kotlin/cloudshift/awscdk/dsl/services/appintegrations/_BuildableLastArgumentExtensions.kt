@@ -2,26 +2,9 @@
 
 package cloudshift.awscdk.dsl.services.appintegrations
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegration
-
-public inline fun CfnDataIntegration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnDataIntegration.setFileConfiguration(block: CfnDataIntegrationFileConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDataIntegrationFileConfigurationPropertyDsl()
-  builder.apply(block)
-  return setFileConfiguration(builder.build())
-}
 
 public inline
     fun CfnDataIntegration.setScheduleConfig(block: CfnDataIntegrationScheduleConfigPropertyDsl.() -> Unit
@@ -31,11 +14,12 @@ public inline
   return setScheduleConfig(builder.build())
 }
 
-public inline fun CfnEventIntegration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnDataIntegration.setFileConfiguration(block: CfnDataIntegrationFileConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDataIntegrationFileConfigurationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setFileConfiguration(builder.build())
 }
 
 public inline

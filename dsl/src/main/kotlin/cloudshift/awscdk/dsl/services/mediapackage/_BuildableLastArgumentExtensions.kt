@@ -2,28 +2,11 @@
 
 package cloudshift.awscdk.dsl.services.mediapackage
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.mediapackage.CfnAsset
 import software.amazon.awscdk.services.mediapackage.CfnChannel
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
-
-public inline fun CfnAsset.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnChannel.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnChannel.setEgressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
@@ -47,11 +30,52 @@ public inline
   return setIngressAccessLogs(builder.build())
 }
 
-public inline fun CfnOriginEndpoint.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnPackagingConfiguration.setCmafPackage(block: CfnPackagingConfigurationCmafPackagePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingConfigurationCmafPackagePropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setCmafPackage(builder.build())
+}
+
+public inline
+    fun CfnPackagingConfiguration.setDashPackage(block: CfnPackagingConfigurationDashPackagePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingConfigurationDashPackagePropertyDsl()
+  builder.apply(block)
+  return setDashPackage(builder.build())
+}
+
+public inline
+    fun CfnPackagingConfiguration.setHlsPackage(block: CfnPackagingConfigurationHlsPackagePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingConfigurationHlsPackagePropertyDsl()
+  builder.apply(block)
+  return setHlsPackage(builder.build())
+}
+
+public inline
+    fun CfnPackagingConfiguration.setMssPackage(block: CfnPackagingConfigurationMssPackagePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingConfigurationMssPackagePropertyDsl()
+  builder.apply(block)
+  return setMssPackage(builder.build())
+}
+
+public inline
+    fun CfnPackagingGroup.setAuthorization(block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingGroupAuthorizationPropertyDsl()
+  builder.apply(block)
+  return setAuthorization(builder.build())
+}
+
+public inline
+    fun CfnPackagingGroup.setEgressAccessLogs(block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
+  builder.apply(block)
+  return setEgressAccessLogs(builder.build())
 }
 
 public inline
@@ -92,66 +116,4 @@ public inline
   val builder = CfnOriginEndpointMssPackagePropertyDsl()
   builder.apply(block)
   return setMssPackage(builder.build())
-}
-
-public inline fun CfnPackagingConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnPackagingConfiguration.setCmafPackage(block: CfnPackagingConfigurationCmafPackagePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingConfigurationCmafPackagePropertyDsl()
-  builder.apply(block)
-  return setCmafPackage(builder.build())
-}
-
-public inline
-    fun CfnPackagingConfiguration.setDashPackage(block: CfnPackagingConfigurationDashPackagePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingConfigurationDashPackagePropertyDsl()
-  builder.apply(block)
-  return setDashPackage(builder.build())
-}
-
-public inline
-    fun CfnPackagingConfiguration.setHlsPackage(block: CfnPackagingConfigurationHlsPackagePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingConfigurationHlsPackagePropertyDsl()
-  builder.apply(block)
-  return setHlsPackage(builder.build())
-}
-
-public inline
-    fun CfnPackagingConfiguration.setMssPackage(block: CfnPackagingConfigurationMssPackagePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingConfigurationMssPackagePropertyDsl()
-  builder.apply(block)
-  return setMssPackage(builder.build())
-}
-
-public inline fun CfnPackagingGroup.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnPackagingGroup.setAuthorization(block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingGroupAuthorizationPropertyDsl()
-  builder.apply(block)
-  return setAuthorization(builder.build())
-}
-
-public inline
-    fun CfnPackagingGroup.setEgressAccessLogs(block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
-  builder.apply(block)
-  return setEgressAccessLogs(builder.build())
 }

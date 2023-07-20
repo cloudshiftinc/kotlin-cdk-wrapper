@@ -2,38 +2,28 @@
 
 package cloudshift.awscdk.dsl.services.gamelift
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.gamelift.CfnAlias
 import software.amazon.awscdk.services.gamelift.CfnBuild
 import software.amazon.awscdk.services.gamelift.CfnFleet
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
-import software.amazon.awscdk.services.gamelift.CfnLocation
-import software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration
-import software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSet
 import software.amazon.awscdk.services.gamelift.CfnScript
 
-public inline fun CfnAlias.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnGameSessionQueue.setFilterConfiguration(block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameSessionQueueFilterConfigurationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setFilterConfiguration(builder.build())
 }
 
-public inline fun CfnAlias.setRoutingStrategy(block: CfnAliasRoutingStrategyPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnAliasRoutingStrategyPropertyDsl()
+public inline
+    fun CfnGameSessionQueue.setPriorityConfiguration(block: CfnGameSessionQueuePriorityConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameSessionQueuePriorityConfigurationPropertyDsl()
   builder.apply(block)
-  return setRoutingStrategy(builder.build())
-}
-
-public inline fun CfnBuild.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setPriorityConfiguration(builder.build())
 }
 
 public inline fun CfnBuild.setStorageLocation(block: CfnBuildStorageLocationPropertyDsl.() -> Unit =
@@ -43,11 +33,27 @@ public inline fun CfnBuild.setStorageLocation(block: CfnBuildStorageLocationProp
   return setStorageLocation(builder.build())
 }
 
-public inline fun CfnFleet.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun CfnScript.setStorageLocation(block: CfnScriptS3LocationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnScriptS3LocationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setStorageLocation(builder.build())
+}
+
+public inline
+    fun CfnGameServerGroup.setAutoScalingPolicy(block: CfnGameServerGroupAutoScalingPolicyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameServerGroupAutoScalingPolicyPropertyDsl()
+  builder.apply(block)
+  return setAutoScalingPolicy(builder.build())
+}
+
+public inline
+    fun CfnGameServerGroup.setLaunchTemplate(block: CfnGameServerGroupLaunchTemplatePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameServerGroupLaunchTemplatePropertyDsl()
+  builder.apply(block)
+  return setLaunchTemplate(builder.build())
 }
 
 public inline
@@ -82,83 +88,9 @@ public inline
   return setRuntimeConfiguration(builder.build())
 }
 
-public inline fun CfnGameServerGroup.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnGameServerGroup.setAutoScalingPolicy(block: CfnGameServerGroupAutoScalingPolicyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGameServerGroupAutoScalingPolicyPropertyDsl()
-  builder.apply(block)
-  return setAutoScalingPolicy(builder.build())
-}
-
-public inline
-    fun CfnGameServerGroup.setLaunchTemplate(block: CfnGameServerGroupLaunchTemplatePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGameServerGroupLaunchTemplatePropertyDsl()
-  builder.apply(block)
-  return setLaunchTemplate(builder.build())
-}
-
-public inline fun CfnGameSessionQueue.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnGameSessionQueue.setFilterConfiguration(block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGameSessionQueueFilterConfigurationPropertyDsl()
-  builder.apply(block)
-  return setFilterConfiguration(builder.build())
-}
-
-public inline
-    fun CfnGameSessionQueue.setPriorityConfiguration(block: CfnGameSessionQueuePriorityConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGameSessionQueuePriorityConfigurationPropertyDsl()
-  builder.apply(block)
-  return setPriorityConfiguration(builder.build())
-}
-
-public inline fun CfnLocation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMatchmakingConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMatchmakingRuleSet.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnScript.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnScript.setStorageLocation(block: CfnScriptS3LocationPropertyDsl.() -> Unit =
+public inline fun CfnAlias.setRoutingStrategy(block: CfnAliasRoutingStrategyPropertyDsl.() -> Unit =
     {}) {
-  val builder = CfnScriptS3LocationPropertyDsl()
+  val builder = CfnAliasRoutingStrategyPropertyDsl()
   builder.apply(block)
-  return setStorageLocation(builder.build())
+  return setRoutingStrategy(builder.build())
 }

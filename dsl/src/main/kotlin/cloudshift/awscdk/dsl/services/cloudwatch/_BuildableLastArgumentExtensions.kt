@@ -2,34 +2,13 @@
 
 package cloudshift.awscdk.dsl.services.cloudwatch
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.cloudwatch.Alarm
-import software.amazon.awscdk.services.cloudwatch.CfnAlarm
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
-import software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm
-import software.amazon.awscdk.services.cloudwatch.CfnDashboard
-import software.amazon.awscdk.services.cloudwatch.CfnInsightRule
-import software.amazon.awscdk.services.cloudwatch.CfnMetricStream
 import software.amazon.awscdk.services.cloudwatch.MathExpression
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.constructs.Construct
-
-public inline fun CfnAlarm.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnAnomalyDetector.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnAnomalyDetector.setConfiguration(block: CfnAnomalyDetectorConfigurationPropertyDsl.() -> Unit
@@ -55,63 +34,35 @@ public inline
   return setSingleMetricAnomalyDetector(builder.build())
 }
 
-public inline fun CfnCompositeAlarm.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnDashboard.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnInsightRule.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMetricStream.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun MathExpression.createAlarm(
-  arg0: Construct,
-  arg1: String,
+public inline fun Metric.createAlarm(
+  scope: Construct,
+  id: String,
   block: CreateAlarmOptionsDsl.() -> Unit = {},
 ): Alarm {
   val builder = CreateAlarmOptionsDsl()
   builder.apply(block)
-  return createAlarm(arg0,arg1,builder.build())
+  return createAlarm(scope, id, builder.build())
+}
+
+public inline fun Metric.with(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return with(builder.build())
+}
+
+public inline fun MathExpression.createAlarm(
+  scope: Construct,
+  id: String,
+  block: CreateAlarmOptionsDsl.() -> Unit = {},
+): Alarm {
+  val builder = CreateAlarmOptionsDsl()
+  builder.apply(block)
+  return createAlarm(scope, id, builder.build())
 }
 
 public inline fun MathExpression.with(block: MathExpressionOptionsDsl.() -> Unit = {}):
     MathExpression {
   val builder = MathExpressionOptionsDsl()
-  builder.apply(block)
-  return with(builder.build())
-}
-
-public inline fun Metric.createAlarm(
-  arg0: Construct,
-  arg1: String,
-  block: CreateAlarmOptionsDsl.() -> Unit = {},
-): Alarm {
-  val builder = CreateAlarmOptionsDsl()
-  builder.apply(block)
-  return createAlarm(arg0,arg1,builder.build())
-}
-
-public inline fun Metric.with(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
   builder.apply(block)
   return with(builder.build())
 }

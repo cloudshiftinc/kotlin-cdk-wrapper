@@ -2,18 +2,14 @@
 
 package cloudshift.awscdk.dsl.services.medialive
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.medialive.CfnChannel
 import software.amazon.awscdk.services.medialive.CfnInput
-import software.amazon.awscdk.services.medialive.CfnInputSecurityGroup
 
-public inline fun CfnChannel.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun CfnInput.setVpc(block: CfnInputInputVpcRequestPropertyDsl.() -> Unit = {}) {
+  val builder = CfnInputInputVpcRequestPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setVpc(builder.build())
 }
 
 public inline
@@ -51,24 +47,4 @@ public inline fun CfnChannel.setVpc(block: CfnChannelVpcOutputSettingsPropertyDs
   val builder = CfnChannelVpcOutputSettingsPropertyDsl()
   builder.apply(block)
   return setVpc(builder.build())
-}
-
-public inline fun CfnInput.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnInput.setVpc(block: CfnInputInputVpcRequestPropertyDsl.() -> Unit = {}) {
-  val builder = CfnInputInputVpcRequestPropertyDsl()
-  builder.apply(block)
-  return setVpc(builder.build())
-}
-
-public inline fun CfnInputSecurityGroup.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }

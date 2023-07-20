@@ -2,19 +2,18 @@
 
 package cloudshift.awscdk.dsl.services.kinesisanalyticsv2
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWatchLoggingOption
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 
-public inline fun CfnApplication.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setReferenceDataSource(builder.build())
 }
 
 public inline
@@ -41,13 +40,6 @@ public inline
   return setRunConfiguration(builder.build())
 }
 
-public inline fun CfnApplicationCloudWatchLoggingOption.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnApplicationCloudWatchLoggingOption.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl.() -> Unit
     = {}) {
@@ -56,32 +48,10 @@ public inline
   return setCloudWatchLoggingOption(builder.build())
 }
 
-public inline fun CfnApplicationOutput.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnApplicationOutput.setOutput(block: CfnApplicationOutputOutputPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnApplicationOutputOutputPropertyDsl()
   builder.apply(block)
   return setOutput(builder.build())
-}
-
-public inline fun CfnApplicationReferenceDataSource.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl()
-  builder.apply(block)
-  return setReferenceDataSource(builder.build())
 }

@@ -2,20 +2,10 @@
 
 package cloudshift.awscdk.dsl.services.iotanalytics
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.iotanalytics.CfnChannel
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
-import software.amazon.awscdk.services.iotanalytics.CfnPipeline
-
-public inline fun CfnChannel.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline fun CfnChannel.setChannelStorage(block: CfnChannelChannelStoragePropertyDsl.() -> Unit
     = {}) {
@@ -31,13 +21,6 @@ public inline
   return setRetentionPeriod(builder.build())
 }
 
-public inline fun CfnDataset.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnDataset.setRetentionPeriod(block: CfnDatasetRetentionPeriodPropertyDsl.() -> Unit = {}) {
   val builder = CfnDatasetRetentionPeriodPropertyDsl()
@@ -51,13 +34,6 @@ public inline
   val builder = CfnDatasetVersioningConfigurationPropertyDsl()
   builder.apply(block)
   return setVersioningConfiguration(builder.build())
-}
-
-public inline fun CfnDatastore.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -90,11 +66,4 @@ public inline
   val builder = CfnDatastoreRetentionPeriodPropertyDsl()
   builder.apply(block)
   return setRetentionPeriod(builder.build())
-}
-
-public inline fun CfnPipeline.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }

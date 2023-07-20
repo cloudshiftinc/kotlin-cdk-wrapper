@@ -10,23 +10,23 @@ import software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook
 import software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook
 import software.constructs.Construct
 
-public inline fun FunctionHook.bind(arg0: Construct, block: BindHookTargetOptionsDsl.() -> Unit =
+public inline fun QueueHook.bind(_scope: Construct, block: BindHookTargetOptionsDsl.() -> Unit =
     {}): LifecycleHookTargetConfig {
   val builder = BindHookTargetOptionsDsl()
   builder.apply(block)
-  return bind(arg0,builder.build())
+  return bind(_scope, builder.build())
 }
 
-public inline fun QueueHook.bind(arg0: Construct, block: BindHookTargetOptionsDsl.() -> Unit = {}):
-    LifecycleHookTargetConfig {
+public inline fun TopicHook.bind(_scope: Construct, block: BindHookTargetOptionsDsl.() -> Unit =
+    {}): LifecycleHookTargetConfig {
   val builder = BindHookTargetOptionsDsl()
   builder.apply(block)
-  return bind(arg0,builder.build())
+  return bind(_scope, builder.build())
 }
 
-public inline fun TopicHook.bind(arg0: Construct, block: BindHookTargetOptionsDsl.() -> Unit = {}):
-    LifecycleHookTargetConfig {
+public inline fun FunctionHook.bind(_scope: Construct, block: BindHookTargetOptionsDsl.() -> Unit =
+    {}): LifecycleHookTargetConfig {
   val builder = BindHookTargetOptionsDsl()
   builder.apply(block)
-  return bind(arg0,builder.build())
+  return bind(_scope, builder.build())
 }

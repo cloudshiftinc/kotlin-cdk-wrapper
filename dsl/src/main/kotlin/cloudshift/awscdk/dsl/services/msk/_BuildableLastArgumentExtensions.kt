@@ -2,29 +2,9 @@
 
 package cloudshift.awscdk.dsl.services.msk
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.msk.CfnBatchScramSecret
 import software.amazon.awscdk.services.msk.CfnCluster
-import software.amazon.awscdk.services.msk.CfnClusterPolicy
-import software.amazon.awscdk.services.msk.CfnConfiguration
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
-import software.amazon.awscdk.services.msk.CfnVpcConnection
-
-public inline fun CfnBatchScramSecret.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnCluster.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnCluster.setBrokerNodeGroupInfo(block: CfnClusterBrokerNodeGroupInfoPropertyDsl.() -> Unit
@@ -71,38 +51,10 @@ public inline fun CfnCluster.setOpenMonitoring(block: CfnClusterOpenMonitoringPr
   return setOpenMonitoring(builder.build())
 }
 
-public inline fun CfnClusterPolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnServerlessCluster.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnServerlessCluster.setClientAuthentication(block: CfnServerlessClusterClientAuthenticationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServerlessClusterClientAuthenticationPropertyDsl()
   builder.apply(block)
   return setClientAuthentication(builder.build())
-}
-
-public inline fun CfnVpcConnection.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }

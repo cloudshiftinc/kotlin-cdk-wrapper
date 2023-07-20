@@ -7,31 +7,19 @@ import cloudshift.awscdk.dsl.cloudassembly.schema.DockerImageDestinationDsl
 import cloudshift.awscdk.dsl.cloudassembly.schema.FileDestinationDsl
 import cloudshift.awscdk.dsl.cloudassembly.schema.MissingContextDsl
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import software.amazon.awscdk.App
 import software.amazon.awscdk.AssetManifestBuilder
 import software.amazon.awscdk.BootstraplessSynthesizer
 import software.amazon.awscdk.CfnCodeDeployBlueGreenHook
-import software.amazon.awscdk.CfnCustomResource
-import software.amazon.awscdk.CfnHookDefaultVersion
-import software.amazon.awscdk.CfnHookTypeConfig
 import software.amazon.awscdk.CfnHookVersion
-import software.amazon.awscdk.CfnMacro
-import software.amazon.awscdk.CfnModuleDefaultVersion
-import software.amazon.awscdk.CfnModuleVersion
-import software.amazon.awscdk.CfnPublicTypeVersion
-import software.amazon.awscdk.CfnPublisher
 import software.amazon.awscdk.CfnResource
-import software.amazon.awscdk.CfnResourceDefaultVersion
 import software.amazon.awscdk.CfnResourceVersion
-import software.amazon.awscdk.CfnStack
 import software.amazon.awscdk.CfnStackSet
 import software.amazon.awscdk.CfnTypeActivation
-import software.amazon.awscdk.CfnWaitCondition
-import software.amazon.awscdk.CfnWaitConditionHandle
 import software.amazon.awscdk.CliCredentialsStackSynthesizer
 import software.amazon.awscdk.DefaultStackSynthesizer
 import software.amazon.awscdk.DockerImage
@@ -40,13 +28,17 @@ import software.amazon.awscdk.DockerImageAssetSource
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.FileAssetLocation
 import software.amazon.awscdk.FileAssetSource
+import software.amazon.awscdk.ICfnResourceOptions
+import software.amazon.awscdk.ILocalBundling
+import software.amazon.awscdk.IResolveContext
+import software.amazon.awscdk.IStackSynthesizer
 import software.amazon.awscdk.ISynthesisSession
 import software.amazon.awscdk.LegacyStackSynthesizer
-import software.amazon.awscdk.NestedStack
 import software.amazon.awscdk.NestedStackSynthesizer
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.Stack
+import software.amazon.awscdk.StackSynthesizer
 import software.amazon.awscdk.Stage
 import software.amazon.awscdk.Tags
 import software.amazon.awscdk.cloudassembly.schema.DockerImageDestination
@@ -55,77 +47,94 @@ import software.amazon.awscdk.cloudassembly.schema.FileDestination
 import software.amazon.awscdk.cloudassembly.schema.FileSource
 import software.amazon.awscdk.cxapi.CloudAssembly
 
-public inline fun App.synth(block: StageSynthesisOptionsDsl.() -> Unit = {}): CloudAssembly {
-  val builder = StageSynthesisOptionsDsl()
-  builder.apply(block)
-  return synth(builder.build())
-}
-
 public inline fun AssetManifestBuilder.addDockerImageAsset(
-  arg0: Stack,
-  arg1: String,
-  arg2: DockerImageSource,
+  stack: Stack,
+  sourceHash: String,
+  source: DockerImageSource,
   block: DockerImageDestinationDsl.() -> Unit = {},
 ): DockerImageDestination {
   val builder = DockerImageDestinationDsl()
   builder.apply(block)
-  return addDockerImageAsset(arg0,arg1,arg2,builder.build())
+  return addDockerImageAsset(stack, sourceHash, source, builder.build())
 }
 
 public inline fun AssetManifestBuilder.addFileAsset(
-  arg0: Stack,
-  arg1: String,
-  arg2: FileSource,
+  stack: Stack,
+  sourceHash: String,
+  source: FileSource,
   block: FileDestinationDsl.() -> Unit = {},
 ): FileDestination {
   val builder = FileDestinationDsl()
   builder.apply(block)
-  return addFileAsset(arg0,arg1,arg2,builder.build())
+  return addFileAsset(stack, sourceHash, source, builder.build())
 }
 
 public inline fun AssetManifestBuilder.defaultAddDockerImageAsset(
-  arg0: Stack,
-  arg1: DockerImageAssetSource,
+  stack: Stack,
+  asset: DockerImageAssetSource,
   block: AssetManifestDockerImageDestinationDsl.() -> Unit = {},
 ): DockerImageDestination {
   val builder = AssetManifestDockerImageDestinationDsl()
   builder.apply(block)
-  return defaultAddDockerImageAsset(arg0,arg1,builder.build())
+  return defaultAddDockerImageAsset(stack, asset, builder.build())
 }
 
 public inline fun AssetManifestBuilder.defaultAddFileAsset(
-  arg0: Stack,
-  arg1: FileAssetSource,
+  stack: Stack,
+  asset: FileAssetSource,
   block: AssetManifestFileDestinationDsl.() -> Unit = {},
 ): FileDestination {
   val builder = AssetManifestFileDestinationDsl()
   builder.apply(block)
-  return defaultAddFileAsset(arg0,arg1,builder.build())
+  return defaultAddFileAsset(stack, asset, builder.build())
 }
 
 public inline fun AssetManifestBuilder.emitManifest(
-  arg0: Stack,
-  arg1: ISynthesisSession,
+  stack: Stack,
+  session: ISynthesisSession,
   block: AssetManifestOptionsDsl.() -> Unit = {},
 ): String {
   val builder = AssetManifestOptionsDsl()
   builder.apply(block)
-  return emitManifest(arg0,arg1,builder.build())
+  return emitManifest(stack, session, builder.build())
+}
+
+public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy,
+    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
+  val builder = RemovalPolicyOptionsDsl()
+  builder.apply(block)
+  return applyRemovalPolicy(policy, builder.build())
+}
+
+public inline fun Tags.add(
+  key: String,
+  `value`: String,
+  block: TagPropsDsl.() -> Unit = {},
+) {
+  val builder = TagPropsDsl()
+  builder.apply(block)
+  return add(key, value, builder.build())
+}
+
+public inline fun Tags.remove(key: String, block: TagPropsDsl.() -> Unit = {}) {
+  val builder = TagPropsDsl()
+  builder.apply(block)
+  return remove(key, builder.build())
+}
+
+public inline fun ILocalBundling.tryBundle(arg0: String, block: BundlingOptionsDsl.() -> Unit = {}):
+    Boolean {
+  val builder = BundlingOptionsDsl()
+  builder.apply(block)
+  return tryBundle(arg0, builder.build())
 }
 
 public inline
-    fun BootstraplessSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
-  val builder = DockerImageAssetSourceDsl()
+    fun CfnResourceVersion.setLoggingConfig(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnResourceVersionLoggingConfigPropertyDsl()
   builder.apply(block)
-  return addDockerImageAsset(builder.build())
-}
-
-public inline fun BootstraplessSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
-    FileAssetLocation {
-  val builder = FileAssetSourceDsl()
-  builder.apply(block)
-  return addFileAsset(builder.build())
+  return setLoggingConfig(builder.build())
 }
 
 public inline
@@ -152,118 +161,10 @@ public inline
   return setTrafficRoutingConfig(builder.build())
 }
 
-public inline fun CfnCustomResource.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun DockerImage.run(block: DockerRunOptionsDsl.() -> Unit = {}) {
+  val builder = DockerRunOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnHookDefaultVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnHookTypeConfig.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnHookVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnHookVersion.setLoggingConfig(block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnHookVersionLoggingConfigPropertyDsl()
-  builder.apply(block)
-  return setLoggingConfig(builder.build())
-}
-
-public inline fun CfnMacro.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnModuleDefaultVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnModuleVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnPublicTypeVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnPublisher.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnResource.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnResourceDefaultVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnResourceVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnResourceVersion.setLoggingConfig(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnResourceVersionLoggingConfigPropertyDsl()
-  builder.apply(block)
-  return setLoggingConfig(builder.build())
-}
-
-public inline fun CfnStack.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnStackSet.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return run(builder.build())
 }
 
 public inline
@@ -281,69 +182,17 @@ public inline
   return setOperationPreferences(builder.build())
 }
 
-public inline fun CfnTypeActivation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun ICfnResourceOptions.setCreationPolicy(block: CfnCreationPolicyDsl.() -> Unit =
+    {}) {
+  val builder = CfnCreationPolicyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setCreationPolicy(builder.build())
 }
 
-public inline
-    fun CfnTypeActivation.setLoggingConfig(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnTypeActivationLoggingConfigPropertyDsl()
+public inline fun ICfnResourceOptions.setUpdatePolicy(block: CfnUpdatePolicyDsl.() -> Unit = {}) {
+  val builder = CfnUpdatePolicyDsl()
   builder.apply(block)
-  return setLoggingConfig(builder.build())
-}
-
-public inline fun CfnWaitCondition.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnWaitConditionHandle.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CliCredentialsStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
-    = {}): DockerImageAssetLocation {
-  val builder = DockerImageAssetSourceDsl()
-  builder.apply(block)
-  return addDockerImageAsset(builder.build())
-}
-
-public inline fun CliCredentialsStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit =
-    {}): FileAssetLocation {
-  val builder = FileAssetSourceDsl()
-  builder.apply(block)
-  return addFileAsset(builder.build())
-}
-
-public inline
-    fun DefaultStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
-    {}): DockerImageAssetLocation {
-  val builder = DockerImageAssetSourceDsl()
-  builder.apply(block)
-  return addDockerImageAsset(builder.build())
-}
-
-public inline fun DefaultStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
-    FileAssetLocation {
-  val builder = FileAssetSourceDsl()
-  builder.apply(block)
-  return addFileAsset(builder.build())
-}
-
-public inline fun DockerImage.run(block: DockerRunOptionsDsl.() -> Unit = {}) {
-  val builder = DockerRunOptionsDsl()
-  builder.apply(block)
-  return run(builder.build())
+  return setUpdatePolicy(builder.build())
 }
 
 public inline fun Duration.toDays(block: TimeConversionOptionsDsl.() -> Unit = {}): Number {
@@ -377,6 +226,14 @@ public inline fun Duration.toSeconds(block: TimeConversionOptionsDsl.() -> Unit 
 }
 
 public inline
+    fun CfnTypeActivation.setLoggingConfig(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnTypeActivationLoggingConfigPropertyDsl()
+  builder.apply(block)
+  return setLoggingConfig(builder.build())
+}
+
+public inline
     fun LegacyStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
     {}): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
@@ -391,41 +248,90 @@ public inline fun LegacyStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.
   return addFileAsset(builder.build())
 }
 
-public inline fun NestedStack.exportStringListValue(arg0: Any,
+public inline fun Stage.synth(block: StageSynthesisOptionsDsl.() -> Unit = {}): CloudAssembly {
+  val builder = StageSynthesisOptionsDsl()
+  builder.apply(block)
+  return synth(builder.build())
+}
+
+public inline fun IStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
+    = {}): DockerImageAssetLocation {
+  val builder = DockerImageAssetSourceDsl()
+  builder.apply(block)
+  return addDockerImageAsset(builder.build())
+}
+
+public inline fun IStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
+    FileAssetLocation {
+  val builder = FileAssetSourceDsl()
+  builder.apply(block)
+  return addFileAsset(builder.build())
+}
+
+public inline
+    fun CliCredentialsStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit
+    = {}): DockerImageAssetLocation {
+  val builder = DockerImageAssetSourceDsl()
+  builder.apply(block)
+  return addDockerImageAsset(builder.build())
+}
+
+public inline fun CliCredentialsStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit =
+    {}): FileAssetLocation {
+  val builder = FileAssetSourceDsl()
+  builder.apply(block)
+  return addFileAsset(builder.build())
+}
+
+public inline fun Stack.exportStringListValue(exportedValue: Any,
     block: ExportValueOptionsDsl.() -> Unit = {}): List<String> {
   val builder = ExportValueOptionsDsl()
   builder.apply(block)
-  return exportStringListValue(arg0,builder.build())
+  return exportStringListValue(exportedValue, builder.build())
 }
 
-public inline fun NestedStack.exportValue(arg0: Any, block: ExportValueOptionsDsl.() -> Unit = {}):
-    String {
+public inline fun Stack.exportValue(exportedValue: Any, block: ExportValueOptionsDsl.() -> Unit =
+    {}): String {
   val builder = ExportValueOptionsDsl()
   builder.apply(block)
-  return exportValue(arg0,builder.build())
+  return exportValue(exportedValue, builder.build())
 }
 
-public inline fun NestedStack.formatArn(block: ArnComponentsDsl.() -> Unit = {}): String {
+public inline fun Stack.formatArn(block: ArnComponentsDsl.() -> Unit = {}): String {
   val builder = ArnComponentsDsl()
   builder.apply(block)
   return formatArn(builder.build())
 }
 
-public inline fun NestedStack.reportMissingContextKey(block: MissingContextDsl.() -> Unit = {}) {
+public inline fun Stack.reportMissingContextKey(block: MissingContextDsl.() -> Unit = {}) {
   val builder = MissingContextDsl()
   builder.apply(block)
   return reportMissingContextKey(builder.build())
 }
 
-public inline
-    fun NestedStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
+public inline fun StackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
     {}): DockerImageAssetLocation {
   val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
   return addDockerImageAsset(builder.build())
 }
 
-public inline fun NestedStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
+public inline fun StackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
+    FileAssetLocation {
+  val builder = FileAssetSourceDsl()
+  builder.apply(block)
+  return addFileAsset(builder.build())
+}
+
+public inline
+    fun DefaultStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
+    {}): DockerImageAssetLocation {
+  val builder = DockerImageAssetSourceDsl()
+  builder.apply(block)
+  return addDockerImageAsset(builder.build())
+}
+
+public inline fun DefaultStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
     FileAssetLocation {
   val builder = FileAssetSourceDsl()
   builder.apply(block)
@@ -468,50 +374,47 @@ public inline fun Size.toTebibytes(block: SizeConversionOptionsDsl.() -> Unit = 
   return toTebibytes(builder.build())
 }
 
-public inline fun Stack.exportStringListValue(arg0: Any, block: ExportValueOptionsDsl.() -> Unit =
-    {}): List<String> {
-  val builder = ExportValueOptionsDsl()
+public inline
+    fun BootstraplessSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
+    {}): DockerImageAssetLocation {
+  val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
-  return exportStringListValue(arg0,builder.build())
+  return addDockerImageAsset(builder.build())
 }
 
-public inline fun Stack.exportValue(arg0: Any, block: ExportValueOptionsDsl.() -> Unit = {}):
-    String {
-  val builder = ExportValueOptionsDsl()
+public inline fun BootstraplessSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
+    FileAssetLocation {
+  val builder = FileAssetSourceDsl()
   builder.apply(block)
-  return exportValue(arg0,builder.build())
+  return addFileAsset(builder.build())
 }
 
-public inline fun Stack.formatArn(block: ArnComponentsDsl.() -> Unit = {}): String {
-  val builder = ArnComponentsDsl()
+public inline fun IResolveContext.resolve(arg0: Any,
+    block: ResolveChangeContextOptionsDsl.() -> Unit = {}): Any {
+  val builder = ResolveChangeContextOptionsDsl()
   builder.apply(block)
-  return formatArn(builder.build())
+  return resolve(arg0, builder.build())
 }
 
-public inline fun Stack.reportMissingContextKey(block: MissingContextDsl.() -> Unit = {}) {
-  val builder = MissingContextDsl()
+public inline
+    fun CfnHookVersion.setLoggingConfig(block: CfnHookVersionLoggingConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnHookVersionLoggingConfigPropertyDsl()
   builder.apply(block)
-  return reportMissingContextKey(builder.build())
+  return setLoggingConfig(builder.build())
 }
 
-public inline fun Stage.synth(block: StageSynthesisOptionsDsl.() -> Unit = {}): CloudAssembly {
-  val builder = StageSynthesisOptionsDsl()
+public inline
+    fun NestedStackSynthesizer.addDockerImageAsset(block: DockerImageAssetSourceDsl.() -> Unit =
+    {}): DockerImageAssetLocation {
+  val builder = DockerImageAssetSourceDsl()
   builder.apply(block)
-  return synth(builder.build())
+  return addDockerImageAsset(builder.build())
 }
 
-public inline fun Tags.add(
-  arg0: String,
-  arg1: String,
-  block: TagPropsDsl.() -> Unit = {},
-) {
-  val builder = TagPropsDsl()
+public inline fun NestedStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.() -> Unit = {}):
+    FileAssetLocation {
+  val builder = FileAssetSourceDsl()
   builder.apply(block)
-  return add(arg0,arg1,builder.build())
-}
-
-public inline fun Tags.remove(arg0: String, block: TagPropsDsl.() -> Unit = {}) {
-  val builder = TagPropsDsl()
-  builder.apply(block)
-  return remove(arg0,builder.build())
+  return addFileAsset(builder.build())
 }

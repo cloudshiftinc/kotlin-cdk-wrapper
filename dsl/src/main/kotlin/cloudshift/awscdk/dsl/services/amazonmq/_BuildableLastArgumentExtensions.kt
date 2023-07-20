@@ -2,18 +2,16 @@
 
 package cloudshift.awscdk.dsl.services.amazonmq
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.amazonmq.CfnBroker
-import software.amazon.awscdk.services.amazonmq.CfnConfiguration
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
 
-public inline fun CfnBroker.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnConfigurationAssociation.setConfiguration(block: CfnConfigurationAssociationConfigurationIdPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConfigurationAssociationConfigurationIdPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setConfiguration(builder.build())
 }
 
 public inline fun CfnBroker.setConfiguration(block: CfnBrokerConfigurationIdPropertyDsl.() -> Unit =
@@ -51,26 +49,4 @@ public inline
   val builder = CfnBrokerMaintenanceWindowPropertyDsl()
   builder.apply(block)
   return setMaintenanceWindowStartTime(builder.build())
-}
-
-public inline fun CfnConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnConfigurationAssociation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnConfigurationAssociation.setConfiguration(block: CfnConfigurationAssociationConfigurationIdPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnConfigurationAssociationConfigurationIdPropertyDsl()
-  builder.apply(block)
-  return setConfiguration(builder.build())
 }

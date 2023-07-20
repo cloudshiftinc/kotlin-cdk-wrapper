@@ -2,26 +2,9 @@
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.codedeploy.CfnApplication
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
-
-public inline fun CfnApplication.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnDeploymentConfig.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnDeploymentConfig.setMinimumHealthyHosts(block: CfnDeploymentConfigMinimumHealthyHostsPropertyDsl.() -> Unit
@@ -37,13 +20,6 @@ public inline
   val builder = CfnDeploymentConfigTrafficRoutingConfigPropertyDsl()
   builder.apply(block)
   return setTrafficRoutingConfig(builder.build())
-}
-
-public inline fun CfnDeploymentGroup.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline

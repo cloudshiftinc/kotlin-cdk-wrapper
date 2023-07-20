@@ -1,8 +1,8 @@
 package cloudshift.awscdkdsl.build.dsl
 
-import cloudshift.awscdkdsl.build.dsl.model.Builder
 import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty
-import com.squareup.kotlinpoet.ANY
+import cloudshift.awscdkdsl.build.dsl.model.CdkBuilder
+import cloudshift.awscdkdsl.build.dsl.model.CdkDsl
 import com.squareup.kotlinpoet.COLLECTION
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
@@ -11,36 +11,32 @@ import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.LambdaTypeName
 import com.squareup.kotlinpoet.MUTABLE_LIST
 import com.squareup.kotlinpoet.ParameterSpec
+import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.UNIT
-import com.squareup.kotlinpoet.asTypeName
-import kotlin.reflect.KClass
-import kotlin.reflect.full.isSubclassOf
 
-internal object CdkDsl {
-    const val packageName = "cloudshift.awscdk.dsl"
-    const val cdkPackageName = "software.amazon.awscdk"
-    val DslMarkerAnnotation = ClassName.bestGuess("cloudshift.awscdk.common.CdkDslMarker")
-}
-
-internal class BuilderGenerator(private val registry: CdkClassRegistry) {
-
-    fun generate(builders: List<Builder>): List<FileSpec> {
+internal object BuilderGenerator {
+    fun generate(builders: List<CdkBuilder>): List<FileSpec> {
         return builders.map { generate(it) }
     }
 
-    private fun generate(builder: Builder): FileSpec {
+    private fun generate(builder: CdkBuilder): FileSpec {
         val builderName = builder.dslBuilderClass.simpleNames.joinToString("")
         val builderClassName = builder.dslBuilderClass
         val builderClassBuilder = TypeSpec.classBuilder(builderClassName)
         builderClassBuilder.addAnnotation(CdkDsl.DslMarkerAnnotation)
+        if (builder.cdkBuilderClass.deprecated) {
+            builderClassBuilder.addAnnotation(Annotations.Deprecated)
+        }
 
         if (builder.builderFactoryFunction.parameters.isNotEmpty()) {
             val constructorBuilder = FunSpec.constructorBuilder()
-            builder.builderFactoryFunction.parameters.forEach {
-                constructorBuilder.addParameter(it.name, it.type)
+            builder.builderFactoryFunction.parameters.forEach { parameter ->
+                val param = ParameterSpec.builder(parameter.name, parameter.type)
+                    .build()
+                constructorBuilder.addParameter(param)
             }
             builderClassBuilder.primaryConstructor(constructorBuilder.build())
         }
@@ -48,7 +44,6 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
         generateBuilderDsl(
             builder,
             builderClassBuilder,
-            registry
         )
 
         return FileSpec.builder(builderClassName.packageName, builderName)
@@ -58,26 +53,25 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
     }
 
     private fun generateBuilderDsl(
-        builder: Builder,
+        builder: CdkBuilder,
         builderClassBuilder: TypeSpec.Builder,
-        registry: CdkClassRegistry,
     ) {
         builderClassBuilder.addProperty(
             PropertySpec.builder(
                 "cdkBuilder",
-                builder.cdkBuilderClass,
-                KModifier.PRIVATE
+                builder.cdkBuilderClass.className,
+                KModifier.PRIVATE,
             ).initializer(
                 "%T.%N(%L)",
                 builder.builderFactoryFunction.className,
                 builder.builderFactoryFunction.functionName,
-                builder.builderFactoryFunction.parameters.joinToString(", ") { it.name }
-            ).build()
+                builder.builderFactoryFunction.parameters.joinToString(", ") { it.name },
+            ).build(),
         )
 
         // the main build() function of the builder dsl
         val buildFnBuilder = FunSpec.builder("build")
-            .returns(builder.buildableClass)
+            .returns(builder.buildableClass.className)
 
         // add properties into the builder dsl
         val overloadedProps = builder.properties.groupBy { it.name }.filter { it.value.size > 1 }.map { it.key }
@@ -85,16 +79,15 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
             when {
                 // list of objects (possibly buildable)
                 property.isList() -> handleListProperty(property, builderClassBuilder, buildFnBuilder)
-                registry.isBuildable(property.type) -> handleBuildable(
+                property.builderClass?.canInstantiate() ?: false -> handleBuildable(
                     property,
                     builderClassBuilder,
-                    registry,
-                    property.name in overloadedProps
+                    property.name in overloadedProps,
                 )
 
                 property.isObject() || property.isObjectMap() -> handleObjectProperty(
                     property,
-                    builderClassBuilder
+                    builderClassBuilder,
                 )
 
                 else -> handleOtherProperty(property, builderClassBuilder)
@@ -108,153 +101,143 @@ internal class BuilderGenerator(private val registry: CdkClassRegistry) {
 
     private fun handleObjectProperty(
         prop: BuilderProperty,
-        builderClassBuilder: TypeSpec.Builder
+        builderClassBuilder: TypeSpec.Builder,
     ) {
         val mapBuilderClass = ClassName("cloudshift.awscdk.common", "MapBuilder")
         val lambdaTypeName = LambdaTypeName.get(
             mapBuilderClass,
-            returnType = UNIT
+            returnType = UNIT,
         )
 
         // DSL setter
         builderClassBuilder.addFunction(
-            FunSpec.builder(prop.name)
-                .addParameter(
+            dslFunctionSpec(prop) {
+                addParameter(
                     ParameterSpec.builder("block", lambdaTypeName)
                         .defaultValue("{}")
-                        .build()
+                        .build(),
                 )
-                .addStatement("val builder = %T()", mapBuilderClass)
-                .addStatement("builder.apply(block)")
-                .addStatement("cdkBuilder.%N(builder.map)", prop.name)
-                .build()
+                addStatement("val builder = %T()", mapBuilderClass)
+                addStatement("builder.apply(block)")
+                addStatement("cdkBuilder.%N(builder.map)", prop.name)
+            },
         )
 
         // existing setter
         builderClassBuilder.addFunction(
-            FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.typeName())
-                .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-                .build()
+            dslFunctionSpec(prop) {
+                addParameter(prop.name, prop.typeName())
+                addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
+            },
         )
     }
 
     private fun handleBuildable(
         prop: BuilderProperty,
         builderClassBuilder: TypeSpec.Builder,
-        registry: CdkClassRegistry,
-        overloaded: Boolean
+        overloaded: Boolean,
     ) {
-        val propClass = registry.lookup(prop.type)!!
-        val builderClass = registry.builderTypeFor(propClass)
-        val dslBuilderClass = builderClass.dslClassName()
+        val builderClass = prop.builderClass ?: error("Expected builder class")
+        val dslBuilderClass = builderClass.className.dslClassName()
         val lambdaTypeName = LambdaTypeName.get(
             dslBuilderClass,
-            returnType = UNIT
+            returnType = UNIT,
         )
 
         // DSL setter
         if (!overloaded) {
             builderClassBuilder.addFunction(
-                FunSpec.builder(prop.name)
-                    .addParameter(
+                dslFunctionSpec(prop) {
+                    addParameter(
                         ParameterSpec.builder("block", lambdaTypeName)
                             .defaultValue("{}")
-                            .build()
+                            .build(),
                     )
-                    .addStatement("val builder = %T()", dslBuilderClass)
-                    .addStatement("builder.apply(block)")
-                    .addStatement("cdkBuilder.%N(builder.build())", prop.name)
-                    .build()
+                    addStatement("val builder = %T()", dslBuilderClass)
+                    addStatement("builder.apply(block)")
+                    addStatement("cdkBuilder.%N(builder.build())", prop.name)
+                },
             )
         }
         // TODO - handle overloaded methods
 
         // setter as specified in CDK builder
         builderClassBuilder.addFunction(
-            FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.typeName())
-                .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-                .build()
+            dslFunctionSpec(prop) {
+                addParameter(prop.name, prop.typeName())
+                addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
+            },
         )
     }
 
     private fun handleOtherProperty(
         prop: BuilderProperty,
-        builderClassBuilder: TypeSpec.Builder
+        builderClassBuilder: TypeSpec.Builder,
     ) {
-
         // setter as specified in the CDK builder
         builderClassBuilder.addFunction(
-            FunSpec.builder(prop.name)
-                .addParameter(prop.name, prop.typeName())
-                .addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
-                .build()
+            dslFunctionSpec(prop) {
+                addParameter(prop.name, prop.typeName())
+                addStatement("cdkBuilder.%N(%N)", prop.name, prop.name)
+            },
         )
     }
 
     private fun handleListProperty(
         prop: BuilderProperty,
         builderClassBuilder: TypeSpec.Builder,
-        buildFnBuilder: FunSpec.Builder
+        buildFnBuilder: FunSpec.Builder,
     ) {
-        val argType = prop.typeArgument()
-
+        val type = prop.type as ParameterizedTypeName
         val collectionName = "_${prop.name}"
-        builderClassBuilder.addProperty(
-            PropertySpec.builder(
-                collectionName,
-                MUTABLE_LIST.parameterizedBy(argType),
-                KModifier.PRIVATE
-            ).initializer("mutableListOf()")
-                .build()
-        )
+        builderClassBuilder
+            .addProperty(
+                PropertySpec.builder(
+                    collectionName,
+                    MUTABLE_LIST.parameterizedBy(type.typeArguments),
+                    KModifier.PRIVATE,
+                )
+                    //.addKdoc("Signature: ${prop.methodSignature}")
+                    .initializer("mutableListOf()")
+                    .build(),
+            )
 
-        if (prop.isListOfBuildable(registry)) {
-            /*
-            fun statement( block : StatementBuilder.() -> Unit ) {
-                statements.add( StatementBuilder().apply(block).build() )
-            }
-          */
-            val propClass = registry.lookup(argType.toString())
-            val builderClass = registry.builderTypeFor(propClass).dslClassName()
+        if (prop.isList() && prop.builderClass?.canInstantiate() == true) {
+            val builderClass = prop.builderClass.className.dslClassName()
             val lambdaTypeName = LambdaTypeName.get(
                 builderClass,
-                returnType = UNIT
+                returnType = UNIT,
             )
-            //val name = builderClass.simpleName.decapitalize().removeSuffix("Builder")
             builderClassBuilder.addFunction(
-                FunSpec.builder(prop.name)
-                    .addParameter(
-                        ParameterSpec.builder(prop.name, lambdaTypeName)
-                            .build()
-                    )
-                    .addStatement(
+                dslFunctionSpec(prop) {
+                    addParameter(ParameterSpec.builder(prop.name, lambdaTypeName).build())
+                    addStatement(
                         "%N.add(%T().apply(%N).build())",
                         collectionName,
                         builderClass,
-                        prop.name
+                        prop.name,
                     )
-                    .build()
+                },
             )
         } else {
             builderClassBuilder.addFunction(
-                FunSpec.builder(prop.name)
-                    .addParameter(prop.name, argType, KModifier.VARARG)
-                    .addStatement("%N.addAll(listOf(*%N))", collectionName, prop.name)
-                    .build()
+                dslFunctionSpec(prop) {
+                    addParameter(prop.name, type.typeArguments[0], KModifier.VARARG)
+                    addStatement("%N.addAll(listOf(*%N))", collectionName, prop.name)
+                },
             )
         }
 
-        builderClassBuilder.addFunction(
-            FunSpec.builder(prop.name)
-                .addParameter(prop.name, COLLECTION.parameterizedBy(argType))
-                .addStatement("%N.addAll(%N)", collectionName, prop.name)
-                .build()
-        )
+        builderClassBuilder.addFunction(dslFunctionSpec(prop) {
+            addParameter(prop.name, COLLECTION.parameterizedBy(type.typeArguments))
+            addStatement("%N.addAll(%N)", collectionName, prop.name)
+        })
 
         // delegate to CDK builder
         buildFnBuilder
             .addStatement("if(%N.isNotEmpty()) cdkBuilder.%N(%N)", collectionName, prop.name, collectionName)
     }
+
 }
+
+

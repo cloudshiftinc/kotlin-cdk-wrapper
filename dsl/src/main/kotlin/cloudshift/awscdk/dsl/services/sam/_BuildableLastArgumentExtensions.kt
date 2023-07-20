@@ -2,9 +2,7 @@
 
 package cloudshift.awscdk.dsl.services.sam
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.sam.CfnApi
 import software.amazon.awscdk.services.sam.CfnApplication
 import software.amazon.awscdk.services.sam.CfnFunction
@@ -12,13 +10,6 @@ import software.amazon.awscdk.services.sam.CfnHttpApi
 import software.amazon.awscdk.services.sam.CfnLayerVersion
 import software.amazon.awscdk.services.sam.CfnSimpleTable
 import software.amazon.awscdk.services.sam.CfnStateMachine
-
-public inline fun CfnApi.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline fun CfnApi.setAccessLogSetting(block: CfnApiAccessLogSettingPropertyDsl.() -> Unit =
     {}) {
@@ -65,11 +56,36 @@ public inline
   return setEndpointConfiguration(builder.build())
 }
 
-public inline fun CfnApplication.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnStateMachine.setDefinitionUri(block: CfnStateMachineS3LocationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnStateMachineS3LocationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setDefinitionUri(builder.build())
+}
+
+public inline
+    fun CfnStateMachine.setLogging(block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setLogging(builder.build())
+}
+
+public inline
+    fun CfnStateMachine.setPolicies(block: CfnStateMachineIAMPolicyDocumentPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnStateMachineIAMPolicyDocumentPropertyDsl()
+  builder.apply(block)
+  return setPolicies(builder.build())
+}
+
+public inline
+    fun CfnStateMachine.setTracing(block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStateMachineTracingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setTracing(builder.build())
 }
 
 public inline
@@ -80,11 +96,27 @@ public inline
   return setLocation(builder.build())
 }
 
-public inline fun CfnFunction.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun CfnSimpleTable.setPrimaryKey(block: CfnSimpleTablePrimaryKeyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTablePrimaryKeyPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setPrimaryKey(builder.build())
+}
+
+public inline
+    fun CfnSimpleTable.setProvisionedThroughput(block: CfnSimpleTableProvisionedThroughputPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTableProvisionedThroughputPropertyDsl()
+  builder.apply(block)
+  return setProvisionedThroughput(builder.build())
+}
+
+public inline
+    fun CfnSimpleTable.setSseSpecification(block: CfnSimpleTableSSESpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTableSSESpecificationPropertyDsl()
+  builder.apply(block)
+  return setSseSpecification(builder.build())
 }
 
 public inline fun CfnFunction.setCodeUri(block: CfnFunctionS3LocationPropertyDsl.() -> Unit = {}) {
@@ -153,13 +185,6 @@ public inline fun CfnFunction.setVpcConfig(block: CfnFunctionVpcConfigPropertyDs
   return setVpcConfig(builder.build())
 }
 
-public inline fun CfnHttpApi.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnHttpApi.setAccessLogSetting(block: CfnHttpApiAccessLogSettingPropertyDsl.() -> Unit =
     {}) {
@@ -212,85 +237,9 @@ public inline fun CfnHttpApi.setRouteSettings(block: CfnHttpApiRouteSettingsProp
   return setRouteSettings(builder.build())
 }
 
-public inline fun CfnLayerVersion.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnLayerVersion.setContentUri(block: CfnLayerVersionS3LocationPropertyDsl.() -> Unit = {}) {
   val builder = CfnLayerVersionS3LocationPropertyDsl()
   builder.apply(block)
   return setContentUri(builder.build())
-}
-
-public inline fun CfnSimpleTable.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnSimpleTable.setPrimaryKey(block: CfnSimpleTablePrimaryKeyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTablePrimaryKeyPropertyDsl()
-  builder.apply(block)
-  return setPrimaryKey(builder.build())
-}
-
-public inline
-    fun CfnSimpleTable.setProvisionedThroughput(block: CfnSimpleTableProvisionedThroughputPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTableProvisionedThroughputPropertyDsl()
-  builder.apply(block)
-  return setProvisionedThroughput(builder.build())
-}
-
-public inline
-    fun CfnSimpleTable.setSseSpecification(block: CfnSimpleTableSSESpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTableSSESpecificationPropertyDsl()
-  builder.apply(block)
-  return setSseSpecification(builder.build())
-}
-
-public inline fun CfnStateMachine.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnStateMachine.setDefinitionUri(block: CfnStateMachineS3LocationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnStateMachineS3LocationPropertyDsl()
-  builder.apply(block)
-  return setDefinitionUri(builder.build())
-}
-
-public inline
-    fun CfnStateMachine.setLogging(block: CfnStateMachineLoggingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineLoggingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setLogging(builder.build())
-}
-
-public inline
-    fun CfnStateMachine.setPolicies(block: CfnStateMachineIAMPolicyDocumentPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnStateMachineIAMPolicyDocumentPropertyDsl()
-  builder.apply(block)
-  return setPolicies(builder.build())
-}
-
-public inline
-    fun CfnStateMachine.setTracing(block: CfnStateMachineTracingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineTracingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setTracing(builder.build())
 }

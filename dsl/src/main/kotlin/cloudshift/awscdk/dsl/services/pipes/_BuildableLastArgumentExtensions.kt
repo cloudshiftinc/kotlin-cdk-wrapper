@@ -2,17 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.pipes
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.pipes.CfnPipe
-
-public inline fun CfnPipe.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnPipe.setEnrichmentParameters(block: CfnPipePipeEnrichmentParametersPropertyDsl.() -> Unit

@@ -2,11 +2,11 @@ package cloudshift.awscdkdsl.build.dsl.model
 
 import com.squareup.kotlinpoet.*
 
-internal data class BuilderProperty2(
+internal data class BuilderProperty(
     val name: String,
     val type: TypeName,
     val deprecated : Boolean,
-    val builderClass: CdkClass2?,
+    val builderClass: CdkClass?,
     val methodSignature: String,
 ) {
     fun typeName(): TypeName = type

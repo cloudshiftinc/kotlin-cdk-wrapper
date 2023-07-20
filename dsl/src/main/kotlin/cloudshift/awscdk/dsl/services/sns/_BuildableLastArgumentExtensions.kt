@@ -2,75 +2,50 @@
 
 package cloudshift.awscdk.dsl.services.sns
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import cloudshift.awscdk.dsl.services.cloudwatch.MetricOptionsDsl
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
-import software.amazon.awscdk.services.sns.CfnSubscription
-import software.amazon.awscdk.services.sns.CfnTopic
-import software.amazon.awscdk.services.sns.CfnTopicPolicy
-import software.amazon.awscdk.services.sns.Topic
+import software.amazon.awscdk.services.sns.ITopic
+import software.amazon.awscdk.services.sns.TopicBase
 
-public inline fun CfnSubscription.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnTopic.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnTopicPolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun Topic.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
+public inline fun ITopic.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToResourcePolicy(builder.build())
 }
 
-public inline fun Topic.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+public inline fun ITopic.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
-  return metric(arg0,builder.build())
+  return metric(arg0, builder.build())
 }
 
-public inline fun Topic.metricNumberOfMessagesPublished(block: MetricOptionsDsl.() -> Unit = {}):
+public inline fun ITopic.metricNumberOfMessagesPublished(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricNumberOfMessagesPublished(builder.build())
 }
 
-public inline fun Topic.metricNumberOfNotificationsDelivered(block: MetricOptionsDsl.() -> Unit =
+public inline fun ITopic.metricNumberOfNotificationsDelivered(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricNumberOfNotificationsDelivered(builder.build())
 }
 
-public inline fun Topic.metricNumberOfNotificationsFailed(block: MetricOptionsDsl.() -> Unit = {}):
+public inline fun ITopic.metricNumberOfNotificationsFailed(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricNumberOfNotificationsFailed(builder.build())
 }
 
-public inline fun Topic.metricNumberOfNotificationsFilteredOut(block: MetricOptionsDsl.() -> Unit =
+public inline fun ITopic.metricNumberOfNotificationsFilteredOut(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
@@ -78,7 +53,7 @@ public inline fun Topic.metricNumberOfNotificationsFilteredOut(block: MetricOpti
 }
 
 public inline
-    fun Topic.metricNumberOfNotificationsFilteredOutInvalidAttributes(block: MetricOptionsDsl.() -> Unit
+    fun ITopic.metricNumberOfNotificationsFilteredOutInvalidAttributes(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
@@ -86,27 +61,105 @@ public inline
 }
 
 public inline
-    fun Topic.metricNumberOfNotificationsFilteredOutNoMessageAttributes(block: MetricOptionsDsl.() -> Unit
+    fun ITopic.metricNumberOfNotificationsFilteredOutNoMessageAttributes(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricNumberOfNotificationsFilteredOutNoMessageAttributes(builder.build())
 }
 
-public inline fun Topic.metricPublishSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+public inline fun ITopic.metricPublishSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricPublishSize(builder.build())
 }
 
-public inline fun Topic.metricSMSMonthToDateSpentUSD(block: MetricOptionsDsl.() -> Unit = {}):
+public inline fun ITopic.metricSMSMonthToDateSpentUSD(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricSMSMonthToDateSpentUSD(builder.build())
 }
 
-public inline fun Topic.metricSMSSuccessRate(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+public inline fun ITopic.metricSMSSuccessRate(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricSMSSuccessRate(builder.build())
+}
+
+public inline fun TopicBase.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToResourcePolicy(builder.build())
+}
+
+public inline fun TopicBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(metricName, builder.build())
+}
+
+public inline fun TopicBase.metricNumberOfMessagesPublished(block: MetricOptionsDsl.() -> Unit =
+    {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfMessagesPublished(builder.build())
+}
+
+public inline fun TopicBase.metricNumberOfNotificationsDelivered(block: MetricOptionsDsl.() -> Unit
+    = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfNotificationsDelivered(builder.build())
+}
+
+public inline fun TopicBase.metricNumberOfNotificationsFailed(block: MetricOptionsDsl.() -> Unit =
+    {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfNotificationsFailed(builder.build())
+}
+
+public inline
+    fun TopicBase.metricNumberOfNotificationsFilteredOut(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfNotificationsFilteredOut(builder.build())
+}
+
+public inline
+    fun TopicBase.metricNumberOfNotificationsFilteredOutInvalidAttributes(block: MetricOptionsDsl.() -> Unit
+    = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfNotificationsFilteredOutInvalidAttributes(builder.build())
+}
+
+public inline
+    fun TopicBase.metricNumberOfNotificationsFilteredOutNoMessageAttributes(block: MetricOptionsDsl.() -> Unit
+    = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricNumberOfNotificationsFilteredOutNoMessageAttributes(builder.build())
+}
+
+public inline fun TopicBase.metricPublishSize(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricPublishSize(builder.build())
+}
+
+public inline fun TopicBase.metricSMSMonthToDateSpentUSD(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricSMSMonthToDateSpentUSD(builder.build())
+}
+
+public inline fun TopicBase.metricSMSSuccessRate(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricSMSSuccessRate(builder.build())

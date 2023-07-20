@@ -2,32 +2,65 @@
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
-import software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy
 import software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
 import software.amazon.awscdk.services.secretsmanager.CfnSecret
-import software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment
+import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.RotationSchedule
 import software.amazon.awscdk.services.secretsmanager.Secret
 import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment
 
-public inline fun CfnResourcePolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun ISecret.addRotationSchedule(arg0: String,
+    block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
+  val builder = RotationScheduleOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return addRotationSchedule(arg0, builder.build())
 }
 
-public inline fun CfnRotationSchedule.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun ISecret.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return addToResourcePolicy(builder.build())
+}
+
+public inline fun SecretTargetAttachment.addRotationSchedule(id: String,
+    block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
+  val builder = RotationScheduleOptionsDsl()
+  builder.apply(block)
+  return addRotationSchedule(id, builder.build())
+}
+
+public inline fun SecretTargetAttachment.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
+    {}): AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToResourcePolicy(builder.build())
+}
+
+public inline fun Secret.addRotationSchedule(id: String,
+    block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
+  val builder = RotationScheduleOptionsDsl()
+  builder.apply(block)
+  return addRotationSchedule(id, builder.build())
+}
+
+public inline fun Secret.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToResourcePolicy(builder.build())
+}
+
+public inline
+    fun CfnSecret.setGenerateSecretString(block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSecretGenerateSecretStringPropertyDsl()
+  builder.apply(block)
+  return setGenerateSecretString(builder.build())
 }
 
 public inline
@@ -44,54 +77,4 @@ public inline
   val builder = CfnRotationScheduleRotationRulesPropertyDsl()
   builder.apply(block)
   return setRotationRules(builder.build())
-}
-
-public inline fun CfnSecret.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnSecret.setGenerateSecretString(block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSecretGenerateSecretStringPropertyDsl()
-  builder.apply(block)
-  return setGenerateSecretString(builder.build())
-}
-
-public inline fun CfnSecretTargetAttachment.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun Secret.addRotationSchedule(arg0: String,
-    block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
-  val builder = RotationScheduleOptionsDsl()
-  builder.apply(block)
-  return addRotationSchedule(arg0,builder.build())
-}
-
-public inline fun Secret.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
-}
-
-public inline fun SecretTargetAttachment.addRotationSchedule(arg0: String,
-    block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
-  val builder = RotationScheduleOptionsDsl()
-  builder.apply(block)
-  return addRotationSchedule(arg0,builder.build())
-}
-
-public inline fun SecretTargetAttachment.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
-    {}): AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
 }

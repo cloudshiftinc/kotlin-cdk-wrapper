@@ -2,19 +2,17 @@
 
 package cloudshift.awscdk.dsl.services.pinpointemail
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
-import software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
-public inline fun CfnConfigurationSet.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnIdentity.setMailFromAttributes(block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnIdentityMailFromAttributesPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setMailFromAttributes(builder.build())
 }
 
 public inline
@@ -49,39 +47,10 @@ public inline
   return setTrackingOptions(builder.build())
 }
 
-public inline fun CfnConfigurationSetEventDestination.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
   builder.apply(block)
   return setEventDestination(builder.build())
-}
-
-public inline fun CfnDedicatedIpPool.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnIdentity.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnIdentity.setMailFromAttributes(block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnIdentityMailFromAttributesPropertyDsl()
-  builder.apply(block)
-  return setMailFromAttributes(builder.build())
 }

@@ -2,37 +2,35 @@
 
 package cloudshift.awscdk.dsl.services.imagebuilder
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.imagebuilder.CfnComponent
 import software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe
-import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 
-public inline fun CfnComponent.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnImageRecipe.setAdditionalInstanceConfiguration(block: CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnContainerRecipe.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setAdditionalInstanceConfiguration(builder.build())
 }
 
 public inline
-    fun CfnContainerRecipe.setInstanceConfiguration(block: CfnContainerRecipeInstanceConfigurationPropertyDsl.() -> Unit
+    fun CfnInfrastructureConfiguration.setInstanceMetadataOptions(block: CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnContainerRecipeInstanceConfigurationPropertyDsl()
+  val builder = CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl()
   builder.apply(block)
-  return setInstanceConfiguration(builder.build())
+  return setInstanceMetadataOptions(builder.build())
+}
+
+public inline
+    fun CfnInfrastructureConfiguration.setLogging(block: CfnInfrastructureConfigurationLoggingPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnInfrastructureConfigurationLoggingPropertyDsl()
+  builder.apply(block)
+  return setLogging(builder.build())
 }
 
 public inline
@@ -43,18 +41,12 @@ public inline
   return setTargetRepository(builder.build())
 }
 
-public inline fun CfnDistributionConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnContainerRecipe.setInstanceConfiguration(block: CfnContainerRecipeInstanceConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnContainerRecipeInstanceConfigurationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnImage.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setInstanceConfiguration(builder.build())
 }
 
 public inline
@@ -71,13 +63,6 @@ public inline
   val builder = CfnImageImageTestsConfigurationPropertyDsl()
   builder.apply(block)
   return setImageTestsConfiguration(builder.build())
-}
-
-public inline fun CfnImagePipeline.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -101,42 +86,4 @@ public inline fun CfnImagePipeline.setSchedule(block: CfnImagePipelineSchedulePr
   val builder = CfnImagePipelineSchedulePropertyDsl()
   builder.apply(block)
   return setSchedule(builder.build())
-}
-
-public inline fun CfnImageRecipe.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnImageRecipe.setAdditionalInstanceConfiguration(block: CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl()
-  builder.apply(block)
-  return setAdditionalInstanceConfiguration(builder.build())
-}
-
-public inline fun CfnInfrastructureConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnInfrastructureConfiguration.setInstanceMetadataOptions(block: CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl()
-  builder.apply(block)
-  return setInstanceMetadataOptions(builder.build())
-}
-
-public inline
-    fun CfnInfrastructureConfiguration.setLogging(block: CfnInfrastructureConfigurationLoggingPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnInfrastructureConfigurationLoggingPropertyDsl()
-  builder.apply(block)
-  return setLogging(builder.build())
 }

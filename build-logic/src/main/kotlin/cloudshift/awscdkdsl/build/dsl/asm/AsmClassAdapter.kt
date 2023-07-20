@@ -1,47 +1,42 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
-import cloudshift.awscdkdsl.build.dsl.model.CdkClass2
+import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import com.squareup.kotlinpoet.ClassName
 import org.gradle.kotlin.dsl.provideDelegate
 import org.objectweb.asm.Opcodes.ACC_BRIDGE
-import org.objectweb.asm.Opcodes.ACC_PUBLIC
-import org.objectweb.asm.Opcodes.ACC_STATIC
 import org.objectweb.asm.Opcodes.ACC_SYNTHETIC
 import org.objectweb.asm.Type
+import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 
-internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass2 {
+internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass {
     override val className: ClassName by lazy(LazyThreadSafetyMode.NONE) { ClassName.fromAsmClassName(delegate.name) }
 
-    private val annotations : List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
-        convertAnnotations(delegate.visibleAnnotations, delegate.invisibleAnnotations)
+    private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
+        delegate.allAnnotations.map { Type.getType(it.desc).toTypeName() }
     }
-    override val deprecated : Boolean = annotations.any { it.toString().contains("Deprecated") }
+    override val deprecated: Boolean = annotations.any { it.toString().contains("Deprecated") }
 
-    override val publicMemberFunctions: List<CdkClass2.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    override val publicMemberFunctions: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
         delegate.methods.filter {
-            it.name != "<init>" &&
-                it.access and ACC_PUBLIC != 0 &&
-                it.access and ACC_SYNTHETIC == 0 &&
-                it.access and ACC_BRIDGE == 0 &&
-                it.access and ACC_STATIC == 0
+            !it.isConstructor() &&
+                it.accessFlags.isPublic() &&
+                !it.accessFlags.isGenerated() &&
+                !it.accessFlags.isStatic()
         }.map { AsmMethodAdapter(it) }
     }
 
-    override val publicStaticFunctions: List<CdkClass2.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    override val publicStaticFunctions: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
         delegate.methods.filter {
-            it.access and ACC_PUBLIC != 0 &&
-                it.access and ACC_SYNTHETIC == 0 &&
-                it.access and ACC_BRIDGE == 0 &&
-                it.access and ACC_STATIC != 0
+            it.accessFlags.isPublic() &&
+                !it.accessFlags.isGenerated() &&
+                it.accessFlags.isStatic()
         }.map { AsmMethodAdapter(it) }
     }
 
-    private val allConstructors: List<CdkClass2.Method> by lazy(LazyThreadSafetyMode.NONE) {
+    private val allConstructors: List<CdkClass.Method> by lazy(LazyThreadSafetyMode.NONE) {
         delegate.methods.filter {
-            it.name == "<init>" &&
-                it.access and ACC_SYNTHETIC == 0 &&
-                it.access and ACC_BRIDGE == 0
+            it.isConstructor() && !it.accessFlags.isGenerated()
         }.map { AsmMethodAdapter(it) }
     }
 
@@ -49,7 +44,7 @@ internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass2 {
         delegate.interfaces.map { ClassName.fromAsmClassName(it) }
     }
 
-    override fun canInstantiate()= allConstructors.all { it.parameters.isEmpty() }
+    override fun canInstantiate() = allConstructors.all { it.parameters.isEmpty() }
 
     override fun implementsInterface(name: ClassName) = name in interfaces
 
@@ -70,3 +65,6 @@ internal class AsmClassAdapter(private val delegate: ClassNode) : CdkClass2 {
         return className.hashCode()
     }
 }
+
+private val ClassNode.allAnnotations: List<AnnotationNode>
+    get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())

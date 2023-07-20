@@ -2,17 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.kinesisfirehose
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
-
-public inline fun CfnDeliveryStream.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnDeliveryStream.setAmazonOpenSearchServerlessDestinationConfiguration(block: CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationPropertyDsl.() -> Unit

@@ -2,20 +2,26 @@
 
 package cloudshift.awscdk.dsl.services.fsx
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 import software.amazon.awscdk.services.fsx.CfnFileSystem
-import software.amazon.awscdk.services.fsx.CfnSnapshot
 import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
 import software.amazon.awscdk.services.fsx.CfnVolume
 
-public inline fun CfnDataRepositoryAssociation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnVolume.setOntapConfiguration(block: CfnVolumeOntapConfigurationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnVolumeOntapConfigurationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setOntapConfiguration(builder.build())
+}
+
+public inline
+    fun CfnVolume.setOpenZfsConfiguration(block: CfnVolumeOpenZFSConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnVolumeOpenZFSConfigurationPropertyDsl()
+  builder.apply(block)
+  return setOpenZfsConfiguration(builder.build())
 }
 
 public inline
@@ -24,13 +30,6 @@ public inline
   val builder = CfnDataRepositoryAssociationS3PropertyDsl()
   builder.apply(block)
   return setS3(builder.build())
-}
-
-public inline fun CfnFileSystem.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -65,47 +64,10 @@ public inline
   return setWindowsConfiguration(builder.build())
 }
 
-public inline fun CfnSnapshot.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnStorageVirtualMachine.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnStorageVirtualMachine.setActiveDirectoryConfiguration(block: CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl()
   builder.apply(block)
   return setActiveDirectoryConfiguration(builder.build())
-}
-
-public inline fun CfnVolume.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnVolume.setOntapConfiguration(block: CfnVolumeOntapConfigurationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnVolumeOntapConfigurationPropertyDsl()
-  builder.apply(block)
-  return setOntapConfiguration(builder.build())
-}
-
-public inline
-    fun CfnVolume.setOpenZfsConfiguration(block: CfnVolumeOpenZFSConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnVolumeOpenZFSConfigurationPropertyDsl()
-  builder.apply(block)
-  return setOpenZfsConfiguration(builder.build())
 }

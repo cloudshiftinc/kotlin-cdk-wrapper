@@ -3,7 +3,7 @@ package cloudshift.awscdkdsl.build.dsl.model
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.TypeName
 
-internal interface CdkClass2 {
+internal interface CdkClass {
     val className: ClassName
     val publicMemberFunctions: List<Method>
     val publicStaticFunctions: List<Method>
@@ -11,6 +11,8 @@ internal interface CdkClass2 {
 
     fun implementsInterface(name: ClassName): Boolean
     fun canInstantiate() : Boolean
+
+    fun isBuilder() = implementsInterface(BuilderInterface)
 
     interface Method {
         val name: String
@@ -25,3 +27,7 @@ internal interface CdkClass2 {
         }
     }
 }
+
+private val BuilderInterface = ClassName("software.amazon.jsii", listOf("Builder"))
+
+

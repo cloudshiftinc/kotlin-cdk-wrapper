@@ -2,29 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.dms
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.dms.CfnCertificate
 import software.amazon.awscdk.services.dms.CfnEndpoint
-import software.amazon.awscdk.services.dms.CfnEventSubscription
-import software.amazon.awscdk.services.dms.CfnReplicationInstance
-import software.amazon.awscdk.services.dms.CfnReplicationSubnetGroup
-import software.amazon.awscdk.services.dms.CfnReplicationTask
-
-public inline fun CfnCertificate.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnEndpoint.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline fun CfnEndpoint.setDocDbSettings(block: CfnEndpointDocDbSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -152,32 +131,4 @@ public inline
   val builder = CfnEndpointSybaseSettingsPropertyDsl()
   builder.apply(block)
   return setSybaseSettings(builder.build())
-}
-
-public inline fun CfnEventSubscription.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnReplicationInstance.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnReplicationSubnetGroup.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnReplicationTask.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }

@@ -2,25 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.licensemanager
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.licensemanager.CfnGrant
 import software.amazon.awscdk.services.licensemanager.CfnLicense
-
-public inline fun CfnGrant.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnLicense.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnLicense.setConsumptionConfiguration(block: CfnLicenseConsumptionConfigurationPropertyDsl.() -> Unit

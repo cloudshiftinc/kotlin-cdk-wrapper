@@ -1,8 +1,7 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.model.CdkBuilder
-import com.google.common.collect.ArrayListMultimap
-import com.google.common.collect.ImmutableMultimap
+import cloudshift.awscdkdsl.build.dsl.model.CdkDsl
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FunSpec
@@ -12,13 +11,6 @@ import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.UNIT
 
 internal class NamespaceObjectGenerator {
-
-    internal data class NamespacedBuilderFunction(val namespace: ClassName, val builderName: String, val funSpec: FunSpec) :
-        Comparable<NamespacedBuilderFunction> {
-        override fun compareTo(other: NamespacedBuilderFunction): Int {
-            return compareValuesBy(this, other, { it.namespace }, { it.builderName })
-        }
-    }
 
     fun generate(builders: List<CdkBuilder>): Map<ClassName, List<NamespacedBuilderFunction>> {
         // add extension function to allow DSL builder
@@ -75,4 +67,13 @@ internal class NamespaceObjectGenerator {
 
         return ClassName(dslPackageName, packageName.split(".").last())
     }
+
+
+    internal data class NamespacedBuilderFunction(val namespace: ClassName, val builderName: String, val funSpec: FunSpec) :
+        Comparable<NamespacedBuilderFunction> {
+        override fun compareTo(other: NamespacedBuilderFunction): Int {
+            return compareValuesBy(this, other, { it.namespace }, { it.builderName })
+        }
+    }
+
 }

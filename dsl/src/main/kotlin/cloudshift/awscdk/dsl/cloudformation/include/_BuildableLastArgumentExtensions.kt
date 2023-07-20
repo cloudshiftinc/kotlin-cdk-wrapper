@@ -7,9 +7,9 @@ import kotlin.Unit
 import software.amazon.awscdk.cloudformation.include.CfnInclude
 import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
 
-public inline fun CfnInclude.loadNestedStack(arg0: String, block: CfnIncludePropsDsl.() -> Unit =
-    {}): IncludedNestedStack {
+public inline fun CfnInclude.loadNestedStack(logicalId: String, block: CfnIncludePropsDsl.() -> Unit
+    = {}): IncludedNestedStack {
   val builder = CfnIncludePropsDsl()
   builder.apply(block)
-  return loadNestedStack(arg0,builder.build())
+  return loadNestedStack(logicalId, builder.build())
 }

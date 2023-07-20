@@ -2,27 +2,22 @@
 
 package cloudshift.awscdk.dsl.services.appsync
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.String
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.appsync.AppsyncFunction
-import software.amazon.awscdk.services.appsync.CfnApiCache
-import software.amazon.awscdk.services.appsync.CfnApiKey
+import software.amazon.awscdk.services.appsync.BaseDataSource
 import software.amazon.awscdk.services.appsync.CfnDataSource
-import software.amazon.awscdk.services.appsync.CfnDomainName
-import software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation
 import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
-import software.amazon.awscdk.services.appsync.CfnGraphQLSchema
 import software.amazon.awscdk.services.appsync.CfnResolver
 import software.amazon.awscdk.services.appsync.CfnSourceApiAssociation
 import software.amazon.awscdk.services.appsync.DynamoDbDataSource
 import software.amazon.awscdk.services.appsync.ElasticsearchDataSource
 import software.amazon.awscdk.services.appsync.EventBridgeDataSource
-import software.amazon.awscdk.services.appsync.GraphqlApi
+import software.amazon.awscdk.services.appsync.GraphqlApiBase
 import software.amazon.awscdk.services.appsync.HttpDataSource
 import software.amazon.awscdk.services.appsync.IGraphqlApi
+import software.amazon.awscdk.services.appsync.ISchema
 import software.amazon.awscdk.services.appsync.ISchemaConfig
 import software.amazon.awscdk.services.appsync.LambdaDataSource
 import software.amazon.awscdk.services.appsync.NoneDataSource
@@ -38,25 +33,137 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.elasticsearch.IDomain as ElasticsearchIDomain
 import software.amazon.awscdk.services.opensearchservice.IDomain as OpensearchserviceIDomain
 
-public inline fun CfnApiCache.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnGraphQLApi.setLambdaAuthorizerConfig(block: CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setLambdaAuthorizerConfig(builder.build())
 }
 
-public inline fun CfnApiKey.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnGraphQLApiLogConfigPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setLogConfig(builder.build())
 }
 
-public inline fun CfnDataSource.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnGraphQLApi.setOpenIdConnectConfig(block: CfnGraphQLApiOpenIDConnectConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGraphQLApiOpenIDConnectConfigPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setOpenIdConnectConfig(builder.build())
+}
+
+public inline
+    fun CfnGraphQLApi.setUserPoolConfig(block: CfnGraphQLApiUserPoolConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnGraphQLApiUserPoolConfigPropertyDsl()
+  builder.apply(block)
+  return setUserPoolConfig(builder.build())
+}
+
+public inline fun GraphqlApiBase.addDynamoDbDataSource(
+  id: String,
+  table: ITable,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): DynamoDbDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addDynamoDbDataSource(id, table, builder.build())
+}
+
+public inline fun GraphqlApiBase.addElasticsearchDataSource(
+  id: String,
+  domain: ElasticsearchIDomain,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): ElasticsearchDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addElasticsearchDataSource(id, domain, builder.build())
+}
+
+public inline fun GraphqlApiBase.addEventBridgeDataSource(
+  id: String,
+  eventBus: IEventBus,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): EventBridgeDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addEventBridgeDataSource(id, eventBus, builder.build())
+}
+
+public inline fun GraphqlApiBase.addHttpDataSource(
+  id: String,
+  endpoint: String,
+  block: HttpDataSourceOptionsDsl.() -> Unit = {},
+): HttpDataSource {
+  val builder = HttpDataSourceOptionsDsl()
+  builder.apply(block)
+  return addHttpDataSource(id, endpoint, builder.build())
+}
+
+public inline fun GraphqlApiBase.addLambdaDataSource(
+  id: String,
+  lambdaFunction: IFunction,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): LambdaDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addLambdaDataSource(id, lambdaFunction, builder.build())
+}
+
+public inline fun GraphqlApiBase.addNoneDataSource(id: String,
+    block: DataSourceOptionsDsl.() -> Unit = {}): NoneDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addNoneDataSource(id, builder.build())
+}
+
+public inline fun GraphqlApiBase.addOpenSearchDataSource(
+  id: String,
+  domain: OpensearchserviceIDomain,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): OpenSearchDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addOpenSearchDataSource(id, domain, builder.build())
+}
+
+public inline fun GraphqlApiBase.addRdsDataSource(
+  id: String,
+  serverlessCluster: IServerlessCluster,
+  secretStore: ISecret,
+  databaseName: String,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): RdsDataSource {
+  val builder = DataSourceOptionsDsl()
+  builder.apply(block)
+  return addRdsDataSource(id, serverlessCluster, secretStore, databaseName, builder.build())
+}
+
+public inline fun GraphqlApiBase.createResolver(id: String,
+    block: ExtendedResolverPropsDsl.() -> Unit = {}): Resolver {
+  val builder = ExtendedResolverPropsDsl()
+  builder.apply(block)
+  return createResolver(id, builder.build())
+}
+
+public inline
+    fun CfnFunctionConfiguration.setRuntime(block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFunctionConfigurationAppSyncRuntimePropertyDsl()
+  builder.apply(block)
+  return setRuntime(builder.build())
+}
+
+public inline
+    fun CfnFunctionConfiguration.setSyncConfig(block: CfnFunctionConfigurationSyncConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFunctionConfigurationSyncConfigPropertyDsl()
+  builder.apply(block)
+  return setSyncConfig(builder.build())
 }
 
 public inline
@@ -113,93 +220,126 @@ public inline
   return setRelationalDatabaseConfig(builder.build())
 }
 
-public inline fun CfnDomainName.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun ISchema.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
+    ISchemaConfig {
+  val builder = SchemaBindOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnDomainNameApiAssociation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnFunctionConfiguration.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return bind(arg0, builder.build())
 }
 
 public inline
-    fun CfnFunctionConfiguration.setRuntime(block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit
+    fun CfnSourceApiAssociation.setSourceApiAssociationConfig(block: CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnFunctionConfigurationAppSyncRuntimePropertyDsl()
+  val builder = CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl()
   builder.apply(block)
-  return setRuntime(builder.build())
+  return setSourceApiAssociationConfig(builder.build())
 }
 
-public inline
-    fun CfnFunctionConfiguration.setSyncConfig(block: CfnFunctionConfigurationSyncConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFunctionConfigurationSyncConfigPropertyDsl()
+public inline fun IGraphqlApi.addDynamoDbDataSource(
+  arg0: String,
+  arg1: ITable,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): DynamoDbDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return setSyncConfig(builder.build())
+  return addDynamoDbDataSource(arg0, arg1, builder.build())
 }
 
-public inline fun CfnGraphQLApi.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun IGraphqlApi.addElasticsearchDataSource(
+  arg0: String,
+  arg1: ElasticsearchIDomain,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): ElasticsearchDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return addElasticsearchDataSource(arg0, arg1, builder.build())
 }
 
-public inline
-    fun CfnGraphQLApi.setLambdaAuthorizerConfig(block: CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl()
+public inline fun IGraphqlApi.addEventBridgeDataSource(
+  arg0: String,
+  arg1: IEventBus,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): EventBridgeDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return setLambdaAuthorizerConfig(builder.build())
+  return addEventBridgeDataSource(arg0, arg1, builder.build())
 }
 
-public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnGraphQLApiLogConfigPropertyDsl()
+public inline fun IGraphqlApi.addHttpDataSource(
+  arg0: String,
+  arg1: String,
+  block: HttpDataSourceOptionsDsl.() -> Unit = {},
+): HttpDataSource {
+  val builder = HttpDataSourceOptionsDsl()
   builder.apply(block)
-  return setLogConfig(builder.build())
+  return addHttpDataSource(arg0, arg1, builder.build())
 }
 
-public inline
-    fun CfnGraphQLApi.setOpenIdConnectConfig(block: CfnGraphQLApiOpenIDConnectConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGraphQLApiOpenIDConnectConfigPropertyDsl()
+public inline fun IGraphqlApi.addLambdaDataSource(
+  arg0: String,
+  arg1: IFunction,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): LambdaDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return setOpenIdConnectConfig(builder.build())
+  return addLambdaDataSource(arg0, arg1, builder.build())
 }
 
-public inline
-    fun CfnGraphQLApi.setUserPoolConfig(block: CfnGraphQLApiUserPoolConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnGraphQLApiUserPoolConfigPropertyDsl()
+public inline fun IGraphqlApi.addNoneDataSource(arg0: String, block: DataSourceOptionsDsl.() -> Unit
+    = {}): NoneDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return setUserPoolConfig(builder.build())
+  return addNoneDataSource(arg0, builder.build())
 }
 
-public inline fun CfnGraphQLSchema.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun IGraphqlApi.addOpenSearchDataSource(
+  arg0: String,
+  arg1: OpensearchserviceIDomain,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): OpenSearchDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return addOpenSearchDataSource(arg0, arg1, builder.build())
 }
 
-public inline fun CfnResolver.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline fun IGraphqlApi.addRdsDataSource(
+  arg0: String,
+  arg1: IServerlessCluster,
+  arg2: ISecret,
+  arg3: String,
+  block: DataSourceOptionsDsl.() -> Unit = {},
+): RdsDataSource {
+  val builder = DataSourceOptionsDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return addRdsDataSource(arg0, arg1, arg2, arg3, builder.build())
+}
+
+public inline fun IGraphqlApi.createResolver(arg0: String,
+    block: ExtendedResolverPropsDsl.() -> Unit = {}): Resolver {
+  val builder = ExtendedResolverPropsDsl()
+  builder.apply(block)
+  return createResolver(arg0, builder.build())
+}
+
+public inline fun SchemaFile.bind(api: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
+    ISchemaConfig {
+  val builder = SchemaBindOptionsDsl()
+  builder.apply(block)
+  return bind(api, builder.build())
+}
+
+public inline fun BaseDataSource.createFunction(id: String,
+    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
+  val builder = BaseAppsyncFunctionPropsDsl()
+  builder.apply(block)
+  return createFunction(id, builder.build())
+}
+
+public inline fun BaseDataSource.createResolver(id: String, block: BaseResolverPropsDsl.() -> Unit =
+    {}): Resolver {
+  val builder = BaseResolverPropsDsl()
+  builder.apply(block)
+  return createResolver(id, builder.build())
 }
 
 public inline fun CfnResolver.setCachingConfig(block: CfnResolverCachingConfigPropertyDsl.() -> Unit
@@ -228,224 +368,4 @@ public inline fun CfnResolver.setSyncConfig(block: CfnResolverSyncConfigProperty
   val builder = CfnResolverSyncConfigPropertyDsl()
   builder.apply(block)
   return setSyncConfig(builder.build())
-}
-
-public inline fun CfnSourceApiAssociation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnSourceApiAssociation.setSourceApiAssociationConfig(block: CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl()
-  builder.apply(block)
-  return setSourceApiAssociationConfig(builder.build())
-}
-
-public inline fun DynamoDbDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun DynamoDbDataSource.createResolver(arg0: String,
-    block: BaseResolverPropsDsl.() -> Unit = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun ElasticsearchDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun ElasticsearchDataSource.createResolver(arg0: String,
-    block: BaseResolverPropsDsl.() -> Unit = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun EventBridgeDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun EventBridgeDataSource.createResolver(arg0: String,
-    block: BaseResolverPropsDsl.() -> Unit = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun GraphqlApi.addDynamoDbDataSource(
-  arg0: String,
-  arg1: ITable,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): DynamoDbDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addDynamoDbDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addElasticsearchDataSource(
-  arg0: String,
-  arg1: ElasticsearchIDomain,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): ElasticsearchDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addElasticsearchDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addEventBridgeDataSource(
-  arg0: String,
-  arg1: IEventBus,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): EventBridgeDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addEventBridgeDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addHttpDataSource(
-  arg0: String,
-  arg1: String,
-  block: HttpDataSourceOptionsDsl.() -> Unit = {},
-): HttpDataSource {
-  val builder = HttpDataSourceOptionsDsl()
-  builder.apply(block)
-  return addHttpDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addLambdaDataSource(
-  arg0: String,
-  arg1: IFunction,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): LambdaDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addLambdaDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addNoneDataSource(arg0: String, block: DataSourceOptionsDsl.() -> Unit
-    = {}): NoneDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addNoneDataSource(arg0,builder.build())
-}
-
-public inline fun GraphqlApi.addOpenSearchDataSource(
-  arg0: String,
-  arg1: OpensearchserviceIDomain,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): OpenSearchDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addOpenSearchDataSource(arg0,arg1,builder.build())
-}
-
-public inline fun GraphqlApi.addRdsDataSource(
-  arg0: String,
-  arg1: IServerlessCluster,
-  arg2: ISecret,
-  arg3: String,
-  block: DataSourceOptionsDsl.() -> Unit = {},
-): RdsDataSource {
-  val builder = DataSourceOptionsDsl()
-  builder.apply(block)
-  return addRdsDataSource(arg0,arg1,arg2,arg3,builder.build())
-}
-
-public inline fun GraphqlApi.createResolver(arg0: String, block: ExtendedResolverPropsDsl.() -> Unit
-    = {}): Resolver {
-  val builder = ExtendedResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun HttpDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun HttpDataSource.createResolver(arg0: String, block: BaseResolverPropsDsl.() -> Unit
-    = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun LambdaDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun LambdaDataSource.createResolver(arg0: String,
-    block: BaseResolverPropsDsl.() -> Unit = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun NoneDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun NoneDataSource.createResolver(arg0: String, block: BaseResolverPropsDsl.() -> Unit
-    = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun OpenSearchDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun OpenSearchDataSource.createResolver(arg0: String,
-    block: BaseResolverPropsDsl.() -> Unit = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun RdsDataSource.createFunction(arg0: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
-  builder.apply(block)
-  return createFunction(arg0,builder.build())
-}
-
-public inline fun RdsDataSource.createResolver(arg0: String, block: BaseResolverPropsDsl.() -> Unit
-    = {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(arg0,builder.build())
-}
-
-public inline fun SchemaFile.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
-    ISchemaConfig {
-  val builder = SchemaBindOptionsDsl()
-  builder.apply(block)
-  return bind(arg0,builder.build())
 }

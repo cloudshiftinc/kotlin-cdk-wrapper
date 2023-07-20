@@ -2,20 +2,10 @@
 
 package cloudshift.awscdk.dsl.services.batch
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 import software.amazon.awscdk.services.batch.CfnJobDefinition
-import software.amazon.awscdk.services.batch.CfnJobQueue
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
-
-public inline fun CfnComputeEnvironment.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnComputeEnvironment.setComputeResources(block: CfnComputeEnvironmentComputeResourcesPropertyDsl.() -> Unit
@@ -39,13 +29,6 @@ public inline
   val builder = CfnComputeEnvironmentUpdatePolicyPropertyDsl()
   builder.apply(block)
   return setUpdatePolicy(builder.build())
-}
-
-public inline fun CfnJobDefinition.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -85,20 +68,6 @@ public inline fun CfnJobDefinition.setTimeout(block: CfnJobDefinitionTimeoutProp
   val builder = CfnJobDefinitionTimeoutPropertyDsl()
   builder.apply(block)
   return setTimeout(builder.build())
-}
-
-public inline fun CfnJobQueue.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnSchedulingPolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline

@@ -9,11 +9,11 @@ import kotlin.Unit
 import software.amazon.awscdk.cxapi.CloudAssembly
 import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 
-public inline fun CloudAssemblyBuilder.addArtifact(arg0: String,
-    block: ArtifactManifestDsl.() -> Unit = {}) {
+public inline fun CloudAssemblyBuilder.addArtifact(id: String, block: ArtifactManifestDsl.() -> Unit
+    = {}) {
   val builder = ArtifactManifestDsl()
   builder.apply(block)
-  return addArtifact(arg0,builder.build())
+  return addArtifact(id, builder.build())
 }
 
 public inline fun CloudAssemblyBuilder.addMissing(block: MissingContextDsl.() -> Unit = {}) {

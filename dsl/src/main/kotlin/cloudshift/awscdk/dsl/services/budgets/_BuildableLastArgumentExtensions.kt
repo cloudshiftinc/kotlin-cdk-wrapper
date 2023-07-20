@@ -2,31 +2,9 @@
 
 package cloudshift.awscdk.dsl.services.budgets
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.budgets.CfnBudget
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
-
-public inline fun CfnBudget.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnBudget.setBudget(block: CfnBudgetBudgetDataPropertyDsl.() -> Unit = {}) {
-  val builder = CfnBudgetBudgetDataPropertyDsl()
-  builder.apply(block)
-  return setBudget(builder.build())
-}
-
-public inline fun CfnBudgetsAction.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnBudgetsAction.setActionThreshold(block: CfnBudgetsActionActionThresholdPropertyDsl.() -> Unit
@@ -42,4 +20,10 @@ public inline
   val builder = CfnBudgetsActionDefinitionPropertyDsl()
   builder.apply(block)
   return setDefinition(builder.build())
+}
+
+public inline fun CfnBudget.setBudget(block: CfnBudgetBudgetDataPropertyDsl.() -> Unit = {}) {
+  val builder = CfnBudgetBudgetDataPropertyDsl()
+  builder.apply(block)
+  return setBudget(builder.build())
 }

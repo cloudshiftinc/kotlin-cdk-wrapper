@@ -1,12 +1,9 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
-import com.google.common.collect.ImmutableMultimap
-import com.google.common.collect.Multimap
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
-import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.TypeSpec
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
@@ -23,6 +20,7 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
     init {
         outputs.upToDateWhen { false }
     }
+
     @get:Input
     abstract val classpath: SetProperty<File>
 
@@ -36,39 +34,23 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
         fs.delete {
             delete(dslDir)
         }
+        val outDir = dslDir.get().asFile
 
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
-
         val cdkClasses = AsmClassLoader.loadClasses(classpath.get())
         val cdkModel = CdkModelFactory.createModel(cdkClasses)
 
-        val classRegistry = CdkModelLoaderImpl.loadModel(classpath.get())
-
-        val outDir = dslDir.get().asFile
-
         logger.lifecycle("Generating builders...")
-
-        BuilderGenerator2.generate(cdkModel.builders).forEach {
-            it.writeTo(outDir)
-        }
+        BuilderGenerator.generate(cdkModel.builders).forEach { it.writeTo(outDir) }
 
         logger.lifecycle("Generating namespace objects...")
-        writeObjects(
-            NamespaceObjectGenerator().generate(cdkModel.builders),
-        )
+        writeObjects(NamespaceObjectGenerator().generate(cdkModel.builders))
 
         logger.lifecycle("Generating extension functions...")
         writeExtensionFunctions(
-            BuildableLastArgumentExtensionGenerator(classRegistry).generate(),
+            BuildableLastArgumentExtensionGenerator().generate(cdkModel),
             "_BuildableLastArgumentExtensions",
         )
-
-
-        /* TODO
-               -pull across deprecation annotations
-               -pull across argument names (try https://github.com/airlift/parameternames)
-               -pull across doc comments
-         */
     }
 
     private fun writeObjects(functionMap: Map<ClassName, List<NamespaceObjectGenerator.NamespacedBuilderFunction>>) {
@@ -85,13 +67,13 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
     }
 
     private fun writeExtensionFunctions(
-        extensionFunctions: Multimap<String, ExtensionFunctionSpec>,
+        extensionFunctions: Map<String, List<ExtensionFunctionSpec>>,
         targetFile: String,
     ) {
-        extensionFunctions.asMap().forEach { (packageName, funSpecs) ->
+        extensionFunctions.forEach { (packageName, funSpecs) ->
             val builder = FileSpec.builder(packageName, targetFile)
             builder.suppressWarningTypes(SUPPRESSIONS)
-            funSpecs.sortedBy { it.toString() }.forEach { funSpec ->
+            funSpecs.forEach { funSpec ->
                 builder.addFunction(funSpec.funSpec)
             }
             builder.build().writeTo(dslDir.get().asFile)

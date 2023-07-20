@@ -1,36 +1,43 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
-import cloudshift.awscdkdsl.build.dsl.model.CdkClass2
+import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.ParameterizedTypeName.Companion.parameterizedBy
 import com.squareup.kotlinpoet.TypeName
+import com.squareup.kotlinpoet.UNIT
+import org.aspectj.util.GenericSignature.ArrayTypeSignature
+import org.aspectj.util.GenericSignature.BaseTypeSignature
 import org.aspectj.util.GenericSignature.ClassTypeSignature
 import org.aspectj.util.GenericSignature.TypeArgument
+import org.aspectj.util.GenericSignature.TypeSignature
 import org.aspectj.util.GenericSignatureParser
 import org.gradle.kotlin.dsl.provideDelegate
 import org.objectweb.asm.Opcodes
 import org.objectweb.asm.Type
+import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
-internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Method {
+internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass.Method {
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
-    private val annotations : List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
-        convertAnnotations(delegate.visibleAnnotations, delegate.invisibleAnnotations)
+    private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
+        delegate.allAnnotations.map { Type.getType(it.desc).toTypeName() }
     }
 
-    override val deprecated : Boolean = annotations.any { it.toString().contains("Deprecated") }
+    override val deprecated: Boolean = annotations.any { it.toString().contains("Deprecated") }
 
-    override val parameters: List<CdkClass2.Method.Parameter> by lazy(LazyThreadSafetyMode.NONE) {
+    override val parameters: List<CdkClass.Method.Parameter> by lazy(LazyThreadSafetyMode.NONE) {
 
         // handle generics from the method signature
         var genericParams: List<TypeName> = emptyList()
+        val argumentTypes = Type.getMethodType(delegate.desc).argumentTypes
 
         if (delegate.signature != null) {
-            genericParams = GenericSignatureParser().parseAsMethodSignature(delegate.signature)
-                .parameters.filterIsInstance<ClassTypeSignature>().map { it.toTypeName() }
+            val params = GenericSignatureParser().parseAsMethodSignature(delegate.signature)
+                .parameters.asList()
+            genericParams = params.map { it.toTypeName() }
+            check(genericParams.size == argumentTypes.size) { "Mismatch generic params size <> argument types size; method = ${delegate.name} arg types = ${argumentTypes.map { it.toTypeName() }}; params = ${params.map { it.javaClass }}; generic params = $genericParams}; desc = ${delegate.desc}; signature = ${delegate.signature}" }
         }
-        val argumentTypes = Type.getMethodType(delegate.desc).argumentTypes
 
         val isStaticMethod = delegate.access and Opcodes.ACC_STATIC != 0
 
@@ -43,6 +50,7 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Me
                     // first index is 'this' for instance methods
                     else -> delegate.localVariables[index + 1].name
                 }
+
                 else -> "arg${index}"
             }
             var theType: TypeName = type.toTypeName()
@@ -63,33 +71,40 @@ internal class AsmMethodAdapter(private val delegate: MethodNode) : CdkClass2.Me
         }
     }
     override val returnType: TypeName by lazy(LazyThreadSafetyMode.NONE) {
-        Type.getReturnType(delegate.desc).toTypeName()
+        when (delegate.signature) {
+            null -> Type.getReturnType(delegate.desc).toTypeName()
+            else -> GenericSignatureParser().parseAsMethodSignature(delegate.signature).returnType.toTypeName()
+        }
     }
 
     override fun toString(): String {
         return "MethodNodeAdapter(name=${name}; desc=${delegate.desc})"
     }
 
+    private fun TypeSignature.toTypeName(): TypeName {
+        return when (val sig = this) {
+            is ClassTypeSignature -> sig.toTypeName()
+            is ArrayTypeSignature -> sig.typeSig.toTypeName()
+            is BaseTypeSignature -> when (sig.toString()) {
+                "V" -> UNIT
+                else -> error("Unsupported BaseTypeSignature: $this")
+            }
+
+            else -> error("Unsupported type $javaClass $this")
+        }
+    }
+
     private fun ClassTypeSignature.toTypeName(): TypeName {
         val typeName = ClassName.fromAsmClassName(outerType.identifier.drop(1))
+        if (outerType.typeArguments.isEmpty()) return typeName
         val params = outerType.typeArguments.map { it.toTypeName() }
         return typeName.parameterizedBy(params)
     }
 
-    private fun TypeArgument.toTypeName(): TypeName {
-        return when (val sig = signature) {
-            is ClassTypeSignature -> {
-                when {
-                    sig.outerType.typeArguments.isEmpty() -> ClassName.fromAsmClassName(
-                        sig.outerType.identifier.drop(1).removeSuffix(";"),
-                    )
-
-                    else -> sig.toTypeName()
-                }
-            }
-
-            else -> error("Unsupported type ${signature.javaClass}")
-        }
-    }
+    private fun TypeArgument.toTypeName(): TypeName = signature.toTypeName()
 }
+
+
+private val MethodNode.allAnnotations: List<AnnotationNode>
+    get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())
 

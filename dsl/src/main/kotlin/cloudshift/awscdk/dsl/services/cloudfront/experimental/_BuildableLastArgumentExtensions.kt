@@ -17,18 +17,18 @@ import software.amazon.awscdk.services.lambda.Alias
 import software.amazon.awscdk.services.lambda.EventSourceMapping
 import software.amazon.awscdk.services.lambda.FunctionUrl
 
-public inline fun EdgeFunction.addAlias(arg0: String, block: AliasOptionsDsl.() -> Unit = {}):
+public inline fun EdgeFunction.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
     Alias {
   val builder = AliasOptionsDsl()
   builder.apply(block)
-  return addAlias(arg0,builder.build())
+  return addAlias(aliasName, builder.build())
 }
 
-public inline fun EdgeFunction.addEventSourceMapping(arg0: String,
+public inline fun EdgeFunction.addEventSourceMapping(id: String,
     block: EventSourceMappingOptionsDsl.() -> Unit = {}): EventSourceMapping {
   val builder = EventSourceMappingOptionsDsl()
   builder.apply(block)
-  return addEventSourceMapping(arg0,builder.build())
+  return addEventSourceMapping(id, builder.build())
 }
 
 public inline fun EdgeFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Unit = {}):
@@ -38,10 +38,10 @@ public inline fun EdgeFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() ->
   return addFunctionUrl(builder.build())
 }
 
-public inline fun EdgeFunction.addPermission(arg0: String, block: PermissionDsl.() -> Unit = {}) {
+public inline fun EdgeFunction.addPermission(id: String, block: PermissionDsl.() -> Unit = {}) {
   val builder = PermissionDsl()
   builder.apply(block)
-  return addPermission(arg0,builder.build())
+  return addPermission(id, builder.build())
 }
 
 public inline fun EdgeFunction.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
@@ -57,11 +57,11 @@ public inline fun EdgeFunction.configureAsyncInvoke(block: EventInvokeConfigOpti
   return configureAsyncInvoke(builder.build())
 }
 
-public inline fun EdgeFunction.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
+public inline fun EdgeFunction.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
-  return metric(arg0,builder.build())
+  return metric(metricName, builder.build())
 }
 
 public inline fun EdgeFunction.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {

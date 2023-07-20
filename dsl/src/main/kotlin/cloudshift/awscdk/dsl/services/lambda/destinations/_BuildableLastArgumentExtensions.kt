@@ -12,42 +12,42 @@ import software.amazon.awscdk.services.lambda.destinations.SnsDestination
 import software.amazon.awscdk.services.lambda.destinations.SqsDestination
 import software.constructs.Construct
 
-public inline fun EventBridgeDestination.bind(
-  arg0: Construct,
-  arg1: IFunction,
+public inline fun SqsDestination.bind(
+  _scope: Construct,
+  fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},
 ): DestinationConfig {
   val builder = DestinationOptionsDsl()
   builder.apply(block)
-  return bind(arg0,arg1,builder.build())
-}
-
-public inline fun LambdaDestination.bind(
-  arg0: Construct,
-  arg1: IFunction,
-  block: DestinationOptionsDsl.() -> Unit = {},
-): DestinationConfig {
-  val builder = DestinationOptionsDsl()
-  builder.apply(block)
-  return bind(arg0,arg1,builder.build())
+  return bind(_scope, fn, builder.build())
 }
 
 public inline fun SnsDestination.bind(
-  arg0: Construct,
-  arg1: IFunction,
+  _scope: Construct,
+  fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},
 ): DestinationConfig {
   val builder = DestinationOptionsDsl()
   builder.apply(block)
-  return bind(arg0,arg1,builder.build())
+  return bind(_scope, fn, builder.build())
 }
 
-public inline fun SqsDestination.bind(
-  arg0: Construct,
-  arg1: IFunction,
+public inline fun LambdaDestination.bind(
+  scope: Construct,
+  fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},
 ): DestinationConfig {
   val builder = DestinationOptionsDsl()
   builder.apply(block)
-  return bind(arg0,arg1,builder.build())
+  return bind(scope, fn, builder.build())
+}
+
+public inline fun EventBridgeDestination.bind(
+  _scope: Construct,
+  fn: IFunction,
+  block: DestinationOptionsDsl.() -> Unit = {},
+): DestinationConfig {
+  val builder = DestinationOptionsDsl()
+  builder.apply(block)
+  return bind(_scope, fn, builder.build())
 }

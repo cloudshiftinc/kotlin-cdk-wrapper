@@ -2,32 +2,15 @@
 
 package cloudshift.awscdk.dsl.services.rekognition
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.rekognition.CfnCollection
-import software.amazon.awscdk.services.rekognition.CfnProject
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 
-public inline fun CfnCollection.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnStreamProcessor.setKinesisVideoStream(block: CfnStreamProcessorKinesisVideoStreamPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStreamProcessorKinesisVideoStreamPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnProject.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnStreamProcessor.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setKinesisVideoStream(builder.build())
 }
 
 public inline
@@ -60,14 +43,6 @@ public inline
   val builder = CfnStreamProcessorKinesisDataStreamPropertyDsl()
   builder.apply(block)
   return setKinesisDataStream(builder.build())
-}
-
-public inline
-    fun CfnStreamProcessor.setKinesisVideoStream(block: CfnStreamProcessorKinesisVideoStreamPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStreamProcessorKinesisVideoStreamPropertyDsl()
-  builder.apply(block)
-  return setKinesisVideoStream(builder.build())
 }
 
 public inline

@@ -1,23 +1,24 @@
 package cloudshift.awscdkdsl.build.dsl
 
 
-import cloudshift.awscdkdsl.build.dsl.model.BuilderFactoryFunction2
-import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty2
+import cloudshift.awscdkdsl.build.dsl.model.BuilderFactoryFunction
+import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty
 import cloudshift.awscdkdsl.build.dsl.model.CdkBuilder
-import cloudshift.awscdkdsl.build.dsl.model.CdkClass2
+import cloudshift.awscdkdsl.build.dsl.model.CdkClass
+import cloudshift.awscdkdsl.build.dsl.model.CdkDsl
+import cloudshift.awscdkdsl.build.dsl.model.CdkModel
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.ParameterizedTypeName
 
 internal object CdkModelFactory {
-    fun createModel(cdkClasses : List<CdkClass2>) : CdkModel {
+    fun createModel(cdkClasses: List<CdkClass>): CdkModel {
 
         val classMap = cdkClasses.associateBy { it.className }
 
-        val builderClasses = cdkClasses.filter { cdkClass ->
-            cdkClass.implementsInterface(BuilderInterface)
-        }.sortedBy { it.className }
+        val builderClasses = cdkClasses.filter { cdkClass -> cdkClass.isBuilder() }.sortedBy { it.className }
 
-        val buildableClasses = builderClasses.associate { builderClass ->
+        // map of builder classname to buildable class
+        val buildersToBuildables = builderClasses.associate { builderClass ->
             val buildMethod = builderClass.publicMemberFunctions.single {
                 it.name == "build" && it.parameters.isEmpty()
             }
@@ -25,7 +26,8 @@ internal object CdkModelFactory {
             builderClass.className to (classMap[returnType] ?: error("Unable to resolve $returnType"))
         }
 
-        val buildersForBuildable = builderClasses.associateBy { builderClass ->
+        // map of buildable classname to builder class
+        val buildablesToBuilders = builderClasses.associateBy { builderClass ->
             val buildMethod = builderClass.publicMemberFunctions.single {
                 it.name == "build" && it.parameters.isEmpty()
             }
@@ -35,25 +37,22 @@ internal object CdkModelFactory {
 
         val builders = builderClasses.map { builderClass ->
             val buildableClass =
-                buildableClasses[builderClass.className] ?: error("Cannot find buildable for ${builderClass.className}")
+                buildersToBuildables[builderClass.className] ?: error("Cannot find buildable for ${builderClass.className}")
             val builderFactoryFunction = findBuilderFactoryFunction(builderClass, buildableClass)
 
             CdkBuilder(
                 buildableClass = buildableClass,
                 cdkBuilderClass = builderClass,
                 builderFactoryFunction = builderFactoryFunction,
-                properties = findBuilderProperties(builderClass, buildersForBuildable),
+                properties = findBuilderProperties(builderClass, buildablesToBuilders),
             )
         }
 
-        return CdkModel(classes = cdkClasses, builders = builders)
+        return CdkModel(classes = cdkClasses, builders = builders, buildablesToBuilders = buildablesToBuilders)
     }
 }
 
-private val BuilderInterface = ClassName("software.amazon.jsii", listOf("Builder"))
-
-
-private fun findBuilderFactoryFunction(builderClass: CdkClass2, buildableClass: CdkClass2): BuilderFactoryFunction2 {
+private fun findBuilderFactoryFunction(builderClass: CdkClass, buildableClass: CdkClass): BuilderFactoryFunction {
     return builderFactoryFunctionLocators.firstNotNullOfOrNull { it(builderClass, buildableClass) }
         ?: error("Cannot find builder factory function $builderClass $buildableClass")
 }
@@ -61,11 +60,11 @@ private fun findBuilderFactoryFunction(builderClass: CdkClass2, buildableClass: 
 private val builderFactoryFunctionLocators = listOf(
 
     // static builder() on buildable type
-    { _: CdkClass2, buildableClass: CdkClass2 ->
+    { _: CdkClass, buildableClass: CdkClass ->
         buildableClass.publicStaticFunctions
             .filter { it.name == "builder" }
             .map {
-                BuilderFactoryFunction2(
+                BuilderFactoryFunction(
                     className = buildableClass.className,
                     functionName = it.name,
                     parameters = it.parameters,
@@ -76,11 +75,11 @@ private val builderFactoryFunctionLocators = listOf(
     },
 
     // static create() on builder type
-    { builderClass: CdkClass2, _: CdkClass2 ->
+    { builderClass: CdkClass, _: CdkClass ->
         builderClass.publicStaticFunctions
             .filter { it.name == "create" }
             .map {
-                BuilderFactoryFunction2(
+                BuilderFactoryFunction(
                     className = builderClass.className,
                     functionName = it.name,
                     parameters = it.parameters,
@@ -91,13 +90,10 @@ private val builderFactoryFunctionLocators = listOf(
 )
 
 
-internal data class CdkModel(val classes: List<CdkClass2>, val builders: List<CdkBuilder>)
-
-
 private fun findBuilderProperties(
-    builderClass: CdkClass2,
-    buildersForBuildable: Map<ClassName, CdkClass2>,
-): List<BuilderProperty2> {
+    builderClass: CdkClass,
+    buildersForBuildable: Map<ClassName, CdkClass>,
+): List<BuilderProperty> {
     val candidates = builderClass.publicMemberFunctions
         .filter { it.name !in excludedMembers && it.parameters.isNotEmpty() }
 
@@ -106,18 +102,18 @@ private fun findBuilderProperties(
     return candidates.map { method ->
         val parameter = method.parameters[0]
         val type = parameter.type
-        val actualType = when(type) {
+        val actualType = when (type) {
             is ParameterizedTypeName -> type.typeArguments[0]
-            else  -> parameter.type
+            else -> parameter.type
         }
         val propertyBuilderClass = buildersForBuildable[actualType]
 
-        "${method.name}/${parameter.type}" to BuilderProperty2(
+        "${method.name}/${parameter.type}" to BuilderProperty(
             name = parameter.name,
             type = parameter.type,
             builderClass = propertyBuilderClass,
             methodSignature = method.signature,
-            deprecated = method.deprecated
+            deprecated = method.deprecated,
         )
     }.sortedBy { it.first }.map { it.second }
 }

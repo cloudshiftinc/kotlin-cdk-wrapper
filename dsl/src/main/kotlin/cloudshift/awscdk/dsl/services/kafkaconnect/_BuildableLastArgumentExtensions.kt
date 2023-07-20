@@ -2,17 +2,8 @@
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
-
-public inline fun CfnConnector.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline fun CfnConnector.setCapacity(block: CfnConnectorCapacityPropertyDsl.() -> Unit = {}) {
   val builder = CfnConnectorCapacityPropertyDsl()

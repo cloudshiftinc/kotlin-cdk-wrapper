@@ -2,19 +2,10 @@
 
 package cloudshift.awscdk.dsl.services.elasticloadbalancing
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancing.ListenerPort
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer
-
-public inline fun CfnLoadBalancer.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnLoadBalancer.setAccessLoggingPolicy(block: CfnLoadBalancerAccessLoggingPolicyPropertyDsl.() -> Unit

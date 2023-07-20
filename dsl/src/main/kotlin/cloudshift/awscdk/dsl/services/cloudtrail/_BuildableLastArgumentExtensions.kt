@@ -2,70 +2,36 @@
 
 package cloudshift.awscdk.dsl.services.cloudtrail
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import software.amazon.awscdk.RemovalPolicy
-import software.amazon.awscdk.services.cloudtrail.CfnChannel
-import software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
-import software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy
-import software.amazon.awscdk.services.cloudtrail.CfnTrail
 import software.amazon.awscdk.services.cloudtrail.DataResourceType
 import software.amazon.awscdk.services.cloudtrail.S3EventSelector
 import software.amazon.awscdk.services.cloudtrail.Trail
 import software.amazon.awscdk.services.lambda.IFunction
 
-public inline fun CfnChannel.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnEventDataStore.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnResourcePolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnTrail.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline fun Trail.addEventSelector(
-  arg0: DataResourceType,
-  arg1: List<String>,
+  dataResourceType: DataResourceType,
+  dataResourceValues: List<String>,
   block: AddEventSelectorOptionsDsl.() -> Unit = {},
 ) {
   val builder = AddEventSelectorOptionsDsl()
   builder.apply(block)
-  return addEventSelector(arg0,arg1,builder.build())
+  return addEventSelector(dataResourceType, dataResourceValues, builder.build())
 }
 
-public inline fun Trail.addLambdaEventSelector(arg0: List<IFunction>,
+public inline fun Trail.addLambdaEventSelector(handlers: List<IFunction>,
     block: AddEventSelectorOptionsDsl.() -> Unit = {}) {
   val builder = AddEventSelectorOptionsDsl()
   builder.apply(block)
-  return addLambdaEventSelector(arg0,builder.build())
+  return addLambdaEventSelector(handlers, builder.build())
 }
 
-public inline fun Trail.addS3EventSelector(arg0: List<S3EventSelector>,
+public inline fun Trail.addS3EventSelector(s3Selector: List<S3EventSelector>,
     block: AddEventSelectorOptionsDsl.() -> Unit = {}) {
   val builder = AddEventSelectorOptionsDsl()
   builder.apply(block)
-  return addS3EventSelector(arg0,builder.build())
+  return addS3EventSelector(s3Selector, builder.build())
 }
 
 public inline fun Trail.logAllLambdaDataEvents(block: AddEventSelectorOptionsDsl.() -> Unit = {}) {

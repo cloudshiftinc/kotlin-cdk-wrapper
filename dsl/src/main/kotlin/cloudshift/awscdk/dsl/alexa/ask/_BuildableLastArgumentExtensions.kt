@@ -2,17 +2,8 @@
 
 package cloudshift.awscdk.dsl.alexa.ask
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.alexa.ask.CfnSkill
-
-public inline fun CfnSkill.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnSkill.setAuthenticationConfiguration(block: CfnSkillAuthenticationConfigurationPropertyDsl.() -> Unit

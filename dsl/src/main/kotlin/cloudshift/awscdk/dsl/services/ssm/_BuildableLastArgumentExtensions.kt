@@ -2,61 +2,11 @@
 
 package cloudshift.awscdk.dsl.services.ssm
 
-import cloudshift.awscdk.dsl.RemovalPolicyOptionsDsl
 import kotlin.Unit
-import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.ssm.CfnAssociation
-import software.amazon.awscdk.services.ssm.CfnDocument
-import software.amazon.awscdk.services.ssm.CfnMaintenanceWindow
-import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
-import software.amazon.awscdk.services.ssm.CfnParameter
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
-import software.amazon.awscdk.services.ssm.CfnResourcePolicy
-
-public inline fun CfnAssociation.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline
-    fun CfnAssociation.setOutputLocation(block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
-  builder.apply(block)
-  return setOutputLocation(builder.build())
-}
-
-public inline fun CfnDocument.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMaintenanceWindow.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMaintenanceWindowTarget.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnMaintenanceWindowTask.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
 
 public inline
     fun CfnMaintenanceWindowTask.setLoggingInfo(block: CfnMaintenanceWindowTaskLoggingInfoPropertyDsl.() -> Unit
@@ -72,20 +22,6 @@ public inline
   val builder = CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl()
   builder.apply(block)
   return setTaskInvocationParameters(builder.build())
-}
-
-public inline fun CfnParameter.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
-public inline fun CfnPatchBaseline.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
 }
 
 public inline
@@ -104,13 +40,6 @@ public inline
   return setGlobalFilters(builder.build())
 }
 
-public inline fun CfnResourceDataSync.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
-  builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
-}
-
 public inline
     fun CfnResourceDataSync.setS3Destination(block: CfnResourceDataSyncS3DestinationPropertyDsl.() -> Unit
     = {}) {
@@ -127,9 +56,10 @@ public inline
   return setSyncSource(builder.build())
 }
 
-public inline fun CfnResourcePolicy.applyRemovalPolicy(arg0: RemovalPolicy,
-    block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
-  val builder = RemovalPolicyOptionsDsl()
+public inline
+    fun CfnAssociation.setOutputLocation(block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
   builder.apply(block)
-  return applyRemovalPolicy(arg0,builder.build())
+  return setOutputLocation(builder.build())
 }
