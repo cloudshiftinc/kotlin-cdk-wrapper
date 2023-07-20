@@ -26,7 +26,3 @@ tasks.named<KotlinCompile>("compileKotlin") {
         }
     }
 }
-
-tasks.withType<BaseKtLintCheckTask> {
-    workerMaxHeapSize.set("512m")
-}

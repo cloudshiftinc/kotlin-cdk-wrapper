@@ -6,6 +6,7 @@ kotlin = "1.9.0"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version = "11.5.0" }
 
 [libraries]
 
@@ -32,6 +33,15 @@ kotest-extensions-spring = { module = "io.kotest.extensions:kotest-extensions-sp
 ### General libraries
 #
 #
+
+asm-bom = { module = "org.ow2.asm:asm-bom", version = "9.5" }
+asm-core = { module = "org.ow2.asm:asm" }
+asm-tree = { module = "org.ow2.asm:asm-tree" }
+asm-util = { module = "org.ow2.asm:asm-util" }
+
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.6" }
+aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.19"}
+
 guava = { module = "com.google.guava:guava", version = "32.1.1-jre" }
 awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.88.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.14.2" }

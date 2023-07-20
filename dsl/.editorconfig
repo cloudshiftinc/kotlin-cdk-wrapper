@@ -1,5 +1,4 @@
-
 [*.{kt,kts}]
+
+# disable ktlint on generated code to simplify comparison & improve performance
 ktlint_standard = disabled
-# ktlint_standard_filename = disabled
-# ktlint_standard_max-line-length = disabled
