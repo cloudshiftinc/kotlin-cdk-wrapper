@@ -458,6 +458,14 @@ public object appflow {
   }
 
   public inline
+      fun cfnFlowDataTransferApiProperty(block: CfnFlowDataTransferApiPropertyDsl.() -> Unit = {}):
+      CfnFlow.DataTransferApiProperty {
+    val builder = CfnFlowDataTransferApiPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnFlowDatadogSourcePropertiesProperty(block: CfnFlowDatadogSourcePropertiesPropertyDsl.() -> Unit
       = {}): CfnFlow.DatadogSourcePropertiesProperty {
     val builder = CfnFlowDatadogSourcePropertiesPropertyDsl()

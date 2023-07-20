@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.xray
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
@@ -20,12 +21,37 @@ public class CfnSamplingRuleDsl(
 
   private val _tags: MutableList<Any> = mutableListOf()
 
+  @Deprecated(message = "deprecated in CDK")
+  public fun ruleName(ruleName: String) {
+    cdkBuilder.ruleName(ruleName)
+  }
+
   public fun samplingRule(samplingRule: IResolvable) {
     cdkBuilder.samplingRule(samplingRule)
   }
 
   public fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
     cdkBuilder.samplingRule(samplingRule)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
+    cdkBuilder.samplingRuleRecord(samplingRuleRecord)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun samplingRuleRecord(samplingRuleRecord: CfnSamplingRule.SamplingRuleRecordProperty) {
+    cdkBuilder.samplingRuleRecord(samplingRuleRecord)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
+    cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun samplingRuleUpdate(samplingRuleUpdate: CfnSamplingRule.SamplingRuleUpdateProperty) {
+    cdkBuilder.samplingRuleUpdate(samplingRuleUpdate)
   }
 
   public fun tags(vararg tags: Any) {

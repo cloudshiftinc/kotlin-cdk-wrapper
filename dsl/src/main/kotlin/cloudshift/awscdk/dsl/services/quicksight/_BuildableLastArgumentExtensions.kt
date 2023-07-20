@@ -12,28 +12,6 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
 public inline
-    fun CfnAnalysis.setDefinition(block: CfnAnalysisAnalysisDefinitionPropertyDsl.() -> Unit = {}) {
-  val builder = CfnAnalysisAnalysisDefinitionPropertyDsl()
-  builder.apply(block)
-  return setDefinition(builder.build())
-}
-
-public inline fun CfnAnalysis.setParameters(block: CfnAnalysisParametersPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnAnalysisParametersPropertyDsl()
-  builder.apply(block)
-  return setParameters(builder.build())
-}
-
-public inline
-    fun CfnAnalysis.setSourceEntity(block: CfnAnalysisAnalysisSourceEntityPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnAnalysisAnalysisSourceEntityPropertyDsl()
-  builder.apply(block)
-  return setSourceEntity(builder.build())
-}
-
-public inline
     fun CfnDataSource.setCredentials(block: CfnDataSourceDataSourceCredentialsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnDataSourceDataSourceCredentialsPropertyDsl()
@@ -71,14 +49,6 @@ public inline
   val builder = CfnDataSourceVpcConnectionPropertiesPropertyDsl()
   builder.apply(block)
   return setVpcConnectionProperties(builder.build())
-}
-
-public inline
-    fun CfnRefreshSchedule.setSchedule(block: CfnRefreshScheduleRefreshScheduleMapPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnRefreshScheduleRefreshScheduleMapPropertyDsl()
-  builder.apply(block)
-  return setSchedule(builder.build())
 }
 
 public inline
@@ -122,6 +92,14 @@ public inline
 }
 
 public inline
+    fun CfnRefreshSchedule.setSchedule(block: CfnRefreshScheduleRefreshScheduleMapPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnRefreshScheduleRefreshScheduleMapPropertyDsl()
+  builder.apply(block)
+  return setSchedule(builder.build())
+}
+
+public inline
     fun CfnTemplate.setDefinition(block: CfnTemplateTemplateVersionDefinitionPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnTemplateTemplateVersionDefinitionPropertyDsl()
@@ -133,6 +111,35 @@ public inline
     fun CfnTemplate.setSourceEntity(block: CfnTemplateTemplateSourceEntityPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnTemplateTemplateSourceEntityPropertyDsl()
+  builder.apply(block)
+  return setSourceEntity(builder.build())
+}
+
+public inline fun CfnTheme.setConfiguration(block: CfnThemeThemeConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnThemeThemeConfigurationPropertyDsl()
+  builder.apply(block)
+  return setConfiguration(builder.build())
+}
+
+public inline
+    fun CfnAnalysis.setDefinition(block: CfnAnalysisAnalysisDefinitionPropertyDsl.() -> Unit = {}) {
+  val builder = CfnAnalysisAnalysisDefinitionPropertyDsl()
+  builder.apply(block)
+  return setDefinition(builder.build())
+}
+
+public inline fun CfnAnalysis.setParameters(block: CfnAnalysisParametersPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnAnalysisParametersPropertyDsl()
+  builder.apply(block)
+  return setParameters(builder.build())
+}
+
+public inline
+    fun CfnAnalysis.setSourceEntity(block: CfnAnalysisAnalysisSourceEntityPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnAnalysisAnalysisSourceEntityPropertyDsl()
   builder.apply(block)
   return setSourceEntity(builder.build())
 }
@@ -166,11 +173,4 @@ public inline
   val builder = CfnDashboardDashboardSourceEntityPropertyDsl()
   builder.apply(block)
   return setSourceEntity(builder.build())
-}
-
-public inline fun CfnTheme.setConfiguration(block: CfnThemeThemeConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnThemeThemeConfigurationPropertyDsl()
-  builder.apply(block)
-  return setConfiguration(builder.build())
 }

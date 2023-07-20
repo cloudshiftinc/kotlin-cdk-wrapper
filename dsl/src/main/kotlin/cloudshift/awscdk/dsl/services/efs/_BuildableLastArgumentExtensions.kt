@@ -25,13 +25,6 @@ public inline fun FileSystem.addToResourcePolicy(block: PolicyStatementDsl.() ->
   return addToResourcePolicy(builder.build())
 }
 
-public inline
-    fun CfnFileSystem.setBackupPolicy(block: CfnFileSystemBackupPolicyPropertyDsl.() -> Unit = {}) {
-  val builder = CfnFileSystemBackupPolicyPropertyDsl()
-  builder.apply(block)
-  return setBackupPolicy(builder.build())
-}
-
 public inline fun CfnAccessPoint.setPosixUser(block: CfnAccessPointPosixUserPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnAccessPointPosixUserPropertyDsl()
@@ -45,4 +38,11 @@ public inline
   val builder = CfnAccessPointRootDirectoryPropertyDsl()
   builder.apply(block)
   return setRootDirectory(builder.build())
+}
+
+public inline
+    fun CfnFileSystem.setBackupPolicy(block: CfnFileSystemBackupPolicyPropertyDsl.() -> Unit = {}) {
+  val builder = CfnFileSystemBackupPolicyPropertyDsl()
+  builder.apply(block)
+  return setBackupPolicy(builder.build())
 }

@@ -3,18 +3,19 @@
 package cloudshift.awscdk.dsl.services.cloudwatch
 
 import cloudshift.awscdk.common.CdkDslMarker
-import kotlin.Any
+import cloudshift.awscdk.dsl.CfnTagDsl
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
-import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps
 
 @CdkDslMarker
 public class CfnInsightRulePropsDsl {
   private val cdkBuilder: CfnInsightRuleProps.Builder = CfnInsightRuleProps.builder()
 
-  private val _tags: MutableList<Any> = mutableListOf()
+  private val _tags: MutableList<CfnTag> = mutableListOf()
 
   public fun ruleBody(ruleBody: String) {
     cdkBuilder.ruleBody(ruleBody)
@@ -28,16 +29,12 @@ public class CfnInsightRulePropsDsl {
     cdkBuilder.ruleState(ruleState)
   }
 
-  public fun tags(vararg tags: Any) {
-    _tags.addAll(listOf(*tags))
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
   }
 
-  public fun tags(tags: Collection<Any>) {
+  public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
-  }
-
-  public fun tags(tags: IResolvable) {
-    cdkBuilder.tags(tags)
   }
 
   public fun build(): CfnInsightRuleProps {

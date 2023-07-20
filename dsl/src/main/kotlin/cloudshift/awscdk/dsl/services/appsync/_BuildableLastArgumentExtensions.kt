@@ -33,37 +33,6 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.elasticsearch.IDomain as ElasticsearchIDomain
 import software.amazon.awscdk.services.opensearchservice.IDomain as OpensearchserviceIDomain
 
-public inline
-    fun CfnGraphQLApi.setLambdaAuthorizerConfig(block: CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl()
-  builder.apply(block)
-  return setLambdaAuthorizerConfig(builder.build())
-}
-
-public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnGraphQLApiLogConfigPropertyDsl()
-  builder.apply(block)
-  return setLogConfig(builder.build())
-}
-
-public inline
-    fun CfnGraphQLApi.setOpenIdConnectConfig(block: CfnGraphQLApiOpenIDConnectConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGraphQLApiOpenIDConnectConfigPropertyDsl()
-  builder.apply(block)
-  return setOpenIdConnectConfig(builder.build())
-}
-
-public inline
-    fun CfnGraphQLApi.setUserPoolConfig(block: CfnGraphQLApiUserPoolConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnGraphQLApiUserPoolConfigPropertyDsl()
-  builder.apply(block)
-  return setUserPoolConfig(builder.build())
-}
-
 public inline fun GraphqlApiBase.addDynamoDbDataSource(
   id: String,
   table: ITable,
@@ -151,22 +120,6 @@ public inline fun GraphqlApiBase.createResolver(id: String,
 }
 
 public inline
-    fun CfnFunctionConfiguration.setRuntime(block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFunctionConfigurationAppSyncRuntimePropertyDsl()
-  builder.apply(block)
-  return setRuntime(builder.build())
-}
-
-public inline
-    fun CfnFunctionConfiguration.setSyncConfig(block: CfnFunctionConfigurationSyncConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFunctionConfigurationSyncConfigPropertyDsl()
-  builder.apply(block)
-  return setSyncConfig(builder.build())
-}
-
-public inline
     fun CfnDataSource.setDynamoDbConfig(block: CfnDataSourceDynamoDBConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnDataSourceDynamoDBConfigPropertyDsl()
@@ -220,11 +173,34 @@ public inline
   return setRelationalDatabaseConfig(builder.build())
 }
 
-public inline fun ISchema.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
-    ISchemaConfig {
-  val builder = SchemaBindOptionsDsl()
+public inline fun BaseDataSource.createFunction(id: String,
+    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
+  val builder = BaseAppsyncFunctionPropsDsl()
   builder.apply(block)
-  return bind(arg0, builder.build())
+  return createFunction(id, builder.build())
+}
+
+public inline fun BaseDataSource.createResolver(id: String, block: BaseResolverPropsDsl.() -> Unit =
+    {}): Resolver {
+  val builder = BaseResolverPropsDsl()
+  builder.apply(block)
+  return createResolver(id, builder.build())
+}
+
+public inline
+    fun CfnFunctionConfiguration.setRuntime(block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFunctionConfigurationAppSyncRuntimePropertyDsl()
+  builder.apply(block)
+  return setRuntime(builder.build())
+}
+
+public inline
+    fun CfnFunctionConfiguration.setSyncConfig(block: CfnFunctionConfigurationSyncConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFunctionConfigurationSyncConfigPropertyDsl()
+  builder.apply(block)
+  return setSyncConfig(builder.build())
 }
 
 public inline
@@ -321,6 +297,37 @@ public inline fun IGraphqlApi.createResolver(arg0: String,
   return createResolver(arg0, builder.build())
 }
 
+public inline
+    fun CfnGraphQLApi.setLambdaAuthorizerConfig(block: CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl()
+  builder.apply(block)
+  return setLambdaAuthorizerConfig(builder.build())
+}
+
+public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnGraphQLApiLogConfigPropertyDsl()
+  builder.apply(block)
+  return setLogConfig(builder.build())
+}
+
+public inline
+    fun CfnGraphQLApi.setOpenIdConnectConfig(block: CfnGraphQLApiOpenIDConnectConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGraphQLApiOpenIDConnectConfigPropertyDsl()
+  builder.apply(block)
+  return setOpenIdConnectConfig(builder.build())
+}
+
+public inline
+    fun CfnGraphQLApi.setUserPoolConfig(block: CfnGraphQLApiUserPoolConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnGraphQLApiUserPoolConfigPropertyDsl()
+  builder.apply(block)
+  return setUserPoolConfig(builder.build())
+}
+
 public inline fun SchemaFile.bind(api: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
     ISchemaConfig {
   val builder = SchemaBindOptionsDsl()
@@ -328,18 +335,11 @@ public inline fun SchemaFile.bind(api: IGraphqlApi, block: SchemaBindOptionsDsl.
   return bind(api, builder.build())
 }
 
-public inline fun BaseDataSource.createFunction(id: String,
-    block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
-  val builder = BaseAppsyncFunctionPropsDsl()
+public inline fun ISchema.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
+    ISchemaConfig {
+  val builder = SchemaBindOptionsDsl()
   builder.apply(block)
-  return createFunction(id, builder.build())
-}
-
-public inline fun BaseDataSource.createResolver(id: String, block: BaseResolverPropsDsl.() -> Unit =
-    {}): Resolver {
-  val builder = BaseResolverPropsDsl()
-  builder.apply(block)
-  return createResolver(id, builder.build())
+  return bind(arg0, builder.build())
 }
 
 public inline fun CfnResolver.setCachingConfig(block: CfnResolverCachingConfigPropertyDsl.() -> Unit

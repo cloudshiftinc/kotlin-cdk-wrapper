@@ -58,6 +58,10 @@ public class CfnStudioComponentPropsDsl {
     cdkBuilder.name(name)
   }
 
+  public fun runtimeRoleArn(runtimeRoleArn: String) {
+    cdkBuilder.runtimeRoleArn(runtimeRoleArn)
+  }
+
   public fun scriptParameters(vararg scriptParameters: Any) {
     _scriptParameters.addAll(listOf(*scriptParameters))
   }
@@ -68,6 +72,10 @@ public class CfnStudioComponentPropsDsl {
 
   public fun scriptParameters(scriptParameters: IResolvable) {
     cdkBuilder.scriptParameters(scriptParameters)
+  }
+
+  public fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
+    cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
   }
 
   public fun studioId(studioId: String) {

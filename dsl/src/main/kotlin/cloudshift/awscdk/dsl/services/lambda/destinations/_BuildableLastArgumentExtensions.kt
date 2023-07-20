@@ -12,7 +12,7 @@ import software.amazon.awscdk.services.lambda.destinations.SnsDestination
 import software.amazon.awscdk.services.lambda.destinations.SqsDestination
 import software.constructs.Construct
 
-public inline fun SqsDestination.bind(
+public inline fun EventBridgeDestination.bind(
   _scope: Construct,
   fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},
@@ -22,7 +22,7 @@ public inline fun SqsDestination.bind(
   return bind(_scope, fn, builder.build())
 }
 
-public inline fun SnsDestination.bind(
+public inline fun SqsDestination.bind(
   _scope: Construct,
   fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},
@@ -42,7 +42,7 @@ public inline fun LambdaDestination.bind(
   return bind(scope, fn, builder.build())
 }
 
-public inline fun EventBridgeDestination.bind(
+public inline fun SnsDestination.bind(
   _scope: Construct,
   fn: IFunction,
   block: DestinationOptionsDsl.() -> Unit = {},

@@ -151,6 +151,14 @@ public object stepfunctions {
   }
 
   public inline
+      fun cfnStateMachineDefinitionProperty(block: CfnStateMachineDefinitionPropertyDsl.() -> Unit =
+      {}): CfnStateMachine.DefinitionProperty {
+    val builder = CfnStateMachineDefinitionPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnStateMachineLogDestinationProperty(block: CfnStateMachineLogDestinationPropertyDsl.() -> Unit
       = {}): CfnStateMachine.LogDestinationProperty {
     val builder = CfnStateMachineLogDestinationPropertyDsl()

@@ -109,6 +109,22 @@ public object iotfleetwise {
   }
 
   public inline
+      fun cfnDecoderManifestCanNetworkInterfaceProperty(block: CfnDecoderManifestCanNetworkInterfacePropertyDsl.() -> Unit
+      = {}): CfnDecoderManifest.CanNetworkInterfaceProperty {
+    val builder = CfnDecoderManifestCanNetworkInterfacePropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDecoderManifestCanSignalDecoderProperty(block: CfnDecoderManifestCanSignalDecoderPropertyDsl.() -> Unit
+      = {}): CfnDecoderManifest.CanSignalDecoderProperty {
+    val builder = CfnDecoderManifestCanSignalDecoderPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnDecoderManifestCanSignalProperty(block: CfnDecoderManifestCanSignalPropertyDsl.() -> Unit
       = {}): CfnDecoderManifest.CanSignalProperty {
     val builder = CfnDecoderManifestCanSignalPropertyDsl()
@@ -128,6 +144,22 @@ public object iotfleetwise {
       fun cfnDecoderManifestObdInterfaceProperty(block: CfnDecoderManifestObdInterfacePropertyDsl.() -> Unit
       = {}): CfnDecoderManifest.ObdInterfaceProperty {
     val builder = CfnDecoderManifestObdInterfacePropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDecoderManifestObdNetworkInterfaceProperty(block: CfnDecoderManifestObdNetworkInterfacePropertyDsl.() -> Unit
+      = {}): CfnDecoderManifest.ObdNetworkInterfaceProperty {
+    val builder = CfnDecoderManifestObdNetworkInterfacePropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDecoderManifestObdSignalDecoderProperty(block: CfnDecoderManifestObdSignalDecoderPropertyDsl.() -> Unit
+      = {}): CfnDecoderManifest.ObdSignalDecoderProperty {
+    val builder = CfnDecoderManifestObdSignalDecoderPropertyDsl()
     builder.apply(block)
     return builder.build()
   }

@@ -6,14 +6,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.lex.CfnBot
 import software.amazon.awscdk.services.lex.CfnBotAlias
 
-public inline
-    fun CfnBotAlias.setConversationLogSettings(block: CfnBotAliasConversationLogSettingsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnBotAliasConversationLogSettingsPropertyDsl()
-  builder.apply(block)
-  return setConversationLogSettings(builder.build())
-}
-
 public inline fun CfnBot.setBotFileS3Location(block: CfnBotS3LocationPropertyDsl.() -> Unit = {}) {
   val builder = CfnBotS3LocationPropertyDsl()
   builder.apply(block)
@@ -26,4 +18,12 @@ public inline
   val builder = CfnBotTestBotAliasSettingsPropertyDsl()
   builder.apply(block)
   return setTestBotAliasSettings(builder.build())
+}
+
+public inline
+    fun CfnBotAlias.setConversationLogSettings(block: CfnBotAliasConversationLogSettingsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnBotAliasConversationLogSettingsPropertyDsl()
+  builder.apply(block)
+  return setConversationLogSettings(builder.build())
 }

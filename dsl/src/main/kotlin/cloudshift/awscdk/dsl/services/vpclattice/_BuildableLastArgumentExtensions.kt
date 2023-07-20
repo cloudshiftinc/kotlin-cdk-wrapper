@@ -9,12 +9,10 @@ import software.amazon.awscdk.services.vpclattice.CfnService
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
-public inline
-    fun CfnTargetGroup.setConfig(block: CfnTargetGroupTargetGroupConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnTargetGroupTargetGroupConfigPropertyDsl()
+public inline fun CfnService.setDnsEntry(block: CfnServiceDnsEntryPropertyDsl.() -> Unit = {}) {
+  val builder = CfnServiceDnsEntryPropertyDsl()
   builder.apply(block)
-  return setConfig(builder.build())
+  return setDnsEntry(builder.build())
 }
 
 public inline fun CfnListener.setDefaultAction(block: CfnListenerDefaultActionPropertyDsl.() -> Unit
@@ -44,8 +42,10 @@ public inline fun CfnRule.setMatch(block: CfnRuleMatchPropertyDsl.() -> Unit = {
   return setMatch(builder.build())
 }
 
-public inline fun CfnService.setDnsEntry(block: CfnServiceDnsEntryPropertyDsl.() -> Unit = {}) {
-  val builder = CfnServiceDnsEntryPropertyDsl()
+public inline
+    fun CfnTargetGroup.setConfig(block: CfnTargetGroupTargetGroupConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnTargetGroupTargetGroupConfigPropertyDsl()
   builder.apply(block)
-  return setDnsEntry(builder.build())
+  return setConfig(builder.build())
 }

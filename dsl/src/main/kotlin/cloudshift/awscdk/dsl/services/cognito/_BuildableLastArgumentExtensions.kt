@@ -16,42 +16,6 @@ import software.amazon.awscdk.services.cognito.UserPoolClient
 import software.amazon.awscdk.services.cognito.UserPoolDomain
 import software.amazon.awscdk.services.cognito.UserPoolResourceServer
 
-public inline fun UserPool.addClient(id: String, block: UserPoolClientOptionsDsl.() -> Unit = {}):
-    UserPoolClient {
-  val builder = UserPoolClientOptionsDsl()
-  builder.apply(block)
-  return addClient(id, builder.build())
-}
-
-public inline fun UserPool.addDomain(id: String, block: UserPoolDomainOptionsDsl.() -> Unit = {}):
-    UserPoolDomain {
-  val builder = UserPoolDomainOptionsDsl()
-  builder.apply(block)
-  return addDomain(id, builder.build())
-}
-
-public inline fun UserPool.addResourceServer(id: String,
-    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
-  val builder = UserPoolResourceServerOptionsDsl()
-  builder.apply(block)
-  return addResourceServer(id, builder.build())
-}
-
-public inline
-    fun CfnIdentityPool.setCognitoStreams(block: CfnIdentityPoolCognitoStreamsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnIdentityPoolCognitoStreamsPropertyDsl()
-  builder.apply(block)
-  return setCognitoStreams(builder.build())
-}
-
-public inline fun CfnIdentityPool.setPushSync(block: CfnIdentityPoolPushSyncPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnIdentityPoolPushSyncPropertyDsl()
-  builder.apply(block)
-  return setPushSync(builder.build())
-}
-
 public inline
     fun CfnUserPoolClient.setAnalyticsConfiguration(block: CfnUserPoolClientAnalyticsConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -92,6 +56,63 @@ public inline
   val builder = CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl()
   builder.apply(block)
   return setRiskExceptionConfiguration(builder.build())
+}
+
+public inline fun UserPoolDomain.baseUrl(block: BaseUrlOptionsDsl.() -> Unit = {}): String {
+  val builder = BaseUrlOptionsDsl()
+  builder.apply(block)
+  return baseUrl(builder.build())
+}
+
+public inline fun UserPoolDomain.signInUrl(client: UserPoolClient,
+    block: SignInUrlOptionsDsl.() -> Unit = {}): String {
+  val builder = SignInUrlOptionsDsl()
+  builder.apply(block)
+  return signInUrl(client, builder.build())
+}
+
+public inline
+    fun CfnUserPoolDomain.setCustomDomainConfig(block: CfnUserPoolDomainCustomDomainConfigTypePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnUserPoolDomainCustomDomainConfigTypePropertyDsl()
+  builder.apply(block)
+  return setCustomDomainConfig(builder.build())
+}
+
+public inline fun IUserPool.addClient(arg0: String, block: UserPoolClientOptionsDsl.() -> Unit =
+    {}): UserPoolClient {
+  val builder = UserPoolClientOptionsDsl()
+  builder.apply(block)
+  return addClient(arg0, builder.build())
+}
+
+public inline fun IUserPool.addDomain(arg0: String, block: UserPoolDomainOptionsDsl.() -> Unit =
+    {}): UserPoolDomain {
+  val builder = UserPoolDomainOptionsDsl()
+  builder.apply(block)
+  return addDomain(arg0, builder.build())
+}
+
+public inline fun IUserPool.addResourceServer(arg0: String,
+    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
+  val builder = UserPoolResourceServerOptionsDsl()
+  builder.apply(block)
+  return addResourceServer(arg0, builder.build())
+}
+
+public inline
+    fun CfnIdentityPool.setCognitoStreams(block: CfnIdentityPoolCognitoStreamsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnIdentityPoolCognitoStreamsPropertyDsl()
+  builder.apply(block)
+  return setCognitoStreams(builder.build())
+}
+
+public inline fun CfnIdentityPool.setPushSync(block: CfnIdentityPoolPushSyncPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnIdentityPoolPushSyncPropertyDsl()
+  builder.apply(block)
+  return setPushSync(builder.build())
 }
 
 public inline
@@ -179,51 +200,30 @@ public inline
 }
 
 public inline
-    fun CfnUserPoolDomain.setCustomDomainConfig(block: CfnUserPoolDomainCustomDomainConfigTypePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnUserPoolDomainCustomDomainConfigTypePropertyDsl()
-  builder.apply(block)
-  return setCustomDomainConfig(builder.build())
-}
-
-public inline fun IUserPool.addClient(arg0: String, block: UserPoolClientOptionsDsl.() -> Unit =
-    {}): UserPoolClient {
-  val builder = UserPoolClientOptionsDsl()
-  builder.apply(block)
-  return addClient(arg0, builder.build())
-}
-
-public inline fun IUserPool.addDomain(arg0: String, block: UserPoolDomainOptionsDsl.() -> Unit =
-    {}): UserPoolDomain {
-  val builder = UserPoolDomainOptionsDsl()
-  builder.apply(block)
-  return addDomain(arg0, builder.build())
-}
-
-public inline fun IUserPool.addResourceServer(arg0: String,
-    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
-  val builder = UserPoolResourceServerOptionsDsl()
-  builder.apply(block)
-  return addResourceServer(arg0, builder.build())
-}
-
-public inline fun UserPoolDomain.baseUrl(block: BaseUrlOptionsDsl.() -> Unit = {}): String {
-  val builder = BaseUrlOptionsDsl()
-  builder.apply(block)
-  return baseUrl(builder.build())
-}
-
-public inline fun UserPoolDomain.signInUrl(client: UserPoolClient,
-    block: SignInUrlOptionsDsl.() -> Unit = {}): String {
-  val builder = SignInUrlOptionsDsl()
-  builder.apply(block)
-  return signInUrl(client, builder.build())
-}
-
-public inline
     fun ClientAttributes.withStandardAttributes(block: StandardAttributesMaskDsl.() -> Unit = {}):
     ClientAttributes {
   val builder = StandardAttributesMaskDsl()
   builder.apply(block)
   return withStandardAttributes(builder.build())
+}
+
+public inline fun UserPool.addClient(id: String, block: UserPoolClientOptionsDsl.() -> Unit = {}):
+    UserPoolClient {
+  val builder = UserPoolClientOptionsDsl()
+  builder.apply(block)
+  return addClient(id, builder.build())
+}
+
+public inline fun UserPool.addDomain(id: String, block: UserPoolDomainOptionsDsl.() -> Unit = {}):
+    UserPoolDomain {
+  val builder = UserPoolDomainOptionsDsl()
+  builder.apply(block)
+  return addDomain(id, builder.build())
+}
+
+public inline fun UserPool.addResourceServer(id: String,
+    block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
+  val builder = UserPoolResourceServerOptionsDsl()
+  builder.apply(block)
+  return addResourceServer(id, builder.build())
 }

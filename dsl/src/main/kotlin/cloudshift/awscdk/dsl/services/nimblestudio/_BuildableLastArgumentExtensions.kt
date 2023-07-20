@@ -8,6 +8,14 @@ import software.amazon.awscdk.services.nimblestudio.CfnStudio
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
 public inline
+    fun CfnStudio.setStudioEncryptionConfiguration(block: CfnStudioStudioEncryptionConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStudioStudioEncryptionConfigurationPropertyDsl()
+  builder.apply(block)
+  return setStudioEncryptionConfiguration(builder.build())
+}
+
+public inline
     fun CfnLaunchProfile.setStreamConfiguration(block: CfnLaunchProfileStreamConfigurationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnLaunchProfileStreamConfigurationPropertyDsl()
@@ -21,12 +29,4 @@ public inline
   val builder = CfnStudioComponentStudioComponentConfigurationPropertyDsl()
   builder.apply(block)
   return setConfiguration(builder.build())
-}
-
-public inline
-    fun CfnStudio.setStudioEncryptionConfiguration(block: CfnStudioStudioEncryptionConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStudioStudioEncryptionConfigurationPropertyDsl()
-  builder.apply(block)
-  return setStudioEncryptionConfiguration(builder.build())
 }

@@ -19,6 +19,7 @@ import software.amazon.awscdk.services.ec2.LaunchTemplate
 import software.amazon.awscdk.services.ec2.LaunchTemplateHttpTokens
 import software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions
 import software.amazon.awscdk.services.ec2.UserData
+import software.amazon.awscdk.services.iam.IInstanceProfile
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
@@ -30,6 +31,10 @@ public class LaunchTemplateDsl(
   private val cdkBuilder: LaunchTemplate.Builder = LaunchTemplate.Builder.create(scope, id)
 
   private val _blockDevices: MutableList<BlockDevice> = mutableListOf()
+
+  public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+    cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+  }
 
   public fun blockDevices(blockDevices: BlockDeviceDsl.() -> Unit) {
     _blockDevices.add(BlockDeviceDsl().apply(blockDevices).build())
@@ -82,6 +87,10 @@ public class LaunchTemplateDsl(
 
   public fun instanceMetadataTags(instanceMetadataTags: Boolean) {
     cdkBuilder.instanceMetadataTags(instanceMetadataTags)
+  }
+
+  public fun instanceProfile(instanceProfile: IInstanceProfile) {
+    cdkBuilder.instanceProfile(instanceProfile)
   }
 
   public fun instanceType(instanceType: InstanceType) {

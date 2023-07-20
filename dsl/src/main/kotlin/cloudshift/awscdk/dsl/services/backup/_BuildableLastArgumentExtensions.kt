@@ -13,28 +13,6 @@ import software.amazon.awscdk.services.backup.CfnBackupSelection
 import software.amazon.awscdk.services.backup.CfnBackupVault
 
 public inline
-    fun CfnBackupSelection.setBackupSelection(block: CfnBackupSelectionBackupSelectionResourceTypePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnBackupSelectionBackupSelectionResourceTypePropertyDsl()
-  builder.apply(block)
-  return setBackupSelection(builder.build())
-}
-
-public inline fun BackupVault.addToAccessPolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToAccessPolicy(builder.build())
-}
-
-public inline
-    fun CfnBackupPlan.setBackupPlan(block: CfnBackupPlanBackupPlanResourceTypePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnBackupPlanBackupPlanResourceTypePropertyDsl()
-  builder.apply(block)
-  return setBackupPlan(builder.build())
-}
-
-public inline
     fun CfnBackupVault.setLockConfiguration(block: CfnBackupVaultLockConfigurationTypePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnBackupVaultLockConfigurationTypePropertyDsl()
@@ -61,4 +39,26 @@ public inline fun BackupPlan.addSelection(id: String, block: BackupSelectionOpti
   val builder = BackupSelectionOptionsDsl()
   builder.apply(block)
   return addSelection(id, builder.build())
+}
+
+public inline fun BackupVault.addToAccessPolicy(block: PolicyStatementDsl.() -> Unit = {}) {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToAccessPolicy(builder.build())
+}
+
+public inline
+    fun CfnBackupPlan.setBackupPlan(block: CfnBackupPlanBackupPlanResourceTypePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnBackupPlanBackupPlanResourceTypePropertyDsl()
+  builder.apply(block)
+  return setBackupPlan(builder.build())
+}
+
+public inline
+    fun CfnBackupSelection.setBackupSelection(block: CfnBackupSelectionBackupSelectionResourceTypePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnBackupSelectionBackupSelectionResourceTypePropertyDsl()
+  builder.apply(block)
+  return setBackupSelection(builder.build())
 }

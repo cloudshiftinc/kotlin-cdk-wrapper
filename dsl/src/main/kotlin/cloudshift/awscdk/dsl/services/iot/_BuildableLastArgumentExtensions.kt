@@ -18,11 +18,51 @@ import software.amazon.awscdk.services.iot.CfnTopicRule
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestination
 
 public inline
-    fun CfnFleetMetric.setAggregationType(block: CfnFleetMetricAggregationTypePropertyDsl.() -> Unit
+    fun CfnJobTemplate.setJobExecutionsRetryConfig(block: CfnJobTemplateJobExecutionsRetryConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnFleetMetricAggregationTypePropertyDsl()
+  val builder = CfnJobTemplateJobExecutionsRetryConfigPropertyDsl()
   builder.apply(block)
-  return setAggregationType(builder.build())
+  return setJobExecutionsRetryConfig(builder.build())
+}
+
+public inline
+    fun CfnTopicRule.setTopicRulePayload(block: CfnTopicRuleTopicRulePayloadPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnTopicRuleTopicRulePayloadPropertyDsl()
+  builder.apply(block)
+  return setTopicRulePayload(builder.build())
+}
+
+public inline
+    fun CfnCACertificate.setRegistrationConfig(block: CfnCACertificateRegistrationConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnCACertificateRegistrationConfigPropertyDsl()
+  builder.apply(block)
+  return setRegistrationConfig(builder.build())
+}
+
+public inline
+    fun CfnBillingGroup.setBillingGroupProperties(block: CfnBillingGroupBillingGroupPropertiesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnBillingGroupBillingGroupPropertiesPropertyDsl()
+  builder.apply(block)
+  return setBillingGroupProperties(builder.build())
+}
+
+public inline
+    fun CfnAccountAuditConfiguration.setAuditCheckConfigurations(block: CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl()
+  builder.apply(block)
+  return setAuditCheckConfigurations(builder.build())
+}
+
+public inline
+    fun CfnAccountAuditConfiguration.setAuditNotificationTargetConfigurations(block: CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl()
+  builder.apply(block)
+  return setAuditNotificationTargetConfigurations(builder.build())
 }
 
 public inline
@@ -42,35 +82,11 @@ public inline
 }
 
 public inline
-    fun CfnThingGroup.setThingGroupProperties(block: CfnThingGroupThingGroupPropertiesPropertyDsl.() -> Unit
+    fun CfnThingType.setThingTypeProperties(block: CfnThingTypeThingTypePropertiesPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnThingGroupThingGroupPropertiesPropertyDsl()
+  val builder = CfnThingTypeThingTypePropertiesPropertyDsl()
   builder.apply(block)
-  return setThingGroupProperties(builder.build())
-}
-
-public inline
-    fun CfnBillingGroup.setBillingGroupProperties(block: CfnBillingGroupBillingGroupPropertiesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnBillingGroupBillingGroupPropertiesPropertyDsl()
-  builder.apply(block)
-  return setBillingGroupProperties(builder.build())
-}
-
-public inline
-    fun CfnProvisioningTemplate.setPreProvisioningHook(block: CfnProvisioningTemplateProvisioningHookPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnProvisioningTemplateProvisioningHookPropertyDsl()
-  builder.apply(block)
-  return setPreProvisioningHook(builder.build())
-}
-
-public inline
-    fun CfnMitigationAction.setActionParams(block: CfnMitigationActionActionParamsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnMitigationActionActionParamsPropertyDsl()
-  builder.apply(block)
-  return setActionParams(builder.build())
+  return setThingTypeProperties(builder.build())
 }
 
 public inline
@@ -97,49 +113,33 @@ public inline fun CfnThing.setAttributePayload(block: CfnThingAttributePayloadPr
 }
 
 public inline
-    fun CfnThingType.setThingTypeProperties(block: CfnThingTypeThingTypePropertiesPropertyDsl.() -> Unit
+    fun CfnFleetMetric.setAggregationType(block: CfnFleetMetricAggregationTypePropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnThingTypeThingTypePropertiesPropertyDsl()
+  val builder = CfnFleetMetricAggregationTypePropertyDsl()
   builder.apply(block)
-  return setThingTypeProperties(builder.build())
+  return setAggregationType(builder.build())
 }
 
 public inline
-    fun CfnTopicRule.setTopicRulePayload(block: CfnTopicRuleTopicRulePayloadPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnTopicRuleTopicRulePayloadPropertyDsl()
+    fun CfnMitigationAction.setActionParams(block: CfnMitigationActionActionParamsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnMitigationActionActionParamsPropertyDsl()
   builder.apply(block)
-  return setTopicRulePayload(builder.build())
+  return setActionParams(builder.build())
 }
 
 public inline
-    fun CfnAccountAuditConfiguration.setAuditCheckConfigurations(block: CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl.() -> Unit
+    fun CfnProvisioningTemplate.setPreProvisioningHook(block: CfnProvisioningTemplateProvisioningHookPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl()
+  val builder = CfnProvisioningTemplateProvisioningHookPropertyDsl()
   builder.apply(block)
-  return setAuditCheckConfigurations(builder.build())
+  return setPreProvisioningHook(builder.build())
 }
 
 public inline
-    fun CfnAccountAuditConfiguration.setAuditNotificationTargetConfigurations(block: CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl.() -> Unit
+    fun CfnThingGroup.setThingGroupProperties(block: CfnThingGroupThingGroupPropertiesPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl()
+  val builder = CfnThingGroupThingGroupPropertiesPropertyDsl()
   builder.apply(block)
-  return setAuditNotificationTargetConfigurations(builder.build())
-}
-
-public inline
-    fun CfnJobTemplate.setJobExecutionsRetryConfig(block: CfnJobTemplateJobExecutionsRetryConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnJobTemplateJobExecutionsRetryConfigPropertyDsl()
-  builder.apply(block)
-  return setJobExecutionsRetryConfig(builder.build())
-}
-
-public inline
-    fun CfnCACertificate.setRegistrationConfig(block: CfnCACertificateRegistrationConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnCACertificateRegistrationConfigPropertyDsl()
-  builder.apply(block)
-  return setRegistrationConfig(builder.build())
+  return setThingGroupProperties(builder.build())
 }

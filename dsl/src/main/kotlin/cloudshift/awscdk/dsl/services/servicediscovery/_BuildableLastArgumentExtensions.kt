@@ -14,28 +14,6 @@ import software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.Service
 
 public inline
-    fun CfnPublicDnsNamespace.setProperties(block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
-  builder.apply(block)
-  return setProperties(builder.build())
-}
-
-public inline fun PublicDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
-    = {}): Service {
-  val builder = DnsServicePropsDsl()
-  builder.apply(block)
-  return createService(id, builder.build())
-}
-
-public inline fun PrivateDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
-    = {}): Service {
-  val builder = DnsServicePropsDsl()
-  builder.apply(block)
-  return createService(id, builder.build())
-}
-
-public inline
     fun CfnPrivateDnsNamespace.setProperties(block: CfnPrivateDnsNamespacePropertiesPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnPrivateDnsNamespacePropertiesPropertyDsl()
@@ -43,9 +21,30 @@ public inline
   return setProperties(builder.build())
 }
 
-public inline fun HttpNamespace.createService(id: String, block: BaseServicePropsDsl.() -> Unit =
-    {}): Service {
-  val builder = BaseServicePropsDsl()
+public inline fun Service.registerCnameInstance(id: String,
+    block: CnameInstanceBasePropsDsl.() -> Unit = {}): IInstance {
+  val builder = CnameInstanceBasePropsDsl()
+  builder.apply(block)
+  return registerCnameInstance(id, builder.build())
+}
+
+public inline fun Service.registerIpInstance(id: String, block: IpInstanceBasePropsDsl.() -> Unit =
+    {}): IInstance {
+  val builder = IpInstanceBasePropsDsl()
+  builder.apply(block)
+  return registerIpInstance(id, builder.build())
+}
+
+public inline fun Service.registerNonIpInstance(id: String,
+    block: NonIpInstanceBasePropsDsl.() -> Unit = {}): IInstance {
+  val builder = NonIpInstanceBasePropsDsl()
+  builder.apply(block)
+  return registerNonIpInstance(id, builder.build())
+}
+
+public inline fun PrivateDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
+    = {}): Service {
+  val builder = DnsServicePropsDsl()
   builder.apply(block)
   return createService(id, builder.build())
 }
@@ -72,23 +71,24 @@ public inline
   return setHealthCheckCustomConfig(builder.build())
 }
 
-public inline fun Service.registerCnameInstance(id: String,
-    block: CnameInstanceBasePropsDsl.() -> Unit = {}): IInstance {
-  val builder = CnameInstanceBasePropsDsl()
+public inline fun HttpNamespace.createService(id: String, block: BaseServicePropsDsl.() -> Unit =
+    {}): Service {
+  val builder = BaseServicePropsDsl()
   builder.apply(block)
-  return registerCnameInstance(id, builder.build())
+  return createService(id, builder.build())
 }
 
-public inline fun Service.registerIpInstance(id: String, block: IpInstanceBasePropsDsl.() -> Unit =
-    {}): IInstance {
-  val builder = IpInstanceBasePropsDsl()
+public inline fun PublicDnsNamespace.createService(id: String, block: DnsServicePropsDsl.() -> Unit
+    = {}): Service {
+  val builder = DnsServicePropsDsl()
   builder.apply(block)
-  return registerIpInstance(id, builder.build())
+  return createService(id, builder.build())
 }
 
-public inline fun Service.registerNonIpInstance(id: String,
-    block: NonIpInstanceBasePropsDsl.() -> Unit = {}): IInstance {
-  val builder = NonIpInstanceBasePropsDsl()
+public inline
+    fun CfnPublicDnsNamespace.setProperties(block: CfnPublicDnsNamespacePropertiesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPublicDnsNamespacePropertiesPropertyDsl()
   builder.apply(block)
-  return registerNonIpInstance(id, builder.build())
+  return setProperties(builder.build())
 }

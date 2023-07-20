@@ -17,27 +17,6 @@ import software.amazon.awscdk.services.ses.IReceiptRuleSet
 import software.amazon.awscdk.services.ses.ReceiptRule
 import software.amazon.awscdk.services.ses.ReceiptRuleSet
 
-public inline fun ReceiptRuleSet.addRule(id: String, block: ReceiptRuleOptionsDsl.() -> Unit = {}):
-    ReceiptRule {
-  val builder = ReceiptRuleOptionsDsl()
-  builder.apply(block)
-  return addRule(id, builder.build())
-}
-
-public inline fun ConfigurationSet.addEventDestination(id: String,
-    block: ConfigurationSetEventDestinationOptionsDsl.() -> Unit = {}):
-    ConfigurationSetEventDestination {
-  val builder = ConfigurationSetEventDestinationOptionsDsl()
-  builder.apply(block)
-  return addEventDestination(id, builder.build())
-}
-
-public inline fun CfnTemplate.setTemplate(block: CfnTemplateTemplatePropertyDsl.() -> Unit = {}) {
-  val builder = CfnTemplateTemplatePropertyDsl()
-  builder.apply(block)
-  return setTemplate(builder.build())
-}
-
 public inline
     fun CfnVdmAttributes.setDashboardAttributes(block: CfnVdmAttributesDashboardAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -54,10 +33,40 @@ public inline
   return setGuardianAttributes(builder.build())
 }
 
-public inline fun CfnReceiptRule.setRule(block: CfnReceiptRuleRulePropertyDsl.() -> Unit = {}) {
-  val builder = CfnReceiptRuleRulePropertyDsl()
+public inline
+    fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
   builder.apply(block)
-  return setRule(builder.build())
+  return setEventDestination(builder.build())
+}
+
+public inline fun ConfigurationSet.addEventDestination(id: String,
+    block: ConfigurationSetEventDestinationOptionsDsl.() -> Unit = {}):
+    ConfigurationSetEventDestination {
+  val builder = ConfigurationSetEventDestinationOptionsDsl()
+  builder.apply(block)
+  return addEventDestination(id, builder.build())
+}
+
+public inline fun ReceiptRuleSet.addRule(id: String, block: ReceiptRuleOptionsDsl.() -> Unit = {}):
+    ReceiptRule {
+  val builder = ReceiptRuleOptionsDsl()
+  builder.apply(block)
+  return addRule(id, builder.build())
+}
+
+public inline fun CfnReceiptFilter.setFilter(block: CfnReceiptFilterFilterPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnReceiptFilterFilterPropertyDsl()
+  builder.apply(block)
+  return setFilter(builder.build())
+}
+
+public inline fun CfnTemplate.setTemplate(block: CfnTemplateTemplatePropertyDsl.() -> Unit = {}) {
+  val builder = CfnTemplateTemplatePropertyDsl()
+  builder.apply(block)
+  return setTemplate(builder.build())
 }
 
 public inline
@@ -100,18 +109,17 @@ public inline
   return setMailFromAttributes(builder.build())
 }
 
-public inline fun CfnReceiptFilter.setFilter(block: CfnReceiptFilterFilterPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnReceiptFilterFilterPropertyDsl()
-  builder.apply(block)
-  return setFilter(builder.build())
-}
-
 public inline fun IReceiptRuleSet.addRule(arg0: String, block: ReceiptRuleOptionsDsl.() -> Unit =
     {}): ReceiptRule {
   val builder = ReceiptRuleOptionsDsl()
   builder.apply(block)
   return addRule(arg0, builder.build())
+}
+
+public inline fun CfnReceiptRule.setRule(block: CfnReceiptRuleRulePropertyDsl.() -> Unit = {}) {
+  val builder = CfnReceiptRuleRulePropertyDsl()
+  builder.apply(block)
+  return setRule(builder.build())
 }
 
 public inline
@@ -160,12 +168,4 @@ public inline
   val builder = CfnConfigurationSetVdmOptionsPropertyDsl()
   builder.apply(block)
   return setVdmOptions(builder.build())
-}
-
-public inline
-    fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
-  builder.apply(block)
-  return setEventDestination(builder.build())
 }

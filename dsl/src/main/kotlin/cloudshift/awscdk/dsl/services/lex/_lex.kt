@@ -808,6 +808,14 @@ public object lex {
     return builder.build()
   }
 
+  public inline
+      fun cfnResourcePolicyPolicyProperty(block: CfnResourcePolicyPolicyPropertyDsl.() -> Unit =
+      {}): CfnResourcePolicy.PolicyProperty {
+    val builder = CfnResourcePolicyPolicyPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun cfnResourcePolicyProps(block: CfnResourcePolicyPropsDsl.() -> Unit = {}):
       CfnResourcePolicyProps {
     val builder = CfnResourcePolicyPropsDsl()

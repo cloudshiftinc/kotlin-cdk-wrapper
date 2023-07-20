@@ -6,6 +6,7 @@ import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -374,6 +375,16 @@ public class CfnDBInstancePropsDsl {
 
   public fun tags(tags: Collection<CfnTag>) {
     _tags.addAll(tags)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun tdeCredentialArn(tdeCredentialArn: String) {
+    cdkBuilder.tdeCredentialArn(tdeCredentialArn)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun tdeCredentialPassword(tdeCredentialPassword: String) {
+    cdkBuilder.tdeCredentialPassword(tdeCredentialPassword)
   }
 
   public fun timezone(timezone: String) {

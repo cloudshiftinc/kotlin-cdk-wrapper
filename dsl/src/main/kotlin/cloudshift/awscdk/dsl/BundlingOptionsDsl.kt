@@ -67,6 +67,10 @@ public class BundlingOptionsDsl {
     cdkBuilder.outputType(outputType)
   }
 
+  public fun platform(platform: String) {
+    cdkBuilder.platform(platform)
+  }
+
   public fun securityOpt(securityOpt: String) {
     cdkBuilder.securityOpt(securityOpt)
   }

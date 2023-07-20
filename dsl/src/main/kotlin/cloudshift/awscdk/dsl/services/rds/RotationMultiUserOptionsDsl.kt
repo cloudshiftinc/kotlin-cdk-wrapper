@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.rds
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.Duration
@@ -27,6 +28,10 @@ public class RotationMultiUserOptionsDsl {
 
   public fun excludeCharacters(excludeCharacters: String) {
     cdkBuilder.excludeCharacters(excludeCharacters)
+  }
+
+  public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
   }
 
   public fun secret(secret: ISecret) {

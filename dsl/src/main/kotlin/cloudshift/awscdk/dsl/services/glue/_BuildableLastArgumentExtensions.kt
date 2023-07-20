@@ -18,12 +18,17 @@ import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 import software.amazon.awscdk.services.glue.CfnTable
 import software.amazon.awscdk.services.glue.CfnTrigger
 
-public inline
-    fun CfnSecurityConfiguration.setEncryptionConfiguration(block: CfnSecurityConfigurationEncryptionConfigurationPropertyDsl.() -> Unit
+public inline fun CfnSchema.setCheckpointVersion(block: CfnSchemaSchemaVersionPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnSecurityConfigurationEncryptionConfigurationPropertyDsl()
+  val builder = CfnSchemaSchemaVersionPropertyDsl()
   builder.apply(block)
-  return setEncryptionConfiguration(builder.build())
+  return setCheckpointVersion(builder.build())
+}
+
+public inline fun CfnSchema.setRegistry(block: CfnSchemaRegistryPropertyDsl.() -> Unit = {}) {
+  val builder = CfnSchemaRegistryPropertyDsl()
+  builder.apply(block)
+  return setRegistry(builder.build())
 }
 
 public inline fun CfnCrawler.setTargets(block: CfnCrawlerTargetsPropertyDsl.() -> Unit = {}) {
@@ -53,29 +58,6 @@ public inline
   return setSchemaChangePolicy(builder.build())
 }
 
-public inline fun CfnSchemaVersion.setSchema(block: CfnSchemaVersionSchemaPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnSchemaVersionSchemaPropertyDsl()
-  builder.apply(block)
-  return setSchema(builder.build())
-}
-
-public inline
-    fun CfnDataQualityRuleset.setTargetTable(block: CfnDataQualityRulesetDataQualityTargetTablePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDataQualityRulesetDataQualityTargetTablePropertyDsl()
-  builder.apply(block)
-  return setTargetTable(builder.build())
-}
-
-public inline
-    fun CfnConnection.setConnectionInput(block: CfnConnectionConnectionInputPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnConnectionConnectionInputPropertyDsl()
-  builder.apply(block)
-  return setConnectionInput(builder.build())
-}
-
 public inline
     fun CfnTrigger.setEventBatchingCondition(block: CfnTriggerEventBatchingConditionPropertyDsl.() -> Unit
     = {}) {
@@ -90,97 +72,20 @@ public inline fun CfnTrigger.setPredicate(block: CfnTriggerPredicatePropertyDsl.
   return setPredicate(builder.build())
 }
 
-public inline fun CfnTable.setTableInput(block: CfnTableTableInputPropertyDsl.() -> Unit = {}) {
-  val builder = CfnTableTableInputPropertyDsl()
+public inline
+    fun CfnSecurityConfiguration.setEncryptionConfiguration(block: CfnSecurityConfigurationEncryptionConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSecurityConfigurationEncryptionConfigurationPropertyDsl()
   builder.apply(block)
-  return setTableInput(builder.build())
+  return setEncryptionConfiguration(builder.build())
 }
 
 public inline
-    fun CfnDataCatalogEncryptionSettings.setDataCatalogEncryptionSettings(block: CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl.() -> Unit
+    fun CfnDataQualityRuleset.setTargetTable(block: CfnDataQualityRulesetDataQualityTargetTablePropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl()
+  val builder = CfnDataQualityRulesetDataQualityTargetTablePropertyDsl()
   builder.apply(block)
-  return setDataCatalogEncryptionSettings(builder.build())
-}
-
-public inline fun CfnDatabase.setDatabaseInput(block: CfnDatabaseDatabaseInputPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDatabaseDatabaseInputPropertyDsl()
-  builder.apply(block)
-  return setDatabaseInput(builder.build())
-}
-
-public inline fun CfnSchema.setCheckpointVersion(block: CfnSchemaSchemaVersionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSchemaSchemaVersionPropertyDsl()
-  builder.apply(block)
-  return setCheckpointVersion(builder.build())
-}
-
-public inline fun CfnSchema.setRegistry(block: CfnSchemaRegistryPropertyDsl.() -> Unit = {}) {
-  val builder = CfnSchemaRegistryPropertyDsl()
-  builder.apply(block)
-  return setRegistry(builder.build())
-}
-
-public inline
-    fun CfnMLTransform.setInputRecordTables(block: CfnMLTransformInputRecordTablesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnMLTransformInputRecordTablesPropertyDsl()
-  builder.apply(block)
-  return setInputRecordTables(builder.build())
-}
-
-public inline
-    fun CfnMLTransform.setTransformParameters(block: CfnMLTransformTransformParametersPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnMLTransformTransformParametersPropertyDsl()
-  builder.apply(block)
-  return setTransformParameters(builder.build())
-}
-
-public inline
-    fun CfnMLTransform.setTransformEncryption(block: CfnMLTransformTransformEncryptionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnMLTransformTransformEncryptionPropertyDsl()
-  builder.apply(block)
-  return setTransformEncryption(builder.build())
-}
-
-public inline fun CfnJob.setCommand(block: CfnJobJobCommandPropertyDsl.() -> Unit = {}) {
-  val builder = CfnJobJobCommandPropertyDsl()
-  builder.apply(block)
-  return setCommand(builder.build())
-}
-
-public inline fun CfnJob.setConnections(block: CfnJobConnectionsListPropertyDsl.() -> Unit = {}) {
-  val builder = CfnJobConnectionsListPropertyDsl()
-  builder.apply(block)
-  return setConnections(builder.build())
-}
-
-public inline fun CfnJob.setExecutionProperty(block: CfnJobExecutionPropertyPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnJobExecutionPropertyPropertyDsl()
-  builder.apply(block)
-  return setExecutionProperty(builder.build())
-}
-
-public inline
-    fun CfnJob.setNotificationProperty(block: CfnJobNotificationPropertyPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnJobNotificationPropertyPropertyDsl()
-  builder.apply(block)
-  return setNotificationProperty(builder.build())
-}
-
-public inline
-    fun CfnPartition.setPartitionInput(block: CfnPartitionPartitionInputPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnPartitionPartitionInputPropertyDsl()
-  builder.apply(block)
-  return setPartitionInput(builder.build())
+  return setTargetTable(builder.build())
 }
 
 public inline
@@ -213,4 +118,99 @@ public inline
   val builder = CfnClassifierXMLClassifierPropertyDsl()
   builder.apply(block)
   return setXmlClassifier(builder.build())
+}
+
+public inline fun CfnDatabase.setDatabaseInput(block: CfnDatabaseDatabaseInputPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDatabaseDatabaseInputPropertyDsl()
+  builder.apply(block)
+  return setDatabaseInput(builder.build())
+}
+
+public inline
+    fun CfnPartition.setPartitionInput(block: CfnPartitionPartitionInputPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnPartitionPartitionInputPropertyDsl()
+  builder.apply(block)
+  return setPartitionInput(builder.build())
+}
+
+public inline
+    fun CfnDataCatalogEncryptionSettings.setDataCatalogEncryptionSettings(block: CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl()
+  builder.apply(block)
+  return setDataCatalogEncryptionSettings(builder.build())
+}
+
+public inline fun CfnSchemaVersion.setSchema(block: CfnSchemaVersionSchemaPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnSchemaVersionSchemaPropertyDsl()
+  builder.apply(block)
+  return setSchema(builder.build())
+}
+
+public inline fun CfnJob.setCommand(block: CfnJobJobCommandPropertyDsl.() -> Unit = {}) {
+  val builder = CfnJobJobCommandPropertyDsl()
+  builder.apply(block)
+  return setCommand(builder.build())
+}
+
+public inline fun CfnJob.setConnections(block: CfnJobConnectionsListPropertyDsl.() -> Unit = {}) {
+  val builder = CfnJobConnectionsListPropertyDsl()
+  builder.apply(block)
+  return setConnections(builder.build())
+}
+
+public inline fun CfnJob.setExecutionProperty(block: CfnJobExecutionPropertyPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnJobExecutionPropertyPropertyDsl()
+  builder.apply(block)
+  return setExecutionProperty(builder.build())
+}
+
+public inline
+    fun CfnJob.setNotificationProperty(block: CfnJobNotificationPropertyPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnJobNotificationPropertyPropertyDsl()
+  builder.apply(block)
+  return setNotificationProperty(builder.build())
+}
+
+public inline fun CfnTable.setTableInput(block: CfnTableTableInputPropertyDsl.() -> Unit = {}) {
+  val builder = CfnTableTableInputPropertyDsl()
+  builder.apply(block)
+  return setTableInput(builder.build())
+}
+
+public inline
+    fun CfnConnection.setConnectionInput(block: CfnConnectionConnectionInputPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnConnectionConnectionInputPropertyDsl()
+  builder.apply(block)
+  return setConnectionInput(builder.build())
+}
+
+public inline
+    fun CfnMLTransform.setInputRecordTables(block: CfnMLTransformInputRecordTablesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnMLTransformInputRecordTablesPropertyDsl()
+  builder.apply(block)
+  return setInputRecordTables(builder.build())
+}
+
+public inline
+    fun CfnMLTransform.setTransformParameters(block: CfnMLTransformTransformParametersPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnMLTransformTransformParametersPropertyDsl()
+  builder.apply(block)
+  return setTransformParameters(builder.build())
+}
+
+public inline
+    fun CfnMLTransform.setTransformEncryption(block: CfnMLTransformTransformEncryptionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnMLTransformTransformEncryptionPropertyDsl()
+  builder.apply(block)
+  return setTransformEncryption(builder.build())
 }

@@ -9,9 +9,9 @@ import software.amazon.awscdk.services.cloudformation.CfnStackSet
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivation
 
 public inline
-    fun CfnResourceVersion.setLoggingConfig(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
+    fun CfnTypeActivation.setLoggingConfig(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnResourceVersionLoggingConfigPropertyDsl()
+  val builder = CfnTypeActivationLoggingConfigPropertyDsl()
   builder.apply(block)
   return setLoggingConfig(builder.build())
 }
@@ -32,9 +32,9 @@ public inline
 }
 
 public inline
-    fun CfnTypeActivation.setLoggingConfig(block: CfnTypeActivationLoggingConfigPropertyDsl.() -> Unit
+    fun CfnResourceVersion.setLoggingConfig(block: CfnResourceVersionLoggingConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnTypeActivationLoggingConfigPropertyDsl()
+  val builder = CfnResourceVersionLoggingConfigPropertyDsl()
   builder.apply(block)
   return setLoggingConfig(builder.build())
 }

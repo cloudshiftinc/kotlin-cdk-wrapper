@@ -58,6 +58,16 @@ public object sso {
   }
 
   public inline
+      fun cfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationProperty(block: CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl.() -> Unit
+      = {}):
+      CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty {
+    val builder =
+        CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnInstanceAccessControlAttributeConfigurationProps(block: CfnInstanceAccessControlAttributeConfigurationPropsDsl.() -> Unit
       = {}): CfnInstanceAccessControlAttributeConfigurationProps {
     val builder = CfnInstanceAccessControlAttributeConfigurationPropsDsl()

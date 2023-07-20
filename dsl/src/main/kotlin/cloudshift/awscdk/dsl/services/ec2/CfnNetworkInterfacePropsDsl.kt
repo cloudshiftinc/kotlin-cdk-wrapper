@@ -31,6 +31,14 @@ public class CfnNetworkInterfacePropsDsl {
     cdkBuilder.description(description)
   }
 
+  public fun enablePrimaryIpv6(enablePrimaryIpv6: Boolean) {
+    cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6)
+  }
+
+  public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
+    cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6)
+  }
+
   public fun groupSet(vararg groupSet: String) {
     _groupSet.addAll(listOf(*groupSet))
   }

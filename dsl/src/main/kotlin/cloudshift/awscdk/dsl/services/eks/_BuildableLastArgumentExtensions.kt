@@ -22,12 +22,81 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.IUser
 import software.constructs.Construct
 
-public inline
-    fun CfnIdentityProviderConfig.setOidc(block: CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl()
+public inline fun ServiceAccount.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToPrincipalPolicyResult {
+  val builder = PolicyStatementDsl()
   builder.apply(block)
-  return setOidc(builder.build())
+  return addToPrincipalPolicy(builder.build())
+}
+
+public inline fun AwsAuth.addRoleMapping(role: IRole, block: AwsAuthMappingDsl.() -> Unit = {}) {
+  val builder = AwsAuthMappingDsl()
+  builder.apply(block)
+  return addRoleMapping(role, builder.build())
+}
+
+public inline fun AwsAuth.addUserMapping(user: IUser, block: AwsAuthMappingDsl.() -> Unit = {}) {
+  val builder = AwsAuthMappingDsl()
+  builder.apply(block)
+  return addUserMapping(user, builder.build())
+}
+
+public inline
+    fun CfnNodegroup.setLaunchTemplate(block: CfnNodegroupLaunchTemplateSpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnNodegroupLaunchTemplateSpecificationPropertyDsl()
+  builder.apply(block)
+  return setLaunchTemplate(builder.build())
+}
+
+public inline fun CfnNodegroup.setRemoteAccess(block: CfnNodegroupRemoteAccessPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnNodegroupRemoteAccessPropertyDsl()
+  builder.apply(block)
+  return setRemoteAccess(builder.build())
+}
+
+public inline
+    fun CfnNodegroup.setScalingConfig(block: CfnNodegroupScalingConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnNodegroupScalingConfigPropertyDsl()
+  builder.apply(block)
+  return setScalingConfig(builder.build())
+}
+
+public inline fun CfnNodegroup.setUpdateConfig(block: CfnNodegroupUpdateConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnNodegroupUpdateConfigPropertyDsl()
+  builder.apply(block)
+  return setUpdateConfig(builder.build())
+}
+
+public inline
+    fun CfnCluster.setResourcesVpcConfig(block: CfnClusterResourcesVpcConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnClusterResourcesVpcConfigPropertyDsl()
+  builder.apply(block)
+  return setResourcesVpcConfig(builder.build())
+}
+
+public inline
+    fun CfnCluster.setKubernetesNetworkConfig(block: CfnClusterKubernetesNetworkConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnClusterKubernetesNetworkConfigPropertyDsl()
+  builder.apply(block)
+  return setKubernetesNetworkConfig(builder.build())
+}
+
+public inline fun CfnCluster.setLogging(block: CfnClusterLoggingPropertyDsl.() -> Unit = {}) {
+  val builder = CfnClusterLoggingPropertyDsl()
+  builder.apply(block)
+  return setLogging(builder.build())
+}
+
+public inline fun CfnCluster.setOutpostConfig(block: CfnClusterOutpostConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnClusterOutpostConfigPropertyDsl()
+  builder.apply(block)
+  return setOutpostConfig(builder.build())
 }
 
 public inline fun ICluster.addCdk8sChart(
@@ -59,54 +128,6 @@ public inline fun ICluster.connectAutoScalingGroupCapacity(arg0: AutoScalingGrou
   val builder = AutoScalingGroupOptionsDsl()
   builder.apply(block)
   return connectAutoScalingGroupCapacity(arg0, builder.build())
-}
-
-public inline fun AwsAuth.addRoleMapping(role: IRole, block: AwsAuthMappingDsl.() -> Unit = {}) {
-  val builder = AwsAuthMappingDsl()
-  builder.apply(block)
-  return addRoleMapping(role, builder.build())
-}
-
-public inline fun AwsAuth.addUserMapping(user: IUser, block: AwsAuthMappingDsl.() -> Unit = {}) {
-  val builder = AwsAuthMappingDsl()
-  builder.apply(block)
-  return addUserMapping(user, builder.build())
-}
-
-public inline fun ServiceAccount.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
-}
-
-public inline
-    fun CfnCluster.setResourcesVpcConfig(block: CfnClusterResourcesVpcConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnClusterResourcesVpcConfigPropertyDsl()
-  builder.apply(block)
-  return setResourcesVpcConfig(builder.build())
-}
-
-public inline
-    fun CfnCluster.setKubernetesNetworkConfig(block: CfnClusterKubernetesNetworkConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnClusterKubernetesNetworkConfigPropertyDsl()
-  builder.apply(block)
-  return setKubernetesNetworkConfig(builder.build())
-}
-
-public inline fun CfnCluster.setLogging(block: CfnClusterLoggingPropertyDsl.() -> Unit = {}) {
-  val builder = CfnClusterLoggingPropertyDsl()
-  builder.apply(block)
-  return setLogging(builder.build())
-}
-
-public inline fun CfnCluster.setOutpostConfig(block: CfnClusterOutpostConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnClusterOutpostConfigPropertyDsl()
-  builder.apply(block)
-  return setOutpostConfig(builder.build())
 }
 
 public inline fun Cluster.addAutoScalingGroupCapacity(id: String,
@@ -176,30 +197,9 @@ public inline fun Cluster.getServiceLoadBalancerAddress(serviceName: String,
 }
 
 public inline
-    fun CfnNodegroup.setLaunchTemplate(block: CfnNodegroupLaunchTemplateSpecificationPropertyDsl.() -> Unit
+    fun CfnIdentityProviderConfig.setOidc(block: CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnNodegroupLaunchTemplateSpecificationPropertyDsl()
+  val builder = CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl()
   builder.apply(block)
-  return setLaunchTemplate(builder.build())
-}
-
-public inline fun CfnNodegroup.setRemoteAccess(block: CfnNodegroupRemoteAccessPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnNodegroupRemoteAccessPropertyDsl()
-  builder.apply(block)
-  return setRemoteAccess(builder.build())
-}
-
-public inline
-    fun CfnNodegroup.setScalingConfig(block: CfnNodegroupScalingConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnNodegroupScalingConfigPropertyDsl()
-  builder.apply(block)
-  return setScalingConfig(builder.build())
-}
-
-public inline fun CfnNodegroup.setUpdateConfig(block: CfnNodegroupUpdateConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnNodegroupUpdateConfigPropertyDsl()
-  builder.apply(block)
-  return setUpdateConfig(builder.build())
+  return setOidc(builder.build())
 }

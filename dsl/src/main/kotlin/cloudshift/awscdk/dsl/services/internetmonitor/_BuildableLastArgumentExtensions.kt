@@ -6,6 +6,14 @@ import kotlin.Unit
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 
 public inline
+    fun CfnMonitor.setHealthEventsConfig(block: CfnMonitorHealthEventsConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnMonitorHealthEventsConfigPropertyDsl()
+  builder.apply(block)
+  return setHealthEventsConfig(builder.build())
+}
+
+public inline
     fun CfnMonitor.setInternetMeasurementsLogDelivery(block: CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl()

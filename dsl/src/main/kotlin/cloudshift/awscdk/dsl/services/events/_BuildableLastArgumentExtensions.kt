@@ -29,6 +29,19 @@ public inline
   return setReplicationConfig(builder.build())
 }
 
+public inline fun Rule.addEventPattern(block: EventPatternDsl.() -> Unit = {}) {
+  val builder = EventPatternDsl()
+  builder.apply(block)
+  return addEventPattern(builder.build())
+}
+
+public inline fun IEventBus.archive(arg0: String, block: BaseArchivePropsDsl.() -> Unit = {}):
+    Archive {
+  val builder = BaseArchivePropsDsl()
+  builder.apply(block)
+  return archive(arg0, builder.build())
+}
+
 public inline fun EventBus.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -41,12 +54,6 @@ public inline fun EventBus.archive(id: String, block: BaseArchivePropsDsl.() -> 
   val builder = BaseArchivePropsDsl()
   builder.apply(block)
   return archive(id, builder.build())
-}
-
-public inline fun Rule.addEventPattern(block: EventPatternDsl.() -> Unit = {}) {
-  val builder = EventPatternDsl()
-  builder.apply(block)
-  return addEventPattern(builder.build())
 }
 
 public inline
@@ -63,11 +70,4 @@ public inline
   val builder = CfnConnectionAuthParametersPropertyDsl()
   builder.apply(block)
   return setAuthParameters(builder.build())
-}
-
-public inline fun IEventBus.archive(arg0: String, block: BaseArchivePropsDsl.() -> Unit = {}):
-    Archive {
-  val builder = BaseArchivePropsDsl()
-  builder.apply(block)
-  return archive(arg0, builder.build())
 }

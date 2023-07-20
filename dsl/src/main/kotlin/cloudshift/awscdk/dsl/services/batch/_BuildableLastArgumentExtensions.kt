@@ -8,30 +8,6 @@ import software.amazon.awscdk.services.batch.CfnJobDefinition
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 
 public inline
-    fun CfnComputeEnvironment.setComputeResources(block: CfnComputeEnvironmentComputeResourcesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnComputeEnvironmentComputeResourcesPropertyDsl()
-  builder.apply(block)
-  return setComputeResources(builder.build())
-}
-
-public inline
-    fun CfnComputeEnvironment.setEksConfiguration(block: CfnComputeEnvironmentEksConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnComputeEnvironmentEksConfigurationPropertyDsl()
-  builder.apply(block)
-  return setEksConfiguration(builder.build())
-}
-
-public inline
-    fun CfnComputeEnvironment.setUpdatePolicy(block: CfnComputeEnvironmentUpdatePolicyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnComputeEnvironmentUpdatePolicyPropertyDsl()
-  builder.apply(block)
-  return setUpdatePolicy(builder.build())
-}
-
-public inline
     fun CfnJobDefinition.setContainerProperties(block: CfnJobDefinitionContainerPropertiesPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnJobDefinitionContainerPropertiesPropertyDsl()
@@ -76,4 +52,28 @@ public inline
   val builder = CfnSchedulingPolicyFairsharePolicyPropertyDsl()
   builder.apply(block)
   return setFairsharePolicy(builder.build())
+}
+
+public inline
+    fun CfnComputeEnvironment.setComputeResources(block: CfnComputeEnvironmentComputeResourcesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnComputeEnvironmentComputeResourcesPropertyDsl()
+  builder.apply(block)
+  return setComputeResources(builder.build())
+}
+
+public inline
+    fun CfnComputeEnvironment.setEksConfiguration(block: CfnComputeEnvironmentEksConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnComputeEnvironmentEksConfigurationPropertyDsl()
+  builder.apply(block)
+  return setEksConfiguration(builder.build())
+}
+
+public inline
+    fun CfnComputeEnvironment.setUpdatePolicy(block: CfnComputeEnvironmentUpdatePolicyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnComputeEnvironmentUpdatePolicyPropertyDsl()
+  builder.apply(block)
+  return setUpdatePolicy(builder.build())
 }

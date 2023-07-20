@@ -12,36 +12,27 @@ import software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment
 import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment
 import software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
 
-public inline fun CfnSite.setLocation(block: CfnSiteLocationPropertyDsl.() -> Unit = {}) {
-  val builder = CfnSiteLocationPropertyDsl()
+public inline
+    fun CfnVpcAttachment.setOptions(block: CfnVpcAttachmentVpcOptionsPropertyDsl.() -> Unit = {}) {
+  val builder = CfnVpcAttachmentVpcOptionsPropertyDsl()
   builder.apply(block)
-  return setLocation(builder.build())
+  return setOptions(builder.build())
 }
 
 public inline
-    fun CfnSiteToSiteVpnAttachment.setProposedSegmentChange(block: CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl.() -> Unit
+    fun CfnVpcAttachment.setProposedSegmentChange(block: CfnVpcAttachmentProposedSegmentChangePropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl()
+  val builder = CfnVpcAttachmentProposedSegmentChangePropertyDsl()
   builder.apply(block)
   return setProposedSegmentChange(builder.build())
 }
 
-public inline fun CfnDevice.setAwsLocation(block: CfnDeviceAWSLocationPropertyDsl.() -> Unit = {}) {
-  val builder = CfnDeviceAWSLocationPropertyDsl()
+public inline
+    fun CfnTransitGatewayRouteTableAttachment.setProposedSegmentChange(block: CfnTransitGatewayRouteTableAttachmentProposedSegmentChangePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnTransitGatewayRouteTableAttachmentProposedSegmentChangePropertyDsl()
   builder.apply(block)
-  return setAwsLocation(builder.build())
-}
-
-public inline fun CfnDevice.setLocation(block: CfnDeviceLocationPropertyDsl.() -> Unit = {}) {
-  val builder = CfnDeviceLocationPropertyDsl()
-  builder.apply(block)
-  return setLocation(builder.build())
-}
-
-public inline fun CfnLink.setBandwidth(block: CfnLinkBandwidthPropertyDsl.() -> Unit = {}) {
-  val builder = CfnLinkBandwidthPropertyDsl()
-  builder.apply(block)
-  return setBandwidth(builder.build())
+  return setProposedSegmentChange(builder.build())
 }
 
 public inline fun CfnConnectPeer.setBgpOptions(block: CfnConnectPeerBgpOptionsPropertyDsl.() -> Unit
@@ -52,9 +43,9 @@ public inline fun CfnConnectPeer.setBgpOptions(block: CfnConnectPeerBgpOptionsPr
 }
 
 public inline
-    fun CfnTransitGatewayRouteTableAttachment.setProposedSegmentChange(block: CfnTransitGatewayRouteTableAttachmentProposedSegmentChangePropertyDsl.() -> Unit
+    fun CfnSiteToSiteVpnAttachment.setProposedSegmentChange(block: CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnTransitGatewayRouteTableAttachmentProposedSegmentChangePropertyDsl()
+  val builder = CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl()
   builder.apply(block)
   return setProposedSegmentChange(builder.build())
 }
@@ -75,17 +66,26 @@ public inline
   return setProposedSegmentChange(builder.build())
 }
 
-public inline
-    fun CfnVpcAttachment.setOptions(block: CfnVpcAttachmentVpcOptionsPropertyDsl.() -> Unit = {}) {
-  val builder = CfnVpcAttachmentVpcOptionsPropertyDsl()
+public inline fun CfnLink.setBandwidth(block: CfnLinkBandwidthPropertyDsl.() -> Unit = {}) {
+  val builder = CfnLinkBandwidthPropertyDsl()
   builder.apply(block)
-  return setOptions(builder.build())
+  return setBandwidth(builder.build())
 }
 
-public inline
-    fun CfnVpcAttachment.setProposedSegmentChange(block: CfnVpcAttachmentProposedSegmentChangePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnVpcAttachmentProposedSegmentChangePropertyDsl()
+public inline fun CfnSite.setLocation(block: CfnSiteLocationPropertyDsl.() -> Unit = {}) {
+  val builder = CfnSiteLocationPropertyDsl()
   builder.apply(block)
-  return setProposedSegmentChange(builder.build())
+  return setLocation(builder.build())
+}
+
+public inline fun CfnDevice.setAwsLocation(block: CfnDeviceAWSLocationPropertyDsl.() -> Unit = {}) {
+  val builder = CfnDeviceAWSLocationPropertyDsl()
+  builder.apply(block)
+  return setAwsLocation(builder.build())
+}
+
+public inline fun CfnDevice.setLocation(block: CfnDeviceLocationPropertyDsl.() -> Unit = {}) {
+  val builder = CfnDeviceLocationPropertyDsl()
+  builder.apply(block)
+  return setLocation(builder.build())
 }

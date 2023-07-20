@@ -84,6 +84,8 @@ import software.amazon.awscdk.CfnTypeActivation
 import software.amazon.awscdk.CfnTypeActivationProps
 import software.amazon.awscdk.CfnUpdatePolicy
 import software.amazon.awscdk.CfnWaitCondition
+import software.amazon.awscdk.CfnWaitConditionHandle
+import software.amazon.awscdk.CfnWaitConditionHandleProps
 import software.amazon.awscdk.CfnWaitConditionProps
 import software.amazon.awscdk.CliCredentialsStackSynthesizer
 import software.amazon.awscdk.CliCredentialsStackSynthesizerProps
@@ -838,6 +840,23 @@ public object awscdk {
     block: CfnWaitConditionDsl.() -> Unit = {},
   ): CfnWaitCondition {
     val builder = CfnWaitConditionDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun cfnWaitConditionHandle(
+    scope: Construct,
+    id: String,
+    block: CfnWaitConditionHandleDsl.() -> Unit = {},
+  ): CfnWaitConditionHandle {
+    val builder = CfnWaitConditionHandleDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun cfnWaitConditionHandleProps(block: CfnWaitConditionHandlePropsDsl.() -> Unit =
+      {}): CfnWaitConditionHandleProps {
+    val builder = CfnWaitConditionHandlePropsDsl()
     builder.apply(block)
     return builder.build()
   }

@@ -9,25 +9,19 @@ import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 
 public inline
-    fun CfnChannel.setEgressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnChannelLogConfigurationPropertyDsl()
+    fun CfnPackagingGroup.setAuthorization(block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingGroupAuthorizationPropertyDsl()
   builder.apply(block)
-  return setEgressAccessLogs(builder.build())
-}
-
-public inline fun CfnChannel.setHlsIngest(block: CfnChannelHlsIngestPropertyDsl.() -> Unit = {}) {
-  val builder = CfnChannelHlsIngestPropertyDsl()
-  builder.apply(block)
-  return setHlsIngest(builder.build())
+  return setAuthorization(builder.build())
 }
 
 public inline
-    fun CfnChannel.setIngressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnChannelLogConfigurationPropertyDsl()
+    fun CfnPackagingGroup.setEgressAccessLogs(block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
   builder.apply(block)
-  return setIngressAccessLogs(builder.build())
+  return setEgressAccessLogs(builder.build())
 }
 
 public inline
@@ -63,19 +57,25 @@ public inline
 }
 
 public inline
-    fun CfnPackagingGroup.setAuthorization(block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingGroupAuthorizationPropertyDsl()
+    fun CfnChannel.setEgressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnChannelLogConfigurationPropertyDsl()
   builder.apply(block)
-  return setAuthorization(builder.build())
+  return setEgressAccessLogs(builder.build())
+}
+
+public inline fun CfnChannel.setHlsIngest(block: CfnChannelHlsIngestPropertyDsl.() -> Unit = {}) {
+  val builder = CfnChannelHlsIngestPropertyDsl()
+  builder.apply(block)
+  return setHlsIngest(builder.build())
 }
 
 public inline
-    fun CfnPackagingGroup.setEgressAccessLogs(block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnPackagingGroupLogConfigurationPropertyDsl()
+    fun CfnChannel.setIngressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnChannelLogConfigurationPropertyDsl()
   builder.apply(block)
-  return setEgressAccessLogs(builder.build())
+  return setIngressAccessLogs(builder.build())
 }
 
 public inline

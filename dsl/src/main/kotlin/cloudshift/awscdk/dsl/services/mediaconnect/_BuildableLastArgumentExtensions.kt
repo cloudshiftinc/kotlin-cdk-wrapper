@@ -11,21 +11,6 @@ import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 
-public inline fun CfnFlowOutput.setEncryption(block: CfnFlowOutputEncryptionPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnFlowOutputEncryptionPropertyDsl()
-  builder.apply(block)
-  return setEncryption(builder.build())
-}
-
-public inline
-    fun CfnFlowOutput.setVpcInterfaceAttachment(block: CfnFlowOutputVpcInterfaceAttachmentPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFlowOutputVpcInterfaceAttachmentPropertyDsl()
-  builder.apply(block)
-  return setVpcInterfaceAttachment(builder.build())
-}
-
 public inline
     fun CfnBridgeSource.setFlowSource(block: CfnBridgeSourceBridgeFlowSourcePropertyDsl.() -> Unit =
     {}) {
@@ -53,21 +38,6 @@ public inline fun CfnFlow.setSourceFailoverConfig(block: CfnFlowFailoverConfigPr
   val builder = CfnFlowFailoverConfigPropertyDsl()
   builder.apply(block)
   return setSourceFailoverConfig(builder.build())
-}
-
-public inline fun CfnFlowSource.setDecryption(block: CfnFlowSourceEncryptionPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnFlowSourceEncryptionPropertyDsl()
-  builder.apply(block)
-  return setDecryption(builder.build())
-}
-
-public inline
-    fun CfnFlowSource.setGatewayBridgeSource(block: CfnFlowSourceGatewayBridgeSourcePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFlowSourceGatewayBridgeSourcePropertyDsl()
-  builder.apply(block)
-  return setGatewayBridgeSource(builder.build())
 }
 
 public inline
@@ -100,6 +70,36 @@ public inline
   val builder = CfnBridgeOutputBridgeNetworkOutputPropertyDsl()
   builder.apply(block)
   return setNetworkOutput(builder.build())
+}
+
+public inline fun CfnFlowOutput.setEncryption(block: CfnFlowOutputEncryptionPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnFlowOutputEncryptionPropertyDsl()
+  builder.apply(block)
+  return setEncryption(builder.build())
+}
+
+public inline
+    fun CfnFlowOutput.setVpcInterfaceAttachment(block: CfnFlowOutputVpcInterfaceAttachmentPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFlowOutputVpcInterfaceAttachmentPropertyDsl()
+  builder.apply(block)
+  return setVpcInterfaceAttachment(builder.build())
+}
+
+public inline fun CfnFlowSource.setDecryption(block: CfnFlowSourceEncryptionPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnFlowSourceEncryptionPropertyDsl()
+  builder.apply(block)
+  return setDecryption(builder.build())
+}
+
+public inline
+    fun CfnFlowSource.setGatewayBridgeSource(block: CfnFlowSourceGatewayBridgeSourcePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFlowSourceGatewayBridgeSourcePropertyDsl()
+  builder.apply(block)
+  return setGatewayBridgeSource(builder.build())
 }
 
 public inline

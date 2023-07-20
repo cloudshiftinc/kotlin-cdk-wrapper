@@ -112,6 +112,14 @@ public object rekognition {
     return builder.build()
   }
 
+  public inline
+      fun cfnStreamProcessorPointProperty(block: CfnStreamProcessorPointPropertyDsl.() -> Unit =
+      {}): CfnStreamProcessor.PointProperty {
+    val builder = CfnStreamProcessorPointPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun cfnStreamProcessorProps(block: CfnStreamProcessorPropsDsl.() -> Unit = {}):
       CfnStreamProcessorProps {
     val builder = CfnStreamProcessorPropsDsl()

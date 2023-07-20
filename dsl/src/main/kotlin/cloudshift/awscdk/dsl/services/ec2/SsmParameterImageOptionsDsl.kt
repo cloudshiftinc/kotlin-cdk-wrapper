@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
+import kotlin.String
 import software.amazon.awscdk.services.ec2.OperatingSystemType
 import software.amazon.awscdk.services.ec2.SsmParameterImageOptions
 import software.amazon.awscdk.services.ec2.UserData
@@ -18,6 +19,10 @@ public class SsmParameterImageOptionsDsl {
 
   public fun os(os: OperatingSystemType) {
     cdkBuilder.os(os)
+  }
+
+  public fun parameterVersion(parameterVersion: String) {
+    cdkBuilder.parameterVersion(parameterVersion)
   }
 
   public fun userData(userData: UserData) {

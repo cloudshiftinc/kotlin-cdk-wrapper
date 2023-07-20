@@ -57,19 +57,6 @@ public inline
   return setReplicationConfiguration(builder.build())
 }
 
-public inline fun Repository.addLifecycleRule(block: LifecycleRuleDsl.() -> Unit = {}) {
-  val builder = LifecycleRuleDsl()
-  builder.apply(block)
-  return addLifecycleRule(builder.build())
-}
-
-public inline fun Repository.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
-}
-
 public inline fun RepositoryBase.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -103,6 +90,19 @@ public inline fun RepositoryBase.onImageScanCompleted(id: String,
   val builder = OnImageScanCompletedOptionsDsl()
   builder.apply(block)
   return onImageScanCompleted(id, builder.build())
+}
+
+public inline fun Repository.addLifecycleRule(block: LifecycleRuleDsl.() -> Unit = {}) {
+  val builder = LifecycleRuleDsl()
+  builder.apply(block)
+  return addLifecycleRule(builder.build())
+}
+
+public inline fun Repository.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToResourcePolicy(builder.build())
 }
 
 public inline

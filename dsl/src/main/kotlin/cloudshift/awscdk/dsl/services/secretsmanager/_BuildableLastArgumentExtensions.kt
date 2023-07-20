@@ -41,6 +41,14 @@ public inline fun SecretTargetAttachment.addToResourcePolicy(block: PolicyStatem
   return addToResourcePolicy(builder.build())
 }
 
+public inline
+    fun CfnSecret.setGenerateSecretString(block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSecretGenerateSecretStringPropertyDsl()
+  builder.apply(block)
+  return setGenerateSecretString(builder.build())
+}
+
 public inline fun Secret.addRotationSchedule(id: String,
     block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
   val builder = RotationScheduleOptionsDsl()
@@ -53,14 +61,6 @@ public inline fun Secret.addToResourcePolicy(block: PolicyStatementDsl.() -> Uni
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToResourcePolicy(builder.build())
-}
-
-public inline
-    fun CfnSecret.setGenerateSecretString(block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSecretGenerateSecretStringPropertyDsl()
-  builder.apply(block)
-  return setGenerateSecretString(builder.build())
 }
 
 public inline

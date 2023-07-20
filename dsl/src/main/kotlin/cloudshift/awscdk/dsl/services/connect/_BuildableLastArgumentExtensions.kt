@@ -11,29 +11,6 @@ import software.amazon.awscdk.services.connect.CfnRule
 import software.amazon.awscdk.services.connect.CfnUser
 
 public inline
-    fun CfnQuickConnect.setQuickConnectConfig(block: CfnQuickConnectQuickConnectConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnQuickConnectQuickConnectConfigPropertyDsl()
-  builder.apply(block)
-  return setQuickConnectConfig(builder.build())
-}
-
-public inline fun CfnInstance.setAttributes(block: CfnInstanceAttributesPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnInstanceAttributesPropertyDsl()
-  builder.apply(block)
-  return setAttributes(builder.build())
-}
-
-public inline
-    fun CfnEvaluationForm.setScoringStrategy(block: CfnEvaluationFormScoringStrategyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnEvaluationFormScoringStrategyPropertyDsl()
-  builder.apply(block)
-  return setScoringStrategy(builder.build())
-}
-
-public inline
     fun CfnInstanceStorageConfig.setKinesisFirehoseConfig(block: CfnInstanceStorageConfigKinesisFirehoseConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnInstanceStorageConfigKinesisFirehoseConfigPropertyDsl()
@@ -78,6 +55,22 @@ public inline fun CfnUser.setIdentityInfo(block: CfnUserUserIdentityInfoProperty
   return setIdentityInfo(builder.build())
 }
 
+public inline
+    fun CfnEvaluationForm.setScoringStrategy(block: CfnEvaluationFormScoringStrategyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnEvaluationFormScoringStrategyPropertyDsl()
+  builder.apply(block)
+  return setScoringStrategy(builder.build())
+}
+
+public inline
+    fun CfnQuickConnect.setQuickConnectConfig(block: CfnQuickConnectQuickConnectConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnQuickConnectQuickConnectConfigPropertyDsl()
+  builder.apply(block)
+  return setQuickConnectConfig(builder.build())
+}
+
 public inline fun CfnRule.setActions(block: CfnRuleActionsPropertyDsl.() -> Unit = {}) {
   val builder = CfnRuleActionsPropertyDsl()
   builder.apply(block)
@@ -90,4 +83,11 @@ public inline
   val builder = CfnRuleRuleTriggerEventSourcePropertyDsl()
   builder.apply(block)
   return setTriggerEventSource(builder.build())
+}
+
+public inline fun CfnInstance.setAttributes(block: CfnInstanceAttributesPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnInstanceAttributesPropertyDsl()
+  builder.apply(block)
+  return setAttributes(builder.build())
 }

@@ -41,6 +41,14 @@ public inline
 }
 
 public inline
+    fun CfnAssociation.setOutputLocation(block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
+  builder.apply(block)
+  return setOutputLocation(builder.build())
+}
+
+public inline
     fun CfnResourceDataSync.setS3Destination(block: CfnResourceDataSyncS3DestinationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnResourceDataSyncS3DestinationPropertyDsl()
@@ -54,12 +62,4 @@ public inline
   val builder = CfnResourceDataSyncSyncSourcePropertyDsl()
   builder.apply(block)
   return setSyncSource(builder.build())
-}
-
-public inline
-    fun CfnAssociation.setOutputLocation(block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAssociationInstanceAssociationOutputLocationPropertyDsl()
-  builder.apply(block)
-  return setOutputLocation(builder.build())
 }

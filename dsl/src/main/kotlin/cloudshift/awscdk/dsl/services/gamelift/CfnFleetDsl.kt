@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.gamelift
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
@@ -22,6 +23,8 @@ public class CfnFleetDsl(
   private val _ec2InboundPermissions: MutableList<Any> = mutableListOf()
 
   private val _locations: MutableList<Any> = mutableListOf()
+
+  private val _logPaths: MutableList<String> = mutableListOf()
 
   private val _metricGroups: MutableList<String> = mutableListOf()
 
@@ -94,6 +97,16 @@ public class CfnFleetDsl(
     cdkBuilder.locations(locations)
   }
 
+  @Deprecated(message = "deprecated in CDK")
+  public fun logPaths(vararg logPaths: String) {
+    _logPaths.addAll(listOf(*logPaths))
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun logPaths(logPaths: Collection<String>) {
+    _logPaths.addAll(logPaths)
+  }
+
   public fun maxSize(maxSize: Number) {
     cdkBuilder.maxSize(maxSize)
   }
@@ -147,9 +160,20 @@ public class CfnFleetDsl(
     cdkBuilder.scriptId(scriptId)
   }
 
+  @Deprecated(message = "deprecated in CDK")
+  public fun serverLaunchParameters(serverLaunchParameters: String) {
+    cdkBuilder.serverLaunchParameters(serverLaunchParameters)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun serverLaunchPath(serverLaunchPath: String) {
+    cdkBuilder.serverLaunchPath(serverLaunchPath)
+  }
+
   public fun build(): CfnFleet {
     if(_ec2InboundPermissions.isNotEmpty()) cdkBuilder.ec2InboundPermissions(_ec2InboundPermissions)
     if(_locations.isNotEmpty()) cdkBuilder.locations(_locations)
+    if(_logPaths.isNotEmpty()) cdkBuilder.logPaths(_logPaths)
     if(_metricGroups.isNotEmpty()) cdkBuilder.metricGroups(_metricGroups)
     return cdkBuilder.build()
   }

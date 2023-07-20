@@ -41,6 +41,10 @@ public class CfnFunctionDeploymentPreferencePropertyDsl {
     cdkBuilder.hooks(hooks)
   }
 
+  public fun role(role: String) {
+    cdkBuilder.role(role)
+  }
+
   public fun type(type: String) {
     cdkBuilder.type(type)
   }

@@ -14,48 +14,9 @@ import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 
 public inline
-    fun CfnResourceDefinition.setInitialVersion(block: CfnResourceDefinitionResourceDefinitionVersionPropertyDsl.() -> Unit
+    fun CfnSubscriptionDefinition.setInitialVersion(block: CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnResourceDefinitionResourceDefinitionVersionPropertyDsl()
-  builder.apply(block)
-  return setInitialVersion(builder.build())
-}
-
-public inline
-    fun CfnDeviceDefinition.setInitialVersion(block: CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl()
-  builder.apply(block)
-  return setInitialVersion(builder.build())
-}
-
-public inline
-    fun CfnConnectorDefinition.setInitialVersion(block: CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl()
-  builder.apply(block)
-  return setInitialVersion(builder.build())
-}
-
-public inline
-    fun CfnFunctionDefinition.setInitialVersion(block: CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl()
-  builder.apply(block)
-  return setInitialVersion(builder.build())
-}
-
-public inline fun CfnGroup.setInitialVersion(block: CfnGroupGroupVersionPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnGroupGroupVersionPropertyDsl()
-  builder.apply(block)
-  return setInitialVersion(builder.build())
-}
-
-public inline
-    fun CfnLoggerDefinition.setInitialVersion(block: CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl()
+  val builder = CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl()
   builder.apply(block)
   return setInitialVersion(builder.build())
 }
@@ -69,9 +30,32 @@ public inline
 }
 
 public inline
-    fun CfnSubscriptionDefinition.setInitialVersion(block: CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl.() -> Unit
+    fun CfnFunctionDefinition.setInitialVersion(block: CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl()
+  val builder = CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl()
+  builder.apply(block)
+  return setInitialVersion(builder.build())
+}
+
+public inline
+    fun CfnConnectorDefinition.setInitialVersion(block: CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl()
+  builder.apply(block)
+  return setInitialVersion(builder.build())
+}
+
+public inline fun CfnGroup.setInitialVersion(block: CfnGroupGroupVersionPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnGroupGroupVersionPropertyDsl()
+  builder.apply(block)
+  return setInitialVersion(builder.build())
+}
+
+public inline
+    fun CfnDeviceDefinition.setInitialVersion(block: CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl()
   builder.apply(block)
   return setInitialVersion(builder.build())
 }
@@ -82,4 +66,20 @@ public inline
   val builder = CfnFunctionDefinitionVersionDefaultConfigPropertyDsl()
   builder.apply(block)
   return setDefaultConfig(builder.build())
+}
+
+public inline
+    fun CfnResourceDefinition.setInitialVersion(block: CfnResourceDefinitionResourceDefinitionVersionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnResourceDefinitionResourceDefinitionVersionPropertyDsl()
+  builder.apply(block)
+  return setInitialVersion(builder.build())
+}
+
+public inline
+    fun CfnLoggerDefinition.setInitialVersion(block: CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl()
+  builder.apply(block)
+  return setInitialVersion(builder.build())
 }

@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.athena
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -55,6 +56,17 @@ public class CfnWorkGroupPropsDsl {
   public
       fun workGroupConfiguration(workGroupConfiguration: CfnWorkGroup.WorkGroupConfigurationProperty) {
     cdkBuilder.workGroupConfiguration(workGroupConfiguration)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: IResolvable) {
+    cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public
+      fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: CfnWorkGroup.WorkGroupConfigurationUpdatesProperty) {
+    cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates)
   }
 
   public fun build(): CfnWorkGroupProps {

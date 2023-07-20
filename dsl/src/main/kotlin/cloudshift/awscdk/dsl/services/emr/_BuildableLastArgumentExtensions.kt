@@ -41,6 +41,21 @@ public inline
 }
 
 public inline
+    fun CfnInstanceFleetConfig.setLaunchSpecifications(block: CfnInstanceFleetConfigInstanceFleetProvisioningSpecificationsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnInstanceFleetConfigInstanceFleetProvisioningSpecificationsPropertyDsl()
+  builder.apply(block)
+  return setLaunchSpecifications(builder.build())
+}
+
+public inline fun CfnStep.setHadoopJarStep(block: CfnStepHadoopJarStepConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnStepHadoopJarStepConfigPropertyDsl()
+  builder.apply(block)
+  return setHadoopJarStep(builder.build())
+}
+
+public inline
     fun CfnInstanceGroupConfig.setAutoScalingPolicy(block: CfnInstanceGroupConfigAutoScalingPolicyPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnInstanceGroupConfigAutoScalingPolicyPropertyDsl()
@@ -54,19 +69,4 @@ public inline
   val builder = CfnInstanceGroupConfigEbsConfigurationPropertyDsl()
   builder.apply(block)
   return setEbsConfiguration(builder.build())
-}
-
-public inline
-    fun CfnInstanceFleetConfig.setLaunchSpecifications(block: CfnInstanceFleetConfigInstanceFleetProvisioningSpecificationsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnInstanceFleetConfigInstanceFleetProvisioningSpecificationsPropertyDsl()
-  builder.apply(block)
-  return setLaunchSpecifications(builder.build())
-}
-
-public inline fun CfnStep.setHadoopJarStep(block: CfnStepHadoopJarStepConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnStepHadoopJarStepConfigPropertyDsl()
-  builder.apply(block)
-  return setHadoopJarStep(builder.build())
 }

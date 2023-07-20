@@ -21,6 +21,14 @@ public class CfnFlowCustomConnectorSourcePropertiesPropertyDsl {
     cdkBuilder.customProperties(customProperties)
   }
 
+  public fun dataTransferApi(dataTransferApi: IResolvable) {
+    cdkBuilder.dataTransferApi(dataTransferApi)
+  }
+
+  public fun dataTransferApi(dataTransferApi: CfnFlow.DataTransferApiProperty) {
+    cdkBuilder.dataTransferApi(dataTransferApi)
+  }
+
   public fun entityName(entityName: String) {
     cdkBuilder.entityName(entityName)
   }

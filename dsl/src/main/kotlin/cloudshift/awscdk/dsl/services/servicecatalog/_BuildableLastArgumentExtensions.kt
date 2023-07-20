@@ -12,6 +12,14 @@ import software.amazon.awscdk.services.servicecatalog.IProduct
 import software.amazon.awscdk.services.servicecatalog.Portfolio
 import software.amazon.awscdk.services.sns.ITopic
 
+public inline
+    fun CfnCloudFormationProvisionedProduct.setProvisioningPreferences(block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl()
+  builder.apply(block)
+  return setProvisioningPreferences(builder.build())
+}
+
 public inline fun Portfolio.constrainCloudFormationParameters(product: IProduct,
     block: CloudFormationRuleConstraintOptionsDsl.() -> Unit = {}) {
   val builder = CloudFormationRuleConstraintOptionsDsl()
@@ -154,12 +162,4 @@ public inline fun IPortfolio.shareWithAccount(arg0: String,
   val builder = PortfolioShareOptionsDsl()
   builder.apply(block)
   return shareWithAccount(arg0, builder.build())
-}
-
-public inline
-    fun CfnCloudFormationProvisionedProduct.setProvisioningPreferences(block: CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl()
-  builder.apply(block)
-  return setProvisioningPreferences(builder.build())
 }

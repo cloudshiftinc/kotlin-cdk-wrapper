@@ -38,21 +38,27 @@ import software.amazon.awscdk.services.rds.ServerlessCluster
 import software.amazon.awscdk.services.secretsmanager.SecretRotation
 import software.constructs.Construct
 
-public inline fun IInstanceEngine.bindToInstance(arg0: Construct,
-    block: InstanceEngineBindOptionsDsl.() -> Unit = {}): InstanceEngineConfig {
-  val builder = InstanceEngineBindOptionsDsl()
+public inline
+    fun CfnDBInstance.setCertificateDetails(block: CfnDBInstanceCertificateDetailsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDBInstanceCertificateDetailsPropertyDsl()
   builder.apply(block)
-  return bindToInstance(arg0, builder.build())
+  return setCertificateDetails(builder.build())
 }
 
-public inline fun IClusterInstance.bind(
-  arg0: Construct,
-  arg1: IDatabaseCluster,
-  block: ClusterInstanceBindOptionsDsl.() -> Unit = {},
-): IAuroraClusterInstance {
-  val builder = ClusterInstanceBindOptionsDsl()
+public inline fun CfnDBInstance.setEndpoint(block: CfnDBInstanceEndpointPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnDBInstanceEndpointPropertyDsl()
   builder.apply(block)
-  return bind(arg0, arg1, builder.build())
+  return setEndpoint(builder.build())
+}
+
+public inline
+    fun CfnDBInstance.setMasterUserSecret(block: CfnDBInstanceMasterUserSecretPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDBInstanceMasterUserSecretPropertyDsl()
+  builder.apply(block)
+  return setMasterUserSecret(builder.build())
 }
 
 public inline fun DatabaseClusterBase.addProxy(id: String, block: DatabaseProxyOptionsDsl.() -> Unit
@@ -170,259 +176,14 @@ public inline fun DatabaseClusterBase.metricVolumeWriteIOPs(block: MetricOptions
   return metricVolumeWriteIOPs(builder.build())
 }
 
-public inline fun ParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit
-    = {}): ParameterGroupClusterConfig {
-  val builder = ParameterGroupClusterBindOptionsDsl()
-  builder.apply(block)
-  return bindToCluster(builder.build())
-}
-
-public inline
-    fun ParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
-    ParameterGroupInstanceConfig {
-  val builder = ParameterGroupInstanceBindOptionsDsl()
-  builder.apply(block)
-  return bindToInstance(builder.build())
-}
-
-public inline fun DatabaseCluster.addRotationMultiUser(id: String,
-    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
-  val builder = RotationMultiUserOptionsDsl()
-  builder.apply(block)
-  return addRotationMultiUser(id, builder.build())
-}
-
-public inline
-    fun DatabaseCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
-    SecretRotation {
-  val builder = RotationSingleUserOptionsDsl()
-  builder.apply(block)
-  return addRotationSingleUser(builder.build())
-}
-
-public inline fun DatabaseCluster.metricACUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricACUUtilization(builder.build())
-}
-
-public inline
-    fun DatabaseCluster.metricServerlessDatabaseCapacity(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricServerlessDatabaseCapacity(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.addProxy(id: String,
-    block: DatabaseProxyOptionsDsl.() -> Unit = {}): DatabaseProxy {
-  val builder = DatabaseProxyOptionsDsl()
-  builder.apply(block)
-  return addProxy(id, builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricCPUUtilization(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit
-    = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricDatabaseConnections(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFreeableMemory(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit =
-    {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFreeStorageSpace(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricReadIOPS(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricReadIOPS(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.metricWriteIOPS(block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricWriteIOPS(builder.build())
-}
-
-public inline fun DatabaseInstanceBase.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit =
-    {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onEvent(id, builder.build())
-}
-
-public inline fun IClusterEngine.bindToCluster(arg0: Construct,
-    block: ClusterEngineBindOptionsDsl.() -> Unit = {}): ClusterEngineConfig {
-  val builder = ClusterEngineBindOptionsDsl()
-  builder.apply(block)
-  return bindToCluster(arg0, builder.build())
-}
-
-public inline fun DatabaseInstanceFromSnapshot.addRotationMultiUser(id: String,
-    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
-  val builder = RotationMultiUserOptionsDsl()
-  builder.apply(block)
-  return addRotationMultiUser(id, builder.build())
-}
-
-public inline
-    fun DatabaseInstanceFromSnapshot.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit
-    = {}): SecretRotation {
-  val builder = RotationSingleUserOptionsDsl()
-  builder.apply(block)
-  return addRotationSingleUser(builder.build())
-}
-
-public inline fun OptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
-    Boolean {
-  val builder = OptionConfigurationDsl()
-  builder.apply(block)
-  return addConfiguration(builder.build())
-}
-
-public inline fun IOptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
-    Boolean {
-  val builder = OptionConfigurationDsl()
-  builder.apply(block)
-  return addConfiguration(builder.build())
-}
-
-public inline
-    fun CfnDBCluster.setMasterUserSecret(block: CfnDBClusterMasterUserSecretPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnDBClusterMasterUserSecretPropertyDsl()
-  builder.apply(block)
-  return setMasterUserSecret(builder.build())
-}
-
-public inline
-    fun CfnDBCluster.setScalingConfiguration(block: CfnDBClusterScalingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDBClusterScalingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setScalingConfiguration(builder.build())
-}
-
-public inline
-    fun CfnDBCluster.setServerlessV2ScalingConfiguration(block: CfnDBClusterServerlessV2ScalingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDBClusterServerlessV2ScalingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setServerlessV2ScalingConfiguration(builder.build())
-}
-
-public inline fun DatabaseInstance.addRotationMultiUser(id: String,
-    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
-  val builder = RotationMultiUserOptionsDsl()
-  builder.apply(block)
-  return addRotationMultiUser(id, builder.build())
-}
-
-public inline
-    fun DatabaseInstance.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
-    SecretRotation {
-  val builder = RotationSingleUserOptionsDsl()
-  builder.apply(block)
-  return addRotationSingleUser(builder.build())
-}
-
-public inline
-    fun CfnDBInstance.setCertificateDetails(block: CfnDBInstanceCertificateDetailsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDBInstanceCertificateDetailsPropertyDsl()
-  builder.apply(block)
-  return setCertificateDetails(builder.build())
-}
-
-public inline fun CfnDBInstance.setEndpoint(block: CfnDBInstanceEndpointPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnDBInstanceEndpointPropertyDsl()
-  builder.apply(block)
-  return setEndpoint(builder.build())
-}
-
-public inline
-    fun CfnDBInstance.setMasterUserSecret(block: CfnDBInstanceMasterUserSecretPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDBInstanceMasterUserSecretPropertyDsl()
-  builder.apply(block)
-  return setMasterUserSecret(builder.build())
-}
-
-public inline fun ClusterInstance.bind(
-  scope: Construct,
-  cluster: IDatabaseCluster,
+public inline fun IClusterInstance.bind(
+  arg0: Construct,
+  arg1: IDatabaseCluster,
   block: ClusterInstanceBindOptionsDsl.() -> Unit = {},
 ): IAuroraClusterInstance {
   val builder = ClusterInstanceBindOptionsDsl()
   builder.apply(block)
-  return bind(scope, cluster, builder.build())
-}
-
-public inline
-    fun CfnDBProxyTargetGroup.setConnectionPoolConfigurationInfo(block: CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl()
-  builder.apply(block)
-  return setConnectionPoolConfigurationInfo(builder.build())
-}
-
-public inline
-    fun IParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit = {}):
-    ParameterGroupClusterConfig {
-  val builder = ParameterGroupClusterBindOptionsDsl()
-  builder.apply(block)
-  return bindToCluster(builder.build())
-}
-
-public inline
-    fun IParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
-    ParameterGroupInstanceConfig {
-  val builder = ParameterGroupInstanceBindOptionsDsl()
-  builder.apply(block)
-  return bindToInstance(builder.build())
-}
-
-public inline fun ServerlessCluster.addRotationMultiUser(id: String,
-    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
-  val builder = RotationMultiUserOptionsDsl()
-  builder.apply(block)
-  return addRotationMultiUser(id, builder.build())
-}
-
-public inline
-    fun ServerlessCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit =
-    {}): SecretRotation {
-  val builder = RotationSingleUserOptionsDsl()
-  builder.apply(block)
-  return addRotationSingleUser(builder.build())
+  return bind(arg0, arg1, builder.build())
 }
 
 public inline fun IDatabaseCluster.addProxy(arg0: String, block: DatabaseProxyOptionsDsl.() -> Unit
@@ -538,6 +299,28 @@ public inline fun IDatabaseCluster.metricVolumeWriteIOPs(block: MetricOptionsDsl
   return metricVolumeWriteIOPs(builder.build())
 }
 
+public inline fun IInstanceEngine.bindToInstance(arg0: Construct,
+    block: InstanceEngineBindOptionsDsl.() -> Unit = {}): InstanceEngineConfig {
+  val builder = InstanceEngineBindOptionsDsl()
+  builder.apply(block)
+  return bindToInstance(arg0, builder.build())
+}
+
+public inline fun ServerlessCluster.addRotationMultiUser(id: String,
+    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
+  val builder = RotationMultiUserOptionsDsl()
+  builder.apply(block)
+  return addRotationMultiUser(id, builder.build())
+}
+
+public inline
+    fun ServerlessCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit =
+    {}): SecretRotation {
+  val builder = RotationSingleUserOptionsDsl()
+  builder.apply(block)
+  return addRotationSingleUser(builder.build())
+}
+
 public inline fun IDatabaseInstance.addProxy(arg0: String, block: DatabaseProxyOptionsDsl.() -> Unit
     = {}): DatabaseProxy {
   val builder = DatabaseProxyOptionsDsl()
@@ -601,6 +384,44 @@ public inline fun IDatabaseInstance.onEvent(arg0: String, block: OnEventOptionsD
   return onEvent(arg0, builder.build())
 }
 
+public inline
+    fun CfnDBCluster.setMasterUserSecret(block: CfnDBClusterMasterUserSecretPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnDBClusterMasterUserSecretPropertyDsl()
+  builder.apply(block)
+  return setMasterUserSecret(builder.build())
+}
+
+public inline
+    fun CfnDBCluster.setScalingConfiguration(block: CfnDBClusterScalingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDBClusterScalingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setScalingConfiguration(builder.build())
+}
+
+public inline
+    fun CfnDBCluster.setServerlessV2ScalingConfiguration(block: CfnDBClusterServerlessV2ScalingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDBClusterServerlessV2ScalingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setServerlessV2ScalingConfiguration(builder.build())
+}
+
+public inline fun OptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
+    Boolean {
+  val builder = OptionConfigurationDsl()
+  builder.apply(block)
+  return addConfiguration(builder.build())
+}
+
+public inline fun IOptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
+    Boolean {
+  val builder = OptionConfigurationDsl()
+  builder.apply(block)
+  return addConfiguration(builder.build())
+}
+
 public inline fun DatabaseClusterFromSnapshot.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -630,4 +451,183 @@ public inline
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricServerlessDatabaseCapacity(builder.build())
+}
+
+public inline fun DatabaseCluster.addRotationMultiUser(id: String,
+    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
+  val builder = RotationMultiUserOptionsDsl()
+  builder.apply(block)
+  return addRotationMultiUser(id, builder.build())
+}
+
+public inline
+    fun DatabaseCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
+    SecretRotation {
+  val builder = RotationSingleUserOptionsDsl()
+  builder.apply(block)
+  return addRotationSingleUser(builder.build())
+}
+
+public inline fun DatabaseCluster.metricACUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricACUUtilization(builder.build())
+}
+
+public inline
+    fun DatabaseCluster.metricServerlessDatabaseCapacity(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricServerlessDatabaseCapacity(builder.build())
+}
+
+public inline fun ClusterInstance.bind(
+  scope: Construct,
+  cluster: IDatabaseCluster,
+  block: ClusterInstanceBindOptionsDsl.() -> Unit = {},
+): IAuroraClusterInstance {
+  val builder = ClusterInstanceBindOptionsDsl()
+  builder.apply(block)
+  return bind(scope, cluster, builder.build())
+}
+
+public inline
+    fun IParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit = {}):
+    ParameterGroupClusterConfig {
+  val builder = ParameterGroupClusterBindOptionsDsl()
+  builder.apply(block)
+  return bindToCluster(builder.build())
+}
+
+public inline
+    fun IParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
+    ParameterGroupInstanceConfig {
+  val builder = ParameterGroupInstanceBindOptionsDsl()
+  builder.apply(block)
+  return bindToInstance(builder.build())
+}
+
+public inline fun ParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit
+    = {}): ParameterGroupClusterConfig {
+  val builder = ParameterGroupClusterBindOptionsDsl()
+  builder.apply(block)
+  return bindToCluster(builder.build())
+}
+
+public inline
+    fun ParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
+    ParameterGroupInstanceConfig {
+  val builder = ParameterGroupInstanceBindOptionsDsl()
+  builder.apply(block)
+  return bindToInstance(builder.build())
+}
+
+public inline fun IClusterEngine.bindToCluster(arg0: Construct,
+    block: ClusterEngineBindOptionsDsl.() -> Unit = {}): ClusterEngineConfig {
+  val builder = ClusterEngineBindOptionsDsl()
+  builder.apply(block)
+  return bindToCluster(arg0, builder.build())
+}
+
+public inline fun DatabaseInstanceBase.addProxy(id: String,
+    block: DatabaseProxyOptionsDsl.() -> Unit = {}): DatabaseProxy {
+  val builder = DatabaseProxyOptionsDsl()
+  builder.apply(block)
+  return addProxy(id, builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
+    = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(metricName, builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit =
+    {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricCPUUtilization(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit
+    = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricDatabaseConnections(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit =
+    {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricFreeableMemory(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit =
+    {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricFreeStorageSpace(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricReadIOPS(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricReadIOPS(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.metricWriteIOPS(block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricWriteIOPS(builder.build())
+}
+
+public inline fun DatabaseInstanceBase.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit =
+    {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onEvent(id, builder.build())
+}
+
+public inline
+    fun CfnDBProxyTargetGroup.setConnectionPoolConfigurationInfo(block: CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl()
+  builder.apply(block)
+  return setConnectionPoolConfigurationInfo(builder.build())
+}
+
+public inline fun DatabaseInstance.addRotationMultiUser(id: String,
+    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
+  val builder = RotationMultiUserOptionsDsl()
+  builder.apply(block)
+  return addRotationMultiUser(id, builder.build())
+}
+
+public inline
+    fun DatabaseInstance.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
+    SecretRotation {
+  val builder = RotationSingleUserOptionsDsl()
+  builder.apply(block)
+  return addRotationSingleUser(builder.build())
+}
+
+public inline fun DatabaseInstanceFromSnapshot.addRotationMultiUser(id: String,
+    block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
+  val builder = RotationMultiUserOptionsDsl()
+  builder.apply(block)
+  return addRotationMultiUser(id, builder.build())
+}
+
+public inline
+    fun DatabaseInstanceFromSnapshot.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit
+    = {}): SecretRotation {
+  val builder = RotationSingleUserOptionsDsl()
+  builder.apply(block)
+  return addRotationSingleUser(builder.build())
 }

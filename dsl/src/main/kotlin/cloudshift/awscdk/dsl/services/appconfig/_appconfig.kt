@@ -171,6 +171,13 @@ public object appconfig {
     return builder.build()
   }
 
+  public inline fun cfnExtensionActionProperty(block: CfnExtensionActionPropertyDsl.() -> Unit =
+      {}): CfnExtension.ActionProperty {
+    val builder = CfnExtensionActionPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun cfnExtensionAssociation(
     scope: Construct,
     id: String,

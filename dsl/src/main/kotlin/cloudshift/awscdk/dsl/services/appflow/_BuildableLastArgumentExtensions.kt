@@ -8,11 +8,11 @@ import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 import software.amazon.awscdk.services.appflow.CfnFlow
 
 public inline
-    fun CfnConnectorProfile.setConnectorProfileConfig(block: CfnConnectorProfileConnectorProfileConfigPropertyDsl.() -> Unit
+    fun CfnConnector.setConnectorProvisioningConfig(block: CfnConnectorConnectorProvisioningConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnConnectorProfileConnectorProfileConfigPropertyDsl()
+  val builder = CfnConnectorConnectorProvisioningConfigPropertyDsl()
   builder.apply(block)
-  return setConnectorProfileConfig(builder.build())
+  return setConnectorProvisioningConfig(builder.build())
 }
 
 public inline fun CfnFlow.setSourceFlowConfig(block: CfnFlowSourceFlowConfigPropertyDsl.() -> Unit =
@@ -37,9 +37,9 @@ public inline
 }
 
 public inline
-    fun CfnConnector.setConnectorProvisioningConfig(block: CfnConnectorConnectorProvisioningConfigPropertyDsl.() -> Unit
+    fun CfnConnectorProfile.setConnectorProfileConfig(block: CfnConnectorProfileConnectorProfileConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnConnectorConnectorProvisioningConfigPropertyDsl()
+  val builder = CfnConnectorProfileConnectorProfileConfigPropertyDsl()
   builder.apply(block)
-  return setConnectorProvisioningConfig(builder.build())
+  return setConnectorProfileConfig(builder.build())
 }

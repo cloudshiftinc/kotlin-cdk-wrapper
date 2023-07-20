@@ -7,20 +7,6 @@ import software.amazon.awscdk.services.iotanalytics.CfnChannel
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
-public inline fun CfnChannel.setChannelStorage(block: CfnChannelChannelStoragePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnChannelChannelStoragePropertyDsl()
-  builder.apply(block)
-  return setChannelStorage(builder.build())
-}
-
-public inline
-    fun CfnChannel.setRetentionPeriod(block: CfnChannelRetentionPeriodPropertyDsl.() -> Unit = {}) {
-  val builder = CfnChannelRetentionPeriodPropertyDsl()
-  builder.apply(block)
-  return setRetentionPeriod(builder.build())
-}
-
 public inline
     fun CfnDataset.setRetentionPeriod(block: CfnDatasetRetentionPeriodPropertyDsl.() -> Unit = {}) {
   val builder = CfnDatasetRetentionPeriodPropertyDsl()
@@ -64,6 +50,20 @@ public inline
     fun CfnDatastore.setRetentionPeriod(block: CfnDatastoreRetentionPeriodPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnDatastoreRetentionPeriodPropertyDsl()
+  builder.apply(block)
+  return setRetentionPeriod(builder.build())
+}
+
+public inline fun CfnChannel.setChannelStorage(block: CfnChannelChannelStoragePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnChannelChannelStoragePropertyDsl()
+  builder.apply(block)
+  return setChannelStorage(builder.build())
+}
+
+public inline
+    fun CfnChannel.setRetentionPeriod(block: CfnChannelRetentionPeriodPropertyDsl.() -> Unit = {}) {
+  val builder = CfnChannelRetentionPeriodPropertyDsl()
   builder.apply(block)
   return setRetentionPeriod(builder.build())
 }

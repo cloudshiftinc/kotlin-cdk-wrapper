@@ -20,6 +20,14 @@ public object internetmonitor {
   }
 
   public inline
+      fun cfnMonitorHealthEventsConfigProperty(block: CfnMonitorHealthEventsConfigPropertyDsl.() -> Unit
+      = {}): CfnMonitor.HealthEventsConfigProperty {
+    val builder = CfnMonitorHealthEventsConfigPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnMonitorInternetMeasurementsLogDeliveryProperty(block: CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl.() -> Unit
       = {}): CfnMonitor.InternetMeasurementsLogDeliveryProperty {
     val builder = CfnMonitorInternetMeasurementsLogDeliveryPropertyDsl()

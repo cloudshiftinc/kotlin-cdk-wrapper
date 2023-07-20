@@ -8,6 +8,14 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDes
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
 public inline
+    fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
+  builder.apply(block)
+  return setEventDestination(builder.build())
+}
+
+public inline
     fun CfnIdentity.setMailFromAttributes(block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnIdentityMailFromAttributesPropertyDsl()
@@ -45,12 +53,4 @@ public inline
   val builder = CfnConfigurationSetTrackingOptionsPropertyDsl()
   builder.apply(block)
   return setTrackingOptions(builder.build())
-}
-
-public inline
-    fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnConfigurationSetEventDestinationEventDestinationPropertyDsl()
-  builder.apply(block)
-  return setEventDestination(builder.build())
 }

@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.sso
 
 import kotlin.Unit
+import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 import software.amazon.awscdk.services.sso.CfnPermissionSet
 
 public inline
@@ -11,4 +12,13 @@ public inline
   val builder = CfnPermissionSetPermissionsBoundaryPropertyDsl()
   builder.apply(block)
   return setPermissionsBoundary(builder.build())
+}
+
+public inline
+    fun CfnInstanceAccessControlAttributeConfiguration.setInstanceAccessControlAttributeConfiguration(block: CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder =
+      CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl()
+  builder.apply(block)
+  return setInstanceAccessControlAttributeConfiguration(builder.build())
 }

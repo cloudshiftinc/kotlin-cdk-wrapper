@@ -6,6 +6,12 @@ import kotlin.Unit
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnUser
 
+public inline fun CfnUser.setPosixProfile(block: CfnUserPosixProfilePropertyDsl.() -> Unit = {}) {
+  val builder = CfnUserPosixProfilePropertyDsl()
+  builder.apply(block)
+  return setPosixProfile(builder.build())
+}
+
 public inline fun CfnServer.setEndpointDetails(block: CfnServerEndpointDetailsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServerEndpointDetailsPropertyDsl()
@@ -33,10 +39,4 @@ public inline fun CfnServer.setWorkflowDetails(block: CfnServerWorkflowDetailsPr
   val builder = CfnServerWorkflowDetailsPropertyDsl()
   builder.apply(block)
   return setWorkflowDetails(builder.build())
-}
-
-public inline fun CfnUser.setPosixProfile(block: CfnUserPosixProfilePropertyDsl.() -> Unit = {}) {
-  val builder = CfnUserPosixProfilePropertyDsl()
-  builder.apply(block)
-  return setPosixProfile(builder.build())
 }

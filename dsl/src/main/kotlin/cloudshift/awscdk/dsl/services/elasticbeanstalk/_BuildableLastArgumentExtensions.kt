@@ -8,12 +8,10 @@ import software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion
 import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
 
-public inline
-    fun CfnApplicationVersion.setSourceBundle(block: CfnApplicationVersionSourceBundlePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationVersionSourceBundlePropertyDsl()
+public inline fun CfnEnvironment.setTier(block: CfnEnvironmentTierPropertyDsl.() -> Unit = {}) {
+  val builder = CfnEnvironmentTierPropertyDsl()
   builder.apply(block)
-  return setSourceBundle(builder.build())
+  return setTier(builder.build())
 }
 
 public inline
@@ -24,10 +22,12 @@ public inline
   return setResourceLifecycleConfig(builder.build())
 }
 
-public inline fun CfnEnvironment.setTier(block: CfnEnvironmentTierPropertyDsl.() -> Unit = {}) {
-  val builder = CfnEnvironmentTierPropertyDsl()
+public inline
+    fun CfnApplicationVersion.setSourceBundle(block: CfnApplicationVersionSourceBundlePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationVersionSourceBundlePropertyDsl()
   builder.apply(block)
-  return setTier(builder.build())
+  return setSourceBundle(builder.build())
 }
 
 public inline

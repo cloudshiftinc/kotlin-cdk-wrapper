@@ -31,6 +31,8 @@ import software.amazon.awscdk.services.cloudwatch.CustomWidget
 import software.amazon.awscdk.services.cloudwatch.CustomWidgetProps
 import software.amazon.awscdk.services.cloudwatch.Dashboard
 import software.amazon.awscdk.services.cloudwatch.DashboardProps
+import software.amazon.awscdk.services.cloudwatch.DashboardVariable
+import software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions
 import software.amazon.awscdk.services.cloudwatch.Dimension
 import software.amazon.awscdk.services.cloudwatch.GaugeWidget
 import software.amazon.awscdk.services.cloudwatch.GaugeWidgetProps
@@ -49,12 +51,14 @@ import software.amazon.awscdk.services.cloudwatch.MetricOptions
 import software.amazon.awscdk.services.cloudwatch.MetricProps
 import software.amazon.awscdk.services.cloudwatch.MetricStatConfig
 import software.amazon.awscdk.services.cloudwatch.MetricWidgetProps
+import software.amazon.awscdk.services.cloudwatch.SearchComponents
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidget
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps
 import software.amazon.awscdk.services.cloudwatch.Spacer
 import software.amazon.awscdk.services.cloudwatch.SpacerProps
 import software.amazon.awscdk.services.cloudwatch.TextWidget
 import software.amazon.awscdk.services.cloudwatch.TextWidgetProps
+import software.amazon.awscdk.services.cloudwatch.VariableValue
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 import software.constructs.Construct
 
@@ -386,6 +390,20 @@ public object cloudwatch {
     return builder.build()
   }
 
+  public inline fun dashboardVariable(block: DashboardVariableDsl.() -> Unit = {}):
+      DashboardVariable {
+    val builder = DashboardVariableDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun dashboardVariableOptions(block: DashboardVariableOptionsDsl.() -> Unit = {}):
+      DashboardVariableOptions {
+    val builder = DashboardVariableOptionsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun dimension(block: DimensionDsl.() -> Unit = {}): Dimension {
     val builder = DimensionDsl()
     builder.apply(block)
@@ -500,6 +518,12 @@ public object cloudwatch {
     return builder.build()
   }
 
+  public inline fun searchComponents(block: SearchComponentsDsl.() -> Unit = {}): SearchComponents {
+    val builder = SearchComponentsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun singleValueWidget(block: SingleValueWidgetDsl.() -> Unit = {}):
       SingleValueWidget {
     val builder = SingleValueWidgetDsl()
@@ -534,6 +558,12 @@ public object cloudwatch {
 
   public inline fun textWidgetProps(block: TextWidgetPropsDsl.() -> Unit = {}): TextWidgetProps {
     val builder = TextWidgetPropsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun variableValue(block: VariableValueDsl.() -> Unit = {}): VariableValue {
+    val builder = VariableValueDsl()
     builder.apply(block)
     return builder.build()
   }

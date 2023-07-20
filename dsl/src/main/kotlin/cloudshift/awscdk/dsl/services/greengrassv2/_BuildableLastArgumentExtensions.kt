@@ -7,14 +7,6 @@ import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
 public inline
-    fun CfnComponentVersion.setLambdaFunction(block: CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl()
-  builder.apply(block)
-  return setLambdaFunction(builder.build())
-}
-
-public inline
     fun CfnDeployment.setDeploymentPolicies(block: CfnDeploymentDeploymentPoliciesPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnDeploymentDeploymentPoliciesPropertyDsl()
@@ -28,4 +20,12 @@ public inline
   val builder = CfnDeploymentDeploymentIoTJobConfigurationPropertyDsl()
   builder.apply(block)
   return setIotJobConfiguration(builder.build())
+}
+
+public inline
+    fun CfnComponentVersion.setLambdaFunction(block: CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl()
+  builder.apply(block)
+  return setLambdaFunction(builder.build())
 }

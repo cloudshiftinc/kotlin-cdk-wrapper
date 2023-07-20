@@ -29,6 +29,14 @@ public class CfnMonitorDsl(
 
   private val _tags: MutableList<CfnTag> = mutableListOf()
 
+  public fun healthEventsConfig(healthEventsConfig: IResolvable) {
+    cdkBuilder.healthEventsConfig(healthEventsConfig)
+  }
+
+  public fun healthEventsConfig(healthEventsConfig: CfnMonitor.HealthEventsConfigProperty) {
+    cdkBuilder.healthEventsConfig(healthEventsConfig)
+  }
+
   public fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
     cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery)
   }

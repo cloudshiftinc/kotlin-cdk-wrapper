@@ -14,6 +14,53 @@ import software.amazon.awscdk.services.dynamodb.IScalableTableAttribute
 import software.amazon.awscdk.services.dynamodb.ITable
 import software.amazon.awscdk.services.dynamodb.Table
 
+public inline
+    fun CfnGlobalTable.setSseSpecification(block: CfnGlobalTableSSESpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGlobalTableSSESpecificationPropertyDsl()
+  builder.apply(block)
+  return setSseSpecification(builder.build())
+}
+
+public inline
+    fun CfnGlobalTable.setStreamSpecification(block: CfnGlobalTableStreamSpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGlobalTableStreamSpecificationPropertyDsl()
+  builder.apply(block)
+  return setStreamSpecification(builder.build())
+}
+
+public inline
+    fun CfnGlobalTable.setTimeToLiveSpecification(block: CfnGlobalTableTimeToLiveSpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGlobalTableTimeToLiveSpecificationPropertyDsl()
+  builder.apply(block)
+  return setTimeToLiveSpecification(builder.build())
+}
+
+public inline
+    fun CfnGlobalTable.setWriteProvisionedThroughputSettings(block: CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl()
+  builder.apply(block)
+  return setWriteProvisionedThroughputSettings(builder.build())
+}
+
+public inline fun IScalableTableAttribute.scaleOnSchedule(arg0: String,
+    block: ScalingScheduleDsl.() -> Unit = {}) {
+  val builder = ScalingScheduleDsl()
+  builder.apply(block)
+  return scaleOnSchedule(arg0, builder.build())
+}
+
+public inline
+    fun IScalableTableAttribute.scaleOnUtilization(block: UtilizationScalingPropsDsl.() -> Unit =
+    {}) {
+  val builder = UtilizationScalingPropsDsl()
+  builder.apply(block)
+  return scaleOnUtilization(builder.build())
+}
+
 public inline fun Table.addGlobalSecondaryIndex(block: GlobalSecondaryIndexPropsDsl.() -> Unit =
     {}) {
   val builder = GlobalSecondaryIndexPropsDsl()
@@ -186,53 +233,6 @@ public inline
   val builder = CfnTableTimeToLiveSpecificationPropertyDsl()
   builder.apply(block)
   return setTimeToLiveSpecification(builder.build())
-}
-
-public inline fun IScalableTableAttribute.scaleOnSchedule(arg0: String,
-    block: ScalingScheduleDsl.() -> Unit = {}) {
-  val builder = ScalingScheduleDsl()
-  builder.apply(block)
-  return scaleOnSchedule(arg0, builder.build())
-}
-
-public inline
-    fun IScalableTableAttribute.scaleOnUtilization(block: UtilizationScalingPropsDsl.() -> Unit =
-    {}) {
-  val builder = UtilizationScalingPropsDsl()
-  builder.apply(block)
-  return scaleOnUtilization(builder.build())
-}
-
-public inline
-    fun CfnGlobalTable.setSseSpecification(block: CfnGlobalTableSSESpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGlobalTableSSESpecificationPropertyDsl()
-  builder.apply(block)
-  return setSseSpecification(builder.build())
-}
-
-public inline
-    fun CfnGlobalTable.setStreamSpecification(block: CfnGlobalTableStreamSpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGlobalTableStreamSpecificationPropertyDsl()
-  builder.apply(block)
-  return setStreamSpecification(builder.build())
-}
-
-public inline
-    fun CfnGlobalTable.setTimeToLiveSpecification(block: CfnGlobalTableTimeToLiveSpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGlobalTableTimeToLiveSpecificationPropertyDsl()
-  builder.apply(block)
-  return setTimeToLiveSpecification(builder.build())
-}
-
-public inline
-    fun CfnGlobalTable.setWriteProvisionedThroughputSettings(block: CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl()
-  builder.apply(block)
-  return setWriteProvisionedThroughputSettings(builder.build())
 }
 
 public inline fun ITable.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {

@@ -11,6 +11,10 @@ import software.amazon.awscdk.services.appmesh.WeightedTarget
 public class WeightedTargetDsl {
   private val cdkBuilder: WeightedTarget.Builder = WeightedTarget.builder()
 
+  public fun port(port: Number) {
+    cdkBuilder.port(port)
+  }
+
   public fun virtualNode(virtualNode: IVirtualNode) {
     cdkBuilder.virtualNode(virtualNode)
   }

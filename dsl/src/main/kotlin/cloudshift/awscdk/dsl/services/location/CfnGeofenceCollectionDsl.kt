@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.location
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnGeofenceCollection
 import software.constructs.Construct
@@ -25,6 +26,16 @@ public class CfnGeofenceCollectionDsl(
 
   public fun kmsKeyId(kmsKeyId: String) {
     cdkBuilder.kmsKeyId(kmsKeyId)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun pricingPlan(pricingPlan: String) {
+    cdkBuilder.pricingPlan(pricingPlan)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun pricingPlanDataSource(pricingPlanDataSource: String) {
+    cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
   }
 
   public fun build(): CfnGeofenceCollection = cdkBuilder.build()

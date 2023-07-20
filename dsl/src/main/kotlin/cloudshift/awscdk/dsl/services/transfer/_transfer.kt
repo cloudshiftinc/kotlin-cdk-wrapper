@@ -135,6 +135,21 @@ public object transfer {
     return builder.build()
   }
 
+  public inline fun cfnServerProtocolProperty(block: CfnServerProtocolPropertyDsl.() -> Unit = {}):
+      CfnServer.ProtocolProperty {
+    val builder = CfnServerProtocolPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnServerStructuredLogDestinationProperty(block: CfnServerStructuredLogDestinationPropertyDsl.() -> Unit
+      = {}): CfnServer.StructuredLogDestinationProperty {
+    val builder = CfnServerStructuredLogDestinationPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline
       fun cfnServerWorkflowDetailProperty(block: CfnServerWorkflowDetailPropertyDsl.() -> Unit =
       {}): CfnServer.WorkflowDetailProperty {
@@ -178,6 +193,13 @@ public object transfer {
 
   public inline fun cfnUserProps(block: CfnUserPropsDsl.() -> Unit = {}): CfnUserProps {
     val builder = CfnUserPropsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun cfnUserSshPublicKeyProperty(block: CfnUserSshPublicKeyPropertyDsl.() -> Unit =
+      {}): CfnUser.SshPublicKeyProperty {
+    val builder = CfnUserSshPublicKeyPropertyDsl()
     builder.apply(block)
     return builder.build()
   }

@@ -17,28 +17,6 @@ public inline
 }
 
 public inline
-    fun CfnSequenceStore.setSseConfig(block: CfnSequenceStoreSseConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnSequenceStoreSseConfigPropertyDsl()
-  builder.apply(block)
-  return setSseConfig(builder.build())
-}
-
-public inline
-    fun CfnVariantStore.setReference(block: CfnVariantStoreReferenceItemPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnVariantStoreReferenceItemPropertyDsl()
-  builder.apply(block)
-  return setReference(builder.build())
-}
-
-public inline fun CfnVariantStore.setSseConfig(block: CfnVariantStoreSseConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnVariantStoreSseConfigPropertyDsl()
-  builder.apply(block)
-  return setSseConfig(builder.build())
-}
-
-public inline
     fun CfnAnnotationStore.setReference(block: CfnAnnotationStoreReferenceItemPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnAnnotationStoreReferenceItemPropertyDsl()
@@ -60,4 +38,26 @@ public inline
   val builder = CfnAnnotationStoreStoreOptionsPropertyDsl()
   builder.apply(block)
   return setStoreOptions(builder.build())
+}
+
+public inline
+    fun CfnSequenceStore.setSseConfig(block: CfnSequenceStoreSseConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnSequenceStoreSseConfigPropertyDsl()
+  builder.apply(block)
+  return setSseConfig(builder.build())
+}
+
+public inline
+    fun CfnVariantStore.setReference(block: CfnVariantStoreReferenceItemPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnVariantStoreReferenceItemPropertyDsl()
+  builder.apply(block)
+  return setReference(builder.build())
+}
+
+public inline fun CfnVariantStore.setSseConfig(block: CfnVariantStoreSseConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnVariantStoreSseConfigPropertyDsl()
+  builder.apply(block)
+  return setSseConfig(builder.build())
 }

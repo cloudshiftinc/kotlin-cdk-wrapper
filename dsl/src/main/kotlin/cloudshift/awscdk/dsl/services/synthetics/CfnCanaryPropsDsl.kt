@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.synthetics
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -41,10 +42,12 @@ public class CfnCanaryPropsDsl {
     cdkBuilder.code(code)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: Boolean) {
     cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion)
   }
 
+  @Deprecated(message = "deprecated in CDK")
   public
       fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable) {
     cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion)

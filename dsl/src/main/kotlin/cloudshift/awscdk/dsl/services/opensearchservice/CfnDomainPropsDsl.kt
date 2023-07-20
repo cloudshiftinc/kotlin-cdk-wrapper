@@ -65,6 +65,10 @@ public class CfnDomainPropsDsl {
     cdkBuilder.cognitoOptions(cognitoOptions)
   }
 
+  public fun domainArn(domainArn: String) {
+    cdkBuilder.domainArn(domainArn)
+  }
+
   public fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
     cdkBuilder.domainEndpointOptions(domainEndpointOptions)
   }

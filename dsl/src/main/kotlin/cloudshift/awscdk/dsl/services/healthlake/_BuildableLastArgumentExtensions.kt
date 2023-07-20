@@ -6,6 +6,14 @@ import kotlin.Unit
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
 
 public inline
+    fun CfnFHIRDatastore.setIdentityProviderConfiguration(block: CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl()
+  builder.apply(block)
+  return setIdentityProviderConfiguration(builder.build())
+}
+
+public inline
     fun CfnFHIRDatastore.setPreloadDataConfig(block: CfnFHIRDatastorePreloadDataConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnFHIRDatastorePreloadDataConfigPropertyDsl()

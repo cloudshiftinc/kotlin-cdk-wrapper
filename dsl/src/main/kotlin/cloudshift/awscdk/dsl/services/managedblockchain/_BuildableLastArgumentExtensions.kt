@@ -6,13 +6,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 import software.amazon.awscdk.services.managedblockchain.CfnNode
 
-public inline fun CfnNode.setNodeConfiguration(block: CfnNodeNodeConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnNodeNodeConfigurationPropertyDsl()
-  builder.apply(block)
-  return setNodeConfiguration(builder.build())
-}
-
 public inline
     fun CfnMember.setMemberConfiguration(block: CfnMemberMemberConfigurationPropertyDsl.() -> Unit =
     {}) {
@@ -27,4 +20,11 @@ public inline
   val builder = CfnMemberNetworkConfigurationPropertyDsl()
   builder.apply(block)
   return setNetworkConfiguration(builder.build())
+}
+
+public inline fun CfnNode.setNodeConfiguration(block: CfnNodeNodeConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnNodeNodeConfigurationPropertyDsl()
+  builder.apply(block)
+  return setNodeConfiguration(builder.build())
 }

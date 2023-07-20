@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.secretsmanager
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.Duration
@@ -38,6 +39,10 @@ public class SecretRotationPropsDsl {
 
   public fun masterSecret(masterSecret: ISecret) {
     cdkBuilder.masterSecret(masterSecret)
+  }
+
+  public fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: Boolean) {
+    cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate)
   }
 
   public fun secret(secret: ISecret) {

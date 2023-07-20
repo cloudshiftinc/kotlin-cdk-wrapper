@@ -6,12 +6,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.medialive.CfnChannel
 import software.amazon.awscdk.services.medialive.CfnInput
 
-public inline fun CfnInput.setVpc(block: CfnInputInputVpcRequestPropertyDsl.() -> Unit = {}) {
-  val builder = CfnInputInputVpcRequestPropertyDsl()
-  builder.apply(block)
-  return setVpc(builder.build())
-}
-
 public inline
     fun CfnChannel.setCdiInputSpecification(block: CfnChannelCdiInputSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -45,6 +39,12 @@ public inline
 
 public inline fun CfnChannel.setVpc(block: CfnChannelVpcOutputSettingsPropertyDsl.() -> Unit = {}) {
   val builder = CfnChannelVpcOutputSettingsPropertyDsl()
+  builder.apply(block)
+  return setVpc(builder.build())
+}
+
+public inline fun CfnInput.setVpc(block: CfnInputInputVpcRequestPropertyDsl.() -> Unit = {}) {
+  val builder = CfnInputInputVpcRequestPropertyDsl()
   builder.apply(block)
   return setVpc(builder.build())
 }

@@ -159,9 +159,25 @@ public object athena {
   }
 
   public inline
+      fun cfnWorkGroupResultConfigurationUpdatesProperty(block: CfnWorkGroupResultConfigurationUpdatesPropertyDsl.() -> Unit
+      = {}): CfnWorkGroup.ResultConfigurationUpdatesProperty {
+    val builder = CfnWorkGroupResultConfigurationUpdatesPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnWorkGroupWorkGroupConfigurationProperty(block: CfnWorkGroupWorkGroupConfigurationPropertyDsl.() -> Unit
       = {}): CfnWorkGroup.WorkGroupConfigurationProperty {
     val builder = CfnWorkGroupWorkGroupConfigurationPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnWorkGroupWorkGroupConfigurationUpdatesProperty(block: CfnWorkGroupWorkGroupConfigurationUpdatesPropertyDsl.() -> Unit
+      = {}): CfnWorkGroup.WorkGroupConfigurationUpdatesProperty {
+    val builder = CfnWorkGroupWorkGroupConfigurationUpdatesPropertyDsl()
     builder.apply(block)
     return builder.build()
   }

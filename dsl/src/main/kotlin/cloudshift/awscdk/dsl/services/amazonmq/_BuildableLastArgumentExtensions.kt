@@ -6,14 +6,6 @@ import kotlin.Unit
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
 
-public inline
-    fun CfnConfigurationAssociation.setConfiguration(block: CfnConfigurationAssociationConfigurationIdPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnConfigurationAssociationConfigurationIdPropertyDsl()
-  builder.apply(block)
-  return setConfiguration(builder.build())
-}
-
 public inline fun CfnBroker.setConfiguration(block: CfnBrokerConfigurationIdPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnBrokerConfigurationIdPropertyDsl()
@@ -49,4 +41,12 @@ public inline
   val builder = CfnBrokerMaintenanceWindowPropertyDsl()
   builder.apply(block)
   return setMaintenanceWindowStartTime(builder.build())
+}
+
+public inline
+    fun CfnConfigurationAssociation.setConfiguration(block: CfnConfigurationAssociationConfigurationIdPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConfigurationAssociationConfigurationIdPropertyDsl()
+  builder.apply(block)
+  return setConfiguration(builder.build())
 }

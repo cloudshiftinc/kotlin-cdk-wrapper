@@ -78,4 +78,20 @@ public object xray {
     builder.apply(block)
     return builder.build()
   }
+
+  public inline
+      fun cfnSamplingRuleSamplingRuleRecordProperty(block: CfnSamplingRuleSamplingRuleRecordPropertyDsl.() -> Unit
+      = {}): CfnSamplingRule.SamplingRuleRecordProperty {
+    val builder = CfnSamplingRuleSamplingRuleRecordPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnSamplingRuleSamplingRuleUpdateProperty(block: CfnSamplingRuleSamplingRuleUpdatePropertyDsl.() -> Unit
+      = {}): CfnSamplingRule.SamplingRuleUpdateProperty {
+    val builder = CfnSamplingRuleSamplingRuleUpdatePropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
 }

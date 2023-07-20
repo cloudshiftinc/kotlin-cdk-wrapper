@@ -7,14 +7,6 @@ import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDe
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
 public inline
-    fun CfnIntegration.setFlowDefinition(block: CfnIntegrationFlowDefinitionPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnIntegrationFlowDefinitionPropertyDsl()
-  builder.apply(block)
-  return setFlowDefinition(builder.build())
-}
-
-public inline
     fun CfnCalculatedAttributeDefinition.setAttributeDetails(block: CfnCalculatedAttributeDefinitionAttributeDetailsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnCalculatedAttributeDefinitionAttributeDetailsPropertyDsl()
@@ -28,4 +20,12 @@ public inline
   val builder = CfnCalculatedAttributeDefinitionConditionsPropertyDsl()
   builder.apply(block)
   return setConditions(builder.build())
+}
+
+public inline
+    fun CfnIntegration.setFlowDefinition(block: CfnIntegrationFlowDefinitionPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnIntegrationFlowDefinitionPropertyDsl()
+  builder.apply(block)
+  return setFlowDefinition(builder.build())
 }

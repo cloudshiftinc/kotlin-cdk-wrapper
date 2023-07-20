@@ -9,30 +9,6 @@ import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
 public inline
-    fun CfnApplicationSettings.setCampaignHook(block: CfnApplicationSettingsCampaignHookPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationSettingsCampaignHookPropertyDsl()
-  builder.apply(block)
-  return setCampaignHook(builder.build())
-}
-
-public inline
-    fun CfnApplicationSettings.setLimits(block: CfnApplicationSettingsLimitsPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnApplicationSettingsLimitsPropertyDsl()
-  builder.apply(block)
-  return setLimits(builder.build())
-}
-
-public inline
-    fun CfnApplicationSettings.setQuietTime(block: CfnApplicationSettingsQuietTimePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationSettingsQuietTimePropertyDsl()
-  builder.apply(block)
-  return setQuietTime(builder.build())
-}
-
-public inline
     fun CfnPushTemplate.setAdm(block: CfnPushTemplateAndroidPushNotificationTemplatePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnPushTemplateAndroidPushNotificationTemplatePropertyDsl()
@@ -70,20 +46,6 @@ public inline
   val builder = CfnPushTemplateAndroidPushNotificationTemplatePropertyDsl()
   builder.apply(block)
   return setGcm(builder.build())
-}
-
-public inline fun CfnSegment.setDimensions(block: CfnSegmentSegmentDimensionsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSegmentSegmentDimensionsPropertyDsl()
-  builder.apply(block)
-  return setDimensions(builder.build())
-}
-
-public inline fun CfnSegment.setSegmentGroups(block: CfnSegmentSegmentGroupsPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnSegmentSegmentGroupsPropertyDsl()
-  builder.apply(block)
-  return setSegmentGroups(builder.build())
 }
 
 public inline fun CfnCampaign.setSchedule(block: CfnCampaignSchedulePropertyDsl.() -> Unit = {}) {
@@ -127,4 +89,42 @@ public inline
   val builder = CfnCampaignTemplateConfigurationPropertyDsl()
   builder.apply(block)
   return setTemplateConfiguration(builder.build())
+}
+
+public inline
+    fun CfnApplicationSettings.setCampaignHook(block: CfnApplicationSettingsCampaignHookPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationSettingsCampaignHookPropertyDsl()
+  builder.apply(block)
+  return setCampaignHook(builder.build())
+}
+
+public inline
+    fun CfnApplicationSettings.setLimits(block: CfnApplicationSettingsLimitsPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnApplicationSettingsLimitsPropertyDsl()
+  builder.apply(block)
+  return setLimits(builder.build())
+}
+
+public inline
+    fun CfnApplicationSettings.setQuietTime(block: CfnApplicationSettingsQuietTimePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationSettingsQuietTimePropertyDsl()
+  builder.apply(block)
+  return setQuietTime(builder.build())
+}
+
+public inline fun CfnSegment.setDimensions(block: CfnSegmentSegmentDimensionsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSegmentSegmentDimensionsPropertyDsl()
+  builder.apply(block)
+  return setDimensions(builder.build())
+}
+
+public inline fun CfnSegment.setSegmentGroups(block: CfnSegmentSegmentGroupsPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnSegmentSegmentGroupsPropertyDsl()
+  builder.apply(block)
+  return setSegmentGroups(builder.build())
 }

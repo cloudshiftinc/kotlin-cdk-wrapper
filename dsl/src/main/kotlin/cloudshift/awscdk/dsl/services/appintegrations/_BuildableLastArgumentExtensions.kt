@@ -7,6 +7,14 @@ import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegration
 
 public inline
+    fun CfnEventIntegration.setEventFilter(block: CfnEventIntegrationEventFilterPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnEventIntegrationEventFilterPropertyDsl()
+  builder.apply(block)
+  return setEventFilter(builder.build())
+}
+
+public inline
     fun CfnDataIntegration.setScheduleConfig(block: CfnDataIntegrationScheduleConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnDataIntegrationScheduleConfigPropertyDsl()
@@ -20,12 +28,4 @@ public inline
   val builder = CfnDataIntegrationFileConfigurationPropertyDsl()
   builder.apply(block)
   return setFileConfiguration(builder.build())
-}
-
-public inline
-    fun CfnEventIntegration.setEventFilter(block: CfnEventIntegrationEventFilterPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnEventIntegrationEventFilterPropertyDsl()
-  builder.apply(block)
-  return setEventFilter(builder.build())
 }

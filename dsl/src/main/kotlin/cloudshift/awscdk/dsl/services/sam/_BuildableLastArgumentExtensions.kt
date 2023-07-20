@@ -11,6 +11,13 @@ import software.amazon.awscdk.services.sam.CfnLayerVersion
 import software.amazon.awscdk.services.sam.CfnSimpleTable
 import software.amazon.awscdk.services.sam.CfnStateMachine
 
+public inline
+    fun CfnLayerVersion.setContentUri(block: CfnLayerVersionS3LocationPropertyDsl.() -> Unit = {}) {
+  val builder = CfnLayerVersionS3LocationPropertyDsl()
+  builder.apply(block)
+  return setContentUri(builder.build())
+}
+
 public inline fun CfnApi.setAccessLogSetting(block: CfnApiAccessLogSettingPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnApiAccessLogSettingPropertyDsl()
@@ -57,6 +64,14 @@ public inline
 }
 
 public inline
+    fun CfnApplication.setLocation(block: CfnApplicationApplicationLocationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnApplicationApplicationLocationPropertyDsl()
+  builder.apply(block)
+  return setLocation(builder.build())
+}
+
+public inline
     fun CfnStateMachine.setDefinitionUri(block: CfnStateMachineS3LocationPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnStateMachineS3LocationPropertyDsl()
@@ -86,37 +101,6 @@ public inline
   val builder = CfnStateMachineTracingConfigurationPropertyDsl()
   builder.apply(block)
   return setTracing(builder.build())
-}
-
-public inline
-    fun CfnApplication.setLocation(block: CfnApplicationApplicationLocationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnApplicationApplicationLocationPropertyDsl()
-  builder.apply(block)
-  return setLocation(builder.build())
-}
-
-public inline fun CfnSimpleTable.setPrimaryKey(block: CfnSimpleTablePrimaryKeyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTablePrimaryKeyPropertyDsl()
-  builder.apply(block)
-  return setPrimaryKey(builder.build())
-}
-
-public inline
-    fun CfnSimpleTable.setProvisionedThroughput(block: CfnSimpleTableProvisionedThroughputPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTableProvisionedThroughputPropertyDsl()
-  builder.apply(block)
-  return setProvisionedThroughput(builder.build())
-}
-
-public inline
-    fun CfnSimpleTable.setSseSpecification(block: CfnSimpleTableSSESpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnSimpleTableSSESpecificationPropertyDsl()
-  builder.apply(block)
-  return setSseSpecification(builder.build())
 }
 
 public inline fun CfnFunction.setCodeUri(block: CfnFunctionS3LocationPropertyDsl.() -> Unit = {}) {
@@ -237,9 +221,25 @@ public inline fun CfnHttpApi.setRouteSettings(block: CfnHttpApiRouteSettingsProp
   return setRouteSettings(builder.build())
 }
 
-public inline
-    fun CfnLayerVersion.setContentUri(block: CfnLayerVersionS3LocationPropertyDsl.() -> Unit = {}) {
-  val builder = CfnLayerVersionS3LocationPropertyDsl()
+public inline fun CfnSimpleTable.setPrimaryKey(block: CfnSimpleTablePrimaryKeyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTablePrimaryKeyPropertyDsl()
   builder.apply(block)
-  return setContentUri(builder.build())
+  return setPrimaryKey(builder.build())
+}
+
+public inline
+    fun CfnSimpleTable.setProvisionedThroughput(block: CfnSimpleTableProvisionedThroughputPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTableProvisionedThroughputPropertyDsl()
+  builder.apply(block)
+  return setProvisionedThroughput(builder.build())
+}
+
+public inline
+    fun CfnSimpleTable.setSseSpecification(block: CfnSimpleTableSSESpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnSimpleTableSSESpecificationPropertyDsl()
+  builder.apply(block)
+  return setSseSpecification(builder.build())
 }

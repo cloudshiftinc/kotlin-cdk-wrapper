@@ -65,9 +65,41 @@ public object lakeformation {
   }
 
   public inline
+      fun cfnDataLakeSettingsAdminsProperty(block: CfnDataLakeSettingsAdminsPropertyDsl.() -> Unit =
+      {}): CfnDataLakeSettings.AdminsProperty {
+    val builder = CfnDataLakeSettingsAdminsPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDataLakeSettingsCreateDatabaseDefaultPermissionsProperty(block: CfnDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyDsl.() -> Unit
+      = {}): CfnDataLakeSettings.CreateDatabaseDefaultPermissionsProperty {
+    val builder = CfnDataLakeSettingsCreateDatabaseDefaultPermissionsPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDataLakeSettingsCreateTableDefaultPermissionsProperty(block: CfnDataLakeSettingsCreateTableDefaultPermissionsPropertyDsl.() -> Unit
+      = {}): CfnDataLakeSettings.CreateTableDefaultPermissionsProperty {
+    val builder = CfnDataLakeSettingsCreateTableDefaultPermissionsPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnDataLakeSettingsDataLakePrincipalProperty(block: CfnDataLakeSettingsDataLakePrincipalPropertyDsl.() -> Unit
       = {}): CfnDataLakeSettings.DataLakePrincipalProperty {
     val builder = CfnDataLakeSettingsDataLakePrincipalPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnDataLakeSettingsExternalDataFilteringAllowListProperty(block: CfnDataLakeSettingsExternalDataFilteringAllowListPropertyDsl.() -> Unit
+      = {}): CfnDataLakeSettings.ExternalDataFilteringAllowListProperty {
+    val builder = CfnDataLakeSettingsExternalDataFilteringAllowListPropertyDsl()
     builder.apply(block)
     return builder.build()
   }

@@ -4,6 +4,8 @@ package cloudshift.awscdk.dsl.services.s3outposts
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 import software.amazon.awscdk.services.s3outposts.CfnEndpointProps
 
 @CdkDslMarker
@@ -16,6 +18,14 @@ public class CfnEndpointPropsDsl {
 
   public fun customerOwnedIpv4Pool(customerOwnedIpv4Pool: String) {
     cdkBuilder.customerOwnedIpv4Pool(customerOwnedIpv4Pool)
+  }
+
+  public fun failedReason(failedReason: IResolvable) {
+    cdkBuilder.failedReason(failedReason)
+  }
+
+  public fun failedReason(failedReason: CfnEndpoint.FailedReasonProperty) {
+    cdkBuilder.failedReason(failedReason)
   }
 
   public fun outpostId(outpostId: String) {

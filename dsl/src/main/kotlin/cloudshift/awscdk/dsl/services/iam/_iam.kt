@@ -43,6 +43,9 @@ import software.amazon.awscdk.services.iam.GrantOnPrincipalOptions
 import software.amazon.awscdk.services.iam.GrantWithResourceOptions
 import software.amazon.awscdk.services.iam.Group
 import software.amazon.awscdk.services.iam.GroupProps
+import software.amazon.awscdk.services.iam.InstanceProfile
+import software.amazon.awscdk.services.iam.InstanceProfileAttributes
+import software.amazon.awscdk.services.iam.InstanceProfileProps
 import software.amazon.awscdk.services.iam.LazyRole
 import software.amazon.awscdk.services.iam.LazyRoleProps
 import software.amazon.awscdk.services.iam.ManagedPolicy
@@ -407,6 +410,30 @@ public object iam {
 
   public inline fun groupProps(block: GroupPropsDsl.() -> Unit = {}): GroupProps {
     val builder = GroupPropsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun instanceProfile(
+    scope: Construct,
+    id: String,
+    block: InstanceProfileDsl.() -> Unit = {},
+  ): InstanceProfile {
+    val builder = InstanceProfileDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun instanceProfileAttributes(block: InstanceProfileAttributesDsl.() -> Unit = {}):
+      InstanceProfileAttributes {
+    val builder = InstanceProfileAttributesDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun instanceProfileProps(block: InstanceProfilePropsDsl.() -> Unit = {}):
+      InstanceProfileProps {
+    val builder = InstanceProfilePropsDsl()
     builder.apply(block)
     return builder.build()
   }

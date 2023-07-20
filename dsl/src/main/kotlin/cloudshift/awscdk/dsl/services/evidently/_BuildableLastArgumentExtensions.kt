@@ -8,14 +8,6 @@ import software.amazon.awscdk.services.evidently.CfnLaunch
 import software.amazon.awscdk.services.evidently.CfnProject
 
 public inline
-    fun CfnLaunch.setExecutionStatus(block: CfnLaunchExecutionStatusObjectPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLaunchExecutionStatusObjectPropertyDsl()
-  builder.apply(block)
-  return setExecutionStatus(builder.build())
-}
-
-public inline
     fun CfnProject.setAppConfigResource(block: CfnProjectAppConfigResourceObjectPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnProjectAppConfigResourceObjectPropertyDsl()
@@ -28,6 +20,14 @@ public inline
   val builder = CfnProjectDataDeliveryObjectPropertyDsl()
   builder.apply(block)
   return setDataDelivery(builder.build())
+}
+
+public inline
+    fun CfnLaunch.setExecutionStatus(block: CfnLaunchExecutionStatusObjectPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLaunchExecutionStatusObjectPropertyDsl()
+  builder.apply(block)
+  return setExecutionStatus(builder.build())
 }
 
 public inline

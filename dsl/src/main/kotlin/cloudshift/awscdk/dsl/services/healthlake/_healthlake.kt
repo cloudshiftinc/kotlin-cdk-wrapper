@@ -28,6 +28,14 @@ public object healthlake {
   }
 
   public inline
+      fun cfnFHIRDatastoreIdentityProviderConfigurationProperty(block: CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl.() -> Unit
+      = {}): CfnFHIRDatastore.IdentityProviderConfigurationProperty {
+    val builder = CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnFHIRDatastoreKmsEncryptionConfigProperty(block: CfnFHIRDatastoreKmsEncryptionConfigPropertyDsl.() -> Unit
       = {}): CfnFHIRDatastore.KmsEncryptionConfigProperty {
     val builder = CfnFHIRDatastoreKmsEncryptionConfigPropertyDsl()

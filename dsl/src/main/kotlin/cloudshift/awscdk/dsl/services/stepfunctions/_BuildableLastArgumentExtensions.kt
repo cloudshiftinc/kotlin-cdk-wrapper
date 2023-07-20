@@ -28,6 +28,29 @@ import software.amazon.awscdk.services.stepfunctions.StringDefinitionBody
 import software.amazon.awscdk.services.stepfunctions.TaskStateBase
 import software.constructs.Construct
 
+public inline fun DefinitionBody.bind(
+  arg0: Construct,
+  arg1: IPrincipal,
+  block: StateMachinePropsDsl.() -> Unit = {},
+): DefinitionConfig {
+  val builder = StateMachinePropsDsl()
+  builder.apply(block)
+  return bind(arg0, arg1, builder.build())
+}
+
+public inline fun Chain.toSingleState(id: String, block: ParallelPropsDsl.() -> Unit = {}):
+    Parallel {
+  val builder = ParallelPropsDsl()
+  builder.apply(block)
+  return toSingleState(id, builder.build())
+}
+
+public inline fun StateGraph.registerPolicyStatement(block: PolicyStatementDsl.() -> Unit = {}) {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return registerPolicyStatement(builder.build())
+}
+
 public inline fun Activity.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -90,26 +113,11 @@ public inline fun Activity.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {
   return metricTimedOut(builder.build())
 }
 
-public inline fun ChainDefinitionBody.bind(
-  scope: Construct,
-  sfnPrincipal: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
-): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
+public inline fun StateMachineFragment.toSingleState(block: SingleStateOptionsDsl.() -> Unit = {}):
+    Parallel {
+  val builder = SingleStateOptionsDsl()
   builder.apply(block)
-  return bind(scope, sfnPrincipal, builder.build())
-}
-
-public inline fun Map.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}): Map {
-  val builder = CatchPropsDsl()
-  builder.apply(block)
-  return addCatch(handler, builder.build())
-}
-
-public inline fun Map.addRetry(block: RetryPropsDsl.() -> Unit = {}): Map {
-  val builder = RetryPropsDsl()
-  builder.apply(block)
-  return addRetry(builder.build())
+  return toSingleState(builder.build())
 }
 
 public inline fun IStateMachine.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}):
@@ -161,33 +169,65 @@ public inline fun IStateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Uni
   return metricTimedOut(builder.build())
 }
 
-public inline fun StateMachineFragment.toSingleState(block: SingleStateOptionsDsl.() -> Unit = {}):
-    Parallel {
-  val builder = SingleStateOptionsDsl()
-  builder.apply(block)
-  return toSingleState(builder.build())
-}
-
-public inline fun StringDefinitionBody.bind(
-  _scope: Construct,
-  _sfnPrincipal: IPrincipal,
-  block: StateMachinePropsDsl.() -> Unit = {},
-): DefinitionConfig {
-  val builder = StateMachinePropsDsl()
-  builder.apply(block)
-  return bind(_scope, _sfnPrincipal, builder.build())
-}
-
-public inline fun StateGraph.registerPolicyStatement(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return registerPolicyStatement(builder.build())
-}
-
 public inline fun Choice.afterwards(block: AfterwardsOptionsDsl.() -> Unit = {}): Chain {
   val builder = AfterwardsOptionsDsl()
   builder.apply(block)
   return afterwards(builder.build())
+}
+
+public inline fun StateMachine.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToRolePolicy(builder.build())
+}
+
+public inline fun StateMachine.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(metricName, builder.build())
+}
+
+public inline fun StateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricAborted(builder.build())
+}
+
+public inline fun StateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricFailed(builder.build())
+}
+
+public inline fun StateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricStarted(builder.build())
+}
+
+public inline fun StateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricSucceeded(builder.build())
+}
+
+public inline fun StateMachine.metricThrottled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricThrottled(builder.build())
+}
+
+public inline fun StateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricTime(builder.build())
+}
+
+public inline fun StateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricTimedOut(builder.build())
 }
 
 public inline
@@ -214,22 +254,24 @@ public inline
   return setTracingConfiguration(builder.build())
 }
 
-public inline
-    fun CfnStateMachineAlias.setDeploymentPreference(block: CfnStateMachineAliasDeploymentPreferencePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStateMachineAliasDeploymentPreferencePropertyDsl()
-  builder.apply(block)
-  return setDeploymentPreference(builder.build())
-}
-
-public inline fun DefinitionBody.bind(
-  arg0: Construct,
-  arg1: IPrincipal,
+public inline fun StringDefinitionBody.bind(
+  _scope: Construct,
+  _sfnPrincipal: IPrincipal,
   block: StateMachinePropsDsl.() -> Unit = {},
 ): DefinitionConfig {
   val builder = StateMachinePropsDsl()
   builder.apply(block)
-  return bind(arg0, arg1, builder.build())
+  return bind(_scope, _sfnPrincipal, builder.build())
+}
+
+public inline fun ChainDefinitionBody.bind(
+  scope: Construct,
+  sfnPrincipal: IPrincipal,
+  block: StateMachinePropsDsl.() -> Unit = {},
+): DefinitionConfig {
+  val builder = StateMachinePropsDsl()
+  builder.apply(block)
+  return bind(scope, sfnPrincipal, builder.build())
 }
 
 public inline fun Parallel.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}):
@@ -245,11 +287,16 @@ public inline fun Parallel.addRetry(block: RetryPropsDsl.() -> Unit = {}): Paral
   return addRetry(builder.build())
 }
 
-public inline fun Chain.toSingleState(id: String, block: ParallelPropsDsl.() -> Unit = {}):
-    Parallel {
-  val builder = ParallelPropsDsl()
+public inline fun Map.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}): Map {
+  val builder = CatchPropsDsl()
   builder.apply(block)
-  return toSingleState(id, builder.build())
+  return addCatch(handler, builder.build())
+}
+
+public inline fun Map.addRetry(block: RetryPropsDsl.() -> Unit = {}): Map {
+  val builder = RetryPropsDsl()
+  builder.apply(block)
+  return addRetry(builder.build())
 }
 
 public inline fun TaskStateBase.addCatch(handler: IChainable, block: CatchPropsDsl.() -> Unit = {}):
@@ -338,57 +385,10 @@ public inline fun FileDefinitionBody.bind(
   return bind(scope, _sfnPrincipal, builder.build())
 }
 
-public inline fun StateMachine.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
+public inline
+    fun CfnStateMachineAlias.setDeploymentPreference(block: CfnStateMachineAliasDeploymentPreferencePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStateMachineAliasDeploymentPreferencePropertyDsl()
   builder.apply(block)
-  return addToRolePolicy(builder.build())
-}
-
-public inline fun StateMachine.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
-}
-
-public inline fun StateMachine.metricAborted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricAborted(builder.build())
-}
-
-public inline fun StateMachine.metricFailed(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricFailed(builder.build())
-}
-
-public inline fun StateMachine.metricStarted(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricStarted(builder.build())
-}
-
-public inline fun StateMachine.metricSucceeded(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricSucceeded(builder.build())
-}
-
-public inline fun StateMachine.metricThrottled(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricThrottled(builder.build())
-}
-
-public inline fun StateMachine.metricTime(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTime(builder.build())
-}
-
-public inline fun StateMachine.metricTimedOut(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricTimedOut(builder.build())
+  return setDeploymentPreference(builder.build())
 }

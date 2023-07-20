@@ -110,10 +110,6 @@ public class CfnDBClusterPropsDsl {
     cdkBuilder.kmsKeyId(kmsKeyId)
   }
 
-  public fun port(port: Number) {
-    cdkBuilder.port(port)
-  }
-
   public fun preferredBackupWindow(preferredBackupWindow: String) {
     cdkBuilder.preferredBackupWindow(preferredBackupWindow)
   }

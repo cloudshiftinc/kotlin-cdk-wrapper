@@ -41,26 +41,6 @@ import software.amazon.awscdk.services.lambda.SingletonFunction
 import software.amazon.awscdk.services.lambda.Version
 import software.constructs.Construct
 
-public inline fun Alias.addAutoScaling(block: AutoScalingOptionsDsl.() -> Unit = {}):
-    IScalableFunctionAttribute {
-  val builder = AutoScalingOptionsDsl()
-  builder.apply(block)
-  return addAutoScaling(builder.build())
-}
-
-public inline fun Alias.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(metricName, builder.build())
-}
-
-public inline fun CfnUrl.setCors(block: CfnUrlCorsPropertyDsl.() -> Unit = {}) {
-  val builder = CfnUrlCorsPropertyDsl()
-  builder.apply(block)
-  return setCors(builder.build())
-}
-
 public inline
     fun CfnVersion.setProvisionedConcurrencyConfig(block: CfnVersionProvisionedConcurrencyConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -69,39 +49,89 @@ public inline
   return setProvisionedConcurrencyConfig(builder.build())
 }
 
-public inline fun Function.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
-    Alias {
-  val builder = AliasOptionsDsl()
+public inline fun CfnLayerVersion.setContent(block: CfnLayerVersionContentPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnLayerVersionContentPropertyDsl()
   builder.apply(block)
-  return addAlias(aliasName, builder.build())
+  return setContent(builder.build())
 }
 
-public inline fun Function.addEnvironment(
-  key: String,
-  `value`: String,
-  block: EnvironmentOptionsDsl.() -> Unit = {},
-): Function {
-  val builder = EnvironmentOptionsDsl()
+public inline fun ILayerVersion.addPermission(arg0: String,
+    block: LayerVersionPermissionDsl.() -> Unit = {}) {
+  val builder = LayerVersionPermissionDsl()
   builder.apply(block)
-  return addEnvironment(key, value, builder.build())
+  return addPermission(arg0, builder.build())
 }
 
 public inline
-    fun CfnEventInvokeConfig.setDestinationConfig(block: CfnEventInvokeConfigDestinationConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnEventInvokeConfigDestinationConfigPropertyDsl()
+    fun QualifiedFunctionBase.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
+    {}) {
+  val builder = EventInvokeConfigOptionsDsl()
   builder.apply(block)
-  return setDestinationConfig(builder.build())
+  return configureAsyncInvoke(builder.build())
 }
 
-public inline fun IDestination.bind(
-  arg0: Construct,
-  arg1: IFunction,
-  block: DestinationOptionsDsl.() -> Unit = {},
-): DestinationConfig {
-  val builder = DestinationOptionsDsl()
+public inline fun IFunction.addEventSourceMapping(arg0: String,
+    block: EventSourceMappingOptionsDsl.() -> Unit = {}): EventSourceMapping {
+  val builder = EventSourceMappingOptionsDsl()
   builder.apply(block)
-  return bind(arg0, arg1, builder.build())
+  return addEventSourceMapping(arg0, builder.build())
+}
+
+public inline fun IFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Unit = {}):
+    FunctionUrl {
+  val builder = FunctionUrlOptionsDsl()
+  builder.apply(block)
+  return addFunctionUrl(builder.build())
+}
+
+public inline fun IFunction.addPermission(arg0: String, block: PermissionDsl.() -> Unit = {}) {
+  val builder = PermissionDsl()
+  builder.apply(block)
+  return addPermission(arg0, builder.build())
+}
+
+public inline fun IFunction.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToRolePolicy(builder.build())
+}
+
+public inline fun IFunction.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
+    {}) {
+  val builder = EventInvokeConfigOptionsDsl()
+  builder.apply(block)
+  return configureAsyncInvoke(builder.build())
+}
+
+public inline fun IFunction.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(arg0, builder.build())
+}
+
+public inline fun IFunction.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricDuration(builder.build())
+}
+
+public inline fun IFunction.metricErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricErrors(builder.build())
+}
+
+public inline fun IFunction.metricInvocations(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricInvocations(builder.build())
+}
+
+public inline fun IFunction.metricThrottles(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metricThrottles(builder.build())
 }
 
 public inline fun CfnParametersCode.assign(block: LocationDsl.() -> Unit = {}): Map<String, Any> {
@@ -126,26 +156,67 @@ public inline
   return setCodeSigningPolicies(builder.build())
 }
 
-public inline
-    fun QualifiedFunctionBase.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
-    {}) {
-  val builder = EventInvokeConfigOptionsDsl()
+public inline fun IScalableFunctionAttribute.scaleOnSchedule(arg0: String,
+    block: ScalingScheduleDsl.() -> Unit = {}) {
+  val builder = ScalingScheduleDsl()
   builder.apply(block)
-  return configureAsyncInvoke(builder.build())
+  return scaleOnSchedule(arg0, builder.build())
 }
 
-public inline fun Version.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
+public inline
+    fun IScalableFunctionAttribute.scaleOnUtilization(block: UtilizationScalingOptionsDsl.() -> Unit
+    = {}) {
+  val builder = UtilizationScalingOptionsDsl()
+  builder.apply(block)
+  return scaleOnUtilization(builder.build())
+}
+
+public inline
+    fun CfnEventInvokeConfig.setDestinationConfig(block: CfnEventInvokeConfigDestinationConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnEventInvokeConfigDestinationConfigPropertyDsl()
+  builder.apply(block)
+  return setDestinationConfig(builder.build())
+}
+
+public inline fun SingletonFunction.addEnvironment(
+  key: String,
+  `value`: String,
+  block: EnvironmentOptionsDsl.() -> Unit = {},
+): Function {
+  val builder = EnvironmentOptionsDsl()
+  builder.apply(block)
+  return addEnvironment(key, value, builder.build())
+}
+
+public inline fun SingletonFunction.addPermission(name: String, block: PermissionDsl.() -> Unit =
+    {}) {
+  val builder = PermissionDsl()
+  builder.apply(block)
+  return addPermission(name, builder.build())
+}
+
+public inline fun Function.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
     Alias {
   val builder = AliasOptionsDsl()
   builder.apply(block)
   return addAlias(aliasName, builder.build())
 }
 
-public inline fun Version.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
-    Metric {
-  val builder = MetricOptionsDsl()
+public inline fun Function.addEnvironment(
+  key: String,
+  `value`: String,
+  block: EnvironmentOptionsDsl.() -> Unit = {},
+): Function {
+  val builder = EnvironmentOptionsDsl()
   builder.apply(block)
-  return metric(metricName, builder.build())
+  return addEnvironment(key, value, builder.build())
+}
+
+public inline fun IVersion.addAlias(arg0: String, block: AliasOptionsDsl.() -> Unit = {}): Alias {
+  val builder = AliasOptionsDsl()
+  builder.apply(block)
+  return addAlias(arg0, builder.build())
 }
 
 public inline fun FunctionBase.addEventSourceMapping(id: String,
@@ -212,11 +283,62 @@ public inline fun FunctionBase.metricThrottles(block: MetricOptionsDsl.() -> Uni
   return metricThrottles(builder.build())
 }
 
-public inline fun ILayerVersion.addPermission(arg0: String,
-    block: LayerVersionPermissionDsl.() -> Unit = {}) {
-  val builder = LayerVersionPermissionDsl()
+public inline fun Version.addAlias(aliasName: String, block: AliasOptionsDsl.() -> Unit = {}):
+    Alias {
+  val builder = AliasOptionsDsl()
   builder.apply(block)
-  return addPermission(arg0, builder.build())
+  return addAlias(aliasName, builder.build())
+}
+
+public inline fun Version.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(metricName, builder.build())
+}
+
+public inline fun AssetImageCode.bindToResource(resource: CfnResource,
+    block: ResourceBindOptionsDsl.() -> Unit = {}) {
+  val builder = ResourceBindOptionsDsl()
+  builder.apply(block)
+  return bindToResource(resource, builder.build())
+}
+
+public inline fun CfnUrl.setCors(block: CfnUrlCorsPropertyDsl.() -> Unit = {}) {
+  val builder = CfnUrlCorsPropertyDsl()
+  builder.apply(block)
+  return setCors(builder.build())
+}
+
+public inline fun IDestination.bind(
+  arg0: Construct,
+  arg1: IFunction,
+  block: DestinationOptionsDsl.() -> Unit = {},
+): DestinationConfig {
+  val builder = DestinationOptionsDsl()
+  builder.apply(block)
+  return bind(arg0, arg1, builder.build())
+}
+
+public inline fun Alias.addAutoScaling(block: AutoScalingOptionsDsl.() -> Unit = {}):
+    IScalableFunctionAttribute {
+  val builder = AutoScalingOptionsDsl()
+  builder.apply(block)
+  return addAutoScaling(builder.build())
+}
+
+public inline fun Alias.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
+    Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(metricName, builder.build())
+}
+
+public inline fun Code.bindToResource(_resource: CfnResource,
+    block: ResourceBindOptionsDsl.() -> Unit = {}) {
+  val builder = ResourceBindOptionsDsl()
+  builder.apply(block)
+  return bindToResource(_resource, builder.build())
 }
 
 public inline fun CfnFunction.setCode(block: CfnFunctionCodePropertyDsl.() -> Unit = {}) {
@@ -282,10 +404,34 @@ public inline fun CfnFunction.setVpcConfig(block: CfnFunctionVpcConfigPropertyDs
   return setVpcConfig(builder.build())
 }
 
-public inline fun IVersion.addAlias(arg0: String, block: AliasOptionsDsl.() -> Unit = {}): Alias {
-  val builder = AliasOptionsDsl()
+public inline fun LayerVersion.addPermission(id: String, block: LayerVersionPermissionDsl.() -> Unit
+    = {}) {
+  val builder = LayerVersionPermissionDsl()
   builder.apply(block)
-  return addAlias(arg0, builder.build())
+  return addPermission(id, builder.build())
+}
+
+public inline fun AssetCode.bindToResource(resource: CfnResource,
+    block: ResourceBindOptionsDsl.() -> Unit = {}) {
+  val builder = ResourceBindOptionsDsl()
+  builder.apply(block)
+  return bindToResource(resource, builder.build())
+}
+
+public inline
+    fun CfnAlias.setProvisionedConcurrencyConfig(block: CfnAliasProvisionedConcurrencyConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAliasProvisionedConcurrencyConfigurationPropertyDsl()
+  builder.apply(block)
+  return setProvisionedConcurrencyConfig(builder.build())
+}
+
+public inline
+    fun CfnAlias.setRoutingConfig(block: CfnAliasAliasRoutingConfigurationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnAliasAliasRoutingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setRoutingConfig(builder.build())
 }
 
 public inline
@@ -342,150 +488,4 @@ public inline
   val builder = CfnEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyDsl()
   builder.apply(block)
   return setSelfManagedKafkaEventSourceConfig(builder.build())
-}
-
-public inline fun IScalableFunctionAttribute.scaleOnSchedule(arg0: String,
-    block: ScalingScheduleDsl.() -> Unit = {}) {
-  val builder = ScalingScheduleDsl()
-  builder.apply(block)
-  return scaleOnSchedule(arg0, builder.build())
-}
-
-public inline
-    fun IScalableFunctionAttribute.scaleOnUtilization(block: UtilizationScalingOptionsDsl.() -> Unit
-    = {}) {
-  val builder = UtilizationScalingOptionsDsl()
-  builder.apply(block)
-  return scaleOnUtilization(builder.build())
-}
-
-public inline fun AssetImageCode.bindToResource(resource: CfnResource,
-    block: ResourceBindOptionsDsl.() -> Unit = {}) {
-  val builder = ResourceBindOptionsDsl()
-  builder.apply(block)
-  return bindToResource(resource, builder.build())
-}
-
-public inline fun LayerVersion.addPermission(id: String, block: LayerVersionPermissionDsl.() -> Unit
-    = {}) {
-  val builder = LayerVersionPermissionDsl()
-  builder.apply(block)
-  return addPermission(id, builder.build())
-}
-
-public inline fun SingletonFunction.addEnvironment(
-  key: String,
-  `value`: String,
-  block: EnvironmentOptionsDsl.() -> Unit = {},
-): Function {
-  val builder = EnvironmentOptionsDsl()
-  builder.apply(block)
-  return addEnvironment(key, value, builder.build())
-}
-
-public inline fun SingletonFunction.addPermission(name: String, block: PermissionDsl.() -> Unit =
-    {}) {
-  val builder = PermissionDsl()
-  builder.apply(block)
-  return addPermission(name, builder.build())
-}
-
-public inline fun CfnLayerVersion.setContent(block: CfnLayerVersionContentPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnLayerVersionContentPropertyDsl()
-  builder.apply(block)
-  return setContent(builder.build())
-}
-
-public inline
-    fun CfnAlias.setProvisionedConcurrencyConfig(block: CfnAliasProvisionedConcurrencyConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAliasProvisionedConcurrencyConfigurationPropertyDsl()
-  builder.apply(block)
-  return setProvisionedConcurrencyConfig(builder.build())
-}
-
-public inline
-    fun CfnAlias.setRoutingConfig(block: CfnAliasAliasRoutingConfigurationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnAliasAliasRoutingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setRoutingConfig(builder.build())
-}
-
-public inline fun AssetCode.bindToResource(resource: CfnResource,
-    block: ResourceBindOptionsDsl.() -> Unit = {}) {
-  val builder = ResourceBindOptionsDsl()
-  builder.apply(block)
-  return bindToResource(resource, builder.build())
-}
-
-public inline fun IFunction.addEventSourceMapping(arg0: String,
-    block: EventSourceMappingOptionsDsl.() -> Unit = {}): EventSourceMapping {
-  val builder = EventSourceMappingOptionsDsl()
-  builder.apply(block)
-  return addEventSourceMapping(arg0, builder.build())
-}
-
-public inline fun IFunction.addFunctionUrl(block: FunctionUrlOptionsDsl.() -> Unit = {}):
-    FunctionUrl {
-  val builder = FunctionUrlOptionsDsl()
-  builder.apply(block)
-  return addFunctionUrl(builder.build())
-}
-
-public inline fun IFunction.addPermission(arg0: String, block: PermissionDsl.() -> Unit = {}) {
-  val builder = PermissionDsl()
-  builder.apply(block)
-  return addPermission(arg0, builder.build())
-}
-
-public inline fun IFunction.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToRolePolicy(builder.build())
-}
-
-public inline fun IFunction.configureAsyncInvoke(block: EventInvokeConfigOptionsDsl.() -> Unit =
-    {}) {
-  val builder = EventInvokeConfigOptionsDsl()
-  builder.apply(block)
-  return configureAsyncInvoke(builder.build())
-}
-
-public inline fun IFunction.metric(arg0: String, block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(arg0, builder.build())
-}
-
-public inline fun IFunction.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricDuration(builder.build())
-}
-
-public inline fun IFunction.metricErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricErrors(builder.build())
-}
-
-public inline fun IFunction.metricInvocations(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricInvocations(builder.build())
-}
-
-public inline fun IFunction.metricThrottles(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metricThrottles(builder.build())
-}
-
-public inline fun Code.bindToResource(_resource: CfnResource,
-    block: ResourceBindOptionsDsl.() -> Unit = {}) {
-  val builder = ResourceBindOptionsDsl()
-  builder.apply(block)
-  return bindToResource(_resource, builder.build())
 }

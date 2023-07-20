@@ -4,10 +4,12 @@ package cloudshift.awscdk.dsl.services.sso
 
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfigurationProps
 
 @CdkDslMarker
@@ -27,6 +29,18 @@ public class CfnInstanceAccessControlAttributeConfigurationPropsDsl {
 
   public fun accessControlAttributes(accessControlAttributes: IResolvable) {
     cdkBuilder.accessControlAttributes(accessControlAttributes)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public
+      fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: IResolvable) {
+    cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public
+      fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty) {
+    cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration)
   }
 
   public fun instanceArn(instanceArn: String) {

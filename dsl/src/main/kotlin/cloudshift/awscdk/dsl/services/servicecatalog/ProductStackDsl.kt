@@ -5,6 +5,7 @@ package cloudshift.awscdk.dsl.services.servicecatalog
 import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.IBucket
+import software.amazon.awscdk.services.s3.deployment.ServerSideEncryption
 import software.amazon.awscdk.services.servicecatalog.ProductStack
 import software.constructs.Construct
 
@@ -17,6 +18,14 @@ public class ProductStackDsl(
 
   public fun assetBucket(assetBucket: IBucket) {
     cdkBuilder.assetBucket(assetBucket)
+  }
+
+  public fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
+    cdkBuilder.serverSideEncryption(serverSideEncryption)
+  }
+
+  public fun serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId: String) {
+    cdkBuilder.serverSideEncryptionAwsKmsKeyId(serverSideEncryptionAwsKmsKeyId)
   }
 
   public fun build(): ProductStack = cdkBuilder.build()

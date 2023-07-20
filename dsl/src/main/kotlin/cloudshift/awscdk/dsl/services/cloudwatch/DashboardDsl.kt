@@ -9,6 +9,7 @@ import kotlin.collections.List
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.Dashboard
+import software.amazon.awscdk.services.cloudwatch.IVariable
 import software.amazon.awscdk.services.cloudwatch.IWidget
 import software.amazon.awscdk.services.cloudwatch.PeriodOverride
 import software.constructs.Construct
@@ -19,6 +20,8 @@ public class DashboardDsl(
   id: String,
 ) {
   private val cdkBuilder: Dashboard.Builder = Dashboard.Builder.create(scope, id)
+
+  private val _variables: MutableList<IVariable> = mutableListOf()
 
   private val _widgets: MutableList<List<IWidget>> = mutableListOf()
 
@@ -42,6 +45,14 @@ public class DashboardDsl(
     cdkBuilder.start(start)
   }
 
+  public fun variables(vararg variables: IVariable) {
+    _variables.addAll(listOf(*variables))
+  }
+
+  public fun variables(variables: Collection<IVariable>) {
+    _variables.addAll(variables)
+  }
+
   public fun widgets(vararg widgets: List<IWidget>) {
     _widgets.addAll(listOf(*widgets))
   }
@@ -51,6 +62,7 @@ public class DashboardDsl(
   }
 
   public fun build(): Dashboard {
+    if(_variables.isNotEmpty()) cdkBuilder.variables(_variables)
     if(_widgets.isNotEmpty()) cdkBuilder.widgets(_widgets)
     return cdkBuilder.build()
   }

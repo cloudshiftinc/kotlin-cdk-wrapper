@@ -129,6 +129,14 @@ public object s3outposts {
   }
 
   public inline
+      fun cfnEndpointFailedReasonProperty(block: CfnEndpointFailedReasonPropertyDsl.() -> Unit =
+      {}): CfnEndpoint.FailedReasonProperty {
+    val builder = CfnEndpointFailedReasonPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
       fun cfnEndpointNetworkInterfaceProperty(block: CfnEndpointNetworkInterfacePropertyDsl.() -> Unit
       = {}): CfnEndpoint.NetworkInterfaceProperty {
     val builder = CfnEndpointNetworkInterfacePropertyDsl()

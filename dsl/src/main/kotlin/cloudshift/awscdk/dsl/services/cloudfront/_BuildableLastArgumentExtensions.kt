@@ -22,6 +22,45 @@ import software.amazon.awscdk.services.cloudfront.OriginBase
 import software.amazon.awscdk.services.cloudfront.OriginBindConfig
 import software.constructs.Construct
 
+public inline
+    fun CfnOriginRequestPolicy.setOriginRequestPolicyConfig(block: CfnOriginRequestPolicyOriginRequestPolicyConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnOriginRequestPolicyOriginRequestPolicyConfigPropertyDsl()
+  builder.apply(block)
+  return setOriginRequestPolicyConfig(builder.build())
+}
+
+public inline
+    fun CfnMonitoringSubscription.setMonitoringSubscription(block: CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl()
+  builder.apply(block)
+  return setMonitoringSubscription(builder.build())
+}
+
+public inline
+    fun CfnContinuousDeploymentPolicy.setContinuousDeploymentPolicyConfig(block: CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigPropertyDsl()
+  builder.apply(block)
+  return setContinuousDeploymentPolicyConfig(builder.build())
+}
+
+public inline fun IOrigin.bind(arg0: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
+    OriginBindConfig {
+  val builder = OriginBindOptionsDsl()
+  builder.apply(block)
+  return bind(arg0, builder.build())
+}
+
+public inline
+    fun CfnOriginAccessControl.setOriginAccessControlConfig(block: CfnOriginAccessControlOriginAccessControlConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnOriginAccessControlOriginAccessControlConfigPropertyDsl()
+  builder.apply(block)
+  return setOriginAccessControlConfig(builder.build())
+}
+
 public inline fun Distribution.addBehavior(
   pathPattern: String,
   origin: IOrigin,
@@ -33,6 +72,14 @@ public inline fun Distribution.addBehavior(
 }
 
 public inline
+    fun CfnPublicKey.setPublicKeyConfig(block: CfnPublicKeyPublicKeyConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnPublicKeyPublicKeyConfigPropertyDsl()
+  builder.apply(block)
+  return setPublicKeyConfig(builder.build())
+}
+
+public inline
     fun CfnStreamingDistribution.setStreamingDistributionConfig(block: CfnStreamingDistributionStreamingDistributionConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnStreamingDistributionStreamingDistributionConfigPropertyDsl()
@@ -41,19 +88,18 @@ public inline
 }
 
 public inline
-    fun CfnDistribution.setDistributionConfig(block: CfnDistributionDistributionConfigPropertyDsl.() -> Unit
+    fun CfnCachePolicy.setCachePolicyConfig(block: CfnCachePolicyCachePolicyConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnDistributionDistributionConfigPropertyDsl()
+  val builder = CfnCachePolicyCachePolicyConfigPropertyDsl()
   builder.apply(block)
-  return setDistributionConfig(builder.build())
+  return setCachePolicyConfig(builder.build())
 }
 
 public inline
-    fun CfnPublicKey.setPublicKeyConfig(block: CfnPublicKeyPublicKeyConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnPublicKeyPublicKeyConfigPropertyDsl()
+    fun CfnKeyGroup.setKeyGroupConfig(block: CfnKeyGroupKeyGroupConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnKeyGroupKeyGroupConfigPropertyDsl()
   builder.apply(block)
-  return setPublicKeyConfig(builder.build())
+  return setKeyGroupConfig(builder.build())
 }
 
 public inline
@@ -72,18 +118,11 @@ public inline
 }
 
 public inline
-    fun CfnMonitoringSubscription.setMonitoringSubscription(block: CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl.() -> Unit
+    fun CfnDistribution.setDistributionConfig(block: CfnDistributionDistributionConfigPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl()
+  val builder = CfnDistributionDistributionConfigPropertyDsl()
   builder.apply(block)
-  return setMonitoringSubscription(builder.build())
-}
-
-public inline
-    fun CfnKeyGroup.setKeyGroupConfig(block: CfnKeyGroupKeyGroupConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnKeyGroupKeyGroupConfigPropertyDsl()
-  builder.apply(block)
-  return setKeyGroupConfig(builder.build())
+  return setDistributionConfig(builder.build())
 }
 
 public inline
@@ -92,45 +131,6 @@ public inline
   val builder = CfnResponseHeadersPolicyResponseHeadersPolicyConfigPropertyDsl()
   builder.apply(block)
   return setResponseHeadersPolicyConfig(builder.build())
-}
-
-public inline fun IOrigin.bind(arg0: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
-    OriginBindConfig {
-  val builder = OriginBindOptionsDsl()
-  builder.apply(block)
-  return bind(arg0, builder.build())
-}
-
-public inline
-    fun CfnOriginRequestPolicy.setOriginRequestPolicyConfig(block: CfnOriginRequestPolicyOriginRequestPolicyConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnOriginRequestPolicyOriginRequestPolicyConfigPropertyDsl()
-  builder.apply(block)
-  return setOriginRequestPolicyConfig(builder.build())
-}
-
-public inline
-    fun CfnContinuousDeploymentPolicy.setContinuousDeploymentPolicyConfig(block: CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigPropertyDsl()
-  builder.apply(block)
-  return setContinuousDeploymentPolicyConfig(builder.build())
-}
-
-public inline
-    fun CfnCachePolicy.setCachePolicyConfig(block: CfnCachePolicyCachePolicyConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnCachePolicyCachePolicyConfigPropertyDsl()
-  builder.apply(block)
-  return setCachePolicyConfig(builder.build())
-}
-
-public inline
-    fun CfnOriginAccessControl.setOriginAccessControlConfig(block: CfnOriginAccessControlOriginAccessControlConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnOriginAccessControlOriginAccessControlConfigPropertyDsl()
-  builder.apply(block)
-  return setOriginAccessControlConfig(builder.build())
 }
 
 public inline

@@ -33,6 +33,8 @@ import software.amazon.awscdk.services.cloudformation.CfnStackSetProps
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivation
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps
 import software.amazon.awscdk.services.cloudformation.CfnWaitCondition
+import software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandle
+import software.amazon.awscdk.services.cloudformation.CfnWaitConditionHandleProps
 import software.amazon.awscdk.services.cloudformation.CfnWaitConditionProps
 import software.constructs.Construct
 
@@ -350,6 +352,23 @@ public object cloudformation {
     block: CfnWaitConditionDsl.() -> Unit = {},
   ): CfnWaitCondition {
     val builder = CfnWaitConditionDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun cfnWaitConditionHandle(
+    scope: Construct,
+    id: String,
+    block: CfnWaitConditionHandleDsl.() -> Unit = {},
+  ): CfnWaitConditionHandle {
+    val builder = CfnWaitConditionHandleDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun cfnWaitConditionHandleProps(block: CfnWaitConditionHandlePropsDsl.() -> Unit =
+      {}): CfnWaitConditionHandleProps {
+    val builder = CfnWaitConditionHandlePropsDsl()
     builder.apply(block)
     return builder.build()
   }

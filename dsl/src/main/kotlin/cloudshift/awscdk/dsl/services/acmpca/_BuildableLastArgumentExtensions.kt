@@ -6,6 +6,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+public inline fun CfnCertificate.setValidity(block: CfnCertificateValidityPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnCertificateValidityPropertyDsl()
+  builder.apply(block)
+  return setValidity(builder.build())
+}
+
+public inline
+    fun CfnCertificate.setApiPassthrough(block: CfnCertificateApiPassthroughPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnCertificateApiPassthroughPropertyDsl()
+  builder.apply(block)
+  return setApiPassthrough(builder.build())
+}
+
+public inline
+    fun CfnCertificate.setValidityNotBefore(block: CfnCertificateValidityPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnCertificateValidityPropertyDsl()
+  builder.apply(block)
+  return setValidityNotBefore(builder.build())
+}
+
 public inline
     fun CfnCertificateAuthority.setSubject(block: CfnCertificateAuthoritySubjectPropertyDsl.() -> Unit
     = {}) {
@@ -28,27 +51,4 @@ public inline
   val builder = CfnCertificateAuthorityRevocationConfigurationPropertyDsl()
   builder.apply(block)
   return setRevocationConfiguration(builder.build())
-}
-
-public inline fun CfnCertificate.setValidity(block: CfnCertificateValidityPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnCertificateValidityPropertyDsl()
-  builder.apply(block)
-  return setValidity(builder.build())
-}
-
-public inline
-    fun CfnCertificate.setApiPassthrough(block: CfnCertificateApiPassthroughPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnCertificateApiPassthroughPropertyDsl()
-  builder.apply(block)
-  return setApiPassthrough(builder.build())
-}
-
-public inline
-    fun CfnCertificate.setValidityNotBefore(block: CfnCertificateValidityPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnCertificateValidityPropertyDsl()
-  builder.apply(block)
-  return setValidityNotBefore(builder.build())
 }

@@ -50,6 +50,33 @@ public inline
   return setCertificateBasedAuthProperties(builder.build())
 }
 
+public inline fun CfnFleet.setComputeCapacity(block: CfnFleetComputeCapacityPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnFleetComputeCapacityPropertyDsl()
+  builder.apply(block)
+  return setComputeCapacity(builder.build())
+}
+
+public inline fun CfnFleet.setDomainJoinInfo(block: CfnFleetDomainJoinInfoPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnFleetDomainJoinInfoPropertyDsl()
+  builder.apply(block)
+  return setDomainJoinInfo(builder.build())
+}
+
+public inline
+    fun CfnFleet.setSessionScriptS3Location(block: CfnFleetS3LocationPropertyDsl.() -> Unit = {}) {
+  val builder = CfnFleetS3LocationPropertyDsl()
+  builder.apply(block)
+  return setSessionScriptS3Location(builder.build())
+}
+
+public inline fun CfnFleet.setVpcConfig(block: CfnFleetVpcConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnFleetVpcConfigPropertyDsl()
+  builder.apply(block)
+  return setVpcConfig(builder.build())
+}
+
 public inline
     fun CfnApplication.setIconS3Location(block: CfnApplicationS3LocationPropertyDsl.() -> Unit =
     {}) {
@@ -78,33 +105,6 @@ public inline
     fun CfnAppBlockBuilder.setVpcConfig(block: CfnAppBlockBuilderVpcConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnAppBlockBuilderVpcConfigPropertyDsl()
-  builder.apply(block)
-  return setVpcConfig(builder.build())
-}
-
-public inline fun CfnFleet.setComputeCapacity(block: CfnFleetComputeCapacityPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnFleetComputeCapacityPropertyDsl()
-  builder.apply(block)
-  return setComputeCapacity(builder.build())
-}
-
-public inline fun CfnFleet.setDomainJoinInfo(block: CfnFleetDomainJoinInfoPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnFleetDomainJoinInfoPropertyDsl()
-  builder.apply(block)
-  return setDomainJoinInfo(builder.build())
-}
-
-public inline
-    fun CfnFleet.setSessionScriptS3Location(block: CfnFleetS3LocationPropertyDsl.() -> Unit = {}) {
-  val builder = CfnFleetS3LocationPropertyDsl()
-  builder.apply(block)
-  return setSessionScriptS3Location(builder.build())
-}
-
-public inline fun CfnFleet.setVpcConfig(block: CfnFleetVpcConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnFleetVpcConfigPropertyDsl()
   builder.apply(block)
   return setVpcConfig(builder.build())
 }

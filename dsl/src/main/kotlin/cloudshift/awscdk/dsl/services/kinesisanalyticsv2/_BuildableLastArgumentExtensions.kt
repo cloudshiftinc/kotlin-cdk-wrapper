@@ -9,6 +9,14 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 
 public inline
+    fun CfnApplicationCloudWatchLoggingOption.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl()
+  builder.apply(block)
+  return setCloudWatchLoggingOption(builder.build())
+}
+
+public inline
     fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl()
@@ -38,14 +46,6 @@ public inline
   val builder = CfnApplicationRunConfigurationPropertyDsl()
   builder.apply(block)
   return setRunConfiguration(builder.build())
-}
-
-public inline
-    fun CfnApplicationCloudWatchLoggingOption.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl()
-  builder.apply(block)
-  return setCloudWatchLoggingOption(builder.build())
 }
 
 public inline

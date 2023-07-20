@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.appflow
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.IResolvable
@@ -23,6 +24,14 @@ public class CfnConnectorProfileSAPODataConnectorProfilePropertiesPropertyDsl {
 
   public fun clientNumber(clientNumber: String) {
     cdkBuilder.clientNumber(clientNumber)
+  }
+
+  public fun disableSso(disableSso: Boolean) {
+    cdkBuilder.disableSso(disableSso)
+  }
+
+  public fun disableSso(disableSso: IResolvable) {
+    cdkBuilder.disableSso(disableSso)
   }
 
   public fun logonLanguage(logonLanguage: String) {

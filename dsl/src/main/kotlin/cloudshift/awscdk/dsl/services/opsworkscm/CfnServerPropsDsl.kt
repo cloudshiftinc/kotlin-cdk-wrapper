@@ -115,6 +115,10 @@ public class CfnServerPropsDsl {
     _securityGroupIds.addAll(securityGroupIds)
   }
 
+  public fun serverName(serverName: String) {
+    cdkBuilder.serverName(serverName)
+  }
+
   public fun serviceRoleArn(serviceRoleArn: String) {
     cdkBuilder.serviceRoleArn(serviceRoleArn)
   }

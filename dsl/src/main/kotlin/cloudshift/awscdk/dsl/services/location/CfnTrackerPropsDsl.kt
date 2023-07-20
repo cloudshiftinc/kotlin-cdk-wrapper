@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.location
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnTrackerProps
 
@@ -20,6 +21,16 @@ public class CfnTrackerPropsDsl {
 
   public fun positionFiltering(positionFiltering: String) {
     cdkBuilder.positionFiltering(positionFiltering)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun pricingPlan(pricingPlan: String) {
+    cdkBuilder.pricingPlan(pricingPlan)
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun pricingPlanDataSource(pricingPlanDataSource: String) {
+    cdkBuilder.pricingPlanDataSource(pricingPlanDataSource)
   }
 
   public fun trackerName(trackerName: String) {

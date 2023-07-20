@@ -7,14 +7,6 @@ import software.amazon.awscdk.services.refactorspaces.CfnApplication
 import software.amazon.awscdk.services.refactorspaces.CfnRoute
 import software.amazon.awscdk.services.refactorspaces.CfnService
 
-public inline
-    fun CfnApplication.setApiGatewayProxy(block: CfnApplicationApiGatewayProxyInputPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationApiGatewayProxyInputPropertyDsl()
-  builder.apply(block)
-  return setApiGatewayProxy(builder.build())
-}
-
 public inline fun CfnRoute.setDefaultRoute(block: CfnRouteDefaultRouteInputPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnRouteDefaultRouteInputPropertyDsl()
@@ -42,4 +34,12 @@ public inline fun CfnService.setUrlEndpoint(block: CfnServiceUrlEndpointInputPro
   val builder = CfnServiceUrlEndpointInputPropertyDsl()
   builder.apply(block)
   return setUrlEndpoint(builder.build())
+}
+
+public inline
+    fun CfnApplication.setApiGatewayProxy(block: CfnApplicationApiGatewayProxyInputPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationApiGatewayProxyInputPropertyDsl()
+  builder.apply(block)
+  return setApiGatewayProxy(builder.build())
 }

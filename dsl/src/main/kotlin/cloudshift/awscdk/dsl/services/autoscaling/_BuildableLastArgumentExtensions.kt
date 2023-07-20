@@ -24,20 +24,11 @@ import software.amazon.awscdk.services.autoscaling.WarmPool
 import software.amazon.awscdk.services.ec2.CloudFormationInit
 import software.constructs.Construct
 
-public inline
-    fun CfnScalingPolicy.setPredictiveScalingConfiguration(block: CfnScalingPolicyPredictiveScalingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnScalingPolicyPredictiveScalingConfigurationPropertyDsl()
+public inline fun ILifecycleHookTarget.bind(arg0: Construct,
+    block: BindHookTargetOptionsDsl.() -> Unit = {}): LifecycleHookTargetConfig {
+  val builder = BindHookTargetOptionsDsl()
   builder.apply(block)
-  return setPredictiveScalingConfiguration(builder.build())
-}
-
-public inline
-    fun CfnScalingPolicy.setTargetTrackingConfiguration(block: CfnScalingPolicyTargetTrackingConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnScalingPolicyTargetTrackingConfigurationPropertyDsl()
-  builder.apply(block)
-  return setTargetTrackingConfiguration(builder.build())
+  return bind(arg0, builder.build())
 }
 
 public inline fun IAutoScalingGroup.addLifecycleHook(arg0: String,
@@ -97,11 +88,58 @@ public inline fun IAutoScalingGroup.scaleToTrackMetric(arg0: String,
 }
 
 public inline
+    fun CfnWarmPool.setInstanceReusePolicy(block: CfnWarmPoolInstanceReusePolicyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnWarmPoolInstanceReusePolicyPropertyDsl()
+  builder.apply(block)
+  return setInstanceReusePolicy(builder.build())
+}
+
+public inline
     fun CfnLaunchConfiguration.setMetadataOptions(block: CfnLaunchConfigurationMetadataOptionsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnLaunchConfigurationMetadataOptionsPropertyDsl()
   builder.apply(block)
   return setMetadataOptions(builder.build())
+}
+
+public inline
+    fun CfnScalingPolicy.setPredictiveScalingConfiguration(block: CfnScalingPolicyPredictiveScalingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnScalingPolicyPredictiveScalingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setPredictiveScalingConfiguration(builder.build())
+}
+
+public inline
+    fun CfnScalingPolicy.setTargetTrackingConfiguration(block: CfnScalingPolicyTargetTrackingConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnScalingPolicyTargetTrackingConfigurationPropertyDsl()
+  builder.apply(block)
+  return setTargetTrackingConfiguration(builder.build())
+}
+
+public inline fun Signals.renderCreationPolicy(block: RenderSignalsOptionsDsl.() -> Unit = {}):
+    CfnCreationPolicy {
+  val builder = RenderSignalsOptionsDsl()
+  builder.apply(block)
+  return renderCreationPolicy(builder.build())
+}
+
+public inline
+    fun CfnAutoScalingGroup.setLaunchTemplate(block: CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl()
+  builder.apply(block)
+  return setLaunchTemplate(builder.build())
+}
+
+public inline
+    fun CfnAutoScalingGroup.setMixedInstancesPolicy(block: CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl()
+  builder.apply(block)
+  return setMixedInstancesPolicy(builder.build())
 }
 
 public inline fun StepScalingAction.addAdjustment(block: AdjustmentTierDsl.() -> Unit = {}) {
@@ -184,42 +222,4 @@ public inline fun AutoScalingGroup.scaleToTrackMetric(id: String,
   val builder = MetricTargetTrackingPropsDsl()
   builder.apply(block)
   return scaleToTrackMetric(id, builder.build())
-}
-
-public inline
-    fun CfnAutoScalingGroup.setLaunchTemplate(block: CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAutoScalingGroupLaunchTemplateSpecificationPropertyDsl()
-  builder.apply(block)
-  return setLaunchTemplate(builder.build())
-}
-
-public inline
-    fun CfnAutoScalingGroup.setMixedInstancesPolicy(block: CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAutoScalingGroupMixedInstancesPolicyPropertyDsl()
-  builder.apply(block)
-  return setMixedInstancesPolicy(builder.build())
-}
-
-public inline fun ILifecycleHookTarget.bind(arg0: Construct,
-    block: BindHookTargetOptionsDsl.() -> Unit = {}): LifecycleHookTargetConfig {
-  val builder = BindHookTargetOptionsDsl()
-  builder.apply(block)
-  return bind(arg0, builder.build())
-}
-
-public inline fun Signals.renderCreationPolicy(block: RenderSignalsOptionsDsl.() -> Unit = {}):
-    CfnCreationPolicy {
-  val builder = RenderSignalsOptionsDsl()
-  builder.apply(block)
-  return renderCreationPolicy(builder.build())
-}
-
-public inline
-    fun CfnWarmPool.setInstanceReusePolicy(block: CfnWarmPoolInstanceReusePolicyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnWarmPoolInstanceReusePolicyPropertyDsl()
-  builder.apply(block)
-  return setInstanceReusePolicy(builder.build())
 }

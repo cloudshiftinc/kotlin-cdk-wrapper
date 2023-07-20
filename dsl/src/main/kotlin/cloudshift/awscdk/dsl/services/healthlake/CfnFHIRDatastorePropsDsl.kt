@@ -27,6 +27,15 @@ public class CfnFHIRDatastorePropsDsl {
     cdkBuilder.datastoreTypeVersion(datastoreTypeVersion)
   }
 
+  public fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
+    cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
+  }
+
+  public
+      fun identityProviderConfiguration(identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty) {
+    cdkBuilder.identityProviderConfiguration(identityProviderConfiguration)
+  }
+
   public fun preloadDataConfig(preloadDataConfig: IResolvable) {
     cdkBuilder.preloadDataConfig(preloadDataConfig)
   }

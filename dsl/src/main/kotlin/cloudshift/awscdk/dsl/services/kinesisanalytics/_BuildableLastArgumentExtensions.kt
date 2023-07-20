@@ -11,19 +11,11 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
 public inline
-    fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl()
+    fun CfnApplicationOutputV2.setOutput(block: CfnApplicationOutputV2OutputPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnApplicationOutputV2OutputPropertyDsl()
   builder.apply(block)
-  return setReferenceDataSource(builder.build())
-}
-
-public inline
-    fun CfnApplicationCloudWatchLoggingOptionV2.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl()
-  builder.apply(block)
-  return setCloudWatchLoggingOption(builder.build())
+  return setOutput(builder.build())
 }
 
 public inline
@@ -51,6 +43,14 @@ public inline
 }
 
 public inline
+    fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl()
+  builder.apply(block)
+  return setReferenceDataSource(builder.build())
+}
+
+public inline
     fun CfnApplicationOutput.setOutput(block: CfnApplicationOutputOutputPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnApplicationOutputOutputPropertyDsl()
@@ -67,9 +67,9 @@ public inline
 }
 
 public inline
-    fun CfnApplicationOutputV2.setOutput(block: CfnApplicationOutputV2OutputPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnApplicationOutputV2OutputPropertyDsl()
+    fun CfnApplicationCloudWatchLoggingOptionV2.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl()
   builder.apply(block)
-  return setOutput(builder.build())
+  return setCloudWatchLoggingOption(builder.build())
 }

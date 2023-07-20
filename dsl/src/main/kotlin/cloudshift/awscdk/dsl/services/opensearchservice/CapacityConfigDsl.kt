@@ -3,6 +3,7 @@
 package cloudshift.awscdk.dsl.services.opensearchservice
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.opensearchservice.CapacityConfig
@@ -25,6 +26,10 @@ public class CapacityConfigDsl {
 
   public fun masterNodes(masterNodes: Number) {
     cdkBuilder.masterNodes(masterNodes)
+  }
+
+  public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
+    cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled)
   }
 
   public fun warmInstanceType(warmInstanceType: String) {

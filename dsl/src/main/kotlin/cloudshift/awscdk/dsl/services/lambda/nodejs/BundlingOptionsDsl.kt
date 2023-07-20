@@ -176,6 +176,10 @@ public class BundlingOptionsDsl {
     _nodeModules.addAll(nodeModules)
   }
 
+  public fun platform(platform: String) {
+    cdkBuilder.platform(platform)
+  }
+
   public fun preCompilation(preCompilation: Boolean) {
     cdkBuilder.preCompilation(preCompilation)
   }

@@ -8,6 +8,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps
 
@@ -31,6 +32,10 @@ public class SingleValueWidgetPropsDsl {
 
   public fun metrics(metrics: Collection<IMetric>) {
     _metrics.addAll(metrics)
+  }
+
+  public fun period(period: Duration) {
+    cdkBuilder.period(period)
   }
 
   public fun region(region: String) {

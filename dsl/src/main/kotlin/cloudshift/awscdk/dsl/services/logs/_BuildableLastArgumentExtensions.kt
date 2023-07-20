@@ -15,33 +15,6 @@ import software.amazon.awscdk.services.logs.LogStream
 import software.amazon.awscdk.services.logs.MetricFilter
 import software.amazon.awscdk.services.logs.SubscriptionFilter
 
-public inline fun ILogGroup.addMetricFilter(arg0: String, block: MetricFilterOptionsDsl.() -> Unit =
-    {}): MetricFilter {
-  val builder = MetricFilterOptionsDsl()
-  builder.apply(block)
-  return addMetricFilter(arg0, builder.build())
-}
-
-public inline fun ILogGroup.addStream(arg0: String, block: StreamOptionsDsl.() -> Unit = {}):
-    LogStream {
-  val builder = StreamOptionsDsl()
-  builder.apply(block)
-  return addStream(arg0, builder.build())
-}
-
-public inline fun ILogGroup.addSubscriptionFilter(arg0: String,
-    block: SubscriptionFilterOptionsDsl.() -> Unit = {}): SubscriptionFilter {
-  val builder = SubscriptionFilterOptionsDsl()
-  builder.apply(block)
-  return addSubscriptionFilter(arg0, builder.build())
-}
-
-public inline fun MetricFilter.metric(block: MetricOptionsDsl.() -> Unit = {}): Metric {
-  val builder = MetricOptionsDsl()
-  builder.apply(block)
-  return metric(builder.build())
-}
-
 public inline fun LogGroup.addMetricFilter(id: String, block: MetricFilterOptionsDsl.() -> Unit =
     {}): MetricFilter {
   val builder = MetricFilterOptionsDsl()
@@ -74,4 +47,31 @@ public inline fun CrossAccountDestination.addToPolicy(block: PolicyStatementDsl.
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToPolicy(builder.build())
+}
+
+public inline fun MetricFilter.metric(block: MetricOptionsDsl.() -> Unit = {}): Metric {
+  val builder = MetricOptionsDsl()
+  builder.apply(block)
+  return metric(builder.build())
+}
+
+public inline fun ILogGroup.addMetricFilter(arg0: String, block: MetricFilterOptionsDsl.() -> Unit =
+    {}): MetricFilter {
+  val builder = MetricFilterOptionsDsl()
+  builder.apply(block)
+  return addMetricFilter(arg0, builder.build())
+}
+
+public inline fun ILogGroup.addStream(arg0: String, block: StreamOptionsDsl.() -> Unit = {}):
+    LogStream {
+  val builder = StreamOptionsDsl()
+  builder.apply(block)
+  return addStream(arg0, builder.build())
+}
+
+public inline fun ILogGroup.addSubscriptionFilter(arg0: String,
+    block: SubscriptionFilterOptionsDsl.() -> Unit = {}): SubscriptionFilter {
+  val builder = SubscriptionFilterOptionsDsl()
+  builder.apply(block)
+  return addSubscriptionFilter(arg0, builder.build())
 }

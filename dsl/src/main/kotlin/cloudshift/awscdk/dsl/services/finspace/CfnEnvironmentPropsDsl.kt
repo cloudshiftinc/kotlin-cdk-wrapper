@@ -4,6 +4,7 @@ package cloudshift.awscdk.dsl.services.finspace
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
@@ -17,7 +18,19 @@ import software.amazon.awscdk.services.finspace.CfnEnvironmentProps
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()
 
+  private val _dataBundles: MutableList<String> = mutableListOf()
+
   private val _tags: MutableList<CfnTag> = mutableListOf()
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun dataBundles(vararg dataBundles: String) {
+    _dataBundles.addAll(listOf(*dataBundles))
+  }
+
+  @Deprecated(message = "deprecated in CDK")
+  public fun dataBundles(dataBundles: Collection<String>) {
+    _dataBundles.addAll(dataBundles)
+  }
 
   public fun description(description: String) {
     cdkBuilder.description(description)
@@ -61,6 +74,7 @@ public class CfnEnvironmentPropsDsl {
   }
 
   public fun build(): CfnEnvironmentProps {
+    if(_dataBundles.isNotEmpty()) cdkBuilder.dataBundles(_dataBundles)
     if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
     return cdkBuilder.build()
   }

@@ -6,6 +6,14 @@ import kotlin.Unit
 import software.amazon.awscdk.services.cassandra.CfnKeyspace
 import software.amazon.awscdk.services.cassandra.CfnTable
 
+public inline
+    fun CfnKeyspace.setReplicationSpecification(block: CfnKeyspaceReplicationSpecificationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnKeyspaceReplicationSpecificationPropertyDsl()
+  builder.apply(block)
+  return setReplicationSpecification(builder.build())
+}
+
 public inline fun CfnTable.setBillingMode(block: CfnTableBillingModePropertyDsl.() -> Unit = {}) {
   val builder = CfnTableBillingModePropertyDsl()
   builder.apply(block)
@@ -18,12 +26,4 @@ public inline
   val builder = CfnTableEncryptionSpecificationPropertyDsl()
   builder.apply(block)
   return setEncryptionSpecification(builder.build())
-}
-
-public inline
-    fun CfnKeyspace.setReplicationSpecification(block: CfnKeyspaceReplicationSpecificationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnKeyspaceReplicationSpecificationPropertyDsl()
-  builder.apply(block)
-  return setReplicationSpecification(builder.build())
 }

@@ -7,14 +7,6 @@ import software.amazon.awscdk.services.robomaker.CfnRobotApplication
 import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
 
 public inline
-    fun CfnRobotApplication.setRobotSoftwareSuite(block: CfnRobotApplicationRobotSoftwareSuitePropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnRobotApplicationRobotSoftwareSuitePropertyDsl()
-  builder.apply(block)
-  return setRobotSoftwareSuite(builder.build())
-}
-
-public inline
     fun CfnSimulationApplication.setRobotSoftwareSuite(block: CfnSimulationApplicationRobotSoftwareSuitePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnSimulationApplicationRobotSoftwareSuitePropertyDsl()
@@ -36,4 +28,12 @@ public inline
   val builder = CfnSimulationApplicationRenderingEnginePropertyDsl()
   builder.apply(block)
   return setRenderingEngine(builder.build())
+}
+
+public inline
+    fun CfnRobotApplication.setRobotSoftwareSuite(block: CfnRobotApplicationRobotSoftwareSuitePropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnRobotApplicationRobotSoftwareSuitePropertyDsl()
+  builder.apply(block)
+  return setRobotSoftwareSuite(builder.build())
 }

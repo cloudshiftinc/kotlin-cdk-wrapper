@@ -14,6 +14,7 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
+import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.logs.RetentionDays
 
@@ -33,6 +34,10 @@ public class ProviderPropsDsl {
 
   public fun onEventHandler(onEventHandler: IFunction) {
     cdkBuilder.onEventHandler(onEventHandler)
+  }
+
+  public fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
+    cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption)
   }
 
   public fun providerFunctionName(providerFunctionName: String) {

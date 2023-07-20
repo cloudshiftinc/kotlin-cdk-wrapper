@@ -17,54 +17,6 @@ import software.amazon.awscdk.services.config.IRule
 import software.amazon.awscdk.services.config.ManagedRule
 import software.amazon.awscdk.services.events.Rule
 
-public inline fun CfnConfigRule.setSource(block: CfnConfigRuleSourcePropertyDsl.() -> Unit = {}) {
-  val builder = CfnConfigRuleSourcePropertyDsl()
-  builder.apply(block)
-  return setSource(builder.build())
-}
-
-public inline fun CfnConfigRule.setScope(block: CfnConfigRuleScopePropertyDsl.() -> Unit = {}) {
-  val builder = CfnConfigRuleScopePropertyDsl()
-  builder.apply(block)
-  return setScope(builder.build())
-}
-
-public inline
-    fun CfnRemediationConfiguration.setExecutionControls(block: CfnRemediationConfigurationExecutionControlsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnRemediationConfigurationExecutionControlsPropertyDsl()
-  builder.apply(block)
-  return setExecutionControls(builder.build())
-}
-
-public inline
-    fun CfnDeliveryChannel.setConfigSnapshotDeliveryProperties(block: CfnDeliveryChannelConfigSnapshotDeliveryPropertiesPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDeliveryChannelConfigSnapshotDeliveryPropertiesPropertyDsl()
-  builder.apply(block)
-  return setConfigSnapshotDeliveryProperties(builder.build())
-}
-
-public inline fun ManagedRule.onComplianceChange(id: String, block: OnEventOptionsDsl.() -> Unit =
-    {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onComplianceChange(id, builder.build())
-}
-
-public inline fun ManagedRule.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onEvent(id, builder.build())
-}
-
-public inline fun ManagedRule.onReEvaluationStatus(id: String, block: OnEventOptionsDsl.() -> Unit =
-    {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onReEvaluationStatus(id, builder.build())
-}
-
 public inline
     fun CfnConfigurationAggregator.setOrganizationAggregationSource(block: CfnConfigurationAggregatorOrganizationAggregationSourcePropertyDsl.() -> Unit
     = {}) {
@@ -73,24 +25,32 @@ public inline
   return setOrganizationAggregationSource(builder.build())
 }
 
-public inline fun CustomRule.onComplianceChange(id: String, block: OnEventOptionsDsl.() -> Unit =
+public inline
+    fun CfnConfigurationRecorder.setRecordingGroup(block: CfnConfigurationRecorderRecordingGroupPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnConfigurationRecorderRecordingGroupPropertyDsl()
+  builder.apply(block)
+  return setRecordingGroup(builder.build())
+}
+
+public inline fun IRule.onComplianceChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
+    Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onComplianceChange(arg0, builder.build())
+}
+
+public inline fun IRule.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onEvent(arg0, builder.build())
+}
+
+public inline fun IRule.onReEvaluationStatus(arg0: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
-  return onComplianceChange(id, builder.build())
-}
-
-public inline fun CustomRule.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onEvent(id, builder.build())
-}
-
-public inline fun CustomRule.onReEvaluationStatus(id: String, block: OnEventOptionsDsl.() -> Unit =
-    {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onReEvaluationStatus(id, builder.build())
+  return onReEvaluationStatus(arg0, builder.build())
 }
 
 public inline fun CustomPolicy.onComplianceChange(id: String, block: OnEventOptionsDsl.() -> Unit =
@@ -114,11 +74,71 @@ public inline fun CustomPolicy.onReEvaluationStatus(id: String, block: OnEventOp
 }
 
 public inline
-    fun CfnConfigurationRecorder.setRecordingGroup(block: CfnConfigurationRecorderRecordingGroupPropertyDsl.() -> Unit
+    fun CfnDeliveryChannel.setConfigSnapshotDeliveryProperties(block: CfnDeliveryChannelConfigSnapshotDeliveryPropertiesPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnConfigurationRecorderRecordingGroupPropertyDsl()
+  val builder = CfnDeliveryChannelConfigSnapshotDeliveryPropertiesPropertyDsl()
   builder.apply(block)
-  return setRecordingGroup(builder.build())
+  return setConfigSnapshotDeliveryProperties(builder.build())
+}
+
+public inline fun CustomRule.onComplianceChange(id: String, block: OnEventOptionsDsl.() -> Unit =
+    {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onComplianceChange(id, builder.build())
+}
+
+public inline fun CustomRule.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onEvent(id, builder.build())
+}
+
+public inline fun CustomRule.onReEvaluationStatus(id: String, block: OnEventOptionsDsl.() -> Unit =
+    {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onReEvaluationStatus(id, builder.build())
+}
+
+public inline
+    fun CfnRemediationConfiguration.setExecutionControls(block: CfnRemediationConfigurationExecutionControlsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnRemediationConfigurationExecutionControlsPropertyDsl()
+  builder.apply(block)
+  return setExecutionControls(builder.build())
+}
+
+public inline fun CfnConfigRule.setSource(block: CfnConfigRuleSourcePropertyDsl.() -> Unit = {}) {
+  val builder = CfnConfigRuleSourcePropertyDsl()
+  builder.apply(block)
+  return setSource(builder.build())
+}
+
+public inline fun CfnConfigRule.setScope(block: CfnConfigRuleScopePropertyDsl.() -> Unit = {}) {
+  val builder = CfnConfigRuleScopePropertyDsl()
+  builder.apply(block)
+  return setScope(builder.build())
+}
+
+public inline fun ManagedRule.onComplianceChange(id: String, block: OnEventOptionsDsl.() -> Unit =
+    {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onComplianceChange(id, builder.build())
+}
+
+public inline fun ManagedRule.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onEvent(id, builder.build())
+}
+
+public inline fun ManagedRule.onReEvaluationStatus(id: String, block: OnEventOptionsDsl.() -> Unit =
+    {}): Rule {
+  val builder = OnEventOptionsDsl()
+  builder.apply(block)
+  return onReEvaluationStatus(id, builder.build())
 }
 
 public inline
@@ -143,24 +163,4 @@ public inline
   val builder = CfnOrganizationConfigRuleOrganizationManagedRuleMetadataPropertyDsl()
   builder.apply(block)
   return setOrganizationManagedRuleMetadata(builder.build())
-}
-
-public inline fun IRule.onComplianceChange(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}):
-    Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onComplianceChange(arg0, builder.build())
-}
-
-public inline fun IRule.onEvent(arg0: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onEvent(arg0, builder.build())
-}
-
-public inline fun IRule.onReEvaluationStatus(arg0: String, block: OnEventOptionsDsl.() -> Unit =
-    {}): Rule {
-  val builder = OnEventOptionsDsl()
-  builder.apply(block)
-  return onReEvaluationStatus(arg0, builder.build())
 }

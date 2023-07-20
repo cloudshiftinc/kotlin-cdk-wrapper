@@ -26,7 +26,53 @@ import software.amazon.awscdk.services.iam.SessionTagsPrincipal
 import software.amazon.awscdk.services.iam.UnknownPrincipal
 import software.amazon.awscdk.services.iam.User
 
-public inline fun Policy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
+public inline fun CfnUser.setLoginProfile(block: CfnUserLoginProfilePropertyDsl.() -> Unit = {}) {
+  val builder = CfnUserLoginProfilePropertyDsl()
+  builder.apply(block)
+  return setLoginProfile(builder.build())
+}
+
+public inline fun CompositePrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
+    {}) {
+  val builder = PolicyDocumentDsl()
+  builder.apply(block)
+  return addToAssumeRolePolicy(builder.build())
+}
+
+public inline fun Role.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToPolicy(builder.build())
+}
+
+public inline fun Role.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToPrincipalPolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToPrincipalPolicy(builder.build())
+}
+
+public inline fun Role.withoutPolicyUpdates(block: WithoutPolicyUpdatesOptionsDsl.() -> Unit = {}):
+    IRole {
+  val builder = WithoutPolicyUpdatesOptionsDsl()
+  builder.apply(block)
+  return withoutPolicyUpdates(builder.build())
+}
+
+public inline fun UnknownPrincipal.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToPolicy(builder.build())
+}
+
+public inline fun UnknownPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToPrincipalPolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToPrincipalPolicy(builder.build())
+}
+
+public inline fun PolicyDocument.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addStatements(builder.build())
@@ -39,19 +85,26 @@ public inline fun IAssumeRolePrincipal.addToAssumeRolePolicy(block: PolicyDocume
   return addToAssumeRolePolicy(builder.build())
 }
 
-public inline fun PolicyDocument.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
+public inline fun IResourceWithPolicy.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
+    {}): AddToResourcePolicyResult {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToResourcePolicy(builder.build())
+}
+
+public inline fun Policy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addStatements(builder.build())
 }
 
-public inline fun User.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
+public inline fun LazyRole.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToPolicy(builder.build())
 }
 
-public inline fun User.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+public inline fun LazyRole.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToPrincipalPolicyResult {
   val builder = PolicyStatementDsl()
   builder.apply(block)
@@ -79,23 +132,18 @@ public inline fun SessionTagsPrincipal.addToPrincipalPolicy(block: PolicyStateme
   return addToPrincipalPolicy(builder.build())
 }
 
-public inline fun ManagedPolicy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
-  val builder = PolicyStatementDsl()
+public inline fun PolicyStatement.addServicePrincipal(service: String,
+    block: ServicePrincipalOptsDsl.() -> Unit = {}) {
+  val builder = ServicePrincipalOptsDsl()
   builder.apply(block)
-  return addStatements(builder.build())
+  return addServicePrincipal(service, builder.build())
 }
 
-public inline fun LazyRole.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
+public inline fun PolicyStatement.copy(block: PolicyStatementPropsDsl.() -> Unit = {}):
+    PolicyStatement {
+  val builder = PolicyStatementPropsDsl()
   builder.apply(block)
-  return addToPolicy(builder.build())
-}
-
-public inline fun LazyRole.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
+  return copy(builder.build())
 }
 
 public inline fun Group.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
@@ -109,26 +157,6 @@ public inline fun Group.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Uni
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToPrincipalPolicy(builder.build())
-}
-
-public inline fun Role.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
-}
-
-public inline fun Role.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
-}
-
-public inline fun Role.withoutPolicyUpdates(block: WithoutPolicyUpdatesOptionsDsl.() -> Unit = {}):
-    IRole {
-  val builder = WithoutPolicyUpdatesOptionsDsl()
-  builder.apply(block)
-  return withoutPolicyUpdates(builder.build())
 }
 
 public inline fun PrincipalBase.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit = {}) {
@@ -150,44 +178,30 @@ public inline fun PrincipalBase.addToPrincipalPolicy(block: PolicyStatementDsl.(
   return addToPrincipalPolicy(builder.build())
 }
 
-public inline fun UnknownPrincipal.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPolicy(builder.build())
-}
-
-public inline fun UnknownPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+public inline fun IPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToPrincipalPolicyResult {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToPrincipalPolicy(builder.build())
 }
 
-public inline fun CfnUser.setLoginProfile(block: CfnUserLoginProfilePropertyDsl.() -> Unit = {}) {
-  val builder = CfnUserLoginProfilePropertyDsl()
+public inline fun ManagedPolicy.addStatements(block: PolicyStatementDsl.() -> Unit = {}) {
+  val builder = PolicyStatementDsl()
   builder.apply(block)
-  return setLoginProfile(builder.build())
+  return addStatements(builder.build())
 }
 
-public inline fun CompositePrincipal.addToAssumeRolePolicy(block: PolicyDocumentDsl.() -> Unit =
-    {}) {
-  val builder = PolicyDocumentDsl()
+public inline fun User.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}): Boolean {
+  val builder = PolicyStatementDsl()
   builder.apply(block)
-  return addToAssumeRolePolicy(builder.build())
+  return addToPolicy(builder.build())
 }
 
-public inline fun PolicyStatement.addServicePrincipal(service: String,
-    block: ServicePrincipalOptsDsl.() -> Unit = {}) {
-  val builder = ServicePrincipalOptsDsl()
+public inline fun User.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
+    AddToPrincipalPolicyResult {
+  val builder = PolicyStatementDsl()
   builder.apply(block)
-  return addServicePrincipal(service, builder.build())
-}
-
-public inline fun PolicyStatement.copy(block: PolicyStatementPropsDsl.() -> Unit = {}):
-    PolicyStatement {
-  val builder = PolicyStatementPropsDsl()
-  builder.apply(block)
-  return copy(builder.build())
+  return addToPrincipalPolicy(builder.build())
 }
 
 public inline fun PrincipalWithConditions.addToPolicy(block: PolicyStatementDsl.() -> Unit = {}):
@@ -202,18 +216,4 @@ public inline fun PrincipalWithConditions.addToPrincipalPolicy(block: PolicyStat
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToPrincipalPolicy(builder.build())
-}
-
-public inline fun IPrincipal.addToPrincipalPolicy(block: PolicyStatementDsl.() -> Unit = {}):
-    AddToPrincipalPolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToPrincipalPolicy(builder.build())
-}
-
-public inline fun IResourceWithPolicy.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
-    {}): AddToResourcePolicyResult {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToResourcePolicy(builder.build())
 }

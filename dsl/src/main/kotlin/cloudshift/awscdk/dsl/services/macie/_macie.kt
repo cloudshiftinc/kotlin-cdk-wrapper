@@ -90,6 +90,14 @@ public object macie {
     return builder.build()
   }
 
+  public inline
+      fun cfnFindingsFilterFindingsFilterListItemProperty(block: CfnFindingsFilterFindingsFilterListItemPropertyDsl.() -> Unit
+      = {}): CfnFindingsFilter.FindingsFilterListItemProperty {
+    val builder = CfnFindingsFilterFindingsFilterListItemPropertyDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun cfnFindingsFilterProps(block: CfnFindingsFilterPropsDsl.() -> Unit = {}):
       CfnFindingsFilterProps {
     val builder = CfnFindingsFilterPropsDsl()

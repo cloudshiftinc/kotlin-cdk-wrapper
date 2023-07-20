@@ -10,30 +10,6 @@ import software.amazon.awscdk.services.cloudwatch.MathExpression
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.constructs.Construct
 
-public inline
-    fun CfnAnomalyDetector.setConfiguration(block: CfnAnomalyDetectorConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAnomalyDetectorConfigurationPropertyDsl()
-  builder.apply(block)
-  return setConfiguration(builder.build())
-}
-
-public inline
-    fun CfnAnomalyDetector.setMetricMathAnomalyDetector(block: CfnAnomalyDetectorMetricMathAnomalyDetectorPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAnomalyDetectorMetricMathAnomalyDetectorPropertyDsl()
-  builder.apply(block)
-  return setMetricMathAnomalyDetector(builder.build())
-}
-
-public inline
-    fun CfnAnomalyDetector.setSingleMetricAnomalyDetector(block: CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl()
-  builder.apply(block)
-  return setSingleMetricAnomalyDetector(builder.build())
-}
-
 public inline fun Metric.createAlarm(
   scope: Construct,
   id: String,
@@ -65,4 +41,28 @@ public inline fun MathExpression.with(block: MathExpressionOptionsDsl.() -> Unit
   val builder = MathExpressionOptionsDsl()
   builder.apply(block)
   return with(builder.build())
+}
+
+public inline
+    fun CfnAnomalyDetector.setConfiguration(block: CfnAnomalyDetectorConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAnomalyDetectorConfigurationPropertyDsl()
+  builder.apply(block)
+  return setConfiguration(builder.build())
+}
+
+public inline
+    fun CfnAnomalyDetector.setMetricMathAnomalyDetector(block: CfnAnomalyDetectorMetricMathAnomalyDetectorPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAnomalyDetectorMetricMathAnomalyDetectorPropertyDsl()
+  builder.apply(block)
+  return setMetricMathAnomalyDetector(builder.build())
+}
+
+public inline
+    fun CfnAnomalyDetector.setSingleMetricAnomalyDetector(block: CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl()
+  builder.apply(block)
+  return setSingleMetricAnomalyDetector(builder.build())
 }

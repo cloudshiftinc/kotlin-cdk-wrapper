@@ -9,29 +9,6 @@ import software.amazon.awscdk.services.lightsail.CfnDisk
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
-public inline
-    fun CfnDistribution.setDefaultCacheBehavior(block: CfnDistributionCacheBehaviorPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDistributionCacheBehaviorPropertyDsl()
-  builder.apply(block)
-  return setDefaultCacheBehavior(builder.build())
-}
-
-public inline fun CfnDistribution.setOrigin(block: CfnDistributionInputOriginPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDistributionInputOriginPropertyDsl()
-  builder.apply(block)
-  return setOrigin(builder.build())
-}
-
-public inline
-    fun CfnDistribution.setCacheBehaviorSettings(block: CfnDistributionCacheSettingsPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDistributionCacheSettingsPropertyDsl()
-  builder.apply(block)
-  return setCacheBehaviorSettings(builder.build())
-}
-
 public inline fun CfnDisk.setLocation(block: CfnDiskLocationPropertyDsl.() -> Unit = {}) {
   val builder = CfnDiskLocationPropertyDsl()
   builder.apply(block)
@@ -44,6 +21,12 @@ public inline
   val builder = CfnContainerContainerServiceDeploymentPropertyDsl()
   builder.apply(block)
   return setContainerServiceDeployment(builder.build())
+}
+
+public inline fun CfnBucket.setAccessRules(block: CfnBucketAccessRulesPropertyDsl.() -> Unit = {}) {
+  val builder = CfnBucketAccessRulesPropertyDsl()
+  builder.apply(block)
+  return setAccessRules(builder.build())
 }
 
 public inline fun CfnInstance.setHardware(block: CfnInstanceHardwarePropertyDsl.() -> Unit = {}) {
@@ -71,8 +54,25 @@ public inline fun CfnInstance.setState(block: CfnInstanceStatePropertyDsl.() -> 
   return setState(builder.build())
 }
 
-public inline fun CfnBucket.setAccessRules(block: CfnBucketAccessRulesPropertyDsl.() -> Unit = {}) {
-  val builder = CfnBucketAccessRulesPropertyDsl()
+public inline
+    fun CfnDistribution.setDefaultCacheBehavior(block: CfnDistributionCacheBehaviorPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDistributionCacheBehaviorPropertyDsl()
   builder.apply(block)
-  return setAccessRules(builder.build())
+  return setDefaultCacheBehavior(builder.build())
+}
+
+public inline fun CfnDistribution.setOrigin(block: CfnDistributionInputOriginPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDistributionInputOriginPropertyDsl()
+  builder.apply(block)
+  return setOrigin(builder.build())
+}
+
+public inline
+    fun CfnDistribution.setCacheBehaviorSettings(block: CfnDistributionCacheSettingsPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDistributionCacheSettingsPropertyDsl()
+  builder.apply(block)
+  return setCacheBehaviorSettings(builder.build())
 }

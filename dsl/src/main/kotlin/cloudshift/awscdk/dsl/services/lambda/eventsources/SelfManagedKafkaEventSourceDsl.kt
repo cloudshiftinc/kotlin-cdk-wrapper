@@ -4,11 +4,13 @@ package cloudshift.awscdk.dsl.services.lambda.eventsources
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.services.ec2.SubnetSelectionDsl
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
+import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ec2.ISecurityGroup
@@ -25,6 +27,8 @@ public class SelfManagedKafkaEventSourceDsl {
       SelfManagedKafkaEventSource.Builder.create()
 
   private val _bootstrapServers: MutableList<String> = mutableListOf()
+
+  private val _filters: MutableList<Map<String, Any>> = mutableListOf()
 
   public fun authenticationMethod(authenticationMethod: AuthenticationMethod) {
     cdkBuilder.authenticationMethod(authenticationMethod)
@@ -48,6 +52,14 @@ public class SelfManagedKafkaEventSourceDsl {
 
   public fun enabled(enabled: Boolean) {
     cdkBuilder.enabled(enabled)
+  }
+
+  public fun filters(vararg filters: Map<String, Any>) {
+    _filters.addAll(listOf(*filters))
+  }
+
+  public fun filters(filters: Collection<Map<String, Any>>) {
+    _filters.addAll(filters)
   }
 
   public fun maxBatchingWindow(maxBatchingWindow: Duration) {
@@ -90,6 +102,7 @@ public class SelfManagedKafkaEventSourceDsl {
 
   public fun build(): SelfManagedKafkaEventSource {
     if(_bootstrapServers.isNotEmpty()) cdkBuilder.bootstrapServers(_bootstrapServers)
+    if(_filters.isNotEmpty()) cdkBuilder.filters(_filters)
     return cdkBuilder.build()
   }
 }

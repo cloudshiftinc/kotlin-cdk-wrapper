@@ -8,22 +8,6 @@ import software.amazon.awscdk.services.apprunner.CfnService
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection
 
 public inline
-    fun CfnObservabilityConfiguration.setTraceConfiguration(block: CfnObservabilityConfigurationTraceConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnObservabilityConfigurationTraceConfigurationPropertyDsl()
-  builder.apply(block)
-  return setTraceConfiguration(builder.build())
-}
-
-public inline
-    fun CfnVpcIngressConnection.setIngressVpcConfiguration(block: CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl()
-  builder.apply(block)
-  return setIngressVpcConfiguration(builder.build())
-}
-
-public inline
     fun CfnService.setSourceConfiguration(block: CfnServiceSourceConfigurationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServiceSourceConfigurationPropertyDsl()
@@ -69,4 +53,20 @@ public inline
   val builder = CfnServiceServiceObservabilityConfigurationPropertyDsl()
   builder.apply(block)
   return setObservabilityConfiguration(builder.build())
+}
+
+public inline
+    fun CfnVpcIngressConnection.setIngressVpcConfiguration(block: CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl()
+  builder.apply(block)
+  return setIngressVpcConfiguration(builder.build())
+}
+
+public inline
+    fun CfnObservabilityConfiguration.setTraceConfiguration(block: CfnObservabilityConfigurationTraceConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnObservabilityConfigurationTraceConfigurationPropertyDsl()
+  builder.apply(block)
+  return setTraceConfiguration(builder.build())
 }

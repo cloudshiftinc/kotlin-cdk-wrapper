@@ -11,19 +11,35 @@ import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
 import software.amazon.awscdk.services.gamelift.CfnScript
 
 public inline
-    fun CfnGameSessionQueue.setFilterConfiguration(block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit
+    fun CfnFleet.setAnywhereConfiguration(block: CfnFleetAnywhereConfigurationPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnGameSessionQueueFilterConfigurationPropertyDsl()
+  val builder = CfnFleetAnywhereConfigurationPropertyDsl()
   builder.apply(block)
-  return setFilterConfiguration(builder.build())
+  return setAnywhereConfiguration(builder.build())
 }
 
 public inline
-    fun CfnGameSessionQueue.setPriorityConfiguration(block: CfnGameSessionQueuePriorityConfigurationPropertyDsl.() -> Unit
+    fun CfnFleet.setCertificateConfiguration(block: CfnFleetCertificateConfigurationPropertyDsl.() -> Unit
     = {}) {
-  val builder = CfnGameSessionQueuePriorityConfigurationPropertyDsl()
+  val builder = CfnFleetCertificateConfigurationPropertyDsl()
   builder.apply(block)
-  return setPriorityConfiguration(builder.build())
+  return setCertificateConfiguration(builder.build())
+}
+
+public inline
+    fun CfnFleet.setResourceCreationLimitPolicy(block: CfnFleetResourceCreationLimitPolicyPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnFleetResourceCreationLimitPolicyPropertyDsl()
+  builder.apply(block)
+  return setResourceCreationLimitPolicy(builder.build())
+}
+
+public inline
+    fun CfnFleet.setRuntimeConfiguration(block: CfnFleetRuntimeConfigurationPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnFleetRuntimeConfigurationPropertyDsl()
+  builder.apply(block)
+  return setRuntimeConfiguration(builder.build())
 }
 
 public inline fun CfnBuild.setStorageLocation(block: CfnBuildStorageLocationPropertyDsl.() -> Unit =
@@ -56,41 +72,25 @@ public inline
   return setLaunchTemplate(builder.build())
 }
 
-public inline
-    fun CfnFleet.setAnywhereConfiguration(block: CfnFleetAnywhereConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFleetAnywhereConfigurationPropertyDsl()
-  builder.apply(block)
-  return setAnywhereConfiguration(builder.build())
-}
-
-public inline
-    fun CfnFleet.setCertificateConfiguration(block: CfnFleetCertificateConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFleetCertificateConfigurationPropertyDsl()
-  builder.apply(block)
-  return setCertificateConfiguration(builder.build())
-}
-
-public inline
-    fun CfnFleet.setResourceCreationLimitPolicy(block: CfnFleetResourceCreationLimitPolicyPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnFleetResourceCreationLimitPolicyPropertyDsl()
-  builder.apply(block)
-  return setResourceCreationLimitPolicy(builder.build())
-}
-
-public inline
-    fun CfnFleet.setRuntimeConfiguration(block: CfnFleetRuntimeConfigurationPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnFleetRuntimeConfigurationPropertyDsl()
-  builder.apply(block)
-  return setRuntimeConfiguration(builder.build())
-}
-
 public inline fun CfnAlias.setRoutingStrategy(block: CfnAliasRoutingStrategyPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnAliasRoutingStrategyPropertyDsl()
   builder.apply(block)
   return setRoutingStrategy(builder.build())
+}
+
+public inline
+    fun CfnGameSessionQueue.setFilterConfiguration(block: CfnGameSessionQueueFilterConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameSessionQueueFilterConfigurationPropertyDsl()
+  builder.apply(block)
+  return setFilterConfiguration(builder.build())
+}
+
+public inline
+    fun CfnGameSessionQueue.setPriorityConfiguration(block: CfnGameSessionQueuePriorityConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnGameSessionQueuePriorityConfigurationPropertyDsl()
+  builder.apply(block)
+  return setPriorityConfiguration(builder.build())
 }

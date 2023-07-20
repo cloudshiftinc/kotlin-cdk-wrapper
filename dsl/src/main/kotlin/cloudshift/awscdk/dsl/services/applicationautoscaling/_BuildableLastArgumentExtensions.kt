@@ -55,16 +55,16 @@ public inline
   return setTargetTrackingScalingPolicyConfiguration(builder.build())
 }
 
+public inline fun StepScalingAction.addAdjustment(block: AdjustmentTierDsl.() -> Unit = {}) {
+  val builder = AdjustmentTierDsl()
+  builder.apply(block)
+  return addAdjustment(builder.build())
+}
+
 public inline
     fun CfnScalableTarget.setSuspendedState(block: CfnScalableTargetSuspendedStatePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnScalableTargetSuspendedStatePropertyDsl()
   builder.apply(block)
   return setSuspendedState(builder.build())
-}
-
-public inline fun StepScalingAction.addAdjustment(block: AdjustmentTierDsl.() -> Unit = {}) {
-  val builder = AdjustmentTierDsl()
-  builder.apply(block)
-  return addAdjustment(builder.build())
 }

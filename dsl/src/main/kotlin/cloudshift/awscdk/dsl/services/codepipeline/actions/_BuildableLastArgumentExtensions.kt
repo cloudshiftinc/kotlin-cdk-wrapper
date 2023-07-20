@@ -10,14 +10,6 @@ import software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreate
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction
 
 public inline
-    fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
-    = {}): Boolean {
-  val builder = PolicyStatementDsl()
-  builder.apply(block)
-  return addToDeploymentRolePolicy(builder.build())
-}
-
-public inline
     fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
     = {}): Boolean {
   val builder = PolicyStatementDsl()
@@ -27,6 +19,14 @@ public inline
 
 public inline
     fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
+    = {}): Boolean {
+  val builder = PolicyStatementDsl()
+  builder.apply(block)
+  return addToDeploymentRolePolicy(builder.build())
+}
+
+public inline
+    fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
     = {}): Boolean {
   val builder = PolicyStatementDsl()
   builder.apply(block)

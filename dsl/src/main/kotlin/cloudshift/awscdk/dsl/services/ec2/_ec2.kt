@@ -297,6 +297,7 @@ import software.amazon.awscdk.services.ec2.PublicSubnet
 import software.amazon.awscdk.services.ec2.PublicSubnetAttributes
 import software.amazon.awscdk.services.ec2.PublicSubnetProps
 import software.amazon.awscdk.services.ec2.RequestedSubnet
+import software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage
 import software.amazon.awscdk.services.ec2.RuleScope
 import software.amazon.awscdk.services.ec2.S3DestinationOptions
 import software.amazon.awscdk.services.ec2.S3DownloadOptions
@@ -4036,6 +4037,14 @@ public object ec2 {
 
   public inline fun requestedSubnet(block: RequestedSubnetDsl.() -> Unit = {}): RequestedSubnet {
     val builder = RequestedSubnetDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline fun resolveSsmParameterAtLaunchImage(parameterName: String,
+      block: ResolveSsmParameterAtLaunchImageDsl.() -> Unit = {}):
+      ResolveSsmParameterAtLaunchImage {
+    val builder = ResolveSsmParameterAtLaunchImageDsl(parameterName)
     builder.apply(block)
     return builder.build()
   }

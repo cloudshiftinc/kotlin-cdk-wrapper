@@ -8,6 +8,14 @@ import software.amazon.awscdk.services.wisdom.CfnAssistantAssociation
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
 
 public inline
+    fun CfnAssistant.setServerSideEncryptionConfiguration(block: CfnAssistantServerSideEncryptionConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAssistantServerSideEncryptionConfigurationPropertyDsl()
+  builder.apply(block)
+  return setServerSideEncryptionConfiguration(builder.build())
+}
+
+public inline
     fun CfnKnowledgeBase.setRenderingConfiguration(block: CfnKnowledgeBaseRenderingConfigurationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnKnowledgeBaseRenderingConfigurationPropertyDsl()
@@ -37,12 +45,4 @@ public inline
   val builder = CfnAssistantAssociationAssociationDataPropertyDsl()
   builder.apply(block)
   return setAssociation(builder.build())
-}
-
-public inline
-    fun CfnAssistant.setServerSideEncryptionConfiguration(block: CfnAssistantServerSideEncryptionConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAssistantServerSideEncryptionConfigurationPropertyDsl()
-  builder.apply(block)
-  return setServerSideEncryptionConfiguration(builder.build())
 }

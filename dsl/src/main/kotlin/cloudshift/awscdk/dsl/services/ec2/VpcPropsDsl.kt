@@ -44,6 +44,10 @@ public class VpcPropsDsl {
     cdkBuilder.cidr(cidr)
   }
 
+  public fun createInternetGateway(createInternetGateway: Boolean) {
+    cdkBuilder.createInternetGateway(createInternetGateway)
+  }
+
   public fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
     cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy)
   }

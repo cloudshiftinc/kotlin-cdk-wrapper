@@ -26,87 +26,14 @@ import software.amazon.awscdk.services.codestarnotifications.INotificationRuleTa
 import software.amazon.awscdk.services.events.Rule
 import software.constructs.Construct
 
-public inline fun LinuxBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
-    List<String> {
-  val builder = BuildEnvironmentDsl()
-  builder.apply(block)
-  return validate(builder.build())
-}
-
-public inline fun WindowsBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
-    List<String> {
-  val builder = BuildEnvironmentDsl()
-  builder.apply(block)
-  return validate(builder.build())
-}
-
-public inline fun LinuxGpuBuildImage.bind(
-  scope: Construct,
-  project: IProject,
+public inline fun IBindableBuildImage.bind(
+  arg0: Construct,
+  arg1: IProject,
   block: BuildImageBindOptionsDsl.() -> Unit = {},
 ): BuildImageConfig {
   val builder = BuildImageBindOptionsDsl()
   builder.apply(block)
-  return bind(scope, project, builder.build())
-}
-
-public inline fun LinuxGpuBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
-    List<String> {
-  val builder = BuildEnvironmentDsl()
-  builder.apply(block)
-  return validate(builder.build())
-}
-
-public inline fun CfnProject.setArtifacts(block: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
-  val builder = CfnProjectArtifactsPropertyDsl()
-  builder.apply(block)
-  return setArtifacts(builder.build())
-}
-
-public inline fun CfnProject.setEnvironment(block: CfnProjectEnvironmentPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnProjectEnvironmentPropertyDsl()
-  builder.apply(block)
-  return setEnvironment(builder.build())
-}
-
-public inline fun CfnProject.setSource(block: CfnProjectSourcePropertyDsl.() -> Unit = {}) {
-  val builder = CfnProjectSourcePropertyDsl()
-  builder.apply(block)
-  return setSource(builder.build())
-}
-
-public inline
-    fun CfnProject.setBuildBatchConfig(block: CfnProjectProjectBuildBatchConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnProjectProjectBuildBatchConfigPropertyDsl()
-  builder.apply(block)
-  return setBuildBatchConfig(builder.build())
-}
-
-public inline fun CfnProject.setCache(block: CfnProjectProjectCachePropertyDsl.() -> Unit = {}) {
-  val builder = CfnProjectProjectCachePropertyDsl()
-  builder.apply(block)
-  return setCache(builder.build())
-}
-
-public inline fun CfnProject.setLogsConfig(block: CfnProjectLogsConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnProjectLogsConfigPropertyDsl()
-  builder.apply(block)
-  return setLogsConfig(builder.build())
-}
-
-public inline fun CfnProject.setTriggers(block: CfnProjectProjectTriggersPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnProjectProjectTriggersPropertyDsl()
-  builder.apply(block)
-  return setTriggers(builder.build())
-}
-
-public inline fun CfnProject.setVpcConfig(block: CfnProjectVpcConfigPropertyDsl.() -> Unit = {}) {
-  val builder = CfnProjectVpcConfigPropertyDsl()
-  builder.apply(block)
-  return setVpcConfig(builder.build())
+  return bind(arg0, arg1, builder.build())
 }
 
 public inline fun Project.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
@@ -224,17 +151,88 @@ public inline fun Project.onStateChange(id: String, block: OnEventOptionsDsl.() 
   return onStateChange(id, builder.build())
 }
 
-public inline fun IBindableBuildImage.bind(
-  arg0: Construct,
-  arg1: IProject,
-  block: BuildImageBindOptionsDsl.() -> Unit = {},
-): BuildImageConfig {
-  val builder = BuildImageBindOptionsDsl()
+public inline fun IBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}): List<String> {
+  val builder = BuildEnvironmentDsl()
   builder.apply(block)
-  return bind(arg0, arg1, builder.build())
+  return validate(builder.build())
 }
 
-public inline fun IBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}): List<String> {
+public inline fun CfnProject.setArtifacts(block: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
+  val builder = CfnProjectArtifactsPropertyDsl()
+  builder.apply(block)
+  return setArtifacts(builder.build())
+}
+
+public inline fun CfnProject.setEnvironment(block: CfnProjectEnvironmentPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnProjectEnvironmentPropertyDsl()
+  builder.apply(block)
+  return setEnvironment(builder.build())
+}
+
+public inline fun CfnProject.setSource(block: CfnProjectSourcePropertyDsl.() -> Unit = {}) {
+  val builder = CfnProjectSourcePropertyDsl()
+  builder.apply(block)
+  return setSource(builder.build())
+}
+
+public inline
+    fun CfnProject.setBuildBatchConfig(block: CfnProjectProjectBuildBatchConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnProjectProjectBuildBatchConfigPropertyDsl()
+  builder.apply(block)
+  return setBuildBatchConfig(builder.build())
+}
+
+public inline fun CfnProject.setCache(block: CfnProjectProjectCachePropertyDsl.() -> Unit = {}) {
+  val builder = CfnProjectProjectCachePropertyDsl()
+  builder.apply(block)
+  return setCache(builder.build())
+}
+
+public inline fun CfnProject.setLogsConfig(block: CfnProjectLogsConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnProjectLogsConfigPropertyDsl()
+  builder.apply(block)
+  return setLogsConfig(builder.build())
+}
+
+public inline fun CfnProject.setTriggers(block: CfnProjectProjectTriggersPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnProjectProjectTriggersPropertyDsl()
+  builder.apply(block)
+  return setTriggers(builder.build())
+}
+
+public inline fun CfnProject.setVpcConfig(block: CfnProjectVpcConfigPropertyDsl.() -> Unit = {}) {
+  val builder = CfnProjectVpcConfigPropertyDsl()
+  builder.apply(block)
+  return setVpcConfig(builder.build())
+}
+
+public inline fun LinuxBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
+    List<String> {
+  val builder = BuildEnvironmentDsl()
+  builder.apply(block)
+  return validate(builder.build())
+}
+
+public inline
+    fun CfnReportGroup.setExportConfig(block: CfnReportGroupReportExportConfigPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnReportGroupReportExportConfigPropertyDsl()
+  builder.apply(block)
+  return setExportConfig(builder.build())
+}
+
+public inline fun WindowsBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
+    List<String> {
+  val builder = BuildEnvironmentDsl()
+  builder.apply(block)
+  return validate(builder.build())
+}
+
+public inline fun LinuxArmBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
+    List<String> {
   val builder = BuildEnvironmentDsl()
   builder.apply(block)
   return validate(builder.build())
@@ -347,17 +345,19 @@ public inline fun IProject.onStateChange(arg0: String, block: OnEventOptionsDsl.
   return onStateChange(arg0, builder.build())
 }
 
-public inline fun LinuxArmBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
+public inline fun LinuxGpuBuildImage.bind(
+  scope: Construct,
+  project: IProject,
+  block: BuildImageBindOptionsDsl.() -> Unit = {},
+): BuildImageConfig {
+  val builder = BuildImageBindOptionsDsl()
+  builder.apply(block)
+  return bind(scope, project, builder.build())
+}
+
+public inline fun LinuxGpuBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
     List<String> {
   val builder = BuildEnvironmentDsl()
   builder.apply(block)
   return validate(builder.build())
-}
-
-public inline
-    fun CfnReportGroup.setExportConfig(block: CfnReportGroupReportExportConfigPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnReportGroupReportExportConfigPropertyDsl()
-  builder.apply(block)
-  return setExportConfig(builder.build())
 }

@@ -4,6 +4,8 @@ package cloudshift.awscdk.dsl.services.devopsguru
 
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration
+import software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegrationProps
 import software.amazon.awscdk.services.devopsguru.CfnNotificationChannel
 import software.amazon.awscdk.services.devopsguru.CfnNotificationChannelProps
 import software.amazon.awscdk.services.devopsguru.CfnResourceCollection
@@ -11,6 +13,24 @@ import software.amazon.awscdk.services.devopsguru.CfnResourceCollectionProps
 import software.constructs.Construct
 
 public object devopsguru {
+  public inline fun cfnLogAnomalyDetectionIntegration(
+    scope: Construct,
+    id: String,
+    block: CfnLogAnomalyDetectionIntegrationDsl.() -> Unit = {},
+  ): CfnLogAnomalyDetectionIntegration {
+    val builder = CfnLogAnomalyDetectionIntegrationDsl(scope, id)
+    builder.apply(block)
+    return builder.build()
+  }
+
+  public inline
+      fun cfnLogAnomalyDetectionIntegrationProps(block: CfnLogAnomalyDetectionIntegrationPropsDsl.() -> Unit
+      = {}): CfnLogAnomalyDetectionIntegrationProps {
+    val builder = CfnLogAnomalyDetectionIntegrationPropsDsl()
+    builder.apply(block)
+    return builder.build()
+  }
+
   public inline fun cfnNotificationChannel(
     scope: Construct,
     id: String,

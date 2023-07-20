@@ -21,3 +21,11 @@ public inline
   builder.apply(block)
   return setWorkGroupConfiguration(builder.build())
 }
+
+public inline
+    fun CfnWorkGroup.setWorkGroupConfigurationUpdates(block: CfnWorkGroupWorkGroupConfigurationUpdatesPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnWorkGroupWorkGroupConfigurationUpdatesPropertyDsl()
+  builder.apply(block)
+  return setWorkGroupConfigurationUpdates(builder.build())
+}

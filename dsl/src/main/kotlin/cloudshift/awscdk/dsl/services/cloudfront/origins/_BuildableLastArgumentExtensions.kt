@@ -9,14 +9,14 @@ import software.amazon.awscdk.services.cloudfront.origins.OriginGroup
 import software.amazon.awscdk.services.cloudfront.origins.S3Origin
 import software.constructs.Construct
 
-public inline fun S3Origin.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
+public inline fun OriginGroup.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()
   builder.apply(block)
   return bind(scope, builder.build())
 }
 
-public inline fun OriginGroup.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
+public inline fun S3Origin.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()
   builder.apply(block)

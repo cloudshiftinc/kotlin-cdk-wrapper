@@ -9,6 +9,22 @@ import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
 import software.amazon.awscdk.services.fsx.CfnVolume
 
 public inline
+    fun CfnDataRepositoryAssociation.setS3(block: CfnDataRepositoryAssociationS3PropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDataRepositoryAssociationS3PropertyDsl()
+  builder.apply(block)
+  return setS3(builder.build())
+}
+
+public inline
+    fun CfnStorageVirtualMachine.setActiveDirectoryConfiguration(block: CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl()
+  builder.apply(block)
+  return setActiveDirectoryConfiguration(builder.build())
+}
+
+public inline
     fun CfnVolume.setOntapConfiguration(block: CfnVolumeOntapConfigurationPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnVolumeOntapConfigurationPropertyDsl()
@@ -22,14 +38,6 @@ public inline
   val builder = CfnVolumeOpenZFSConfigurationPropertyDsl()
   builder.apply(block)
   return setOpenZfsConfiguration(builder.build())
-}
-
-public inline
-    fun CfnDataRepositoryAssociation.setS3(block: CfnDataRepositoryAssociationS3PropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDataRepositoryAssociationS3PropertyDsl()
-  builder.apply(block)
-  return setS3(builder.build())
 }
 
 public inline
@@ -62,12 +70,4 @@ public inline
   val builder = CfnFileSystemWindowsConfigurationPropertyDsl()
   builder.apply(block)
   return setWindowsConfiguration(builder.build())
-}
-
-public inline
-    fun CfnStorageVirtualMachine.setActiveDirectoryConfiguration(block: CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnStorageVirtualMachineActiveDirectoryConfigurationPropertyDsl()
-  builder.apply(block)
-  return setActiveDirectoryConfiguration(builder.build())
 }

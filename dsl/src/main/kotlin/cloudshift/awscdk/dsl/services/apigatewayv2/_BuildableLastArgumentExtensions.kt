@@ -22,13 +22,6 @@ public inline fun CfnApi.setCorsConfiguration(block: CfnApiCorsPropertyDsl.() ->
   return setCorsConfiguration(builder.build())
 }
 
-public inline fun CfnIntegration.setTlsConfig(block: CfnIntegrationTlsConfigPropertyDsl.() -> Unit =
-    {}) {
-  val builder = CfnIntegrationTlsConfigPropertyDsl()
-  builder.apply(block)
-  return setTlsConfig(builder.build())
-}
-
 public inline
     fun CfnStage.setAccessLogSettings(block: CfnStageAccessLogSettingsPropertyDsl.() -> Unit = {}) {
   val builder = CfnStageAccessLogSettingsPropertyDsl()
@@ -41,22 +34,6 @@ public inline
   val builder = CfnStageRouteSettingsPropertyDsl()
   builder.apply(block)
   return setDefaultRouteSettings(builder.build())
-}
-
-public inline
-    fun CfnAuthorizer.setJwtConfiguration(block: CfnAuthorizerJWTConfigurationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnAuthorizerJWTConfigurationPropertyDsl()
-  builder.apply(block)
-  return setJwtConfiguration(builder.build())
-}
-
-public inline
-    fun CfnDomainName.setMutualTlsAuthentication(block: CfnDomainNameMutualTlsAuthenticationPropertyDsl.() -> Unit
-    = {}) {
-  val builder = CfnDomainNameMutualTlsAuthenticationPropertyDsl()
-  builder.apply(block)
-  return setMutualTlsAuthentication(builder.build())
 }
 
 public inline
@@ -81,4 +58,27 @@ public inline
   val builder = CfnApiGatewayManagedOverridesStageOverridesPropertyDsl()
   builder.apply(block)
   return setStage(builder.build())
+}
+
+public inline
+    fun CfnDomainName.setMutualTlsAuthentication(block: CfnDomainNameMutualTlsAuthenticationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnDomainNameMutualTlsAuthenticationPropertyDsl()
+  builder.apply(block)
+  return setMutualTlsAuthentication(builder.build())
+}
+
+public inline
+    fun CfnAuthorizer.setJwtConfiguration(block: CfnAuthorizerJWTConfigurationPropertyDsl.() -> Unit
+    = {}) {
+  val builder = CfnAuthorizerJWTConfigurationPropertyDsl()
+  builder.apply(block)
+  return setJwtConfiguration(builder.build())
+}
+
+public inline fun CfnIntegration.setTlsConfig(block: CfnIntegrationTlsConfigPropertyDsl.() -> Unit =
+    {}) {
+  val builder = CfnIntegrationTlsConfigPropertyDsl()
+  builder.apply(block)
+  return setTlsConfig(builder.build())
 }
