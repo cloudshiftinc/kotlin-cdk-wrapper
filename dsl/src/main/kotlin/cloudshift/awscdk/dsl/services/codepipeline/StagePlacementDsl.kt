@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codepipeline
 
@@ -17,15 +8,15 @@ import software.amazon.awscdk.services.codepipeline.StagePlacement
 
 @CdkDslMarker
 public class StagePlacementDsl {
-    private val cdkBuilder: StagePlacement.Builder = StagePlacement.builder()
+  private val cdkBuilder: StagePlacement.Builder = StagePlacement.builder()
 
-    public fun justAfter(justAfter: IStage) {
-        cdkBuilder.justAfter(justAfter)
-    }
+  public fun justAfter(justAfter: IStage) {
+    cdkBuilder.justAfter(justAfter)
+  }
 
-    public fun rightBefore(rightBefore: IStage) {
-        cdkBuilder.rightBefore(rightBefore)
-    }
+  public fun rightBefore(rightBefore: IStage) {
+    cdkBuilder.rightBefore(rightBefore)
+  }
 
-    public fun build(): StagePlacement = cdkBuilder.build()
+  public fun build(): StagePlacement = cdkBuilder.build()
 }

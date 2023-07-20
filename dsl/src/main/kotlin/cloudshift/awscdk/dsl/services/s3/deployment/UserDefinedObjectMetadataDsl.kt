@@ -1,24 +1,15 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.s3.deployment
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata
 import kotlin.Deprecated
+import software.amazon.awscdk.services.s3.deployment.UserDefinedObjectMetadata
 
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class UserDefinedObjectMetadataDsl {
-    private val cdkBuilder: UserDefinedObjectMetadata.Builder = UserDefinedObjectMetadata.builder()
+  private val cdkBuilder: UserDefinedObjectMetadata.Builder = UserDefinedObjectMetadata.builder()
 
-    public fun build(): UserDefinedObjectMetadata = cdkBuilder.build()
+  public fun build(): UserDefinedObjectMetadata = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 @CdkDslMarker
 public class CfnDashboardSectionLayoutConfigurationPropertyDsl {
-    private val cdkBuilder: CfnDashboard.SectionLayoutConfigurationProperty.Builder =
-        CfnDashboard.SectionLayoutConfigurationProperty.builder()
+  private val cdkBuilder: CfnDashboard.SectionLayoutConfigurationProperty.Builder =
+      CfnDashboard.SectionLayoutConfigurationProperty.builder()
 
-    public fun freeFormLayout(freeFormLayout: IResolvable) {
-        cdkBuilder.freeFormLayout(freeFormLayout)
-    }
+  public fun freeFormLayout(freeFormLayout: IResolvable) {
+    cdkBuilder.freeFormLayout(freeFormLayout)
+  }
 
-    public fun freeFormLayout(freeFormLayout: CfnDashboard.FreeFormSectionLayoutConfigurationProperty) {
-        cdkBuilder.freeFormLayout(freeFormLayout)
-    }
+  public
+      fun freeFormLayout(freeFormLayout: CfnDashboard.FreeFormSectionLayoutConfigurationProperty) {
+    cdkBuilder.freeFormLayout(freeFormLayout)
+  }
 
-    public fun build(): CfnDashboard.SectionLayoutConfigurationProperty = cdkBuilder.build()
+  public fun build(): CfnDashboard.SectionLayoutConfigurationProperty = cdkBuilder.build()
 }

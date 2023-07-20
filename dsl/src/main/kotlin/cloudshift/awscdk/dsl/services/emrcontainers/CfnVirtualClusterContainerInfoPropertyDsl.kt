@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.emrcontainers
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
 
 @CdkDslMarker
 public class CfnVirtualClusterContainerInfoPropertyDsl {
-    private val cdkBuilder: CfnVirtualCluster.ContainerInfoProperty.Builder =
-        CfnVirtualCluster.ContainerInfoProperty.builder()
+  private val cdkBuilder: CfnVirtualCluster.ContainerInfoProperty.Builder =
+      CfnVirtualCluster.ContainerInfoProperty.builder()
 
-    public fun eksInfo(eksInfo: IResolvable) {
-        cdkBuilder.eksInfo(eksInfo)
-    }
+  public fun eksInfo(eksInfo: IResolvable) {
+    cdkBuilder.eksInfo(eksInfo)
+  }
 
-    public fun eksInfo(eksInfo: CfnVirtualCluster.EksInfoProperty) {
-        cdkBuilder.eksInfo(eksInfo)
-    }
+  public fun eksInfo(eksInfo: CfnVirtualCluster.EksInfoProperty) {
+    cdkBuilder.eksInfo(eksInfo)
+  }
 
-    public fun build(): CfnVirtualCluster.ContainerInfoProperty = cdkBuilder.build()
+  public fun build(): CfnVirtualCluster.ContainerInfoProperty = cdkBuilder.build()
 }

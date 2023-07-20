@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl
 
@@ -16,8 +7,8 @@ import software.amazon.awscdk.PermissionsBoundaryBindOptions
 
 @CdkDslMarker
 public class PermissionsBoundaryBindOptionsDsl {
-    private val cdkBuilder: PermissionsBoundaryBindOptions.Builder =
-        PermissionsBoundaryBindOptions.builder()
+  private val cdkBuilder: PermissionsBoundaryBindOptions.Builder =
+      PermissionsBoundaryBindOptions.builder()
 
-    public fun build(): PermissionsBoundaryBindOptions = cdkBuilder.build()
+  public fun build(): PermissionsBoundaryBindOptions = cdkBuilder.build()
 }

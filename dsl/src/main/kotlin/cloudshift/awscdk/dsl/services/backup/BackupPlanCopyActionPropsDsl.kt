@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.backup
 
@@ -18,19 +9,19 @@ import software.amazon.awscdk.services.backup.IBackupVault
 
 @CdkDslMarker
 public class BackupPlanCopyActionPropsDsl {
-    private val cdkBuilder: BackupPlanCopyActionProps.Builder = BackupPlanCopyActionProps.builder()
+  private val cdkBuilder: BackupPlanCopyActionProps.Builder = BackupPlanCopyActionProps.builder()
 
-    public fun deleteAfter(deleteAfter: Duration) {
-        cdkBuilder.deleteAfter(deleteAfter)
-    }
+  public fun deleteAfter(deleteAfter: Duration) {
+    cdkBuilder.deleteAfter(deleteAfter)
+  }
 
-    public fun destinationBackupVault(destinationBackupVault: IBackupVault) {
-        cdkBuilder.destinationBackupVault(destinationBackupVault)
-    }
+  public fun destinationBackupVault(destinationBackupVault: IBackupVault) {
+    cdkBuilder.destinationBackupVault(destinationBackupVault)
+  }
 
-    public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-        cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter)
-    }
+  public fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
+    cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter)
+  }
 
-    public fun build(): BackupPlanCopyActionProps = cdkBuilder.build()
+  public fun build(): BackupPlanCopyActionProps = cdkBuilder.build()
 }

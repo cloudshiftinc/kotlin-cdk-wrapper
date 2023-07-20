@@ -1,86 +1,77 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs.patterns
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.ecs.ContainerImage
-import software.amazon.awscdk.services.ecs.LogDriver
-import software.amazon.awscdk.services.ecs.Secret
-import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps
-import software.amazon.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.services.ecs.ContainerImage
+import software.amazon.awscdk.services.ecs.LogDriver
+import software.amazon.awscdk.services.ecs.Secret
+import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageProps
+import software.amazon.awscdk.services.iam.IRole
 
 @CdkDslMarker
 public class NetworkLoadBalancedTaskImagePropsDsl {
-    private val cdkBuilder: NetworkLoadBalancedTaskImageProps.Builder =
-        NetworkLoadBalancedTaskImageProps.builder()
+  private val cdkBuilder: NetworkLoadBalancedTaskImageProps.Builder =
+      NetworkLoadBalancedTaskImageProps.builder()
 
-    private val _containerPorts: MutableList<Number> = mutableListOf()
+  private val _containerPorts: MutableList<Number> = mutableListOf()
 
-    public fun containerName(containerName: String) {
-        cdkBuilder.containerName(containerName)
-    }
+  public fun containerName(containerName: String) {
+    cdkBuilder.containerName(containerName)
+  }
 
-    public fun containerPorts(vararg containerPorts: Number) {
-        _containerPorts.addAll(listOf(*containerPorts))
-    }
+  public fun containerPorts(vararg containerPorts: Number) {
+    _containerPorts.addAll(listOf(*containerPorts))
+  }
 
-    public fun containerPorts(containerPorts: Collection<Number>) {
-        _containerPorts.addAll(containerPorts)
-    }
+  public fun containerPorts(containerPorts: Collection<Number>) {
+    _containerPorts.addAll(containerPorts)
+  }
 
-    public fun dockerLabels(dockerLabels: Map<String, String>) {
-        cdkBuilder.dockerLabels(dockerLabels)
-    }
+  public fun dockerLabels(dockerLabels: Map<String, String>) {
+    cdkBuilder.dockerLabels(dockerLabels)
+  }
 
-    public fun enableLogging(enableLogging: Boolean) {
-        cdkBuilder.enableLogging(enableLogging)
-    }
+  public fun enableLogging(enableLogging: Boolean) {
+    cdkBuilder.enableLogging(enableLogging)
+  }
 
-    public fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
-    }
+  public fun environment(environment: Map<String, String>) {
+    cdkBuilder.environment(environment)
+  }
 
-    public fun executionRole(executionRole: IRole) {
-        cdkBuilder.executionRole(executionRole)
-    }
+  public fun executionRole(executionRole: IRole) {
+    cdkBuilder.executionRole(executionRole)
+  }
 
-    public fun family(family: String) {
-        cdkBuilder.family(family)
-    }
+  public fun family(family: String) {
+    cdkBuilder.family(family)
+  }
 
-    public fun image(image: ContainerImage) {
-        cdkBuilder.image(image)
-    }
+  public fun image(image: ContainerImage) {
+    cdkBuilder.image(image)
+  }
 
-    public fun logDriver(logDriver: LogDriver) {
-        cdkBuilder.logDriver(logDriver)
-    }
+  public fun logDriver(logDriver: LogDriver) {
+    cdkBuilder.logDriver(logDriver)
+  }
 
-    public fun secrets(secrets: Map<String, Secret>) {
-        cdkBuilder.secrets(secrets)
-    }
+  public fun secrets(secrets: Map<String, Secret>) {
+    cdkBuilder.secrets(secrets)
+  }
 
-    public fun taskRole(taskRole: IRole) {
-        cdkBuilder.taskRole(taskRole)
-    }
+  public fun taskRole(taskRole: IRole) {
+    cdkBuilder.taskRole(taskRole)
+  }
 
-    public fun build(): NetworkLoadBalancedTaskImageProps {
-        if (_containerPorts.isNotEmpty()) cdkBuilder.containerPorts(_containerPorts)
-        return cdkBuilder.build()
-    }
+  public fun build(): NetworkLoadBalancedTaskImageProps {
+    if(_containerPorts.isNotEmpty()) cdkBuilder.containerPorts(_containerPorts)
+    return cdkBuilder.build()
+  }
 }

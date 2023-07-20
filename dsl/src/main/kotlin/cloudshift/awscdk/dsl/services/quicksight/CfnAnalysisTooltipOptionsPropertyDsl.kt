@@ -1,41 +1,32 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
-import kotlin.String
 
 @CdkDslMarker
 public class CfnAnalysisTooltipOptionsPropertyDsl {
-    private val cdkBuilder: CfnAnalysis.TooltipOptionsProperty.Builder =
-        CfnAnalysis.TooltipOptionsProperty.builder()
+  private val cdkBuilder: CfnAnalysis.TooltipOptionsProperty.Builder =
+      CfnAnalysis.TooltipOptionsProperty.builder()
 
-    public fun fieldBasedTooltip(fieldBasedTooltip: IResolvable) {
-        cdkBuilder.fieldBasedTooltip(fieldBasedTooltip)
-    }
+  public fun fieldBasedTooltip(fieldBasedTooltip: IResolvable) {
+    cdkBuilder.fieldBasedTooltip(fieldBasedTooltip)
+  }
 
-    public fun fieldBasedTooltip(fieldBasedTooltip: CfnAnalysis.FieldBasedTooltipProperty) {
-        cdkBuilder.fieldBasedTooltip(fieldBasedTooltip)
-    }
+  public fun fieldBasedTooltip(fieldBasedTooltip: CfnAnalysis.FieldBasedTooltipProperty) {
+    cdkBuilder.fieldBasedTooltip(fieldBasedTooltip)
+  }
 
-    public fun selectedTooltipType(selectedTooltipType: String) {
-        cdkBuilder.selectedTooltipType(selectedTooltipType)
-    }
+  public fun selectedTooltipType(selectedTooltipType: String) {
+    cdkBuilder.selectedTooltipType(selectedTooltipType)
+  }
 
-    public fun tooltipVisibility(tooltipVisibility: String) {
-        cdkBuilder.tooltipVisibility(tooltipVisibility)
-    }
+  public fun tooltipVisibility(tooltipVisibility: String) {
+    cdkBuilder.tooltipVisibility(tooltipVisibility)
+  }
 
-    public fun build(): CfnAnalysis.TooltipOptionsProperty = cdkBuilder.build()
+  public fun build(): CfnAnalysis.TooltipOptionsProperty = cdkBuilder.build()
 }

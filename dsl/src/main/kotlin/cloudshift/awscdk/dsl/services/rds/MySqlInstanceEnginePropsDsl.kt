@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.rds
 
@@ -17,11 +8,11 @@ import software.amazon.awscdk.services.rds.MysqlEngineVersion
 
 @CdkDslMarker
 public class MySqlInstanceEnginePropsDsl {
-    private val cdkBuilder: MySqlInstanceEngineProps.Builder = MySqlInstanceEngineProps.builder()
+  private val cdkBuilder: MySqlInstanceEngineProps.Builder = MySqlInstanceEngineProps.builder()
 
-    public fun version(version: MysqlEngineVersion) {
-        cdkBuilder.version(version)
-    }
+  public fun version(version: MysqlEngineVersion) {
+    cdkBuilder.version(version)
+  }
 
-    public fun build(): MySqlInstanceEngineProps = cdkBuilder.build()
+  public fun build(): MySqlInstanceEngineProps = cdkBuilder.build()
 }

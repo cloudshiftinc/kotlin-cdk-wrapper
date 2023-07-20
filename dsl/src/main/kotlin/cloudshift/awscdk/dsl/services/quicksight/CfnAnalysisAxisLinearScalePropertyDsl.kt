@@ -1,32 +1,23 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import kotlin.Number
+import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
 @CdkDslMarker
 public class CfnAnalysisAxisLinearScalePropertyDsl {
-    private val cdkBuilder: CfnAnalysis.AxisLinearScaleProperty.Builder =
-        CfnAnalysis.AxisLinearScaleProperty.builder()
+  private val cdkBuilder: CfnAnalysis.AxisLinearScaleProperty.Builder =
+      CfnAnalysis.AxisLinearScaleProperty.builder()
 
-    public fun stepCount(stepCount: Number) {
-        cdkBuilder.stepCount(stepCount)
-    }
+  public fun stepCount(stepCount: Number) {
+    cdkBuilder.stepCount(stepCount)
+  }
 
-    public fun stepSize(stepSize: Number) {
-        cdkBuilder.stepSize(stepSize)
-    }
+  public fun stepSize(stepSize: Number) {
+    cdkBuilder.stepSize(stepSize)
+  }
 
-    public fun build(): CfnAnalysis.AxisLinearScaleProperty = cdkBuilder.build()
+  public fun build(): CfnAnalysis.AxisLinearScaleProperty = cdkBuilder.build()
 }

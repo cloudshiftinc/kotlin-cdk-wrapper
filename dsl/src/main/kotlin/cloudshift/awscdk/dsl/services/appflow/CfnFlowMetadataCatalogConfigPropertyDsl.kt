@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.appflow
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.appflow.CfnFlow
 
 @CdkDslMarker
 public class CfnFlowMetadataCatalogConfigPropertyDsl {
-    private val cdkBuilder: CfnFlow.MetadataCatalogConfigProperty.Builder =
-        CfnFlow.MetadataCatalogConfigProperty.builder()
+  private val cdkBuilder: CfnFlow.MetadataCatalogConfigProperty.Builder =
+      CfnFlow.MetadataCatalogConfigProperty.builder()
 
-    public fun glueDataCatalog(glueDataCatalog: IResolvable) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog)
-    }
+  public fun glueDataCatalog(glueDataCatalog: IResolvable) {
+    cdkBuilder.glueDataCatalog(glueDataCatalog)
+  }
 
-    public fun glueDataCatalog(glueDataCatalog: CfnFlow.GlueDataCatalogProperty) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog)
-    }
+  public fun glueDataCatalog(glueDataCatalog: CfnFlow.GlueDataCatalogProperty) {
+    cdkBuilder.glueDataCatalog(glueDataCatalog)
+  }
 
-    public fun build(): CfnFlow.MetadataCatalogConfigProperty = cdkBuilder.build()
+  public fun build(): CfnFlow.MetadataCatalogConfigProperty = cdkBuilder.build()
 }

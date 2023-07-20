@@ -1,57 +1,48 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.greengrass
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.greengrass.CfnGroup
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.greengrass.CfnGroup
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnGroupDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnGroup.Builder = CfnGroup.Builder.create(scope, id)
+  private val cdkBuilder: CfnGroup.Builder = CfnGroup.Builder.create(scope, id)
 
-    public fun initialVersion(initialVersion: IResolvable) {
-        cdkBuilder.initialVersion(initialVersion)
-    }
+  public fun initialVersion(initialVersion: IResolvable) {
+    cdkBuilder.initialVersion(initialVersion)
+  }
 
-    public fun initialVersion(initialVersion: CfnGroup.GroupVersionProperty) {
-        cdkBuilder.initialVersion(initialVersion)
-    }
+  public fun initialVersion(initialVersion: CfnGroup.GroupVersionProperty) {
+    cdkBuilder.initialVersion(initialVersion)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-    }
+  public fun roleArn(roleArn: String) {
+    cdkBuilder.roleArn(roleArn)
+  }
 
-    public fun tags(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.tags(builder.map)
-    }
+  public fun tags(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.tags(builder.map)
+  }
 
-    public fun tags(tags: Any) {
-        cdkBuilder.tags(tags)
-    }
+  public fun tags(tags: Any) {
+    cdkBuilder.tags(tags)
+  }
 
-    public fun build(): CfnGroup = cdkBuilder.build()
+  public fun build(): CfnGroup = cdkBuilder.build()
 }

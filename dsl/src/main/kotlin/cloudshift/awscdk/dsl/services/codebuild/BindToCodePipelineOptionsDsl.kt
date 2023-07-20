@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codebuild
 
@@ -17,11 +8,11 @@ import software.amazon.awscdk.services.s3.IBucket
 
 @CdkDslMarker
 public class BindToCodePipelineOptionsDsl {
-    private val cdkBuilder: BindToCodePipelineOptions.Builder = BindToCodePipelineOptions.builder()
+  private val cdkBuilder: BindToCodePipelineOptions.Builder = BindToCodePipelineOptions.builder()
 
-    public fun artifactBucket(artifactBucket: IBucket) {
-        cdkBuilder.artifactBucket(artifactBucket)
-    }
+  public fun artifactBucket(artifactBucket: IBucket) {
+    cdkBuilder.artifactBucket(artifactBucket)
+  }
 
-    public fun build(): BindToCodePipelineOptions = cdkBuilder.build()
+  public fun build(): BindToCodePipelineOptions = cdkBuilder.build()
 }

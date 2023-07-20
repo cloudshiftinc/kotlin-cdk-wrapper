@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -18,16 +9,17 @@ import software.amazon.awscdk.services.cloudfront.CfnOriginAccessControlProps
 
 @CdkDslMarker
 public class CfnOriginAccessControlPropsDsl {
-    private val cdkBuilder: CfnOriginAccessControlProps.Builder =
-        CfnOriginAccessControlProps.builder()
+  private val cdkBuilder: CfnOriginAccessControlProps.Builder =
+      CfnOriginAccessControlProps.builder()
 
-    public fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
-        cdkBuilder.originAccessControlConfig(originAccessControlConfig)
-    }
+  public fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
+    cdkBuilder.originAccessControlConfig(originAccessControlConfig)
+  }
 
-    public fun originAccessControlConfig(originAccessControlConfig: CfnOriginAccessControl.OriginAccessControlConfigProperty) {
-        cdkBuilder.originAccessControlConfig(originAccessControlConfig)
-    }
+  public
+      fun originAccessControlConfig(originAccessControlConfig: CfnOriginAccessControl.OriginAccessControlConfigProperty) {
+    cdkBuilder.originAccessControlConfig(originAccessControlConfig)
+  }
 
-    public fun build(): CfnOriginAccessControlProps = cdkBuilder.build()
+  public fun build(): CfnOriginAccessControlProps = cdkBuilder.build()
 }

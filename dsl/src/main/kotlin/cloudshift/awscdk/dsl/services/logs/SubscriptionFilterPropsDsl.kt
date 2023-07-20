@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.logs
 
@@ -19,19 +10,19 @@ import software.amazon.awscdk.services.logs.SubscriptionFilterProps
 
 @CdkDslMarker
 public class SubscriptionFilterPropsDsl {
-    private val cdkBuilder: SubscriptionFilterProps.Builder = SubscriptionFilterProps.builder()
+  private val cdkBuilder: SubscriptionFilterProps.Builder = SubscriptionFilterProps.builder()
 
-    public fun destination(destination: ILogSubscriptionDestination) {
-        cdkBuilder.destination(destination)
-    }
+  public fun destination(destination: ILogSubscriptionDestination) {
+    cdkBuilder.destination(destination)
+  }
 
-    public fun filterPattern(filterPattern: IFilterPattern) {
-        cdkBuilder.filterPattern(filterPattern)
-    }
+  public fun filterPattern(filterPattern: IFilterPattern) {
+    cdkBuilder.filterPattern(filterPattern)
+  }
 
-    public fun logGroup(logGroup: ILogGroup) {
-        cdkBuilder.logGroup(logGroup)
-    }
+  public fun logGroup(logGroup: ILogGroup) {
+    cdkBuilder.logGroup(logGroup)
+  }
 
-    public fun build(): SubscriptionFilterProps = cdkBuilder.build()
+  public fun build(): SubscriptionFilterProps = cdkBuilder.build()
 }

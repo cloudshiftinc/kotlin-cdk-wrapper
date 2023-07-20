@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.cxapi
 
@@ -16,7 +7,7 @@ import software.amazon.awscdk.cxapi.AssemblyBuildOptions
 
 @CdkDslMarker
 public class AssemblyBuildOptionsDsl {
-    private val cdkBuilder: AssemblyBuildOptions.Builder = AssemblyBuildOptions.builder()
+  private val cdkBuilder: AssemblyBuildOptions.Builder = AssemblyBuildOptions.builder()
 
-    public fun build(): AssemblyBuildOptions = cdkBuilder.build()
+  public fun build(): AssemblyBuildOptions = cdkBuilder.build()
 }

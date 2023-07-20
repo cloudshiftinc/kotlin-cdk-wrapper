@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.sagemaker
 
@@ -17,24 +8,25 @@ import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionDataQualityJobInputPropertyDsl {
-    private val cdkBuilder: CfnDataQualityJobDefinition.DataQualityJobInputProperty.Builder =
-        CfnDataQualityJobDefinition.DataQualityJobInputProperty.builder()
+  private val cdkBuilder: CfnDataQualityJobDefinition.DataQualityJobInputProperty.Builder =
+      CfnDataQualityJobDefinition.DataQualityJobInputProperty.builder()
 
-    public fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput)
-    }
+  public fun batchTransformInput(batchTransformInput: IResolvable) {
+    cdkBuilder.batchTransformInput(batchTransformInput)
+  }
 
-    public fun batchTransformInput(batchTransformInput: CfnDataQualityJobDefinition.BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput)
-    }
+  public
+      fun batchTransformInput(batchTransformInput: CfnDataQualityJobDefinition.BatchTransformInputProperty) {
+    cdkBuilder.batchTransformInput(batchTransformInput)
+  }
 
-    public fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput)
-    }
+  public fun endpointInput(endpointInput: IResolvable) {
+    cdkBuilder.endpointInput(endpointInput)
+  }
 
-    public fun endpointInput(endpointInput: CfnDataQualityJobDefinition.EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput)
-    }
+  public fun endpointInput(endpointInput: CfnDataQualityJobDefinition.EndpointInputProperty) {
+    cdkBuilder.endpointInput(endpointInput)
+  }
 
-    public fun build(): CfnDataQualityJobDefinition.DataQualityJobInputProperty = cdkBuilder.build()
+  public fun build(): CfnDataQualityJobDefinition.DataQualityJobInputProperty = cdkBuilder.build()
 }

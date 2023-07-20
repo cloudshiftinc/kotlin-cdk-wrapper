@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateBoxPlotFieldWellsPropertyDsl {
-    private val cdkBuilder: CfnTemplate.BoxPlotFieldWellsProperty.Builder =
-        CfnTemplate.BoxPlotFieldWellsProperty.builder()
+  private val cdkBuilder: CfnTemplate.BoxPlotFieldWellsProperty.Builder =
+      CfnTemplate.BoxPlotFieldWellsProperty.builder()
 
-    public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: IResolvable) {
-        cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
-    }
+  public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: IResolvable) {
+    cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
+  }
 
-    public fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: CfnTemplate.BoxPlotAggregatedFieldWellsProperty) {
-        cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
-    }
+  public
+      fun boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells: CfnTemplate.BoxPlotAggregatedFieldWellsProperty) {
+    cdkBuilder.boxPlotAggregatedFieldWells(boxPlotAggregatedFieldWells)
+  }
 
-    public fun build(): CfnTemplate.BoxPlotFieldWellsProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.BoxPlotFieldWellsProperty = cdkBuilder.build()
 }

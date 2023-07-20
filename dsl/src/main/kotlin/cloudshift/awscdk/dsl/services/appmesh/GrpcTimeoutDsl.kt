@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.appmesh
 
@@ -17,15 +8,15 @@ import software.amazon.awscdk.services.appmesh.GrpcTimeout
 
 @CdkDslMarker
 public class GrpcTimeoutDsl {
-    private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()
+  private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()
 
-    public fun idle(idle: Duration) {
-        cdkBuilder.idle(idle)
-    }
+  public fun idle(idle: Duration) {
+    cdkBuilder.idle(idle)
+  }
 
-    public fun perRequest(perRequest: Duration) {
-        cdkBuilder.perRequest(perRequest)
-    }
+  public fun perRequest(perRequest: Duration) {
+    cdkBuilder.perRequest(perRequest)
+  }
 
-    public fun build(): GrpcTimeout = cdkBuilder.build()
+  public fun build(): GrpcTimeout = cdkBuilder.build()
 }

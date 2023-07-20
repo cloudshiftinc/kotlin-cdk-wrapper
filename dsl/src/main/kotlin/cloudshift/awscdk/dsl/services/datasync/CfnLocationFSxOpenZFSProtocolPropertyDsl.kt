@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.datasync
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
 
 @CdkDslMarker
 public class CfnLocationFSxOpenZFSProtocolPropertyDsl {
-    private val cdkBuilder: CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
-        CfnLocationFSxOpenZFS.ProtocolProperty.builder()
+  private val cdkBuilder: CfnLocationFSxOpenZFS.ProtocolProperty.Builder =
+      CfnLocationFSxOpenZFS.ProtocolProperty.builder()
 
-    public fun nfs(nfs: IResolvable) {
-        cdkBuilder.nfs(nfs)
-    }
+  public fun nfs(nfs: IResolvable) {
+    cdkBuilder.nfs(nfs)
+  }
 
-    public fun nfs(nfs: CfnLocationFSxOpenZFS.NFSProperty) {
-        cdkBuilder.nfs(nfs)
-    }
+  public fun nfs(nfs: CfnLocationFSxOpenZFS.NFSProperty) {
+    cdkBuilder.nfs(nfs)
+  }
 
-    public fun build(): CfnLocationFSxOpenZFS.ProtocolProperty = cdkBuilder.build()
+  public fun build(): CfnLocationFSxOpenZFS.ProtocolProperty = cdkBuilder.build()
 }

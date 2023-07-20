@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.triggers
 
@@ -17,6 +8,13 @@ import cloudshift.awscdk.dsl.services.iam.PolicyStatementDsl
 import cloudshift.awscdk.dsl.services.lambda.AdotInstrumentationConfigDsl
 import cloudshift.awscdk.dsl.services.lambda.LogRetentionRetryOptionsDsl
 import cloudshift.awscdk.dsl.services.lambda.VersionOptionsDsl
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.codeguruprofiler.IProfilingGroup
@@ -46,261 +44,254 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.triggers.TriggerFunctionProps
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.Number
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class TriggerFunctionPropsDsl {
-    private val cdkBuilder: TriggerFunctionProps.Builder = TriggerFunctionProps.builder()
+  private val cdkBuilder: TriggerFunctionProps.Builder = TriggerFunctionProps.builder()
 
-    private val _events: MutableList<IEventSource> = mutableListOf()
+  private val _events: MutableList<IEventSource> = mutableListOf()
 
-    private val _executeAfter: MutableList<Construct> = mutableListOf()
+  private val _executeAfter: MutableList<Construct> = mutableListOf()
 
-    private val _executeBefore: MutableList<Construct> = mutableListOf()
+  private val _executeBefore: MutableList<Construct> = mutableListOf()
 
-    private val _initialPolicy: MutableList<PolicyStatement> = mutableListOf()
+  private val _initialPolicy: MutableList<PolicyStatement> = mutableListOf()
 
-    private val _layers: MutableList<ILayerVersion> = mutableListOf()
+  private val _layers: MutableList<ILayerVersion> = mutableListOf()
 
-    private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
+  private val _securityGroups: MutableList<ISecurityGroup> = mutableListOf()
 
-    public fun adotInstrumentation(block: AdotInstrumentationConfigDsl.() -> Unit = {}) {
-        val builder = AdotInstrumentationConfigDsl()
-        builder.apply(block)
-        cdkBuilder.adotInstrumentation(builder.build())
-    }
+  public fun adotInstrumentation(block: AdotInstrumentationConfigDsl.() -> Unit = {}) {
+    val builder = AdotInstrumentationConfigDsl()
+    builder.apply(block)
+    cdkBuilder.adotInstrumentation(builder.build())
+  }
 
-    public fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig) {
-        cdkBuilder.adotInstrumentation(adotInstrumentation)
-    }
+  public fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig) {
+    cdkBuilder.adotInstrumentation(adotInstrumentation)
+  }
 
-    public fun allowAllOutbound(allowAllOutbound: Boolean) {
-        cdkBuilder.allowAllOutbound(allowAllOutbound)
-    }
+  public fun allowAllOutbound(allowAllOutbound: Boolean) {
+    cdkBuilder.allowAllOutbound(allowAllOutbound)
+  }
 
-    public fun allowPublicSubnet(allowPublicSubnet: Boolean) {
-        cdkBuilder.allowPublicSubnet(allowPublicSubnet)
-    }
+  public fun allowPublicSubnet(allowPublicSubnet: Boolean) {
+    cdkBuilder.allowPublicSubnet(allowPublicSubnet)
+  }
 
-    public fun architecture(architecture: Architecture) {
-        cdkBuilder.architecture(architecture)
-    }
+  public fun architecture(architecture: Architecture) {
+    cdkBuilder.architecture(architecture)
+  }
 
-    public fun code(code: Code) {
-        cdkBuilder.code(code)
-    }
+  public fun code(code: Code) {
+    cdkBuilder.code(code)
+  }
 
-    public fun codeSigningConfig(codeSigningConfig: ICodeSigningConfig) {
-        cdkBuilder.codeSigningConfig(codeSigningConfig)
-    }
+  public fun codeSigningConfig(codeSigningConfig: ICodeSigningConfig) {
+    cdkBuilder.codeSigningConfig(codeSigningConfig)
+  }
 
-    public fun currentVersionOptions(block: VersionOptionsDsl.() -> Unit = {}) {
-        val builder = VersionOptionsDsl()
-        builder.apply(block)
-        cdkBuilder.currentVersionOptions(builder.build())
-    }
+  public fun currentVersionOptions(block: VersionOptionsDsl.() -> Unit = {}) {
+    val builder = VersionOptionsDsl()
+    builder.apply(block)
+    cdkBuilder.currentVersionOptions(builder.build())
+  }
 
-    public fun currentVersionOptions(currentVersionOptions: VersionOptions) {
-        cdkBuilder.currentVersionOptions(currentVersionOptions)
-    }
+  public fun currentVersionOptions(currentVersionOptions: VersionOptions) {
+    cdkBuilder.currentVersionOptions(currentVersionOptions)
+  }
 
-    public fun deadLetterQueue(deadLetterQueue: IQueue) {
-        cdkBuilder.deadLetterQueue(deadLetterQueue)
-    }
+  public fun deadLetterQueue(deadLetterQueue: IQueue) {
+    cdkBuilder.deadLetterQueue(deadLetterQueue)
+  }
 
-    public fun deadLetterQueueEnabled(deadLetterQueueEnabled: Boolean) {
-        cdkBuilder.deadLetterQueueEnabled(deadLetterQueueEnabled)
-    }
+  public fun deadLetterQueueEnabled(deadLetterQueueEnabled: Boolean) {
+    cdkBuilder.deadLetterQueueEnabled(deadLetterQueueEnabled)
+  }
 
-    public fun deadLetterTopic(deadLetterTopic: ITopic) {
-        cdkBuilder.deadLetterTopic(deadLetterTopic)
-    }
+  public fun deadLetterTopic(deadLetterTopic: ITopic) {
+    cdkBuilder.deadLetterTopic(deadLetterTopic)
+  }
 
-    public fun description(description: String) {
-        cdkBuilder.description(description)
-    }
+  public fun description(description: String) {
+    cdkBuilder.description(description)
+  }
 
-    public fun environment(environment: Map<String, String>) {
-        cdkBuilder.environment(environment)
-    }
+  public fun environment(environment: Map<String, String>) {
+    cdkBuilder.environment(environment)
+  }
 
-    public fun environmentEncryption(environmentEncryption: IKey) {
-        cdkBuilder.environmentEncryption(environmentEncryption)
-    }
+  public fun environmentEncryption(environmentEncryption: IKey) {
+    cdkBuilder.environmentEncryption(environmentEncryption)
+  }
 
-    public fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-        cdkBuilder.ephemeralStorageSize(ephemeralStorageSize)
-    }
+  public fun ephemeralStorageSize(ephemeralStorageSize: Size) {
+    cdkBuilder.ephemeralStorageSize(ephemeralStorageSize)
+  }
 
-    public fun events(vararg events: IEventSource) {
-        _events.addAll(listOf(*events))
-    }
+  public fun events(vararg events: IEventSource) {
+    _events.addAll(listOf(*events))
+  }
 
-    public fun events(events: Collection<IEventSource>) {
-        _events.addAll(events)
-    }
+  public fun events(events: Collection<IEventSource>) {
+    _events.addAll(events)
+  }
 
-    public fun executeAfter(vararg executeAfter: Construct) {
-        _executeAfter.addAll(listOf(*executeAfter))
-    }
+  public fun executeAfter(vararg executeAfter: Construct) {
+    _executeAfter.addAll(listOf(*executeAfter))
+  }
 
-    public fun executeAfter(executeAfter: Collection<Construct>) {
-        _executeAfter.addAll(executeAfter)
-    }
+  public fun executeAfter(executeAfter: Collection<Construct>) {
+    _executeAfter.addAll(executeAfter)
+  }
 
-    public fun executeBefore(vararg executeBefore: Construct) {
-        _executeBefore.addAll(listOf(*executeBefore))
-    }
+  public fun executeBefore(vararg executeBefore: Construct) {
+    _executeBefore.addAll(listOf(*executeBefore))
+  }
 
-    public fun executeBefore(executeBefore: Collection<Construct>) {
-        _executeBefore.addAll(executeBefore)
-    }
+  public fun executeBefore(executeBefore: Collection<Construct>) {
+    _executeBefore.addAll(executeBefore)
+  }
 
-    public fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
-        cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)
-    }
+  public fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
+    cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)
+  }
 
-    public fun filesystem(filesystem: FileSystem) {
-        cdkBuilder.filesystem(filesystem)
-    }
+  public fun filesystem(filesystem: FileSystem) {
+    cdkBuilder.filesystem(filesystem)
+  }
 
-    public fun functionName(functionName: String) {
-        cdkBuilder.functionName(functionName)
-    }
+  public fun functionName(functionName: String) {
+    cdkBuilder.functionName(functionName)
+  }
 
-    public fun handler(handler: String) {
-        cdkBuilder.handler(handler)
-    }
+  public fun handler(handler: String) {
+    cdkBuilder.handler(handler)
+  }
 
-    public fun initialPolicy(initialPolicy: PolicyStatementDsl.() -> Unit) {
-        _initialPolicy.add(PolicyStatementDsl().apply(initialPolicy).build())
-    }
+  public fun initialPolicy(initialPolicy: PolicyStatementDsl.() -> Unit) {
+    _initialPolicy.add(PolicyStatementDsl().apply(initialPolicy).build())
+  }
 
-    public fun initialPolicy(initialPolicy: Collection<PolicyStatement>) {
-        _initialPolicy.addAll(initialPolicy)
-    }
+  public fun initialPolicy(initialPolicy: Collection<PolicyStatement>) {
+    _initialPolicy.addAll(initialPolicy)
+  }
 
-    public fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
-        cdkBuilder.insightsVersion(insightsVersion)
-    }
+  public fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
+    cdkBuilder.insightsVersion(insightsVersion)
+  }
 
-    public fun layers(vararg layers: ILayerVersion) {
-        _layers.addAll(listOf(*layers))
-    }
+  public fun layers(vararg layers: ILayerVersion) {
+    _layers.addAll(listOf(*layers))
+  }
 
-    public fun layers(layers: Collection<ILayerVersion>) {
-        _layers.addAll(layers)
-    }
+  public fun layers(layers: Collection<ILayerVersion>) {
+    _layers.addAll(layers)
+  }
 
-    public fun logRetention(logRetention: RetentionDays) {
-        cdkBuilder.logRetention(logRetention)
-    }
+  public fun logRetention(logRetention: RetentionDays) {
+    cdkBuilder.logRetention(logRetention)
+  }
 
-    public fun logRetentionRetryOptions(block: LogRetentionRetryOptionsDsl.() -> Unit = {}) {
-        val builder = LogRetentionRetryOptionsDsl()
-        builder.apply(block)
-        cdkBuilder.logRetentionRetryOptions(builder.build())
-    }
+  public fun logRetentionRetryOptions(block: LogRetentionRetryOptionsDsl.() -> Unit = {}) {
+    val builder = LogRetentionRetryOptionsDsl()
+    builder.apply(block)
+    cdkBuilder.logRetentionRetryOptions(builder.build())
+  }
 
-    public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-        cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
-    }
+  public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
+    cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions)
+  }
 
-    public fun logRetentionRole(logRetentionRole: IRole) {
-        cdkBuilder.logRetentionRole(logRetentionRole)
-    }
+  public fun logRetentionRole(logRetentionRole: IRole) {
+    cdkBuilder.logRetentionRole(logRetentionRole)
+  }
 
-    public fun maxEventAge(maxEventAge: Duration) {
-        cdkBuilder.maxEventAge(maxEventAge)
-    }
+  public fun maxEventAge(maxEventAge: Duration) {
+    cdkBuilder.maxEventAge(maxEventAge)
+  }
 
-    public fun memorySize(memorySize: Number) {
-        cdkBuilder.memorySize(memorySize)
-    }
+  public fun memorySize(memorySize: Number) {
+    cdkBuilder.memorySize(memorySize)
+  }
 
-    public fun onFailure(onFailure: IDestination) {
-        cdkBuilder.onFailure(onFailure)
-    }
+  public fun onFailure(onFailure: IDestination) {
+    cdkBuilder.onFailure(onFailure)
+  }
 
-    public fun onSuccess(onSuccess: IDestination) {
-        cdkBuilder.onSuccess(onSuccess)
-    }
+  public fun onSuccess(onSuccess: IDestination) {
+    cdkBuilder.onSuccess(onSuccess)
+  }
 
-    public fun paramsAndSecrets(paramsAndSecrets: ParamsAndSecretsLayerVersion) {
-        cdkBuilder.paramsAndSecrets(paramsAndSecrets)
-    }
+  public fun paramsAndSecrets(paramsAndSecrets: ParamsAndSecretsLayerVersion) {
+    cdkBuilder.paramsAndSecrets(paramsAndSecrets)
+  }
 
-    public fun profiling(profiling: Boolean) {
-        cdkBuilder.profiling(profiling)
-    }
+  public fun profiling(profiling: Boolean) {
+    cdkBuilder.profiling(profiling)
+  }
 
-    public fun profilingGroup(profilingGroup: IProfilingGroup) {
-        cdkBuilder.profilingGroup(profilingGroup)
-    }
+  public fun profilingGroup(profilingGroup: IProfilingGroup) {
+    cdkBuilder.profilingGroup(profilingGroup)
+  }
 
-    public fun reservedConcurrentExecutions(reservedConcurrentExecutions: Number) {
-        cdkBuilder.reservedConcurrentExecutions(reservedConcurrentExecutions)
-    }
+  public fun reservedConcurrentExecutions(reservedConcurrentExecutions: Number) {
+    cdkBuilder.reservedConcurrentExecutions(reservedConcurrentExecutions)
+  }
 
-    public fun retryAttempts(retryAttempts: Number) {
-        cdkBuilder.retryAttempts(retryAttempts)
-    }
+  public fun retryAttempts(retryAttempts: Number) {
+    cdkBuilder.retryAttempts(retryAttempts)
+  }
 
-    public fun role(role: IRole) {
-        cdkBuilder.role(role)
-    }
+  public fun role(role: IRole) {
+    cdkBuilder.role(role)
+  }
 
-    public fun runtime(runtime: Runtime) {
-        cdkBuilder.runtime(runtime)
-    }
+  public fun runtime(runtime: Runtime) {
+    cdkBuilder.runtime(runtime)
+  }
 
-    public fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode) {
-        cdkBuilder.runtimeManagementMode(runtimeManagementMode)
-    }
+  public fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode) {
+    cdkBuilder.runtimeManagementMode(runtimeManagementMode)
+  }
 
-    public fun securityGroups(vararg securityGroups: ISecurityGroup) {
-        _securityGroups.addAll(listOf(*securityGroups))
-    }
+  public fun securityGroups(vararg securityGroups: ISecurityGroup) {
+    _securityGroups.addAll(listOf(*securityGroups))
+  }
 
-    public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
-        _securityGroups.addAll(securityGroups)
-    }
+  public fun securityGroups(securityGroups: Collection<ISecurityGroup>) {
+    _securityGroups.addAll(securityGroups)
+  }
 
-    public fun timeout(timeout: Duration) {
-        cdkBuilder.timeout(timeout)
-    }
+  public fun timeout(timeout: Duration) {
+    cdkBuilder.timeout(timeout)
+  }
 
-    public fun tracing(tracing: Tracing) {
-        cdkBuilder.tracing(tracing)
-    }
+  public fun tracing(tracing: Tracing) {
+    cdkBuilder.tracing(tracing)
+  }
 
-    public fun vpc(vpc: IVpc) {
-        cdkBuilder.vpc(vpc)
-    }
+  public fun vpc(vpc: IVpc) {
+    cdkBuilder.vpc(vpc)
+  }
 
-    public fun vpcSubnets(block: SubnetSelectionDsl.() -> Unit = {}) {
-        val builder = SubnetSelectionDsl()
-        builder.apply(block)
-        cdkBuilder.vpcSubnets(builder.build())
-    }
+  public fun vpcSubnets(block: SubnetSelectionDsl.() -> Unit = {}) {
+    val builder = SubnetSelectionDsl()
+    builder.apply(block)
+    cdkBuilder.vpcSubnets(builder.build())
+  }
 
-    public fun vpcSubnets(vpcSubnets: SubnetSelection) {
-        cdkBuilder.vpcSubnets(vpcSubnets)
-    }
+  public fun vpcSubnets(vpcSubnets: SubnetSelection) {
+    cdkBuilder.vpcSubnets(vpcSubnets)
+  }
 
-    public fun build(): TriggerFunctionProps {
-        if (_events.isNotEmpty()) cdkBuilder.events(_events)
-        if (_executeAfter.isNotEmpty()) cdkBuilder.executeAfter(_executeAfter)
-        if (_executeBefore.isNotEmpty()) cdkBuilder.executeBefore(_executeBefore)
-        if (_initialPolicy.isNotEmpty()) cdkBuilder.initialPolicy(_initialPolicy)
-        if (_layers.isNotEmpty()) cdkBuilder.layers(_layers)
-        if (_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
-        return cdkBuilder.build()
-    }
+  public fun build(): TriggerFunctionProps {
+    if(_events.isNotEmpty()) cdkBuilder.events(_events)
+    if(_executeAfter.isNotEmpty()) cdkBuilder.executeAfter(_executeAfter)
+    if(_executeBefore.isNotEmpty()) cdkBuilder.executeBefore(_executeBefore)
+    if(_initialPolicy.isNotEmpty()) cdkBuilder.initialPolicy(_initialPolicy)
+    if(_layers.isNotEmpty()) cdkBuilder.layers(_layers)
+    if(_securityGroups.isNotEmpty()) cdkBuilder.securityGroups(_securityGroups)
+    return cdkBuilder.build()
+  }
 }

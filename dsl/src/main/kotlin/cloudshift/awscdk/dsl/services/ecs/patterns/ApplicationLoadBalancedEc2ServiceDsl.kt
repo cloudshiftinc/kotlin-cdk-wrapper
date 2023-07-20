@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs.patterns
 
@@ -16,6 +7,12 @@ import cloudshift.awscdk.dsl.services.ecs.CapacityProviderStrategyDsl
 import cloudshift.awscdk.dsl.services.ecs.CloudMapOptionsDsl
 import cloudshift.awscdk.dsl.services.ecs.DeploymentCircuitBreakerDsl
 import cloudshift.awscdk.dsl.services.ecs.DeploymentControllerDsl
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.Collection
+import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.amazon.awscdk.services.ec2.IVpc
@@ -37,213 +34,208 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
-import kotlin.Boolean
-import kotlin.Number
-import kotlin.String
-import kotlin.Unit
-import kotlin.collections.Collection
-import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class ApplicationLoadBalancedEc2ServiceDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: ApplicationLoadBalancedEc2Service.Builder =
-        ApplicationLoadBalancedEc2Service.Builder.create(scope, id)
+  private val cdkBuilder: ApplicationLoadBalancedEc2Service.Builder =
+      ApplicationLoadBalancedEc2Service.Builder.create(scope, id)
 
-    private val _capacityProviderStrategies: MutableList<CapacityProviderStrategy> = mutableListOf()
+  private val _capacityProviderStrategies: MutableList<CapacityProviderStrategy> = mutableListOf()
 
-    private val _placementConstraints: MutableList<PlacementConstraint> = mutableListOf()
+  private val _placementConstraints: MutableList<PlacementConstraint> = mutableListOf()
 
-    private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
+  private val _placementStrategies: MutableList<PlacementStrategy> = mutableListOf()
 
-    public fun capacityProviderStrategies(capacityProviderStrategies: CapacityProviderStrategyDsl.() -> Unit) {
-        _capacityProviderStrategies.add(CapacityProviderStrategyDsl().apply(capacityProviderStrategies).build())
-    }
+  public
+      fun capacityProviderStrategies(capacityProviderStrategies: CapacityProviderStrategyDsl.() -> Unit) {
+    _capacityProviderStrategies.add(CapacityProviderStrategyDsl().apply(capacityProviderStrategies).build())
+  }
 
-    public fun capacityProviderStrategies(capacityProviderStrategies: Collection<CapacityProviderStrategy>) {
-        _capacityProviderStrategies.addAll(capacityProviderStrategies)
-    }
+  public
+      fun capacityProviderStrategies(capacityProviderStrategies: Collection<CapacityProviderStrategy>) {
+    _capacityProviderStrategies.addAll(capacityProviderStrategies)
+  }
 
-    public fun certificate(certificate: ICertificate) {
-        cdkBuilder.certificate(certificate)
-    }
+  public fun certificate(certificate: ICertificate) {
+    cdkBuilder.certificate(certificate)
+  }
 
-    public fun circuitBreaker(block: DeploymentCircuitBreakerDsl.() -> Unit = {}) {
-        val builder = DeploymentCircuitBreakerDsl()
-        builder.apply(block)
-        cdkBuilder.circuitBreaker(builder.build())
-    }
+  public fun circuitBreaker(block: DeploymentCircuitBreakerDsl.() -> Unit = {}) {
+    val builder = DeploymentCircuitBreakerDsl()
+    builder.apply(block)
+    cdkBuilder.circuitBreaker(builder.build())
+  }
 
-    public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-        cdkBuilder.circuitBreaker(circuitBreaker)
-    }
+  public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
+    cdkBuilder.circuitBreaker(circuitBreaker)
+  }
 
-    public fun cloudMapOptions(block: CloudMapOptionsDsl.() -> Unit = {}) {
-        val builder = CloudMapOptionsDsl()
-        builder.apply(block)
-        cdkBuilder.cloudMapOptions(builder.build())
-    }
+  public fun cloudMapOptions(block: CloudMapOptionsDsl.() -> Unit = {}) {
+    val builder = CloudMapOptionsDsl()
+    builder.apply(block)
+    cdkBuilder.cloudMapOptions(builder.build())
+  }
 
-    public fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-        cdkBuilder.cloudMapOptions(cloudMapOptions)
-    }
+  public fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
+    cdkBuilder.cloudMapOptions(cloudMapOptions)
+  }
 
-    public fun cluster(cluster: ICluster) {
-        cdkBuilder.cluster(cluster)
-    }
+  public fun cluster(cluster: ICluster) {
+    cdkBuilder.cluster(cluster)
+  }
 
-    public fun cpu(cpu: Number) {
-        cdkBuilder.cpu(cpu)
-    }
+  public fun cpu(cpu: Number) {
+    cdkBuilder.cpu(cpu)
+  }
 
-    public fun deploymentController(block: DeploymentControllerDsl.() -> Unit = {}) {
-        val builder = DeploymentControllerDsl()
-        builder.apply(block)
-        cdkBuilder.deploymentController(builder.build())
-    }
+  public fun deploymentController(block: DeploymentControllerDsl.() -> Unit = {}) {
+    val builder = DeploymentControllerDsl()
+    builder.apply(block)
+    cdkBuilder.deploymentController(builder.build())
+  }
 
-    public fun deploymentController(deploymentController: DeploymentController) {
-        cdkBuilder.deploymentController(deploymentController)
-    }
+  public fun deploymentController(deploymentController: DeploymentController) {
+    cdkBuilder.deploymentController(deploymentController)
+  }
 
-    public fun desiredCount(desiredCount: Number) {
-        cdkBuilder.desiredCount(desiredCount)
-    }
+  public fun desiredCount(desiredCount: Number) {
+    cdkBuilder.desiredCount(desiredCount)
+  }
 
-    public fun domainName(domainName: String) {
-        cdkBuilder.domainName(domainName)
-    }
+  public fun domainName(domainName: String) {
+    cdkBuilder.domainName(domainName)
+  }
 
-    public fun domainZone(domainZone: IHostedZone) {
-        cdkBuilder.domainZone(domainZone)
-    }
+  public fun domainZone(domainZone: IHostedZone) {
+    cdkBuilder.domainZone(domainZone)
+  }
 
-    public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
-        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
-    }
+  public fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
+    cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
+  }
 
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-        cdkBuilder.enableExecuteCommand(enableExecuteCommand)
-    }
+  public fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+    cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+  }
 
-    public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-        cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod)
-    }
+  public fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
+    cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod)
+  }
 
-    public fun idleTimeout(idleTimeout: Duration) {
-        cdkBuilder.idleTimeout(idleTimeout)
-    }
+  public fun idleTimeout(idleTimeout: Duration) {
+    cdkBuilder.idleTimeout(idleTimeout)
+  }
 
-    public fun listenerPort(listenerPort: Number) {
-        cdkBuilder.listenerPort(listenerPort)
-    }
+  public fun listenerPort(listenerPort: Number) {
+    cdkBuilder.listenerPort(listenerPort)
+  }
 
-    public fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
-        cdkBuilder.loadBalancer(loadBalancer)
-    }
+  public fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
+    cdkBuilder.loadBalancer(loadBalancer)
+  }
 
-    public fun loadBalancerName(loadBalancerName: String) {
-        cdkBuilder.loadBalancerName(loadBalancerName)
-    }
+  public fun loadBalancerName(loadBalancerName: String) {
+    cdkBuilder.loadBalancerName(loadBalancerName)
+  }
 
-    public fun maxHealthyPercent(maxHealthyPercent: Number) {
-        cdkBuilder.maxHealthyPercent(maxHealthyPercent)
-    }
+  public fun maxHealthyPercent(maxHealthyPercent: Number) {
+    cdkBuilder.maxHealthyPercent(maxHealthyPercent)
+  }
 
-    public fun memoryLimitMiB(memoryLimitMiB: Number) {
-        cdkBuilder.memoryLimitMiB(memoryLimitMiB)
-    }
+  public fun memoryLimitMiB(memoryLimitMiB: Number) {
+    cdkBuilder.memoryLimitMiB(memoryLimitMiB)
+  }
 
-    public fun memoryReservationMiB(memoryReservationMiB: Number) {
-        cdkBuilder.memoryReservationMiB(memoryReservationMiB)
-    }
+  public fun memoryReservationMiB(memoryReservationMiB: Number) {
+    cdkBuilder.memoryReservationMiB(memoryReservationMiB)
+  }
 
-    public fun minHealthyPercent(minHealthyPercent: Number) {
-        cdkBuilder.minHealthyPercent(minHealthyPercent)
-    }
+  public fun minHealthyPercent(minHealthyPercent: Number) {
+    cdkBuilder.minHealthyPercent(minHealthyPercent)
+  }
 
-    public fun openListener(openListener: Boolean) {
-        cdkBuilder.openListener(openListener)
-    }
+  public fun openListener(openListener: Boolean) {
+    cdkBuilder.openListener(openListener)
+  }
 
-    public fun placementConstraints(vararg placementConstraints: PlacementConstraint) {
-        _placementConstraints.addAll(listOf(*placementConstraints))
-    }
+  public fun placementConstraints(vararg placementConstraints: PlacementConstraint) {
+    _placementConstraints.addAll(listOf(*placementConstraints))
+  }
 
-    public fun placementConstraints(placementConstraints: Collection<PlacementConstraint>) {
-        _placementConstraints.addAll(placementConstraints)
-    }
+  public fun placementConstraints(placementConstraints: Collection<PlacementConstraint>) {
+    _placementConstraints.addAll(placementConstraints)
+  }
 
-    public fun placementStrategies(vararg placementStrategies: PlacementStrategy) {
-        _placementStrategies.addAll(listOf(*placementStrategies))
-    }
+  public fun placementStrategies(vararg placementStrategies: PlacementStrategy) {
+    _placementStrategies.addAll(listOf(*placementStrategies))
+  }
 
-    public fun placementStrategies(placementStrategies: Collection<PlacementStrategy>) {
-        _placementStrategies.addAll(placementStrategies)
-    }
+  public fun placementStrategies(placementStrategies: Collection<PlacementStrategy>) {
+    _placementStrategies.addAll(placementStrategies)
+  }
 
-    public fun propagateTags(propagateTags: PropagatedTagSource) {
-        cdkBuilder.propagateTags(propagateTags)
-    }
+  public fun propagateTags(propagateTags: PropagatedTagSource) {
+    cdkBuilder.propagateTags(propagateTags)
+  }
 
-    public fun protocol(protocol: ApplicationProtocol) {
-        cdkBuilder.protocol(protocol)
-    }
+  public fun protocol(protocol: ApplicationProtocol) {
+    cdkBuilder.protocol(protocol)
+  }
 
-    public fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-        cdkBuilder.protocolVersion(protocolVersion)
-    }
+  public fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
+    cdkBuilder.protocolVersion(protocolVersion)
+  }
 
-    public fun publicLoadBalancer(publicLoadBalancer: Boolean) {
-        cdkBuilder.publicLoadBalancer(publicLoadBalancer)
-    }
+  public fun publicLoadBalancer(publicLoadBalancer: Boolean) {
+    cdkBuilder.publicLoadBalancer(publicLoadBalancer)
+  }
 
-    public fun recordType(recordType: ApplicationLoadBalancedServiceRecordType) {
-        cdkBuilder.recordType(recordType)
-    }
+  public fun recordType(recordType: ApplicationLoadBalancedServiceRecordType) {
+    cdkBuilder.recordType(recordType)
+  }
 
-    public fun redirectHttp(redirectHttp: Boolean) {
-        cdkBuilder.redirectHttp(redirectHttp)
-    }
+  public fun redirectHttp(redirectHttp: Boolean) {
+    cdkBuilder.redirectHttp(redirectHttp)
+  }
 
-    public fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-    }
+  public fun serviceName(serviceName: String) {
+    cdkBuilder.serviceName(serviceName)
+  }
 
-    public fun sslPolicy(sslPolicy: SslPolicy) {
-        cdkBuilder.sslPolicy(sslPolicy)
-    }
+  public fun sslPolicy(sslPolicy: SslPolicy) {
+    cdkBuilder.sslPolicy(sslPolicy)
+  }
 
-    public fun targetProtocol(targetProtocol: ApplicationProtocol) {
-        cdkBuilder.targetProtocol(targetProtocol)
-    }
+  public fun targetProtocol(targetProtocol: ApplicationProtocol) {
+    cdkBuilder.targetProtocol(targetProtocol)
+  }
 
-    public fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-        cdkBuilder.taskDefinition(taskDefinition)
-    }
+  public fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
+    cdkBuilder.taskDefinition(taskDefinition)
+  }
 
-    public fun taskImageOptions(block: ApplicationLoadBalancedTaskImageOptionsDsl.() -> Unit = {}) {
-        val builder = ApplicationLoadBalancedTaskImageOptionsDsl()
-        builder.apply(block)
-        cdkBuilder.taskImageOptions(builder.build())
-    }
+  public fun taskImageOptions(block: ApplicationLoadBalancedTaskImageOptionsDsl.() -> Unit = {}) {
+    val builder = ApplicationLoadBalancedTaskImageOptionsDsl()
+    builder.apply(block)
+    cdkBuilder.taskImageOptions(builder.build())
+  }
 
-    public fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageOptions) {
-        cdkBuilder.taskImageOptions(taskImageOptions)
-    }
+  public fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageOptions) {
+    cdkBuilder.taskImageOptions(taskImageOptions)
+  }
 
-    public fun vpc(vpc: IVpc) {
-        cdkBuilder.vpc(vpc)
-    }
+  public fun vpc(vpc: IVpc) {
+    cdkBuilder.vpc(vpc)
+  }
 
-    public fun build(): ApplicationLoadBalancedEc2Service {
-        if (_capacityProviderStrategies.isNotEmpty()) {
-            cdkBuilder.capacityProviderStrategies(_capacityProviderStrategies)
-        }
-        if (_placementConstraints.isNotEmpty()) cdkBuilder.placementConstraints(_placementConstraints)
-        if (_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
-        return cdkBuilder.build()
-    }
+  public fun build(): ApplicationLoadBalancedEc2Service {
+    if(_capacityProviderStrategies.isNotEmpty())
+        cdkBuilder.capacityProviderStrategies(_capacityProviderStrategies)
+    if(_placementConstraints.isNotEmpty()) cdkBuilder.placementConstraints(_placementConstraints)
+    if(_placementStrategies.isNotEmpty()) cdkBuilder.placementStrategies(_placementStrategies)
+    return cdkBuilder.build()
+  }
 }

@@ -1,64 +1,55 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnLaunchTemplateDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnLaunchTemplate.Builder = CfnLaunchTemplate.Builder.create(scope, id)
+  private val cdkBuilder: CfnLaunchTemplate.Builder = CfnLaunchTemplate.Builder.create(scope, id)
 
-    private val _tagSpecifications: MutableList<Any> = mutableListOf()
+  private val _tagSpecifications: MutableList<Any> = mutableListOf()
 
-    public fun launchTemplateData(launchTemplateData: IResolvable) {
-        cdkBuilder.launchTemplateData(launchTemplateData)
-    }
+  public fun launchTemplateData(launchTemplateData: IResolvable) {
+    cdkBuilder.launchTemplateData(launchTemplateData)
+  }
 
-    public fun launchTemplateData(launchTemplateData: CfnLaunchTemplate.LaunchTemplateDataProperty) {
-        cdkBuilder.launchTemplateData(launchTemplateData)
-    }
+  public fun launchTemplateData(launchTemplateData: CfnLaunchTemplate.LaunchTemplateDataProperty) {
+    cdkBuilder.launchTemplateData(launchTemplateData)
+  }
 
-    public fun launchTemplateName(launchTemplateName: String) {
-        cdkBuilder.launchTemplateName(launchTemplateName)
-    }
+  public fun launchTemplateName(launchTemplateName: String) {
+    cdkBuilder.launchTemplateName(launchTemplateName)
+  }
 
-    public fun tagSpecifications(vararg tagSpecifications: Any) {
-        _tagSpecifications.addAll(listOf(*tagSpecifications))
-    }
+  public fun tagSpecifications(vararg tagSpecifications: Any) {
+    _tagSpecifications.addAll(listOf(*tagSpecifications))
+  }
 
-    public fun tagSpecifications(tagSpecifications: Collection<Any>) {
-        _tagSpecifications.addAll(tagSpecifications)
-    }
+  public fun tagSpecifications(tagSpecifications: Collection<Any>) {
+    _tagSpecifications.addAll(tagSpecifications)
+  }
 
-    public fun tagSpecifications(tagSpecifications: IResolvable) {
-        cdkBuilder.tagSpecifications(tagSpecifications)
-    }
+  public fun tagSpecifications(tagSpecifications: IResolvable) {
+    cdkBuilder.tagSpecifications(tagSpecifications)
+  }
 
-    public fun versionDescription(versionDescription: String) {
-        cdkBuilder.versionDescription(versionDescription)
-    }
+  public fun versionDescription(versionDescription: String) {
+    cdkBuilder.versionDescription(versionDescription)
+  }
 
-    public fun build(): CfnLaunchTemplate {
-        if (_tagSpecifications.isNotEmpty()) cdkBuilder.tagSpecifications(_tagSpecifications)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnLaunchTemplate {
+    if(_tagSpecifications.isNotEmpty()) cdkBuilder.tagSpecifications(_tagSpecifications)
+    return cdkBuilder.build()
+  }
 }

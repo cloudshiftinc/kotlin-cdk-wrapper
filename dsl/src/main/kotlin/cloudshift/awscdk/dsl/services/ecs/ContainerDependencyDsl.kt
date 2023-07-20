@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.services.ecs.ContainerDependencyCondition
 
 @CdkDslMarker
 public class ContainerDependencyDsl {
-    private val cdkBuilder: ContainerDependency.Builder = ContainerDependency.builder()
+  private val cdkBuilder: ContainerDependency.Builder = ContainerDependency.builder()
 
-    public fun condition(condition: ContainerDependencyCondition) {
-        cdkBuilder.condition(condition)
-    }
+  public fun condition(condition: ContainerDependencyCondition) {
+    cdkBuilder.condition(condition)
+  }
 
-    public fun container(container: ContainerDefinition) {
-        cdkBuilder.container(container)
-    }
+  public fun container(container: ContainerDefinition) {
+    cdkBuilder.container(container)
+  }
 
-    public fun build(): ContainerDependency = cdkBuilder.build()
+  public fun build(): ContainerDependency = cdkBuilder.build()
 }

@@ -1,72 +1,63 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codepipeline.actions
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.codepipeline.Artifact
-import software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction
-import software.amazon.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.codepipeline.Artifact
+import software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction
+import software.amazon.awscdk.services.iam.IRole
 
 @CdkDslMarker
 public class CodeStarConnectionsSourceActionDsl {
-    private val cdkBuilder: CodeStarConnectionsSourceAction.Builder =
-        CodeStarConnectionsSourceAction.Builder.create()
+  private val cdkBuilder: CodeStarConnectionsSourceAction.Builder =
+      CodeStarConnectionsSourceAction.Builder.create()
 
-    public fun actionName(actionName: String) {
-        cdkBuilder.actionName(actionName)
-    }
+  public fun actionName(actionName: String) {
+    cdkBuilder.actionName(actionName)
+  }
 
-    public fun branch(branch: String) {
-        cdkBuilder.branch(branch)
-    }
+  public fun branch(branch: String) {
+    cdkBuilder.branch(branch)
+  }
 
-    public fun codeBuildCloneOutput(codeBuildCloneOutput: Boolean) {
-        cdkBuilder.codeBuildCloneOutput(codeBuildCloneOutput)
-    }
+  public fun codeBuildCloneOutput(codeBuildCloneOutput: Boolean) {
+    cdkBuilder.codeBuildCloneOutput(codeBuildCloneOutput)
+  }
 
-    public fun connectionArn(connectionArn: String) {
-        cdkBuilder.connectionArn(connectionArn)
-    }
+  public fun connectionArn(connectionArn: String) {
+    cdkBuilder.connectionArn(connectionArn)
+  }
 
-    public fun output(output: Artifact) {
-        cdkBuilder.output(output)
-    }
+  public fun output(output: Artifact) {
+    cdkBuilder.output(output)
+  }
 
-    public fun owner(owner: String) {
-        cdkBuilder.owner(owner)
-    }
+  public fun owner(owner: String) {
+    cdkBuilder.owner(owner)
+  }
 
-    public fun repo(repo: String) {
-        cdkBuilder.repo(repo)
-    }
+  public fun repo(repo: String) {
+    cdkBuilder.repo(repo)
+  }
 
-    public fun role(role: IRole) {
-        cdkBuilder.role(role)
-    }
+  public fun role(role: IRole) {
+    cdkBuilder.role(role)
+  }
 
-    public fun runOrder(runOrder: Number) {
-        cdkBuilder.runOrder(runOrder)
-    }
+  public fun runOrder(runOrder: Number) {
+    cdkBuilder.runOrder(runOrder)
+  }
 
-    public fun triggerOnPush(triggerOnPush: Boolean) {
-        cdkBuilder.triggerOnPush(triggerOnPush)
-    }
+  public fun triggerOnPush(triggerOnPush: Boolean) {
+    cdkBuilder.triggerOnPush(triggerOnPush)
+  }
 
-    public fun variablesNamespace(variablesNamespace: String) {
-        cdkBuilder.variablesNamespace(variablesNamespace)
-    }
+  public fun variablesNamespace(variablesNamespace: String) {
+    cdkBuilder.variablesNamespace(variablesNamespace)
+  }
 
-    public fun build(): CodeStarConnectionsSourceAction = cdkBuilder.build()
+  public fun build(): CodeStarConnectionsSourceAction = cdkBuilder.build()
 }

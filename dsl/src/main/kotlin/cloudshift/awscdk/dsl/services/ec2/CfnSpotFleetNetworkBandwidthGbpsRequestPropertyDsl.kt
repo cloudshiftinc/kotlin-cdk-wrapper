@@ -1,32 +1,23 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ec2
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.ec2.CfnSpotFleet
 import kotlin.Number
+import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
 @CdkDslMarker
 public class CfnSpotFleetNetworkBandwidthGbpsRequestPropertyDsl {
-    private val cdkBuilder: CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder =
-        CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
+  private val cdkBuilder: CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.Builder =
+      CfnSpotFleet.NetworkBandwidthGbpsRequestProperty.builder()
 
-    public fun max(max: Number) {
-        cdkBuilder.max(max)
-    }
+  public fun max(max: Number) {
+    cdkBuilder.max(max)
+  }
 
-    public fun min(min: Number) {
-        cdkBuilder.min(min)
-    }
+  public fun min(min: Number) {
+    cdkBuilder.min(min)
+  }
 
-    public fun build(): CfnSpotFleet.NetworkBandwidthGbpsRequestProperty = cdkBuilder.build()
+  public fun build(): CfnSpotFleet.NetworkBandwidthGbpsRequestProperty = cdkBuilder.build()
 }

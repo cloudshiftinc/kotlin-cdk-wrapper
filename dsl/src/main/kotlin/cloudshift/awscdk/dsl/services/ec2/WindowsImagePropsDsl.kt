@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ec2
 
@@ -17,11 +8,11 @@ import software.amazon.awscdk.services.ec2.WindowsImageProps
 
 @CdkDslMarker
 public class WindowsImagePropsDsl {
-    private val cdkBuilder: WindowsImageProps.Builder = WindowsImageProps.builder()
+  private val cdkBuilder: WindowsImageProps.Builder = WindowsImageProps.builder()
 
-    public fun userData(userData: UserData) {
-        cdkBuilder.userData(userData)
-    }
+  public fun userData(userData: UserData) {
+    cdkBuilder.userData(userData)
+  }
 
-    public fun build(): WindowsImageProps = cdkBuilder.build()
+  public fun build(): WindowsImageProps = cdkBuilder.build()
 }

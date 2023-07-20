@@ -1,31 +1,22 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codedeploy
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig
 import kotlin.Number
+import software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig
 
 @CdkDslMarker
 public class LinearTrafficRoutingConfigDsl {
-    private val cdkBuilder: LinearTrafficRoutingConfig.Builder = LinearTrafficRoutingConfig.builder()
+  private val cdkBuilder: LinearTrafficRoutingConfig.Builder = LinearTrafficRoutingConfig.builder()
 
-    public fun linearInterval(linearInterval: Number) {
-        cdkBuilder.linearInterval(linearInterval)
-    }
+  public fun linearInterval(linearInterval: Number) {
+    cdkBuilder.linearInterval(linearInterval)
+  }
 
-    public fun linearPercentage(linearPercentage: Number) {
-        cdkBuilder.linearPercentage(linearPercentage)
-    }
+  public fun linearPercentage(linearPercentage: Number) {
+    cdkBuilder.linearPercentage(linearPercentage)
+  }
 
-    public fun build(): LinearTrafficRoutingConfig = cdkBuilder.build()
+  public fun build(): LinearTrafficRoutingConfig = cdkBuilder.build()
 }

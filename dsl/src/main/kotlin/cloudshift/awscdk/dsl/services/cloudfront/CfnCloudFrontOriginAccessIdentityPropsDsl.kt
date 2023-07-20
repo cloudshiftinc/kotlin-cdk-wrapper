@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
@@ -18,16 +9,18 @@ import software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdent
 
 @CdkDslMarker
 public class CfnCloudFrontOriginAccessIdentityPropsDsl {
-    private val cdkBuilder: CfnCloudFrontOriginAccessIdentityProps.Builder =
-        CfnCloudFrontOriginAccessIdentityProps.builder()
+  private val cdkBuilder: CfnCloudFrontOriginAccessIdentityProps.Builder =
+      CfnCloudFrontOriginAccessIdentityProps.builder()
 
-    public fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
-        cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
-    }
+  public
+      fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
+    cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
+  }
 
-    public fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty) {
-        cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
-    }
+  public
+      fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty) {
+    cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig)
+  }
 
-    public fun build(): CfnCloudFrontOriginAccessIdentityProps = cdkBuilder.build()
+  public fun build(): CfnCloudFrontOriginAccessIdentityProps = cdkBuilder.build()
 }

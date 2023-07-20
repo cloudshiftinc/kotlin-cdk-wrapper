@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateSankeyDiagramFieldWellsPropertyDsl {
-    private val cdkBuilder: CfnTemplate.SankeyDiagramFieldWellsProperty.Builder =
-        CfnTemplate.SankeyDiagramFieldWellsProperty.builder()
+  private val cdkBuilder: CfnTemplate.SankeyDiagramFieldWellsProperty.Builder =
+      CfnTemplate.SankeyDiagramFieldWellsProperty.builder()
 
-    public fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: IResolvable) {
-        cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
-    }
+  public fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: IResolvable) {
+    cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
+  }
 
-    public fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: CfnTemplate.SankeyDiagramAggregatedFieldWellsProperty) {
-        cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
-    }
+  public
+      fun sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells: CfnTemplate.SankeyDiagramAggregatedFieldWellsProperty) {
+    cdkBuilder.sankeyDiagramAggregatedFieldWells(sankeyDiagramAggregatedFieldWells)
+  }
 
-    public fun build(): CfnTemplate.SankeyDiagramFieldWellsProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.SankeyDiagramFieldWellsProperty = cdkBuilder.build()
 }

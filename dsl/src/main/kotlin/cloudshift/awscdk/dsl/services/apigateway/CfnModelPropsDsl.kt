@@ -1,52 +1,43 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.apigateway
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.services.apigateway.CfnModelProps
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.services.apigateway.CfnModelProps
 
 @CdkDslMarker
 public class CfnModelPropsDsl {
-    private val cdkBuilder: CfnModelProps.Builder = CfnModelProps.builder()
+  private val cdkBuilder: CfnModelProps.Builder = CfnModelProps.builder()
 
-    public fun contentType(contentType: String) {
-        cdkBuilder.contentType(contentType)
-    }
+  public fun contentType(contentType: String) {
+    cdkBuilder.contentType(contentType)
+  }
 
-    public fun description(description: String) {
-        cdkBuilder.description(description)
-    }
+  public fun description(description: String) {
+    cdkBuilder.description(description)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun restApiId(restApiId: String) {
-        cdkBuilder.restApiId(restApiId)
-    }
+  public fun restApiId(restApiId: String) {
+    cdkBuilder.restApiId(restApiId)
+  }
 
-    public fun schema(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.schema(builder.map)
-    }
+  public fun schema(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.schema(builder.map)
+  }
 
-    public fun schema(schema: Any) {
-        cdkBuilder.schema(schema)
-    }
+  public fun schema(schema: Any) {
+    cdkBuilder.schema(schema)
+  }
 
-    public fun build(): CfnModelProps = cdkBuilder.build()
+  public fun build(): CfnModelProps = cdkBuilder.build()
 }

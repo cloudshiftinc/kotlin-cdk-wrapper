@@ -1,36 +1,27 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.CfnModuleDefaultVersionProps
 import kotlin.String
+import software.amazon.awscdk.CfnModuleDefaultVersionProps
 
 @CdkDslMarker
 public class CfnModuleDefaultVersionPropsDsl {
-    private val cdkBuilder: CfnModuleDefaultVersionProps.Builder =
-        CfnModuleDefaultVersionProps.builder()
+  private val cdkBuilder: CfnModuleDefaultVersionProps.Builder =
+      CfnModuleDefaultVersionProps.builder()
 
-    public fun arn(arn: String) {
-        cdkBuilder.arn(arn)
-    }
+  public fun arn(arn: String) {
+    cdkBuilder.arn(arn)
+  }
 
-    public fun moduleName(moduleName: String) {
-        cdkBuilder.moduleName(moduleName)
-    }
+  public fun moduleName(moduleName: String) {
+    cdkBuilder.moduleName(moduleName)
+  }
 
-    public fun versionId(versionId: String) {
-        cdkBuilder.versionId(versionId)
-    }
+  public fun versionId(versionId: String) {
+    cdkBuilder.versionId(versionId)
+  }
 
-    public fun build(): CfnModuleDefaultVersionProps = cdkBuilder.build()
+  public fun build(): CfnModuleDefaultVersionProps = cdkBuilder.build()
 }

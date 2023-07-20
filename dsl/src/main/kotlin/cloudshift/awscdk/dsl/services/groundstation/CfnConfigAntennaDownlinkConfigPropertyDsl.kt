@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.groundstation
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.groundstation.CfnConfig
 
 @CdkDslMarker
 public class CfnConfigAntennaDownlinkConfigPropertyDsl {
-    private val cdkBuilder: CfnConfig.AntennaDownlinkConfigProperty.Builder =
-        CfnConfig.AntennaDownlinkConfigProperty.builder()
+  private val cdkBuilder: CfnConfig.AntennaDownlinkConfigProperty.Builder =
+      CfnConfig.AntennaDownlinkConfigProperty.builder()
 
-    public fun spectrumConfig(spectrumConfig: IResolvable) {
-        cdkBuilder.spectrumConfig(spectrumConfig)
-    }
+  public fun spectrumConfig(spectrumConfig: IResolvable) {
+    cdkBuilder.spectrumConfig(spectrumConfig)
+  }
 
-    public fun spectrumConfig(spectrumConfig: CfnConfig.SpectrumConfigProperty) {
-        cdkBuilder.spectrumConfig(spectrumConfig)
-    }
+  public fun spectrumConfig(spectrumConfig: CfnConfig.SpectrumConfigProperty) {
+    cdkBuilder.spectrumConfig(spectrumConfig)
+  }
 
-    public fun build(): CfnConfig.AntennaDownlinkConfigProperty = cdkBuilder.build()
+  public fun build(): CfnConfig.AntennaDownlinkConfigProperty = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.networkfirewall
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
 @CdkDslMarker
 public class CfnFirewallPolicyActionDefinitionPropertyDsl {
-    private val cdkBuilder: CfnFirewallPolicy.ActionDefinitionProperty.Builder =
-        CfnFirewallPolicy.ActionDefinitionProperty.builder()
+  private val cdkBuilder: CfnFirewallPolicy.ActionDefinitionProperty.Builder =
+      CfnFirewallPolicy.ActionDefinitionProperty.builder()
 
-    public fun publishMetricAction(publishMetricAction: IResolvable) {
-        cdkBuilder.publishMetricAction(publishMetricAction)
-    }
+  public fun publishMetricAction(publishMetricAction: IResolvable) {
+    cdkBuilder.publishMetricAction(publishMetricAction)
+  }
 
-    public fun publishMetricAction(publishMetricAction: CfnFirewallPolicy.PublishMetricActionProperty) {
-        cdkBuilder.publishMetricAction(publishMetricAction)
-    }
+  public
+      fun publishMetricAction(publishMetricAction: CfnFirewallPolicy.PublishMetricActionProperty) {
+    cdkBuilder.publishMetricAction(publishMetricAction)
+  }
 
-    public fun build(): CfnFirewallPolicy.ActionDefinitionProperty = cdkBuilder.build()
+  public fun build(): CfnFirewallPolicy.ActionDefinitionProperty = cdkBuilder.build()
 }

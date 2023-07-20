@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codepipeline
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.services.s3.IBucket
 
 @CdkDslMarker
 public class CrossRegionSupportDsl {
-    private val cdkBuilder: CrossRegionSupport.Builder = CrossRegionSupport.builder()
+  private val cdkBuilder: CrossRegionSupport.Builder = CrossRegionSupport.builder()
 
-    public fun replicationBucket(replicationBucket: IBucket) {
-        cdkBuilder.replicationBucket(replicationBucket)
-    }
+  public fun replicationBucket(replicationBucket: IBucket) {
+    cdkBuilder.replicationBucket(replicationBucket)
+  }
 
-    public fun stack(stack: Stack) {
-        cdkBuilder.stack(stack)
-    }
+  public fun stack(stack: Stack) {
+    cdkBuilder.stack(stack)
+  }
 
-    public fun build(): CrossRegionSupport = cdkBuilder.build()
+  public fun build(): CrossRegionSupport = cdkBuilder.build()
 }

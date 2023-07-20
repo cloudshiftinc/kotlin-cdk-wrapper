@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -17,12 +8,12 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarge
 
 @CdkDslMarker
 public class EcsFargateLaunchTargetOptionsDsl {
-    private val cdkBuilder: EcsFargateLaunchTargetOptions.Builder =
-        EcsFargateLaunchTargetOptions.builder()
+  private val cdkBuilder: EcsFargateLaunchTargetOptions.Builder =
+      EcsFargateLaunchTargetOptions.builder()
 
-    public fun platformVersion(platformVersion: FargatePlatformVersion) {
-        cdkBuilder.platformVersion(platformVersion)
-    }
+  public fun platformVersion(platformVersion: FargatePlatformVersion) {
+    cdkBuilder.platformVersion(platformVersion)
+  }
 
-    public fun build(): EcsFargateLaunchTargetOptions = cdkBuilder.build()
+  public fun build(): EcsFargateLaunchTargetOptions = cdkBuilder.build()
 }

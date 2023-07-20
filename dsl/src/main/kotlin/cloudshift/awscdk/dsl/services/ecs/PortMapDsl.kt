@@ -1,49 +1,40 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
+import kotlin.String
 import software.amazon.awscdk.services.ecs.AppProtocol
 import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.ecs.PortMap
 import software.amazon.awscdk.services.ecs.Protocol
-import kotlin.Number
-import kotlin.String
 
 @CdkDslMarker
 public class PortMapDsl(
-    networkmode: NetworkMode,
+  networkmode: NetworkMode,
 ) {
-    private val cdkBuilder: PortMap.Builder = PortMap.Builder.create(networkmode)
+  private val cdkBuilder: PortMap.Builder = PortMap.Builder.create(networkmode)
 
-    public fun appProtocol(appProtocol: AppProtocol) {
-        cdkBuilder.appProtocol(appProtocol)
-    }
+  public fun appProtocol(appProtocol: AppProtocol) {
+    cdkBuilder.appProtocol(appProtocol)
+  }
 
-    public fun containerPort(containerPort: Number) {
-        cdkBuilder.containerPort(containerPort)
-    }
+  public fun containerPort(containerPort: Number) {
+    cdkBuilder.containerPort(containerPort)
+  }
 
-    public fun hostPort(hostPort: Number) {
-        cdkBuilder.hostPort(hostPort)
-    }
+  public fun hostPort(hostPort: Number) {
+    cdkBuilder.hostPort(hostPort)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun protocol(protocol: Protocol) {
-        cdkBuilder.protocol(protocol)
-    }
+  public fun protocol(protocol: Protocol) {
+    cdkBuilder.protocol(protocol)
+  }
 
-    public fun build(): PortMap = cdkBuilder.build()
+  public fun build(): PortMap = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.lambda
 
@@ -17,15 +8,15 @@ import software.amazon.awscdk.services.lambda.CfnParametersCodeProps
 
 @CdkDslMarker
 public class CfnParametersCodePropsDsl {
-    private val cdkBuilder: CfnParametersCodeProps.Builder = CfnParametersCodeProps.builder()
+  private val cdkBuilder: CfnParametersCodeProps.Builder = CfnParametersCodeProps.builder()
 
-    public fun bucketNameParam(bucketNameParam: CfnParameter) {
-        cdkBuilder.bucketNameParam(bucketNameParam)
-    }
+  public fun bucketNameParam(bucketNameParam: CfnParameter) {
+    cdkBuilder.bucketNameParam(bucketNameParam)
+  }
 
-    public fun objectKeyParam(objectKeyParam: CfnParameter) {
-        cdkBuilder.objectKeyParam(objectKeyParam)
-    }
+  public fun objectKeyParam(objectKeyParam: CfnParameter) {
+    cdkBuilder.objectKeyParam(objectKeyParam)
+  }
 
-    public fun build(): CfnParametersCodeProps = cdkBuilder.build()
+  public fun build(): CfnParametersCodeProps = cdkBuilder.build()
 }

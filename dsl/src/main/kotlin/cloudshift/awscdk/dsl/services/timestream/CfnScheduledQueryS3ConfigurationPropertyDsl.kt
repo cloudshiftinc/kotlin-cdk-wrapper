@@ -1,36 +1,27 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.timestream
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 import kotlin.String
+import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
 @CdkDslMarker
 public class CfnScheduledQueryS3ConfigurationPropertyDsl {
-    private val cdkBuilder: CfnScheduledQuery.S3ConfigurationProperty.Builder =
-        CfnScheduledQuery.S3ConfigurationProperty.builder()
+  private val cdkBuilder: CfnScheduledQuery.S3ConfigurationProperty.Builder =
+      CfnScheduledQuery.S3ConfigurationProperty.builder()
 
-    public fun bucketName(bucketName: String) {
-        cdkBuilder.bucketName(bucketName)
-    }
+  public fun bucketName(bucketName: String) {
+    cdkBuilder.bucketName(bucketName)
+  }
 
-    public fun encryptionOption(encryptionOption: String) {
-        cdkBuilder.encryptionOption(encryptionOption)
-    }
+  public fun encryptionOption(encryptionOption: String) {
+    cdkBuilder.encryptionOption(encryptionOption)
+  }
 
-    public fun objectKeyPrefix(objectKeyPrefix: String) {
-        cdkBuilder.objectKeyPrefix(objectKeyPrefix)
-    }
+  public fun objectKeyPrefix(objectKeyPrefix: String) {
+    cdkBuilder.objectKeyPrefix(objectKeyPrefix)
+  }
 
-    public fun build(): CfnScheduledQuery.S3ConfigurationProperty = cdkBuilder.build()
+  public fun build(): CfnScheduledQuery.S3ConfigurationProperty = cdkBuilder.build()
 }

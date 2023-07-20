@@ -1,32 +1,23 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.cloudfront
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes
 import kotlin.String
+import software.amazon.awscdk.services.cloudfront.CloudFrontWebDistributionAttributes
 
 @CdkDslMarker
 public class CloudFrontWebDistributionAttributesDsl {
-    private val cdkBuilder: CloudFrontWebDistributionAttributes.Builder =
-        CloudFrontWebDistributionAttributes.builder()
+  private val cdkBuilder: CloudFrontWebDistributionAttributes.Builder =
+      CloudFrontWebDistributionAttributes.builder()
 
-    public fun distributionId(distributionId: String) {
-        cdkBuilder.distributionId(distributionId)
-    }
+  public fun distributionId(distributionId: String) {
+    cdkBuilder.distributionId(distributionId)
+  }
 
-    public fun domainName(domainName: String) {
-        cdkBuilder.domainName(domainName)
-    }
+  public fun domainName(domainName: String) {
+    cdkBuilder.domainName(domainName)
+  }
 
-    public fun build(): CloudFrontWebDistributionAttributes = cdkBuilder.build()
+  public fun build(): CloudFrontWebDistributionAttributes = cdkBuilder.build()
 }

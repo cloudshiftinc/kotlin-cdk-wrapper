@@ -1,46 +1,37 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.Duration
-import software.amazon.awscdk.services.ecs.CpuUtilizationScalingProps
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.Duration
+import software.amazon.awscdk.services.ecs.CpuUtilizationScalingProps
 
 @CdkDslMarker
 public class CpuUtilizationScalingPropsDsl {
-    private val cdkBuilder: CpuUtilizationScalingProps.Builder = CpuUtilizationScalingProps.builder()
+  private val cdkBuilder: CpuUtilizationScalingProps.Builder = CpuUtilizationScalingProps.builder()
 
-    public fun disableScaleIn(disableScaleIn: Boolean) {
-        cdkBuilder.disableScaleIn(disableScaleIn)
-    }
+  public fun disableScaleIn(disableScaleIn: Boolean) {
+    cdkBuilder.disableScaleIn(disableScaleIn)
+  }
 
-    public fun policyName(policyName: String) {
-        cdkBuilder.policyName(policyName)
-    }
+  public fun policyName(policyName: String) {
+    cdkBuilder.policyName(policyName)
+  }
 
-    public fun scaleInCooldown(scaleInCooldown: Duration) {
-        cdkBuilder.scaleInCooldown(scaleInCooldown)
-    }
+  public fun scaleInCooldown(scaleInCooldown: Duration) {
+    cdkBuilder.scaleInCooldown(scaleInCooldown)
+  }
 
-    public fun scaleOutCooldown(scaleOutCooldown: Duration) {
-        cdkBuilder.scaleOutCooldown(scaleOutCooldown)
-    }
+  public fun scaleOutCooldown(scaleOutCooldown: Duration) {
+    cdkBuilder.scaleOutCooldown(scaleOutCooldown)
+  }
 
-    public fun targetUtilizationPercent(targetUtilizationPercent: Number) {
-        cdkBuilder.targetUtilizationPercent(targetUtilizationPercent)
-    }
+  public fun targetUtilizationPercent(targetUtilizationPercent: Number) {
+    cdkBuilder.targetUtilizationPercent(targetUtilizationPercent)
+  }
 
-    public fun build(): CpuUtilizationScalingProps = cdkBuilder.build()
+  public fun build(): CpuUtilizationScalingProps = cdkBuilder.build()
 }

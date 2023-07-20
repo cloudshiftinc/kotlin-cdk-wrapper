@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.config
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
 @CdkDslMarker
 public class CfnRemediationConfigurationExecutionControlsPropertyDsl {
-    private val cdkBuilder: CfnRemediationConfiguration.ExecutionControlsProperty.Builder =
-        CfnRemediationConfiguration.ExecutionControlsProperty.builder()
+  private val cdkBuilder: CfnRemediationConfiguration.ExecutionControlsProperty.Builder =
+      CfnRemediationConfiguration.ExecutionControlsProperty.builder()
 
-    public fun ssmControls(ssmControls: IResolvable) {
-        cdkBuilder.ssmControls(ssmControls)
-    }
+  public fun ssmControls(ssmControls: IResolvable) {
+    cdkBuilder.ssmControls(ssmControls)
+  }
 
-    public fun ssmControls(ssmControls: CfnRemediationConfiguration.SsmControlsProperty) {
-        cdkBuilder.ssmControls(ssmControls)
-    }
+  public fun ssmControls(ssmControls: CfnRemediationConfiguration.SsmControlsProperty) {
+    cdkBuilder.ssmControls(ssmControls)
+  }
 
-    public fun build(): CfnRemediationConfiguration.ExecutionControlsProperty = cdkBuilder.build()
+  public fun build(): CfnRemediationConfiguration.ExecutionControlsProperty = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateCustomActionNavigationOperationPropertyDsl {
-    private val cdkBuilder: CfnTemplate.CustomActionNavigationOperationProperty.Builder =
-        CfnTemplate.CustomActionNavigationOperationProperty.builder()
+  private val cdkBuilder: CfnTemplate.CustomActionNavigationOperationProperty.Builder =
+      CfnTemplate.CustomActionNavigationOperationProperty.builder()
 
-    public fun localNavigationConfiguration(localNavigationConfiguration: IResolvable) {
-        cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
-    }
+  public fun localNavigationConfiguration(localNavigationConfiguration: IResolvable) {
+    cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
+  }
 
-    public fun localNavigationConfiguration(localNavigationConfiguration: CfnTemplate.LocalNavigationConfigurationProperty) {
-        cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
-    }
+  public
+      fun localNavigationConfiguration(localNavigationConfiguration: CfnTemplate.LocalNavigationConfigurationProperty) {
+    cdkBuilder.localNavigationConfiguration(localNavigationConfiguration)
+  }
 
-    public fun build(): CfnTemplate.CustomActionNavigationOperationProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.CustomActionNavigationOperationProperty = cdkBuilder.build()
 }

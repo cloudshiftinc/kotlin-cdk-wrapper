@@ -1,50 +1,41 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.greengrass
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.greengrass.CfnCoreDefinition
-import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.greengrass.CfnCoreDefinition
+import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps
 
 @CdkDslMarker
 public class CfnCoreDefinitionPropsDsl {
-    private val cdkBuilder: CfnCoreDefinitionProps.Builder = CfnCoreDefinitionProps.builder()
+  private val cdkBuilder: CfnCoreDefinitionProps.Builder = CfnCoreDefinitionProps.builder()
 
-    public fun initialVersion(initialVersion: IResolvable) {
-        cdkBuilder.initialVersion(initialVersion)
-    }
+  public fun initialVersion(initialVersion: IResolvable) {
+    cdkBuilder.initialVersion(initialVersion)
+  }
 
-    public fun initialVersion(initialVersion: CfnCoreDefinition.CoreDefinitionVersionProperty) {
-        cdkBuilder.initialVersion(initialVersion)
-    }
+  public fun initialVersion(initialVersion: CfnCoreDefinition.CoreDefinitionVersionProperty) {
+    cdkBuilder.initialVersion(initialVersion)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun tags(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.tags(builder.map)
-    }
+  public fun tags(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.tags(builder.map)
+  }
 
-    public fun tags(tags: Any) {
-        cdkBuilder.tags(tags)
-    }
+  public fun tags(tags: Any) {
+    cdkBuilder.tags(tags)
+  }
 
-    public fun build(): CfnCoreDefinitionProps = cdkBuilder.build()
+  public fun build(): CfnCoreDefinitionProps = cdkBuilder.build()
 }

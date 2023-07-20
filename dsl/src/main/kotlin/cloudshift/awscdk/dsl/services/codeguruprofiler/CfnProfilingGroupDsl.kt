@@ -1,85 +1,76 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codeguruprofiler
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnProfilingGroupDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnProfilingGroup.Builder = CfnProfilingGroup.Builder.create(scope, id)
+  private val cdkBuilder: CfnProfilingGroup.Builder = CfnProfilingGroup.Builder.create(scope, id)
 
-    private val _anomalyDetectionNotificationConfiguration: MutableList<Any> = mutableListOf()
+  private val _anomalyDetectionNotificationConfiguration: MutableList<Any> = mutableListOf()
 
-    private val _tags: MutableList<CfnTag> = mutableListOf()
+  private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    public fun agentPermissions(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.agentPermissions(builder.map)
-    }
+  public fun agentPermissions(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.agentPermissions(builder.map)
+  }
 
-    public fun agentPermissions(agentPermissions: Any) {
-        cdkBuilder.agentPermissions(agentPermissions)
-    }
+  public fun agentPermissions(agentPermissions: Any) {
+    cdkBuilder.agentPermissions(agentPermissions)
+  }
 
-    public fun anomalyDetectionNotificationConfiguration(
-        vararg anomalyDetectionNotificationConfiguration: Any,
-    ) {
-        _anomalyDetectionNotificationConfiguration.addAll(listOf(*anomalyDetectionNotificationConfiguration))
-    }
+  public fun anomalyDetectionNotificationConfiguration(vararg
+      anomalyDetectionNotificationConfiguration: Any) {
+    _anomalyDetectionNotificationConfiguration.addAll(listOf(*anomalyDetectionNotificationConfiguration))
+  }
 
-    public fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: Collection<Any>) {
-        _anomalyDetectionNotificationConfiguration.addAll(anomalyDetectionNotificationConfiguration)
-    }
+  public
+      fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: Collection<Any>) {
+    _anomalyDetectionNotificationConfiguration.addAll(anomalyDetectionNotificationConfiguration)
+  }
 
-    public fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
-        cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
-    }
+  public
+      fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
+    cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
+  }
 
-    public fun computePlatform(computePlatform: String) {
-        cdkBuilder.computePlatform(computePlatform)
-    }
+  public fun computePlatform(computePlatform: String) {
+    cdkBuilder.computePlatform(computePlatform)
+  }
 
-    public fun profilingGroupName(profilingGroupName: String) {
-        cdkBuilder.profilingGroupName(profilingGroupName)
-    }
+  public fun profilingGroupName(profilingGroupName: String) {
+    cdkBuilder.profilingGroupName(profilingGroupName)
+  }
 
-    public fun tags(tags: CfnTagDsl.() -> Unit) {
-        _tags.add(CfnTagDsl().apply(tags).build())
-    }
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
 
-    public fun tags(tags: Collection<CfnTag>) {
-        _tags.addAll(tags)
-    }
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
 
-    public fun build(): CfnProfilingGroup {
-        if (_anomalyDetectionNotificationConfiguration.isNotEmpty()) {
-            cdkBuilder.anomalyDetectionNotificationConfiguration(_anomalyDetectionNotificationConfiguration)
-        }
-        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnProfilingGroup {
+    if(_anomalyDetectionNotificationConfiguration.isNotEmpty())
+        cdkBuilder.anomalyDetectionNotificationConfiguration(_anomalyDetectionNotificationConfiguration)
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
 }

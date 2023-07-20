@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 @CdkDslMarker
 public class CfnDashboardRadarChartFieldWellsPropertyDsl {
-    private val cdkBuilder: CfnDashboard.RadarChartFieldWellsProperty.Builder =
-        CfnDashboard.RadarChartFieldWellsProperty.builder()
+  private val cdkBuilder: CfnDashboard.RadarChartFieldWellsProperty.Builder =
+      CfnDashboard.RadarChartFieldWellsProperty.builder()
 
-    public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: IResolvable) {
-        cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
-    }
+  public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: IResolvable) {
+    cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
+  }
 
-    public fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: CfnDashboard.RadarChartAggregatedFieldWellsProperty) {
-        cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
-    }
+  public
+      fun radarChartAggregatedFieldWells(radarChartAggregatedFieldWells: CfnDashboard.RadarChartAggregatedFieldWellsProperty) {
+    cdkBuilder.radarChartAggregatedFieldWells(radarChartAggregatedFieldWells)
+  }
 
-    public fun build(): CfnDashboard.RadarChartFieldWellsProperty = cdkBuilder.build()
+  public fun build(): CfnDashboard.RadarChartFieldWellsProperty = cdkBuilder.build()
 }

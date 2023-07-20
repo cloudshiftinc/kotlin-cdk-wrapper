@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
@@ -18,16 +9,16 @@ import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachmentProp
 
 @CdkDslMarker
 public class SecretTargetAttachmentPropsDsl {
-    private val cdkBuilder: SecretTargetAttachmentProps.Builder =
-        SecretTargetAttachmentProps.builder()
+  private val cdkBuilder: SecretTargetAttachmentProps.Builder =
+      SecretTargetAttachmentProps.builder()
 
-    public fun secret(secret: ISecret) {
-        cdkBuilder.secret(secret)
-    }
+  public fun secret(secret: ISecret) {
+    cdkBuilder.secret(secret)
+  }
 
-    public fun target(target: ISecretAttachmentTarget) {
-        cdkBuilder.target(target)
-    }
+  public fun target(target: ISecretAttachmentTarget) {
+    cdkBuilder.target(target)
+  }
 
-    public fun build(): SecretTargetAttachmentProps = cdkBuilder.build()
+  public fun build(): SecretTargetAttachmentProps = cdkBuilder.build()
 }

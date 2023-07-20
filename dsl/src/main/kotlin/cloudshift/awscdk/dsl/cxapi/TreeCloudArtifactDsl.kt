@@ -1,17 +1,13 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.cxapi
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
+import kotlin.collections.Collection
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.ArtifactType
 import software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties
 import software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
@@ -20,66 +16,59 @@ import software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties
 import software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties
 import software.amazon.awscdk.cxapi.CloudAssembly
 import software.amazon.awscdk.cxapi.TreeCloudArtifact
-import kotlin.String
-import kotlin.collections.Collection
-import kotlin.collections.List
-import kotlin.collections.Map
-import kotlin.collections.MutableList
 
 @CdkDslMarker
 public class TreeCloudArtifactDsl(
-    assembly: CloudAssembly,
-    name: String,
+  assembly: CloudAssembly,
+  name: String,
 ) {
-    private val cdkBuilder: TreeCloudArtifact.Builder = TreeCloudArtifact.Builder.create(
-        assembly,
-        name,
-    )
+  private val cdkBuilder: TreeCloudArtifact.Builder = TreeCloudArtifact.Builder.create(assembly,
+      name)
 
-    private val _dependencies: MutableList<String> = mutableListOf()
+  private val _dependencies: MutableList<String> = mutableListOf()
 
-    public fun dependencies(vararg dependencies: String) {
-        _dependencies.addAll(listOf(*dependencies))
-    }
+  public fun dependencies(vararg dependencies: String) {
+    _dependencies.addAll(listOf(*dependencies))
+  }
 
-    public fun dependencies(dependencies: Collection<String>) {
-        _dependencies.addAll(dependencies)
-    }
+  public fun dependencies(dependencies: Collection<String>) {
+    _dependencies.addAll(dependencies)
+  }
 
-    public fun displayName(displayName: String) {
-        cdkBuilder.displayName(displayName)
-    }
+  public fun displayName(displayName: String) {
+    cdkBuilder.displayName(displayName)
+  }
 
-    public fun environment(environment: String) {
-        cdkBuilder.environment(environment)
-    }
+  public fun environment(environment: String) {
+    cdkBuilder.environment(environment)
+  }
 
-    public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
-        cdkBuilder.metadata(metadata)
-    }
+  public fun metadata(metadata: Map<String, List<MetadataEntry>>) {
+    cdkBuilder.metadata(metadata)
+  }
 
-    public fun properties(properties: AssetManifestProperties) {
-        cdkBuilder.properties(properties)
-    }
+  public fun properties(properties: AssetManifestProperties) {
+    cdkBuilder.properties(properties)
+  }
 
-    public fun properties(properties: AwsCloudFormationStackProperties) {
-        cdkBuilder.properties(properties)
-    }
+  public fun properties(properties: AwsCloudFormationStackProperties) {
+    cdkBuilder.properties(properties)
+  }
 
-    public fun properties(properties: NestedCloudAssemblyProperties) {
-        cdkBuilder.properties(properties)
-    }
+  public fun properties(properties: NestedCloudAssemblyProperties) {
+    cdkBuilder.properties(properties)
+  }
 
-    public fun properties(properties: TreeArtifactProperties) {
-        cdkBuilder.properties(properties)
-    }
+  public fun properties(properties: TreeArtifactProperties) {
+    cdkBuilder.properties(properties)
+  }
 
-    public fun type(type: ArtifactType) {
-        cdkBuilder.type(type)
-    }
+  public fun type(type: ArtifactType) {
+    cdkBuilder.type(type)
+  }
 
-    public fun build(): TreeCloudArtifact {
-        if (_dependencies.isNotEmpty()) cdkBuilder.dependencies(_dependencies)
-        return cdkBuilder.build()
-    }
+  public fun build(): TreeCloudArtifact {
+    if(_dependencies.isNotEmpty()) cdkBuilder.dependencies(_dependencies)
+    return cdkBuilder.build()
+  }
 }

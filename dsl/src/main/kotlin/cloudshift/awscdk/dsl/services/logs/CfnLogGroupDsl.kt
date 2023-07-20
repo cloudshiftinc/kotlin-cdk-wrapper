@@ -1,70 +1,61 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.logs
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.services.logs.CfnLogGroup
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.services.logs.CfnLogGroup
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnLogGroupDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnLogGroup.Builder = CfnLogGroup.Builder.create(scope, id)
+  private val cdkBuilder: CfnLogGroup.Builder = CfnLogGroup.Builder.create(scope, id)
 
-    private val _tags: MutableList<CfnTag> = mutableListOf()
+  private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    public fun dataProtectionPolicy(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.dataProtectionPolicy(builder.map)
-    }
+  public fun dataProtectionPolicy(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.dataProtectionPolicy(builder.map)
+  }
 
-    public fun dataProtectionPolicy(dataProtectionPolicy: Any) {
-        cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
-    }
+  public fun dataProtectionPolicy(dataProtectionPolicy: Any) {
+    cdkBuilder.dataProtectionPolicy(dataProtectionPolicy)
+  }
 
-    public fun kmsKeyId(kmsKeyId: String) {
-        cdkBuilder.kmsKeyId(kmsKeyId)
-    }
+  public fun kmsKeyId(kmsKeyId: String) {
+    cdkBuilder.kmsKeyId(kmsKeyId)
+  }
 
-    public fun logGroupName(logGroupName: String) {
-        cdkBuilder.logGroupName(logGroupName)
-    }
+  public fun logGroupName(logGroupName: String) {
+    cdkBuilder.logGroupName(logGroupName)
+  }
 
-    public fun retentionInDays(retentionInDays: Number) {
-        cdkBuilder.retentionInDays(retentionInDays)
-    }
+  public fun retentionInDays(retentionInDays: Number) {
+    cdkBuilder.retentionInDays(retentionInDays)
+  }
 
-    public fun tags(tags: CfnTagDsl.() -> Unit) {
-        _tags.add(CfnTagDsl().apply(tags).build())
-    }
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
 
-    public fun tags(tags: Collection<CfnTag>) {
-        _tags.addAll(tags)
-    }
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
 
-    public fun build(): CfnLogGroup {
-        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnLogGroup {
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
 }

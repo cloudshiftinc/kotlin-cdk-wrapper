@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateGeospatialMapFieldWellsPropertyDsl {
-    private val cdkBuilder: CfnTemplate.GeospatialMapFieldWellsProperty.Builder =
-        CfnTemplate.GeospatialMapFieldWellsProperty.builder()
+  private val cdkBuilder: CfnTemplate.GeospatialMapFieldWellsProperty.Builder =
+      CfnTemplate.GeospatialMapFieldWellsProperty.builder()
 
-    public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: IResolvable) {
-        cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
-    }
+  public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: IResolvable) {
+    cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
+  }
 
-    public fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: CfnTemplate.GeospatialMapAggregatedFieldWellsProperty) {
-        cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
-    }
+  public
+      fun geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells: CfnTemplate.GeospatialMapAggregatedFieldWellsProperty) {
+    cdkBuilder.geospatialMapAggregatedFieldWells(geospatialMapAggregatedFieldWells)
+  }
 
-    public fun build(): CfnTemplate.GeospatialMapFieldWellsProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.GeospatialMapFieldWellsProperty = cdkBuilder.build()
 }

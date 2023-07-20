@@ -1,37 +1,28 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.databrew
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.databrew.CfnDataset
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.services.databrew.CfnDataset
 
 @CdkDslMarker
 public class CfnDatasetFilesLimitPropertyDsl {
-    private val cdkBuilder: CfnDataset.FilesLimitProperty.Builder =
-        CfnDataset.FilesLimitProperty.builder()
+  private val cdkBuilder: CfnDataset.FilesLimitProperty.Builder =
+      CfnDataset.FilesLimitProperty.builder()
 
-    public fun maxFiles(maxFiles: Number) {
-        cdkBuilder.maxFiles(maxFiles)
-    }
+  public fun maxFiles(maxFiles: Number) {
+    cdkBuilder.maxFiles(maxFiles)
+  }
 
-    public fun order(order: String) {
-        cdkBuilder.order(order)
-    }
+  public fun order(order: String) {
+    cdkBuilder.order(order)
+  }
 
-    public fun orderedBy(orderedBy: String) {
-        cdkBuilder.orderedBy(orderedBy)
-    }
+  public fun orderedBy(orderedBy: String) {
+    cdkBuilder.orderedBy(orderedBy)
+  }
 
-    public fun build(): CfnDataset.FilesLimitProperty = cdkBuilder.build()
+  public fun build(): CfnDataset.FilesLimitProperty = cdkBuilder.build()
 }

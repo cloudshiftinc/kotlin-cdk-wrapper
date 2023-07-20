@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecr
 
@@ -18,16 +9,17 @@ import software.amazon.awscdk.services.ecr.CfnReplicationConfigurationProps
 
 @CdkDslMarker
 public class CfnReplicationConfigurationPropsDsl {
-    private val cdkBuilder: CfnReplicationConfigurationProps.Builder =
-        CfnReplicationConfigurationProps.builder()
+  private val cdkBuilder: CfnReplicationConfigurationProps.Builder =
+      CfnReplicationConfigurationProps.builder()
 
-    public fun replicationConfiguration(replicationConfiguration: IResolvable) {
-        cdkBuilder.replicationConfiguration(replicationConfiguration)
-    }
+  public fun replicationConfiguration(replicationConfiguration: IResolvable) {
+    cdkBuilder.replicationConfiguration(replicationConfiguration)
+  }
 
-    public fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
-        cdkBuilder.replicationConfiguration(replicationConfiguration)
-    }
+  public
+      fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
+    cdkBuilder.replicationConfiguration(replicationConfiguration)
+  }
 
-    public fun build(): CfnReplicationConfigurationProps = cdkBuilder.build()
+  public fun build(): CfnReplicationConfigurationProps = cdkBuilder.build()
 }

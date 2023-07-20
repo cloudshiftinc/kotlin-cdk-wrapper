@@ -1,28 +1,19 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.lambda
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.lambda.CfnAlias
 import kotlin.Number
+import software.amazon.awscdk.services.lambda.CfnAlias
 
 @CdkDslMarker
 public class CfnAliasProvisionedConcurrencyConfigurationPropertyDsl {
-    private val cdkBuilder: CfnAlias.ProvisionedConcurrencyConfigurationProperty.Builder =
-        CfnAlias.ProvisionedConcurrencyConfigurationProperty.builder()
+  private val cdkBuilder: CfnAlias.ProvisionedConcurrencyConfigurationProperty.Builder =
+      CfnAlias.ProvisionedConcurrencyConfigurationProperty.builder()
 
-    public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
-        cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
-    }
+  public fun provisionedConcurrentExecutions(provisionedConcurrentExecutions: Number) {
+    cdkBuilder.provisionedConcurrentExecutions(provisionedConcurrentExecutions)
+  }
 
-    public fun build(): CfnAlias.ProvisionedConcurrencyConfigurationProperty = cdkBuilder.build()
+  public fun build(): CfnAlias.ProvisionedConcurrencyConfigurationProperty = cdkBuilder.build()
 }

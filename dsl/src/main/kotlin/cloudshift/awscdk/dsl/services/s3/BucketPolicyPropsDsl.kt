@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.s3
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.services.s3.IBucket
 
 @CdkDslMarker
 public class BucketPolicyPropsDsl {
-    private val cdkBuilder: BucketPolicyProps.Builder = BucketPolicyProps.builder()
+  private val cdkBuilder: BucketPolicyProps.Builder = BucketPolicyProps.builder()
 
-    public fun bucket(bucket: IBucket) {
-        cdkBuilder.bucket(bucket)
-    }
+  public fun bucket(bucket: IBucket) {
+    cdkBuilder.bucket(bucket)
+  }
 
-    public fun removalPolicy(removalPolicy: RemovalPolicy) {
-        cdkBuilder.removalPolicy(removalPolicy)
-    }
+  public fun removalPolicy(removalPolicy: RemovalPolicy) {
+    cdkBuilder.removalPolicy(removalPolicy)
+  }
 
-    public fun build(): BucketPolicyProps = cdkBuilder.build()
+  public fun build(): BucketPolicyProps = cdkBuilder.build()
 }

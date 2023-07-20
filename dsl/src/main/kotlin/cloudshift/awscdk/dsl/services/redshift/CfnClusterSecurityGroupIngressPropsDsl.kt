@@ -1,40 +1,31 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.redshift
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps
 import kotlin.String
+import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps
 
 @CdkDslMarker
 public class CfnClusterSecurityGroupIngressPropsDsl {
-    private val cdkBuilder: CfnClusterSecurityGroupIngressProps.Builder =
-        CfnClusterSecurityGroupIngressProps.builder()
+  private val cdkBuilder: CfnClusterSecurityGroupIngressProps.Builder =
+      CfnClusterSecurityGroupIngressProps.builder()
 
-    public fun cidrip(cidrip: String) {
-        cdkBuilder.cidrip(cidrip)
-    }
+  public fun cidrip(cidrip: String) {
+    cdkBuilder.cidrip(cidrip)
+  }
 
-    public fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
-        cdkBuilder.clusterSecurityGroupName(clusterSecurityGroupName)
-    }
+  public fun clusterSecurityGroupName(clusterSecurityGroupName: String) {
+    cdkBuilder.clusterSecurityGroupName(clusterSecurityGroupName)
+  }
 
-    public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
-        cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
-    }
+  public fun ec2SecurityGroupName(ec2SecurityGroupName: String) {
+    cdkBuilder.ec2SecurityGroupName(ec2SecurityGroupName)
+  }
 
-    public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
-        cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
-    }
+  public fun ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId: String) {
+    cdkBuilder.ec2SecurityGroupOwnerId(ec2SecurityGroupOwnerId)
+  }
 
-    public fun build(): CfnClusterSecurityGroupIngressProps = cdkBuilder.build()
+  public fun build(): CfnClusterSecurityGroupIngressProps = cdkBuilder.build()
 }

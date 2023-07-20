@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.devopsguru
 
@@ -16,8 +7,8 @@ import software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegrat
 
 @CdkDslMarker
 public class CfnLogAnomalyDetectionIntegrationPropsDsl {
-    private val cdkBuilder: CfnLogAnomalyDetectionIntegrationProps.Builder =
-        CfnLogAnomalyDetectionIntegrationProps.builder()
+  private val cdkBuilder: CfnLogAnomalyDetectionIntegrationProps.Builder =
+      CfnLogAnomalyDetectionIntegrationProps.builder()
 
-    public fun build(): CfnLogAnomalyDetectionIntegrationProps = cdkBuilder.build()
+  public fun build(): CfnLogAnomalyDetectionIntegrationProps = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.cognito
 
@@ -17,55 +8,55 @@ import software.amazon.awscdk.services.lambda.IFunction
 
 @CdkDslMarker
 public class UserPoolTriggersDsl {
-    private val cdkBuilder: UserPoolTriggers.Builder = UserPoolTriggers.builder()
+  private val cdkBuilder: UserPoolTriggers.Builder = UserPoolTriggers.builder()
 
-    public fun createAuthChallenge(createAuthChallenge: IFunction) {
-        cdkBuilder.createAuthChallenge(createAuthChallenge)
-    }
+  public fun createAuthChallenge(createAuthChallenge: IFunction) {
+    cdkBuilder.createAuthChallenge(createAuthChallenge)
+  }
 
-    public fun customEmailSender(customEmailSender: IFunction) {
-        cdkBuilder.customEmailSender(customEmailSender)
-    }
+  public fun customEmailSender(customEmailSender: IFunction) {
+    cdkBuilder.customEmailSender(customEmailSender)
+  }
 
-    public fun customMessage(customMessage: IFunction) {
-        cdkBuilder.customMessage(customMessage)
-    }
+  public fun customMessage(customMessage: IFunction) {
+    cdkBuilder.customMessage(customMessage)
+  }
 
-    public fun customSmsSender(customSmsSender: IFunction) {
-        cdkBuilder.customSmsSender(customSmsSender)
-    }
+  public fun customSmsSender(customSmsSender: IFunction) {
+    cdkBuilder.customSmsSender(customSmsSender)
+  }
 
-    public fun defineAuthChallenge(defineAuthChallenge: IFunction) {
-        cdkBuilder.defineAuthChallenge(defineAuthChallenge)
-    }
+  public fun defineAuthChallenge(defineAuthChallenge: IFunction) {
+    cdkBuilder.defineAuthChallenge(defineAuthChallenge)
+  }
 
-    public fun postAuthentication(postAuthentication: IFunction) {
-        cdkBuilder.postAuthentication(postAuthentication)
-    }
+  public fun postAuthentication(postAuthentication: IFunction) {
+    cdkBuilder.postAuthentication(postAuthentication)
+  }
 
-    public fun postConfirmation(postConfirmation: IFunction) {
-        cdkBuilder.postConfirmation(postConfirmation)
-    }
+  public fun postConfirmation(postConfirmation: IFunction) {
+    cdkBuilder.postConfirmation(postConfirmation)
+  }
 
-    public fun preAuthentication(preAuthentication: IFunction) {
-        cdkBuilder.preAuthentication(preAuthentication)
-    }
+  public fun preAuthentication(preAuthentication: IFunction) {
+    cdkBuilder.preAuthentication(preAuthentication)
+  }
 
-    public fun preSignUp(preSignUp: IFunction) {
-        cdkBuilder.preSignUp(preSignUp)
-    }
+  public fun preSignUp(preSignUp: IFunction) {
+    cdkBuilder.preSignUp(preSignUp)
+  }
 
-    public fun preTokenGeneration(preTokenGeneration: IFunction) {
-        cdkBuilder.preTokenGeneration(preTokenGeneration)
-    }
+  public fun preTokenGeneration(preTokenGeneration: IFunction) {
+    cdkBuilder.preTokenGeneration(preTokenGeneration)
+  }
 
-    public fun userMigration(userMigration: IFunction) {
-        cdkBuilder.userMigration(userMigration)
-    }
+  public fun userMigration(userMigration: IFunction) {
+    cdkBuilder.userMigration(userMigration)
+  }
 
-    public fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: IFunction) {
-        cdkBuilder.verifyAuthChallengeResponse(verifyAuthChallengeResponse)
-    }
+  public fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: IFunction) {
+    cdkBuilder.verifyAuthChallengeResponse(verifyAuthChallengeResponse)
+  }
 
-    public fun build(): UserPoolTriggers = cdkBuilder.build()
+  public fun build(): UserPoolTriggers = cdkBuilder.build()
 }

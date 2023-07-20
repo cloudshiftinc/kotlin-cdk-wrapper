@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.medialive
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.medialive.CfnChannel
 
 @CdkDslMarker
 public class CfnChannelKeyProviderSettingsPropertyDsl {
-    private val cdkBuilder: CfnChannel.KeyProviderSettingsProperty.Builder =
-        CfnChannel.KeyProviderSettingsProperty.builder()
+  private val cdkBuilder: CfnChannel.KeyProviderSettingsProperty.Builder =
+      CfnChannel.KeyProviderSettingsProperty.builder()
 
-    public fun staticKeySettings(staticKeySettings: IResolvable) {
-        cdkBuilder.staticKeySettings(staticKeySettings)
-    }
+  public fun staticKeySettings(staticKeySettings: IResolvable) {
+    cdkBuilder.staticKeySettings(staticKeySettings)
+  }
 
-    public fun staticKeySettings(staticKeySettings: CfnChannel.StaticKeySettingsProperty) {
-        cdkBuilder.staticKeySettings(staticKeySettings)
-    }
+  public fun staticKeySettings(staticKeySettings: CfnChannel.StaticKeySettingsProperty) {
+    cdkBuilder.staticKeySettings(staticKeySettings)
+  }
 
-    public fun build(): CfnChannel.KeyProviderSettingsProperty = cdkBuilder.build()
+  public fun build(): CfnChannel.KeyProviderSettingsProperty = cdkBuilder.build()
 }

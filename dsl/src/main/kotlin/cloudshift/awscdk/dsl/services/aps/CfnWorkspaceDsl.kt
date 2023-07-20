@@ -1,62 +1,53 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.aps
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.aps.CfnWorkspace
-import software.constructs.Construct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.aps.CfnWorkspace
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnWorkspaceDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnWorkspace.Builder = CfnWorkspace.Builder.create(scope, id)
+  private val cdkBuilder: CfnWorkspace.Builder = CfnWorkspace.Builder.create(scope, id)
 
-    private val _tags: MutableList<CfnTag> = mutableListOf()
+  private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    public fun alertManagerDefinition(alertManagerDefinition: String) {
-        cdkBuilder.alertManagerDefinition(alertManagerDefinition)
-    }
+  public fun alertManagerDefinition(alertManagerDefinition: String) {
+    cdkBuilder.alertManagerDefinition(alertManagerDefinition)
+  }
 
-    public fun alias(alias: String) {
-        cdkBuilder.alias(alias)
-    }
+  public fun alias(alias: String) {
+    cdkBuilder.alias(alias)
+  }
 
-    public fun loggingConfiguration(loggingConfiguration: IResolvable) {
-        cdkBuilder.loggingConfiguration(loggingConfiguration)
-    }
+  public fun loggingConfiguration(loggingConfiguration: IResolvable) {
+    cdkBuilder.loggingConfiguration(loggingConfiguration)
+  }
 
-    public fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty) {
-        cdkBuilder.loggingConfiguration(loggingConfiguration)
-    }
+  public fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty) {
+    cdkBuilder.loggingConfiguration(loggingConfiguration)
+  }
 
-    public fun tags(tags: CfnTagDsl.() -> Unit) {
-        _tags.add(CfnTagDsl().apply(tags).build())
-    }
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
 
-    public fun tags(tags: Collection<CfnTag>) {
-        _tags.addAll(tags)
-    }
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
 
-    public fun build(): CfnWorkspace {
-        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnWorkspace {
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
 }

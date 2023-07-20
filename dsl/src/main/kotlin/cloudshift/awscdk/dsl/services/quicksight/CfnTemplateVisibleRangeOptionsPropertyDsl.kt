@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateVisibleRangeOptionsPropertyDsl {
-    private val cdkBuilder: CfnTemplate.VisibleRangeOptionsProperty.Builder =
-        CfnTemplate.VisibleRangeOptionsProperty.builder()
+  private val cdkBuilder: CfnTemplate.VisibleRangeOptionsProperty.Builder =
+      CfnTemplate.VisibleRangeOptionsProperty.builder()
 
-    public fun percentRange(percentRange: IResolvable) {
-        cdkBuilder.percentRange(percentRange)
-    }
+  public fun percentRange(percentRange: IResolvable) {
+    cdkBuilder.percentRange(percentRange)
+  }
 
-    public fun percentRange(percentRange: CfnTemplate.PercentVisibleRangeProperty) {
-        cdkBuilder.percentRange(percentRange)
-    }
+  public fun percentRange(percentRange: CfnTemplate.PercentVisibleRangeProperty) {
+    cdkBuilder.percentRange(percentRange)
+  }
 
-    public fun build(): CfnTemplate.VisibleRangeOptionsProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.VisibleRangeOptionsProperty = cdkBuilder.build()
 }

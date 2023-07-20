@@ -1,32 +1,23 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.supportapp
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps
 import kotlin.String
+import software.amazon.awscdk.services.supportapp.CfnSlackWorkspaceConfigurationProps
 
 @CdkDslMarker
 public class CfnSlackWorkspaceConfigurationPropsDsl {
-    private val cdkBuilder: CfnSlackWorkspaceConfigurationProps.Builder =
-        CfnSlackWorkspaceConfigurationProps.builder()
+  private val cdkBuilder: CfnSlackWorkspaceConfigurationProps.Builder =
+      CfnSlackWorkspaceConfigurationProps.builder()
 
-    public fun teamId(teamId: String) {
-        cdkBuilder.teamId(teamId)
-    }
+  public fun teamId(teamId: String) {
+    cdkBuilder.teamId(teamId)
+  }
 
-    public fun versionId(versionId: String) {
-        cdkBuilder.versionId(versionId)
-    }
+  public fun versionId(versionId: String) {
+    cdkBuilder.versionId(versionId)
+  }
 
-    public fun build(): CfnSlackWorkspaceConfigurationProps = cdkBuilder.build()
+  public fun build(): CfnSlackWorkspaceConfigurationProps = cdkBuilder.build()
 }

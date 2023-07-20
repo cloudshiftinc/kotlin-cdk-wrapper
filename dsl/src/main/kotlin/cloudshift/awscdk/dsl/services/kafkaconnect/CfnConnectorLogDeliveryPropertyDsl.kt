@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
 @CdkDslMarker
 public class CfnConnectorLogDeliveryPropertyDsl {
-    private val cdkBuilder: CfnConnector.LogDeliveryProperty.Builder =
-        CfnConnector.LogDeliveryProperty.builder()
+  private val cdkBuilder: CfnConnector.LogDeliveryProperty.Builder =
+      CfnConnector.LogDeliveryProperty.builder()
 
-    public fun workerLogDelivery(workerLogDelivery: IResolvable) {
-        cdkBuilder.workerLogDelivery(workerLogDelivery)
-    }
+  public fun workerLogDelivery(workerLogDelivery: IResolvable) {
+    cdkBuilder.workerLogDelivery(workerLogDelivery)
+  }
 
-    public fun workerLogDelivery(workerLogDelivery: CfnConnector.WorkerLogDeliveryProperty) {
-        cdkBuilder.workerLogDelivery(workerLogDelivery)
-    }
+  public fun workerLogDelivery(workerLogDelivery: CfnConnector.WorkerLogDeliveryProperty) {
+    cdkBuilder.workerLogDelivery(workerLogDelivery)
+  }
 
-    public fun build(): CfnConnector.LogDeliveryProperty = cdkBuilder.build()
+  public fun build(): CfnConnector.LogDeliveryProperty = cdkBuilder.build()
 }

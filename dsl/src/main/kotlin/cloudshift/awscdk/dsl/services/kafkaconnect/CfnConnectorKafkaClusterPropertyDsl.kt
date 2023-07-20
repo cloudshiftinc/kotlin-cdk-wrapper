@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.kafkaconnect
 
@@ -17,16 +8,16 @@ import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
 @CdkDslMarker
 public class CfnConnectorKafkaClusterPropertyDsl {
-    private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =
-        CfnConnector.KafkaClusterProperty.builder()
+  private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =
+      CfnConnector.KafkaClusterProperty.builder()
 
-    public fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
-        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
-    }
+  public fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
+    cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
+  }
 
-    public fun apacheKafkaCluster(apacheKafkaCluster: CfnConnector.ApacheKafkaClusterProperty) {
-        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
-    }
+  public fun apacheKafkaCluster(apacheKafkaCluster: CfnConnector.ApacheKafkaClusterProperty) {
+    cdkBuilder.apacheKafkaCluster(apacheKafkaCluster)
+  }
 
-    public fun build(): CfnConnector.KafkaClusterProperty = cdkBuilder.build()
+  public fun build(): CfnConnector.KafkaClusterProperty = cdkBuilder.build()
 }

@@ -1,110 +1,101 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.apigatewayv2
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.common.MapBuilder
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.apigatewayv2.CfnStage
-import software.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.apigatewayv2.CfnStage
+import software.constructs.Construct
 
 @CdkDslMarker
 public class CfnStageDsl(
-    scope: Construct,
-    id: String,
+  scope: Construct,
+  id: String,
 ) {
-    private val cdkBuilder: CfnStage.Builder = CfnStage.Builder.create(scope, id)
+  private val cdkBuilder: CfnStage.Builder = CfnStage.Builder.create(scope, id)
 
-    public fun accessLogSettings(accessLogSettings: IResolvable) {
-        cdkBuilder.accessLogSettings(accessLogSettings)
-    }
+  public fun accessLogSettings(accessLogSettings: IResolvable) {
+    cdkBuilder.accessLogSettings(accessLogSettings)
+  }
 
-    public fun accessLogSettings(accessLogSettings: CfnStage.AccessLogSettingsProperty) {
-        cdkBuilder.accessLogSettings(accessLogSettings)
-    }
+  public fun accessLogSettings(accessLogSettings: CfnStage.AccessLogSettingsProperty) {
+    cdkBuilder.accessLogSettings(accessLogSettings)
+  }
 
-    public fun accessPolicyId(accessPolicyId: String) {
-        cdkBuilder.accessPolicyId(accessPolicyId)
-    }
+  public fun accessPolicyId(accessPolicyId: String) {
+    cdkBuilder.accessPolicyId(accessPolicyId)
+  }
 
-    public fun apiId(apiId: String) {
-        cdkBuilder.apiId(apiId)
-    }
+  public fun apiId(apiId: String) {
+    cdkBuilder.apiId(apiId)
+  }
 
-    public fun autoDeploy(autoDeploy: Boolean) {
-        cdkBuilder.autoDeploy(autoDeploy)
-    }
+  public fun autoDeploy(autoDeploy: Boolean) {
+    cdkBuilder.autoDeploy(autoDeploy)
+  }
 
-    public fun autoDeploy(autoDeploy: IResolvable) {
-        cdkBuilder.autoDeploy(autoDeploy)
-    }
+  public fun autoDeploy(autoDeploy: IResolvable) {
+    cdkBuilder.autoDeploy(autoDeploy)
+  }
 
-    public fun clientCertificateId(clientCertificateId: String) {
-        cdkBuilder.clientCertificateId(clientCertificateId)
-    }
+  public fun clientCertificateId(clientCertificateId: String) {
+    cdkBuilder.clientCertificateId(clientCertificateId)
+  }
 
-    public fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-        cdkBuilder.defaultRouteSettings(defaultRouteSettings)
-    }
+  public fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
+    cdkBuilder.defaultRouteSettings(defaultRouteSettings)
+  }
 
-    public fun defaultRouteSettings(defaultRouteSettings: CfnStage.RouteSettingsProperty) {
-        cdkBuilder.defaultRouteSettings(defaultRouteSettings)
-    }
+  public fun defaultRouteSettings(defaultRouteSettings: CfnStage.RouteSettingsProperty) {
+    cdkBuilder.defaultRouteSettings(defaultRouteSettings)
+  }
 
-    public fun deploymentId(deploymentId: String) {
-        cdkBuilder.deploymentId(deploymentId)
-    }
+  public fun deploymentId(deploymentId: String) {
+    cdkBuilder.deploymentId(deploymentId)
+  }
 
-    public fun description(description: String) {
-        cdkBuilder.description(description)
-    }
+  public fun description(description: String) {
+    cdkBuilder.description(description)
+  }
 
-    public fun routeSettings(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.routeSettings(builder.map)
-    }
+  public fun routeSettings(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.routeSettings(builder.map)
+  }
 
-    public fun routeSettings(routeSettings: Any) {
-        cdkBuilder.routeSettings(routeSettings)
-    }
+  public fun routeSettings(routeSettings: Any) {
+    cdkBuilder.routeSettings(routeSettings)
+  }
 
-    public fun stageName(stageName: String) {
-        cdkBuilder.stageName(stageName)
-    }
+  public fun stageName(stageName: String) {
+    cdkBuilder.stageName(stageName)
+  }
 
-    public fun stageVariables(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.stageVariables(builder.map)
-    }
+  public fun stageVariables(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.stageVariables(builder.map)
+  }
 
-    public fun stageVariables(stageVariables: Any) {
-        cdkBuilder.stageVariables(stageVariables)
-    }
+  public fun stageVariables(stageVariables: Any) {
+    cdkBuilder.stageVariables(stageVariables)
+  }
 
-    public fun tags(block: MapBuilder.() -> Unit = {}) {
-        val builder = MapBuilder()
-        builder.apply(block)
-        cdkBuilder.tags(builder.map)
-    }
+  public fun tags(block: MapBuilder.() -> Unit = {}) {
+    val builder = MapBuilder()
+    builder.apply(block)
+    cdkBuilder.tags(builder.map)
+  }
 
-    public fun tags(tags: Any) {
-        cdkBuilder.tags(tags)
-    }
+  public fun tags(tags: Any) {
+    cdkBuilder.tags(tags)
+  }
 
-    public fun build(): CfnStage = cdkBuilder.build()
+  public fun build(): CfnStage = cdkBuilder.build()
 }

@@ -1,80 +1,72 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.panorama
 
 import cloudshift.awscdk.common.CdkDslMarker
 import cloudshift.awscdk.dsl.CfnTagDsl
-import software.amazon.awscdk.CfnTag
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.panorama.CfnApplicationInstance
-import software.amazon.awscdk.services.panorama.CfnApplicationInstanceProps
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.CfnTag
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.panorama.CfnApplicationInstance
+import software.amazon.awscdk.services.panorama.CfnApplicationInstanceProps
 
 @CdkDslMarker
 public class CfnApplicationInstancePropsDsl {
-    private val cdkBuilder: CfnApplicationInstanceProps.Builder =
-        CfnApplicationInstanceProps.builder()
+  private val cdkBuilder: CfnApplicationInstanceProps.Builder =
+      CfnApplicationInstanceProps.builder()
 
-    private val _tags: MutableList<CfnTag> = mutableListOf()
+  private val _tags: MutableList<CfnTag> = mutableListOf()
 
-    public fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
-        cdkBuilder.applicationInstanceIdToReplace(applicationInstanceIdToReplace)
-    }
+  public fun applicationInstanceIdToReplace(applicationInstanceIdToReplace: String) {
+    cdkBuilder.applicationInstanceIdToReplace(applicationInstanceIdToReplace)
+  }
 
-    public fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
-        cdkBuilder.defaultRuntimeContextDevice(defaultRuntimeContextDevice)
-    }
+  public fun defaultRuntimeContextDevice(defaultRuntimeContextDevice: String) {
+    cdkBuilder.defaultRuntimeContextDevice(defaultRuntimeContextDevice)
+  }
 
-    public fun description(description: String) {
-        cdkBuilder.description(description)
-    }
+  public fun description(description: String) {
+    cdkBuilder.description(description)
+  }
 
-    public fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
-        cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
-    }
+  public fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
+    cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
+  }
 
-    public fun manifestOverridesPayload(manifestOverridesPayload: CfnApplicationInstance.ManifestOverridesPayloadProperty) {
-        cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
-    }
+  public
+      fun manifestOverridesPayload(manifestOverridesPayload: CfnApplicationInstance.ManifestOverridesPayloadProperty) {
+    cdkBuilder.manifestOverridesPayload(manifestOverridesPayload)
+  }
 
-    public fun manifestPayload(manifestPayload: IResolvable) {
-        cdkBuilder.manifestPayload(manifestPayload)
-    }
+  public fun manifestPayload(manifestPayload: IResolvable) {
+    cdkBuilder.manifestPayload(manifestPayload)
+  }
 
-    public fun manifestPayload(manifestPayload: CfnApplicationInstance.ManifestPayloadProperty) {
-        cdkBuilder.manifestPayload(manifestPayload)
-    }
+  public fun manifestPayload(manifestPayload: CfnApplicationInstance.ManifestPayloadProperty) {
+    cdkBuilder.manifestPayload(manifestPayload)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun runtimeRoleArn(runtimeRoleArn: String) {
-        cdkBuilder.runtimeRoleArn(runtimeRoleArn)
-    }
+  public fun runtimeRoleArn(runtimeRoleArn: String) {
+    cdkBuilder.runtimeRoleArn(runtimeRoleArn)
+  }
 
-    public fun tags(tags: CfnTagDsl.() -> Unit) {
-        _tags.add(CfnTagDsl().apply(tags).build())
-    }
+  public fun tags(tags: CfnTagDsl.() -> Unit) {
+    _tags.add(CfnTagDsl().apply(tags).build())
+  }
 
-    public fun tags(tags: Collection<CfnTag>) {
-        _tags.addAll(tags)
-    }
+  public fun tags(tags: Collection<CfnTag>) {
+    _tags.addAll(tags)
+  }
 
-    public fun build(): CfnApplicationInstanceProps {
-        if (_tags.isNotEmpty()) cdkBuilder.tags(_tags)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnApplicationInstanceProps {
+    if(_tags.isNotEmpty()) cdkBuilder.tags(_tags)
+    return cdkBuilder.build()
+  }
 }

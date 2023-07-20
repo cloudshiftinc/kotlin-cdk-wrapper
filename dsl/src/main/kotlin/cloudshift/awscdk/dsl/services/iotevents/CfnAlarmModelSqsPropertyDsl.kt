@@ -1,45 +1,36 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.iotevents
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 import kotlin.Boolean
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
 @CdkDslMarker
 public class CfnAlarmModelSqsPropertyDsl {
-    private val cdkBuilder: CfnAlarmModel.SqsProperty.Builder = CfnAlarmModel.SqsProperty.builder()
+  private val cdkBuilder: CfnAlarmModel.SqsProperty.Builder = CfnAlarmModel.SqsProperty.builder()
 
-    public fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload)
-    }
+  public fun payload(payload: IResolvable) {
+    cdkBuilder.payload(payload)
+  }
 
-    public fun payload(payload: CfnAlarmModel.PayloadProperty) {
-        cdkBuilder.payload(payload)
-    }
+  public fun payload(payload: CfnAlarmModel.PayloadProperty) {
+    cdkBuilder.payload(payload)
+  }
 
-    public fun queueUrl(queueUrl: String) {
-        cdkBuilder.queueUrl(queueUrl)
-    }
+  public fun queueUrl(queueUrl: String) {
+    cdkBuilder.queueUrl(queueUrl)
+  }
 
-    public fun useBase64(useBase64: Boolean) {
-        cdkBuilder.useBase64(useBase64)
-    }
+  public fun useBase64(useBase64: Boolean) {
+    cdkBuilder.useBase64(useBase64)
+  }
 
-    public fun useBase64(useBase64: IResolvable) {
-        cdkBuilder.useBase64(useBase64)
-    }
+  public fun useBase64(useBase64: IResolvable) {
+    cdkBuilder.useBase64(useBase64)
+  }
 
-    public fun build(): CfnAlarmModel.SqsProperty = cdkBuilder.build()
+  public fun build(): CfnAlarmModel.SqsProperty = cdkBuilder.build()
 }

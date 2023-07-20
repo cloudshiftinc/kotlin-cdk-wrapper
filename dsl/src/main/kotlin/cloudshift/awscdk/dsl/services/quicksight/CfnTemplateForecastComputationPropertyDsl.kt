@@ -1,78 +1,69 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Number
 import kotlin.String
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplateForecastComputationPropertyDsl {
-    private val cdkBuilder: CfnTemplate.ForecastComputationProperty.Builder =
-        CfnTemplate.ForecastComputationProperty.builder()
+  private val cdkBuilder: CfnTemplate.ForecastComputationProperty.Builder =
+      CfnTemplate.ForecastComputationProperty.builder()
 
-    public fun computationId(computationId: String) {
-        cdkBuilder.computationId(computationId)
-    }
+  public fun computationId(computationId: String) {
+    cdkBuilder.computationId(computationId)
+  }
 
-    public fun customSeasonalityValue(customSeasonalityValue: Number) {
-        cdkBuilder.customSeasonalityValue(customSeasonalityValue)
-    }
+  public fun customSeasonalityValue(customSeasonalityValue: Number) {
+    cdkBuilder.customSeasonalityValue(customSeasonalityValue)
+  }
 
-    public fun lowerBoundary(lowerBoundary: Number) {
-        cdkBuilder.lowerBoundary(lowerBoundary)
-    }
+  public fun lowerBoundary(lowerBoundary: Number) {
+    cdkBuilder.lowerBoundary(lowerBoundary)
+  }
 
-    public fun name(name: String) {
-        cdkBuilder.name(name)
-    }
+  public fun name(name: String) {
+    cdkBuilder.name(name)
+  }
 
-    public fun periodsBackward(periodsBackward: Number) {
-        cdkBuilder.periodsBackward(periodsBackward)
-    }
+  public fun periodsBackward(periodsBackward: Number) {
+    cdkBuilder.periodsBackward(periodsBackward)
+  }
 
-    public fun periodsForward(periodsForward: Number) {
-        cdkBuilder.periodsForward(periodsForward)
-    }
+  public fun periodsForward(periodsForward: Number) {
+    cdkBuilder.periodsForward(periodsForward)
+  }
 
-    public fun predictionInterval(predictionInterval: Number) {
-        cdkBuilder.predictionInterval(predictionInterval)
-    }
+  public fun predictionInterval(predictionInterval: Number) {
+    cdkBuilder.predictionInterval(predictionInterval)
+  }
 
-    public fun seasonality(seasonality: String) {
-        cdkBuilder.seasonality(seasonality)
-    }
+  public fun seasonality(seasonality: String) {
+    cdkBuilder.seasonality(seasonality)
+  }
 
-    public fun time(time: IResolvable) {
-        cdkBuilder.time(time)
-    }
+  public fun time(time: IResolvable) {
+    cdkBuilder.time(time)
+  }
 
-    public fun time(time: CfnTemplate.DimensionFieldProperty) {
-        cdkBuilder.time(time)
-    }
+  public fun time(time: CfnTemplate.DimensionFieldProperty) {
+    cdkBuilder.time(time)
+  }
 
-    public fun upperBoundary(upperBoundary: Number) {
-        cdkBuilder.upperBoundary(upperBoundary)
-    }
+  public fun upperBoundary(upperBoundary: Number) {
+    cdkBuilder.upperBoundary(upperBoundary)
+  }
 
-    public fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`)
-    }
+  public fun `value`(`value`: IResolvable) {
+    cdkBuilder.`value`(`value`)
+  }
 
-    public fun `value`(`value`: CfnTemplate.MeasureFieldProperty) {
-        cdkBuilder.`value`(`value`)
-    }
+  public fun `value`(`value`: CfnTemplate.MeasureFieldProperty) {
+    cdkBuilder.`value`(`value`)
+  }
 
-    public fun build(): CfnTemplate.ForecastComputationProperty = cdkBuilder.build()
+  public fun build(): CfnTemplate.ForecastComputationProperty = cdkBuilder.build()
 }

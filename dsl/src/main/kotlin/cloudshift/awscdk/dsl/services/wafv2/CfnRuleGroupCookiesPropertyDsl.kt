@@ -1,41 +1,32 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.wafv2
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
-import kotlin.String
 
 @CdkDslMarker
 public class CfnRuleGroupCookiesPropertyDsl {
-    private val cdkBuilder: CfnRuleGroup.CookiesProperty.Builder =
-        CfnRuleGroup.CookiesProperty.builder()
+  private val cdkBuilder: CfnRuleGroup.CookiesProperty.Builder =
+      CfnRuleGroup.CookiesProperty.builder()
 
-    public fun matchPattern(matchPattern: IResolvable) {
-        cdkBuilder.matchPattern(matchPattern)
-    }
+  public fun matchPattern(matchPattern: IResolvable) {
+    cdkBuilder.matchPattern(matchPattern)
+  }
 
-    public fun matchPattern(matchPattern: CfnRuleGroup.CookieMatchPatternProperty) {
-        cdkBuilder.matchPattern(matchPattern)
-    }
+  public fun matchPattern(matchPattern: CfnRuleGroup.CookieMatchPatternProperty) {
+    cdkBuilder.matchPattern(matchPattern)
+  }
 
-    public fun matchScope(matchScope: String) {
-        cdkBuilder.matchScope(matchScope)
-    }
+  public fun matchScope(matchScope: String) {
+    cdkBuilder.matchScope(matchScope)
+  }
 
-    public fun oversizeHandling(oversizeHandling: String) {
-        cdkBuilder.oversizeHandling(oversizeHandling)
-    }
+  public fun oversizeHandling(oversizeHandling: String) {
+    cdkBuilder.oversizeHandling(oversizeHandling)
+  }
 
-    public fun build(): CfnRuleGroup.CookiesProperty = cdkBuilder.build()
+  public fun build(): CfnRuleGroup.CookiesProperty = cdkBuilder.build()
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.logs.destinations
 
@@ -17,11 +8,11 @@ import software.amazon.awscdk.services.logs.destinations.KinesisDestinationProps
 
 @CdkDslMarker
 public class KinesisDestinationPropsDsl {
-    private val cdkBuilder: KinesisDestinationProps.Builder = KinesisDestinationProps.builder()
+  private val cdkBuilder: KinesisDestinationProps.Builder = KinesisDestinationProps.builder()
 
-    public fun role(role: IRole) {
-        cdkBuilder.role(role)
-    }
+  public fun role(role: IRole) {
+    cdkBuilder.role(role)
+  }
 
-    public fun build(): KinesisDestinationProps = cdkBuilder.build()
+  public fun build(): KinesisDestinationProps = cdkBuilder.build()
 }

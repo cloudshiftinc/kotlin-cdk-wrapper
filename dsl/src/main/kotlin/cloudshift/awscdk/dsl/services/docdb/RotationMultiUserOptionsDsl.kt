@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.docdb
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 
 @CdkDslMarker
 public class RotationMultiUserOptionsDsl {
-    private val cdkBuilder: RotationMultiUserOptions.Builder = RotationMultiUserOptions.builder()
+  private val cdkBuilder: RotationMultiUserOptions.Builder = RotationMultiUserOptions.builder()
 
-    public fun automaticallyAfter(automaticallyAfter: Duration) {
-        cdkBuilder.automaticallyAfter(automaticallyAfter)
-    }
+  public fun automaticallyAfter(automaticallyAfter: Duration) {
+    cdkBuilder.automaticallyAfter(automaticallyAfter)
+  }
 
-    public fun secret(secret: ISecret) {
-        cdkBuilder.secret(secret)
-    }
+  public fun secret(secret: ISecret) {
+    cdkBuilder.secret(secret)
+  }
 
-    public fun build(): RotationMultiUserOptions = cdkBuilder.build()
+  public fun build(): RotationMultiUserOptions = cdkBuilder.build()
 }

@@ -1,58 +1,49 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.ecs
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Collection
 import kotlin.collections.Map
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
 @CdkDslMarker
 public class CfnTaskDefinitionLogConfigurationPropertyDsl {
-    private val cdkBuilder: CfnTaskDefinition.LogConfigurationProperty.Builder =
-        CfnTaskDefinition.LogConfigurationProperty.builder()
+  private val cdkBuilder: CfnTaskDefinition.LogConfigurationProperty.Builder =
+      CfnTaskDefinition.LogConfigurationProperty.builder()
 
-    private val _secretOptions: MutableList<Any> = mutableListOf()
+  private val _secretOptions: MutableList<Any> = mutableListOf()
 
-    public fun logDriver(logDriver: String) {
-        cdkBuilder.logDriver(logDriver)
-    }
+  public fun logDriver(logDriver: String) {
+    cdkBuilder.logDriver(logDriver)
+  }
 
-    public fun options(options: Map<String, String>) {
-        cdkBuilder.options(options)
-    }
+  public fun options(options: Map<String, String>) {
+    cdkBuilder.options(options)
+  }
 
-    public fun options(options: IResolvable) {
-        cdkBuilder.options(options)
-    }
+  public fun options(options: IResolvable) {
+    cdkBuilder.options(options)
+  }
 
-    public fun secretOptions(vararg secretOptions: Any) {
-        _secretOptions.addAll(listOf(*secretOptions))
-    }
+  public fun secretOptions(vararg secretOptions: Any) {
+    _secretOptions.addAll(listOf(*secretOptions))
+  }
 
-    public fun secretOptions(secretOptions: Collection<Any>) {
-        _secretOptions.addAll(secretOptions)
-    }
+  public fun secretOptions(secretOptions: Collection<Any>) {
+    _secretOptions.addAll(secretOptions)
+  }
 
-    public fun secretOptions(secretOptions: IResolvable) {
-        cdkBuilder.secretOptions(secretOptions)
-    }
+  public fun secretOptions(secretOptions: IResolvable) {
+    cdkBuilder.secretOptions(secretOptions)
+  }
 
-    public fun build(): CfnTaskDefinition.LogConfigurationProperty {
-        if (_secretOptions.isNotEmpty()) cdkBuilder.secretOptions(_secretOptions)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnTaskDefinition.LogConfigurationProperty {
+    if(_secretOptions.isNotEmpty()) cdkBuilder.secretOptions(_secretOptions)
+    return cdkBuilder.build()
+  }
 }

@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.lakeformation
 
@@ -16,8 +7,8 @@ import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings
 
 @CdkDslMarker
 public class CfnDataLakeSettingsCreateTableDefaultPermissionsPropertyDsl {
-    private val cdkBuilder: CfnDataLakeSettings.CreateTableDefaultPermissionsProperty.Builder =
-        CfnDataLakeSettings.CreateTableDefaultPermissionsProperty.builder()
+  private val cdkBuilder: CfnDataLakeSettings.CreateTableDefaultPermissionsProperty.Builder =
+      CfnDataLakeSettings.CreateTableDefaultPermissionsProperty.builder()
 
-    public fun build(): CfnDataLakeSettings.CreateTableDefaultPermissionsProperty = cdkBuilder.build()
+  public fun build(): CfnDataLakeSettings.CreateTableDefaultPermissionsProperty = cdkBuilder.build()
 }

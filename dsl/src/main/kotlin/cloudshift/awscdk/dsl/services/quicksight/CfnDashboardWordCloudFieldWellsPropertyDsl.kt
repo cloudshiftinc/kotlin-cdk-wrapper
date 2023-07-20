@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
@@ -17,16 +8,17 @@ import software.amazon.awscdk.services.quicksight.CfnDashboard
 
 @CdkDslMarker
 public class CfnDashboardWordCloudFieldWellsPropertyDsl {
-    private val cdkBuilder: CfnDashboard.WordCloudFieldWellsProperty.Builder =
-        CfnDashboard.WordCloudFieldWellsProperty.builder()
+  private val cdkBuilder: CfnDashboard.WordCloudFieldWellsProperty.Builder =
+      CfnDashboard.WordCloudFieldWellsProperty.builder()
 
-    public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
-        cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
-    }
+  public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: IResolvable) {
+    cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
+  }
 
-    public fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: CfnDashboard.WordCloudAggregatedFieldWellsProperty) {
-        cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
-    }
+  public
+      fun wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells: CfnDashboard.WordCloudAggregatedFieldWellsProperty) {
+    cdkBuilder.wordCloudAggregatedFieldWells(wordCloudAggregatedFieldWells)
+  }
 
-    public fun build(): CfnDashboard.WordCloudFieldWellsProperty = cdkBuilder.build()
+  public fun build(): CfnDashboard.WordCloudFieldWellsProperty = cdkBuilder.build()
 }

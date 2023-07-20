@@ -1,44 +1,35 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.quicksight
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.IResolvable
-import software.amazon.awscdk.services.quicksight.CfnTemplate
 import kotlin.Any
 import kotlin.collections.Collection
 import kotlin.collections.MutableList
+import software.amazon.awscdk.IResolvable
+import software.amazon.awscdk.services.quicksight.CfnTemplate
 
 @CdkDslMarker
 public class CfnTemplatePivotTableSortConfigurationPropertyDsl {
-    private val cdkBuilder: CfnTemplate.PivotTableSortConfigurationProperty.Builder =
-        CfnTemplate.PivotTableSortConfigurationProperty.builder()
+  private val cdkBuilder: CfnTemplate.PivotTableSortConfigurationProperty.Builder =
+      CfnTemplate.PivotTableSortConfigurationProperty.builder()
 
-    private val _fieldSortOptions: MutableList<Any> = mutableListOf()
+  private val _fieldSortOptions: MutableList<Any> = mutableListOf()
 
-    public fun fieldSortOptions(vararg fieldSortOptions: Any) {
-        _fieldSortOptions.addAll(listOf(*fieldSortOptions))
-    }
+  public fun fieldSortOptions(vararg fieldSortOptions: Any) {
+    _fieldSortOptions.addAll(listOf(*fieldSortOptions))
+  }
 
-    public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
-        _fieldSortOptions.addAll(fieldSortOptions)
-    }
+  public fun fieldSortOptions(fieldSortOptions: Collection<Any>) {
+    _fieldSortOptions.addAll(fieldSortOptions)
+  }
 
-    public fun fieldSortOptions(fieldSortOptions: IResolvable) {
-        cdkBuilder.fieldSortOptions(fieldSortOptions)
-    }
+  public fun fieldSortOptions(fieldSortOptions: IResolvable) {
+    cdkBuilder.fieldSortOptions(fieldSortOptions)
+  }
 
-    public fun build(): CfnTemplate.PivotTableSortConfigurationProperty {
-        if (_fieldSortOptions.isNotEmpty()) cdkBuilder.fieldSortOptions(_fieldSortOptions)
-        return cdkBuilder.build()
-    }
+  public fun build(): CfnTemplate.PivotTableSortConfigurationProperty {
+    if(_fieldSortOptions.isNotEmpty()) cdkBuilder.fieldSortOptions(_fieldSortOptions)
+    return cdkBuilder.build()
+  }
 }

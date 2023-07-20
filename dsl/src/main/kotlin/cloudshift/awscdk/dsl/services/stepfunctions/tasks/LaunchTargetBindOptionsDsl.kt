@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.stepfunctions.tasks
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptio
 
 @CdkDslMarker
 public class LaunchTargetBindOptionsDsl {
-    private val cdkBuilder: LaunchTargetBindOptions.Builder = LaunchTargetBindOptions.builder()
+  private val cdkBuilder: LaunchTargetBindOptions.Builder = LaunchTargetBindOptions.builder()
 
-    public fun cluster(cluster: ICluster) {
-        cdkBuilder.cluster(cluster)
-    }
+  public fun cluster(cluster: ICluster) {
+    cdkBuilder.cluster(cluster)
+  }
 
-    public fun taskDefinition(taskDefinition: ITaskDefinition) {
-        cdkBuilder.taskDefinition(taskDefinition)
-    }
+  public fun taskDefinition(taskDefinition: ITaskDefinition) {
+    cdkBuilder.taskDefinition(taskDefinition)
+  }
 
-    public fun build(): LaunchTargetBindOptions = cdkBuilder.build()
+  public fun build(): LaunchTargetBindOptions = cdkBuilder.build()
 }

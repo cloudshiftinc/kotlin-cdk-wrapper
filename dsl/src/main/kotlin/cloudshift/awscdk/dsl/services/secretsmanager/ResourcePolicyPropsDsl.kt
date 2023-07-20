@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.secretsmanager
 
@@ -17,11 +8,11 @@ import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
 
 @CdkDslMarker
 public class ResourcePolicyPropsDsl {
-    private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()
+  private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()
 
-    public fun secret(secret: ISecret) {
-        cdkBuilder.secret(secret)
-    }
+  public fun secret(secret: ISecret) {
+    cdkBuilder.secret(secret)
+  }
 
-    public fun build(): ResourcePolicyProps = cdkBuilder.build()
+  public fun build(): ResourcePolicyProps = cdkBuilder.build()
 }

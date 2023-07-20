@@ -1,63 +1,54 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.codepipeline.actions
 
 import cloudshift.awscdk.common.CdkDslMarker
+import kotlin.Number
+import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps
-import kotlin.Number
-import kotlin.String
 
 @CdkDslMarker
 public class AlexaSkillDeployActionPropsDsl {
-    private val cdkBuilder: AlexaSkillDeployActionProps.Builder =
-        AlexaSkillDeployActionProps.builder()
+  private val cdkBuilder: AlexaSkillDeployActionProps.Builder =
+      AlexaSkillDeployActionProps.builder()
 
-    public fun actionName(actionName: String) {
-        cdkBuilder.actionName(actionName)
-    }
+  public fun actionName(actionName: String) {
+    cdkBuilder.actionName(actionName)
+  }
 
-    public fun clientId(clientId: String) {
-        cdkBuilder.clientId(clientId)
-    }
+  public fun clientId(clientId: String) {
+    cdkBuilder.clientId(clientId)
+  }
 
-    public fun clientSecret(clientSecret: SecretValue) {
-        cdkBuilder.clientSecret(clientSecret)
-    }
+  public fun clientSecret(clientSecret: SecretValue) {
+    cdkBuilder.clientSecret(clientSecret)
+  }
 
-    public fun input(input: Artifact) {
-        cdkBuilder.input(input)
-    }
+  public fun input(input: Artifact) {
+    cdkBuilder.input(input)
+  }
 
-    public fun parameterOverridesArtifact(parameterOverridesArtifact: Artifact) {
-        cdkBuilder.parameterOverridesArtifact(parameterOverridesArtifact)
-    }
+  public fun parameterOverridesArtifact(parameterOverridesArtifact: Artifact) {
+    cdkBuilder.parameterOverridesArtifact(parameterOverridesArtifact)
+  }
 
-    public fun refreshToken(refreshToken: SecretValue) {
-        cdkBuilder.refreshToken(refreshToken)
-    }
+  public fun refreshToken(refreshToken: SecretValue) {
+    cdkBuilder.refreshToken(refreshToken)
+  }
 
-    public fun runOrder(runOrder: Number) {
-        cdkBuilder.runOrder(runOrder)
-    }
+  public fun runOrder(runOrder: Number) {
+    cdkBuilder.runOrder(runOrder)
+  }
 
-    public fun skillId(skillId: String) {
-        cdkBuilder.skillId(skillId)
-    }
+  public fun skillId(skillId: String) {
+    cdkBuilder.skillId(skillId)
+  }
 
-    public fun variablesNamespace(variablesNamespace: String) {
-        cdkBuilder.variablesNamespace(variablesNamespace)
-    }
+  public fun variablesNamespace(variablesNamespace: String) {
+    cdkBuilder.variablesNamespace(variablesNamespace)
+  }
 
-    public fun build(): AlexaSkillDeployActionProps = cdkBuilder.build()
+  public fun build(): AlexaSkillDeployActionProps = cdkBuilder.build()
 }

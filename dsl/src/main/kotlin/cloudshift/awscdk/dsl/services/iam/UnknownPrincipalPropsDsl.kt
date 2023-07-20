@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.iam
 
@@ -17,11 +8,11 @@ import software.constructs.IConstruct
 
 @CdkDslMarker
 public class UnknownPrincipalPropsDsl {
-    private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()
+  private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()
 
-    public fun resource(resource: IConstruct) {
-        cdkBuilder.resource(resource)
-    }
+  public fun resource(resource: IConstruct) {
+    cdkBuilder.resource(resource)
+  }
 
-    public fun build(): UnknownPrincipalProps = cdkBuilder.build()
+  public fun build(): UnknownPrincipalProps = cdkBuilder.build()
 }

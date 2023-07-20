@@ -1,36 +1,27 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.services.appstream
 
 import cloudshift.awscdk.common.CdkDslMarker
-import software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps
 import kotlin.String
+import software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps
 
 @CdkDslMarker
 public class CfnApplicationEntitlementAssociationPropsDsl {
-    private val cdkBuilder: CfnApplicationEntitlementAssociationProps.Builder =
-        CfnApplicationEntitlementAssociationProps.builder()
+  private val cdkBuilder: CfnApplicationEntitlementAssociationProps.Builder =
+      CfnApplicationEntitlementAssociationProps.builder()
 
-    public fun applicationIdentifier(applicationIdentifier: String) {
-        cdkBuilder.applicationIdentifier(applicationIdentifier)
-    }
+  public fun applicationIdentifier(applicationIdentifier: String) {
+    cdkBuilder.applicationIdentifier(applicationIdentifier)
+  }
 
-    public fun entitlementName(entitlementName: String) {
-        cdkBuilder.entitlementName(entitlementName)
-    }
+  public fun entitlementName(entitlementName: String) {
+    cdkBuilder.entitlementName(entitlementName)
+  }
 
-    public fun stackName(stackName: String) {
-        cdkBuilder.stackName(stackName)
-    }
+  public fun stackName(stackName: String) {
+    cdkBuilder.stackName(stackName)
+  }
 
-    public fun build(): CfnApplicationEntitlementAssociationProps = cdkBuilder.build()
+  public fun build(): CfnApplicationEntitlementAssociationProps = cdkBuilder.build()
 }

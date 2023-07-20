@@ -1,13 +1,4 @@
-@file:Suppress(
-    "RedundantVisibilityModifier",
-    "RedundantUnitReturnType",
-    "RemoveRedundantQualifierName",
-    "unused",
-    "UnusedImport",
-    "ClassName",
-    "REDUNDANT_PROJECTION",
-    "DEPRECATION",
-)
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
 
 package cloudshift.awscdk.dsl.cloudformation.include
 
@@ -18,15 +9,15 @@ import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
 
 @CdkDslMarker
 public class IncludedNestedStackDsl {
-    private val cdkBuilder: IncludedNestedStack.Builder = IncludedNestedStack.builder()
+  private val cdkBuilder: IncludedNestedStack.Builder = IncludedNestedStack.builder()
 
-    public fun includedTemplate(includedTemplate: CfnInclude) {
-        cdkBuilder.includedTemplate(includedTemplate)
-    }
+  public fun includedTemplate(includedTemplate: CfnInclude) {
+    cdkBuilder.includedTemplate(includedTemplate)
+  }
 
-    public fun stack(stack: NestedStack) {
-        cdkBuilder.stack(stack)
-    }
+  public fun stack(stack: NestedStack) {
+    cdkBuilder.stack(stack)
+  }
 
-    public fun build(): IncludedNestedStack = cdkBuilder.build()
+  public fun build(): IncludedNestedStack = cdkBuilder.build()
 }
