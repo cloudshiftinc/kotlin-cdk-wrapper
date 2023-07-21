@@ -2,7 +2,7 @@ import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 
 plugins {
     id("cloudshift.awscdkdsl.build.base")
-    id("io.github.gradle-nexus.publish-plugin") version("2.0.0-rc-1")  // only on root project
+    id("io.github.gradle-nexus.publish-plugin") version ("2.0.0-rc-1")  // only on root project
 }
 
 nexusPublishing {
@@ -24,6 +24,29 @@ tasks {
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
+    }
+
+    // from https://github.com/Vampire/setup-wsl/blob/master/gradle/build-logic/src/main/kotlin/net/kautler/github_actions.gradle.kts
+    val preprocessWorkflows by registering
+
+    file(".github/workflows").listFiles { _, name -> name.endsWith(".main.kts") }!!.forEach {workflowScript ->
+        val workflowName = workflowScript.name.removeSuffix(".main.kts")
+        val camelCasedWorkflowName = workflowName.replace("""-\w""".toRegex()) {
+            it.value.substring(1).replaceFirstChar(Char::uppercaseChar)
+        }.replaceFirstChar(Char::uppercaseChar)
+
+        val task = register<Exec>("preprocess${camelCasedWorkflowName}Workflow") {
+            inputs.file(workflowScript).withPropertyName("workflowScript")
+            outputs.file(workflowScript.resolveSibling("$workflowName.yaml")).withPropertyName("workflowFile")
+            commandLine(workflowScript.absolutePath)
+        }
+        preprocessWorkflows {
+            dependsOn(task)
+        }
+    }
+
+    named("precommit") {
+        dependsOn(preprocessWorkflows)
     }
 }
 
