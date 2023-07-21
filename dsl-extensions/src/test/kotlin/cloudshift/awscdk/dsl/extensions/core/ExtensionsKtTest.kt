@@ -29,7 +29,7 @@ class ExtensionsKtTest : FunSpec({
                     arn(stack) {
                         service("s3")
                         resource("myBucket")
-                    },
+                    }
                 )
             }
         }
@@ -47,7 +47,7 @@ private class MyConstruct(scope: Construct, id: String) : Construct(scope, id) {
                     arn {
                         service("s3")
                         resource("myBucket")
-                    },
+                    }
                 )
             }
         }
