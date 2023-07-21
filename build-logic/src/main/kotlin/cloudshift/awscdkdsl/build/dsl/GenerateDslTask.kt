@@ -8,8 +8,10 @@ import com.squareup.kotlinpoet.TypeSpec
 import org.gradle.api.DefaultTask
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.FileSystemOperations
+import org.gradle.api.file.RegularFileProperty
 import org.gradle.api.provider.SetProperty
 import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.InputFile
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
@@ -24,11 +26,16 @@ abstract class GenerateDslTask @Inject constructor(private val fs: FileSystemOpe
     @get:Input
     abstract val classpath: SetProperty<File>
 
+    @get:InputFile
+    abstract val cloudFormationSpecificationZip : RegularFileProperty
+
     @get:OutputDirectory
     abstract val dslDir: DirectoryProperty
 
     @TaskAction
     fun action() {
+
+        logger.lifecycle("${cloudFormationSpecificationZip.get()}")
 
         logger.lifecycle("Removing old DSL from ${dslDir.get()}")
         fs.delete {

@@ -1,8 +1,10 @@
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
+import de.undercouch.gradle.tasks.download.Download
 
 plugins {
     id("cloudshift.awscdkdsl.build.base")
     id("io.github.gradle-nexus.publish-plugin") version ("2.0.0-rc-1")  // only on root project
+    id("de.undercouch.download") version("5.4.0")
 }
 
 nexusPublishing {
@@ -21,9 +23,16 @@ dependencies {
 }
 
 tasks {
+    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
+        src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
+        onlyIfModified(true)
+        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
+    }
+
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
+        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
     }
 
     // from https://github.com/Vampire/setup-wsl/blob/master/gradle/build-logic/src/main/kotlin/net/kautler/github_actions.gradle.kts
