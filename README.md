@@ -10,11 +10,11 @@ val bucket = s3.bucket(scope = stack, id = "TestBucket") {
             bucketName("test-bucket")
         }
 
-        bucket.addCorsRule {
-            allowedHeaders("Test-Header")
-            allowedMethods(HttpMethods.HEAD)
-            allowedOrigins("abc")
-        }
+bucket.addCorsRule {
+    allowedHeaders("Test-Header")
+    allowedMethods(HttpMethods.HEAD)
+    allowedOrigins("abc")
+}
 ```
 
 The Kotlin DSL wraps the AWS CDK Java library, directly using the builders exposed there.  Any construct / object that has a builder has a corresponding DSL.
