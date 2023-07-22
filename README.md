@@ -49,18 +49,3 @@ val policyStatements = iam.policyStatements {
             }
         }
 ```
-
-
-# Known issues
-
-* JavaDoc comments are not pulled across;
-
-
-
-[License Badge]:
-https://shields.io/github/license/Vampire/setup-wsl.svg?label=License
-
-[Latest Release]:
-https://github.com/Vampire/setup-wsl/releases/latest
-[License File]:
-https://github.com/Vampire/setup-wsl/blob/master/LICENSE
