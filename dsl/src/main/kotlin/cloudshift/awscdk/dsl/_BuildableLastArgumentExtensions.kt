@@ -576,6 +576,16 @@ public inline fun NestedStackSynthesizer.addFileAsset(block: FileAssetSourceDsl.
   return addFileAsset(builder.build())
 }
 
+/**
+ * Associate the CreationPolicy attribute with a resource to prevent its status from reaching create
+ * complete until AWS CloudFormation receives a specified number of success signals or the timeout
+ * period is exceeded.
+ *
+ * To signal a
+ * resource, you can use the cfn-signal helper script or SignalResource API. AWS CloudFormation
+ * publishes valid signals
+ * to the stack events so that you track the number of signals sent.
+ */
 public inline fun ICfnResourceOptions.setCreationPolicy(block: CfnCreationPolicyDsl.() -> Unit =
     {}) {
   val builder = CfnCreationPolicyDsl()
@@ -583,6 +593,14 @@ public inline fun ICfnResourceOptions.setCreationPolicy(block: CfnCreationPolicy
   return setCreationPolicy(builder.build())
 }
 
+/**
+ * Use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the
+ * AWS::AutoScaling::AutoScalingGroup resource.
+ *
+ * AWS CloudFormation invokes one of three update policies depending on the type of change you make
+ * or whether a
+ * scheduled action is associated with the Auto Scaling group.
+ */
 public inline fun ICfnResourceOptions.setUpdatePolicy(block: CfnUpdatePolicyDsl.() -> Unit = {}) {
   val builder = CfnUpdatePolicyDsl()
   builder.apply(block)

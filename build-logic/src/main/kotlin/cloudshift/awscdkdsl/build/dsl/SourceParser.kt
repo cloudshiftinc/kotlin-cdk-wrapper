@@ -57,7 +57,7 @@ internal object SourceParser {
 
     private fun convertTypeDeclaration(type: TypeDeclaration<*>): CdkSourceClass {
         val methods = type.methods.filter {
-            it.isPublic && !it.isStatic && !it.isConstructorDeclaration
+            (it.isPublic || it.isDefault) && !it.isStatic && !it.isConstructorDeclaration
         }
             .map { method ->
                 val comment = method.comment.getOrNull()
@@ -68,6 +68,10 @@ internal object SourceParser {
                     comment = comment
                 )
             }
+
+        if(type.className.toString() == "software.amazon.awscdk.CfnStackSet.DeploymentTargetsProperty") {
+            println("here")
+        }
 
         val comment = type.comment.getOrNull()
             ?.let { convertJavadocComment(it.content) }

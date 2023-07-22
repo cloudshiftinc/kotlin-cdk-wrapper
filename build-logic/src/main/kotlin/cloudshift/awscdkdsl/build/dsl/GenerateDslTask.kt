@@ -36,8 +36,8 @@ abstract class GenerateDslTask
         @get:Input
         abstract val sources: SetProperty<File>
 
-        @get:InputFile
-        abstract val cloudFormationSpecificationZip: RegularFileProperty
+//        @get:InputFile
+//        abstract val cloudFormationSpecificationZip: RegularFileProperty
 
         @get:OutputDirectory
         abstract val dslDir: DirectoryProperty

@@ -32,17 +32,17 @@ dependencies {
 }
 
 tasks {
-    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
-        src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
-        onlyIfModified(true)
-        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
-    }
+//    val downloadCloudformationSpecZip = register<Download>("downloadCloudFormationSpecZip") {
+//        src("https://d1uauaxba7bl26.cloudfront.net/latest/CloudFormationResourceSpecification.zip")
+//        onlyIfModified(true)
+//        dest(temporaryDir.resolve("cloudFormationSpec.zip"))
+//    }
 
     register<GenerateDslTask>("generateDsl") {
         dslDir = file("dsl/src/main/kotlin")
         classpath = awscdk
         sources = awscdkSource
-        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
+//        cloudFormationSpecificationZip = downloadCloudformationSpecZip.map { it.dest }
     }
 
     // from https://github.com/Vampire/setup-wsl/blob/master/gradle/build-logic/src/main/kotlin/net/kautler/github_actions.gradle.kts
