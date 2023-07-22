@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * Mathematical expression and a list of attribute items specified in that expression.
+ */
 public inline
     fun CfnCalculatedAttributeDefinition.setAttributeDetails(block: CfnCalculatedAttributeDefinitionAttributeDetailsPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setAttributeDetails(builder.build())
 }
 
+/**
+ * The conditions including range, object count, and threshold for the calculated attribute.
+ */
 public inline
     fun CfnCalculatedAttributeDefinition.setConditions(block: CfnCalculatedAttributeDefinitionConditionsPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setConditions(builder.build())
 }
 
+/**
+ * The configuration that controls how Customer Profiles retrieves data from the source.
+ */
 public inline
     fun CfnIntegration.setFlowDefinition(block: CfnIntegrationFlowDefinitionPropertyDsl.() -> Unit =
     {}) {

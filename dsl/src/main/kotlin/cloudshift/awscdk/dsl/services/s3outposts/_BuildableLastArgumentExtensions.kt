@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.s3outposts.CfnAccessPoint
 import software.amazon.awscdk.services.s3outposts.CfnBucket
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 
+/**
+ *
+ */
 public inline fun CfnEndpoint.setFailedReason(block: CfnEndpointFailedReasonPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnEndpointFailedReasonPropertyDsl()
@@ -14,6 +17,10 @@ public inline fun CfnEndpoint.setFailedReason(block: CfnEndpointFailedReasonProp
   return setFailedReason(builder.build())
 }
 
+/**
+ * Creates a new lifecycle configuration for the S3 on Outposts bucket or replaces an existing
+ * lifecycle configuration.
+ */
 public inline
     fun CfnBucket.setLifecycleConfiguration(block: CfnBucketLifecycleConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +29,9 @@ public inline
   return setLifecycleConfiguration(builder.build())
 }
 
+/**
+ * The virtual private cloud (VPC) configuration for this access point, if one exists.
+ */
 public inline
     fun CfnAccessPoint.setVpcConfiguration(block: CfnAccessPointVpcConfigurationPropertyDsl.() -> Unit
     = {}) {

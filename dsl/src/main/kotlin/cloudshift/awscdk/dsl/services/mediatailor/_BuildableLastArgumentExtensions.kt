@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.mediatailor
 import kotlin.Unit
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 
+/**
+ * The configuration for avail suppression, also known as ad suppression.
+ */
 public inline
     fun CfnPlaybackConfiguration.setAvailSuppression(block: CfnPlaybackConfigurationAvailSuppressionPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setAvailSuppression(builder.build())
 }
 
+/**
+ * The configuration for bumpers.
+ */
 public inline
     fun CfnPlaybackConfiguration.setBumper(block: CfnPlaybackConfigurationBumperPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +27,10 @@ public inline
   return setBumper(builder.build())
 }
 
+/**
+ * The configuration for using a content delivery network (CDN), like Amazon CloudFront, for content
+ * and ad segment management.
+ */
 public inline
     fun CfnPlaybackConfiguration.setCdnConfiguration(block: CfnPlaybackConfigurationCdnConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -29,6 +39,9 @@ public inline
   return setCdnConfiguration(builder.build())
 }
 
+/**
+ * The configuration for DASH PUT operations.
+ */
 public inline
     fun CfnPlaybackConfiguration.setDashConfiguration(block: CfnPlaybackConfigurationDashConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -37,6 +50,9 @@ public inline
   return setDashConfiguration(builder.build())
 }
 
+/**
+ * The configuration for HLS content.
+ */
 public inline
     fun CfnPlaybackConfiguration.setHlsConfiguration(block: CfnPlaybackConfigurationHlsConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -45,6 +61,9 @@ public inline
   return setHlsConfiguration(builder.build())
 }
 
+/**
+ * The configuration for pre-roll ad insertion.
+ */
 public inline
     fun CfnPlaybackConfiguration.setLivePreRollConfiguration(block: CfnPlaybackConfigurationLivePreRollConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -53,6 +72,9 @@ public inline
   return setLivePreRollConfiguration(builder.build())
 }
 
+/**
+ * The configuration for manifest processing rules.
+ */
 public inline
     fun CfnPlaybackConfiguration.setManifestProcessingRules(block: CfnPlaybackConfigurationManifestProcessingRulesPropertyDsl.() -> Unit
     = {}) {

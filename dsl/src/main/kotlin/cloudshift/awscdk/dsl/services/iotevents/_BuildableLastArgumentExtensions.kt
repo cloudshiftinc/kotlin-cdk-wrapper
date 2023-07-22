@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 import software.amazon.awscdk.services.iotevents.CfnInput
 
+/**
+ * Defines when your alarm is invoked.
+ */
 public inline fun CfnAlarmModel.setAlarmRule(block: CfnAlarmModelAlarmRulePropertyDsl.() -> Unit =
     {}) {
   val builder = CfnAlarmModelAlarmRulePropertyDsl()
@@ -14,6 +17,9 @@ public inline fun CfnAlarmModel.setAlarmRule(block: CfnAlarmModelAlarmRuleProper
   return setAlarmRule(builder.build())
 }
 
+/**
+ * Contains the configuration information of alarm state changes.
+ */
 public inline
     fun CfnAlarmModel.setAlarmCapabilities(block: CfnAlarmModelAlarmCapabilitiesPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setAlarmCapabilities(builder.build())
 }
 
+/**
+ * Contains information about one or more alarm actions.
+ */
 public inline
     fun CfnAlarmModel.setAlarmEventActions(block: CfnAlarmModelAlarmEventActionsPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +39,9 @@ public inline
   return setAlarmEventActions(builder.build())
 }
 
+/**
+ * The definition of the input.
+ */
 public inline fun CfnInput.setInputDefinition(block: CfnInputInputDefinitionPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnInputInputDefinitionPropertyDsl()
@@ -37,6 +49,9 @@ public inline fun CfnInput.setInputDefinition(block: CfnInputInputDefinitionProp
   return setInputDefinition(builder.build())
 }
 
+/**
+ * Information that defines how a detector operates.
+ */
 public inline
     fun CfnDetectorModel.setDetectorModelDefinition(block: CfnDetectorModelDetectorModelDefinitionPropertyDsl.() -> Unit
     = {}) {

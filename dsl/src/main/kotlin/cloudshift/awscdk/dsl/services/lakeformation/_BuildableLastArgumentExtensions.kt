@@ -8,6 +8,9 @@ import software.amazon.awscdk.services.lakeformation.CfnPermissions
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 
+/**
+ * The principal to be granted a permission.
+ */
 public inline
     fun CfnPrincipalPermissions.setPrincipal(block: CfnPrincipalPermissionsDataLakePrincipalPropertyDsl.() -> Unit
     = {}) {
@@ -16,6 +19,9 @@ public inline
   return setPrincipal(builder.build())
 }
 
+/**
+ * The resource to be granted or revoked permissions.
+ */
 public inline
     fun CfnPrincipalPermissions.setResource(block: CfnPrincipalPermissionsResourcePropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +30,9 @@ public inline
   return setResource(builder.build())
 }
 
+/**
+ * UTF-8 string (valid values: `DATABASE | TABLE` ).
+ */
 public inline
     fun CfnTagAssociation.setResource(block: CfnTagAssociationResourcePropertyDsl.() -> Unit = {}) {
   val builder = CfnTagAssociationResourcePropertyDsl()
@@ -31,6 +40,9 @@ public inline
   return setResource(builder.build())
 }
 
+/**
+ * The AWS Lake Formation principal.
+ */
 public inline
     fun CfnPermissions.setDataLakePrincipal(block: CfnPermissionsDataLakePrincipalPropertyDsl.() -> Unit
     = {}) {
@@ -39,6 +51,9 @@ public inline
   return setDataLakePrincipal(builder.build())
 }
 
+/**
+ * A structure for the resource.
+ */
 public inline fun CfnPermissions.setResource(block: CfnPermissionsResourcePropertyDsl.() -> Unit =
     {}) {
   val builder = CfnPermissionsResourcePropertyDsl()
@@ -46,6 +61,9 @@ public inline fun CfnPermissions.setResource(block: CfnPermissionsResourceProper
   return setResource(builder.build())
 }
 
+/**
+ * A wildcard with exclusions.
+ */
 public inline
     fun CfnDataCellsFilter.setColumnWildcard(block: CfnDataCellsFilterColumnWildcardPropertyDsl.() -> Unit
     = {}) {
@@ -54,6 +72,9 @@ public inline
   return setColumnWildcard(builder.build())
 }
 
+/**
+ * A PartiQL predicate.
+ */
 public inline
     fun CfnDataCellsFilter.setRowFilter(block: CfnDataCellsFilterRowFilterPropertyDsl.() -> Unit =
     {}) {

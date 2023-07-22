@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.xray.CfnGroup
 import software.amazon.awscdk.services.xray.CfnSamplingRule
 
+/**
+ * The structure containing configurations related to insights.
+ */
 public inline
     fun CfnGroup.setInsightsConfiguration(block: CfnGroupInsightsConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setInsightsConfiguration(builder.build())
 }
 
+/**
+ * The sampling rule to be created or updated.
+ */
 public inline
     fun CfnSamplingRule.setSamplingRule(block: CfnSamplingRuleSamplingRulePropertyDsl.() -> Unit =
     {}) {
@@ -22,6 +28,9 @@ public inline
   return setSamplingRule(builder.build())
 }
 
+/**
+ * @deprecated this property has been deprecated
+ */
 public inline
     fun CfnSamplingRule.setSamplingRuleRecord(block: CfnSamplingRuleSamplingRuleRecordPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +39,9 @@ public inline
   return setSamplingRuleRecord(builder.build())
 }
 
+/**
+ * @deprecated this property has been deprecated
+ */
 public inline
     fun CfnSamplingRule.setSamplingRuleUpdate(block: CfnSamplingRuleSamplingRuleUpdatePropertyDsl.() -> Unit
     = {}) {

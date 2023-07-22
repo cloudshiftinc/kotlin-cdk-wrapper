@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.rolesanywhere
 import kotlin.Unit
 import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
 
+/**
+ * The trust anchor type and its related certificate data.
+ */
 public inline fun CfnTrustAnchor.setSource(block: CfnTrustAnchorSourcePropertyDsl.() -> Unit = {}) {
   val builder = CfnTrustAnchorSourcePropertyDsl()
   builder.apply(block)

@@ -9,6 +9,11 @@ import software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreate
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction
 
+/**
+ * Add statement to the service role assumed by CloudFormation while executing this action.
+ *
+ * @param statement 
+ */
 public inline
     fun CloudFormationDeleteStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
     = {}): Boolean {
@@ -17,6 +22,11 @@ public inline
   return addToDeploymentRolePolicy(builder.build())
 }
 
+/**
+ * Add statement to the service role assumed by CloudFormation while executing this action.
+ *
+ * @param statement 
+ */
 public inline
     fun CloudFormationCreateReplaceChangeSetAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
     = {}): Boolean {
@@ -25,6 +35,11 @@ public inline
   return addToDeploymentRolePolicy(builder.build())
 }
 
+/**
+ * Add statement to the service role assumed by CloudFormation while executing this action.
+ *
+ * @param statement 
+ */
 public inline
     fun CloudFormationCreateUpdateStackAction.addToDeploymentRolePolicy(block: PolicyStatementDsl.() -> Unit
     = {}): Boolean {

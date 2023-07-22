@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.finspace
 import kotlin.Unit
 import software.amazon.awscdk.services.finspace.CfnEnvironment
 
+/**
+ * Configuration information when authentication mode is FEDERATED.
+ */
 public inline
     fun CfnEnvironment.setFederationParameters(block: CfnEnvironmentFederationParametersPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setFederationParameters(builder.build())
 }
 
+/**
+ * Configuration information for the superuser.
+ */
 public inline
     fun CfnEnvironment.setSuperuserParameters(block: CfnEnvironmentSuperuserParametersPropertyDsl.() -> Unit
     = {}) {

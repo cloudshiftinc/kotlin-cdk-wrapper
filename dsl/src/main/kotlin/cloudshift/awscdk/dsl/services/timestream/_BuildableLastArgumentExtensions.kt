@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.timestream
 import kotlin.Unit
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
+/**
+ * Configuration for error reporting.
+ */
 public inline
     fun CfnScheduledQuery.setErrorReportConfiguration(block: CfnScheduledQueryErrorReportConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setErrorReportConfiguration(builder.build())
 }
 
+/**
+ * Notification configuration for the scheduled query.
+ */
 public inline
     fun CfnScheduledQuery.setNotificationConfiguration(block: CfnScheduledQueryNotificationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +27,9 @@ public inline
   return setNotificationConfiguration(builder.build())
 }
 
+/**
+ * Schedule configuration.
+ */
 public inline
     fun CfnScheduledQuery.setScheduleConfiguration(block: CfnScheduledQueryScheduleConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -29,6 +38,9 @@ public inline
   return setScheduleConfiguration(builder.build())
 }
 
+/**
+ * Scheduled query target store configuration.
+ */
 public inline
     fun CfnScheduledQuery.setTargetConfiguration(block: CfnScheduledQueryTargetConfigurationPropertyDsl.() -> Unit
     = {}) {

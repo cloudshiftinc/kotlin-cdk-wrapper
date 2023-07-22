@@ -24,6 +24,11 @@ public inline fun ISlackChannelConfiguration.metric(arg0: String, block: MetricO
   return metric(arg0, builder.build())
 }
 
+/**
+ * Adds extra permission to iam-role of Slack channel configuration.
+ *
+ * @param statement 
+ */
 public inline fun SlackChannelConfiguration.addToRolePolicy(block: PolicyStatementDsl.() -> Unit =
     {}) {
   val builder = PolicyStatementDsl()
@@ -31,6 +36,12 @@ public inline fun SlackChannelConfiguration.addToRolePolicy(block: PolicyStateme
   return addToRolePolicy(builder.build())
 }
 
+/**
+ * Return the given named metric for this SlackChannelConfiguration.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun SlackChannelConfiguration.metric(metricName: String,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()

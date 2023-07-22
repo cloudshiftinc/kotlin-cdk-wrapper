@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 import software.amazon.awscdk.services.managedblockchain.CfnNode
 
+/**
+ * Configuration properties of the member.
+ */
 public inline
     fun CfnMember.setMemberConfiguration(block: CfnMemberMemberConfigurationPropertyDsl.() -> Unit =
     {}) {
@@ -14,6 +17,9 @@ public inline
   return setMemberConfiguration(builder.build())
 }
 
+/**
+ * Configuration properties of the network to which the member belongs.
+ */
 public inline
     fun CfnMember.setNetworkConfiguration(block: CfnMemberNetworkConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setNetworkConfiguration(builder.build())
 }
 
+/**
+ * Configuration properties of a peer node.
+ */
 public inline fun CfnNode.setNodeConfiguration(block: CfnNodeNodeConfigurationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnNodeNodeConfigurationPropertyDsl()

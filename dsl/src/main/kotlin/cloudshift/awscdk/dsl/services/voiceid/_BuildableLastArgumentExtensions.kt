@@ -5,6 +5,10 @@ package cloudshift.awscdk.dsl.services.voiceid
 import kotlin.Unit
 import software.amazon.awscdk.services.voiceid.CfnDomain
 
+/**
+ * The server-side encryption configuration containing the KMS key identifier you want Voice ID to
+ * use to encrypt your data.
+ */
 public inline
     fun CfnDomain.setServerSideEncryptionConfiguration(block: CfnDomainServerSideEncryptionConfigurationPropertyDsl.() -> Unit
     = {}) {

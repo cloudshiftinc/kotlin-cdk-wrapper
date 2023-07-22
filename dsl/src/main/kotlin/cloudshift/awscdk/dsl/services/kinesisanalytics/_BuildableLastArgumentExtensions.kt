@@ -10,6 +10,11 @@ import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceD
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+ * identify an in-application stream and a destination where you want the in-application stream data to
+ * be written.
+ */
 public inline
     fun CfnApplicationOutputV2.setOutput(block: CfnApplicationOutputV2OutputPropertyDsl.() -> Unit =
     {}) {
@@ -18,6 +23,9 @@ public inline
   return setOutput(builder.build())
 }
 
+/**
+ * Use this parameter to configure the application.
+ */
 public inline
     fun CfnApplicationV2.setApplicationConfiguration(block: CfnApplicationV2ApplicationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -26,6 +34,9 @@ public inline
   return setApplicationConfiguration(builder.build())
 }
 
+/**
+ * Describes the maintenance configuration for the application.
+ */
 public inline
     fun CfnApplicationV2.setApplicationMaintenanceConfiguration(block: CfnApplicationV2ApplicationMaintenanceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -34,6 +45,9 @@ public inline
   return setApplicationMaintenanceConfiguration(builder.build())
 }
 
+/**
+ * Identifies the run configuration (start parameters) of a Kinesis Data Analytics application.
+ */
 public inline
     fun CfnApplicationV2.setRunConfiguration(block: CfnApplicationV2RunConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -42,6 +56,9 @@ public inline
   return setRunConfiguration(builder.build())
 }
 
+/**
+ * The reference data source can be an object in your Amazon S3 bucket.
+ */
 public inline
     fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
     = {}) {
@@ -50,6 +67,9 @@ public inline
   return setReferenceDataSource(builder.build())
 }
 
+/**
+ * An array of objects, each describing one output configuration.
+ */
 public inline
     fun CfnApplicationOutput.setOutput(block: CfnApplicationOutputOutputPropertyDsl.() -> Unit =
     {}) {
@@ -58,6 +78,12 @@ public inline
   return setOutput(builder.build())
 }
 
+/**
+ * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
+ * providing the source information (Amazon S3 bucket name and object key name), the resulting
+ * in-application table name that is created, and the necessary schema to map the data elements in the
+ * Amazon S3 object to the in-application table.
+ */
 public inline
     fun CfnApplicationReferenceDataSourceV2.setReferenceDataSource(block: CfnApplicationReferenceDataSourceV2ReferenceDataSourcePropertyDsl.() -> Unit
     = {}) {
@@ -66,6 +92,10 @@ public inline
   return setReferenceDataSource(builder.build())
 }
 
+/**
+ * Provides a description of Amazon CloudWatch logging options, including the log stream Amazon
+ * Resource Name (ARN).
+ */
 public inline
     fun CfnApplicationCloudWatchLoggingOptionV2.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionV2CloudWatchLoggingOptionPropertyDsl.() -> Unit
     = {}) {

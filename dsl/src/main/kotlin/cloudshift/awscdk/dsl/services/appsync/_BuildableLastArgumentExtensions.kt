@@ -33,6 +33,13 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.elasticsearch.IDomain as ElasticsearchIDomain
 import software.amazon.awscdk.services.opensearchservice.IDomain as OpensearchserviceIDomain
 
+/**
+ * add a new DynamoDB data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param table The DynamoDB table backing this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addDynamoDbDataSource(
   id: String,
   table: ITable,
@@ -43,6 +50,14 @@ public inline fun GraphqlApiBase.addDynamoDbDataSource(
   return addDynamoDbDataSource(id, table, builder.build())
 }
 
+/**
+ * (deprecated) add a new elasticsearch data source to this API.
+ *
+ * * use `addOpenSearchDataSource`
+ * @param id The data source's id. 
+ * @param domain The elasticsearch domain for this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addElasticsearchDataSource(
   id: String,
   domain: ElasticsearchIDomain,
@@ -53,6 +68,13 @@ public inline fun GraphqlApiBase.addElasticsearchDataSource(
   return addElasticsearchDataSource(id, domain, builder.build())
 }
 
+/**
+ * Add an EventBridge data source to this api.
+ *
+ * @param id The data source's id. 
+ * @param eventBus The EventBridge EventBus on which to put events. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addEventBridgeDataSource(
   id: String,
   eventBus: IEventBus,
@@ -63,6 +85,13 @@ public inline fun GraphqlApiBase.addEventBridgeDataSource(
   return addEventBridgeDataSource(id, eventBus, builder.build())
 }
 
+/**
+ * add a new http data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param endpoint The http endpoint. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addHttpDataSource(
   id: String,
   endpoint: String,
@@ -73,6 +102,13 @@ public inline fun GraphqlApiBase.addHttpDataSource(
   return addHttpDataSource(id, endpoint, builder.build())
 }
 
+/**
+ * add a new Lambda data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param lambdaFunction The Lambda function to call to interact with this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addLambdaDataSource(
   id: String,
   lambdaFunction: IFunction,
@@ -83,6 +119,15 @@ public inline fun GraphqlApiBase.addLambdaDataSource(
   return addLambdaDataSource(id, lambdaFunction, builder.build())
 }
 
+/**
+ * add a new dummy data source to this API.
+ *
+ * Useful for pipeline resolvers
+ * and for backend changes that don't require a data source.
+ *
+ * @param id The data source's id. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addNoneDataSource(id: String,
     block: DataSourceOptionsDsl.() -> Unit = {}): NoneDataSource {
   val builder = DataSourceOptionsDsl()
@@ -90,6 +135,13 @@ public inline fun GraphqlApiBase.addNoneDataSource(id: String,
   return addNoneDataSource(id, builder.build())
 }
 
+/**
+ * add a new OpenSearch data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param domain The OpenSearch domain for this data source. 
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addOpenSearchDataSource(
   id: String,
   domain: OpensearchserviceIDomain,
@@ -100,6 +152,16 @@ public inline fun GraphqlApiBase.addOpenSearchDataSource(
   return addOpenSearchDataSource(id, domain, builder.build())
 }
 
+/**
+ * add a new Rds data source to this API.
+ *
+ * @param id The data source's id. 
+ * @param serverlessCluster The serverless cluster to interact with this data source. 
+ * @param secretStore The secret store that contains the username and password for the serverless
+ * cluster. 
+ * @param databaseName The optional name of the database to use within the cluster.
+ * @param options The optional configuration for this data source.
+ */
 public inline fun GraphqlApiBase.addRdsDataSource(
   id: String,
   serverlessCluster: IServerlessCluster,
@@ -112,6 +174,12 @@ public inline fun GraphqlApiBase.addRdsDataSource(
   return addRdsDataSource(id, serverlessCluster, secretStore, databaseName, builder.build())
 }
 
+/**
+ * creates a new resolver for this datasource and API using the given properties.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun GraphqlApiBase.createResolver(id: String,
     block: ExtendedResolverPropsDsl.() -> Unit = {}): Resolver {
   val builder = ExtendedResolverPropsDsl()
@@ -119,6 +187,9 @@ public inline fun GraphqlApiBase.createResolver(id: String,
   return createResolver(id, builder.build())
 }
 
+/**
+ * AWS Region and TableName for an Amazon DynamoDB table in your account.
+ */
 public inline
     fun CfnDataSource.setDynamoDbConfig(block: CfnDataSourceDynamoDBConfigPropertyDsl.() -> Unit =
     {}) {
@@ -127,6 +198,9 @@ public inline
   return setDynamoDbConfig(builder.build())
 }
 
+/**
+ * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+ */
 public inline
     fun CfnDataSource.setElasticsearchConfig(block: CfnDataSourceElasticsearchConfigPropertyDsl.() -> Unit
     = {}) {
@@ -135,6 +209,9 @@ public inline
   return setElasticsearchConfig(builder.build())
 }
 
+/**
+ * An EventBridge configuration that contains a valid ARN of an event bus.
+ */
 public inline
     fun CfnDataSource.setEventBridgeConfig(block: CfnDataSourceEventBridgeConfigPropertyDsl.() -> Unit
     = {}) {
@@ -143,6 +220,9 @@ public inline
   return setEventBridgeConfig(builder.build())
 }
 
+/**
+ * Endpoints for an HTTP data source.
+ */
 public inline fun CfnDataSource.setHttpConfig(block: CfnDataSourceHttpConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnDataSourceHttpConfigPropertyDsl()
@@ -150,6 +230,9 @@ public inline fun CfnDataSource.setHttpConfig(block: CfnDataSourceHttpConfigProp
   return setHttpConfig(builder.build())
 }
 
+/**
+ * An ARN of a Lambda function in valid ARN format.
+ */
 public inline
     fun CfnDataSource.setLambdaConfig(block: CfnDataSourceLambdaConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnDataSourceLambdaConfigPropertyDsl()
@@ -157,6 +240,9 @@ public inline
   return setLambdaConfig(builder.build())
 }
 
+/**
+ * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+ */
 public inline
     fun CfnDataSource.setOpenSearchServiceConfig(block: CfnDataSourceOpenSearchServiceConfigPropertyDsl.() -> Unit
     = {}) {
@@ -165,6 +251,9 @@ public inline
   return setOpenSearchServiceConfig(builder.build())
 }
 
+/**
+ * Relational Database configuration of the relational database data source.
+ */
 public inline
     fun CfnDataSource.setRelationalDatabaseConfig(block: CfnDataSourceRelationalDatabaseConfigPropertyDsl.() -> Unit
     = {}) {
@@ -173,6 +262,12 @@ public inline
   return setRelationalDatabaseConfig(builder.build())
 }
 
+/**
+ * creates a new appsync function for this datasource and API using the given properties.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun BaseDataSource.createFunction(id: String,
     block: BaseAppsyncFunctionPropsDsl.() -> Unit = {}): AppsyncFunction {
   val builder = BaseAppsyncFunctionPropsDsl()
@@ -180,6 +275,12 @@ public inline fun BaseDataSource.createFunction(id: String,
   return createFunction(id, builder.build())
 }
 
+/**
+ * creates a new resolver for this datasource and API using the given properties.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun BaseDataSource.createResolver(id: String, block: BaseResolverPropsDsl.() -> Unit =
     {}): Resolver {
   val builder = BaseResolverPropsDsl()
@@ -187,6 +288,9 @@ public inline fun BaseDataSource.createResolver(id: String, block: BaseResolverP
   return createResolver(id, builder.build())
 }
 
+/**
+ * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+ */
 public inline
     fun CfnFunctionConfiguration.setRuntime(block: CfnFunctionConfigurationAppSyncRuntimePropertyDsl.() -> Unit
     = {}) {
@@ -195,6 +299,9 @@ public inline
   return setRuntime(builder.build())
 }
 
+/**
+ * Describes a Sync configuration for a resolver.
+ */
 public inline
     fun CfnFunctionConfiguration.setSyncConfig(block: CfnFunctionConfigurationSyncConfigPropertyDsl.() -> Unit
     = {}) {
@@ -203,6 +310,9 @@ public inline
   return setSyncConfig(builder.build())
 }
 
+/**
+ * The `SourceApiAssociationConfig` object data.
+ */
 public inline
     fun CfnSourceApiAssociation.setSourceApiAssociationConfig(block: CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl.() -> Unit
     = {}) {
@@ -297,6 +407,10 @@ public inline fun IGraphqlApi.createResolver(arg0: String,
   return createResolver(arg0, builder.build())
 }
 
+/**
+ * A `LambdaAuthorizerConfig` holds configuration on how to authorize AWS AppSync API access when
+ * using the `AWS_LAMBDA` authorizer mode.
+ */
 public inline
     fun CfnGraphQLApi.setLambdaAuthorizerConfig(block: CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl.() -> Unit
     = {}) {
@@ -305,6 +419,9 @@ public inline
   return setLambdaAuthorizerConfig(builder.build())
 }
 
+/**
+ * The Amazon CloudWatch Logs configuration.
+ */
 public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnGraphQLApiLogConfigPropertyDsl()
@@ -312,6 +429,9 @@ public inline fun CfnGraphQLApi.setLogConfig(block: CfnGraphQLApiLogConfigProper
   return setLogConfig(builder.build())
 }
 
+/**
+ * The OpenID Connect configuration.
+ */
 public inline
     fun CfnGraphQLApi.setOpenIdConnectConfig(block: CfnGraphQLApiOpenIDConnectConfigPropertyDsl.() -> Unit
     = {}) {
@@ -320,6 +440,10 @@ public inline
   return setOpenIdConnectConfig(builder.build())
 }
 
+/**
+ * Optional authorization configuration for using Amazon Cognito user pools with your GraphQL
+ * endpoint.
+ */
 public inline
     fun CfnGraphQLApi.setUserPoolConfig(block: CfnGraphQLApiUserPoolConfigPropertyDsl.() -> Unit =
     {}) {
@@ -328,6 +452,12 @@ public inline
   return setUserPoolConfig(builder.build())
 }
 
+/**
+ * Called when the GraphQL Api is initialized to allow this object to bind to the stack.
+ *
+ * @param api The binding GraphQL Api. 
+ * @param _options
+ */
 public inline fun SchemaFile.bind(api: IGraphqlApi, block: SchemaBindOptionsDsl.() -> Unit = {}):
     ISchemaConfig {
   val builder = SchemaBindOptionsDsl()
@@ -342,6 +472,9 @@ public inline fun ISchema.bind(arg0: IGraphqlApi, block: SchemaBindOptionsDsl.()
   return bind(arg0, builder.build())
 }
 
+/**
+ * The caching configuration for the resolver.
+ */
 public inline fun CfnResolver.setCachingConfig(block: CfnResolverCachingConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnResolverCachingConfigPropertyDsl()
@@ -349,6 +482,9 @@ public inline fun CfnResolver.setCachingConfig(block: CfnResolverCachingConfigPr
   return setCachingConfig(builder.build())
 }
 
+/**
+ * Functions linked with the pipeline resolver.
+ */
 public inline
     fun CfnResolver.setPipelineConfig(block: CfnResolverPipelineConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnResolverPipelineConfigPropertyDsl()
@@ -356,6 +492,9 @@ public inline
   return setPipelineConfig(builder.build())
 }
 
+/**
+ * Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function.
+ */
 public inline fun CfnResolver.setRuntime(block: CfnResolverAppSyncRuntimePropertyDsl.() -> Unit =
     {}) {
   val builder = CfnResolverAppSyncRuntimePropertyDsl()
@@ -363,6 +502,9 @@ public inline fun CfnResolver.setRuntime(block: CfnResolverAppSyncRuntimePropert
   return setRuntime(builder.build())
 }
 
+/**
+ * The `SyncConfig` for a resolver attached to a versioned data source.
+ */
 public inline fun CfnResolver.setSyncConfig(block: CfnResolverSyncConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnResolverSyncConfigPropertyDsl()

@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.kinesisfirehose
 import kotlin.Unit
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ *
+ */
 public inline
     fun CfnDeliveryStream.setAmazonOpenSearchServerlessDestinationConfiguration(block: CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setAmazonOpenSearchServerlessDestinationConfiguration(builder.build())
 }
 
+/**
+ * The destination in Amazon OpenSearch Service.
+ */
 public inline
     fun CfnDeliveryStream.setAmazonopensearchserviceDestinationConfiguration(block: CfnDeliveryStreamAmazonopensearchserviceDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +27,10 @@ public inline
   return setAmazonopensearchserviceDestinationConfiguration(builder.build())
 }
 
+/**
+ * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side Encryption
+ * (SSE).
+ */
 public inline
     fun CfnDeliveryStream.setDeliveryStreamEncryptionConfigurationInput(block: CfnDeliveryStreamDeliveryStreamEncryptionConfigurationInputPropertyDsl.() -> Unit
     = {}) {
@@ -29,6 +39,9 @@ public inline
   return setDeliveryStreamEncryptionConfigurationInput(builder.build())
 }
 
+/**
+ * An Amazon ES destination for the delivery stream.
+ */
 public inline
     fun CfnDeliveryStream.setElasticsearchDestinationConfiguration(block: CfnDeliveryStreamElasticsearchDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -37,6 +50,9 @@ public inline
   return setElasticsearchDestinationConfiguration(builder.build())
 }
 
+/**
+ * An Amazon S3 destination for the delivery stream.
+ */
 public inline
     fun CfnDeliveryStream.setExtendedS3DestinationConfiguration(block: CfnDeliveryStreamExtendedS3DestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -45,6 +61,9 @@ public inline
   return setExtendedS3DestinationConfiguration(builder.build())
 }
 
+/**
+ * Enables configuring Kinesis Firehose to deliver data to any HTTP endpoint destination.
+ */
 public inline
     fun CfnDeliveryStream.setHttpEndpointDestinationConfiguration(block: CfnDeliveryStreamHttpEndpointDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -53,6 +72,11 @@ public inline
   return setHttpEndpointDestinationConfiguration(builder.build())
 }
 
+/**
+ * When a Kinesis stream is used as the source for the delivery stream, a
+ * [KinesisStreamSourceConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html)
+ * containing the Kinesis stream ARN and the role ARN for the source stream.
+ */
 public inline
     fun CfnDeliveryStream.setKinesisStreamSourceConfiguration(block: CfnDeliveryStreamKinesisStreamSourceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -61,6 +85,9 @@ public inline
   return setKinesisStreamSourceConfiguration(builder.build())
 }
 
+/**
+ * An Amazon Redshift destination for the delivery stream.
+ */
 public inline
     fun CfnDeliveryStream.setRedshiftDestinationConfiguration(block: CfnDeliveryStreamRedshiftDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -69,6 +96,10 @@ public inline
   return setRedshiftDestinationConfiguration(builder.build())
 }
 
+/**
+ * The `S3DestinationConfiguration` property type specifies an Amazon Simple Storage Service (Amazon
+ * S3) destination to which Amazon Kinesis Data Firehose (Kinesis Data Firehose) delivers data.
+ */
 public inline
     fun CfnDeliveryStream.setS3DestinationConfiguration(block: CfnDeliveryStreamS3DestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -77,6 +108,9 @@ public inline
   return setS3DestinationConfiguration(builder.build())
 }
 
+/**
+ * The configuration of a destination in Splunk for the delivery stream.
+ */
 public inline
     fun CfnDeliveryStream.setSplunkDestinationConfiguration(block: CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {

@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.s3objectlambda
 import kotlin.Unit
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 
+/**
+ * A configuration used when creating an Object Lambda Access Point.
+ */
 public inline
     fun CfnAccessPoint.setObjectLambdaConfiguration(block: CfnAccessPointObjectLambdaConfigurationPropertyDsl.() -> Unit
     = {}) {

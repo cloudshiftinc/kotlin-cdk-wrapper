@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.aps
 import kotlin.Unit
 import software.amazon.awscdk.services.aps.CfnWorkspace
 
+/**
+ * The LoggingConfiguration attribute is used to set the logging configuration for the workspace.
+ */
 public inline
     fun CfnWorkspace.setLoggingConfiguration(block: CfnWorkspaceLoggingConfigurationPropertyDsl.() -> Unit
     = {}) {

@@ -38,6 +38,9 @@ import software.amazon.awscdk.services.rds.ServerlessCluster
 import software.amazon.awscdk.services.secretsmanager.SecretRotation
 import software.constructs.Construct
 
+/**
+ * The details of the DB instance's server certificate.
+ */
 public inline
     fun CfnDBInstance.setCertificateDetails(block: CfnDBInstanceCertificateDetailsPropertyDsl.() -> Unit
     = {}) {
@@ -46,6 +49,9 @@ public inline
   return setCertificateDetails(builder.build())
 }
 
+/**
+ * The connection endpoint for the DB instance.
+ */
 public inline fun CfnDBInstance.setEndpoint(block: CfnDBInstanceEndpointPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnDBInstanceEndpointPropertyDsl()
@@ -53,6 +59,9 @@ public inline fun CfnDBInstance.setEndpoint(block: CfnDBInstanceEndpointProperty
   return setEndpoint(builder.build())
 }
 
+/**
+ * The secret managed by RDS in AWS Secrets Manager for the master user password.
+ */
 public inline
     fun CfnDBInstance.setMasterUserSecret(block: CfnDBInstanceMasterUserSecretPropertyDsl.() -> Unit
     = {}) {
@@ -61,6 +70,12 @@ public inline
   return setMasterUserSecret(builder.build())
 }
 
+/**
+ * Add a new db proxy to this cluster.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseClusterBase.addProxy(id: String, block: DatabaseProxyOptionsDsl.() -> Unit
     = {}): DatabaseProxy {
   val builder = DatabaseProxyOptionsDsl()
@@ -68,6 +83,12 @@ public inline fun DatabaseClusterBase.addProxy(id: String, block: DatabaseProxyO
   return addProxy(id, builder.build())
 }
 
+/**
+ * Return the given named metric for this DBCluster.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -75,6 +96,13 @@ public inline fun DatabaseClusterBase.metric(metricName: String, block: MetricOp
   return metric(metricName, builder.build())
 }
 
+/**
+ * The percentage of CPU utilization.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -82,6 +110,13 @@ public inline fun DatabaseClusterBase.metricCPUUtilization(block: MetricOptionsD
   return metricCPUUtilization(builder.build())
 }
 
+/**
+ * The number of database connections in use.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -89,6 +124,13 @@ public inline fun DatabaseClusterBase.metricDatabaseConnections(block: MetricOpt
   return metricDatabaseConnections(builder.build())
 }
 
+/**
+ * The average number of deadlocks in the database per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricDeadlocks(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -96,6 +138,13 @@ public inline fun DatabaseClusterBase.metricDeadlocks(block: MetricOptionsDsl.()
   return metricDeadlocks(builder.build())
 }
 
+/**
+ * The amount of time that the instance has been running, in seconds.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricEngineUptime(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -103,6 +152,13 @@ public inline fun DatabaseClusterBase.metricEngineUptime(block: MetricOptionsDsl
   return metricEngineUptime(builder.build())
 }
 
+/**
+ * The amount of available random access memory, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -110,6 +166,13 @@ public inline fun DatabaseClusterBase.metricFreeableMemory(block: MetricOptionsD
   return metricFreeableMemory(builder.build())
 }
 
+/**
+ * The amount of local storage available, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricFreeLocalStorage(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -117,6 +180,13 @@ public inline fun DatabaseClusterBase.metricFreeLocalStorage(block: MetricOption
   return metricFreeLocalStorage(builder.build())
 }
 
+/**
+ * The amount of network throughput received from clients by each instance, in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline
     fun DatabaseClusterBase.metricNetworkReceiveThroughput(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -125,6 +195,14 @@ public inline
   return metricNetworkReceiveThroughput(builder.build())
 }
 
+/**
+ * The amount of network throughput both received from and transmitted to clients by each instance,
+ * in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricNetworkThroughput(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -132,6 +210,13 @@ public inline fun DatabaseClusterBase.metricNetworkThroughput(block: MetricOptio
   return metricNetworkThroughput(builder.build())
 }
 
+/**
+ * The amount of network throughput sent to clients by each instance, in bytes per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline
     fun DatabaseClusterBase.metricNetworkTransmitThroughput(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
@@ -140,6 +225,14 @@ public inline
   return metricNetworkTransmitThroughput(builder.build())
 }
 
+/**
+ * The total amount of backup storage in bytes consumed by all Aurora snapshots outside its backup
+ * retention window.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricSnapshotStorageUsed(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -147,6 +240,13 @@ public inline fun DatabaseClusterBase.metricSnapshotStorageUsed(block: MetricOpt
   return metricSnapshotStorageUsed(builder.build())
 }
 
+/**
+ * The total amount of backup storage in bytes for which you are billed.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline
     fun DatabaseClusterBase.metricTotalBackupStorageBilled(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -155,6 +255,13 @@ public inline
   return metricTotalBackupStorageBilled(builder.build())
 }
 
+/**
+ * The amount of storage used by your Aurora DB instance, in bytes.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricVolumeBytesUsed(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -162,6 +269,13 @@ public inline fun DatabaseClusterBase.metricVolumeBytesUsed(block: MetricOptions
   return metricVolumeBytesUsed(builder.build())
 }
 
+/**
+ * The number of billed read I/O operations from a cluster volume, reported at 5-minute intervals.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricVolumeReadIOPs(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -169,6 +283,13 @@ public inline fun DatabaseClusterBase.metricVolumeReadIOPs(block: MetricOptionsD
   return metricVolumeReadIOPs(builder.build())
 }
 
+/**
+ * The number of write disk I/O operations to the cluster volume, reported at 5-minute intervals.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseClusterBase.metricVolumeWriteIOPs(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -306,6 +427,12 @@ public inline fun IInstanceEngine.bindToInstance(arg0: Construct,
   return bindToInstance(arg0, builder.build())
 }
 
+/**
+ * Adds the multi user rotation to this cluster.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun ServerlessCluster.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -313,6 +440,11 @@ public inline fun ServerlessCluster.addRotationMultiUser(id: String,
   return addRotationMultiUser(id, builder.build())
 }
 
+/**
+ * Adds the single user rotation of the master password to this cluster.
+ *
+ * @param options
+ */
 public inline
     fun ServerlessCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit =
     {}): SecretRotation {
@@ -384,6 +516,9 @@ public inline fun IDatabaseInstance.onEvent(arg0: String, block: OnEventOptionsD
   return onEvent(arg0, builder.build())
 }
 
+/**
+ * The secret managed by RDS in AWS Secrets Manager for the master user password.
+ */
 public inline
     fun CfnDBCluster.setMasterUserSecret(block: CfnDBClusterMasterUserSecretPropertyDsl.() -> Unit =
     {}) {
@@ -392,6 +527,10 @@ public inline
   return setMasterUserSecret(builder.build())
 }
 
+/**
+ * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
+ * Serverless DB cluster.
+ */
 public inline
     fun CfnDBCluster.setScalingConfiguration(block: CfnDBClusterScalingConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -400,6 +539,10 @@ public inline
   return setScalingConfiguration(builder.build())
 }
 
+/**
+ * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of an
+ * Aurora Serverless V2 DB cluster.
+ */
 public inline
     fun CfnDBCluster.setServerlessV2ScalingConfiguration(block: CfnDBClusterServerlessV2ScalingConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -408,6 +551,13 @@ public inline
   return setServerlessV2ScalingConfiguration(builder.build())
 }
 
+/**
+ * Adds a configuration to this OptionGroup.
+ *
+ * This method is a no-op for an imported OptionGroup.
+ *
+ * @param configuration 
+ */
 public inline fun OptionGroup.addConfiguration(block: OptionConfigurationDsl.() -> Unit = {}):
     Boolean {
   val builder = OptionConfigurationDsl()
@@ -422,6 +572,15 @@ public inline fun IOptionGroup.addConfiguration(block: OptionConfigurationDsl.()
   return addConfiguration(builder.build())
 }
 
+/**
+ * Adds the multi user rotation to this cluster.
+ *
+ * See [Alternating users rotation
+ * strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseClusterFromSnapshot.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -429,6 +588,14 @@ public inline fun DatabaseClusterFromSnapshot.addRotationMultiUser(id: String,
   return addRotationMultiUser(id, builder.build())
 }
 
+/**
+ * Adds the single user rotation of the master password to this cluster.
+ *
+ * See [Single user rotation
+ * strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-one-user-one-password)
+ *
+ * @param options
+ */
 public inline
     fun DatabaseClusterFromSnapshot.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit
     = {}): SecretRotation {
@@ -437,6 +604,17 @@ public inline
   return addRotationSingleUser(builder.build())
 }
 
+/**
+ * This value is represented as a percentage.
+ *
+ * It's calculated as the value of the
+ * ServerlessDatabaseCapacity metric divided by the maximum ACU value of the DB cluster.
+ *
+ * If this metric approaches a value of 100.0, the DB instance has scaled up as high as it can.
+ * Consider increasing the maximum ACU setting for the cluster.
+ *
+ * @param props
+ */
 public inline
     fun DatabaseClusterFromSnapshot.metricACUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -445,6 +623,12 @@ public inline
   return metricACUUtilization(builder.build())
 }
 
+/**
+ * As a cluster-level metric, it represents the average of the ServerlessDatabaseCapacity values of
+ * all the Aurora Serverless v2 DB instances in the cluster.
+ *
+ * @param props
+ */
 public inline
     fun DatabaseClusterFromSnapshot.metricServerlessDatabaseCapacity(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -453,6 +637,15 @@ public inline
   return metricServerlessDatabaseCapacity(builder.build())
 }
 
+/**
+ * Adds the multi user rotation to this cluster.
+ *
+ * See [Alternating users rotation
+ * strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-two-users)
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseCluster.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -460,6 +653,14 @@ public inline fun DatabaseCluster.addRotationMultiUser(id: String,
   return addRotationMultiUser(id, builder.build())
 }
 
+/**
+ * Adds the single user rotation of the master password to this cluster.
+ *
+ * See [Single user rotation
+ * strategy](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets_strategies.html#rotating-secrets-one-user-one-password)
+ *
+ * @param options
+ */
 public inline
     fun DatabaseCluster.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
     SecretRotation {
@@ -468,6 +669,17 @@ public inline
   return addRotationSingleUser(builder.build())
 }
 
+/**
+ * This value is represented as a percentage.
+ *
+ * It's calculated as the value of the
+ * ServerlessDatabaseCapacity metric divided by the maximum ACU value of the DB cluster.
+ *
+ * If this metric approaches a value of 100.0, the DB instance has scaled up as high as it can.
+ * Consider increasing the maximum ACU setting for the cluster.
+ *
+ * @param props
+ */
 public inline fun DatabaseCluster.metricACUUtilization(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -475,6 +687,12 @@ public inline fun DatabaseCluster.metricACUUtilization(block: MetricOptionsDsl.(
   return metricACUUtilization(builder.build())
 }
 
+/**
+ * As a cluster-level metric, it represents the average of the ServerlessDatabaseCapacity values of
+ * all the Aurora Serverless v2 DB instances in the cluster.
+ *
+ * @param props
+ */
 public inline
     fun DatabaseCluster.metricServerlessDatabaseCapacity(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -483,6 +701,13 @@ public inline
   return metricServerlessDatabaseCapacity(builder.build())
 }
 
+/**
+ * Add the ClusterInstance to the cluster.
+ *
+ * @param scope 
+ * @param cluster 
+ * @param props 
+ */
 public inline fun ClusterInstance.bind(
   scope: Construct,
   cluster: IDatabaseCluster,
@@ -509,6 +734,11 @@ public inline
   return bindToInstance(builder.build())
 }
 
+/**
+ * Method called when this Parameter Group is used when defining a database cluster.
+ *
+ * @param _options 
+ */
 public inline fun ParameterGroup.bindToCluster(block: ParameterGroupClusterBindOptionsDsl.() -> Unit
     = {}): ParameterGroupClusterConfig {
   val builder = ParameterGroupClusterBindOptionsDsl()
@@ -516,6 +746,11 @@ public inline fun ParameterGroup.bindToCluster(block: ParameterGroupClusterBindO
   return bindToCluster(builder.build())
 }
 
+/**
+ * Method called when this Parameter Group is used when defining a database instance.
+ *
+ * @param _options 
+ */
 public inline
     fun ParameterGroup.bindToInstance(block: ParameterGroupInstanceBindOptionsDsl.() -> Unit = {}):
     ParameterGroupInstanceConfig {
@@ -531,6 +766,12 @@ public inline fun IClusterEngine.bindToCluster(arg0: Construct,
   return bindToCluster(arg0, builder.build())
 }
 
+/**
+ * Add a new db proxy to this instance.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseInstanceBase.addProxy(id: String,
     block: DatabaseProxyOptionsDsl.() -> Unit = {}): DatabaseProxy {
   val builder = DatabaseProxyOptionsDsl()
@@ -538,6 +779,12 @@ public inline fun DatabaseInstanceBase.addProxy(id: String,
   return addProxy(id, builder.build())
 }
 
+/**
+ * Return the given named metric for this DBInstance.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -545,6 +792,13 @@ public inline fun DatabaseInstanceBase.metric(metricName: String, block: MetricO
   return metric(metricName, builder.build())
 }
 
+/**
+ * The percentage of CPU utilization.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricCPUUtilization(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -552,6 +806,13 @@ public inline fun DatabaseInstanceBase.metricCPUUtilization(block: MetricOptions
   return metricCPUUtilization(builder.build())
 }
 
+/**
+ * The number of database connections in use.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricDatabaseConnections(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -559,6 +820,13 @@ public inline fun DatabaseInstanceBase.metricDatabaseConnections(block: MetricOp
   return metricDatabaseConnections(builder.build())
 }
 
+/**
+ * The amount of available random access memory.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricFreeableMemory(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -566,6 +834,13 @@ public inline fun DatabaseInstanceBase.metricFreeableMemory(block: MetricOptions
   return metricFreeableMemory(builder.build())
 }
 
+/**
+ * The amount of available storage space.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricFreeStorageSpace(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -573,6 +848,13 @@ public inline fun DatabaseInstanceBase.metricFreeStorageSpace(block: MetricOptio
   return metricFreeStorageSpace(builder.build())
 }
 
+/**
+ * The average number of disk write I/O operations per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricReadIOPS(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -580,6 +862,13 @@ public inline fun DatabaseInstanceBase.metricReadIOPS(block: MetricOptionsDsl.()
   return metricReadIOPS(builder.build())
 }
 
+/**
+ * The average number of disk read I/O operations per second.
+ *
+ * Average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun DatabaseInstanceBase.metricWriteIOPS(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -587,6 +876,15 @@ public inline fun DatabaseInstanceBase.metricWriteIOPS(block: MetricOptionsDsl.(
   return metricWriteIOPS(builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers for instance events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun DatabaseInstanceBase.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -594,6 +892,10 @@ public inline fun DatabaseInstanceBase.onEvent(id: String, block: OnEventOptions
   return onEvent(id, builder.build())
 }
 
+/**
+ * Settings that control the size and behavior of the connection pool associated with a
+ * `DBProxyTargetGroup` .
+ */
 public inline
     fun CfnDBProxyTargetGroup.setConnectionPoolConfigurationInfo(block: CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl.() -> Unit
     = {}) {
@@ -602,6 +904,12 @@ public inline
   return setConnectionPoolConfigurationInfo(builder.build())
 }
 
+/**
+ * Adds the multi user rotation to this instance.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseInstance.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -609,6 +917,11 @@ public inline fun DatabaseInstance.addRotationMultiUser(id: String,
   return addRotationMultiUser(id, builder.build())
 }
 
+/**
+ * Adds the single user rotation of the master password to this instance.
+ *
+ * @param options the options for the rotation, if you want to override the defaults.
+ */
 public inline
     fun DatabaseInstance.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit = {}):
     SecretRotation {
@@ -617,6 +930,12 @@ public inline
   return addRotationSingleUser(builder.build())
 }
 
+/**
+ * Adds the multi user rotation to this instance.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun DatabaseInstanceFromSnapshot.addRotationMultiUser(id: String,
     block: RotationMultiUserOptionsDsl.() -> Unit = {}): SecretRotation {
   val builder = RotationMultiUserOptionsDsl()
@@ -624,6 +943,11 @@ public inline fun DatabaseInstanceFromSnapshot.addRotationMultiUser(id: String,
   return addRotationMultiUser(id, builder.build())
 }
 
+/**
+ * Adds the single user rotation of the master password to this instance.
+ *
+ * @param options the options for the rotation, if you want to override the defaults.
+ */
 public inline
     fun DatabaseInstanceFromSnapshot.addRotationSingleUser(block: RotationSingleUserOptionsDsl.() -> Unit
     = {}): SecretRotation {

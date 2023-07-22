@@ -24,6 +24,9 @@ import software.amazon.awscdk.services.appmesh.VirtualNode
 import software.amazon.awscdk.services.appmesh.VirtualRouter
 import software.constructs.Construct
 
+/**
+ * The route specification to apply.
+ */
 public inline fun CfnRoute.setSpec(block: CfnRouteRouteSpecPropertyDsl.() -> Unit = {}) {
   val builder = CfnRouteRouteSpecPropertyDsl()
   builder.apply(block)
@@ -51,6 +54,9 @@ public inline fun IMesh.addVirtualRouter(arg0: String, block: VirtualRouterBaseP
   return addVirtualRouter(arg0, builder.build())
 }
 
+/**
+ * The specifications of the gateway route.
+ */
 public inline
     fun CfnGatewayRoute.setSpec(block: CfnGatewayRouteGatewayRouteSpecPropertyDsl.() -> Unit = {}) {
   val builder = CfnGatewayRouteGatewayRouteSpecPropertyDsl()
@@ -58,6 +64,12 @@ public inline
   return setSpec(builder.build())
 }
 
+/**
+ * Add a single route to the router.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun VirtualRouter.addRoute(id: String, block: RouteBasePropsDsl.() -> Unit = {}):
     Route {
   val builder = RouteBasePropsDsl()
@@ -72,6 +84,15 @@ public inline fun IVirtualGateway.addGatewayRoute(arg0: String,
   return addGatewayRoute(arg0, builder.build())
 }
 
+/**
+ * Called when the AccessLog type is initialized.
+ *
+ * Can be used to enforce
+ * mutual exclusivity with future properties
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun HealthCheck.bind(arg0: Construct, block: HealthCheckBindOptionsDsl.() -> Unit =
     {}): HealthCheckConfig {
   val builder = HealthCheckBindOptionsDsl()
@@ -86,6 +107,9 @@ public inline fun IVirtualRouter.addRoute(arg0: String, block: RouteBasePropsDsl
   return addRoute(arg0, builder.build())
 }
 
+/**
+ * The virtual router specification to apply.
+ */
 public inline
     fun CfnVirtualRouter.setSpec(block: CfnVirtualRouterVirtualRouterSpecPropertyDsl.() -> Unit =
     {}) {
@@ -94,6 +118,9 @@ public inline
   return setSpec(builder.build())
 }
 
+/**
+ * The specifications of the virtual gateway.
+ */
 public inline
     fun CfnVirtualGateway.setSpec(block: CfnVirtualGatewayVirtualGatewaySpecPropertyDsl.() -> Unit =
     {}) {
@@ -102,6 +129,9 @@ public inline
   return setSpec(builder.build())
 }
 
+/**
+ * The virtual node specification to apply.
+ */
 public inline fun CfnVirtualNode.setSpec(block: CfnVirtualNodeVirtualNodeSpecPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnVirtualNodeVirtualNodeSpecPropertyDsl()
@@ -109,6 +139,9 @@ public inline fun CfnVirtualNode.setSpec(block: CfnVirtualNodeVirtualNodeSpecPro
   return setSpec(builder.build())
 }
 
+/**
+ * The virtual service specification to apply.
+ */
 public inline
     fun CfnVirtualService.setSpec(block: CfnVirtualServiceVirtualServiceSpecPropertyDsl.() -> Unit =
     {}) {
@@ -117,12 +150,21 @@ public inline
   return setSpec(builder.build())
 }
 
+/**
+ * The service mesh specification to apply.
+ */
 public inline fun CfnMesh.setSpec(block: CfnMeshMeshSpecPropertyDsl.() -> Unit = {}) {
   val builder = CfnMeshMeshSpecPropertyDsl()
   builder.apply(block)
   return setSpec(builder.build())
 }
 
+/**
+ * Adds a VirtualGateway to the Mesh.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun Mesh.addVirtualGateway(id: String, block: VirtualGatewayBasePropsDsl.() -> Unit =
     {}): VirtualGateway {
   val builder = VirtualGatewayBasePropsDsl()
@@ -130,6 +172,12 @@ public inline fun Mesh.addVirtualGateway(id: String, block: VirtualGatewayBasePr
   return addVirtualGateway(id, builder.build())
 }
 
+/**
+ * Adds a VirtualNode to the Mesh.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun Mesh.addVirtualNode(id: String, block: VirtualNodeBasePropsDsl.() -> Unit = {}):
     VirtualNode {
   val builder = VirtualNodeBasePropsDsl()
@@ -137,6 +185,12 @@ public inline fun Mesh.addVirtualNode(id: String, block: VirtualNodeBasePropsDsl
   return addVirtualNode(id, builder.build())
 }
 
+/**
+ * Adds a VirtualRouter to the Mesh with the given id and props.
+ *
+ * @param id 
+ * @param props
+ */
 public inline fun Mesh.addVirtualRouter(id: String, block: VirtualRouterBasePropsDsl.() -> Unit =
     {}): VirtualRouter {
   val builder = VirtualRouterBasePropsDsl()
@@ -144,6 +198,12 @@ public inline fun Mesh.addVirtualRouter(id: String, block: VirtualRouterBaseProp
   return addVirtualRouter(id, builder.build())
 }
 
+/**
+ * Utility method to add a new GatewayRoute to the VirtualGateway.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun VirtualGateway.addGatewayRoute(id: String,
     block: GatewayRouteBasePropsDsl.() -> Unit = {}): GatewayRoute {
   val builder = GatewayRouteBasePropsDsl()

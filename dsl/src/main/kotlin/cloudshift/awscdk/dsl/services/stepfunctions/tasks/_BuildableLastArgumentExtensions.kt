@@ -19,6 +19,12 @@ public inline fun IEcsLaunchTarget.bind(arg0: EcsRunTask,
   return bind(arg0, builder.build())
 }
 
+/**
+ * Called when the Fargate launch type configured on RunTask.
+ *
+ * @param _task 
+ * @param launchTargetOptions 
+ */
 public inline fun EcsFargateLaunchTarget.bind(_task: EcsRunTask,
     block: LaunchTargetBindOptionsDsl.() -> Unit = {}): EcsLaunchTargetConfig {
   val builder = LaunchTargetBindOptionsDsl()
@@ -26,6 +32,12 @@ public inline fun EcsFargateLaunchTarget.bind(_task: EcsRunTask,
   return bind(_task, builder.build())
 }
 
+/**
+ * Called when the EC2 launch type is configured on RunTask.
+ *
+ * @param _task 
+ * @param launchTargetOptions 
+ */
 public inline fun EcsEc2LaunchTarget.bind(_task: EcsRunTask,
     block: LaunchTargetBindOptionsDsl.() -> Unit = {}): EcsLaunchTargetConfig {
   val builder = LaunchTargetBindOptionsDsl()
@@ -33,6 +45,12 @@ public inline fun EcsEc2LaunchTarget.bind(_task: EcsRunTask,
   return bind(_task, builder.build())
 }
 
+/**
+ * Called when the S3Location is bound to a StepFunctions task.
+ *
+ * @param task 
+ * @param opts 
+ */
 public inline fun S3Location.bind(arg0: ISageMakerTask, block: S3LocationBindOptionsDsl.() -> Unit =
     {}): S3LocationConfig {
   val builder = S3LocationBindOptionsDsl()

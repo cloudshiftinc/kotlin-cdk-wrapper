@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * (Optional) Information about the number of nodes and node types in a vehicle network.
+ */
 public inline
     fun CfnSignalCatalog.setNodeCounts(block: CfnSignalCatalogNodeCountsPropertyDsl.() -> Unit =
     {}) {
@@ -14,6 +17,9 @@ public inline
   return setNodeCounts(builder.build())
 }
 
+/**
+ * The data collection scheme associated with the campaign.
+ */
 public inline
     fun CfnCampaign.setCollectionScheme(block: CfnCampaignCollectionSchemePropertyDsl.() -> Unit =
     {}) {

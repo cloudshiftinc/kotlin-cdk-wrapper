@@ -8,6 +8,10 @@ import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationCloudWat
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 
+/**
+ * Provides a description of Amazon CloudWatch logging options, including the log stream Amazon
+ * Resource Name (ARN).
+ */
 public inline
     fun CfnApplicationCloudWatchLoggingOption.setCloudWatchLoggingOption(block: CfnApplicationCloudWatchLoggingOptionCloudWatchLoggingOptionPropertyDsl.() -> Unit
     = {}) {
@@ -16,6 +20,12 @@ public inline
   return setCloudWatchLoggingOption(builder.build())
 }
 
+/**
+ * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
+ * providing the source information (Amazon S3 bucket name and object key name), the resulting
+ * in-application table name that is created, and the necessary schema to map the data elements in the
+ * Amazon S3 object to the in-application table.
+ */
 public inline
     fun CfnApplicationReferenceDataSource.setReferenceDataSource(block: CfnApplicationReferenceDataSourceReferenceDataSourcePropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +34,9 @@ public inline
   return setReferenceDataSource(builder.build())
 }
 
+/**
+ * Use this parameter to configure the application.
+ */
 public inline
     fun CfnApplication.setApplicationConfiguration(block: CfnApplicationApplicationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -32,6 +45,9 @@ public inline
   return setApplicationConfiguration(builder.build())
 }
 
+/**
+ * Describes the maintenance configuration for the application.
+ */
 public inline
     fun CfnApplication.setApplicationMaintenanceConfiguration(block: CfnApplicationApplicationMaintenanceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -40,6 +56,9 @@ public inline
   return setApplicationMaintenanceConfiguration(builder.build())
 }
 
+/**
+ * Identifies the run configuration (start parameters) of a Kinesis Data Analytics application.
+ */
 public inline
     fun CfnApplication.setRunConfiguration(block: CfnApplicationRunConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -48,6 +67,11 @@ public inline
   return setRunConfiguration(builder.build())
 }
 
+/**
+ * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+ * identify an in-application stream and a destination where you want the in-application stream data to
+ * be written.
+ */
 public inline
     fun CfnApplicationOutput.setOutput(block: CfnApplicationOutputOutputPropertyDsl.() -> Unit =
     {}) {

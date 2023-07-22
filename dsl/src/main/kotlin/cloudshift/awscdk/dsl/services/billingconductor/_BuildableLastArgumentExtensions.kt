@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
 import software.amazon.awscdk.services.billingconductor.CfnPricingRule
 
+/**
+ * The set of accounts that will be under the billing group.
+ */
 public inline
     fun CfnBillingGroup.setAccountGrouping(block: CfnBillingGroupAccountGroupingPropertyDsl.() -> Unit
     = {}) {
@@ -15,6 +18,9 @@ public inline
   return setAccountGrouping(builder.build())
 }
 
+/**
+ * The preferences and settings that will be used to compute the AWS charges for a billing group.
+ */
 public inline
     fun CfnBillingGroup.setComputationPreference(block: CfnBillingGroupComputationPreferencePropertyDsl.() -> Unit
     = {}) {
@@ -23,6 +29,9 @@ public inline
   return setComputationPreference(builder.build())
 }
 
+/**
+ * The set of tiering configurations for the pricing rule.
+ */
 public inline fun CfnPricingRule.setTiering(block: CfnPricingRuleTieringPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnPricingRuleTieringPropertyDsl()
@@ -30,6 +39,9 @@ public inline fun CfnPricingRule.setTiering(block: CfnPricingRuleTieringProperty
   return setTiering(builder.build())
 }
 
+/**
+ * A time range for which the custom line item is effective.
+ */
 public inline
     fun CfnCustomLineItem.setBillingPeriodRange(block: CfnCustomLineItemBillingPeriodRangePropertyDsl.() -> Unit
     = {}) {
@@ -38,6 +50,9 @@ public inline
   return setBillingPeriodRange(builder.build())
 }
 
+/**
+ * The charge details of a custom line item.
+ */
 public inline
     fun CfnCustomLineItem.setCustomLineItemChargeDetails(block: CfnCustomLineItemCustomLineItemChargeDetailsPropertyDsl.() -> Unit
     = {}) {

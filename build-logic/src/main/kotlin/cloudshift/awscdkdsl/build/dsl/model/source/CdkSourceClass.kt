@@ -8,4 +8,4 @@ data class CdkSourceClass(val className: ClassName, val methods: List<CdkSourceM
     }
 }
 
-data class CdkSourceMethod(val name: String, val type: String, val comment: String?)
+data class CdkSourceMethod(val name: String, val parameterCount : Int, val comment: String?)

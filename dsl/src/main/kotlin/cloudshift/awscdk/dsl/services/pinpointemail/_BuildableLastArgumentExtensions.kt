@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
+/**
+ * An object that defines the event destination.
+ */
 public inline
     fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
     = {}) {
@@ -15,6 +18,9 @@ public inline
   return setEventDestination(builder.build())
 }
 
+/**
+ * Used to enable or disable the custom Mail-From domain configuration for an email identity.
+ */
 public inline
     fun CfnIdentity.setMailFromAttributes(block: CfnIdentityMailFromAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -23,6 +29,10 @@ public inline
   return setMailFromAttributes(builder.build())
 }
 
+/**
+ * An object that defines the dedicated IP pool that is used to send emails that you send using the
+ * configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setDeliveryOptions(block: CfnConfigurationSetDeliveryOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -31,6 +41,10 @@ public inline
   return setDeliveryOptions(builder.build())
 }
 
+/**
+ * An object that defines whether or not Amazon Pinpoint collects reputation metrics for the emails
+ * that you send that use the configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setReputationOptions(block: CfnConfigurationSetReputationOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -39,6 +53,10 @@ public inline
   return setReputationOptions(builder.build())
 }
 
+/**
+ * An object that defines whether or not Amazon Pinpoint can send email that you send using the
+ * configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setSendingOptions(block: CfnConfigurationSetSendingOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -47,6 +65,10 @@ public inline
   return setSendingOptions(builder.build())
 }
 
+/**
+ * An object that defines the open and click tracking options for emails that you send using the
+ * configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setTrackingOptions(block: CfnConfigurationSetTrackingOptionsPropertyDsl.() -> Unit
     = {}) {

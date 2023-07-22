@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.scheduler
 import kotlin.Unit
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 
+/**
+ * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
+ */
 public inline
     fun CfnSchedule.setFlexibleTimeWindow(block: CfnScheduleFlexibleTimeWindowPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setFlexibleTimeWindow(builder.build())
 }
 
+/**
+ * The schedule's target details.
+ */
 public inline fun CfnSchedule.setTarget(block: CfnScheduleTargetPropertyDsl.() -> Unit = {}) {
   val builder = CfnScheduleTargetPropertyDsl()
   builder.apply(block)

@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
 import software.amazon.awscdk.services.apprunner.CfnService
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection
 
+/**
+ * The source to deploy to the App Runner service.
+ */
 public inline
     fun CfnService.setSourceConfiguration(block: CfnServiceSourceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -15,6 +18,10 @@ public inline
   return setSourceConfiguration(builder.build())
 }
 
+/**
+ * An optional custom encryption key that App Runner uses to encrypt the copy of your source
+ * repository that it maintains and your service logs.
+ */
 public inline
     fun CfnService.setEncryptionConfiguration(block: CfnServiceEncryptionConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -23,6 +30,10 @@ public inline
   return setEncryptionConfiguration(builder.build())
 }
 
+/**
+ * The settings for the health check that AWS App Runner performs to monitor the health of the App
+ * Runner service.
+ */
 public inline
     fun CfnService.setHealthCheckConfiguration(block: CfnServiceHealthCheckConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -31,6 +42,9 @@ public inline
   return setHealthCheckConfiguration(builder.build())
 }
 
+/**
+ * The runtime configuration of instances (scaling units) of your service.
+ */
 public inline
     fun CfnService.setInstanceConfiguration(block: CfnServiceInstanceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -39,6 +53,10 @@ public inline
   return setInstanceConfiguration(builder.build())
 }
 
+/**
+ * Configuration settings related to network traffic of the web application that the App Runner
+ * service runs.
+ */
 public inline
     fun CfnService.setNetworkConfiguration(block: CfnServiceNetworkConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -47,6 +65,9 @@ public inline
   return setNetworkConfiguration(builder.build())
 }
 
+/**
+ * The observability configuration of your service.
+ */
 public inline
     fun CfnService.setObservabilityConfiguration(block: CfnServiceServiceObservabilityConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -55,6 +76,10 @@ public inline
   return setObservabilityConfiguration(builder.build())
 }
 
+/**
+ * Specifications for the customer’s Amazon VPC and the related AWS PrivateLink VPC endpoint that
+ * are used to create the VPC Ingress Connection resource.
+ */
 public inline
     fun CfnVpcIngressConnection.setIngressVpcConfiguration(block: CfnVpcIngressConnectionIngressVpcConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -63,6 +88,9 @@ public inline
   return setIngressVpcConfiguration(builder.build())
 }
 
+/**
+ * The configuration of the tracing feature within this observability configuration.
+ */
 public inline
     fun CfnObservabilityConfiguration.setTraceConfiguration(block: CfnObservabilityConfigurationTraceConfigurationPropertyDsl.() -> Unit
     = {}) {

@@ -6,6 +6,10 @@ import kotlin.Unit
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * The minimum number of healthy instances that should be available at any time during the
+ * deployment.
+ */
 public inline
     fun CfnDeploymentConfig.setMinimumHealthyHosts(block: CfnDeploymentConfigMinimumHealthyHostsPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +18,9 @@ public inline
   return setMinimumHealthyHosts(builder.build())
 }
 
+/**
+ * The configuration that specifies how the deployment traffic is routed.
+ */
 public inline
     fun CfnDeploymentConfig.setTrafficRoutingConfig(block: CfnDeploymentConfigTrafficRoutingConfigPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +29,9 @@ public inline
   return setTrafficRoutingConfig(builder.build())
 }
 
+/**
+ * Information about the Amazon CloudWatch alarms that are associated with the deployment group.
+ */
 public inline
     fun CfnDeploymentGroup.setAlarmConfiguration(block: CfnDeploymentGroupAlarmConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +40,10 @@ public inline
   return setAlarmConfiguration(builder.build())
 }
 
+/**
+ * Information about the automatic rollback configuration that is associated with the deployment
+ * group.
+ */
 public inline
     fun CfnDeploymentGroup.setAutoRollbackConfiguration(block: CfnDeploymentGroupAutoRollbackConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -38,6 +52,9 @@ public inline
   return setAutoRollbackConfiguration(builder.build())
 }
 
+/**
+ * Information about blue/green deployment options for a deployment group.
+ */
 public inline
     fun CfnDeploymentGroup.setBlueGreenDeploymentConfiguration(block: CfnDeploymentGroupBlueGreenDeploymentConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -46,6 +63,9 @@ public inline
   return setBlueGreenDeploymentConfiguration(builder.build())
 }
 
+/**
+ * The application revision to deploy to this deployment group.
+ */
 public inline
     fun CfnDeploymentGroup.setDeployment(block: CfnDeploymentGroupDeploymentPropertyDsl.() -> Unit =
     {}) {
@@ -54,6 +74,10 @@ public inline
   return setDeployment(builder.build())
 }
 
+/**
+ * Attributes that determine the type of deployment to run and whether to route deployment traffic
+ * behind a load balancer.
+ */
 public inline
     fun CfnDeploymentGroup.setDeploymentStyle(block: CfnDeploymentGroupDeploymentStylePropertyDsl.() -> Unit
     = {}) {
@@ -62,6 +86,9 @@ public inline
   return setDeploymentStyle(builder.build())
 }
 
+/**
+ * Information about groups of tags applied to Amazon EC2 instances.
+ */
 public inline
     fun CfnDeploymentGroup.setEc2TagSet(block: CfnDeploymentGroupEC2TagSetPropertyDsl.() -> Unit =
     {}) {
@@ -70,6 +97,9 @@ public inline
   return setEc2TagSet(builder.build())
 }
 
+/**
+ * Information about the load balancer to use in a deployment.
+ */
 public inline
     fun CfnDeploymentGroup.setLoadBalancerInfo(block: CfnDeploymentGroupLoadBalancerInfoPropertyDsl.() -> Unit
     = {}) {
@@ -78,6 +108,9 @@ public inline
   return setLoadBalancerInfo(builder.build())
 }
 
+/**
+ * Information about groups of tags applied to on-premises instances.
+ */
 public inline
     fun CfnDeploymentGroup.setOnPremisesTagSet(block: CfnDeploymentGroupOnPremisesTagSetPropertyDsl.() -> Unit
     = {}) {

@@ -8,6 +8,9 @@ import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 
+/**
+ * Parameters for CDN authorization.
+ */
 public inline
     fun CfnPackagingGroup.setAuthorization(block: CfnPackagingGroupAuthorizationPropertyDsl.() -> Unit
     = {}) {
@@ -16,6 +19,9 @@ public inline
   return setAuthorization(builder.build())
 }
 
+/**
+ * The configuration parameters for egress access logging.
+ */
 public inline
     fun CfnPackagingGroup.setEgressAccessLogs(block: CfnPackagingGroupLogConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +30,9 @@ public inline
   return setEgressAccessLogs(builder.build())
 }
 
+/**
+ * Parameters for CMAF packaging.
+ */
 public inline
     fun CfnPackagingConfiguration.setCmafPackage(block: CfnPackagingConfigurationCmafPackagePropertyDsl.() -> Unit
     = {}) {
@@ -32,6 +41,9 @@ public inline
   return setCmafPackage(builder.build())
 }
 
+/**
+ * Parameters for DASH-ISO packaging.
+ */
 public inline
     fun CfnPackagingConfiguration.setDashPackage(block: CfnPackagingConfigurationDashPackagePropertyDsl.() -> Unit
     = {}) {
@@ -40,6 +52,9 @@ public inline
   return setDashPackage(builder.build())
 }
 
+/**
+ * Parameters for Apple HLS packaging.
+ */
 public inline
     fun CfnPackagingConfiguration.setHlsPackage(block: CfnPackagingConfigurationHlsPackagePropertyDsl.() -> Unit
     = {}) {
@@ -48,6 +63,9 @@ public inline
   return setHlsPackage(builder.build())
 }
 
+/**
+ * Parameters for Microsoft Smooth Streaming packaging.
+ */
 public inline
     fun CfnPackagingConfiguration.setMssPackage(block: CfnPackagingConfigurationMssPackagePropertyDsl.() -> Unit
     = {}) {
@@ -56,6 +74,9 @@ public inline
   return setMssPackage(builder.build())
 }
 
+/**
+ * Configures egress access logs.
+ */
 public inline
     fun CfnChannel.setEgressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
     {}) {
@@ -64,12 +85,18 @@ public inline
   return setEgressAccessLogs(builder.build())
 }
 
+/**
+ * The input URL where the source stream should be sent.
+ */
 public inline fun CfnChannel.setHlsIngest(block: CfnChannelHlsIngestPropertyDsl.() -> Unit = {}) {
   val builder = CfnChannelHlsIngestPropertyDsl()
   builder.apply(block)
   return setHlsIngest(builder.build())
 }
 
+/**
+ * Configures ingress access logs.
+ */
 public inline
     fun CfnChannel.setIngressAccessLogs(block: CfnChannelLogConfigurationPropertyDsl.() -> Unit =
     {}) {
@@ -78,6 +105,9 @@ public inline
   return setIngressAccessLogs(builder.build())
 }
 
+/**
+ * Parameters for CDN authorization.
+ */
 public inline
     fun CfnOriginEndpoint.setAuthorization(block: CfnOriginEndpointAuthorizationPropertyDsl.() -> Unit
     = {}) {
@@ -86,6 +116,9 @@ public inline
   return setAuthorization(builder.build())
 }
 
+/**
+ * Parameters for Common Media Application Format (CMAF) packaging.
+ */
 public inline
     fun CfnOriginEndpoint.setCmafPackage(block: CfnOriginEndpointCmafPackagePropertyDsl.() -> Unit =
     {}) {
@@ -94,6 +127,9 @@ public inline
   return setCmafPackage(builder.build())
 }
 
+/**
+ * Parameters for DASH packaging.
+ */
 public inline
     fun CfnOriginEndpoint.setDashPackage(block: CfnOriginEndpointDashPackagePropertyDsl.() -> Unit =
     {}) {
@@ -102,6 +138,9 @@ public inline
   return setDashPackage(builder.build())
 }
 
+/**
+ * Parameters for Apple HLS packaging.
+ */
 public inline
     fun CfnOriginEndpoint.setHlsPackage(block: CfnOriginEndpointHlsPackagePropertyDsl.() -> Unit =
     {}) {
@@ -110,6 +149,9 @@ public inline
   return setHlsPackage(builder.build())
 }
 
+/**
+ * Parameters for Microsoft Smooth Streaming packaging.
+ */
 public inline
     fun CfnOriginEndpoint.setMssPackage(block: CfnOriginEndpointMssPackagePropertyDsl.() -> Unit =
     {}) {

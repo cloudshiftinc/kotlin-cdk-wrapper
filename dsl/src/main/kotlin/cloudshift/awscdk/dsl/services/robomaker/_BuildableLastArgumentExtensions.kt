@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.robomaker.CfnRobotApplication
 import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
 
+/**
+ * The robot software suite used by the simulation application.
+ */
 public inline
     fun CfnSimulationApplication.setRobotSoftwareSuite(block: CfnSimulationApplicationRobotSoftwareSuitePropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setRobotSoftwareSuite(builder.build())
 }
 
+/**
+ * The simulation software suite used by the simulation application.
+ */
 public inline
     fun CfnSimulationApplication.setSimulationSoftwareSuite(block: CfnSimulationApplicationSimulationSoftwareSuitePropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setSimulationSoftwareSuite(builder.build())
 }
 
+/**
+ * The rendering engine for the simulation application.
+ */
 public inline
     fun CfnSimulationApplication.setRenderingEngine(block: CfnSimulationApplicationRenderingEnginePropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +39,9 @@ public inline
   return setRenderingEngine(builder.build())
 }
 
+/**
+ * The robot software suite used by the robot application.
+ */
 public inline
     fun CfnRobotApplication.setRobotSoftwareSuite(block: CfnRobotApplicationRobotSoftwareSuitePropertyDsl.() -> Unit
     = {}) {

@@ -17,7 +17,7 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
-internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod: CdkSourceMethod? = null) : CdkClass.Method {
+internal class AsmMethodAdapter(private val delegate: MethodNode, private val sourceMethod: CdkSourceMethod? = null) : CdkClass.Method {
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
     private val annotations: List<ClassName> by lazy(LazyThreadSafetyMode.NONE) {
@@ -72,12 +72,14 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod: 
                     .toTypeName()
             }
 
-            val nullable = allAnnotations.any { it.toString().lowercase().contains("nullable") }
+            val nullable = allAnnotations.any {
+                it.toString()
+                    .lowercase()
+                    .contains("nullable")
+            }
 
             AsmParameterAdapter(
-                name = parameterName,
-                type = theType,
-                nullable = nullable
+                name = parameterName, type = theType, nullable = nullable
             )
         }
     }
@@ -92,7 +94,10 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod: 
             ).returnType.toTypeName()
         }
     }
-    override val comment: String? = sourceMethod?.comment
+    override val comment: String?
+        get() {
+            return sourceMethod?.comment
+        }
 
     override fun toString(): String {
         return "AsmMethodAdapter(name=$name; desc=${delegate.desc})"

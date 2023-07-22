@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.iotanalytics.CfnChannel
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Optional.
+ */
 public inline
     fun CfnDataset.setRetentionPeriod(block: CfnDatasetRetentionPeriodPropertyDsl.() -> Unit = {}) {
   val builder = CfnDatasetRetentionPeriodPropertyDsl()
@@ -14,6 +17,9 @@ public inline
   return setRetentionPeriod(builder.build())
 }
 
+/**
+ * Optional.
+ */
 public inline
     fun CfnDataset.setVersioningConfiguration(block: CfnDatasetVersioningConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setVersioningConfiguration(builder.build())
 }
 
+/**
+ * Information about the partition dimensions in a data store.
+ */
 public inline
     fun CfnDatastore.setDatastorePartitions(block: CfnDatastoreDatastorePartitionsPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +39,9 @@ public inline
   return setDatastorePartitions(builder.build())
 }
 
+/**
+ * Where data store data is stored.
+ */
 public inline
     fun CfnDatastore.setDatastoreStorage(block: CfnDatastoreDatastoreStoragePropertyDsl.() -> Unit =
     {}) {
@@ -38,6 +50,12 @@ public inline
   return setDatastoreStorage(builder.build())
 }
 
+/**
+ * Contains the configuration information of file formats.
+ *
+ * AWS IoT Analytics data stores support JSON and
+ * [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) .
+ */
 public inline
     fun CfnDatastore.setFileFormatConfiguration(block: CfnDatastoreFileFormatConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -46,6 +64,9 @@ public inline
   return setFileFormatConfiguration(builder.build())
 }
 
+/**
+ * How long, in days, message data is kept for the data store.
+ */
 public inline
     fun CfnDatastore.setRetentionPeriod(block: CfnDatastoreRetentionPeriodPropertyDsl.() -> Unit =
     {}) {
@@ -54,6 +75,9 @@ public inline
   return setRetentionPeriod(builder.build())
 }
 
+/**
+ * Where channel data is stored.
+ */
 public inline fun CfnChannel.setChannelStorage(block: CfnChannelChannelStoragePropertyDsl.() -> Unit
     = {}) {
   val builder = CfnChannelChannelStoragePropertyDsl()
@@ -61,6 +85,9 @@ public inline fun CfnChannel.setChannelStorage(block: CfnChannelChannelStoragePr
   return setChannelStorage(builder.build())
 }
 
+/**
+ * How long, in days, message data is kept for the channel.
+ */
 public inline
     fun CfnChannel.setRetentionPeriod(block: CfnChannelRetentionPeriodPropertyDsl.() -> Unit = {}) {
   val builder = CfnChannelRetentionPeriodPropertyDsl()

@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.pipes
 import kotlin.Unit
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters required to set up enrichment on your pipe.
+ */
 public inline
     fun CfnPipe.setEnrichmentParameters(block: CfnPipePipeEnrichmentParametersPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setEnrichmentParameters(builder.build())
 }
 
+/**
+ * The parameters required to set up a source for your pipe.
+ */
 public inline
     fun CfnPipe.setSourceParameters(block: CfnPipePipeSourceParametersPropertyDsl.() -> Unit = {}) {
   val builder = CfnPipePipeSourceParametersPropertyDsl()
@@ -20,6 +26,9 @@ public inline
   return setSourceParameters(builder.build())
 }
 
+/**
+ * The parameters required to set up a target for your pipe.
+ */
 public inline
     fun CfnPipe.setTargetParameters(block: CfnPipePipeTargetParametersPropertyDsl.() -> Unit = {}) {
   val builder = CfnPipePipeTargetParametersPropertyDsl()

@@ -13,6 +13,9 @@ import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 
+/**
+ * The subscription definition version to include when the subscription definition is created.
+ */
 public inline
     fun CfnSubscriptionDefinition.setInitialVersion(block: CfnSubscriptionDefinitionSubscriptionDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +24,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The core definition version to include when the core definition is created.
+ */
 public inline
     fun CfnCoreDefinition.setInitialVersion(block: CfnCoreDefinitionCoreDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -29,6 +35,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The function definition version to include when the function definition is created.
+ */
 public inline
     fun CfnFunctionDefinition.setInitialVersion(block: CfnFunctionDefinitionFunctionDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -37,6 +46,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The connector definition version to include when the connector definition is created.
+ */
 public inline
     fun CfnConnectorDefinition.setInitialVersion(block: CfnConnectorDefinitionConnectorDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -45,6 +57,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The group version to include when the group is created.
+ */
 public inline fun CfnGroup.setInitialVersion(block: CfnGroupGroupVersionPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnGroupGroupVersionPropertyDsl()
@@ -52,6 +67,9 @@ public inline fun CfnGroup.setInitialVersion(block: CfnGroupGroupVersionProperty
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The device definition version to include when the device definition is created.
+ */
 public inline
     fun CfnDeviceDefinition.setInitialVersion(block: CfnDeviceDefinitionDeviceDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -60,6 +78,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The default configuration that applies to all Lambda functions in the group.
+ */
 public inline
     fun CfnFunctionDefinitionVersion.setDefaultConfig(block: CfnFunctionDefinitionVersionDefaultConfigPropertyDsl.() -> Unit
     = {}) {
@@ -68,6 +89,9 @@ public inline
   return setDefaultConfig(builder.build())
 }
 
+/**
+ * The resource definition version to include when the resource definition is created.
+ */
 public inline
     fun CfnResourceDefinition.setInitialVersion(block: CfnResourceDefinitionResourceDefinitionVersionPropertyDsl.() -> Unit
     = {}) {
@@ -76,6 +100,9 @@ public inline
   return setInitialVersion(builder.build())
 }
 
+/**
+ * The logger definition version to include when the logger definition is created.
+ */
 public inline
     fun CfnLoggerDefinition.setInitialVersion(block: CfnLoggerDefinitionLoggerDefinitionVersionPropertyDsl.() -> Unit
     = {}) {

@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.workspaces
 import kotlin.Unit
 import software.amazon.awscdk.services.workspaces.CfnWorkspace
 
+/**
+ * The WorkSpace properties.
+ */
 public inline
     fun CfnWorkspace.setWorkspaceProperties(block: CfnWorkspaceWorkspacePropertiesPropertyDsl.() -> Unit
     = {}) {

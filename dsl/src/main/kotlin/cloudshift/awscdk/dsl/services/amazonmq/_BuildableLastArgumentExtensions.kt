@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
 
+/**
+ * A list of information about the configuration.
+ */
 public inline fun CfnBroker.setConfiguration(block: CfnBrokerConfigurationIdPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnBrokerConfigurationIdPropertyDsl()
@@ -13,6 +16,9 @@ public inline fun CfnBroker.setConfiguration(block: CfnBrokerConfigurationIdProp
   return setConfiguration(builder.build())
 }
 
+/**
+ * Encryption options for the broker.
+ */
 public inline
     fun CfnBroker.setEncryptionOptions(block: CfnBrokerEncryptionOptionsPropertyDsl.() -> Unit =
     {}) {
@@ -21,6 +27,9 @@ public inline
   return setEncryptionOptions(builder.build())
 }
 
+/**
+ * Optional.
+ */
 public inline
     fun CfnBroker.setLdapServerMetadata(block: CfnBrokerLdapServerMetadataPropertyDsl.() -> Unit =
     {}) {
@@ -29,12 +38,19 @@ public inline
   return setLdapServerMetadata(builder.build())
 }
 
+/**
+ * Enables Amazon CloudWatch logging for brokers.
+ */
 public inline fun CfnBroker.setLogs(block: CfnBrokerLogListPropertyDsl.() -> Unit = {}) {
   val builder = CfnBrokerLogListPropertyDsl()
   builder.apply(block)
   return setLogs(builder.build())
 }
 
+/**
+ * The scheduled time period relative to UTC during which Amazon MQ begins to apply pending updates
+ * or patches to the broker.
+ */
 public inline
     fun CfnBroker.setMaintenanceWindowStartTime(block: CfnBrokerMaintenanceWindowPropertyDsl.() -> Unit
     = {}) {
@@ -43,6 +59,9 @@ public inline
   return setMaintenanceWindowStartTime(builder.build())
 }
 
+/**
+ * The configuration to associate with a broker.
+ */
 public inline
     fun CfnConfigurationAssociation.setConfiguration(block: CfnConfigurationAssociationConfigurationIdPropertyDsl.() -> Unit
     = {}) {

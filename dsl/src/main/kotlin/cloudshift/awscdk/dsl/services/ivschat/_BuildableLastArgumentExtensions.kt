@@ -6,6 +6,10 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
 import software.amazon.awscdk.services.ivschat.CfnRoom
 
+/**
+ * The DestinationConfiguration is a complex type that contains information about where chat content
+ * will be logged.
+ */
 public inline
     fun CfnLoggingConfiguration.setDestinationConfiguration(block: CfnLoggingConfigurationDestinationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +18,9 @@ public inline
   return setDestinationConfiguration(builder.build())
 }
 
+/**
+ * Configuration information for optional review of messages.
+ */
 public inline
     fun CfnRoom.setMessageReviewHandler(block: CfnRoomMessageReviewHandlerPropertyDsl.() -> Unit =
     {}) {

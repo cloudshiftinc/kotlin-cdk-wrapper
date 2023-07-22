@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegration
 
+/**
+ * The event integration filter.
+ */
 public inline
     fun CfnEventIntegration.setEventFilter(block: CfnEventIntegrationEventFilterPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setEventFilter(builder.build())
 }
 
+/**
+ * The name of the data and how often it should be pulled from the source.
+ */
 public inline
     fun CfnDataIntegration.setScheduleConfig(block: CfnDataIntegrationScheduleConfigPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setScheduleConfig(builder.build())
 }
 
+/**
+ * The configuration for what files should be pulled from the source.
+ */
 public inline
     fun CfnDataIntegration.setFileConfiguration(block: CfnDataIntegrationFileConfigurationPropertyDsl.() -> Unit
     = {}) {

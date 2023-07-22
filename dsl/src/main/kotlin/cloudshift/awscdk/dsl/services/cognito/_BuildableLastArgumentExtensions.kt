@@ -16,6 +16,10 @@ import software.amazon.awscdk.services.cognito.UserPoolClient
 import software.amazon.awscdk.services.cognito.UserPoolDomain
 import software.amazon.awscdk.services.cognito.UserPoolResourceServer
 
+/**
+ * The user pool analytics configuration for collecting metrics and sending them to your Amazon
+ * Pinpoint campaign.
+ */
 public inline
     fun CfnUserPoolClient.setAnalyticsConfiguration(block: CfnUserPoolClientAnalyticsConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +28,9 @@ public inline
   return setAnalyticsConfiguration(builder.build())
 }
 
+/**
+ * The units in which the validity times are represented.
+ */
 public inline
     fun CfnUserPoolClient.setTokenValidityUnits(block: CfnUserPoolClientTokenValidityUnitsPropertyDsl.() -> Unit
     = {}) {
@@ -32,6 +39,10 @@ public inline
   return setTokenValidityUnits(builder.build())
 }
 
+/**
+ * The account takeover risk configuration object, including the `NotifyConfiguration` object and
+ * `Actions` to take if there is an account takeover.
+ */
 public inline
     fun CfnUserPoolRiskConfigurationAttachment.setAccountTakeoverRiskConfiguration(block: CfnUserPoolRiskConfigurationAttachmentAccountTakeoverRiskConfigurationTypePropertyDsl.() -> Unit
     = {}) {
@@ -41,6 +52,10 @@ public inline
   return setAccountTakeoverRiskConfiguration(builder.build())
 }
 
+/**
+ * The compromised credentials risk configuration object, including the `EventFilter` and the
+ * `EventAction` .
+ */
 public inline
     fun CfnUserPoolRiskConfigurationAttachment.setCompromisedCredentialsRiskConfiguration(block: CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl.() -> Unit
     = {}) {
@@ -50,6 +65,9 @@ public inline
   return setCompromisedCredentialsRiskConfiguration(builder.build())
 }
 
+/**
+ * The configuration to override the risk decision.
+ */
 public inline
     fun CfnUserPoolRiskConfigurationAttachment.setRiskExceptionConfiguration(block: CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl.() -> Unit
     = {}) {
@@ -58,12 +76,24 @@ public inline
   return setRiskExceptionConfiguration(builder.build())
 }
 
+/**
+ * The URL to the hosted UI associated with this domain.
+ *
+ * @param options options to customize baseUrl.
+ */
 public inline fun UserPoolDomain.baseUrl(block: BaseUrlOptionsDsl.() -> Unit = {}): String {
   val builder = BaseUrlOptionsDsl()
   builder.apply(block)
   return baseUrl(builder.build())
 }
 
+/**
+ * The URL to the sign in page in this domain using a specific UserPoolClient.
+ *
+ * @param client [disable-awslint:ref-via-interface] the user pool client that the UI will use to
+ * interact with the UserPool. 
+ * @param options options to customize signInUrl. 
+ */
 public inline fun UserPoolDomain.signInUrl(client: UserPoolClient,
     block: SignInUrlOptionsDsl.() -> Unit = {}): String {
   val builder = SignInUrlOptionsDsl()
@@ -71,6 +101,10 @@ public inline fun UserPoolDomain.signInUrl(client: UserPoolClient,
   return signInUrl(client, builder.build())
 }
 
+/**
+ * The configuration for a custom domain that hosts the sign-up and sign-in pages for your
+ * application.
+ */
 public inline
     fun CfnUserPoolDomain.setCustomDomainConfig(block: CfnUserPoolDomainCustomDomainConfigTypePropertyDsl.() -> Unit
     = {}) {
@@ -100,6 +134,9 @@ public inline fun IUserPool.addResourceServer(arg0: String,
   return addResourceServer(arg0, builder.build())
 }
 
+/**
+ * Configuration options for configuring Amazon Cognito streams.
+ */
 public inline
     fun CfnIdentityPool.setCognitoStreams(block: CfnIdentityPoolCognitoStreamsPropertyDsl.() -> Unit
     = {}) {
@@ -108,6 +145,9 @@ public inline
   return setCognitoStreams(builder.build())
 }
 
+/**
+ * The configuration options to be applied to the identity pool.
+ */
 public inline fun CfnIdentityPool.setPushSync(block: CfnIdentityPoolPushSyncPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnIdentityPoolPushSyncPropertyDsl()
@@ -115,6 +155,10 @@ public inline fun CfnIdentityPool.setPushSync(block: CfnIdentityPoolPushSyncProp
   return setPushSync(builder.build())
 }
 
+/**
+ * Use this setting to define which verified available method a user can use to recover their
+ * password when they call `ForgotPassword` .
+ */
 public inline
     fun CfnUserPool.setAccountRecoverySetting(block: CfnUserPoolAccountRecoverySettingPropertyDsl.() -> Unit
     = {}) {
@@ -123,6 +167,9 @@ public inline
   return setAccountRecoverySetting(builder.build())
 }
 
+/**
+ * The configuration for creating a new user profile.
+ */
 public inline
     fun CfnUserPool.setAdminCreateUserConfig(block: CfnUserPoolAdminCreateUserConfigPropertyDsl.() -> Unit
     = {}) {
@@ -131,6 +178,9 @@ public inline
   return setAdminCreateUserConfig(builder.build())
 }
 
+/**
+ * The device-remembering configuration for a user pool.
+ */
 public inline
     fun CfnUserPool.setDeviceConfiguration(block: CfnUserPoolDeviceConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -139,6 +189,9 @@ public inline
   return setDeviceConfiguration(builder.build())
 }
 
+/**
+ * The email configuration of your user pool.
+ */
 public inline
     fun CfnUserPool.setEmailConfiguration(block: CfnUserPoolEmailConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -147,6 +200,9 @@ public inline
   return setEmailConfiguration(builder.build())
 }
 
+/**
+ * The Lambda trigger configuration information for the new user pool.
+ */
 public inline fun CfnUserPool.setLambdaConfig(block: CfnUserPoolLambdaConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnUserPoolLambdaConfigPropertyDsl()
@@ -154,12 +210,19 @@ public inline fun CfnUserPool.setLambdaConfig(block: CfnUserPoolLambdaConfigProp
   return setLambdaConfig(builder.build())
 }
 
+/**
+ * The policy associated with a user pool.
+ */
 public inline fun CfnUserPool.setPolicies(block: CfnUserPoolPoliciesPropertyDsl.() -> Unit = {}) {
   val builder = CfnUserPoolPoliciesPropertyDsl()
   builder.apply(block)
   return setPolicies(builder.build())
 }
 
+/**
+ * The SMS configuration with the settings that your Amazon Cognito user pool must use to send an
+ * SMS message from your AWS account through Amazon Simple Notification Service.
+ */
 public inline
     fun CfnUserPool.setSmsConfiguration(block: CfnUserPoolSmsConfigurationPropertyDsl.() -> Unit =
     {}) {
@@ -168,6 +231,9 @@ public inline
   return setSmsConfiguration(builder.build())
 }
 
+/**
+ * The settings for updates to user attributes.
+ */
 public inline
     fun CfnUserPool.setUserAttributeUpdateSettings(block: CfnUserPoolUserAttributeUpdateSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -176,6 +242,9 @@ public inline
   return setUserAttributeUpdateSettings(builder.build())
 }
 
+/**
+ * You can choose to set case sensitivity on the username input for the selected sign-in option.
+ */
 public inline
     fun CfnUserPool.setUsernameConfiguration(block: CfnUserPoolUsernameConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -184,6 +253,9 @@ public inline
   return setUsernameConfiguration(builder.build())
 }
 
+/**
+ * Enables advanced security risk detection.
+ */
 public inline
     fun CfnUserPool.setUserPoolAddOns(block: CfnUserPoolUserPoolAddOnsPropertyDsl.() -> Unit = {}) {
   val builder = CfnUserPoolUserPoolAddOnsPropertyDsl()
@@ -191,6 +263,10 @@ public inline
   return setUserPoolAddOns(builder.build())
 }
 
+/**
+ * The template for the verification message that the user sees when the app requests permission to
+ * access the user's information.
+ */
 public inline
     fun CfnUserPool.setVerificationMessageTemplate(block: CfnUserPoolVerificationMessageTemplatePropertyDsl.() -> Unit
     = {}) {
@@ -199,6 +275,11 @@ public inline
   return setVerificationMessageTemplate(builder.build())
 }
 
+/**
+ * Creates a custom ClientAttributes with the specified attributes.
+ *
+ * @param attributes a list of standard attributes to add to the set. 
+ */
 public inline
     fun ClientAttributes.withStandardAttributes(block: StandardAttributesMaskDsl.() -> Unit = {}):
     ClientAttributes {
@@ -207,6 +288,12 @@ public inline
   return withStandardAttributes(builder.build())
 }
 
+/**
+ * Add a new app client to this user pool.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun UserPool.addClient(id: String, block: UserPoolClientOptionsDsl.() -> Unit = {}):
     UserPoolClient {
   val builder = UserPoolClientOptionsDsl()
@@ -214,6 +301,12 @@ public inline fun UserPool.addClient(id: String, block: UserPoolClientOptionsDsl
   return addClient(id, builder.build())
 }
 
+/**
+ * Associate a domain to this user pool.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun UserPool.addDomain(id: String, block: UserPoolDomainOptionsDsl.() -> Unit = {}):
     UserPoolDomain {
   val builder = UserPoolDomainOptionsDsl()
@@ -221,6 +314,12 @@ public inline fun UserPool.addDomain(id: String, block: UserPoolDomainOptionsDsl
   return addDomain(id, builder.build())
 }
 
+/**
+ * Add a new resource server to this user pool.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun UserPool.addResourceServer(id: String,
     block: UserPoolResourceServerOptionsDsl.() -> Unit = {}): UserPoolResourceServer {
   val builder = UserPoolResourceServerOptionsDsl()

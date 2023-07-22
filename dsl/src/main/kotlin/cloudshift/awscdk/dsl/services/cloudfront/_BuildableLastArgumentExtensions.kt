@@ -22,6 +22,9 @@ import software.amazon.awscdk.services.cloudfront.OriginBase
 import software.amazon.awscdk.services.cloudfront.OriginBindConfig
 import software.constructs.Construct
 
+/**
+ * The origin request policy configuration.
+ */
 public inline
     fun CfnOriginRequestPolicy.setOriginRequestPolicyConfig(block: CfnOriginRequestPolicyOriginRequestPolicyConfigPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +33,9 @@ public inline
   return setOriginRequestPolicyConfig(builder.build())
 }
 
+/**
+ * A subscription configuration for additional CloudWatch metrics.
+ */
 public inline
     fun CfnMonitoringSubscription.setMonitoringSubscription(block: CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl.() -> Unit
     = {}) {
@@ -38,6 +44,9 @@ public inline
   return setMonitoringSubscription(builder.build())
 }
 
+/**
+ * Contains the configuration for a continuous deployment policy.
+ */
 public inline
     fun CfnContinuousDeploymentPolicy.setContinuousDeploymentPolicyConfig(block: CfnContinuousDeploymentPolicyContinuousDeploymentPolicyConfigPropertyDsl.() -> Unit
     = {}) {
@@ -53,6 +62,9 @@ public inline fun IOrigin.bind(arg0: Construct, block: OriginBindOptionsDsl.() -
   return bind(arg0, builder.build())
 }
 
+/**
+ * The origin access control.
+ */
 public inline
     fun CfnOriginAccessControl.setOriginAccessControlConfig(block: CfnOriginAccessControlOriginAccessControlConfigPropertyDsl.() -> Unit
     = {}) {
@@ -61,6 +73,14 @@ public inline
   return setOriginAccessControlConfig(builder.build())
 }
 
+/**
+ * Adds a new behavior to this distribution for the given pathPattern.
+ *
+ * @param pathPattern the path pattern (e.g., 'images/ *') that specifies which requests to apply
+ * the behavior to. 
+ * @param origin the origin to use for this behavior. 
+ * @param behaviorOptions the options for the behavior at this path.
+ */
 public inline fun Distribution.addBehavior(
   pathPattern: String,
   origin: IOrigin,
@@ -71,6 +91,13 @@ public inline fun Distribution.addBehavior(
   return addBehavior(pathPattern, origin, builder.build())
 }
 
+/**
+ * Configuration information about a public key that you can use with [signed URLs and signed
+ * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) ,
+ * or with [field-level
+ * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+ * .
+ */
 public inline
     fun CfnPublicKey.setPublicKeyConfig(block: CfnPublicKeyPublicKeyConfigPropertyDsl.() -> Unit =
     {}) {
@@ -79,6 +106,9 @@ public inline
   return setPublicKeyConfig(builder.build())
 }
 
+/**
+ * The current configuration information for the RTMP distribution.
+ */
 public inline
     fun CfnStreamingDistribution.setStreamingDistributionConfig(block: CfnStreamingDistributionStreamingDistributionConfigPropertyDsl.() -> Unit
     = {}) {
@@ -87,6 +117,9 @@ public inline
   return setStreamingDistributionConfig(builder.build())
 }
 
+/**
+ * The cache policy configuration.
+ */
 public inline
     fun CfnCachePolicy.setCachePolicyConfig(block: CfnCachePolicyCachePolicyConfigPropertyDsl.() -> Unit
     = {}) {
@@ -95,6 +128,9 @@ public inline
   return setCachePolicyConfig(builder.build())
 }
 
+/**
+ * The key group configuration.
+ */
 public inline
     fun CfnKeyGroup.setKeyGroupConfig(block: CfnKeyGroupKeyGroupConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnKeyGroupKeyGroupConfigPropertyDsl()
@@ -102,6 +138,9 @@ public inline
   return setKeyGroupConfig(builder.build())
 }
 
+/**
+ * Contains configuration information about a CloudFront function.
+ */
 public inline
     fun CfnFunction.setFunctionConfig(block: CfnFunctionFunctionConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnFunctionFunctionConfigPropertyDsl()
@@ -109,6 +148,9 @@ public inline
   return setFunctionConfig(builder.build())
 }
 
+/**
+ * Contains metadata about a CloudFront function.
+ */
 public inline
     fun CfnFunction.setFunctionMetadata(block: CfnFunctionFunctionMetadataPropertyDsl.() -> Unit =
     {}) {
@@ -117,6 +159,9 @@ public inline
   return setFunctionMetadata(builder.build())
 }
 
+/**
+ * The distribution's configuration.
+ */
 public inline
     fun CfnDistribution.setDistributionConfig(block: CfnDistributionDistributionConfigPropertyDsl.() -> Unit
     = {}) {
@@ -125,6 +170,9 @@ public inline
   return setDistributionConfig(builder.build())
 }
 
+/**
+ * A response headers policy configuration.
+ */
 public inline
     fun CfnResponseHeadersPolicy.setResponseHeadersPolicyConfig(block: CfnResponseHeadersPolicyResponseHeadersPolicyConfigPropertyDsl.() -> Unit
     = {}) {
@@ -133,6 +181,9 @@ public inline
   return setResponseHeadersPolicyConfig(builder.build())
 }
 
+/**
+ * The current configuration information for the identity.
+ */
 public inline
     fun CfnCloudFrontOriginAccessIdentity.setCloudFrontOriginAccessIdentityConfig(block: CfnCloudFrontOriginAccessIdentityCloudFrontOriginAccessIdentityConfigPropertyDsl.() -> Unit
     = {}) {
@@ -141,6 +192,14 @@ public inline
   return setCloudFrontOriginAccessIdentityConfig(builder.build())
 }
 
+/**
+ * Binds the origin to the associated Distribution.
+ *
+ * Can be used to grant permissions, create dependent resources, etc.
+ *
+ * @param _scope 
+ * @param options 
+ */
 public inline fun OriginBase.bind(_scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()

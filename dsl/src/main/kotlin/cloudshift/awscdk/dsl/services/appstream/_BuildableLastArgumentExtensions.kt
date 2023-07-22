@@ -11,6 +11,9 @@ import software.amazon.awscdk.services.appstream.CfnFleet
 import software.amazon.awscdk.services.appstream.CfnImageBuilder
 import software.amazon.awscdk.services.appstream.CfnStack
 
+/**
+ * The source S3 location of the app block.
+ */
 public inline fun CfnAppBlock.setSourceS3Location(block: CfnAppBlockS3LocationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnAppBlockS3LocationPropertyDsl()
@@ -18,6 +21,9 @@ public inline fun CfnAppBlock.setSourceS3Location(block: CfnAppBlockS3LocationPr
   return setSourceS3Location(builder.build())
 }
 
+/**
+ * The post setup script details of the app block.
+ */
 public inline
     fun CfnAppBlock.setPostSetupScriptDetails(block: CfnAppBlockScriptDetailsPropertyDsl.() -> Unit
     = {}) {
@@ -26,6 +32,9 @@ public inline
   return setPostSetupScriptDetails(builder.build())
 }
 
+/**
+ * The setup script details of the app block.
+ */
 public inline
     fun CfnAppBlock.setSetupScriptDetails(block: CfnAppBlockScriptDetailsPropertyDsl.() -> Unit =
     {}) {
@@ -34,6 +43,10 @@ public inline
   return setSetupScriptDetails(builder.build())
 }
 
+/**
+ * The credentials for the service account used by the streaming instance to connect to the
+ * directory.
+ */
 public inline
     fun CfnDirectoryConfig.setServiceAccountCredentials(block: CfnDirectoryConfigServiceAccountCredentialsPropertyDsl.() -> Unit
     = {}) {
@@ -42,6 +55,10 @@ public inline
   return setServiceAccountCredentials(builder.build())
 }
 
+/**
+ * The certificate-based authentication properties used to authenticate SAML 2.0 Identity Provider
+ * (IdP) user identities to Active Directory domain-joined streaming instances.
+ */
 public inline
     fun CfnDirectoryConfig.setCertificateBasedAuthProperties(block: CfnDirectoryConfigCertificateBasedAuthPropertiesPropertyDsl.() -> Unit
     = {}) {
@@ -50,6 +67,9 @@ public inline
   return setCertificateBasedAuthProperties(builder.build())
 }
 
+/**
+ * The desired capacity for the fleet.
+ */
 public inline fun CfnFleet.setComputeCapacity(block: CfnFleetComputeCapacityPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnFleetComputeCapacityPropertyDsl()
@@ -57,6 +77,10 @@ public inline fun CfnFleet.setComputeCapacity(block: CfnFleetComputeCapacityProp
   return setComputeCapacity(builder.build())
 }
 
+/**
+ * The name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft
+ * Active Directory domain.
+ */
 public inline fun CfnFleet.setDomainJoinInfo(block: CfnFleetDomainJoinInfoPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnFleetDomainJoinInfoPropertyDsl()
@@ -64,6 +88,9 @@ public inline fun CfnFleet.setDomainJoinInfo(block: CfnFleetDomainJoinInfoProper
   return setDomainJoinInfo(builder.build())
 }
 
+/**
+ * The S3 location of the session scripts configuration zip file.
+ */
 public inline
     fun CfnFleet.setSessionScriptS3Location(block: CfnFleetS3LocationPropertyDsl.() -> Unit = {}) {
   val builder = CfnFleetS3LocationPropertyDsl()
@@ -71,12 +98,18 @@ public inline
   return setSessionScriptS3Location(builder.build())
 }
 
+/**
+ * The VPC configuration for the fleet.
+ */
 public inline fun CfnFleet.setVpcConfig(block: CfnFleetVpcConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnFleetVpcConfigPropertyDsl()
   builder.apply(block)
   return setVpcConfig(builder.build())
 }
 
+/**
+ * The icon S3 location of the application.
+ */
 public inline
     fun CfnApplication.setIconS3Location(block: CfnApplicationS3LocationPropertyDsl.() -> Unit =
     {}) {
@@ -85,6 +118,9 @@ public inline
   return setIconS3Location(builder.build())
 }
 
+/**
+ * The persistent application settings for users of the stack.
+ */
 public inline
     fun CfnStack.setApplicationSettings(block: CfnStackApplicationSettingsPropertyDsl.() -> Unit =
     {}) {
@@ -93,6 +129,9 @@ public inline
   return setApplicationSettings(builder.build())
 }
 
+/**
+ * The streaming protocol that you want your stack to prefer.
+ */
 public inline
     fun CfnStack.setStreamingExperienceSettings(block: CfnStackStreamingExperienceSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -101,6 +140,9 @@ public inline
   return setStreamingExperienceSettings(builder.build())
 }
 
+/**
+ * The VPC configuration for the app block builder.
+ */
 public inline
     fun CfnAppBlockBuilder.setVpcConfig(block: CfnAppBlockBuilderVpcConfigPropertyDsl.() -> Unit =
     {}) {
@@ -109,6 +151,10 @@ public inline
   return setVpcConfig(builder.build())
 }
 
+/**
+ * The name of the directory and organizational unit (OU) to use to join the image builder to a
+ * Microsoft Active Directory domain.
+ */
 public inline
     fun CfnImageBuilder.setDomainJoinInfo(block: CfnImageBuilderDomainJoinInfoPropertyDsl.() -> Unit
     = {}) {
@@ -117,6 +163,9 @@ public inline
   return setDomainJoinInfo(builder.build())
 }
 
+/**
+ * The VPC configuration for the image builder.
+ */
 public inline fun CfnImageBuilder.setVpcConfig(block: CfnImageBuilderVpcConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnImageBuilderVpcConfigPropertyDsl()

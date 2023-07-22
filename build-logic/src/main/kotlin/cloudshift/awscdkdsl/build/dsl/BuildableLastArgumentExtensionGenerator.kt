@@ -18,11 +18,11 @@ internal class BuildableLastArgumentExtensionGenerator {
                 cdkClass.publicMemberFunctions.filter { method ->
                     method.parameters.isNotEmpty()
                 }
-                    .mapNotNull {
-                        val lastParam = it.parameters.last()
+                    .mapNotNull { method ->
+                        val lastParam = method.parameters.last()
                         val builderClass = cdkModel.builderClassFor(lastParam.type) ?: return@mapNotNull null
                         if (!builderClass.canInstantiate()) return@mapNotNull null
-                        val funSpec = generateExtensionForBuildableArg(builderClass, cdkClass, it)
+                        val funSpec = generateExtensionForBuildableArg(builderClass, cdkClass, method)
                         ExtensionFunctionSpec(
                             packageName = cdkClass.className.dslClassName().packageName,
                             funSpec = funSpec,
@@ -87,6 +87,8 @@ internal class BuildableLastArgumentExtensionGenerator {
             .addModifiers(KModifier.INLINE)
             .receiver(receiverClass.className)
             .returns(method.returnType)
+
+        method.comment?.let { builder.addKdoc("%L", it)}
 
         val args = mutableListOf<String>()
         method.parameters.dropLast(1)

@@ -9,6 +9,12 @@ import software.amazon.awscdk.services.cloudfront.origins.OriginGroup
 import software.amazon.awscdk.services.cloudfront.origins.S3Origin
 import software.constructs.Construct
 
+/**
+ * The method called when a given Origin is added (for the first time) to a Distribution.
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun OriginGroup.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()
@@ -16,6 +22,12 @@ public inline fun OriginGroup.bind(scope: Construct, block: OriginBindOptionsDsl
   return bind(scope, builder.build())
 }
 
+/**
+ * The method called when a given Origin is added (for the first time) to a Distribution.
+ *
+ * @param scope 
+ * @param options 
+ */
 public inline fun S3Origin.bind(scope: Construct, block: OriginBindOptionsDsl.() -> Unit = {}):
     OriginBindConfig {
   val builder = OriginBindOptionsDsl()

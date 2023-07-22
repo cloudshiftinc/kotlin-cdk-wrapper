@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.fis
 import kotlin.Unit
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 
+/**
+ * The configuration for experiment logging.
+ */
 public inline
     fun CfnExperimentTemplate.setLogConfiguration(block: CfnExperimentTemplateExperimentTemplateLogConfigurationPropertyDsl.() -> Unit
     = {}) {

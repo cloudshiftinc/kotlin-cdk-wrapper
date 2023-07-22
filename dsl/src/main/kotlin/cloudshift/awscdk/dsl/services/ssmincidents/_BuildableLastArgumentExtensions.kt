@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.ssmincidents
 import kotlin.Unit
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * Details used to create an incident when using this response plan.
+ */
 public inline
     fun CfnResponsePlan.setIncidentTemplate(block: CfnResponsePlanIncidentTemplatePropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setIncidentTemplate(builder.build())
 }
 
+/**
+ * The AWS Chatbot chat channel used for collaboration during an incident.
+ */
 public inline
     fun CfnResponsePlan.setChatChannel(block: CfnResponsePlanChatChannelPropertyDsl.() -> Unit =
     {}) {

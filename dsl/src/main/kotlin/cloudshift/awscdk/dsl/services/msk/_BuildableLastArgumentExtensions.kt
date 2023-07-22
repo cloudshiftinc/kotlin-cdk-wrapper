@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.msk.CfnCluster
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 
+/**
+ * Information about the broker nodes in the cluster.
+ */
 public inline
     fun CfnCluster.setBrokerNodeGroupInfo(block: CfnClusterBrokerNodeGroupInfoPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setBrokerNodeGroupInfo(builder.build())
 }
 
+/**
+ * Includes all client authentication related information.
+ */
 public inline
     fun CfnCluster.setClientAuthentication(block: CfnClusterClientAuthenticationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setClientAuthentication(builder.build())
 }
 
+/**
+ * Represents the configuration that you want MSK to use for the cluster.
+ */
 public inline
     fun CfnCluster.setConfigurationInfo(block: CfnClusterConfigurationInfoPropertyDsl.() -> Unit =
     {}) {
@@ -30,6 +39,9 @@ public inline
   return setConfigurationInfo(builder.build())
 }
 
+/**
+ * Includes all encryption-related information.
+ */
 public inline fun CfnCluster.setEncryptionInfo(block: CfnClusterEncryptionInfoPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnClusterEncryptionInfoPropertyDsl()
@@ -37,6 +49,9 @@ public inline fun CfnCluster.setEncryptionInfo(block: CfnClusterEncryptionInfoPr
   return setEncryptionInfo(builder.build())
 }
 
+/**
+ * Logging Info details.
+ */
 public inline fun CfnCluster.setLoggingInfo(block: CfnClusterLoggingInfoPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnClusterLoggingInfoPropertyDsl()
@@ -44,6 +59,9 @@ public inline fun CfnCluster.setLoggingInfo(block: CfnClusterLoggingInfoProperty
   return setLoggingInfo(builder.build())
 }
 
+/**
+ * The settings for open monitoring.
+ */
 public inline fun CfnCluster.setOpenMonitoring(block: CfnClusterOpenMonitoringPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnClusterOpenMonitoringPropertyDsl()
@@ -51,6 +69,9 @@ public inline fun CfnCluster.setOpenMonitoring(block: CfnClusterOpenMonitoringPr
   return setOpenMonitoring(builder.build())
 }
 
+/**
+ *
+ */
 public inline
     fun CfnServerlessCluster.setClientAuthentication(block: CfnServerlessClusterClientAuthenticationPropertyDsl.() -> Unit
     = {}) {

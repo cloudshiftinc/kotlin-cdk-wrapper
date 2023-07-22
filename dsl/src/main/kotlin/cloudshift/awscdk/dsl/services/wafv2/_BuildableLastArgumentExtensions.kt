@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The action to perform if none of the `Rules` contained in the `WebACL` match.
+ */
 public inline fun CfnWebACL.setDefaultAction(block: CfnWebACLDefaultActionPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnWebACLDefaultActionPropertyDsl()
@@ -13,6 +16,9 @@ public inline fun CfnWebACL.setDefaultAction(block: CfnWebACLDefaultActionProper
   return setDefaultAction(builder.build())
 }
 
+/**
+ * Defines and enables Amazon CloudWatch metrics and web request sample collection.
+ */
 public inline
     fun CfnWebACL.setVisibilityConfig(block: CfnWebACLVisibilityConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnWebACLVisibilityConfigPropertyDsl()
@@ -20,6 +26,9 @@ public inline
   return setVisibilityConfig(builder.build())
 }
 
+/**
+ * Specifies custom configurations for the associations between the web ACL and protected resources.
+ */
 public inline
     fun CfnWebACL.setAssociationConfig(block: CfnWebACLAssociationConfigPropertyDsl.() -> Unit =
     {}) {
@@ -28,6 +37,10 @@ public inline
   return setAssociationConfig(builder.build())
 }
 
+/**
+ * Specifies how AWS WAF should handle `CAPTCHA` evaluations for rules that don't have their own
+ * `CaptchaConfig` settings.
+ */
 public inline fun CfnWebACL.setCaptchaConfig(block: CfnWebACLCaptchaConfigPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnWebACLCaptchaConfigPropertyDsl()
@@ -35,6 +48,10 @@ public inline fun CfnWebACL.setCaptchaConfig(block: CfnWebACLCaptchaConfigProper
   return setCaptchaConfig(builder.build())
 }
 
+/**
+ * Specifies how AWS WAF should handle challenge evaluations for rules that don't have their own
+ * `ChallengeConfig` settings.
+ */
 public inline fun CfnWebACL.setChallengeConfig(block: CfnWebACLChallengeConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnWebACLChallengeConfigPropertyDsl()
@@ -42,6 +59,9 @@ public inline fun CfnWebACL.setChallengeConfig(block: CfnWebACLChallengeConfigPr
   return setChallengeConfig(builder.build())
 }
 
+/**
+ * Defines and enables Amazon CloudWatch metrics and web request sample collection.
+ */
 public inline
     fun CfnRuleGroup.setVisibilityConfig(block: CfnRuleGroupVisibilityConfigPropertyDsl.() -> Unit =
     {}) {

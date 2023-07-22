@@ -7,6 +7,9 @@ import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 import software.amazon.awscdk.services.nimblestudio.CfnStudio
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * Configuration of the encryption method that is used for the studio.
+ */
 public inline
     fun CfnStudio.setStudioEncryptionConfiguration(block: CfnStudioStudioEncryptionConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -15,6 +18,9 @@ public inline
   return setStudioEncryptionConfiguration(builder.build())
 }
 
+/**
+ * A configuration for a streaming session.
+ */
 public inline
     fun CfnLaunchProfile.setStreamConfiguration(block: CfnLaunchProfileStreamConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -23,6 +29,9 @@ public inline
   return setStreamConfiguration(builder.build())
 }
 
+/**
+ * The configuration of the studio component, based on component type.
+ */
 public inline
     fun CfnStudioComponent.setConfiguration(block: CfnStudioComponentStudioComponentConfigurationPropertyDsl.() -> Unit
     = {}) {

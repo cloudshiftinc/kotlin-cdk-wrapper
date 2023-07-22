@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.healthlake
 import kotlin.Unit
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
 
+/**
+ *
+ */
 public inline
     fun CfnFHIRDatastore.setIdentityProviderConfiguration(block: CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +16,9 @@ public inline
   return setIdentityProviderConfiguration(builder.build())
 }
 
+/**
+ * The preloaded data configuration for the Data Store.
+ */
 public inline
     fun CfnFHIRDatastore.setPreloadDataConfig(block: CfnFHIRDatastorePreloadDataConfigPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +27,10 @@ public inline
   return setPreloadDataConfig(builder.build())
 }
 
+/**
+ * The server-side encryption key configuration for a customer provided encryption key specified for
+ * creating a Data Store.
+ */
 public inline
     fun CfnFHIRDatastore.setSseConfiguration(block: CfnFHIRDatastoreSseConfigurationPropertyDsl.() -> Unit
     = {}) {

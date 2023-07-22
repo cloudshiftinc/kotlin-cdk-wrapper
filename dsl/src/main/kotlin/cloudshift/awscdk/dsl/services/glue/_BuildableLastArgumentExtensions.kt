@@ -18,6 +18,9 @@ import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 import software.amazon.awscdk.services.glue.CfnTable
 import software.amazon.awscdk.services.glue.CfnTrigger
 
+/**
+ * Specify the `VersionNumber` or the `IsLatest` for setting the checkpoint for the schema.
+ */
 public inline fun CfnSchema.setCheckpointVersion(block: CfnSchemaSchemaVersionPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnSchemaSchemaVersionPropertyDsl()
@@ -25,18 +28,28 @@ public inline fun CfnSchema.setCheckpointVersion(block: CfnSchemaSchemaVersionPr
   return setCheckpointVersion(builder.build())
 }
 
+/**
+ * The registry where a schema is stored.
+ */
 public inline fun CfnSchema.setRegistry(block: CfnSchemaRegistryPropertyDsl.() -> Unit = {}) {
   val builder = CfnSchemaRegistryPropertyDsl()
   builder.apply(block)
   return setRegistry(builder.build())
 }
 
+/**
+ * A collection of targets to crawl.
+ */
 public inline fun CfnCrawler.setTargets(block: CfnCrawlerTargetsPropertyDsl.() -> Unit = {}) {
   val builder = CfnCrawlerTargetsPropertyDsl()
   builder.apply(block)
   return setTargets(builder.build())
 }
 
+/**
+ * A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that
+ * were added since the last crawler run.
+ */
 public inline fun CfnCrawler.setRecrawlPolicy(block: CfnCrawlerRecrawlPolicyPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnCrawlerRecrawlPolicyPropertyDsl()
@@ -44,12 +57,18 @@ public inline fun CfnCrawler.setRecrawlPolicy(block: CfnCrawlerRecrawlPolicyProp
   return setRecrawlPolicy(builder.build())
 }
 
+/**
+ * For scheduled crawlers, the schedule when the crawler runs.
+ */
 public inline fun CfnCrawler.setSchedule(block: CfnCrawlerSchedulePropertyDsl.() -> Unit = {}) {
   val builder = CfnCrawlerSchedulePropertyDsl()
   builder.apply(block)
   return setSchedule(builder.build())
 }
 
+/**
+ * The policy that specifies update and delete behaviors for the crawler.
+ */
 public inline
     fun CfnCrawler.setSchemaChangePolicy(block: CfnCrawlerSchemaChangePolicyPropertyDsl.() -> Unit =
     {}) {
@@ -58,6 +77,10 @@ public inline
   return setSchemaChangePolicy(builder.build())
 }
 
+/**
+ * Batch condition that must be met (specified number of events received or batch time window
+ * expired) before EventBridge event trigger fires.
+ */
 public inline
     fun CfnTrigger.setEventBatchingCondition(block: CfnTriggerEventBatchingConditionPropertyDsl.() -> Unit
     = {}) {
@@ -66,12 +89,18 @@ public inline
   return setEventBatchingCondition(builder.build())
 }
 
+/**
+ * The predicate of this trigger, which defines when it will fire.
+ */
 public inline fun CfnTrigger.setPredicate(block: CfnTriggerPredicatePropertyDsl.() -> Unit = {}) {
   val builder = CfnTriggerPredicatePropertyDsl()
   builder.apply(block)
   return setPredicate(builder.build())
 }
 
+/**
+ * The encryption configuration associated with this security configuration.
+ */
 public inline
     fun CfnSecurityConfiguration.setEncryptionConfiguration(block: CfnSecurityConfigurationEncryptionConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -80,6 +109,9 @@ public inline
   return setEncryptionConfiguration(builder.build())
 }
 
+/**
+ * An object representing an AWS Glue table.
+ */
 public inline
     fun CfnDataQualityRuleset.setTargetTable(block: CfnDataQualityRulesetDataQualityTargetTablePropertyDsl.() -> Unit
     = {}) {
@@ -88,6 +120,9 @@ public inline
   return setTargetTable(builder.build())
 }
 
+/**
+ * A classifier for comma-separated values (CSV).
+ */
 public inline
     fun CfnClassifier.setCsvClassifier(block: CfnClassifierCsvClassifierPropertyDsl.() -> Unit =
     {}) {
@@ -96,6 +131,9 @@ public inline
   return setCsvClassifier(builder.build())
 }
 
+/**
+ * A classifier that uses `grok` .
+ */
 public inline
     fun CfnClassifier.setGrokClassifier(block: CfnClassifierGrokClassifierPropertyDsl.() -> Unit =
     {}) {
@@ -104,6 +142,9 @@ public inline
   return setGrokClassifier(builder.build())
 }
 
+/**
+ * A classifier for JSON content.
+ */
 public inline
     fun CfnClassifier.setJsonClassifier(block: CfnClassifierJsonClassifierPropertyDsl.() -> Unit =
     {}) {
@@ -112,6 +153,9 @@ public inline
   return setJsonClassifier(builder.build())
 }
 
+/**
+ * A classifier for XML content.
+ */
 public inline
     fun CfnClassifier.setXmlClassifier(block: CfnClassifierXMLClassifierPropertyDsl.() -> Unit =
     {}) {
@@ -120,6 +164,9 @@ public inline
   return setXmlClassifier(builder.build())
 }
 
+/**
+ * The metadata for the database.
+ */
 public inline fun CfnDatabase.setDatabaseInput(block: CfnDatabaseDatabaseInputPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnDatabaseDatabaseInputPropertyDsl()
@@ -127,6 +174,9 @@ public inline fun CfnDatabase.setDatabaseInput(block: CfnDatabaseDatabaseInputPr
   return setDatabaseInput(builder.build())
 }
 
+/**
+ * The structure used to create and update a partition.
+ */
 public inline
     fun CfnPartition.setPartitionInput(block: CfnPartitionPartitionInputPropertyDsl.() -> Unit =
     {}) {
@@ -135,6 +185,9 @@ public inline
   return setPartitionInput(builder.build())
 }
 
+/**
+ * Contains configuration information for maintaining Data Catalog security.
+ */
 public inline
     fun CfnDataCatalogEncryptionSettings.setDataCatalogEncryptionSettings(block: CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -143,6 +196,9 @@ public inline
   return setDataCatalogEncryptionSettings(builder.build())
 }
 
+/**
+ * The schema that includes the schema version.
+ */
 public inline fun CfnSchemaVersion.setSchema(block: CfnSchemaVersionSchemaPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnSchemaVersionSchemaPropertyDsl()
@@ -150,18 +206,27 @@ public inline fun CfnSchemaVersion.setSchema(block: CfnSchemaVersionSchemaProper
   return setSchema(builder.build())
 }
 
+/**
+ * The code that executes a job.
+ */
 public inline fun CfnJob.setCommand(block: CfnJobJobCommandPropertyDsl.() -> Unit = {}) {
   val builder = CfnJobJobCommandPropertyDsl()
   builder.apply(block)
   return setCommand(builder.build())
 }
 
+/**
+ * The connections used for this job.
+ */
 public inline fun CfnJob.setConnections(block: CfnJobConnectionsListPropertyDsl.() -> Unit = {}) {
   val builder = CfnJobConnectionsListPropertyDsl()
   builder.apply(block)
   return setConnections(builder.build())
 }
 
+/**
+ * The maximum number of concurrent runs that are allowed for this job.
+ */
 public inline fun CfnJob.setExecutionProperty(block: CfnJobExecutionPropertyPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnJobExecutionPropertyPropertyDsl()
@@ -169,6 +234,9 @@ public inline fun CfnJob.setExecutionProperty(block: CfnJobExecutionPropertyProp
   return setExecutionProperty(builder.build())
 }
 
+/**
+ * Specifies configuration properties of a notification.
+ */
 public inline
     fun CfnJob.setNotificationProperty(block: CfnJobNotificationPropertyPropertyDsl.() -> Unit =
     {}) {
@@ -177,12 +245,18 @@ public inline
   return setNotificationProperty(builder.build())
 }
 
+/**
+ * A structure used to define a table.
+ */
 public inline fun CfnTable.setTableInput(block: CfnTableTableInputPropertyDsl.() -> Unit = {}) {
   val builder = CfnTableTableInputPropertyDsl()
   builder.apply(block)
   return setTableInput(builder.build())
 }
 
+/**
+ * The connection that you want to create.
+ */
 public inline
     fun CfnConnection.setConnectionInput(block: CfnConnectionConnectionInputPropertyDsl.() -> Unit =
     {}) {
@@ -191,6 +265,9 @@ public inline
   return setConnectionInput(builder.build())
 }
 
+/**
+ * A list of AWS Glue table definitions used by the transform.
+ */
 public inline
     fun CfnMLTransform.setInputRecordTables(block: CfnMLTransformInputRecordTablesPropertyDsl.() -> Unit
     = {}) {
@@ -199,6 +276,9 @@ public inline
   return setInputRecordTables(builder.build())
 }
 
+/**
+ * The algorithm-specific parameters that are associated with the machine learning transform.
+ */
 public inline
     fun CfnMLTransform.setTransformParameters(block: CfnMLTransformTransformParametersPropertyDsl.() -> Unit
     = {}) {
@@ -207,6 +287,9 @@ public inline
   return setTransformParameters(builder.build())
 }
 
+/**
+ * The encryption-at-rest settings of the transform that apply to accessing user data.
+ */
 public inline
     fun CfnMLTransform.setTransformEncryption(block: CfnMLTransformTransformEncryptionPropertyDsl.() -> Unit
     = {}) {

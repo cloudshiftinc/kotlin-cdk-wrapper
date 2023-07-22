@@ -17,6 +17,9 @@ import software.amazon.awscdk.services.ses.IReceiptRuleSet
 import software.amazon.awscdk.services.ses.ReceiptRule
 import software.amazon.awscdk.services.ses.ReceiptRuleSet
 
+/**
+ * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
+ */
 public inline
     fun CfnVdmAttributes.setDashboardAttributes(block: CfnVdmAttributesDashboardAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -25,6 +28,9 @@ public inline
   return setDashboardAttributes(builder.build())
 }
 
+/**
+ * Specifies additional settings for your VDM configuration as applicable to the Guardian.
+ */
 public inline
     fun CfnVdmAttributes.setGuardianAttributes(block: CfnVdmAttributesGuardianAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -33,6 +39,9 @@ public inline
   return setGuardianAttributes(builder.build())
 }
 
+/**
+ * The event destination object.
+ */
 public inline
     fun CfnConfigurationSetEventDestination.setEventDestination(block: CfnConfigurationSetEventDestinationEventDestinationPropertyDsl.() -> Unit
     = {}) {
@@ -41,6 +50,12 @@ public inline
   return setEventDestination(builder.build())
 }
 
+/**
+ * Adds an event destination to this configuration set.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun ConfigurationSet.addEventDestination(id: String,
     block: ConfigurationSetEventDestinationOptionsDsl.() -> Unit = {}):
     ConfigurationSetEventDestination {
@@ -49,6 +64,15 @@ public inline fun ConfigurationSet.addEventDestination(id: String,
   return addEventDestination(id, builder.build())
 }
 
+/**
+ * Adds a new receipt rule in this rule set.
+ *
+ * The new rule is added after
+ * the last added rule unless `after` is specified.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun ReceiptRuleSet.addRule(id: String, block: ReceiptRuleOptionsDsl.() -> Unit = {}):
     ReceiptRule {
   val builder = ReceiptRuleOptionsDsl()
@@ -56,6 +80,10 @@ public inline fun ReceiptRuleSet.addRule(id: String, block: ReceiptRuleOptionsDs
   return addRule(id, builder.build())
 }
 
+/**
+ * A data structure that describes the IP address filter to create, which consists of a name, an IP
+ * address range, and whether to allow or block mail from it.
+ */
 public inline fun CfnReceiptFilter.setFilter(block: CfnReceiptFilterFilterPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnReceiptFilterFilterPropertyDsl()
@@ -63,12 +91,18 @@ public inline fun CfnReceiptFilter.setFilter(block: CfnReceiptFilterFilterProper
   return setFilter(builder.build())
 }
 
+/**
+ * The content of the email, composed of a subject line and either an HTML part or a text-only part.
+ */
 public inline fun CfnTemplate.setTemplate(block: CfnTemplateTemplatePropertyDsl.() -> Unit = {}) {
   val builder = CfnTemplateTemplatePropertyDsl()
   builder.apply(block)
   return setTemplate(builder.build())
 }
 
+/**
+ * Used to associate a configuration set with an email identity.
+ */
 public inline
     fun CfnEmailIdentity.setConfigurationSetAttributes(block: CfnEmailIdentityConfigurationSetAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -77,6 +111,9 @@ public inline
   return setConfigurationSetAttributes(builder.build())
 }
 
+/**
+ * An object that contains information about the DKIM attributes for the identity.
+ */
 public inline
     fun CfnEmailIdentity.setDkimAttributes(block: CfnEmailIdentityDkimAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -85,6 +122,11 @@ public inline
   return setDkimAttributes(builder.build())
 }
 
+/**
+ * If your request includes this object, Amazon SES configures the identity to use Bring Your Own
+ * DKIM (BYODKIM) for DKIM authentication purposes, or, configures the key length to be used for [Easy
+ * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
+ */
 public inline
     fun CfnEmailIdentity.setDkimSigningAttributes(block: CfnEmailIdentityDkimSigningAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -93,6 +135,9 @@ public inline
   return setDkimSigningAttributes(builder.build())
 }
 
+/**
+ * Used to enable or disable feedback forwarding for an identity.
+ */
 public inline
     fun CfnEmailIdentity.setFeedbackAttributes(block: CfnEmailIdentityFeedbackAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -101,6 +146,9 @@ public inline
   return setFeedbackAttributes(builder.build())
 }
 
+/**
+ * Used to enable or disable the custom Mail-From domain configuration for an email identity.
+ */
 public inline
     fun CfnEmailIdentity.setMailFromAttributes(block: CfnEmailIdentityMailFromAttributesPropertyDsl.() -> Unit
     = {}) {
@@ -116,12 +164,20 @@ public inline fun IReceiptRuleSet.addRule(arg0: String, block: ReceiptRuleOption
   return addRule(arg0, builder.build())
 }
 
+/**
+ * A data structure that contains the specified rule's name, actions, recipients, domains, enabled
+ * status, scan status, and TLS policy.
+ */
 public inline fun CfnReceiptRule.setRule(block: CfnReceiptRuleRulePropertyDsl.() -> Unit = {}) {
   val builder = CfnReceiptRuleRulePropertyDsl()
   builder.apply(block)
   return setRule(builder.build())
 }
 
+/**
+ * Specifies whether messages that use the configuration set are required to use Transport Layer
+ * Security (TLS).
+ */
 public inline
     fun CfnConfigurationSet.setDeliveryOptions(block: CfnConfigurationSetDeliveryOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -130,6 +186,9 @@ public inline
   return setDeliveryOptions(builder.build())
 }
 
+/**
+ * An object that represents the reputation settings for the configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setReputationOptions(block: CfnConfigurationSetReputationOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -138,6 +197,10 @@ public inline
   return setReputationOptions(builder.build())
 }
 
+/**
+ * An object that defines whether or not Amazon SES can send email that you send using the
+ * configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setSendingOptions(block: CfnConfigurationSetSendingOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -146,6 +209,9 @@ public inline
   return setSendingOptions(builder.build())
 }
 
+/**
+ * An object that contains information about the suppression list preferences for your account.
+ */
 public inline
     fun CfnConfigurationSet.setSuppressionOptions(block: CfnConfigurationSetSuppressionOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -154,6 +220,9 @@ public inline
   return setSuppressionOptions(builder.build())
 }
 
+/**
+ * The name of the custom open and click tracking domain associated with the configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setTrackingOptions(block: CfnConfigurationSetTrackingOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -162,6 +231,9 @@ public inline
   return setTrackingOptions(builder.build())
 }
 
+/**
+ * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
+ */
 public inline
     fun CfnConfigurationSet.setVdmOptions(block: CfnConfigurationSetVdmOptionsPropertyDsl.() -> Unit
     = {}) {

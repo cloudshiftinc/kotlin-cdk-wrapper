@@ -8,6 +8,9 @@ import software.amazon.awscdk.services.omics.CfnReferenceStore
 import software.amazon.awscdk.services.omics.CfnSequenceStore
 import software.amazon.awscdk.services.omics.CfnVariantStore
 
+/**
+ * Server-side encryption (SSE) settings for the store.
+ */
 public inline
     fun CfnReferenceStore.setSseConfig(block: CfnReferenceStoreSseConfigPropertyDsl.() -> Unit =
     {}) {
@@ -16,6 +19,9 @@ public inline
   return setSseConfig(builder.build())
 }
 
+/**
+ * The genome reference for the store's annotations.
+ */
 public inline
     fun CfnAnnotationStore.setReference(block: CfnAnnotationStoreReferenceItemPropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +30,9 @@ public inline
   return setReference(builder.build())
 }
 
+/**
+ * The store's server-side encryption (SSE) settings.
+ */
 public inline
     fun CfnAnnotationStore.setSseConfig(block: CfnAnnotationStoreSseConfigPropertyDsl.() -> Unit =
     {}) {
@@ -32,6 +41,9 @@ public inline
   return setSseConfig(builder.build())
 }
 
+/**
+ * File parsing options for the annotation store.
+ */
 public inline
     fun CfnAnnotationStore.setStoreOptions(block: CfnAnnotationStoreStoreOptionsPropertyDsl.() -> Unit
     = {}) {
@@ -40,6 +52,9 @@ public inline
   return setStoreOptions(builder.build())
 }
 
+/**
+ * Server-side encryption (SSE) settings for the store.
+ */
 public inline
     fun CfnSequenceStore.setSseConfig(block: CfnSequenceStoreSseConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnSequenceStoreSseConfigPropertyDsl()
@@ -47,6 +62,9 @@ public inline
   return setSseConfig(builder.build())
 }
 
+/**
+ * The genome reference for the store's variants.
+ */
 public inline
     fun CfnVariantStore.setReference(block: CfnVariantStoreReferenceItemPropertyDsl.() -> Unit =
     {}) {
@@ -55,6 +73,9 @@ public inline
   return setReference(builder.build())
 }
 
+/**
+ * Server-side encryption (SSE) settings for the store.
+ */
 public inline fun CfnVariantStore.setSseConfig(block: CfnVariantStoreSseConfigPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnVariantStoreSseConfigPropertyDsl()

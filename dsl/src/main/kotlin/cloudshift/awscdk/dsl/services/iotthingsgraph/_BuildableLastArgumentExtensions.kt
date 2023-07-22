@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.iotthingsgraph
 import kotlin.Unit
 import software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate
 
+/**
+ *
+ */
 public inline
     fun CfnFlowTemplate.setDefinition(block: CfnFlowTemplateDefinitionDocumentPropertyDsl.() -> Unit
     = {}) {

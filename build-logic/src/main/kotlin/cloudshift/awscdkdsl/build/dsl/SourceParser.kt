@@ -56,23 +56,18 @@ internal object SourceParser {
     }
 
     private fun convertTypeDeclaration(type: TypeDeclaration<*>): CdkSourceClass {
-        val methods = when (type.name.identifier) {
-            "Builder" -> type.methods.filter {
-                it.isPublic && it.parameters.size == 1 && !it.isStatic && !it.isConstructorDeclaration
-            }
-                .map { method ->
-                    val parameterType = method.parameters.first().type.asString()
-                    val comment = method.comment.getOrNull()
-                        ?.let { convertJavadocComment(it.content) }
-                    CdkSourceMethod(
-                        name = method.name.identifier,
-                        type = parameterType,
-                        comment = comment
-                    )
-                }
-
-            else -> emptyList()
+        val methods = type.methods.filter {
+            it.isPublic && !it.isStatic && !it.isConstructorDeclaration
         }
+            .map { method ->
+                val comment = method.comment.getOrNull()
+                    ?.let { convertJavadocComment(it.content) }
+                CdkSourceMethod(
+                    name = method.name.identifier,
+                    parameterCount = method.parameters.size,
+                    comment = comment
+                )
+            }
 
         val comment = type.comment.getOrNull()
             ?.let { convertJavadocComment(it.content) }

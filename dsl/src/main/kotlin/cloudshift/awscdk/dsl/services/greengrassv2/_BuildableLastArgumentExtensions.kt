@@ -6,6 +6,9 @@ import kotlin.Unit
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * The deployment policies for the deployment.
+ */
 public inline
     fun CfnDeployment.setDeploymentPolicies(block: CfnDeploymentDeploymentPoliciesPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +17,9 @@ public inline
   return setDeploymentPolicies(builder.build())
 }
 
+/**
+ * The job configuration for the deployment configuration.
+ */
 public inline
     fun CfnDeployment.setIotJobConfiguration(block: CfnDeploymentDeploymentIoTJobConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +28,9 @@ public inline
   return setIotJobConfiguration(builder.build())
 }
 
+/**
+ * The parameters to create a component from a Lambda function.
+ */
 public inline
     fun CfnComponentVersion.setLambdaFunction(block: CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl.() -> Unit
     = {}) {

@@ -8,6 +8,9 @@ import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 
+/**
+ * Information about an Amazon S3 bucket to write Run Command task-level logs to.
+ */
 public inline
     fun CfnMaintenanceWindowTask.setLoggingInfo(block: CfnMaintenanceWindowTaskLoggingInfoPropertyDsl.() -> Unit
     = {}) {
@@ -16,6 +19,9 @@ public inline
   return setLoggingInfo(builder.build())
 }
 
+/**
+ * The parameters to pass to the task when it runs.
+ */
 public inline
     fun CfnMaintenanceWindowTask.setTaskInvocationParameters(block: CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl.() -> Unit
     = {}) {
@@ -24,6 +30,9 @@ public inline
   return setTaskInvocationParameters(builder.build())
 }
 
+/**
+ * A set of rules used to include patches in the baseline.
+ */
 public inline
     fun CfnPatchBaseline.setApprovalRules(block: CfnPatchBaselineRuleGroupPropertyDsl.() -> Unit =
     {}) {
@@ -32,6 +41,9 @@ public inline
   return setApprovalRules(builder.build())
 }
 
+/**
+ * A set of global filters used to include patches in the baseline.
+ */
 public inline
     fun CfnPatchBaseline.setGlobalFilters(block: CfnPatchBaselinePatchFilterGroupPropertyDsl.() -> Unit
     = {}) {
@@ -40,6 +52,10 @@ public inline
   return setGlobalFilters(builder.build())
 }
 
+/**
+ * An Amazon Simple Storage Service (Amazon S3) bucket where you want to store the output details of
+ * the request.
+ */
 public inline
     fun CfnAssociation.setOutputLocation(block: CfnAssociationInstanceAssociationOutputLocationPropertyDsl.() -> Unit
     = {}) {
@@ -48,6 +64,9 @@ public inline
   return setOutputLocation(builder.build())
 }
 
+/**
+ * Configuration information for the target S3 bucket.
+ */
 public inline
     fun CfnResourceDataSync.setS3Destination(block: CfnResourceDataSyncS3DestinationPropertyDsl.() -> Unit
     = {}) {
@@ -56,6 +75,9 @@ public inline
   return setS3Destination(builder.build())
 }
 
+/**
+ * Information about the source where the data was synchronized.
+ */
 public inline
     fun CfnResourceDataSync.setSyncSource(block: CfnResourceDataSyncSyncSourcePropertyDsl.() -> Unit
     = {}) {

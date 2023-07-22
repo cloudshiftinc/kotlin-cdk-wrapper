@@ -7,6 +7,10 @@ import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * The traffic filtering behavior of a firewall policy, defined in a collection of stateless and
+ * stateful rule groups and other settings.
+ */
 public inline
     fun CfnFirewallPolicy.setFirewallPolicy(block: CfnFirewallPolicyFirewallPolicyPropertyDsl.() -> Unit
     = {}) {
@@ -15,6 +19,9 @@ public inline
   return setFirewallPolicy(builder.build())
 }
 
+/**
+ * Defines how AWS Network Firewall performs logging for a `Firewall` .
+ */
 public inline
     fun CfnLoggingConfiguration.setLoggingConfiguration(block: CfnLoggingConfigurationLoggingConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -23,6 +30,9 @@ public inline
   return setLoggingConfiguration(builder.build())
 }
 
+/**
+ * An object that defines the rule group rules.
+ */
 public inline fun CfnRuleGroup.setRuleGroup(block: CfnRuleGroupRuleGroupPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnRuleGroupRuleGroupPropertyDsl()

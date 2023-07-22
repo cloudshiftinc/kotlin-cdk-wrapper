@@ -12,6 +12,13 @@ import software.amazon.awscdk.services.lambda.destinations.SnsDestination
 import software.amazon.awscdk.services.lambda.destinations.SqsDestination
 import software.constructs.Construct
 
+/**
+ * Returns a destination configuration.
+ *
+ * @param _scope 
+ * @param fn 
+ * @param _options
+ */
 public inline fun EventBridgeDestination.bind(
   _scope: Construct,
   fn: IFunction,
@@ -22,6 +29,13 @@ public inline fun EventBridgeDestination.bind(
   return bind(_scope, fn, builder.build())
 }
 
+/**
+ * Returns a destination configuration.
+ *
+ * @param _scope 
+ * @param fn 
+ * @param _options
+ */
 public inline fun SqsDestination.bind(
   _scope: Construct,
   fn: IFunction,
@@ -32,6 +46,13 @@ public inline fun SqsDestination.bind(
   return bind(_scope, fn, builder.build())
 }
 
+/**
+ * Returns a destination configuration.
+ *
+ * @param scope 
+ * @param fn 
+ * @param options
+ */
 public inline fun LambdaDestination.bind(
   scope: Construct,
   fn: IFunction,
@@ -42,6 +63,13 @@ public inline fun LambdaDestination.bind(
   return bind(scope, fn, builder.build())
 }
 
+/**
+ * Returns a destination configuration.
+ *
+ * @param _scope 
+ * @param fn 
+ * @param _options
+ */
 public inline fun SnsDestination.bind(
   _scope: Construct,
   fn: IFunction,

@@ -13,12 +13,18 @@ import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
 
+/**
+ * The LoRaWAN information used with a FUOTA task.
+ */
 public inline fun CfnFuotaTask.setLoRaWan(block: CfnFuotaTaskLoRaWANPropertyDsl.() -> Unit = {}) {
   val builder = CfnFuotaTaskLoRaWANPropertyDsl()
   builder.apply(block)
   return setLoRaWan(builder.build())
 }
 
+/**
+ * The gateway configuration information to use to create the wireless gateway.
+ */
 public inline
     fun CfnWirelessGateway.setLoRaWan(block: CfnWirelessGatewayLoRaWANGatewayPropertyDsl.() -> Unit
     = {}) {
@@ -27,6 +33,9 @@ public inline
   return setLoRaWan(builder.build())
 }
 
+/**
+ * The Sidewalk account credentials.
+ */
 public inline
     fun CfnPartnerAccount.setSidewalk(block: CfnPartnerAccountSidewalkAccountInfoPropertyDsl.() -> Unit
     = {}) {
@@ -35,6 +44,9 @@ public inline
   return setSidewalk(builder.build())
 }
 
+/**
+ *
+ */
 public inline
     fun CfnPartnerAccount.setSidewalkResponse(block: CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl.() -> Unit
     = {}) {
@@ -43,6 +55,9 @@ public inline
   return setSidewalkResponse(builder.build())
 }
 
+/**
+ *
+ */
 public inline
     fun CfnPartnerAccount.setSidewalkUpdate(block: CfnPartnerAccountSidewalkUpdateAccountPropertyDsl.() -> Unit
     = {}) {
@@ -51,6 +66,9 @@ public inline
   return setSidewalkUpdate(builder.build())
 }
 
+/**
+ * The Sidewalk-related information of the wireless device import task.
+ */
 public inline
     fun CfnWirelessDeviceImportTask.setSidewalk(block: CfnWirelessDeviceImportTaskSidewalkPropertyDsl.() -> Unit
     = {}) {
@@ -59,6 +77,9 @@ public inline
   return setSidewalk(builder.build())
 }
 
+/**
+ * The LoRaWAN information that is to be used with the multicast group.
+ */
 public inline fun CfnMulticastGroup.setLoRaWan(block: CfnMulticastGroupLoRaWANPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnMulticastGroupLoRaWANPropertyDsl()
@@ -66,6 +87,9 @@ public inline fun CfnMulticastGroup.setLoRaWan(block: CfnMulticastGroupLoRaWANPr
   return setLoRaWan(builder.build())
 }
 
+/**
+ * LoRaWAN service profile object.
+ */
 public inline
     fun CfnServiceProfile.setLoRaWan(block: CfnServiceProfileLoRaWANServiceProfilePropertyDsl.() -> Unit
     = {}) {
@@ -74,6 +98,9 @@ public inline
   return setLoRaWan(builder.build())
 }
 
+/**
+ *
+ */
 public inline
     fun CfnTaskDefinition.setLoRaWanUpdateGatewayTaskEntry(block: CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl.() -> Unit
     = {}) {
@@ -82,6 +109,9 @@ public inline
   return setLoRaWanUpdateGatewayTaskEntry(builder.build())
 }
 
+/**
+ * Information about the gateways to update.
+ */
 public inline
     fun CfnTaskDefinition.setUpdate(block: CfnTaskDefinitionUpdateWirelessGatewayTaskCreatePropertyDsl.() -> Unit
     = {}) {
@@ -90,6 +120,9 @@ public inline
   return setUpdate(builder.build())
 }
 
+/**
+ * The device configuration information to use to create the wireless device.
+ */
 public inline
     fun CfnWirelessDevice.setLoRaWan(block: CfnWirelessDeviceLoRaWANDevicePropertyDsl.() -> Unit =
     {}) {
@@ -98,6 +131,9 @@ public inline
   return setLoRaWan(builder.build())
 }
 
+/**
+ * LoRaWAN device profile object.
+ */
 public inline
     fun CfnDeviceProfile.setLoRaWan(block: CfnDeviceProfileLoRaWANDeviceProfilePropertyDsl.() -> Unit
     = {}) {

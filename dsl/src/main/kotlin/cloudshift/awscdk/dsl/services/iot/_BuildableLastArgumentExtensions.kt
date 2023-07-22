@@ -17,6 +17,9 @@ import software.amazon.awscdk.services.iot.CfnThingType
 import software.amazon.awscdk.services.iot.CfnTopicRule
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestination
 
+/**
+ * Allows you to create the criteria to retry a job.
+ */
 public inline
     fun CfnJobTemplate.setJobExecutionsRetryConfig(block: CfnJobTemplateJobExecutionsRetryConfigPropertyDsl.() -> Unit
     = {}) {
@@ -25,6 +28,9 @@ public inline
   return setJobExecutionsRetryConfig(builder.build())
 }
 
+/**
+ * The rule payload.
+ */
 public inline
     fun CfnTopicRule.setTopicRulePayload(block: CfnTopicRuleTopicRulePayloadPropertyDsl.() -> Unit =
     {}) {
@@ -33,6 +39,9 @@ public inline
   return setTopicRulePayload(builder.build())
 }
 
+/**
+ * Information about the registration configuration.
+ */
 public inline
     fun CfnCACertificate.setRegistrationConfig(block: CfnCACertificateRegistrationConfigPropertyDsl.() -> Unit
     = {}) {
@@ -41,6 +50,9 @@ public inline
   return setRegistrationConfig(builder.build())
 }
 
+/**
+ * The properties of the billing group.
+ */
 public inline
     fun CfnBillingGroup.setBillingGroupProperties(block: CfnBillingGroupBillingGroupPropertiesPropertyDsl.() -> Unit
     = {}) {
@@ -49,6 +61,9 @@ public inline
   return setBillingGroupProperties(builder.build())
 }
 
+/**
+ * Specifies which audit checks are enabled and disabled for this account.
+ */
 public inline
     fun CfnAccountAuditConfiguration.setAuditCheckConfigurations(block: CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl.() -> Unit
     = {}) {
@@ -57,6 +72,9 @@ public inline
   return setAuditCheckConfigurations(builder.build())
 }
 
+/**
+ * Information about the targets to which audit notifications are sent.
+ */
 public inline
     fun CfnAccountAuditConfiguration.setAuditNotificationTargetConfigurations(block: CfnAccountAuditConfigurationAuditNotificationTargetConfigurationsPropertyDsl.() -> Unit
     = {}) {
@@ -65,6 +83,9 @@ public inline
   return setAuditNotificationTargetConfigurations(builder.build())
 }
 
+/**
+ * An object that specifies the authorization service for a domain.
+ */
 public inline
     fun CfnDomainConfiguration.setAuthorizerConfig(block: CfnDomainConfigurationAuthorizerConfigPropertyDsl.() -> Unit
     = {}) {
@@ -73,6 +94,9 @@ public inline
   return setAuthorizerConfig(builder.build())
 }
 
+/**
+ * An object that specifies the TLS configuration for a domain.
+ */
 public inline
     fun CfnDomainConfiguration.setTlsConfig(block: CfnDomainConfigurationTlsConfigPropertyDsl.() -> Unit
     = {}) {
@@ -81,6 +105,9 @@ public inline
   return setTlsConfig(builder.build())
 }
 
+/**
+ * The thing type properties for the thing type to create.
+ */
 public inline
     fun CfnThingType.setThingTypeProperties(block: CfnThingTypeThingTypePropertiesPropertyDsl.() -> Unit
     = {}) {
@@ -89,6 +116,9 @@ public inline
   return setThingTypeProperties(builder.build())
 }
 
+/**
+ * Properties of the HTTP URL.
+ */
 public inline
     fun CfnTopicRuleDestination.setHttpUrlProperties(block: CfnTopicRuleDestinationHttpUrlDestinationSummaryPropertyDsl.() -> Unit
     = {}) {
@@ -97,6 +127,9 @@ public inline
   return setHttpUrlProperties(builder.build())
 }
 
+/**
+ * Properties of the virtual private cloud (VPC) connection.
+ */
 public inline
     fun CfnTopicRuleDestination.setVpcProperties(block: CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl.() -> Unit
     = {}) {
@@ -105,6 +138,9 @@ public inline
   return setVpcProperties(builder.build())
 }
 
+/**
+ * A string that contains up to three key value pairs.
+ */
 public inline fun CfnThing.setAttributePayload(block: CfnThingAttributePayloadPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnThingAttributePayloadPropertyDsl()
@@ -112,6 +148,9 @@ public inline fun CfnThing.setAttributePayload(block: CfnThingAttributePayloadPr
   return setAttributePayload(builder.build())
 }
 
+/**
+ * The type of the aggregation query.
+ */
 public inline
     fun CfnFleetMetric.setAggregationType(block: CfnFleetMetricAggregationTypePropertyDsl.() -> Unit
     = {}) {
@@ -120,6 +159,9 @@ public inline
   return setAggregationType(builder.build())
 }
 
+/**
+ * The set of parameters for this mitigation action.
+ */
 public inline
     fun CfnMitigationAction.setActionParams(block: CfnMitigationActionActionParamsPropertyDsl.() -> Unit
     = {}) {
@@ -128,6 +170,9 @@ public inline
   return setActionParams(builder.build())
 }
 
+/**
+ * Creates a pre-provisioning hook template.
+ */
 public inline
     fun CfnProvisioningTemplate.setPreProvisioningHook(block: CfnProvisioningTemplateProvisioningHookPropertyDsl.() -> Unit
     = {}) {
@@ -136,6 +181,9 @@ public inline
   return setPreProvisioningHook(builder.build())
 }
 
+/**
+ * Thing group properties.
+ */
 public inline
     fun CfnThingGroup.setThingGroupProperties(block: CfnThingGroupThingGroupPropertiesPropertyDsl.() -> Unit
     = {}) {

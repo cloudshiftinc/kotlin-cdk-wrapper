@@ -27,6 +27,12 @@ public inline fun ISecret.addToResourcePolicy(block: PolicyStatementDsl.() -> Un
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Adds a rotation schedule to the secret.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun SecretTargetAttachment.addRotationSchedule(id: String,
     block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
   val builder = RotationScheduleOptionsDsl()
@@ -34,6 +40,16 @@ public inline fun SecretTargetAttachment.addRotationSchedule(id: String,
   return addRotationSchedule(id, builder.build())
 }
 
+/**
+ * Forward any additions to the resource policy to the original secret.
+ *
+ * This is required because a secret can only have a single resource policy.
+ * If we do not forward policy additions, a new policy resource is created using the secret
+ * attachment ARN.
+ * This ends up being rejected by CloudFormation.
+ *
+ * @param statement 
+ */
 public inline fun SecretTargetAttachment.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit =
     {}): AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -41,6 +57,9 @@ public inline fun SecretTargetAttachment.addToResourcePolicy(block: PolicyStatem
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * A structure that specifies how to generate a password to encrypt and store in the secret.
+ */
 public inline
     fun CfnSecret.setGenerateSecretString(block: CfnSecretGenerateSecretStringPropertyDsl.() -> Unit
     = {}) {
@@ -49,6 +68,12 @@ public inline
   return setGenerateSecretString(builder.build())
 }
 
+/**
+ * Adds a rotation schedule to the secret.
+ *
+ * @param id 
+ * @param options 
+ */
 public inline fun Secret.addRotationSchedule(id: String,
     block: RotationScheduleOptionsDsl.() -> Unit = {}): RotationSchedule {
   val builder = RotationScheduleOptionsDsl()
@@ -56,6 +81,15 @@ public inline fun Secret.addRotationSchedule(id: String,
   return addRotationSchedule(id, builder.build())
 }
 
+/**
+ * Adds a statement to the IAM resource policy associated with this secret.
+ *
+ * If this secret was created in this stack, a resource policy will be
+ * automatically created upon the first call to `addToResourcePolicy`. If
+ * the secret is imported, then this is a no-op.
+ *
+ * @param statement 
+ */
 public inline fun Secret.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -63,6 +97,11 @@ public inline fun Secret.addToResourcePolicy(block: PolicyStatementDsl.() -> Uni
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
+ * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+ * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+ */
 public inline
     fun CfnRotationSchedule.setHostedRotationLambda(block: CfnRotationScheduleHostedRotationLambdaPropertyDsl.() -> Unit
     = {}) {
@@ -71,6 +110,9 @@ public inline
   return setHostedRotationLambda(builder.build())
 }
 
+/**
+ * A structure that defines the rotation configuration for this secret.
+ */
 public inline
     fun CfnRotationSchedule.setRotationRules(block: CfnRotationScheduleRotationRulesPropertyDsl.() -> Unit
     = {}) {

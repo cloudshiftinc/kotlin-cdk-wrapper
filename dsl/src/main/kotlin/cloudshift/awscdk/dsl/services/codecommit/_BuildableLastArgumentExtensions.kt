@@ -156,6 +156,13 @@ public inline fun IRepository.onStateChange(arg0: String, block: OnEventOptionsD
   return onStateChange(arg0, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a pull request is merged.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifiyOnPullRequestMerged(
   id: String,
   target: INotificationRuleTarget,
@@ -166,6 +173,12 @@ public inline fun Repository.notifiyOnPullRequestMerged(
   return notifiyOnPullRequestMerged(id, target, builder.build())
 }
 
+/**
+ * Create a trigger to notify another service to run actions on repository events.
+ *
+ * @param arn Arn of the resource that repository events will notify. 
+ * @param options Trigger options to run actions.
+ */
 public inline fun Repository.notify(arn: String, block: RepositoryTriggerOptionsDsl.() -> Unit =
     {}): Repository {
   val builder = RepositoryTriggerOptionsDsl()
@@ -173,6 +186,17 @@ public inline fun Repository.notify(arn: String, block: RepositoryTriggerOptions
   return notify(arn, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule triggered when the project events specified by you are
+ * emitted. Similar to `onEvent` API.
+ *
+ * You can also use the methods to define rules for the specific event emitted.
+ * eg: `notifyOnPullRequstCreated`.
+ *
+ * @param id 
+ * @param target 
+ * @param options 
+ */
 public inline fun Repository.notifyOn(
   id: String,
   target: INotificationRuleTarget,
@@ -183,6 +207,13 @@ public inline fun Repository.notifyOn(
   return notifyOn(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when an approval rule is overridden.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnApprovalRuleOverridden(
   id: String,
   target: INotificationRuleTarget,
@@ -193,6 +224,13 @@ public inline fun Repository.notifyOnApprovalRuleOverridden(
   return notifyOnApprovalRuleOverridden(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when an approval status is changed.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnApprovalStatusChanged(
   id: String,
   target: INotificationRuleTarget,
@@ -203,6 +241,13 @@ public inline fun Repository.notifyOnApprovalStatusChanged(
   return notifyOnApprovalStatusChanged(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a new branch or tag is created.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnBranchOrTagCreated(
   id: String,
   target: INotificationRuleTarget,
@@ -213,6 +258,13 @@ public inline fun Repository.notifyOnBranchOrTagCreated(
   return notifyOnBranchOrTagCreated(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a branch or tag is deleted.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnBranchOrTagDeleted(
   id: String,
   target: INotificationRuleTarget,
@@ -223,6 +275,13 @@ public inline fun Repository.notifyOnBranchOrTagDeleted(
   return notifyOnBranchOrTagDeleted(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a comment is made on a pull request.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnPullRequestComment(
   id: String,
   target: INotificationRuleTarget,
@@ -233,6 +292,13 @@ public inline fun Repository.notifyOnPullRequestComment(
   return notifyOnPullRequestComment(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a pull request is created.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnPullRequestCreated(
   id: String,
   target: INotificationRuleTarget,
@@ -243,6 +309,13 @@ public inline fun Repository.notifyOnPullRequestCreated(
   return notifyOnPullRequestCreated(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule which triggers when a pull request is merged.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Repository.notifyOnPullRequestMerged(
   id: String,
   target: INotificationRuleTarget,
@@ -253,6 +326,12 @@ public inline fun Repository.notifyOnPullRequestMerged(
   return notifyOnPullRequestMerged(id, target, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a comment is made on a commit.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onCommentOnCommit(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -260,6 +339,12 @@ public inline fun Repository.onCommentOnCommit(id: String, block: OnEventOptions
   return onCommentOnCommit(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onCommentOnPullRequest(id: String, block: OnEventOptionsDsl.() -> Unit
     = {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -267,18 +352,39 @@ public inline fun Repository.onCommentOnPullRequest(id: String, block: OnEventOp
   return onCommentOnPullRequest(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onCommit(id: String, block: OnCommitOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCommitOptionsDsl()
   builder.apply(block)
   return onCommit(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers for repository events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
   return onEvent(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a pull request state is changed.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onPullRequestStateChange(id: String,
     block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -286,6 +392,13 @@ public inline fun Repository.onPullRequestStateChange(id: String,
   return onPullRequestStateChange(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a reference is created (i.e. a new branch/tag
+ * is created) to the repository.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onReferenceCreated(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -293,6 +406,13 @@ public inline fun Repository.onReferenceCreated(id: String, block: OnEventOption
   return onReferenceCreated(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a reference is delete (i.e. a branch/tag is
+ * deleted) from the repository.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onReferenceDeleted(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -300,6 +420,13 @@ public inline fun Repository.onReferenceDeleted(id: String, block: OnEventOption
   return onReferenceDeleted(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a reference is updated (i.e. a commit is
+ * pushed to an existing or new branch) from the repository.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onReferenceUpdated(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -307,6 +434,13 @@ public inline fun Repository.onReferenceUpdated(id: String, block: OnEventOption
   return onReferenceUpdated(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers when a "CodeCommit Repository State Change" event
+ * occurs.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Repository.onStateChange(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -314,6 +448,10 @@ public inline fun Repository.onStateChange(id: String, block: OnEventOptionsDsl.
   return onStateChange(id, builder.build())
 }
 
+/**
+ * Information about code to be committed to a repository after it is created in an AWS
+ * CloudFormation stack.
+ */
 public inline fun CfnRepository.setCode(block: CfnRepositoryCodePropertyDsl.() -> Unit = {}) {
   val builder = CfnRepositoryCodePropertyDsl()
   builder.apply(block)

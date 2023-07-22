@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.qldb
 import kotlin.Unit
 import software.amazon.awscdk.services.qldb.CfnStream
 
+/**
+ * The configuration settings of the Kinesis Data Streams destination for your stream request.
+ */
 public inline
     fun CfnStream.setKinesisConfiguration(block: CfnStreamKinesisConfigurationPropertyDsl.() -> Unit
     = {}) {

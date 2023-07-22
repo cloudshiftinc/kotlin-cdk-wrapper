@@ -27,6 +27,20 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalance
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupBase
 
+/**
+ * Perform the given default action on incoming requests.
+ *
+ * This allows full control of the default action of the load balancer,
+ * including Action chaining, fixed responses and redirect responses. See
+ * the `ListenerAction` class for all options.
+ *
+ * It's possible to add routing conditions to the Action added in this way.
+ * At least one Action must be added without conditions (which becomes the
+ * default Action).
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun ApplicationListener.addAction(id: String,
     block: AddApplicationActionPropsDsl.() -> Unit = {}) {
   val builder = AddApplicationActionPropsDsl()
@@ -34,6 +48,19 @@ public inline fun ApplicationListener.addAction(id: String,
   return addAction(id, builder.build())
 }
 
+/**
+ * Load balance incoming requests to the given target groups.
+ *
+ * All target groups will be load balanced to with equal weight and without
+ * stickiness. For a more complex configuration than that, use `addAction()`.
+ *
+ * It's possible to add routing conditions to the TargetGroups added in this
+ * way. At least one TargetGroup must be added without conditions (which will
+ * become the default Action for this listener).
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun ApplicationListener.addTargetGroups(id: String,
     block: AddApplicationTargetGroupsPropsDsl.() -> Unit = {}) {
   val builder = AddApplicationTargetGroupsPropsDsl()
@@ -41,6 +68,22 @@ public inline fun ApplicationListener.addTargetGroups(id: String,
   return addTargetGroups(id, builder.build())
 }
 
+/**
+ * Load balance incoming requests to the given load balancing targets.
+ *
+ * This method implicitly creates an ApplicationTargetGroup for the targets
+ * involved, and a 'forward' action to route traffic to the given TargetGroup.
+ *
+ * If you want more control over the precise setup, create the TargetGroup
+ * and use `addAction` yourself.
+ *
+ * It's possible to add conditions to the targets added in this way. At least
+ * one set of targets must be added without conditions.
+ *
+ * @return The newly created target group
+ * @param id 
+ * @param props 
+ */
 public inline fun ApplicationListener.addTargets(id: String,
     block: AddApplicationTargetsPropsDsl.() -> Unit = {}): ApplicationTargetGroup {
   val builder = AddApplicationTargetsPropsDsl()
@@ -48,6 +91,14 @@ public inline fun ApplicationListener.addTargets(id: String,
   return addTargets(id, builder.build())
 }
 
+/**
+ * Register that a connectable that has been added to this load balancer.
+ *
+ * Don't call this directly. It is called by ApplicationTargetGroup.
+ *
+ * @param connectable 
+ * @param portRange 
+ */
 public inline fun ApplicationListener.registerConnectable(connectable: IConnectable,
     block: PortDsl.() -> Unit = {}) {
   val builder = PortDsl()
@@ -55,6 +106,13 @@ public inline fun ApplicationListener.registerConnectable(connectable: IConnecta
   return registerConnectable(connectable, builder.build())
 }
 
+/**
+ * Add a listener to this load balancer.
+ *
+ * @return The newly created listener
+ * @param id 
+ * @param props 
+ */
 public inline fun NetworkLoadBalancer.addListener(id: String,
     block: BaseNetworkListenerPropsDsl.() -> Unit = {}): NetworkListener {
   val builder = BaseNetworkListenerPropsDsl()
@@ -62,6 +120,15 @@ public inline fun NetworkLoadBalancer.addListener(id: String,
   return addListener(id, builder.build())
 }
 
+/**
+ * (deprecated) Return the given named metric for this Network Load Balancer.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.custom` instead
+ * @param metricName 
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metric(metricName: String, block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -69,6 +136,18 @@ public inline fun NetworkLoadBalancer.metric(metricName: String, block: MetricOp
   return metric(metricName, builder.build())
 }
 
+/**
+ * (deprecated) The total number of concurrent TCP flows (or connections) from clients to targets.
+ *
+ * This metric includes connections in the SYN_SENT and ESTABLISHED states.
+ * TCP connections are not terminated at the load balancer, so a client
+ * opening a TCP connection to a target counts as a single flow.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricActiveFlowCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -76,6 +155,14 @@ public inline fun NetworkLoadBalancer.metricActiveFlowCount(block: MetricOptions
   return metricActiveFlowCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of load balancer capacity units (LCU) used by your load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.activeFlowCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -83,6 +170,15 @@ public inline fun NetworkLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl
   return metricConsumedLCUs(builder.build())
 }
 
+/**
+ * (deprecated) The total number of new TCP flows (or connections) established from clients to
+ * targets in the time period.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.newFlowCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricNewFlowCount(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -90,6 +186,14 @@ public inline fun NetworkLoadBalancer.metricNewFlowCount(block: MetricOptionsDsl
   return metricNewFlowCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of bytes processed by the load balancer, including TCP/IP headers.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.processedBytes` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricProcessedBytes(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -97,6 +201,16 @@ public inline fun NetworkLoadBalancer.metricProcessedBytes(block: MetricOptionsD
   return metricProcessedBytes(builder.build())
 }
 
+/**
+ * (deprecated) The total number of reset (RST) packets sent from a client to a target.
+ *
+ * These resets are generated by the client and forwarded by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpClientResetCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricTcpClientResetCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -104,6 +218,14 @@ public inline fun NetworkLoadBalancer.metricTcpClientResetCount(block: MetricOpt
   return metricTcpClientResetCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of reset (RST) packets generated by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpElbResetCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricTcpElbResetCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -111,6 +233,16 @@ public inline fun NetworkLoadBalancer.metricTcpElbResetCount(block: MetricOption
   return metricTcpElbResetCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of reset (RST) packets sent from a target to a client.
+ *
+ * These resets are generated by the target and forwarded by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `NetworkLoadBalancer.metrics.tcpTargetResetCount` instead
+ * @param props
+ */
 public inline fun NetworkLoadBalancer.metricTcpTargetResetCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -118,6 +250,19 @@ public inline fun NetworkLoadBalancer.metricTcpTargetResetCount(block: MetricOpt
   return metricTcpTargetResetCount(builder.build())
 }
 
+/**
+ * Return the given named metric for this Application Load Balancer Target Group.
+ *
+ * Returns the metric for this target group from the point of view of the first
+ * load balancer load balancing to it. If you have multiple load balancers load
+ * sending traffic to the same target group, you will have to override the dimensions
+ * on this metric.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metric(metricName: String,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -125,6 +270,14 @@ public inline fun ApplicationTargetGroup.metric(metricName: String,
   return metric(metricName, builder.build())
 }
 
+/**
+ * (deprecated) The number of healthy hosts in the target group.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.healthyHostCount` instead
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -132,6 +285,18 @@ public inline fun ApplicationTargetGroup.metricHealthyHostCount(block: MetricOpt
   return metricHealthyHostCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in this
+ * target group.
+ *
+ * This does not include any response codes generated by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.httpCodeTarget` instead
+ * @param code 
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricHttpCodeTarget(code: HttpCodeTarget,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -139,6 +304,14 @@ public inline fun ApplicationTargetGroup.metricHttpCodeTarget(code: HttpCodeTarg
   return metricHttpCodeTarget(code, builder.build())
 }
 
+/**
+ * (deprecated) The number of IPv6 requests received by the target group.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.ipv6RequestCount` instead
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricIpv6RequestCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -146,6 +319,16 @@ public inline fun ApplicationTargetGroup.metricIpv6RequestCount(block: MetricOpt
   return metricIpv6RequestCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of requests processed over IPv4 and IPv6.
+ *
+ * This count includes only the requests with a response generated by a target of the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.requestCount` instead
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricRequestCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -153,6 +336,16 @@ public inline fun ApplicationTargetGroup.metricRequestCount(block: MetricOptions
   return metricRequestCount(builder.build())
 }
 
+/**
+ * (deprecated) The average number of requests received by each target in a target group.
+ *
+ * The only valid statistic is Sum. Note that this represents the average not the sum.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.requestCountPerTarget` instead
+ * @param props
+ */
 public inline
     fun ApplicationTargetGroup.metricRequestCountPerTarget(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -161,6 +354,15 @@ public inline
   return metricRequestCountPerTarget(builder.build())
 }
 
+/**
+ * (deprecated) The number of connections that were not successfully established between the load
+ * balancer and target.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.targetConnectionErrorCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationTargetGroup.metricTargetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
@@ -169,6 +371,15 @@ public inline
   return metricTargetConnectionErrorCount(builder.build())
 }
 
+/**
+ * (deprecated) The time elapsed, in seconds, after the request leaves the load balancer until a
+ * response from the target is received.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.targetResponseTime` instead
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricTargetResponseTime(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -176,6 +387,17 @@ public inline fun ApplicationTargetGroup.metricTargetResponseTime(block: MetricO
   return metricTargetResponseTime(builder.build())
 }
 
+/**
+ * (deprecated) The number of TLS connections initiated by the load balancer that did not establish
+ * a session with the target.
+ *
+ * Possible causes include a mismatch of ciphers or protocols.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.tlsNegotiationErrorCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationTargetGroup.metricTargetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -184,6 +406,14 @@ public inline
   return metricTargetTLSNegotiationErrorCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of unhealthy hosts in the target group.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationTargetGroup.metrics.unhealthyHostCount` instead
+ * @param props
+ */
 public inline fun ApplicationTargetGroup.metricUnhealthyHostCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -191,6 +421,14 @@ public inline fun ApplicationTargetGroup.metricUnhealthyHostCount(block: MetricO
   return metricUnhealthyHostCount(builder.build())
 }
 
+/**
+ * Register a connectable as a member of this target group.
+ *
+ * Don't call this directly. It will be called by load balancing targets.
+ *
+ * @param connectable 
+ * @param portRange
+ */
 public inline fun ApplicationTargetGroup.registerConnectable(connectable: IConnectable,
     block: PortDsl.() -> Unit = {}) {
   val builder = PortDsl()
@@ -198,6 +436,12 @@ public inline fun ApplicationTargetGroup.registerConnectable(connectable: IConne
   return registerConnectable(connectable, builder.build())
 }
 
+/**
+ * Add a new listener to this load balancer.
+ *
+ * @param id 
+ * @param props 
+ */
 public inline fun ApplicationLoadBalancer.addListener(id: String,
     block: BaseApplicationListenerPropsDsl.() -> Unit = {}): ApplicationListener {
   val builder = BaseApplicationListenerPropsDsl()
@@ -205,6 +449,11 @@ public inline fun ApplicationLoadBalancer.addListener(id: String,
   return addListener(id, builder.build())
 }
 
+/**
+ * Add a redirection listener to this load balancer.
+ *
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.addRedirect(block: ApplicationLoadBalancerRedirectConfigDsl.() -> Unit
     = {}): ApplicationListener {
@@ -213,6 +462,15 @@ public inline
   return addRedirect(builder.build())
 }
 
+/**
+ * (deprecated) Return the given named metric for this Application Load Balancer.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.custom` instead
+ * @param metricName 
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metric(metricName: String,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -220,6 +478,15 @@ public inline fun ApplicationLoadBalancer.metric(metricName: String,
   return metric(metricName, builder.build())
 }
 
+/**
+ * (deprecated) The total number of concurrent TCP connections active from clients to the load
+ * balancer and from the load balancer to targets.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.activeConnectionCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricActiveConnectionCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
@@ -228,6 +495,18 @@ public inline
   return metricActiveConnectionCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of TLS connections initiated by the client that did not establish a
+ * session with the load balancer.
+ *
+ * Possible causes include a
+ * mismatch of ciphers or protocols.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.clientTlsNegotiationErrorCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricClientTlsNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -236,6 +515,14 @@ public inline
   return metricClientTlsNegotiationErrorCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of load balancer capacity units (LCU) used by your load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.consumedLCUs` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricConsumedLCUs(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -243,6 +530,18 @@ public inline fun ApplicationLoadBalancer.metricConsumedLCUs(block: MetricOption
   return metricConsumedLCUs(builder.build())
 }
 
+/**
+ * (deprecated) The number of user authentications that could not be completed.
+ *
+ * Because an authenticate action was misconfigured, the load balancer
+ * couldn't establish a connection with the IdP, or the load balancer
+ * couldn't complete the authentication flow due to an internal error.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthError` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricElbAuthError(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -250,6 +549,15 @@ public inline fun ApplicationLoadBalancer.metricElbAuthError(block: MetricOption
   return metricElbAuthError(builder.build())
 }
 
+/**
+ * (deprecated) The number of user authentications that could not be completed because the IdP
+ * denied access to the user or an authorization code was used more than once.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthFailure` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricElbAuthFailure(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -257,6 +565,16 @@ public inline fun ApplicationLoadBalancer.metricElbAuthFailure(block: MetricOpti
   return metricElbAuthFailure(builder.build())
 }
 
+/**
+ * (deprecated) The time elapsed, in milliseconds, to query the IdP for the ID token and user info.
+ *
+ * If one or more of these operations fail, this is the time to failure.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthLatency` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricElbAuthLatency(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -264,6 +582,17 @@ public inline fun ApplicationLoadBalancer.metricElbAuthLatency(block: MetricOpti
   return metricElbAuthLatency(builder.build())
 }
 
+/**
+ * (deprecated) The number of authenticate actions that were successful.
+ *
+ * This metric is incremented at the end of the authentication workflow,
+ * after the load balancer has retrieved the user claims from the IdP.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.elbAuthSuccess` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricElbAuthSuccess(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -271,6 +600,17 @@ public inline fun ApplicationLoadBalancer.metricElbAuthSuccess(block: MetricOpti
   return metricElbAuthSuccess(builder.build())
 }
 
+/**
+ * (deprecated) The number of HTTP 3xx/4xx/5xx codes that originate from the load balancer.
+ *
+ * This does not include any response codes generated by the targets.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeElb` instead
+ * @param code 
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricHttpCodeElb(code: HttpCodeElb,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -278,6 +618,18 @@ public inline fun ApplicationLoadBalancer.metricHttpCodeElb(code: HttpCodeElb,
   return metricHttpCodeElb(code, builder.build())
 }
 
+/**
+ * (deprecated) The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in the
+ * load balancer.
+ *
+ * This does not include any response codes generated by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpCodeTarget` instead
+ * @param code 
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricHttpCodeTarget(code: HttpCodeTarget,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -285,6 +637,14 @@ public inline fun ApplicationLoadBalancer.metricHttpCodeTarget(code: HttpCodeTar
   return metricHttpCodeTarget(code, builder.build())
 }
 
+/**
+ * (deprecated) The number of fixed-response actions that were successful.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpFixedResponseCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricHttpFixedResponseCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
@@ -293,6 +653,14 @@ public inline
   return metricHttpFixedResponseCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of redirect actions that were successful.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectCount` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricHttpRedirectCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -300,6 +668,15 @@ public inline fun ApplicationLoadBalancer.metricHttpRedirectCount(block: MetricO
   return metricHttpRedirectCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of redirect actions that couldn't be completed because the URL in the
+ * response location header is larger than 8K.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.httpRedirectUrlLimitExceededCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricHttpRedirectUrlLimitExceededCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -308,6 +685,14 @@ public inline
   return metricHttpRedirectUrlLimitExceededCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of bytes processed by the load balancer over IPv6.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6ProcessedBytes` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricIpv6ProcessedBytes(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -316,6 +701,14 @@ public inline
   return metricIpv6ProcessedBytes(builder.build())
 }
 
+/**
+ * (deprecated) The number of IPv6 requests received by the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ipv6RequestCount` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricIpv6RequestCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -323,6 +716,15 @@ public inline fun ApplicationLoadBalancer.metricIpv6RequestCount(block: MetricOp
   return metricIpv6RequestCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of new TCP connections established from clients to the load
+ * balancer and from the load balancer to targets.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.newConnectionCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricNewConnectionCount(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -331,6 +733,14 @@ public inline
   return metricNewConnectionCount(builder.build())
 }
 
+/**
+ * (deprecated) The total number of bytes processed by the load balancer over IPv4 and IPv6.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.processedBytes` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricProcessedBytes(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -338,6 +748,15 @@ public inline fun ApplicationLoadBalancer.metricProcessedBytes(block: MetricOpti
   return metricProcessedBytes(builder.build())
 }
 
+/**
+ * (deprecated) The number of connections that were rejected because the load balancer had reached
+ * its maximum number of connections.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.rejectedConnectionCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricRejectedConnectionCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
@@ -346,6 +765,16 @@ public inline
   return metricRejectedConnectionCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of requests processed over IPv4 and IPv6.
+ *
+ * This count includes only the requests with a response generated by a target of the load balancer.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.requestCount` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricRequestCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -353,6 +782,15 @@ public inline fun ApplicationLoadBalancer.metricRequestCount(block: MetricOption
   return metricRequestCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of rules processed by the load balancer given a request rate averaged
+ * over an hour.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.ruleEvaluations` instead
+ * @param props
+ */
 public inline fun ApplicationLoadBalancer.metricRuleEvaluations(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -360,6 +798,15 @@ public inline fun ApplicationLoadBalancer.metricRuleEvaluations(block: MetricOpt
   return metricRuleEvaluations(builder.build())
 }
 
+/**
+ * (deprecated) The number of connections that were not successfully established between the load
+ * balancer and target.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetConnectionErrorCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricTargetConnectionErrorCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -368,6 +815,15 @@ public inline
   return metricTargetConnectionErrorCount(builder.build())
 }
 
+/**
+ * (deprecated) The time elapsed, in seconds, after the request leaves the load balancer until a
+ * response from the target is received.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetResponseTime` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricTargetResponseTime(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
@@ -376,6 +832,17 @@ public inline
   return metricTargetResponseTime(builder.build())
 }
 
+/**
+ * (deprecated) The number of TLS connections initiated by the load balancer that did not establish
+ * a session with the target.
+ *
+ * Possible causes include a mismatch of ciphers or protocols.
+ *
+ * Default: Sum over 5 minutes
+ *
+ * @deprecated Use `ApplicationLoadBalancer.metrics.targetTLSNegotiationErrorCount` instead
+ * @param props
+ */
 public inline
     fun ApplicationLoadBalancer.metricTargetTLSNegotiationErrorCount(block: MetricOptionsDsl.() -> Unit
     = {}): Metric {
@@ -758,18 +1225,36 @@ public inline fun INetworkLoadBalancer.addListener(arg0: String,
   return addListener(arg0, builder.build())
 }
 
+/**
+ * Set/replace the target group's health check.
+ *
+ * @param healthCheck 
+ */
 public inline fun TargetGroupBase.configureHealthCheck(block: HealthCheckDsl.() -> Unit = {}) {
   val builder = HealthCheckDsl()
   builder.apply(block)
   return configureHealthCheck(builder.build())
 }
 
+/**
+ * Health check for the members of this target group.
+ */
 public inline fun TargetGroupBase.setHealthCheck(block: HealthCheckDsl.() -> Unit = {}) {
   val builder = HealthCheckDsl()
   builder.apply(block)
   return setHealthCheck(builder.build())
 }
 
+/**
+ * Perform the given Action on incoming requests.
+ *
+ * This allows full control of the default Action of the load balancer,
+ * including weighted forwarding. See the `NetworkListenerAction` class for
+ * all options.
+ *
+ * @param _id 
+ * @param props 
+ */
 public inline fun NetworkListener.addAction(_id: String, block: AddNetworkActionPropsDsl.() -> Unit
     = {}) {
   val builder = AddNetworkActionPropsDsl()
@@ -777,6 +1262,22 @@ public inline fun NetworkListener.addAction(_id: String, block: AddNetworkAction
   return addAction(_id, builder.build())
 }
 
+/**
+ * Load balance incoming requests to the given load balancing targets.
+ *
+ * This method implicitly creates a NetworkTargetGroup for the targets
+ * involved, and a 'forward' action to route traffic to the given TargetGroup.
+ *
+ * If you want more control over the precise setup, create the TargetGroup
+ * and use `addAction` yourself.
+ *
+ * It's possible to add conditions to the targets added in this way. At least
+ * one set of targets must be added without conditions.
+ *
+ * @return The newly created target group
+ * @param id 
+ * @param props 
+ */
 public inline fun NetworkListener.addTargets(id: String, block: AddNetworkTargetsPropsDsl.() -> Unit
     = {}): NetworkTargetGroup {
   val builder = AddNetworkTargetsPropsDsl()
@@ -784,6 +1285,14 @@ public inline fun NetworkListener.addTargets(id: String, block: AddNetworkTarget
   return addTargets(id, builder.build())
 }
 
+/**
+ * (deprecated) The number of targets that are considered healthy.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
+ * @param props
+ */
 public inline fun NetworkTargetGroup.metricHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -791,6 +1300,14 @@ public inline fun NetworkTargetGroup.metricHealthyHostCount(block: MetricOptions
   return metricHealthyHostCount(builder.build())
 }
 
+/**
+ * (deprecated) The number of targets that are considered unhealthy.
+ *
+ * Default: Average over 5 minutes
+ *
+ * @deprecated Use `NetworkTargetGroup.metrics.healthyHostCount` instead
+ * @param props
+ */
 public inline fun NetworkTargetGroup.metricUnHealthyHostCount(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -798,6 +1315,10 @@ public inline fun NetworkTargetGroup.metricUnHealthyHostCount(block: MetricOptio
   return metricUnHealthyHostCount(builder.build())
 }
 
+/**
+ * [HTTP/HTTPS health checks] The HTTP or gRPC codes to use when checking for a successful response
+ * from a target.
+ */
 public inline fun CfnTargetGroup.setMatcher(block: CfnTargetGroupMatcherPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnTargetGroupMatcherPropertyDsl()

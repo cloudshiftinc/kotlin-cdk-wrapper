@@ -5,6 +5,10 @@ package cloudshift.awscdk.dsl.services.rekognition
 import kotlin.Unit
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 
+/**
+ * The Kinesis video stream that provides the source of the streaming video for an Amazon
+ * Rekognition Video stream processor.
+ */
 public inline
     fun CfnStreamProcessor.setKinesisVideoStream(block: CfnStreamProcessorKinesisVideoStreamPropertyDsl.() -> Unit
     = {}) {
@@ -13,6 +17,9 @@ public inline
   return setKinesisVideoStream(builder.build())
 }
 
+/**
+ * Connected home settings to use on a streaming video.
+ */
 public inline
     fun CfnStreamProcessor.setConnectedHomeSettings(block: CfnStreamProcessorConnectedHomeSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -21,6 +28,9 @@ public inline
   return setConnectedHomeSettings(builder.build())
 }
 
+/**
+ * Allows you to opt in or opt out to share data with Rekognition to improve model performance.
+ */
 public inline
     fun CfnStreamProcessor.setDataSharingPreference(block: CfnStreamProcessorDataSharingPreferencePropertyDsl.() -> Unit
     = {}) {
@@ -29,6 +39,10 @@ public inline
   return setDataSharingPreference(builder.build())
 }
 
+/**
+ * The input parameters used to recognize faces in a streaming video analyzed by an Amazon
+ * Rekognition stream processor.
+ */
 public inline
     fun CfnStreamProcessor.setFaceSearchSettings(block: CfnStreamProcessorFaceSearchSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -37,6 +51,9 @@ public inline
   return setFaceSearchSettings(builder.build())
 }
 
+/**
+ * Amazon Rekognition's Video Stream Processor takes a Kinesis video stream as input.
+ */
 public inline
     fun CfnStreamProcessor.setKinesisDataStream(block: CfnStreamProcessorKinesisDataStreamPropertyDsl.() -> Unit
     = {}) {
@@ -45,6 +62,10 @@ public inline
   return setKinesisDataStream(builder.build())
 }
 
+/**
+ * The Amazon Simple Notification Service topic to which Amazon Rekognition publishes the object
+ * detection results and completion status of a video analysis operation.
+ */
 public inline
     fun CfnStreamProcessor.setNotificationChannel(block: CfnStreamProcessorNotificationChannelPropertyDsl.() -> Unit
     = {}) {
@@ -53,6 +74,10 @@ public inline
   return setNotificationChannel(builder.build())
 }
 
+/**
+ * The Amazon S3 bucket location to which Amazon Rekognition publishes the detailed inference
+ * results of a video analysis operation.
+ */
 public inline
     fun CfnStreamProcessor.setS3Destination(block: CfnStreamProcessorS3DestinationPropertyDsl.() -> Unit
     = {}) {

@@ -6,6 +6,10 @@ import kotlin.Unit
 import software.amazon.awscdk.services.devopsguru.CfnNotificationChannel
 import software.amazon.awscdk.services.devopsguru.CfnResourceCollection
 
+/**
+ * A `NotificationChannelConfig` object that contains information about configured notification
+ * channels.
+ */
 public inline
     fun CfnNotificationChannel.setConfig(block: CfnNotificationChannelNotificationChannelConfigPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +18,10 @@ public inline
   return setConfig(builder.build())
 }
 
+/**
+ * Information about a filter used to specify which AWS resources are analyzed for anomalous
+ * behavior by DevOps Guru.
+ */
 public inline
     fun CfnResourceCollection.setResourceCollectionFilter(block: CfnResourceCollectionResourceCollectionFilterPropertyDsl.() -> Unit
     = {}) {

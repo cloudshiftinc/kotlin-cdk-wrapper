@@ -6,6 +6,10 @@ import kotlin.Unit
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 import software.amazon.awscdk.services.sso.CfnPermissionSet
 
+/**
+ * Specifies the configuration of the AWS managed or customer managed policy that you want to set as
+ * a permissions boundary.
+ */
 public inline
     fun CfnPermissionSet.setPermissionsBoundary(block: CfnPermissionSetPermissionsBoundaryPropertyDsl.() -> Unit
     = {}) {
@@ -14,6 +18,12 @@ public inline
   return setPermissionsBoundary(builder.build())
 }
 
+/**
+ * (deprecated) The InstanceAccessControlAttributeConfiguration property has been deprecated but is
+ * still supported for backwards compatibility purposes.
+ *
+ * @deprecated this property has been deprecated
+ */
 public inline
     fun CfnInstanceAccessControlAttributeConfiguration.setInstanceAccessControlAttributeConfiguration(block: CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl.() -> Unit
     = {}) {

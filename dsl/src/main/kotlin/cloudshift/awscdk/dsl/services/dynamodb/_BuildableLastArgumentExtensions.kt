@@ -14,6 +14,9 @@ import software.amazon.awscdk.services.dynamodb.IScalableTableAttribute
 import software.amazon.awscdk.services.dynamodb.ITable
 import software.amazon.awscdk.services.dynamodb.Table
 
+/**
+ * Specifies the settings to enable server-side encryption.
+ */
 public inline
     fun CfnGlobalTable.setSseSpecification(block: CfnGlobalTableSSESpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -22,6 +25,9 @@ public inline
   return setSseSpecification(builder.build())
 }
 
+/**
+ * Specifies the streams settings on your global table.
+ */
 public inline
     fun CfnGlobalTable.setStreamSpecification(block: CfnGlobalTableStreamSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -30,6 +36,9 @@ public inline
   return setStreamSpecification(builder.build())
 }
 
+/**
+ * Specifies the time to live (TTL) settings for the table.
+ */
 public inline
     fun CfnGlobalTable.setTimeToLiveSpecification(block: CfnGlobalTableTimeToLiveSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -38,6 +47,9 @@ public inline
   return setTimeToLiveSpecification(builder.build())
 }
 
+/**
+ * Specifies an auto scaling policy for write capacity.
+ */
 public inline
     fun CfnGlobalTable.setWriteProvisionedThroughputSettings(block: CfnGlobalTableWriteProvisionedThroughputSettingsPropertyDsl.() -> Unit
     = {}) {
@@ -61,6 +73,11 @@ public inline
   return scaleOnUtilization(builder.build())
 }
 
+/**
+ * Add a global secondary index of table.
+ *
+ * @param props the property of global secondary index. 
+ */
 public inline fun Table.addGlobalSecondaryIndex(block: GlobalSecondaryIndexPropsDsl.() -> Unit =
     {}) {
   val builder = GlobalSecondaryIndexPropsDsl()
@@ -68,12 +85,24 @@ public inline fun Table.addGlobalSecondaryIndex(block: GlobalSecondaryIndexProps
   return addGlobalSecondaryIndex(builder.build())
 }
 
+/**
+ * Add a local secondary index of table.
+ *
+ * @param props the property of local secondary index. 
+ */
 public inline fun Table.addLocalSecondaryIndex(block: LocalSecondaryIndexPropsDsl.() -> Unit = {}) {
   val builder = LocalSecondaryIndexPropsDsl()
   builder.apply(block)
   return addLocalSecondaryIndex(builder.build())
 }
 
+/**
+ * Enable read capacity scaling for the given GSI.
+ *
+ * @return An object to configure additional AutoScaling settings for this attribute
+ * @param indexName 
+ * @param props 
+ */
 public inline fun Table.autoScaleGlobalSecondaryIndexReadCapacity(indexName: String,
     block: EnableScalingPropsDsl.() -> Unit = {}): IScalableTableAttribute {
   val builder = EnableScalingPropsDsl()
@@ -81,6 +110,13 @@ public inline fun Table.autoScaleGlobalSecondaryIndexReadCapacity(indexName: Str
   return autoScaleGlobalSecondaryIndexReadCapacity(indexName, builder.build())
 }
 
+/**
+ * Enable write capacity scaling for the given GSI.
+ *
+ * @return An object to configure additional AutoScaling settings for this attribute
+ * @param indexName 
+ * @param props 
+ */
 public inline fun Table.autoScaleGlobalSecondaryIndexWriteCapacity(indexName: String,
     block: EnableScalingPropsDsl.() -> Unit = {}): IScalableTableAttribute {
   val builder = EnableScalingPropsDsl()
@@ -88,6 +124,12 @@ public inline fun Table.autoScaleGlobalSecondaryIndexWriteCapacity(indexName: St
   return autoScaleGlobalSecondaryIndexWriteCapacity(indexName, builder.build())
 }
 
+/**
+ * Enable read capacity scaling for this table.
+ *
+ * @return An object to configure additional AutoScaling settings
+ * @param props 
+ */
 public inline fun Table.autoScaleReadCapacity(block: EnableScalingPropsDsl.() -> Unit = {}):
     IScalableTableAttribute {
   val builder = EnableScalingPropsDsl()
@@ -95,6 +137,12 @@ public inline fun Table.autoScaleReadCapacity(block: EnableScalingPropsDsl.() ->
   return autoScaleReadCapacity(builder.build())
 }
 
+/**
+ * Enable write capacity scaling for this table.
+ *
+ * @return An object to configure additional AutoScaling settings for this attribute
+ * @param props 
+ */
 public inline fun Table.autoScaleWriteCapacity(block: EnableScalingPropsDsl.() -> Unit = {}):
     IScalableTableAttribute {
   val builder = EnableScalingPropsDsl()
@@ -102,6 +150,15 @@ public inline fun Table.autoScaleWriteCapacity(block: EnableScalingPropsDsl.() -
   return autoScaleWriteCapacity(builder.build())
 }
 
+/**
+ * Return the given named metric for this Table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param metricName 
+ * @param props
+ */
 public inline fun Table.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -109,6 +166,14 @@ public inline fun Table.metric(metricName: String, block: MetricOptionsDsl.() ->
   return metric(metricName, builder.build())
 }
 
+/**
+ * Metric for the conditional check failed requests this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline fun Table.metricConditionalCheckFailedRequests(block: MetricOptionsDsl.() -> Unit =
     {}): Metric {
   val builder = MetricOptionsDsl()
@@ -116,6 +181,14 @@ public inline fun Table.metricConditionalCheckFailedRequests(block: MetricOption
   return metricConditionalCheckFailedRequests(builder.build())
 }
 
+/**
+ * Metric for the consumed read capacity units this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline fun Table.metricConsumedReadCapacityUnits(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -123,6 +196,14 @@ public inline fun Table.metricConsumedReadCapacityUnits(block: MetricOptionsDsl.
   return metricConsumedReadCapacityUnits(builder.build())
 }
 
+/**
+ * Metric for the consumed write capacity units this table.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline fun Table.metricConsumedWriteCapacityUnits(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -130,6 +211,14 @@ public inline fun Table.metricConsumedWriteCapacityUnits(block: MetricOptionsDsl
   return metricConsumedWriteCapacityUnits(builder.build())
 }
 
+/**
+ * Metric for the successful request latency this table.
+ *
+ * By default, the metric will be calculated as an average over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline fun Table.metricSuccessfulRequestLatency(block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -137,6 +226,16 @@ public inline fun Table.metricSuccessfulRequestLatency(block: MetricOptionsDsl.(
   return metricSuccessfulRequestLatency(builder.build())
 }
 
+/**
+ * Metric for the system errors this table.
+ *
+ * This will sum errors across all possible operations.
+ * Note that by default, each individual metric will be calculated as a sum over a period of 5
+ * minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline
     fun Table.metricSystemErrorsForOperations(block: SystemErrorsForOperationsMetricOptionsDsl.() -> Unit
     = {}): IMetric {
@@ -145,12 +244,29 @@ public inline
   return metricSystemErrorsForOperations(builder.build())
 }
 
+/**
+ * (deprecated) How many requests are throttled on this table.
+ *
+ * Default: sum over 5 minutes
+ *
+ * @deprecated Do not use this function. It returns an invalid metric. Use
+ * `metricThrottledRequestsForOperation` instead.
+ * @param props
+ */
 public inline fun Table.metricThrottledRequests(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricThrottledRequests(builder.build())
 }
 
+/**
+ * How many requests are throttled on this table, for the given operation.
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param operation 
+ * @param props
+ */
 public inline fun Table.metricThrottledRequestsForOperation(operation: String,
     block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
@@ -158,6 +274,16 @@ public inline fun Table.metricThrottledRequestsForOperation(operation: String,
   return metricThrottledRequestsForOperation(operation, builder.build())
 }
 
+/**
+ * How many requests are throttled on this table.
+ *
+ * This will sum errors across all possible operations.
+ * Note that by default, each individual metric will be calculated as a sum over a period of 5
+ * minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline
     fun Table.metricThrottledRequestsForOperations(block: OperationsMetricOptionsDsl.() -> Unit =
     {}): IMetric {
@@ -166,12 +292,26 @@ public inline
   return metricThrottledRequestsForOperations(builder.build())
 }
 
+/**
+ * Metric for the user errors.
+ *
+ * Note that this metric reports user errors across all
+ * the tables in the account and region the table resides in.
+ *
+ * By default, the metric will be calculated as a sum over a period of 5 minutes.
+ * You can customize this by using the `statistic` and `period` properties.
+ *
+ * @param props
+ */
 public inline fun Table.metricUserErrors(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricUserErrors(builder.build())
 }
 
+/**
+ * The settings used to enable or disable CloudWatch Contributor Insights for the specified table.
+ */
 public inline
     fun CfnTable.setContributorInsightsSpecification(block: CfnTableContributorInsightsSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -180,6 +320,9 @@ public inline
   return setContributorInsightsSpecification(builder.build())
 }
 
+/**
+ * Specifies the properties of data being imported from the S3 bucket source to the table.
+ */
 public inline
     fun CfnTable.setImportSourceSpecification(block: CfnTableImportSourceSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -188,6 +331,9 @@ public inline
   return setImportSourceSpecification(builder.build())
 }
 
+/**
+ * The Kinesis Data Streams configuration for the specified table.
+ */
 public inline
     fun CfnTable.setKinesisStreamSpecification(block: CfnTableKinesisStreamSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -196,6 +342,9 @@ public inline
   return setKinesisStreamSpecification(builder.build())
 }
 
+/**
+ * The settings used to enable point in time recovery.
+ */
 public inline
     fun CfnTable.setPointInTimeRecoverySpecification(block: CfnTablePointInTimeRecoverySpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -204,6 +353,10 @@ public inline
   return setPointInTimeRecoverySpecification(builder.build())
 }
 
+/**
+ * Throughput for the specified table, which consists of values for `ReadCapacityUnits` and
+ * `WriteCapacityUnits` .
+ */
 public inline
     fun CfnTable.setProvisionedThroughput(block: CfnTableProvisionedThroughputPropertyDsl.() -> Unit
     = {}) {
@@ -212,6 +365,9 @@ public inline
   return setProvisionedThroughput(builder.build())
 }
 
+/**
+ * Specifies the settings to enable server-side encryption.
+ */
 public inline fun CfnTable.setSseSpecification(block: CfnTableSSESpecificationPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnTableSSESpecificationPropertyDsl()
@@ -219,6 +375,9 @@ public inline fun CfnTable.setSseSpecification(block: CfnTableSSESpecificationPr
   return setSseSpecification(builder.build())
 }
 
+/**
+ * The settings for the DynamoDB table stream, which capture changes to items stored in the table.
+ */
 public inline
     fun CfnTable.setStreamSpecification(block: CfnTableStreamSpecificationPropertyDsl.() -> Unit =
     {}) {
@@ -227,6 +386,9 @@ public inline
   return setStreamSpecification(builder.build())
 }
 
+/**
+ * Specifies the Time to Live (TTL) settings for the table.
+ */
 public inline
     fun CfnTable.setTimeToLiveSpecification(block: CfnTableTimeToLiveSpecificationPropertyDsl.() -> Unit
     = {}) {

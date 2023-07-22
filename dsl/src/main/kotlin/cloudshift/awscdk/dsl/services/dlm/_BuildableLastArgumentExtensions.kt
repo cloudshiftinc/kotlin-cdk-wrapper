@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.dlm
 import kotlin.Unit
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * The configuration details of the lifecycle policy.
+ */
 public inline
     fun CfnLifecyclePolicy.setPolicyDetails(block: CfnLifecyclePolicyPolicyDetailsPropertyDsl.() -> Unit
     = {}) {

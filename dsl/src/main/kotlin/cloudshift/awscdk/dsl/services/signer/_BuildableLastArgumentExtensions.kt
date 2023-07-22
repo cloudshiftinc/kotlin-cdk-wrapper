@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.signer
 import kotlin.Unit
 import software.amazon.awscdk.services.signer.CfnSigningProfile
 
+/**
+ * The validity period override for any signature generated using this signing profile.
+ */
 public inline
     fun CfnSigningProfile.setSignatureValidityPeriod(block: CfnSigningProfileSignatureValidityPeriodPropertyDsl.() -> Unit
     = {}) {

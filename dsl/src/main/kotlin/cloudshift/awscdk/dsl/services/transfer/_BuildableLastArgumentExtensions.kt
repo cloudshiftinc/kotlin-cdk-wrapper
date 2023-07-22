@@ -6,12 +6,20 @@ import kotlin.Unit
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnUser
 
+/**
+ * Specifies the full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any
+ * secondary groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon Elastic
+ * File System (Amazon EFS) file systems.
+ */
 public inline fun CfnUser.setPosixProfile(block: CfnUserPosixProfilePropertyDsl.() -> Unit = {}) {
   val builder = CfnUserPosixProfilePropertyDsl()
   builder.apply(block)
   return setPosixProfile(builder.build())
 }
 
+/**
+ * The virtual private cloud (VPC) endpoint settings that are configured for your server.
+ */
 public inline fun CfnServer.setEndpointDetails(block: CfnServerEndpointDetailsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServerEndpointDetailsPropertyDsl()
@@ -19,6 +27,10 @@ public inline fun CfnServer.setEndpointDetails(block: CfnServerEndpointDetailsPr
   return setEndpointDetails(builder.build())
 }
 
+/**
+ * Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or
+ * `API_GATEWAY` .
+ */
 public inline
     fun CfnServer.setIdentityProviderDetails(block: CfnServerIdentityProviderDetailsPropertyDsl.() -> Unit
     = {}) {
@@ -27,6 +39,9 @@ public inline
   return setIdentityProviderDetails(builder.build())
 }
 
+/**
+ * The protocol settings that are configured for your server.
+ */
 public inline fun CfnServer.setProtocolDetails(block: CfnServerProtocolDetailsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServerProtocolDetailsPropertyDsl()
@@ -34,6 +49,10 @@ public inline fun CfnServer.setProtocolDetails(block: CfnServerProtocolDetailsPr
   return setProtocolDetails(builder.build())
 }
 
+/**
+ * Specifies the workflow ID for the workflow to assign and the execution role that's used for
+ * executing the workflow.
+ */
 public inline fun CfnServer.setWorkflowDetails(block: CfnServerWorkflowDetailsPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnServerWorkflowDetailsPropertyDsl()

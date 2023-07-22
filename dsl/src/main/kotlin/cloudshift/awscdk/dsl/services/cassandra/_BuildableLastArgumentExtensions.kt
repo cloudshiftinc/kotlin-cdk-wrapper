@@ -6,6 +6,11 @@ import kotlin.Unit
 import software.amazon.awscdk.services.cassandra.CfnKeyspace
 import software.amazon.awscdk.services.cassandra.CfnTable
 
+/**
+ * Specifies the `ReplicationStrategy` of a keyspace.
+ *
+ * The options are:.
+ */
 public inline
     fun CfnKeyspace.setReplicationSpecification(block: CfnKeyspaceReplicationSpecificationPropertyDsl.() -> Unit
     = {}) {
@@ -14,12 +19,18 @@ public inline
   return setReplicationSpecification(builder.build())
 }
 
+/**
+ * The billing mode for the table, which determines how you'll be charged for reads and writes:.
+ */
 public inline fun CfnTable.setBillingMode(block: CfnTableBillingModePropertyDsl.() -> Unit = {}) {
   val builder = CfnTableBillingModePropertyDsl()
   builder.apply(block)
   return setBillingMode(builder.build())
 }
 
+/**
+ * The encryption at rest options for the table.
+ */
 public inline
     fun CfnTable.setEncryptionSpecification(block: CfnTableEncryptionSpecificationPropertyDsl.() -> Unit
     = {}) {

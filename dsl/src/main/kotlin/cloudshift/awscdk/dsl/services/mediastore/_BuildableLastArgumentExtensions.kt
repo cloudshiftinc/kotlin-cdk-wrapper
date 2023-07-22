@@ -5,6 +5,9 @@ package cloudshift.awscdk.dsl.services.mediastore
 import kotlin.Unit
 import software.amazon.awscdk.services.mediastore.CfnContainer
 
+/**
+ *
+ */
 public inline fun CfnContainer.setMetricPolicy(block: CfnContainerMetricPolicyPropertyDsl.() -> Unit
     = {}) {
   val builder = CfnContainerMetricPolicyPropertyDsl()

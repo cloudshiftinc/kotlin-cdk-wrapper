@@ -36,12 +36,23 @@ public inline fun IBindableBuildImage.bind(
   return bind(arg0, arg1, builder.build())
 }
 
+/**
+ * Add a permission only if there's a policy attached.
+ *
+ * @param statement The permissions statement to add. 
+ */
 public inline fun Project.addToRolePolicy(block: PolicyStatementDsl.() -> Unit = {}) {
   val builder = PolicyStatementDsl()
   builder.apply(block)
   return addToRolePolicy(builder.build())
 }
 
+/**
+ * A callback invoked when the given project is added to a CodePipeline.
+ *
+ * @param _scope the construct the binding is taking place in. 
+ * @param options additional options for the binding. 
+ */
 public inline fun Project.bindToCodePipeline(_scope: Construct,
     block: BindToCodePipelineOptionsDsl.() -> Unit = {}) {
   val builder = BindToCodePipelineOptionsDsl()
@@ -49,6 +60,11 @@ public inline fun Project.bindToCodePipeline(_scope: Construct,
   return bindToCodePipeline(_scope, builder.build())
 }
 
+/**
+ * @return a CloudWatch metric associated with this build project.
+ * @param metricName The name of the metric. 
+ * @param props Customization properties.
+ */
 public inline fun Project.metric(metricName: String, block: MetricOptionsDsl.() -> Unit = {}):
     Metric {
   val builder = MetricOptionsDsl()
@@ -56,30 +72,85 @@ public inline fun Project.metric(metricName: String, block: MetricOptionsDsl.() 
   return metric(metricName, builder.build())
 }
 
+/**
+ * Measures the number of builds triggered.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun Project.metricBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricBuilds(builder.build())
 }
 
+/**
+ * Measures the duration of all builds over time.
+ *
+ * Units: Seconds
+ *
+ * Valid CloudWatch statistics: Average (recommended), Maximum, Minimum
+ *
+ * Default: average over 5 minutes
+ *
+ * @param props
+ */
 public inline fun Project.metricDuration(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricDuration(builder.build())
 }
 
+/**
+ * Measures the number of builds that failed because of client error or because of a timeout.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun Project.metricFailedBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricFailedBuilds(builder.build())
 }
 
+/**
+ * Measures the number of successful builds.
+ *
+ * Units: Count
+ *
+ * Valid CloudWatch statistics: Sum
+ *
+ * Default: sum over 5 minutes
+ *
+ * @param props
+ */
 public inline fun Project.metricSucceededBuilds(block: MetricOptionsDsl.() -> Unit = {}): Metric {
   val builder = MetricOptionsDsl()
   builder.apply(block)
   return metricSucceededBuilds(builder.build())
 }
 
+/**
+ * Defines a CodeStar Notification rule triggered when the project events emitted by you specified,
+ * it very similar to `onEvent` API.
+ *
+ * You can also use the methods `notifyOnBuildSucceeded` and
+ * `notifyOnBuildFailed` to define rules for these specific event emitted.
+ *
+ * @param id 
+ * @param target 
+ * @param options 
+ */
 public inline fun Project.notifyOn(
   id: String,
   target: INotificationRuleTarget,
@@ -90,6 +161,13 @@ public inline fun Project.notifyOn(
   return notifyOn(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar notification rule which triggers when a build fails.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Project.notifyOnBuildFailed(
   id: String,
   target: INotificationRuleTarget,
@@ -100,6 +178,13 @@ public inline fun Project.notifyOnBuildFailed(
   return notifyOnBuildFailed(id, target, builder.build())
 }
 
+/**
+ * Defines a CodeStar notification rule which triggers when a build completes successfully.
+ *
+ * @param id 
+ * @param target 
+ * @param options
+ */
 public inline fun Project.notifyOnBuildSucceeded(
   id: String,
   target: INotificationRuleTarget,
@@ -110,6 +195,15 @@ public inline fun Project.notifyOnBuildSucceeded(
   return notifyOnBuildSucceeded(id, target, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build fails.
+ *
+ * To access fields from the event in the event target input,
+ * use the static fields on the `StateChangeEvent` class.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onBuildFailed(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -117,6 +211,15 @@ public inline fun Project.onBuildFailed(id: String, block: OnEventOptionsDsl.() 
   return onBuildFailed(id, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build starts.
+ *
+ * To access fields from the event in the event target input,
+ * use the static fields on the `StateChangeEvent` class.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onBuildStarted(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -124,6 +227,15 @@ public inline fun Project.onBuildStarted(id: String, block: OnEventOptionsDsl.()
   return onBuildStarted(id, builder.build())
 }
 
+/**
+ * Defines an event rule which triggers when a build completes successfully.
+ *
+ * To access fields from the event in the event target input,
+ * use the static fields on the `StateChangeEvent` class.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onBuildSucceeded(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -131,12 +243,26 @@ public inline fun Project.onBuildSucceeded(id: String, block: OnEventOptionsDsl.
   return onBuildSucceeded(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule triggered when something happens with this project.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnEventOptionsDsl()
   builder.apply(block)
   return onEvent(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule that triggers upon phase change of this build project.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onPhaseChange(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -144,6 +270,34 @@ public inline fun Project.onPhaseChange(id: String, block: OnEventOptionsDsl.() 
   return onPhaseChange(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule triggered when the build project state changes.
+ *
+ * You can filter specific build status events using an event
+ * pattern filter on the `build-status` detail field:
+ *
+ * const rule = project.onStateChange('OnBuildStarted', { target });
+ * rule.addEventPattern({
+ * detail: {
+ * 'build-status': [
+ * "IN_PROGRESS",
+ * "SUCCEEDED",
+ * "FAILED",
+ * "STOPPED"
+ * ]
+ * }
+ * });
+ *
+ * You can also use the methods `onBuildFailed` and `onBuildSucceeded` to define rules for
+ * these specific state changes.
+ *
+ * To access fields from the event in the event target input,
+ * use the static fields on the `StateChangeEvent` class.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html)
+ * @param id 
+ * @param options
+ */
 public inline fun Project.onStateChange(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -157,12 +311,21 @@ public inline fun IBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {
   return validate(builder.build())
 }
 
+/**
+ * `Artifacts` is a property of the
+ * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that specifies output settings for artifacts generated by an AWS CodeBuild build.
+ */
 public inline fun CfnProject.setArtifacts(block: CfnProjectArtifactsPropertyDsl.() -> Unit = {}) {
   val builder = CfnProjectArtifactsPropertyDsl()
   builder.apply(block)
   return setArtifacts(builder.build())
 }
 
+/**
+ * The build environment settings for the project, such as the environment type or the environment
+ * variables to use for the build environment.
+ */
 public inline fun CfnProject.setEnvironment(block: CfnProjectEnvironmentPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnProjectEnvironmentPropertyDsl()
@@ -170,12 +333,18 @@ public inline fun CfnProject.setEnvironment(block: CfnProjectEnvironmentProperty
   return setEnvironment(builder.build())
 }
 
+/**
+ * The source code settings for the project, such as the source code's repository type and location.
+ */
 public inline fun CfnProject.setSource(block: CfnProjectSourcePropertyDsl.() -> Unit = {}) {
   val builder = CfnProjectSourcePropertyDsl()
   builder.apply(block)
   return setSource(builder.build())
 }
 
+/**
+ * A `ProjectBuildBatchConfig` object that defines the batch build options for the project.
+ */
 public inline
     fun CfnProject.setBuildBatchConfig(block: CfnProjectProjectBuildBatchConfigPropertyDsl.() -> Unit
     = {}) {
@@ -184,18 +353,29 @@ public inline
   return setBuildBatchConfig(builder.build())
 }
 
+/**
+ * Settings that AWS CodeBuild uses to store and reuse build dependencies.
+ */
 public inline fun CfnProject.setCache(block: CfnProjectProjectCachePropertyDsl.() -> Unit = {}) {
   val builder = CfnProjectProjectCachePropertyDsl()
   builder.apply(block)
   return setCache(builder.build())
 }
 
+/**
+ * Information about logs for the build project.
+ */
 public inline fun CfnProject.setLogsConfig(block: CfnProjectLogsConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnProjectLogsConfigPropertyDsl()
   builder.apply(block)
   return setLogsConfig(builder.build())
 }
 
+/**
+ * For an existing AWS CodeBuild build project that has its source code stored in a GitHub
+ * repository, enables AWS CodeBuild to begin automatically rebuilding the source code every time a
+ * code change is pushed to the repository.
+ */
 public inline fun CfnProject.setTriggers(block: CfnProjectProjectTriggersPropertyDsl.() -> Unit =
     {}) {
   val builder = CfnProjectProjectTriggersPropertyDsl()
@@ -203,12 +383,20 @@ public inline fun CfnProject.setTriggers(block: CfnProjectProjectTriggersPropert
   return setTriggers(builder.build())
 }
 
+/**
+ * `VpcConfig` specifies settings that enable AWS CodeBuild to access resources in an Amazon VPC.
+ */
 public inline fun CfnProject.setVpcConfig(block: CfnProjectVpcConfigPropertyDsl.() -> Unit = {}) {
   val builder = CfnProjectVpcConfigPropertyDsl()
   builder.apply(block)
   return setVpcConfig(builder.build())
 }
 
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param _env 
+ */
 public inline fun LinuxBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
     List<String> {
   val builder = BuildEnvironmentDsl()
@@ -216,6 +404,9 @@ public inline fun LinuxBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit
   return validate(builder.build())
 }
 
+/**
+ * Information about the destination where the raw data of this `ReportGroup` is exported.
+ */
 public inline
     fun CfnReportGroup.setExportConfig(block: CfnReportGroupReportExportConfigPropertyDsl.() -> Unit
     = {}) {
@@ -224,6 +415,11 @@ public inline
   return setExportConfig(builder.build())
 }
 
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param buildEnvironment 
+ */
 public inline fun WindowsBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
     List<String> {
   val builder = BuildEnvironmentDsl()
@@ -231,6 +427,12 @@ public inline fun WindowsBuildImage.validate(block: BuildEnvironmentDsl.() -> Un
   return validate(builder.build())
 }
 
+/**
+ * Validates by checking the BuildEnvironment computeType as aarch64 images only support
+ * ComputeType.SMALL and ComputeType.LARGE.
+ *
+ * @param buildEnvironment BuildEnvironment. 
+ */
 public inline fun LinuxArmBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
     List<String> {
   val builder = BuildEnvironmentDsl()
@@ -345,6 +547,13 @@ public inline fun IProject.onStateChange(arg0: String, block: OnEventOptionsDsl.
   return onStateChange(arg0, builder.build())
 }
 
+/**
+ * Function that allows the build image access to the construct tree.
+ *
+ * @param scope 
+ * @param project 
+ * @param _options 
+ */
 public inline fun LinuxGpuBuildImage.bind(
   scope: Construct,
   project: IProject,
@@ -355,6 +564,11 @@ public inline fun LinuxGpuBuildImage.bind(
   return bind(scope, project, builder.build())
 }
 
+/**
+ * Allows the image a chance to validate whether the passed configuration is correct.
+ *
+ * @param buildEnvironment 
+ */
 public inline fun LinuxGpuBuildImage.validate(block: BuildEnvironmentDsl.() -> Unit = {}):
     List<String> {
   val builder = BuildEnvironmentDsl()

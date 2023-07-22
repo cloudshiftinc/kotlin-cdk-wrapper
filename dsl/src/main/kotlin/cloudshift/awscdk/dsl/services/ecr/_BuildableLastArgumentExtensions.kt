@@ -49,6 +49,9 @@ public inline fun IRepository.onImageScanCompleted(arg0: String,
   return onImageScanCompleted(arg0, builder.build())
 }
 
+/**
+ * The replication configuration for a registry.
+ */
 public inline
     fun CfnReplicationConfiguration.setReplicationConfiguration(block: CfnReplicationConfigurationReplicationConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -57,6 +60,11 @@ public inline
   return setReplicationConfiguration(builder.build())
 }
 
+/**
+ * Add a policy statement to the repository's resource policy.
+ *
+ * @param statement 
+ */
 public inline fun RepositoryBase.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -64,6 +72,15 @@ public inline fun RepositoryBase.addToResourcePolicy(block: PolicyStatementDsl.(
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * Define a CloudWatch event that triggers when something happens to this repository.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun RepositoryBase.onCloudTrailEvent(id: String, block: OnEventOptionsDsl.() -> Unit =
     {}): Rule {
   val builder = OnEventOptionsDsl()
@@ -71,6 +88,16 @@ public inline fun RepositoryBase.onCloudTrailEvent(id: String, block: OnEventOpt
   return onCloudTrailEvent(id, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this
+ * repository.
+ *
+ * Requires that there exists at least one CloudTrail Trail in your account
+ * that captures the event. This method will not create the Trail.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun RepositoryBase.onCloudTrailImagePushed(id: String,
     block: OnCloudTrailImagePushedOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnCloudTrailImagePushedOptionsDsl()
@@ -78,6 +105,15 @@ public inline fun RepositoryBase.onCloudTrailImagePushed(id: String,
   return onCloudTrailImagePushed(id, builder.build())
 }
 
+/**
+ * Defines a CloudWatch event rule which triggers for repository events.
+ *
+ * Use
+ * `rule.addEventPattern(pattern)` to specify a filter.
+ *
+ * @param id 
+ * @param options
+ */
 public inline fun RepositoryBase.onEvent(id: String, block: OnEventOptionsDsl.() -> Unit = {}):
     Rule {
   val builder = OnEventOptionsDsl()
@@ -85,6 +121,12 @@ public inline fun RepositoryBase.onEvent(id: String, block: OnEventOptionsDsl.()
   return onEvent(id, builder.build())
 }
 
+/**
+ * Defines an AWS CloudWatch event rule that can trigger a target when an image scan is completed.
+ *
+ * @param id The id of the rule. 
+ * @param options Options for adding the rule.
+ */
 public inline fun RepositoryBase.onImageScanCompleted(id: String,
     block: OnImageScanCompletedOptionsDsl.() -> Unit = {}): Rule {
   val builder = OnImageScanCompletedOptionsDsl()
@@ -92,12 +134,29 @@ public inline fun RepositoryBase.onImageScanCompleted(id: String,
   return onImageScanCompleted(id, builder.build())
 }
 
+/**
+ * Add a life cycle rule to the repository.
+ *
+ * Life cycle rules automatically expire images from the repository that match
+ * certain conditions.
+ *
+ * @param rule 
+ */
 public inline fun Repository.addLifecycleRule(block: LifecycleRuleDsl.() -> Unit = {}) {
   val builder = LifecycleRuleDsl()
   builder.apply(block)
   return addLifecycleRule(builder.build())
 }
 
+/**
+ * Add a policy statement to the repository's resource policy.
+ *
+ * While other resources policies in AWS either require or accept a resource section,
+ * Cfn for ECR does not allow us to specify a resource policy.
+ * It will fail if a resource section is present at all.
+ *
+ * @param statement 
+ */
 public inline fun Repository.addToResourcePolicy(block: PolicyStatementDsl.() -> Unit = {}):
     AddToResourcePolicyResult {
   val builder = PolicyStatementDsl()
@@ -105,6 +164,9 @@ public inline fun Repository.addToResourcePolicy(block: PolicyStatementDsl.() ->
   return addToResourcePolicy(builder.build())
 }
 
+/**
+ * The encryption configuration for the repository.
+ */
 public inline
     fun CfnRepository.setEncryptionConfiguration(block: CfnRepositoryEncryptionConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -113,6 +175,9 @@ public inline
   return setEncryptionConfiguration(builder.build())
 }
 
+/**
+ * The image scanning configuration for the repository.
+ */
 public inline
     fun CfnRepository.setImageScanningConfiguration(block: CfnRepositoryImageScanningConfigurationPropertyDsl.() -> Unit
     = {}) {
@@ -121,6 +186,9 @@ public inline
   return setImageScanningConfiguration(builder.build())
 }
 
+/**
+ * Creates or updates a lifecycle policy.
+ */
 public inline
     fun CfnRepository.setLifecyclePolicy(block: CfnRepositoryLifecyclePolicyPropertyDsl.() -> Unit =
     {}) {
