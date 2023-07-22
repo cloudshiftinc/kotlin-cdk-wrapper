@@ -1,3 +1,4 @@
+import cloudshift.awscdkdsl.build.NoLocalChanges
 import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 import de.undercouch.gradle.tasks.download.Download
 
@@ -79,33 +80,21 @@ dependencies {
     ktlint("com.pinterest:ktlint:0.50.0")
 }
 
-val ktlintArgs = setOf( "**/src/**/*.kt",
-    "**.kts",
-    "!build-logic/build/**",
-    "!dsl/src/**/*.kt")
-
 val ktlintFormat = tasks.register<JavaExec>("ktlintFormat") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
     description = "Check Kotlin code style and format"
     classpath = ktlint
     mainClass.set("com.pinterest.ktlint.Main")
     jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
-    args( setOf("--format") + ktlintArgs )
+    args("--format", "**/src/**/*.kt", "**.kts", "!build-logic/build/**", "!dsl/src/**/*.kt")
 }
 
-val ktlintCheck = tasks.register<JavaExec>("ktlintCheck") {
+val noLocalChanges = tasks.register<NoLocalChanges>("noLocalChanges") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
-    description = "Check Kotlin code style"
-    classpath = ktlint
-    mainClass.set("com.pinterest.ktlint.Main")
-    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
-    args(ktlintArgs)
+    onlyIf { System.getenv()["CI"] != null }
+    dependsOn(ktlintFormat)
 }
 
 tasks.named("check") {
-    dependsOn(ktlintCheck)
-}
-
-tasks.named("precommit") {
-    dependsOn(ktlintFormat)
+    dependsOn(noLocalChanges)
 }

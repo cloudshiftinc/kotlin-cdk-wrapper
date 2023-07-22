@@ -43,14 +43,16 @@ internal object SourceParser {
 
     private fun processType(type: TypeDeclaration<*>): List<CdkSourceClass> {
         val list = mutableListOf(convertTypeDeclaration(type))
-        list.addAll(type.members.filterIsInstance<TypeDeclaration<*>>()
-            .filter {
-                !it.name.asString()
-                    .contains("Jsii")
-            }
-            .flatMap {
-                processType(it)
-            })
+        list.addAll(
+            type.members.filterIsInstance<TypeDeclaration<*>>()
+                .filter {
+                    !it.name.asString()
+                        .contains("Jsii")
+                }
+                .flatMap {
+                    processType(it)
+                }
+        )
         return list
     }
 
@@ -64,7 +66,9 @@ internal object SourceParser {
                     val comment = it.comment.getOrNull()
                         ?.let { convertJavadocComment(it.content) }
                     CdkSourceMethod(
-                        name = it.name.identifier, type = type, comment = comment
+                        name = it.name.identifier,
+                        type = type,
+                        comment = comment
                     )
                 }
 
@@ -89,7 +93,8 @@ internal object SourceParser {
             gatherParentNames(names, this)
 
             return ClassName(
-                findCompilationUnit().get().packageDeclaration.get().name.asString(), names
+                findCompilationUnit().get().packageDeclaration.get().name.asString(),
+                names
             )
         }
 
@@ -157,6 +162,11 @@ internal object SourceParser {
     // Java CDK erroneously uses "This parameter is required." seeming randomly
     // remove "@return {@code this}" as that is an artifact of Java builder pattern
     private val javaDocLinesToRemove = setOf(
-        "@return {@code this}", "<ul>", "</ul>", "<blockquote>", "</blockquote>", "@deprecated <ul>"
+        "@return {@code this}",
+        "<ul>",
+        "</ul>",
+        "<blockquote>",
+        "</blockquote>",
+        "@deprecated <ul>"
     )
 }
