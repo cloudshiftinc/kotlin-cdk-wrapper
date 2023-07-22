@@ -10,7 +10,6 @@ import javax.inject.Inject
 abstract class NoLocalChanges
     @Inject
     constructor(private val execOperations: ExecOperations) : DefaultTask() {
-
         @TaskAction
         fun action() {
             val output = ByteArrayOutputStream()
@@ -21,9 +20,7 @@ abstract class NoLocalChanges
             }
             when (result.exitValue) {
                 0 -> logger.lifecycle("No local files have changed")
-                else -> {
-                    throw GradleException("Local files have changed; Possibly missed formatting before commit. Changed files: \n${String(output.toByteArray())}")
-                }
+                else -> throw GradleException("Local files have changed; Possibly missed formatting before commit. Changed files: \n${String(output.toByteArray())}")
             }
         }
     }

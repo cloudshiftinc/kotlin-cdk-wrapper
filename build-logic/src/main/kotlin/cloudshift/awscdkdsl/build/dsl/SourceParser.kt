@@ -106,7 +106,7 @@ internal object SourceParser {
             .dropWhile { it.isBlank() }
             .map { it.trim() }
             .filter { it !in javaDocLinesToRemove }
-            .map { it.replace("This parameter is required.", "") }
+            .map { replaceMap.entries.fold(it) { acc, entry -> acc.replace(entry.key, entry.value) } }
             .map {
                 it.replace(seeAlsoRegex) {
                     val (url, label) = it.destructured
@@ -114,52 +114,42 @@ internal object SourceParser {
                 }
             }
             .map {
-                it.replace("<code>", "`")
-                    .replace("</code>", "`")
-            }
-            .map {
-                it.replace("<strong>", "**")
-                    .replace("</strong>", "**")
-            }
-            .map {
-                it.replace("<em>", "*")
-                    .replace("</em>", "*")
-            }
-            .map {
                 it.replace(aHrefRegex) { "[${it.groupValues[2]}](${it.groupValues[1]})" }
             }
             .map {
-                it.replace("<p>", "")
-            }
-            .map {
-                it.replace("<li>", "* ")
-            }
-            .map { it.replace("</li>", "") }
-            .map {
                 it.replace(linkRegex) { "[${it.groupValues[1]}]" }
             }
-            .map {
-                it.replace("<blockquote>", "")
-            }
-            .map { it.replace("</blockquote>", "") }
-            .map {
-                it.replace("<pre>", "```")
-            }
-            .map { it.replace("</pre>", "```") }
-            .map {
-                it.replace("/*", "/ *")
-            }
-            .map { it.replace("<ul>", "") }
-            .map { it.replace("</ul>", "") }
             .filter { !it.startsWith("Sets the value of ") }
             .joinToString("\n")
     }
 
+    private val replaceMap = mapOf(
+        "<blockquote>" to "",
+        "</blockquote>" to "",
+        "<pre>" to "```",
+        "</pre>" to "```",
+        "<ul>" to "",
+        "</ul>" to "",
+        "<li>" to "* ",
+        "</li>" to "",
+        "<p>" to "",
+        "<strong>" to "**",
+        "</strong>" to "**",
+        "<em>" to "*",
+        "</em>" to "*",
+        "<code>" to "`",
+        "</code>" to "`",
+
+        // Java CDK erroneously uses "This parameter is required." seeming randomly
+        "This parameter is required." to "",
+
+        // do this last
+        "/*" to "/ *"
+    )
     private val seeAlsoRegex = Regex("^@see <a href=\"(.*?)\">(.*?)</a>\$")
     private val aHrefRegex = Regex("<a href=\"(.*?)\">(.*?)</a>")
     private val linkRegex = Regex("\\{@link (.*?)}")
 
-    // Java CDK erroneously uses "This parameter is required." seeming randomly
     // remove "@return {@code this}" as that is an artifact of Java builder pattern
     private val javaDocLinesToRemove = setOf(
         "@return {@code this}",
