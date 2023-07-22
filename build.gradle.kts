@@ -79,18 +79,33 @@ dependencies {
     ktlint("com.pinterest:ktlint:0.50.0")
 }
 
-tasks.register<JavaExec>("ktlintFormat") {
+val ktlintArgs = setOf( "**/src/**/*.kt",
+    "**.kts",
+    "!build-logic/build/**",
+    "!dsl/src/**/*.kt")
+
+val ktlintFormat = tasks.register<JavaExec>("ktlintFormat") {
     group = LifecycleBasePlugin.VERIFICATION_GROUP
     description = "Check Kotlin code style and format"
     classpath = ktlint
     mainClass.set("com.pinterest.ktlint.Main")
     jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
-    args(
-        "--format",
-//        "--log-level=debug",
-        "**/src/**/*.kt",
-        "**.kts",
-        "!build-logic/build/**",
-        "!dsl/src/**/*.kt"
-    )
+    args( setOf("--format") + ktlintArgs )
+}
+
+val ktlintCheck = tasks.register<JavaExec>("ktlintCheck") {
+    group = LifecycleBasePlugin.VERIFICATION_GROUP
+    description = "Check Kotlin code style"
+    classpath = ktlint
+    mainClass.set("com.pinterest.ktlint.Main")
+    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
+    args(ktlintArgs)
+}
+
+tasks.named("check") {
+    dependsOn(ktlintCheck)
+}
+
+tasks.named("precommit") {
+    dependsOn(ktlintFormat)
 }
