@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.signer.CfnSigningProfile
 import software.constructs.Construct
 
+/**
+ * Creates a signing profile.
+ *
+ * A signing profile is a code-signing template that can be used to carry out a pre-defined signing
+ * job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * CfnSigningProfile cfnSigningProfile = CfnSigningProfile.Builder.create(this,
+ * "MyCfnSigningProfile")
+ * .platformId("platformId")
+ * // the properties below are optional
+ * .signatureValidityPeriod(SignatureValidityPeriodProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html)
+ */
 @CdkDslMarker
 public class CfnSigningProfileDsl(
   scope: Construct,

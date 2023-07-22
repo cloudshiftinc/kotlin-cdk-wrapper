@@ -6,6 +6,44 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Specifies that AWS WAF should run a `CAPTCHA` check against the request:.
+ *
+ * * If the request includes a valid, unexpired `CAPTCHA` token, AWS WAF allows the web request
+ * inspection to proceed to the next rule, similar to a `CountAction` .
+ * * If the request doesn't include a valid, unexpired `CAPTCHA` token, AWS WAF discontinues the web
+ * ACL evaluation of the request and blocks it from going to its intended destination.
+ *
+ * AWS WAF generates a response that it sends back to the client, which includes the following:
+ *
+ * * The header `x-amzn-waf-action` with a value of `captcha` .
+ * * The HTTP status code `405 Method Not Allowed` .
+ * * If the request contains an `Accept` header with a value of `text/html` , the response includes
+ * a `CAPTCHA` challenge.
+ *
+ * You can configure the expiration time in the `CaptchaConfig` `ImmunityTimeProperty` setting at
+ * the rule and web ACL level. The rule setting overrides the web ACL setting.
+ *
+ * This action option is available for rules. It isn't available for web ACL default actions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CaptchaActionProperty captchaActionProperty = CaptchaActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-captchaaction.html)
+ */
 @CdkDslMarker
 public class CfnWebACLCaptchaActionPropertyDsl {
   private val cdkBuilder: CfnWebACL.CaptchaActionProperty.Builder =

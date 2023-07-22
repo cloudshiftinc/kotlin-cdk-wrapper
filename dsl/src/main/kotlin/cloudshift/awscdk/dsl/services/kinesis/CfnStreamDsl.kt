@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesis.CfnStream
 import software.constructs.Construct
 
+/**
+ * Creates a Kinesis stream that captures and transports data records that are emitted from data
+ * sources.
+ *
+ * For information about creating streams, see
+ * [CreateStream](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateStream.html) in the
+ * Amazon Kinesis API Reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesis.*;
+ * CfnStream cfnStream = CfnStream.Builder.create(this, "MyCfnStream")
+ * .name("name")
+ * .retentionPeriodHours(123)
+ * .shardCount(123)
+ * .streamEncryption(StreamEncryptionProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .streamModeDetails(StreamModeDetailsProperty.builder()
+ * .streamMode("streamMode")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamDsl(
   scope: Construct,

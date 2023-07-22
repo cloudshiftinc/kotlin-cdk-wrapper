@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 
+/**
+ * `Configurations` is a property of the `AWS::EMR::Cluster` resource that specifies the
+ * configuration of applications on an Amazon EMR cluster.
+ *
+ * Configurations are optional. You can use them to have EMR customize applications and software
+ * bundled with Amazon EMR when a cluster is created. A configuration consists of a classification,
+ * properties, and optional nested configurations. A classification refers to an application-specific
+ * configuration file. Properties are the settings you want to change in that file. For more
+ * information, see [Configuring
+ * Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) .
+ *
+ *
+ * Applies only to Amazon EMR releases 4.0 and later.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ConfigurationProperty configurationProperty_;
+ * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurationProperties(Map.of(
+ * "configurationPropertiesKey", "configurationProperties"))
+ * .configurations(List.of(configurationProperty_))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancegroupconfig-configuration.html)
+ */
 @CdkDslMarker
 public class CfnInstanceGroupConfigConfigurationPropertyDsl {
   private val cdkBuilder: CfnInstanceGroupConfig.ConfigurationProperty.Builder =

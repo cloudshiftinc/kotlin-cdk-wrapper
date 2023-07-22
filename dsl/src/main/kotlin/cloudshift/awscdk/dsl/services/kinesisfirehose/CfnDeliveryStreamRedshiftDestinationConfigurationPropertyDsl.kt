@@ -7,6 +7,100 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `RedshiftDestinationConfiguration` property type specifies an Amazon Redshift cluster to
+ * which Amazon Kinesis Data Firehose (Kinesis Data Firehose) delivers data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * RedshiftDestinationConfigurationProperty redshiftDestinationConfigurationProperty =
+ * RedshiftDestinationConfigurationProperty.builder()
+ * .clusterJdbcurl("clusterJdbcurl")
+ * .copyCommand(CopyCommandProperty.builder()
+ * .dataTableName("dataTableName")
+ * // the properties below are optional
+ * .copyOptions("copyOptions")
+ * .dataTableColumns("dataTableColumns")
+ * .build())
+ * .password("password")
+ * .roleArn("roleArn")
+ * .s3Configuration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * .username("username")
+ * // the properties below are optional
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .processingConfiguration(ProcessingConfigurationProperty.builder()
+ * .enabled(false)
+ * .processors(List.of(ProcessorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .parameters(List.of(ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .build())
+ * .retryOptions(RedshiftRetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build())
+ * .s3BackupConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * .s3BackupMode("s3BackupMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamRedshiftDestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.RedshiftDestinationConfigurationProperty.Builder =

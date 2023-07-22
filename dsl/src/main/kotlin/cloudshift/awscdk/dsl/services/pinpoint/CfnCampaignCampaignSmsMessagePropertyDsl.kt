@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the content and settings for an SMS message that's sent to recipients of a campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CampaignSmsMessageProperty campaignSmsMessageProperty = CampaignSmsMessageProperty.builder()
+ * .body("body")
+ * .entityId("entityId")
+ * .messageType("messageType")
+ * .originationNumber("originationNumber")
+ * .senderId("senderId")
+ * .templateId("templateId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignsmsmessage.html)
+ */
 @CdkDslMarker
 public class CfnCampaignCampaignSmsMessagePropertyDsl {
   private val cdkBuilder: CfnCampaign.CampaignSmsMessageProperty.Builder =

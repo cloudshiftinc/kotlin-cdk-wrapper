@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps
 
+/**
+ * Properties for defining a `CfnByteMatchSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnByteMatchSetProps cfnByteMatchSetProps = CfnByteMatchSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .byteMatchTuples(List.of(ByteMatchTupleProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .positionalConstraint("positionalConstraint")
+ * .textTransformation("textTransformation")
+ * // the properties below are optional
+ * .targetString("targetString")
+ * .targetStringBase64("targetStringBase64")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html)
+ */
 @CdkDslMarker
 public class CfnByteMatchSetPropsDsl {
   private val cdkBuilder: CfnByteMatchSetProps.Builder = CfnByteMatchSetProps.builder()

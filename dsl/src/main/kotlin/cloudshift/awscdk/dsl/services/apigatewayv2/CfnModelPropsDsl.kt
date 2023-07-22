@@ -9,6 +9,28 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.apigatewayv2.CfnModelProps
 
+/**
+ * Properties for defining a `CfnModel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object schema;
+ * CfnModelProps cfnModelProps = CfnModelProps.builder()
+ * .apiId("apiId")
+ * .name("name")
+ * .schema(schema)
+ * // the properties below are optional
+ * .contentType("contentType")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html)
+ */
 @CdkDslMarker
 public class CfnModelPropsDsl {
   private val cdkBuilder: CfnModelProps.Builder = CfnModelProps.builder()

@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.services.location.CfnTrackerConsumer
 import software.constructs.Construct
 
+/**
+ * The `AWS::Location::TrackerConsumer` resource specifies an association between a geofence
+ * collection and a tracker resource.
+ *
+ * The geofence collection is referred to as the *consumer* of the tracker. This allows the tracker
+ * resource to communicate location data to the linked geofence collection.
+ *
+ *
+ * Currently not supported — Cross-account configurations, such as creating associations between a
+ * tracker resource in one account and a geofence collection in another account.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnTrackerConsumer cfnTrackerConsumer = CfnTrackerConsumer.Builder.create(this,
+ * "MyCfnTrackerConsumer")
+ * .consumerArn("consumerArn")
+ * .trackerName("trackerName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-trackerconsumer.html)
+ */
 @CdkDslMarker
 public class CfnTrackerConsumerDsl(
   scope: Construct,

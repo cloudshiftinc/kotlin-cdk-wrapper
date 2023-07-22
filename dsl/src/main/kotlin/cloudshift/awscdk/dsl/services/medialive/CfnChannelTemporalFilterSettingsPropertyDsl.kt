@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings for the temporal filter to apply to the video.
+ *
+ * The parents of this entity are H264FilterSettings, H265FilterSettings, and Mpeg2FilterSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * TemporalFilterSettingsProperty temporalFilterSettingsProperty =
+ * TemporalFilterSettingsProperty.builder()
+ * .postFilterSharpening("postFilterSharpening")
+ * .strength("strength")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-temporalfiltersettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelTemporalFilterSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.TemporalFilterSettingsProperty.Builder =

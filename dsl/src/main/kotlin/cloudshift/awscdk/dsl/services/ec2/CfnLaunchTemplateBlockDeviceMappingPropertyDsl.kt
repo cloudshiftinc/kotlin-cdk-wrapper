@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Information about a block device mapping for an Amazon EC2 launch template.
+ *
+ * `BlockDeviceMapping` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateBlockDeviceMappingPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.BlockDeviceMappingProperty.Builder =

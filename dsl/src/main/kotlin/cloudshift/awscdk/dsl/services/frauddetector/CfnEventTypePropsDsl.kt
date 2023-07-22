@@ -13,6 +13,68 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.frauddetector.CfnEventTypeProps
 
+/**
+ * Properties for defining a `CfnEventType`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnEventTypeProps cfnEventTypeProps = CfnEventTypeProps.builder()
+ * .entityTypes(List.of(EntityTypeProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .description("description")
+ * .inline(false)
+ * .lastUpdatedTime("lastUpdatedTime")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .eventVariables(List.of(EventVariableProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .dataSource("dataSource")
+ * .dataType("dataType")
+ * .defaultValue("defaultValue")
+ * .description("description")
+ * .inline(false)
+ * .lastUpdatedTime("lastUpdatedTime")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableType("variableType")
+ * .build()))
+ * .labels(List.of(LabelProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .description("description")
+ * .inline(false)
+ * .lastUpdatedTime("lastUpdatedTime")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-eventtype.html)
+ */
 @CdkDslMarker
 public class CfnEventTypePropsDsl {
   private val cdkBuilder: CfnEventTypeProps.Builder = CfnEventTypeProps.builder()

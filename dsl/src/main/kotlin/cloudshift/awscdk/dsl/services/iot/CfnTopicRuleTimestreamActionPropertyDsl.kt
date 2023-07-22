@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action that writes records into an Amazon Timestream table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * TimestreamActionProperty timestreamActionProperty = TimestreamActionProperty.builder()
+ * .databaseName("databaseName")
+ * .dimensions(List.of(TimestreamDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .roleArn("roleArn")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .timestamp(TimestreamTimestampProperty.builder()
+ * .unit("unit")
+ * .value("value")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleTimestreamActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.TimestreamActionProperty.Builder =

@@ -8,6 +8,22 @@ import kotlin.String
 import software.amazon.awscdk.services.codestarnotifications.DetailType
 import software.amazon.awscdk.services.codestarnotifications.NotificationRuleOptions
 
+/**
+ * Standard set of options for `notifyOnXxx` codestar notification handler on construct.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * NotificationRuleOptions notificationRuleOptions = NotificationRuleOptions.builder()
+ * .detailType(DetailType.BASIC)
+ * .enabled(false)
+ * .notificationRuleName("notificationRuleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NotificationRuleOptionsDsl {
   private val cdkBuilder: NotificationRuleOptions.Builder = NotificationRuleOptions.builder()

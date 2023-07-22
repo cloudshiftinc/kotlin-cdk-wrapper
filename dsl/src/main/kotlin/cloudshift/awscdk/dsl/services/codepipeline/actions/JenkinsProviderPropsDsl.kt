@@ -7,6 +7,17 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps
 
+/**
+ * Example:
+ *
+ * ```
+ * JenkinsProvider jenkinsProvider = JenkinsProvider.Builder.create(this, "JenkinsProvider")
+ * .providerName("MyJenkinsProvider")
+ * .serverUrl("http://my-jenkins.com:8080")
+ * .version("2")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JenkinsProviderPropsDsl {
   private val cdkBuilder: JenkinsProviderProps.Builder = JenkinsProviderProps.builder()

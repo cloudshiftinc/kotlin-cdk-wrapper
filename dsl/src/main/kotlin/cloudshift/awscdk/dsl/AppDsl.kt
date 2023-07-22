@@ -15,6 +15,42 @@ import software.amazon.awscdk.App
 import software.amazon.awscdk.IPolicyValidationPluginBeta1
 import software.amazon.awscdk.IReusableStackSynthesizer
 
+/**
+ * A construct which represents an entire CDK app. This construct is normally the root of the
+ * construct tree.
+ *
+ * You would normally define an `App` instance in your program's entrypoint,
+ * then define constructs where the app is used as the parent scope.
+ *
+ * After all the child constructs are defined within the app, you should call
+ * `app.synth()` which will emit a "cloud assembly" from this app into the
+ * directory specified by `outdir`. Cloud assemblies includes artifacts such as
+ * CloudFormation templates and assets that are needed to deploy this app into
+ * the AWS cloud.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
+ * .name("foobar.com")
+ * .build();
+ * Service service = namespace.createService("Service", DnsServiceProps.builder()
+ * .name("foo")
+ * .dnsRecordType(DnsRecordType.CNAME)
+ * .dnsTtl(Duration.seconds(30))
+ * .build());
+ * service.registerCnameInstance("CnameInstance", CnameInstanceBaseProps.builder()
+ * .instanceCname("service.pizza")
+ * .build());
+ * app.synth();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cdk/latest/guide/apps.html)
+ */
 @CdkDslMarker
 public class AppDsl {
   private val cdkBuilder: App.Builder = App.Builder.create()

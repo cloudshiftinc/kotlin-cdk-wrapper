@@ -14,6 +14,23 @@ import software.amazon.awscdk.services.globalaccelerator.HealthCheckProtocol
 import software.amazon.awscdk.services.globalaccelerator.IEndpoint
 import software.amazon.awscdk.services.globalaccelerator.PortOverride
 
+/**
+ * Basic options for creating a new EndpointGroup.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer alb;
+ * Listener listener;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * ApplicationLoadBalancerEndpoint.Builder.create(alb)
+ * .weight(128)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EndpointGroupOptionsDsl {
   private val cdkBuilder: EndpointGroupOptions.Builder = EndpointGroupOptions.builder()

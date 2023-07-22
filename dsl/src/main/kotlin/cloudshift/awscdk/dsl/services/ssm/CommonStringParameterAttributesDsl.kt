@@ -7,6 +7,23 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ssm.CommonStringParameterAttributes
 
+/**
+ * Common attributes for string parameters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CommonStringParameterAttributes commonStringParameterAttributes =
+ * CommonStringParameterAttributes.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .simpleName(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonStringParameterAttributesDsl {
   private val cdkBuilder: CommonStringParameterAttributes.Builder =

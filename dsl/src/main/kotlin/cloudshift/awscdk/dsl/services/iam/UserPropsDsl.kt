@@ -12,6 +12,19 @@ import software.amazon.awscdk.services.iam.IGroup
 import software.amazon.awscdk.services.iam.IManagedPolicy
 import software.amazon.awscdk.services.iam.UserProps
 
+/**
+ * Properties for defining an IAM user.
+ *
+ * Example:
+ *
+ * ```
+ * User user = User.Builder.create(this, "MyUser").password(SecretValue.plainText("1234")).build();
+ * Group group = new Group(this, "MyGroup");
+ * Policy policy = new Policy(this, "MyPolicy");
+ * policy.attachToUser(user);
+ * group.attachInlinePolicy(policy);
+ * ```
+ */
 @CdkDslMarker
 public class UserPropsDsl {
   private val cdkBuilder: UserProps.Builder = UserProps.builder()

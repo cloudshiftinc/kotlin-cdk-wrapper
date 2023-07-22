@@ -16,6 +16,38 @@ import software.amazon.awscdk.services.apigateway.MethodLoggingLevel
 import software.amazon.awscdk.services.apigateway.Stage
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * // production stage
+ * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+ * .build())
+ * .build();
+ * Deployment deployment = Deployment.Builder.create(this, "Deployment").api(api).build();
+ * // development stage
+ * LogGroup devLogGroup = new LogGroup(this, "DevLogs");
+ * Stage.Builder.create(this, "dev")
+ * .deployment(deployment)
+ * .accessLogDestination(new LogGroupLogDestination(devLogGroup))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields(JsonWithStandardFieldProps.builder()
+ * .caller(false)
+ * .httpMethod(true)
+ * .ip(true)
+ * .protocol(true)
+ * .requestTime(true)
+ * .resourcePath(true)
+ * .responseLength(true)
+ * .status(true)
+ * .user(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StageDsl(
   scope: Construct,

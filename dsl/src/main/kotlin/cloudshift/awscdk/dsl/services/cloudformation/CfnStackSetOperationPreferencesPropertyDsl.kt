@@ -9,6 +9,33 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudformation.CfnStackSet
 
+/**
+ * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+ *
+ * For more information on maximum concurrent accounts and failure tolerance, see [Stack set
+ * operation
+ * options](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-ops-options)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * OperationPreferencesProperty operationPreferencesProperty =
+ * OperationPreferencesProperty.builder()
+ * .failureToleranceCount(123)
+ * .failureTolerancePercentage(123)
+ * .maxConcurrentCount(123)
+ * .maxConcurrentPercentage(123)
+ * .regionConcurrencyType("regionConcurrencyType")
+ * .regionOrder(List.of("regionOrder"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-operationpreferences.html)
+ */
 @CdkDslMarker
 public class CfnStackSetOperationPreferencesPropertyDsl {
   private val cdkBuilder: CfnStackSet.OperationPreferencesProperty.Builder =

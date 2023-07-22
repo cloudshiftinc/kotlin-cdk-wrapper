@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A container for specifying rule filters.
+ *
+ * The filters determine the subset of objects to which the rule applies. This element is required
+ * only if you specify more than one filter.
+ *
+ * For example:
+ *
+ * * If you specify both a `Prefix` and a `TagFilter` , wrap these filters in an `And` tag.
+ * * If you specify a filter based on multiple tags, wrap the `TagFilter` elements in an `And` tag
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ReplicationRuleAndOperatorProperty replicationRuleAndOperatorProperty =
+ * ReplicationRuleAndOperatorProperty.builder()
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationruleandoperator.html)
+ */
 @CdkDslMarker
 public class CfnBucketReplicationRuleAndOperatorPropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationRuleAndOperatorProperty.Builder =

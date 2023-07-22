@@ -7,6 +7,36 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `SpotProvisioningSpecification` is a subproperty of the `InstanceFleetProvisioningSpecifications`
+ * property type.
+ *
+ * `SpotProvisioningSpecification` determines the launch specification for Spot instances in the
+ * instance fleet, which includes the defined duration and provisioning timeout behavior.
+ *
+ *
+ * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+ * excluding 5.0.x versions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * SpotProvisioningSpecificationProperty spotProvisioningSpecificationProperty =
+ * SpotProvisioningSpecificationProperty.builder()
+ * .timeoutAction("timeoutAction")
+ * .timeoutDurationMinutes(123)
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .blockDurationMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotprovisioningspecification.html)
+ */
 @CdkDslMarker
 public class CfnClusterSpotProvisioningSpecificationPropertyDsl {
   private val cdkBuilder: CfnCluster.SpotProvisioningSpecificationProperty.Builder =

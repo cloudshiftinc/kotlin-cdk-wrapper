@@ -7,6 +7,58 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about one caption to extract from the input.
+ *
+ * The parent of this entity is InputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * CaptionSelectorProperty captionSelectorProperty = CaptionSelectorProperty.builder()
+ * .languageCode("languageCode")
+ * .name("name")
+ * .selectorSettings(CaptionSelectorSettingsProperty.builder()
+ * .ancillarySourceSettings(AncillarySourceSettingsProperty.builder()
+ * .sourceAncillaryChannelNumber(123)
+ * .build())
+ * .aribSourceSettings(AribSourceSettingsProperty.builder().build())
+ * .dvbSubSourceSettings(DvbSubSourceSettingsProperty.builder()
+ * .ocrLanguage("ocrLanguage")
+ * .pid(123)
+ * .build())
+ * .embeddedSourceSettings(EmbeddedSourceSettingsProperty.builder()
+ * .convert608To708("convert608To708")
+ * .scte20Detection("scte20Detection")
+ * .source608ChannelNumber(123)
+ * .source608TrackNumber(123)
+ * .build())
+ * .scte20SourceSettings(Scte20SourceSettingsProperty.builder()
+ * .convert608To708("convert608To708")
+ * .source608ChannelNumber(123)
+ * .build())
+ * .scte27SourceSettings(Scte27SourceSettingsProperty.builder()
+ * .ocrLanguage("ocrLanguage")
+ * .pid(123)
+ * .build())
+ * .teletextSourceSettings(TeletextSourceSettingsProperty.builder()
+ * .outputRectangle(CaptionRectangleProperty.builder()
+ * .height(123)
+ * .leftOffset(123)
+ * .topOffset(123)
+ * .width(123)
+ * .build())
+ * .pageNumber("pageNumber")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionselector.html)
+ */
 @CdkDslMarker
 public class CfnChannelCaptionSelectorPropertyDsl {
   private val cdkBuilder: CfnChannel.CaptionSelectorProperty.Builder =

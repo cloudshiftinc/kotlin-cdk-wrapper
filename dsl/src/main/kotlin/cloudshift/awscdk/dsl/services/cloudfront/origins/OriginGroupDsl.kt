@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.IOrigin
 import software.amazon.awscdk.services.cloudfront.origins.OriginGroup
 
+/**
+ * An Origin that represents a group.
+ *
+ * Consists of a primary Origin,
+ * and a fallback Origin called when the primary returns one of the provided HTTP status codes.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(OriginGroup.Builder.create()
+ * .primaryOrigin(new S3Origin(myBucket))
+ * .fallbackOrigin(new HttpOrigin("www.example.com"))
+ * // optional, defaults to: 500, 502, 503 and 504
+ * .fallbackStatusCodes(List.of(404))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginGroupDsl {
   private val cdkBuilder: OriginGroup.Builder = OriginGroup.Builder.create()

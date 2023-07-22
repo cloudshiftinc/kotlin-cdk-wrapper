@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationEFS` resource creates an endpoint for an Amazon EFS file system.
+ *
+ * AWS DataSync can access this endpoint as a source or destination location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationEFS cfnLocationEFS = CfnLocationEFS.Builder.create(this, "MyCfnLocationEFS")
+ * .ec2Config(Ec2ConfigProperty.builder()
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .subnetArn("subnetArn")
+ * .build())
+ * // the properties below are optional
+ * .accessPointArn("accessPointArn")
+ * .efsFilesystemArn("efsFilesystemArn")
+ * .fileSystemAccessRoleArn("fileSystemAccessRoleArn")
+ * .inTransitEncryption("inTransitEncryption")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html)
+ */
 @CdkDslMarker
 public class CfnLocationEFSDsl(
   scope: Construct,

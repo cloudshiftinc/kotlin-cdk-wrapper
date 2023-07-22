@@ -9,6 +9,31 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.Metric
 import software.amazon.awscdk.services.cloudwatch.Unit
 
+/**
+ * A metric emitted by a service.
+ *
+ * The metric is a combination of a metric identifier (namespace, name and dimensions)
+ * and an aggregation function (statistic, period and unit).
+ *
+ * It also contains metadata which is used only in graphs, such as color and label.
+ * It makes sense to embed this in here, so that compound constructs can attach
+ * that metadata to metrics they expose.
+ *
+ * This class does not represent a resource, so hence is not a construct. Instead,
+ * Metric is an abstraction that makes it easy to specify metrics for use in both
+ * alarms and graphs.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * Metric minuteErrorRate = fn.metricErrors(MetricOptions.builder()
+ * .statistic(Stats.AVERAGE)
+ * .period(Duration.minutes(1))
+ * .label("Lambda failure rate")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class MetricDsl {
   private val cdkBuilder: Metric.Builder = Metric.Builder.create()

@@ -7,6 +7,34 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * The metadata options for the instance.
+ *
+ * For more information, see [Instance metadata and user
+ * data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html) in the *Amazon
+ * EC2 User Guide* .
+ *
+ * `MetadataOptions` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * MetadataOptionsProperty metadataOptionsProperty = MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpProtocolIpv6("httpProtocolIpv6")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .instanceMetadataTags("instanceMetadataTags")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-metadataoptions.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateMetadataOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.MetadataOptionsProperty.Builder =

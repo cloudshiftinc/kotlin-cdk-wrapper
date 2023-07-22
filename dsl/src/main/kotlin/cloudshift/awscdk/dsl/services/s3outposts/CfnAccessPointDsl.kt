@@ -11,6 +11,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnAccessPoint
 import software.constructs.Construct
 
+/**
+ * The AWS::S3Outposts::AccessPoint resource specifies an access point and associates it with the
+ * specified Amazon S3 on Outposts bucket.
+ *
+ * For more information, see [Managing data access with Amazon S3 access
+ * points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points.html) .
+ *
+ *
+ * S3 on Outposts supports only VPC-style access points.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * Object policy;
+ * CfnAccessPoint cfnAccessPoint = CfnAccessPoint.Builder.create(this, "MyCfnAccessPoint")
+ * .bucket("bucket")
+ * .name("name")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .vpcId("vpcId")
+ * .build())
+ * // the properties below are optional
+ * .policy(policy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointDsl(
   scope: Construct,

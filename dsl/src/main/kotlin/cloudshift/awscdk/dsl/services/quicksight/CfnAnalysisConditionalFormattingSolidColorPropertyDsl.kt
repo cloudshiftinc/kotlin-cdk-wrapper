@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * Formatting configuration for solid color.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ConditionalFormattingSolidColorProperty conditionalFormattingSolidColorProperty =
+ * ConditionalFormattingSolidColorProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .color("color")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-conditionalformattingsolidcolor.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisConditionalFormattingSolidColorPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ConditionalFormattingSolidColorProperty.Builder =

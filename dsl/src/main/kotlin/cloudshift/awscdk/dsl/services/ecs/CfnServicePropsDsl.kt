@@ -16,6 +16,112 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 import software.amazon.awscdk.services.ecs.CfnServiceProps
 
+/**
+ * Properties for defining a `CfnService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build()))
+ * .cluster("cluster")
+ * .deploymentConfiguration(DeploymentConfigurationProperty.builder()
+ * .alarms(DeploymentAlarmsProperty.builder()
+ * .alarmNames(List.of("alarmNames"))
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .maximumPercent(123)
+ * .minimumHealthyPercent(123)
+ * .build())
+ * .deploymentController(DeploymentControllerProperty.builder()
+ * .type("type")
+ * .build())
+ * .desiredCount(123)
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriodSeconds(123)
+ * .launchType("launchType")
+ * .loadBalancers(List.of(LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .field("field")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .role("role")
+ * .schedulingStrategy("schedulingStrategy")
+ * .serviceConnectConfiguration(ServiceConnectConfigurationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build())
+ * .namespace("namespace")
+ * .services(List.of(ServiceConnectServiceProperty.builder()
+ * .portName("portName")
+ * // the properties below are optional
+ * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .dnsName("dnsName")
+ * .build()))
+ * .discoveryName("discoveryName")
+ * .ingressPortOverride(123)
+ * .build()))
+ * .build())
+ * .serviceName("serviceName")
+ * .serviceRegistries(List.of(ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskDefinition("taskDefinition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)
+ */
 @CdkDslMarker
 public class CfnServicePropsDsl {
   private val cdkBuilder: CfnServiceProps.Builder = CfnServiceProps.builder()

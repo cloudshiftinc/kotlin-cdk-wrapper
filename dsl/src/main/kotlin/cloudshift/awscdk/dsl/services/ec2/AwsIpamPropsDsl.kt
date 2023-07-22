@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.AwsIpamProps
 
+/**
+ * Configuration for AwsIpam.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.IpAddresses;
+ * CfnIPAMPool pool;
+ * Vpc.Builder.create(this, "TheVPC")
+ * .ipAddresses(IpAddresses.awsIpamAllocation(AwsIpamProps.builder()
+ * .ipv4IpamPoolId(pool.getRef())
+ * .ipv4NetmaskLength(18)
+ * .defaultSubnetIpv4NetmaskLength(24)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsIpamPropsDsl {
   private val cdkBuilder: AwsIpamProps.Builder = AwsIpamProps.builder()

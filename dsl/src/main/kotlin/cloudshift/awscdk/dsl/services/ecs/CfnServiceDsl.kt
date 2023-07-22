@@ -16,6 +16,125 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 import software.constructs.Construct
 
+/**
+ * The `AWS::ECS::Service` resource creates an Amazon Elastic Container Service (Amazon ECS) service
+ * that runs and maintains the requested number of tasks and associated load balancers.
+ *
+ *
+ * The stack update fails if you change any properties that require replacement and at least one
+ * Amazon ECS Service Connect `ServiceConnectService` is configured. This is because AWS CloudFormation
+ * creates the replacement service first, but each `ServiceConnectService` must have a name that is
+ * unique in the namespace. &gt; Starting April 15, 2023, AWS ; will not onboard new customers to
+ * Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options
+ * that offer better price and performance. After April 15, 2023, new customers will not be able to
+ * launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS , or Amazon EC2 .
+ * However, customers who have used Amazon EI at least once during the past 30-day period are
+ * considered current customers and will be able to continue using the service.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build()))
+ * .cluster("cluster")
+ * .deploymentConfiguration(DeploymentConfigurationProperty.builder()
+ * .alarms(DeploymentAlarmsProperty.builder()
+ * .alarmNames(List.of("alarmNames"))
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .maximumPercent(123)
+ * .minimumHealthyPercent(123)
+ * .build())
+ * .deploymentController(DeploymentControllerProperty.builder()
+ * .type("type")
+ * .build())
+ * .desiredCount(123)
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriodSeconds(123)
+ * .launchType("launchType")
+ * .loadBalancers(List.of(LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .field("field")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .role("role")
+ * .schedulingStrategy("schedulingStrategy")
+ * .serviceConnectConfiguration(ServiceConnectConfigurationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build())
+ * .namespace("namespace")
+ * .services(List.of(ServiceConnectServiceProperty.builder()
+ * .portName("portName")
+ * // the properties below are optional
+ * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .dnsName("dnsName")
+ * .build()))
+ * .discoveryName("discoveryName")
+ * .ingressPortOverride(123)
+ * .build()))
+ * .build())
+ * .serviceName("serviceName")
+ * .serviceRegistries(List.of(ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskDefinition("taskDefinition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)
+ */
 @CdkDslMarker
 public class CfnServiceDsl(
   scope: Construct,

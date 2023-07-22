@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 
+/**
+ * Used to associate a configuration set with a dedicated IP pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * DeliveryOptionsProperty deliveryOptionsProperty = DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-deliveryoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetDeliveryOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.DeliveryOptionsProperty.Builder =

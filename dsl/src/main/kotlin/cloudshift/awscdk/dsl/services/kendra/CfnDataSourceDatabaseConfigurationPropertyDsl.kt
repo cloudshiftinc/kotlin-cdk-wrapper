@@ -7,6 +7,54 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to a index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * DatabaseConfigurationProperty databaseConfigurationProperty =
+ * DatabaseConfigurationProperty.builder()
+ * .columnConfiguration(ColumnConfigurationProperty.builder()
+ * .changeDetectingColumns(List.of("changeDetectingColumns"))
+ * .documentDataColumnName("documentDataColumnName")
+ * .documentIdColumnName("documentIdColumnName")
+ * // the properties below are optional
+ * .documentTitleColumnName("documentTitleColumnName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .connectionConfiguration(ConnectionConfigurationProperty.builder()
+ * .databaseHost("databaseHost")
+ * .databaseName("databaseName")
+ * .databasePort(123)
+ * .secretArn("secretArn")
+ * .tableName("tableName")
+ * .build())
+ * .databaseEngineType("databaseEngineType")
+ * // the properties below are optional
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .allowedGroupsColumnName("allowedGroupsColumnName")
+ * .build())
+ * .sqlConfiguration(SqlConfigurationProperty.builder()
+ * .queryIdentifiersEnclosingOption("queryIdentifiersEnclosingOption")
+ * .build())
+ * .vpcConfiguration(DataSourceVpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-databaseconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceDatabaseConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.DatabaseConfigurationProperty.Builder =

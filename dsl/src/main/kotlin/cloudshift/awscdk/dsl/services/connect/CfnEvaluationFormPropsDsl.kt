@@ -14,6 +14,97 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 import software.amazon.awscdk.services.connect.CfnEvaluationFormProps
 
+/**
+ * Properties for defining a `CfnEvaluationForm`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormSectionProperty evaluationFormSectionProperty_;
+ * CfnEvaluationFormProps cfnEvaluationFormProps = CfnEvaluationFormProps.builder()
+ * .instanceArn("instanceArn")
+ * .items(List.of(EvaluationFormBaseItemProperty.builder()
+ * .section(EvaluationFormSectionProperty.builder()
+ * .refId("refId")
+ * .title("title")
+ * // the properties below are optional
+ * .instructions("instructions")
+ * .items(List.of(EvaluationFormItemProperty.builder()
+ * .question(EvaluationFormQuestionProperty.builder()
+ * .questionType("questionType")
+ * .refId("refId")
+ * .title("title")
+ * // the properties below are optional
+ * .instructions("instructions")
+ * .notApplicableEnabled(false)
+ * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
+ * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+ * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+ * .label("label")
+ * .build())
+ * .build())
+ * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * .build())
+ * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+ * .refId("refId")
+ * .text("text")
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * // the properties below are optional
+ * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+ * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+ * .category("category")
+ * .condition("condition")
+ * .optionRefId("optionRefId")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .defaultOptionRefId("defaultOptionRefId")
+ * .build())
+ * .displayAs("displayAs")
+ * .build())
+ * .build())
+ * .weight(123)
+ * .build())
+ * .section(evaluationFormSectionProperty_)
+ * .build()))
+ * .weight(123)
+ * .build())
+ * .build()))
+ * .status("status")
+ * .title("title")
+ * // the properties below are optional
+ * .description("description")
+ * .scoringStrategy(ScoringStrategyProperty.builder()
+ * .mode("mode")
+ * .status("status")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-evaluationform.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormPropsDsl {
   private val cdkBuilder: CfnEvaluationFormProps.Builder = CfnEvaluationFormProps.builder()

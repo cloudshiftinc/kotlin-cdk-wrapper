@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.FireLensLogDriverProps
 import software.amazon.awscdk.services.ecs.Secret
 
+/**
+ * Specifies the firelens log driver configuration options.
+ *
+ * Example:
+ *
+ * ```
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.firelens(FireLensLogDriverProps.builder()
+ * .options(Map.of(
+ * "Name", "firehose",
+ * "region", "us-west-2",
+ * "delivery_stream", "my-stream"))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FireLensLogDriverPropsDsl {
   private val cdkBuilder: FireLensLogDriverProps.Builder = FireLensLogDriverProps.builder()

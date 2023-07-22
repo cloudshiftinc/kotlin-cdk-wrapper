@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnPackage
 import software.constructs.Construct
 
+/**
+ * Creates a package and storage location in an Amazon S3 access point.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnPackage cfnPackage = CfnPackage.Builder.create(this, "MyCfnPackage")
+ * .packageName("packageName")
+ * // the properties below are optional
+ * .storageLocation(StorageLocationProperty.builder()
+ * .binaryPrefixLocation("binaryPrefixLocation")
+ * .bucket("bucket")
+ * .generatedPrefixLocation("generatedPrefixLocation")
+ * .manifestPrefixLocation("manifestPrefixLocation")
+ * .repoPrefixLocation("repoPrefixLocation")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html)
+ */
 @CdkDslMarker
 public class CfnPackageDsl(
   scope: Construct,

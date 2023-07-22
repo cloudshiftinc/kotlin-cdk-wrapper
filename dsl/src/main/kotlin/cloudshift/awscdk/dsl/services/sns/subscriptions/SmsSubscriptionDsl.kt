@@ -10,6 +10,16 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.SmsSubscription
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an sms address as a subscription target.
+ *
+ * Example:
+ *
+ * ```
+ * Topic myTopic = new Topic(this, "Topic");
+ * myTopic.addSubscription(new SmsSubscription("+15551231234"));
+ * ```
+ */
 @CdkDslMarker
 public class SmsSubscriptionDsl(
   phoneNumber: String,

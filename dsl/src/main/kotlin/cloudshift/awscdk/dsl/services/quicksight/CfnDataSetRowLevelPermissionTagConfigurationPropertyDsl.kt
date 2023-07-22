@@ -12,6 +12,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * The configuration of tags on a dataset to set row-level security.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * Object tagRuleConfigurations;
+ * RowLevelPermissionTagConfigurationProperty rowLevelPermissionTagConfigurationProperty =
+ * RowLevelPermissionTagConfigurationProperty.builder()
+ * .tagRules(List.of(RowLevelPermissionTagRuleProperty.builder()
+ * .columnName("columnName")
+ * .tagKey("tagKey")
+ * // the properties below are optional
+ * .matchAllValue("matchAllValue")
+ * .tagMultiValueDelimiter("tagMultiValueDelimiter")
+ * .build()))
+ * // the properties below are optional
+ * .status("status")
+ * .tagRuleConfigurations(tagRuleConfigurations)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-rowlevelpermissiontagconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSetRowLevelPermissionTagConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSet.RowLevelPermissionTagConfigurationProperty.Builder =

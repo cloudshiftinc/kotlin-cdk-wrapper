@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotcoredeviceadvisor.*;
+ * SuiteDefinitionConfigurationProperty suiteDefinitionConfigurationProperty =
+ * SuiteDefinitionConfigurationProperty.builder()
+ * .devicePermissionRoleArn("devicePermissionRoleArn")
+ * .rootGroup("rootGroup")
+ * // the properties below are optional
+ * .devices(List.of(DeviceUnderTestProperty.builder()
+ * .certificateArn("certificateArn")
+ * .thingArn("thingArn")
+ * .build()))
+ * .intendedForQualification(false)
+ * .suiteDefinitionName("suiteDefinitionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotcoredeviceadvisor-suitedefinition-suitedefinitionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSuiteDefinitionSuiteDefinitionConfigurationPropertyDsl {
   private val cdkBuilder: CfnSuiteDefinition.SuiteDefinitionConfigurationProperty.Builder =

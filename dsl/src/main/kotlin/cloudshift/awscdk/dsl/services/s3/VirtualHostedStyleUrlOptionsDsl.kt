@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions
 
+/**
+ * Options for creating Virtual-Hosted style URL.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * bucket.urlForObject("objectname"); // Path-Style URL
+ * bucket.virtualHostedUrlForObject("objectname"); // Virtual Hosted-Style URL
+ * bucket.virtualHostedUrlForObject("objectname",
+ * VirtualHostedStyleUrlOptions.builder().regional(false).build());
+ * ```
+ */
 @CdkDslMarker
 public class VirtualHostedStyleUrlOptionsDsl {
   private val cdkBuilder: VirtualHostedStyleUrlOptions.Builder =

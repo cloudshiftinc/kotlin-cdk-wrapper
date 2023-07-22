@@ -14,6 +14,74 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalogProps
 
+/**
+ * Properties for defining a `CfnSignalCatalog`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnSignalCatalogProps cfnSignalCatalogProps = CfnSignalCatalogProps.builder()
+ * .description("description")
+ * .name("name")
+ * .nodeCounts(NodeCountsProperty.builder()
+ * .totalActuators(123)
+ * .totalAttributes(123)
+ * .totalBranches(123)
+ * .totalNodes(123)
+ * .totalSensors(123)
+ * .build())
+ * .nodes(List.of(NodeProperty.builder()
+ * .actuator(ActuatorProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .assignedValue("assignedValue")
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build())
+ * .attribute(AttributeProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .assignedValue("assignedValue")
+ * .defaultValue("defaultValue")
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build())
+ * .branch(BranchProperty.builder()
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .description("description")
+ * .build())
+ * .sensor(SensorProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build())
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogPropsDsl {
   private val cdkBuilder: CfnSignalCatalogProps.Builder = CfnSignalCatalogProps.builder()

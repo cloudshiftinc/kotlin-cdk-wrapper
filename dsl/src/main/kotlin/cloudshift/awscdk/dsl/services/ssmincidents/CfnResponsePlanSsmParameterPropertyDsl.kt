@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * The key-value pair parameters to use when running the automation document.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * SsmParameterProperty ssmParameterProperty = SsmParameterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmparameter.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanSsmParameterPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.SsmParameterProperty.Builder =

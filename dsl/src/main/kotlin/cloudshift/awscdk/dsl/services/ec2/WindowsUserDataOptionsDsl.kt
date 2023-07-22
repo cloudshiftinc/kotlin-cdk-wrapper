@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ec2.WindowsUserDataOptions
 
+/**
+ * Options when constructing UserData for Windows.
+ *
+ * Example:
+ *
+ * ```
+ * UserData windowsUserData =
+ * UserData.forWindows(WindowsUserDataOptions.builder().persist(true).build());
+ * ```
+ */
 @CdkDslMarker
 public class WindowsUserDataOptionsDsl {
   private val cdkBuilder: WindowsUserDataOptions.Builder = WindowsUserDataOptions.builder()

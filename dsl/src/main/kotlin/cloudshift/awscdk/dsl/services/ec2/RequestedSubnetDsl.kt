@@ -8,6 +8,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ec2.RequestedSubnet
 import software.amazon.awscdk.services.ec2.SubnetConfiguration
 
+/**
+ * Subnet requested for allocation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * RequestedSubnet requestedSubnet = RequestedSubnet.builder()
+ * .availabilityZone("availabilityZone")
+ * .configuration(SubnetConfiguration.builder()
+ * .name("name")
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * // the properties below are optional
+ * .cidrMask(123)
+ * .mapPublicIpOnLaunch(false)
+ * .reserved(false)
+ * .build())
+ * .subnetConstructId("subnetConstructId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RequestedSubnetDsl {
   private val cdkBuilder: RequestedSubnet.Builder = RequestedSubnet.builder()

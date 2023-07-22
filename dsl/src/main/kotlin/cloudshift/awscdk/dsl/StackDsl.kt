@@ -13,6 +13,30 @@ import software.amazon.awscdk.PermissionsBoundary
 import software.amazon.awscdk.Stack
 import software.constructs.Construct
 
+/**
+ * A root construct which represents a single CloudFormation stack.
+ *
+ * Example:
+ *
+ * ```
+ * import path.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.kinesisanalytics.flink.alpha.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "FlinkAppTest");
+ * Application flinkApp = Application.Builder.create(stack, "App")
+ * .code(ApplicationCode.fromAsset(join(__dirname, "code-asset")))
+ * .runtime(Runtime.FLINK_1_11)
+ * .build();
+ * Alarm.Builder.create(stack, "Alarm")
+ * .metric(flinkApp.metricFullRestarts())
+ * .evaluationPeriods(1)
+ * .threshold(3)
+ * .build();
+ * app.synth();
+ * ```
+ */
 @CdkDslMarker
 public class StackDsl(
   scope: Construct,

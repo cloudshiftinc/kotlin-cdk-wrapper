@@ -13,6 +13,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.certificatemanager.CfnCertificateProps
 
+/**
+ * Properties for defining a `CfnCertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * CfnCertificateProps cfnCertificateProps = CfnCertificateProps.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .certificateTransparencyLoggingPreference("certificateTransparencyLoggingPreference")
+ * .domainValidationOptions(List.of(DomainValidationOptionProperty.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .hostedZoneId("hostedZoneId")
+ * .validationDomain("validationDomain")
+ * .build()))
+ * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .validationMethod("validationMethod")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificatePropsDsl {
   private val cdkBuilder: CfnCertificateProps.Builder = CfnCertificateProps.builder()

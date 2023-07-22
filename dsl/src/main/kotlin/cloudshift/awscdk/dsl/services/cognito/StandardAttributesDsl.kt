@@ -7,6 +7,34 @@ import kotlin.Unit
 import software.amazon.awscdk.services.cognito.StandardAttribute
 import software.amazon.awscdk.services.cognito.StandardAttributes
 
+/**
+ * The set of standard attributes that can be marked as required or mutable.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .standardAttributes(StandardAttributes.builder()
+ * .fullname(StandardAttribute.builder()
+ * .required(true)
+ * .mutable(false)
+ * .build())
+ * .address(StandardAttribute.builder()
+ * .required(false)
+ * .mutable(true)
+ * .build())
+ * .build())
+ * .customAttributes(Map.of(
+ * "myappid", StringAttribute.Builder.create().minLen(5).maxLen(15).mutable(false).build(),
+ * "callingcode", NumberAttribute.Builder.create().min(1).max(3).mutable(true).build(),
+ * "isEmployee", BooleanAttribute.Builder.create().mutable(true).build(),
+ * "joinedOn", new DateTimeAttribute()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes)
+ */
 @CdkDslMarker
 public class StandardAttributesDsl {
   private val cdkBuilder: StandardAttributes.Builder = StandardAttributes.builder()

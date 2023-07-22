@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 
+/**
+ * Specifies the ARN's of a SageMaker image and SageMaker image version, and the instance type that
+ * the version runs on.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ResourceSpecProperty resourceSpecProperty = ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-resourcespec.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileResourceSpecPropertyDsl {
   private val cdkBuilder: CfnUserProfile.ResourceSpecProperty.Builder =

@@ -8,6 +8,17 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.VdmAttributes
 import software.constructs.Construct
 
+/**
+ * Virtual Deliverablity Manager (VDM) attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // Enables engagement tracking and optimized shared delivery by default
+ * // Enables engagement tracking and optimized shared delivery by default
+ * new VdmAttributes(this, "Vdm");
+ * ```
+ */
 @CdkDslMarker
 public class VdmAttributesDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.neptune.CfnDBCluster
 
+/**
+ * Describes an Amazon Identity and Access Management (IAM) role that is associated with a DB
+ * cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * DBClusterRoleProperty dBClusterRoleProperty = DBClusterRoleProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .featureName("featureName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-neptune-dbcluster-dbclusterrole.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterDBClusterRolePropertyDsl {
   private val cdkBuilder: CfnDBCluster.DBClusterRoleProperty.Builder =

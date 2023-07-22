@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.m2.CfnEnvironment
 
+/**
+ * Defines the storage configuration for a runtime environment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * StorageConfigurationProperty storageConfigurationProperty =
+ * StorageConfigurationProperty.builder()
+ * .efs(EfsStorageConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .mountPoint("mountPoint")
+ * .build())
+ * .fsx(FsxStorageConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .mountPoint("mountPoint")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-storageconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentStorageConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.StorageConfigurationProperty.Builder =

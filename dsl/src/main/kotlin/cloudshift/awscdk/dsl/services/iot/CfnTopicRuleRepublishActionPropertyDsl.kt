@@ -8,6 +8,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to republish to another topic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * RepublishActionProperty republishActionProperty = RepublishActionProperty.builder()
+ * .roleArn("roleArn")
+ * .topic("topic")
+ * // the properties below are optional
+ * .headers(RepublishActionHeadersProperty.builder()
+ * .contentType("contentType")
+ * .correlationData("correlationData")
+ * .messageExpiry("messageExpiry")
+ * .payloadFormatIndicator("payloadFormatIndicator")
+ * .responseTopic("responseTopic")
+ * .userProperties(List.of(UserPropertyProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .qos(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-republishaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleRepublishActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.RepublishActionProperty.Builder =

@@ -9,6 +9,28 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.pinpoint.CfnSmsTemplateProps
 
+/**
+ * Properties for defining a `CfnSmsTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnSmsTemplateProps cfnSmsTemplateProps = CfnSmsTemplateProps.builder()
+ * .body("body")
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .defaultSubstitutions("defaultSubstitutions")
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smstemplate.html)
+ */
 @CdkDslMarker
 public class CfnSmsTemplatePropsDsl {
   private val cdkBuilder: CfnSmsTemplateProps.Builder = CfnSmsTemplateProps.builder()

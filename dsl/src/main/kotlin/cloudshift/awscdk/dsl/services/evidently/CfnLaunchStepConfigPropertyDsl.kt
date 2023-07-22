@@ -10,6 +10,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * A structure that defines when each step of the launch is to start, and how much launch traffic is
+ * to be allocated to each variation during each step.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * StepConfigProperty stepConfigProperty = StepConfigProperty.builder()
+ * .groupWeights(List.of(GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build()))
+ * .startTime("startTime")
+ * // the properties below are optional
+ * .segmentOverrides(List.of(SegmentOverrideProperty.builder()
+ * .evaluationOrder(123)
+ * .segment("segment")
+ * .weights(List.of(GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-stepconfig.html)
+ */
 @CdkDslMarker
 public class CfnLaunchStepConfigPropertyDsl {
   private val cdkBuilder: CfnLaunch.StepConfigProperty.Builder =

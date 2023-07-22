@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A filter that filters topics based on the value of a numeric field.
+ *
+ * The filter includes only topics whose numeric field value matches the specified value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicNumericEqualityFilterProperty topicNumericEqualityFilterProperty =
+ * TopicNumericEqualityFilterProperty.builder()
+ * .aggregation("aggregation")
+ * .constant(TopicSingularFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicnumericequalityfilter.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicNumericEqualityFilterPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicNumericEqualityFilterProperty.Builder =

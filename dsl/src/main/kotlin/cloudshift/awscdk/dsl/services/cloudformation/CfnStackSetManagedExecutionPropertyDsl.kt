@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnStackSet
 
+/**
+ * Describes whether StackSets performs non-conflicting operations concurrently and queues
+ * conflicting operations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * ManagedExecutionProperty managedExecutionProperty = ManagedExecutionProperty.builder()
+ * .active(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-managedexecution.html)
+ */
 @CdkDslMarker
 public class CfnStackSetManagedExecutionPropertyDsl {
   private val cdkBuilder: CfnStackSet.ManagedExecutionProperty.Builder =

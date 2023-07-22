@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The data path that needs to be sorted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataPathValueProperty dataPathValueProperty = DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-datapathvalue.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisDataPathValuePropertyDsl {
   private val cdkBuilder: CfnAnalysis.DataPathValueProperty.Builder =

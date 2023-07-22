@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.AddRouteOptions
 import software.amazon.awscdk.services.ec2.RouterType
 
+/**
+ * Options for adding a new route to a subnet.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc = Vpc.Builder.create(this, "VPC")
+ * .subnetConfiguration(List.of(SubnetConfiguration.builder()
+ * .subnetType(SubnetType.PUBLIC)
+ * .name("Public")
+ * .build(), SubnetConfiguration.builder()
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .name("Isolated")
+ * .build()))
+ * .build();
+ * ((Subnet)vpc.isolatedSubnets[0]).addRoute("StaticRoute", AddRouteOptions.builder()
+ * .routerId(vpc.getInternetGatewayId())
+ * .routerType(RouterType.GATEWAY)
+ * .destinationCidrBlock("8.8.8.8/32")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddRouteOptionsDsl {
   private val cdkBuilder: AddRouteOptions.Builder = AddRouteOptions.builder()

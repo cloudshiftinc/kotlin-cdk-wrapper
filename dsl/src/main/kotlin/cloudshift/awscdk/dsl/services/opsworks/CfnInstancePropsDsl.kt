@@ -12,6 +12,69 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 import software.amazon.awscdk.services.opsworks.CfnInstanceProps
 
+/**
+ * Properties for defining a `CfnInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnInstanceProps cfnInstanceProps = CfnInstanceProps.builder()
+ * .instanceType("instanceType")
+ * .layerIds(List.of("layerIds"))
+ * .stackId("stackId")
+ * // the properties below are optional
+ * .agentVersion("agentVersion")
+ * .amiId("amiId")
+ * .architecture("architecture")
+ * .autoScalingType("autoScalingType")
+ * .availabilityZone("availabilityZone")
+ * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build()))
+ * .ebsOptimized(false)
+ * .elasticIps(List.of("elasticIps"))
+ * .hostname("hostname")
+ * .installUpdatesOnBoot(false)
+ * .os("os")
+ * .rootDeviceType("rootDeviceType")
+ * .sshKeyName("sshKeyName")
+ * .subnetId("subnetId")
+ * .tenancy("tenancy")
+ * .timeBasedAutoScaling(TimeBasedAutoScalingProperty.builder()
+ * .friday(Map.of(
+ * "fridayKey", "friday"))
+ * .monday(Map.of(
+ * "mondayKey", "monday"))
+ * .saturday(Map.of(
+ * "saturdayKey", "saturday"))
+ * .sunday(Map.of(
+ * "sundayKey", "sunday"))
+ * .thursday(Map.of(
+ * "thursdayKey", "thursday"))
+ * .tuesday(Map.of(
+ * "tuesdayKey", "tuesday"))
+ * .wednesday(Map.of(
+ * "wednesdayKey", "wednesday"))
+ * .build())
+ * .virtualizationType("virtualizationType")
+ * .volumes(List.of("volumes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstancePropsDsl {
   private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnCluster
 
+/**
+ * Describes a connection endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * EndpointProperty endpointProperty = EndpointProperty.builder()
+ * .address("address")
+ * .port("port")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnCluster.EndpointProperty.Builder =

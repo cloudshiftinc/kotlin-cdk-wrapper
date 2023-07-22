@@ -9,6 +9,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 
+/**
+ * Automatic rollback configuration for handling endpoint deployment failures and recovery.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * AutoRollbackConfigProperty autoRollbackConfigProperty = AutoRollbackConfigProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-autorollbackconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAutoRollbackConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.AutoRollbackConfigProperty.Builder =

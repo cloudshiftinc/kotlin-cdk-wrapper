@@ -9,6 +9,29 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.UtilizationScalingOptions
 
+/**
+ * Options for enabling Lambda utilization tracking.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * Function fn;
+ * Alias alias = fn.addAlias("prod");
+ * // Create AutoScaling target
+ * IScalableFunctionAttribute as =
+ * alias.addAutoScaling(AutoScalingOptions.builder().maxCapacity(50).build());
+ * // Configure Target Tracking
+ * as.scaleOnUtilization(UtilizationScalingOptions.builder()
+ * .utilizationTarget(0.5)
+ * .build());
+ * // Configure Scheduled Scaling
+ * as.scaleOnSchedule("ScaleUpInTheMorning", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UtilizationScalingOptionsDsl {
   private val cdkBuilder: UtilizationScalingOptions.Builder = UtilizationScalingOptions.builder()

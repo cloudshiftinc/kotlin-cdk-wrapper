@@ -9,6 +9,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule
 import software.constructs.Construct
 
+/**
+ * Creates a Traffic Mirror filter rule.
+ *
+ * A Traffic Mirror rule defines the Traffic Mirror source traffic to mirror.
+ *
+ * You need the Traffic Mirror filter ID when you create the rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTrafficMirrorFilterRule cfnTrafficMirrorFilterRule =
+ * CfnTrafficMirrorFilterRule.Builder.create(this, "MyCfnTrafficMirrorFilterRule")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .ruleAction("ruleAction")
+ * .ruleNumber(123)
+ * .sourceCidrBlock("sourceCidrBlock")
+ * .trafficDirection("trafficDirection")
+ * .trafficMirrorFilterId("trafficMirrorFilterId")
+ * // the properties below are optional
+ * .description("description")
+ * .destinationPortRange(TrafficMirrorPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .protocol(123)
+ * .sourcePortRange(TrafficMirrorPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)
+ */
 @CdkDslMarker
 public class CfnTrafficMirrorFilterRuleDsl(
   scope: Construct,

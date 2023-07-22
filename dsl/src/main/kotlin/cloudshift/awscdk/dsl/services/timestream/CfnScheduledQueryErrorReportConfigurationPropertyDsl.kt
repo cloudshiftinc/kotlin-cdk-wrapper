@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
+/**
+ * Configuration required for error reporting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * ErrorReportConfigurationProperty errorReportConfigurationProperty =
+ * ErrorReportConfigurationProperty.builder()
+ * .s3Configuration(S3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .encryptionOption("encryptionOption")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-errorreportconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnScheduledQueryErrorReportConfigurationPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.ErrorReportConfigurationProperty.Builder =

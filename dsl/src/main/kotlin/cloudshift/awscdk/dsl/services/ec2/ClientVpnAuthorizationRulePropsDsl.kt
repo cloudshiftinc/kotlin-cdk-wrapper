@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps
 import software.amazon.awscdk.services.ec2.IClientVpnEndpoint
 
+/**
+ * Properties for a ClientVpnAuthorizationRule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientVpnEndpoint clientVpnEndpoint;
+ * ClientVpnAuthorizationRuleProps clientVpnAuthorizationRuleProps =
+ * ClientVpnAuthorizationRuleProps.builder()
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .clientVpnEndpoint(clientVpnEndpoint)
+ * .description("description")
+ * .groupId("groupId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnAuthorizationRulePropsDsl {
   private val cdkBuilder: ClientVpnAuthorizationRuleProps.Builder =

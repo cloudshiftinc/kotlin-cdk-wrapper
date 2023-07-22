@@ -10,6 +10,22 @@ import software.amazon.awscdk.FileCopyOptions
 import software.amazon.awscdk.IgnoreMode
 import software.amazon.awscdk.SymlinkFollowMode
 
+/**
+ * Options applied when copying directories into the staging location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * FileCopyOptions fileCopyOptions = FileCopyOptions.builder()
+ * .exclude(List.of("exclude"))
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileCopyOptionsDsl {
   private val cdkBuilder: FileCopyOptions.Builder = FileCopyOptions.builder()

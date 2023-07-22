@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnSceneProps
 
+/**
+ * Properties for defining a `CfnScene`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * CfnSceneProps cfnSceneProps = CfnSceneProps.builder()
+ * .contentLocation("contentLocation")
+ * .sceneId("sceneId")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .capabilities(List.of("capabilities"))
+ * .description("description")
+ * .sceneMetadata(Map.of(
+ * "sceneMetadataKey", "sceneMetadata"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html)
+ */
 @CdkDslMarker
 public class CfnScenePropsDsl {
   private val cdkBuilder: CfnSceneProps.Builder = CfnSceneProps.builder()

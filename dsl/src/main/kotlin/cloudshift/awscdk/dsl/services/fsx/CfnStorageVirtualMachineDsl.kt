@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine
 import software.constructs.Construct
 
+/**
+ * Creates a storage virtual machine (SVM) for an Amazon FSx for ONTAP file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnStorageVirtualMachine cfnStorageVirtualMachine = CfnStorageVirtualMachine.Builder.create(this,
+ * "MyCfnStorageVirtualMachine")
+ * .fileSystemId("fileSystemId")
+ * .name("name")
+ * // the properties below are optional
+ * .activeDirectoryConfiguration(ActiveDirectoryConfigurationProperty.builder()
+ * .netBiosName("netBiosName")
+ * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
+ * .dnsIps(List.of("dnsIps"))
+ * .domainName("domainName")
+ * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .password("password")
+ * .userName("userName")
+ * .build())
+ * .build())
+ * .rootVolumeSecurityStyle("rootVolumeSecurityStyle")
+ * .svmAdminPassword("svmAdminPassword")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-storagevirtualmachine.html)
+ */
 @CdkDslMarker
 public class CfnStorageVirtualMachineDsl(
   scope: Construct,

@@ -8,6 +8,26 @@ import software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Attributes used to import an existing EC2 task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * Ec2TaskDefinitionAttributes ec2TaskDefinitionAttributes = Ec2TaskDefinitionAttributes.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .executionRole(role)
+ * .networkMode(NetworkMode.NONE)
+ * .taskRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class Ec2TaskDefinitionAttributesDsl {
   private val cdkBuilder: Ec2TaskDefinitionAttributes.Builder =

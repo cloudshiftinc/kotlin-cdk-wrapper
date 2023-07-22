@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The details of a capacity provider strategy.
+ *
+ * To learn more, see
+ * [CapacityProviderStrategyItem](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CapacityProviderStrategyItem.html)
+ * in the Amazon ECS API Reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+ * CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-capacityproviderstrategyitem.html)
+ */
 @CdkDslMarker
 public class CfnPipeCapacityProviderStrategyItemPropertyDsl {
   private val cdkBuilder: CfnPipe.CapacityProviderStrategyItemProperty.Builder =

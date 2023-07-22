@@ -13,6 +13,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.timestream.CfnTableProps
 
+/**
+ * Properties for defining a `CfnTable`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * Object magneticStoreWriteProperties;
+ * Object retentionProperties;
+ * CfnTableProps cfnTableProps = CfnTableProps.builder()
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .magneticStoreWriteProperties(magneticStoreWriteProperties)
+ * .retentionProperties(retentionProperties)
+ * .tableName("tableName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html)
+ */
 @CdkDslMarker
 public class CfnTablePropsDsl {
   private val cdkBuilder: CfnTableProps.Builder = CfnTableProps.builder()

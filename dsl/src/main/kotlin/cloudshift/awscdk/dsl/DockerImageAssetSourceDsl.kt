@@ -11,6 +11,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.DockerCacheOption
 import software.amazon.awscdk.DockerImageAssetSource
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerImageAssetSource dockerImageAssetSource = DockerImageAssetSource.builder()
+ * .sourceHash("sourceHash")
+ * // the properties below are optional
+ * .assetName("assetName")
+ * .directoryName("directoryName")
+ * .dockerBuildArgs(Map.of(
+ * "dockerBuildArgsKey", "dockerBuildArgs"))
+ * .dockerBuildSecrets(Map.of(
+ * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+ * .dockerBuildTarget("dockerBuildTarget")
+ * .dockerCacheFrom(List.of(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build()))
+ * .dockerCacheTo(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build())
+ * .dockerFile("dockerFile")
+ * .dockerOutputs(List.of("dockerOutputs"))
+ * .executable(List.of("executable"))
+ * .networkMode("networkMode")
+ * .platform("platform")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageAssetSourceDsl {
   private val cdkBuilder: DockerImageAssetSource.Builder = DockerImageAssetSource.builder()

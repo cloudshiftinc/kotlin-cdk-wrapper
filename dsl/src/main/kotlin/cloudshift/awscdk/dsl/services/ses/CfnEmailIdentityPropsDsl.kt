@@ -8,6 +8,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 import software.amazon.awscdk.services.ses.CfnEmailIdentityProps
 
+/**
+ * Properties for defining a `CfnEmailIdentity`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnEmailIdentityProps cfnEmailIdentityProps = CfnEmailIdentityProps.builder()
+ * .emailIdentity("emailIdentity")
+ * // the properties below are optional
+ * .configurationSetAttributes(ConfigurationSetAttributesProperty.builder()
+ * .configurationSetName("configurationSetName")
+ * .build())
+ * .dkimAttributes(DkimAttributesProperty.builder()
+ * .signingEnabled(false)
+ * .build())
+ * .dkimSigningAttributes(DkimSigningAttributesProperty.builder()
+ * .domainSigningPrivateKey("domainSigningPrivateKey")
+ * .domainSigningSelector("domainSigningSelector")
+ * .nextSigningKeyLength("nextSigningKeyLength")
+ * .build())
+ * .feedbackAttributes(FeedbackAttributesProperty.builder()
+ * .emailForwardingEnabled(false)
+ * .build())
+ * .mailFromAttributes(MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityPropsDsl {
   private val cdkBuilder: CfnEmailIdentityProps.Builder = CfnEmailIdentityProps.builder()

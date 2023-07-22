@@ -11,6 +11,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sqs.CfnQueuePolicyProps
 
+/**
+ * Properties for defining a `CfnQueuePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Object policyDocument;
+ * CfnQueuePolicyProps cfnQueuePolicyProps = CfnQueuePolicyProps.builder()
+ * .policyDocument(policyDocument)
+ * .queues(List.of("queues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html)
+ */
 @CdkDslMarker
 public class CfnQueuePolicyPropsDsl {
   private val cdkBuilder: CfnQueuePolicyProps.Builder = CfnQueuePolicyProps.builder()

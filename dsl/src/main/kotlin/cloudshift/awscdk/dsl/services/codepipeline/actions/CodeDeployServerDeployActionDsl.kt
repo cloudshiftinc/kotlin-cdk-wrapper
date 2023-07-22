@@ -10,6 +10,27 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * ServerDeploymentGroup deploymentGroup;
+ * Pipeline pipeline = Pipeline.Builder.create(this, "MyPipeline")
+ * .pipelineName("MyPipeline")
+ * .build();
+ * // add the source and build Stages to the Pipeline...
+ * Artifact buildOutput = new Artifact();
+ * CodeDeployServerDeployAction deployAction = CodeDeployServerDeployAction.Builder.create()
+ * .actionName("CodeDeploy")
+ * .input(buildOutput)
+ * .deploymentGroup(deploymentGroup)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(deployAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CodeDeployServerDeployActionDsl {
   private val cdkBuilder: CodeDeployServerDeployAction.Builder =

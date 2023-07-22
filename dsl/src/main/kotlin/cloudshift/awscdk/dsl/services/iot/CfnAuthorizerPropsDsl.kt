@@ -14,6 +14,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnAuthorizerProps
 
+/**
+ * Properties for defining a `CfnAuthorizer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnAuthorizerProps cfnAuthorizerProps = CfnAuthorizerProps.builder()
+ * .authorizerFunctionArn("authorizerFunctionArn")
+ * // the properties below are optional
+ * .authorizerName("authorizerName")
+ * .enableCachingForHttp(false)
+ * .signingDisabled(false)
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tokenKeyName("tokenKeyName")
+ * .tokenSigningPublicKeys(Map.of(
+ * "tokenSigningPublicKeysKey", "tokenSigningPublicKeys"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerPropsDsl {
   private val cdkBuilder: CfnAuthorizerProps.Builder = CfnAuthorizerProps.builder()

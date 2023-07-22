@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lakeformation.CfnTag
 import software.constructs.Construct
 
+/**
+ * The `AWS::LakeFormation::Tag` resource represents an LF-tag, which consists of a key and one or
+ * more possible values for the key.
+ *
+ * During a stack operation, AWS CloudFormation calls the AWS Lake Formation `CreateLFTag` API to
+ * create a tag, and `UpdateLFTag` API to update a tag resource, and a `DeleteLFTag` to delete it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * CfnTag cfnTag = CfnTag.Builder.create(this, "MyCfnTag")
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * // the properties below are optional
+ * .catalogId("catalogId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tag.html)
+ */
 @CdkDslMarker
 public class CfnTagDsl(
   scope: Construct,

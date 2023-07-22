@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 
+/**
+ * Specifies the Lambda function to use by default as a code hook for campaigns in the application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CampaignHookProperty campaignHookProperty = CampaignHookProperty.builder()
+ * .lambdaFunctionName("lambdaFunctionName")
+ * .mode("mode")
+ * .webUrl("webUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-applicationsettings-campaignhook.html)
+ */
 @CdkDslMarker
 public class CfnApplicationSettingsCampaignHookPropertyDsl {
   private val cdkBuilder: CfnApplicationSettings.CampaignHookProperty.Builder =

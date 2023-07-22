@@ -9,6 +9,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicecatalog.TagOptions
 import software.constructs.Construct
 
+/**
+ * Defines a set of TagOptions, which are a list of key-value pairs managed in AWS Service Catalog.
+ *
+ * It is not an AWS tag, but serves as a template for creating an AWS tag based on the TagOption.
+ * See https://docs.aws.amazon.com/servicecatalog/latest/adminguide/tagoptions.html
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio portfolio;
+ * CloudFormationProduct product;
+ * TagOptions tagOptionsForPortfolio = TagOptions.Builder.create(this, "OrgTagOptions")
+ * .allowedValuesForTags(Map.of(
+ * "Group", List.of("finance", "engineering", "marketing", "research"),
+ * "CostCenter", List.of("01", "02", "03")))
+ * .build();
+ * portfolio.associateTagOptions(tagOptionsForPortfolio);
+ * TagOptions tagOptionsForProduct = TagOptions.Builder.create(this, "ProductTagOptions")
+ * .allowedValuesForTags(Map.of(
+ * "Environment", List.of("dev", "alpha", "prod")))
+ * .build();
+ * product.associateTagOptions(tagOptionsForProduct);
+ * ```
+ */
 @CdkDslMarker
 public class TagOptionsDsl(
   scope: Construct,

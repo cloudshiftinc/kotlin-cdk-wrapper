@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The definition of an analysis.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-analysisdefinition.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisAnalysisDefinitionPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AnalysisDefinitionProperty.Builder =

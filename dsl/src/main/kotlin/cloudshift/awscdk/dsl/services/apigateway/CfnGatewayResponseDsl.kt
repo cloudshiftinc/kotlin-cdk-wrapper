@@ -9,6 +9,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnGatewayResponse
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::GatewayResponse` resource creates a gateway response for your API.
+ *
+ * For more information, see [API Gateway
+ * Responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/customize-gateway-responses.html#api-gateway-gatewayResponse-definition)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnGatewayResponse cfnGatewayResponse = CfnGatewayResponse.Builder.create(this,
+ * "MyCfnGatewayResponse")
+ * .responseType("responseType")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .statusCode("statusCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-gatewayresponse.html)
+ */
 @CdkDslMarker
 public class CfnGatewayResponseDsl(
   scope: Construct,

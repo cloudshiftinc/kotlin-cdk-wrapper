@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
 
+/**
+ * Contains information about the Amazon Relational Database Service (RDS) configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * RDSSourceConfigProperty rDSSourceConfigProperty = RDSSourceConfigProperty.builder()
+ * .databaseHost("databaseHost")
+ * .databaseName("databaseName")
+ * .databasePort(123)
+ * .dbInstanceIdentifier("dbInstanceIdentifier")
+ * .roleArn("roleArn")
+ * .secretManagerArn("secretManagerArn")
+ * .tableName("tableName")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .securityGroupIdList(List.of("securityGroupIdList"))
+ * .subnetIdList(List.of("subnetIdList"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-rdssourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorRDSSourceConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.RDSSourceConfigProperty.Builder =

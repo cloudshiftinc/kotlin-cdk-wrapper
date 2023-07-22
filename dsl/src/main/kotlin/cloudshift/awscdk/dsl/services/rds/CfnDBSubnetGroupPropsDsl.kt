@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBSubnetGroupProps
 
+/**
+ * Properties for defining a `CfnDBSubnetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBSubnetGroupProps cfnDBSubnetGroupProps = CfnDBSubnetGroupProps.builder()
+ * .dbSubnetGroupDescription("dbSubnetGroupDescription")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDBSubnetGroupPropsDsl {
   private val cdkBuilder: CfnDBSubnetGroupProps.Builder = CfnDBSubnetGroupProps.builder()

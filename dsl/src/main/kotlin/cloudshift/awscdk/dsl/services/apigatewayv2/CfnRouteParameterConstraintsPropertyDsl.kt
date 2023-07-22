@@ -7,6 +7,21 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnRoute
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * ParameterConstraintsProperty parameterConstraintsProperty =
+ * ParameterConstraintsProperty.builder()
+ * .required(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-route-parameterconstraints.html)
+ */
 @CdkDslMarker
 public class CfnRouteParameterConstraintsPropertyDsl {
   private val cdkBuilder: CfnRoute.ParameterConstraintsProperty.Builder =

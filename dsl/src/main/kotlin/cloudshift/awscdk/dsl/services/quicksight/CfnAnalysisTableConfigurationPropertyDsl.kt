@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration for a `TableVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tableconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisTableConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableConfigurationProperty.Builder =

@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a heat map.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-heatmapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateHeatMapConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.HeatMapConfigurationProperty.Builder =

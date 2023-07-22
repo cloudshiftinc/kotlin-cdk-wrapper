@@ -12,6 +12,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.CfnManagedPolicy
 import software.constructs.Construct
 
+/**
+ * Creates a new managed policy for your AWS account .
+ *
+ * This operation creates a policy version with a version identifier of `v1` and sets v1 as the
+ * policy's default version. For more information about policy versions, see [Versioning for managed
+ * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-versions.html) in the
+ * *IAM User Guide* .
+ *
+ * As a best practice, you can validate your IAM policies. To learn more, see [Validating IAM
+ * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_policy-validator.html) in
+ * the *IAM User Guide* .
+ *
+ * For more information about managed policies in general, see [Managed policies and inline
+ * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the
+ * *IAM User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnManagedPolicy cfnManagedPolicy = CfnManagedPolicy.Builder.create(this, "MyCfnManagedPolicy")
+ * .policyDocument(policyDocument)
+ * // the properties below are optional
+ * .description("description")
+ * .groups(List.of("groups"))
+ * .managedPolicyName("managedPolicyName")
+ * .path("path")
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
+ */
 @CdkDslMarker
 public class CfnManagedPolicyDsl(
   scope: Construct,

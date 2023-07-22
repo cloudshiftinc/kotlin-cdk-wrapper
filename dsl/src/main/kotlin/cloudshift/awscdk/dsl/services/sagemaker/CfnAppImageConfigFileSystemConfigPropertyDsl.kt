@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 
+/**
+ * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
+ * .defaultGid(123)
+ * .defaultUid(123)
+ * .mountPath("mountPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-filesystemconfig.html)
+ */
 @CdkDslMarker
 public class CfnAppImageConfigFileSystemConfigPropertyDsl {
   private val cdkBuilder: CfnAppImageConfig.FileSystemConfigProperty.Builder =

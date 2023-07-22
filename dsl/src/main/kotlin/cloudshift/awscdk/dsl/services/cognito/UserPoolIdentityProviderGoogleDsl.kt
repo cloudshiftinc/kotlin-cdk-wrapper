@@ -14,6 +14,25 @@ import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle
 import software.constructs.Construct
 
+/**
+ * Represents a identity provider that integrates with 'Google'.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = new UserPool(this, "Pool");
+ * SecretValue secret = Secret.fromSecretAttributes(this, "CognitoClientSecret",
+ * SecretAttributes.builder()
+ * .secretCompleteArn("arn:aws:secretsmanager:xxx:xxx:secret:xxx-xxx")
+ * .build()).getSecretValue();
+ * UserPoolIdentityProviderGoogle provider = UserPoolIdentityProviderGoogle.Builder.create(this,
+ * "Google")
+ * .clientId("amzn-client-id")
+ * .clientSecretValue(secret)
+ * .userPool(userpool)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderGoogleDsl(
   scope: Construct,

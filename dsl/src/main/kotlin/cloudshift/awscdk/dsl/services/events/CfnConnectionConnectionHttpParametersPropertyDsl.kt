@@ -9,6 +9,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnConnection
 
+/**
+ * Contains additional parameters for the connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * ConnectionHttpParametersProperty connectionHttpParametersProperty =
+ * ConnectionHttpParametersProperty.builder()
+ * .bodyParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .headerParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .queryStringParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html)
+ */
 @CdkDslMarker
 public class CfnConnectionConnectionHttpParametersPropertyDsl {
   private val cdkBuilder: CfnConnection.ConnectionHttpParametersProperty.Builder =

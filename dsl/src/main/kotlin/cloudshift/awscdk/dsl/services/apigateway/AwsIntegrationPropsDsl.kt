@@ -10,6 +10,17 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.apigateway.AwsIntegrationProps
 import software.amazon.awscdk.services.apigateway.IntegrationOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * AwsIntegration getMessageIntegration = AwsIntegration.Builder.create()
+ * .service("sqs")
+ * .path("queueName")
+ * .region("eu-west-1")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsIntegrationPropsDsl {
   private val cdkBuilder: AwsIntegrationProps.Builder = AwsIntegrationProps.builder()

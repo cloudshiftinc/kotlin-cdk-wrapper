@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.lambda.IVersion
 import software.amazon.awscdk.services.lambda.VersionWeight
 
+/**
+ * A version/weight pair for routing traffic to Lambda functions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * Version version;
+ * VersionWeight versionWeight = VersionWeight.builder()
+ * .version(version)
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VersionWeightDsl {
   private val cdkBuilder: VersionWeight.Builder = VersionWeight.builder()

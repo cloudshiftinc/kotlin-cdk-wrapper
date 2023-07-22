@@ -11,6 +11,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.BitBucketSourceProps
 import software.amazon.awscdk.services.codebuild.FilterGroup
 
+/**
+ * Construction properties for `BitBucketSource`.
+ *
+ * Example:
+ *
+ * ```
+ * ISource bbSource = Source.bitBucket(BitBucketSourceProps.builder()
+ * .owner("owner")
+ * .repo("repo")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BitBucketSourcePropsDsl {
   private val cdkBuilder: BitBucketSourceProps.Builder = BitBucketSourceProps.builder()

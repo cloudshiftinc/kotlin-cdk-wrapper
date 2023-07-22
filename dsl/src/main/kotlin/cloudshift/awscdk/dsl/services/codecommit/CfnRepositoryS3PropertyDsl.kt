@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codecommit.CfnRepository
 
+/**
+ * Information about the Amazon S3 bucket that contains the code that will be committed to the new
+ * repository.
+ *
+ * Changes to this property are ignored after initial resource creation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * S3Property s3Property = S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-s3.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryS3PropertyDsl {
   private val cdkBuilder: CfnRepository.S3Property.Builder = CfnRepository.S3Property.builder()

@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.sqs.DeadLetterQueue
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Dead letter queue settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * DeadLetterQueue deadLetterQueue = DeadLetterQueue.builder()
+ * .maxReceiveCount(123)
+ * .queue(queue)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeadLetterQueueDsl {
   private val cdkBuilder: DeadLetterQueue.Builder = DeadLetterQueue.builder()

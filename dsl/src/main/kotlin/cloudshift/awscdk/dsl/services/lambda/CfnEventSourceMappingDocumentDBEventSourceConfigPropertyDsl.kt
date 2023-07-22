@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * Specific configuration settings for a DocumentDB event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * DocumentDBEventSourceConfigProperty documentDBEventSourceConfigProperty =
+ * DocumentDBEventSourceConfigProperty.builder()
+ * .collectionName("collectionName")
+ * .databaseName("databaseName")
+ * .fullDocument("fullDocument")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-documentdbeventsourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingDocumentDBEventSourceConfigPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.Builder =

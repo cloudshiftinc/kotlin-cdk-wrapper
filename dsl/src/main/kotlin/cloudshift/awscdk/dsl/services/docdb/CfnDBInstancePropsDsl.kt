@@ -13,6 +13,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.docdb.CfnDBInstanceProps
 
+/**
+ * Properties for defining a `CfnDBInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * CfnDBInstanceProps cfnDBInstanceProps = CfnDBInstanceProps.builder()
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbInstanceClass("dbInstanceClass")
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .dbInstanceIdentifier("dbInstanceIdentifier")
+ * .enablePerformanceInsights(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html)
+ */
 @CdkDslMarker
 public class CfnDBInstancePropsDsl {
   private val cdkBuilder: CfnDBInstanceProps.Builder = CfnDBInstanceProps.builder()

@@ -9,6 +9,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationinsights.CfnApplication
 
+/**
+ * The `AWS::ApplicationInsights::Application SubComponentConfigurationDetails` property type
+ * specifies the configuration settings of the sub-components.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationinsights.*;
+ * SubComponentConfigurationDetailsProperty subComponentConfigurationDetailsProperty =
+ * SubComponentConfigurationDetailsProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .logs(List.of(LogProperty.builder()
+ * .logType("logType")
+ * // the properties below are optional
+ * .encoding("encoding")
+ * .logGroupName("logGroupName")
+ * .logPath("logPath")
+ * .patternSet("patternSet")
+ * .build()))
+ * .windowsEvents(List.of(WindowsEventProperty.builder()
+ * .eventLevels(List.of("eventLevels"))
+ * .eventName("eventName")
+ * .logGroupName("logGroupName")
+ * // the properties below are optional
+ * .patternSet("patternSet")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-subcomponentconfigurationdetails.html)
+ */
 @CdkDslMarker
 public class CfnApplicationSubComponentConfigurationDetailsPropertyDsl {
   private val cdkBuilder: CfnApplication.SubComponentConfigurationDetailsProperty.Builder =

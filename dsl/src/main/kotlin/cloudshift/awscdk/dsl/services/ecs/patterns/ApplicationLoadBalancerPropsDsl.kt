@@ -13,6 +13,40 @@ import software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Properties to define an application load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * Certificate certificate;
+ * HostedZone hostedZone;
+ * ApplicationLoadBalancerProps applicationLoadBalancerProps =
+ * ApplicationLoadBalancerProps.builder()
+ * .listeners(List.of(ApplicationListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .certificate(certificate)
+ * .port(123)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .domainName("domainName")
+ * .domainZone(hostedZone)
+ * .idleTimeout(Duration.minutes(30))
+ * .publicLoadBalancer(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerPropsDsl {
   private val cdkBuilder: ApplicationLoadBalancerProps.Builder =

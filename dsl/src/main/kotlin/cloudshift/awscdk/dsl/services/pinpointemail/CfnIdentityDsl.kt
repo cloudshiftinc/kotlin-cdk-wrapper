@@ -12,6 +12,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 import software.constructs.Construct
 
+/**
+ * Specifies an identity to use for sending email through Amazon Pinpoint.
+ *
+ * In Amazon Pinpoint, an *identity* is an email address or domain that you use when you send email.
+ * Before you can use Amazon Pinpoint to send an email from an identity, you first have to verify it.
+ * By verifying an identity, you demonstrate that you're the owner of the address or domain, and that
+ * you've given Amazon Pinpoint permission to send email from that identity.
+ *
+ * When you verify an email address, Amazon Pinpoint sends an email to the address. Your email
+ * address is verified as soon as you follow the link in the verification email.
+ *
+ * When you verify a domain, this operation provides a set of DKIM tokens, which you can convert
+ * into CNAME tokens. You add these CNAME tokens to the DNS configuration for your domain. Your domain
+ * is verified when Amazon Pinpoint detects these records in the DNS configuration for your domain. It
+ * usually takes around 72 hours to complete the domain verification process.
+ *
+ *
+ * When you use CloudFormation to specify an identity, CloudFormation might indicate that the
+ * identity was created successfully. However, you have to verify the identity before you can use it to
+ * send email.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnIdentity cfnIdentity = CfnIdentity.Builder.create(this, "MyCfnIdentity")
+ * .name("name")
+ * // the properties below are optional
+ * .dkimSigningEnabled(false)
+ * .feedbackForwardingEnabled(false)
+ * .mailFromAttributes(MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build())
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html)
+ */
 @CdkDslMarker
 public class CfnIdentityDsl(
   scope: Construct,

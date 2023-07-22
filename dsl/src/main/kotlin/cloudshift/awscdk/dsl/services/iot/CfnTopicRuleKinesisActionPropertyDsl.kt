@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to write data to an Amazon Kinesis stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * KinesisActionProperty kinesisActionProperty = KinesisActionProperty.builder()
+ * .roleArn("roleArn")
+ * .streamName("streamName")
+ * // the properties below are optional
+ * .partitionKey("partitionKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kinesisaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleKinesisActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.KinesisActionProperty.Builder =

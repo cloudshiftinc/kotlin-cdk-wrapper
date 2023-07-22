@@ -9,6 +9,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRuleProps
 
+/**
+ * Properties for defining a `CfnTrafficMirrorFilterRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTrafficMirrorFilterRuleProps cfnTrafficMirrorFilterRuleProps =
+ * CfnTrafficMirrorFilterRuleProps.builder()
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .ruleAction("ruleAction")
+ * .ruleNumber(123)
+ * .sourceCidrBlock("sourceCidrBlock")
+ * .trafficDirection("trafficDirection")
+ * .trafficMirrorFilterId("trafficMirrorFilterId")
+ * // the properties below are optional
+ * .description("description")
+ * .destinationPortRange(TrafficMirrorPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .protocol(123)
+ * .sourcePortRange(TrafficMirrorPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)
+ */
 @CdkDslMarker
 public class CfnTrafficMirrorFilterRulePropsDsl {
   private val cdkBuilder: CfnTrafficMirrorFilterRuleProps.Builder =

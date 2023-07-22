@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Sets the priority that Amazon Lex should use when eliciting slot values from a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotPriorityProperty slotPriorityProperty = SlotPriorityProperty.builder()
+ * .priority(123)
+ * .slotName("slotName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotpriority.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotPriorityPropertyDsl {
   private val cdkBuilder: CfnBot.SlotPriorityProperty.Builder =

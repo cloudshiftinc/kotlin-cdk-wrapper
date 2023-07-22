@@ -20,6 +20,73 @@ import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
 
+/**
+ * The properties for the base Ec2Service or FargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Cluster cluster;
+ * ContainerDefinition containerDefinition;
+ * LogDriver logDriver;
+ * INamespace namespace;
+ * BaseServiceOptions baseServiceOptions = BaseServiceOptions.builder()
+ * .cluster(cluster)
+ * // the properties below are optional
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .rollback(false)
+ * .build())
+ * .cloudMapOptions(CloudMapOptions.builder()
+ * .cloudMapNamespace(namespace)
+ * .container(containerDefinition)
+ * .containerPort(123)
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.minutes(30))
+ * .failureThreshold(123)
+ * .name("name")
+ * .build())
+ * .deploymentAlarms(DeploymentAlarmConfig.builder()
+ * .alarmNames(List.of("alarmNames"))
+ * // the properties below are optional
+ * .behavior(AlarmBehavior.ROLLBACK_ON_ALARM)
+ * .build())
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.ECS)
+ * .build())
+ * .desiredCount(123)
+ * .enableECSManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriod(Duration.minutes(30))
+ * .maxHealthyPercent(123)
+ * .minHealthyPercent(123)
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .serviceConnectConfiguration(ServiceConnectProps.builder()
+ * .logDriver(logDriver)
+ * .namespace("namespace")
+ * .services(List.of(ServiceConnectService.builder()
+ * .portMappingName("portMappingName")
+ * // the properties below are optional
+ * .discoveryName("discoveryName")
+ * .dnsName("dnsName")
+ * .ingressPortOverride(123)
+ * .port(123)
+ * .build()))
+ * .build())
+ * .serviceName("serviceName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseServiceOptionsDsl {
   private val cdkBuilder: BaseServiceOptions.Builder = BaseServiceOptions.builder()

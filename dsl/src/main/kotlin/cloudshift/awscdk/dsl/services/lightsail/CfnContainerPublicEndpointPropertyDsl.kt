@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnContainer
 
+/**
+ * `PublicEndpoint` is a property of the
+ * [ContainerServiceDeployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html)
+ * property. It describes describes the settings of the public endpoint of a container on a container
+ * service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * PublicEndpointProperty publicEndpointProperty = PublicEndpointProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .healthCheckConfig(HealthCheckConfigProperty.builder()
+ * .healthyThreshold(123)
+ * .intervalSeconds(123)
+ * .path("path")
+ * .successCodes("successCodes")
+ * .timeoutSeconds(123)
+ * .unhealthyThreshold(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html)
+ */
 @CdkDslMarker
 public class CfnContainerPublicEndpointPropertyDsl {
   private val cdkBuilder: CfnContainer.PublicEndpointProperty.Builder =

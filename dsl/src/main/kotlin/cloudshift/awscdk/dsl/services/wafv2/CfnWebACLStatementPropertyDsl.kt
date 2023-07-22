@@ -6,6 +6,17 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The processing guidance for a rule, used by AWS WAF to determine whether a web request matches
+ * the rule.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-statement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.StatementProperty.Builder =

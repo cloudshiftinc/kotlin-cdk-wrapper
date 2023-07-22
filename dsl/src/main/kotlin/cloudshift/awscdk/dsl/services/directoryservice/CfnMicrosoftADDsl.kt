@@ -9,6 +9,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD
 import software.constructs.Construct
 
+/**
+ * The `AWS::DirectoryService::MicrosoftAD` resource specifies a Microsoft Active Directory in AWS
+ * so that your directory users and groups can access the AWS Management Console and AWS applications
+ * using their existing credentials.
+ *
+ * For more information, see [AWS Managed Microsoft
+ * AD](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_microsoft_ad.html) in
+ * the *AWS Directory Service Admin Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.directoryservice.*;
+ * CfnMicrosoftAD cfnMicrosoftAD = CfnMicrosoftAD.Builder.create(this, "MyCfnMicrosoftAD")
+ * .name("name")
+ * .password("password")
+ * .vpcSettings(VpcSettingsProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * // the properties below are optional
+ * .createAlias(false)
+ * .edition("edition")
+ * .enableSso(false)
+ * .shortName("shortName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html)
+ */
 @CdkDslMarker
 public class CfnMicrosoftADDsl(
   scope: Construct,

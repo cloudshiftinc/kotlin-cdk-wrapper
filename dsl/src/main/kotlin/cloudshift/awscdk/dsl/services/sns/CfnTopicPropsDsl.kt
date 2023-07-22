@@ -15,6 +15,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sns.CfnTopicProps
 
+/**
+ * Properties for defining a `CfnTopic`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * Object dataProtectionPolicy;
+ * CfnTopicProps cfnTopicProps = CfnTopicProps.builder()
+ * .contentBasedDeduplication(false)
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .displayName("displayName")
+ * .fifoTopic(false)
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .signatureVersion("signatureVersion")
+ * .subscription(List.of(SubscriptionProperty.builder()
+ * .endpoint("endpoint")
+ * .protocol("protocol")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .topicName("topicName")
+ * .tracingConfig("tracingConfig")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)
+ */
 @CdkDslMarker
 public class CfnTopicPropsDsl {
   private val cdkBuilder: CfnTopicProps.Builder = CfnTopicProps.builder()

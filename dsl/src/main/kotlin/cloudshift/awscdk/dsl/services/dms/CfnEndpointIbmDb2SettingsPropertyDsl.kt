@@ -9,6 +9,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines an IBMDB2 endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about other available settings,
+ * see [Extra connection attributes when using Db2 LUW as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.DB2.html#CHAP_Source.DB2.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * IbmDb2SettingsProperty ibmDb2SettingsProperty = IbmDb2SettingsProperty.builder()
+ * .currentLsn("currentLsn")
+ * .maxKBytesPerRead(123)
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .setDataCaptureChanges(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-ibmdb2settings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointIbmDb2SettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.IbmDb2SettingsProperty.Builder =

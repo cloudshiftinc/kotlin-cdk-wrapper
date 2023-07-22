@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnApplication
 import software.amazon.awscdk.services.appstream.CfnApplicationProps
 
+/**
+ * Properties for defining a `CfnApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .appBlockArn("appBlockArn")
+ * .iconS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .build())
+ * .instanceFamilies(List.of("instanceFamilies"))
+ * .launchPath("launchPath")
+ * .name("name")
+ * .platforms(List.of("platforms"))
+ * // the properties below are optional
+ * .attributesToDelete(List.of("attributesToDelete"))
+ * .description("description")
+ * .displayName("displayName")
+ * .launchParameters("launchParameters")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()

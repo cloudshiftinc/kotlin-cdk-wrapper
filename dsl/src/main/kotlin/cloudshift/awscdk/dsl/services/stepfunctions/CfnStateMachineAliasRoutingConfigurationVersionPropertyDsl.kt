@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
 
+/**
+ * The state machine version to which you want to route the execution traffic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * RoutingConfigurationVersionProperty routingConfigurationVersionProperty =
+ * RoutingConfigurationVersionProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-routingconfigurationversion.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineAliasRoutingConfigurationVersionPropertyDsl {
   private val cdkBuilder: CfnStateMachineAlias.RoutingConfigurationVersionProperty.Builder =

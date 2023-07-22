@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action that captures a CloudWatch metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CloudwatchMetricActionProperty cloudwatchMetricActionProperty =
+ * CloudwatchMetricActionProperty.builder()
+ * .metricName("metricName")
+ * .metricNamespace("metricNamespace")
+ * .metricUnit("metricUnit")
+ * .metricValue("metricValue")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .metricTimestamp("metricTimestamp")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchmetricaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleCloudwatchMetricActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.CloudwatchMetricActionProperty.Builder =

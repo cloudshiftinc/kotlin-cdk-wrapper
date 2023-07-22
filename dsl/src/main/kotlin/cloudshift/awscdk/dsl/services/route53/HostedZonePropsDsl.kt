@@ -10,6 +10,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.route53.HostedZoneProps
 
+/**
+ * Properties of a new hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone hostedZone = HostedZone.Builder.create(this,
+ * "MyHostedZone").zoneName("example.org").build();
+ * Metric metric = Metric.Builder.create()
+ * .namespace("AWS/Route53")
+ * .metricName("DNSQueries")
+ * .dimensionsMap(Map.of(
+ * "HostedZoneId", hostedZone.getHostedZoneId()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HostedZonePropsDsl {
   private val cdkBuilder: HostedZoneProps.Builder = HostedZoneProps.builder()

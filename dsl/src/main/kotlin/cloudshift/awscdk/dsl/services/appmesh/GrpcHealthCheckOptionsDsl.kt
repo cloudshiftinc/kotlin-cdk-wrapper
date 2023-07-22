@@ -7,6 +7,24 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.appmesh.GrpcHealthCheckOptions
 
+/**
+ * Properties used to define GRPC Based healthchecks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GrpcHealthCheckOptions grpcHealthCheckOptions = GrpcHealthCheckOptions.builder()
+ * .healthyThreshold(123)
+ * .interval(Duration.minutes(30))
+ * .timeout(Duration.minutes(30))
+ * .unhealthyThreshold(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GrpcHealthCheckOptionsDsl {
   private val cdkBuilder: GrpcHealthCheckOptions.Builder = GrpcHealthCheckOptions.builder()

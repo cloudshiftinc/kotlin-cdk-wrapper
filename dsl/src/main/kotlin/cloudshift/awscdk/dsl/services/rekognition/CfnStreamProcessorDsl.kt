@@ -15,6 +15,89 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 import software.constructs.Construct
 
+/**
+ * The `AWS::Rekognition::StreamProcessor` type creates a stream processor used to detect and
+ * recognize faces or to detect connected home labels in a streaming video.
+ *
+ * Amazon Rekognition Video is a consumer of live video from Amazon Kinesis Video Streams. There are
+ * two different settings for stream processors in Amazon Rekognition, one for detecting faces and one
+ * for connected home features.
+ *
+ * If you are creating a stream processor for detecting faces, you provide a Kinesis video stream
+ * (input) and a Kinesis data stream (output). You also specify the face recognition criteria in
+ * FaceSearchSettings. For example, the collection containing faces that you want to recognize.
+ *
+ * If you are creating a stream processor for detection of connected home labels, you provide a
+ * Kinesis video stream for input, and for output an Amazon S3 bucket and an Amazon SNS topic. You can
+ * also provide a KMS key ID to encrypt the data sent to your Amazon S3 bucket. You specify what you
+ * want to detect in ConnectedHomeSettings, such as people, packages, and pets.
+ *
+ * You can also specify where in the frame you want Amazon Rekognition to monitor with
+ * BoundingBoxRegionsOfInterest and PolygonRegionsOfInterest. The Name is used to manage the stream
+ * processor and it is the identifier for the stream processor. The `AWS::Rekognition::StreamProcessor`
+ * resource creates a stream processor in the same Region where you create the Amazon CloudFormation
+ * stack.
+ *
+ * For more information, see
+ * [CreateStreamProcessor](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateStreamProcessor)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * Object polygonRegionsOfInterest;
+ * CfnStreamProcessor cfnStreamProcessor = CfnStreamProcessor.Builder.create(this,
+ * "MyCfnStreamProcessor")
+ * .kinesisVideoStream(KinesisVideoStreamProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .boundingBoxRegionsOfInterest(List.of(BoundingBoxProperty.builder()
+ * .height(123)
+ * .left(123)
+ * .top(123)
+ * .width(123)
+ * .build()))
+ * .connectedHomeSettings(ConnectedHomeSettingsProperty.builder()
+ * .labels(List.of("labels"))
+ * // the properties below are optional
+ * .minConfidence(123)
+ * .build())
+ * .dataSharingPreference(DataSharingPreferenceProperty.builder()
+ * .optIn(false)
+ * .build())
+ * .faceSearchSettings(FaceSearchSettingsProperty.builder()
+ * .collectionId("collectionId")
+ * // the properties below are optional
+ * .faceMatchThreshold(123)
+ * .build())
+ * .kinesisDataStream(KinesisDataStreamProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .name("name")
+ * .notificationChannel(NotificationChannelProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .polygonRegionsOfInterest(polygonRegionsOfInterest)
+ * .s3Destination(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-streamprocessor.html)
+ */
 @CdkDslMarker
 public class CfnStreamProcessorDsl(
   scope: Construct,

@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
+/**
+ * Information about the container that a data quality monitoring job runs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DataQualityAppSpecificationProperty dataQualityAppSpecificationProperty =
+ * DataQualityAppSpecificationProperty.builder()
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .postAnalyticsProcessorSourceUri("postAnalyticsProcessorSourceUri")
+ * .recordPreprocessorSourceUri("recordPreprocessorSourceUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-dataqualityjobdefinition-dataqualityappspecification.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionDataQualityAppSpecificationPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.DataQualityAppSpecificationProperty.Builder =

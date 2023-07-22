@@ -10,6 +10,25 @@ import software.amazon.awscdk.cloudassembly.schema.MetadataEntry
 import software.amazon.awscdk.cxapi.SynthesisMessage
 import software.amazon.awscdk.cxapi.SynthesisMessageLevel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * SynthesisMessage synthesisMessage = SynthesisMessage.builder()
+ * .entry(MetadataEntry.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .trace(List.of("trace"))
+ * .build())
+ * .id("id")
+ * .level(SynthesisMessageLevel.INFO)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SynthesisMessageDsl {
   private val cdkBuilder: SynthesisMessage.Builder = SynthesisMessage.builder()

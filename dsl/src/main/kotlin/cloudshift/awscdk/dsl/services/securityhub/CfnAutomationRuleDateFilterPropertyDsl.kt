@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * A date filter for querying findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * DateFilterProperty dateFilterProperty = DateFilterProperty.builder()
+ * .dateRange(DateRangeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .end("end")
+ * .start("start")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleDateFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.DateFilterProperty.Builder =

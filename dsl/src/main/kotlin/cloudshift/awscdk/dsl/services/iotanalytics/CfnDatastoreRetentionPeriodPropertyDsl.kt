@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * How long, in days, message data is kept.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * RetentionPeriodProperty retentionPeriodProperty = RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-retentionperiod.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreRetentionPeriodPropertyDsl {
   private val cdkBuilder: CfnDatastore.RetentionPeriodProperty.Builder =

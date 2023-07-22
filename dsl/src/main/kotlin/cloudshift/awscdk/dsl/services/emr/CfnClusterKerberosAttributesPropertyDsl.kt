@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `KerberosAttributes` is a property of the `AWS::EMR::Cluster` resource.
+ *
+ * `KerberosAttributes` define the cluster-specific Kerberos configuration when Kerberos
+ * authentication is enabled using a security configuration. The cluster-specific configuration must be
+ * compatible with the security configuration. For more information see [Use Kerberos
+ * Authentication](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-kerberos.html) in the
+ * *EMR Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * KerberosAttributesProperty kerberosAttributesProperty = KerberosAttributesProperty.builder()
+ * .kdcAdminPassword("kdcAdminPassword")
+ * .realm("realm")
+ * // the properties below are optional
+ * .adDomainJoinPassword("adDomainJoinPassword")
+ * .adDomainJoinUser("adDomainJoinUser")
+ * .crossRealmTrustPrincipalPassword("crossRealmTrustPrincipalPassword")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-kerberosattributes.html)
+ */
 @CdkDslMarker
 public class CfnClusterKerberosAttributesPropertyDsl {
   private val cdkBuilder: CfnCluster.KerberosAttributesProperty.Builder =

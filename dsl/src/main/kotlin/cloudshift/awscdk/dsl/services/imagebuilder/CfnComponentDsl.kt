@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnComponent
 import software.constructs.Construct
 
+/**
+ * Creates a new component that can be used to build, validate, test, and assess your image.
+ *
+ * The component is based on a YAML document that you specify using exactly one of the following
+ * methods:
+ *
+ * * Inline, using the `data` property in the request body.
+ * * A URL that points to a YAML document file stored in Amazon S3, using the `uri` property in the
+ * request body.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnComponent cfnComponent = CfnComponent.Builder.create(this, "MyCfnComponent")
+ * .name("name")
+ * .platform("platform")
+ * .version("version")
+ * // the properties below are optional
+ * .changeDescription("changeDescription")
+ * .data("data")
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .supportedOsVersions(List.of("supportedOsVersions"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .uri("uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html)
+ */
 @CdkDslMarker
 public class CfnComponentDsl(
   scope: Construct,

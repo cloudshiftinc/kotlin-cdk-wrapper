@@ -9,6 +9,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 import software.constructs.Construct
 
+/**
+ * An object that provides information about a solution.
+ *
+ * A solution is a trained model that can be deployed as a campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object autoMlConfig;
+ * Object hpoConfig;
+ * CfnSolution cfnSolution = CfnSolution.Builder.create(this, "MyCfnSolution")
+ * .datasetGroupArn("datasetGroupArn")
+ * .name("name")
+ * // the properties below are optional
+ * .eventType("eventType")
+ * .performAutoMl(false)
+ * .performHpo(false)
+ * .recipeArn("recipeArn")
+ * .solutionConfig(SolutionConfigProperty.builder()
+ * .algorithmHyperParameters(Map.of(
+ * "algorithmHyperParametersKey", "algorithmHyperParameters"))
+ * .autoMlConfig(autoMlConfig)
+ * .eventValueThreshold("eventValueThreshold")
+ * .featureTransformationParameters(Map.of(
+ * "featureTransformationParametersKey", "featureTransformationParameters"))
+ * .hpoConfig(hpoConfig)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-solution.html)
+ */
 @CdkDslMarker
 public class CfnSolutionDsl(
   scope: Construct,

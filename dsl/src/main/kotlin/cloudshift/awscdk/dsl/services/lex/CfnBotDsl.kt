@@ -15,6 +15,21 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 import software.constructs.Construct
 
+/**
+ * Amazon Lex V2 is the only supported version in AWS CloudFormation .
+ *
+ * Specifies an Amazon Lex conversational bot.
+ *
+ * You must configure an intent based on the `AMAZON.FallbackIntent` built-in intent. If you don't
+ * add one, creating the bot will fail.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html)
+ */
 @CdkDslMarker
 public class CfnBotDsl(
   scope: Construct,

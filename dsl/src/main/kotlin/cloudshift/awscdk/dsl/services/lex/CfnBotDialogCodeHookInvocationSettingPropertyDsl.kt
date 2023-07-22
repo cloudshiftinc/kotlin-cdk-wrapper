@@ -8,6 +8,17 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Settings that specify the dialog code hook that is called by Amazon Lex at a step of the
+ * conversation.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-dialogcodehookinvocationsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotDialogCodeHookInvocationSettingPropertyDsl {
   private val cdkBuilder: CfnBot.DialogCodeHookInvocationSettingProperty.Builder =

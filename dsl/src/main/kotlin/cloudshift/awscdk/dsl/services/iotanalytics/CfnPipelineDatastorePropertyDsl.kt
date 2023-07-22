@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * The datastore activity that specifies where to store the processed data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DatastoreProperty datastoreProperty = DatastoreProperty.builder()
+ * .datastoreName("datastoreName")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-datastore.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDatastorePropertyDsl {
   private val cdkBuilder: CfnPipeline.DatastoreProperty.Builder =

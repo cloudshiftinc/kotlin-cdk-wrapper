@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnApp
 
+/**
+ * Describes an app's data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
+ * .arn("arn")
+ * .databaseName("databaseName")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-datasource.html)
+ */
 @CdkDslMarker
 public class CfnAppDataSourcePropertyDsl {
   private val cdkBuilder: CfnApp.DataSourceProperty.Builder = CfnApp.DataSourceProperty.builder()

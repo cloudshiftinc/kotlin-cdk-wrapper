@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * The `AlarmConfiguration` property type configures CloudWatch alarms for an AWS CodeDeploy
+ * deployment group.
+ *
+ * `AlarmConfiguration` is a property of the
+ * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * AlarmConfigurationProperty alarmConfigurationProperty = AlarmConfigurationProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .name("name")
+ * .build()))
+ * .enabled(false)
+ * .ignorePollAlarmFailure(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupAlarmConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.AlarmConfigurationProperty.Builder =

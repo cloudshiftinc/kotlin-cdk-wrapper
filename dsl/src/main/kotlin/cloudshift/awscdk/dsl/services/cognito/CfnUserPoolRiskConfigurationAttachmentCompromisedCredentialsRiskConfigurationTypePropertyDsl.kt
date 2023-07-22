@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
 
+/**
+ * The compromised credentials risk configuration type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CompromisedCredentialsRiskConfigurationTypeProperty
+ * compromisedCredentialsRiskConfigurationTypeProperty =
+ * CompromisedCredentialsRiskConfigurationTypeProperty.builder()
+ * .actions(CompromisedCredentialsActionsTypeProperty.builder()
+ * .eventAction("eventAction")
+ * .build())
+ * // the properties below are optional
+ * .eventFilter(List.of("eventFilter"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-compromisedcredentialsriskconfigurationtype.html)
+ */
 @CdkDslMarker
 public class
     CfnUserPoolRiskConfigurationAttachmentCompromisedCredentialsRiskConfigurationTypePropertyDsl {

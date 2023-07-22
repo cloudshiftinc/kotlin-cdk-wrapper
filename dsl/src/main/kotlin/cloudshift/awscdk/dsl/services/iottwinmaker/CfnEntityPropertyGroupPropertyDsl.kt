@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
+/**
+ * The property group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-propertygroup.html)
+ */
 @CdkDslMarker
 public class CfnEntityPropertyGroupPropertyDsl {
   private val cdkBuilder: CfnEntity.PropertyGroupProperty.Builder =

@@ -30,6 +30,28 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
 import software.amazon.awscdk.services.rds.StorageType
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for a DatabaseInstanceReadReplica.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseInstance sourceInstance;
+ * DatabaseInstanceFromSnapshot.Builder.create(this, "Instance")
+ * .snapshotIdentifier("my-snapshot")
+ * .engine(DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build()))
+ * // optional, defaults to m5.large
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
+ * .vpc(vpc)
+ * .build();
+ * DatabaseInstanceReadReplica.Builder.create(this, "ReadReplica")
+ * .sourceDatabaseInstance(sourceInstance)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.LARGE))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstanceReadReplicaPropsDsl {
   private val cdkBuilder: DatabaseInstanceReadReplicaProps.Builder =

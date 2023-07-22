@@ -14,6 +14,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings
 import software.constructs.Construct
 
+/**
+ * The `AWS::LakeFormation::DataLakeSettings` resource is an AWS Lake Formation resource type that
+ * manages the data lake settings for your account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object parameters;
+ * CfnDataLakeSettings cfnDataLakeSettings = CfnDataLakeSettings.Builder.create(this,
+ * "MyCfnDataLakeSettings")
+ * .admins(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build()))
+ * .allowExternalDataFiltering(false)
+ * .authorizedSessionTagValueList(List.of("authorizedSessionTagValueList"))
+ * .createDatabaseDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .createTableDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .externalDataFilteringAllowList(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build()))
+ * .parameters(parameters)
+ * .trustedResourceOwners(List.of("trustedResourceOwners"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html)
+ */
 @CdkDslMarker
 public class CfnDataLakeSettingsDsl(
   scope: Construct,

@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration for this MP2 audio.
+ *
+ * The parent of this entity is AudioCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Mp2SettingsProperty mp2SettingsProperty = Mp2SettingsProperty.builder()
+ * .bitrate(123)
+ * .codingMode("codingMode")
+ * .sampleRate(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mp2settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMp2SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Mp2SettingsProperty.Builder =

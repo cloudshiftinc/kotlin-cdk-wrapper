@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.kinesisvideo.CfnStreamProps
 
+/**
+ * Properties for defining a `CfnStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisvideo.*;
+ * CfnStreamProps cfnStreamProps = CfnStreamProps.builder()
+ * .dataRetentionInHours(123)
+ * .deviceName("deviceName")
+ * .kmsKeyId("kmsKeyId")
+ * .mediaType("mediaType")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamPropsDsl {
   private val cdkBuilder: CfnStreamProps.Builder = CfnStreamProps.builder()

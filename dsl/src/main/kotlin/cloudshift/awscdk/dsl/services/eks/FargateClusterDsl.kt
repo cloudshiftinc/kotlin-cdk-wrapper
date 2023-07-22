@@ -27,6 +27,21 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.ILayerVersion
 import software.constructs.Construct
 
+/**
+ * Defines an EKS cluster that runs entirely on AWS Fargate.
+ *
+ * The cluster is created with a default Fargate Profile that matches the
+ * "default" and "kube-system" namespaces. You can add additional profiles using
+ * `addFargateProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
+ * .version(KubernetesVersion.V1_27)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateClusterDsl(
   scope: Construct,

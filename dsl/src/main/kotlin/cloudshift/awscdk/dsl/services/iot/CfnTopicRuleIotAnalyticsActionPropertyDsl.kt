@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Sends message data to an AWS IoT Analytics channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * IotAnalyticsActionProperty iotAnalyticsActionProperty = IotAnalyticsActionProperty.builder()
+ * .channelName("channelName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .batchMode(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotanalyticsaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleIotAnalyticsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.IotAnalyticsActionProperty.Builder =

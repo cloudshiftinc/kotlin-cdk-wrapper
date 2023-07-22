@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for standard Salesforce knowledge articles.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SalesforceStandardKnowledgeArticleTypeConfigurationProperty
+ * salesforceStandardKnowledgeArticleTypeConfigurationProperty =
+ * SalesforceStandardKnowledgeArticleTypeConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardknowledgearticletypeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSalesforceStandardKnowledgeArticleTypeConfigurationPropertyDsl {
   private val cdkBuilder:

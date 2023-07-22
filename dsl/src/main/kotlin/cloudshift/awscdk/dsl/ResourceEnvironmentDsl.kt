@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.ResourceEnvironment
 
+/**
+ * Represents the environment a given resource lives in.
+ *
+ * Used as the return value for the `IResource.env` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ResourceEnvironment resourceEnvironment = ResourceEnvironment.builder()
+ * .account("account")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResourceEnvironmentDsl {
   private val cdkBuilder: ResourceEnvironment.Builder = ResourceEnvironment.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnCustomActionType
 
+/**
+ * `Settings` is a property of the `AWS::CodePipeline::CustomActionType` resource that provides URLs
+ * that users can access to view information about the CodePipeline custom action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * SettingsProperty settingsProperty = SettingsProperty.builder()
+ * .entityUrlTemplate("entityUrlTemplate")
+ * .executionUrlTemplate("executionUrlTemplate")
+ * .revisionUrlTemplate("revisionUrlTemplate")
+ * .thirdPartyConfigurationUrl("thirdPartyConfigurationUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html)
+ */
 @CdkDslMarker
 public class CfnCustomActionTypeSettingsPropertyDsl {
   private val cdkBuilder: CfnCustomActionType.SettingsProperty.Builder =

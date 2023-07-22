@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnAccessPoint
 
+/**
+ * The Virtual Private Cloud (VPC) configuration for this access point.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-accesspoint-vpcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.VpcConfigurationProperty.Builder =

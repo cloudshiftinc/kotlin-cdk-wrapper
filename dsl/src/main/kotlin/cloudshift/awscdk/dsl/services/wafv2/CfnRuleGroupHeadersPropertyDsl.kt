@@ -7,6 +7,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * Inspect all headers in the web request.
+ *
+ * You can specify the parts of the headers to inspect and you can narrow the set of headers to
+ * inspect by including or excluding specific keys.
+ *
+ * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+ * specification.
+ *
+ * If you want to inspect just the value of a single header, use the `SingleHeader` `FieldToMatch`
+ * setting instead.
+ *
+ * Example JSON: `"Headers": { "MatchPattern": { "All": {} }, "MatchScope": "KEY",
+ * "OversizeHandling": "MATCH" }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * HeadersProperty headersProperty = HeadersProperty.builder()
+ * .matchPattern(HeaderMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedHeaders(List.of("excludedHeaders"))
+ * .includedHeaders(List.of("includedHeaders"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-headers.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupHeadersPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.HeadersProperty.Builder =

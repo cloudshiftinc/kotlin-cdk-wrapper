@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnSchemaVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::SchemaVersion` is an AWS Glue resource type that manages schema versions of
+ * schemas in the AWS Glue Schema Registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnSchemaVersion cfnSchemaVersion = CfnSchemaVersion.Builder.create(this, "MyCfnSchemaVersion")
+ * .schema(SchemaProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build())
+ * .schemaDefinition("schemaDefinition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversion.html)
+ */
 @CdkDslMarker
 public class CfnSchemaVersionDsl(
   scope: Construct,

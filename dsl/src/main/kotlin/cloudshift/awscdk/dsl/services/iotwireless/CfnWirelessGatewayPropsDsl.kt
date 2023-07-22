@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGateway
 import software.amazon.awscdk.services.iotwireless.CfnWirelessGatewayProps
 
+/**
+ * Properties for defining a `CfnWirelessGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnWirelessGatewayProps cfnWirelessGatewayProps = CfnWirelessGatewayProps.builder()
+ * .loRaWan(LoRaWANGatewayProperty.builder()
+ * .gatewayEui("gatewayEui")
+ * .rfRegion("rfRegion")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .lastUplinkReceivedAt("lastUplinkReceivedAt")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .thingArn("thingArn")
+ * .thingName("thingName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessgateway.html)
+ */
 @CdkDslMarker
 public class CfnWirelessGatewayPropsDsl {
   private val cdkBuilder: CfnWirelessGatewayProps.Builder = CfnWirelessGatewayProps.builder()

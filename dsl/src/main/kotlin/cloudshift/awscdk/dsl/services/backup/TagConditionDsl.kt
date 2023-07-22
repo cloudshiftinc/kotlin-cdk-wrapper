@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.backup.TagCondition
 import software.amazon.awscdk.services.backup.TagOperation
 
+/**
+ * A tag condition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * TagCondition tagCondition = TagCondition.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .operation(TagOperation.STRING_EQUALS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TagConditionDsl {
   private val cdkBuilder: TagCondition.Builder = TagCondition.builder()

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `KinesisStreamSourceConfiguration` property type specifies the stream and role Amazon
+ * Resource Names (ARNs) for a Kinesis stream used as the source for a delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * KinesisStreamSourceConfigurationProperty kinesisStreamSourceConfigurationProperty =
+ * KinesisStreamSourceConfigurationProperty.builder()
+ * .kinesisStreamArn("kinesisStreamArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamKinesisStreamSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.Builder =

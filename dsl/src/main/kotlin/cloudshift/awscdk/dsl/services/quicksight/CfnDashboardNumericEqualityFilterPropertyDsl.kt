@@ -8,6 +8,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A `NumericEqualityFilter` filters values that are equal to the specified value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NumericEqualityFilterProperty numericEqualityFilterProperty =
+ * NumericEqualityFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .filterId("filterId")
+ * .matchOperator("matchOperator")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .parameterName("parameterName")
+ * .selectAllOptions("selectAllOptions")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-numericequalityfilter.html)
+ */
 @CdkDslMarker
 public class CfnDashboardNumericEqualityFilterPropertyDsl {
   private val cdkBuilder: CfnDashboard.NumericEqualityFilterProperty.Builder =

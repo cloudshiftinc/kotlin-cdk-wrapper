@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnProfile
 import software.constructs.Construct
 
+/**
+ * Creates the local or partner profile to use for AS2 transfers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnProfile cfnProfile = CfnProfile.Builder.create(this, "MyCfnProfile")
+ * .as2Id("as2Id")
+ * .profileType("profileType")
+ * // the properties below are optional
+ * .certificateIds(List.of("certificateIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-profile.html)
+ */
 @CdkDslMarker
 public class CfnProfileDsl(
   scope: Construct,

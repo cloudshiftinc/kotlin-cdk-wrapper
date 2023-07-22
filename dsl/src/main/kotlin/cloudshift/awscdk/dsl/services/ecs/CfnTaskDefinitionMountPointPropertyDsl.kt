@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The details for a volume mount point that's used in a container definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * MountPointProperty mountPointProperty = MountPointProperty.builder()
+ * .containerPath("containerPath")
+ * .readOnly(false)
+ * .sourceVolume("sourceVolume")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-mountpoint.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionMountPointPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.MountPointProperty.Builder =

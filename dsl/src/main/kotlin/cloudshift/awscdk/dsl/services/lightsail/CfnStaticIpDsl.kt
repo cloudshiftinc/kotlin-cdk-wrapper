@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnStaticIp
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::StaticIp` resource specifies a static IP that can be attached to an Amazon
+ * Lightsail instance that is in the same AWS Region and Availability Zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnStaticIp cfnStaticIp = CfnStaticIp.Builder.create(this, "MyCfnStaticIp")
+ * .staticIpName("staticIpName")
+ * // the properties below are optional
+ * .attachedTo("attachedTo")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-staticip.html)
+ */
 @CdkDslMarker
 public class CfnStaticIpDsl(
   scope: Construct,

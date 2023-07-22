@@ -15,6 +15,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnProject
 import software.constructs.Construct
 
+/**
+ * Creates a machine learning (ML) project that can contain one or more templates that set up an ML
+ * pipeline from training to deploying an approved model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object serviceCatalogProvisioningDetails;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .projectName("projectName")
+ * .serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails)
+ * // the properties below are optional
+ * .projectDescription("projectDescription")
+ * .serviceCatalogProvisionedProductDetails(ServiceCatalogProvisionedProductDetailsProperty.builder()
+ * .provisionedProductId("provisionedProductId")
+ * .provisionedProductStatusMessage("provisionedProductStatusMessage")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

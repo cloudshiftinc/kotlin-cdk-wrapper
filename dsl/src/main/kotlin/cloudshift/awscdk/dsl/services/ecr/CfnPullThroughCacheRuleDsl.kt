@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule
 import software.constructs.Construct
 
+/**
+ * Creates a pull through cache rule.
+ *
+ * A pull through cache rule provides a way to cache images from an external public registry in your
+ * Amazon ECR private registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * CfnPullThroughCacheRule cfnPullThroughCacheRule = CfnPullThroughCacheRule.Builder.create(this,
+ * "MyCfnPullThroughCacheRule")
+ * .ecrRepositoryPrefix("ecrRepositoryPrefix")
+ * .upstreamRegistryUrl("upstreamRegistryUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-pullthroughcacherule.html)
+ */
 @CdkDslMarker
 public class CfnPullThroughCacheRuleDsl(
   scope: Construct,

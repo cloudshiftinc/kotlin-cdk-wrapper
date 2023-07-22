@@ -7,6 +7,32 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * Specifies the configuration details of a scheduled-trigger flow that you define.
+ *
+ * Currently, these settings only apply to the scheduled-trigger type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * ScheduledTriggerPropertiesProperty scheduledTriggerPropertiesProperty =
+ * ScheduledTriggerPropertiesProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .dataPullMode("dataPullMode")
+ * .firstExecutionFrom(123)
+ * .scheduleEndTime(123)
+ * .scheduleOffset(123)
+ * .scheduleStartTime(123)
+ * .timezone("timezone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-scheduledtriggerproperties.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationScheduledTriggerPropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.ScheduledTriggerPropertiesProperty.Builder =

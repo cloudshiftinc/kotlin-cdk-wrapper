@@ -15,6 +15,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon FSx for Lustre data repository association (DRA).
+ *
+ * A data repository association is a link between a directory on the file system and an Amazon S3
+ * bucket or prefix. You can have a maximum of 8 data repository associations on a file system. Data
+ * repository associations are supported on all FSx for Lustre 2.12 and newer file systems, excluding
+ * `scratch_1` deployment type.
+ *
+ * Each data repository association must have a unique Amazon FSx file system directory and a unique
+ * S3 bucket or prefix associated with it. You can configure a data repository association for
+ * automatic import only, for automatic export only, or for both. To learn more about linking a data
+ * repository to your file system, see [Linking your file system to an S3
+ * bucket](https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnDataRepositoryAssociation cfnDataRepositoryAssociation =
+ * CfnDataRepositoryAssociation.Builder.create(this, "MyCfnDataRepositoryAssociation")
+ * .dataRepositoryPath("dataRepositoryPath")
+ * .fileSystemId("fileSystemId")
+ * .fileSystemPath("fileSystemPath")
+ * // the properties below are optional
+ * .batchImportMetaDataOnCreate(false)
+ * .importedFileChunkSize(123)
+ * .s3(S3Property.builder()
+ * .autoExportPolicy(AutoExportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .autoImportPolicy(AutoImportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html)
+ */
 @CdkDslMarker
 public class CfnDataRepositoryAssociationDsl(
   scope: Construct,

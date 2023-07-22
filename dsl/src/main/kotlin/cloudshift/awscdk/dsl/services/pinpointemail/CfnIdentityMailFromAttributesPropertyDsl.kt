@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
+/**
+ * A list of attributes that are associated with a MAIL FROM domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * MailFromAttributesProperty mailFromAttributesProperty = MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-identity-mailfromattributes.html)
+ */
 @CdkDslMarker
 public class CfnIdentityMailFromAttributesPropertyDsl {
   private val cdkBuilder: CfnIdentity.MailFromAttributesProperty.Builder =

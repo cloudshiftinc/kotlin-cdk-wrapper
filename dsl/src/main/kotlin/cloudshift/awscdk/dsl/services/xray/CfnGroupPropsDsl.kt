@@ -11,6 +11,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnGroup
 import software.amazon.awscdk.services.xray.CfnGroupProps
 
+/**
+ * Properties for defining a `CfnGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * Object tags;
+ * CfnGroupProps cfnGroupProps = CfnGroupProps.builder()
+ * .groupName("groupName")
+ * // the properties below are optional
+ * .filterExpression("filterExpression")
+ * .insightsConfiguration(InsightsConfigurationProperty.builder()
+ * .insightsEnabled(false)
+ * .notificationsEnabled(false)
+ * .build())
+ * .tags(List.of(tags))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupPropsDsl {
   private val cdkBuilder: CfnGroupProps.Builder = CfnGroupProps.builder()

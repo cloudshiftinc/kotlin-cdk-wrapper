@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachmentProps
 
+/**
+ * Properties for defining a `CfnSecretTargetAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * CfnSecretTargetAttachmentProps cfnSecretTargetAttachmentProps =
+ * CfnSecretTargetAttachmentProps.builder()
+ * .secretId("secretId")
+ * .targetId("targetId")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
+ */
 @CdkDslMarker
 public class CfnSecretTargetAttachmentPropsDsl {
   private val cdkBuilder: CfnSecretTargetAttachmentProps.Builder =

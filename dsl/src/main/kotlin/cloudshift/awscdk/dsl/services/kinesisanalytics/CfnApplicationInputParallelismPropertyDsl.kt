@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplication
 
+/**
+ * Describes the number of in-application streams to create for a given streaming source.
+ *
+ * For information about parallelism, see [Configuring Application
+ * Input](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * InputParallelismProperty inputParallelismProperty = InputParallelismProperty.builder()
+ * .count(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputparallelism.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInputParallelismPropertyDsl {
   private val cdkBuilder: CfnApplication.InputParallelismProperty.Builder =

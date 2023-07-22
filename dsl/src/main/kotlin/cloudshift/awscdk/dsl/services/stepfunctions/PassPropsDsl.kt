@@ -11,6 +11,22 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.PassProps
 import software.amazon.awscdk.services.stepfunctions.Result
 
+/**
+ * Properties for defining a Pass state.
+ *
+ * Example:
+ *
+ * ```
+ * // Makes the current JSON state { ..., "subObject": { "hello": "world" } }
+ * Pass pass = Pass.Builder.create(this, "Add Hello World")
+ * .result(Result.fromObject(Map.of("hello", "world")))
+ * .resultPath("$.subObject")
+ * .build();
+ * // Set the next state
+ * Pass nextState = new Pass(this, "NextState");
+ * pass.next(nextState);
+ * ```
+ */
 @CdkDslMarker
 public class PassPropsDsl {
   private val cdkBuilder: PassProps.Builder = PassProps.builder()

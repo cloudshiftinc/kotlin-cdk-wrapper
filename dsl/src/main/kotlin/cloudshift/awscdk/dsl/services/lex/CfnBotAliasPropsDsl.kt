@@ -13,6 +13,67 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBotAlias
 import software.amazon.awscdk.services.lex.CfnBotAliasProps
 
+/**
+ * Properties for defining a `CfnBotAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * Object sentimentAnalysisSettings;
+ * CfnBotAliasProps cfnBotAliasProps = CfnBotAliasProps.builder()
+ * .botAliasName("botAliasName")
+ * .botId("botId")
+ * // the properties below are optional
+ * .botAliasLocaleSettings(List.of(BotAliasLocaleSettingsItemProperty.builder()
+ * .botAliasLocaleSetting(BotAliasLocaleSettingsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .codeHookSpecification(CodeHookSpecificationProperty.builder()
+ * .lambdaCodeHook(LambdaCodeHookProperty.builder()
+ * .codeHookInterfaceVersion("codeHookInterfaceVersion")
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build())
+ * .build())
+ * .localeId("localeId")
+ * .build()))
+ * .botAliasTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .botVersion("botVersion")
+ * .conversationLogSettings(ConversationLogSettingsProperty.builder()
+ * .audioLogSettings(List.of(AudioLogSettingProperty.builder()
+ * .destination(AudioLogDestinationProperty.builder()
+ * .s3Bucket(S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .textLogSettings(List.of(TextLogSettingProperty.builder()
+ * .destination(TextLogDestinationProperty.builder()
+ * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .logPrefix("logPrefix")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .build())
+ * .description("description")
+ * .sentimentAnalysisSettings(sentimentAnalysisSettings)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-botalias.html)
+ */
 @CdkDslMarker
 public class CfnBotAliasPropsDsl {
   private val cdkBuilder: CfnBotAliasProps.Builder = CfnBotAliasProps.builder()

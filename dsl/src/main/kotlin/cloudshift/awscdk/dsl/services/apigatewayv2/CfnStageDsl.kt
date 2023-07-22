@@ -12,6 +12,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnStage
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Stage` resource specifies a stage for an API.
+ *
+ * Each stage is a named reference to a deployment of the API and is made available for client
+ * applications to call. To learn more, see [Working with stages for HTTP
+ * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-stages.html) and [Deploy
+ * a WebSocket API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-set-up-websocket-deployment.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object routeSettings;
+ * Object stageVariables;
+ * Object tags;
+ * CfnStage cfnStage = CfnStage.Builder.create(this, "MyCfnStage")
+ * .apiId("apiId")
+ * .stageName("stageName")
+ * // the properties below are optional
+ * .accessLogSettings(AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .accessPolicyId("accessPolicyId")
+ * .autoDeploy(false)
+ * .clientCertificateId("clientCertificateId")
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .deploymentId("deploymentId")
+ * .description("description")
+ * .routeSettings(routeSettings)
+ * .stageVariables(stageVariables)
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)
+ */
 @CdkDslMarker
 public class CfnStageDsl(
   scope: Construct,

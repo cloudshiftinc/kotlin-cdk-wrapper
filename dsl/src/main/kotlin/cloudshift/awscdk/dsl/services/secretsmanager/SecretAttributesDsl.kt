@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.secretsmanager.SecretAttributes
 
+/**
+ * Attributes required to import an existing secret into the Stack.
+ *
+ * One ARN format (`secretArn`, `secretCompleteArn`, `secretPartialArn`) must be provided.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = new UserPool(this, "Pool");
+ * SecretValue secret = Secret.fromSecretAttributes(this, "CognitoClientSecret",
+ * SecretAttributes.builder()
+ * .secretCompleteArn("arn:aws:secretsmanager:xxx:xxx:secret:xxx-xxx")
+ * .build()).getSecretValue();
+ * UserPoolIdentityProviderGoogle provider = UserPoolIdentityProviderGoogle.Builder.create(this,
+ * "Google")
+ * .clientId("amzn-client-id")
+ * .clientSecretValue(secret)
+ * .userPool(userpool)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretAttributesDsl {
   private val cdkBuilder: SecretAttributes.Builder = SecretAttributes.builder()

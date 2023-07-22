@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 
+/**
+ * The IAM SAML identity provider used for federated authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * FederatedAuthenticationRequestProperty federatedAuthenticationRequestProperty =
+ * FederatedAuthenticationRequestProperty.builder()
+ * .samlProviderArn("samlProviderArn")
+ * // the properties below are optional
+ * .selfServiceSamlProviderArn("selfServiceSamlProviderArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-federatedauthenticationrequest.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnEndpointFederatedAuthenticationRequestPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty.Builder =

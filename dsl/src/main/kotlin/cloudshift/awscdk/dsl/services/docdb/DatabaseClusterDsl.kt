@@ -22,6 +22,26 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
+/**
+ * Create a clustered database with a given number of instances.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .masterUser(Login.builder()
+ * .username("myuser")
+ * .build())
+ * .instanceType(InstanceType.of(InstanceClass.MEMORY5, InstanceSize.LARGE))
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PUBLIC)
+ * .build())
+ * .vpc(vpc)
+ * .deletionProtection(true)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterDsl(
   scope: Construct,

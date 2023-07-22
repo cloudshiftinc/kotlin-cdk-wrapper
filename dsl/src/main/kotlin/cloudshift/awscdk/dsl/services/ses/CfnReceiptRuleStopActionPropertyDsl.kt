@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action terminates the evaluation of the receipt rule set
+ * and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).
+ *
+ * For information about setting a stop action in a receipt rule, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-stop.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * StopActionProperty stopActionProperty = StopActionProperty.builder()
+ * .scope("scope")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-stopaction.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleStopActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.StopActionProperty.Builder =

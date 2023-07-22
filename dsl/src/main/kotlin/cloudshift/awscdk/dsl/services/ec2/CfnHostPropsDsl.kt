@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnHostProps
 
+/**
+ * Properties for defining a `CfnHost`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnHostProps cfnHostProps = CfnHostProps.builder()
+ * .availabilityZone("availabilityZone")
+ * // the properties below are optional
+ * .autoPlacement("autoPlacement")
+ * .hostMaintenance("hostMaintenance")
+ * .hostRecovery("hostRecovery")
+ * .instanceFamily("instanceFamily")
+ * .instanceType("instanceType")
+ * .outpostArn("outpostArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html)
+ */
 @CdkDslMarker
 public class CfnHostPropsDsl {
   private val cdkBuilder: CfnHostProps.Builder = CfnHostProps.builder()

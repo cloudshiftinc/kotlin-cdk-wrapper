@@ -8,6 +8,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A `NumericRangeFilter` filters values that are within the value range.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NumericRangeFilterProperty numericRangeFilterProperty = NumericRangeFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .filterId("filterId")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .includeMaximum(false)
+ * .includeMinimum(false)
+ * .rangeMaximum(NumericRangeFilterValueProperty.builder()
+ * .parameter("parameter")
+ * .staticValue(123)
+ * .build())
+ * .rangeMinimum(NumericRangeFilterValueProperty.builder()
+ * .parameter("parameter")
+ * .staticValue(123)
+ * .build())
+ * .selectAllOptions("selectAllOptions")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-numericrangefilter.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisNumericRangeFilterPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NumericRangeFilterProperty.Builder =

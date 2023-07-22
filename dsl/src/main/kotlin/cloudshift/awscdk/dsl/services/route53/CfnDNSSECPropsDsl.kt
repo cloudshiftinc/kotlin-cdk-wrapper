@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnDNSSECProps
 
+/**
+ * Properties for defining a `CfnDNSSEC`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnDNSSECProps cfnDNSSECProps = CfnDNSSECProps.builder()
+ * .hostedZoneId("hostedZoneId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)
+ */
 @CdkDslMarker
 public class CfnDNSSECPropsDsl {
   private val cdkBuilder: CfnDNSSECProps.Builder = CfnDNSSECProps.builder()

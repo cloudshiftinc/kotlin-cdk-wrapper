@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.devicefarm.CfnVPCEConfiguration
 import software.constructs.Construct
 
+/**
+ * Creates a configuration record in Device Farm for your Amazon Virtual Private Cloud (VPC)
+ * endpoint service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnVPCEConfiguration cfnVPCEConfiguration = CfnVPCEConfiguration.Builder.create(this,
+ * "MyCfnVPCEConfiguration")
+ * .serviceDnsName("serviceDnsName")
+ * .vpceConfigurationName("vpceConfigurationName")
+ * .vpceServiceName("vpceServiceName")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpceConfigurationDescription("vpceConfigurationDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-vpceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnVPCEConfigurationDsl(
   scope: Construct,

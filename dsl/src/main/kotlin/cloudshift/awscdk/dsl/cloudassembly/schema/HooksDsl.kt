@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.Hooks
 
+/**
+ * Commands to run at predefined points during the integration test workflow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * Hooks hooks = Hooks.builder()
+ * .postDeploy(List.of("postDeploy"))
+ * .postDestroy(List.of("postDestroy"))
+ * .preDeploy(List.of("preDeploy"))
+ * .preDestroy(List.of("preDestroy"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HooksDsl {
   private val cdkBuilder: Hooks.Builder = Hooks.builder()

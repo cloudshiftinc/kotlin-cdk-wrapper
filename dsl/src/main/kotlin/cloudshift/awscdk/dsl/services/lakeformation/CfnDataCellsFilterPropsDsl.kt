@@ -10,6 +10,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter
 import software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps
 
+/**
+ * Properties for defining a `CfnDataCellsFilter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object allRowsWildcard;
+ * CfnDataCellsFilterProps cfnDataCellsFilterProps = CfnDataCellsFilterProps.builder()
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableCatalogId("tableCatalogId")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .rowFilter(RowFilterProperty.builder()
+ * .allRowsWildcard(allRowsWildcard)
+ * .filterExpression("filterExpression")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html)
+ */
 @CdkDslMarker
 public class CfnDataCellsFilterPropsDsl {
   private val cdkBuilder: CfnDataCellsFilterProps.Builder = CfnDataCellsFilterProps.builder()

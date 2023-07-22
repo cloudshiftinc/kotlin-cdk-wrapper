@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnHealthCheck
 
+/**
+ * A complex type that identifies the CloudWatch alarm that you want Amazon Route 53 health checkers
+ * to use to determine whether the specified health check is healthy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * AlarmIdentifierProperty alarmIdentifierProperty = AlarmIdentifierProperty.builder()
+ * .name("name")
+ * .region("region")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html)
+ */
 @CdkDslMarker
 public class CfnHealthCheckAlarmIdentifierPropertyDsl {
   private val cdkBuilder: CfnHealthCheck.AlarmIdentifierProperty.Builder =

@@ -13,6 +13,21 @@ import software.amazon.awscdk.services.ec2.VpnConnection
 import software.amazon.awscdk.services.ec2.VpnTunnelOption
 import software.constructs.Construct
 
+/**
+ * Define a VPN Connection.
+ *
+ * Example:
+ *
+ * ```
+ * // Across all tunnels in the account/region
+ * Metric allDataOut = VpnConnection.metricAllTunnelDataOut();
+ * // For a specific vpn connection
+ * VpnConnection vpnConnection = vpc.addVpnConnection("Dynamic", VpnConnectionOptions.builder()
+ * .ip("1.2.3.4")
+ * .build());
+ * Metric state = vpnConnection.metricTunnelState();
+ * ```
+ */
 @CdkDslMarker
 public class VpnConnectionDsl(
   scope: Construct,

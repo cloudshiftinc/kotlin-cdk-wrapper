@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a Kinesis stream as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetKinesisStreamParametersProperty pipeTargetKinesisStreamParametersProperty =
+ * PipeTargetKinesisStreamParametersProperty.builder()
+ * .partitionKey("partitionKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetkinesisstreamparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetKinesisStreamParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetKinesisStreamParametersProperty.Builder =

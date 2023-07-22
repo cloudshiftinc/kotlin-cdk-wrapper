@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.CrossAccountDestinationProps
 
+/**
+ * Properties for a CrossAccountDestination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * Role role;
+ * CrossAccountDestinationProps crossAccountDestinationProps =
+ * CrossAccountDestinationProps.builder()
+ * .role(role)
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .destinationName("destinationName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CrossAccountDestinationPropsDsl {
   private val cdkBuilder: CrossAccountDestinationProps.Builder =

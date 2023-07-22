@@ -11,6 +11,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Construction properties for UntrustedCodeBoundaryPolicy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * PolicyStatement policyStatement;
+ * UntrustedCodeBoundaryPolicyProps untrustedCodeBoundaryPolicyProps =
+ * UntrustedCodeBoundaryPolicyProps.builder()
+ * .additionalStatements(List.of(policyStatement))
+ * .managedPolicyName("managedPolicyName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UntrustedCodeBoundaryPolicyPropsDsl {
   private val cdkBuilder: UntrustedCodeBoundaryPolicyProps.Builder =

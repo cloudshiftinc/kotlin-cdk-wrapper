@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 
+/**
+ * Information about the source of the data included in the resource data sync.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * SyncSourceProperty syncSourceProperty = SyncSourceProperty.builder()
+ * .sourceRegions(List.of("sourceRegions"))
+ * .sourceType("sourceType")
+ * // the properties below are optional
+ * .awsOrganizationsSource(AwsOrganizationsSourceProperty.builder()
+ * .organizationSourceType("organizationSourceType")
+ * // the properties below are optional
+ * .organizationalUnits(List.of("organizationalUnits"))
+ * .build())
+ * .includeFutureRegions(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-syncsource.html)
+ */
 @CdkDslMarker
 public class CfnResourceDataSyncSyncSourcePropertyDsl {
   private val cdkBuilder: CfnResourceDataSync.SyncSourceProperty.Builder =

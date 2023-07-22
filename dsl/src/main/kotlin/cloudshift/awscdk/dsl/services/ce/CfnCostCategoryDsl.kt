@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.services.ce.CfnCostCategory
 import software.constructs.Construct
 
+/**
+ * The `AWS::CE::CostCategory` resource creates groupings of cost that you can use across products
+ * in the AWS Billing and Cost Management console, such as Cost Explorer and AWS Budgets.
+ *
+ * For more information, see [Managing Your Costs with Cost
+ * Categories](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-cost-categories.html)
+ * in the *AWS Billing and Cost Management User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnCostCategory cfnCostCategory = CfnCostCategory.Builder.create(this, "MyCfnCostCategory")
+ * .name("name")
+ * .rules("rules")
+ * .ruleVersion("ruleVersion")
+ * // the properties below are optional
+ * .defaultValue("defaultValue")
+ * .splitChargeRules("splitChargeRules")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html)
+ */
 @CdkDslMarker
 public class CfnCostCategoryDsl(
   scope: Construct,

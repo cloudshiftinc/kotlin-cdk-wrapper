@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.appsync.CachingConfig
 
+/**
+ * CachingConfig for AppSync resolvers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appsync.*;
+ * CachingConfig cachingConfig = CachingConfig.builder()
+ * .ttl(Duration.minutes(30))
+ * // the properties below are optional
+ * .cachingKeys(List.of("cachingKeys"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CachingConfigDsl {
   private val cdkBuilder: CachingConfig.Builder = CachingConfig.builder()

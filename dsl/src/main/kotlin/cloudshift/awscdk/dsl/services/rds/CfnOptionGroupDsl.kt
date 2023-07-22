@@ -14,6 +14,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnOptionGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::OptionGroup` resource creates or updates an option group, to enable and configure
+ * features that are specific to a particular DB engine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnOptionGroup cfnOptionGroup = CfnOptionGroup.Builder.create(this, "MyCfnOptionGroup")
+ * .engineName("engineName")
+ * .majorEngineVersion("majorEngineVersion")
+ * .optionGroupDescription("optionGroupDescription")
+ * // the properties below are optional
+ * .optionConfigurations(List.of(OptionConfigurationProperty.builder()
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .dbSecurityGroupMemberships(List.of("dbSecurityGroupMemberships"))
+ * .optionSettings(List.of(OptionSettingProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .optionVersion("optionVersion")
+ * .port(123)
+ * .vpcSecurityGroupMemberships(List.of("vpcSecurityGroupMemberships"))
+ * .build()))
+ * .optionGroupName("optionGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html)
+ */
 @CdkDslMarker
 public class CfnOptionGroupDsl(
   scope: Construct,

@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.customerprofiles.CfnDomain
 import software.constructs.Construct
 
+/**
+ * Specifies an Amazon Connect Customer Profiles Domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .deadLetterQueueUrl("deadLetterQueueUrl")
+ * .defaultEncryptionKey("defaultEncryptionKey")
+ * .defaultExpirationDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainDsl(
   scope: Construct,

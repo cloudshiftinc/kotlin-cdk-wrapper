@@ -7,6 +7,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.eks.Selector
 
+/**
+ * Fargate profile selector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * Selector selector = Selector.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SelectorDsl {
   private val cdkBuilder: Selector.Builder = Selector.builder()

@@ -7,6 +7,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The data configuration of the reference line.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ReferenceLineDataConfigurationProperty referenceLineDataConfigurationProperty =
+ * ReferenceLineDataConfigurationProperty.builder()
+ * .axisBinding("axisBinding")
+ * .dynamicConfiguration(ReferenceLineDynamicDataConfigurationProperty.builder()
+ * .calculation(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .measureAggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .build())
+ * .staticConfiguration(ReferenceLineStaticDataConfigurationProperty.builder()
+ * .value(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-referencelinedataconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisReferenceLineDataConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ReferenceLineDataConfigurationProperty.Builder =

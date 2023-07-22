@@ -10,6 +10,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.Tag
 
+/**
+ * The Tag Aspect will handle adding a tag to this node and cascading tags to children.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * Tag tag = Tag.Builder.create("key", "value")
+ * .applyToLaunchedInstances(false)
+ * .excludeResourceTypes(List.of("excludeResourceTypes"))
+ * .includeResourceTypes(List.of("includeResourceTypes"))
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TagDsl(
   key: String,

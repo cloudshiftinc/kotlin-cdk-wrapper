@@ -11,6 +11,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.logs.CfnMetricFilter
 import software.constructs.Construct
 
+/**
+ * The `AWS::Logs::MetricFilter` resource specifies a metric filter that describes how CloudWatch
+ * Logs extracts information from logs and transforms it into Amazon CloudWatch metrics.
+ *
+ * If you have multiple metric filters that are associated with a log group, all the filters are
+ * applied to the log streams in that group.
+ *
+ * The maximum number of metric filters that can be associated with a log group is 100.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnMetricFilter cfnMetricFilter = CfnMetricFilter.Builder.create(this, "MyCfnMetricFilter")
+ * .filterPattern("filterPattern")
+ * .logGroupName("logGroupName")
+ * .metricTransformations(List.of(MetricTransformationProperty.builder()
+ * .metricName("metricName")
+ * .metricNamespace("metricNamespace")
+ * .metricValue("metricValue")
+ * // the properties below are optional
+ * .defaultValue(123)
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build()))
+ * // the properties below are optional
+ * .filterName("filterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)
+ */
 @CdkDslMarker
 public class CfnMetricFilterDsl(
   scope: Construct,

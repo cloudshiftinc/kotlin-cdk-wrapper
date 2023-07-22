@@ -9,6 +9,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when using SAPOData as a flow destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SAPODataDestinationPropertiesProperty sAPODataDestinationPropertiesProperty =
+ * SAPODataDestinationPropertiesProperty.builder()
+ * .objectPath("objectPath")
+ * // the properties below are optional
+ * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .failOnFirstError(false)
+ * .build())
+ * .idFieldNames(List.of("idFieldNames"))
+ * .successResponseHandlingConfig(SuccessResponseHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .build())
+ * .writeOperationType("writeOperationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatadestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowSAPODataDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SAPODataDestinationPropertiesProperty.Builder =

@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobQueue
 import software.constructs.Construct
 
+/**
+ * The `AWS::Batch::JobQueue` resource specifies the parameters for an AWS Batch job queue
+ * definition.
+ *
+ * For more information, see [Job
+ * Queues](https://docs.aws.amazon.com/batch/latest/userguide/job_queues.html) in the ** .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnJobQueue cfnJobQueue = CfnJobQueue.Builder.create(this, "MyCfnJobQueue")
+ * .computeEnvironmentOrder(List.of(ComputeEnvironmentOrderProperty.builder()
+ * .computeEnvironment("computeEnvironment")
+ * .order(123)
+ * .build()))
+ * .priority(123)
+ * // the properties below are optional
+ * .jobQueueName("jobQueueName")
+ * .schedulingPolicyArn("schedulingPolicyArn")
+ * .state("state")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)
+ */
 @CdkDslMarker
 public class CfnJobQueueDsl(
   scope: Construct,

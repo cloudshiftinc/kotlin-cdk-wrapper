@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.ec2.Action
 import software.amazon.awscdk.services.ec2.CommonNetworkAclEntryOptions
 import software.amazon.awscdk.services.ec2.TrafficDirection
 
+/**
+ * Basic NetworkACL entry props.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclCidr aclCidr;
+ * AclTraffic aclTraffic;
+ * CommonNetworkAclEntryOptions commonNetworkAclEntryOptions =
+ * CommonNetworkAclEntryOptions.builder()
+ * .cidr(aclCidr)
+ * .ruleNumber(123)
+ * .traffic(aclTraffic)
+ * // the properties below are optional
+ * .direction(TrafficDirection.EGRESS)
+ * .networkAclEntryName("networkAclEntryName")
+ * .ruleAction(Action.ALLOW)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonNetworkAclEntryOptionsDsl {
   private val cdkBuilder: CommonNetworkAclEntryOptions.Builder =

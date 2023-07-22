@@ -15,6 +15,26 @@ import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.s3.assets.Asset
 import software.constructs.Construct
 
+/**
+ * Represents a helm chart within the Kubernetes system.
+ *
+ * Applies/deletes the resources using `kubectl` in sync with the resource.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // option 1: use a construct
+ * // option 1: use a construct
+ * HelmChart.Builder.create(this, "MyOCIChart")
+ * .cluster(cluster)
+ * .chart("some-chart")
+ * .repository("oci://${ACCOUNT_ID}.dkr.ecr.${ACCOUNT_REGION}.amazonaws.com/${REPO_NAME}")
+ * .namespace("oci")
+ * .version("0.0.1")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HelmChartDsl(
   scope: Construct,

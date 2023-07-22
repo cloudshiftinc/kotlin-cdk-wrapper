@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps
 
+/**
+ * Properties for defining a `CfnRepositoryAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codegurureviewer.*;
+ * CfnRepositoryAssociationProps cfnRepositoryAssociationProps =
+ * CfnRepositoryAssociationProps.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .bucketName("bucketName")
+ * .connectionArn("connectionArn")
+ * .owner("owner")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codegurureviewer-repositoryassociation.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryAssociationPropsDsl {
   private val cdkBuilder: CfnRepositoryAssociationProps.Builder =

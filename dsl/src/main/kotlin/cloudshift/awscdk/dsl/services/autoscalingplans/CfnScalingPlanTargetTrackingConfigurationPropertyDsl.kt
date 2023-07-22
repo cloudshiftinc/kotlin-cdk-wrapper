@@ -8,6 +8,46 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 
+/**
+ * `TargetTrackingConfiguration` is a subproperty of
+ * [ScalingInstruction](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
+ * that specifies a target tracking configuration to use with AWS Auto Scaling ( Auto Scaling Plans ).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscalingplans.*;
+ * TargetTrackingConfigurationProperty targetTrackingConfigurationProperty =
+ * TargetTrackingConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableScaleIn(false)
+ * .estimatedInstanceWarmup(123)
+ * .predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty.builder()
+ * .predefinedScalingMetricType("predefinedScalingMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnScalingPlanTargetTrackingConfigurationPropertyDsl {
   private val cdkBuilder: CfnScalingPlan.TargetTrackingConfigurationProperty.Builder =

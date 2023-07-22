@@ -8,6 +8,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * Contains the parameters needed for you to provide custom input to a target based on one or more
+ * pieces of data extracted from the event.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * InputTransformerProperty inputTransformerProperty = InputTransformerProperty.builder()
+ * .inputTemplate("inputTemplate")
+ * // the properties below are optional
+ * .inputPathsMap(Map.of(
+ * "inputPathsMapKey", "inputPathsMap"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-inputtransformer.html)
+ */
 @CdkDslMarker
 public class CfnRuleInputTransformerPropertyDsl {
   private val cdkBuilder: CfnRule.InputTransformerProperty.Builder =

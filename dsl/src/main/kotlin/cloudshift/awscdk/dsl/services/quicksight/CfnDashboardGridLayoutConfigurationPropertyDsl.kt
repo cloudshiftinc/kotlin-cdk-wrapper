@@ -9,6 +9,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration for a grid layout. Also called a tiled layout.
+ *
+ * Visuals snap to a grid with standard spacing and alignment. Dashboards are displayed as designed,
+ * with options to fit to screen or view at actual size.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GridLayoutConfigurationProperty gridLayoutConfigurationProperty =
+ * GridLayoutConfigurationProperty.builder()
+ * .elements(List.of(GridLayoutElementProperty.builder()
+ * .columnSpan(123)
+ * .elementId("elementId")
+ * .elementType("elementType")
+ * .rowSpan(123)
+ * // the properties below are optional
+ * .columnIndex(123)
+ * .rowIndex(123)
+ * .build()))
+ * // the properties below are optional
+ * .canvasSizeOptions(GridLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(GridLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .resizeOption("resizeOption")
+ * // the properties below are optional
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-gridlayoutconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardGridLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.GridLayoutConfigurationProperty.Builder =

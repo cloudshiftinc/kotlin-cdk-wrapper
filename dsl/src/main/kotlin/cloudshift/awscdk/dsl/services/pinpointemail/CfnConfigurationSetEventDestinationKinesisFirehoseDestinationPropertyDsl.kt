@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 
+/**
+ * An object that defines an Amazon Kinesis Data Firehose destination for email events.
+ *
+ * You can use Amazon Kinesis Data Firehose to stream data to other services, such as Amazon S3 and
+ * Amazon Redshift.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * KinesisFirehoseDestinationProperty kinesisFirehoseDestinationProperty =
+ * KinesisFirehoseDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .iamRoleArn("iamRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-kinesisfirehosedestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationKinesisFirehoseDestinationPropertyDsl {
   private val cdkBuilder:

@@ -13,6 +13,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnFeatureProps
 
+/**
+ * Properties for defining a `CfnFeature`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnFeatureProps cfnFeatureProps = CfnFeatureProps.builder()
+ * .name("name")
+ * .project("project")
+ * .variations(List.of(VariationObjectProperty.builder()
+ * .variationName("variationName")
+ * // the properties below are optional
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .longValue(123)
+ * .stringValue("stringValue")
+ * .build()))
+ * // the properties below are optional
+ * .defaultVariation("defaultVariation")
+ * .description("description")
+ * .entityOverrides(List.of(EntityOverrideProperty.builder()
+ * .entityId("entityId")
+ * .variation("variation")
+ * .build()))
+ * .evaluationStrategy("evaluationStrategy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-feature.html)
+ */
 @CdkDslMarker
 public class CfnFeaturePropsDsl {
   private val cdkBuilder: CfnFeatureProps.Builder = CfnFeatureProps.builder()

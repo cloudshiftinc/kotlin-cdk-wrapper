@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * Represents the properties of a local secondary index.
+ *
+ * A local secondary index can only be created when its parent table is created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * LocalSecondaryIndexProperty localSecondaryIndexProperty = LocalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-localsecondaryindex.html)
+ */
 @CdkDslMarker
 public class CfnTableLocalSecondaryIndexPropertyDsl {
   private val cdkBuilder: CfnTable.LocalSecondaryIndexProperty.Builder =

@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 
+/**
+ * Specifies an encryption configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * EncryptionConfigurationProperty encryptionConfigurationProperty =
+ * EncryptionConfigurationProperty.builder()
+ * .cloudWatchEncryption(CloudWatchEncryptionProperty.builder()
+ * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .jobBookmarksEncryption(JobBookmarksEncryptionProperty.builder()
+ * .jobBookmarksEncryptionMode("jobBookmarksEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .s3Encryptions(List.of(S3EncryptionProperty.builder()
+ * .kmsKeyArn("kmsKeyArn")
+ * .s3EncryptionMode("s3EncryptionMode")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-encryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnSecurityConfiguration.EncryptionConfigurationProperty.Builder =

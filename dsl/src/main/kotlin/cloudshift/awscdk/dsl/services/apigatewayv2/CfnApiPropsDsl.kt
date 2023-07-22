@@ -13,6 +13,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApi
 import software.amazon.awscdk.services.apigatewayv2.CfnApiProps
 
+/**
+ * Properties for defining a `CfnApi`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object body;
+ * CfnApiProps cfnApiProps = CfnApiProps.builder()
+ * .apiKeySelectionExpression("apiKeySelectionExpression")
+ * .basePath("basePath")
+ * .body(body)
+ * .bodyS3Location(BodyS3LocationProperty.builder()
+ * .bucket("bucket")
+ * .etag("etag")
+ * .key("key")
+ * .version("version")
+ * .build())
+ * .corsConfiguration(CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build())
+ * .credentialsArn("credentialsArn")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .disableSchemaValidation(false)
+ * .failOnWarnings(false)
+ * .name("name")
+ * .protocolType("protocolType")
+ * .routeKey("routeKey")
+ * .routeSelectionExpression("routeSelectionExpression")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .target("target")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)
+ */
 @CdkDslMarker
 public class CfnApiPropsDsl {
   private val cdkBuilder: CfnApiProps.Builder = CfnApiProps.builder()

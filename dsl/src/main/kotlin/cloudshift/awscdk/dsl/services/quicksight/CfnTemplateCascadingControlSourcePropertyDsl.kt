@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The source controls that are used in a `CascadingControlConfiguration` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CascadingControlSourceProperty cascadingControlSourceProperty =
+ * CascadingControlSourceProperty.builder()
+ * .columnToMatch(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceSheetControlId("sourceSheetControlId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-cascadingcontrolsource.html)
+ */
 @CdkDslMarker
 public class CfnTemplateCascadingControlSourcePropertyDsl {
   private val cdkBuilder: CfnTemplate.CascadingControlSourceProperty.Builder =

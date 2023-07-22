@@ -12,6 +12,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
 import software.constructs.Construct
 
+/**
+ * The `AWS::RoboMaker::SimulationApplication` resource creates an AWS RoboMaker simulation
+ * application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnSimulationApplication cfnSimulationApplication = CfnSimulationApplication.Builder.create(this,
+ * "MyCfnSimulationApplication")
+ * .robotSoftwareSuite(RobotSoftwareSuiteProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .simulationSoftwareSuite(SimulationSoftwareSuiteProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * // the properties below are optional
+ * .currentRevisionId("currentRevisionId")
+ * .environment("environment")
+ * .name("name")
+ * .renderingEngine(RenderingEngineProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .sources(List.of(SourceConfigProperty.builder()
+ * .architecture("architecture")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplication.html)
+ */
 @CdkDslMarker
 public class CfnSimulationApplicationDsl(
   scope: Construct,

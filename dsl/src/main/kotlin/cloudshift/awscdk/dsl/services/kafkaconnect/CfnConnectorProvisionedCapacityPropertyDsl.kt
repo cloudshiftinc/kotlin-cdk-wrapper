@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * Details about a connector's provisioned capacity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * ProvisionedCapacityProperty provisionedCapacityProperty = ProvisionedCapacityProperty.builder()
+ * .workerCount(123)
+ * // the properties below are optional
+ * .mcuCount(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-provisionedcapacity.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProvisionedCapacityPropertyDsl {
   private val cdkBuilder: CfnConnector.ProvisionedCapacityProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * An object that contains the name and file location for a file being deleted by a workflow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * DeleteStepDetailsProperty deleteStepDetailsProperty = DeleteStepDetailsProperty.builder()
+ * .name("name")
+ * .sourceFileLocation("sourceFileLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowDeleteStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.DeleteStepDetailsProperty.Builder =

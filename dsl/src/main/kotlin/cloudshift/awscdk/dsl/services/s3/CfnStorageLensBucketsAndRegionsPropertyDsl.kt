@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * This resource contains the details of the buckets and Regions for the Amazon S3 Storage Lens
+ * configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * BucketsAndRegionsProperty bucketsAndRegionsProperty = BucketsAndRegionsProperty.builder()
+ * .buckets(List.of("buckets"))
+ * .regions(List.of("regions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketsandregions.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensBucketsAndRegionsPropertyDsl {
   private val cdkBuilder: CfnStorageLens.BucketsAndRegionsProperty.Builder =

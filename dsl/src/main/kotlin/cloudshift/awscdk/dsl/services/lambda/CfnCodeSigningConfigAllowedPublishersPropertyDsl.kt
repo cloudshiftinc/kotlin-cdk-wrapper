@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.CfnCodeSigningConfig
 
+/**
+ * List of signing profiles that can sign a code package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * AllowedPublishersProperty allowedPublishersProperty = AllowedPublishersProperty.builder()
+ * .signingProfileVersionArns(List.of("signingProfileVersionArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-codesigningconfig-allowedpublishers.html)
+ */
 @CdkDslMarker
 public class CfnCodeSigningConfigAllowedPublishersPropertyDsl {
   private val cdkBuilder: CfnCodeSigningConfig.AllowedPublishersProperty.Builder =

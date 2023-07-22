@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.refactorspaces.CfnApplication
 import software.amazon.awscdk.services.refactorspaces.CfnApplicationProps
 
+/**
+ * Properties for defining a `CfnApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .environmentIdentifier("environmentIdentifier")
+ * .name("name")
+ * .proxyType("proxyType")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .apiGatewayProxy(ApiGatewayProxyInputProperty.builder()
+ * .endpointType("endpointType")
+ * .stageName("stageName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()

@@ -8,6 +8,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 import software.constructs.Construct
 
+/**
+ * Specifies an identity for using within SES.
+ *
+ * An identity is an email address or domain that you use when you send email. Before you can use an
+ * identity to send email, you first have to verify it. By verifying an identity, you demonstrate that
+ * you're the owner of the identity, and that you've given Amazon SES API v2 permission to send email
+ * from the identity.
+ *
+ * When you verify an email address, SES sends an email to the address. Your email address is
+ * verified as soon as you follow the link in the verification email. When you verify a domain without
+ * specifying the DkimSigningAttributes properties, OR only the NextSigningKeyLength property of
+ * DkimSigningAttributes, this resource provides a set of CNAME token names and values
+ * (DkimDNSTokenName1, DkimDNSTokenValue1, DkimDNSTokenName2, DkimDNSTokenValue2, DkimDNSTokenName3,
+ * DkimDNSTokenValue3) as outputs. You can then add these to the DNS configuration for your domain.
+ * Your domain is verified when Amazon SES detects these records in the DNS configuration for your
+ * domain. This verification method is known as Easy DKIM.
+ *
+ * Alternatively, you can perform the verification process by providing your own public-private key
+ * pair. This verification method is known as Bring Your Own DKIM (BYODKIM). To use BYODKIM, your
+ * resource must include DkimSigningAttributes properties DomainSigningSelector and
+ * DomainSigningPrivateKey. When you specify this object, you provide a selector
+ * (DomainSigningSelector) (a component of the DNS record name that identifies the public key to use
+ * for DKIM authentication) and a private key (DomainSigningPrivateKey).
+ *
+ * Additionally, you can associate an existing configuration set with the email identity that you're
+ * verifying.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnEmailIdentity cfnEmailIdentity = CfnEmailIdentity.Builder.create(this, "MyCfnEmailIdentity")
+ * .emailIdentity("emailIdentity")
+ * // the properties below are optional
+ * .configurationSetAttributes(ConfigurationSetAttributesProperty.builder()
+ * .configurationSetName("configurationSetName")
+ * .build())
+ * .dkimAttributes(DkimAttributesProperty.builder()
+ * .signingEnabled(false)
+ * .build())
+ * .dkimSigningAttributes(DkimSigningAttributesProperty.builder()
+ * .domainSigningPrivateKey("domainSigningPrivateKey")
+ * .domainSigningSelector("domainSigningSelector")
+ * .nextSigningKeyLength("nextSigningKeyLength")
+ * .build())
+ * .feedbackAttributes(FeedbackAttributesProperty.builder()
+ * .emailForwardingEnabled(false)
+ * .build())
+ * .mailFromAttributes(MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-emailidentity.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityDsl(
   scope: Construct,

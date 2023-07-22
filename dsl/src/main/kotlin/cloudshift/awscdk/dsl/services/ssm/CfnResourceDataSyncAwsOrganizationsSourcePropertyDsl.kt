@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 
+/**
+ * Information about the `AwsOrganizationsSource` resource data sync source.
+ *
+ * A sync source of this type can synchronize data from AWS Organizations or, if an AWS organization
+ * isn't present, from multiple AWS Regions .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * AwsOrganizationsSourceProperty awsOrganizationsSourceProperty =
+ * AwsOrganizationsSourceProperty.builder()
+ * .organizationSourceType("organizationSourceType")
+ * // the properties below are optional
+ * .organizationalUnits(List.of("organizationalUnits"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-awsorganizationssource.html)
+ */
 @CdkDslMarker
 public class CfnResourceDataSyncAwsOrganizationsSourcePropertyDsl {
   private val cdkBuilder: CfnResourceDataSync.AwsOrganizationsSourceProperty.Builder =

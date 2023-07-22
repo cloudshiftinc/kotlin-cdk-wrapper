@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A transform operation that casts a column to a different type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CastColumnTypeOperationProperty castColumnTypeOperationProperty =
+ * CastColumnTypeOperationProperty.builder()
+ * .columnName("columnName")
+ * .newColumnType("newColumnType")
+ * // the properties below are optional
+ * .format("format")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-castcolumntypeoperation.html)
+ */
 @CdkDslMarker
 public class CfnDataSetCastColumnTypeOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.CastColumnTypeOperationProperty.Builder =

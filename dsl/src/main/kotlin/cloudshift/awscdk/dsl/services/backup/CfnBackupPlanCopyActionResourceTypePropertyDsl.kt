@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 
+/**
+ * Copies backups created by a backup rule to another vault.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * CopyActionResourceTypeProperty copyActionResourceTypeProperty =
+ * CopyActionResourceTypeProperty.builder()
+ * .destinationBackupVaultArn("destinationBackupVaultArn")
+ * // the properties below are optional
+ * .lifecycle(LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-copyactionresourcetype.html)
+ */
 @CdkDslMarker
 public class CfnBackupPlanCopyActionResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupPlan.CopyActionResourceTypeProperty.Builder =

@@ -23,6 +23,42 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps
 import software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsEc2ServiceProps
 import software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps
 
+/**
+ * The properties for the NetworkMultipleTargetGroupsEc2Service service.
+ *
+ * Example:
+ *
+ * ```
+ * // Two network load balancers, each with their own listener and target group.
+ * Cluster cluster;
+ * NetworkMultipleTargetGroupsEc2Service loadBalancedEc2Service =
+ * NetworkMultipleTargetGroupsEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(256)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageProps.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .loadBalancers(List.of(NetworkLoadBalancerProps.builder()
+ * .name("lb1")
+ * .listeners(List.of(NetworkListenerProps.builder()
+ * .name("listener1")
+ * .build()))
+ * .build(), NetworkLoadBalancerProps.builder()
+ * .name("lb2")
+ * .listeners(List.of(NetworkListenerProps.builder()
+ * .name("listener2")
+ * .build()))
+ * .build()))
+ * .targetGroups(List.of(NetworkTargetProps.builder()
+ * .containerPort(80)
+ * .listener("listener1")
+ * .build(), NetworkTargetProps.builder()
+ * .containerPort(90)
+ * .listener("listener2")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkMultipleTargetGroupsEc2ServicePropsDsl {
   private val cdkBuilder: NetworkMultipleTargetGroupsEc2ServiceProps.Builder =

@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.VolumeAttributes
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Attributes required to import an existing EBS Volume into the Stack.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * VolumeAttributes volumeAttributes = VolumeAttributes.builder()
+ * .availabilityZone("availabilityZone")
+ * .volumeId("volumeId")
+ * // the properties below are optional
+ * .encryptionKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VolumeAttributesDsl {
   private val cdkBuilder: VolumeAttributes.Builder = VolumeAttributes.builder()

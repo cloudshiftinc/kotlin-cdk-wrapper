@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The options for a paper canvas of a section-based layout.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SectionBasedLayoutPaperCanvasSizeOptionsProperty sectionBasedLayoutPaperCanvasSizeOptionsProperty
+ * = SectionBasedLayoutPaperCanvasSizeOptionsProperty.builder()
+ * .paperMargin(SpacingProperty.builder()
+ * .bottom("bottom")
+ * .left("left")
+ * .right("right")
+ * .top("top")
+ * .build())
+ * .paperOrientation("paperOrientation")
+ * .paperSize("paperSize")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sectionbasedlayoutpapercanvassizeoptions.html)
+ */
 @CdkDslMarker
 public class CfnTemplateSectionBasedLayoutPaperCanvasSizeOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.SectionBasedLayoutPaperCanvasSizeOptionsProperty.Builder =

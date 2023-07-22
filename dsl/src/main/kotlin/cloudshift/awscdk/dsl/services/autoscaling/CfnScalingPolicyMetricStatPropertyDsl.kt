@@ -7,6 +7,42 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * `MetricStat` is a property of the [AWS::AutoScaling::ScalingPolicy
+ * MetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricdataquery.html)
+ * property type.
+ *
+ * This structure defines the CloudWatch metric to return, along with the statistic, period, and
+ * unit.
+ *
+ * For more information about the CloudWatch terminology below, see [Amazon CloudWatch
+ * concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
+ * in the *Amazon CloudWatch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * MetricStatProperty metricStatProperty = MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-metricstat.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyMetricStatPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.MetricStatProperty.Builder =

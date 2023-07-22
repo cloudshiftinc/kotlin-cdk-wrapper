@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer
 
+/**
+ * Specifies a subnet for a load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * SubnetMappingProperty subnetMappingProperty = SubnetMappingProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .allocationId("allocationId")
+ * .iPv6Address("iPv6Address")
+ * .privateIPv4Address("privateIPv4Address")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerSubnetMappingPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.SubnetMappingProperty.Builder =

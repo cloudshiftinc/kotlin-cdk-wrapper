@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.OpenIdConnectProvider
 import software.constructs.Construct
 
+/**
+ * IAM OIDC identity providers are entities in IAM that describe an external identity provider (IdP)
+ * service that supports the OpenID Connect (OIDC) standard, such as Google or Salesforce.
+ *
+ * You use an IAM OIDC identity provider
+ * when you want to establish trust between an OIDC-compatible IdP and your AWS
+ * account. This is useful when creating a mobile app or web application that
+ * requires access to AWS resources, but you don't want to create custom sign-in
+ * code or manage your own user identities.
+ *
+ * Example:
+ *
+ * ```
+ * OpenIdConnectProvider provider = OpenIdConnectProvider.Builder.create(this, "MyProvider")
+ * .url("https://openid/connect")
+ * .clientIds(List.of("myclient1", "myclient2"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_oidc.html)
+ */
 @CdkDslMarker
 public class OpenIdConnectProviderDsl(
   scope: Construct,

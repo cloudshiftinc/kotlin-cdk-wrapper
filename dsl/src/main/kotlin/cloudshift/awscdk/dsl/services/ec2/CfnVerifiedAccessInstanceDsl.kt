@@ -14,6 +14,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 import software.constructs.Construct
 
+/**
+ * Describes a Verified Access instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVerifiedAccessInstance cfnVerifiedAccessInstance =
+ * CfnVerifiedAccessInstance.Builder.create(this, "MyCfnVerifiedAccessInstance")
+ * .description("description")
+ * .loggingConfigurations(VerifiedAccessLogsProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * .logGroup("logGroup")
+ * .build())
+ * .includeTrustContext(false)
+ * .kinesisDataFirehose(KinesisDataFirehoseProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .enabled(false)
+ * .build())
+ * .logVersion("logVersion")
+ * .s3(S3Property.builder()
+ * .bucketName("bucketName")
+ * .bucketOwner("bucketOwner")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .verifiedAccessTrustProviderIds(List.of("verifiedAccessTrustProviderIds"))
+ * .verifiedAccessTrustProviders(List.of(VerifiedAccessTrustProviderProperty.builder()
+ * .description("description")
+ * .deviceTrustProviderType("deviceTrustProviderType")
+ * .trustProviderType("trustProviderType")
+ * .userTrustProviderType("userTrustProviderType")
+ * .verifiedAccessTrustProviderId("verifiedAccessTrustProviderId")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessinstance.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceDsl(
   scope: Construct,

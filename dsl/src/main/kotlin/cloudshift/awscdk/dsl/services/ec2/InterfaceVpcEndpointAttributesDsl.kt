@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAttributes
 
+/**
+ * Construction properties for an ImportedInterfaceVpcEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SecurityGroup securityGroup;
+ * InterfaceVpcEndpointAttributes interfaceVpcEndpointAttributes =
+ * InterfaceVpcEndpointAttributes.builder()
+ * .port(123)
+ * .vpcEndpointId("vpcEndpointId")
+ * // the properties below are optional
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InterfaceVpcEndpointAttributesDsl {
   private val cdkBuilder: InterfaceVpcEndpointAttributes.Builder =

@@ -17,6 +17,30 @@ import software.amazon.awscdk.services.stepfunctions.LogOptions
 import software.amazon.awscdk.services.stepfunctions.StateMachineProps
 import software.amazon.awscdk.services.stepfunctions.StateMachineType
 
+/**
+ * Properties for defining a State Machine.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact inputArtifact = new Artifact();
+ * Pass startState = new Pass(this, "StartState");
+ * StateMachine simpleStateMachine = StateMachine.Builder.create(this, "SimpleStateMachine")
+ * .definition(startState)
+ * .build();
+ * StepFunctionInvokeAction stepFunctionAction = StepFunctionInvokeAction.Builder.create()
+ * .actionName("Invoke")
+ * .stateMachine(simpleStateMachine)
+ * .stateMachineInput(StateMachineInput.filePath(inputArtifact.atPath("assets/input.json")))
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("StepFunctions")
+ * .actions(List.of(stepFunctionAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StateMachinePropsDsl {
   private val cdkBuilder: StateMachineProps.Builder = StateMachineProps.builder()

@@ -9,6 +9,25 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.LogStream
 import software.constructs.Construct
 
+/**
+ * Define a Log Stream in a Log Group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * LogStream logStream = LogStream.Builder.create(this, "MyLogStream")
+ * .logGroup(logGroup)
+ * // the properties below are optional
+ * .logStreamName("logStreamName")
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogStreamDsl(
   scope: Construct,

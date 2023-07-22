@@ -27,6 +27,37 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Construction props for a CodeBuildStep.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+ * .build()))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * // Turn this on because the pipeline uses Docker image assets
+ * .dockerEnabledForSelfMutation(true)
+ * .build();
+ * pipeline.addWave("MyWave", WaveOptions.builder()
+ * .post(List.of(
+ * CodeBuildStep.Builder.create("RunApproval")
+ * .commands(List.of("command-from-image"))
+ * .buildEnvironment(BuildEnvironment.builder()
+ * // The user of a Docker image asset in the pipeline requires turning on
+ * // 'dockerEnabledForSelfMutation'.
+ * .buildImage(LinuxBuildImage.fromAsset(this, "Image", DockerImageAssetProps.builder()
+ * .directory("./docker-image")
+ * .build()))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildStepPropsDsl {
   private val cdkBuilder: CodeBuildStepProps.Builder = CodeBuildStepProps.builder()

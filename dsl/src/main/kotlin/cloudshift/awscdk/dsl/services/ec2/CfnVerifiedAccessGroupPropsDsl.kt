@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroupProps
 
+/**
+ * Properties for defining a `CfnVerifiedAccessGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVerifiedAccessGroupProps cfnVerifiedAccessGroupProps = CfnVerifiedAccessGroupProps.builder()
+ * .verifiedAccessInstanceId("verifiedAccessInstanceId")
+ * // the properties below are optional
+ * .description("description")
+ * .policyDocument("policyDocument")
+ * .policyEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessgroup.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessGroupPropsDsl {
   private val cdkBuilder: CfnVerifiedAccessGroupProps.Builder =

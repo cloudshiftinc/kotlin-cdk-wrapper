@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
+/**
+ * Information about IAM roles, subnets, and security groups needed for this DataflowEndpointGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * SecurityDetailsProperty securityDetailsProperty = SecurityDetailsProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-securitydetails.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupSecurityDetailsPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.SecurityDetailsProperty.Builder =

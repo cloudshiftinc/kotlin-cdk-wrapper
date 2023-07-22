@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A text box.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SheetTextBoxProperty sheetTextBoxProperty = SheetTextBoxProperty.builder()
+ * .sheetTextBoxId("sheetTextBoxId")
+ * // the properties below are optional
+ * .content("content")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-sheettextbox.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisSheetTextBoxPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SheetTextBoxProperty.Builder =

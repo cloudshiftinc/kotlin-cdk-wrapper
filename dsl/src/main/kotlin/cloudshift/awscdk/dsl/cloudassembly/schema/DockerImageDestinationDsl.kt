@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.DockerImageDestination
 
+/**
+ * Where to publish docker images.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * DockerImageDestination dockerImageDestination = DockerImageDestination.builder()
+ * .imageTag("imageTag")
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .assumeRoleArn("assumeRoleArn")
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageDestinationDsl {
   private val cdkBuilder: DockerImageDestination.Builder = DockerImageDestination.builder()

@@ -7,6 +7,37 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 
+/**
+ * The load balancer configuration to use with a service or task set.
+ *
+ * When you add, update, or remove a load balancer configuration, Amazon ECS starts a new deployment
+ * with the updated Elastic Load Balancing configuration. This causes tasks to register to and
+ * deregister from load balancers.
+ *
+ * We recommend that you verify this on a test environment before you update the Elastic Load
+ * Balancing configuration.
+ *
+ * A service-linked role is required for services that use multiple target groups. For more
+ * information, see [Using service-linked
+ * roles](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using-service-linked-roles.html)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LoadBalancerProperty loadBalancerProperty = LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnTaskSetLoadBalancerPropertyDsl {
   private val cdkBuilder: CfnTaskSet.LoadBalancerProperty.Builder =

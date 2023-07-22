@@ -8,6 +8,32 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * Determines whether CloudFront includes the `Strict-Transport-Security` HTTP response header and
+ * the header's value.
+ *
+ * For more information about the `Strict-Transport-Security` HTTP response header, see
+ * [Strict-Transport-Security](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+ * in the MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * StrictTransportSecurityProperty strictTransportSecurityProperty =
+ * StrictTransportSecurityProperty.builder()
+ * .accessControlMaxAgeSec(123)
+ * .override(false)
+ * // the properties below are optional
+ * .includeSubdomains(false)
+ * .preload(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-stricttransportsecurity.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyStrictTransportSecurityPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.StrictTransportSecurityProperty.Builder =

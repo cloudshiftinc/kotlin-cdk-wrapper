@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object customStatements;
+ * AuthResourcePolicyProperty authResourcePolicyProperty = AuthResourcePolicyProperty.builder()
+ * .awsAccountBlacklist(List.of("awsAccountBlacklist"))
+ * .awsAccountWhitelist(List.of("awsAccountWhitelist"))
+ * .customStatements(List.of(customStatements))
+ * .intrinsicVpcBlacklist(List.of("intrinsicVpcBlacklist"))
+ * .intrinsicVpceBlacklist(List.of("intrinsicVpceBlacklist"))
+ * .intrinsicVpceWhitelist(List.of("intrinsicVpceWhitelist"))
+ * .intrinsicVpcWhitelist(List.of("intrinsicVpcWhitelist"))
+ * .ipRangeBlacklist(List.of("ipRangeBlacklist"))
+ * .ipRangeWhitelist(List.of("ipRangeWhitelist"))
+ * .sourceVpcBlacklist(List.of("sourceVpcBlacklist"))
+ * .sourceVpcWhitelist(List.of("sourceVpcWhitelist"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-authresourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnFunctionAuthResourcePolicyPropertyDsl {
   private val cdkBuilder: CfnFunction.AuthResourcePolicyProperty.Builder =

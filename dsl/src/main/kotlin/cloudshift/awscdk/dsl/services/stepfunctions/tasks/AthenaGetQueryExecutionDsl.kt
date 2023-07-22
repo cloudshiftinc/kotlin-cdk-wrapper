@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecution
 import software.constructs.Construct
 
+/**
+ * Get an Athena Query Execution as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaGetQueryExecution getQueryExecutionJob = AthenaGetQueryExecution.Builder.create(this, "Get
+ * Query Execution")
+ * .queryExecutionId(JsonPath.stringAt("$.QueryExecutionId"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-athena.html)
+ */
 @CdkDslMarker
 public class AthenaGetQueryExecutionDsl(
   scope: Construct,

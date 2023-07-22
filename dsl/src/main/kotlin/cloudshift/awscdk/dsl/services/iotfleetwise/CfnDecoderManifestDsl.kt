@@ -14,6 +14,87 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 import software.constructs.Construct
 
+/**
+ * Creates the decoder manifest associated with a model manifest. To create a decoder manifest, the
+ * following must be true:.
+ *
+ * * Every signal decoder has a unique name.
+ * * Each signal decoder is associated with a network interface.
+ * * Each network interface has a unique ID.
+ * * The signal decoders are specified in the model manifest.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnDecoderManifest cfnDecoderManifest = CfnDecoderManifest.Builder.create(this,
+ * "MyCfnDecoderManifest")
+ * .modelManifestArn("modelManifestArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .networkInterfaces(List.of(NetworkInterfacesItemsProperty.builder()
+ * .interfaceId("interfaceId")
+ * .type("type")
+ * // the properties below are optional
+ * .canInterface(CanInterfaceProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .protocolName("protocolName")
+ * .protocolVersion("protocolVersion")
+ * .build())
+ * .obdInterface(ObdInterfaceProperty.builder()
+ * .name("name")
+ * .requestMessageId("requestMessageId")
+ * // the properties below are optional
+ * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
+ * .hasTransmissionEcu("hasTransmissionEcu")
+ * .obdStandard("obdStandard")
+ * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
+ * .useExtendedIds("useExtendedIds")
+ * .build())
+ * .build()))
+ * .signalDecoders(List.of(SignalDecodersItemsProperty.builder()
+ * .fullyQualifiedName("fullyQualifiedName")
+ * .interfaceId("interfaceId")
+ * .type("type")
+ * // the properties below are optional
+ * .canSignal(CanSignalProperty.builder()
+ * .factor("factor")
+ * .isBigEndian("isBigEndian")
+ * .isSigned("isSigned")
+ * .length("length")
+ * .messageId("messageId")
+ * .offset("offset")
+ * .startBit("startBit")
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .obdSignal(ObdSignalProperty.builder()
+ * .byteLength("byteLength")
+ * .offset("offset")
+ * .pid("pid")
+ * .pidResponseLength("pidResponseLength")
+ * .scaling("scaling")
+ * .serviceMode("serviceMode")
+ * .startByte("startByte")
+ * // the properties below are optional
+ * .bitMaskLength("bitMaskLength")
+ * .bitRightShift("bitRightShift")
+ * .build())
+ * .build()))
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestDsl(
   scope: Construct,

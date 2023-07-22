@@ -8,6 +8,53 @@ import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.CfnProject
 import software.amazon.awscdk.services.codebuild.SourceConfig
 
+/**
+ * The type returned from `ISource#bind`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * SourceConfig sourceConfig = SourceConfig.builder()
+ * .sourceProperty(SourceProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .auth(SourceAuthProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .resource("resource")
+ * .build())
+ * .buildSpec("buildSpec")
+ * .buildStatusConfig(BuildStatusConfigProperty.builder()
+ * .context("context")
+ * .targetUrl("targetUrl")
+ * .build())
+ * .gitCloneDepth(123)
+ * .gitSubmodulesConfig(GitSubmodulesConfigProperty.builder()
+ * .fetchSubmodules(false)
+ * .build())
+ * .insecureSsl(false)
+ * .location("location")
+ * .reportBuildStatus(false)
+ * .sourceIdentifier("sourceIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .buildTriggers(ProjectTriggersProperty.builder()
+ * .buildType("buildType")
+ * .filterGroups(List.of(List.of(WebhookFilterProperty.builder()
+ * .pattern("pattern")
+ * .type("type")
+ * // the properties below are optional
+ * .excludeMatchedPattern(false)
+ * .build())))
+ * .webhook(false)
+ * .build())
+ * .sourceVersion("sourceVersion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SourceConfigDsl {
   private val cdkBuilder: SourceConfig.Builder = SourceConfig.builder()

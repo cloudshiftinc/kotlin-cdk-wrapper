@@ -7,6 +7,23 @@ import kotlin.Boolean
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps
 
+/**
+ * Properties for a NetworkLoadBalancerEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * Instance instance;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * InstanceEndpoint.Builder.create(instance)
+ * .weight(128)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class InstanceEndpointPropsDsl {
   private val cdkBuilder: InstanceEndpointProps.Builder = InstanceEndpointProps.builder()

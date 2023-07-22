@@ -12,6 +12,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnPlacementGroupProps
 
+/**
+ * Properties for defining a `CfnPlacementGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnPlacementGroupProps cfnPlacementGroupProps = CfnPlacementGroupProps.builder()
+ * .partitionCount(123)
+ * .spreadLevel("spreadLevel")
+ * .strategy("strategy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html)
+ */
 @CdkDslMarker
 public class CfnPlacementGroupPropsDsl {
   private val cdkBuilder: CfnPlacementGroupProps.Builder = CfnPlacementGroupProps.builder()

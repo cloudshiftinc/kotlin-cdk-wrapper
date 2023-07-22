@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStep
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to to cancel a Step on an EMR Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrCancelStep.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .stepId("StepId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrCancelStepDsl(
   scope: Construct,

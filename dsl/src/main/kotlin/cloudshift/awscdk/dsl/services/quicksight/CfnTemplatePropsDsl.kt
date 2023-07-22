@@ -14,6 +14,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 import software.amazon.awscdk.services.quicksight.CfnTemplateProps
 
+/**
+ * Properties for defining a `CfnTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-template.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePropsDsl {
   private val cdkBuilder: CfnTemplateProps.Builder = CfnTemplateProps.builder()

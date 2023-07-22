@@ -8,6 +8,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for the MPEG-2 codec in the output.
+ *
+ * The parent of this entity is VideoCodecSetting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Mpeg2SettingsProperty mpeg2SettingsProperty = Mpeg2SettingsProperty.builder()
+ * .adaptiveQuantization("adaptiveQuantization")
+ * .afdSignaling("afdSignaling")
+ * .colorMetadata("colorMetadata")
+ * .colorSpace("colorSpace")
+ * .displayAspectRatio("displayAspectRatio")
+ * .filterSettings(Mpeg2FilterSettingsProperty.builder()
+ * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
+ * .postFilterSharpening("postFilterSharpening")
+ * .strength("strength")
+ * .build())
+ * .build())
+ * .fixedAfd("fixedAfd")
+ * .framerateDenominator(123)
+ * .framerateNumerator(123)
+ * .gopClosedCadence(123)
+ * .gopNumBFrames(123)
+ * .gopSize(123)
+ * .gopSizeUnits("gopSizeUnits")
+ * .scanType("scanType")
+ * .subgopLength("subgopLength")
+ * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+ * .fontSize("fontSize")
+ * .position("position")
+ * .prefix("prefix")
+ * .build())
+ * .timecodeInsertion("timecodeInsertion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mpeg2settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMpeg2SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Mpeg2SettingsProperty.Builder =

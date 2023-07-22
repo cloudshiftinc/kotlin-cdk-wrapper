@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Specifies the tags to apply to a resource when the resource is being created for an EC2 Fleet.
+ *
+ * `TagSpecification` is a property of the
+ * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-tagspecification.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetTagSpecificationPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.TagSpecificationProperty.Builder =

@@ -12,6 +12,42 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.refactorspaces.CfnEnvironment
 import software.constructs.Construct
 
+/**
+ * Creates an AWS Migration Hub Refactor Spaces environment.
+ *
+ * The caller owns the environment resource, and all Refactor Spaces applications, services, and
+ * routes created within the environment. They are referred to as the *environment owner* . The
+ * environment owner has cross-account visibility and control of Refactor Spaces resources that are
+ * added to the environment by other accounts that the environment is shared with.
+ *
+ * When creating an environment with a
+ * [CreateEnvironment:NetworkFabricType](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/APIReference/API_CreateEnvironment.html#migrationhubrefactorspaces-CreateEnvironment-request-NetworkFabricType)
+ * of `TRANSIT_GATEWAY` , Refactor Spaces provisions a transit gateway to enable services in VPCs to
+ * communicate directly across accounts. If
+ * [CreateEnvironment:NetworkFabricType](https://docs.aws.amazon.com/migrationhub-refactor-spaces/latest/APIReference/API_CreateEnvironment.html#migrationhubrefactorspaces-CreateEnvironment-request-NetworkFabricType)
+ * is `NONE` , Refactor Spaces does not create a transit gateway and you must use your network
+ * infrastructure to route traffic to services with private URL endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnEnvironment cfnEnvironment = CfnEnvironment.Builder.create(this, "MyCfnEnvironment")
+ * .name("name")
+ * .networkFabricType("networkFabricType")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentDsl(
   scope: Construct,

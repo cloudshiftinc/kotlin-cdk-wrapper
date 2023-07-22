@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Result of binding a lifecycle hook to a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * LifecycleHookTargetConfig lifecycleHookTargetConfig = LifecycleHookTargetConfig.builder()
+ * .createdRole(role)
+ * .notificationTargetArn("notificationTargetArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LifecycleHookTargetConfigDsl {
   private val cdkBuilder: LifecycleHookTargetConfig.Builder = LifecycleHookTargetConfig.builder()

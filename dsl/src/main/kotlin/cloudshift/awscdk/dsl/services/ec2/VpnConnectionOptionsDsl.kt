@@ -11,6 +11,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.VpnConnectionOptions
 import software.amazon.awscdk.services.ec2.VpnTunnelOption
 
+/**
+ * Example:
+ *
+ * ```
+ * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
+ * .vpnConnections(Map.of(
+ * "dynamic", VpnConnectionOptions.builder() // Dynamic routing (BGP)
+ * .ip("1.2.3.4").build(),
+ * "static", VpnConnectionOptions.builder() // Static routing
+ * .ip("4.5.6.7")
+ * .staticRoutes(List.of("192.168.10.0/24", "192.168.20.0/24")).build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpnConnectionOptionsDsl {
   private val cdkBuilder: VpnConnectionOptions.Builder = VpnConnectionOptions.builder()

@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for the SCTE-35 time signal APOS mode.
+ *
+ * The parent of this entity is AvailSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Scte35TimeSignalAposProperty scte35TimeSignalAposProperty =
+ * Scte35TimeSignalAposProperty.builder()
+ * .adAvailOffset(123)
+ * .noRegionalBlackoutFlag("noRegionalBlackoutFlag")
+ * .webDeliveryAllowedFlag("webDeliveryAllowedFlag")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35timesignalapos.html)
+ */
 @CdkDslMarker
 public class CfnChannelScte35TimeSignalAposPropertyDsl {
   private val cdkBuilder: CfnChannel.Scte35TimeSignalAposProperty.Builder =

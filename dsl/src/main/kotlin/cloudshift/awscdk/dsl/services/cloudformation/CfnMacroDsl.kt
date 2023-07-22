@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnMacro
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudFormation::Macro` resource is a CloudFormation resource type that creates a
+ * CloudFormation macro to perform custom processing on CloudFormation templates.
+ *
+ * For more information, see [Using AWS CloudFormation macros to perform custom processing on
+ * templates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnMacro cfnMacro = CfnMacro.Builder.create(this, "MyCfnMacro")
+ * .functionName("functionName")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-macro.html)
+ */
 @CdkDslMarker
 public class CfnMacroDsl(
   scope: Construct,

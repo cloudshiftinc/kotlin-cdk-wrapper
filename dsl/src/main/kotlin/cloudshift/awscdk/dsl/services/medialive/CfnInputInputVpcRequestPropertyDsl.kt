@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.medialive.CfnInput
 
+/**
+ * Settings that apply only if the input is an push input where the source is on Amazon VPC.
+ *
+ * The parent of this entity is Input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * InputVpcRequestProperty inputVpcRequestProperty = InputVpcRequestProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputvpcrequest.html)
+ */
 @CdkDslMarker
 public class CfnInputInputVpcRequestPropertyDsl {
   private val cdkBuilder: CfnInput.InputVpcRequestProperty.Builder =

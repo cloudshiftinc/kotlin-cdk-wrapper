@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment
 import software.constructs.Construct
 
+/**
+ * Attaches an Elastic Load Balancing load balancer to an AWS OpsWorks layer that you specify.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnElasticLoadBalancerAttachment cfnElasticLoadBalancerAttachment =
+ * CfnElasticLoadBalancerAttachment.Builder.create(this, "MyCfnElasticLoadBalancerAttachment")
+ * .elasticLoadBalancerName("elasticLoadBalancerName")
+ * .layerId("layerId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-elasticloadbalancerattachment.html)
+ */
 @CdkDslMarker
 public class CfnElasticLoadBalancerAttachmentDsl(
   scope: Construct,

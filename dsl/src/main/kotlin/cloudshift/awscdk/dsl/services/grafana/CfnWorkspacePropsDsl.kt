@@ -10,6 +10,64 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 import software.amazon.awscdk.services.grafana.CfnWorkspaceProps
 
+/**
+ * Properties for defining a `CfnWorkspace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * CfnWorkspaceProps cfnWorkspaceProps = CfnWorkspaceProps.builder()
+ * .accountAccessType("accountAccessType")
+ * .authenticationProviders(List.of("authenticationProviders"))
+ * .permissionType("permissionType")
+ * // the properties below are optional
+ * .clientToken("clientToken")
+ * .dataSources(List.of("dataSources"))
+ * .description("description")
+ * .grafanaVersion("grafanaVersion")
+ * .name("name")
+ * .networkAccessControl(NetworkAccessControlProperty.builder()
+ * .prefixListIds(List.of("prefixListIds"))
+ * .vpceIds(List.of("vpceIds"))
+ * .build())
+ * .notificationDestinations(List.of("notificationDestinations"))
+ * .organizationalUnits(List.of("organizationalUnits"))
+ * .organizationRoleName("organizationRoleName")
+ * .roleArn("roleArn")
+ * .samlConfiguration(SamlConfigurationProperty.builder()
+ * .idpMetadata(IdpMetadataProperty.builder()
+ * .url("url")
+ * .xml("xml")
+ * .build())
+ * // the properties below are optional
+ * .allowedOrganizations(List.of("allowedOrganizations"))
+ * .assertionAttributes(AssertionAttributesProperty.builder()
+ * .email("email")
+ * .groups("groups")
+ * .login("login")
+ * .name("name")
+ * .org("org")
+ * .role("role")
+ * .build())
+ * .loginValidityDuration(123)
+ * .roleValues(RoleValuesProperty.builder()
+ * .admin(List.of("admin"))
+ * .editor(List.of("editor"))
+ * .build())
+ * .build())
+ * .stackSetName("stackSetName")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspacePropsDsl {
   private val cdkBuilder: CfnWorkspaceProps.Builder = CfnWorkspaceProps.builder()

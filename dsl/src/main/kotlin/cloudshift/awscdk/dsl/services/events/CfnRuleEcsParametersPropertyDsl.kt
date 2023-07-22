@@ -12,6 +12,57 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * The custom parameters to be used when the target is an Amazon ECS task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * EcsParametersProperty ecsParametersProperty = EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tagList(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskCount(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html)
+ */
 @CdkDslMarker
 public class CfnRuleEcsParametersPropertyDsl {
   private val cdkBuilder: CfnRule.EcsParametersProperty.Builder =

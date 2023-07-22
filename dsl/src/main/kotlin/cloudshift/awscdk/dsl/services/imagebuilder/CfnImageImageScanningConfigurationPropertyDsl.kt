@@ -7,6 +7,27 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 
+/**
+ * Contains settings for Image Builder image resource and container image scans.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
+ * ImageScanningConfigurationProperty.builder()
+ * .ecrConfiguration(EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build())
+ * .imageScanningEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-imagescanningconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnImageImageScanningConfigurationPropertyDsl {
   private val cdkBuilder: CfnImage.ImageScanningConfigurationProperty.Builder =

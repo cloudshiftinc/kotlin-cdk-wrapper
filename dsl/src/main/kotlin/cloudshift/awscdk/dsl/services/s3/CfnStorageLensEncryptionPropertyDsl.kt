@@ -9,6 +9,31 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * This resource contains the type of server-side encryption used to encrypt an Amazon S3 Storage
+ * Lens metrics export.
+ *
+ * For valid values, see the
+ * [StorageLensDataExportEncryption](https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_StorageLensDataExportEncryption.html)
+ * in the *Amazon S3 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object sses3;
+ * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
+ * .ssekms(SSEKMSProperty.builder()
+ * .keyId("keyId")
+ * .build())
+ * .sses3(sses3)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-encryption.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensEncryptionPropertyDsl {
   private val cdkBuilder: CfnStorageLens.EncryptionProperty.Builder =

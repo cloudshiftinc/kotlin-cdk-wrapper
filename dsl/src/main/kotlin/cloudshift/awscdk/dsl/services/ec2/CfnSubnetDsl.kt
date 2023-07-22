@@ -16,6 +16,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSubnet
 import software.constructs.Construct
 
+/**
+ * Specifies a subnet for the specified VPC.
+ *
+ * For an IPv4 only subnet, specify an IPv4 CIDR block. If the VPC has an IPv6 CIDR block, you can
+ * create an IPv6 only subnet or a dual stack subnet instead. For an IPv6 only subnet, specify an IPv6
+ * CIDR block. For a dual stack subnet, specify both an IPv4 CIDR block and an IPv6 CIDR block.
+ *
+ * For more information, see [Subnets for your
+ * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/configure-subnets.html) in the *Amazon VPC
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * public void associateSubnetWithV6Cidr(Vpc vpc, Number count, ISubnet subnet) {
+ * CfnSubnet cfnSubnet = (CfnSubnet)subnet.getNode().getDefaultChild();
+ * cfnSubnet.getIpv6CidrBlock() = Fn.select(count, Fn.cidr(Fn.select(0, vpc.getVpcIpv6CidrBlocks()),
+ * 256, (128 - 64).toString()));
+ * cfnSubnet.getAssignIpv6AddressOnCreation() = true;
+ * }
+ * // make an ipv6 cidr
+ * CfnVPCCidrBlock ipv6cidr = CfnVPCCidrBlock.Builder.create(this, "CIDR6")
+ * .vpcId(vpc.getVpcId())
+ * .amazonProvidedIpv6CidrBlock(true)
+ * .build();
+ * // connect the ipv6 cidr to all vpc subnets
+ * Number subnetcount = 0;
+ * ISubnet[] subnets = vpc.publicSubnets.concat(vpc.getPrivateSubnets());
+ * for (Object subnet : subnets) {
+ * // Wait for the ipv6 cidr to complete
+ * subnet.node.addDependency(ipv6cidr);
+ * associateSubnetWithV6Cidr(vpc, subnetcount, subnet);
+ * subnetcount = subnetcount + 1;
+ * }
+ * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
+ * .version(KubernetesVersion.V1_27)
+ * .vpc(vpc)
+ * .ipFamily(IpFamily.IP_V6)
+ * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html)
+ */
 @CdkDslMarker
 public class CfnSubnetDsl(
   scope: Construct,

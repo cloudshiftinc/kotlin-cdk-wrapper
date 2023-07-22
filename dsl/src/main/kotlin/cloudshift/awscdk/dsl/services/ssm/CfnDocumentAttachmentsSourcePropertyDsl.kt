@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnDocument
 
+/**
+ * Identifying information about a document attachment, including the file name and a key-value pair
+ * that identifies the location of an attachment to a document.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * AttachmentsSourceProperty attachmentsSourceProperty = AttachmentsSourceProperty.builder()
+ * .key("key")
+ * .name("name")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-attachmentssource.html)
+ */
 @CdkDslMarker
 public class CfnDocumentAttachmentsSourcePropertyDsl {
   private val cdkBuilder: CfnDocument.AttachmentsSourceProperty.Builder =

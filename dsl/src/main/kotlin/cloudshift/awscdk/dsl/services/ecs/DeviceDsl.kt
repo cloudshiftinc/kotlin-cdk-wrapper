@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.Device
 import software.amazon.awscdk.services.ecs.DevicePermission
 
+/**
+ * A container instance host device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Device device = Device.builder()
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .containerPath("containerPath")
+ * .permissions(List.of(DevicePermission.READ))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeviceDsl {
   private val cdkBuilder: Device.Builder = Device.builder()

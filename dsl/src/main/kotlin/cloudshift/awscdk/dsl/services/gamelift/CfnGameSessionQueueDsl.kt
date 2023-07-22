@@ -15,6 +15,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::GameSessionQueue` resource creates a placement queue that processes requests
+ * for new game sessions.
+ *
+ * A queue uses FleetIQ algorithms to determine the best placement locations and find an available
+ * game server, then prompts the game server to start a new game session. Queues can have destinations
+ * (GameLift fleets or aliases), which determine where the queue can place new game sessions. A queue
+ * can have destinations with varied fleet type (Spot and On-Demand), instance type, and AWS Region .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnGameSessionQueue cfnGameSessionQueue = CfnGameSessionQueue.Builder.create(this,
+ * "MyCfnGameSessionQueue")
+ * .name("name")
+ * // the properties below are optional
+ * .customEventData("customEventData")
+ * .destinations(List.of(DestinationProperty.builder()
+ * .destinationArn("destinationArn")
+ * .build()))
+ * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .allowedLocations(List.of("allowedLocations"))
+ * .build())
+ * .notificationTarget("notificationTarget")
+ * .playerLatencyPolicies(List.of(PlayerLatencyPolicyProperty.builder()
+ * .maximumIndividualPlayerLatencyMilliseconds(123)
+ * .policyDurationSeconds(123)
+ * .build()))
+ * .priorityConfiguration(PriorityConfigurationProperty.builder()
+ * .locationOrder(List.of("locationOrder"))
+ * .priorityOrder(List.of("priorityOrder"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeoutInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)
+ */
 @CdkDslMarker
 public class CfnGameSessionQueueDsl(
   scope: Construct,

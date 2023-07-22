@@ -11,6 +11,33 @@ import software.amazon.awscdk.services.elasticsearch.IDomain
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * (deprecated) An Appsync datasource backed by Elasticsearch.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.elasticsearch.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Domain domain;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * ElasticsearchDataSource elasticsearchDataSource = ElasticsearchDataSource.Builder.create(this,
+ * "MyElasticsearchDataSource")
+ * .api(graphqlApi)
+ * .domain(domain)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ *
+ * * use `OpenSearchDataSource`
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class ElasticsearchDataSourceDsl(

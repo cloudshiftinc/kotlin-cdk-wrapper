@@ -11,6 +11,66 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeProps
 
+/**
+ * Properties for defining a `CfnBridge`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnBridgeProps cfnBridgeProps = CfnBridgeProps.builder()
+ * .name("name")
+ * .placementArn("placementArn")
+ * .sources(List.of(BridgeSourceProperty.builder()
+ * .flowSource(BridgeFlowSourceProperty.builder()
+ * .flowArn("flowArn")
+ * .name("name")
+ * // the properties below are optional
+ * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .networkSource(BridgeNetworkSourceProperty.builder()
+ * .multicastIp("multicastIp")
+ * .name("name")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .egressGatewayBridge(EgressGatewayBridgeProperty.builder()
+ * .maxBitrate(123)
+ * .build())
+ * .ingressGatewayBridge(IngressGatewayBridgeProperty.builder()
+ * .maxBitrate(123)
+ * .maxOutputs(123)
+ * .build())
+ * .outputs(List.of(BridgeOutputProperty.builder()
+ * .networkOutput(BridgeNetworkOutputProperty.builder()
+ * .ipAddress("ipAddress")
+ * .name("name")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .ttl(123)
+ * .build())
+ * .build()))
+ * .sourceFailoverConfig(FailoverConfigProperty.builder()
+ * .failoverMode("failoverMode")
+ * // the properties below are optional
+ * .sourcePriority(SourcePriorityProperty.builder()
+ * .primarySource("primarySource")
+ * .build())
+ * .state("state")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridge.html)
+ */
 @CdkDslMarker
 public class CfnBridgePropsDsl {
   private val cdkBuilder: CfnBridgeProps.Builder = CfnBridgeProps.builder()

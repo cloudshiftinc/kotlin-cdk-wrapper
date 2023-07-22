@@ -8,6 +8,24 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener
 
+/**
+ * Information about the target group stickiness for a rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * TargetGroupStickinessConfigProperty targetGroupStickinessConfigProperty =
+ * TargetGroupStickinessConfigProperty.builder()
+ * .durationSeconds(123)
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-targetgroupstickinessconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerTargetGroupStickinessConfigPropertyDsl {
   private val cdkBuilder: CfnListener.TargetGroupStickinessConfigProperty.Builder =

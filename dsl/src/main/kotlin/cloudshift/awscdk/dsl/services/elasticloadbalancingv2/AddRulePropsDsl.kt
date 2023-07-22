@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.AddRuleProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition
 
+/**
+ * Properties for adding a conditional load balancing rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ListenerCondition listenerCondition;
+ * AddRuleProps addRuleProps = AddRuleProps.builder()
+ * .conditions(List.of(listenerCondition))
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddRulePropsDsl {
   private val cdkBuilder: AddRuleProps.Builder = AddRuleProps.builder()

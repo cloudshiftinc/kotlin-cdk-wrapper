@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 
+/**
+ * Specifies health check settings for your Classic Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * HealthCheckProperty healthCheckProperty = HealthCheckProperty.builder()
+ * .healthyThreshold("healthyThreshold")
+ * .interval("interval")
+ * .target("target")
+ * .timeout("timeout")
+ * .unhealthyThreshold("unhealthyThreshold")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-healthcheck.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerHealthCheckPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.HealthCheckProperty.Builder =

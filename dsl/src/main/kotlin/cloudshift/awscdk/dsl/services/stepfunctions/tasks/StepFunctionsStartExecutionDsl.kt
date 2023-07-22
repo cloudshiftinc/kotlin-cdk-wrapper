@@ -20,6 +20,35 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsStartExecution
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to call StartExecution on another state machine.
+ *
+ * It supports three service integration patterns: REQUEST_RESPONSE, RUN_JOB, and
+ * WAIT_FOR_TASK_TOKEN.
+ *
+ * Example:
+ *
+ * ```
+ * // Define a state machine with one Pass state
+ * StateMachine child = StateMachine.Builder.create(this, "ChildStateMachine")
+ * .definition(Chain.start(new Pass(this, "PassState")))
+ * .build();
+ * // Include the state machine in a Task state with callback pattern
+ * StepFunctionsStartExecution task = StepFunctionsStartExecution.Builder.create(this, "ChildTask")
+ * .stateMachine(child)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .input(TaskInput.fromObject(Map.of(
+ * "token", JsonPath.getTaskToken(),
+ * "foo", "bar")))
+ * .name("MyExecutionName")
+ * .build();
+ * // Define a second state machine with the Task state above
+ * // Define a second state machine with the Task state above
+ * StateMachine.Builder.create(this, "ParentStateMachine")
+ * .definition(task)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsStartExecutionDsl(
   scope: Construct,

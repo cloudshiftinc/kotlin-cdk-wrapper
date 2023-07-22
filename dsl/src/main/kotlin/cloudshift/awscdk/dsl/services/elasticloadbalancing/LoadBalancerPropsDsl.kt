@@ -16,6 +16,25 @@ import software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerProps
 
+/**
+ * Construction properties for a LoadBalancer.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * Ec2Service service = Ec2Service.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
+ * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
+ * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
+ * .containerName("MyContainer")
+ * .containerPort(80)
+ * .build()));
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerPropsDsl {
   private val cdkBuilder: LoadBalancerProps.Builder = LoadBalancerProps.builder()

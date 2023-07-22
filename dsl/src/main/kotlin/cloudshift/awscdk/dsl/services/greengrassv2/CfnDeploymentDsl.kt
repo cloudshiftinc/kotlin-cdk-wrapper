@@ -12,6 +12,104 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 import software.constructs.Construct
 
+/**
+ * Creates a continuous deployment for a target, which is a AWS IoT Greengrass core device or group
+ * of core devices.
+ *
+ * When you add a new core device to a group of core devices that has a deployment, AWS IoT
+ * Greengrass deploys that group's deployment to the new device.
+ *
+ * You can define one deployment for each target. When you create a new deployment for a target that
+ * has an existing deployment, you replace the previous deployment. AWS IoT Greengrass applies the new
+ * deployment to the target devices.
+ *
+ * You can only add, update, or delete up to 10 deployments at a time to a single target.
+ *
+ * Every deployment has a revision number that indicates how many deployment revisions you define
+ * for a target. Use this operation to create a new revision of an existing deployment. This operation
+ * returns the revision number of the new deployment when you create it.
+ *
+ * For more information, see the [Create
+ * deployments](https://docs.aws.amazon.com/greengrass/v2/developerguide/create-deployments.html) in
+ * the *AWS IoT Greengrass V2 Developer Guide* .
+ *
+ *
+ * Deployment resources are deleted when you delete stacks. To keep the deployments in a stack, you
+ * must specify `"DeletionPolicy": "Retain"` on each deployment resource in the stack template that you
+ * want to keep. For more information, see
+ * [DeletionPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * .
+ *
+ * You can only delete up to 10 deployment resources at a time. If you delete more than 10
+ * resources, you receive an error.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * Object rateIncreaseCriteria;
+ * CfnDeployment cfnDeployment = CfnDeployment.Builder.create(this, "MyCfnDeployment")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .components(Map.of(
+ * "componentsKey", ComponentDeploymentSpecificationProperty.builder()
+ * .componentVersion("componentVersion")
+ * .configurationUpdate(ComponentConfigurationUpdateProperty.builder()
+ * .merge("merge")
+ * .reset(List.of("reset"))
+ * .build())
+ * .runWith(ComponentRunWithProperty.builder()
+ * .posixUser("posixUser")
+ * .systemResourceLimits(SystemResourceLimitsProperty.builder()
+ * .cpus(123)
+ * .memory(123)
+ * .build())
+ * .windowsUser("windowsUser")
+ * .build())
+ * .build()))
+ * .deploymentName("deploymentName")
+ * .deploymentPolicies(DeploymentPoliciesProperty.builder()
+ * .componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty.builder()
+ * .action("action")
+ * .timeoutInSeconds(123)
+ * .build())
+ * .configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty.builder()
+ * .timeoutInSeconds(123)
+ * .build())
+ * .failureHandlingPolicy("failureHandlingPolicy")
+ * .build())
+ * .iotJobConfiguration(DeploymentIoTJobConfigurationProperty.builder()
+ * .abortConfig(IoTJobAbortConfigProperty.builder()
+ * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build()))
+ * .build())
+ * .jobExecutionsRolloutConfig(IoTJobExecutionsRolloutConfigProperty.builder()
+ * .exponentialRate(IoTJobExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(rateIncreaseCriteria)
+ * .build())
+ * .maximumPerMinute(123)
+ * .build())
+ * .timeoutConfig(IoTJobTimeoutConfigProperty.builder()
+ * .inProgressTimeoutInMinutes(123)
+ * .build())
+ * .build())
+ * .parentTargetArn("parentTargetArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDsl(
   scope: Construct,

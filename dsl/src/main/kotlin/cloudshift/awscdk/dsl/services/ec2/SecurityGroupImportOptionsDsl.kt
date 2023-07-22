@@ -6,6 +6,18 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ec2.SecurityGroupImportOptions
 
+/**
+ * Additional options for imported security groups.
+ *
+ * Example:
+ *
+ * ```
+ * ISecurityGroup securityGroup = SecurityGroup.fromSecurityGroupId(this, "SG", "sg-12345",
+ * SecurityGroupImportOptions.builder()
+ * .mutable(false)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SecurityGroupImportOptionsDsl {
   private val cdkBuilder: SecurityGroupImportOptions.Builder = SecurityGroupImportOptions.builder()

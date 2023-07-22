@@ -7,6 +7,30 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 
+/**
+ * *This data type is used with the GameLift FleetIQ and game server groups.*.
+ *
+ * Configuration settings for intelligent automatic scaling that uses target tracking. After the
+ * Auto Scaling group is created, all updates to Auto Scaling policies, including changing this policy
+ * and adding or removing other policies, is done directly on the Auto Scaling group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * AutoScalingPolicyProperty autoScalingPolicyProperty = AutoScalingPolicyProperty.builder()
+ * .targetTrackingConfiguration(TargetTrackingConfigurationProperty.builder()
+ * .targetValue(123)
+ * .build())
+ * // the properties below are optional
+ * .estimatedInstanceWarmup(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnGameServerGroupAutoScalingPolicyPropertyDsl {
   private val cdkBuilder: CfnGameServerGroup.AutoScalingPolicyProperty.Builder =

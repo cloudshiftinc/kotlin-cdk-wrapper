@@ -8,6 +8,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * Docker container image configuration object for the model explainability job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelExplainabilityAppSpecificationProperty modelExplainabilityAppSpecificationProperty =
+ * ModelExplainabilityAppSpecificationProperty.builder()
+ * .configUri("configUri")
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilityappspecification.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionModelExplainabilityAppSpecificationPropertyDsl {
   private val cdkBuilder:

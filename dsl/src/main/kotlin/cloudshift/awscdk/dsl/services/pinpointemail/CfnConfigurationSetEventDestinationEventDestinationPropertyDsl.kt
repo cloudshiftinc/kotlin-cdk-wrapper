@@ -10,6 +10,47 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 
+/**
+ * In Amazon Pinpoint, *events* include message sends, deliveries, opens, clicks, bounces, and
+ * complaints.
+ *
+ * *Event destinations* are places that you can send information about these events to. For example,
+ * you can send event data to Amazon SNS to receive notifications when you receive bounces or
+ * complaints, or you can use Amazon Kinesis Data Firehose to stream data to Amazon S3 for long-term
+ * storage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * EventDestinationProperty eventDestinationProperty = EventDestinationProperty.builder()
+ * .matchingEventTypes(List.of("matchingEventTypes"))
+ * // the properties below are optional
+ * .cloudWatchDestination(CloudWatchDestinationProperty.builder()
+ * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+ * .defaultDimensionValue("defaultDimensionValue")
+ * .dimensionName("dimensionName")
+ * .dimensionValueSource("dimensionValueSource")
+ * .build()))
+ * .build())
+ * .enabled(false)
+ * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .iamRoleArn("iamRoleArn")
+ * .build())
+ * .pinpointDestination(PinpointDestinationProperty.builder()
+ * .applicationArn("applicationArn")
+ * .build())
+ * .snsDestination(SnsDestinationProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-eventdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationEventDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.EventDestinationProperty.Builder =

@@ -6,6 +6,37 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * The broker logs configuration for this MSK cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * BrokerLogsProperty brokerLogsProperty = BrokerLogsProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build())
+ * .firehose(FirehoseProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .s3(S3Property.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokerlogs.html)
+ */
 @CdkDslMarker
 public class CfnClusterBrokerLogsPropertyDsl {
   private val cdkBuilder: CfnCluster.BrokerLogsProperty.Builder =

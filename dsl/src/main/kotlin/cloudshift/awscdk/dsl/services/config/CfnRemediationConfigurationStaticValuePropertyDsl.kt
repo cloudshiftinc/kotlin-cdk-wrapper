@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
+/**
+ * The static value of the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * StaticValueProperty staticValueProperty = StaticValueProperty.builder()
+ * .value(List.of("value"))
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-staticvalue.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationStaticValuePropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.StaticValueProperty.Builder =

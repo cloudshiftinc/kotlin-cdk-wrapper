@@ -14,6 +14,21 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnParameter
 import software.constructs.Construct
 
+/**
+ * A CloudFormation parameter.
+ *
+ * Use the optional Parameters section to customize your templates.
+ * Parameters enable you to input custom values to your template each time you create or
+ * update a stack.
+ *
+ * Example:
+ *
+ * ```
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * CfnParameter url = new CfnParameter(this, "url-param");
+ * myTopic.addSubscription(new UrlSubscription(url.getValueAsString()));
+ * ```
+ */
 @CdkDslMarker
 public class CfnParameterDsl(
   scope: Construct,

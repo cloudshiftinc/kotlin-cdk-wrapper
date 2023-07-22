@@ -12,6 +12,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinitionProps
 
+/**
+ * Properties for defining a `CfnSuiteDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotcoredeviceadvisor.*;
+ * Object suiteDefinitionConfiguration;
+ * CfnSuiteDefinitionProps cfnSuiteDefinitionProps = CfnSuiteDefinitionProps.builder()
+ * .suiteDefinitionConfiguration(suiteDefinitionConfiguration)
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html)
+ */
 @CdkDslMarker
 public class CfnSuiteDefinitionPropsDsl {
   private val cdkBuilder: CfnSuiteDefinitionProps.Builder = CfnSuiteDefinitionProps.builder()

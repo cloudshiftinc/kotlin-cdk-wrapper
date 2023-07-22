@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.stepfunctions.TaskInput
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointProps
 
+/**
+ * Properties for creating an Amazon SageMaker endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateEndpoint.Builder.create(this, "SagemakerEndpoint")
+ * .endpointName(JsonPath.stringAt("$.EndpointName"))
+ * .endpointConfigName(JsonPath.stringAt("$.EndpointConfigName"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerCreateEndpointPropsDsl {
   private val cdkBuilder: SageMakerCreateEndpointProps.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to write data to an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * S3ActionProperty s3ActionProperty = S3ActionProperty.builder()
+ * .bucketName("bucketName")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .cannedAcl("cannedAcl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-s3action.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleS3ActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.S3ActionProperty.Builder =

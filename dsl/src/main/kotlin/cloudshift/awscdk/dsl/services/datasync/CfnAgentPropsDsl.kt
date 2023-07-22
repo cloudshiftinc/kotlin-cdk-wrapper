@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnAgentProps
 
+/**
+ * Properties for defining a `CfnAgent`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnAgentProps cfnAgentProps = CfnAgentProps.builder()
+ * .activationKey("activationKey")
+ * .agentName("agentName")
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .subnetArns(List.of("subnetArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html)
+ */
 @CdkDslMarker
 public class CfnAgentPropsDsl {
   private val cdkBuilder: CfnAgentProps.Builder = CfnAgentProps.builder()

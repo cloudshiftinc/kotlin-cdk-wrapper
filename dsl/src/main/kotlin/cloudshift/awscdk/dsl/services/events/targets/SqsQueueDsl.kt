@@ -10,6 +10,17 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.SqsQueue
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an SQS Queue as a target for Amazon EventBridge rules.
+ *
+ * Example:
+ *
+ * ```
+ * // publish to an SQS queue every time code is committed
+ * // to a CodeCommit repository
+ * repository.onCommit("onCommit", OnCommitOptions.builder().target(new SqsQueue(queue)).build());
+ * ```
+ */
 @CdkDslMarker
 public class SqsQueueDsl(
   queue: IQueue,

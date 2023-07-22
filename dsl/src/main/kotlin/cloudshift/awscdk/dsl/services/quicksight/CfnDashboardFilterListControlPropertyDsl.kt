@@ -7,6 +7,63 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A control to display a list of buttons or boxes.
+ *
+ * This is used to select either a single value or multiple values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FilterListControlProperty filterListControlProperty = FilterListControlProperty.builder()
+ * .filterControlId("filterControlId")
+ * .sourceFilterId("sourceFilterId")
+ * .title("title")
+ * // the properties below are optional
+ * .cascadingControlConfiguration(CascadingControlConfigurationProperty.builder()
+ * .sourceControls(List.of(CascadingControlSourceProperty.builder()
+ * .columnToMatch(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceSheetControlId("sourceSheetControlId")
+ * .build()))
+ * .build())
+ * .displayOptions(ListControlDisplayOptionsProperty.builder()
+ * .searchOptions(ListControlSearchOptionsProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .titleOptions(LabelOptionsProperty.builder()
+ * .customLabel("customLabel")
+ * .fontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .visibility("visibility")
+ * .build())
+ * .build())
+ * .selectableValues(FilterSelectableValuesProperty.builder()
+ * .values(List.of("values"))
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-filterlistcontrol.html)
+ */
 @CdkDslMarker
 public class CfnDashboardFilterListControlPropertyDsl {
   private val cdkBuilder: CfnDashboard.FilterListControlProperty.Builder =

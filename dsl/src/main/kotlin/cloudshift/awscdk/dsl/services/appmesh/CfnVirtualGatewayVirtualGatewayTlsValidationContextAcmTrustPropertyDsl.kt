@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents a Transport Layer Security (TLS) validation context trust for an AWS
+ * Certificate Manager certificate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayTlsValidationContextAcmTrustProperty
+ * virtualGatewayTlsValidationContextAcmTrustProperty =
+ * VirtualGatewayTlsValidationContextAcmTrustProperty.builder()
+ * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextacmtrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayTlsValidationContextAcmTrustPropertyDsl {
   private val cdkBuilder:

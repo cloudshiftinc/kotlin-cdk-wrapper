@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile credentials required when using ServiceNow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * ServiceNowConnectorProfileCredentialsProperty serviceNowConnectorProfileCredentialsProperty =
+ * ServiceNowConnectorProfileCredentialsProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileServiceNowConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.Builder

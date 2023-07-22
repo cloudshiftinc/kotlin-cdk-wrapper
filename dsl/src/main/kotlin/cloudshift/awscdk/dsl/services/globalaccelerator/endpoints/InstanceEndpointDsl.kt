@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.services.ec2.IInstance
 import software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint
 
+/**
+ * Use an EC2 Instance as a Global Accelerator Endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * Instance instance;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * InstanceEndpoint.Builder.create(instance)
+ * .weight(128)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class InstanceEndpointDsl(
   instance: IInstance,

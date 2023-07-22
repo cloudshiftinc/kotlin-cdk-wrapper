@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about system resource limits that the  software applies to a component's
+ * processes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * SystemResourceLimitsProperty systemResourceLimitsProperty =
+ * SystemResourceLimitsProperty.builder()
+ * .cpus(123)
+ * .memory(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-systemresourcelimits.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentSystemResourceLimitsPropertyDsl {
   private val cdkBuilder: CfnDeployment.SystemResourceLimitsProperty.Builder =

@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.apigateway.SecurityPolicy
 import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * IDomainName domainName = DomainName.fromDomainNameAttributes(this, "DomainName",
+ * DomainNameAttributes.builder()
+ * .domainName("domainName")
+ * .domainNameAliasHostedZoneId("domainNameAliasHostedZoneId")
+ * .domainNameAliasTarget("domainNameAliasTarget")
+ * .build());
+ * BasePathMapping.Builder.create(this, "BasePathMapping")
+ * .domainName(domainName)
+ * .restApi(api)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DomainNameDsl(
   scope: Construct,

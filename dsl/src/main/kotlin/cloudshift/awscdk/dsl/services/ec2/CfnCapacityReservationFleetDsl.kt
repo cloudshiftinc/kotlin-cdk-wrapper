@@ -13,6 +13,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet
 import software.constructs.Construct
 
+/**
+ * Creates a new Capacity Reservation Fleet with the specified attributes.
+ *
+ * For more information, see [Capacity Reservation
+ * Fleets](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-fleets.html) in the *Amazon EC2 User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnCapacityReservationFleet cfnCapacityReservationFleet =
+ * CfnCapacityReservationFleet.Builder.create(this, "MyCfnCapacityReservationFleet")
+ * .allocationStrategy("allocationStrategy")
+ * .endDate("endDate")
+ * .instanceMatchCriteria("instanceMatchCriteria")
+ * .instanceTypeSpecifications(List.of(InstanceTypeSpecificationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
+ * .ebsOptimized(false)
+ * .instancePlatform("instancePlatform")
+ * .instanceType("instanceType")
+ * .priority(123)
+ * .weight(123)
+ * .build()))
+ * .noRemoveEndDate(false)
+ * .removeEndDate(false)
+ * .tagSpecifications(List.of(TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .tenancy("tenancy")
+ * .totalTargetCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationFleetDsl(
   scope: Construct,

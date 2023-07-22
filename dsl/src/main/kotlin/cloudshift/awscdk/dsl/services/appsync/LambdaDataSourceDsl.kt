@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * An AppSync datasource backed by a Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function function_;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * LambdaDataSource lambdaDataSource = LambdaDataSource.Builder.create(this, "MyLambdaDataSource")
+ * .api(graphqlApi)
+ * .lambdaFunction(function_)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDataSourceDsl(
   scope: Construct,

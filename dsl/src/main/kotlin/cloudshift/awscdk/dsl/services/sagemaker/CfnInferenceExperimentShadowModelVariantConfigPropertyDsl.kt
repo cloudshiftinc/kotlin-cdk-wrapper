@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The name and sampling percentage of a shadow variant.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ShadowModelVariantConfigProperty shadowModelVariantConfigProperty =
+ * ShadowModelVariantConfigProperty.builder()
+ * .samplingPercentage(123)
+ * .shadowModelVariantName("shadowModelVariantName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodelvariantconfig.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentShadowModelVariantConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ShadowModelVariantConfigProperty.Builder =

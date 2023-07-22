@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The volume mounts for a container for an Amazon EKS job.
+ *
+ * For more information about volumes and volume mounts in Kubernetes, see
+ * [Volumes](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/) in the
+ * *Kubernetes documentation* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EksContainerVolumeMountProperty eksContainerVolumeMountProperty =
+ * EksContainerVolumeMountProperty.builder()
+ * .mountPath("mountPath")
+ * .name("name")
+ * .readOnly(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainervolumemount.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEksContainerVolumeMountPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EksContainerVolumeMountProperty.Builder =

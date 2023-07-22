@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The OAuth 2.0 credentials required for OAuth 2.0 authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * OAuth2CredentialsProperty oAuth2CredentialsProperty = OAuth2CredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .refreshToken("refreshToken")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2credentials.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileOAuth2CredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.OAuth2CredentialsProperty.Builder =

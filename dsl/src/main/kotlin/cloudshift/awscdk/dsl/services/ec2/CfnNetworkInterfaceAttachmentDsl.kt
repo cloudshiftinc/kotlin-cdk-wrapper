@@ -9,6 +9,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment
 import software.constructs.Construct
 
+/**
+ * Attaches an elastic network interface (ENI) to an Amazon EC2 instance.
+ *
+ * You can use this resource type to attach additional network interfaces to an instance without
+ * interruption.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInterfaceAttachment cfnNetworkInterfaceAttachment =
+ * CfnNetworkInterfaceAttachment.Builder.create(this, "MyCfnNetworkInterfaceAttachment")
+ * .deviceIndex("deviceIndex")
+ * .instanceId("instanceId")
+ * .networkInterfaceId("networkInterfaceId")
+ * // the properties below are optional
+ * .deleteOnTermination(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInterfaceAttachmentDsl(
   scope: Construct,

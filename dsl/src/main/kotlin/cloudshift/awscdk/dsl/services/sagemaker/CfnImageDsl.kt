@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.sagemaker.CfnImage
 import software.constructs.Construct
 
+/**
+ * Creates a custom SageMaker image.
+ *
+ * A SageMaker image is a set of image versions. Each image version represents a container image
+ * stored in Amazon Elastic Container Registry (ECR). For more information, see [Bring your own
+ * SageMaker image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnImage cfnImage = CfnImage.Builder.create(this, "MyCfnImage")
+ * .imageName("imageName")
+ * .imageRoleArn("imageRoleArn")
+ * // the properties below are optional
+ * .imageDescription("imageDescription")
+ * .imageDisplayName("imageDisplayName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-image.html)
+ */
 @CdkDslMarker
 public class CfnImageDsl(
   scope: Construct,

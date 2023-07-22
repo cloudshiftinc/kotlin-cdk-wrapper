@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * A rule that compares an input property value to a threshold value with a comparison operator.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * SimpleRuleProperty simpleRuleProperty = SimpleRuleProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .inputProperty("inputProperty")
+ * .threshold("threshold")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-simplerule.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelSimpleRulePropertyDsl {
   private val cdkBuilder: CfnAlarmModel.SimpleRuleProperty.Builder =

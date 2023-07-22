@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableProps
 
+/**
+ * Properties for defining a `CfnLocalGatewayRouteTable`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableProps cfnLocalGatewayRouteTableProps =
+ * CfnLocalGatewayRouteTableProps.builder()
+ * .localGatewayId("localGatewayId")
+ * // the properties below are optional
+ * .mode("mode")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetable.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTablePropsDsl {
   private val cdkBuilder: CfnLocalGatewayRouteTableProps.Builder =

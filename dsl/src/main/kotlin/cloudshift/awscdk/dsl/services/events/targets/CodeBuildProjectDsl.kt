@@ -11,6 +11,28 @@ import software.amazon.awscdk.services.events.targets.CodeBuildProject
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Start a CodeBuild build when an Amazon EventBridge rule is triggered.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * Repository repo;
+ * PipelineProject project;
+ * Topic myTopic;
+ * // starts a CodeBuild project when a commit is pushed to the "main" branch of the repo
+ * repo.onCommit("CommitToMain", OnCommitOptions.builder()
+ * .target(new CodeBuildProject(project))
+ * .branches(List.of("main"))
+ * .build());
+ * // publishes a message to an Amazon SNS topic when a comment is made on a pull request
+ * Rule rule = repo.onCommentOnPullRequest("CommentOnPullRequest", OnEventOptions.builder()
+ * .target(new SnsTopic(myTopic))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildProjectDsl(
   project: IProject,

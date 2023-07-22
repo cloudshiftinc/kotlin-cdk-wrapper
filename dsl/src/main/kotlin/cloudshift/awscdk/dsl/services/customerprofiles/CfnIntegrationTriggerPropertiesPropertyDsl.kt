@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * Specifies the configuration details that control the trigger for a flow.
+ *
+ * Currently, these settings only apply to the Scheduled trigger type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * TriggerPropertiesProperty triggerPropertiesProperty = TriggerPropertiesProperty.builder()
+ * .scheduled(ScheduledTriggerPropertiesProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .dataPullMode("dataPullMode")
+ * .firstExecutionFrom(123)
+ * .scheduleEndTime(123)
+ * .scheduleOffset(123)
+ * .scheduleStartTime(123)
+ * .timezone("timezone")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-triggerproperties.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationTriggerPropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.TriggerPropertiesProperty.Builder =

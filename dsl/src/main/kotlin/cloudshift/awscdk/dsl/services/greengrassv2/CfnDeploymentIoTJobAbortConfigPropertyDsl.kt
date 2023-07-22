@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains a list of criteria that define when and how to cancel a configuration deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * IoTJobAbortConfigProperty ioTJobAbortConfigProperty = IoTJobAbortConfigProperty.builder()
+ * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortconfig.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentIoTJobAbortConfigPropertyDsl {
   private val cdkBuilder: CfnDeployment.IoTJobAbortConfigProperty.Builder =

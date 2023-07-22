@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the
+ * Amazon Redshift Data API ExecuteStatement based on EventBridge events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * RedshiftDataParametersProperty redshiftDataParametersProperty =
+ * RedshiftDataParametersProperty.builder()
+ * .database("database")
+ * .sql("sql")
+ * // the properties below are optional
+ * .dbUser("dbUser")
+ * .secretManagerArn("secretManagerArn")
+ * .statementName("statementName")
+ * .withEvent(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-redshiftdataparameters.html)
+ */
 @CdkDslMarker
 public class CfnRuleRedshiftDataParametersPropertyDsl {
   private val cdkBuilder: CfnRule.RedshiftDataParametersProperty.Builder =

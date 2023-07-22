@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appsync.CfnResolver
 
+/**
+ * Use the `PipelineConfig` property type to specify `PipelineConfig` for an AWS AppSync resolver.
+ *
+ * `PipelineConfig` is a property of the
+ * [AWS::AppSync::Resolver](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * PipelineConfigProperty pipelineConfigProperty = PipelineConfigProperty.builder()
+ * .functions(List.of("functions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-pipelineconfig.html)
+ */
 @CdkDslMarker
 public class CfnResolverPipelineConfigPropertyDsl {
   private val cdkBuilder: CfnResolver.PipelineConfigProperty.Builder =

@@ -10,6 +10,26 @@ import kotlin.Unit
 import software.amazon.awscdk.services.dax.CfnParameterGroup
 import software.constructs.Construct
 
+/**
+ * A named set of parameters that are applied to all of the nodes in a DAX cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dax.*;
+ * Object parameterNameValues;
+ * CfnParameterGroup cfnParameterGroup = CfnParameterGroup.Builder.create(this,
+ * "MyCfnParameterGroup")
+ * .description("description")
+ * .parameterGroupName("parameterGroupName")
+ * .parameterNameValues(parameterNameValues)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-parametergroup.html)
+ */
 @CdkDslMarker
 public class CfnParameterGroupDsl(
   scope: Construct,

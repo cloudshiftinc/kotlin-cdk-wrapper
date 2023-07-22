@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 
+/**
+ * Specifies an action for an experiment template.
+ *
+ * For more information, see
+ * [Actions](https://docs.aws.amazon.com/fis/latest/userguide/actions.html) in the *AWS Fault Injection
+ * Simulator User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fis.*;
+ * ExperimentTemplateActionProperty experimentTemplateActionProperty =
+ * ExperimentTemplateActionProperty.builder()
+ * .actionId("actionId")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .startAfter(List.of("startAfter"))
+ * .targets(Map.of(
+ * "targetsKey", "targets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateaction.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTemplateExperimentTemplateActionPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateActionProperty.Builder =

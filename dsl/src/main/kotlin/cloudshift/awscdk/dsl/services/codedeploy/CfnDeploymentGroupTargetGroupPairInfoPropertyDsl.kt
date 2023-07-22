@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * TargetGroupPairInfoProperty targetGroupPairInfoProperty = TargetGroupPairInfoProperty.builder()
+ * .prodTrafficRoute(TrafficRouteProperty.builder()
+ * .listenerArns(List.of("listenerArns"))
+ * .build())
+ * .targetGroups(List.of(TargetGroupInfoProperty.builder()
+ * .name("name")
+ * .build()))
+ * .testTrafficRoute(TrafficRouteProperty.builder()
+ * .listenerArns(List.of("listenerArns"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgrouppairinfo.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupTargetGroupPairInfoPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.TargetGroupPairInfoProperty.Builder =

@@ -17,6 +17,46 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 
+/**
+ * Properties for a new Network Target Group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * INetworkLoadBalancerTarget networkLoadBalancerTarget;
+ * Vpc vpc;
+ * NetworkTargetGroupProps networkTargetGroupProps = NetworkTargetGroupProps.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .connectionTermination(false)
+ * .deregistrationDelay(Duration.minutes(30))
+ * .healthCheck(HealthCheck.builder()
+ * .enabled(false)
+ * .healthyGrpcCodes("healthyGrpcCodes")
+ * .healthyHttpCodes("healthyHttpCodes")
+ * .healthyThresholdCount(123)
+ * .interval(Duration.minutes(30))
+ * .path("path")
+ * .port("port")
+ * .protocol(Protocol.HTTP)
+ * .timeout(Duration.minutes(30))
+ * .unhealthyThresholdCount(123)
+ * .build())
+ * .preserveClientIp(false)
+ * .protocol(Protocol.HTTP)
+ * .proxyProtocolV2(false)
+ * .targetGroupName("targetGroupName")
+ * .targets(List.of(networkLoadBalancerTarget))
+ * .targetType(TargetType.INSTANCE)
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkTargetGroupPropsDsl {
   private val cdkBuilder: NetworkTargetGroupProps.Builder = NetworkTargetGroupProps.builder()

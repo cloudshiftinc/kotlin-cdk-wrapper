@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `ElasticsearchRetryOptions` property type configures the retry behavior for when Amazon
+ * Kinesis Data Firehose (Kinesis Data Firehose) can't deliver data to Amazon Elasticsearch Service
+ * (Amazon ES).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * ElasticsearchRetryOptionsProperty elasticsearchRetryOptionsProperty =
+ * ElasticsearchRetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamElasticsearchRetryOptionsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.ElasticsearchRetryOptionsProperty.Builder =

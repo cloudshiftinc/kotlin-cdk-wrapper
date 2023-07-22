@@ -10,6 +10,88 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * Configuration defining a new instance group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ConfigurationProperty configurationProperty_;
+ * Size size;
+ * InstanceGroupConfigProperty instanceGroupConfigProperty = InstanceGroupConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceRole(EmrCreateCluster.getInstanceRoleType().MASTER)
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
+ * .constraints(ScalingConstraintsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .rules(List.of(ScalingRuleProperty.builder()
+ * .action(ScalingActionProperty.builder()
+ * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType(EmrCreateCluster.getScalingAdjustmentType().CHANGE_IN_CAPACITY)
+ * .coolDown(123)
+ * .build())
+ * // the properties below are optional
+ * .market(EmrCreateCluster.getInstanceMarket().ON_DEMAND)
+ * .build())
+ * .name("name")
+ * .trigger(ScalingTriggerProperty.builder()
+ * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+ * .comparisonOperator(EmrCreateCluster.getCloudWatchAlarmComparisonOperator().GREATER_THAN_OR_EQUAL)
+ * .metricName("metricName")
+ * .period(Duration.minutes(30))
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .evaluationPeriods(123)
+ * .namespace("namespace")
+ * .statistic(EmrCreateCluster.getCloudWatchAlarmStatistic().SAMPLE_COUNT)
+ * .threshold(123)
+ * .unit(EmrCreateCluster.getCloudWatchAlarmUnit().NONE)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .build())
+ * .bidPrice("bidPrice")
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurations(List.of(configurationProperty_))
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .build()))
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .market(EmrCreateCluster.getInstanceMarket().ON_DEMAND)
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceGroupConfig.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterInstanceGroupConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.InstanceGroupConfigProperty.Builder =

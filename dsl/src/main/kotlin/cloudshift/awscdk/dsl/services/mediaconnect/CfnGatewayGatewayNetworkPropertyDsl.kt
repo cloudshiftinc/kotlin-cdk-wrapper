@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnGateway
 
+/**
+ * The network settings for a gateway.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * GatewayNetworkProperty gatewayNetworkProperty = GatewayNetworkProperty.builder()
+ * .cidrBlock("cidrBlock")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-gateway-gatewaynetwork.html)
+ */
 @CdkDslMarker
 public class CfnGatewayGatewayNetworkPropertyDsl {
   private val cdkBuilder: CfnGateway.GatewayNetworkProperty.Builder =

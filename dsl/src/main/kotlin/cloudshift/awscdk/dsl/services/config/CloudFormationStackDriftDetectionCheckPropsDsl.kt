@@ -14,6 +14,21 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties for a CloudFormationStackDriftDetectionCheck.
+ *
+ * Example:
+ *
+ * ```
+ * // compliant if stack's status is 'IN_SYNC'
+ * // non-compliant if the stack's drift status is 'DRIFTED'
+ * // compliant if stack's status is 'IN_SYNC'
+ * // non-compliant if the stack's drift status is 'DRIFTED'
+ * CloudFormationStackDriftDetectionCheck.Builder.create(this, "Drift")
+ * .ownStackOnly(true)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationStackDriftDetectionCheckPropsDsl {
   private val cdkBuilder: CloudFormationStackDriftDetectionCheckProps.Builder =

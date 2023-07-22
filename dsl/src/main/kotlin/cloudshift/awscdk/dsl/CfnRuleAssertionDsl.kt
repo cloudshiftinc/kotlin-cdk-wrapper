@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.CfnRuleAssertion
 import software.amazon.awscdk.ICfnConditionExpression
 
+/**
+ * A rule assertion.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ICfnConditionExpression cfnConditionExpression;
+ * CfnRuleAssertion cfnRuleAssertion = CfnRuleAssertion.builder()
+ * .assert(cfnConditionExpression)
+ * .assertDescription("assertDescription")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnRuleAssertionDsl {
   private val cdkBuilder: CfnRuleAssertion.Builder = CfnRuleAssertion.builder()

@@ -6,6 +6,44 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 
+/**
+ * A structure for the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * ResourceProperty resourceProperty = ResourceProperty.builder()
+ * .databaseResource(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataLocationResource(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .s3Resource("s3Resource")
+ * .build())
+ * .tableResource(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableWildcard(TableWildcardProperty.builder().build())
+ * .build())
+ * .tableWithColumnsResource(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-resource.html)
+ */
 @CdkDslMarker
 public class CfnPermissionsResourcePropertyDsl {
   private val cdkBuilder: CfnPermissions.ResourceProperty.Builder =

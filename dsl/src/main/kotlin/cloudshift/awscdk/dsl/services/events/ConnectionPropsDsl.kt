@@ -9,6 +9,30 @@ import software.amazon.awscdk.services.events.Authorization
 import software.amazon.awscdk.services.events.ConnectionProps
 import software.amazon.awscdk.services.events.HttpParameter
 
+/**
+ * An API Destination Connection.
+ *
+ * A connection defines the authorization type and credentials to use for authorization with an API
+ * destination HTTP endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Connection connection = Connection.Builder.create(this, "Connection")
+ * .authorization(Authorization.apiKey("x-api-key", SecretValue.secretsManager("ApiSecretName")))
+ * .description("Connection with API Key x-api-key")
+ * .build();
+ * ApiDestination destination = ApiDestination.Builder.create(this, "Destination")
+ * .connection(connection)
+ * .endpoint("https://example.com")
+ * .description("Calling example.com with API key x-api-key")
+ * .build();
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .targets(List.of(new ApiDestination(destination)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConnectionPropsDsl {
   private val cdkBuilder: ConnectionProps.Builder = ConnectionProps.builder()

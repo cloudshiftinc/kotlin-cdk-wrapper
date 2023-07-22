@@ -15,6 +15,30 @@ import software.amazon.awscdk.services.fsx.LustreFileSystem
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * The FSx for Lustre File System implementation of IFileSystem.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.*;
+ * Vpc vpc;
+ * Bucket bucket;
+ * Map&lt;String, Object&gt; lustreConfiguration = Map.of(
+ * "deploymentType", LustreDeploymentType.SCRATCH_2,
+ * "exportPath", bucket.s3UrlForObject(),
+ * "importPath", bucket.s3UrlForObject(),
+ * "autoImportPolicy", LustreAutoImportPolicy.NEW_CHANGED_DELETED);
+ * LustreFileSystem fs = LustreFileSystem.Builder.create(this, "FsxLustreFileSystem")
+ * .vpc(vpc)
+ * .vpcSubnet(vpc.getPrivateSubnets()[0])
+ * .storageCapacityGiB(1200)
+ * .lustreConfiguration(lustreConfiguration)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
+ */
 @CdkDslMarker
 public class LustreFileSystemDsl(
   scope: Construct,

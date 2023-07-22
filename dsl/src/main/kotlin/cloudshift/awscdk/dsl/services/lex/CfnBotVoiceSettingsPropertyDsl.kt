@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Defines settings for using an Amazon Polly voice to communicate with a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * VoiceSettingsProperty voiceSettingsProperty = VoiceSettingsProperty.builder()
+ * .voiceId("voiceId")
+ * // the properties below are optional
+ * .engine("engine")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-voicesettings.html)
+ */
 @CdkDslMarker
 public class CfnBotVoiceSettingsPropertyDsl {
   private val cdkBuilder: CfnBot.VoiceSettingsProperty.Builder =

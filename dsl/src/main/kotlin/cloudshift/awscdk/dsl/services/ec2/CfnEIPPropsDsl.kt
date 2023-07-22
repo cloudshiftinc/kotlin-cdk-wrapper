@@ -11,6 +11,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnEIPProps
 
+/**
+ * Properties for defining a `CfnEIP`.
+ *
+ * Example:
+ *
+ * ```
+ * Instance instance;
+ * HostedZone myZone;
+ * CfnEIP elasticIp = CfnEIP.Builder.create(this, "EIP")
+ * .domain("vpc")
+ * .instanceId(instance.getInstanceId())
+ * .build();
+ * ARecord.Builder.create(this, "ARecord")
+ * .zone(myZone)
+ * .target(RecordTarget.fromIpAddresses(elasticIp.getRef()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html)
+ */
 @CdkDslMarker
 public class CfnEIPPropsDsl {
   private val cdkBuilder: CfnEIPProps.Builder = CfnEIPProps.builder()

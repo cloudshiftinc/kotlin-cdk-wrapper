@@ -8,6 +8,37 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sns.StringConditions
 
+/**
+ * Conditions that can be applied to string attributes.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function fn;
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * // Lambda should receive only message matching the following conditions on attributes:
+ * // color: 'red' or 'orange' or begins with 'bl'
+ * // size: anything but 'small' or 'medium'
+ * // price: between 100 and 200 or greater than 300
+ * // store: attribute must be present
+ * myTopic.addSubscription(LambdaSubscription.Builder.create(fn)
+ * .filterPolicy(Map.of(
+ * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .allowlist(List.of("red", "orange"))
+ * .matchPrefixes(List.of("bl"))
+ * .build()),
+ * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .denylist(List.of("small", "medium"))
+ * .build()),
+ * "price", SubscriptionFilter.numericFilter(NumericConditions.builder()
+ * .between(BetweenCondition.builder().start(100).stop(200).build())
+ * .greaterThan(300)
+ * .build()),
+ * "store", SubscriptionFilter.existsFilter()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StringConditionsDsl {
   private val cdkBuilder: StringConditions.Builder = StringConditions.builder()

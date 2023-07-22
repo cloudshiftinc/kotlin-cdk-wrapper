@@ -7,6 +7,21 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions
 
+/**
+ * Configuration options for the Asset Manifest.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * AssetManifestOptions assetManifestOptions = AssetManifestOptions.builder()
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .requiresBootstrapStackVersion(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetManifestOptionsDsl {
   private val cdkBuilder: AssetManifestOptions.Builder = AssetManifestOptions.builder()

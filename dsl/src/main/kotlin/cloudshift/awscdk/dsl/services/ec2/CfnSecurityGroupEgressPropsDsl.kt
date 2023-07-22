@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupEgressProps
 
+/**
+ * Properties for defining a `CfnSecurityGroupEgress`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSecurityGroupEgressProps cfnSecurityGroupEgressProps = CfnSecurityGroupEgressProps.builder()
+ * .groupId("groupId")
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .destinationPrefixListId("destinationPrefixListId")
+ * .destinationSecurityGroupId("destinationSecurityGroupId")
+ * .fromPort(123)
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupEgressPropsDsl {
   private val cdkBuilder: CfnSecurityGroupEgressProps.Builder =

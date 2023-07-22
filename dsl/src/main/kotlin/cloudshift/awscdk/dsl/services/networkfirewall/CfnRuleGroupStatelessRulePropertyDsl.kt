@@ -7,6 +7,49 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * A single stateless rule.
+ *
+ * This is used in `RuleGroup.StatelessRulesAndCustomActions` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatelessRuleProperty statelessRuleProperty = StatelessRuleProperty.builder()
+ * .priority(123)
+ * .ruleDefinition(RuleDefinitionProperty.builder()
+ * .actions(List.of("actions"))
+ * .matchAttributes(MatchAttributesProperty.builder()
+ * .destinationPorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .destinations(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .protocols(List.of(123))
+ * .sourcePorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .sources(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+ * .flags(List.of("flags"))
+ * // the properties below are optional
+ * .masks(List.of("masks"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrule.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupStatelessRulePropertyDsl {
   private val cdkBuilder: CfnRuleGroup.StatelessRuleProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 
+/**
+ * Each `Range` specifies one range of days or times to exclude from use for training or updating an
+ * anomaly detection model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * RangeProperty rangeProperty = RangeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-range.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorRangePropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.RangeProperty.Builder =

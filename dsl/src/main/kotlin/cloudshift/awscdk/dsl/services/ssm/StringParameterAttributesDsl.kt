@@ -11,6 +11,43 @@ import software.amazon.awscdk.services.ssm.ParameterType
 import software.amazon.awscdk.services.ssm.ParameterValueType
 import software.amazon.awscdk.services.ssm.StringParameterAttributes
 
+/**
+ * Attributes for parameters of various types of string.
+ *
+ * Example:
+ *
+ * ```
+ * Number parameterVersion = Token.asNumber(Map.of("Ref", "MyParameter"));
+ * // Retrieve the latest value of the non-secret parameter
+ * // with name "/My/String/Parameter".
+ * String stringValue = StringParameter.fromStringParameterAttributes(this, "MyValue",
+ * StringParameterAttributes.builder()
+ * .parameterName("/My/Public/Parameter")
+ * .build()).getStringValue();
+ * String stringValueVersionFromToken = StringParameter.fromStringParameterAttributes(this,
+ * "MyValueVersionFromToken", StringParameterAttributes.builder()
+ * .parameterName("/My/Public/Parameter")
+ * // parameter version from token
+ * .version(parameterVersion)
+ * .build()).getStringValue();
+ * // Retrieve a specific version of the secret (SecureString) parameter.
+ * // 'version' is always required.
+ * IStringParameter secretValue = StringParameter.fromSecureStringParameterAttributes(this,
+ * "MySecureValue", SecureStringParameterAttributes.builder()
+ * .parameterName("/My/Secret/Parameter")
+ * .version(5)
+ * .build());
+ * IStringParameter secretValueVersionFromToken =
+ * StringParameter.fromSecureStringParameterAttributes(this, "MySecureValueVersionFromToken",
+ * SecureStringParameterAttributes.builder()
+ * .parameterName("/My/Secret/Parameter")
+ * // parameter version from token
+ * .version(parameterVersion)
+ * .build());
+ * ```
+ *
+ * [Documentation](ParameterType)
+ */
 @CdkDslMarker
 public class StringParameterAttributesDsl {
   private val cdkBuilder: StringParameterAttributes.Builder = StringParameterAttributes.builder()

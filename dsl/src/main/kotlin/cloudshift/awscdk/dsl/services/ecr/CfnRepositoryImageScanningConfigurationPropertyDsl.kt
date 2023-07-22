@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecr.CfnRepository
 
+/**
+ * The image scanning configuration for a repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
+ * ImageScanningConfigurationProperty.builder()
+ * .scanOnPush(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-imagescanningconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryImageScanningConfigurationPropertyDsl {
   private val cdkBuilder: CfnRepository.ImageScanningConfigurationProperty.Builder =

@@ -11,6 +11,19 @@ import software.amazon.awscdk.services.kinesis.StreamMode
 import software.amazon.awscdk.services.kinesis.StreamProps
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties for a Kinesis Stream.
+ *
+ * Example:
+ *
+ * ```
+ * Key key = new Key(this, "MyKey");
+ * Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .encryptionKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StreamPropsDsl {
   private val cdkBuilder: StreamProps.Builder = StreamProps.builder()

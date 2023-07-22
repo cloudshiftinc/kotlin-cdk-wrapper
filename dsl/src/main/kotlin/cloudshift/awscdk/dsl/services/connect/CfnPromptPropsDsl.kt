@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnPromptProps
 
+/**
+ * Properties for defining a `CfnPrompt`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnPromptProps cfnPromptProps = CfnPromptProps.builder()
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .s3Uri("s3Uri")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)
+ */
 @CdkDslMarker
 public class CfnPromptPropsDsl {
   private val cdkBuilder: CfnPromptProps.Builder = CfnPromptProps.builder()

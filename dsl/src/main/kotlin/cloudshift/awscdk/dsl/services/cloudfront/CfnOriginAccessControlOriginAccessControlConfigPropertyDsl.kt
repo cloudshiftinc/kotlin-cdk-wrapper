@@ -6,6 +6,39 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl
 
+/**
+ * Creates a new origin access control in CloudFront.
+ *
+ * After you create an origin access control, you can add it to an origin in a CloudFront
+ * distribution so that CloudFront sends authenticated (signed) requests to the origin.
+ *
+ * This makes it possible to block public access to the origin, allowing viewers (users) to access
+ * the origin's content only through CloudFront.
+ *
+ * For more information about using a CloudFront origin access control, see [Restricting access to
+ * an AWS
+ * origin](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-origin.html)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginAccessControlConfigProperty originAccessControlConfigProperty =
+ * OriginAccessControlConfigProperty.builder()
+ * .name("name")
+ * .originAccessControlOriginType("originAccessControlOriginType")
+ * .signingBehavior("signingBehavior")
+ * .signingProtocol("signingProtocol")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originaccesscontrol-originaccesscontrolconfig.html)
+ */
 @CdkDslMarker
 public class CfnOriginAccessControlOriginAccessControlConfigPropertyDsl {
   private val cdkBuilder: CfnOriginAccessControl.OriginAccessControlConfigProperty.Builder =

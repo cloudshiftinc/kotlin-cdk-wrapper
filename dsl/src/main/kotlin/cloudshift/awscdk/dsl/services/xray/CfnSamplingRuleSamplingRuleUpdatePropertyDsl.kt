@@ -9,6 +9,32 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnSamplingRule
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * SamplingRuleUpdateProperty samplingRuleUpdateProperty = SamplingRuleUpdateProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .fixedRate(123)
+ * .host("host")
+ * .httpMethod("httpMethod")
+ * .priority(123)
+ * .reservoirSize(123)
+ * .resourceArn("resourceArn")
+ * .ruleArn("ruleArn")
+ * .ruleName("ruleName")
+ * .serviceName("serviceName")
+ * .serviceType("serviceType")
+ * .urlPath("urlPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingruleupdate.html)
+ */
 @CdkDslMarker
 public class CfnSamplingRuleSamplingRuleUpdatePropertyDsl {
   private val cdkBuilder: CfnSamplingRule.SamplingRuleUpdateProperty.Builder =

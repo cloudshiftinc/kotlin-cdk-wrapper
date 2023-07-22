@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The email configuration of your user pool.
+ *
+ * The email configuration type sets your preferred sending method, AWS Region, and sender for
+ * messages from your user pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * EmailConfigurationProperty emailConfigurationProperty = EmailConfigurationProperty.builder()
+ * .configurationSet("configurationSet")
+ * .emailSendingAccount("emailSendingAccount")
+ * .from("from")
+ * .replyToEmailAddress("replyToEmailAddress")
+ * .sourceArn("sourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolEmailConfigurationPropertyDsl {
   private val cdkBuilder: CfnUserPool.EmailConfigurationProperty.Builder =

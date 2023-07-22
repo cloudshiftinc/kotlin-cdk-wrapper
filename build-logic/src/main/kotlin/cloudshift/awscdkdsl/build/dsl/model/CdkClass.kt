@@ -8,6 +8,7 @@ internal interface CdkClass {
     val publicMemberFunctions: List<Method>
     val publicStaticFunctions: List<Method>
     val deprecated: Boolean
+    val comment: String?
 
     fun implementsInterface(name: ClassName): Boolean
 

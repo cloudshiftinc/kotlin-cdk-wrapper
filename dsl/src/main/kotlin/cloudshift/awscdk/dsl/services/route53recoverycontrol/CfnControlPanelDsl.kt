@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanel
 import software.constructs.Construct
 
+/**
+ * Creates a new control panel in Amazon Route 53 Application Recovery Controller.
+ *
+ * A control panel represents a group of routing controls that can be changed together in a single
+ * transaction. You can use a control panel to centrally view the operational status of applications
+ * across your organization, and trigger multi-app failovers in a single transaction, for example, to
+ * fail over from one AWS Region (cell) to another.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnControlPanel cfnControlPanel = CfnControlPanel.Builder.create(this, "MyCfnControlPanel")
+ * .name("name")
+ * // the properties below are optional
+ * .clusterArn("clusterArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-controlpanel.html)
+ */
 @CdkDslMarker
 public class CfnControlPanelDsl(
   scope: Construct,

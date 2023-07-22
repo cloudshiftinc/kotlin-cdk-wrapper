@@ -9,6 +9,27 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordSetOptions
 
+/**
+ * Options for a RecordSet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * RecordSetOptions recordSetOptions = RecordSetOptions.builder()
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RecordSetOptionsDsl {
   private val cdkBuilder: RecordSetOptions.Builder = RecordSetOptions.builder()

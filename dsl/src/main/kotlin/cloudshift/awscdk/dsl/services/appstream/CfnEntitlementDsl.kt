@@ -11,6 +11,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnEntitlement
 import software.constructs.Construct
 
+/**
+ * Creates an entitlement to control access, based on user attributes, to specific applications
+ * within a stack.
+ *
+ * Entitlements apply to SAML 2.0 federated user identities. Amazon AppStream 2.0 user pool and
+ * streaming URL users are entitled to all applications in a stack. Entitlements don't apply to the
+ * desktop stream view application or to applications managed by a dynamic app provider using the
+ * Dynamic Application Framework.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnEntitlement cfnEntitlement = CfnEntitlement.Builder.create(this, "MyCfnEntitlement")
+ * .appVisibility("appVisibility")
+ * .attributes(List.of(AttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .stackName("stackName")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-entitlement.html)
+ */
 @CdkDslMarker
 public class CfnEntitlementDsl(
   scope: Construct,

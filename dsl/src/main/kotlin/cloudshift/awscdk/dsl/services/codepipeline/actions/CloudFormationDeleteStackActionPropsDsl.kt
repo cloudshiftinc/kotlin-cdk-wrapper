@@ -18,6 +18,44 @@ import software.amazon.awscdk.services.codepipeline.ArtifactPath
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for the CloudFormationDeleteStackAction.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Artifact artifact;
+ * ArtifactPath artifactPath;
+ * Object parameterOverrides;
+ * Role role;
+ * CloudFormationDeleteStackActionProps cloudFormationDeleteStackActionProps =
+ * CloudFormationDeleteStackActionProps.builder()
+ * .actionName("actionName")
+ * .adminPermissions(false)
+ * .stackName("stackName")
+ * // the properties below are optional
+ * .account("account")
+ * .cfnCapabilities(List.of(CfnCapabilities.NONE))
+ * .deploymentRole(role)
+ * .extraInputs(List.of(artifact))
+ * .output(artifact)
+ * .outputFileName("outputFileName")
+ * .parameterOverrides(Map.of(
+ * "parameterOverridesKey", parameterOverrides))
+ * .region("region")
+ * .role(role)
+ * .runOrder(123)
+ * .templateConfiguration(artifactPath)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationDeleteStackActionPropsDsl {
   private val cdkBuilder: CloudFormationDeleteStackActionProps.Builder =

@@ -14,6 +14,39 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.sagemaker.CfnPipeline
 import software.constructs.Construct
 
+/**
+ * The `AWS::SageMaker::Pipeline` resource creates shell scripts that run when you create and/or
+ * start a SageMaker Pipeline.
+ *
+ * For information about SageMaker Pipelines, see [SageMaker
+ * Pipelines](https://docs.aws.amazon.com/sagemaker/latest/dg/pipelines.html) in the *Amazon SageMaker
+ * Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object parallelismConfiguration;
+ * Object pipelineDefinition;
+ * CfnPipeline cfnPipeline = CfnPipeline.Builder.create(this, "MyCfnPipeline")
+ * .pipelineDefinition(pipelineDefinition)
+ * .pipelineName("pipelineName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .parallelismConfiguration(parallelismConfiguration)
+ * .pipelineDescription("pipelineDescription")
+ * .pipelineDisplayName("pipelineDisplayName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDsl(
   scope: Construct,

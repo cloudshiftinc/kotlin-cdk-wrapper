@@ -15,6 +15,51 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
 import software.constructs.Construct
 
+/**
+ * Creates a scheduled inference.
+ *
+ * Scheduling an inference is setting up a continuous real-time inference plan to analyze new
+ * measurement data. When setting up the schedule, you provide an Amazon S3 bucket location for the
+ * input data, assign it a delimiter between separate entries in the data, set an offset delay if
+ * desired, and set the frequency of inferencing. You must also provide an Amazon S3 bucket location
+ * for the output data.
+ *
+ *
+ * Updating some properties below (for example, InferenceSchedulerName and ServerSideKmsKeyId)
+ * triggers a resource replacement, which requires a new model. To replace such a property using AWS
+ * CloudFormation , but without creating a completely new stack, you must replace ModelName. If you
+ * need to replace the property, but want to use the same model, delete the current stack and create a
+ * new one with the updated properties.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutequipment.*;
+ * Object dataInputConfiguration;
+ * Object dataOutputConfiguration;
+ * CfnInferenceScheduler cfnInferenceScheduler = CfnInferenceScheduler.Builder.create(this,
+ * "MyCfnInferenceScheduler")
+ * .dataInputConfiguration(dataInputConfiguration)
+ * .dataOutputConfiguration(dataOutputConfiguration)
+ * .dataUploadFrequency("dataUploadFrequency")
+ * .modelName("modelName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .dataDelayOffsetInMinutes(123)
+ * .inferenceSchedulerName("inferenceSchedulerName")
+ * .serverSideKmsKeyId("serverSideKmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html)
+ */
 @CdkDslMarker
 public class CfnInferenceSchedulerDsl(
   scope: Construct,

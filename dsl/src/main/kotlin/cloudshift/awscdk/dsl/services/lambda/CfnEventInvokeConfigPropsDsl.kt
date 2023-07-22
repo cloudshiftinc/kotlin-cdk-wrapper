@@ -9,6 +9,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
 import software.amazon.awscdk.services.lambda.CfnEventInvokeConfigProps
 
+/**
+ * Properties for defining a `CfnEventInvokeConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnEventInvokeConfigProps cfnEventInvokeConfigProps = CfnEventInvokeConfigProps.builder()
+ * .functionName("functionName")
+ * .qualifier("qualifier")
+ * // the properties below are optional
+ * .destinationConfig(DestinationConfigProperty.builder()
+ * .onFailure(OnFailureProperty.builder()
+ * .destination("destination")
+ * .build())
+ * .onSuccess(OnSuccessProperty.builder()
+ * .destination("destination")
+ * .build())
+ * .build())
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html)
+ */
 @CdkDslMarker
 public class CfnEventInvokeConfigPropsDsl {
   private val cdkBuilder: CfnEventInvokeConfigProps.Builder = CfnEventInvokeConfigProps.builder()

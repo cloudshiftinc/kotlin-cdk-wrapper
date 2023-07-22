@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies the configuration for notifications of inference results for asynchronous inference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * AsyncInferenceNotificationConfigProperty asyncInferenceNotificationConfigProperty =
+ * AsyncInferenceNotificationConfigProperty.builder()
+ * .errorTopic("errorTopic")
+ * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
+ * .successTopic("successTopic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferencenotificationconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigAsyncInferenceNotificationConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.AsyncInferenceNotificationConfigProperty.Builder =

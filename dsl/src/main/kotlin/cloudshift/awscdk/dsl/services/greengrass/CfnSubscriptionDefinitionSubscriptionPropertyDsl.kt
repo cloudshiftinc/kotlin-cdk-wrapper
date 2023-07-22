@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 
+/**
+ * Subscriptions define how MQTT messages can be exchanged between devices, functions, and
+ * connectors in the group, and with AWS IoT or the local shadow service.
+ *
+ * A subscription defines a message source, message target, and a topic (or subject) that's used to
+ * route messages from the source to the target. A subscription defines the message flow in one
+ * direction, from the source to the target. For two-way communication, you must set up two
+ * subscriptions, one for each direction.
+ *
+ * In an AWS CloudFormation template, the `Subscriptions` property of the
+ * [`SubscriptionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscriptiondefinitionversion.html)
+ * property type contains a list of `Subscription` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * SubscriptionProperty subscriptionProperty = SubscriptionProperty.builder()
+ * .id("id")
+ * .source("source")
+ * .subject("subject")
+ * .target("target")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-subscriptiondefinition-subscription.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionDefinitionSubscriptionPropertyDsl {
   private val cdkBuilder: CfnSubscriptionDefinition.SubscriptionProperty.Builder =

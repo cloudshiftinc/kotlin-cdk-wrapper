@@ -11,6 +11,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnRecordSetGroup
 import software.constructs.Construct
 
+/**
+ * A complex type that contains an optional comment, the name and ID of the hosted zone that you
+ * want to make changes in, and values for the records that you want to create.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnRecordSetGroup cfnRecordSetGroup = CfnRecordSetGroup.Builder.create(this,
+ * "MyCfnRecordSetGroup")
+ * .comment("comment")
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .recordSets(List.of(RecordSetProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .aliasTarget(AliasTargetProperty.builder()
+ * .dnsName("dnsName")
+ * .hostedZoneId("hostedZoneId")
+ * // the properties below are optional
+ * .evaluateTargetHealth(false)
+ * .build())
+ * .cidrRoutingConfig(CidrRoutingConfigProperty.builder()
+ * .collectionId("collectionId")
+ * .locationName("locationName")
+ * .build())
+ * .failover("failover")
+ * .geoLocation(GeoLocationProperty.builder()
+ * .continentCode("continentCode")
+ * .countryCode("countryCode")
+ * .subdivisionCode("subdivisionCode")
+ * .build())
+ * .healthCheckId("healthCheckId")
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .multiValueAnswer(false)
+ * .region("region")
+ * .resourceRecords(List.of("resourceRecords"))
+ * .setIdentifier("setIdentifier")
+ * .ttl("ttl")
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetGroupDsl(
   scope: Construct,

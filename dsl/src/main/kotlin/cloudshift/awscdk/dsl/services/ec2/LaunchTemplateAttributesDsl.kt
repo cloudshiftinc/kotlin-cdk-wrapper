@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.LaunchTemplateAttributes
 
+/**
+ * Attributes for an imported LaunchTemplate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * LaunchTemplateAttributes launchTemplateAttributes = LaunchTemplateAttributes.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .versionNumber("versionNumber")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LaunchTemplateAttributesDsl {
   private val cdkBuilder: LaunchTemplateAttributes.Builder = LaunchTemplateAttributes.builder()

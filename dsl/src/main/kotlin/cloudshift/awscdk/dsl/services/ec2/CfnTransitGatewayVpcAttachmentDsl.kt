@@ -14,6 +14,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment
 import software.constructs.Construct
 
+/**
+ * Specifies a VPC attachment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object options;
+ * CfnTransitGatewayVpcAttachment cfnTransitGatewayVpcAttachment =
+ * CfnTransitGatewayVpcAttachment.Builder.create(this, "MyCfnTransitGatewayVpcAttachment")
+ * .subnetIds(List.of("subnetIds"))
+ * .transitGatewayId("transitGatewayId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .addSubnetIds(List.of("addSubnetIds"))
+ * .options(options)
+ * .removeSubnetIds(List.of("removeSubnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayVpcAttachmentDsl(
   scope: Construct,

@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A `TimeEqualityFilter` filters values that are equal to a given value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TimeEqualityFilterProperty timeEqualityFilterProperty = TimeEqualityFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .filterId("filterId")
+ * // the properties below are optional
+ * .parameterName("parameterName")
+ * .timeGranularity("timeGranularity")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-timeequalityfilter.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTimeEqualityFilterPropertyDsl {
   private val cdkBuilder: CfnTemplate.TimeEqualityFilterProperty.Builder =

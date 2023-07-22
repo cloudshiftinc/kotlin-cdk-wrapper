@@ -20,6 +20,30 @@ import software.amazon.awscdk.services.rds.ProxyTarget
 import software.amazon.awscdk.services.rds.SessionPinningFilter
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Construction properties for a DatabaseProxy.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
+ * .version(AuroraMysqlEngineVersion.VER_3_03_0)
+ * .build()))
+ * .writer(ClusterInstance.provisioned("writer"))
+ * .vpc(vpc)
+ * .build();
+ * DatabaseProxy proxy = DatabaseProxy.Builder.create(this, "Proxy")
+ * .proxyTarget(ProxyTarget.fromCluster(cluster))
+ * .secrets(List.of(cluster.getSecret()))
+ * .vpc(vpc)
+ * .build();
+ * Role role = Role.Builder.create(this, "DBProxyRole").assumedBy(new
+ * AccountPrincipal(this.account)).build();
+ * proxy.grantConnect(role, "admin");
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseProxyPropsDsl {
   private val cdkBuilder: DatabaseProxyProps.Builder = DatabaseProxyProps.builder()

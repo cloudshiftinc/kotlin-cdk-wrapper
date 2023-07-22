@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 import software.amazon.awscdk.services.billingconductor.CfnBillingGroupProps
 
+/**
+ * Properties for defining a `CfnBillingGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnBillingGroupProps cfnBillingGroupProps = CfnBillingGroupProps.builder()
+ * .accountGrouping(AccountGroupingProperty.builder()
+ * .linkedAccountIds(List.of("linkedAccountIds"))
+ * .build())
+ * .computationPreference(ComputationPreferenceProperty.builder()
+ * .pricingPlanArn("pricingPlanArn")
+ * .build())
+ * .name("name")
+ * .primaryAccountId("primaryAccountId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html)
+ */
 @CdkDslMarker
 public class CfnBillingGroupPropsDsl {
   private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()

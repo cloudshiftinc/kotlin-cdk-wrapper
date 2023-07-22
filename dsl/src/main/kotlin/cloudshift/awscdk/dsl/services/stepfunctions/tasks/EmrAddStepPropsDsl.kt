@@ -19,6 +19,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.ActionOnFailure
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStepProps
 
+/**
+ * Properties for EmrAddStep.
+ *
+ * Example:
+ *
+ * ```
+ * EmrAddStep.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .name("StepName")
+ * .jar("Jar")
+ * .actionOnFailure(ActionOnFailure.CONTINUE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrAddStepPropsDsl {
   private val cdkBuilder: EmrAddStepProps.Builder = EmrAddStepProps.builder()

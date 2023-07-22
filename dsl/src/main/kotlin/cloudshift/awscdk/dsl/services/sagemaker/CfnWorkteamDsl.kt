@@ -14,6 +14,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnWorkteam
 import software.constructs.Construct
 
+/**
+ * Creates a new work team for labeling your data.
+ *
+ * A work team is defined by one or more Amazon Cognito user pools. You must first create the user
+ * pools before you can create a work team.
+ *
+ * You cannot create more than 25 work teams in an account and region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnWorkteam cfnWorkteam = CfnWorkteam.Builder.create(this, "MyCfnWorkteam")
+ * .description("description")
+ * .memberDefinitions(List.of(MemberDefinitionProperty.builder()
+ * .cognitoMemberDefinition(CognitoMemberDefinitionProperty.builder()
+ * .cognitoClientId("cognitoClientId")
+ * .cognitoUserGroup("cognitoUserGroup")
+ * .cognitoUserPool("cognitoUserPool")
+ * .build())
+ * .oidcMemberDefinition(OidcMemberDefinitionProperty.builder()
+ * .oidcGroups(List.of("oidcGroups"))
+ * .build())
+ * .build()))
+ * .notificationConfiguration(NotificationConfigurationProperty.builder()
+ * .notificationTopicArn("notificationTopicArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workforceName("workforceName")
+ * .workteamName("workteamName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html)
+ */
 @CdkDslMarker
 public class CfnWorkteamDsl(
   scope: Construct,

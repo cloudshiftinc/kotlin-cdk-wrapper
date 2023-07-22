@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnExperiment
 
+/**
+ * This structure defines how much experiment traffic to allocate to one treatment used in the
+ * experiment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * TreatmentToWeightProperty treatmentToWeightProperty = TreatmentToWeightProperty.builder()
+ * .splitWeight(123)
+ * .treatment("treatment")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmenttoweight.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTreatmentToWeightPropertyDsl {
   private val cdkBuilder: CfnExperiment.TreatmentToWeightProperty.Builder =

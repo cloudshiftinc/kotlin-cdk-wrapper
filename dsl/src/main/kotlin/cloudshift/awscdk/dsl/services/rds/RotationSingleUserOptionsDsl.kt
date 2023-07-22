@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.rds.RotationSingleUserOptions
 
+/**
+ * Options to add the multi user rotation.
+ *
+ * Example:
+ *
+ * ```
+ * DatabaseInstance instance;
+ * SecurityGroup mySecurityGroup;
+ * instance.addRotationSingleUser(RotationSingleUserOptions.builder()
+ * .automaticallyAfter(Duration.days(7)) // defaults to 30 days
+ * .excludeCharacters("!&#64;#$%^&amp;*") // defaults to the set " %+~`#///
+ * here*()|[]{}:;&lt;&gt;?!'/&#64;\"\\"
+ * .securityGroup(mySecurityGroup) // defaults to an auto-created security group
+ * .rotateImmediatelyOnUpdate(false)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RotationSingleUserOptionsDsl {
   private val cdkBuilder: RotationSingleUserOptions.Builder = RotationSingleUserOptions.builder()

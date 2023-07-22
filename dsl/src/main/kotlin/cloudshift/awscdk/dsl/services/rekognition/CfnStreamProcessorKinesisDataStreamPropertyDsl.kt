@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 
+/**
+ * Amazon Rekognition Video Stream Processor take as input a Kinesis video stream (Input) and a
+ * Kinesis data stream (Output).
+ *
+ * This is the Amazon Kinesis Data Streams instance to which the Amazon Rekognition stream processor
+ * streams the analysis results. This must be created within the constraints specified at
+ * [KinesisDataStream](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_KinesisDataStream)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * KinesisDataStreamProperty kinesisDataStreamProperty = KinesisDataStreamProperty.builder()
+ * .arn("arn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-kinesisdatastream.html)
+ */
 @CdkDslMarker
 public class CfnStreamProcessorKinesisDataStreamPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.KinesisDataStreamProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
+/**
+ * Specifies the GPS coordinates of a location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CoordinatesProperty coordinatesProperty = CoordinatesProperty.builder()
+ * .latitude(123)
+ * .longitude(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-coordinates.html)
+ */
 @CdkDslMarker
 public class CfnSegmentCoordinatesPropertyDsl {
   private val cdkBuilder: CfnSegment.CoordinatesProperty.Builder =

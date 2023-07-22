@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.logs.CfnMetricFilter
 
+/**
+ * `MetricTransformation` is a property of the `AWS::Logs::MetricFilter` resource that describes how
+ * to transform log streams into a CloudWatch metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * MetricTransformationProperty metricTransformationProperty =
+ * MetricTransformationProperty.builder()
+ * .metricName("metricName")
+ * .metricNamespace("metricNamespace")
+ * .metricValue("metricValue")
+ * // the properties below are optional
+ * .defaultValue(123)
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html)
+ */
 @CdkDslMarker
 public class CfnMetricFilterMetricTransformationPropertyDsl {
   private val cdkBuilder: CfnMetricFilter.MetricTransformationProperty.Builder =

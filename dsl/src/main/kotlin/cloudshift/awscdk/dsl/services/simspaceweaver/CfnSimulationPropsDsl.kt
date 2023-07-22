@@ -8,6 +8,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.simspaceweaver.CfnSimulation
 import software.amazon.awscdk.services.simspaceweaver.CfnSimulationProps
 
+/**
+ * Properties for defining a `CfnSimulation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.simspaceweaver.*;
+ * CfnSimulationProps cfnSimulationProps = CfnSimulationProps.builder()
+ * .name("name")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .maximumDuration("maximumDuration")
+ * .schemaS3Location(S3LocationProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build())
+ * .snapshotS3Location(S3LocationProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-simspaceweaver-simulation.html)
+ */
 @CdkDslMarker
 public class CfnSimulationPropsDsl {
   private val cdkBuilder: CfnSimulationProps.Builder = CfnSimulationProps.builder()

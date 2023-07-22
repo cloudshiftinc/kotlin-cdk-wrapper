@@ -44,6 +44,8 @@ internal class NamespaceObjectGenerator {
             )
         }
 
+        builder.buildableClass.comment?.let { funSpecBuilder.addKdoc("%L", it) }
+
         builder.builderFactoryFunction.parameters.forEach {
             funSpecBuilder.addParameter(it.name, it.typeName())
         }

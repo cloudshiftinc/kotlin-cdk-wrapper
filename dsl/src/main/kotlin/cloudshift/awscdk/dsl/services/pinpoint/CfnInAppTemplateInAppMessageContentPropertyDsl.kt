@@ -7,6 +7,78 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 
+/**
+ * Specifies the configuration of an in-app message, including its header, body, buttons, colors,
+ * and images.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * InAppMessageContentProperty inAppMessageContentProperty = InAppMessageContentProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .bodyConfig(BodyConfigProperty.builder()
+ * .alignment("alignment")
+ * .body("body")
+ * .textColor("textColor")
+ * .build())
+ * .headerConfig(HeaderConfigProperty.builder()
+ * .alignment("alignment")
+ * .header("header")
+ * .textColor("textColor")
+ * .build())
+ * .imageUrl("imageUrl")
+ * .primaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .secondaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-inappmessagecontent.html)
+ */
 @CdkDslMarker
 public class CfnInAppTemplateInAppMessageContentPropertyDsl {
   private val cdkBuilder: CfnInAppTemplate.InAppMessageContentProperty.Builder =

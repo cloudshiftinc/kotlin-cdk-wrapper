@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
 
+/**
+ * A calculation made by contrasting a measure and a dimension from your source data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * MetricProperty metricProperty = MetricProperty.builder()
+ * .aggregationFunction("aggregationFunction")
+ * .metricName("metricName")
+ * // the properties below are optional
+ * .namespace("namespace")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-metric.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorMetricPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.MetricProperty.Builder =

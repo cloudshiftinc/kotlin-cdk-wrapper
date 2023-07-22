@@ -7,6 +7,19 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.DefaultStackSynthesizerProps
 
+/**
+ * Configuration properties for DefaultStackSynthesizer.
+ *
+ * Example:
+ *
+ * ```
+ * MyStack.Builder.create(app, "MyStack")
+ * .synthesizer(DefaultStackSynthesizer.Builder.create()
+ * .fileAssetsBucketName("my-orgs-asset-bucket")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DefaultStackSynthesizerPropsDsl {
   private val cdkBuilder: DefaultStackSynthesizerProps.Builder =

@@ -9,6 +9,34 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.MathExpression
 
+/**
+ * A math expression built with metric(s) emitted by a service.
+ *
+ * The math expression is a combination of an expression (x+y) and metrics to apply expression on.
+ * It also contains metadata which is used only in graphs, such as color and label.
+ * It makes sense to embed this in here, so that compound constructs can attach
+ * that metadata to metrics they expose.
+ *
+ * MathExpression can also be used for search expressions. In this case,
+ * it also optionally accepts a searchRegion and searchAccount property for cross-environment
+ * search expressions.
+ *
+ * This class does not represent a resource, so hence is not a construct. Instead,
+ * MathExpression is an abstraction that makes it easy to specify metrics for use in both
+ * alarms and graphs.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * MathExpression allProblems = MathExpression.Builder.create()
+ * .expression("errors + throttles")
+ * .usingMetrics(Map.of(
+ * "errors", fn.metricErrors(),
+ * "throttles", fn.metricThrottles()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MathExpressionDsl {
   private val cdkBuilder: MathExpression.Builder = MathExpression.Builder.create()

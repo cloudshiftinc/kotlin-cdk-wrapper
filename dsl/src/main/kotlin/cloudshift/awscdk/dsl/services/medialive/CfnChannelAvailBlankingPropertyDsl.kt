@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of ad avail blanking in the output.
+ *
+ * The parent of this entity is EncoderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AvailBlankingProperty availBlankingProperty = AvailBlankingProperty.builder()
+ * .availBlankingImage(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availblanking.html)
+ */
 @CdkDslMarker
 public class CfnChannelAvailBlankingPropertyDsl {
   private val cdkBuilder: CfnChannel.AvailBlankingProperty.Builder =

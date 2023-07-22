@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sns.TopicPolicyProps
 
+/**
+ * Properties to associate SNS topics with a policy.
+ *
+ * Example:
+ *
+ * ```
+ * Topic topic = new Topic(this, "Topic");
+ * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
+ * .topics(List.of(topic))
+ * .build();
+ * topicPolicy.document.addStatements(PolicyStatement.Builder.create()
+ * .actions(List.of("sns:Subscribe"))
+ * .principals(List.of(new AnyPrincipal()))
+ * .resources(List.of(topic.getTopicArn()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TopicPolicyPropsDsl {
   private val cdkBuilder: TopicPolicyProps.Builder = TopicPolicyProps.builder()

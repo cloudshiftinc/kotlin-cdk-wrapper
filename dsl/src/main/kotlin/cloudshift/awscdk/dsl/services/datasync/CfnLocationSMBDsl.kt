@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationSMB
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationSMB` resource specifies a Server Message Block (SMB) location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationSMB cfnLocationSMB = CfnLocationSMB.Builder.create(this, "MyCfnLocationSMB")
+ * .agentArns(List.of("agentArns"))
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .mountOptions(MountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .password("password")
+ * .serverHostname("serverHostname")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html)
+ */
 @CdkDslMarker
 public class CfnLocationSMBDsl(
   scope: Construct,

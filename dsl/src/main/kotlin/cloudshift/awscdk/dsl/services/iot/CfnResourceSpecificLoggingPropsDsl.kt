@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnResourceSpecificLoggingProps
 
+/**
+ * Properties for defining a `CfnResourceSpecificLogging`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnResourceSpecificLoggingProps cfnResourceSpecificLoggingProps =
+ * CfnResourceSpecificLoggingProps.builder()
+ * .logLevel("logLevel")
+ * .targetName("targetName")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html)
+ */
 @CdkDslMarker
 public class CfnResourceSpecificLoggingPropsDsl {
   private val cdkBuilder: CfnResourceSpecificLoggingProps.Builder =

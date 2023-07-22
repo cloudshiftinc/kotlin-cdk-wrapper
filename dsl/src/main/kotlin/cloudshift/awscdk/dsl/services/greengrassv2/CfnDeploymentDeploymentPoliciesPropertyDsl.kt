@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about policies that define how a deployment updates components and handles
+ * failure.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * DeploymentPoliciesProperty deploymentPoliciesProperty = DeploymentPoliciesProperty.builder()
+ * .componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty.builder()
+ * .action("action")
+ * .timeoutInSeconds(123)
+ * .build())
+ * .configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty.builder()
+ * .timeoutInSeconds(123)
+ * .build())
+ * .failureHandlingPolicy("failureHandlingPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentpolicies.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDeploymentPoliciesPropertyDsl {
   private val cdkBuilder: CfnDeployment.DeploymentPoliciesProperty.Builder =

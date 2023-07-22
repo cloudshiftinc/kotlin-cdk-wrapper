@@ -13,6 +13,69 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains information about an AWS Lambda function to import to create a component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * LambdaFunctionRecipeSourceProperty lambdaFunctionRecipeSourceProperty =
+ * LambdaFunctionRecipeSourceProperty.builder()
+ * .componentDependencies(Map.of(
+ * "componentDependenciesKey", ComponentDependencyRequirementProperty.builder()
+ * .dependencyType("dependencyType")
+ * .versionRequirement("versionRequirement")
+ * .build()))
+ * .componentLambdaParameters(LambdaExecutionParametersProperty.builder()
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
+ * .eventSources(List.of(LambdaEventSourceProperty.builder()
+ * .topic("topic")
+ * .type("type")
+ * .build()))
+ * .execArgs(List.of("execArgs"))
+ * .inputPayloadEncodingType("inputPayloadEncodingType")
+ * .linuxProcessParams(LambdaLinuxProcessParamsProperty.builder()
+ * .containerParams(LambdaContainerParamsProperty.builder()
+ * .devices(List.of(LambdaDeviceMountProperty.builder()
+ * .addGroupOwner(false)
+ * .path("path")
+ * .permission("permission")
+ * .build()))
+ * .memorySizeInKb(123)
+ * .mountRoSysfs(false)
+ * .volumes(List.of(LambdaVolumeMountProperty.builder()
+ * .addGroupOwner(false)
+ * .destinationPath("destinationPath")
+ * .permission("permission")
+ * .sourcePath("sourcePath")
+ * .build()))
+ * .build())
+ * .isolationMode("isolationMode")
+ * .build())
+ * .maxIdleTimeInSeconds(123)
+ * .maxInstancesCount(123)
+ * .maxQueueSize(123)
+ * .pinned(false)
+ * .statusTimeoutInSeconds(123)
+ * .timeoutInSeconds(123)
+ * .build())
+ * .componentName("componentName")
+ * .componentPlatforms(List.of(ComponentPlatformProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .name("name")
+ * .build()))
+ * .componentVersion("componentVersion")
+ * .lambdaArn("lambdaArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdafunctionrecipesource.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionLambdaFunctionRecipeSourcePropertyDsl {
   private val cdkBuilder: CfnComponentVersion.LambdaFunctionRecipeSourceProperty.Builder =

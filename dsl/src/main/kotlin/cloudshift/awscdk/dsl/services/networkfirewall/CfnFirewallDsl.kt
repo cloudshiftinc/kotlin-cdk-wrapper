@@ -15,6 +15,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewall
 import software.constructs.Construct
 
+/**
+ * Use the `Firewall` to provide stateful, managed, network firewall and intrusion detection and
+ * prevention filtering for your VPCs in Amazon VPC .
+ *
+ * The firewall defines the configuration settings for an AWS Network Firewall firewall. The
+ * settings include the firewall policy, the subnets in your VPC to use for the firewall endpoints, and
+ * any tags that are attached to the firewall AWS resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * CfnFirewall cfnFirewall = CfnFirewall.Builder.create(this, "MyCfnFirewall")
+ * .firewallName("firewallName")
+ * .firewallPolicyArn("firewallPolicyArn")
+ * .subnetMappings(List.of(SubnetMappingProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ipAddressType("ipAddressType")
+ * .build()))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .deleteProtection(false)
+ * .description("description")
+ * .firewallPolicyChangeProtection(false)
+ * .subnetChangeProtection(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)
+ */
 @CdkDslMarker
 public class CfnFirewallDsl(
   scope: Construct,

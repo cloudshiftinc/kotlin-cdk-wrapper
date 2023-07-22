@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.OidcEndpoints
 
+/**
+ * OpenID Connect endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * OidcEndpoints oidcEndpoints = OidcEndpoints.builder()
+ * .authorization("authorization")
+ * .jwksUri("jwksUri")
+ * .token("token")
+ * .userInfo("userInfo")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OidcEndpointsDsl {
   private val cdkBuilder: OidcEndpoints.Builder = OidcEndpoints.builder()

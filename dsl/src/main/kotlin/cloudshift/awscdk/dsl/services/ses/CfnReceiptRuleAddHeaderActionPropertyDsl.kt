@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action adds a header to the received email.
+ *
+ * For information about adding a header using a receipt rule, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-add-header.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * AddHeaderActionProperty addHeaderActionProperty = AddHeaderActionProperty.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-addheaderaction.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleAddHeaderActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.AddHeaderActionProperty.Builder =

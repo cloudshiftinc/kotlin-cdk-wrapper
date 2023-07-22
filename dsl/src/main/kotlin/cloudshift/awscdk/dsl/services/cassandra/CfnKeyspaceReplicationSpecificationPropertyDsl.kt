@@ -8,6 +8,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cassandra.CfnKeyspace
 
+/**
+ * You can use `ReplicationSpecification` to configure the `ReplicationStrategy` of a keyspace in
+ * Amazon Keyspaces.
+ *
+ * The `ReplicationSpecification` property is `CreateOnly` and cannot be changed after the keyspace
+ * has been created. This property applies automatically to all tables in the keyspace.
+ *
+ * For more information, see [Multi-Region
+ * Replication](https://docs.aws.amazon.com/keyspaces/latest/devguide/multiRegion-replication.html) in
+ * the *Amazon Keyspaces Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * ReplicationSpecificationProperty replicationSpecificationProperty =
+ * ReplicationSpecificationProperty.builder()
+ * .regionList(List.of("regionList"))
+ * .replicationStrategy("replicationStrategy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-keyspace-replicationspecification.html)
+ */
 @CdkDslMarker
 public class CfnKeyspaceReplicationSpecificationPropertyDsl {
   private val cdkBuilder: CfnKeyspace.ReplicationSpecificationProperty.Builder =

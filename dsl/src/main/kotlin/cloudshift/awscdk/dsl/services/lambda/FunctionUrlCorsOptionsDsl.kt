@@ -11,6 +11,23 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions
 import software.amazon.awscdk.services.lambda.HttpMethod
 
+/**
+ * Specifies a cross-origin access property for a function URL.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * fn.addFunctionUrl(FunctionUrlOptions.builder()
+ * .authType(FunctionUrlAuthType.NONE)
+ * .cors(FunctionUrlCorsOptions.builder()
+ * // Allow this to be called from websites on https://example.com.
+ * // Can also be ['*'] to allow all domain.
+ * .allowedOrigins(List.of("https://example.com"))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FunctionUrlCorsOptionsDsl {
   private val cdkBuilder: FunctionUrlCorsOptions.Builder = FunctionUrlCorsOptions.builder()

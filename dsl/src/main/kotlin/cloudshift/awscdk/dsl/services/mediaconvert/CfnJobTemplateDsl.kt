@@ -14,6 +14,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconvert.CfnJobTemplate
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConvert::JobTemplate resource is an AWS Elemental MediaConvert resource type that
+ * you can use to generate transcoding jobs.
+ *
+ * When you declare this entity in your AWS CloudFormation template, you pass in your transcoding
+ * job settings in JSON or YAML format. This settings specification must be formed in a particular way
+ * that conforms to AWS Elemental MediaConvert job validation. For more information about creating a
+ * job template model for the `SettingsJson` property, see the Remarks section later in this topic.
+ *
+ * For information about job templates, see [Working with AWS Elemental MediaConvert Job
+ * Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html) in
+ * the ** .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object settingsJson;
+ * Object tags;
+ * CfnJobTemplate cfnJobTemplate = CfnJobTemplate.Builder.create(this, "MyCfnJobTemplate")
+ * .settingsJson(settingsJson)
+ * // the properties below are optional
+ * .accelerationSettings(AccelerationSettingsProperty.builder()
+ * .mode("mode")
+ * .build())
+ * .category("category")
+ * .description("description")
+ * .hopDestinations(List.of(HopDestinationProperty.builder()
+ * .priority(123)
+ * .queue("queue")
+ * .waitMinutes(123)
+ * .build()))
+ * .name("name")
+ * .priority(123)
+ * .queue("queue")
+ * .statusUpdateInterval("statusUpdateInterval")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateDsl(
   scope: Construct,

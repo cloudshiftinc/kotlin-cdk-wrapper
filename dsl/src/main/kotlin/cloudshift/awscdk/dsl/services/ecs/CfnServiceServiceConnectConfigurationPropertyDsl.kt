@@ -11,6 +11,55 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The Service Connect configuration of your Amazon ECS service.
+ *
+ * The configuration for this service to discover and connect to services, and be discovered by, and
+ * connected from, other services within a namespace.
+ *
+ * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks
+ * can connect to services across all of the clusters in the namespace. Tasks connect through a managed
+ * proxy container that collects logs and metrics for increased visibility. Only the tasks that Amazon
+ * ECS services create are supported with Service Connect. For more information, see [Service
+ * Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceConnectConfigurationProperty serviceConnectConfigurationProperty =
+ * ServiceConnectConfigurationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build())
+ * .namespace("namespace")
+ * .services(List.of(ServiceConnectServiceProperty.builder()
+ * .portName("portName")
+ * // the properties below are optional
+ * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .dnsName("dnsName")
+ * .build()))
+ * .discoveryName("discoveryName")
+ * .ingressPortOverride(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceServiceConnectConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.ServiceConnectConfigurationProperty.Builder =

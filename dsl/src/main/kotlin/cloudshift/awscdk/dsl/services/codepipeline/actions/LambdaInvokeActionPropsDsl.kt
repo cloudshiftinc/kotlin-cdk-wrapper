@@ -16,6 +16,24 @@ import software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionPr
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Construction properties of the `LambdaInvokeAction Lambda invoke CodePipeline Action`.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * LambdaInvokeAction lambdaAction = LambdaInvokeAction.Builder.create()
+ * .actionName("Lambda")
+ * .lambda(fn)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Lambda")
+ * .actions(List.of(lambdaAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LambdaInvokeActionPropsDsl {
   private val cdkBuilder: LambdaInvokeActionProps.Builder = LambdaInvokeActionProps.builder()

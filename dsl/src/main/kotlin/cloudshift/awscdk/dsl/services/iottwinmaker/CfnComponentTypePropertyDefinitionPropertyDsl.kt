@@ -9,6 +9,65 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
+/**
+ * PropertyDefinition is an object that maps strings to the property definitions in the component
+ * type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataTypeProperty dataTypeProperty_;
+ * DataValueProperty dataValueProperty_;
+ * Object relationshipValue;
+ * PropertyDefinitionProperty propertyDefinitionProperty = PropertyDefinitionProperty.builder()
+ * .configurations(Map.of(
+ * "configurationsKey", "configurations"))
+ * .dataType(DataTypeProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .allowedValues(List.of(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build()))
+ * .nestedType(dataTypeProperty_)
+ * .relationship(RelationshipProperty.builder()
+ * .relationshipType("relationshipType")
+ * .targetComponentTypeId("targetComponentTypeId")
+ * .build())
+ * .unitOfMeasure("unitOfMeasure")
+ * .build())
+ * .defaultValue(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .isExternalId(false)
+ * .isRequiredInEntity(false)
+ * .isStoredExternally(false)
+ * .isTimeSeries(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-propertydefinition.html)
+ */
 @CdkDslMarker
 public class CfnComponentTypePropertyDefinitionPropertyDsl {
   private val cdkBuilder: CfnComponentType.PropertyDefinitionProperty.Builder =

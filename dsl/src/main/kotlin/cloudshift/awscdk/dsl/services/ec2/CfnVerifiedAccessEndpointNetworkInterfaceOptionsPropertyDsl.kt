@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
 
+/**
+ * Describes the network interface options when creating an AWS Verified Access endpoint using the
+ * `network-interface` type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NetworkInterfaceOptionsProperty networkInterfaceOptionsProperty =
+ * NetworkInterfaceOptionsProperty.builder()
+ * .networkInterfaceId("networkInterfaceId")
+ * .port(123)
+ * .protocol("protocol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-networkinterfaceoptions.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessEndpointNetworkInterfaceOptionsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.Builder =

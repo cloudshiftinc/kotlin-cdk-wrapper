@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.ecs.FargateTaskDefinition
 import software.amazon.awscdk.services.ecs.RuntimePlatform
 import software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * CpuArchitecture cpuArchitecture;
+ * FargateTaskDefinition fargateTaskDefinition;
+ * OperatingSystemFamily operatingSystemFamily;
+ * FargateServiceBaseProps fargateServiceBaseProps = FargateServiceBaseProps.builder()
+ * .cpu(123)
+ * .memoryLimitMiB(123)
+ * .platformVersion(FargatePlatformVersion.LATEST)
+ * .runtimePlatform(RuntimePlatform.builder()
+ * .cpuArchitecture(cpuArchitecture)
+ * .operatingSystemFamily(operatingSystemFamily)
+ * .build())
+ * .taskDefinition(fargateTaskDefinition)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateServiceBasePropsDsl {
   private val cdkBuilder: FargateServiceBaseProps.Builder = FargateServiceBaseProps.builder()

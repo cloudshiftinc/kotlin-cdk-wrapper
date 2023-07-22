@@ -7,6 +7,28 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.cognito.SignInUrlOptions
 
+/**
+ * Options to customize the behaviour of `signInUrl()`.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = UserPool.Builder.create(this, "UserPool").build();
+ * UserPoolClient client = userpool.addClient("Client", UserPoolClientOptions.builder()
+ * // ...
+ * .oAuth(OAuthSettings.builder()
+ * .flows(OAuthFlows.builder()
+ * .implicitCodeGrant(true)
+ * .build())
+ * .callbackUrls(List.of("https://myapp.com/home", "https://myapp.com/users"))
+ * .build())
+ * .build());
+ * UserPoolDomain domain = userpool.addDomain("Domain", UserPoolDomainOptions.builder().build());
+ * String signInUrl = domain.signInUrl(client, SignInUrlOptions.builder()
+ * .redirectUri("https://myapp.com/home")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SignInUrlOptionsDsl {
   private val cdkBuilder: SignInUrlOptions.Builder = SignInUrlOptions.builder()

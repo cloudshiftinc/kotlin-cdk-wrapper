@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 
+/**
+ * Describes an Amazon EBS volume.
+ *
+ * This data type maps directly to the Amazon EC2
+ * [EbsBlockDevice](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EbsBlockDevice.html)
+ * data type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-ebsblockdevice.html)
+ */
 @CdkDslMarker
 public class CfnInstanceEbsBlockDevicePropertyDsl {
   private val cdkBuilder: CfnInstance.EbsBlockDeviceProperty.Builder =

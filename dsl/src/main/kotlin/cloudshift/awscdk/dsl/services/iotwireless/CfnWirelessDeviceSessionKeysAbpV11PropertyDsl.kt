@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 
+/**
+ * Session keys for ABP v1.1.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SessionKeysAbpV11Property sessionKeysAbpV11Property = SessionKeysAbpV11Property.builder()
+ * .appSKey("appSKey")
+ * .fNwkSIntKey("fNwkSIntKey")
+ * .nwkSEncKey("nwkSEncKey")
+ * .sNwkSIntKey("sNwkSIntKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv11.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceSessionKeysAbpV11PropertyDsl {
   private val cdkBuilder: CfnWirelessDevice.SessionKeysAbpV11Property.Builder =

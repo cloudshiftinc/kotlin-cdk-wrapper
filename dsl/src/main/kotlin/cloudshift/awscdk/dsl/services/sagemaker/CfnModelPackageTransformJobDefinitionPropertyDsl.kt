@@ -9,6 +9,54 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Defines the input needed to run a transform job using the inference specification specified in
+ * the algorithm.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TransformJobDefinitionProperty transformJobDefinitionProperty =
+ * TransformJobDefinitionProperty.builder()
+ * .transformInput(TransformInputProperty.builder()
+ * .dataSource(DataSourceProperty.builder()
+ * .s3DataSource(S3DataSourceProperty.builder()
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .compressionType("compressionType")
+ * .contentType("contentType")
+ * .splitType("splitType")
+ * .build())
+ * .transformOutput(TransformOutputProperty.builder()
+ * .s3OutputPath("s3OutputPath")
+ * // the properties below are optional
+ * .accept("accept")
+ * .assembleWith("assembleWith")
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .transformResources(TransformResourcesProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .build())
+ * // the properties below are optional
+ * .batchStrategy("batchStrategy")
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .maxConcurrentTransforms(123)
+ * .maxPayloadInMb(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformjobdefinition.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageTransformJobDefinitionPropertyDsl {
   private val cdkBuilder: CfnModelPackage.TransformJobDefinitionProperty.Builder =

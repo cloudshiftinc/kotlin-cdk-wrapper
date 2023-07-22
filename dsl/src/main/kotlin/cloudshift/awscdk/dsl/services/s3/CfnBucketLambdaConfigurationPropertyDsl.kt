@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Describes the AWS Lambda functions to invoke and the events for which to invoke them.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * LambdaConfigurationProperty lambdaConfigurationProperty = LambdaConfigurationProperty.builder()
+ * .event("event")
+ * .function("function")
+ * // the properties below are optional
+ * .filter(NotificationFilterProperty.builder()
+ * .s3Key(S3KeyFilterProperty.builder()
+ * .rules(List.of(FilterRuleProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lambdaconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketLambdaConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.LambdaConfigurationProperty.Builder =

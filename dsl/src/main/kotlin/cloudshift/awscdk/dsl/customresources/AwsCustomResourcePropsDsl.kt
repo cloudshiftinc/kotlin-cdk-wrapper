@@ -17,6 +17,30 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * Properties for AwsCustomResource.
+ *
+ * Note that at least onCreate, onUpdate or onDelete must be specified.
+ *
+ * Example:
+ *
+ * ```
+ * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
+ * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+ * .service("SSM")
+ * .action("getParameter")
+ * .parameters(Map.of(
+ * "Name", "my-parameter",
+ * "WithDecryption", true))
+ * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+ * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
+ * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * .build()))
+ * .build();
+ * // Use the value in another construct with
+ * getParameter.getResponseField("Parameter.Value");
+ * ```
+ */
 @CdkDslMarker
 public class AwsCustomResourcePropsDsl {
   private val cdkBuilder: AwsCustomResourceProps.Builder = AwsCustomResourceProps.builder()

@@ -13,6 +13,30 @@ import software.amazon.awscdk.services.ec2.NetworkAclEntry
 import software.amazon.awscdk.services.ec2.TrafficDirection
 import software.constructs.Construct
 
+/**
+ * Define an entry in a Network ACL table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclCidr aclCidr;
+ * AclTraffic aclTraffic;
+ * NetworkAcl networkAcl;
+ * NetworkAclEntry networkAclEntry = NetworkAclEntry.Builder.create(this, "MyNetworkAclEntry")
+ * .cidr(aclCidr)
+ * .networkAcl(networkAcl)
+ * .ruleNumber(123)
+ * .traffic(aclTraffic)
+ * // the properties below are optional
+ * .direction(TrafficDirection.EGRESS)
+ * .networkAclEntryName("networkAclEntryName")
+ * .ruleAction(Action.ALLOW)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkAclEntryDsl(
   scope: Construct,

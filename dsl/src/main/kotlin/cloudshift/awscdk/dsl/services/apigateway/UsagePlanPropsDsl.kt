@@ -12,6 +12,27 @@ import software.amazon.awscdk.services.apigateway.ThrottleSettings
 import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
 import software.amazon.awscdk.services.apigateway.UsagePlanProps
 
+/**
+ * Example:
+ *
+ * ```
+ * LambdaIntegration integration;
+ * RestApi api = new RestApi(this, "hello-api");
+ * Resource v1 = api.root.addResource("v1");
+ * Resource echo = v1.addResource("echo");
+ * Method echoMethod = echo.addMethod("GET", integration,
+ * MethodOptions.builder().apiKeyRequired(true).build());
+ * UsagePlan plan = api.addUsagePlan("UsagePlan", UsagePlanProps.builder()
+ * .name("Easy")
+ * .throttle(ThrottleSettings.builder()
+ * .rateLimit(10)
+ * .burstLimit(2)
+ * .build())
+ * .build());
+ * IApiKey key = api.addApiKey("ApiKey");
+ * plan.addApiKey(key);
+ * ```
+ */
 @CdkDslMarker
 public class UsagePlanPropsDsl {
   private val cdkBuilder: UsagePlanProps.Builder = UsagePlanProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplication
 
+/**
+ * Provides additional mapping information when JSON is the record format on the streaming source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * JSONMappingParametersProperty jSONMappingParametersProperty =
+ * JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-jsonmappingparameters.html)
+ */
 @CdkDslMarker
 public class CfnApplicationJSONMappingParametersPropertyDsl {
   private val cdkBuilder: CfnApplication.JSONMappingParametersProperty.Builder =

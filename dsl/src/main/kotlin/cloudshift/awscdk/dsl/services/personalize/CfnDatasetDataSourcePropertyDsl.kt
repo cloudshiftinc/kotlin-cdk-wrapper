@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnDataset
 
+/**
+ * The Amazon S3 bucket that contains the training data to import.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * DataSourceProperty dataSourceProperty = DataSourceProperty.builder()
+ * .dataLocation("dataLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-dataset-datasource.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDataSourcePropertyDsl {
   private val cdkBuilder: CfnDataset.DataSourceProperty.Builder =

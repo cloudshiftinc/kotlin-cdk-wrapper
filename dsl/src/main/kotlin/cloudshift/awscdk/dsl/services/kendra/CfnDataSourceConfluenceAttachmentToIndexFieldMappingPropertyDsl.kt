@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Maps attributes or field names of Confluence attachments to Amazon Kendra index field names.
+ *
+ * To create custom fields, use the `UpdateIndex` API before you map to Confluence fields. For more
+ * information, see [Mapping data source
+ * fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) . The Confuence data source
+ * field names must exist in your Confluence custom metadata.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConfluenceAttachmentToIndexFieldMappingProperty confluenceAttachmentToIndexFieldMappingProperty =
+ * ConfluenceAttachmentToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-confluenceattachmenttoindexfieldmapping.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConfluenceAttachmentToIndexFieldMappingPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConfluenceAttachmentToIndexFieldMappingProperty.Builder =

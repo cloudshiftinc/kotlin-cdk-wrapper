@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object representing the gateway route host name to match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GatewayRouteHostnameMatchProperty gatewayRouteHostnameMatchProperty =
+ * GatewayRouteHostnameMatchProperty.builder()
+ * .exact("exact")
+ * .suffix("suffix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-gatewayroutehostnamematch.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteGatewayRouteHostnameMatchPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Builder =

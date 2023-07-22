@@ -10,6 +10,81 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement used to run the rules that are defined in a `RuleGroup` .
+ *
+ * To use this, create a rule group with your rules, then provide the ARN of the rule group in this
+ * statement.
+ *
+ * You cannot nest a `RuleGroupReferenceStatement` , for example for use inside a `NotStatement` or
+ * `OrStatement` . You can only use a rule group reference statement at the top level inside a web ACL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * RuleGroupReferenceStatementProperty ruleGroupReferenceStatementProperty =
+ * RuleGroupReferenceStatementProperty.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .excludedRules(List.of(ExcludedRuleProperty.builder()
+ * .name("name")
+ * .build()))
+ * .ruleActionOverrides(List.of(RuleActionOverrideProperty.builder()
+ * .actionToUse(RuleActionProperty.builder()
+ * .allow(AllowActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .block(BlockActionProperty.builder()
+ * .customResponse(CustomResponseProperty.builder()
+ * .responseCode(123)
+ * // the properties below are optional
+ * .customResponseBodyKey("customResponseBodyKey")
+ * .responseHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .captcha(CaptchaActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .challenge(ChallengeActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .count(CountActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rulegroupreferencestatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRuleGroupReferenceStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.RuleGroupReferenceStatementProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 
+/**
+ * LoRaWAN object for create APIs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SessionKeysAbpV10xProperty sessionKeysAbpV10xProperty = SessionKeysAbpV10xProperty.builder()
+ * .appSKey("appSKey")
+ * .nwkSKey("nwkSKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-sessionkeysabpv10x.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceSessionKeysAbpV10xPropertyDsl {
   private val cdkBuilder: CfnWirelessDevice.SessionKeysAbpV10xProperty.Builder =

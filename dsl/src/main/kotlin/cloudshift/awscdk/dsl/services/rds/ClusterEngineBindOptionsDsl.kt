@@ -7,6 +7,25 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.rds.ClusterEngineBindOptions
 import software.amazon.awscdk.services.rds.IParameterGroup
 
+/**
+ * The extra options passed to the `IClusterEngine.bindToCluster` method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * ParameterGroup parameterGroup;
+ * Role role;
+ * ClusterEngineBindOptions clusterEngineBindOptions = ClusterEngineBindOptions.builder()
+ * .parameterGroup(parameterGroup)
+ * .s3ExportRole(role)
+ * .s3ImportRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterEngineBindOptionsDsl {
   private val cdkBuilder: ClusterEngineBindOptions.Builder = ClusterEngineBindOptions.builder()

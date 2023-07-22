@@ -14,6 +14,26 @@ import software.amazon.awscdk.services.sns.SubscriptionProtocol
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 
+/**
+ * A new subscription.
+ *
+ * Prefer to use the `ITopic.addSubscription()` methods to create instances of
+ * this class.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
+ * DeliveryStream stream;
+ * Topic topic = new Topic(this, "Topic");
+ * Subscription.Builder.create(this, "Subscription")
+ * .topic(topic)
+ * .endpoint(stream.getDeliveryStreamArn())
+ * .protocol(SubscriptionProtocol.FIREHOSE)
+ * .subscriptionRoleArn("SAMPLE_ARN")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionDsl(
   scope: Construct,

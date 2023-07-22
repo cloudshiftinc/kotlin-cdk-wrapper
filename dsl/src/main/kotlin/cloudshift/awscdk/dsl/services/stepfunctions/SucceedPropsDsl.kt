@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.SucceedProps
 
+/**
+ * Properties for defining a Succeed state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * SucceedProps succeedProps = SucceedProps.builder()
+ * .comment("comment")
+ * .inputPath("inputPath")
+ * .outputPath("outputPath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SucceedPropsDsl {
   private val cdkBuilder: SucceedProps.Builder = SucceedProps.builder()

@@ -10,6 +10,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
+/**
+ * An object that specifies the data type of a property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataTypeProperty dataTypeProperty_;
+ * DataValueProperty dataValueProperty_;
+ * Object relationshipValue;
+ * DataTypeProperty dataTypeProperty = DataTypeProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .allowedValues(List.of(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build()))
+ * .nestedType(dataTypeProperty_)
+ * .relationship(RelationshipProperty.builder()
+ * .relationshipType("relationshipType")
+ * .targetComponentTypeId("targetComponentTypeId")
+ * .build())
+ * .unitOfMeasure("unitOfMeasure")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-datatype.html)
+ */
 @CdkDslMarker
 public class CfnComponentTypeDataTypePropertyDsl {
   private val cdkBuilder: CfnComponentType.DataTypeProperty.Builder =

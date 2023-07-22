@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPool
 
+/**
+ * `CognitoIdentityProvider` is a property of the
+ * [AWS::Cognito::IdentityPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
+ * resource that represents an Amazon Cognito user pool and its client ID.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CognitoIdentityProviderProperty cognitoIdentityProviderProperty =
+ * CognitoIdentityProviderProperty.builder()
+ * .clientId("clientId")
+ * .providerName("providerName")
+ * .serverSideTokenCheck(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolCognitoIdentityProviderPropertyDsl {
   private val cdkBuilder: CfnIdentityPool.CognitoIdentityProviderProperty.Builder =

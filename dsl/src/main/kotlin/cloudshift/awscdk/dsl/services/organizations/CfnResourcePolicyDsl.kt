@@ -14,6 +14,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Creates or updates a resource-based delegation policy that can be used to delegate policy
+ * management for AWS Organizations to specified member accounts to perform policy actions that are by
+ * default available only to the management account.
+ *
+ * For more information about delegated policy management, see [Delegated administrator for AWS
+ * Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_delegate_policies.html)
+ * in the *AWS Organizations User Guide* .
+ *
+ * You can only call this operation from the organization's management account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * Object content;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .content(content)
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

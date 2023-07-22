@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Defines when your alarm is invoked.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * AlarmRuleProperty alarmRuleProperty = AlarmRuleProperty.builder()
+ * .simpleRule(SimpleRuleProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .inputProperty("inputProperty")
+ * .threshold("threshold")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-alarmrule.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelAlarmRulePropertyDsl {
   private val cdkBuilder: CfnAlarmModel.AlarmRuleProperty.Builder =

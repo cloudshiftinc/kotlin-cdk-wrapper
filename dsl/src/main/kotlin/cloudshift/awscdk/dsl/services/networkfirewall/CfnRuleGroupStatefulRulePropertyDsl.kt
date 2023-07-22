@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * A single Suricata rules specification, for use in a stateful rule group.
+ *
+ * Use this option to specify a simple Suricata rule with protocol, source and destination, ports,
+ * direction, and rule options. For information about the Suricata `Rules` format, see [Rules
+ * Format](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatefulRuleProperty statefulRuleProperty = StatefulRuleProperty.builder()
+ * .action("action")
+ * .header(HeaderProperty.builder()
+ * .destination("destination")
+ * .destinationPort("destinationPort")
+ * .direction("direction")
+ * .protocol("protocol")
+ * .source("source")
+ * .sourcePort("sourcePort")
+ * .build())
+ * .ruleOptions(List.of(RuleOptionProperty.builder()
+ * .keyword("keyword")
+ * // the properties below are optional
+ * .settings(List.of("settings"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulrule.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupStatefulRulePropertyDsl {
   private val cdkBuilder: CfnRuleGroup.StatefulRuleProperty.Builder =

@@ -9,6 +9,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Details for a step that creates one or more tags.
+ *
+ * You specify one or more tags. Each tag contains a key-value pair.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * TagStepDetailsProperty tagStepDetailsProperty = TagStepDetailsProperty.builder()
+ * .name("name")
+ * .sourceFileLocation("sourceFileLocation")
+ * .tags(List.of(S3TagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowTagStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.TagStepDetailsProperty.Builder =

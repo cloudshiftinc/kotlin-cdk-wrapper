@@ -15,6 +15,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroupProps
 
+/**
+ * Properties for defining a `CfnWorkgroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * CfnWorkgroupProps cfnWorkgroupProps = CfnWorkgroupProps.builder()
+ * .workgroupName("workgroupName")
+ * // the properties below are optional
+ * .baseCapacity(123)
+ * .configParameters(List.of(ConfigParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .enhancedVpcRouting(false)
+ * .namespaceName("namespaceName")
+ * .port(123)
+ * .publiclyAccessible(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-workgroup.html)
+ */
 @CdkDslMarker
 public class CfnWorkgroupPropsDsl {
   private val cdkBuilder: CfnWorkgroupProps.Builder = CfnWorkgroupProps.builder()

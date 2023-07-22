@@ -6,6 +6,40 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.apigateway.JsonWithStandardFieldProps
 
+/**
+ * Properties for controlling items output in JSON standard format.
+ *
+ * Example:
+ *
+ * ```
+ * // production stage
+ * LogGroup prdLogGroup = new LogGroup(this, "PrdLogs");
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(new LogGroupLogDestination(prdLogGroup))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+ * .build())
+ * .build();
+ * Deployment deployment = Deployment.Builder.create(this, "Deployment").api(api).build();
+ * // development stage
+ * LogGroup devLogGroup = new LogGroup(this, "DevLogs");
+ * Stage.Builder.create(this, "dev")
+ * .deployment(deployment)
+ * .accessLogDestination(new LogGroupLogDestination(devLogGroup))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields(JsonWithStandardFieldProps.builder()
+ * .caller(false)
+ * .httpMethod(true)
+ * .ip(true)
+ * .protocol(true)
+ * .requestTime(true)
+ * .resourcePath(true)
+ * .responseLength(true)
+ * .status(true)
+ * .user(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JsonWithStandardFieldPropsDsl {
   private val cdkBuilder: JsonWithStandardFieldProps.Builder = JsonWithStandardFieldProps.builder()

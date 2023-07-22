@@ -11,6 +11,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
 import software.constructs.Construct
 
+/**
+ * Specify an AWS Elastic Beanstalk configuration template by using the
+ * AWS::ElasticBeanstalk::ConfigurationTemplate resource in an AWS CloudFormation template.
+ *
+ * The AWS::ElasticBeanstalk::ConfigurationTemplate resource is an AWS Elastic Beanstalk resource
+ * type that specifies an Elastic Beanstalk configuration template, associated with a specific Elastic
+ * Beanstalk application. You define application configuration settings in a configuration template.
+ * You can then use the configuration template to deploy different versions of the application with the
+ * same configuration settings.
+ *
+ *
+ * The Elastic Beanstalk console and documentation often refer to configuration templates as *saved
+ * configurations* . When you set configuration options in a saved configuration (configuration
+ * template), Elastic Beanstalk applies them with a particular precedence as part of applying options
+ * from multiple sources. For more information, see [Configuration
+ * Options](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options.html) in the *AWS
+ * Elastic Beanstalk Developer Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnConfigurationTemplate cfnConfigurationTemplate = CfnConfigurationTemplate.Builder.create(this,
+ * "MyCfnConfigurationTemplate")
+ * .applicationName("applicationName")
+ * // the properties below are optional
+ * .description("description")
+ * .environmentId("environmentId")
+ * .optionSettings(List.of(ConfigurationOptionSettingProperty.builder()
+ * .namespace("namespace")
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .resourceName("resourceName")
+ * .value("value")
+ * .build()))
+ * .platformArn("platformArn")
+ * .solutionStackName("solutionStackName")
+ * .sourceConfiguration(SourceConfigurationProperty.builder()
+ * .applicationName("applicationName")
+ * .templateName("templateName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationTemplateDsl(
   scope: Construct,

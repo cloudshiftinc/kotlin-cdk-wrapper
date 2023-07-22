@@ -8,6 +8,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A `RelativeDatesFilter` filters relative dates values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RelativeDatesFilterProperty relativeDatesFilterProperty = RelativeDatesFilterProperty.builder()
+ * .anchorDateConfiguration(AnchorDateConfigurationProperty.builder()
+ * .anchorOption("anchorOption")
+ * .parameterName("parameterName")
+ * .build())
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .filterId("filterId")
+ * .nullOption("nullOption")
+ * .relativeDateType("relativeDateType")
+ * .timeGranularity("timeGranularity")
+ * // the properties below are optional
+ * .excludePeriodConfiguration(ExcludePeriodConfigurationProperty.builder()
+ * .amount(123)
+ * .granularity("granularity")
+ * // the properties below are optional
+ * .status("status")
+ * .build())
+ * .minimumGranularity("minimumGranularity")
+ * .parameterName("parameterName")
+ * .relativeDateValue(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-relativedatesfilter.html)
+ */
 @CdkDslMarker
 public class CfnTemplateRelativeDatesFilterPropertyDsl {
   private val cdkBuilder: CfnTemplate.RelativeDatesFilterProperty.Builder =

@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.vpclattice.CfnAuthPolicyProps
 
+/**
+ * Properties for defining a `CfnAuthPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * Object policy;
+ * CfnAuthPolicyProps cfnAuthPolicyProps = CfnAuthPolicyProps.builder()
+ * .policy(policy)
+ * .resourceIdentifier("resourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html)
+ */
 @CdkDslMarker
 public class CfnAuthPolicyPropsDsl {
   private val cdkBuilder: CfnAuthPolicyProps.Builder = CfnAuthPolicyProps.builder()

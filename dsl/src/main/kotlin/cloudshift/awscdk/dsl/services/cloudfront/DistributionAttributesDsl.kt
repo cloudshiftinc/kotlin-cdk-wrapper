@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.DistributionAttributes
 
+/**
+ * Attributes used to import a Distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // Using a reference to an imported Distribution
+ * IDistribution distribution = Distribution.fromDistributionAttributes(this, "ImportedDist",
+ * DistributionAttributes.builder()
+ * .domainName("d111111abcdef8.cloudfront.net")
+ * .distributionId("012345ABCDEF")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class DistributionAttributesDsl {
   private val cdkBuilder: DistributionAttributes.Builder = DistributionAttributes.builder()

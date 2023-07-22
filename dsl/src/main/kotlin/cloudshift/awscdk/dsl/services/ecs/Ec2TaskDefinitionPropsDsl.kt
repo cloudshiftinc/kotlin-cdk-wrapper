@@ -17,6 +17,23 @@ import software.amazon.awscdk.services.ecs.ProxyConfiguration
 import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * The properties for a task definition run on an EC2 cluster.
+ *
+ * Example:
+ *
+ * ```
+ * Ec2TaskDefinition ec2TaskDefinition = Ec2TaskDefinition.Builder.create(this, "TaskDef")
+ * .networkMode(NetworkMode.BRIDGE)
+ * .build();
+ * ContainerDefinition container = ec2TaskDefinition.addContainer("WebContainer",
+ * ContainerDefinitionOptions.builder()
+ * // Use an image from DockerHub
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(1024)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class Ec2TaskDefinitionPropsDsl {
   private val cdkBuilder: Ec2TaskDefinitionProps.Builder = Ec2TaskDefinitionProps.builder()

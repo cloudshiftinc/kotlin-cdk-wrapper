@@ -7,6 +7,36 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Specifies the number of units to request for an EC2 Fleet.
+ *
+ * You can choose to set the target capacity in terms of instances or a performance characteristic
+ * that is important to your application workload, such as vCPUs, memory, or I/O. If the request type
+ * is `maintain` , you can specify a target capacity of `0` and add capacity later.
+ *
+ * `TargetCapacitySpecificationRequest` is a property of the
+ * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TargetCapacitySpecificationRequestProperty targetCapacitySpecificationRequestProperty =
+ * TargetCapacitySpecificationRequestProperty.builder()
+ * .totalTargetCapacity(123)
+ * // the properties below are optional
+ * .defaultTargetCapacityType("defaultTargetCapacityType")
+ * .onDemandTargetCapacity(123)
+ * .spotTargetCapacity(123)
+ * .targetCapacityUnitType("targetCapacityUnitType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-targetcapacityspecificationrequest.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetTargetCapacitySpecificationRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.Builder =

@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when Amazon S3 is being used as the flow source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * S3SourcePropertiesProperty s3SourcePropertiesProperty = S3SourcePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * // the properties below are optional
+ * .s3InputFormatConfig(S3InputFormatConfigProperty.builder()
+ * .s3InputFileType("s3InputFileType")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-s3sourceproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowS3SourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.S3SourcePropertiesProperty.Builder =

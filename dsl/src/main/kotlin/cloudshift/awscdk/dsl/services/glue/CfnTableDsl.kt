@@ -8,6 +8,90 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTable
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Table` resource specifies tabular data in the AWS Glue data catalog.
+ *
+ * For more information, see [Defining Tables in the AWS Glue Data
+ * Catalog](https://docs.aws.amazon.com/glue/latest/dg/tables-described.html) and [Table
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-Table)
+ * in the *AWS Glue Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * Object skewedColumnValueLocationMaps;
+ * CfnTable cfnTable = CfnTable.Builder.create(this, "MyCfnTable")
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .tableInput(TableInputProperty.builder()
+ * .description("description")
+ * .name("name")
+ * .owner("owner")
+ * .parameters(parameters)
+ * .partitionKeys(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .retention(123)
+ * .storageDescriptor(StorageDescriptorProperty.builder()
+ * .bucketColumns(List.of("bucketColumns"))
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .compressed(false)
+ * .inputFormat("inputFormat")
+ * .location("location")
+ * .numberOfBuckets(123)
+ * .outputFormat("outputFormat")
+ * .parameters(parameters)
+ * .schemaReference(SchemaReferenceProperty.builder()
+ * .schemaId(SchemaIdProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build())
+ * .schemaVersionId("schemaVersionId")
+ * .schemaVersionNumber(123)
+ * .build())
+ * .serdeInfo(SerdeInfoProperty.builder()
+ * .name("name")
+ * .parameters(parameters)
+ * .serializationLibrary("serializationLibrary")
+ * .build())
+ * .skewedInfo(SkewedInfoProperty.builder()
+ * .skewedColumnNames(List.of("skewedColumnNames"))
+ * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+ * .skewedColumnValues(List.of("skewedColumnValues"))
+ * .build())
+ * .sortColumns(List.of(OrderProperty.builder()
+ * .column("column")
+ * .sortOrder(123)
+ * .build()))
+ * .storedAsSubDirectories(false)
+ * .build())
+ * .tableType("tableType")
+ * .targetTable(TableIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .viewExpandedText("viewExpandedText")
+ * .viewOriginalText("viewOriginalText")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html)
+ */
 @CdkDslMarker
 public class CfnTableDsl(
   scope: Construct,

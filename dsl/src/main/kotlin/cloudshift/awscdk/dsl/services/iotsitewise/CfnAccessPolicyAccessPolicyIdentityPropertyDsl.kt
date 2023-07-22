@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
 
+/**
+ * The identity (IAM Identity Center user, IAM Identity Center group, or IAM user) to which this
+ * access policy applies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * AccessPolicyIdentityProperty accessPolicyIdentityProperty =
+ * AccessPolicyIdentityProperty.builder()
+ * .iamRole(IamRoleProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .iamUser(IamUserProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .user(UserProperty.builder()
+ * .id("id")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyidentity.html)
+ */
 @CdkDslMarker
 public class CfnAccessPolicyAccessPolicyIdentityPropertyDsl {
   private val cdkBuilder: CfnAccessPolicy.AccessPolicyIdentityProperty.Builder =

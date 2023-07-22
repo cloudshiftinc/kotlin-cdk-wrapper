@@ -12,6 +12,102 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScopeProps
 
+/**
+ * Properties for defining a `CfnNetworkInsightsAccessScope`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInsightsAccessScopeProps cfnNetworkInsightsAccessScopeProps =
+ * CfnNetworkInsightsAccessScopeProps.builder()
+ * .excludePaths(List.of(AccessScopePathRequestProperty.builder()
+ * .destination(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .source(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .throughResources(List.of(ThroughResourcesStatementRequestProperty.builder()
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build()))
+ * .build()))
+ * .matchPaths(List.of(AccessScopePathRequestProperty.builder()
+ * .destination(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .source(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .throughResources(List.of(ThroughResourcesStatementRequestProperty.builder()
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAccessScopePropsDsl {
   private val cdkBuilder: CfnNetworkInsightsAccessScopeProps.Builder =

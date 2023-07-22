@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.appmesh.HealthCheckBindOptions
 
+/**
+ * Options used for creating the Health Check object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HealthCheckBindOptions healthCheckBindOptions = HealthCheckBindOptions.builder()
+ * .defaultPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HealthCheckBindOptionsDsl {
   private val cdkBuilder: HealthCheckBindOptions.Builder = HealthCheckBindOptions.builder()

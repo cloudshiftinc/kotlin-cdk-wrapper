@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
+/**
+ * Configuration for the cluster used to run model monitoring jobs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .volumeSizeInGb(123)
+ * // the properties below are optional
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-clusterconfig.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringScheduleClusterConfigPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.ClusterConfigProperty.Builder =

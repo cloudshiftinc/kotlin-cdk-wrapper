@@ -8,6 +8,25 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The OAuth 2.0 properties required for OAuth 2.0 authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * OAuth2PropertiesProperty oAuth2PropertiesProperty = OAuth2PropertiesProperty.builder()
+ * .oAuth2GrantType("oAuth2GrantType")
+ * .tokenUrl("tokenUrl")
+ * .tokenUrlCustomProperties(Map.of(
+ * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauth2properties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileOAuth2PropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.OAuth2PropertiesProperty.Builder =

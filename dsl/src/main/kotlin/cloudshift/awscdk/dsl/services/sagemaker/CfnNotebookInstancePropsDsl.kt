@@ -14,6 +14,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstance
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceProps
 
+/**
+ * Properties for defining a `CfnNotebookInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnNotebookInstanceProps cfnNotebookInstanceProps = CfnNotebookInstanceProps.builder()
+ * .instanceType("instanceType")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .additionalCodeRepositories(List.of("additionalCodeRepositories"))
+ * .defaultCodeRepository("defaultCodeRepository")
+ * .directInternetAccess("directInternetAccess")
+ * .instanceMetadataServiceConfiguration(InstanceMetadataServiceConfigurationProperty.builder()
+ * .minimumInstanceMetadataServiceVersion("minimumInstanceMetadataServiceVersion")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .lifecycleConfigName("lifecycleConfigName")
+ * .notebookInstanceName("notebookInstanceName")
+ * .platformIdentifier("platformIdentifier")
+ * .rootAccess("rootAccess")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetId("subnetId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .volumeSizeInGb(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html)
+ */
 @CdkDslMarker
 public class CfnNotebookInstancePropsDsl {
   private val cdkBuilder: CfnNotebookInstanceProps.Builder = CfnNotebookInstanceProps.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigatewayv2.CfnApiMappingProps
 
+/**
+ * Properties for defining a `CfnApiMapping`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CfnApiMappingProps cfnApiMappingProps = CfnApiMappingProps.builder()
+ * .apiId("apiId")
+ * .domainName("domainName")
+ * .stage("stage")
+ * // the properties below are optional
+ * .apiMappingKey("apiMappingKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apimapping.html)
+ */
 @CdkDslMarker
 public class CfnApiMappingPropsDsl {
   private val cdkBuilder: CfnApiMappingProps.Builder = CfnApiMappingProps.builder()

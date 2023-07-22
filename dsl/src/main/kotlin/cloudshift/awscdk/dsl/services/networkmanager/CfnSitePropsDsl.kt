@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnSite
 import software.amazon.awscdk.services.networkmanager.CfnSiteProps
 
+/**
+ * Properties for defining a `CfnSite`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnSiteProps cfnSiteProps = CfnSiteProps.builder()
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .description("description")
+ * .location(LocationProperty.builder()
+ * .address("address")
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html)
+ */
 @CdkDslMarker
 public class CfnSitePropsDsl {
   private val cdkBuilder: CfnSiteProps.Builder = CfnSiteProps.builder()

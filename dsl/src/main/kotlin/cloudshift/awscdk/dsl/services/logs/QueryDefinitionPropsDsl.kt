@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.QueryDefinitionProps
 import software.amazon.awscdk.services.logs.QueryString
 
+/**
+ * Properties for a QueryDefinition.
+ *
+ * Example:
+ *
+ * ```
+ * QueryDefinition.Builder.create(this, "QueryDefinition")
+ * .queryDefinitionName("MyQuery")
+ * .queryString(QueryString.Builder.create()
+ * .fields(List.of("&#64;timestamp", "&#64;message"))
+ * .parseStatements(List.of("&#64;message \"[*] *\" as loggingType, loggingMessage", "&#64;message
+ * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
+ * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
+ * occurred!\""))
+ * .sort("&#64;timestamp desc")
+ * .limit(20)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueryDefinitionPropsDsl {
   private val cdkBuilder: QueryDefinitionProps.Builder = QueryDefinitionProps.builder()

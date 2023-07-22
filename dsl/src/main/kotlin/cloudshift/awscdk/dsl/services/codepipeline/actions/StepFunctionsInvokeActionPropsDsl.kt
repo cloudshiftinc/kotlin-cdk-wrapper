@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.codepipeline.actions.StepFunctionsInvokeA
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.stepfunctions.IStateMachine
 
+/**
+ * Construction properties of the `StepFunctionsInvokeAction StepFunction Invoke Action`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Pass startState = new Pass(this, "StartState");
+ * StateMachine simpleStateMachine = StateMachine.Builder.create(this, "SimpleStateMachine")
+ * .definition(startState)
+ * .build();
+ * StepFunctionInvokeAction stepFunctionAction = StepFunctionInvokeAction.Builder.create()
+ * .actionName("Invoke")
+ * .stateMachine(simpleStateMachine)
+ * .stateMachineInput(StateMachineInput.literal(Map.of("IsHelloWorldExample", true)))
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("StepFunctions")
+ * .actions(List.of(stepFunctionAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsInvokeActionPropsDsl {
   private val cdkBuilder: StepFunctionsInvokeActionProps.Builder =

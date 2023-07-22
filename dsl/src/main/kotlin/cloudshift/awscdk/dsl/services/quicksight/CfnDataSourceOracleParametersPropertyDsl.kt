@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * Oracle parameters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * OracleParametersProperty oracleParametersProperty = OracleParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oracleparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceOracleParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.OracleParametersProperty.Builder =

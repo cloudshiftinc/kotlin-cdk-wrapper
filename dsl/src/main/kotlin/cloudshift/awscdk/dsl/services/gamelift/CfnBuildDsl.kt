@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnBuild
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::Build` resource creates a game server build that is installed and run on
+ * instances in an Amazon GameLift fleet.
+ *
+ * This resource points to an Amazon S3 location that contains a zip file with all of the components
+ * of the game server build.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnBuild cfnBuild = CfnBuild.Builder.create(this, "MyCfnBuild")
+ * .name("name")
+ * .operatingSystem("operatingSystem")
+ * .serverSdkVersion("serverSdkVersion")
+ * .storageLocation(StorageLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html)
+ */
 @CdkDslMarker
 public class CfnBuildDsl(
   scope: Construct,

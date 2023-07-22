@@ -9,6 +9,18 @@ import software.amazon.awscdk.services.servicecatalog.Portfolio
 import software.amazon.awscdk.services.servicecatalog.TagOptions
 import software.constructs.Construct
 
+/**
+ * A Service Catalog portfolio.
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio.Builder.create(this, "Portfolio")
+ * .displayName("MyPortfolio")
+ * .providerName("MyTeam")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PortfolioDsl(
   scope: Construct,

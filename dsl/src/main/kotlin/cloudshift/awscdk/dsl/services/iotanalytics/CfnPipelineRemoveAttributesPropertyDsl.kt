@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that removes attributes from a message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * RemoveAttributesProperty removeAttributesProperty = RemoveAttributesProperty.builder()
+ * .attributes(List.of("attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-removeattributes.html)
+ */
 @CdkDslMarker
 public class CfnPipelineRemoveAttributesPropertyDsl {
   private val cdkBuilder: CfnPipeline.RemoveAttributesProperty.Builder =

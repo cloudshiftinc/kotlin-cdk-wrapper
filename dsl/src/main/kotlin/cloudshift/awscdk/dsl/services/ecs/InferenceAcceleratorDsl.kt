@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.InferenceAccelerator
 
+/**
+ * Elastic Inference Accelerator.
+ *
+ * For more information, see [Elastic Inference
+ * Basics](https://docs.aws.amazon.com/elastic-inference/latest/developerguide/basics.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * InferenceAccelerator inferenceAccelerator = InferenceAccelerator.builder()
+ * .deviceName("deviceName")
+ * .deviceType("deviceType")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InferenceAcceleratorDsl {
   private val cdkBuilder: InferenceAccelerator.Builder = InferenceAccelerator.builder()

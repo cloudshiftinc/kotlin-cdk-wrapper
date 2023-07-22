@@ -13,6 +13,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Represents information about an action declaration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * Object configuration;
+ * ActionDeclarationProperty actionDeclarationProperty = ActionDeclarationProperty.builder()
+ * .actionTypeId(ActionTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .namespace("namespace")
+ * .outputArtifacts(List.of(OutputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .region("region")
+ * .roleArn("roleArn")
+ * .runOrder(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html)
+ */
 @CdkDslMarker
 public class CfnPipelineActionDeclarationPropertyDsl {
   private val cdkBuilder: CfnPipeline.ActionDeclarationProperty.Builder =

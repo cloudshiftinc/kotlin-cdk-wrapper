@@ -11,6 +11,18 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.apigateway.RestApi
 import software.amazon.awscdk.services.cloudfront.origins.RestApiOrigin
 
+/**
+ * An Origin for an API Gateway REST API.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * Distribution.Builder.create(this, "Distribution")
+ * .defaultBehavior(BehaviorOptions.builder().origin(new RestApiOrigin(api)).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RestApiOriginDsl(
   restApi: RestApi,

@@ -9,6 +9,42 @@ import software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * The log configuration for the results of the execute command actions.
+ *
+ * The logs can be sent to CloudWatch Logs and/ or an Amazon S3 bucket.
+ * For more information, see [ExecuteCommandLogConfiguration]
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandlogconfiguration.html
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Key kmsKey = new Key(this, "KmsKey");
+ * // Pass the KMS key in the `encryptionKey` field to associate the key to the log group
+ * LogGroup logGroup = LogGroup.Builder.create(this, "LogGroup")
+ * .encryptionKey(kmsKey)
+ * .build();
+ * // Pass the KMS key in the `encryptionKey` field to associate the key to the S3 bucket
+ * Bucket execBucket = Bucket.Builder.create(this, "EcsExecBucket")
+ * .encryptionKey(kmsKey)
+ * .build();
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
+ * .executeCommandConfiguration(ExecuteCommandConfiguration.builder()
+ * .kmsKey(kmsKey)
+ * .logConfiguration(ExecuteCommandLogConfiguration.builder()
+ * .cloudWatchLogGroup(logGroup)
+ * .cloudWatchEncryptionEnabled(true)
+ * .s3Bucket(execBucket)
+ * .s3EncryptionEnabled(true)
+ * .s3KeyPrefix("exec-command-output")
+ * .build())
+ * .logging(ExecuteCommandLogging.OVERRIDE)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExecuteCommandLogConfigurationDsl {
   private val cdkBuilder: ExecuteCommandLogConfiguration.Builder =

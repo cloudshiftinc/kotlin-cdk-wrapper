@@ -14,6 +14,47 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnPortal
 import software.constructs.Construct
 
+/**
+ * Creates a portal, which can contain projects and dashboards.
+ *
+ * Before you can create a portal, you must enable IAM Identity Center . AWS IoT SiteWise Monitor
+ * uses IAM Identity Center to manage user permissions. For more information, see [Enabling IAM
+ * Identity
+ * Center](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/monitor-get-started.html#mon-gs-sso)
+ * in the *AWS IoT SiteWise User Guide* .
+ *
+ *
+ * Before you can sign in to a new portal, you must add at least one IAM Identity Center user or
+ * group to that portal. For more information, see [Adding or removing portal
+ * administrators](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/administer-portals.html#portal-change-admins)
+ * in the *AWS IoT SiteWise User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * Object alarms;
+ * CfnPortal cfnPortal = CfnPortal.Builder.create(this, "MyCfnPortal")
+ * .portalContactEmail("portalContactEmail")
+ * .portalName("portalName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .alarms(alarms)
+ * .notificationSenderEmail("notificationSenderEmail")
+ * .portalAuthMode("portalAuthMode")
+ * .portalDescription("portalDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)
+ */
 @CdkDslMarker
 public class CfnPortalDsl(
   scope: Construct,

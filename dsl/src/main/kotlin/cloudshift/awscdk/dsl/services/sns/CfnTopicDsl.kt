@@ -16,6 +16,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sns.CfnTopic
 import software.constructs.Construct
 
+/**
+ * The `AWS::SNS::Topic` resource creates a topic to which notifications can be published.
+ *
+ *
+ * One account can create a maximum of 100,000 standard topics and 1,000 FIFO topics. For more
+ * information, see [Amazon SNS endpoints and
+ * quotas](https://docs.aws.amazon.com/general/latest/gr/sns.html) in the *AWS General Reference* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * Object dataProtectionPolicy;
+ * CfnTopic cfnTopic = CfnTopic.Builder.create(this, "MyCfnTopic")
+ * .contentBasedDeduplication(false)
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .displayName("displayName")
+ * .fifoTopic(false)
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .signatureVersion("signatureVersion")
+ * .subscription(List.of(SubscriptionProperty.builder()
+ * .endpoint("endpoint")
+ * .protocol("protocol")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .topicName("topicName")
+ * .tracingConfig("tracingConfig")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topic.html)
+ */
 @CdkDslMarker
 public class CfnTopicDsl(
   scope: Construct,

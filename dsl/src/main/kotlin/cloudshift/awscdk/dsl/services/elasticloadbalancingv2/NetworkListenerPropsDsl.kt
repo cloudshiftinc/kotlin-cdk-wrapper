@@ -15,6 +15,32 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerPro
 import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 
+/**
+ * Properties for a Network Listener attached to a Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ListenerCertificate listenerCertificate;
+ * NetworkListenerAction networkListenerAction;
+ * NetworkLoadBalancer networkLoadBalancer;
+ * NetworkTargetGroup networkTargetGroup;
+ * NetworkListenerProps networkListenerProps = NetworkListenerProps.builder()
+ * .loadBalancer(networkLoadBalancer)
+ * .port(123)
+ * // the properties below are optional
+ * .alpnPolicy(AlpnPolicy.HTTP1_ONLY)
+ * .certificates(List.of(listenerCertificate))
+ * .defaultAction(networkListenerAction)
+ * .defaultTargetGroups(List.of(networkTargetGroup))
+ * .protocol(Protocol.HTTP)
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkListenerPropsDsl {
   private val cdkBuilder: NetworkListenerProps.Builder = NetworkListenerProps.builder()

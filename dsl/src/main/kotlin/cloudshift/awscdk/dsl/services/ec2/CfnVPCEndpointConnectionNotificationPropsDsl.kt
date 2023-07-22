@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotificationProps
 
+/**
+ * Properties for defining a `CfnVPCEndpointConnectionNotification`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointConnectionNotificationProps cfnVPCEndpointConnectionNotificationProps =
+ * CfnVPCEndpointConnectionNotificationProps.builder()
+ * .connectionEvents(List.of("connectionEvents"))
+ * .connectionNotificationArn("connectionNotificationArn")
+ * // the properties below are optional
+ * .serviceId("serviceId")
+ * .vpcEndpointId("vpcEndpointId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointConnectionNotificationPropsDsl {
   private val cdkBuilder: CfnVPCEndpointConnectionNotificationProps.Builder =

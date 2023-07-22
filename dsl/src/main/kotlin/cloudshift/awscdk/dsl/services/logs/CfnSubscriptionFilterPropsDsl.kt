@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.logs.CfnSubscriptionFilterProps
 
+/**
+ * Properties for defining a `CfnSubscriptionFilter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnSubscriptionFilterProps cfnSubscriptionFilterProps = CfnSubscriptionFilterProps.builder()
+ * .destinationArn("destinationArn")
+ * .filterPattern("filterPattern")
+ * .logGroupName("logGroupName")
+ * // the properties below are optional
+ * .distribution("distribution")
+ * .filterName("filterName")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-subscriptionfilter.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionFilterPropsDsl {
   private val cdkBuilder: CfnSubscriptionFilterProps.Builder = CfnSubscriptionFilterProps.builder()

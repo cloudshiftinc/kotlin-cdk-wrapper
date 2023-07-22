@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * A hyper parameter that was configured in training the model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TrainingHyperParameterProperty trainingHyperParameterProperty =
+ * TrainingHyperParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-traininghyperparameter.html)
+ */
 @CdkDslMarker
 public class CfnModelCardTrainingHyperParameterPropertyDsl {
   private val cdkBuilder: CfnModelCard.TrainingHyperParameterProperty.Builder =

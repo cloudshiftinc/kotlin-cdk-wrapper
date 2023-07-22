@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationSMB
 
+/**
+ * Specifies the version of the SMB protocol that DataSync uses to access your SMB file server.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * MountOptionsProperty mountOptionsProperty = MountOptionsProperty.builder()
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationsmb-mountoptions.html)
+ */
 @CdkDslMarker
 public class CfnLocationSMBMountOptionsPropertyDsl {
   private val cdkBuilder: CfnLocationSMB.MountOptionsProperty.Builder =

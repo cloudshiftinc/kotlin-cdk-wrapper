@@ -15,6 +15,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProductProps
 
+/**
+ * Properties for defining a `CfnCloudFormationProduct`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * Object info;
+ * CfnCloudFormationProductProps cfnCloudFormationProductProps =
+ * CfnCloudFormationProductProps.builder()
+ * .name("name")
+ * .owner("owner")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .distributor("distributor")
+ * .productType("productType")
+ * .provisioningArtifactParameters(List.of(ProvisioningArtifactPropertiesProperty.builder()
+ * .info(info)
+ * // the properties below are optional
+ * .description("description")
+ * .disableTemplateValidation(false)
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .replaceProvisioningArtifacts(false)
+ * .sourceConnection(SourceConnectionProperty.builder()
+ * .connectionParameters(ConnectionParametersProperty.builder()
+ * .codeStar(CodeStarParametersProperty.builder()
+ * .artifactPath("artifactPath")
+ * .branch("branch")
+ * .connectionArn("connectionArn")
+ * .repository("repository")
+ * .build())
+ * .build())
+ * .type("type")
+ * .build())
+ * .supportDescription("supportDescription")
+ * .supportEmail("supportEmail")
+ * .supportUrl("supportUrl")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationproduct.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProductPropsDsl {
   private val cdkBuilder: CfnCloudFormationProductProps.Builder =

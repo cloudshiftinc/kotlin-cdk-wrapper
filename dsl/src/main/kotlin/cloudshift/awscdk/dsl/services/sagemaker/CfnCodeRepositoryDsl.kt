@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnCodeRepository
 import software.constructs.Construct
 
+/**
+ * Creates a Git repository as a resource in your SageMaker account.
+ *
+ * You can associate the repository with notebook instances so that you can use Git source control
+ * for the notebooks you create. The Git repository is a resource in your SageMaker account, so it can
+ * be associated with more than one notebook instance, and it persists independently from the lifecycle
+ * of any notebook instances it is associated with.
+ *
+ * The repository can be hosted either in [AWS
+ * CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other
+ * Git repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnCodeRepository cfnCodeRepository = CfnCodeRepository.Builder.create(this,
+ * "MyCfnCodeRepository")
+ * .gitConfig(GitConfigProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * // the properties below are optional
+ * .branch("branch")
+ * .secretArn("secretArn")
+ * .build())
+ * // the properties below are optional
+ * .codeRepositoryName("codeRepositoryName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html)
+ */
 @CdkDslMarker
 public class CfnCodeRepositoryDsl(
   scope: Construct,

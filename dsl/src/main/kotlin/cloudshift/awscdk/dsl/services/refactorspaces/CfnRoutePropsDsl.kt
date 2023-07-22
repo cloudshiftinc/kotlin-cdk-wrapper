@@ -13,6 +13,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.refactorspaces.CfnRoute
 import software.amazon.awscdk.services.refactorspaces.CfnRouteProps
 
+/**
+ * Properties for defining a `CfnRoute`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnRouteProps cfnRouteProps = CfnRouteProps.builder()
+ * .applicationIdentifier("applicationIdentifier")
+ * .environmentIdentifier("environmentIdentifier")
+ * .routeType("routeType")
+ * .serviceIdentifier("serviceIdentifier")
+ * // the properties below are optional
+ * .defaultRoute(DefaultRouteInputProperty.builder()
+ * .activationState("activationState")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .uriPathRoute(UriPathRouteInputProperty.builder()
+ * .activationState("activationState")
+ * // the properties below are optional
+ * .appendSourcePath(false)
+ * .includeChildPaths(false)
+ * .methods(List.of("methods"))
+ * .sourcePath("sourcePath")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-route.html)
+ */
 @CdkDslMarker
 public class CfnRoutePropsDsl {
   private val cdkBuilder: CfnRouteProps.Builder = CfnRouteProps.builder()

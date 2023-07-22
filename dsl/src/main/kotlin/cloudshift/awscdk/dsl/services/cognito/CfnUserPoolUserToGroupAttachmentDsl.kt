@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment
 import software.constructs.Construct
 
+/**
+ * Adds the specified user to the specified group.
+ *
+ * Calling this action requires developer credentials.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolUserToGroupAttachment cfnUserPoolUserToGroupAttachment =
+ * CfnUserPoolUserToGroupAttachment.Builder.create(this, "MyCfnUserPoolUserToGroupAttachment")
+ * .groupName("groupName")
+ * .username("username")
+ * .userPoolId("userPoolId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUserToGroupAttachmentDsl(
   scope: Construct,

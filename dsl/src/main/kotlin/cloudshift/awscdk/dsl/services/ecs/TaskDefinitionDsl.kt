@@ -21,6 +21,31 @@ import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * The base class for all task definitions.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * FargateService service = FargateService.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
+ * "LB").vpc(vpc).internetFacing(true).build();
+ * ApplicationListener listener = lb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * service.registerLoadBalancerTargets(EcsTarget.builder()
+ * .containerName("web")
+ * .containerPort(80)
+ * .newTargetGroupId("ECS")
+ * .listener(ListenerConfig.applicationListener(listener, AddApplicationTargetsProps.builder()
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TaskDefinitionDsl(
   scope: Construct,

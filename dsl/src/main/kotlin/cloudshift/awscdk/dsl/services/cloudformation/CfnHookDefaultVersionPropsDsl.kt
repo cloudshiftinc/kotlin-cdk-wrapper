@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps
 
+/**
+ * Properties for defining a `CfnHookDefaultVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnHookDefaultVersionProps cfnHookDefaultVersionProps = CfnHookDefaultVersionProps.builder()
+ * .typeName("typeName")
+ * .typeVersionArn("typeVersionArn")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
+ */
 @CdkDslMarker
 public class CfnHookDefaultVersionPropsDsl {
   private val cdkBuilder: CfnHookDefaultVersionProps.Builder = CfnHookDefaultVersionProps.builder()

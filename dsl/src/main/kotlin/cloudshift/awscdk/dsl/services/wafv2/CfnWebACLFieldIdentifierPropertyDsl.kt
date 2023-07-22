@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The identifier of the username or password field, used in the `ManagedRuleGroupConfig` settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * FieldIdentifierProperty fieldIdentifierProperty = FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-fieldidentifier.html)
+ */
 @CdkDslMarker
 public class CfnWebACLFieldIdentifierPropertyDsl {
   private val cdkBuilder: CfnWebACL.FieldIdentifierProperty.Builder =

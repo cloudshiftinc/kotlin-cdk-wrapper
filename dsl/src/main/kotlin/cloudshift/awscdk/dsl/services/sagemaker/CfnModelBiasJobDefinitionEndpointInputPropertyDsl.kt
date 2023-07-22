@@ -7,6 +7,32 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
 
+/**
+ * Input object for the endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * EndpointInputProperty endpointInputProperty = EndpointInputProperty.builder()
+ * .endpointName("endpointName")
+ * .localPath("localPath")
+ * // the properties below are optional
+ * .endTimeOffset("endTimeOffset")
+ * .featuresAttribute("featuresAttribute")
+ * .inferenceAttribute("inferenceAttribute")
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityThresholdAttribute(123)
+ * .s3DataDistributionType("s3DataDistributionType")
+ * .s3InputMode("s3InputMode")
+ * .startTimeOffset("startTimeOffset")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-endpointinput.html)
+ */
 @CdkDslMarker
 public class CfnModelBiasJobDefinitionEndpointInputPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.EndpointInputProperty.Builder =

@@ -21,6 +21,30 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ec2.VpcProps
 import software.amazon.awscdk.services.ec2.VpnConnectionOptions
 
+/**
+ * Configuration for Vpc.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.*;
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc")
+ * .ipAddresses(IpAddresses.cidr("10.0.0.0/16"))
+ * .build();
+ * VpcConnector vpcConnector = VpcConnector.Builder.create(this, "VpcConnector")
+ * .vpc(vpc)
+ * .vpcSubnets(vpc.selectSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build()))
+ * .vpcConnectorName("MyVpcConnector")
+ * .build();
+ * Service.Builder.create(this, "Service")
+ * .source(Source.fromEcrPublic(EcrPublicProps.builder()
+ * .imageConfiguration(ImageConfiguration.builder().port(8000).build())
+ * .imageIdentifier("public.ecr.aws/aws-containers/hello-app-runner:latest")
+ * .build()))
+ * .vpcConnector(vpcConnector)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcPropsDsl {
   private val cdkBuilder: VpcProps.Builder = VpcProps.builder()

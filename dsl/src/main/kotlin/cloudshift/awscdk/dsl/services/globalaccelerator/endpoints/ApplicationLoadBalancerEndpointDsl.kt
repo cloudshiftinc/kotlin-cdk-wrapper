@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
 import software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint
 
+/**
+ * Use an Application Load Balancer as a Global Accelerator Endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer alb;
+ * Listener listener;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * ApplicationLoadBalancerEndpoint.Builder.create(alb)
+ * .weight(128)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerEndpointDsl(
   loadBalancer: IApplicationLoadBalancer,

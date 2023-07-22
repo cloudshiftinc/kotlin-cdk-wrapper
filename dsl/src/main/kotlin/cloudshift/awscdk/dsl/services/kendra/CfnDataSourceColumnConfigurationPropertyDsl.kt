@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides information about how Amazon Kendra should use the columns of a database in an index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ColumnConfigurationProperty columnConfigurationProperty = ColumnConfigurationProperty.builder()
+ * .changeDetectingColumns(List.of("changeDetectingColumns"))
+ * .documentDataColumnName("documentDataColumnName")
+ * .documentIdColumnName("documentIdColumnName")
+ * // the properties below are optional
+ * .documentTitleColumnName("documentTitleColumnName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-columnconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceColumnConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ColumnConfigurationProperty.Builder =

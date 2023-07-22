@@ -14,6 +14,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnVehicle
 import software.constructs.Construct
 
+/**
+ * Creates a vehicle, which is an instance of a vehicle model (model manifest).
+ *
+ * Vehicles created from the same vehicle model consist of the same signals inherited from the
+ * vehicle model.
+ *
+ *
+ * If you have an existing AWS IoT thing, you can use AWS IoT FleetWise to create a vehicle and
+ * collect data from your thing.
+ *
+ *
+ * For more information, see [Create a vehicle
+ * (console)](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/create-vehicle-console.html)
+ * in the *AWS IoT FleetWise Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnVehicle cfnVehicle = CfnVehicle.Builder.create(this, "MyCfnVehicle")
+ * .decoderManifestArn("decoderManifestArn")
+ * .modelManifestArn("modelManifestArn")
+ * .name("name")
+ * // the properties below are optional
+ * .associationBehavior("associationBehavior")
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html)
+ */
 @CdkDslMarker
 public class CfnVehicleDsl(
   scope: Construct,

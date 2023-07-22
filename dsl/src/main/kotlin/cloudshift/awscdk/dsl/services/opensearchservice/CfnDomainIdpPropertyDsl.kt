@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * The SAML Identity Provider's information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * IdpProperty idpProperty = IdpProperty.builder()
+ * .entityId("entityId")
+ * .metadataContent("metadataContent")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-idp.html)
+ */
 @CdkDslMarker
 public class CfnDomainIdpPropertyDsl {
   private val cdkBuilder: CfnDomain.IdpProperty.Builder = CfnDomain.IdpProperty.builder()

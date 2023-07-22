@@ -7,6 +7,27 @@ import software.amazon.awscdk.services.events.targets.EventBusProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Configuration properties of an Event Bus event.
+ *
+ * Cannot extend TargetBaseProps. Retry policy is not supported for Event bus targets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * Role role;
+ * EventBusProps eventBusProps = EventBusProps.builder()
+ * .deadLetterQueue(queue)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBusPropsDsl {
   private val cdkBuilder: EventBusProps.Builder = EventBusProps.builder()

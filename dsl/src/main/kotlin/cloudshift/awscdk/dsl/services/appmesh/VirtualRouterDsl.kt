@@ -11,6 +11,16 @@ import software.amazon.awscdk.services.appmesh.VirtualRouter
 import software.amazon.awscdk.services.appmesh.VirtualRouterListener
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualRouter router = mesh.addVirtualRouter("router", VirtualRouterBaseProps.builder()
+ * .listeners(List.of(VirtualRouterListener.http(8080)))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class VirtualRouterDsl(
   scope: Construct,

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.CfnDashboardProps
 
+/**
+ * Properties for defining a `CfnDashboard`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnDashboardProps cfnDashboardProps = CfnDashboardProps.builder()
+ * .dashboardBody("dashboardBody")
+ * // the properties below are optional
+ * .dashboardName("dashboardName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPropsDsl {
   private val cdkBuilder: CfnDashboardProps.Builder = CfnDashboardProps.builder()

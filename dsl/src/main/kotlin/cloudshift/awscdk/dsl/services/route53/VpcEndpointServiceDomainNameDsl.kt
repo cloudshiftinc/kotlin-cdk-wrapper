@@ -9,6 +9,23 @@ import software.amazon.awscdk.services.route53.IPublicHostedZone
 import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName
 import software.constructs.Construct
 
+/**
+ * A Private DNS configuration for a VPC endpoint service.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.route53.HostedZone;
+ * import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName;
+ * HostedZone zone;
+ * VpcEndpointService vpces;
+ * VpcEndpointServiceDomainName.Builder.create(this, "EndpointDomain")
+ * .endpointService(vpces)
+ * .domainName("my-stuff.aws-cdk.dev")
+ * .publicHostedZone(zone)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcEndpointServiceDomainNameDsl(
   scope: Construct,

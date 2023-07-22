@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about a deployment's update to a component's configuration on AWS IoT
+ * Greengrass core devices.
+ *
+ * For more information, see [Update component
+ * configurations](https://docs.aws.amazon.com/greengrass/v2/developerguide/update-component-configurations.html)
+ * in the *AWS IoT Greengrass V2 Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * ComponentConfigurationUpdateProperty componentConfigurationUpdateProperty =
+ * ComponentConfigurationUpdateProperty.builder()
+ * .merge("merge")
+ * .reset(List.of("reset"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentconfigurationupdate.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentComponentConfigurationUpdatePropertyDsl {
   private val cdkBuilder: CfnDeployment.ComponentConfigurationUpdateProperty.Builder =

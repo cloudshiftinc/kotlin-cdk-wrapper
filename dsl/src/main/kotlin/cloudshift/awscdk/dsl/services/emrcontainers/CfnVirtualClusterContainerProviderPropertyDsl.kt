@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
 
+/**
+ * The information about the container provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrcontainers.*;
+ * ContainerProviderProperty containerProviderProperty = ContainerProviderProperty.builder()
+ * .id("id")
+ * .info(ContainerInfoProperty.builder()
+ * .eksInfo(EksInfoProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrcontainers-virtualcluster-containerprovider.html)
+ */
 @CdkDslMarker
 public class CfnVirtualClusterContainerProviderPropertyDsl {
   private val cdkBuilder: CfnVirtualCluster.ContainerProviderProperty.Builder =

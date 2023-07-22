@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.PortRange
 
+/**
+ * The list of port ranges for the connections from clients to the accelerator.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * PortRange portRange = PortRange.builder()
+ * .fromPort(123)
+ * // the properties below are optional
+ * .toPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PortRangeDsl {
   private val cdkBuilder: PortRange.Builder = PortRange.builder()

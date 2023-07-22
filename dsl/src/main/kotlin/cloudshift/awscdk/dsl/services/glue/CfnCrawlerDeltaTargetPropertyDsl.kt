@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * Specifies a Delta data store to crawl one or more Delta tables.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * DeltaTargetProperty deltaTargetProperty = DeltaTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .createNativeDeltaTable(false)
+ * .deltaTables(List.of("deltaTables"))
+ * .writeManifest(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-deltatarget.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerDeltaTargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.DeltaTargetProperty.Builder =

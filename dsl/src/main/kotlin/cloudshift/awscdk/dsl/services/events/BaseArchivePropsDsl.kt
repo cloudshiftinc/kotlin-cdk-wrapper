@@ -9,6 +9,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.events.BaseArchiveProps
 import software.amazon.awscdk.services.events.EventPattern
 
+/**
+ * The event archive base properties.
+ *
+ * Example:
+ *
+ * ```
+ * EventBus bus = EventBus.Builder.create(this, "bus")
+ * .eventBusName("MyCustomEventBus")
+ * .build();
+ * bus.archive("MyArchive", BaseArchiveProps.builder()
+ * .archiveName("MyCustomEventBusArchive")
+ * .description("MyCustomerEventBus Archive")
+ * .eventPattern(EventPattern.builder()
+ * .account(List.of(Stack.of(this).getAccount()))
+ * .build())
+ * .retention(Duration.days(365))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BaseArchivePropsDsl {
   private val cdkBuilder: BaseArchiveProps.Builder = BaseArchiveProps.builder()

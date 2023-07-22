@@ -10,6 +10,18 @@ import kotlin.collections.Map
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudfront.origins.RestApiOriginProps
 
+/**
+ * Properties for an Origin for an API Gateway REST API.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * Distribution.Builder.create(this, "Distribution")
+ * .defaultBehavior(BehaviorOptions.builder().origin(RestApiOrigin.Builder.create(api).originPath("/custom-origin-path").build()).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RestApiOriginPropsDsl {
   private val cdkBuilder: RestApiOriginProps.Builder = RestApiOriginProps.builder()

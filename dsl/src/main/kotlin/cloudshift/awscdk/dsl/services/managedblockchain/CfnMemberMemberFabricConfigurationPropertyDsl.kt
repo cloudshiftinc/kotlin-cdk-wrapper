@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 
+/**
+ * Configuration properties for Hyperledger Fabric for a member in a Managed Blockchain network that
+ * is using the Hyperledger Fabric framework.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * MemberFabricConfigurationProperty memberFabricConfigurationProperty =
+ * MemberFabricConfigurationProperty.builder()
+ * .adminPassword("adminPassword")
+ * .adminUsername("adminUsername")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberfabricconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMemberMemberFabricConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.MemberFabricConfigurationProperty.Builder =

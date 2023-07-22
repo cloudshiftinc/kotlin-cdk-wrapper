@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of the same-sheet target visuals that you want to be filtered.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SameSheetTargetVisualConfigurationProperty sameSheetTargetVisualConfigurationProperty =
+ * SameSheetTargetVisualConfigurationProperty.builder()
+ * .targetVisualOptions("targetVisualOptions")
+ * .targetVisuals(List.of("targetVisuals"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-samesheettargetvisualconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisSameSheetTargetVisualConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SameSheetTargetVisualConfigurationProperty.Builder =

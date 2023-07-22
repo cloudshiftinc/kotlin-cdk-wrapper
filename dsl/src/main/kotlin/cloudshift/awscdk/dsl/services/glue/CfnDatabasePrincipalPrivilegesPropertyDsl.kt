@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDatabase
 
+/**
+ * the permissions granted to a principal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * PrincipalPrivilegesProperty principalPrivilegesProperty = PrincipalPrivilegesProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-principalprivileges.html)
+ */
 @CdkDslMarker
 public class CfnDatabasePrincipalPrivilegesPropertyDsl {
   private val cdkBuilder: CfnDatabase.PrincipalPrivilegesProperty.Builder =

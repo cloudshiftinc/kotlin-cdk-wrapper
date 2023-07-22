@@ -11,6 +11,32 @@ import kotlin.Unit
 import software.amazon.awscdk.services.glue.CfnWorkflow
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Workflow` is an AWS Glue resource type that manages AWS Glue workflows.
+ *
+ * A workflow is a container for a set of related jobs, crawlers, and triggers in AWS Glue . Using a
+ * workflow, you can design a complex multi-job extract, transform, and load (ETL) activity that AWS
+ * Glue can execute and track as single entity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object defaultRunProperties;
+ * Object tags;
+ * CfnWorkflow cfnWorkflow = CfnWorkflow.Builder.create(this, "MyCfnWorkflow")
+ * .defaultRunProperties(defaultRunProperties)
+ * .description("description")
+ * .maxConcurrentRuns(123)
+ * .name("name")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowDsl(
   scope: Construct,

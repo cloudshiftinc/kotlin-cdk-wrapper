@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
+/**
+ * Only one of MixedMeasureMappings or MultiMeasureMappings is to be provided.
+ *
+ * MultiMeasureMappings can be used to ingest data as multi measures in the derived table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * MultiMeasureMappingsProperty multiMeasureMappingsProperty =
+ * MultiMeasureMappingsProperty.builder()
+ * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+ * .measureValueType("measureValueType")
+ * .sourceColumn("sourceColumn")
+ * // the properties below are optional
+ * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+ * .build()))
+ * // the properties below are optional
+ * .targetMultiMeasureName("targetMultiMeasureName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasuremappings.html)
+ */
 @CdkDslMarker
 public class CfnScheduledQueryMultiMeasureMappingsPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.MultiMeasureMappingsProperty.Builder =

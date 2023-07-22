@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * The automation options of the single select question.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormSingleSelectQuestionAutomationOptionProperty
+ * evaluationFormSingleSelectQuestionAutomationOptionProperty =
+ * EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+ * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+ * .category("category")
+ * .condition("condition")
+ * .optionRefId("optionRefId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomationoption.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormSingleSelectQuestionAutomationOptionPropertyDsl {
   private val cdkBuilder:

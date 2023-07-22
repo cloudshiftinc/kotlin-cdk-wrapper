@@ -8,6 +8,24 @@ import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.appsync.NoneDataSource
 import software.constructs.Construct
 
+/**
+ * An AppSync dummy datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * GraphqlApi graphqlApi;
+ * NoneDataSource noneDataSource = NoneDataSource.Builder.create(this, "MyNoneDataSource")
+ * .api(graphqlApi)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NoneDataSourceDsl(
   scope: Construct,

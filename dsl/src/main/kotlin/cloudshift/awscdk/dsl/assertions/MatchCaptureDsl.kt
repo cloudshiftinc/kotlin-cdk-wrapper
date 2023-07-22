@@ -9,6 +9,23 @@ import kotlin.Unit
 import software.amazon.awscdk.assertions.Capture
 import software.amazon.awscdk.assertions.MatchCapture
 
+/**
+ * Information about a value captured during match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.assertions.*;
+ * Capture capture;
+ * Object value;
+ * MatchCapture matchCapture = MatchCapture.builder()
+ * .capture(capture)
+ * .value(value)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MatchCaptureDsl {
   private val cdkBuilder: MatchCapture.Builder = MatchCapture.builder()

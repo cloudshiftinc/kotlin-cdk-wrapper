@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Contains settings used by Amazon Lex to select a slot value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotValueSelectionSettingProperty slotValueSelectionSettingProperty =
+ * SlotValueSelectionSettingProperty.builder()
+ * .resolutionStrategy("resolutionStrategy")
+ * // the properties below are optional
+ * .advancedRecognitionSetting(AdvancedRecognitionSettingProperty.builder()
+ * .audioRecognitionStrategy("audioRecognitionStrategy")
+ * .build())
+ * .regexFilter(SlotValueRegexFilterProperty.builder()
+ * .pattern("pattern")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotvalueselectionsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotValueSelectionSettingPropertyDsl {
   private val cdkBuilder: CfnBot.SlotValueSelectionSettingProperty.Builder =

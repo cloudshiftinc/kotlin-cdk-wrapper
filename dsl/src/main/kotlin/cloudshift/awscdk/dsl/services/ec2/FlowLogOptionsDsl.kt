@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.ec2.FlowLogOptions
 import software.amazon.awscdk.services.ec2.FlowLogTrafficType
 import software.amazon.awscdk.services.ec2.LogFormat
 
+/**
+ * Options to add a flow log to a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc = new Vpc(this, "Vpc");
+ * vpc.addFlowLog("FlowLogS3", FlowLogOptions.builder()
+ * .destination(FlowLogDestination.toS3())
+ * .build());
+ * // Only reject traffic and interval every minute.
+ * vpc.addFlowLog("FlowLogCloudWatch", FlowLogOptions.builder()
+ * .trafficType(FlowLogTrafficType.REJECT)
+ * .maxAggregationInterval(FlowLogMaxAggregationInterval.ONE_MINUTE)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FlowLogOptionsDsl {
   private val cdkBuilder: FlowLogOptions.Builder = FlowLogOptions.builder()

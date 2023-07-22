@@ -12,6 +12,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.dms.CfnReplicationTaskProps
 
+/**
+ * Properties for defining a `CfnReplicationTask`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnReplicationTaskProps cfnReplicationTaskProps = CfnReplicationTaskProps.builder()
+ * .migrationType("migrationType")
+ * .replicationInstanceArn("replicationInstanceArn")
+ * .sourceEndpointArn("sourceEndpointArn")
+ * .tableMappings("tableMappings")
+ * .targetEndpointArn("targetEndpointArn")
+ * // the properties below are optional
+ * .cdcStartPosition("cdcStartPosition")
+ * .cdcStartTime(123)
+ * .cdcStopPosition("cdcStopPosition")
+ * .replicationTaskIdentifier("replicationTaskIdentifier")
+ * .replicationTaskSettings("replicationTaskSettings")
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskData("taskData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html)
+ */
 @CdkDslMarker
 public class CfnReplicationTaskPropsDsl {
   private val cdkBuilder: CfnReplicationTaskProps.Builder = CfnReplicationTaskProps.builder()

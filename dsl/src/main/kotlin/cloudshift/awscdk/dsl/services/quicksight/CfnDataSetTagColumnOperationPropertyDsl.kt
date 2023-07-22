@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A transform operation that tags a column with additional information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TagColumnOperationProperty tagColumnOperationProperty = TagColumnOperationProperty.builder()
+ * .columnName("columnName")
+ * .tags(List.of(ColumnTagProperty.builder()
+ * .columnDescription(ColumnDescriptionProperty.builder()
+ * .text("text")
+ * .build())
+ * .columnGeographicRole("columnGeographicRole")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-tagcolumnoperation.html)
+ */
 @CdkDslMarker
 public class CfnDataSetTagColumnOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.TagColumnOperationProperty.Builder =

@@ -7,6 +7,23 @@ import software.amazon.awscdk.services.logs.IFilterPattern
 import software.amazon.awscdk.services.logs.ILogSubscriptionDestination
 import software.amazon.awscdk.services.logs.SubscriptionFilterOptions
 
+/**
+ * Properties for a new SubscriptionFilter created from a LogGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * IFilterPattern filterPattern;
+ * ILogSubscriptionDestination logSubscriptionDestination;
+ * SubscriptionFilterOptions subscriptionFilterOptions = SubscriptionFilterOptions.builder()
+ * .destination(logSubscriptionDestination)
+ * .filterPattern(filterPattern)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionFilterOptionsDsl {
   private val cdkBuilder: SubscriptionFilterOptions.Builder = SubscriptionFilterOptions.builder()

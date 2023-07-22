@@ -12,6 +12,25 @@ import software.amazon.awscdk.services.stepfunctions.Pass
 import software.amazon.awscdk.services.stepfunctions.Result
 import software.constructs.Construct
 
+/**
+ * Define a Pass in the state machine.
+ *
+ * A Pass state can be used to transform the current execution's state.
+ *
+ * Example:
+ *
+ * ```
+ * Choice choice = new Choice(this, "Did it work?");
+ * // Add conditions with .when()
+ * Pass successState = new Pass(this, "SuccessState");
+ * Pass failureState = new Pass(this, "FailureState");
+ * choice.when(Condition.stringEquals("$.status", "SUCCESS"), successState);
+ * choice.when(Condition.numberGreaterThan("$.attempts", 5), failureState);
+ * // Use .otherwise() to indicate what should be done if none of the conditions match
+ * Pass tryAgainState = new Pass(this, "TryAgainState");
+ * choice.otherwise(tryAgainState);
+ * ```
+ */
 @CdkDslMarker
 public class PassDsl(
   scope: Construct,

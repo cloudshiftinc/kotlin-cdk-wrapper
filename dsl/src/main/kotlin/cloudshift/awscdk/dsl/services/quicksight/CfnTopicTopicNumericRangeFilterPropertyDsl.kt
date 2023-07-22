@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A filter that filters topics based on the value of a numeric field.
+ *
+ * The filter includes only topics whose numeric field value falls within the specified range.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicNumericRangeFilterProperty topicNumericRangeFilterProperty =
+ * TopicNumericRangeFilterProperty.builder()
+ * .aggregation("aggregation")
+ * .constant(TopicRangeFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .rangeConstant(RangeConstantProperty.builder()
+ * .maximum("maximum")
+ * .minimum("minimum")
+ * .build())
+ * .build())
+ * .inclusive(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicnumericrangefilter.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicNumericRangeFilterPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicNumericRangeFilterProperty.Builder =

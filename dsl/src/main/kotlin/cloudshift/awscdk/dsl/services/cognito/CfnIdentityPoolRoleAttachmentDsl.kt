@@ -12,6 +12,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::IdentityPoolRoleAttachment` resource manages the role configuration for an
+ * Amazon Cognito identity pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object roles;
+ * CfnIdentityPoolRoleAttachment cfnIdentityPoolRoleAttachment =
+ * CfnIdentityPoolRoleAttachment.Builder.create(this, "MyCfnIdentityPoolRoleAttachment")
+ * .identityPoolId("identityPoolId")
+ * // the properties below are optional
+ * .roleMappings(Map.of(
+ * "roleMappingsKey", RoleMappingProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .ambiguousRoleResolution("ambiguousRoleResolution")
+ * .identityProvider("identityProvider")
+ * .rulesConfiguration(RulesConfigurationTypeProperty.builder()
+ * .rules(List.of(MappingRuleProperty.builder()
+ * .claim("claim")
+ * .matchType("matchType")
+ * .roleArn("roleArn")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build()))
+ * .roles(roles)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolRoleAttachmentDsl(
   scope: Construct,

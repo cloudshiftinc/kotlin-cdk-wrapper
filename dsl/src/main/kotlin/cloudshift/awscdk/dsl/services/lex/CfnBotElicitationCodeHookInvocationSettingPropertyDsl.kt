@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Settings that specify the dialog code hook that is called by Amazon Lex between eliciting slot
+ * values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * ElicitationCodeHookInvocationSettingProperty elicitationCodeHookInvocationSettingProperty =
+ * ElicitationCodeHookInvocationSettingProperty.builder()
+ * .enableCodeHookInvocation(false)
+ * // the properties below are optional
+ * .invocationLabel("invocationLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-elicitationcodehookinvocationsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotElicitationCodeHookInvocationSettingPropertyDsl {
   private val cdkBuilder: CfnBot.ElicitationCodeHookInvocationSettingProperty.Builder =

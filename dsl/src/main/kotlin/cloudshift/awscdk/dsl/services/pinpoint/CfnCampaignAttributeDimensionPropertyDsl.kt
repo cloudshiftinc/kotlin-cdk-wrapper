@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies attribute-based criteria for including or excluding endpoints from a segment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * AttributeDimensionProperty attributeDimensionProperty = AttributeDimensionProperty.builder()
+ * .attributeType("attributeType")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-attributedimension.html)
+ */
 @CdkDslMarker
 public class CfnCampaignAttributeDimensionPropertyDsl {
   private val cdkBuilder: CfnCampaign.AttributeDimensionProperty.Builder =

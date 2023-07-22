@@ -8,6 +8,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the schedule settings for a campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object attributes;
+ * Object metrics;
+ * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+ * .endTime("endTime")
+ * .eventFilter(CampaignEventFilterProperty.builder()
+ * .dimensions(EventDimensionsProperty.builder()
+ * .attributes(attributes)
+ * .eventType(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .metrics(metrics)
+ * .build())
+ * .filterType("filterType")
+ * .build())
+ * .frequency("frequency")
+ * .isLocalTime(false)
+ * .quietTime(QuietTimeProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build())
+ * .startTime("startTime")
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-schedule.html)
+ */
 @CdkDslMarker
 public class CfnCampaignSchedulePropertyDsl {
   private val cdkBuilder: CfnCampaign.ScheduleProperty.Builder =

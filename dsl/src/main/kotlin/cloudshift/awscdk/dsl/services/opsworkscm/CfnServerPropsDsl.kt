@@ -15,6 +15,49 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworkscm.CfnServerProps
 
+/**
+ * Properties for defining a `CfnServer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworkscm.*;
+ * CfnServerProps cfnServerProps = CfnServerProps.builder()
+ * .instanceProfileArn("instanceProfileArn")
+ * .instanceType("instanceType")
+ * .serviceRoleArn("serviceRoleArn")
+ * // the properties below are optional
+ * .associatePublicIpAddress(false)
+ * .backupId("backupId")
+ * .backupRetentionCount(123)
+ * .customCertificate("customCertificate")
+ * .customDomain("customDomain")
+ * .customPrivateKey("customPrivateKey")
+ * .disableAutomatedBackup(false)
+ * .engine("engine")
+ * .engineAttributes(List.of(EngineAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .engineModel("engineModel")
+ * .engineVersion("engineVersion")
+ * .keyPair("keyPair")
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .serverName("serverName")
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html)
+ */
 @CdkDslMarker
 public class CfnServerPropsDsl {
   private val cdkBuilder: CfnServerProps.Builder = CfnServerProps.builder()

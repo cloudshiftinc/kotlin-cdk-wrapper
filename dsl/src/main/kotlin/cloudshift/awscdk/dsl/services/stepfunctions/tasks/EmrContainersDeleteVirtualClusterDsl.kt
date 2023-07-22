@@ -18,6 +18,19 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualCluster
 import software.constructs.Construct
 
+/**
+ * Deletes an EMR Containers virtual cluster as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersDeleteVirtualCluster.Builder.create(this, "Delete a Virtual Cluster")
+ * .virtualClusterId(TaskInput.fromJsonPathAt("$.virtualCluster"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.amazonaws.cn/en_us/step-functions/latest/dg/connect-emr-eks.html)
+ */
 @CdkDslMarker
 public class EmrContainersDeleteVirtualClusterDsl(
   scope: Construct,

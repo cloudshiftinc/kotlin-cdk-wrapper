@@ -9,6 +9,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnApiCacheProps
 
+/**
+ * Properties for defining a `CfnApiCache`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnApiCacheProps cfnApiCacheProps = CfnApiCacheProps.builder()
+ * .apiCachingBehavior("apiCachingBehavior")
+ * .apiId("apiId")
+ * .ttl(123)
+ * .type("type")
+ * // the properties below are optional
+ * .atRestEncryptionEnabled(false)
+ * .transitEncryptionEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html)
+ */
 @CdkDslMarker
 public class CfnApiCachePropsDsl {
   private val cdkBuilder: CfnApiCacheProps.Builder = CfnApiCacheProps.builder()

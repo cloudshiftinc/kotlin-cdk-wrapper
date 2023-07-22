@@ -18,6 +18,30 @@ import software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecu
 import software.amazon.awscdk.services.stepfunctions.tasks.QueryExecutionContext
 import software.amazon.awscdk.services.stepfunctions.tasks.ResultConfiguration
 
+/**
+ * Properties for starting a Query Execution.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
+ * "Start Athena Query")
+ * .queryString(JsonPath.stringAt("$.queryString"))
+ * .queryExecutionContext(QueryExecutionContext.builder()
+ * .databaseName("mydatabase")
+ * .build())
+ * .resultConfiguration(ResultConfiguration.builder()
+ * .encryptionConfiguration(EncryptionConfiguration.builder()
+ * .encryptionOption(EncryptionOption.S3_MANAGED)
+ * .build())
+ * .outputLocation(Location.builder()
+ * .bucketName("query-results-bucket")
+ * .objectKey("folder")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AthenaStartQueryExecutionPropsDsl {
   private val cdkBuilder: AthenaStartQueryExecutionProps.Builder =

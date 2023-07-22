@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 
+/**
+ * The Virtual Deliverability Manager (VDM) options that apply to a configuration set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * VdmOptionsProperty vdmOptionsProperty = VdmOptionsProperty.builder()
+ * .dashboardOptions(DashboardOptionsProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianOptions(GuardianOptionsProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-vdmoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetVdmOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.VdmOptionsProperty.Builder =

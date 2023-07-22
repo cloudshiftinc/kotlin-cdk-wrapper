@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnLink
 import software.constructs.Construct
 
+/**
+ * Specifies a link for a site.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnLink cfnLink = CfnLink.Builder.create(this, "MyCfnLink")
+ * .bandwidth(BandwidthProperty.builder()
+ * .downloadSpeed(123)
+ * .uploadSpeed(123)
+ * .build())
+ * .globalNetworkId("globalNetworkId")
+ * .siteId("siteId")
+ * // the properties below are optional
+ * .description("description")
+ * .provider("provider")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-link.html)
+ */
 @CdkDslMarker
 public class CfnLinkDsl(
   scope: Construct,

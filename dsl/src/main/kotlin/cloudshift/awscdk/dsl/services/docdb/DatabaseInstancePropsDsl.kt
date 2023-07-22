@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.docdb.DatabaseInstanceProps
 import software.amazon.awscdk.services.docdb.IDatabaseCluster
 import software.amazon.awscdk.services.ec2.InstanceType
 
+/**
+ * Construction properties for a DatabaseInstanceNew.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.docdb.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * DatabaseCluster databaseCluster;
+ * InstanceType instanceType;
+ * DatabaseInstanceProps databaseInstanceProps = DatabaseInstanceProps.builder()
+ * .cluster(databaseCluster)
+ * .instanceType(instanceType)
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .dbInstanceName("dbInstanceName")
+ * .enablePerformanceInsights(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstancePropsDsl {
   private val cdkBuilder: DatabaseInstanceProps.Builder = DatabaseInstanceProps.builder()

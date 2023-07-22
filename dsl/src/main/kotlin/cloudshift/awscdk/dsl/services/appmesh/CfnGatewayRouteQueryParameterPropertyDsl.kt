@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object that represents the query parameter in the request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * QueryParameterProperty queryParameterProperty = QueryParameterProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .match(HttpQueryParameterMatchProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-queryparameter.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteQueryParameterPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.QueryParameterProperty.Builder =

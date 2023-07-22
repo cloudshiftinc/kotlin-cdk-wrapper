@@ -12,6 +12,47 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rum.CfnAppMonitor
 
+/**
+ * This structure contains much of the configuration data for the app monitor.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rum.*;
+ * AppMonitorConfigurationProperty appMonitorConfigurationProperty =
+ * AppMonitorConfigurationProperty.builder()
+ * .allowCookies(false)
+ * .enableXRay(false)
+ * .excludedPages(List.of("excludedPages"))
+ * .favoritePages(List.of("favoritePages"))
+ * .guestRoleArn("guestRoleArn")
+ * .identityPoolId("identityPoolId")
+ * .includedPages(List.of("includedPages"))
+ * .metricDestinations(List.of(MetricDestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .destinationArn("destinationArn")
+ * .iamRoleArn("iamRoleArn")
+ * .metricDefinitions(List.of(MetricDefinitionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dimensionKeys(Map.of(
+ * "dimensionKeysKey", "dimensionKeys"))
+ * .eventPattern("eventPattern")
+ * .namespace("namespace")
+ * .unitLabel("unitLabel")
+ * .valueKey("valueKey")
+ * .build()))
+ * .build()))
+ * .sessionSampleRate(123)
+ * .telemetries(List.of("telemetries"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-appmonitorconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAppMonitorAppMonitorConfigurationPropertyDsl {
   private val cdkBuilder: CfnAppMonitor.AppMonitorConfigurationProperty.Builder =

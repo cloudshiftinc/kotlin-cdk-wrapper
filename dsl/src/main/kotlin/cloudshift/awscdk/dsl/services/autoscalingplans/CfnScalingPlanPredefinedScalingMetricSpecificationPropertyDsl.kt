@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 
+/**
+ * `PredefinedScalingMetricSpecification` is a subproperty of
+ * [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
+ * that specifies a customized scaling metric for a target tracking configuration to use with AWS Auto
+ * Scaling ( Auto Scaling Plans ).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscalingplans.*;
+ * PredefinedScalingMetricSpecificationProperty predefinedScalingMetricSpecificationProperty =
+ * PredefinedScalingMetricSpecificationProperty.builder()
+ * .predefinedScalingMetricType("predefinedScalingMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.html)
+ */
 @CdkDslMarker
 public class CfnScalingPlanPredefinedScalingMetricSpecificationPropertyDsl {
   private val cdkBuilder: CfnScalingPlan.PredefinedScalingMetricSpecificationProperty.Builder =

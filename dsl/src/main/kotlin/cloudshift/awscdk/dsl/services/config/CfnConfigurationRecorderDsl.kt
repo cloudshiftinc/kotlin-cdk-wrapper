@@ -8,6 +8,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationRecorder
 import software.constructs.Construct
 
+/**
+ * The AWS::Config::ConfigurationRecorder resource describes the AWS resource types for which AWS
+ * Config records configuration changes.
+ *
+ * The configuration recorder stores the configurations of the supported resources in your account
+ * as configuration items.
+ *
+ *
+ * To enable AWS Config , you must create a configuration recorder and a delivery channel. AWS
+ * Config uses the delivery channel to deliver the configuration changes to your Amazon S3 bucket or
+ * Amazon SNS topic. For more information, see
+ * [AWS::Config::DeliveryChannel](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)
+ * .
+ *
+ *
+ * AWS CloudFormation starts the recorder as soon as the delivery channel is available.
+ *
+ * To stop the recorder and delete it, delete the configuration recorder from your stack. To stop
+ * the recorder without deleting it, call the
+ * [StopConfigurationRecorder](https://docs.aws.amazon.com/config/latest/APIReference/API_StopConfigurationRecorder.html)
+ * action of the AWS Config API directly.
+ *
+ * For more information, see [Configuration
+ * Recorder](https://docs.aws.amazon.com/config/latest/developerguide/config-concepts.html#config-recorder)
+ * in the AWS Config Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnConfigurationRecorder cfnConfigurationRecorder = CfnConfigurationRecorder.Builder.create(this,
+ * "MyCfnConfigurationRecorder")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .name("name")
+ * .recordingGroup(RecordingGroupProperty.builder()
+ * .allSupported(false)
+ * .includeGlobalResourceTypes(false)
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationRecorderDsl(
   scope: Construct,

@@ -12,6 +12,26 @@ import software.amazon.awscdk.services.logs.QueryDefinition
 import software.amazon.awscdk.services.logs.QueryString
 import software.constructs.Construct
 
+/**
+ * Define a query definition for CloudWatch Logs Insights.
+ *
+ * Example:
+ *
+ * ```
+ * QueryDefinition.Builder.create(this, "QueryDefinition")
+ * .queryDefinitionName("MyQuery")
+ * .queryString(QueryString.Builder.create()
+ * .fields(List.of("&#64;timestamp", "&#64;message"))
+ * .parseStatements(List.of("&#64;message \"[*] *\" as loggingType, loggingMessage", "&#64;message
+ * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
+ * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
+ * occurred!\""))
+ * .sort("&#64;timestamp desc")
+ * .limit(20)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueryDefinitionDsl(
   scope: Construct,

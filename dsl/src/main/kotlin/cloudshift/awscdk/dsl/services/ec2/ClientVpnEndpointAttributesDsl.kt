@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.ClientVpnEndpointAttributes
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 
+/**
+ * Attributes when importing an existing client VPN endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SecurityGroup securityGroup;
+ * ClientVpnEndpointAttributes clientVpnEndpointAttributes = ClientVpnEndpointAttributes.builder()
+ * .endpointId("endpointId")
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnEndpointAttributesDsl {
   private val cdkBuilder: ClientVpnEndpointAttributes.Builder =

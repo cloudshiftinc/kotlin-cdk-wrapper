@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnObjectType
 
+/**
+ * Represents a field in a ProfileObjectType.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * ObjectTypeFieldProperty objectTypeFieldProperty = ObjectTypeFieldProperty.builder()
+ * .contentType("contentType")
+ * .source("source")
+ * .target("target")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypefield.html)
+ */
 @CdkDslMarker
 public class CfnObjectTypeObjectTypeFieldPropertyDsl {
   private val cdkBuilder: CfnObjectType.ObjectTypeFieldProperty.Builder =

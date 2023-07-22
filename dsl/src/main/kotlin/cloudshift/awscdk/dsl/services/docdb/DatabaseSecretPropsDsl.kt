@@ -8,6 +8,24 @@ import software.amazon.awscdk.services.docdb.DatabaseSecretProps
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Construction properties for a DatabaseSecret.
+ *
+ * Example:
+ *
+ * ```
+ * DatabaseCluster cluster;
+ * DatabaseSecret myUserSecret = DatabaseSecret.Builder.create(this, "MyUserSecret")
+ * .username("myuser")
+ * .masterSecret(cluster.getSecret())
+ * .build();
+ * ISecret myUserSecretAttached = myUserSecret.attach(cluster); // Adds DB connections information
+ * in the secret
+ * cluster.addRotationMultiUser("MyUser", RotationMultiUserOptions.builder() // Add rotation using
+ * the multi user scheme
+ * .secret(myUserSecretAttached).build());
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseSecretPropsDsl {
   private val cdkBuilder: DatabaseSecretProps.Builder = DatabaseSecretProps.builder()

@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.assertions.MatchFailure
 import software.amazon.awscdk.assertions.Matcher
 
+/**
+ * Match failure details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.assertions.*;
+ * Matcher matcher;
+ * MatchFailure matchFailure = MatchFailure.builder()
+ * .matcher(matcher)
+ * .message("message")
+ * .path(List.of("path"))
+ * // the properties below are optional
+ * .cost(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MatchFailureDsl {
   private val cdkBuilder: MatchFailure.Builder = MatchFailure.builder()

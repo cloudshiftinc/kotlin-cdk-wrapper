@@ -10,6 +10,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a named entity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicNamedEntityProperty topicNamedEntityProperty = TopicNamedEntityProperty.builder()
+ * .entityName("entityName")
+ * // the properties below are optional
+ * .definition(List.of(NamedEntityDefinitionProperty.builder()
+ * .fieldName("fieldName")
+ * .metric(NamedEntityDefinitionMetricProperty.builder()
+ * .aggregation("aggregation")
+ * .aggregationFunctionParameters(Map.of(
+ * "aggregationFunctionParametersKey", "aggregationFunctionParameters"))
+ * .build())
+ * .propertyName("propertyName")
+ * .propertyRole("propertyRole")
+ * .propertyUsage("propertyUsage")
+ * .build()))
+ * .entityDescription("entityDescription")
+ * .entitySynonyms(List.of("entitySynonyms"))
+ * .semanticEntityType(SemanticEntityTypeProperty.builder()
+ * .subTypeName("subTypeName")
+ * .typeName("typeName")
+ * .typeParameters(Map.of(
+ * "typeParametersKey", "typeParameters"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicnamedentity.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicNamedEntityPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicNamedEntityProperty.Builder =

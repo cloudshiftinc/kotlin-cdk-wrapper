@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps
 
+/**
+ * Properties for defining a `CfnRobotApplicationVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnRobotApplicationVersionProps cfnRobotApplicationVersionProps =
+ * CfnRobotApplicationVersionProps.builder()
+ * .application("application")
+ * // the properties below are optional
+ * .currentRevisionId("currentRevisionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplicationversion.html)
+ */
 @CdkDslMarker
 public class CfnRobotApplicationVersionPropsDsl {
   private val cdkBuilder: CfnRobotApplicationVersionProps.Builder =

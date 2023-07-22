@@ -10,6 +10,24 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.Architecture
 import software.amazon.awscdk.services.lambda.FunctionAttributes
 
+/**
+ * Represents a Lambda function defined outside of this stack.
+ *
+ * Example:
+ *
+ * ```
+ * IFunction fn = Function.fromFunctionAttributes(this, "Function", FunctionAttributes.builder()
+ * .functionArn("arn:aws:lambda:us-east-1:123456789012:function:MyFn")
+ * // The following are optional properties for specific use cases and should be used with caution:
+ * // Use Case: imported function is in the same account as the stack. This tells the CDK that it
+ * // can modify the function's permissions.
+ * .sameEnvironment(true)
+ * // Use Case: imported function is in a different account and user commits to ensuring that the
+ * // imported function has the correct permissions outside the CDK.
+ * .skipPermissions(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FunctionAttributesDsl {
   private val cdkBuilder: FunctionAttributes.Builder = FunctionAttributes.builder()

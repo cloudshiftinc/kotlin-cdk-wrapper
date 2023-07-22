@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents the method and value to match with the header value sent in a request.
+ *
+ * Specify one match method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HeaderMatchMethodProperty headerMatchMethodProperty = HeaderMatchMethodProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(MatchRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-headermatchmethod.html)
+ */
 @CdkDslMarker
 public class CfnRouteHeaderMatchMethodPropertyDsl {
   private val cdkBuilder: CfnRoute.HeaderMatchMethodProperty.Builder =

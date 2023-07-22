@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codecommit.RepositoryEventTrigger
 import software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions
 
+/**
+ * Creates for a repository trigger to an SNS topic or Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * RepositoryTriggerOptions repositoryTriggerOptions = RepositoryTriggerOptions.builder()
+ * .branches(List.of("branches"))
+ * .customData("customData")
+ * .events(List.of(RepositoryEventTrigger.ALL))
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryTriggerOptionsDsl {
   private val cdkBuilder: RepositoryTriggerOptions.Builder = RepositoryTriggerOptions.builder()

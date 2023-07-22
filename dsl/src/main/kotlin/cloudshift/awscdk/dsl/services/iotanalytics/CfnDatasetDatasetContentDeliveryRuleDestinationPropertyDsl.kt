@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * The destination to which dataset contents are delivered.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DatasetContentDeliveryRuleDestinationProperty datasetContentDeliveryRuleDestinationProperty =
+ * DatasetContentDeliveryRuleDestinationProperty.builder()
+ * .iotEventsDestinationConfiguration(IotEventsDestinationConfigurationProperty.builder()
+ * .inputName("inputName")
+ * .roleArn("roleArn")
+ * .build())
+ * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .glueConfiguration(GlueConfigurationProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-datasetcontentdeliveryruledestination.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDatasetContentDeliveryRuleDestinationPropertyDsl {
   private val cdkBuilder: CfnDataset.DatasetContentDeliveryRuleDestinationProperty.Builder =

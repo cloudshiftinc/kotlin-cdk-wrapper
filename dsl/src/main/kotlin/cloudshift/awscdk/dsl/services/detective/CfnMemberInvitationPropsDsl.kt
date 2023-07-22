@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.detective.CfnMemberInvitationProps
 
+/**
+ * Properties for defining a `CfnMemberInvitation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.detective.*;
+ * CfnMemberInvitationProps cfnMemberInvitationProps = CfnMemberInvitationProps.builder()
+ * .graphArn("graphArn")
+ * .memberEmailAddress("memberEmailAddress")
+ * .memberId("memberId")
+ * // the properties below are optional
+ * .disableEmailNotification(false)
+ * .message("message")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
+ */
 @CdkDslMarker
 public class CfnMemberInvitationPropsDsl {
   private val cdkBuilder: CfnMemberInvitationProps.Builder = CfnMemberInvitationProps.builder()

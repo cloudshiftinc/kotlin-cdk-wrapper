@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * Use this structure to start and stop the launch.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * ExecutionStatusObjectProperty executionStatusObjectProperty =
+ * ExecutionStatusObjectProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .desiredState("desiredState")
+ * .reason("reason")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-executionstatusobject.html)
+ */
 @CdkDslMarker
 public class CfnLaunchExecutionStatusObjectPropertyDsl {
   private val cdkBuilder: CfnLaunch.ExecutionStatusObjectProperty.Builder =

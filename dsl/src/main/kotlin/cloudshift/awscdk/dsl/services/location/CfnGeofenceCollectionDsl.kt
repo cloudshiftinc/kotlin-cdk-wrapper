@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.services.location.CfnGeofenceCollection
 import software.constructs.Construct
 
+/**
+ * The `AWS::Location::GeofenceCollection` resource specifies the ability to detect and act when a
+ * tracked device enters or exits a defined geographical boundary known as a geofence.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnGeofenceCollection cfnGeofenceCollection = CfnGeofenceCollection.Builder.create(this,
+ * "MyCfnGeofenceCollection")
+ * .collectionName("collectionName")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .pricingPlan("pricingPlan")
+ * .pricingPlanDataSource("pricingPlanDataSource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)
+ */
 @CdkDslMarker
 public class CfnGeofenceCollectionDsl(
   scope: Construct,

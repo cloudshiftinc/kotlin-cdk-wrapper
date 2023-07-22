@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.ec2.NatInstanceProps
 import software.amazon.awscdk.services.ec2.NatTrafficDirection
 
+/**
+ * Properties for a NAT instance.
+ *
+ * Example:
+ *
+ * ```
+ * // Configure the `natGatewayProvider` when defining a Vpc
+ * NatInstanceProvider natGatewayProvider = NatProvider.instance(NatInstanceProps.builder()
+ * .instanceType(new InstanceType("t3.small"))
+ * .build());
+ * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
+ * .natGatewayProvider(natGatewayProvider)
+ * // The 'natGateways' parameter now controls the number of NAT instances
+ * .natGateways(2)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NatInstancePropsDsl {
   private val cdkBuilder: NatInstanceProps.Builder = NatInstanceProps.builder()

@@ -7,6 +7,20 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnSimpleTable
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * SSESpecificationProperty sSESpecificationProperty = SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-ssespecification.html)
+ */
 @CdkDslMarker
 public class CfnSimpleTableSSESpecificationPropertyDsl {
   private val cdkBuilder: CfnSimpleTable.SSESpecificationProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.CfnParameter
 import software.amazon.awscdk.services.lambda.CfnParametersCodeProps
 
+/**
+ * Construction properties for `CfnParametersCode`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnParameter cfnParameter;
+ * CfnParametersCodeProps cfnParametersCodeProps = CfnParametersCodeProps.builder()
+ * .bucketNameParam(cfnParameter)
+ * .objectKeyParam(cfnParameter)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnParametersCodePropsDsl {
   private val cdkBuilder: CfnParametersCodeProps.Builder = CfnParametersCodeProps.builder()

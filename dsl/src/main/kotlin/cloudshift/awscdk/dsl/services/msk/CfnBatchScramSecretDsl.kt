@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.msk.CfnBatchScramSecret
 import software.constructs.Construct
 
+/**
+ * Resource Type definition for AWS::MSK::BatchScramSecret.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnBatchScramSecret cfnBatchScramSecret = CfnBatchScramSecret.Builder.create(this,
+ * "MyCfnBatchScramSecret")
+ * .clusterArn("clusterArn")
+ * // the properties below are optional
+ * .secretArnList(List.of("secretArnList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html)
+ */
 @CdkDslMarker
 public class CfnBatchScramSecretDsl(
   scope: Construct,

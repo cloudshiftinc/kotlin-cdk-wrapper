@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.m2.CfnApplication
 
+/**
+ * The application definition for a particular application.
+ *
+ * You can specify either inline JSON or an Amazon S3 bucket location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * DefinitionProperty definitionProperty = DefinitionProperty.builder()
+ * .content("content")
+ * .s3Location("s3Location")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-application-definition.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDefinitionPropertyDsl {
   private val cdkBuilder: CfnApplication.DefinitionProperty.Builder =

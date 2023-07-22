@@ -15,6 +15,31 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBal
 import software.amazon.awscdk.services.elasticloadbalancingv2.DesyncMitigationMode
 import software.amazon.awscdk.services.elasticloadbalancingv2.IpAddressType
 
+/**
+ * Properties for defining an Application Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * FargateService service = FargateService.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
+ * "LB").vpc(vpc).internetFacing(true).build();
+ * ApplicationListener listener = lb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * service.registerLoadBalancerTargets(EcsTarget.builder()
+ * .containerName("web")
+ * .containerPort(80)
+ * .newTargetGroupId("ECS")
+ * .listener(ListenerConfig.applicationListener(listener, AddApplicationTargetsProps.builder()
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerPropsDsl {
   private val cdkBuilder: ApplicationLoadBalancerProps.Builder =

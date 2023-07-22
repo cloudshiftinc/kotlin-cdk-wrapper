@@ -11,6 +11,24 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.patterns.HttpsRedirect
 import software.constructs.Construct
 
+/**
+ * Allows creating a domainA -&gt; domainB redirect using CloudFront and S3.
+ *
+ * You can specify multiple domains to be redirected.
+ *
+ * Example:
+ *
+ * ```
+ * HttpsRedirect.Builder.create(this, "Redirect")
+ * .recordNames(List.of("foo.example.com"))
+ * .targetDomain("bar.example.com")
+ * .zone(HostedZone.fromHostedZoneAttributes(this, "HostedZone", HostedZoneAttributes.builder()
+ * .hostedZoneId("ID")
+ * .zoneName("example.com")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpsRedirectDsl(
   scope: Construct,

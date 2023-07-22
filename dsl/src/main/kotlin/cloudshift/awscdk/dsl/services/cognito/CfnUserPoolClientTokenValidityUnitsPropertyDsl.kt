@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolClient
 
+/**
+ * The time units you use when you set the duration of ID, access, and refresh tokens.
+ *
+ * The default unit for RefreshToken is days, and the default for ID and access tokens is hours.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * TokenValidityUnitsProperty tokenValidityUnitsProperty = TokenValidityUnitsProperty.builder()
+ * .accessToken("accessToken")
+ * .idToken("idToken")
+ * .refreshToken("refreshToken")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-tokenvalidityunits.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolClientTokenValidityUnitsPropertyDsl {
   private val cdkBuilder: CfnUserPoolClient.TokenValidityUnitsProperty.Builder =

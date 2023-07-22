@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.Host
 
+/**
+ * The details on a container instance bind mount host volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Host host = Host.builder()
+ * .sourcePath("sourcePath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HostDsl {
   private val cdkBuilder: Host.Builder = Host.builder()

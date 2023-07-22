@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnInternetGatewayProps
 
+/**
+ * Properties for defining a `CfnInternetGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnInternetGatewayProps cfnInternetGatewayProps = CfnInternetGatewayProps.builder()
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html)
+ */
 @CdkDslMarker
 public class CfnInternetGatewayPropsDsl {
   private val cdkBuilder: CfnInternetGatewayProps.Builder = CfnInternetGatewayProps.builder()

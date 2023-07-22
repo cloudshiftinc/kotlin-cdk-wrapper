@@ -6,6 +6,17 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.ServerApplicationProps
 
+/**
+ * Construction properties for `ServerApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * ServerApplication application = ServerApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerApplicationPropsDsl {
   private val cdkBuilder: ServerApplicationProps.Builder = ServerApplicationProps.builder()

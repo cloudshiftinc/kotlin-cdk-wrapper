@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscriptionProps
 
+/**
+ * Properties for defining a `CfnNetworkPerformanceMetricSubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkPerformanceMetricSubscriptionProps cfnNetworkPerformanceMetricSubscriptionProps =
+ * CfnNetworkPerformanceMetricSubscriptionProps.builder()
+ * .destination("destination")
+ * .metric("metric")
+ * .source("source")
+ * .statistic("statistic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkperformancemetricsubscription.html)
+ */
 @CdkDslMarker
 public class CfnNetworkPerformanceMetricSubscriptionPropsDsl {
   private val cdkBuilder: CfnNetworkPerformanceMetricSubscriptionProps.Builder =

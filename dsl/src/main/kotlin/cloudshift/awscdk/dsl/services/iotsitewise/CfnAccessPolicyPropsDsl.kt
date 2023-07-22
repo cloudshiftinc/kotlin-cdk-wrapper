@@ -8,6 +8,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
 import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicyProps
 
+/**
+ * Properties for defining a `CfnAccessPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnAccessPolicyProps cfnAccessPolicyProps = CfnAccessPolicyProps.builder()
+ * .accessPolicyIdentity(AccessPolicyIdentityProperty.builder()
+ * .iamRole(IamRoleProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .iamUser(IamUserProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .user(UserProperty.builder()
+ * .id("id")
+ * .build())
+ * .build())
+ * .accessPolicyPermission("accessPolicyPermission")
+ * .accessPolicyResource(AccessPolicyResourceProperty.builder()
+ * .portal(PortalProperty.builder()
+ * .id("id")
+ * .build())
+ * .project(ProjectProperty.builder()
+ * .id("id")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-accesspolicy.html)
+ */
 @CdkDslMarker
 public class CfnAccessPolicyPropsDsl {
   private val cdkBuilder: CfnAccessPolicyProps.Builder = CfnAccessPolicyProps.builder()

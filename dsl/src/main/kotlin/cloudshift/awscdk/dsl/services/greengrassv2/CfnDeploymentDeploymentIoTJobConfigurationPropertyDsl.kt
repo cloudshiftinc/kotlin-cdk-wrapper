@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about an AWS IoT job configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * Object rateIncreaseCriteria;
+ * DeploymentIoTJobConfigurationProperty deploymentIoTJobConfigurationProperty =
+ * DeploymentIoTJobConfigurationProperty.builder()
+ * .abortConfig(IoTJobAbortConfigProperty.builder()
+ * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build()))
+ * .build())
+ * .jobExecutionsRolloutConfig(IoTJobExecutionsRolloutConfigProperty.builder()
+ * .exponentialRate(IoTJobExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(rateIncreaseCriteria)
+ * .build())
+ * .maximumPerMinute(123)
+ * .build())
+ * .timeoutConfig(IoTJobTimeoutConfigProperty.builder()
+ * .inProgressTimeoutInMinutes(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentiotjobconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDeploymentIoTJobConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeployment.DeploymentIoTJobConfigurationProperty.Builder =

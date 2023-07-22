@@ -10,6 +10,25 @@ import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.ecs.LinuxParameters
 import software.constructs.Construct
 
+/**
+ * Linux-specific options that are applied to the container.
+ *
+ * Example:
+ *
+ * ```
+ * TaskDefinition taskDefinition;
+ * taskDefinition.addContainer("container", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(1024)
+ * .linuxParameters(LinuxParameters.Builder.create(this, "LinuxParameters")
+ * .initProcessEnabled(true)
+ * .sharedMemorySize(1024)
+ * .maxSwap(Size.mebibytes(5000))
+ * .swappiness(90)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LinuxParametersDsl(
   scope: Construct,

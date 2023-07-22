@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 
+/**
+ * Optional. The metadata of the LDAP server used to authenticate and authorize connections to the
+ * broker.
+ *
+ *
+ * Does not apply to RabbitMQ brokers.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * LdapServerMetadataProperty ldapServerMetadataProperty = LdapServerMetadataProperty.builder()
+ * .hosts(List.of("hosts"))
+ * .roleBase("roleBase")
+ * .roleSearchMatching("roleSearchMatching")
+ * .serviceAccountPassword("serviceAccountPassword")
+ * .serviceAccountUsername("serviceAccountUsername")
+ * .userBase("userBase")
+ * .userSearchMatching("userSearchMatching")
+ * // the properties below are optional
+ * .roleName("roleName")
+ * .roleSearchSubtree(false)
+ * .userRoleName("userRoleName")
+ * .userSearchSubtree(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-ldapservermetadata.html)
+ */
 @CdkDslMarker
 public class CfnBrokerLdapServerMetadataPropertyDsl {
   private val cdkBuilder: CfnBroker.LdapServerMetadataProperty.Builder =

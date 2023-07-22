@@ -16,6 +16,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnStage
 import software.amazon.awscdk.services.apigateway.CfnStageProps
 
+/**
+ * Properties for defining a `CfnStage`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnStageProps cfnStageProps = CfnStageProps.builder()
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .accessLogSetting(AccessLogSettingProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .cacheClusterEnabled(false)
+ * .cacheClusterSize("cacheClusterSize")
+ * .canarySetting(CanarySettingProperty.builder()
+ * .deploymentId("deploymentId")
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build())
+ * .clientCertificateId("clientCertificateId")
+ * .deploymentId("deploymentId")
+ * .description("description")
+ * .documentationVersion("documentationVersion")
+ * .methodSettings(List.of(MethodSettingProperty.builder()
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .dataTraceEnabled(false)
+ * .httpMethod("httpMethod")
+ * .loggingLevel("loggingLevel")
+ * .metricsEnabled(false)
+ * .resourcePath("resourcePath")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build()))
+ * .stageName("stageName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tracingEnabled(false)
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-stage.html)
+ */
 @CdkDslMarker
 public class CfnStagePropsDsl {
   private val cdkBuilder: CfnStageProps.Builder = CfnStageProps.builder()

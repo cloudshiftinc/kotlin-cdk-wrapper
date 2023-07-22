@@ -12,6 +12,59 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfigurationProps
 
+/**
+ * Properties for defining a `CfnLaunchConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnLaunchConfigurationProps cfnLaunchConfigurationProps = CfnLaunchConfigurationProps.builder()
+ * .imageId("imageId")
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .associatePublicIpAddress(false)
+ * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .ebs(BlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice(false)
+ * .virtualName("virtualName")
+ * .build()))
+ * .classicLinkVpcId("classicLinkVpcId")
+ * .classicLinkVpcSecurityGroups(List.of("classicLinkVpcSecurityGroups"))
+ * .ebsOptimized(false)
+ * .iamInstanceProfile("iamInstanceProfile")
+ * .instanceId("instanceId")
+ * .instanceMonitoring(false)
+ * .kernelId("kernelId")
+ * .keyName("keyName")
+ * .launchConfigurationName("launchConfigurationName")
+ * .metadataOptions(MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build())
+ * .placementTenancy("placementTenancy")
+ * .ramDiskId("ramDiskId")
+ * .securityGroups(List.of("securityGroups"))
+ * .spotPrice("spotPrice")
+ * .userData("userData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLaunchConfigurationPropsDsl {
   private val cdkBuilder: CfnLaunchConfigurationProps.Builder =

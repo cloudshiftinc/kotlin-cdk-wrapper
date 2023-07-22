@@ -8,6 +8,29 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The configuration for `AdminCreateUser` requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * AdminCreateUserConfigProperty adminCreateUserConfigProperty =
+ * AdminCreateUserConfigProperty.builder()
+ * .allowAdminCreateUserOnly(false)
+ * .inviteMessageTemplate(InviteMessageTemplateProperty.builder()
+ * .emailMessage("emailMessage")
+ * .emailSubject("emailSubject")
+ * .smsMessage("smsMessage")
+ * .build())
+ * .unusedAccountValidityDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolAdminCreateUserConfigPropertyDsl {
   private val cdkBuilder: CfnUserPool.AdminCreateUserConfigProperty.Builder =

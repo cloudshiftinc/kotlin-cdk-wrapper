@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents the health check policy for a virtual gateway's listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayHealthCheckPolicyProperty virtualGatewayHealthCheckPolicyProperty =
+ * VirtualGatewayHealthCheckPolicyProperty.builder()
+ * .healthyThreshold(123)
+ * .intervalMillis(123)
+ * .protocol("protocol")
+ * .timeoutMillis(123)
+ * .unhealthyThreshold(123)
+ * // the properties below are optional
+ * .path("path")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayhealthcheckpolicy.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayHealthCheckPolicyPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty.Builder =

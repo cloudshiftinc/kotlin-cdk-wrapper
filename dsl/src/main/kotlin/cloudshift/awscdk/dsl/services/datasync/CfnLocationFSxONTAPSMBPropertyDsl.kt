@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 
+/**
+ * Specifies the Server Message Block (SMB) protocol configuration that AWS DataSync uses to access
+ * a storage virtual machine (SVM) on your Amazon FSx for NetApp ONTAP file system.
+ *
+ * For more information, see [Accessing FSx for ONTAP file
+ * systems](https://docs.aws.amazon.com/datasync/latest/userguide/create-ontap-location.html#create-ontap-location-access)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * SMBProperty sMBProperty = SMBProperty.builder()
+ * .mountOptions(SmbMountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .password("password")
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-smb.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxONTAPSMBPropertyDsl {
   private val cdkBuilder: CfnLocationFSxONTAP.SMBProperty.Builder =

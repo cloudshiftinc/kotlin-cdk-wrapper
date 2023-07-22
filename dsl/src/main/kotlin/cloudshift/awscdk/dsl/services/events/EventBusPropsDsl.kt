@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.EventBusProps
 
+/**
+ * Properties to define an event bus.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.events.*;
+ * EventBus myEventBus = EventBus.Builder.create(this, "EventBus")
+ * .eventBusName("MyEventBus1")
+ * .build();
+ * EventBridgePutEvents.Builder.create(this, "Send an event to EventBridge")
+ * .entries(List.of(EventBridgePutEventsEntry.builder()
+ * .detail(TaskInput.fromObject(Map.of(
+ * "Message", "Hello from Step Functions!")))
+ * .eventBus(myEventBus)
+ * .detailType("MessageFromStepFunctions")
+ * .source("step.functions")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBusPropsDsl {
   private val cdkBuilder: EventBusProps.Builder = EventBusProps.builder()

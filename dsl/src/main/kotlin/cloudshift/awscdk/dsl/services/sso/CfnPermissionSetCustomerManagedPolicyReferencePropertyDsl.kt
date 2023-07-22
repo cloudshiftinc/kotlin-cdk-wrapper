@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sso.CfnPermissionSet
 
+/**
+ * Specifies the name and path of a customer managed policy.
+ *
+ * You must have an IAM policy that matches the name and path in each AWS account where you want to
+ * deploy your permission set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * CustomerManagedPolicyReferenceProperty customerManagedPolicyReferenceProperty =
+ * CustomerManagedPolicyReferenceProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .path("path")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-permissionset-customermanagedpolicyreference.html)
+ */
 @CdkDslMarker
 public class CfnPermissionSetCustomerManagedPolicyReferencePropertyDsl {
   private val cdkBuilder: CfnPermissionSet.CustomerManagedPolicyReferenceProperty.Builder =

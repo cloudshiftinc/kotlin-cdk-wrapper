@@ -28,6 +28,32 @@ import software.amazon.awscdk.services.ecs.AddCapacityOptions
 import software.amazon.awscdk.services.ecs.MachineImageType
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * The properties for adding instance capacity to an AutoScalingGroup.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * // Create an ECS cluster
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
+ * // Add capacity to it
+ * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .desiredCapacity(3)
+ * .build());
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("DefaultContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(512)
+ * .build());
+ * // Instantiate an Amazon ECS Service
+ * Ec2Service ecsService = Ec2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddCapacityOptionsDsl {
   private val cdkBuilder: AddCapacityOptions.Builder = AddCapacityOptions.builder()

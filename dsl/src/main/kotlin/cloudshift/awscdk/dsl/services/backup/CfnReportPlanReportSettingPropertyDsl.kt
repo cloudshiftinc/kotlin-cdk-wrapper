@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.backup.CfnReportPlan
 
+/**
+ * Contains detailed information about a report setting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * ReportSettingProperty reportSettingProperty = ReportSettingProperty.builder()
+ * .reportTemplate("reportTemplate")
+ * // the properties below are optional
+ * .accounts(List.of("accounts"))
+ * .frameworkArns(List.of("frameworkArns"))
+ * .organizationUnits(List.of("organizationUnits"))
+ * .regions(List.of("regions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html)
+ */
 @CdkDslMarker
 public class CfnReportPlanReportSettingPropertyDsl {
   private val cdkBuilder: CfnReportPlan.ReportSettingProperty.Builder =

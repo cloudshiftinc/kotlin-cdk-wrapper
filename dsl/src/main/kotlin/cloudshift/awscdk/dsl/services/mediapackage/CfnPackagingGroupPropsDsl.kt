@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroupProps
 
+/**
+ * Properties for defining a `CfnPackagingGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnPackagingGroupProps cfnPackagingGroupProps = CfnPackagingGroupProps.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .authorization(AuthorizationProperty.builder()
+ * .cdnIdentifierSecret("cdnIdentifierSecret")
+ * .secretsRoleArn("secretsRoleArn")
+ * .build())
+ * .egressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html)
+ */
 @CdkDslMarker
 public class CfnPackagingGroupPropsDsl {
   private val cdkBuilder: CfnPackagingGroupProps.Builder = CfnPackagingGroupProps.builder()

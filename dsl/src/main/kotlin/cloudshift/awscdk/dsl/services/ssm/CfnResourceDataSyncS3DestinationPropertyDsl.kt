@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 
+/**
+ * Information about the target S3 bucket for the resource data sync.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * S3DestinationProperty s3DestinationProperty = S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketRegion("bucketRegion")
+ * .syncFormat("syncFormat")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-resourcedatasync-s3destination.html)
+ */
 @CdkDslMarker
 public class CfnResourceDataSyncS3DestinationPropertyDsl {
   private val cdkBuilder: CfnResourceDataSync.S3DestinationProperty.Builder =

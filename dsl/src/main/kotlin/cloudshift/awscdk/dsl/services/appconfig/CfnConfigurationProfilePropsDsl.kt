@@ -12,6 +12,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
 import software.amazon.awscdk.services.appconfig.CfnConfigurationProfileProps
 
+/**
+ * Properties for defining a `CfnConfigurationProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnConfigurationProfileProps cfnConfigurationProfileProps =
+ * CfnConfigurationProfileProps.builder()
+ * .applicationId("applicationId")
+ * .locationUri("locationUri")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .retrievalRoleArn("retrievalRoleArn")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .validators(List.of(ValidatorsProperty.builder()
+ * .content("content")
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationProfilePropsDsl {
   private val cdkBuilder: CfnConfigurationProfileProps.Builder =

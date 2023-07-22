@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes how to interpret an application-defined timestamp value from an MQTT message payload
+ * and the precision of that value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * TimestampProperty timestampProperty = TimestampProperty.builder()
+ * .value("value")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestamp.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleTimestampPropertyDsl {
   private val cdkBuilder: CfnTopicRule.TimestampProperty.Builder =

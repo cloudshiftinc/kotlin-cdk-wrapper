@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
 
+/**
+ * Container image configuration object for the monitoring job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelQualityAppSpecificationProperty modelQualityAppSpecificationProperty =
+ * ModelQualityAppSpecificationProperty.builder()
+ * .imageUri("imageUri")
+ * .problemType("problemType")
+ * // the properties below are optional
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .postAnalyticsProcessorSourceUri("postAnalyticsProcessorSourceUri")
+ * .recordPreprocessorSourceUri("recordPreprocessorSourceUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-modelqualityappspecification.html)
+ */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionModelQualityAppSpecificationPropertyDsl {
   private val cdkBuilder: CfnModelQualityJobDefinition.ModelQualityAppSpecificationProperty.Builder

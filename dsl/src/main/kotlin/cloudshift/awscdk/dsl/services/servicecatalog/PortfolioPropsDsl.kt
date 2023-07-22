@@ -8,6 +8,18 @@ import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.PortfolioProps
 import software.amazon.awscdk.services.servicecatalog.TagOptions
 
+/**
+ * Properties for a Portfolio.
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio.Builder.create(this, "Portfolio")
+ * .displayName("MyPortfolio")
+ * .providerName("MyTeam")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PortfolioPropsDsl {
   private val cdkBuilder: PortfolioProps.Builder = PortfolioProps.builder()

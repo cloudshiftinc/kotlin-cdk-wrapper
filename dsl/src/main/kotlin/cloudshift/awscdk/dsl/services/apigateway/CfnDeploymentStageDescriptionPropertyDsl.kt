@@ -16,6 +16,65 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDeployment
 
+/**
+ * `StageDescription` is a property of the
+ * [AWS::ApiGateway::Deployment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html)
+ * resource that configures a deployment stage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * StageDescriptionProperty stageDescriptionProperty = StageDescriptionProperty.builder()
+ * .accessLogSetting(AccessLogSettingProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .cacheClusterEnabled(false)
+ * .cacheClusterSize("cacheClusterSize")
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .canarySetting(CanarySettingProperty.builder()
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build())
+ * .clientCertificateId("clientCertificateId")
+ * .dataTraceEnabled(false)
+ * .description("description")
+ * .documentationVersion("documentationVersion")
+ * .loggingLevel("loggingLevel")
+ * .methodSettings(List.of(MethodSettingProperty.builder()
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .dataTraceEnabled(false)
+ * .httpMethod("httpMethod")
+ * .loggingLevel("loggingLevel")
+ * .metricsEnabled(false)
+ * .resourcePath("resourcePath")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build()))
+ * .metricsEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .tracingEnabled(false)
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentStageDescriptionPropertyDsl {
   private val cdkBuilder: CfnDeployment.StageDescriptionProperty.Builder =

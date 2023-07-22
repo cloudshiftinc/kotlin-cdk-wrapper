@@ -11,6 +11,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents the requirements for a route to match HTTP requests for a virtual
+ * router.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpRouteMatchProperty httpRouteMatchProperty = HttpRouteMatchProperty.builder()
+ * .headers(List.of(HttpRouteHeaderProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .invert(false)
+ * .match(HeaderMatchMethodProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(MatchRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build())
+ * .build()))
+ * .method("method")
+ * .path(HttpPathMatchProperty.builder()
+ * .exact("exact")
+ * .regex("regex")
+ * .build())
+ * .port(123)
+ * .prefix("prefix")
+ * .queryParameters(List.of(QueryParameterProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .match(HttpQueryParameterMatchProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build()))
+ * .scheme("scheme")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httproutematch.html)
+ */
 @CdkDslMarker
 public class CfnRouteHttpRouteMatchPropertyDsl {
   private val cdkBuilder: CfnRoute.HttpRouteMatchProperty.Builder =

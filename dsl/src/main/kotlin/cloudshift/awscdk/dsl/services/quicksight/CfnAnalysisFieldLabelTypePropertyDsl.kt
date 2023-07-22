@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The field label type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FieldLabelTypeProperty fieldLabelTypeProperty = FieldLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-fieldlabeltype.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFieldLabelTypePropertyDsl {
   private val cdkBuilder: CfnAnalysis.FieldLabelTypeProperty.Builder =

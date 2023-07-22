@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sam.CfnApplication
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * ApplicationLocationProperty applicationLocationProperty = ApplicationLocationProperty.builder()
+ * .applicationId("applicationId")
+ * .semanticVersion("semanticVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-application-applicationlocation.html)
+ */
 @CdkDslMarker
 public class CfnApplicationApplicationLocationPropertyDsl {
   private val cdkBuilder: CfnApplication.ApplicationLocationProperty.Builder =

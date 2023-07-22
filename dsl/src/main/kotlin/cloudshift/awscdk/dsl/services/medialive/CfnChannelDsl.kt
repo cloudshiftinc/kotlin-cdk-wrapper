@@ -13,6 +13,19 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaLive::Channel resource is a MediaLive resource type that creates a channel.
+ *
+ * A MediaLive channel ingests and transcodes (decodes and encodes) source content from the inputs
+ * that are attached to that channel, and packages the new content into outputs.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelDsl(
   scope: Construct,

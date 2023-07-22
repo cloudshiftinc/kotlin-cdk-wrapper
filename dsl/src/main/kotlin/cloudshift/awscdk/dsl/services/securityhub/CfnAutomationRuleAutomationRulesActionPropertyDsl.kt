@@ -7,6 +7,50 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * One or more actions to update finding fields if a finding matches the defined criteria of the
+ * rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * Object id;
+ * Object updatedBy;
+ * AutomationRulesActionProperty automationRulesActionProperty =
+ * AutomationRulesActionProperty.builder()
+ * .findingFieldsUpdate(AutomationRulesFindingFieldsUpdateProperty.builder()
+ * .confidence(123)
+ * .criticality(123)
+ * .note(NoteUpdateProperty.builder()
+ * .text("text")
+ * .updatedBy(updatedBy)
+ * .build())
+ * .relatedFindings(List.of(RelatedFindingProperty.builder()
+ * .id(id)
+ * .productArn("productArn")
+ * .build()))
+ * .severity(SeverityUpdateProperty.builder()
+ * .label("label")
+ * .normalized(123)
+ * .product(123)
+ * .build())
+ * .types(List.of("types"))
+ * .userDefinedFields(Map.of(
+ * "userDefinedFieldsKey", "userDefinedFields"))
+ * .verificationState("verificationState")
+ * .workflow(WorkflowUpdateProperty.builder()
+ * .status("status")
+ * .build())
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-automationrulesaction.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleAutomationRulesActionPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.AutomationRulesActionProperty.Builder =

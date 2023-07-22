@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.stepfunctions.RetryProps
 
+/**
+ * Retry details.
+ *
+ * Example:
+ *
+ * ```
+ * Parallel parallel = new Parallel(this, "Do the work in parallel");
+ * // Add branches to be executed in parallel
+ * Pass shipItem = new Pass(this, "ShipItem");
+ * Pass sendInvoice = new Pass(this, "SendInvoice");
+ * Pass restock = new Pass(this, "Restock");
+ * parallel.branch(shipItem);
+ * parallel.branch(sendInvoice);
+ * parallel.branch(restock);
+ * // Retry the whole workflow if something goes wrong
+ * parallel.addRetry(RetryProps.builder().maxAttempts(1).build());
+ * // How to recover from errors
+ * Pass sendFailureNotification = new Pass(this, "SendFailureNotification");
+ * parallel.addCatch(sendFailureNotification);
+ * // What to do in case everything succeeded
+ * Pass closeOrder = new Pass(this, "CloseOrder");
+ * parallel.next(closeOrder);
+ * ```
+ */
 @CdkDslMarker
 public class RetryPropsDsl {
   private val cdkBuilder: RetryProps.Builder = RetryProps.builder()

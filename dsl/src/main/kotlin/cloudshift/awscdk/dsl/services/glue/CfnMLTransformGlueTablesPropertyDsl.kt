@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnMLTransform
 
+/**
+ * The database and table in the AWS Glue Data Catalog that is used for input or output data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * GlueTablesProperty glueTablesProperty = GlueTablesProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .catalogId("catalogId")
+ * .connectionName("connectionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-gluetables.html)
+ */
 @CdkDslMarker
 public class CfnMLTransformGlueTablesPropertyDsl {
   private val cdkBuilder: CfnMLTransform.GlueTablesProperty.Builder =

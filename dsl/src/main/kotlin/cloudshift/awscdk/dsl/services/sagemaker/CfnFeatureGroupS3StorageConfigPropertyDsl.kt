@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * The Amazon Simple Storage (Amazon S3) location and and security configuration for `OfflineStore`
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * S3StorageConfigProperty s3StorageConfigProperty = S3StorageConfigProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-s3storageconfig.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupS3StorageConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.S3StorageConfigProperty.Builder =

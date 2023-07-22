@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 
+/**
+ * Specifies options when sharing an Amazon SageMaker Studio notebook.
+ *
+ * These settings are specified as part of `DefaultUserSettings` when the
+ * [CreateDomain](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html) API
+ * is called, and as part of `UserSettings` when the
+ * [CreateUserProfile](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html)
+ * API is called.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * SharingSettingsProperty sharingSettingsProperty = SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-sharingsettings.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileSharingSettingsPropertyDsl {
   private val cdkBuilder: CfnUserProfile.SharingSettingsProperty.Builder =

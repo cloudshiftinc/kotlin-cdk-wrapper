@@ -14,6 +14,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
 import software.constructs.Construct
 
+/**
+ * Provisions the specified product.
+ *
+ * A provisioned product is a resourced instance of a product. For example, provisioning a product
+ * based on a AWS CloudFormation template launches a AWS CloudFormation stack and its underlying
+ * resources. You can check the status of this request using
+ * [DescribeRecord](https://docs.aws.amazon.com/servicecatalog/latest/dg/API_DescribeRecord.html) .
+ *
+ * If the request contains a tag key with an empty list of values, there is a tag conflict for that
+ * key. Do not include conflicted keys as tags, or this causes the error "Parameter validation failed:
+ * Missing required parameter in Tags[ *N* ]: *Value* ".
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnCloudFormationProvisionedProduct cfnCloudFormationProvisionedProduct =
+ * CfnCloudFormationProvisionedProduct.Builder.create(this, "MyCfnCloudFormationProvisionedProduct")
+ * .acceptLanguage("acceptLanguage")
+ * .notificationArns(List.of("notificationArns"))
+ * .pathId("pathId")
+ * .pathName("pathName")
+ * .productId("productId")
+ * .productName("productName")
+ * .provisionedProductName("provisionedProductName")
+ * .provisioningArtifactId("provisioningArtifactId")
+ * .provisioningArtifactName("provisioningArtifactName")
+ * .provisioningParameters(List.of(ProvisioningParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .provisioningPreferences(ProvisioningPreferencesProperty.builder()
+ * .stackSetAccounts(List.of("stackSetAccounts"))
+ * .stackSetFailureToleranceCount(123)
+ * .stackSetFailureTolerancePercentage(123)
+ * .stackSetMaxConcurrencyCount(123)
+ * .stackSetMaxConcurrencyPercentage(123)
+ * .stackSetOperationType("stackSetOperationType")
+ * .stackSetRegions(List.of("stackSetRegions"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProvisionedProductDsl(
   scope: Construct,

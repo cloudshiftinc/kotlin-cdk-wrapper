@@ -15,6 +15,34 @@ import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.KafkaEventSourceProps
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Properties for a Kafka event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Object filters;
+ * Secret secret;
+ * KafkaEventSourceProps kafkaEventSourceProps = KafkaEventSourceProps.builder()
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .topic("topic")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .consumerGroupId("consumerGroupId")
+ * .enabled(false)
+ * .filters(List.of(Map.of(
+ * "filtersKey", filters)))
+ * .maxBatchingWindow(Duration.minutes(30))
+ * .secret(secret)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KafkaEventSourcePropsDsl {
   private val cdkBuilder: KafkaEventSourceProps.Builder = KafkaEventSourceProps.builder()

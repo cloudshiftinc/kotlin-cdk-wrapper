@@ -12,6 +12,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 import software.constructs.Construct
 
+/**
+ * Creates an instance in a specified stack. For more information, see [Adding an Instance to a
+ * Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinginstances-add.html) .
+ *
+ * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
+ * the stack, or an attached policy that explicitly grants permissions. For more information on user
+ * permissions, see [Managing User
+ * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnInstance cfnInstance = CfnInstance.Builder.create(this, "MyCfnInstance")
+ * .instanceType("instanceType")
+ * .layerIds(List.of("layerIds"))
+ * .stackId("stackId")
+ * // the properties below are optional
+ * .agentVersion("agentVersion")
+ * .amiId("amiId")
+ * .architecture("architecture")
+ * .autoScalingType("autoScalingType")
+ * .availabilityZone("availabilityZone")
+ * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build()))
+ * .ebsOptimized(false)
+ * .elasticIps(List.of("elasticIps"))
+ * .hostname("hostname")
+ * .installUpdatesOnBoot(false)
+ * .os("os")
+ * .rootDeviceType("rootDeviceType")
+ * .sshKeyName("sshKeyName")
+ * .subnetId("subnetId")
+ * .tenancy("tenancy")
+ * .timeBasedAutoScaling(TimeBasedAutoScalingProperty.builder()
+ * .friday(Map.of(
+ * "fridayKey", "friday"))
+ * .monday(Map.of(
+ * "mondayKey", "monday"))
+ * .saturday(Map.of(
+ * "saturdayKey", "saturday"))
+ * .sunday(Map.of(
+ * "sundayKey", "sunday"))
+ * .thursday(Map.of(
+ * "thursdayKey", "thursday"))
+ * .tuesday(Map.of(
+ * "tuesdayKey", "tuesday"))
+ * .wednesday(Map.of(
+ * "wednesdayKey", "wednesday"))
+ * .build())
+ * .virtualizationType("virtualizationType")
+ * .volumes(List.of("volumes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstanceDsl(
   scope: Construct,

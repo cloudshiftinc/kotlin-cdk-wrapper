@@ -10,6 +10,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 
+/**
+ * Parameters for a packaging configuration that uses Microsoft Smooth Streaming (MSS) packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * MssPackageProperty mssPackageProperty = MssPackageProperty.builder()
+ * .mssManifests(List.of(MssManifestProperty.builder()
+ * .manifestName("manifestName")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(MssEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .segmentDurationSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-msspackage.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationMssPackagePropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.MssPackageProperty.Builder =

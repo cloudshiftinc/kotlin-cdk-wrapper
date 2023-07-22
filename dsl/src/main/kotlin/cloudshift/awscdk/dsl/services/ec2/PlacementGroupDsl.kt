@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.ec2.PlacementGroupSpreadLevel
 import software.amazon.awscdk.services.ec2.PlacementGroupStrategy
 import software.constructs.Construct
 
+/**
+ * Defines a placement group.
+ *
+ * Placement groups give you fine-grained control over
+ * where your instances are provisioned.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PlacementGroup placementGroup = PlacementGroup.Builder.create(this, "MyPlacementGroup")
+ * .partitions(123)
+ * .placementGroupName("placementGroupName")
+ * .spreadLevel(PlacementGroupSpreadLevel.HOST)
+ * .strategy(PlacementGroupStrategy.CLUSTER)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PlacementGroupDsl(
   scope: Construct,

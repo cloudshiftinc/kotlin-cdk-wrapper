@@ -8,6 +8,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.s3.StorageClass
 import software.amazon.awscdk.services.s3.Transition
 
+/**
+ * Describes when an object transitions to a specified storage class.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * StorageClass storageClass;
+ * Transition transition = Transition.builder()
+ * .storageClass(storageClass)
+ * // the properties below are optional
+ * .transitionAfter(Duration.minutes(30))
+ * .transitionDate(new Date())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TransitionDsl {
   private val cdkBuilder: Transition.Builder = Transition.builder()

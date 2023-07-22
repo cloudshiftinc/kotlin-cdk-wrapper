@@ -7,6 +7,87 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Describes the configuration of the HTTP endpoint destination.
+ *
+ * Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported
+ * third-party service providers, including Datadog, MongoDB, and New Relic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * HttpEndpointDestinationConfigurationProperty httpEndpointDestinationConfigurationProperty =
+ * HttpEndpointDestinationConfigurationProperty.builder()
+ * .endpointConfiguration(HttpEndpointConfigurationProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .accessKey("accessKey")
+ * .name("name")
+ * .build())
+ * .s3Configuration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .processingConfiguration(ProcessingConfigurationProperty.builder()
+ * .enabled(false)
+ * .processors(List.of(ProcessorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .parameters(List.of(ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .build())
+ * .requestConfiguration(HttpEndpointRequestConfigurationProperty.builder()
+ * .commonAttributes(List.of(HttpEndpointCommonAttributeProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeValue("attributeValue")
+ * .build()))
+ * .contentEncoding("contentEncoding")
+ * .build())
+ * .retryOptions(RetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build())
+ * .roleArn("roleArn")
+ * .s3BackupMode("s3BackupMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointdestinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamHttpEndpointDestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty.Builder =

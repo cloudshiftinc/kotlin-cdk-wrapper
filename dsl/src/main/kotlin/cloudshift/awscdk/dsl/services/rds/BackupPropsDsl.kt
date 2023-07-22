@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.rds.BackupProps
 
+/**
+ * Backup configuration for RDS databases.
+ *
+ * Default: - The retention period for automated backups is 1 day.
+ * The preferred backup window will be a 30-minute window selected at random
+ * from an 8-hour block of time for each AWS Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * BackupProps backupProps = BackupProps.builder()
+ * .retention(Duration.minutes(30))
+ * // the properties below are optional
+ * .preferredWindow("preferredWindow")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html#USER_WorkingWithAutomatedBackups.BackupWindow)
+ */
 @CdkDslMarker
 public class BackupPropsDsl {
   private val cdkBuilder: BackupProps.Builder = BackupProps.builder()

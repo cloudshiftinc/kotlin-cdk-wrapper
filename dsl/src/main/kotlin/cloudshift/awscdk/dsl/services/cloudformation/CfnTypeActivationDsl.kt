@@ -9,6 +9,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivation
 import software.constructs.Construct
 
+/**
+ * Activates a public third-party extension, making it available for use in stack templates.
+ *
+ * For more information, see [Using public
+ * extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html) in
+ * the *AWS CloudFormation User Guide* .
+ *
+ * Once you have activated a public third-party extension in your account and Region, use
+ * [SetTypeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html)
+ * to specify configuration properties for the extension. For more information, see [Configuring
+ * extensions at the account
+ * level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration)
+ * in the *CloudFormation User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnTypeActivation cfnTypeActivation = CfnTypeActivation.Builder.create(this,
+ * "MyCfnTypeActivation")
+ * .autoUpdate(false)
+ * .executionRoleArn("executionRoleArn")
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build())
+ * .majorVersion("majorVersion")
+ * .publicTypeArn("publicTypeArn")
+ * .publisherId("publisherId")
+ * .type("type")
+ * .typeName("typeName")
+ * .typeNameAlias("typeNameAlias")
+ * .versionBump("versionBump")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-typeactivation.html)
+ */
 @CdkDslMarker
 public class CfnTypeActivationDsl(
   scope: Construct,

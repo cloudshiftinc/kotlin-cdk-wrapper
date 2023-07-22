@@ -39,6 +39,109 @@ import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Non runtime options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codeguruprofiler.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * AdotLayerVersion adotLayerVersion;
+ * Architecture architecture;
+ * CodeSigningConfig codeSigningConfig;
+ * IDestination destination;
+ * IEventSource eventSource;
+ * FileSystem fileSystem;
+ * Key key;
+ * LambdaInsightsVersion lambdaInsightsVersion;
+ * LayerVersion layerVersion;
+ * ParamsAndSecretsLayerVersion paramsAndSecretsLayerVersion;
+ * PolicyStatement policyStatement;
+ * ProfilingGroup profilingGroup;
+ * Queue queue;
+ * Role role;
+ * RuntimeManagementMode runtimeManagementMode;
+ * SecurityGroup securityGroup;
+ * Size size;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Topic topic;
+ * Vpc vpc;
+ * FunctionOptions functionOptions = FunctionOptions.builder()
+ * .adotInstrumentation(AdotInstrumentationConfig.builder()
+ * .execWrapper(AdotLambdaExecWrapper.REGULAR_HANDLER)
+ * .layerVersion(adotLayerVersion)
+ * .build())
+ * .allowAllOutbound(false)
+ * .allowPublicSubnet(false)
+ * .architecture(architecture)
+ * .codeSigningConfig(codeSigningConfig)
+ * .currentVersionOptions(VersionOptions.builder()
+ * .codeSha256("codeSha256")
+ * .description("description")
+ * .maxEventAge(Duration.minutes(30))
+ * .onFailure(destination)
+ * .onSuccess(destination)
+ * .provisionedConcurrentExecutions(123)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .retryAttempts(123)
+ * .build())
+ * .deadLetterQueue(queue)
+ * .deadLetterQueueEnabled(false)
+ * .deadLetterTopic(topic)
+ * .description("description")
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .environmentEncryption(key)
+ * .ephemeralStorageSize(size)
+ * .events(List.of(eventSource))
+ * .filesystem(fileSystem)
+ * .functionName("functionName")
+ * .initialPolicy(List.of(policyStatement))
+ * .insightsVersion(lambdaInsightsVersion)
+ * .layers(List.of(layerVersion))
+ * .logRetention(RetentionDays.ONE_DAY)
+ * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
+ * .base(Duration.minutes(30))
+ * .maxRetries(123)
+ * .build())
+ * .logRetentionRole(role)
+ * .maxEventAge(Duration.minutes(30))
+ * .memorySize(123)
+ * .onFailure(destination)
+ * .onSuccess(destination)
+ * .paramsAndSecrets(paramsAndSecretsLayerVersion)
+ * .profiling(false)
+ * .profilingGroup(profilingGroup)
+ * .reservedConcurrentExecutions(123)
+ * .retryAttempts(123)
+ * .role(role)
+ * .runtimeManagementMode(runtimeManagementMode)
+ * .securityGroups(List.of(securityGroup))
+ * .timeout(Duration.minutes(30))
+ * .tracing(Tracing.ACTIVE)
+ * .vpc(vpc)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionOptionsDsl {
   private val cdkBuilder: FunctionOptions.Builder = FunctionOptions.builder()

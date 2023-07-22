@@ -7,6 +7,37 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion
 
+/**
+ * A logger represents logging settings for the AWS IoT Greengrass group, which can be stored in
+ * CloudWatch and the local file system of your core device.
+ *
+ * All log entries include a timestamp, log level, and information about the event. For more
+ * information, see [Monitoring with AWS IoT Greengrass
+ * Logs](https://docs.aws.amazon.com/greengrass/latest/developerguide/greengrass-logs-overview.html) in
+ * the *Developer Guide* .
+ *
+ * In an AWS CloudFormation template, the `Loggers` property of the
+ * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+ * resource contains a list of `Logger` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * LoggerProperty loggerProperty = LoggerProperty.builder()
+ * .component("component")
+ * .id("id")
+ * .level("level")
+ * .type("type")
+ * // the properties below are optional
+ * .space(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinitionversion-logger.html)
+ */
 @CdkDslMarker
 public class CfnLoggerDefinitionVersionLoggerPropertyDsl {
   private val cdkBuilder: CfnLoggerDefinitionVersion.LoggerProperty.Builder =

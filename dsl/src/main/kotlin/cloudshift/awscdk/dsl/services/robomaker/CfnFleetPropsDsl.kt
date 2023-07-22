@@ -7,6 +7,24 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.robomaker.CfnFleetProps
 
+/**
+ * Properties for defining a `CfnFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnFleetProps cfnFleetProps = CfnFleetProps.builder()
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
   private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()

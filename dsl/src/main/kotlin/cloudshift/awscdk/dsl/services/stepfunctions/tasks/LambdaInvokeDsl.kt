@@ -21,6 +21,27 @@ import software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvocationType
 import software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke
 import software.constructs.Construct
 
+/**
+ * Invoke a Lambda function as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * LambdaInvoke.Builder.create(this, "Invoke with empty object as payload")
+ * .lambdaFunction(fn)
+ * .payload(TaskInput.fromObject(Map.of()))
+ * .build();
+ * // use the output of fn as input
+ * // use the output of fn as input
+ * LambdaInvoke.Builder.create(this, "Invoke with payload field in the state input")
+ * .lambdaFunction(fn)
+ * .payload(TaskInput.fromJsonPathAt("$.Payload"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-lambda.html)
+ */
 @CdkDslMarker
 public class LambdaInvokeDsl(
   scope: Construct,

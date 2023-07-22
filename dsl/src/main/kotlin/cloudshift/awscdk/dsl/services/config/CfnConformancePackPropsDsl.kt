@@ -12,6 +12,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConformancePackProps
 
+/**
+ * Properties for defining a `CfnConformancePack`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object templateSsmDocumentDetails;
+ * CfnConformancePackProps cfnConformancePackProps = CfnConformancePackProps.builder()
+ * .conformancePackName("conformancePackName")
+ * // the properties below are optional
+ * .conformancePackInputParameters(List.of(ConformancePackInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .deliveryS3Bucket("deliveryS3Bucket")
+ * .deliveryS3KeyPrefix("deliveryS3KeyPrefix")
+ * .templateBody("templateBody")
+ * .templateS3Uri("templateS3Uri")
+ * .templateSsmDocumentDetails(templateSsmDocumentDetails)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)
+ */
 @CdkDslMarker
 public class CfnConformancePackPropsDsl {
   private val cdkBuilder: CfnConformancePackProps.Builder = CfnConformancePackProps.builder()

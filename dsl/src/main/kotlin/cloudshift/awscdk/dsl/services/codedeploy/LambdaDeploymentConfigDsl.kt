@@ -8,6 +8,28 @@ import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.TrafficRouting
 import software.constructs.Construct
 
+/**
+ * A custom Deployment Configuration for a Lambda Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application;
+ * Alias alias;
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .build();
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .application(application)
+ * .alias(alias)
+ * .deploymentConfig(config)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDeploymentConfigDsl(
   scope: Construct,

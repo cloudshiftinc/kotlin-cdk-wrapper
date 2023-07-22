@@ -11,6 +11,31 @@ import software.amazon.awscdk.services.autoscaling.ILifecycleHookTarget
 import software.amazon.awscdk.services.autoscaling.LifecycleTransition
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Basic properties for a lifecycle hook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * ILifecycleHookTarget lifecycleHookTarget;
+ * Role role;
+ * BasicLifecycleHookProps basicLifecycleHookProps = BasicLifecycleHookProps.builder()
+ * .lifecycleTransition(LifecycleTransition.INSTANCE_LAUNCHING)
+ * // the properties below are optional
+ * .defaultResult(DefaultResult.CONTINUE)
+ * .heartbeatTimeout(Duration.minutes(30))
+ * .lifecycleHookName("lifecycleHookName")
+ * .notificationMetadata("notificationMetadata")
+ * .notificationTarget(lifecycleHookTarget)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BasicLifecycleHookPropsDsl {
   private val cdkBuilder: BasicLifecycleHookProps.Builder = BasicLifecycleHookProps.builder()

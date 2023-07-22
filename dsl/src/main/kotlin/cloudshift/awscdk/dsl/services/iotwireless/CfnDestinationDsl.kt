@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotwireless.CfnDestination
 import software.constructs.Construct
 
+/**
+ * Creates a new destination that maps a device message to an AWS IoT rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnDestination cfnDestination = CfnDestination.Builder.create(this, "MyCfnDestination")
+ * .expression("expression")
+ * .expressionType("expressionType")
+ * .name("name")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)
+ */
 @CdkDslMarker
 public class CfnDestinationDsl(
   scope: Construct,

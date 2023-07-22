@@ -15,6 +15,13 @@ import software.amazon.awscdk.services.ecr.RepositoryProps
 import software.amazon.awscdk.services.ecr.TagMutability
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Example:
+ *
+ * ```
+ * Repository.Builder.create(this, "Repo").imageTagMutability(TagMutability.IMMUTABLE).build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryPropsDsl {
   private val cdkBuilder: RepositoryProps.Builder = RepositoryProps.builder()

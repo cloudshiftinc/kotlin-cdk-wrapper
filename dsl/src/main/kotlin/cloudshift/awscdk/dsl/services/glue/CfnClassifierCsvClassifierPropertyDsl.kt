@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnClassifier
 
+/**
+ * A classifier for custom `CSV` content.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CsvClassifierProperty csvClassifierProperty = CsvClassifierProperty.builder()
+ * .allowSingleColumn(false)
+ * .containsHeader("containsHeader")
+ * .delimiter("delimiter")
+ * .disableValueTrimming(false)
+ * .header(List.of("header"))
+ * .name("name")
+ * .quoteSymbol("quoteSymbol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-classifier-csvclassifier.html)
+ */
 @CdkDslMarker
 public class CfnClassifierCsvClassifierPropertyDsl {
   private val cdkBuilder: CfnClassifier.CsvClassifierProperty.Builder =

@@ -14,6 +14,81 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 import software.constructs.Construct
 
+/**
+ * Allows you to create a workflow with specified steps and step details the workflow invokes after
+ * file transfer completes.
+ *
+ * After creating a workflow, you can associate the workflow created with any transfer servers by
+ * specifying the `workflow-details` field in `CreateServer` and `UpdateServer` operations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * Object copyStepDetails;
+ * Object customStepDetails;
+ * Object deleteStepDetails;
+ * Object tagStepDetails;
+ * CfnWorkflow cfnWorkflow = CfnWorkflow.Builder.create(this, "MyCfnWorkflow")
+ * .steps(List.of(WorkflowStepProperty.builder()
+ * .copyStepDetails(copyStepDetails)
+ * .customStepDetails(customStepDetails)
+ * .decryptStepDetails(DecryptStepDetailsProperty.builder()
+ * .destinationFileLocation(InputFileLocationProperty.builder()
+ * .efsFileLocation(EfsInputFileLocationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .path("path")
+ * .build())
+ * .s3FileLocation(S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * .overwriteExisting("overwriteExisting")
+ * .sourceFileLocation("sourceFileLocation")
+ * .type("type")
+ * .build())
+ * .deleteStepDetails(deleteStepDetails)
+ * .tagStepDetails(tagStepDetails)
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .onExceptionSteps(List.of(WorkflowStepProperty.builder()
+ * .copyStepDetails(copyStepDetails)
+ * .customStepDetails(customStepDetails)
+ * .decryptStepDetails(DecryptStepDetailsProperty.builder()
+ * .destinationFileLocation(InputFileLocationProperty.builder()
+ * .efsFileLocation(EfsInputFileLocationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .path("path")
+ * .build())
+ * .s3FileLocation(S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * .overwriteExisting("overwriteExisting")
+ * .sourceFileLocation("sourceFileLocation")
+ * .type("type")
+ * .build())
+ * .deleteStepDetails(deleteStepDetails)
+ * .tagStepDetails(tagStepDetails)
+ * .type("type")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowDsl(
   scope: Construct,

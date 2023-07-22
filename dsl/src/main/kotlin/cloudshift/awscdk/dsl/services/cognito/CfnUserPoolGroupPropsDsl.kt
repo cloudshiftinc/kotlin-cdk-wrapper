@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolGroupProps
 
+/**
+ * Properties for defining a `CfnUserPoolGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolGroupProps cfnUserPoolGroupProps = CfnUserPoolGroupProps.builder()
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .description("description")
+ * .groupName("groupName")
+ * .precedence(123)
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolGroupPropsDsl {
   private val cdkBuilder: CfnUserPoolGroupProps.Builder = CfnUserPoolGroupProps.builder()

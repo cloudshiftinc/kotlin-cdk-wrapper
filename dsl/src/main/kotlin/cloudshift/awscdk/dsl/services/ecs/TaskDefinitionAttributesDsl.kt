@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.ecs.TaskDefinitionAttributes
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * A reference to an existing task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * TaskDefinitionAttributes taskDefinitionAttributes = TaskDefinitionAttributes.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .compatibility(Compatibility.EC2)
+ * .executionRole(role)
+ * .networkMode(NetworkMode.NONE)
+ * .taskRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TaskDefinitionAttributesDsl {
   private val cdkBuilder: TaskDefinitionAttributes.Builder = TaskDefinitionAttributes.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.ecs.FargateTaskDefinition
 import software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions
 
+/**
+ * The properties for the ScheduledFargateTask using a task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * FargateTaskDefinition fargateTaskDefinition;
+ * ScheduledFargateTaskDefinitionOptions scheduledFargateTaskDefinitionOptions =
+ * ScheduledFargateTaskDefinitionOptions.builder()
+ * .taskDefinition(fargateTaskDefinition)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledFargateTaskDefinitionOptionsDsl {
   private val cdkBuilder: ScheduledFargateTaskDefinitionOptions.Builder =

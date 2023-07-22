@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * Specific configuration settings for a self-managed Apache Kafka event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * SelfManagedKafkaEventSourceConfigProperty selfManagedKafkaEventSourceConfigProperty =
+ * SelfManagedKafkaEventSourceConfigProperty.builder()
+ * .consumerGroupId("consumerGroupId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingSelfManagedKafkaEventSourceConfigPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder =

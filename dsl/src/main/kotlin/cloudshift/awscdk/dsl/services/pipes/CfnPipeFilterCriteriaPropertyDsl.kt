@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The collection of event patterns used to filter events.
+ *
+ * To remove a filter, specify a `FilterCriteria` object with an empty array of `Filter` objects.
+ *
+ * For more information, see [Events and Event
+ * Patterns](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+ * in the *Amazon EventBridge User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * FilterCriteriaProperty filterCriteriaProperty = FilterCriteriaProperty.builder()
+ * .filters(List.of(FilterProperty.builder()
+ * .pattern("pattern")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-filtercriteria.html)
+ */
 @CdkDslMarker
 public class CfnPipeFilterCriteriaPropertyDsl {
   private val cdkBuilder: CfnPipe.FilterCriteriaProperty.Builder =

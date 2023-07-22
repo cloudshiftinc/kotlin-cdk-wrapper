@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the inventory configuration for an Amazon S3 bucket.
+ *
+ * For more information, see [GET Bucket
+ * inventory](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETInventoryConfig.html) in the
+ * *Amazon S3 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * InventoryConfigurationProperty inventoryConfigurationProperty =
+ * InventoryConfigurationProperty.builder()
+ * .destination(DestinationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .format("format")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .prefix("prefix")
+ * .build())
+ * .enabled(false)
+ * .id("id")
+ * .includedObjectVersions("includedObjectVersions")
+ * .scheduleFrequency("scheduleFrequency")
+ * // the properties below are optional
+ * .optionalFields(List.of("optionalFields"))
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketInventoryConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.InventoryConfigurationProperty.Builder =

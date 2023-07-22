@@ -20,6 +20,26 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.CallAwsServiceProps
 
+/**
+ * Properties for calling an AWS service's API action from your state machine.
+ *
+ * Example:
+ *
+ * ```
+ * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
+ * .service("rekognition")
+ * .action("detectLabels")
+ * .iamResources(List.of("*"))
+ * .additionalIamStatements(List.of(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("s3:getObject"))
+ * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/supported-services-awssdk.html)
+ */
 @CdkDslMarker
 public class CallAwsServicePropsDsl {
   private val cdkBuilder: CallAwsServiceProps.Builder = CallAwsServiceProps.builder()

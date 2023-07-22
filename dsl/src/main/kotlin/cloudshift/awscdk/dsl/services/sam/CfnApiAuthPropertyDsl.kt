@@ -11,6 +11,23 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object authorizers;
+ * AuthProperty authProperty = AuthProperty.builder()
+ * .addDefaultAuthorizerToCorsPreflight(false)
+ * .authorizers(authorizers)
+ * .defaultAuthorizer("defaultAuthorizer")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-auth.html)
+ */
 @CdkDslMarker
 public class CfnApiAuthPropertyDsl {
   private val cdkBuilder: CfnApi.AuthProperty.Builder = CfnApi.AuthProperty.builder()

@@ -18,6 +18,25 @@ import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * The details of a task definition run on an EC2 cluster.
+ *
+ * Example:
+ *
+ * ```
+ * Secret secret;
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.splunk(SplunkLogDriverProps.builder()
+ * .secretToken(secret)
+ * .url("my-splunk-url")
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class Ec2TaskDefinitionDsl(
   scope: Construct,

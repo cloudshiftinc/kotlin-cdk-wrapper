@@ -14,6 +14,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnUsagePlan
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::UsagePlan` resource creates a usage plan for deployed APIs.
+ *
+ * A usage plan sets a target for the throttling and quota limits on individual client API keys. For
+ * more information, see [Creating and Using API Usage Plans in Amazon API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-api-usage-plans.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * In some cases clients can exceed the targets that you set. Don’t rely on usage plans to control
+ * costs. Consider using [AWS
+ * Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
+ * to monitor costs and [AWS
+ * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnUsagePlan cfnUsagePlan = CfnUsagePlan.Builder.create(this, "MyCfnUsagePlan")
+ * .apiStages(List.of(ApiStageProperty.builder()
+ * .apiId("apiId")
+ * .stage("stage")
+ * .throttle(Map.of(
+ * "throttleKey", ThrottleSettingsProperty.builder()
+ * .burstLimit(123)
+ * .rateLimit(123)
+ * .build()))
+ * .build()))
+ * .description("description")
+ * .quota(QuotaSettingsProperty.builder()
+ * .limit(123)
+ * .offset(123)
+ * .period("period")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .throttle(ThrottleSettingsProperty.builder()
+ * .burstLimit(123)
+ * .rateLimit(123)
+ * .build())
+ * .usagePlanName("usagePlanName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanDsl(
   scope: Construct,

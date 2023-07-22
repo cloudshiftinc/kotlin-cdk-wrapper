@@ -15,6 +15,20 @@ import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.KinesisEventSourceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kinesis.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource;
+ * Function myFunction;
+ * Stream stream = new Stream(this, "MyStream");
+ * myFunction.addEventSource(KinesisEventSource.Builder.create(stream)
+ * .batchSize(100) // default
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class KinesisEventSourcePropsDsl {
   private val cdkBuilder: KinesisEventSourceProps.Builder = KinesisEventSourceProps.builder()

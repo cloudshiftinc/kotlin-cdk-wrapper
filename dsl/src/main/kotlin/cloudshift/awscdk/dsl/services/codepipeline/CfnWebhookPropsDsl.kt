@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnWebhook
 import software.amazon.awscdk.services.codepipeline.CfnWebhookProps
 
+/**
+ * Properties for defining a `CfnWebhook`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CfnWebhookProps cfnWebhookProps = CfnWebhookProps.builder()
+ * .authentication("authentication")
+ * .authenticationConfiguration(WebhookAuthConfigurationProperty.builder()
+ * .allowedIpRange("allowedIpRange")
+ * .secretToken("secretToken")
+ * .build())
+ * .filters(List.of(WebhookFilterRuleProperty.builder()
+ * .jsonPath("jsonPath")
+ * // the properties below are optional
+ * .matchEquals("matchEquals")
+ * .build()))
+ * .targetAction("targetAction")
+ * .targetPipeline("targetPipeline")
+ * .targetPipelineVersion(123)
+ * // the properties below are optional
+ * .name("name")
+ * .registerWithThirdParty(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html)
+ */
 @CdkDslMarker
 public class CfnWebhookPropsDsl {
   private val cdkBuilder: CfnWebhookProps.Builder = CfnWebhookProps.builder()

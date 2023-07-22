@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
 
+/**
+ * Contains the dimension configuration to use when you publish email sending events to Amazon
+ * CloudWatch.
+ *
+ * For information about publishing email sending events to Amazon CloudWatch, see the [Amazon SES
+ * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DimensionConfigurationProperty dimensionConfigurationProperty =
+ * DimensionConfigurationProperty.builder()
+ * .defaultDimensionValue("defaultDimensionValue")
+ * .dimensionName("dimensionName")
+ * .dimensionValueSource("dimensionValueSource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-dimensionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationDimensionConfigurationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.DimensionConfigurationProperty.Builder

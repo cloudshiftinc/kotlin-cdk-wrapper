@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery
 
+/**
+ * Query input for looking up a security group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * SecurityGroupContextQuery securityGroupContextQuery = SecurityGroupContextQuery.builder()
+ * .account("account")
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .securityGroupId("securityGroupId")
+ * .securityGroupName("securityGroupName")
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecurityGroupContextQueryDsl {
   private val cdkBuilder: SecurityGroupContextQuery.Builder = SecurityGroupContextQuery.builder()

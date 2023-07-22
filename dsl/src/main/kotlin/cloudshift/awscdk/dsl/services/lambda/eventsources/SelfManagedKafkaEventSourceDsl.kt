@@ -21,6 +21,34 @@ import software.amazon.awscdk.services.lambda.eventsources.AuthenticationMethod
 import software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Use a self hosted Kafka installation as a streaming source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.secretsmanager.Secret;
+ * import software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource;
+ * // The secret that allows access to your self hosted Kafka cluster
+ * Secret secret;
+ * Function myFunction;
+ * // The list of Kafka brokers
+ * String[] bootstrapServers = List.of("kafka-broker:9092");
+ * // The Kafka topic you want to subscribe to
+ * String topic = "some-cool-topic";
+ * // (Optional) The consumer group id to use when connecting to the Kafka broker. If omitted the
+ * UUID of the event source mapping will be used.
+ * String consumerGroupId = "my-consumer-group-id";
+ * myFunction.addEventSource(SelfManagedKafkaEventSource.Builder.create()
+ * .bootstrapServers(bootstrapServers)
+ * .topic(topic)
+ * .consumerGroupId(consumerGroupId)
+ * .secret(secret)
+ * .batchSize(100) // default
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SelfManagedKafkaEventSourceDsl {
   private val cdkBuilder: SelfManagedKafkaEventSource.Builder =

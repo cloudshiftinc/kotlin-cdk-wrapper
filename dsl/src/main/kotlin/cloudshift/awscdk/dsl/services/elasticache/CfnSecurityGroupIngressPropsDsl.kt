@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps
 
+/**
+ * Properties for defining a `CfnSecurityGroupIngress`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnSecurityGroupIngressProps cfnSecurityGroupIngressProps =
+ * CfnSecurityGroupIngressProps.builder()
+ * .cacheSecurityGroupName("cacheSecurityGroupName")
+ * .ec2SecurityGroupName("ec2SecurityGroupName")
+ * // the properties below are optional
+ * .ec2SecurityGroupOwnerId("ec2SecurityGroupOwnerId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroupingress.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupIngressPropsDsl {
   private val cdkBuilder: CfnSecurityGroupIngressProps.Builder =

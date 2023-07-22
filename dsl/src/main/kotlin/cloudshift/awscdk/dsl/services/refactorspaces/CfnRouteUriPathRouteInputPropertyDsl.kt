@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.refactorspaces.CfnRoute
 
+/**
+ * The configuration for the URI path route type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * UriPathRouteInputProperty uriPathRouteInputProperty = UriPathRouteInputProperty.builder()
+ * .activationState("activationState")
+ * // the properties below are optional
+ * .appendSourcePath(false)
+ * .includeChildPaths(false)
+ * .methods(List.of("methods"))
+ * .sourcePath("sourcePath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-route-uripathrouteinput.html)
+ */
 @CdkDslMarker
 public class CfnRouteUriPathRouteInputPropertyDsl {
   private val cdkBuilder: CfnRoute.UriPathRouteInputProperty.Builder =

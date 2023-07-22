@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 
+/**
+ * Defines how AWS Network Firewall performs logging for a `Firewall` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * LoggingConfigurationProperty loggingConfigurationProperty =
+ * LoggingConfigurationProperty.builder()
+ * .logDestinationConfigs(List.of(LogDestinationConfigProperty.builder()
+ * .logDestination(Map.of(
+ * "logDestinationKey", "logDestination"))
+ * .logDestinationType("logDestinationType")
+ * .logType("logType")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.LoggingConfigurationProperty.Builder =

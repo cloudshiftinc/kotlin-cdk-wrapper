@@ -9,6 +9,21 @@ import software.amazon.awscdk.services.apigateway.EndpointConfiguration
 import software.amazon.awscdk.services.apigateway.EndpointType
 import software.amazon.awscdk.services.ec2.IVpcEndpoint
 
+/**
+ * The endpoint configuration of a REST API, including VPCs and endpoint types.
+ *
+ * EndpointConfiguration is a property of the AWS::ApiGateway::RestApi resource.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api = RestApi.Builder.create(this, "api")
+ * .endpointConfiguration(EndpointConfiguration.builder()
+ * .types(List.of(EndpointType.EDGE))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EndpointConfigurationDsl {
   private val cdkBuilder: EndpointConfiguration.Builder = EndpointConfiguration.builder()

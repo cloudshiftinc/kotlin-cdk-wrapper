@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Contains information about code hooks that Amazon Lex calls during a conversation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * CodeHookSpecificationProperty codeHookSpecificationProperty =
+ * CodeHookSpecificationProperty.builder()
+ * .lambdaCodeHook(LambdaCodeHookProperty.builder()
+ * .codeHookInterfaceVersion("codeHookInterfaceVersion")
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-codehookspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotCodeHookSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.CodeHookSpecificationProperty.Builder =

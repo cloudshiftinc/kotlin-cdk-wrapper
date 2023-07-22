@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotsitewise.CfnGateway
 
+/**
+ * Contains a summary of a gateway capability configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * GatewayCapabilitySummaryProperty gatewayCapabilitySummaryProperty =
+ * GatewayCapabilitySummaryProperty.builder()
+ * .capabilityNamespace("capabilityNamespace")
+ * // the properties below are optional
+ * .capabilityConfiguration("capabilityConfiguration")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewaycapabilitysummary.html)
+ */
 @CdkDslMarker
 public class CfnGatewayGatewayCapabilitySummaryPropertyDsl {
   private val cdkBuilder: CfnGateway.GatewayCapabilitySummaryProperty.Builder =

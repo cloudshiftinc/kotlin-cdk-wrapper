@@ -15,6 +15,88 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 import software.constructs.Construct
 
+/**
+ * Specifies a Classic Load Balancer.
+ *
+ * You can specify the `AvailabilityZones` or `Subnets` property, but not both.
+ *
+ * If this resource has a public IP address and is also in a VPC that is defined in the same
+ * template, you must use the [DependsOn
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * to declare a dependency on the VPC-gateway attachment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * Object attributes;
+ * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+ * .listeners(List.of(ListenersProperty.builder()
+ * .instancePort("instancePort")
+ * .loadBalancerPort("loadBalancerPort")
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .instanceProtocol("instanceProtocol")
+ * .policyNames(List.of("policyNames"))
+ * .sslCertificateId("sslCertificateId")
+ * .build()))
+ * // the properties below are optional
+ * .accessLoggingPolicy(AccessLoggingPolicyProperty.builder()
+ * .enabled(false)
+ * .s3BucketName("s3BucketName")
+ * // the properties below are optional
+ * .emitInterval(123)
+ * .s3BucketPrefix("s3BucketPrefix")
+ * .build())
+ * .appCookieStickinessPolicy(List.of(AppCookieStickinessPolicyProperty.builder()
+ * .cookieName("cookieName")
+ * .policyName("policyName")
+ * .build()))
+ * .availabilityZones(List.of("availabilityZones"))
+ * .connectionDrainingPolicy(ConnectionDrainingPolicyProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .timeout(123)
+ * .build())
+ * .connectionSettings(ConnectionSettingsProperty.builder()
+ * .idleTimeout(123)
+ * .build())
+ * .crossZone(false)
+ * .healthCheck(HealthCheckProperty.builder()
+ * .healthyThreshold("healthyThreshold")
+ * .interval("interval")
+ * .target("target")
+ * .timeout("timeout")
+ * .unhealthyThreshold("unhealthyThreshold")
+ * .build())
+ * .instances(List.of("instances"))
+ * .lbCookieStickinessPolicy(List.of(LBCookieStickinessPolicyProperty.builder()
+ * .cookieExpirationPeriod("cookieExpirationPeriod")
+ * .policyName("policyName")
+ * .build()))
+ * .loadBalancerName("loadBalancerName")
+ * .policies(List.of(PoliciesProperty.builder()
+ * .attributes(List.of(attributes))
+ * .policyName("policyName")
+ * .policyType("policyType")
+ * // the properties below are optional
+ * .instancePorts(List.of("instancePorts"))
+ * .loadBalancerPorts(List.of("loadBalancerPorts"))
+ * .build()))
+ * .scheme("scheme")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancing-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerDsl(
   scope: Construct,

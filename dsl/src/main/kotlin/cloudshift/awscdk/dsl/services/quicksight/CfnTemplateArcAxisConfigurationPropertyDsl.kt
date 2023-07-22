@@ -7,6 +7,27 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The arc axis configuration of a `GaugeChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ArcAxisConfigurationProperty arcAxisConfigurationProperty =
+ * ArcAxisConfigurationProperty.builder()
+ * .range(ArcAxisDisplayRangeProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .reserveRange(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-arcaxisconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateArcAxisConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ArcAxisConfigurationProperty.Builder =

@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnReadinessCheckProps
 
+/**
+ * Properties for defining a `CfnReadinessCheck`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnReadinessCheckProps cfnReadinessCheckProps = CfnReadinessCheckProps.builder()
+ * .readinessCheckName("readinessCheckName")
+ * .resourceSetName("resourceSetName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-readinesscheck.html)
+ */
 @CdkDslMarker
 public class CfnReadinessCheckPropsDsl {
   private val cdkBuilder: CfnReadinessCheckProps.Builder = CfnReadinessCheckProps.builder()

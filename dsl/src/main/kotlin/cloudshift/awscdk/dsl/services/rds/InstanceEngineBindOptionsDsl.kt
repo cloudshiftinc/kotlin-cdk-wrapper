@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.rds.IOptionGroup
 import software.amazon.awscdk.services.rds.InstanceEngineBindOptions
 
+/**
+ * The options passed to `IInstanceEngine.bind`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * OptionGroup optionGroup;
+ * Role role;
+ * InstanceEngineBindOptions instanceEngineBindOptions = InstanceEngineBindOptions.builder()
+ * .domain("domain")
+ * .optionGroup(optionGroup)
+ * .s3ExportRole(role)
+ * .s3ImportRole(role)
+ * .timezone("timezone")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InstanceEngineBindOptionsDsl {
   private val cdkBuilder: InstanceEngineBindOptions.Builder = InstanceEngineBindOptions.builder()

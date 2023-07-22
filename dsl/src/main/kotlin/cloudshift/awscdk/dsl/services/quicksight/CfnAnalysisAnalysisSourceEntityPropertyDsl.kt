@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The source entity of an analysis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AnalysisSourceEntityProperty analysisSourceEntityProperty =
+ * AnalysisSourceEntityProperty.builder()
+ * .sourceTemplate(AnalysisSourceTemplateProperty.builder()
+ * .arn("arn")
+ * .dataSetReferences(List.of(DataSetReferenceProperty.builder()
+ * .dataSetArn("dataSetArn")
+ * .dataSetPlaceholder("dataSetPlaceholder")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-analysissourceentity.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisAnalysisSourceEntityPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AnalysisSourceEntityProperty.Builder =

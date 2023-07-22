@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The column group schema.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ColumnGroupSchemaProperty columnGroupSchemaProperty = ColumnGroupSchemaProperty.builder()
+ * .columnGroupColumnSchemaList(List.of(ColumnGroupColumnSchemaProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-columngroupschema.html)
+ */
 @CdkDslMarker
 public class CfnTemplateColumnGroupSchemaPropertyDsl {
   private val cdkBuilder: CfnTemplate.ColumnGroupSchemaProperty.Builder =

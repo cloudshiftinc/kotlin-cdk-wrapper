@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.Step
 import software.amazon.awscdk.pipelines.Wave
 
+/**
+ * Multiple stages that are deployed in parallel.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline;
+ * Wave europeWave = pipeline.addWave("Europe");
+ * europeWave.addStage(MyApplicationStage.Builder.create(this, "Ireland")
+ * .env(Environment.builder().region("eu-west-1").build())
+ * .build());
+ * europeWave.addStage(MyApplicationStage.Builder.create(this, "Germany")
+ * .env(Environment.builder().region("eu-central-1").build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class WaveDsl(
   id: String,

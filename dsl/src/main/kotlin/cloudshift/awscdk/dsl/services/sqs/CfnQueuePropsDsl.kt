@@ -16,6 +16,42 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sqs.CfnQueueProps
 
+/**
+ * Properties for defining a `CfnQueue`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Object redriveAllowPolicy;
+ * Object redrivePolicy;
+ * CfnQueueProps cfnQueueProps = CfnQueueProps.builder()
+ * .contentBasedDeduplication(false)
+ * .deduplicationScope("deduplicationScope")
+ * .delaySeconds(123)
+ * .fifoQueue(false)
+ * .fifoThroughputLimit("fifoThroughputLimit")
+ * .kmsDataKeyReusePeriodSeconds(123)
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .maximumMessageSize(123)
+ * .messageRetentionPeriod(123)
+ * .queueName("queueName")
+ * .receiveMessageWaitTimeSeconds(123)
+ * .redriveAllowPolicy(redriveAllowPolicy)
+ * .redrivePolicy(redrivePolicy)
+ * .sqsManagedSseEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .visibilityTimeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)
+ */
 @CdkDslMarker
 public class CfnQueuePropsDsl {
   private val cdkBuilder: CfnQueueProps.Builder = CfnQueueProps.builder()

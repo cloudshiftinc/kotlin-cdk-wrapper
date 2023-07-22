@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 
+/**
+ * Parameters for enabling CDN authorization.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * AuthorizationProperty authorizationProperty = AuthorizationProperty.builder()
+ * .cdnIdentifierSecret("cdnIdentifierSecret")
+ * .secretsRoleArn("secretsRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packaginggroup-authorization.html)
+ */
 @CdkDslMarker
 public class CfnPackagingGroupAuthorizationPropertyDsl {
   private val cdkBuilder: CfnPackagingGroup.AuthorizationProperty.Builder =

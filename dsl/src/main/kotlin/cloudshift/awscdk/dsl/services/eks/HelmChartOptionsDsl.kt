@@ -13,6 +13,22 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.eks.HelmChartOptions
 import software.amazon.awscdk.services.s3.assets.Asset
 
+/**
+ * Helm Chart options.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.assets.*;
+ * Cluster cluster;
+ * Asset chartAsset = Asset.Builder.create(this, "ChartAsset")
+ * .path("/path/to/asset")
+ * .build();
+ * cluster.addHelmChart("test-chart", HelmChartOptions.builder()
+ * .chartAsset(chartAsset)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HelmChartOptionsDsl {
   private val cdkBuilder: HelmChartOptions.Builder = HelmChartOptions.builder()

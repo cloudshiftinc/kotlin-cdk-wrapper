@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.customresources.SdkCallsPolicyOptions
 
+/**
+ * Options for the auto-generation of policies based on the configured SDK calls.
+ *
+ * Example:
+ *
+ * ```
+ * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
+ * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+ * .service("SSM")
+ * .action("getParameter")
+ * .parameters(Map.of(
+ * "Name", "my-parameter",
+ * "WithDecryption", true))
+ * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+ * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
+ * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * .build()))
+ * .build();
+ * // Use the value in another construct with
+ * getParameter.getResponseField("Parameter.Value");
+ * ```
+ */
 @CdkDslMarker
 public class SdkCallsPolicyOptionsDsl {
   private val cdkBuilder: SdkCallsPolicyOptions.Builder = SdkCallsPolicyOptions.builder()

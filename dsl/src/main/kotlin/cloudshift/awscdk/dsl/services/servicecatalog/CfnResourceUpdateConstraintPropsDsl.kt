@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps
 
+/**
+ * Properties for defining a `CfnResourceUpdateConstraint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnResourceUpdateConstraintProps cfnResourceUpdateConstraintProps =
+ * CfnResourceUpdateConstraintProps.builder()
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .tagUpdateOnProvisionedProduct("tagUpdateOnProvisionedProduct")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
+ */
 @CdkDslMarker
 public class CfnResourceUpdateConstraintPropsDsl {
   private val cdkBuilder: CfnResourceUpdateConstraintProps.Builder =

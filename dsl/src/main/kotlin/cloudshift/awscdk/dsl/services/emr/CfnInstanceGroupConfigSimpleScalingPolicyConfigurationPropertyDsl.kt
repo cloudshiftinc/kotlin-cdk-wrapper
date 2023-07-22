@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 
+/**
+ * `SimpleScalingPolicyConfiguration` is a subproperty of the `ScalingAction` property type.
+ *
+ * `SimpleScalingPolicyConfiguration` determines how an automatic scaling action adds or removes
+ * instances, the cooldown period, and the number of EC2 instances that are added each time the
+ * CloudWatch metric alarm condition is satisfied.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * SimpleScalingPolicyConfigurationProperty simpleScalingPolicyConfigurationProperty =
+ * SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType("adjustmentType")
+ * .coolDown(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancegroupconfig-simplescalingpolicyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInstanceGroupConfigSimpleScalingPolicyConfigurationPropertyDsl {
   private val cdkBuilder: CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty.Builder =

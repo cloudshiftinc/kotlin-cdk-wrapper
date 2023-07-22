@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderAttributes
 
+/**
+ * Properties for importing an existing Jenkins provider.
+ *
+ * Example:
+ *
+ * ```
+ * IJenkinsProvider jenkinsProvider = JenkinsProvider.fromJenkinsProviderAttributes(this,
+ * "JenkinsProvider", JenkinsProviderAttributes.builder()
+ * .providerName("MyJenkinsProvider")
+ * .serverUrl("http://my-jenkins.com:8080")
+ * .version("2")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class JenkinsProviderAttributesDsl {
   private val cdkBuilder: JenkinsProviderAttributes.Builder = JenkinsProviderAttributes.builder()

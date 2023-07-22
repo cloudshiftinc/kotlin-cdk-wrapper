@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnStack
 
+/**
+ * Describes an Elastic IP address.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * ElasticIpProperty elasticIpProperty = ElasticIpProperty.builder()
+ * .ip("ip")
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-elasticip.html)
+ */
 @CdkDslMarker
 public class CfnStackElasticIpPropertyDsl {
   private val cdkBuilder: CfnStack.ElasticIpProperty.Builder = CfnStack.ElasticIpProperty.builder()

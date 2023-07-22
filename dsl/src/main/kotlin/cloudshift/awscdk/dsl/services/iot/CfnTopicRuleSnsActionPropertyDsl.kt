@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to publish to an Amazon SNS topic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * SnsActionProperty snsActionProperty = SnsActionProperty.builder()
+ * .roleArn("roleArn")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .messageFormat("messageFormat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-snsaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleSnsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.SnsActionProperty.Builder =

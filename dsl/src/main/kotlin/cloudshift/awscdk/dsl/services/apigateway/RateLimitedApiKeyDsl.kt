@@ -20,6 +20,23 @@ import software.amazon.awscdk.services.apigateway.ThrottleSettings
 import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
 import software.constructs.Construct
 
+/**
+ * An API Gateway ApiKey, for which a rate limiting configuration can be specified.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
+ * .customerId("hello-customer")
+ * .stages(List.of(api.getDeploymentStage()))
+ * .quota(QuotaSettings.builder()
+ * .limit(10000)
+ * .period(Period.MONTH)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RateLimitedApiKeyDsl(
   scope: Construct,

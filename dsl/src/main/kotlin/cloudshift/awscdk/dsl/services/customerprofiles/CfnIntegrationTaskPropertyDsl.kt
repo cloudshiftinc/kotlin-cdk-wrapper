@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * The `Task` property type specifies the class for modeling different type of tasks.
+ *
+ * Task implementation varies based on the TaskType.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * TaskProperty taskProperty = TaskProperty.builder()
+ * .sourceFields(List.of("sourceFields"))
+ * .taskType("taskType")
+ * // the properties below are optional
+ * .connectorOperator(ConnectorOperatorProperty.builder()
+ * .marketo("marketo")
+ * .s3("s3")
+ * .salesforce("salesforce")
+ * .serviceNow("serviceNow")
+ * .zendesk("zendesk")
+ * .build())
+ * .destinationField("destinationField")
+ * .taskProperties(List.of(TaskPropertiesMapProperty.builder()
+ * .operatorPropertyKey("operatorPropertyKey")
+ * .property("property")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-task.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationTaskPropertyDsl {
   private val cdkBuilder: CfnIntegration.TaskProperty.Builder =

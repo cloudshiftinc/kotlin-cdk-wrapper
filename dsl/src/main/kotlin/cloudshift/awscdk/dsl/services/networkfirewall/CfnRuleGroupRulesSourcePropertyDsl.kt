@@ -10,6 +10,87 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * The stateless or stateful rules definitions for use in a single rule group.
+ *
+ * Each rule group requires a single `RulesSource` . You can use an instance of this for either
+ * stateless rules or stateful rules.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * RulesSourceProperty rulesSourceProperty = RulesSourceProperty.builder()
+ * .rulesSourceList(RulesSourceListProperty.builder()
+ * .generatedRulesType("generatedRulesType")
+ * .targets(List.of("targets"))
+ * .targetTypes(List.of("targetTypes"))
+ * .build())
+ * .rulesString("rulesString")
+ * .statefulRules(List.of(StatefulRuleProperty.builder()
+ * .action("action")
+ * .header(HeaderProperty.builder()
+ * .destination("destination")
+ * .destinationPort("destinationPort")
+ * .direction("direction")
+ * .protocol("protocol")
+ * .source("source")
+ * .sourcePort("sourcePort")
+ * .build())
+ * .ruleOptions(List.of(RuleOptionProperty.builder()
+ * .keyword("keyword")
+ * // the properties below are optional
+ * .settings(List.of("settings"))
+ * .build()))
+ * .build()))
+ * .statelessRulesAndCustomActions(StatelessRulesAndCustomActionsProperty.builder()
+ * .statelessRules(List.of(StatelessRuleProperty.builder()
+ * .priority(123)
+ * .ruleDefinition(RuleDefinitionProperty.builder()
+ * .actions(List.of("actions"))
+ * .matchAttributes(MatchAttributesProperty.builder()
+ * .destinationPorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .destinations(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .protocols(List.of(123))
+ * .sourcePorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .sources(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+ * .flags(List.of("flags"))
+ * // the properties below are optional
+ * .masks(List.of("masks"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .customActions(List.of(CustomActionProperty.builder()
+ * .actionDefinition(ActionDefinitionProperty.builder()
+ * .publishMetricAction(PublishMetricActionProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .actionName("actionName")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessource.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupRulesSourcePropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RulesSourceProperty.Builder =

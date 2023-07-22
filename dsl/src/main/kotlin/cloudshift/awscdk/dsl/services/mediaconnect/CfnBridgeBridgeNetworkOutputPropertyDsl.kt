@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 
+/**
+ * The output of the bridge.
+ *
+ * A network output is delivered to your premises.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * BridgeNetworkOutputProperty bridgeNetworkOutputProperty = BridgeNetworkOutputProperty.builder()
+ * .ipAddress("ipAddress")
+ * .name("name")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .ttl(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworkoutput.html)
+ */
 @CdkDslMarker
 public class CfnBridgeBridgeNetworkOutputPropertyDsl {
   private val cdkBuilder: CfnBridge.BridgeNetworkOutputProperty.Builder =

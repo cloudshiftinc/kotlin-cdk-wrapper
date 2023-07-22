@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 
+/**
+ * Details about a borrow configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * BorrowConfigurationProperty borrowConfigurationProperty = BorrowConfigurationProperty.builder()
+ * .allowEarlyCheckIn(false)
+ * .maxTimeToLiveInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-borrowconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLicenseBorrowConfigurationPropertyDsl {
   private val cdkBuilder: CfnLicense.BorrowConfigurationProperty.Builder =

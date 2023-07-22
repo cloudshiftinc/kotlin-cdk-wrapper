@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.iot.CfnResourceSpecificLogging
 import software.constructs.Construct
 
+/**
+ * Configure resource-specific logging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnResourceSpecificLogging cfnResourceSpecificLogging =
+ * CfnResourceSpecificLogging.Builder.create(this, "MyCfnResourceSpecificLogging")
+ * .logLevel("logLevel")
+ * .targetName("targetName")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-resourcespecificlogging.html)
+ */
 @CdkDslMarker
 public class CfnResourceSpecificLoggingDsl(
   scope: Construct,

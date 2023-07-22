@@ -13,6 +13,25 @@ import software.amazon.awscdk.services.config.CustomPolicyProps
 import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 
+/**
+ * Construction properties for a CustomPolicy.
+ *
+ * Example:
+ *
+ * ```
+ * String samplePolicyText = "\n# This rule checks if point in time recovery (PITR) is enabled on
+ * active Amazon DynamoDB tables\nlet status = ['ACTIVE']\n\nrule tableisactive when\n    resourceType
+ * == \"AWS::DynamoDB::Table\" {\n    configuration.tableStatus == %status\n}\n\nrule checkcompliance
+ * when\n    resourceType == \"AWS::DynamoDB::Table\"\n    tableisactive {\n        let pitr =
+ * supplementaryConfiguration.ContinuousBackupsDescription.pointInTimeRecoveryDescription.pointInTimeRecoveryStatus\n
+ *        %pitr == \"ENABLED\"\n}\n";
+ * CustomPolicy.Builder.create(this, "Custom")
+ * .policyText(samplePolicyText)
+ * .enableDebugLog(true)
+ * .ruleScope(RuleScope.fromResources(List.of(ResourceType.DYNAMODB_TABLE)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomPolicyPropsDsl {
   private val cdkBuilder: CustomPolicyProps.Builder = CustomPolicyProps.builder()

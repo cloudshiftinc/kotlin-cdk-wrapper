@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfigProps
 
+/**
+ * Properties for defining a `CfnNotebookInstanceLifecycleConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnNotebookInstanceLifecycleConfigProps cfnNotebookInstanceLifecycleConfigProps =
+ * CfnNotebookInstanceLifecycleConfigProps.builder()
+ * .notebookInstanceLifecycleConfigName("notebookInstanceLifecycleConfigName")
+ * .onCreate(List.of(NotebookInstanceLifecycleHookProperty.builder()
+ * .content("content")
+ * .build()))
+ * .onStart(List.of(NotebookInstanceLifecycleHookProperty.builder()
+ * .content("content")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html)
+ */
 @CdkDslMarker
 public class CfnNotebookInstanceLifecycleConfigPropsDsl {
   private val cdkBuilder: CfnNotebookInstanceLifecycleConfigProps.Builder =

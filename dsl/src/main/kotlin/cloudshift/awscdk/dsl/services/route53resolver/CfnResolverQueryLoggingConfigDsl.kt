@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfig
 import software.constructs.Construct
 
+/**
+ * The AWS::Route53Resolver::ResolverQueryLoggingConfig resource is a complex type that contains
+ * settings for one query logging configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverQueryLoggingConfig cfnResolverQueryLoggingConfig =
+ * CfnResolverQueryLoggingConfig.Builder.create(this, "MyCfnResolverQueryLoggingConfig")
+ * .destinationArn("destinationArn")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfig.html)
+ */
 @CdkDslMarker
 public class CfnResolverQueryLoggingConfigDsl(
   scope: Construct,

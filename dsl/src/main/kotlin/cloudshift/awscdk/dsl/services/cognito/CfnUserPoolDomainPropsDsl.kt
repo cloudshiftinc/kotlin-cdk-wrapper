@@ -8,6 +8,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolDomain
 import software.amazon.awscdk.services.cognito.CfnUserPoolDomainProps
 
+/**
+ * Properties for defining a `CfnUserPoolDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolDomainProps cfnUserPoolDomainProps = CfnUserPoolDomainProps.builder()
+ * .domain("domain")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .customDomainConfig(CustomDomainConfigTypeProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolDomainPropsDsl {
   private val cdkBuilder: CfnUserPoolDomainProps.Builder = CfnUserPoolDomainProps.builder()

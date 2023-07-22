@@ -13,6 +13,32 @@ import software.amazon.awscdk.services.lambda.AliasOptions
 import software.amazon.awscdk.services.lambda.IDestination
 import software.amazon.awscdk.services.lambda.VersionWeight
 
+/**
+ * Options for `lambda.Alias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * IDestination destination;
+ * Version version;
+ * AliasOptions aliasOptions = AliasOptions.builder()
+ * .additionalVersions(List.of(VersionWeight.builder()
+ * .version(version)
+ * .weight(123)
+ * .build()))
+ * .description("description")
+ * .maxEventAge(Duration.minutes(30))
+ * .onFailure(destination)
+ * .onSuccess(destination)
+ * .provisionedConcurrentExecutions(123)
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasOptionsDsl {
   private val cdkBuilder: AliasOptions.Builder = AliasOptions.builder()

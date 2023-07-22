@@ -14,6 +14,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnCACertificate
 import software.constructs.Construct
 
+/**
+ * Specifies a CA certificate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCACertificate cfnCACertificate = CfnCACertificate.Builder.create(this, "MyCfnCACertificate")
+ * .caCertificatePem("caCertificatePem")
+ * .status("status")
+ * // the properties below are optional
+ * .autoRegistrationStatus("autoRegistrationStatus")
+ * .certificateMode("certificateMode")
+ * .registrationConfig(RegistrationConfigProperty.builder()
+ * .roleArn("roleArn")
+ * .templateBody("templateBody")
+ * .templateName("templateName")
+ * .build())
+ * .removeAutoRegistration(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .verificationCertificatePem("verificationCertificatePem")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-cacertificate.html)
+ */
 @CdkDslMarker
 public class CfnCACertificateDsl(
   scope: Construct,

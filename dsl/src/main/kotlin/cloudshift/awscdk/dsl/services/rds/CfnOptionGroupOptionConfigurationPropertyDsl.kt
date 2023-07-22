@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnOptionGroup
 
+/**
+ * The `OptionConfiguration` property type specifies an individual option, and its settings, within
+ * an `AWS::RDS::OptionGroup` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * OptionConfigurationProperty optionConfigurationProperty = OptionConfigurationProperty.builder()
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .dbSecurityGroupMemberships(List.of("dbSecurityGroupMemberships"))
+ * .optionSettings(List.of(OptionSettingProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .optionVersion("optionVersion")
+ * .port(123)
+ * .vpcSecurityGroupMemberships(List.of("vpcSecurityGroupMemberships"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-optiongroup-optionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnOptionGroupOptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnOptionGroup.OptionConfigurationProperty.Builder =

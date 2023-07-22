@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 
+/**
+ * A configuration for accessing an external Secure Packager and Encoder Key Exchange (SPEKE)
+ * service that provides encryption keys.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * SpekeKeyProviderProperty spekeKeyProviderProperty = SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-spekekeyprovider.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationSpekeKeyProviderPropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.SpekeKeyProviderProperty.Builder =

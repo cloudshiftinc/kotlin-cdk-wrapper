@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that contains `HeaderName` and `HeaderValue` elements, if any, for this
+ * distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginCustomHeaderProperty originCustomHeaderProperty = OriginCustomHeaderProperty.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origincustomheader.html)
+ */
 @CdkDslMarker
 public class CfnDistributionOriginCustomHeaderPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginCustomHeaderProperty.Builder =

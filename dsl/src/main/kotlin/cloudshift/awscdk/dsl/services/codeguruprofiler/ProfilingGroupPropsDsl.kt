@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.codeguruprofiler.ComputePlatform
 import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps
 
+/**
+ * Properties for creating a new Profiling Group.
+ *
+ * Example:
+ *
+ * ```
+ * ProfilingGroup profilingGroup = ProfilingGroup.Builder.create(this, "MyProfilingGroup")
+ * .computePlatform(ComputePlatform.AWS_LAMBDA)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProfilingGroupPropsDsl {
   private val cdkBuilder: ProfilingGroupProps.Builder = ProfilingGroupProps.builder()

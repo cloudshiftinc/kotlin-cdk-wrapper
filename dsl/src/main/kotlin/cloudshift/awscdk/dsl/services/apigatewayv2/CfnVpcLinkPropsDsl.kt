@@ -9,6 +9,27 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigatewayv2.CfnVpcLinkProps
 
+/**
+ * Properties for defining a `CfnVpcLink`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CfnVpcLinkProps cfnVpcLinkProps = CfnVpcLinkProps.builder()
+ * .name("name")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-vpclink.html)
+ */
 @CdkDslMarker
 public class CfnVpcLinkPropsDsl {
   private val cdkBuilder: CfnVpcLinkProps.Builder = CfnVpcLinkProps.builder()

@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
 import software.amazon.awscdk.services.emrcontainers.CfnVirtualClusterProps
 
+/**
+ * Properties for defining a `CfnVirtualCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrcontainers.*;
+ * CfnVirtualClusterProps cfnVirtualClusterProps = CfnVirtualClusterProps.builder()
+ * .containerProvider(ContainerProviderProperty.builder()
+ * .id("id")
+ * .info(ContainerInfoProperty.builder()
+ * .eksInfo(EksInfoProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .build())
+ * .type("type")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)
+ */
 @CdkDslMarker
 public class CfnVirtualClusterPropsDsl {
   private val cdkBuilder: CfnVirtualClusterProps.Builder = CfnVirtualClusterProps.builder()

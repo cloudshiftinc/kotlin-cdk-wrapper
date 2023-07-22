@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.services.iot.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::Certificate` resource to declare an AWS IoT X.509 certificate. For information
+ * about working with X.509 certificates, see [X.509 Client
+ * Certificates](https://docs.aws.amazon.com/iot/latest/developerguide/x509-client-certs.html) in the
+ * *AWS IoT Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .status("status")
+ * // the properties below are optional
+ * .caCertificatePem("caCertificatePem")
+ * .certificateMode("certificateMode")
+ * .certificatePem("certificatePem")
+ * .certificateSigningRequest("certificateSigningRequest")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster
 import software.constructs.Construct
 
+/**
+ * The `AWS::EMRContainers::VirtualCluster` resource specifies a virtual cluster.
+ *
+ * A virtual cluster is a managed entity on Amazon EMR on EKS. You can create, describe, list, and
+ * delete virtual clusters. They do not consume any additional resources in your system. A single
+ * virtual cluster maps to a single Kubernetes namespace. Given this relationship, you can model
+ * virtual clusters the same way you model Kubernetes namespaces to meet your requirements.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrcontainers.*;
+ * CfnVirtualCluster cfnVirtualCluster = CfnVirtualCluster.Builder.create(this,
+ * "MyCfnVirtualCluster")
+ * .containerProvider(ContainerProviderProperty.builder()
+ * .id("id")
+ * .info(ContainerInfoProperty.builder()
+ * .eksInfo(EksInfoProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .build())
+ * .type("type")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrcontainers-virtualcluster.html)
+ */
 @CdkDslMarker
 public class CfnVirtualClusterDsl(
   scope: Construct,

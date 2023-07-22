@@ -14,6 +14,67 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnLaunch
 import software.amazon.awscdk.services.evidently.CfnLaunchProps
 
+/**
+ * Properties for defining a `CfnLaunch`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnLaunchProps cfnLaunchProps = CfnLaunchProps.builder()
+ * .groups(List.of(LaunchGroupObjectProperty.builder()
+ * .feature("feature")
+ * .groupName("groupName")
+ * .variation("variation")
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .name("name")
+ * .project("project")
+ * .scheduledSplitsConfig(List.of(StepConfigProperty.builder()
+ * .groupWeights(List.of(GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build()))
+ * .startTime("startTime")
+ * // the properties below are optional
+ * .segmentOverrides(List.of(SegmentOverrideProperty.builder()
+ * .evaluationOrder(123)
+ * .segment("segment")
+ * .weights(List.of(GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build()))
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .executionStatus(ExecutionStatusObjectProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .desiredState("desiredState")
+ * .reason("reason")
+ * .build())
+ * .metricMonitors(List.of(MetricDefinitionObjectProperty.builder()
+ * .entityIdKey("entityIdKey")
+ * .metricName("metricName")
+ * .valueKey("valueKey")
+ * // the properties below are optional
+ * .eventPattern("eventPattern")
+ * .unitLabel("unitLabel")
+ * .build()))
+ * .randomizationSalt("randomizationSalt")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-launch.html)
+ */
 @CdkDslMarker
 public class CfnLaunchPropsDsl {
   private val cdkBuilder: CfnLaunchProps.Builder = CfnLaunchProps.builder()

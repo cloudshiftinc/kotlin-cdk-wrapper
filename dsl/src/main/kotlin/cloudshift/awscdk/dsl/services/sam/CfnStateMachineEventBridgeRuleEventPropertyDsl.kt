@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sam.CfnStateMachine
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object pattern;
+ * EventBridgeRuleEventProperty eventBridgeRuleEventProperty =
+ * EventBridgeRuleEventProperty.builder()
+ * .pattern(pattern)
+ * // the properties below are optional
+ * .eventBusName("eventBusName")
+ * .input("input")
+ * .inputPath("inputPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-eventbridgeruleevent.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineEventBridgeRuleEventPropertyDsl {
   private val cdkBuilder: CfnStateMachine.EventBridgeRuleEventProperty.Builder =

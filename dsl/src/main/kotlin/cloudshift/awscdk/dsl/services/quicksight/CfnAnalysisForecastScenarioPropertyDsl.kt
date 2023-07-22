@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The forecast scenario of a forecast in the line chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ForecastScenarioProperty forecastScenarioProperty = ForecastScenarioProperty.builder()
+ * .whatIfPointScenario(WhatIfPointScenarioProperty.builder()
+ * .date("date")
+ * .value(123)
+ * .build())
+ * .whatIfRangeScenario(WhatIfRangeScenarioProperty.builder()
+ * .endDate("endDate")
+ * .startDate("startDate")
+ * .value(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-forecastscenario.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisForecastScenarioPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ForecastScenarioProperty.Builder =

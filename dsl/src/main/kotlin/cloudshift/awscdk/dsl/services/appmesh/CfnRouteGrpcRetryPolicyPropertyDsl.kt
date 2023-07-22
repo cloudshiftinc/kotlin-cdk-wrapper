@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents a retry policy.
+ *
+ * Specify at least one value for at least one of the types of `RetryEvents` , a value for
+ * `maxRetries` , and a value for `perRetryTimeout` . Both `server-error` and `gateway-error` under
+ * `httpRetryEvents` include the Envoy `reset` policy. For more information on the `reset` policy, see
+ * the [Envoy
+ * documentation](https://docs.aws.amazon.com/https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_filters/router_filter#x-envoy-retry-on)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GrpcRetryPolicyProperty grpcRetryPolicyProperty = GrpcRetryPolicyProperty.builder()
+ * .maxRetries(123)
+ * .perRetryTimeout(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * // the properties below are optional
+ * .grpcRetryEvents(List.of("grpcRetryEvents"))
+ * .httpRetryEvents(List.of("httpRetryEvents"))
+ * .tcpRetryEvents(List.of("tcpRetryEvents"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcretrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnRouteGrpcRetryPolicyPropertyDsl {
   private val cdkBuilder: CfnRoute.GrpcRetryPolicyProperty.Builder =

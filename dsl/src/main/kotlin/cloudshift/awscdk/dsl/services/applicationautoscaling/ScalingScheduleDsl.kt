@@ -8,6 +8,38 @@ import kotlin.Number
 import software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule
 import software.amazon.awscdk.services.applicationautoscaling.Schedule
 
+/**
+ * A scheduled scaling action.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .build();
+ * ScalableTaskCount scalableTarget =
+ * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
+ * .minCapacity(5)
+ * .maxCapacity(20)
+ * .build());
+ * scalableTarget.scaleOnSchedule("DaytimeScaleDown", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(1)
+ * .build());
+ * scalableTarget.scaleOnSchedule("EveningRushScaleUp", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(10)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ScalingScheduleDsl {
   private val cdkBuilder: ScalingSchedule.Builder = ScalingSchedule.builder()

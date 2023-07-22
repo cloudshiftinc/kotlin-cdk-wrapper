@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The constraint on task placement in the task definition.
+ *
+ * For more information, see [Task placement
+ * constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ *
+ * Task placement constraints aren't supported for tasks run on AWS Fargate .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * TaskDefinitionPlacementConstraintProperty taskDefinitionPlacementConstraintProperty =
+ * TaskDefinitionPlacementConstraintProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-taskdefinitionplacementconstraint.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionTaskDefinitionPlacementConstraintPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.TaskDefinitionPlacementConstraintProperty.Builder =

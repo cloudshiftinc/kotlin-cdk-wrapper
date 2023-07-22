@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup
 import software.constructs.Construct
 
+/**
+ * High-level information for a firewall rule group.
+ *
+ * A firewall rule group is a collection of rules that DNS Firewall uses to filter DNS network
+ * traffic for a VPC. To retrieve the rules for the rule group, call
+ * [ListFirewallRules](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRules.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnFirewallRuleGroup cfnFirewallRuleGroup = CfnFirewallRuleGroup.Builder.create(this,
+ * "MyCfnFirewallRuleGroup")
+ * .firewallRules(List.of(FirewallRuleProperty.builder()
+ * .action("action")
+ * .firewallDomainListId("firewallDomainListId")
+ * .priority(123)
+ * // the properties below are optional
+ * .blockOverrideDnsType("blockOverrideDnsType")
+ * .blockOverrideDomain("blockOverrideDomain")
+ * .blockOverrideTtl(123)
+ * .blockResponse("blockResponse")
+ * .build()))
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html)
+ */
 @CdkDslMarker
 public class CfnFirewallRuleGroupDsl(
   scope: Construct,

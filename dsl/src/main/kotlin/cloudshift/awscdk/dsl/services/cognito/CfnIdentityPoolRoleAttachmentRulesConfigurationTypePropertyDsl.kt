@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
 
+/**
+ * `RulesConfigurationType` is a subproperty of the
+ * [RoleMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)
+ * property that defines the rules to be used for mapping users to roles.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * RulesConfigurationTypeProperty rulesConfigurationTypeProperty =
+ * RulesConfigurationTypeProperty.builder()
+ * .rules(List.of(MappingRuleProperty.builder()
+ * .claim("claim")
+ * .matchType("matchType")
+ * .roleArn("roleArn")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolRoleAttachmentRulesConfigurationTypePropertyDsl {
   private val cdkBuilder: CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Builder =

@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnSubscriptionDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnSubscriptionDefinitionVersionProps cfnSubscriptionDefinitionVersionProps =
+ * CfnSubscriptionDefinitionVersionProps.builder()
+ * .subscriptionDefinitionId("subscriptionDefinitionId")
+ * .subscriptions(List.of(SubscriptionProperty.builder()
+ * .id("id")
+ * .source("source")
+ * .subject("subject")
+ * .target("target")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnSubscriptionDefinitionVersionProps.Builder =

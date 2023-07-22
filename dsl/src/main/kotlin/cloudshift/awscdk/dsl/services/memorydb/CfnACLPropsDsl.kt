@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnACLProps
 
+/**
+ * Properties for defining a `CfnACL`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * CfnACLProps cfnACLProps = CfnACLProps.builder()
+ * .aclName("aclName")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userNames(List.of("userNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html)
+ */
 @CdkDslMarker
 public class CfnACLPropsDsl {
   private val cdkBuilder: CfnACLProps.Builder = CfnACLProps.builder()

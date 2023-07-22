@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.servicediscovery.INamespace
 import software.amazon.awscdk.services.servicediscovery.RoutingPolicy
 import software.amazon.awscdk.services.servicediscovery.ServiceAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * INamespace namespace;
+ * ServiceAttributes serviceAttributes = ServiceAttributes.builder()
+ * .dnsRecordType(DnsRecordType.A)
+ * .namespace(namespace)
+ * .routingPolicy(RoutingPolicy.WEIGHTED)
+ * .serviceArn("serviceArn")
+ * .serviceId("serviceId")
+ * .serviceName("serviceName")
+ * // the properties below are optional
+ * .discoveryType(DiscoveryType.API)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceAttributesDsl {
   private val cdkBuilder: ServiceAttributes.Builder = ServiceAttributes.builder()

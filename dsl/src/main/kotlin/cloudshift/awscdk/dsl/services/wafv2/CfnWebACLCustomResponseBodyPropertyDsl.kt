@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The response body to use in a custom response to a web request.
+ *
+ * This is referenced by key from `CustomResponse` `CustomResponseBodyKey` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CustomResponseBodyProperty customResponseBodyProperty = CustomResponseBodyProperty.builder()
+ * .content("content")
+ * .contentType("contentType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-customresponsebody.html)
+ */
 @CdkDslMarker
 public class CfnWebACLCustomResponseBodyPropertyDsl {
   private val cdkBuilder: CfnWebACL.CustomResponseBodyProperty.Builder =

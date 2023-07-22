@@ -11,6 +11,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * The filter to use to identify the subset of cookies to inspect in a web request.
+ *
+ * You must specify exactly one setting: either `All` , `IncludedCookies` , or `ExcludedCookies` .
+ *
+ * Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * CookieMatchPatternProperty cookieMatchPatternProperty = CookieMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedCookies(List.of("excludedCookies"))
+ * .includedCookies(List.of("includedCookies"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-cookiematchpattern.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupCookieMatchPatternPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.CookieMatchPatternProperty.Builder =

@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
+/**
+ * `AddOn` is a property of the
+ * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
+ * resource. It describes the add-ons for an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * AddOnProperty addOnProperty = AddOnProperty.builder()
+ * .addOnType("addOnType")
+ * // the properties below are optional
+ * .autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty.builder()
+ * .snapshotTimeOfDay("snapshotTimeOfDay")
+ * .build())
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-addon.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAddOnPropertyDsl {
   private val cdkBuilder: CfnInstance.AddOnProperty.Builder = CfnInstance.AddOnProperty.builder()

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnBasePathMappingProps
 
+/**
+ * Properties for defining a `CfnBasePathMapping`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnBasePathMappingProps cfnBasePathMappingProps = CfnBasePathMappingProps.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .id("id")
+ * .restApiId("restApiId")
+ * .stage("stage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html)
+ */
 @CdkDslMarker
 public class CfnBasePathMappingPropsDsl {
   private val cdkBuilder: CfnBasePathMappingProps.Builder = CfnBasePathMappingProps.builder()

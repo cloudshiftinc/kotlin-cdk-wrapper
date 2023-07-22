@@ -12,6 +12,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration of an Amazon FSx for OpenZFS root volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * RootVolumeConfigurationProperty rootVolumeConfigurationProperty =
+ * RootVolumeConfigurationProperty.builder()
+ * .copyTagsToSnapshots(false)
+ * .dataCompressionType("dataCompressionType")
+ * .nfsExports(List.of(NfsExportsProperty.builder()
+ * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build()))
+ * .build()))
+ * .readOnly(false)
+ * .recordSizeKiB(123)
+ * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-rootvolumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemRootVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.RootVolumeConfigurationProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.MathExpressionOptions
 
+/**
+ * Configurable options for MathExpressions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MathExpressionOptions mathExpressionOptions = MathExpressionOptions.builder()
+ * .color("color")
+ * .label("label")
+ * .period(Duration.minutes(30))
+ * .searchAccount("searchAccount")
+ * .searchRegion("searchRegion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MathExpressionOptionsDsl {
   private val cdkBuilder: MathExpressionOptions.Builder = MathExpressionOptions.builder()

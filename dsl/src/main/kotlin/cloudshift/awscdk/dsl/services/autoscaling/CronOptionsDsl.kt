@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CronOptions
 
+/**
+ * Options to configure a cron expression.
+ *
+ * All fields are strings so you can use complex expressions. Absence of
+ * a field implies '*' or '?', whichever one is appropriate.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnSchedule("PrescaleInTheMorning", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .build());
+ * autoScalingGroup.scaleOnSchedule("AllowDownscalingAtNight", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(1)
+ * .build());
+ * ```
+ *
+ * [Documentation](http://crontab.org/)
+ */
 @CdkDslMarker
 public class CronOptionsDsl {
   private val cdkBuilder: CronOptions.Builder = CronOptions.builder()

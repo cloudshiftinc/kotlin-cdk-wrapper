@@ -11,6 +11,56 @@ import software.amazon.awscdk.services.appsync.LambdaAuthorizerConfig
 import software.amazon.awscdk.services.appsync.OpenIdConnectConfig
 import software.amazon.awscdk.services.appsync.UserPoolConfig
 
+/**
+ * Interface to specify default or additional authorization(s).
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "Api")
+ * .name("demo")
+ * .schema(SchemaFile.fromAsset(join(__dirname, "schema.graphql")))
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .defaultAuthorization(AuthorizationMode.builder()
+ * .authorizationType(AuthorizationType.IAM)
+ * .build())
+ * .build())
+ * .xrayEnabled(true)
+ * .build();
+ * Table demoTable = Table.Builder.create(this, "DemoTable")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .build();
+ * DynamoDbDataSource demoDS = api.addDynamoDbDataSource("demoDataSource", demoTable);
+ * // Resolver for the Query "getDemos" that scans the DynamoDb table and returns the entire list.
+ * // Resolver Mapping Template Reference:
+ * //
+ * https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-dynamodb.html
+ * demoDS.createResolver("QueryGetDemosResolver", BaseResolverProps.builder()
+ * .typeName("Query")
+ * .fieldName("getDemos")
+ * .requestMappingTemplate(MappingTemplate.dynamoDbScanTable())
+ * .responseMappingTemplate(MappingTemplate.dynamoDbResultList())
+ * .build());
+ * // Resolver for the Mutation "addDemo" that puts the item into the DynamoDb table.
+ * demoDS.createResolver("MutationAddDemoResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("addDemo")
+ * .requestMappingTemplate(MappingTemplate.dynamoDbPutItem(PrimaryKey.partition("id").auto(),
+ * Values.projecting("input")))
+ * .responseMappingTemplate(MappingTemplate.dynamoDbResultItem())
+ * .build());
+ * //To enable DynamoDB read consistency with the `MappingTemplate`:
+ * demoDS.createResolver("QueryGetDemosConsistentResolver", BaseResolverProps.builder()
+ * .typeName("Query")
+ * .fieldName("getDemosConsistent")
+ * .requestMappingTemplate(MappingTemplate.dynamoDbScanTable(true))
+ * .responseMappingTemplate(MappingTemplate.dynamoDbResultList())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AuthorizationModeDsl {
   private val cdkBuilder: AuthorizationMode.Builder = AuthorizationMode.builder()

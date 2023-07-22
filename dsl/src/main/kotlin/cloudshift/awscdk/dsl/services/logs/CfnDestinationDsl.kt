@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.logs.CfnDestination
 import software.constructs.Construct
 
+/**
+ * The AWS::Logs::Destination resource specifies a CloudWatch Logs destination.
+ *
+ * A destination encapsulates a physical resource (such as an Amazon Kinesis data stream) and
+ * enables you to subscribe that resource to a stream of log events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnDestination cfnDestination = CfnDestination.Builder.create(this, "MyCfnDestination")
+ * .destinationName("destinationName")
+ * .roleArn("roleArn")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .destinationPolicy("destinationPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html)
+ */
 @CdkDslMarker
 public class CfnDestinationDsl(
   scope: Construct,

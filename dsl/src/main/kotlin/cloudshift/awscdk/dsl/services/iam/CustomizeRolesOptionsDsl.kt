@@ -8,6 +8,20 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.iam.CustomizeRolesOptions
 
+/**
+ * Options for customizing IAM role creation.
+ *
+ * Example:
+ *
+ * ```
+ * App app;
+ * Stack stack = new Stack(app, "MyStack");
+ * Role.customizeRoles(this, CustomizeRolesOptions.builder()
+ * .usePrecreatedRoles(Map.of(
+ * "MyStack/MyLambda/ServiceRole", "my-role-name"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CustomizeRolesOptionsDsl {
   private val cdkBuilder: CustomizeRolesOptions.Builder = CustomizeRolesOptions.builder()

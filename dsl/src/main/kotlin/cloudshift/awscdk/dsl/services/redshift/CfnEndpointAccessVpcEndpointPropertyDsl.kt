@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnEndpointAccess
 
+/**
+ * The connection endpoint for connecting to an Amazon Redshift cluster through the proxy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * VpcEndpointProperty vpcEndpointProperty = VpcEndpointProperty.builder()
+ * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcendpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAccessVpcEndpointPropertyDsl {
   private val cdkBuilder: CfnEndpointAccess.VpcEndpointProperty.Builder =

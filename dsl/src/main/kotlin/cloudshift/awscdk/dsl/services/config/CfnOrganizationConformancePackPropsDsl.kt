@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnOrganizationConformancePackProps
 
+/**
+ * Properties for defining a `CfnOrganizationConformancePack`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnOrganizationConformancePackProps cfnOrganizationConformancePackProps =
+ * CfnOrganizationConformancePackProps.builder()
+ * .organizationConformancePackName("organizationConformancePackName")
+ * // the properties below are optional
+ * .conformancePackInputParameters(List.of(ConformancePackInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .deliveryS3Bucket("deliveryS3Bucket")
+ * .deliveryS3KeyPrefix("deliveryS3KeyPrefix")
+ * .excludedAccounts(List.of("excludedAccounts"))
+ * .templateBody("templateBody")
+ * .templateS3Uri("templateS3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConformancePackPropsDsl {
   private val cdkBuilder: CfnOrganizationConformancePackProps.Builder =

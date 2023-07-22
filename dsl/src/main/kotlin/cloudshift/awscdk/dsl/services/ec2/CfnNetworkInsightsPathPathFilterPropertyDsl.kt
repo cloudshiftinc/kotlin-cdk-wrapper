@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
 
+/**
+ * Describes a set of filters for a path analysis.
+ *
+ * Use path filters to scope the analysis when there can be multiple resulting paths.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PathFilterProperty pathFilterProperty = PathFilterProperty.builder()
+ * .destinationAddress("destinationAddress")
+ * .destinationPortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .sourceAddress("sourceAddress")
+ * .sourcePortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-pathfilter.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsPathPathFilterPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsPath.PathFilterProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps
 
+/**
+ * Properties for defining a `CfnVPCDHCPOptionsAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCDHCPOptionsAssociationProps cfnVPCDHCPOptionsAssociationProps =
+ * CfnVPCDHCPOptionsAssociationProps.builder()
+ * .dhcpOptionsId("dhcpOptionsId")
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html)
+ */
 @CdkDslMarker
 public class CfnVPCDHCPOptionsAssociationPropsDsl {
   private val cdkBuilder: CfnVPCDHCPOptionsAssociationProps.Builder =

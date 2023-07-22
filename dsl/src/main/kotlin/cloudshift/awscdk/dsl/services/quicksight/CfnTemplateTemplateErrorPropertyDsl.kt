@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * List of errors that occurred when the template version creation failed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TemplateErrorProperty templateErrorProperty = TemplateErrorProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .violatedEntities(List.of(EntityProperty.builder()
+ * .path("path")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-templateerror.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTemplateErrorPropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateErrorProperty.Builder =

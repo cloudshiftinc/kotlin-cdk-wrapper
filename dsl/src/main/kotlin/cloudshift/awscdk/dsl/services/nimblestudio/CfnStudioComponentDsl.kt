@@ -12,6 +12,79 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 import software.constructs.Construct
 
+/**
+ * The `AWS::NimbleStudio::StudioComponent` resource represents a network resource that is used by a
+ * studio's users and workflows.
+ *
+ * A typical studio contains studio components for the following: a render farm, an Active
+ * Directory, a licensing service, and a shared file system.
+ *
+ * Access to a studio component is managed by specifying security groups for the resource, as well
+ * as its endpoint.
+ *
+ * A studio component also has a set of initialization scripts, which are returned by
+ * `GetLaunchProfileInitialization` . These initialization scripts run on streaming sessions when they
+ * start. They provide users with flexibility in controlling how studio resources are configured on a
+ * streaming session.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * CfnStudioComponent cfnStudioComponent = CfnStudioComponent.Builder.create(this,
+ * "MyCfnStudioComponent")
+ * .name("name")
+ * .studioId("studioId")
+ * .type("type")
+ * // the properties below are optional
+ * .configuration(StudioComponentConfigurationProperty.builder()
+ * .activeDirectoryConfiguration(ActiveDirectoryConfigurationProperty.builder()
+ * .computerAttributes(List.of(ActiveDirectoryComputerAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .directoryId("directoryId")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build())
+ * .computeFarmConfiguration(ComputeFarmConfigurationProperty.builder()
+ * .activeDirectoryUser("activeDirectoryUser")
+ * .endpoint("endpoint")
+ * .build())
+ * .licenseServiceConfiguration(LicenseServiceConfigurationProperty.builder()
+ * .endpoint("endpoint")
+ * .build())
+ * .sharedFileSystemConfiguration(SharedFileSystemConfigurationProperty.builder()
+ * .endpoint("endpoint")
+ * .fileSystemId("fileSystemId")
+ * .linuxMountPoint("linuxMountPoint")
+ * .shareName("shareName")
+ * .windowsMountDrive("windowsMountDrive")
+ * .build())
+ * .build())
+ * .description("description")
+ * .ec2SecurityGroupIds(List.of("ec2SecurityGroupIds"))
+ * .initializationScripts(List.of(StudioComponentInitializationScriptProperty.builder()
+ * .launchProfileProtocolVersion("launchProfileProtocolVersion")
+ * .platform("platform")
+ * .runContext("runContext")
+ * .script("script")
+ * .build()))
+ * .runtimeRoleArn("runtimeRoleArn")
+ * .scriptParameters(List.of(ScriptParameterKeyValueProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .secureInitializationRoleArn("secureInitializationRoleArn")
+ * .subtype("subtype")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentDsl(
   scope: Construct,

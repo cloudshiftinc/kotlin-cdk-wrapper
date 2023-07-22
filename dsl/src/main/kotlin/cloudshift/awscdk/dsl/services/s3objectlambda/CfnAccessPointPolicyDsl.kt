@@ -10,6 +10,26 @@ import kotlin.Unit
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy
 import software.constructs.Construct
 
+/**
+ * The `AWS::S3ObjectLambda::AccessPointPolicy` resource specifies the Object Lambda Access Point
+ * resource policy document.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3objectlambda.*;
+ * Object policyDocument;
+ * CfnAccessPointPolicy cfnAccessPointPolicy = CfnAccessPointPolicy.Builder.create(this,
+ * "MyCfnAccessPointPolicy")
+ * .objectLambdaAccessPoint("objectLambdaAccessPoint")
+ * .policyDocument(policyDocument)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspointpolicy.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointPolicyDsl(
   scope: Construct,

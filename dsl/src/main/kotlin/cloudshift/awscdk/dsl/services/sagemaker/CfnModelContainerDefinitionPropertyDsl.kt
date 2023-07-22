@@ -10,6 +10,39 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModel
 
+/**
+ * Describes the container, as part of model definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object environment;
+ * ContainerDefinitionProperty containerDefinitionProperty = ContainerDefinitionProperty.builder()
+ * .containerHostname("containerHostname")
+ * .environment(environment)
+ * .image("image")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .repositoryAccessMode("repositoryAccessMode")
+ * // the properties below are optional
+ * .repositoryAuthConfig(RepositoryAuthConfigProperty.builder()
+ * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+ * .build())
+ * .build())
+ * .inferenceSpecificationName("inferenceSpecificationName")
+ * .mode("mode")
+ * .modelDataUrl("modelDataUrl")
+ * .modelPackageName("modelPackageName")
+ * .multiModelConfig(MultiModelConfigProperty.builder()
+ * .modelCacheSetting("modelCacheSetting")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html)
+ */
 @CdkDslMarker
 public class CfnModelContainerDefinitionPropertyDsl {
   private val cdkBuilder: CfnModel.ContainerDefinitionProperty.Builder =

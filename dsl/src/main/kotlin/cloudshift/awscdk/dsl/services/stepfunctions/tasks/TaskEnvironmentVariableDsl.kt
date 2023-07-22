@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable
 
+/**
+ * An environment variable to be set in the container run as a task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * TaskEnvironmentVariable taskEnvironmentVariable = TaskEnvironmentVariable.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TaskEnvironmentVariableDsl {
   private val cdkBuilder: TaskEnvironmentVariable.Builder = TaskEnvironmentVariable.builder()

@@ -14,6 +14,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPathProps
 
+/**
+ * Properties for defining a `CfnNetworkInsightsPath`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInsightsPathProps cfnNetworkInsightsPathProps = CfnNetworkInsightsPathProps.builder()
+ * .protocol("protocol")
+ * .source("source")
+ * // the properties below are optional
+ * .destination("destination")
+ * .destinationIp("destinationIp")
+ * .destinationPort(123)
+ * .filterAtDestination(PathFilterProperty.builder()
+ * .destinationAddress("destinationAddress")
+ * .destinationPortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .sourceAddress("sourceAddress")
+ * .sourcePortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build())
+ * .filterAtSource(PathFilterProperty.builder()
+ * .destinationAddress("destinationAddress")
+ * .destinationPortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .sourceAddress("sourceAddress")
+ * .sourcePortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build())
+ * .sourceIp("sourceIp")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsPathPropsDsl {
   private val cdkBuilder: CfnNetworkInsightsPathProps.Builder =

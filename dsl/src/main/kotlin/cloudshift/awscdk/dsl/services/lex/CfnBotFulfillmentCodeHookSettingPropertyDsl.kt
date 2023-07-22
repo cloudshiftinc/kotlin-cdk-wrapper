@@ -7,6 +7,16 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Determines if a Lambda function should be invoked for a specific intent.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-fulfillmentcodehooksetting.html)
+ */
 @CdkDslMarker
 public class CfnBotFulfillmentCodeHookSettingPropertyDsl {
   private val cdkBuilder: CfnBot.FulfillmentCodeHookSettingProperty.Builder =

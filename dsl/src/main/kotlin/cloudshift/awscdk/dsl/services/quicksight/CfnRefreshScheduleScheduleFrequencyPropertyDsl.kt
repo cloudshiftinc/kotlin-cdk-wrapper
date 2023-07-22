@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 
+/**
+ * The frequency for the refresh schedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ScheduleFrequencyProperty scheduleFrequencyProperty = ScheduleFrequencyProperty.builder()
+ * .interval("interval")
+ * .refreshOnDay(RefreshOnDayProperty.builder()
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .build())
+ * .timeOfTheDay("timeOfTheDay")
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-schedulefrequency.html)
+ */
 @CdkDslMarker
 public class CfnRefreshScheduleScheduleFrequencyPropertyDsl {
   private val cdkBuilder: CfnRefreshSchedule.ScheduleFrequencyProperty.Builder =

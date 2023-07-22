@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
 
+/**
+ * The AWS Identity and Access Management ( IAM ) action definition details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * IamActionDefinitionProperty iamActionDefinitionProperty = IamActionDefinitionProperty.builder()
+ * .policyArn("policyArn")
+ * // the properties below are optional
+ * .groups(List.of("groups"))
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-iamactiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnBudgetsActionIamActionDefinitionPropertyDsl {
   private val cdkBuilder: CfnBudgetsAction.IamActionDefinitionProperty.Builder =

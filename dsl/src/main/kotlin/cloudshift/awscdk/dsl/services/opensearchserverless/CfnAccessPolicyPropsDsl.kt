@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps
 
+/**
+ * Properties for defining a `CfnAccessPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnAccessPolicyProps cfnAccessPolicyProps = CfnAccessPolicyProps.builder()
+ * .name("name")
+ * .policy("policy")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-accesspolicy.html)
+ */
 @CdkDslMarker
 public class CfnAccessPolicyPropsDsl {
   private val cdkBuilder: CfnAccessPolicyProps.Builder = CfnAccessPolicyProps.builder()

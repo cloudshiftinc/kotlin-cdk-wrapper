@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnStaticIpProps
 
+/**
+ * Properties for defining a `CfnStaticIp`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnStaticIpProps cfnStaticIpProps = CfnStaticIpProps.builder()
+ * .staticIpName("staticIpName")
+ * // the properties below are optional
+ * .attachedTo("attachedTo")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-staticip.html)
+ */
 @CdkDslMarker
 public class CfnStaticIpPropsDsl {
   private val cdkBuilder: CfnStaticIpProps.Builder = CfnStaticIpProps.builder()

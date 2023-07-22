@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnBucket
 import software.amazon.awscdk.services.lightsail.CfnBucketProps
 
+/**
+ * Properties for defining a `CfnBucket`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnBucketProps cfnBucketProps = CfnBucketProps.builder()
+ * .bucketName("bucketName")
+ * .bundleId("bundleId")
+ * // the properties below are optional
+ * .accessRules(AccessRulesProperty.builder()
+ * .allowPublicOverrides(false)
+ * .objectAccess("objectAccess")
+ * .build())
+ * .objectVersioning(false)
+ * .readOnlyAccessAccounts(List.of("readOnlyAccessAccounts"))
+ * .resourcesReceivingAccess(List.of("resourcesReceivingAccess"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-bucket.html)
+ */
 @CdkDslMarker
 public class CfnBucketPropsDsl {
   private val cdkBuilder: CfnBucketProps.Builder = CfnBucketProps.builder()

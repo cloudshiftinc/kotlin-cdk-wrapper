@@ -12,6 +12,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::RouteResponse` resource creates a route response for a WebSocket API.
+ *
+ * For more information, see [Set up Route Responses for a WebSocket API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-route-response.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object responseModels;
+ * CfnRouteResponse cfnRouteResponse = CfnRouteResponse.Builder.create(this, "MyCfnRouteResponse")
+ * .apiId("apiId")
+ * .routeId("routeId")
+ * .routeResponseKey("routeResponseKey")
+ * // the properties below are optional
+ * .modelSelectionExpression("modelSelectionExpression")
+ * .responseModels(responseModels)
+ * .responseParameters(Map.of(
+ * "responseParametersKey", ParameterConstraintsProperty.builder()
+ * .required(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html)
+ */
 @CdkDslMarker
 public class CfnRouteResponseDsl(
   scope: Construct,

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The option that determines the text display weight, or boldness.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FontWeightProperty fontWeightProperty = FontWeightProperty.builder()
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-fontweight.html)
+ */
 @CdkDslMarker
 public class CfnDashboardFontWeightPropertyDsl {
   private val cdkBuilder: CfnDashboard.FontWeightProperty.Builder =

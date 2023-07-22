@@ -12,6 +12,91 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 import software.constructs.Construct
 
+/**
+ * Creates a connector using the specified properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * CfnConnector cfnConnector = CfnConnector.Builder.create(this, "MyCfnConnector")
+ * .capacity(CapacityProperty.builder()
+ * .autoScaling(AutoScalingProperty.builder()
+ * .maxWorkerCount(123)
+ * .mcuCount(123)
+ * .minWorkerCount(123)
+ * .scaleInPolicy(ScaleInPolicyProperty.builder()
+ * .cpuUtilizationPercentage(123)
+ * .build())
+ * .scaleOutPolicy(ScaleOutPolicyProperty.builder()
+ * .cpuUtilizationPercentage(123)
+ * .build())
+ * .build())
+ * .provisionedCapacity(ProvisionedCapacityProperty.builder()
+ * .workerCount(123)
+ * // the properties below are optional
+ * .mcuCount(123)
+ * .build())
+ * .build())
+ * .connectorConfiguration(Map.of(
+ * "connectorConfigurationKey", "connectorConfiguration"))
+ * .connectorName("connectorName")
+ * .kafkaCluster(KafkaClusterProperty.builder()
+ * .apacheKafkaCluster(ApacheKafkaClusterProperty.builder()
+ * .bootstrapServers("bootstrapServers")
+ * .vpc(VpcProperty.builder()
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .build())
+ * .kafkaClusterClientAuthentication(KafkaClusterClientAuthenticationProperty.builder()
+ * .authenticationType("authenticationType")
+ * .build())
+ * .kafkaClusterEncryptionInTransit(KafkaClusterEncryptionInTransitProperty.builder()
+ * .encryptionType("encryptionType")
+ * .build())
+ * .kafkaConnectVersion("kafkaConnectVersion")
+ * .plugins(List.of(PluginProperty.builder()
+ * .customPlugin(CustomPluginProperty.builder()
+ * .customPluginArn("customPluginArn")
+ * .revision(123)
+ * .build())
+ * .build()))
+ * .serviceExecutionRoleArn("serviceExecutionRoleArn")
+ * // the properties below are optional
+ * .connectorDescription("connectorDescription")
+ * .logDelivery(LogDeliveryProperty.builder()
+ * .workerLogDelivery(WorkerLogDeliveryProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsLogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build())
+ * .firehose(FirehoseLogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .s3(S3LogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .build())
+ * .workerConfiguration(WorkerConfigurationProperty.builder()
+ * .revision(123)
+ * .workerConfigurationArn("workerConfigurationArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDsl(
   scope: Construct,

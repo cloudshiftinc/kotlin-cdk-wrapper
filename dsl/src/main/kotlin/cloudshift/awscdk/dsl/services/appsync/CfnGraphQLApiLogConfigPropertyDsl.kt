@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * The `LogConfig` property type specifies the logging configuration when writing GraphQL operations
+ * and tracing to Amazon CloudWatch for an AWS AppSync GraphQL API.
+ *
+ * `LogConfig` is a property of the
+ * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * LogConfigProperty logConfigProperty = LogConfigProperty.builder()
+ * .cloudWatchLogsRoleArn("cloudWatchLogsRoleArn")
+ * .excludeVerboseContent(false)
+ * .fieldLogLevel("fieldLogLevel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiLogConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.LogConfigProperty.Builder =

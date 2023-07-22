@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDomainName
 import software.amazon.awscdk.services.apigateway.CfnDomainNameProps
 
+/**
+ * Properties for defining a `CfnDomainName`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDomainNameProps cfnDomainNameProps = CfnDomainNameProps.builder()
+ * .certificateArn("certificateArn")
+ * .domainName("domainName")
+ * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .build())
+ * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion("truststoreVersion")
+ * .build())
+ * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+ * .regionalCertificateArn("regionalCertificateArn")
+ * .securityPolicy("securityPolicy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
+ */
 @CdkDslMarker
 public class CfnDomainNamePropsDsl {
   private val cdkBuilder: CfnDomainNameProps.Builder = CfnDomainNameProps.builder()

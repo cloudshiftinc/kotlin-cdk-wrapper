@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a security group rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisSecurityGroupRuleProperty analysisSecurityGroupRuleProperty =
+ * AnalysisSecurityGroupRuleProperty.builder()
+ * .cidr("cidr")
+ * .direction("direction")
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .prefixListId("prefixListId")
+ * .protocol("protocol")
+ * .securityGroupId("securityGroupId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysissecuritygrouprule.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisSecurityGroupRulePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisSecurityGroupRuleProperty.Builder =

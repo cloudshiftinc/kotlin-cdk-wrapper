@@ -6,6 +6,57 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Dashboard publish options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DashboardPublishOptionsProperty dashboardPublishOptionsProperty =
+ * DashboardPublishOptionsProperty.builder()
+ * .adHocFilteringOption(AdHocFilteringOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .dataPointDrillUpDownOption(DataPointDrillUpDownOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .dataPointMenuLabelOption(DataPointMenuLabelOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .dataPointTooltipOption(DataPointTooltipOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .exportToCsvOption(ExportToCSVOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .exportWithHiddenFieldsOption(ExportWithHiddenFieldsOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .sheetControlsOption(SheetControlsOptionProperty.builder()
+ * .visibilityState("visibilityState")
+ * .build())
+ * .sheetLayoutElementMaximizationOption(SheetLayoutElementMaximizationOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .visualAxisSortOption(VisualAxisSortOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .visualMenuOption(VisualMenuOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .visualPublishOptions(DashboardVisualPublishOptionsProperty.builder()
+ * .exportHiddenFieldsOption(ExportHiddenFieldsOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardpublishoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDashboardPublishOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardPublishOptionsProperty.Builder =

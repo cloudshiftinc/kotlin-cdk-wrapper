@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.rds.OptionConfiguration
 
+/**
+ * Configuration properties for an option.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * SecurityGroup securityGroup;
+ * Vpc vpc;
+ * OptionConfiguration optionConfiguration = OptionConfiguration.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .port(123)
+ * .securityGroups(List.of(securityGroup))
+ * .settings(Map.of(
+ * "settingsKey", "settings"))
+ * .version("version")
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OptionConfigurationDsl {
   private val cdkBuilder: OptionConfiguration.Builder = OptionConfiguration.builder()

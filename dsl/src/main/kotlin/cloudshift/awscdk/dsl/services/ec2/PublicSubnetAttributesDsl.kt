@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.PublicSubnetAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PublicSubnetAttributes publicSubnetAttributes = PublicSubnetAttributes.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .ipv4CidrBlock("ipv4CidrBlock")
+ * .routeTableId("routeTableId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PublicSubnetAttributesDsl {
   private val cdkBuilder: PublicSubnetAttributes.Builder = PublicSubnetAttributes.builder()

@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A transform operation that projects columns.
+ *
+ * Operations that come after a projection can only refer to projected columns.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ProjectOperationProperty projectOperationProperty = ProjectOperationProperty.builder()
+ * .projectedColumns(List.of("projectedColumns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-projectoperation.html)
+ */
 @CdkDslMarker
 public class CfnDataSetProjectOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.ProjectOperationProperty.Builder =

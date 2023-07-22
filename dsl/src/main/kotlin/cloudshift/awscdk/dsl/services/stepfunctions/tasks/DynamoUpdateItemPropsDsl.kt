@@ -21,6 +21,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionM
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItemProps
 
+/**
+ * Properties for DynamoUpdateItem Task.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoUpdateItem.Builder.create(this, "UpdateItem")
+ * .key(Map.of(
+ * "MessageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .expressionAttributeValues(Map.of(
+ * ":val", DynamoAttributeValue.numberFromString(JsonPath.stringAt("$.Item.TotalCount.N")),
+ * ":rand", DynamoAttributeValue.fromNumber(20)))
+ * .updateExpression("SET TotalCount = :val + :rand")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoUpdateItemPropsDsl {
   private val cdkBuilder: DynamoUpdateItemProps.Builder = DynamoUpdateItemProps.builder()

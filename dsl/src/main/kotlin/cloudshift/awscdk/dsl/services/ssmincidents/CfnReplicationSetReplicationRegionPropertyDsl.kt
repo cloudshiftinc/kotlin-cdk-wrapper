@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
 
+/**
+ * The `ReplicationRegion` property type specifies the Region and KMS key to add to the replication
+ * set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * ReplicationRegionProperty replicationRegionProperty = ReplicationRegionProperty.builder()
+ * .regionConfiguration(RegionConfigurationProperty.builder()
+ * .sseKmsKeyId("sseKmsKeyId")
+ * .build())
+ * .regionName("regionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-replicationset-replicationregion.html)
+ */
 @CdkDslMarker
 public class CfnReplicationSetReplicationRegionPropertyDsl {
   private val cdkBuilder: CfnReplicationSet.ReplicationRegionProperty.Builder =

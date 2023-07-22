@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A container for describing a condition that must be met for the specified redirect to apply.
+ *
+ * For example, 1. If request is for pages in the `/docs` folder, redirect to the `/documents`
+ * folder. 2. If request results in HTTP error 4xx, redirect request to another host where you might
+ * process the error.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * RoutingRuleConditionProperty routingRuleConditionProperty =
+ * RoutingRuleConditionProperty.builder()
+ * .httpErrorCodeReturnedEquals("httpErrorCodeReturnedEquals")
+ * .keyPrefixEquals("keyPrefixEquals")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-routingrulecondition.html)
+ */
 @CdkDslMarker
 public class CfnBucketRoutingRuleConditionPropertyDsl {
   private val cdkBuilder: CfnBucket.RoutingRuleConditionProperty.Builder =

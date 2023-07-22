@@ -6,6 +6,39 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * Workers can send worker logs to different destination types.
+ *
+ * This configuration specifies the details of these destinations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * WorkerLogDeliveryProperty workerLogDeliveryProperty = WorkerLogDeliveryProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsLogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build())
+ * .firehose(FirehoseLogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .s3(S3LogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerlogdelivery.html)
+ */
 @CdkDslMarker
 public class CfnConnectorWorkerLogDeliveryPropertyDsl {
   private val cdkBuilder: CfnConnector.WorkerLogDeliveryProperty.Builder =

@@ -19,6 +19,28 @@ import software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy
 import software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 
+/**
+ * Options for creating a new behavior.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BehaviorOptionsDsl {
   private val cdkBuilder: BehaviorOptions.Builder = BehaviorOptions.builder()

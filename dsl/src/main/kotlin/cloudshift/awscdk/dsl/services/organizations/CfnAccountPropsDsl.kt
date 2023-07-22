@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnAccountProps
 
+/**
+ * Properties for defining a `CfnAccount`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * CfnAccountProps cfnAccountProps = CfnAccountProps.builder()
+ * .accountName("accountName")
+ * .email("email")
+ * // the properties below are optional
+ * .parentIds(List.of("parentIds"))
+ * .roleName("roleName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-account.html)
+ */
 @CdkDslMarker
 public class CfnAccountPropsDsl {
   private val cdkBuilder: CfnAccountProps.Builder = CfnAccountProps.builder()

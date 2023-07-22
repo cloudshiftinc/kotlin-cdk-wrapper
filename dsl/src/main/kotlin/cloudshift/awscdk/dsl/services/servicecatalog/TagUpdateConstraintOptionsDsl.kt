@@ -8,6 +8,20 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions
 
+/**
+ * Properties for ResourceUpdateConstraint.
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio portfolio;
+ * CloudFormationProduct product;
+ * // to disable tag updates:
+ * portfolio.constrainTagUpdates(product, TagUpdateConstraintOptions.builder()
+ * .allow(false)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TagUpdateConstraintOptionsDsl {
   private val cdkBuilder: TagUpdateConstraintOptions.Builder = TagUpdateConstraintOptions.builder()

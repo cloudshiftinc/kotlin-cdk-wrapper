@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.CfnHookDefaultVersion
 import software.constructs.Construct
 
+/**
+ * The `HookDefaultVersion` resource specifies the default version of the hook.
+ *
+ * The default version of the hook is used in CloudFormation operations for this AWS account and AWS
+ * Region .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnHookDefaultVersion cfnHookDefaultVersion = CfnHookDefaultVersion.Builder.create(this,
+ * "MyCfnHookDefaultVersion")
+ * .typeName("typeName")
+ * .typeVersionArn("typeVersionArn")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
+ */
 @CdkDslMarker
 public class CfnHookDefaultVersionDsl(
   scope: Construct,

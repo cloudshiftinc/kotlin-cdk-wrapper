@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity
 import software.amazon.awscdk.services.cloudfront.S3OriginConfig
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * S3 origin configuration for CloudFront.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket;
+ * ViewerCertificate viewerCertificate = ViewerCertificate.fromIamCertificate("MYIAMROLEIDENTIFIER",
+ * ViewerCertificateOptions.builder()
+ * .aliases(List.of("MYALIAS"))
+ * .build());
+ * CloudFrontWebDistribution.Builder.create(this, "MyCfWebDistribution")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(sourceBucket)
+ * .build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build()))
+ * .viewerCertificate(viewerCertificate)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3OriginConfigDsl {
   private val cdkBuilder: S3OriginConfig.Builder = S3OriginConfig.builder()

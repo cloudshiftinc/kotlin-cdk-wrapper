@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codedeploy.CfnApplication
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeDeploy::Application` resource creates an AWS CodeDeploy application.
+ *
+ * In CodeDeploy , an application is a name that functions as a container to ensure that the correct
+ * combination of revision, deployment configuration, and deployment group are referenced during a
+ * deployment. You can use the `AWS::CodeDeploy::DeploymentGroup` resource to associate the application
+ * with a CodeDeploy deployment group. For more information, see [CodeDeploy
+ * Deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployment-steps.html) in the
+ * *AWS CodeDeploy User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .applicationName("applicationName")
+ * .computePlatform("computePlatform")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

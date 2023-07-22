@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * Container distribution settings for encryption, licensing, and sharing in a specific Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ContainerDistributionConfigurationProperty containerDistributionConfigurationProperty =
+ * ContainerDistributionConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .description("description")
+ * .targetRepository(TargetContainerRepositoryProperty.builder()
+ * .repositoryName("repositoryName")
+ * .service("service")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-containerdistributionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationContainerDistributionConfigurationPropertyDsl {
   private val cdkBuilder:

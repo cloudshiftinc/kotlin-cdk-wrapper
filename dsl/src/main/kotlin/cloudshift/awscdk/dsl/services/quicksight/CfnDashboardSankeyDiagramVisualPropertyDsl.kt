@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A sankey diagram.
+ *
+ * For more information, see [Using Sankey
+ * diagrams](https://docs.aws.amazon.com/quicksight/latest/user/sankey-diagram.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardSankeyDiagramVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.SankeyDiagramVisualProperty.Builder =

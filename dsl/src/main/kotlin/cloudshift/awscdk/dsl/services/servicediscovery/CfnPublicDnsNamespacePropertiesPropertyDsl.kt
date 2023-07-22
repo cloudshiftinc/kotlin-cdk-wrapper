@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
 
+/**
+ * Properties for the public DNS namespace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * PropertiesProperty propertiesProperty = PropertiesProperty.builder()
+ * .dnsProperties(PublicDnsPropertiesMutableProperty.builder()
+ * .soa(SOAProperty.builder()
+ * .ttl(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-publicdnsnamespace-properties.html)
+ */
 @CdkDslMarker
 public class CfnPublicDnsNamespacePropertiesPropertyDsl {
   private val cdkBuilder: CfnPublicDnsNamespace.PropertiesProperty.Builder =

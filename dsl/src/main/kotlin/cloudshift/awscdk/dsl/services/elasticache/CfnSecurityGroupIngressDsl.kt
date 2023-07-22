@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngress
 import software.constructs.Construct
 
+/**
+ * The AWS::ElastiCache::SecurityGroupIngress type authorizes ingress to a cache security group from
+ * hosts in specified Amazon EC2 security groups.
+ *
+ * For more information about ElastiCache security group ingress, go to
+ * [AuthorizeCacheSecurityGroupIngress](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_AuthorizeCacheSecurityGroupIngress.html)
+ * in the *Amazon ElastiCache API Reference Guide* .
+ *
+ *
+ * Updates are not supported.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnSecurityGroupIngress cfnSecurityGroupIngress = CfnSecurityGroupIngress.Builder.create(this,
+ * "MyCfnSecurityGroupIngress")
+ * .cacheSecurityGroupName("cacheSecurityGroupName")
+ * .ec2SecurityGroupName("ec2SecurityGroupName")
+ * // the properties below are optional
+ * .ec2SecurityGroupOwnerId("ec2SecurityGroupOwnerId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroupingress.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupIngressDsl(
   scope: Construct,

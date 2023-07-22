@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 
+/**
+ * The contact that Incident Manager is engaging during an incident.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * ContactTargetInfoProperty contactTargetInfoProperty = ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-contacttargetinfo.html)
+ */
 @CdkDslMarker
 public class CfnPlanContactTargetInfoPropertyDsl {
   private val cdkBuilder: CfnPlan.ContactTargetInfoProperty.Builder =

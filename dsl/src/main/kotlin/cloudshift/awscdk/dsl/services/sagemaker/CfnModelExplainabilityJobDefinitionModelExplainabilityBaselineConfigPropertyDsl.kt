@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * The configuration for a baseline model explainability job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelExplainabilityBaselineConfigProperty modelExplainabilityBaselineConfigProperty =
+ * ModelExplainabilityBaselineConfigProperty.builder()
+ * .baseliningJobName("baseliningJobName")
+ * .constraintsResource(ConstraintsResourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-modelexplainabilitybaselineconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionModelExplainabilityBaselineConfigPropertyDsl {
   private val cdkBuilder:

@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.UniqueResourceNameOptions
 
+/**
+ * Options for creating a unique resource name.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * UniqueResourceNameOptions uniqueResourceNameOptions = UniqueResourceNameOptions.builder()
+ * .allowedSpecialCharacters("allowedSpecialCharacters")
+ * .maxLength(123)
+ * .separator("separator")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UniqueResourceNameOptionsDsl {
   private val cdkBuilder: UniqueResourceNameOptions.Builder = UniqueResourceNameOptions.builder()

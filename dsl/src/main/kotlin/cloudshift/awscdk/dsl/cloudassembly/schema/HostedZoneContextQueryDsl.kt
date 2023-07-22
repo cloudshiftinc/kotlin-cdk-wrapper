@@ -7,6 +7,26 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.HostedZoneContextQuery
 
+/**
+ * Query to hosted zone context provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * HostedZoneContextQuery hostedZoneContextQuery = HostedZoneContextQuery.builder()
+ * .account("account")
+ * .domainName("domainName")
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .privateZone(false)
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HostedZoneContextQueryDsl {
   private val cdkBuilder: HostedZoneContextQuery.Builder = HostedZoneContextQuery.builder()

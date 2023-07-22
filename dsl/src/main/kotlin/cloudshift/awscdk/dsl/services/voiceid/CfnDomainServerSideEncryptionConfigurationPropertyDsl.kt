@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.voiceid.CfnDomain
 
+/**
+ * The configuration containing information about the customer managed key used for encrypting
+ * customer data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.voiceid.*;
+ * ServerSideEncryptionConfigurationProperty serverSideEncryptionConfigurationProperty =
+ * ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-voiceid-domain-serversideencryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDomainServerSideEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDomain.ServerSideEncryptionConfigurationProperty.Builder =

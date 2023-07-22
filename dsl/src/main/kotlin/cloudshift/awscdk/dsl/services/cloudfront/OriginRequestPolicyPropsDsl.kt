@@ -9,6 +9,30 @@ import software.amazon.awscdk.services.cloudfront.OriginRequestHeaderBehavior
 import software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps
 import software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior
 
+/**
+ * Properties for creating a Origin Request Policy.
+ *
+ * Example:
+ *
+ * ```
+ * // Creating a custom origin request policy for a Distribution -- all parameters optional
+ * S3Origin bucketOrigin;
+ * OriginRequestPolicy myOriginRequestPolicy = OriginRequestPolicy.Builder.create(this,
+ * "OriginRequestPolicy")
+ * .originRequestPolicyName("MyPolicy")
+ * .comment("A default policy")
+ * .cookieBehavior(OriginRequestCookieBehavior.none())
+ * .headerBehavior(OriginRequestHeaderBehavior.all("CloudFront-Is-Android-Viewer"))
+ * .queryStringBehavior(OriginRequestQueryStringBehavior.allowList("username"))
+ * .build();
+ * Distribution.Builder.create(this, "myDistCustomPolicy")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(bucketOrigin)
+ * .originRequestPolicy(myOriginRequestPolicy)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginRequestPolicyPropsDsl {
   private val cdkBuilder: OriginRequestPolicyProps.Builder = OriginRequestPolicyProps.builder()

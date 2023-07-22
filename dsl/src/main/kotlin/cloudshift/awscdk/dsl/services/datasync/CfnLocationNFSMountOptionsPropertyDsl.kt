@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
 
+/**
+ * Specifies the mount options that DataSync can use to mount your NFS share.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * MountOptionsProperty mountOptionsProperty = MountOptionsProperty.builder()
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-mountoptions.html)
+ */
 @CdkDslMarker
 public class CfnLocationNFSMountOptionsPropertyDsl {
   private val cdkBuilder: CfnLocationNFS.MountOptionsProperty.Builder =

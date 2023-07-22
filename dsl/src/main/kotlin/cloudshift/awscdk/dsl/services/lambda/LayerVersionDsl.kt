@@ -13,6 +13,19 @@ import software.amazon.awscdk.services.lambda.LayerVersion
 import software.amazon.awscdk.services.lambda.Runtime
 import software.constructs.Construct
 
+/**
+ * Defines a new Lambda Layer version.
+ *
+ * Example:
+ *
+ * ```
+ * LayerVersion.Builder.create(this, "MyLayer")
+ * .removalPolicy(RemovalPolicy.RETAIN)
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .compatibleArchitectures(List.of(Architecture.X86_64, Architecture.ARM_64))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LayerVersionDsl(
   scope: Construct,

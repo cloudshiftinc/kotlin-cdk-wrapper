@@ -9,6 +9,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appmesh.VirtualRouterBaseProps
 import software.amazon.awscdk.services.appmesh.VirtualRouterListener
 
+/**
+ * Interface with base properties all routers willl inherit.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualRouter router = mesh.addVirtualRouter("router", VirtualRouterBaseProps.builder()
+ * .listeners(List.of(VirtualRouterListener.http(8080)))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class VirtualRouterBasePropsDsl {
   private val cdkBuilder: VirtualRouterBaseProps.Builder = VirtualRouterBaseProps.builder()

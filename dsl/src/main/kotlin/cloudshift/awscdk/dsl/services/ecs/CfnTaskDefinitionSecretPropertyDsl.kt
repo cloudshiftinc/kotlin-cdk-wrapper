@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * An object representing the secret to expose to your container.
+ *
+ * Secrets can be exposed to a container in the following ways:
+ *
+ * * To inject sensitive data into your containers as environment variables, use the `secrets`
+ * container definition parameter.
+ * * To reference sensitive information in the log configuration of a container, use the
+ * `secretOptions` container definition parameter.
+ *
+ * For more information, see [Specifying sensitive
+ * data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html) in
+ * the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * SecretProperty secretProperty = SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-secret.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionSecretPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.SecretProperty.Builder =

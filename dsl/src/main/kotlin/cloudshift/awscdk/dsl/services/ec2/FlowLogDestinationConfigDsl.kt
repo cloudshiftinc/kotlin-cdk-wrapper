@@ -12,6 +12,36 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Flow Log Destination configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * LogGroup logGroup;
+ * Role role;
+ * FlowLogDestinationConfig flowLogDestinationConfig = FlowLogDestinationConfig.builder()
+ * .logDestinationType(FlowLogDestinationType.CLOUD_WATCH_LOGS)
+ * // the properties below are optional
+ * .destinationOptions(DestinationOptions.builder()
+ * .fileFormat(FlowLogFileFormat.PLAIN_TEXT)
+ * .hiveCompatiblePartitions(false)
+ * .perHourPartition(false)
+ * .build())
+ * .iamRole(role)
+ * .keyPrefix("keyPrefix")
+ * .logGroup(logGroup)
+ * .s3Bucket(bucket)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FlowLogDestinationConfigDsl {
   private val cdkBuilder: FlowLogDestinationConfig.Builder = FlowLogDestinationConfig.builder()

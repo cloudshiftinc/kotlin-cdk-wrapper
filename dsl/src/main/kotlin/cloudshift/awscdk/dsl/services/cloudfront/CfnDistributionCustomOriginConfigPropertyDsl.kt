@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A custom origin.
+ *
+ * A custom origin is any origin that is *not* an Amazon S3 bucket, with one exception. An Amazon S3
+ * bucket that is [configured with static website
+ * hosting](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html) *is* a custom origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CustomOriginConfigProperty customOriginConfigProperty = CustomOriginConfigProperty.builder()
+ * .originProtocolPolicy("originProtocolPolicy")
+ * // the properties below are optional
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .originKeepaliveTimeout(123)
+ * .originReadTimeout(123)
+ * .originSslProtocols(List.of("originSslProtocols"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customoriginconfig.html)
+ */
 @CdkDslMarker
 public class CfnDistributionCustomOriginConfigPropertyDsl {
   private val cdkBuilder: CfnDistribution.CustomOriginConfigProperty.Builder =

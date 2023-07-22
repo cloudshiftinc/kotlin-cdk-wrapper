@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.services.location.CfnRouteCalculator
 import software.constructs.Construct
 
+/**
+ * Specifies a route calculator resource in your AWS account.
+ *
+ * You can send requests to a route calculator resource to estimate travel time, distance, and get
+ * directions. A route calculator sources traffic and road network data from your chosen data provider.
+ *
+ *
+ * If your application is tracking or routing assets you use in your business, such as delivery
+ * vehicles or employees, you must not use Esri as your geolocation provider. See section 82 of the
+ * [AWS service terms](https://docs.aws.amazon.com/service-terms) for more details.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnRouteCalculator cfnRouteCalculator = CfnRouteCalculator.Builder.create(this,
+ * "MyCfnRouteCalculator")
+ * .calculatorName("calculatorName")
+ * .dataSource("dataSource")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html)
+ */
 @CdkDslMarker
 public class CfnRouteCalculatorDsl(
   scope: Construct,

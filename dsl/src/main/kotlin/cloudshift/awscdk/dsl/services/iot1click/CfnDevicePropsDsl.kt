@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot1click.CfnDeviceProps
 
+/**
+ * Properties for defining a `CfnDevice`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot1click.*;
+ * CfnDeviceProps cfnDeviceProps = CfnDeviceProps.builder()
+ * .deviceId("deviceId")
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-device.html)
+ */
 @CdkDslMarker
 public class CfnDevicePropsDsl {
   private val cdkBuilder: CfnDeviceProps.Builder = CfnDeviceProps.builder()

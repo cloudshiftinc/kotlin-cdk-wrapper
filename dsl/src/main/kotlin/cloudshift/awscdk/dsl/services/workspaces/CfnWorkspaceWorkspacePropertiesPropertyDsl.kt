@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.workspaces.CfnWorkspace
 
+/**
+ * Information about a WorkSpace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * WorkspacePropertiesProperty workspacePropertiesProperty = WorkspacePropertiesProperty.builder()
+ * .computeTypeName("computeTypeName")
+ * .rootVolumeSizeGib(123)
+ * .runningMode("runningMode")
+ * .runningModeAutoStopTimeoutInMinutes(123)
+ * .userVolumeSizeGib(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-workspace-workspaceproperties.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceWorkspacePropertiesPropertyDsl {
   private val cdkBuilder: CfnWorkspace.WorkspacePropertiesProperty.Builder =

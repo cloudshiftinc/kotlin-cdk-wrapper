@@ -14,6 +14,110 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope
 import software.constructs.Construct
 
+/**
+ * Describes a Network Access Scope.
+ *
+ * A Network Access Scope defines outbound (egress) and inbound (ingress) traffic patterns,
+ * including sources, destinations, paths, and traffic types.
+ *
+ * Network Access Analyzer identifies unintended network access to your resources on AWS . When you
+ * start an analysis on a Network Access Scope, Network Access Analyzer produces findings. For more
+ * information, see the [Network Access Analyzer User
+ * Guide](https://docs.aws.amazon.com/vpc/latest/network-access-analyzer/) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInsightsAccessScope cfnNetworkInsightsAccessScope =
+ * CfnNetworkInsightsAccessScope.Builder.create(this, "MyCfnNetworkInsightsAccessScope")
+ * .excludePaths(List.of(AccessScopePathRequestProperty.builder()
+ * .destination(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .source(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .throughResources(List.of(ThroughResourcesStatementRequestProperty.builder()
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build()))
+ * .build()))
+ * .matchPaths(List.of(AccessScopePathRequestProperty.builder()
+ * .destination(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .source(PathStatementRequestProperty.builder()
+ * .packetHeaderStatement(PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build())
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build())
+ * .throughResources(List.of(ThroughResourcesStatementRequestProperty.builder()
+ * .resourceStatement(ResourceStatementRequestProperty.builder()
+ * .resources(List.of("resources"))
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAccessScopeDsl(
   scope: Construct,

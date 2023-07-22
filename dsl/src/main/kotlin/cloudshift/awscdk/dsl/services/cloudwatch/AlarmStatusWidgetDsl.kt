@@ -12,6 +12,20 @@ import software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget
 import software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetSortBy
 import software.amazon.awscdk.services.cloudwatch.IAlarm
 
+/**
+ * A dashboard widget that displays alarms in a grid view.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * dashboard.addWidgets(
+ * AlarmStatusWidget.Builder.create()
+ * .alarms(List.of(errorAlarm))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AlarmStatusWidgetDsl {
   private val cdkBuilder: AlarmStatusWidget.Builder = AlarmStatusWidget.Builder.create()

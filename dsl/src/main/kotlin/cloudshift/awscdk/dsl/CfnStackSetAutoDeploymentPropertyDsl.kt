@@ -7,6 +7,24 @@ import kotlin.Boolean
 import software.amazon.awscdk.CfnStackSet
 import software.amazon.awscdk.IResolvable
 
+/**
+ * [ `Service-managed` permissions] Describes whether StackSets automatically deploys to AWS
+ * Organizations accounts that are added to a target organizational unit (OU).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * AutoDeploymentProperty autoDeploymentProperty = AutoDeploymentProperty.builder()
+ * .enabled(false)
+ * .retainStacksOnAccountRemoval(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-autodeployment.html)
+ */
 @CdkDslMarker
 public class CfnStackSetAutoDeploymentPropertyDsl {
   private val cdkBuilder: CfnStackSet.AutoDeploymentProperty.Builder =

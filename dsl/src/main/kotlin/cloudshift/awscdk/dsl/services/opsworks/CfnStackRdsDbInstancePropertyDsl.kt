@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnStack
 
+/**
+ * Describes an Amazon RDS instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * RdsDbInstanceProperty rdsDbInstanceProperty = RdsDbInstanceProperty.builder()
+ * .dbPassword("dbPassword")
+ * .dbUser("dbUser")
+ * .rdsDbInstanceArn("rdsDbInstanceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html)
+ */
 @CdkDslMarker
 public class CfnStackRdsDbInstancePropertyDsl {
   private val cdkBuilder: CfnStack.RdsDbInstanceProperty.Builder =

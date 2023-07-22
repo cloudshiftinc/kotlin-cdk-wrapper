@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
 
+/**
+ * The `Targets` property type specifies adding a target to a maintenance window target in AWS
+ * Systems Manager .
+ *
+ * `Targets` is a property of the
+ * [AWS::SSM::MaintenanceWindowTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * TargetsProperty targetsProperty = TargetsProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtarget-targets.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTargetTargetsPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTarget.TargetsProperty.Builder =

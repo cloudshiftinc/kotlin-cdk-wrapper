@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the settings for events that cause a campaign to be sent.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object attributes;
+ * Object metrics;
+ * CampaignEventFilterProperty campaignEventFilterProperty = CampaignEventFilterProperty.builder()
+ * .dimensions(EventDimensionsProperty.builder()
+ * .attributes(attributes)
+ * .eventType(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .metrics(metrics)
+ * .build())
+ * .filterType("filterType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaigneventfilter.html)
+ */
 @CdkDslMarker
 public class CfnCampaignCampaignEventFilterPropertyDsl {
   private val cdkBuilder: CfnCampaign.CampaignEventFilterProperty.Builder =

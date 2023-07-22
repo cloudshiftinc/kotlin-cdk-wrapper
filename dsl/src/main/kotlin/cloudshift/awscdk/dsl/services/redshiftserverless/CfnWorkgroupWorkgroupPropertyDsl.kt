@@ -12,6 +12,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup
 
+/**
+ * The collection of computing resources from which an endpoint is created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * WorkgroupProperty workgroupProperty = WorkgroupProperty.builder()
+ * .baseCapacity(123)
+ * .configParameters(List.of(ConfigParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .creationDate("creationDate")
+ * .endpoint(EndpointProperty.builder()
+ * .address("address")
+ * .port(123)
+ * .vpcEndpoints(List.of(VpcEndpointProperty.builder()
+ * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build()))
+ * .build())
+ * .enhancedVpcRouting(false)
+ * .namespaceName("namespaceName")
+ * .publiclyAccessible(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .status("status")
+ * .subnetIds(List.of("subnetIds"))
+ * .workgroupArn("workgroupArn")
+ * .workgroupId("workgroupId")
+ * .workgroupName("workgroupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-workgroup.html)
+ */
 @CdkDslMarker
 public class CfnWorkgroupWorkgroupPropertyDsl {
   private val cdkBuilder: CfnWorkgroup.WorkgroupProperty.Builder =

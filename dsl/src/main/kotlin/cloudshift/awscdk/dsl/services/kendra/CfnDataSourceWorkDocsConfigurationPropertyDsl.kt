@@ -11,6 +11,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to Amazon WorkDocs as your data source.
+ *
+ * Amazon WorkDocs connector is available in Oregon, North Virginia, Sydney, Singapore and Ireland
+ * regions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * WorkDocsConfigurationProperty workDocsConfigurationProperty =
+ * WorkDocsConfigurationProperty.builder()
+ * .organizationId("organizationId")
+ * // the properties below are optional
+ * .crawlComments(false)
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .useChangeLog(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-workdocsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceWorkDocsConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.WorkDocsConfigurationProperty.Builder =

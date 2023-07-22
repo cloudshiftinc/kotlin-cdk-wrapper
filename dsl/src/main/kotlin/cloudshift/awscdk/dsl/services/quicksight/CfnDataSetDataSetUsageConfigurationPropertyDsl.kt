@@ -7,6 +7,24 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * The usage configuration to apply to child datasets that reference this dataset as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataSetUsageConfigurationProperty dataSetUsageConfigurationProperty =
+ * DataSetUsageConfigurationProperty.builder()
+ * .disableUseAsDirectQuerySource(false)
+ * .disableUseAsImportedSource(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datasetusageconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSetDataSetUsageConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSet.DataSetUsageConfigurationProperty.Builder =

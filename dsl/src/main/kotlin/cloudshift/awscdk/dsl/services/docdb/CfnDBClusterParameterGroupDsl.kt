@@ -14,6 +14,54 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.docdb.CfnDBClusterParameterGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::DocDB::DBClusterParameterGroup` Amazon DocumentDB (with MongoDB compatibility) resource
+ * describes a DBClusterParameterGroup.
+ *
+ * For more information, see
+ * [DBClusterParameterGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBClusterParameterGroup.html)
+ * in the *Amazon DocumentDB Developer Guide* .
+ *
+ * Parameters in a cluster parameter group apply to all of the instances in a cluster.
+ *
+ * A cluster parameter group is initially created with the default parameters for the database
+ * engine used by instances in the cluster. To provide custom values for any of the parameters, you
+ * must modify the group after you create it. After you create a DB cluster parameter group, you must
+ * associate it with your cluster. For the new cluster parameter group and associated settings to take
+ * effect, you must then reboot the DB instances in the cluster without failover.
+ *
+ *
+ * After you create a cluster parameter group, you should wait at least 5 minutes before creating
+ * your first cluster that uses that cluster parameter group as the default parameter group. This
+ * allows Amazon DocumentDB to fully complete the create action before the cluster parameter group is
+ * used as the default for a new cluster. This step is especially important for parameters that are
+ * critical when creating the default database for a cluster, such as the character set for the default
+ * database defined by the `character_set_database` parameter.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * Object parameters;
+ * CfnDBClusterParameterGroup cfnDBClusterParameterGroup =
+ * CfnDBClusterParameterGroup.Builder.create(this, "MyCfnDBClusterParameterGroup")
+ * .description("description")
+ * .family("family")
+ * .parameters(parameters)
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbclusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterParameterGroupDsl(
   scope: Construct,

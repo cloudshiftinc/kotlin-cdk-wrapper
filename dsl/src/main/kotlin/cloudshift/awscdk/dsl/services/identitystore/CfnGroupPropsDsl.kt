@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.identitystore.CfnGroupProps
 
+/**
+ * Properties for defining a `CfnGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.identitystore.*;
+ * CfnGroupProps cfnGroupProps = CfnGroupProps.builder()
+ * .displayName("displayName")
+ * .identityStoreId("identityStoreId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupPropsDsl {
   private val cdkBuilder: CfnGroupProps.Builder = CfnGroupProps.builder()

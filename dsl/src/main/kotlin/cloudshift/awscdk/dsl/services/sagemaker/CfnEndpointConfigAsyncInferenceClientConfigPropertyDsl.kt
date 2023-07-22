@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Configures the behavior of the client used by SageMaker to interact with the model container
+ * during asynchronous inference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * AsyncInferenceClientConfigProperty asyncInferenceClientConfigProperty =
+ * AsyncInferenceClientConfigProperty.builder()
+ * .maxConcurrentInvocationsPerInstance(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceclientconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigAsyncInferenceClientConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.AsyncInferenceClientConfigProperty.Builder =

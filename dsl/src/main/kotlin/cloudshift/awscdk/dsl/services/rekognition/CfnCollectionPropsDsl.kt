@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rekognition.CfnCollectionProps
 
+/**
+ * Properties for defining a `CfnCollection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * CfnCollectionProps cfnCollectionProps = CfnCollectionProps.builder()
+ * .collectionId("collectionId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html)
+ */
 @CdkDslMarker
 public class CfnCollectionPropsDsl {
   private val cdkBuilder: CfnCollectionProps.Builder = CfnCollectionProps.builder()

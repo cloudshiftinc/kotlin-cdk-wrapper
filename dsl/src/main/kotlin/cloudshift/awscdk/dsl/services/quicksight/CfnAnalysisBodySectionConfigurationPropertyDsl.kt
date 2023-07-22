@@ -7,6 +7,75 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of a body section.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * BodySectionConfigurationProperty bodySectionConfigurationProperty =
+ * BodySectionConfigurationProperty.builder()
+ * .content(BodySectionContentProperty.builder()
+ * .layout(SectionLayoutConfigurationProperty.builder()
+ * .freeFormLayout(FreeFormSectionLayoutConfigurationProperty.builder()
+ * .elements(List.of(FreeFormLayoutElementProperty.builder()
+ * .elementId("elementId")
+ * .elementType("elementType")
+ * .height("height")
+ * .width("width")
+ * .xAxisLocation("xAxisLocation")
+ * .yAxisLocation("yAxisLocation")
+ * // the properties below are optional
+ * .backgroundStyle(FreeFormLayoutElementBackgroundStyleProperty.builder()
+ * .color("color")
+ * .visibility("visibility")
+ * .build())
+ * .borderStyle(FreeFormLayoutElementBorderStyleProperty.builder()
+ * .color("color")
+ * .visibility("visibility")
+ * .build())
+ * .loadingAnimation(LoadingAnimationProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .renderingRules(List.of(SheetElementRenderingRuleProperty.builder()
+ * .configurationOverrides(SheetElementConfigurationOverridesProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .expression("expression")
+ * .build()))
+ * .selectedBorderStyle(FreeFormLayoutElementBorderStyleProperty.builder()
+ * .color("color")
+ * .visibility("visibility")
+ * .build())
+ * .visibility("visibility")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .sectionId("sectionId")
+ * // the properties below are optional
+ * .pageBreakConfiguration(SectionPageBreakConfigurationProperty.builder()
+ * .after(SectionAfterPageBreakProperty.builder()
+ * .status("status")
+ * .build())
+ * .build())
+ * .style(SectionStyleProperty.builder()
+ * .height("height")
+ * .padding(SpacingProperty.builder()
+ * .bottom("bottom")
+ * .left("left")
+ * .right("right")
+ * .top("top")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-bodysectionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisBodySectionConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.BodySectionConfigurationProperty.Builder =

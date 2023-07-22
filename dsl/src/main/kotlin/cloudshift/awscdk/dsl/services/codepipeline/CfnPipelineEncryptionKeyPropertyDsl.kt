@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Represents information about the key used to encrypt data in the artifact store, such as an AWS
+ * Key Management Service ( AWS KMS) key.
+ *
+ * `EncryptionKey` is a property of the
+ * [ArtifactStore](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-artifactstore.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * EncryptionKeyProperty encryptionKeyProperty = EncryptionKeyProperty.builder()
+ * .id("id")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-encryptionkey.html)
+ */
 @CdkDslMarker
 public class CfnPipelineEncryptionKeyPropertyDsl {
   private val cdkBuilder: CfnPipeline.EncryptionKeyProperty.Builder =

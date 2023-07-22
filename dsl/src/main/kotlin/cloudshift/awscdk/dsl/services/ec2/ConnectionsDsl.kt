@@ -11,6 +11,33 @@ import software.amazon.awscdk.services.ec2.IPeer
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.Port
 
+/**
+ * Manage the allowed network connections for constructs with Security Groups.
+ *
+ * Security Groups can be thought of as a firewall for network-connected
+ * devices. This class makes it easy to allow network connections to and
+ * from security groups, and between security groups individually. When
+ * establishing connectivity between security groups, it will automatically
+ * add rules in both security groups
+ *
+ * This object can manage one or more security groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * IPeer peer;
+ * Port port;
+ * SecurityGroup securityGroup;
+ * Connections connections = Connections.Builder.create()
+ * .defaultPort(port)
+ * .peer(peer)
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConnectionsDsl {
   private val cdkBuilder: Connections.Builder = Connections.Builder.create()

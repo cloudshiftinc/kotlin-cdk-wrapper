@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A configuration for enabling the `Server-Timing` header in HTTP responses sent from CloudFront.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * ServerTimingHeadersConfigProperty serverTimingHeadersConfigProperty =
+ * ServerTimingHeadersConfigProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .samplingRate(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-servertimingheadersconfig.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyServerTimingHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty.Builder =

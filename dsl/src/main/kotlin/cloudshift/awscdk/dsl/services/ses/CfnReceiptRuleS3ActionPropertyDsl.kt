@@ -6,6 +6,41 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action saves the received message to an Amazon Simple
+ * Storage Service (Amazon S3) bucket and, optionally, publishes a notification to Amazon Simple
+ * Notification Service (Amazon SNS).
+ *
+ * To enable Amazon SES to write emails to your Amazon S3 bucket, use an AWS KMS key to encrypt your
+ * emails, or publish to an Amazon SNS topic of another account, Amazon SES must have permission to
+ * access those resources. For information about granting permissions, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+ *
+ *
+ * When you save your emails to an Amazon S3 bucket, the maximum email size (including headers) is
+ * 40 MB. Emails larger than that bounces.
+ *
+ *
+ * For information about specifying Amazon S3 actions in receipt rules, see the [Amazon SES
+ * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-s3.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * S3ActionProperty s3ActionProperty = S3ActionProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-s3action.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleS3ActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.S3ActionProperty.Builder =

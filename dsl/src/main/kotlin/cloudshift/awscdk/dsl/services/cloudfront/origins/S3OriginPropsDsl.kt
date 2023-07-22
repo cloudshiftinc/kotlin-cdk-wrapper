@@ -11,6 +11,21 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity
 import software.amazon.awscdk.services.cloudfront.origins.S3OriginProps
 
+/**
+ * Properties to use to customize an S3 Origin.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder().origin(S3Origin.Builder.create(myBucket)
+ * .customHeaders(Map.of(
+ * "Foo", "bar"))
+ * .build()).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3OriginPropsDsl {
   private val cdkBuilder: S3OriginProps.Builder = S3OriginProps.builder()

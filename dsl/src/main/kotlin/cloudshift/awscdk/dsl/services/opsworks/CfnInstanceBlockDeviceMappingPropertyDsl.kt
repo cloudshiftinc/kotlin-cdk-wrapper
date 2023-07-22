@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 
+/**
+ * Describes a block device mapping.
+ *
+ * This data type maps directly to the Amazon EC2
+ * [BlockDeviceMapping](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BlockDeviceMapping.html)
+ * data type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html)
+ */
 @CdkDslMarker
 public class CfnInstanceBlockDeviceMappingPropertyDsl {
   private val cdkBuilder: CfnInstance.BlockDeviceMappingProperty.Builder =

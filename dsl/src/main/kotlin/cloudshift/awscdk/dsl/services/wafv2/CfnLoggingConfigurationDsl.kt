@@ -13,6 +13,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 import software.constructs.Construct
 
+/**
+ * Defines an association between logging destinations and a web ACL resource, for logging from AWS
+ * WAF .
+ *
+ * As part of the association, you can specify parts of the standard logging fields to keep out of
+ * the logs and you can specify filters so that you log only a subset of the logging records.
+ *
+ *
+ * You can define one logging destination per web ACL.
+ *
+ *
+ * You can access information about the traffic that AWS WAF inspects using the following steps:
+ *
+ * * Create your logging destination. You can use an Amazon CloudWatch Logs log group, an Amazon
+ * Simple Storage Service (Amazon S3) bucket, or an Amazon Kinesis Data Firehose.
+ *
+ * The name that you give the destination must start with `aws-waf-logs-` . Depending on the type of
+ * destination, you might need to configure additional settings or permissions.
+ *
+ * For configuration requirements and pricing information for each destination type, see [Logging
+ * web ACL traffic](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the *AWS WAF
+ * Developer Guide* .
+ *
+ * * Associate your logging destination to your web ACL using a `PutLoggingConfiguration` request.
+ *
+ * When you successfully enable logging using a `PutLoggingConfiguration` request, AWS WAF creates
+ * an additional role or policy that is required to write logs to the logging destination. For an
+ * Amazon CloudWatch Logs log group, AWS WAF creates a resource policy on the log group. For an Amazon
+ * S3 bucket, AWS WAF creates a bucket policy. For an Amazon Kinesis Data Firehose, AWS WAF creates a
+ * service-linked role.
+ *
+ * For additional information about web ACL logging, see [Logging web ACL traffic
+ * information](https://docs.aws.amazon.com/waf/latest/developerguide/logging.html) in the *AWS WAF
+ * Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object jsonBody;
+ * Object loggingFilter;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object uriPath;
+ * CfnLoggingConfiguration cfnLoggingConfiguration = CfnLoggingConfiguration.Builder.create(this,
+ * "MyCfnLoggingConfiguration")
+ * .logDestinationConfigs(List.of("logDestinationConfigs"))
+ * .resourceArn("resourceArn")
+ * // the properties below are optional
+ * .loggingFilter(loggingFilter)
+ * .redactedFields(List.of(FieldToMatchProperty.builder()
+ * .jsonBody(jsonBody)
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .uriPath(uriPath)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationDsl(
   scope: Construct,

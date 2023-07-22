@@ -7,6 +7,29 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Off-peak window settings for the domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * OffPeakWindowOptionsProperty offPeakWindowOptionsProperty =
+ * OffPeakWindowOptionsProperty.builder()
+ * .enabled(false)
+ * .offPeakWindow(OffPeakWindowProperty.builder()
+ * .windowStartTime(WindowStartTimeProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-offpeakwindowoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainOffPeakWindowOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.OffPeakWindowOptionsProperty.Builder =

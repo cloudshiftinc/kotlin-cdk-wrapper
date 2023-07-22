@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * Information about an Amazon EC2 tag filter.
+ *
+ * For more information about using tags and tag groups to help manage your Amazon EC2 instances and
+ * on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+ * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) in the
+ * *AWS CodeDeploy User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * EC2TagFilterProperty eC2TagFilterProperty = EC2TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupEC2TagFilterPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.EC2TagFilterProperty.Builder =

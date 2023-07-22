@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnPrompt
 import software.constructs.Construct
 
+/**
+ * Creates a prompt for the specified Amazon Connect instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnPrompt cfnPrompt = CfnPrompt.Builder.create(this, "MyCfnPrompt")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .s3Uri("s3Uri")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-prompt.html)
+ */
 @CdkDslMarker
 public class CfnPromptDsl(
   scope: Construct,

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
+/**
+ * The codes to use when checking for a successful response from a target for health checks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * MatcherProperty matcherProperty = MatcherProperty.builder()
+ * .httpCode("httpCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-matcher.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupMatcherPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.MatcherProperty.Builder =

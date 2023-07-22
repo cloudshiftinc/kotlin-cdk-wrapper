@@ -15,6 +15,115 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnFunction
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::Function` resource creates a Lambda function.
+ *
+ * To create a function, you need a [deployment
+ * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) and an [execution
+ * role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) . The
+ * deployment package is a .zip file archive or container image that contains your function code. The
+ * execution role grants the function permission to use AWS services, such as Amazon CloudWatch Logs
+ * for log streaming and AWS X-Ray for request tracing.
+ *
+ * You set the package type to `Image` if the deployment package is a [container
+ * image](https://docs.aws.amazon.com/lambda/latest/dg/lambda-images.html) . For a container image, the
+ * code property must include the URI of a container image in the Amazon ECR registry. You do not need
+ * to specify the handler and runtime properties.
+ *
+ * You set the package type to `Zip` if the deployment package is a [.zip file
+ * archive](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-zip)
+ * . For a .zip file archive, the code property specifies the location of the .zip file. You must also
+ * specify the handler and runtime properties. For a Python example, see [Deploy Python Lambda
+ * functions with .zip file archives](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)
+ * .
+ *
+ * You can use [code
+ * signing](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) if your
+ * deployment package is a .zip file archive. To enable code signing for this function, specify the ARN
+ * of a code-signing configuration. When a user attempts to deploy a code package with
+ * `UpdateFunctionCode` , Lambda checks that the code package has a valid signature from a trusted
+ * publisher. The code-signing configuration includes a set of signing profiles, which define the
+ * trusted publishers for this function.
+ *
+ * Note that you configure [provisioned
+ * concurrency](https://docs.aws.amazon.com/lambda/latest/dg/provisioned-concurrency.html) on a
+ * `AWS::Lambda::Version` or a `AWS::Lambda::Alias` .
+ *
+ * For a complete introduction to Lambda functions, see [What is
+ * Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/lambda-welcome.html) in the *Lambda developer
+ * guide.*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnFunction cfnFunction = CfnFunction.Builder.create(this, "MyCfnFunction")
+ * .code(CodeProperty.builder()
+ * .imageUri("imageUri")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .zipFile("zipFile")
+ * .build())
+ * .role("role")
+ * // the properties below are optional
+ * .architectures(List.of("architectures"))
+ * .codeSigningConfigArn("codeSigningConfigArn")
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .targetArn("targetArn")
+ * .build())
+ * .description("description")
+ * .environment(EnvironmentProperty.builder()
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .ephemeralStorage(EphemeralStorageProperty.builder()
+ * .size(123)
+ * .build())
+ * .fileSystemConfigs(List.of(FileSystemConfigProperty.builder()
+ * .arn("arn")
+ * .localMountPath("localMountPath")
+ * .build()))
+ * .functionName("functionName")
+ * .handler("handler")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entryPoint"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .kmsKeyArn("kmsKeyArn")
+ * .layers(List.of("layers"))
+ * .memorySize(123)
+ * .packageType("packageType")
+ * .reservedConcurrentExecutions(123)
+ * .runtime("runtime")
+ * .runtimeManagementConfig(RuntimeManagementConfigProperty.builder()
+ * .updateRuntimeOn("updateRuntimeOn")
+ * // the properties below are optional
+ * .runtimeVersionArn("runtimeVersionArn")
+ * .build())
+ * .snapStart(SnapStartProperty.builder()
+ * .applyOn("applyOn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeout(123)
+ * .tracingConfig(TracingConfigProperty.builder()
+ * .mode("mode")
+ * .build())
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDsl(
   scope: Construct,

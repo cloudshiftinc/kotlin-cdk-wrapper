@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about a component to deploy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * ComponentDeploymentSpecificationProperty componentDeploymentSpecificationProperty =
+ * ComponentDeploymentSpecificationProperty.builder()
+ * .componentVersion("componentVersion")
+ * .configurationUpdate(ComponentConfigurationUpdateProperty.builder()
+ * .merge("merge")
+ * .reset(List.of("reset"))
+ * .build())
+ * .runWith(ComponentRunWithProperty.builder()
+ * .posixUser("posixUser")
+ * .systemResourceLimits(SystemResourceLimitsProperty.builder()
+ * .cpus(123)
+ * .memory(123)
+ * .build())
+ * .windowsUser("windowsUser")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentdeploymentspecification.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentComponentDeploymentSpecificationPropertyDsl {
   private val cdkBuilder: CfnDeployment.ComponentDeploymentSpecificationProperty.Builder =

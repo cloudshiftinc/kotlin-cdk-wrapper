@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDeviceFleet
 import software.constructs.Construct
 
+/**
+ * The `AWS::SageMaker::DeviceFleet` resource is an Amazon SageMaker resource type that allows you
+ * to create a DeviceFleet that manages your SageMaker Edge Manager Devices.
+ *
+ * You must register your devices against the `DeviceFleet` separately.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDeviceFleet cfnDeviceFleet = CfnDeviceFleet.Builder.create(this, "MyCfnDeviceFleet")
+ * .deviceFleetName("deviceFleetName")
+ * .outputConfig(EdgeOutputConfigProperty.builder()
+ * .s3OutputLocation("s3OutputLocation")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)
+ */
 @CdkDslMarker
 public class CfnDeviceFleetDsl(
   scope: Construct,

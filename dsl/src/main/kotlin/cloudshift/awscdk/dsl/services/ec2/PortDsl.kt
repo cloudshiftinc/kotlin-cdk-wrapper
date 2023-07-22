@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.Port
 import software.amazon.awscdk.services.ec2.Protocol
 
+/**
+ * Interface for classes that provide the connection-specification parts of a security group rule.
+ *
+ * Example:
+ *
+ * ```
+ * InstanceType instanceType;
+ * NatInstanceProvider provider = NatProvider.instance(NatInstanceProps.builder()
+ * .instanceType(instanceType)
+ * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
+ * .build());
+ * Vpc.Builder.create(this, "TheVPC")
+ * .natGatewayProvider(provider)
+ * .build();
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * ```
+ */
 @CdkDslMarker
 public class PortDsl {
   private val cdkBuilder: Port.Builder = Port.Builder.create()

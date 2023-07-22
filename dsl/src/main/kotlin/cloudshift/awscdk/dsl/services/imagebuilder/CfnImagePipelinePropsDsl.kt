@@ -10,6 +10,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipelineProps
 
+/**
+ * Properties for defining a `CfnImagePipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnImagePipelineProps cfnImagePipelineProps = CfnImagePipelineProps.builder()
+ * .infrastructureConfigurationArn("infrastructureConfigurationArn")
+ * .name("name")
+ * // the properties below are optional
+ * .containerRecipeArn("containerRecipeArn")
+ * .description("description")
+ * .distributionConfigurationArn("distributionConfigurationArn")
+ * .enhancedImageMetadataEnabled(false)
+ * .imageRecipeArn("imageRecipeArn")
+ * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
+ * .ecrConfiguration(EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build())
+ * .imageScanningEnabled(false)
+ * .build())
+ * .imageTestsConfiguration(ImageTestsConfigurationProperty.builder()
+ * .imageTestsEnabled(false)
+ * .timeoutMinutes(123)
+ * .build())
+ * .schedule(ScheduleProperty.builder()
+ * .pipelineExecutionStartCondition("pipelineExecutionStartCondition")
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .status("status")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)
+ */
 @CdkDslMarker
 public class CfnImagePipelinePropsDsl {
   private val cdkBuilder: CfnImagePipelineProps.Builder = CfnImagePipelineProps.builder()

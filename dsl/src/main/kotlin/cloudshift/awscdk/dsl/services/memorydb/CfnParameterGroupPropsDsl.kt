@@ -13,6 +13,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnParameterGroupProps
 
+/**
+ * Properties for defining a `CfnParameterGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * Object parameters;
+ * CfnParameterGroupProps cfnParameterGroupProps = CfnParameterGroupProps.builder()
+ * .family("family")
+ * .parameterGroupName("parameterGroupName")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(parameters)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-parametergroup.html)
+ */
 @CdkDslMarker
 public class CfnParameterGroupPropsDsl {
   private val cdkBuilder: CfnParameterGroupProps.Builder = CfnParameterGroupProps.builder()

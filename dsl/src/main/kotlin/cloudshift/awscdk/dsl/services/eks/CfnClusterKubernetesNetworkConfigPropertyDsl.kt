@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * The Kubernetes network configuration for the cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * KubernetesNetworkConfigProperty kubernetesNetworkConfigProperty =
+ * KubernetesNetworkConfigProperty.builder()
+ * .ipFamily("ipFamily")
+ * .serviceIpv4Cidr("serviceIpv4Cidr")
+ * .serviceIpv6Cidr("serviceIpv6Cidr")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterKubernetesNetworkConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.KubernetesNetworkConfigProperty.Builder =

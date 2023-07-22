@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * The metric to optimize during HPO.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * HpoObjectiveProperty hpoObjectiveProperty = HpoObjectiveProperty.builder()
+ * .metricName("metricName")
+ * .metricRegex("metricRegex")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hpoobjective.html)
+ */
 @CdkDslMarker
 public class CfnSolutionHpoObjectivePropertyDsl {
   private val cdkBuilder: CfnSolution.HpoObjectiveProperty.Builder =

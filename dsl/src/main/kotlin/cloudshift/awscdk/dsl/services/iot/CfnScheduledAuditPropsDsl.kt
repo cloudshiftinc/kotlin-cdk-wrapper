@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnScheduledAuditProps
 
+/**
+ * Properties for defining a `CfnScheduledAudit`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnScheduledAuditProps cfnScheduledAuditProps = CfnScheduledAuditProps.builder()
+ * .frequency("frequency")
+ * .targetCheckNames(List.of("targetCheckNames"))
+ * // the properties below are optional
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .scheduledAuditName("scheduledAuditName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html)
+ */
 @CdkDslMarker
 public class CfnScheduledAuditPropsDsl {
   private val cdkBuilder: CfnScheduledAuditProps.Builder = CfnScheduledAuditProps.builder()

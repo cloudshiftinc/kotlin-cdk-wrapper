@@ -7,6 +7,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about one audio to extract from the input.
+ *
+ * The parent of this entity is InputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioSelectorProperty audioSelectorProperty = AudioSelectorProperty.builder()
+ * .name("name")
+ * .selectorSettings(AudioSelectorSettingsProperty.builder()
+ * .audioHlsRenditionSelection(AudioHlsRenditionSelectionProperty.builder()
+ * .groupId("groupId")
+ * .name("name")
+ * .build())
+ * .audioLanguageSelection(AudioLanguageSelectionProperty.builder()
+ * .languageCode("languageCode")
+ * .languageSelectionPolicy("languageSelectionPolicy")
+ * .build())
+ * .audioPidSelection(AudioPidSelectionProperty.builder()
+ * .pid(123)
+ * .build())
+ * .audioTrackSelection(AudioTrackSelectionProperty.builder()
+ * .dolbyEDecode(AudioDolbyEDecodeProperty.builder()
+ * .programSelection("programSelection")
+ * .build())
+ * .tracks(List.of(AudioTrackProperty.builder()
+ * .track(123)
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audioselector.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioSelectorPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioSelectorProperty.Builder =

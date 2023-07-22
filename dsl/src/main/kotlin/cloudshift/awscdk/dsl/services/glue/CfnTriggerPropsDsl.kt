@@ -14,6 +14,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTrigger
 import software.amazon.awscdk.services.glue.CfnTriggerProps
 
+/**
+ * Properties for defining a `CfnTrigger`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object arguments_;
+ * Object tags;
+ * CfnTriggerProps cfnTriggerProps = CfnTriggerProps.builder()
+ * .actions(List.of(ActionProperty.builder()
+ * .arguments(arguments_)
+ * .crawlerName("crawlerName")
+ * .jobName("jobName")
+ * .notificationProperty(NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build())
+ * .securityConfiguration("securityConfiguration")
+ * .timeout(123)
+ * .build()))
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .eventBatchingCondition(EventBatchingConditionProperty.builder()
+ * .batchSize(123)
+ * // the properties below are optional
+ * .batchWindow(123)
+ * .build())
+ * .name("name")
+ * .predicate(PredicateProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .crawlerName("crawlerName")
+ * .crawlState("crawlState")
+ * .jobName("jobName")
+ * .logicalOperator("logicalOperator")
+ * .state("state")
+ * .build()))
+ * .logical("logical")
+ * .build())
+ * .schedule("schedule")
+ * .startOnCreation(false)
+ * .tags(tags)
+ * .workflowName("workflowName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)
+ */
 @CdkDslMarker
 public class CfnTriggerPropsDsl {
   private val cdkBuilder: CfnTriggerProps.Builder = CfnTriggerProps.builder()

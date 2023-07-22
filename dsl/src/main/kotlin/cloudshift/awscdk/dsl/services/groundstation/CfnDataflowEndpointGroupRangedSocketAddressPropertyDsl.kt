@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * RangedSocketAddressProperty rangedSocketAddressProperty = RangedSocketAddressProperty.builder()
+ * .name("name")
+ * .portRange(IntegerRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-rangedsocketaddress.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupRangedSocketAddressPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.RangedSocketAddressProperty.Builder =

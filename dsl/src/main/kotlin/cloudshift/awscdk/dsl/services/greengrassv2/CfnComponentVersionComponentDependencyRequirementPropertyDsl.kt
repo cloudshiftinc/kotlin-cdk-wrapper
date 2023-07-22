@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains information about a component dependency for a Lambda function component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * ComponentDependencyRequirementProperty componentDependencyRequirementProperty =
+ * ComponentDependencyRequirementProperty.builder()
+ * .dependencyType("dependencyType")
+ * .versionRequirement("versionRequirement")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentdependencyrequirement.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionComponentDependencyRequirementPropertyDsl {
   private val cdkBuilder: CfnComponentVersion.ComponentDependencyRequirementProperty.Builder =

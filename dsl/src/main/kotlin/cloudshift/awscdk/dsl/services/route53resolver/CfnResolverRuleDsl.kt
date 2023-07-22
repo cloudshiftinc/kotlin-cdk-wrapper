@@ -14,6 +14,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53resolver.CfnResolverRule
 import software.constructs.Construct
 
+/**
+ * For DNS queries that originate in your VPCs, specifies which Resolver endpoint the queries pass
+ * through, one domain name that you want to forward to your network, and the IP addresses of the DNS
+ * resolvers in your network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverRule cfnResolverRule = CfnResolverRule.Builder.create(this, "MyCfnResolverRule")
+ * .domainName("domainName")
+ * .ruleType("ruleType")
+ * // the properties below are optional
+ * .name("name")
+ * .resolverEndpointId("resolverEndpointId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetIps(List.of(TargetAddressProperty.builder()
+ * .ip("ip")
+ * .ipv6("ipv6")
+ * .port("port")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)
+ */
 @CdkDslMarker
 public class CfnResolverRuleDsl(
   scope: Construct,

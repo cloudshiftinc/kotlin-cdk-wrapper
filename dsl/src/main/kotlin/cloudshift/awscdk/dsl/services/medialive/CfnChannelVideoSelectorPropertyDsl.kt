@@ -7,6 +7,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the video to extract from the input. An input can contain only one video
+ * selector.
+ *
+ * The parent of this entity is InputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VideoSelectorProperty videoSelectorProperty = VideoSelectorProperty.builder()
+ * .colorSpace("colorSpace")
+ * .colorSpaceSettings(VideoSelectorColorSpaceSettingsProperty.builder()
+ * .hdr10Settings(Hdr10SettingsProperty.builder()
+ * .maxCll(123)
+ * .maxFall(123)
+ * .build())
+ * .build())
+ * .colorSpaceUsage("colorSpaceUsage")
+ * .selectorSettings(VideoSelectorSettingsProperty.builder()
+ * .videoSelectorPid(VideoSelectorPidProperty.builder()
+ * .pid(123)
+ * .build())
+ * .videoSelectorProgramId(VideoSelectorProgramIdProperty.builder()
+ * .programId(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselector.html)
+ */
 @CdkDslMarker
 public class CfnChannelVideoSelectorPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorProperty.Builder =

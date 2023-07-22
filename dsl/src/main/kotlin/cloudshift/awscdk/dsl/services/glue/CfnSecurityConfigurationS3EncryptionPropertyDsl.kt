@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 
+/**
+ * Specifies how Amazon Simple Storage Service (Amazon S3) data should be encrypted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * S3EncryptionProperty s3EncryptionProperty = S3EncryptionProperty.builder()
+ * .kmsKeyArn("kmsKeyArn")
+ * .s3EncryptionMode("s3EncryptionMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-s3encryption.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationS3EncryptionPropertyDsl {
   private val cdkBuilder: CfnSecurityConfiguration.S3EncryptionProperty.Builder =

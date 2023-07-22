@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.workspaces.CfnConnectionAliasProps
 
+/**
+ * Properties for defining a `CfnConnectionAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * CfnConnectionAliasProps cfnConnectionAliasProps = CfnConnectionAliasProps.builder()
+ * .connectionString("connectionString")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)
+ */
 @CdkDslMarker
 public class CfnConnectionAliasPropsDsl {
   private val cdkBuilder: CfnConnectionAliasProps.Builder = CfnConnectionAliasProps.builder()

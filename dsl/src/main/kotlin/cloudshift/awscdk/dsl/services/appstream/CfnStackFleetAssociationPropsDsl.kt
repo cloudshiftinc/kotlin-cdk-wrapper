@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnStackFleetAssociationProps
 
+/**
+ * Properties for defining a `CfnStackFleetAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnStackFleetAssociationProps cfnStackFleetAssociationProps =
+ * CfnStackFleetAssociationProps.builder()
+ * .fleetName("fleetName")
+ * .stackName("stackName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html)
+ */
 @CdkDslMarker
 public class CfnStackFleetAssociationPropsDsl {
   private val cdkBuilder: CfnStackFleetAssociationProps.Builder =

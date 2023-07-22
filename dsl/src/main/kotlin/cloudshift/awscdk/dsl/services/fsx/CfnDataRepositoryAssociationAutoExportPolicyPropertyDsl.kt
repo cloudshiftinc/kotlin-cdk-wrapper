@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 
+/**
+ * Describes a data repository association's automatic export policy.
+ *
+ * The `AutoExportPolicy` defines the types of updated objects on the file system that will be
+ * automatically exported to the data repository. As you create, modify, or delete files, Amazon FSx
+ * for Lustre automatically exports the defined changes asynchronously once your application finishes
+ * modifying the file.
+ *
+ * The `AutoExportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
+ * repository association.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * AutoExportPolicyProperty autoExportPolicyProperty = AutoExportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoexportpolicy.html)
+ */
 @CdkDslMarker
 public class CfnDataRepositoryAssociationAutoExportPolicyPropertyDsl {
   private val cdkBuilder: CfnDataRepositoryAssociation.AutoExportPolicyProperty.Builder =

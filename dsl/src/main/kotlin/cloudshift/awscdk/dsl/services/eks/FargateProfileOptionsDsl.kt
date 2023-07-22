@@ -14,6 +14,18 @@ import software.amazon.awscdk.services.eks.FargateProfileOptions
 import software.amazon.awscdk.services.eks.Selector
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for defining EKS Fargate Profiles.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.addFargateProfile("MyProfile", FargateProfileOptions.builder()
+ * .selectors(List.of(Selector.builder().namespace("default").build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FargateProfileOptionsDsl {
   private val cdkBuilder: FargateProfileOptions.Builder = FargateProfileOptions.builder()

@@ -42,6 +42,35 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 
+/**
+ * Deploys a file from inside the construct library as a function.
+ *
+ * The supplied file is subject to the 4096 bytes limit of being embedded in a
+ * CloudFormation template.
+ *
+ * The construct includes an associated role with the lambda.
+ *
+ * This construct does not yet reproduce all features from the underlying resource
+ * library.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionDsl(
   scope: Construct,

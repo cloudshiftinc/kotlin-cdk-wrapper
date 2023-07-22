@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * The display options for tile borders for visuals.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * BorderStyleProperty borderStyleProperty = BorderStyleProperty.builder()
+ * .show(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-borderstyle.html)
+ */
 @CdkDslMarker
 public class CfnThemeBorderStylePropertyDsl {
   private val cdkBuilder: CfnTheme.BorderStyleProperty.Builder =

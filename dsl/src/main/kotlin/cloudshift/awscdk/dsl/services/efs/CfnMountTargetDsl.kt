@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.efs.CfnMountTarget
 import software.constructs.Construct
 
+/**
+ * The `AWS::EFS::MountTarget` resource is an Amazon EFS resource that creates a mount target for an
+ * EFS file system.
+ *
+ * You can then mount the file system on Amazon EC2 instances or other resources by using the mount
+ * target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * CfnMountTarget cfnMountTarget = CfnMountTarget.Builder.create(this, "MyCfnMountTarget")
+ * .fileSystemId("fileSystemId")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ipAddress("ipAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
+ */
 @CdkDslMarker
 public class CfnMountTargetDsl(
   scope: Construct,

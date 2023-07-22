@@ -10,6 +10,24 @@ import software.amazon.awscdk.services.cloudwatch.CompositeAlarmProps
 import software.amazon.awscdk.services.cloudwatch.IAlarm
 import software.amazon.awscdk.services.cloudwatch.IAlarmRule
 
+/**
+ * Properties for creating a Composite Alarm.
+ *
+ * Example:
+ *
+ * ```
+ * Alarm alarm1;
+ * Alarm alarm2;
+ * Alarm alarm3;
+ * Alarm alarm4;
+ * IAlarmRule alarmRule = AlarmRule.anyOf(AlarmRule.allOf(AlarmRule.anyOf(alarm1,
+ * AlarmRule.fromAlarm(alarm2, AlarmState.OK), alarm3), AlarmRule.not(AlarmRule.fromAlarm(alarm4,
+ * AlarmState.INSUFFICIENT_DATA))), AlarmRule.fromBoolean(false));
+ * CompositeAlarm.Builder.create(this, "MyAwesomeCompositeAlarm")
+ * .alarmRule(alarmRule)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CompositeAlarmPropsDsl {
   private val cdkBuilder: CompositeAlarmProps.Builder = CompositeAlarmProps.builder()

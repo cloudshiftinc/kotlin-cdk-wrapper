@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 
+/**
+ * An object that defines the tags (keys and values) that you want to associate with the identity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * TagsProperty tagsProperty = TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-identity-tags.html)
+ */
 @CdkDslMarker
 public class CfnIdentityTagsPropertyDsl {
   private val cdkBuilder: CfnIdentity.TagsProperty.Builder = CfnIdentity.TagsProperty.builder()

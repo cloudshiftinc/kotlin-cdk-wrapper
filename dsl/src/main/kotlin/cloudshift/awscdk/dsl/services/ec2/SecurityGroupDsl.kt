@@ -9,6 +9,59 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SecurityGroup
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon EC2 security group within a VPC.
+ *
+ * Security Groups act like a firewall with a set of rules, and are associated
+ * with any AWS resource that has or creates Elastic Network Interfaces (ENIs).
+ * A typical example of a resource that has a security group is an Instance (or
+ * Auto Scaling Group of instances)
+ *
+ * If you are defining new infrastructure in CDK, there is a good chance you
+ * won't have to interact with this class at all. Like IAM Roles, Security
+ * Groups need to exist to control access between AWS resources, but CDK will
+ * automatically generate and populate them with least-privilege permissions
+ * for you so you can concentrate on your business logic.
+ *
+ * All Constructs that require Security Groups will create one for you if you
+ * don't specify one at construction. After construction, you can selectively
+ * allow connections to and between constructs via--for example-- the `instance.connections`
+ * object. Think of it as "allowing connections to your instance", rather than
+ * "adding ingress rules a security group". See the <a
+ * href="https://docs.aws.amazon.com/cdk/api/latest/docs/aws-cdk-lib.aws_ec2-readme.html#allowing-connections">Allowing
+ * Connections</a>
+ * section in the library documentation for examples.
+ *
+ * Direct manipulation of the Security Group through `addIngressRule` and
+ * `addEgressRule` is possible, but mutation through the `.connections` object
+ * is recommended. If you peer two constructs with security groups this way,
+ * appropriate rules will be created in both.
+ *
+ * If you have an existing security group you want to use in your CDK application,
+ * you would import it like this:
+ *
+ * ```
+ * ISecurityGroup securityGroup = SecurityGroup.fromSecurityGroupId(this, "SG", "sg-12345",
+ * SecurityGroupImportOptions.builder()
+ * .mutable(false)
+ * .build());
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * SecurityGroup mySecurityGroupWithoutInlineRules = SecurityGroup.Builder.create(this,
+ * "SecurityGroup")
+ * .vpc(vpc)
+ * .description("Allow ssh access to ec2 instances")
+ * .allowAllOutbound(true)
+ * .disableInlineRules(true)
+ * .build();
+ * //This will add the rule as an external cloud formation construct
+ * mySecurityGroupWithoutInlineRules.addIngressRule(Peer.anyIpv4(), Port.tcp(22), "allow ssh access
+ * from the world");
+ * ```
+ */
 @CdkDslMarker
 public class SecurityGroupDsl(
   scope: Construct,

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEnclaveCertificateIamRoleAssociationProps
 
+/**
+ * Properties for defining a `CfnEnclaveCertificateIamRoleAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnEnclaveCertificateIamRoleAssociationProps cfnEnclaveCertificateIamRoleAssociationProps =
+ * CfnEnclaveCertificateIamRoleAssociationProps.builder()
+ * .certificateArn("certificateArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-enclavecertificateiamroleassociation.html)
+ */
 @CdkDslMarker
 public class CfnEnclaveCertificateIamRoleAssociationPropsDsl {
   private val cdkBuilder: CfnEnclaveCertificateIamRoleAssociationProps.Builder =

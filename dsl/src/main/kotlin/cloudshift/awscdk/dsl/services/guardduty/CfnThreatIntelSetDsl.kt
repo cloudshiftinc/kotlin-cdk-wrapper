@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnThreatIntelSet
 import software.constructs.Construct
 
+/**
+ * The `AWS::GuardDuty::ThreatIntelSet` resource specifies a new `ThreatIntelSet` .
+ *
+ * A `ThreatIntelSet` consists of known malicious IP addresses. GuardDuty generates findings based
+ * on the `ThreatIntelSet` when it is activated.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnThreatIntelSet cfnThreatIntelSet = CfnThreatIntelSet.Builder.create(this,
+ * "MyCfnThreatIntelSet")
+ * .activate(false)
+ * .detectorId("detectorId")
+ * .format("format")
+ * .location("location")
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-threatintelset.html)
+ */
 @CdkDslMarker
 public class CfnThreatIntelSetDsl(
   scope: Construct,

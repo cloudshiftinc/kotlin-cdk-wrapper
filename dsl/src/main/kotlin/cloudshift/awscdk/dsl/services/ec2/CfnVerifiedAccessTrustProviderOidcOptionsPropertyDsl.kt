@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
 
+/**
+ * Describes the options for an OpenID Connect-compatible user-identity trust provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * OidcOptionsProperty oidcOptionsProperty = OidcOptionsProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .issuer("issuer")
+ * .scope("scope")
+ * .tokenEndpoint("tokenEndpoint")
+ * .userInfoEndpoint("userInfoEndpoint")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccesstrustprovider-oidcoptions.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessTrustProviderOidcOptionsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessTrustProvider.OidcOptionsProperty.Builder =

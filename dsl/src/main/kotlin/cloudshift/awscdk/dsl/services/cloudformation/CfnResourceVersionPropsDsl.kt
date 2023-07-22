@@ -8,6 +8,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnResourceVersion
 import software.amazon.awscdk.services.cloudformation.CfnResourceVersionProps
 
+/**
+ * Properties for defining a `CfnResourceVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnResourceVersionProps cfnResourceVersionProps = CfnResourceVersionProps.builder()
+ * .schemaHandlerPackage("schemaHandlerPackage")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .executionRoleArn("executionRoleArn")
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)
+ */
 @CdkDslMarker
 public class CfnResourceVersionPropsDsl {
   private val cdkBuilder: CfnResourceVersionProps.Builder = CfnResourceVersionProps.builder()

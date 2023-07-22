@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 
+/**
+ * The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system
+ * with a data repository association.
+ *
+ * The configuration defines which file events (new, changed, or deleted files or directories) are
+ * automatically imported from the linked data repository to the file system or automatically exported
+ * from the file system to the data repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * S3Property s3Property = S3Property.builder()
+ * .autoExportPolicy(AutoExportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .autoImportPolicy(AutoImportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-s3.html)
+ */
 @CdkDslMarker
 public class CfnDataRepositoryAssociationS3PropertyDsl {
   private val cdkBuilder: CfnDataRepositoryAssociation.S3Property.Builder =

@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies an instance's Capacity Reservation targeting option. You can specify only one option at
+ * a time.
+ *
+ * `CapacityReservationSpecification` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CapacityReservationSpecificationProperty capacityReservationSpecificationProperty =
+ * CapacityReservationSpecificationProperty.builder()
+ * .capacityReservationPreference("capacityReservationPreference")
+ * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
+ * .capacityReservationId("capacityReservationId")
+ * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-capacityreservationspecification.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateCapacityReservationSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.CapacityReservationSpecificationProperty.Builder =

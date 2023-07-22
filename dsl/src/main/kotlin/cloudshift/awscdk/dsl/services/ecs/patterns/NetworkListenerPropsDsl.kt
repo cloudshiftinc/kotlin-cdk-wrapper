@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps
 
+/**
+ * Properties to define an network listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * NetworkListenerProps networkListenerProps = NetworkListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .port(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkListenerPropsDsl {
   private val cdkBuilder: NetworkListenerProps.Builder = NetworkListenerProps.builder()

@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 
+/**
+ * Information that defines how a detector operates.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-detectormodeldefinition.html)
+ */
 @CdkDslMarker
 public class CfnDetectorModelDetectorModelDefinitionPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.DetectorModelDefinitionProperty.Builder =

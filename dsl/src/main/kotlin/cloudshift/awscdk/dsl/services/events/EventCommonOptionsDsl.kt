@@ -9,6 +9,37 @@ import software.amazon.awscdk.services.events.EventCommonOptions
 import software.amazon.awscdk.services.events.EventPattern
 import software.constructs.Construct
 
+/**
+ * Common options for Events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * Object detail;
+ * EventCommonOptions eventCommonOptions = EventCommonOptions.builder()
+ * .crossStackScope(construct)
+ * .description("description")
+ * .eventPattern(EventPattern.builder()
+ * .account(List.of("account"))
+ * .detail(Map.of(
+ * "detailKey", detail))
+ * .detailType(List.of("detailType"))
+ * .id(List.of("id"))
+ * .region(List.of("region"))
+ * .resources(List.of("resources"))
+ * .source(List.of("source"))
+ * .time(List.of("time"))
+ * .version(List.of("version"))
+ * .build())
+ * .ruleName("ruleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventCommonOptionsDsl {
   private val cdkBuilder: EventCommonOptions.Builder = EventCommonOptions.builder()

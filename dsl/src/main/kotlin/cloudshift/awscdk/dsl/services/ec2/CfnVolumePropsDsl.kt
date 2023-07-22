@@ -14,6 +14,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVolumeProps
 
+/**
+ * Properties for defining a `CfnVolume`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVolumeProps cfnVolumeProps = CfnVolumeProps.builder()
+ * .availabilityZone("availabilityZone")
+ * // the properties below are optional
+ * .autoEnableIo(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .multiAttachEnabled(false)
+ * .outpostArn("outpostArn")
+ * .size(123)
+ * .snapshotId("snapshotId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .throughput(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volume.html)
+ */
 @CdkDslMarker
 public class CfnVolumePropsDsl {
   private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()

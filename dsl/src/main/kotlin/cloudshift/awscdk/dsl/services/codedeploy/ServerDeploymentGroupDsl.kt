@@ -19,6 +19,23 @@ import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * A CodeDeploy Deployment Group that deploys to EC2/on-premise instances.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * LoadBalancer lb;
+ * lb.addListener(LoadBalancerListener.builder()
+ * .externalPort(80)
+ * .build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancer(LoadBalancer.classic(lb))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerDeploymentGroupDsl(
   scope: Construct,

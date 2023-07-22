@@ -13,6 +13,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointProps
 
+/**
+ * Properties for defining a `CfnVPCEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object policyDocument;
+ * CfnVPCEndpointProps cfnVPCEndpointProps = CfnVPCEndpointProps.builder()
+ * .serviceName("serviceName")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .policyDocument(policyDocument)
+ * .privateDnsEnabled(false)
+ * .routeTableIds(List.of("routeTableIds"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcEndpointType("vpcEndpointType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointPropsDsl {
   private val cdkBuilder: CfnVPCEndpointProps.Builder = CfnVPCEndpointProps.builder()

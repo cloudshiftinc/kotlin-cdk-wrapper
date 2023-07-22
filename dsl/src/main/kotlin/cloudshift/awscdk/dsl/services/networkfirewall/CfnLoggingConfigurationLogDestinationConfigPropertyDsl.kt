@@ -8,6 +8,34 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 
+/**
+ * Defines where AWS Network Firewall sends logs for the firewall for one log type.
+ *
+ * This is used in `LoggingConfiguration` . You can send each type of log to an Amazon S3 bucket, a
+ * CloudWatch log group, or a Kinesis Data Firehose delivery stream.
+ *
+ * Network Firewall generates logs for stateful rule groups. You can save alert and flow log types.
+ * The stateful rules engine records flow logs for all network traffic that it receives. It records
+ * alert logs for traffic that matches stateful rules that have the rule action set to `DROP` or
+ * `ALERT` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * LogDestinationConfigProperty logDestinationConfigProperty =
+ * LogDestinationConfigProperty.builder()
+ * .logDestination(Map.of(
+ * "logDestinationKey", "logDestination"))
+ * .logDestinationType("logDestinationType")
+ * .logType("logType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-loggingconfiguration-logdestinationconfig.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationLogDestinationConfigPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.LogDestinationConfigProperty.Builder =

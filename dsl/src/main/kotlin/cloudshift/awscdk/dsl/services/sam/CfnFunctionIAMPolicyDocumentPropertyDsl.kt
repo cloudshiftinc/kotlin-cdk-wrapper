@@ -9,6 +9,22 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object statement;
+ * IAMPolicyDocumentProperty iAMPolicyDocumentProperty = Map.of(
+ * "statement", statement,
+ * // the properties below are optional
+ * "version", "version");
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-iampolicydocument.html)
+ */
 @CdkDslMarker
 public class CfnFunctionIAMPolicyDocumentPropertyDsl {
   private val cdkBuilder: CfnFunction.IAMPolicyDocumentProperty.Builder =

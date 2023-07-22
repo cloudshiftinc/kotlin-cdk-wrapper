@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the audio input specifications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * AudioSpecificationProperty audioSpecificationProperty = AudioSpecificationProperty.builder()
+ * .endTimeoutMs(123)
+ * .maxLengthMs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-audiospecification.html)
+ */
 @CdkDslMarker
 public class CfnBotAudioSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.AudioSpecificationProperty.Builder =

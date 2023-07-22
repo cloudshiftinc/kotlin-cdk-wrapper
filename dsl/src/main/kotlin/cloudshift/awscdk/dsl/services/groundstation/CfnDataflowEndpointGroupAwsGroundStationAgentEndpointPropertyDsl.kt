@@ -7,6 +7,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * AwsGroundStationAgentEndpointProperty awsGroundStationAgentEndpointProperty =
+ * AwsGroundStationAgentEndpointProperty.builder()
+ * .agentStatus("agentStatus")
+ * .auditResults("auditResults")
+ * .egressAddress(ConnectionDetailsProperty.builder()
+ * .mtu(123)
+ * .socketAddress(SocketAddressProperty.builder()
+ * .name("name")
+ * .port(123)
+ * .build())
+ * .build())
+ * .ingressAddress(RangedConnectionDetailsProperty.builder()
+ * .mtu(123)
+ * .socketAddress(RangedSocketAddressProperty.builder()
+ * .name("name")
+ * .portRange(IntegerRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build())
+ * .build())
+ * .build())
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-awsgroundstationagentendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupAwsGroundStationAgentEndpointPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty.Builder =

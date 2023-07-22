@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.eks.TaintEffect
 import software.amazon.awscdk.services.eks.TaintSpec
 
+/**
+ * Taint interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * TaintSpec taintSpec = TaintSpec.builder()
+ * .effect(TaintEffect.NO_SCHEDULE)
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TaintSpecDsl {
   private val cdkBuilder: TaintSpec.Builder = TaintSpec.builder()

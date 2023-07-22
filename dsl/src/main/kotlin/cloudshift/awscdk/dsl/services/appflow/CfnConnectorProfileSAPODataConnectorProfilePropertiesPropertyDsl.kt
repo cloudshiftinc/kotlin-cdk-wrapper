@@ -9,6 +9,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile properties required when using SAPOData.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SAPODataConnectorProfilePropertiesProperty sAPODataConnectorProfilePropertiesProperty =
+ * SAPODataConnectorProfilePropertiesProperty.builder()
+ * .applicationHostUrl("applicationHostUrl")
+ * .applicationServicePath("applicationServicePath")
+ * .clientNumber("clientNumber")
+ * .disableSso(false)
+ * .logonLanguage("logonLanguage")
+ * .oAuthProperties(OAuthPropertiesProperty.builder()
+ * .authCodeUrl("authCodeUrl")
+ * .oAuthScopes(List.of("oAuthScopes"))
+ * .tokenUrl("tokenUrl")
+ * .build())
+ * .portNumber(123)
+ * .privateLinkServiceName("privateLinkServiceName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-sapodataconnectorprofileproperties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileSAPODataConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.SAPODataConnectorProfilePropertiesProperty.Builder =

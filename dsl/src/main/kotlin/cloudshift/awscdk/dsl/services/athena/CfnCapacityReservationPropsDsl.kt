@@ -14,6 +14,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnCapacityReservation
 import software.amazon.awscdk.services.athena.CfnCapacityReservationProps
 
+/**
+ * Properties for defining a `CfnCapacityReservation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnCapacityReservationProps cfnCapacityReservationProps = CfnCapacityReservationProps.builder()
+ * .name("name")
+ * .targetDpus(123)
+ * // the properties below are optional
+ * .capacityAssignmentConfiguration(CapacityAssignmentConfigurationProperty.builder()
+ * .capacityAssignments(List.of(CapacityAssignmentProperty.builder()
+ * .workgroupNames(List.of("workgroupNames"))
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-capacityreservation.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationPropsDsl {
   private val cdkBuilder: CfnCapacityReservationProps.Builder =

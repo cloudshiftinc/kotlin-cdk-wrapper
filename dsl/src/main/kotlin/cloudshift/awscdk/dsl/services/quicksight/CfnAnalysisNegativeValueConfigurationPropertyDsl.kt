@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The options that determine the negative value configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NegativeValueConfigurationProperty negativeValueConfigurationProperty =
+ * NegativeValueConfigurationProperty.builder()
+ * .displayMode("displayMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-negativevalueconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisNegativeValueConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.NegativeValueConfigurationProperty.Builder =

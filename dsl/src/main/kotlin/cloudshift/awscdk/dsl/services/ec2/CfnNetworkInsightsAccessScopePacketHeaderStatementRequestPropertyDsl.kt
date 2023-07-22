@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope
 
+/**
+ * Describes a packet header statement.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PacketHeaderStatementRequestProperty packetHeaderStatementRequestProperty =
+ * PacketHeaderStatementRequestProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPorts(List.of("destinationPorts"))
+ * .destinationPrefixLists(List.of("destinationPrefixLists"))
+ * .protocols(List.of("protocols"))
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePorts(List.of("sourcePorts"))
+ * .sourcePrefixLists(List.of("sourcePrefixLists"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAccessScopePacketHeaderStatementRequestPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty.Builder

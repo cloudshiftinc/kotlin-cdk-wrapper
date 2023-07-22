@@ -11,6 +11,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.events.targets.AwsApiProps
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Properties for an AwsApi target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Object parameters;
+ * PolicyStatement policyStatement;
+ * AwsApiProps awsApiProps = AwsApiProps.builder()
+ * .action("action")
+ * .service("service")
+ * // the properties below are optional
+ * .apiVersion("apiVersion")
+ * .catchErrorPattern("catchErrorPattern")
+ * .parameters(parameters)
+ * .policyStatement(policyStatement)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsApiPropsDsl {
   private val cdkBuilder: AwsApiProps.Builder = AwsApiProps.builder()

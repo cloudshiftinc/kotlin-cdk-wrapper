@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate
 import software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplateProps
 
+/**
+ * Properties for defining a `CfnConfigurationTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnConfigurationTemplateProps cfnConfigurationTemplateProps =
+ * CfnConfigurationTemplateProps.builder()
+ * .applicationName("applicationName")
+ * // the properties below are optional
+ * .description("description")
+ * .environmentId("environmentId")
+ * .optionSettings(List.of(ConfigurationOptionSettingProperty.builder()
+ * .namespace("namespace")
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .resourceName("resourceName")
+ * .value("value")
+ * .build()))
+ * .platformArn("platformArn")
+ * .solutionStackName("solutionStackName")
+ * .sourceConfiguration(SourceConfigurationProperty.builder()
+ * .applicationName("applicationName")
+ * .templateName("templateName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationTemplatePropsDsl {
   private val cdkBuilder: CfnConfigurationTemplateProps.Builder =

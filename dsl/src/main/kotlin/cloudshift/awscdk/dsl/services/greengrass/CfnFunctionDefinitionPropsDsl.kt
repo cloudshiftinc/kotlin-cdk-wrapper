@@ -11,6 +11,66 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionProps
 
+/**
+ * Properties for defining a `CfnFunctionDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * Object variables;
+ * CfnFunctionDefinitionProps cfnFunctionDefinitionProps = CfnFunctionDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(FunctionDefinitionVersionProperty.builder()
+ * .functions(List.of(FunctionProperty.builder()
+ * .functionArn("functionArn")
+ * .functionConfiguration(FunctionConfigurationProperty.builder()
+ * .encodingType("encodingType")
+ * .environment(EnvironmentProperty.builder()
+ * .accessSysfs(false)
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
+ * .resourceId("resourceId")
+ * // the properties below are optional
+ * .permission("permission")
+ * .build()))
+ * .variables(variables)
+ * .build())
+ * .execArgs("execArgs")
+ * .executable("executable")
+ * .memorySize(123)
+ * .pinned(false)
+ * .timeout(123)
+ * .build())
+ * .id("id")
+ * .build()))
+ * // the properties below are optional
+ * .defaultConfig(DefaultConfigProperty.builder()
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionPropsDsl {
   private val cdkBuilder: CfnFunctionDefinitionProps.Builder = CfnFunctionDefinitionProps.builder()

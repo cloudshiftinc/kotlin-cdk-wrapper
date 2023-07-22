@@ -6,6 +6,38 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrass.CfnGroup
 
+/**
+ * A group version in AWS IoT Greengrass , which references of a core definition version, device
+ * definition version, subscription definition version, and other version types that contain the
+ * components you want to deploy to a Greengrass core device.
+ *
+ * The group version must reference a core definition version that contains one core. Other version
+ * types are optionally included, depending on your business need.
+ *
+ * In an AWS CloudFormation template, `GroupVersion` is the property type of the `InitialVersion`
+ * property in the
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * GroupVersionProperty groupVersionProperty = GroupVersionProperty.builder()
+ * .connectorDefinitionVersionArn("connectorDefinitionVersionArn")
+ * .coreDefinitionVersionArn("coreDefinitionVersionArn")
+ * .deviceDefinitionVersionArn("deviceDefinitionVersionArn")
+ * .functionDefinitionVersionArn("functionDefinitionVersionArn")
+ * .loggerDefinitionVersionArn("loggerDefinitionVersionArn")
+ * .resourceDefinitionVersionArn("resourceDefinitionVersionArn")
+ * .subscriptionDefinitionVersionArn("subscriptionDefinitionVersionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-group-groupversion.html)
+ */
 @CdkDslMarker
 public class CfnGroupGroupVersionPropertyDsl {
   private val cdkBuilder: CfnGroup.GroupVersionProperty.Builder =

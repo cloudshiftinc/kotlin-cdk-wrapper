@@ -27,6 +27,24 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Example:
+ *
+ * ```
+ * Repository ecrRepository;
+ * Project.Builder.create(this, "Project")
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(WindowsBuildImage.fromEcrRepository(ecrRepository, "v1.0",
+ * WindowsImageType.SERVER_2019))
+ * // optional certificate to include in the build image
+ * .certificate(BuildEnvironmentCertificate.builder()
+ * .bucket(Bucket.fromBucketName(this, "Bucket", "my-bucket"))
+ * .objectKey("path/to/cert.pem")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProjectPropsDsl {
   private val cdkBuilder: ProjectProps.Builder = ProjectProps.builder()

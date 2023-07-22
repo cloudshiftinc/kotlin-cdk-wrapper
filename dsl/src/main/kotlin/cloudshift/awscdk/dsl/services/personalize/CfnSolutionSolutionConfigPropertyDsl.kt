@@ -11,6 +11,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * Describes the configuration properties for the solution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object autoMlConfig;
+ * Object hpoConfig;
+ * SolutionConfigProperty solutionConfigProperty = SolutionConfigProperty.builder()
+ * .algorithmHyperParameters(Map.of(
+ * "algorithmHyperParametersKey", "algorithmHyperParameters"))
+ * .autoMlConfig(autoMlConfig)
+ * .eventValueThreshold("eventValueThreshold")
+ * .featureTransformationParameters(Map.of(
+ * "featureTransformationParametersKey", "featureTransformationParameters"))
+ * .hpoConfig(hpoConfig)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-solutionconfig.html)
+ */
 @CdkDslMarker
 public class CfnSolutionSolutionConfigPropertyDsl {
   private val cdkBuilder: CfnSolution.SolutionConfigProperty.Builder =

@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnFleet
 
+/**
+ * A range of IP addresses and port settings that allow inbound traffic to connect to server
+ * processes on an instance in a fleet.
+ *
+ * New game sessions are assigned an IP address/port number combination, which must fall into the
+ * fleet's allowed ranges. Fleets with custom game builds must have permissions explicitly set. For
+ * Realtime Servers fleets, GameLift automatically opens two port ranges, one for TCP messaging and one
+ * for UDP.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * IpPermissionProperty ipPermissionProperty = IpPermissionProperty.builder()
+ * .fromPort(123)
+ * .ipRange("ipRange")
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-ippermission.html)
+ */
 @CdkDslMarker
 public class CfnFleetIpPermissionPropertyDsl {
   private val cdkBuilder: CfnFleet.IpPermissionProperty.Builder =

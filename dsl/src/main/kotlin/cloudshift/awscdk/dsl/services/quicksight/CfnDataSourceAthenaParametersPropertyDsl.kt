@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * Parameters for Amazon Athena.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AthenaParametersProperty athenaParametersProperty = AthenaParametersProperty.builder()
+ * .roleArn("roleArn")
+ * .workGroup("workGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-athenaparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceAthenaParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.AthenaParametersProperty.Builder =

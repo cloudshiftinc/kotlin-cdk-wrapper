@@ -10,6 +10,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnOrganizationConfigRule
 import software.amazon.awscdk.services.config.CfnOrganizationConfigRuleProps
 
+/**
+ * Properties for defining a `CfnOrganizationConfigRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnOrganizationConfigRuleProps cfnOrganizationConfigRuleProps =
+ * CfnOrganizationConfigRuleProps.builder()
+ * .organizationConfigRuleName("organizationConfigRuleName")
+ * // the properties below are optional
+ * .excludedAccounts(List.of("excludedAccounts"))
+ * .organizationCustomPolicyRuleMetadata(OrganizationCustomPolicyRuleMetadataProperty.builder()
+ * .policyText("policyText")
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .debugLogDeliveryAccounts(List.of("debugLogDeliveryAccounts"))
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build())
+ * .organizationCustomRuleMetadata(OrganizationCustomRuleMetadataProperty.builder()
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
+ * // the properties below are optional
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build())
+ * .organizationManagedRuleMetadata(OrganizationManagedRuleMetadataProperty.builder()
+ * .ruleIdentifier("ruleIdentifier")
+ * // the properties below are optional
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconfigrule.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConfigRulePropsDsl {
   private val cdkBuilder: CfnOrganizationConfigRuleProps.Builder =

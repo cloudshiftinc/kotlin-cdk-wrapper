@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotwireless.CfnDestinationProps
 
+/**
+ * Properties for defining a `CfnDestination`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnDestinationProps cfnDestinationProps = CfnDestinationProps.builder()
+ * .expression("expression")
+ * .expressionType("expressionType")
+ * .name("name")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-destination.html)
+ */
 @CdkDslMarker
 public class CfnDestinationPropsDsl {
   private val cdkBuilder: CfnDestinationProps.Builder = CfnDestinationProps.builder()

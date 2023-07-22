@@ -9,6 +9,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies a model that you want to host and the resources to deploy for hosting it.
+ *
+ * If you are deploying multiple models, tell Amazon SageMaker how to distribute traffic among the
+ * models by specifying the `InitialVariantWeight` objects.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ProductionVariantProperty productionVariantProperty = ProductionVariantProperty.builder()
+ * .initialVariantWeight(123)
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * // the properties below are optional
+ * .acceleratorType("acceleratorType")
+ * .containerStartupHealthCheckTimeoutInSeconds(123)
+ * .enableSsmAccess(false)
+ * .initialInstanceCount(123)
+ * .instanceType("instanceType")
+ * .modelDataDownloadTimeoutInSeconds(123)
+ * .serverlessConfig(ServerlessConfigProperty.builder()
+ * .maxConcurrency(123)
+ * .memorySizeInMb(123)
+ * // the properties below are optional
+ * .provisionedConcurrency(123)
+ * .build())
+ * .volumeSizeInGb(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-productionvariant.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigProductionVariantPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ProductionVariantProperty.Builder =

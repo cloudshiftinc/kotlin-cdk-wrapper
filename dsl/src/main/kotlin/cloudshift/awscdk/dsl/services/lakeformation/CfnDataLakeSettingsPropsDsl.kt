@@ -13,6 +13,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps
 
+/**
+ * Properties for defining a `CfnDataLakeSettings`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object parameters;
+ * CfnDataLakeSettingsProps cfnDataLakeSettingsProps = CfnDataLakeSettingsProps.builder()
+ * .admins(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build()))
+ * .allowExternalDataFiltering(false)
+ * .authorizedSessionTagValueList(List.of("authorizedSessionTagValueList"))
+ * .createDatabaseDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .createTableDefaultPermissions(List.of(PrincipalPermissionsProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .externalDataFilteringAllowList(List.of(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build()))
+ * .parameters(parameters)
+ * .trustedResourceOwners(List.of("trustedResourceOwners"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datalakesettings.html)
+ */
 @CdkDslMarker
 public class CfnDataLakeSettingsPropsDsl {
   private val cdkBuilder: CfnDataLakeSettingsProps.Builder = CfnDataLakeSettingsProps.builder()

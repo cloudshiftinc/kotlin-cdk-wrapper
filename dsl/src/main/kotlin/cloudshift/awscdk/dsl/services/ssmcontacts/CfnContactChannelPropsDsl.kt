@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps
 
+/**
+ * Properties for defining a `CfnContactChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnContactChannelProps cfnContactChannelProps = CfnContactChannelProps.builder()
+ * .channelAddress("channelAddress")
+ * .channelName("channelName")
+ * .channelType("channelType")
+ * .contactId("contactId")
+ * // the properties below are optional
+ * .deferActivation(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html)
+ */
 @CdkDslMarker
 public class CfnContactChannelPropsDsl {
   private val cdkBuilder: CfnContactChannelProps.Builder = CfnContactChannelProps.builder()

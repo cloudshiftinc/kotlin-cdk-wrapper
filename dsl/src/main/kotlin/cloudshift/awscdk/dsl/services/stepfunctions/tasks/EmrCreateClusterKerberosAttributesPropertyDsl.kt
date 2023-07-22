@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * Attributes for Kerberos configuration when Kerberos authentication is enabled using a security
+ * configuration.
+ *
+ * See the RunJobFlow API for complete documentation on input parameters
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * KerberosAttributesProperty kerberosAttributesProperty = KerberosAttributesProperty.builder()
+ * .realm("realm")
+ * // the properties below are optional
+ * .adDomainJoinPassword("adDomainJoinPassword")
+ * .adDomainJoinUser("adDomainJoinUser")
+ * .crossRealmTrustPrincipalPassword("crossRealmTrustPrincipalPassword")
+ * .kdcAdminPassword("kdcAdminPassword")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_KerberosAttributes.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterKerberosAttributesPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.KerberosAttributesProperty.Builder =

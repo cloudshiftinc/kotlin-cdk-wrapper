@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.logs.CfnMetricFilterProps
 
+/**
+ * Properties for defining a `CfnMetricFilter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnMetricFilterProps cfnMetricFilterProps = CfnMetricFilterProps.builder()
+ * .filterPattern("filterPattern")
+ * .logGroupName("logGroupName")
+ * .metricTransformations(List.of(MetricTransformationProperty.builder()
+ * .metricName("metricName")
+ * .metricNamespace("metricNamespace")
+ * .metricValue("metricValue")
+ * // the properties below are optional
+ * .defaultValue(123)
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build()))
+ * // the properties below are optional
+ * .filterName("filterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html)
+ */
 @CdkDslMarker
 public class CfnMetricFilterPropsDsl {
   private val cdkBuilder: CfnMetricFilterProps.Builder = CfnMetricFilterProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.macie.CfnSessionProps
 
+/**
+ * Properties for defining a `CfnSession`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnSessionProps cfnSessionProps = CfnSessionProps.builder()
+ * .findingPublishingFrequency("findingPublishingFrequency")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-session.html)
+ */
 @CdkDslMarker
 public class CfnSessionPropsDsl {
   private val cdkBuilder: CfnSessionProps.Builder = CfnSessionProps.builder()

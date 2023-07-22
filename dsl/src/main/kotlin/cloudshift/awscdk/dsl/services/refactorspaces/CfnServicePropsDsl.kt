@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.refactorspaces.CfnService
 import software.amazon.awscdk.services.refactorspaces.CfnServiceProps
 
+/**
+ * Properties for defining a `CfnService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
+ * .applicationIdentifier("applicationIdentifier")
+ * .endpointType("endpointType")
+ * .environmentIdentifier("environmentIdentifier")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .lambdaEndpoint(LambdaEndpointInputProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .urlEndpoint(UrlEndpointInputProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .healthUrl("healthUrl")
+ * .build())
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-service.html)
+ */
 @CdkDslMarker
 public class CfnServicePropsDsl {
   private val cdkBuilder: CfnServiceProps.Builder = CfnServiceProps.builder()

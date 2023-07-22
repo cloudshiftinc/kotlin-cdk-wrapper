@@ -14,6 +14,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudtrail.CfnChannel
 import software.constructs.Construct
 
+/**
+ * Contains information about a returned CloudTrail channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * CfnChannel cfnChannel = CfnChannel.Builder.create(this, "MyCfnChannel")
+ * .destinations(List.of(DestinationProperty.builder()
+ * .location("location")
+ * .type("type")
+ * .build()))
+ * .name("name")
+ * .source("source")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelDsl(
   scope: Construct,

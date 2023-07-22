@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnLayerVersionPermission
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::LayerVersionPermission` resource adds permissions to the resource-based policy
+ * of a version of an [Lambda
+ * layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) . Use this action to
+ * grant layer usage permission to other accounts. You can grant permission to a single account, all
+ * AWS accounts, or all accounts in an organization.
+ *
+ *
+ * Since the release of the
+ * [UpdateReplacePolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html)
+ * both `UpdateReplacePolicy` and `DeletionPolicy` are required to protect your
+ * Resources/LayerPermissions from deletion.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnLayerVersionPermission cfnLayerVersionPermission =
+ * CfnLayerVersionPermission.Builder.create(this, "MyCfnLayerVersionPermission")
+ * .action("action")
+ * .layerVersionArn("layerVersionArn")
+ * .principal("principal")
+ * // the properties below are optional
+ * .organizationId("organizationId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html)
+ */
 @CdkDslMarker
 public class CfnLayerVersionPermissionDsl(
   scope: Construct,

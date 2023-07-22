@@ -10,6 +10,27 @@ import software.amazon.awscdk.services.appmesh.IMesh
 import software.amazon.awscdk.services.appmesh.VirtualRouterListener
 import software.amazon.awscdk.services.appmesh.VirtualRouterProps
 
+/**
+ * The properties used when creating a new VirtualRouter.
+ *
+ * Example:
+ *
+ * ```
+ * Stack infraStack;
+ * Stack appStack;
+ * Mesh mesh = Mesh.Builder.create(infraStack, "AppMesh")
+ * .meshName("myAwsMesh")
+ * .egressFilter(MeshFilterType.ALLOW_ALL)
+ * .build();
+ * // the VirtualRouter will belong to 'appStack',
+ * // even though the Mesh belongs to 'infraStack'
+ * VirtualRouter router = VirtualRouter.Builder.create(appStack, "router")
+ * .mesh(mesh) // notice that mesh is a required property when creating a router with the 'new'
+ * statement
+ * .listeners(List.of(VirtualRouterListener.http(8081)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VirtualRouterPropsDsl {
   private val cdkBuilder: VirtualRouterProps.Builder = VirtualRouterProps.builder()

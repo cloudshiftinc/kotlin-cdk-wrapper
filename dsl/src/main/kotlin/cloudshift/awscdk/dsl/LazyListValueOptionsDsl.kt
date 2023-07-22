@@ -7,6 +7,21 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.LazyListValueOptions
 
+/**
+ * Options for creating a lazy list token.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * LazyListValueOptions lazyListValueOptions = LazyListValueOptions.builder()
+ * .displayHint("displayHint")
+ * .omitEmpty(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LazyListValueOptionsDsl {
   private val cdkBuilder: LazyListValueOptions.Builder = LazyListValueOptions.builder()

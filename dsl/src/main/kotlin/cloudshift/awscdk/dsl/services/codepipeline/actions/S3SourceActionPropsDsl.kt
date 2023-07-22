@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.codepipeline.actions.S3Trigger
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties of the `S3SourceAction S3 source Action`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * Bucket sourceBucket;
+ * Artifact sourceOutput = new Artifact();
+ * String key = "some/key.zip";
+ * Trail trail = new Trail(this, "CloudTrail");
+ * trail.addS3EventSelector(List.of(S3EventSelector.builder()
+ * .bucket(sourceBucket)
+ * .objectPrefix(key)
+ * .build()), AddEventSelectorOptions.builder()
+ * .readWriteType(ReadWriteType.WRITE_ONLY)
+ * .build());
+ * S3SourceAction sourceAction = S3SourceAction.Builder.create()
+ * .actionName("S3Source")
+ * .bucketKey(key)
+ * .bucket(sourceBucket)
+ * .output(sourceOutput)
+ * .trigger(S3Trigger.EVENTS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3SourceActionPropsDsl {
   private val cdkBuilder: S3SourceActionProps.Builder = S3SourceActionProps.builder()

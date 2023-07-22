@@ -9,6 +9,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
+/**
+ * `Disk` is a property of the
+ * [Hardware](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
+ * property. It describes a disk attached to an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * DiskProperty diskProperty = DiskProperty.builder()
+ * .diskName("diskName")
+ * .path("path")
+ * // the properties below are optional
+ * .attachedTo("attachedTo")
+ * .attachmentState("attachmentState")
+ * .iops(123)
+ * .isSystemDisk(false)
+ * .sizeInGb("sizeInGb")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-disk.html)
+ */
 @CdkDslMarker
 public class CfnInstanceDiskPropertyDsl {
   private val cdkBuilder: CfnInstance.DiskProperty.Builder = CfnInstance.DiskProperty.builder()

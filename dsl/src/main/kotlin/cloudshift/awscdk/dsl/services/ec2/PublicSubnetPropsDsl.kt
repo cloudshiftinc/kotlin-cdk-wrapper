@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ec2.PublicSubnetProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PublicSubnetProps publicSubnetProps = PublicSubnetProps.builder()
+ * .availabilityZone("availabilityZone")
+ * .cidrBlock("cidrBlock")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .mapPublicIpOnLaunch(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PublicSubnetPropsDsl {
   private val cdkBuilder: PublicSubnetProps.Builder = PublicSubnetProps.builder()

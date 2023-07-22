@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnOrganizationConformancePack
 import software.constructs.Construct
 
+/**
+ * OrganizationConformancePack deploys conformance packs across member accounts in an AWS
+ * Organizations .
+ *
+ * OrganizationConformancePack enables organization service access for
+ * `config-multiaccountsetup.amazonaws.com` through the `EnableAWSServiceAccess` action and creates a
+ * service linked role in the master account of your organization. The service linked role is created
+ * only when the role does not exist in the master account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnOrganizationConformancePack cfnOrganizationConformancePack =
+ * CfnOrganizationConformancePack.Builder.create(this, "MyCfnOrganizationConformancePack")
+ * .organizationConformancePackName("organizationConformancePackName")
+ * // the properties below are optional
+ * .conformancePackInputParameters(List.of(ConformancePackInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .deliveryS3Bucket("deliveryS3Bucket")
+ * .deliveryS3KeyPrefix("deliveryS3KeyPrefix")
+ * .excludedAccounts(List.of("excludedAccounts"))
+ * .templateBody("templateBody")
+ * .templateS3Uri("templateS3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-organizationconformancepack.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConformancePackDsl(
   scope: Construct,

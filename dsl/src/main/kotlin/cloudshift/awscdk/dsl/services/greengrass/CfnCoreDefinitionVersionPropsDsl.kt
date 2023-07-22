@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnCoreDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnCoreDefinitionVersionProps cfnCoreDefinitionVersionProps =
+ * CfnCoreDefinitionVersionProps.builder()
+ * .coreDefinitionId("coreDefinitionId")
+ * .cores(List.of(CoreProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnCoreDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnCoreDefinitionVersionProps.Builder =

@@ -12,6 +12,74 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datapipeline.CfnPipeline
 import software.constructs.Construct
 
+/**
+ * The AWS::DataPipeline::Pipeline resource specifies a data pipeline that you can use to automate
+ * the movement and transformation of data.
+ *
+ * In each pipeline, you define pipeline objects, such as activities, schedules, data nodes, and
+ * resources. For information about pipeline objects and components that you can use, see [Pipeline
+ * Object
+ * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+ * in the *AWS Data Pipeline Developer Guide* .
+ *
+ * The `AWS::DataPipeline::Pipeline` resource adds tasks, schedules, and preconditions to the
+ * specified pipeline. You can use `PutPipelineDefinition` to populate a new pipeline.
+ *
+ * `PutPipelineDefinition` also validates the configuration as it adds it to the pipeline. Changes
+ * to the pipeline are saved unless one of the following validation errors exist in the pipeline.
+ *
+ * * An object is missing a name or identifier field.
+ * * A string or reference field is empty.
+ * * The number of objects in the pipeline exceeds the allowed maximum number of objects.
+ * * The pipeline is in a FINISHED state.
+ *
+ * Pipeline object definitions are passed to the
+ * [PutPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_PutPipelineDefinition.html)
+ * action and returned by the
+ * [GetPipelineDefinition](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_GetPipelineDefinition.html)
+ * action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * CfnPipeline cfnPipeline = CfnPipeline.Builder.create(this, "MyCfnPipeline")
+ * .name("name")
+ * // the properties below are optional
+ * .activate(false)
+ * .description("description")
+ * .parameterObjects(List.of(ParameterObjectProperty.builder()
+ * .attributes(List.of(ParameterAttributeProperty.builder()
+ * .key("key")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .build()))
+ * .parameterValues(List.of(ParameterValueProperty.builder()
+ * .id("id")
+ * .stringValue("stringValue")
+ * .build()))
+ * .pipelineObjects(List.of(PipelineObjectProperty.builder()
+ * .fields(List.of(FieldProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .refValue("refValue")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .name("name")
+ * .build()))
+ * .pipelineTags(List.of(PipelineTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDsl(
   scope: Construct,

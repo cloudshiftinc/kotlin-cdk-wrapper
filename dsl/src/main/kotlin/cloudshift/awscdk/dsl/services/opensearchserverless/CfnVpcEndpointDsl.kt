@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint
 import software.constructs.Construct
 
+/**
+ * Creates an OpenSearch Serverless-managed interface VPC endpoint.
+ *
+ * For more information, see [Access Amazon OpenSearch Serverless using an interface
+ * endpoint](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-vpc.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnVpcEndpoint cfnVpcEndpoint = CfnVpcEndpoint.Builder.create(this, "MyCfnVpcEndpoint")
+ * .name("name")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVpcEndpointDsl(
   scope: Construct,

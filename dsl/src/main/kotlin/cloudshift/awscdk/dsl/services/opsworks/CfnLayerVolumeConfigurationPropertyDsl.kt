@@ -9,6 +9,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
+/**
+ * Describes an Amazon EBS volume configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * VolumeConfigurationProperty volumeConfigurationProperty = VolumeConfigurationProperty.builder()
+ * .encrypted(false)
+ * .iops(123)
+ * .mountPoint("mountPoint")
+ * .numberOfDisks(123)
+ * .raidLevel(123)
+ * .size(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLayerVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnLayer.VolumeConfigurationProperty.Builder =

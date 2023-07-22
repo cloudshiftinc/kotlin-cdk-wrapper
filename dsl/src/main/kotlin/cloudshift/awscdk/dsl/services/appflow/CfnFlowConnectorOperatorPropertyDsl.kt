@@ -6,6 +6,38 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The operation to be performed on the provided source fields.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * ConnectorOperatorProperty connectorOperatorProperty = ConnectorOperatorProperty.builder()
+ * .amplitude("amplitude")
+ * .customConnector("customConnector")
+ * .datadog("datadog")
+ * .dynatrace("dynatrace")
+ * .googleAnalytics("googleAnalytics")
+ * .inforNexus("inforNexus")
+ * .marketo("marketo")
+ * .pardot("pardot")
+ * .s3("s3")
+ * .salesforce("salesforce")
+ * .sapoData("sapoData")
+ * .serviceNow("serviceNow")
+ * .singular("singular")
+ * .slack("slack")
+ * .trendmicro("trendmicro")
+ * .veeva("veeva")
+ * .zendesk("zendesk")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-connectoroperator.html)
+ */
 @CdkDslMarker
 public class CfnFlowConnectorOperatorPropertyDsl {
   private val cdkBuilder: CfnFlow.ConnectorOperatorProperty.Builder =

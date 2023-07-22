@@ -23,6 +23,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJob
 import software.constructs.Construct
 
+/**
+ * Task to submits an AWS Batch job from a job definition.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.batch.alpha.*;
+ * EcsJobDefinition batchJobDefinition;
+ * JobQueue batchQueue;
+ * BatchSubmitJob task = BatchSubmitJob.Builder.create(this, "Submit Job")
+ * .jobDefinitionArn(batchJobDefinition.getJobDefinitionArn())
+ * .jobName("MyJob")
+ * .jobQueueArn(batchQueue.getJobQueueArn())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-batch.html)
+ */
 @CdkDslMarker
 public class BatchSubmitJobDsl(
   scope: Construct,

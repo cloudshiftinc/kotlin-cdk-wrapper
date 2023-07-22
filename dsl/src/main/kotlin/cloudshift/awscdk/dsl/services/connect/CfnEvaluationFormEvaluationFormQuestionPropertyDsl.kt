@@ -9,6 +9,70 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about a question from an evaluation form.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormQuestionProperty evaluationFormQuestionProperty =
+ * EvaluationFormQuestionProperty.builder()
+ * .questionType("questionType")
+ * .refId("refId")
+ * .title("title")
+ * // the properties below are optional
+ * .instructions("instructions")
+ * .notApplicableEnabled(false)
+ * .questionTypeProperties(EvaluationFormQuestionTypePropertiesProperty.builder()
+ * .numeric(EvaluationFormNumericQuestionPropertiesProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+ * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+ * .label("label")
+ * .build())
+ * .build())
+ * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * .build())
+ * .singleSelect(EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+ * .refId("refId")
+ * .text("text")
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * // the properties below are optional
+ * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+ * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+ * .category("category")
+ * .condition("condition")
+ * .optionRefId("optionRefId")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .defaultOptionRefId("defaultOptionRefId")
+ * .build())
+ * .displayAs("displayAs")
+ * .build())
+ * .build())
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformquestion.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormQuestionPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormQuestionProperty.Builder =

@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnGateway
 import software.amazon.awscdk.services.iotsitewise.CfnGatewayProps
 
+/**
+ * Properties for defining a `CfnGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnGatewayProps cfnGatewayProps = CfnGatewayProps.builder()
+ * .gatewayName("gatewayName")
+ * .gatewayPlatform(GatewayPlatformProperty.builder()
+ * .greengrass(GreengrassProperty.builder()
+ * .groupArn("groupArn")
+ * .build())
+ * .greengrassV2(GreengrassV2Property.builder()
+ * .coreDeviceThingName("coreDeviceThingName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .gatewayCapabilitySummaries(List.of(GatewayCapabilitySummaryProperty.builder()
+ * .capabilityNamespace("capabilityNamespace")
+ * // the properties below are optional
+ * .capabilityConfiguration("capabilityConfiguration")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html)
+ */
 @CdkDslMarker
 public class CfnGatewayPropsDsl {
   private val cdkBuilder: CfnGatewayProps.Builder = CfnGatewayProps.builder()

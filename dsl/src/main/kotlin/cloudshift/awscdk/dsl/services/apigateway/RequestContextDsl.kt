@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.apigateway.RequestContext
 
+/**
+ * Configure what must be included in the `requestContext`.
+ *
+ * More details can be found at mapping templates documentation.
+ *
+ * Example:
+ *
+ * ```
+ * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
+ * .stateMachine(machine)
+ * .headers(true)
+ * .path(false)
+ * .querystring(false)
+ * .authorizer(false)
+ * .requestContext(RequestContext.builder()
+ * .caller(true)
+ * .user(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-mapping-template-reference.html)
+ */
 @CdkDslMarker
 public class RequestContextDsl {
   private val cdkBuilder: RequestContext.Builder = RequestContext.builder()

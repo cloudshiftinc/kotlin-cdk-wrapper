@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSchema
 
+/**
+ * Specifies a registry in the AWS Glue Schema Registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * RegistryProperty registryProperty = RegistryProperty.builder()
+ * .arn("arn")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-registry.html)
+ */
 @CdkDslMarker
 public class CfnSchemaRegistryPropertyDsl {
   private val cdkBuilder: CfnSchema.RegistryProperty.Builder = CfnSchema.RegistryProperty.builder()

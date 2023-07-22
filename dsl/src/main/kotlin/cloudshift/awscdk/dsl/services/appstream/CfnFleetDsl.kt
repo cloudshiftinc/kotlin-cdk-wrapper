@@ -15,6 +15,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnFleet
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::Fleet` resource creates a fleet for Amazon AppStream 2.0. A fleet consists
+ * of streaming instances that run a specified image when using Always-On or On-Demand.
+ *
+ * Example:
+ *
+ * ```
+ * CfnFleet fleet = CfnFleet.Builder.create(this, "Fleet")
+ * .instanceType("stream.standard.small")
+ * .name("Fleet")
+ * .computeCapacity(ComputeCapacityProperty.builder()
+ * .desiredInstances(1)
+ * .build())
+ * .imageName("AppStream-AmazonLinux2-09-21-2022")
+ * .build();
+ * fleet.getCfnOptions().getCreationPolicy() = CfnCreationPolicy.builder()
+ * .startFleet(true)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetDsl(
   scope: Construct,

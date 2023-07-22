@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The setup of WAV audio in the output.
+ *
+ * The parent of this entity is AudioCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * WavSettingsProperty wavSettingsProperty = WavSettingsProperty.builder()
+ * .bitDepth(123)
+ * .codingMode("codingMode")
+ * .sampleRate(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-wavsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelWavSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.WavSettingsProperty.Builder =

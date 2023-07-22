@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnRecordSet
 
+/**
+ * The object that is specified in resource record set object when you are linking a resource record
+ * set to a CIDR location.
+ *
+ * A `LocationName` with an asterisk “*” can be used to create a default CIDR record. `CollectionId`
+ * is still required for default record.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CidrRoutingConfigProperty cidrRoutingConfigProperty = CidrRoutingConfigProperty.builder()
+ * .collectionId("collectionId")
+ * .locationName("locationName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-cidrroutingconfig.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetCidrRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnRecordSet.CidrRoutingConfigProperty.Builder =

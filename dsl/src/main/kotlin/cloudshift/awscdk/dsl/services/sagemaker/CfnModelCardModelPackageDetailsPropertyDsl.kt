@@ -11,6 +11,47 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Metadata information related to model package version.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelPackageDetailsProperty modelPackageDetailsProperty = ModelPackageDetailsProperty.builder()
+ * .approvalDescription("approvalDescription")
+ * .createdBy(ModelPackageCreatorProperty.builder()
+ * .userProfileName("userProfileName")
+ * .build())
+ * .domain("domain")
+ * .inferenceSpecification(InferenceSpecificationProperty.builder()
+ * .containers(List.of(ContainerProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .modelDataUrl("modelDataUrl")
+ * .nearestModelName("nearestModelName")
+ * .build()))
+ * .build())
+ * .modelApprovalStatus("modelApprovalStatus")
+ * .modelPackageArn("modelPackageArn")
+ * .modelPackageDescription("modelPackageDescription")
+ * .modelPackageGroupName("modelPackageGroupName")
+ * .modelPackageName("modelPackageName")
+ * .modelPackageStatus("modelPackageStatus")
+ * .modelPackageVersion(123)
+ * .sourceAlgorithms(List.of(SourceAlgorithmProperty.builder()
+ * .algorithmName("algorithmName")
+ * // the properties below are optional
+ * .modelDataUrl("modelDataUrl")
+ * .build()))
+ * .task("task")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-modelpackagedetails.html)
+ */
 @CdkDslMarker
 public class CfnModelCardModelPackageDetailsPropertyDsl {
   private val cdkBuilder: CfnModelCard.ModelPackageDetailsProperty.Builder =

@@ -13,6 +13,65 @@ import software.amazon.awscdk.CfnCodeDeployBlueGreenHookProps
 import software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks
 import software.amazon.awscdk.CfnTrafficRoutingConfig
 
+/**
+ * Construction properties of `CfnCodeDeployBlueGreenHook`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCodeDeployBlueGreenHookProps cfnCodeDeployBlueGreenHookProps =
+ * CfnCodeDeployBlueGreenHookProps.builder()
+ * .applications(List.of(CfnCodeDeployBlueGreenApplication.builder()
+ * .ecsAttributes(CfnCodeDeployBlueGreenEcsAttributes.builder()
+ * .taskDefinitions(List.of("taskDefinitions"))
+ * .taskSets(List.of("taskSets"))
+ * .trafficRouting(CfnTrafficRouting.builder()
+ * .prodTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .targetGroups(List.of("targetGroups"))
+ * .testTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build())
+ * .build())
+ * .target(CfnCodeDeployBlueGreenApplicationTarget.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build()))
+ * .serviceRole("serviceRole")
+ * // the properties below are optional
+ * .additionalOptions(CfnCodeDeployBlueGreenAdditionalOptions.builder()
+ * .terminationWaitTimeInMinutes(123)
+ * .build())
+ * .lifecycleEventHooks(CfnCodeDeployBlueGreenLifecycleEventHooks.builder()
+ * .afterAllowTestTraffic("afterAllowTestTraffic")
+ * .afterAllowTraffic("afterAllowTraffic")
+ * .afterInstall("afterInstall")
+ * .beforeAllowTraffic("beforeAllowTraffic")
+ * .beforeInstall("beforeInstall")
+ * .build())
+ * .trafficRoutingConfig(CfnTrafficRoutingConfig.builder()
+ * .type(CfnTrafficRoutingType.ALL_AT_ONCE)
+ * // the properties below are optional
+ * .timeBasedCanary(CfnTrafficRoutingTimeBasedCanary.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build())
+ * .timeBasedLinear(CfnTrafficRoutingTimeBasedLinear.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenHookPropsDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenHookProps.Builder =

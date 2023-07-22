@@ -13,6 +13,31 @@ import software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Metric metric;
+ * TargetTrackingScalingPolicy targetTrackingScalingPolicy =
+ * TargetTrackingScalingPolicy.Builder.create(this, "MyTargetTrackingScalingPolicy")
+ * .autoScalingGroup(autoScalingGroup)
+ * .targetValue(123)
+ * // the properties below are optional
+ * .cooldown(Duration.minutes(30))
+ * .customMetric(metric)
+ * .disableScaleIn(false)
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .predefinedMetric(PredefinedMetric.ASG_AVERAGE_CPU_UTILIZATION)
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TargetTrackingScalingPolicyDsl(
   scope: Construct,

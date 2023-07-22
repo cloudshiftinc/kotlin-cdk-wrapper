@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The override configuration of the rendering rules of a sheet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SheetElementConfigurationOverridesProperty sheetElementConfigurationOverridesProperty =
+ * SheetElementConfigurationOverridesProperty.builder()
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sheetelementconfigurationoverrides.html)
+ */
 @CdkDslMarker
 public class CfnTemplateSheetElementConfigurationOverridesPropertyDsl {
   private val cdkBuilder: CfnTemplate.SheetElementConfigurationOverridesProperty.Builder =

@@ -17,6 +17,24 @@ import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.s3.assets.Asset
 import software.constructs.Construct
 
+/**
+ * An asset represents a local file or directory, which is automatically uploaded to S3 and then can
+ * be referenced within a CDK application.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * Asset asset = Asset.Builder.create(this, "BundledAsset")
+ * .path("/path/to/asset")
+ * .bundling(BundlingOptions.builder()
+ * .image(DockerImage.fromRegistry("alpine"))
+ * .command(List.of("command-that-produces-an-archive.sh"))
+ * .outputType(BundlingOutput.NOT_ARCHIVED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetDsl(
   scope: Construct,

@@ -17,6 +17,17 @@ import software.amazon.awscdk.services.stepfunctions.TaskInput
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersDeleteVirtualClusterProps
 
+/**
+ * Properties to define a EMR Containers DeleteVirtualCluster Task.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersDeleteVirtualCluster.Builder.create(this, "Delete a Virtual Cluster")
+ * .virtualClusterId(TaskInput.fromJsonPathAt("$.virtualCluster"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrContainersDeleteVirtualClusterPropsDsl {
   private val cdkBuilder: EmrContainersDeleteVirtualClusterProps.Builder =

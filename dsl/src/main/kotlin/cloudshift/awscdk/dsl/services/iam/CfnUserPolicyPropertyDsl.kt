@@ -9,6 +9,30 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.iam.CfnUser
 
+/**
+ * Contains information about an attached policy.
+ *
+ * An attached policy is a managed policy that has been attached to a user, group, or role.
+ *
+ * For more information about managed policies, refer to [Managed Policies and Inline
+ * Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the
+ * *IAM User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * PolicyProperty policyProperty = PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user-policy.html)
+ */
 @CdkDslMarker
 public class CfnUserPolicyPropertyDsl {
   private val cdkBuilder: CfnUser.PolicyProperty.Builder = CfnUser.PolicyProperty.builder()

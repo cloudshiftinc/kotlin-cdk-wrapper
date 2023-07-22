@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The criteria for inspecting login requests, used by the ATP rule group to validate credentials
+ * usage.
+ *
+ * This is part of the `AWSManagedRulesATPRuleSet` configuration in `ManagedRuleGroupConfig` .
+ *
+ * In these settings, you specify how your application accepts login attempts by providing the
+ * request payload type and the names of the fields within the request body where the username and
+ * password are provided.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * RequestInspectionProperty requestInspectionProperty = RequestInspectionProperty.builder()
+ * .passwordField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .payloadType("payloadType")
+ * .usernameField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-requestinspection.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRequestInspectionPropertyDsl {
   private val cdkBuilder: CfnWebACL.RequestInspectionProperty.Builder =

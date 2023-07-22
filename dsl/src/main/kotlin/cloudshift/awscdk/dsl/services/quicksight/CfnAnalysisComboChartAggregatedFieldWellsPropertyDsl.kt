@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The aggregated field wells of a combo chart.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-combochartaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisComboChartAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ComboChartAggregatedFieldWellsProperty.Builder =

@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnStack
 
+/**
+ * The persistent application settings for users of a stack.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * ApplicationSettingsProperty applicationSettingsProperty = ApplicationSettingsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .settingsGroup("settingsGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-applicationsettings.html)
+ */
 @CdkDslMarker
 public class CfnStackApplicationSettingsPropertyDsl {
   private val cdkBuilder: CfnStack.ApplicationSettingsProperty.Builder =

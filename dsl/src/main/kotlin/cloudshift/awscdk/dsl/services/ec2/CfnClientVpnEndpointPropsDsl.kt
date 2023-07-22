@@ -13,6 +13,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpointProps
 
+/**
+ * Properties for defining a `CfnClientVpnEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnClientVpnEndpointProps cfnClientVpnEndpointProps = CfnClientVpnEndpointProps.builder()
+ * .authenticationOptions(List.of(ClientAuthenticationRequestProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .activeDirectory(DirectoryServiceAuthenticationRequestProperty.builder()
+ * .directoryId("directoryId")
+ * .build())
+ * .federatedAuthentication(FederatedAuthenticationRequestProperty.builder()
+ * .samlProviderArn("samlProviderArn")
+ * // the properties below are optional
+ * .selfServiceSamlProviderArn("selfServiceSamlProviderArn")
+ * .build())
+ * .mutualAuthentication(CertificateAuthenticationRequestProperty.builder()
+ * .clientRootCertificateChainArn("clientRootCertificateChainArn")
+ * .build())
+ * .build()))
+ * .clientCidrBlock("clientCidrBlock")
+ * .connectionLogOptions(ConnectionLogOptionsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .cloudwatchLogGroup("cloudwatchLogGroup")
+ * .cloudwatchLogStream("cloudwatchLogStream")
+ * .build())
+ * .serverCertificateArn("serverCertificateArn")
+ * // the properties below are optional
+ * .clientConnectOptions(ClientConnectOptionsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .build())
+ * .clientLoginBannerOptions(ClientLoginBannerOptionsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bannerText("bannerText")
+ * .build())
+ * .description("description")
+ * .dnsServers(List.of("dnsServers"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .selfServicePortal("selfServicePortal")
+ * .sessionTimeoutHours(123)
+ * .splitTunnel(false)
+ * .tagSpecifications(List.of(TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .transportProtocol("transportProtocol")
+ * .vpcId("vpcId")
+ * .vpnPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnendpoint.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnEndpointPropsDsl {
   private val cdkBuilder: CfnClientVpnEndpointProps.Builder = CfnClientVpnEndpointProps.builder()

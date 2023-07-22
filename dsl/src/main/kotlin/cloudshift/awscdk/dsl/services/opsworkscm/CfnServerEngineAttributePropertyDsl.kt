@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworkscm.CfnServer
 
+/**
+ * The `EngineAttribute` property type specifies administrator credentials for an AWS OpsWorks for
+ * Chef Automate or OpsWorks for Puppet Enterprise server.
+ *
+ * `EngineAttribute` is a property of the `AWS::OpsWorksCM::Server` resource type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworkscm.*;
+ * EngineAttributeProperty engineAttributeProperty = EngineAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworkscm-server-engineattribute.html)
+ */
 @CdkDslMarker
 public class CfnServerEngineAttributePropertyDsl {
   private val cdkBuilder: CfnServer.EngineAttributeProperty.Builder =

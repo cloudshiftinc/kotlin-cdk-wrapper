@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.BlockDevice
 import software.amazon.awscdk.services.ec2.BlockDeviceVolume
 
+/**
+ * Block device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * BlockDeviceVolume blockDeviceVolume;
+ * BlockDevice blockDevice = BlockDevice.builder()
+ * .deviceName("deviceName")
+ * .volume(blockDeviceVolume)
+ * // the properties below are optional
+ * .mappingEnabled(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BlockDeviceDsl {
   private val cdkBuilder: BlockDevice.Builder = BlockDevice.builder()

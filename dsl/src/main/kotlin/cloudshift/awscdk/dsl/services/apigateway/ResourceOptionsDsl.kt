@@ -9,6 +9,18 @@ import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.ResourceOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * Resource resource;
+ * Resource subtree = resource.addResource("subtree", ResourceOptions.builder()
+ * .defaultCorsPreflightOptions(CorsOptions.builder()
+ * .allowOrigins(List.of("https://amazon.com"))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ResourceOptionsDsl {
   private val cdkBuilder: ResourceOptions.Builder = ResourceOptions.builder()

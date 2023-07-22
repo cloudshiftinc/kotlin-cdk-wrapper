@@ -13,6 +13,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cassandra.CfnKeyspace
 import software.amazon.awscdk.services.cassandra.CfnKeyspaceProps
 
+/**
+ * Properties for defining a `CfnKeyspace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * CfnKeyspaceProps cfnKeyspaceProps = CfnKeyspaceProps.builder()
+ * .keyspaceName("keyspaceName")
+ * .replicationSpecification(ReplicationSpecificationProperty.builder()
+ * .regionList(List.of("regionList"))
+ * .replicationStrategy("replicationStrategy")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html)
+ */
 @CdkDslMarker
 public class CfnKeyspacePropsDsl {
   private val cdkBuilder: CfnKeyspaceProps.Builder = CfnKeyspaceProps.builder()

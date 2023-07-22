@@ -22,6 +22,73 @@ import software.amazon.awscdk.services.autoscaling.TerminationPolicy
 import software.amazon.awscdk.services.autoscaling.UpdatePolicy
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Basic properties of an AutoScalingGroup, except the exact machines to run and where they should
+ * run.
+ *
+ * Constructs that want to create AutoScalingGroups can inherit
+ * this interface and specialize the essential parts in various ways.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * BlockDeviceVolume blockDeviceVolume;
+ * GroupMetrics groupMetrics;
+ * HealthCheck healthCheck;
+ * ScalingEvents scalingEvents;
+ * Signals signals;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Topic topic;
+ * UpdatePolicy updatePolicy;
+ * CommonAutoScalingGroupProps commonAutoScalingGroupProps = CommonAutoScalingGroupProps.builder()
+ * .allowAllOutbound(false)
+ * .associatePublicIpAddress(false)
+ * .autoScalingGroupName("autoScalingGroupName")
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("deviceName")
+ * .volume(blockDeviceVolume)
+ * .build()))
+ * .capacityRebalance(false)
+ * .cooldown(Duration.minutes(30))
+ * .defaultInstanceWarmup(Duration.minutes(30))
+ * .desiredCapacity(123)
+ * .groupMetrics(List.of(groupMetrics))
+ * .healthCheck(healthCheck)
+ * .ignoreUnmodifiedSizeProperties(false)
+ * .instanceMonitoring(Monitoring.BASIC)
+ * .keyName("keyName")
+ * .maxCapacity(123)
+ * .maxInstanceLifetime(Duration.minutes(30))
+ * .minCapacity(123)
+ * .newInstancesProtectedFromScaleIn(false)
+ * .notifications(List.of(NotificationConfiguration.builder()
+ * .topic(topic)
+ * // the properties below are optional
+ * .scalingEvents(scalingEvents)
+ * .build()))
+ * .signals(signals)
+ * .spotPrice("spotPrice")
+ * .ssmSessionPermissions(false)
+ * .terminationPolicies(List.of(TerminationPolicy.ALLOCATION_STRATEGY))
+ * .updatePolicy(updatePolicy)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonAutoScalingGroupPropsDsl {
   private val cdkBuilder: CommonAutoScalingGroupProps.Builder =

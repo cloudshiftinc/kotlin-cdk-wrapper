@@ -13,6 +13,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroupProps
 
+/**
+ * Properties for defining a `CfnDBClusterParameterGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * Object parameters;
+ * CfnDBClusterParameterGroupProps cfnDBClusterParameterGroupProps =
+ * CfnDBClusterParameterGroupProps.builder()
+ * .description("description")
+ * .family("family")
+ * .parameters(parameters)
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterParameterGroupPropsDsl {
   private val cdkBuilder: CfnDBClusterParameterGroupProps.Builder =

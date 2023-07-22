@@ -37,6 +37,29 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServiceProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * The properties for the QueueProcessingFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.enableFargateCapacityProviders();
+ * QueueProcessingFargateService queueProcessingFargateService =
+ * QueueProcessingFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(512)
+ * .image(ContainerImage.fromRegistry("test"))
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE_SPOT")
+ * .weight(2)
+ * .build(), CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE")
+ * .weight(1)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueProcessingFargateServicePropsDsl {
   private val cdkBuilder: QueueProcessingFargateServiceProps.Builder =

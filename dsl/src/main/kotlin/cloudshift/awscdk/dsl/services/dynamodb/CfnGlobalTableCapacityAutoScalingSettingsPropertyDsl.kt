@@ -7,6 +7,34 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Configures a scalable target and an autoscaling policy for a table or global secondary index's
+ * read or write capacity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * CapacityAutoScalingSettingsProperty capacityAutoScalingSettingsProperty =
+ * CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-capacityautoscalingsettings.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableCapacityAutoScalingSettingsPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.CapacityAutoScalingSettingsProperty.Builder =

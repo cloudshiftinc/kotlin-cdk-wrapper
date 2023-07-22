@@ -8,6 +8,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for a Microsoft Smooth output group.
+ *
+ * The parent of this entity is OutputGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * MsSmoothGroupSettingsProperty msSmoothGroupSettingsProperty =
+ * MsSmoothGroupSettingsProperty.builder()
+ * .acquisitionPointId("acquisitionPointId")
+ * .audioOnlyTimecodeControl("audioOnlyTimecodeControl")
+ * .certificateMode("certificateMode")
+ * .connectionRetryInterval(123)
+ * .destination(OutputLocationRefProperty.builder()
+ * .destinationRefId("destinationRefId")
+ * .build())
+ * .eventId("eventId")
+ * .eventIdMode("eventIdMode")
+ * .eventStopBehavior("eventStopBehavior")
+ * .filecacheDuration(123)
+ * .fragmentLength(123)
+ * .inputLossAction("inputLossAction")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .segmentationMode("segmentationMode")
+ * .sendDelayMs(123)
+ * .sparseTrackType("sparseTrackType")
+ * .streamManifestBehavior("streamManifestBehavior")
+ * .timestampOffset("timestampOffset")
+ * .timestampOffsetMode("timestampOffsetMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mssmoothgroupsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMsSmoothGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MsSmoothGroupSettingsProperty.Builder =

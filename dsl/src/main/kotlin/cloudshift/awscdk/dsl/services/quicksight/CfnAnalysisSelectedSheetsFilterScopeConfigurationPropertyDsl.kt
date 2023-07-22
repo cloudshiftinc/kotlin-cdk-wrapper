@@ -9,6 +9,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration for applying a filter to specific sheets or visuals.
+ *
+ * You can apply this filter to multiple visuals that are on one sheet or to all visuals on a sheet.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SelectedSheetsFilterScopeConfigurationProperty selectedSheetsFilterScopeConfigurationProperty =
+ * SelectedSheetsFilterScopeConfigurationProperty.builder()
+ * .sheetVisualScopingConfigurations(List.of(SheetVisualScopingConfigurationProperty.builder()
+ * .scope("scope")
+ * .sheetId("sheetId")
+ * // the properties below are optional
+ * .visualIds(List.of("visualIds"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-selectedsheetsfilterscopeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisSelectedSheetsFilterScopeConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SelectedSheetsFilterScopeConfigurationProperty.Builder =

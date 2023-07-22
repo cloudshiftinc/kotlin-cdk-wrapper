@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.macie.CfnAllowList
 
+/**
+ * Specifies the location and name of an Amazon Simple Storage Service ( Amazon S3 ) object that
+ * lists specific, predefined text to ignore when inspecting data sources for sensitive data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * S3WordsListProperty s3WordsListProperty = S3WordsListProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-macie-allowlist-s3wordslist.html)
+ */
 @CdkDslMarker
 public class CfnAllowListS3WordsListPropertyDsl {
   private val cdkBuilder: CfnAllowList.S3WordsListProperty.Builder =

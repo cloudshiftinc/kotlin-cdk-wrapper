@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Describes the parameters of a VPC used by the application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-vpcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.VpcConfigurationProperty.Builder =

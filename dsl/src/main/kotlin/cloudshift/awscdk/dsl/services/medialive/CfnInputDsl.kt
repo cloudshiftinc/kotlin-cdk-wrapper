@@ -13,6 +13,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnInput
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaLive::Input resource is a MediaLive resource type that creates an input.
+ *
+ * A MediaLive input holds information that describes how the MediaLive channel is connected to the
+ * upstream system that is providing the source content that is to be transcoded.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Object tags;
+ * CfnInput cfnInput = CfnInput.Builder.create(this, "MyCfnInput")
+ * .destinations(List.of(InputDestinationRequestProperty.builder()
+ * .streamName("streamName")
+ * .build()))
+ * .inputDevices(List.of(InputDeviceSettingsProperty.builder()
+ * .id("id")
+ * .build()))
+ * .inputSecurityGroups(List.of("inputSecurityGroups"))
+ * .mediaConnectFlows(List.of(MediaConnectFlowRequestProperty.builder()
+ * .flowArn("flowArn")
+ * .build()))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .sources(List.of(InputSourceRequestProperty.builder()
+ * .passwordParam("passwordParam")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .tags(tags)
+ * .type("type")
+ * .vpc(InputVpcRequestProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html)
+ */
 @CdkDslMarker
 public class CfnInputDsl(
   scope: Construct,

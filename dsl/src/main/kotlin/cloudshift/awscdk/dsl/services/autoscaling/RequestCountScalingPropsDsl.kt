@@ -8,6 +8,18 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.RequestCountScalingProps
 
+/**
+ * Properties for enabling scaling based on request/second.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnRequestCount("LimitRPS", RequestCountScalingProps.builder()
+ * .targetRequestsPerSecond(1000)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RequestCountScalingPropsDsl {
   private val cdkBuilder: RequestCountScalingProps.Builder = RequestCountScalingProps.builder()

@@ -8,6 +8,20 @@ import software.amazon.awscdk.services.ses.ReceiptFilter
 import software.amazon.awscdk.services.ses.ReceiptFilterPolicy
 import software.constructs.Construct
 
+/**
+ * A receipt filter.
+ *
+ * When instantiated without props, it creates a
+ * block all receipt filter.
+ *
+ * Example:
+ *
+ * ```
+ * ReceiptFilter.Builder.create(this, "Filter")
+ * .ip("1.2.3.4/16")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptFilterDsl(
   scope: Construct,

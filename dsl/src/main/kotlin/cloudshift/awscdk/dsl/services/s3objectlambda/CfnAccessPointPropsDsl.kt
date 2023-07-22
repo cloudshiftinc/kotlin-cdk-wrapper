@@ -8,6 +8,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPointProps
 
+/**
+ * Properties for defining a `CfnAccessPoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3objectlambda.*;
+ * Object contentTransformation;
+ * CfnAccessPointProps cfnAccessPointProps = CfnAccessPointProps.builder()
+ * .objectLambdaConfiguration(ObjectLambdaConfigurationProperty.builder()
+ * .supportingAccessPoint("supportingAccessPoint")
+ * .transformationConfigurations(List.of(TransformationConfigurationProperty.builder()
+ * .actions(List.of("actions"))
+ * .contentTransformation(contentTransformation)
+ * .build()))
+ * // the properties below are optional
+ * .allowedFeatures(List.of("allowedFeatures"))
+ * .cloudWatchMetricsEnabled(false)
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointPropsDsl {
   private val cdkBuilder: CfnAccessPointProps.Builder = CfnAccessPointProps.builder()

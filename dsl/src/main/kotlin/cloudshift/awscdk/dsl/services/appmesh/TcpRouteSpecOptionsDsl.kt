@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.appmesh.TcpRouteSpecOptions
 import software.amazon.awscdk.services.appmesh.TcpTimeout
 import software.amazon.awscdk.services.appmesh.WeightedTarget
 
+/**
+ * Properties specific for a TCP Based Routes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualNode virtualNode;
+ * TcpRouteSpecOptions tcpRouteSpecOptions = TcpRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder()
+ * .virtualNode(virtualNode)
+ * // the properties below are optional
+ * .port(123)
+ * .weight(123)
+ * .build()))
+ * // the properties below are optional
+ * .priority(123)
+ * .timeout(TcpTimeout.builder()
+ * .idle(Duration.minutes(30))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TcpRouteSpecOptionsDsl {
   private val cdkBuilder: TcpRouteSpecOptions.Builder = TcpRouteSpecOptions.builder()

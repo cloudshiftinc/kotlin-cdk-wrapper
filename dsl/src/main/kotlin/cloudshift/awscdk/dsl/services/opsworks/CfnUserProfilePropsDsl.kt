@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnUserProfileProps
 
+/**
+ * Properties for defining a `CfnUserProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnUserProfileProps cfnUserProfileProps = CfnUserProfileProps.builder()
+ * .iamUserArn("iamUserArn")
+ * // the properties below are optional
+ * .allowSelfManagement(false)
+ * .sshPublicKey("sshPublicKey")
+ * .sshUsername("sshUsername")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html)
+ */
 @CdkDslMarker
 public class CfnUserProfilePropsDsl {
   private val cdkBuilder: CfnUserProfileProps.Builder = CfnUserProfileProps.builder()

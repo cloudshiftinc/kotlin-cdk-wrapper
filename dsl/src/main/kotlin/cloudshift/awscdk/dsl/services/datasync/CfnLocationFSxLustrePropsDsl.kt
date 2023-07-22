@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationFSxLustreProps
 
+/**
+ * Properties for defining a `CfnLocationFSxLustre`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxLustreProps cfnLocationFSxLustreProps = CfnLocationFSxLustreProps.builder()
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * // the properties below are optional
+ * .fsxFilesystemArn("fsxFilesystemArn")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxLustrePropsDsl {
   private val cdkBuilder: CfnLocationFSxLustreProps.Builder = CfnLocationFSxLustreProps.builder()

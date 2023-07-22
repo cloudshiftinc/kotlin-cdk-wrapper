@@ -8,6 +8,41 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 
+/**
+ * The parts of the request that you want to keep out of the logs.
+ *
+ * This is used in the logging configuration `RedactedFields` specification.
+ *
+ * Example JSON for a `QueryString` field to match:
+ *
+ * `"FieldToMatch": { "QueryString": {} }`
+ *
+ * Example JSON for a `Method` field to match specification:
+ *
+ * `"FieldToMatch": { "Method": { "Name": "DELETE" } }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object jsonBody;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object uriPath;
+ * FieldToMatchProperty fieldToMatchProperty = FieldToMatchProperty.builder()
+ * .jsonBody(jsonBody)
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .uriPath(uriPath)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-fieldtomatch.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationFieldToMatchPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.FieldToMatchProperty.Builder =

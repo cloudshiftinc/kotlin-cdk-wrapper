@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Defines an equivalent isotropically radiated power (EIRP).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * EirpProperty eirpProperty = EirpProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-eirp.html)
+ */
 @CdkDslMarker
 public class CfnConfigEirpPropertyDsl {
   private val cdkBuilder: CfnConfig.EirpProperty.Builder = CfnConfig.EirpProperty.builder()

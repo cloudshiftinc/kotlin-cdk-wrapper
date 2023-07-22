@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Property key-value pairs passed into an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * PropertyGroupProperty propertyGroupProperty = PropertyGroupProperty.builder()
+ * .propertyGroupId("propertyGroupId")
+ * .propertyMap(Map.of(
+ * "propertyMapKey", "propertyMap"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-propertygroup.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropertyGroupPropertyDsl {
   private val cdkBuilder: CfnApplication.PropertyGroupProperty.Builder =

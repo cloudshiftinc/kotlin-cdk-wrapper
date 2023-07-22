@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * The wait policy to use when creating or updating a Dataset.
+ *
+ * The default is to wait for SPICE ingestion to finish with timeout of 36 hours.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * IngestionWaitPolicyProperty ingestionWaitPolicyProperty = IngestionWaitPolicyProperty.builder()
+ * .ingestionWaitTimeInHours(123)
+ * .waitForSpiceIngestion(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-ingestionwaitpolicy.html)
+ */
 @CdkDslMarker
 public class CfnDataSetIngestionWaitPolicyPropertyDsl {
   private val cdkBuilder: CfnDataSet.IngestionWaitPolicyProperty.Builder =

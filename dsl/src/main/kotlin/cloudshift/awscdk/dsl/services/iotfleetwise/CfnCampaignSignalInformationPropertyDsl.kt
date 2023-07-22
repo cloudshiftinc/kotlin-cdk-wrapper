@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 
+/**
+ * Information about a signal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * SignalInformationProperty signalInformationProperty = SignalInformationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .maxSampleCount(123)
+ * .minimumSamplingIntervalMs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html)
+ */
 @CdkDslMarker
 public class CfnCampaignSignalInformationPropertyDsl {
   private val cdkBuilder: CfnCampaign.SignalInformationProperty.Builder =

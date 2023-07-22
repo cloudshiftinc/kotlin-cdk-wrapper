@@ -13,6 +13,23 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 import software.constructs.Construct
 
+/**
+ * The `AWS::KinesisFirehose::DeliveryStream` resource specifies an Amazon Kinesis Data Firehose
+ * (Kinesis Data Firehose) delivery stream that delivers real-time streaming data to an Amazon Simple
+ * Storage Service (Amazon S3), Amazon Redshift, or Amazon Elasticsearch Service (Amazon ES)
+ * destination.
+ *
+ * For more information, see [Creating an Amazon Kinesis Data Firehose Delivery
+ * Stream](https://docs.aws.amazon.com/firehose/latest/dev/basic-create.html) in the *Amazon Kinesis
+ * Data Firehose Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamDsl(
   scope: Construct,

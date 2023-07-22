@@ -11,6 +11,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 
+/**
+ * Specifies a target for an experiment.
+ *
+ * You must specify at least one Amazon Resource Name (ARN) or at least one resource tag. You cannot
+ * specify both ARNs and tags.
+ *
+ * For more information, see
+ * [Targets](https://docs.aws.amazon.com/fis/latest/userguide/targets.html) in the *AWS Fault Injection
+ * Simulator User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fis.*;
+ * ExperimentTemplateTargetProperty experimentTemplateTargetProperty =
+ * ExperimentTemplateTargetProperty.builder()
+ * .resourceType("resourceType")
+ * .selectionMode("selectionMode")
+ * // the properties below are optional
+ * .filters(List.of(ExperimentTemplateTargetFilterProperty.builder()
+ * .path("path")
+ * .values(List.of("values"))
+ * .build()))
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .resourceArns(List.of("resourceArns"))
+ * .resourceTags(Map.of(
+ * "resourceTagsKey", "resourceTags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatetarget.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTemplateExperimentTemplateTargetPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateTargetProperty.Builder =

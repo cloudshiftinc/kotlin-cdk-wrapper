@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 
+/**
+ * An object that represents a launch template that's associated with a compute resource.
+ *
+ * You must specify either the launch template ID or launch template name in the request, but not
+ * both.
+ *
+ * If security groups are specified using both the `securityGroupIds` parameter of
+ * `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter
+ * of `CreateComputeEnvironment` will be used.
+ *
+ *
+ * This object isn't applicable to jobs that are running on Fargate resources.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
+ * LaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentLaunchTemplateSpecificationPropertyDsl {
   private val cdkBuilder: CfnComputeEnvironment.LaunchTemplateSpecificationProperty.Builder =

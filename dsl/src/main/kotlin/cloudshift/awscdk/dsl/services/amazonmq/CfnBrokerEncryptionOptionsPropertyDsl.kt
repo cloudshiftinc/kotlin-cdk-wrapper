@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 
+/**
+ * Encryption options for the broker.
+ *
+ *
+ * Does not apply to RabbitMQ brokers.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * EncryptionOptionsProperty encryptionOptionsProperty = EncryptionOptionsProperty.builder()
+ * .useAwsOwnedKey(false)
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-encryptionoptions.html)
+ */
 @CdkDslMarker
 public class CfnBrokerEncryptionOptionsPropertyDsl {
   private val cdkBuilder: CfnBroker.EncryptionOptionsProperty.Builder =

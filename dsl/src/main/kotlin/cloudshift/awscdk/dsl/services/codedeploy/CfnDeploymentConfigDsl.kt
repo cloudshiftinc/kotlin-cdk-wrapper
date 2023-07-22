@@ -8,6 +8,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeDeploy::DeploymentConfig` resource creates a set of deployment rules, deployment
+ * success conditions, and deployment failure conditions that AWS CodeDeploy uses during a deployment.
+ *
+ * The deployment configuration specifies, through the use of a `MinimumHealthyHosts` value, the
+ * number or percentage of instances that must remain available at any time during a deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CfnDeploymentConfig cfnDeploymentConfig = CfnDeploymentConfig.Builder.create(this,
+ * "MyCfnDeploymentConfig")
+ * .computePlatform("computePlatform")
+ * .deploymentConfigName("deploymentConfigName")
+ * .minimumHealthyHosts(MinimumHealthyHostsProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .trafficRoutingConfig(TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .timeBasedCanary(TimeBasedCanaryProperty.builder()
+ * .canaryInterval(123)
+ * .canaryPercentage(123)
+ * .build())
+ * .timeBasedLinear(TimeBasedLinearProperty.builder()
+ * .linearInterval(123)
+ * .linearPercentage(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentConfigDsl(
   scope: Construct,

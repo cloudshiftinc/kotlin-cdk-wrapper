@@ -12,6 +12,35 @@ import software.amazon.awscdk.services.codepipeline.actions.EcsDeployActionProps
 import software.amazon.awscdk.services.ecs.IBaseService
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties of `EcsDeployAction`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecs.*;
+ * FargateService service;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact buildOutput = new Artifact();
+ * IStage deployStage = pipeline.addStage(StageOptions.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(
+ * EcsDeployAction.Builder.create()
+ * .actionName("DeployAction")
+ * .service(service)
+ * // if your file is called imagedefinitions.json,
+ * // use the `input` property,
+ * // and leave out the `imageFile` property
+ * .input(buildOutput)
+ * // if your file name is _not_ imagedefinitions.json,
+ * // use the `imageFile` property,
+ * // and leave out the `input` property
+ * .imageFile(buildOutput.atPath("imageDef.json"))
+ * .deploymentTimeout(Duration.minutes(60))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EcsDeployActionPropsDsl {
   private val cdkBuilder: EcsDeployActionProps.Builder = EcsDeployActionProps.builder()

@@ -8,6 +8,18 @@ import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.pipelines.GitHubSourceOptions
 import software.amazon.awscdk.services.codepipeline.actions.GitHubTrigger
 
+/**
+ * Options for GitHub sources.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipelineSource.gitHub("org/repo", "branch", GitHubSourceOptions.builder()
+ * // This is optional
+ * .authentication(SecretValue.secretsManager("my-token"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourceOptionsDsl {
   private val cdkBuilder: GitHubSourceOptions.Builder = GitHubSourceOptions.builder()

@@ -13,6 +13,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnBucket
 import software.constructs.Construct
 
+/**
+ * The AWS::S3Outposts::Bucket resource specifies a new Amazon S3 on Outposts bucket.
+ *
+ * To create an S3 on Outposts bucket, you must have S3 on Outposts capacity provisioned on your
+ * Outpost. For more information, see [Using Amazon S3 on
+ * Outposts](https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html) .
+ *
+ * S3 on Outposts buckets support the following:
+ *
+ * * Tags
+ * * Lifecycle configuration rules for deleting expired objects
+ *
+ * For a complete list of restrictions and Amazon S3 feature limitations on S3 on Outposts, see
+ * [Amazon S3 on Outposts Restrictions and
+ * Limitations](https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3OnOutpostsRestrictionsLimitations.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * Object filter;
+ * CfnBucket cfnBucket = CfnBucket.Builder.create(this, "MyCfnBucket")
+ * .bucketName("bucketName")
+ * .outpostId("outpostId")
+ * // the properties below are optional
+ * .lifecycleConfiguration(LifecycleConfigurationProperty.builder()
+ * .rules(List.of(RuleProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .abortIncompleteMultipartUpload(AbortIncompleteMultipartUploadProperty.builder()
+ * .daysAfterInitiation(123)
+ * .build())
+ * .expirationDate("expirationDate")
+ * .expirationInDays(123)
+ * .filter(filter)
+ * .id("id")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucket.html)
+ */
 @CdkDslMarker
 public class CfnBucketDsl(
   scope: Construct,

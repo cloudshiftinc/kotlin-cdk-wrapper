@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.identitystore.CfnGroup
 import software.constructs.Construct
 
+/**
+ * A group object, which contains a specified group’s metadata and attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.identitystore.*;
+ * CfnGroup cfnGroup = CfnGroup.Builder.create(this, "MyCfnGroup")
+ * .displayName("displayName")
+ * .identityStoreId("identityStoreId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupDsl(
   scope: Construct,

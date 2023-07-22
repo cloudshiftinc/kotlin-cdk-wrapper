@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.managedblockchain.CfnAccessorProps
 
+/**
+ * Properties for defining a `CfnAccessor`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnAccessorProps cfnAccessorProps = CfnAccessorProps.builder()
+ * .accessorType("accessorType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-accessor.html)
+ */
 @CdkDslMarker
 public class CfnAccessorPropsDsl {
   private val cdkBuilder: CfnAccessorProps.Builder = CfnAccessorProps.builder()

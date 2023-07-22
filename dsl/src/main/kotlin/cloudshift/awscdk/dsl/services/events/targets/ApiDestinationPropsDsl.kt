@@ -14,6 +14,36 @@ import software.amazon.awscdk.services.events.targets.ApiDestinationProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the EventBridge Api Destinations Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * Role role;
+ * RuleTargetInput ruleTargetInput;
+ * ApiDestinationProps apiDestinationProps = ApiDestinationProps.builder()
+ * .deadLetterQueue(queue)
+ * .event(ruleTargetInput)
+ * .eventRole(role)
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .maxEventAge(Duration.minutes(30))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApiDestinationPropsDsl {
   private val cdkBuilder: ApiDestinationProps.Builder = ApiDestinationProps.builder()

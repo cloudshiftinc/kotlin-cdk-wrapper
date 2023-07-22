@@ -10,6 +10,26 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.ParallelProps
 
+/**
+ * Properties for defining a Parallel state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object resultSelector;
+ * ParallelProps parallelProps = ParallelProps.builder()
+ * .comment("comment")
+ * .inputPath("inputPath")
+ * .outputPath("outputPath")
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ParallelPropsDsl {
   private val cdkBuilder: ParallelProps.Builder = ParallelProps.builder()

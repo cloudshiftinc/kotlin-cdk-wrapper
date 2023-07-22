@@ -14,6 +14,152 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeDeploy::DeploymentGroup` resource creates an AWS CodeDeploy deployment group that
+ * specifies which instances your application revisions are deployed to, along with other deployment
+ * options.
+ *
+ * For more information, see
+ * [CreateDeploymentGroup](https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeploymentGroup.html)
+ * in the *CodeDeploy API Reference* .
+ *
+ *
+ * Amazon ECS blue/green deployments through CodeDeploy do not use the
+ * `AWS::CodeDeploy::DeploymentGroup` resource. To perform Amazon ECS blue/green deployments, use the
+ * `AWS::CodeDeploy::BlueGreen` hook. See [Perform Amazon ECS blue/green deployments through CodeDeploy
+ * using AWS
+ * CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html) for
+ * more information.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CfnDeploymentGroup cfnDeploymentGroup = CfnDeploymentGroup.Builder.create(this,
+ * "MyCfnDeploymentGroup")
+ * .applicationName("applicationName")
+ * .serviceRoleArn("serviceRoleArn")
+ * // the properties below are optional
+ * .alarmConfiguration(AlarmConfigurationProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .name("name")
+ * .build()))
+ * .enabled(false)
+ * .ignorePollAlarmFailure(false)
+ * .build())
+ * .autoRollbackConfiguration(AutoRollbackConfigurationProperty.builder()
+ * .enabled(false)
+ * .events(List.of("events"))
+ * .build())
+ * .autoScalingGroups(List.of("autoScalingGroups"))
+ * .blueGreenDeploymentConfiguration(BlueGreenDeploymentConfigurationProperty.builder()
+ * .deploymentReadyOption(DeploymentReadyOptionProperty.builder()
+ * .actionOnTimeout("actionOnTimeout")
+ * .waitTimeInMinutes(123)
+ * .build())
+ * .greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty.builder()
+ * .action("action")
+ * .build())
+ * .terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty.builder()
+ * .action("action")
+ * .terminationWaitTimeInMinutes(123)
+ * .build())
+ * .build())
+ * .deployment(DeploymentProperty.builder()
+ * .revision(RevisionLocationProperty.builder()
+ * .gitHubLocation(GitHubLocationProperty.builder()
+ * .commitId("commitId")
+ * .repository("repository")
+ * .build())
+ * .revisionType("revisionType")
+ * .s3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .bundleType("bundleType")
+ * .eTag("eTag")
+ * .version("version")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .ignoreApplicationStopFailures(false)
+ * .build())
+ * .deploymentConfigName("deploymentConfigName")
+ * .deploymentGroupName("deploymentGroupName")
+ * .deploymentStyle(DeploymentStyleProperty.builder()
+ * .deploymentOption("deploymentOption")
+ * .deploymentType("deploymentType")
+ * .build())
+ * .ec2TagFilters(List.of(EC2TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .ec2TagSet(EC2TagSetProperty.builder()
+ * .ec2TagSetList(List.of(EC2TagSetListObjectProperty.builder()
+ * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .build())
+ * .ecsServices(List.of(ECSServiceProperty.builder()
+ * .clusterName("clusterName")
+ * .serviceName("serviceName")
+ * .build()))
+ * .loadBalancerInfo(LoadBalancerInfoProperty.builder()
+ * .elbInfoList(List.of(ELBInfoProperty.builder()
+ * .name("name")
+ * .build()))
+ * .targetGroupInfoList(List.of(TargetGroupInfoProperty.builder()
+ * .name("name")
+ * .build()))
+ * .targetGroupPairInfoList(List.of(TargetGroupPairInfoProperty.builder()
+ * .prodTrafficRoute(TrafficRouteProperty.builder()
+ * .listenerArns(List.of("listenerArns"))
+ * .build())
+ * .targetGroups(List.of(TargetGroupInfoProperty.builder()
+ * .name("name")
+ * .build()))
+ * .testTrafficRoute(TrafficRouteProperty.builder()
+ * .listenerArns(List.of("listenerArns"))
+ * .build())
+ * .build()))
+ * .build())
+ * .onPremisesInstanceTagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .onPremisesTagSet(OnPremisesTagSetProperty.builder()
+ * .onPremisesTagSetList(List.of(OnPremisesTagSetListObjectProperty.builder()
+ * .onPremisesTagGroup(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .build())
+ * .outdatedInstancesStrategy("outdatedInstancesStrategy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .triggerConfigurations(List.of(TriggerConfigProperty.builder()
+ * .triggerEvents(List.of("triggerEvents"))
+ * .triggerName("triggerName")
+ * .triggerTargetArn("triggerTargetArn")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupDsl(
   scope: Construct,

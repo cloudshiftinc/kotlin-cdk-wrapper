@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes resources needed to authenticate access to some source repositories.
+ *
+ * The specific resource depends on the repository provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * AuthenticationConfigurationProperty authenticationConfigurationProperty =
+ * AuthenticationConfigurationProperty.builder()
+ * .accessRoleArn("accessRoleArn")
+ * .connectionArn("connectionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-authenticationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceAuthenticationConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.AuthenticationConfigurationProperty.Builder =

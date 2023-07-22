@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttrib
 import software.amazon.awscdk.services.applicationautoscaling.ServiceNamespace
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for a ScalableTableAttribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * BaseScalableAttributeProps baseScalableAttributeProps = BaseScalableAttributeProps.builder()
+ * .dimension("dimension")
+ * .maxCapacity(123)
+ * .resourceId("resourceId")
+ * .role(role)
+ * .serviceNamespace(ServiceNamespace.ECS)
+ * // the properties below are optional
+ * .minCapacity(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseScalableAttributePropsDsl {
   private val cdkBuilder: BaseScalableAttributeProps.Builder = BaseScalableAttributeProps.builder()

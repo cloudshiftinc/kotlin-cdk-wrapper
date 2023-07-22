@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
 
+/**
+ * Specifies configuration information for the output results from the inference, including output
+ * S3 location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutequipment.*;
+ * S3OutputConfigurationProperty s3OutputConfigurationProperty =
+ * S3OutputConfigurationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-s3outputconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInferenceSchedulerS3OutputConfigurationPropertyDsl {
   private val cdkBuilder: CfnInferenceScheduler.S3OutputConfigurationProperty.Builder =

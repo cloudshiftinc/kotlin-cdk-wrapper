@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * The `SsmAutomation` property type specifies details about the Systems Manager automation document
+ * that will be used as a runbook during an incident.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * SsmAutomationProperty ssmAutomationProperty = SsmAutomationProperty.builder()
+ * .documentName("documentName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .documentVersion("documentVersion")
+ * .dynamicParameters(List.of(DynamicSsmParameterProperty.builder()
+ * .key("key")
+ * .value(DynamicSsmParameterValueProperty.builder()
+ * .variable("variable")
+ * .build())
+ * .build()))
+ * .parameters(List.of(SsmParameterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .targetAccount("targetAccount")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-ssmautomation.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanSsmAutomationPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.SsmAutomationProperty.Builder =

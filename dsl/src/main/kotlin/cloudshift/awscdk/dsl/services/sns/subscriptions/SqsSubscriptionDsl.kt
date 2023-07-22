@@ -11,6 +11,17 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.SqsSubscription
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an SQS queue as a subscription target.
+ *
+ * Example:
+ *
+ * ```
+ * Queue queue;
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * myTopic.addSubscription(new SqsSubscription(queue));
+ * ```
+ */
 @CdkDslMarker
 public class SqsSubscriptionDsl(
   queue: IQueue,

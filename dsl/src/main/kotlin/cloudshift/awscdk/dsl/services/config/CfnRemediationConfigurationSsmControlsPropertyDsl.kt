@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
+/**
+ * AWS Systems Manager (SSM) specific remediation controls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * SsmControlsProperty ssmControlsProperty = SsmControlsProperty.builder()
+ * .concurrentExecutionRatePercentage(123)
+ * .errorPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-ssmcontrols.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationSsmControlsPropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.SsmControlsProperty.Builder =

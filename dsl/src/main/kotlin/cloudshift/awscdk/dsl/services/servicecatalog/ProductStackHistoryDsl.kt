@@ -9,6 +9,32 @@ import software.amazon.awscdk.services.servicecatalog.ProductStack
 import software.amazon.awscdk.services.servicecatalog.ProductStackHistory
 import software.constructs.Construct
 
+/**
+ * A Construct that contains a Service Catalog product stack with its previous deployments
+ * maintained.
+ *
+ * Example:
+ *
+ * ```
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProductV2");
+ * }
+ * }
+ * ProductStackHistory productStackHistory = ProductStackHistory.Builder.create(this,
+ * "ProductStackHistory")
+ * .productStack(new S3BucketProduct(this, "S3BucketProduct"))
+ * .currentVersionName("v2")
+ * .currentVersionLocked(true)
+ * .build();
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "MyFirstProduct")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(productStackHistory.currentVersion()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProductStackHistoryDsl(
   scope: Construct,

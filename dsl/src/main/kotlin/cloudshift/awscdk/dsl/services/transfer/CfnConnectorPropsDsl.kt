@@ -13,6 +13,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnConnectorProps
 
+/**
+ * Properties for defining a `CfnConnector`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * Object as2Config;
+ * CfnConnectorProps cfnConnectorProps = CfnConnectorProps.builder()
+ * .accessRole("accessRole")
+ * .as2Config(as2Config)
+ * .url("url")
+ * // the properties below are optional
+ * .loggingRole("loggingRole")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorPropsDsl {
   private val cdkBuilder: CfnConnectorProps.Builder = CfnConnectorProps.builder()

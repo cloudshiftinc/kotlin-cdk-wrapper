@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnIPSetProps
 
+/**
+ * Properties for defining a `CfnIPSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnIPSetProps cfnIPSetProps = CfnIPSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .ipSetDescriptors(List.of(Map.of(
+ * "type", "type",
+ * "value", "value")))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-ipset.html)
+ */
 @CdkDslMarker
 public class CfnIPSetPropsDsl {
   private val cdkBuilder: CfnIPSetProps.Builder = CfnIPSetProps.builder()

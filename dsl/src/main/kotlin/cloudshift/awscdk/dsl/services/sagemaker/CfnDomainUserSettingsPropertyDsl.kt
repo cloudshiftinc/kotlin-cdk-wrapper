@@ -9,6 +9,79 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 
+/**
+ * A collection of settings that apply to users of Amazon SageMaker Studio.
+ *
+ * These settings are specified when the
+ * [CreateUserProfile](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateUserProfile.html)
+ * API is called, and as `DefaultUserSettings` when the
+ * [CreateDomain](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateDomain.html) API
+ * is called.
+ *
+ * `SecurityGroups` is aggregated when specified in both calls. For all other settings in
+ * `UserSettings` , the values specified in `CreateUserProfile` take precedence over those specified in
+ * `CreateDomain` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * // the properties below are optional
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rSessionAppSettings(RSessionAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
+ * .accessStatus("accessStatus")
+ * .userGroup("userGroup")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .sharingSettings(SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html)
+ */
 @CdkDslMarker
 public class CfnDomainUserSettingsPropertyDsl {
   private val cdkBuilder: CfnDomain.UserSettingsProperty.Builder =

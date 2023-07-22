@@ -11,6 +11,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnFunctionDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object variables;
+ * CfnFunctionDefinitionVersionProps cfnFunctionDefinitionVersionProps =
+ * CfnFunctionDefinitionVersionProps.builder()
+ * .functionDefinitionId("functionDefinitionId")
+ * .functions(List.of(FunctionProperty.builder()
+ * .functionArn("functionArn")
+ * .functionConfiguration(FunctionConfigurationProperty.builder()
+ * .encodingType("encodingType")
+ * .environment(EnvironmentProperty.builder()
+ * .accessSysfs(false)
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
+ * .resourceId("resourceId")
+ * // the properties below are optional
+ * .permission("permission")
+ * .build()))
+ * .variables(variables)
+ * .build())
+ * .execArgs("execArgs")
+ * .executable("executable")
+ * .memorySize(123)
+ * .pinned(false)
+ * .timeout(123)
+ * .build())
+ * .id("id")
+ * .build()))
+ * // the properties below are optional
+ * .defaultConfig(DefaultConfigProperty.builder()
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-functiondefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnFunctionDefinitionVersionProps.Builder =

@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iot.CfnFleetMetric
 
+/**
+ * The type of aggregation queries.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AggregationTypeProperty aggregationTypeProperty = AggregationTypeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-fleetmetric-aggregationtype.html)
+ */
 @CdkDslMarker
 public class CfnFleetMetricAggregationTypePropertyDsl {
   private val cdkBuilder: CfnFleetMetric.AggregationTypeProperty.Builder =

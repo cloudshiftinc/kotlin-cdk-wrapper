@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnStackUserAssociationProps
 
+/**
+ * Properties for defining a `CfnStackUserAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnStackUserAssociationProps cfnStackUserAssociationProps =
+ * CfnStackUserAssociationProps.builder()
+ * .authenticationType("authenticationType")
+ * .stackName("stackName")
+ * .userName("userName")
+ * // the properties below are optional
+ * .sendEmailNotification(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html)
+ */
 @CdkDslMarker
 public class CfnStackUserAssociationPropsDsl {
   private val cdkBuilder: CfnStackUserAssociationProps.Builder =

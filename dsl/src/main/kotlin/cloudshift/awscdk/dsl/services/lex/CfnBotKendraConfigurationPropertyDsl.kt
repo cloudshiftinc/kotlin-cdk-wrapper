@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides configuration information for the `AMAZON.KendraSearchIntent` intent. When you use this
+ * intent, Amazon Lex searches the specified Amazon Kendra index and returns documents from the index
+ * that match the user's utterance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * KendraConfigurationProperty kendraConfigurationProperty = KendraConfigurationProperty.builder()
+ * .kendraIndex("kendraIndex")
+ * // the properties below are optional
+ * .queryFilterString("queryFilterString")
+ * .queryFilterStringEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-kendraconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBotKendraConfigurationPropertyDsl {
   private val cdkBuilder: CfnBot.KendraConfigurationProperty.Builder =

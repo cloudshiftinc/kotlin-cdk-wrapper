@@ -14,6 +14,23 @@ import software.amazon.awscdk.services.applicationautoscaling.MetricAggregationT
 import software.amazon.awscdk.services.applicationautoscaling.ScalingInterval
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Example:
+ *
+ * ```
+ * ScalableAttribute capacity;
+ * Metric cpuUtilization;
+ * capacity.scaleOnMetric("ScaleToCPU", BasicStepScalingPolicyProps.builder()
+ * .metric(cpuUtilization)
+ * .scalingSteps(List.of(ScalingInterval.builder().upper(10).change(-1).build(),
+ * ScalingInterval.builder().lower(50).change(+1).build(),
+ * ScalingInterval.builder().lower(70).change(+3).build()))
+ * // Change this to AdjustmentType.PercentChangeInCapacity to interpret the
+ * // 'change' numbers before as percentages instead of capacity counts.
+ * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BasicStepScalingPolicyPropsDsl {
   private val cdkBuilder: BasicStepScalingPolicyProps.Builder =

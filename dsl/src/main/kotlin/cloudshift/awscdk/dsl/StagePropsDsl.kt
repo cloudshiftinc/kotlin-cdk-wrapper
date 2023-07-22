@@ -12,6 +12,25 @@ import software.amazon.awscdk.IPolicyValidationPluginBeta1
 import software.amazon.awscdk.PermissionsBoundary
 import software.amazon.awscdk.StageProps
 
+/**
+ * Initialization props for a stage.
+ *
+ * Example:
+ *
+ * ```
+ * App app;
+ * new Stage(app, "DevStage");
+ * Stage.Builder.create(app, "BetaStage")
+ * .permissionsBoundary(PermissionsBoundary.fromName("beta-permissions-boundary"))
+ * .build();
+ * Stage.Builder.create(app, "GammaStage")
+ * .permissionsBoundary(PermissionsBoundary.fromName("prod-permissions-boundary"))
+ * .build();
+ * Stage.Builder.create(app, "ProdStage")
+ * .permissionsBoundary(PermissionsBoundary.fromName("prod-permissions-boundary"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StagePropsDsl {
   private val cdkBuilder: StageProps.Builder = StageProps.builder()

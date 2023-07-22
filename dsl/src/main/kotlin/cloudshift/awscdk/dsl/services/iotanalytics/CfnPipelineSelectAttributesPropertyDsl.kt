@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * Creates a new message using only the specified attributes from the original message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * SelectAttributesProperty selectAttributesProperty = SelectAttributesProperty.builder()
+ * .attributes(List.of("attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-selectattributes.html)
+ */
 @CdkDslMarker
 public class CfnPipelineSelectAttributesPropertyDsl {
   private val cdkBuilder: CfnPipeline.SelectAttributesProperty.Builder =

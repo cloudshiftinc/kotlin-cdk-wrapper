@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The numeric equality type drill down filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CategoryDrillDownFilterProperty categoryDrillDownFilterProperty =
+ * CategoryDrillDownFilterProperty.builder()
+ * .categoryValues(List.of("categoryValues"))
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-categorydrilldownfilter.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisCategoryDrillDownFilterPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CategoryDrillDownFilterProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * A structure that contains the configuration for canary artifacts, including the
+ * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3 .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * ArtifactConfigProperty artifactConfigProperty = ArtifactConfigProperty.builder()
+ * .s3Encryption(S3EncryptionProperty.builder()
+ * .encryptionMode("encryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-artifactconfig.html)
+ */
 @CdkDslMarker
 public class CfnCanaryArtifactConfigPropertyDsl {
   private val cdkBuilder: CfnCanary.ArtifactConfigProperty.Builder =

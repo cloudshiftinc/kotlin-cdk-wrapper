@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription
 import software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps
 
+/**
+ * Properties for defining a `CfnMonitoringSubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnMonitoringSubscriptionProps cfnMonitoringSubscriptionProps =
+ * CfnMonitoringSubscriptionProps.builder()
+ * .distributionId("distributionId")
+ * .monitoringSubscription(MonitoringSubscriptionProperty.builder()
+ * .realtimeMetricsSubscriptionConfig(RealtimeMetricsSubscriptionConfigProperty.builder()
+ * .realtimeMetricsSubscriptionStatus("realtimeMetricsSubscriptionStatus")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringSubscriptionPropsDsl {
   private val cdkBuilder: CfnMonitoringSubscriptionProps.Builder =

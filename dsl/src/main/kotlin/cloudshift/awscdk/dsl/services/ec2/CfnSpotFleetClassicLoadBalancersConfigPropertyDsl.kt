@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Specifies the Classic Load Balancers to attach to a Spot Fleet.
+ *
+ * Spot Fleet registers the running Spot Instances with these Classic Load Balancers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClassicLoadBalancersConfigProperty classicLoadBalancersConfigProperty =
+ * ClassicLoadBalancersConfigProperty.builder()
+ * .classicLoadBalancers(List.of(ClassicLoadBalancerProperty.builder()
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-classicloadbalancersconfig.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetClassicLoadBalancersConfigPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.ClassicLoadBalancersConfigProperty.Builder =

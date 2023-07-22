@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.omics.CfnAnnotationStore
 
+/**
+ * A genome reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * ReferenceItemProperty referenceItemProperty = ReferenceItemProperty.builder()
+ * .referenceArn("referenceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-referenceitem.html)
+ */
 @CdkDslMarker
 public class CfnAnnotationStoreReferenceItemPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.ReferenceItemProperty.Builder =

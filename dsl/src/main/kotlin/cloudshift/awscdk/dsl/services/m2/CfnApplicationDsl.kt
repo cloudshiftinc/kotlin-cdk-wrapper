@@ -9,6 +9,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.m2.CfnApplication
 import software.constructs.Construct
 
+/**
+ * Specifies a new application with given parameters. Requires an existing runtime environment and
+ * application definition file.
+ *
+ * For information about application definitions, see the [AWS Mainframe Modernization User
+ * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .definition(DefinitionProperty.builder()
+ * .content("content")
+ * .s3Location("s3Location")
+ * .build())
+ * .engineType("engineType")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .roleArn("roleArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

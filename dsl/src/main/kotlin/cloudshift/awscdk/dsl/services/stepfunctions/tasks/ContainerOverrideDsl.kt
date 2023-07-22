@@ -12,6 +12,32 @@ import software.amazon.awscdk.services.ecs.ContainerDefinition
 import software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverride
 import software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable
 
+/**
+ * A list of container overrides that specify the name of a container and the overrides it should
+ * receive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ContainerDefinition containerDefinition;
+ * ContainerOverride containerOverride = ContainerOverride.builder()
+ * .containerDefinition(containerDefinition)
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .environment(List.of(TaskEnvironmentVariable.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .memoryLimit(123)
+ * .memoryReservation(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerOverrideDsl {
   private val cdkBuilder: ContainerOverride.Builder = ContainerOverride.builder()

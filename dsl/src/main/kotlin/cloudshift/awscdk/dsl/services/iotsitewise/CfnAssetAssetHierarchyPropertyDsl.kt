@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotsitewise.CfnAsset
 
+/**
+ * Describes an asset hierarchy that contains a `childAssetId` and `hierarchyLogicalId` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * AssetHierarchyProperty assetHierarchyProperty = AssetHierarchyProperty.builder()
+ * .childAssetId("childAssetId")
+ * .logicalId("logicalId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html)
+ */
 @CdkDslMarker
 public class CfnAssetAssetHierarchyPropertyDsl {
   private val cdkBuilder: CfnAsset.AssetHierarchyProperty.Builder =

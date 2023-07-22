@@ -18,6 +18,47 @@ import software.amazon.awscdk.services.s3.LifecycleRule
 import software.amazon.awscdk.services.s3.NoncurrentVersionTransition
 import software.amazon.awscdk.services.s3.Transition
 
+/**
+ * Declaration of a Life cycle rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * StorageClass storageClass;
+ * Object tagFilters;
+ * LifecycleRule lifecycleRule = LifecycleRule.builder()
+ * .abortIncompleteMultipartUploadAfter(Duration.minutes(30))
+ * .enabled(false)
+ * .expiration(Duration.minutes(30))
+ * .expirationDate(new Date())
+ * .expiredObjectDeleteMarker(false)
+ * .id("id")
+ * .noncurrentVersionExpiration(Duration.minutes(30))
+ * .noncurrentVersionsToRetain(123)
+ * .noncurrentVersionTransitions(List.of(NoncurrentVersionTransition.builder()
+ * .storageClass(storageClass)
+ * .transitionAfter(Duration.minutes(30))
+ * // the properties below are optional
+ * .noncurrentVersionsToRetain(123)
+ * .build()))
+ * .objectSizeGreaterThan(123)
+ * .objectSizeLessThan(123)
+ * .prefix("prefix")
+ * .tagFilters(Map.of(
+ * "tagFiltersKey", tagFilters))
+ * .transitions(List.of(Transition.builder()
+ * .storageClass(storageClass)
+ * // the properties below are optional
+ * .transitionAfter(Duration.minutes(30))
+ * .transitionDate(new Date())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LifecycleRuleDsl {
   private val cdkBuilder: LifecycleRule.Builder = LifecycleRule.builder()

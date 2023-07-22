@@ -15,6 +15,39 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iam.CfnRoleProps
 
+/**
+ * Properties for defining a `CfnRole`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object assumeRolePolicyDocument;
+ * Object policyDocument;
+ * CfnRoleProps cfnRoleProps = CfnRoleProps.builder()
+ * .assumeRolePolicyDocument(assumeRolePolicyDocument)
+ * // the properties below are optional
+ * .description("description")
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .maxSessionDuration(123)
+ * .path("path")
+ * .permissionsBoundary("permissionsBoundary")
+ * .policies(List.of(PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build()))
+ * .roleName("roleName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+ */
 @CdkDslMarker
 public class CfnRolePropsDsl {
   private val cdkBuilder: CfnRoleProps.Builder = CfnRoleProps.builder()

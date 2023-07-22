@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.refactorspaces.CfnApplication
 
+/**
+ * A wrapper object holding the Amazon API Gateway endpoint input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * ApiGatewayProxyInputProperty apiGatewayProxyInputProperty =
+ * ApiGatewayProxyInputProperty.builder()
+ * .endpointType("endpointType")
+ * .stageName("stageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-application-apigatewayproxyinput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationApiGatewayProxyInputPropertyDsl {
   private val cdkBuilder: CfnApplication.ApiGatewayProxyInputProperty.Builder =

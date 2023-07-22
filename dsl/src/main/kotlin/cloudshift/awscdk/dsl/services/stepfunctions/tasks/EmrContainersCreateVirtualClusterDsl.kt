@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster
 import software.constructs.Construct
 
+/**
+ * Task that creates an EMR Containers virtual cluster from an EKS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersCreateVirtualCluster.Builder.create(this, "Create a Virtual Cluster")
+ * .eksCluster(EksClusterInput.fromTaskInput(TaskInput.fromText("clusterId")))
+ * .eksNamespace("specified-namespace")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-emr-eks.html)
+ */
 @CdkDslMarker
 public class EmrContainersCreateVirtualClusterDsl(
   scope: Construct,

@@ -9,6 +9,25 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListene
 import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate
 
+/**
+ * Properties for adding a set of certificates to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationListener applicationListener;
+ * ListenerCertificate listenerCertificate;
+ * ApplicationListenerCertificateProps applicationListenerCertificateProps =
+ * ApplicationListenerCertificateProps.builder()
+ * .listener(applicationListener)
+ * // the properties below are optional
+ * .certificates(List.of(listenerCertificate))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerCertificatePropsDsl {
   private val cdkBuilder: ApplicationListenerCertificateProps.Builder =

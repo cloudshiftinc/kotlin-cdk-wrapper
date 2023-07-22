@@ -8,6 +8,18 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.CpuUtilizationScalingProps
 
+/**
+ * Properties for enabling scaling based on CPU utilization.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnCpuUtilization("KeepSpareCPU", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CpuUtilizationScalingPropsDsl {
   private val cdkBuilder: CpuUtilizationScalingProps.Builder = CpuUtilizationScalingProps.builder()

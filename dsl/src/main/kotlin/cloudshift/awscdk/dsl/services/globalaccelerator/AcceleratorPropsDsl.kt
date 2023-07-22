@@ -7,6 +7,21 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.globalaccelerator.AcceleratorProps
 
+/**
+ * Construct properties of the Accelerator.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * AcceleratorProps acceleratorProps = AcceleratorProps.builder()
+ * .acceleratorName("acceleratorName")
+ * .enabled(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AcceleratorPropsDsl {
   private val cdkBuilder: AcceleratorProps.Builder = AcceleratorProps.builder()

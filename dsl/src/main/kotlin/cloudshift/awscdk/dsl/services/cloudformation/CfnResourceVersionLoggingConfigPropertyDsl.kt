@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnResourceVersion
 
+/**
+ * Logging configuration information for a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-resourceversion-loggingconfig.html)
+ */
 @CdkDslMarker
 public class CfnResourceVersionLoggingConfigPropertyDsl {
   private val cdkBuilder: CfnResourceVersion.LoggingConfigProperty.Builder =

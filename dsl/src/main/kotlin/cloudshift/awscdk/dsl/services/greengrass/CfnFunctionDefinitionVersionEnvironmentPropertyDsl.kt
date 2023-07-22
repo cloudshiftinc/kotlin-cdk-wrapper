@@ -12,6 +12,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
 
+/**
+ * The environment configuration for a Lambda function on the AWS IoT Greengrass core.
+ *
+ * In an AWS CloudFormation template, `Environment` is a property of the
+ * [`FunctionConfiguration`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-functionconfiguration.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object variables;
+ * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
+ * .accessSysfs(false)
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
+ * .resourceId("resourceId")
+ * // the properties below are optional
+ * .permission("permission")
+ * .build()))
+ * .variables(variables)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionVersionEnvironmentPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinitionVersion.EnvironmentProperty.Builder =

@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.athena.CfnPreparedStatement
 import software.constructs.Construct
 
+/**
+ * Specifies a prepared statement for use with SQL queries in Athena.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnPreparedStatement cfnPreparedStatement = CfnPreparedStatement.Builder.create(this,
+ * "MyCfnPreparedStatement")
+ * .queryStatement("queryStatement")
+ * .statementName("statementName")
+ * .workGroup("workGroup")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html)
+ */
 @CdkDslMarker
 public class CfnPreparedStatementDsl(
   scope: Construct,

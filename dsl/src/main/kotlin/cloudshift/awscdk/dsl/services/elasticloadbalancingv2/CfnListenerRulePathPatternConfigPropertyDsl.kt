@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about a path pattern condition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * PathPatternConfigProperty pathPatternConfigProperty = PathPatternConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-pathpatternconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRulePathPatternConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.PathPatternConfigProperty.Builder =

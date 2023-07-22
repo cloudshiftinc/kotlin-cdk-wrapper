@@ -10,6 +10,28 @@ import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachine
 import software.amazon.awscdk.services.stepfunctions.DefinitionConfig
 
+/**
+ * Partial object from the StateMachine L1 construct properties containing definition information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object definition;
+ * DefinitionConfig definitionConfig = DefinitionConfig.builder()
+ * .definition(definition)
+ * .definitionS3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .definitionString("definitionString")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DefinitionConfigDsl {
   private val cdkBuilder: DefinitionConfig.Builder = DefinitionConfig.builder()

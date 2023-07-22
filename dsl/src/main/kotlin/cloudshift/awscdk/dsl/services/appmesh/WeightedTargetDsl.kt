@@ -7,6 +7,24 @@ import kotlin.Number
 import software.amazon.awscdk.services.appmesh.IVirtualNode
 import software.amazon.awscdk.services.appmesh.WeightedTarget
 
+/**
+ * Properties for the Weighted Targets in the route.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualNode virtualNode;
+ * WeightedTarget weightedTarget = WeightedTarget.builder()
+ * .virtualNode(virtualNode)
+ * // the properties below are optional
+ * .port(123)
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WeightedTargetDsl {
   private val cdkBuilder: WeightedTarget.Builder = WeightedTarget.builder()

@@ -15,6 +15,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.docdb.CfnDBCluster
 import software.constructs.Construct
 
+/**
+ * The `AWS::DocDB::DBCluster` Amazon DocumentDB (with MongoDB compatibility) resource describes a
+ * DBCluster.
+ *
+ * Amazon DocumentDB is a fully managed, MongoDB-compatible document database engine. For more
+ * information, see
+ * [DBCluster](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBCluster.html) in the
+ * *Amazon DocumentDB Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * CfnDBCluster cfnDBCluster = CfnDBCluster.Builder.create(this, "MyCfnDBCluster")
+ * .availabilityZones(List.of("availabilityZones"))
+ * .backupRetentionPeriod(123)
+ * .copyTagsToSnapshot(false)
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .deletionProtection(false)
+ * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .engineVersion("engineVersion")
+ * .kmsKeyId("kmsKeyId")
+ * .masterUsername("masterUsername")
+ * .masterUserPassword("masterUserPassword")
+ * .port(123)
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .restoreToTime("restoreToTime")
+ * .restoreType("restoreType")
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .storageEncrypted(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useLatestRestorableTime(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterDsl(
   scope: Construct,

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that computes an arithmetic expression using the message's attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * MathProperty mathProperty = MathProperty.builder()
+ * .attribute("attribute")
+ * .math("math")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-math.html)
+ */
 @CdkDslMarker
 public class CfnPipelineMathPropertyDsl {
   private val cdkBuilder: CfnPipeline.MathProperty.Builder = CfnPipeline.MathProperty.builder()

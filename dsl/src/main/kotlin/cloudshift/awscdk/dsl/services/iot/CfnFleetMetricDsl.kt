@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnFleetMetric
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::FleetMetric` resource to declare a fleet metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnFleetMetric cfnFleetMetric = CfnFleetMetric.Builder.create(this, "MyCfnFleetMetric")
+ * .metricName("metricName")
+ * // the properties below are optional
+ * .aggregationField("aggregationField")
+ * .aggregationType(AggregationTypeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build())
+ * .description("description")
+ * .indexName("indexName")
+ * .period(123)
+ * .queryString("queryString")
+ * .queryVersion("queryVersion")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html)
+ */
 @CdkDslMarker
 public class CfnFleetMetricDsl(
   scope: Construct,

@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.config.CfnStoredQuery
 import software.constructs.Construct
 
+/**
+ * Provides the details of a stored query.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnStoredQuery cfnStoredQuery = CfnStoredQuery.Builder.create(this, "MyCfnStoredQuery")
+ * .queryExpression("queryExpression")
+ * .queryName("queryName")
+ * // the properties below are optional
+ * .queryDescription("queryDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)
+ */
 @CdkDslMarker
 public class CfnStoredQueryDsl(
   scope: Construct,

@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.lambda.SourceAccessConfiguration
 import software.amazon.awscdk.services.lambda.SourceAccessConfigurationType
 
+/**
+ * Specific settings like the authentication protocol or the VPC components to secure access to your
+ * event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * SourceAccessConfigurationType sourceAccessConfigurationType;
+ * SourceAccessConfiguration sourceAccessConfiguration = SourceAccessConfiguration.builder()
+ * .type(sourceAccessConfigurationType)
+ * .uri("uri")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SourceAccessConfigurationDsl {
   private val cdkBuilder: SourceAccessConfiguration.Builder = SourceAccessConfiguration.builder()

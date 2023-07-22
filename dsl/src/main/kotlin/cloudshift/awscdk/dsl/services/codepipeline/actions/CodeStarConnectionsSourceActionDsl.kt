@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * A CodePipeline source action for the CodeStar Connections source, which allows connecting to
+ * GitHub and BitBucket.
+ *
+ * Example:
+ *
+ * ```
+ * Artifact sourceOutput = new Artifact();
+ * CodeStarConnectionsSourceAction sourceAction = CodeStarConnectionsSourceAction.Builder.create()
+ * .actionName("BitBucket_Source")
+ * .owner("aws")
+ * .repo("aws-cdk")
+ * .output(sourceOutput)
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:123456789012:connection/12345678-abcd-12ab-34cdef5678gh")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeStarConnectionsSourceActionDsl {
   private val cdkBuilder: CodeStarConnectionsSourceAction.Builder =

@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ssm.ParameterOptions
 import software.amazon.awscdk.services.ssm.ParameterTier
 
+/**
+ * Properties needed to create a new SSM Parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * ParameterOptions parameterOptions = ParameterOptions.builder()
+ * .allowedPattern("allowedPattern")
+ * .description("description")
+ * .parameterName("parameterName")
+ * .simpleName(false)
+ * .tier(ParameterTier.ADVANCED)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ParameterOptionsDsl {
   private val cdkBuilder: ParameterOptions.Builder = ParameterOptions.builder()

@@ -7,6 +7,43 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for an EAC3 audio encode in the output.
+ *
+ * The parent of this entity is AudioCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Eac3SettingsProperty eac3SettingsProperty = Eac3SettingsProperty.builder()
+ * .attenuationControl("attenuationControl")
+ * .bitrate(123)
+ * .bitstreamMode("bitstreamMode")
+ * .codingMode("codingMode")
+ * .dcFilter("dcFilter")
+ * .dialnorm(123)
+ * .drcLine("drcLine")
+ * .drcRf("drcRf")
+ * .lfeControl("lfeControl")
+ * .lfeFilter("lfeFilter")
+ * .loRoCenterMixLevel(123)
+ * .loRoSurroundMixLevel(123)
+ * .ltRtCenterMixLevel(123)
+ * .ltRtSurroundMixLevel(123)
+ * .metadataControl("metadataControl")
+ * .passthroughControl("passthroughControl")
+ * .phaseControl("phaseControl")
+ * .stereoDownmix("stereoDownmix")
+ * .surroundExMode("surroundExMode")
+ * .surroundMode("surroundMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelEac3SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Eac3SettingsProperty.Builder =

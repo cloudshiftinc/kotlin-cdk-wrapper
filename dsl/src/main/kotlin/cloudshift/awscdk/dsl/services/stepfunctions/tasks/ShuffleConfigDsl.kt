@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
 
+/**
+ * Configuration for a shuffle option for input data in a channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ShuffleConfig shuffleConfig = ShuffleConfig.builder()
+ * .seed(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ShuffleConfigDsl {
   private val cdkBuilder: ShuffleConfig.Builder = ShuffleConfig.builder()

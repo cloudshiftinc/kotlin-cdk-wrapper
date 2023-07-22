@@ -15,6 +15,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationHDFS
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationHDFS` resource specifies an endpoint for a Hadoop Distributed File
+ * System (HDFS).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationHDFS cfnLocationHDFS = CfnLocationHDFS.Builder.create(this, "MyCfnLocationHDFS")
+ * .agentArns(List.of("agentArns"))
+ * .authenticationType("authenticationType")
+ * .nameNodes(List.of(NameNodeProperty.builder()
+ * .hostname("hostname")
+ * .port(123)
+ * .build()))
+ * // the properties below are optional
+ * .blockSize(123)
+ * .kerberosKeytab("kerberosKeytab")
+ * .kerberosKrb5Conf("kerberosKrb5Conf")
+ * .kerberosPrincipal("kerberosPrincipal")
+ * .kmsKeyProviderUri("kmsKeyProviderUri")
+ * .qopConfiguration(QopConfigurationProperty.builder()
+ * .dataTransferProtection("dataTransferProtection")
+ * .rpcProtection("rpcProtection")
+ * .build())
+ * .replicationFactor(123)
+ * .simpleUser("simpleUser")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html)
+ */
 @CdkDslMarker
 public class CfnLocationHDFSDsl(
   scope: Construct,

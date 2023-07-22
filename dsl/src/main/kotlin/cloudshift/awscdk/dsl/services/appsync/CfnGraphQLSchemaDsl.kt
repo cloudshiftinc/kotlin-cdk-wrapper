@@ -7,6 +7,42 @@ import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLSchema
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::GraphQLSchema` resource is used for your AWS AppSync GraphQL schema that
+ * controls the data model for your API.
+ *
+ * Schema files are text written in Schema Definition Language (SDL) format. For more information
+ * about schema authoring, see [Designing a GraphQL
+ * API](https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html) in the *AWS
+ * AppSync Developer Guide* .
+ *
+ *
+ * When you submit an update, AWS CloudFormation updates resources based on differences between what
+ * you submit and the stack's current template. To cause this resource to be updated you must change a
+ * property value for this resource in the CloudFormation template. Changing the Amazon S3 file content
+ * without changing a property value will not result in an update operation.
+ *
+ * See [Update Behaviors of Stack
+ * Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html)
+ * in the *AWS CloudFormation User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnGraphQLSchema cfnGraphQLSchema = CfnGraphQLSchema.Builder.create(this, "MyCfnGraphQLSchema")
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .definition("definition")
+ * .definitionS3Location("definitionS3Location")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLSchemaDsl(
   scope: Construct,

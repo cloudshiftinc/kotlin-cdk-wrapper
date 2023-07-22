@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.ses.actions.BounceProps
 import software.amazon.awscdk.services.ses.actions.BounceTemplate
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Construction properties for a bounce action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * BounceTemplate bounceTemplate;
+ * Topic topic;
+ * BounceProps bounceProps = BounceProps.builder()
+ * .sender("sender")
+ * .template(bounceTemplate)
+ * // the properties below are optional
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BouncePropsDsl {
   private val cdkBuilder: BounceProps.Builder = BounceProps.builder()

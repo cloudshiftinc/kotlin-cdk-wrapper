@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.elasticsearch.AdvancedSecurityOptions
 
+/**
+ * (deprecated) Specifies options for fine-grained access control.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_1)
+ * .enforceHttps(true)
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
+ * .masterUserName("master-user")
+ * .build())
+ * .build();
+ * SecretValue masterUserPassword = domain.getMasterUserPassword();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class AdvancedSecurityOptionsDsl {

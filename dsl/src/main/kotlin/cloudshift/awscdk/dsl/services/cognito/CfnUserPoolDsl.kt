@@ -13,6 +13,138 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::UserPool` resource creates an Amazon Cognito user pool.
+ *
+ * For more information on working with Amazon Cognito user pools, see [Amazon Cognito User
+ * Pools](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools.html)
+ * and
+ * [CreateUserPool](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPool.html)
+ * .
+ *
+ *
+ * If you don't specify a value for a parameter, Amazon Cognito sets it to a default value.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object userPoolTags;
+ * CfnUserPool cfnUserPool = CfnUserPool.Builder.create(this, "MyCfnUserPool")
+ * .accountRecoverySetting(AccountRecoverySettingProperty.builder()
+ * .recoveryMechanisms(List.of(RecoveryOptionProperty.builder()
+ * .name("name")
+ * .priority(123)
+ * .build()))
+ * .build())
+ * .adminCreateUserConfig(AdminCreateUserConfigProperty.builder()
+ * .allowAdminCreateUserOnly(false)
+ * .inviteMessageTemplate(InviteMessageTemplateProperty.builder()
+ * .emailMessage("emailMessage")
+ * .emailSubject("emailSubject")
+ * .smsMessage("smsMessage")
+ * .build())
+ * .unusedAccountValidityDays(123)
+ * .build())
+ * .aliasAttributes(List.of("aliasAttributes"))
+ * .autoVerifiedAttributes(List.of("autoVerifiedAttributes"))
+ * .deletionProtection("deletionProtection")
+ * .deviceConfiguration(DeviceConfigurationProperty.builder()
+ * .challengeRequiredOnNewDevice(false)
+ * .deviceOnlyRememberedOnUserPrompt(false)
+ * .build())
+ * .emailConfiguration(EmailConfigurationProperty.builder()
+ * .configurationSet("configurationSet")
+ * .emailSendingAccount("emailSendingAccount")
+ * .from("from")
+ * .replyToEmailAddress("replyToEmailAddress")
+ * .sourceArn("sourceArn")
+ * .build())
+ * .emailVerificationMessage("emailVerificationMessage")
+ * .emailVerificationSubject("emailVerificationSubject")
+ * .enabledMfas(List.of("enabledMfas"))
+ * .lambdaConfig(LambdaConfigProperty.builder()
+ * .createAuthChallenge("createAuthChallenge")
+ * .customEmailSender(CustomEmailSenderProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build())
+ * .customMessage("customMessage")
+ * .customSmsSender(CustomSMSSenderProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build())
+ * .defineAuthChallenge("defineAuthChallenge")
+ * .kmsKeyId("kmsKeyId")
+ * .postAuthentication("postAuthentication")
+ * .postConfirmation("postConfirmation")
+ * .preAuthentication("preAuthentication")
+ * .preSignUp("preSignUp")
+ * .preTokenGeneration("preTokenGeneration")
+ * .userMigration("userMigration")
+ * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
+ * .build())
+ * .mfaConfiguration("mfaConfiguration")
+ * .policies(PoliciesProperty.builder()
+ * .passwordPolicy(PasswordPolicyProperty.builder()
+ * .minimumLength(123)
+ * .requireLowercase(false)
+ * .requireNumbers(false)
+ * .requireSymbols(false)
+ * .requireUppercase(false)
+ * .temporaryPasswordValidityDays(123)
+ * .build())
+ * .build())
+ * .schema(List.of(SchemaAttributeProperty.builder()
+ * .attributeDataType("attributeDataType")
+ * .developerOnlyAttribute(false)
+ * .mutable(false)
+ * .name("name")
+ * .numberAttributeConstraints(NumberAttributeConstraintsProperty.builder()
+ * .maxValue("maxValue")
+ * .minValue("minValue")
+ * .build())
+ * .required(false)
+ * .stringAttributeConstraints(StringAttributeConstraintsProperty.builder()
+ * .maxLength("maxLength")
+ * .minLength("minLength")
+ * .build())
+ * .build()))
+ * .smsAuthenticationMessage("smsAuthenticationMessage")
+ * .smsConfiguration(SmsConfigurationProperty.builder()
+ * .externalId("externalId")
+ * .snsCallerArn("snsCallerArn")
+ * .snsRegion("snsRegion")
+ * .build())
+ * .smsVerificationMessage("smsVerificationMessage")
+ * .userAttributeUpdateSettings(UserAttributeUpdateSettingsProperty.builder()
+ * .attributesRequireVerificationBeforeUpdate(List.of("attributesRequireVerificationBeforeUpdate"))
+ * .build())
+ * .usernameAttributes(List.of("usernameAttributes"))
+ * .usernameConfiguration(UsernameConfigurationProperty.builder()
+ * .caseSensitive(false)
+ * .build())
+ * .userPoolAddOns(UserPoolAddOnsProperty.builder()
+ * .advancedSecurityMode("advancedSecurityMode")
+ * .build())
+ * .userPoolName("userPoolName")
+ * .userPoolTags(userPoolTags)
+ * .verificationMessageTemplate(VerificationMessageTemplateProperty.builder()
+ * .defaultEmailOption("defaultEmailOption")
+ * .emailMessage("emailMessage")
+ * .emailMessageByLink("emailMessageByLink")
+ * .emailSubject("emailSubject")
+ * .emailSubjectByLink("emailSubjectByLink")
+ * .smsMessage("smsMessage")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolDsl(
   scope: Construct,

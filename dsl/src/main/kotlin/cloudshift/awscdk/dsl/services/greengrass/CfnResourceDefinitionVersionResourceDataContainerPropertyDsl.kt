@@ -6,6 +6,76 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion
 
+/**
+ * A container for resource data, which defines the resource type.
+ *
+ * The container takes only one of the following supported resource data types:
+ * `LocalDeviceResourceData` , `LocalVolumeResourceData` , `SageMakerMachineLearningModelResourceData`
+ * , `S3MachineLearningModelResourceData` , or `SecretsManagerSecretResourceData` .
+ *
+ *
+ * Only one resource type can be defined for a `ResourceDataContainer` instance.
+ *
+ *
+ * In an AWS CloudFormation template, `ResourceDataContainer` is a property of the
+ * [`ResourceInstance`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * ResourceDataContainerProperty resourceDataContainerProperty =
+ * ResourceDataContainerProperty.builder()
+ * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sageMakerJobArn("sageMakerJobArn")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionVersionResourceDataContainerPropertyDsl {
   private val cdkBuilder: CfnResourceDefinitionVersion.ResourceDataContainerProperty.Builder =

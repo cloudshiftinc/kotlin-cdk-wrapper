@@ -13,6 +13,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.kinesisvideo.CfnStream
 import software.constructs.Construct
 
+/**
+ * Specifies a new Kinesis video stream.
+ *
+ * When you create a new stream, Kinesis Video Streams assigns it a version number. When you change
+ * the stream's metadata, Kinesis Video Streams updates the version.
+ *
+ * `CreateStream` is an asynchronous operation.
+ *
+ * For information about how the service works, see [How it
+ * Works](https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/how-it-works.html) .
+ *
+ * You must have permissions for the `KinesisVideo:CreateStream` action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisvideo.*;
+ * CfnStream cfnStream = CfnStream.Builder.create(this, "MyCfnStream")
+ * .dataRetentionInHours(123)
+ * .deviceName("deviceName")
+ * .kmsKeyId("kmsKeyId")
+ * .mediaType("mediaType")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamDsl(
   scope: Construct,

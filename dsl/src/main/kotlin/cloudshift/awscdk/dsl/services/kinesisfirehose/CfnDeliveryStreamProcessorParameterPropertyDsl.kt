@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `ProcessorParameter` property specifies a processor parameter in a data processor for an
+ * Amazon Kinesis Data Firehose delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * ProcessorParameterProperty processorParameterProperty = ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processorparameter.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamProcessorParameterPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.ProcessorParameterProperty.Builder =

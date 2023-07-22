@@ -13,6 +13,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolUserProps
 
+/**
+ * Properties for defining a `CfnUserPoolUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object clientMetadata;
+ * CfnUserPoolUserProps cfnUserPoolUserProps = CfnUserPoolUserProps.builder()
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .clientMetadata(clientMetadata)
+ * .desiredDeliveryMediums(List.of("desiredDeliveryMediums"))
+ * .forceAliasCreation(false)
+ * .messageAction("messageAction")
+ * .userAttributes(List.of(AttributeTypeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .username("username")
+ * .validationData(List.of(AttributeTypeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUserPropsDsl {
   private val cdkBuilder: CfnUserPoolUserProps.Builder = CfnUserPoolUserProps.builder()

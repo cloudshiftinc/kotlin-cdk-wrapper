@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps
 
+/**
+ * Properties for defining a `CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps
+ * cfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps =
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.builder()
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * .localGatewayVirtualInterfaceGroupId("localGatewayVirtualInterfaceGroupId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationPropsDsl {
   private val cdkBuilder: CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.Builder =

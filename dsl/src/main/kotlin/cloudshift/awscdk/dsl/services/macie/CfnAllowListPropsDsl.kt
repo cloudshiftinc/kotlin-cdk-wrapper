@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.macie.CfnAllowList
 import software.amazon.awscdk.services.macie.CfnAllowListProps
 
+/**
+ * Properties for defining a `CfnAllowList`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnAllowListProps cfnAllowListProps = CfnAllowListProps.builder()
+ * .criteria(CriteriaProperty.builder()
+ * .regex("regex")
+ * .s3WordsList(S3WordsListProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build())
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-allowlist.html)
+ */
 @CdkDslMarker
 public class CfnAllowListPropsDsl {
   private val cdkBuilder: CfnAllowListProps.Builder = CfnAllowListProps.builder()

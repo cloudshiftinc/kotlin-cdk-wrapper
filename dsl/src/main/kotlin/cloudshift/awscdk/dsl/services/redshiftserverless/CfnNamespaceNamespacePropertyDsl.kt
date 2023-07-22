@@ -8,6 +8,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.redshiftserverless.CfnNamespace
 
+/**
+ * A collection of database objects and users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * NamespaceProperty namespaceProperty = NamespaceProperty.builder()
+ * .adminUsername("adminUsername")
+ * .creationDate("creationDate")
+ * .dbName("dbName")
+ * .defaultIamRoleArn("defaultIamRoleArn")
+ * .iamRoles(List.of("iamRoles"))
+ * .kmsKeyId("kmsKeyId")
+ * .logExports(List.of("logExports"))
+ * .namespaceArn("namespaceArn")
+ * .namespaceId("namespaceId")
+ * .namespaceName("namespaceName")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-namespace.html)
+ */
 @CdkDslMarker
 public class CfnNamespaceNamespacePropertyDsl {
   private val cdkBuilder: CfnNamespace.NamespaceProperty.Builder =

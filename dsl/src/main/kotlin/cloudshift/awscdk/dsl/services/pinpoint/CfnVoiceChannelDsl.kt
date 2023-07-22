@@ -9,6 +9,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnVoiceChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * To send a voice message, you send the message through the voice channel. Before you can use
+ * Amazon Pinpoint to send voice messages, you have to enable the voice channel for an Amazon Pinpoint
+ * application.
+ *
+ * The VoiceChannel resource represents the status and other information about the voice channel for
+ * an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnVoiceChannel cfnVoiceChannel = CfnVoiceChannel.Builder.create(this, "MyCfnVoiceChannel")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-voicechannel.html)
+ */
 @CdkDslMarker
 public class CfnVoiceChannelDsl(
   scope: Construct,

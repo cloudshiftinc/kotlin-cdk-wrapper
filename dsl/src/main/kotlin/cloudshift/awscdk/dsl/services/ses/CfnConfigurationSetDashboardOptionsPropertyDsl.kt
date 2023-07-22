@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 
+/**
+ * Settings for your VDM configuration as applicable to the Dashboard.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DashboardOptionsProperty dashboardOptionsProperty = DashboardOptionsProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-dashboardoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetDashboardOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.DashboardOptionsProperty.Builder =

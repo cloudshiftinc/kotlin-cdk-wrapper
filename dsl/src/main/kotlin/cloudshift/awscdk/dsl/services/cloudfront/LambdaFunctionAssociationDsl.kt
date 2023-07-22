@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.cloudfront.LambdaEdgeEventType
 import software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation
 import software.amazon.awscdk.services.lambda.IVersion
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Version version;
+ * LambdaFunctionAssociation lambdaFunctionAssociation = LambdaFunctionAssociation.builder()
+ * .eventType(LambdaEdgeEventType.ORIGIN_REQUEST)
+ * .lambdaFunction(version)
+ * // the properties below are optional
+ * .includeBody(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaFunctionAssociationDsl {
   private val cdkBuilder: LambdaFunctionAssociation.Builder = LambdaFunctionAssociation.builder()

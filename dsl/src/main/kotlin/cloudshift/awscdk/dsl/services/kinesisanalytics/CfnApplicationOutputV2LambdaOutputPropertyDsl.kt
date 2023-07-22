@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
 
+/**
+ * When you configure a SQL-based Kinesis Data Analytics application's output, identifies an Amazon
+ * Lambda function as the destination.
+ *
+ * You provide the function Amazon Resource Name (ARN) of the Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * LambdaOutputProperty lambdaOutputProperty = LambdaOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-lambdaoutput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationOutputV2LambdaOutputPropertyDsl {
   private val cdkBuilder: CfnApplicationOutputV2.LambdaOutputProperty.Builder =

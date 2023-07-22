@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.DockerImageAssetLocation
 
+/**
+ * The location of the published docker image.
+ *
+ * This is where the image can be
+ * consumed at runtime.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerImageAssetLocation dockerImageAssetLocation = DockerImageAssetLocation.builder()
+ * .imageUri("imageUri")
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .imageTag("imageTag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageAssetLocationDsl {
   private val cdkBuilder: DockerImageAssetLocation.Builder = DockerImageAssetLocation.builder()

@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 
+/**
+ * `CookieObject` is a property of the
+ * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
+ * property. It describes whether an Amazon Lightsail content delivery network (CDN) distribution
+ * forwards cookies to the origin and, if so, which ones.
+ *
+ * For the cookies that you specify, your distribution caches separate versions of the specified
+ * content based on the cookie values in viewer requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CookieObjectProperty cookieObjectProperty = CookieObjectProperty.builder()
+ * .cookiesAllowList(List.of("cookiesAllowList"))
+ * .option("option")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cookieobject.html)
+ */
 @CdkDslMarker
 public class CfnDistributionCookieObjectPropertyDsl {
   private val cdkBuilder: CfnDistribution.CookieObjectProperty.Builder =

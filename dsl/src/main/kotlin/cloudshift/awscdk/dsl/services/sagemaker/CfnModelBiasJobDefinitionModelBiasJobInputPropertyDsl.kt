@@ -6,6 +6,60 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
 
+/**
+ * Inputs for the model bias job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelBiasJobInputProperty modelBiasJobInputProperty = ModelBiasJobInputProperty.builder()
+ * .groundTruthS3Input(MonitoringGroundTruthS3InputProperty.builder()
+ * .s3Uri("s3Uri")
+ * .build())
+ * // the properties below are optional
+ * .batchTransformInput(BatchTransformInputProperty.builder()
+ * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
+ * .datasetFormat(DatasetFormatProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .header(false)
+ * .build())
+ * .json(JsonProperty.builder()
+ * .line(false)
+ * .build())
+ * .parquet(false)
+ * .build())
+ * .localPath("localPath")
+ * // the properties below are optional
+ * .endTimeOffset("endTimeOffset")
+ * .featuresAttribute("featuresAttribute")
+ * .inferenceAttribute("inferenceAttribute")
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityThresholdAttribute(123)
+ * .s3DataDistributionType("s3DataDistributionType")
+ * .s3InputMode("s3InputMode")
+ * .startTimeOffset("startTimeOffset")
+ * .build())
+ * .endpointInput(EndpointInputProperty.builder()
+ * .endpointName("endpointName")
+ * .localPath("localPath")
+ * // the properties below are optional
+ * .endTimeOffset("endTimeOffset")
+ * .featuresAttribute("featuresAttribute")
+ * .inferenceAttribute("inferenceAttribute")
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityThresholdAttribute(123)
+ * .s3DataDistributionType("s3DataDistributionType")
+ * .s3InputMode("s3InputMode")
+ * .startTimeOffset("startTimeOffset")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-modelbiasjobinput.html)
+ */
 @CdkDslMarker
 public class CfnModelBiasJobDefinitionModelBiasJobInputPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasJobInputProperty.Builder =

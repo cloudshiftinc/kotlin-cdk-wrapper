@@ -31,6 +31,27 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * An EC2 service running on an ECS cluster fronted by a network load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * NetworkLoadBalancedEc2Service loadBalancedEcsService =
+ * NetworkLoadBalancedEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("test"))
+ * .environment(Map.of(
+ * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
+ * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
+ * .build())
+ * .desiredCount(2)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancedEc2ServiceDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents types of timeouts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TcpTimeoutProperty tcpTimeoutProperty = TcpTimeoutProperty.builder()
+ * .idle(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-tcptimeout.html)
+ */
 @CdkDslMarker
 public class CfnRouteTcpTimeoutPropertyDsl {
   private val cdkBuilder: CfnRoute.TcpTimeoutProperty.Builder =

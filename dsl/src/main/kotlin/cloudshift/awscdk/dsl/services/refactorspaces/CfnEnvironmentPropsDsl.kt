@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.refactorspaces.CfnEnvironmentProps
 
+/**
+ * Properties for defining a `CfnEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .name("name")
+ * .networkFabricType("networkFabricType")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()

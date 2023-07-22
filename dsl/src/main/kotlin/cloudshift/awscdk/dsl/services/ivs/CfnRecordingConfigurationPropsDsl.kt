@@ -14,6 +14,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
 import software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps
 
+/**
+ * Properties for defining a `CfnRecordingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnRecordingConfigurationProps cfnRecordingConfigurationProps =
+ * CfnRecordingConfigurationProps.builder()
+ * .destinationConfiguration(DestinationConfigurationProperty.builder()
+ * .s3(S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .recordingReconnectWindowSeconds(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .thumbnailConfiguration(ThumbnailConfigurationProperty.builder()
+ * .recordingMode("recordingMode")
+ * // the properties below are optional
+ * .targetIntervalSeconds(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRecordingConfigurationPropsDsl {
   private val cdkBuilder: CfnRecordingConfigurationProps.Builder =

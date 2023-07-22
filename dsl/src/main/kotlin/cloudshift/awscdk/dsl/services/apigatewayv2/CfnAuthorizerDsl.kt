@@ -12,6 +12,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Authorizer` resource creates an authorizer for a WebSocket API or an HTTP
+ * API.
+ *
+ * To learn more, see [Controlling and managing access to a WebSocket API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-control-access.html)
+ * and [Controlling and managing access to an HTTP API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-access-control.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CfnAuthorizer cfnAuthorizer = CfnAuthorizer.Builder.create(this, "MyCfnAuthorizer")
+ * .apiId("apiId")
+ * .authorizerType("authorizerType")
+ * .name("name")
+ * // the properties below are optional
+ * .authorizerCredentialsArn("authorizerCredentialsArn")
+ * .authorizerPayloadFormatVersion("authorizerPayloadFormatVersion")
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .enableSimpleResponses(false)
+ * .identitySource(List.of("identitySource"))
+ * .identityValidationExpression("identityValidationExpression")
+ * .jwtConfiguration(JWTConfigurationProperty.builder()
+ * .audience(List.of("audience"))
+ * .issuer("issuer")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerDsl(
   scope: Construct,

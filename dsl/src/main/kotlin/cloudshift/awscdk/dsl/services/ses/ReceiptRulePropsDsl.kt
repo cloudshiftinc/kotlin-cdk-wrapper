@@ -13,6 +13,31 @@ import software.amazon.awscdk.services.ses.IReceiptRuleSet
 import software.amazon.awscdk.services.ses.ReceiptRuleProps
 import software.amazon.awscdk.services.ses.TlsPolicy
 
+/**
+ * Construction properties for a ReceiptRule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ReceiptRule receiptRule;
+ * IReceiptRuleAction receiptRuleAction;
+ * ReceiptRuleSet receiptRuleSet;
+ * ReceiptRuleProps receiptRuleProps = ReceiptRuleProps.builder()
+ * .ruleSet(receiptRuleSet)
+ * // the properties below are optional
+ * .actions(List.of(receiptRuleAction))
+ * .after(receiptRule)
+ * .enabled(false)
+ * .receiptRuleName("receiptRuleName")
+ * .recipients(List.of("recipients"))
+ * .scanEnabled(false)
+ * .tlsPolicy(TlsPolicy.OPTIONAL)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptRulePropsDsl {
   private val cdkBuilder: ReceiptRuleProps.Builder = ReceiptRuleProps.builder()

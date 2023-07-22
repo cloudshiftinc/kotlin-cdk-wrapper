@@ -12,6 +12,28 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.fsx.CfnSnapshot
 import software.constructs.Construct
 
+/**
+ * A snapshot of an Amazon FSx for OpenZFS volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnSnapshot cfnSnapshot = CfnSnapshot.Builder.create(this, "MyCfnSnapshot")
+ * .name("name")
+ * .volumeId("volumeId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-snapshot.html)
+ */
 @CdkDslMarker
 public class CfnSnapshotDsl(
   scope: Construct,

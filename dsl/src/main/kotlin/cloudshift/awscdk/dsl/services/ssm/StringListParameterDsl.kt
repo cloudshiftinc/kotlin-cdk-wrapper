@@ -11,6 +11,16 @@ import software.amazon.awscdk.services.ssm.ParameterTier
 import software.amazon.awscdk.services.ssm.StringListParameter
 import software.constructs.Construct
 
+/**
+ * Creates a new StringList SSM Parameter.
+ *
+ * Example:
+ *
+ * ```
+ * StringListParameter.valueForTypedListParameter(this, "/My/Public/Parameter",
+ * ParameterValueType.AWS_EC2_IMAGE_ID);
+ * ```
+ */
 @CdkDslMarker
 public class StringListParameterDsl(
   scope: Construct,

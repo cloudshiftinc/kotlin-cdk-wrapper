@@ -13,6 +13,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnHttpApi
 import software.constructs.Construct
 
+/**
+ * Definition of AWS::Serverless::HttpApi.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object authorizers;
+ * Object definitionBody;
+ * CfnHttpApi cfnHttpApi = CfnHttpApi.Builder.create(this, "MyCfnHttpApi")
+ * .accessLogSetting(AccessLogSettingProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .auth(HttpApiAuthProperty.builder()
+ * .authorizers(authorizers)
+ * .defaultAuthorizer("defaultAuthorizer")
+ * .build())
+ * .corsConfiguration(false)
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .definitionBody(definitionBody)
+ * .definitionUri("definitionUri")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .domain(HttpApiDomainConfigurationProperty.builder()
+ * .certificateArn("certificateArn")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .endpointConfiguration("endpointConfiguration")
+ * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion(false)
+ * .build())
+ * .route53(Route53ConfigurationProperty.builder()
+ * .distributedDomainName("distributedDomainName")
+ * .evaluateTargetHealth(false)
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .ipV6(false)
+ * .build())
+ * .securityPolicy("securityPolicy")
+ * .build())
+ * .failOnWarnings(false)
+ * .routeSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .stageName("stageName")
+ * .stageVariables(Map.of(
+ * "stageVariablesKey", "stageVariables"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-httpapi.html)
+ */
 @CdkDslMarker
 public class CfnHttpApiDsl(
   scope: Construct,

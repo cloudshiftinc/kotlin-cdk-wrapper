@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides information about the column that should be used for filtering the query response by
+ * groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * AclConfigurationProperty aclConfigurationProperty = AclConfigurationProperty.builder()
+ * .allowedGroupsColumnName("allowedGroupsColumnName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-aclconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceAclConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.AclConfigurationProperty.Builder =

@@ -15,6 +15,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnAuthorizer
 import software.constructs.Construct
 
+/**
+ * Specifies an authorizer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnAuthorizer cfnAuthorizer = CfnAuthorizer.Builder.create(this, "MyCfnAuthorizer")
+ * .authorizerFunctionArn("authorizerFunctionArn")
+ * // the properties below are optional
+ * .authorizerName("authorizerName")
+ * .enableCachingForHttp(false)
+ * .signingDisabled(false)
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tokenKeyName("tokenKeyName")
+ * .tokenSigningPublicKeys(Map.of(
+ * "tokenSigningPublicKeysKey", "tokenSigningPublicKeys"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerDsl(
   scope: Construct,

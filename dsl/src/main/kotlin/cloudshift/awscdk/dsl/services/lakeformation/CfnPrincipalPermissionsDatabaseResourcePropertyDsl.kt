@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
+/**
+ * A structure for the database object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-databaseresource.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsDatabaseResourcePropertyDsl {
   private val cdkBuilder: CfnPrincipalPermissions.DatabaseResourceProperty.Builder =

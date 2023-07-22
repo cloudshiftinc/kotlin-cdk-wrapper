@@ -32,6 +32,28 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ec2.UserData
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties of a Fleet.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
+ * during instance startup")))
+ * .signals(Signals.waitForAll(SignalsOptions.builder()
+ * .timeout(Duration.minutes(10))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AutoScalingGroupPropsDsl {
   private val cdkBuilder: AutoScalingGroupProps.Builder = AutoScalingGroupProps.builder()

@@ -14,6 +14,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.workspaces.CfnWorkspace
 import software.constructs.Construct
 
+/**
+ * The `AWS::WorkSpaces::Workspace` resource specifies a WorkSpace.
+ *
+ * Updates are not supported for the `BundleId` , `RootVolumeEncryptionEnabled` ,
+ * `UserVolumeEncryptionEnabled` , or `VolumeEncryptionKey` properties. To update these properties, you
+ * must also update a property that triggers a replacement, such as the `UserName` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * CfnWorkspace cfnWorkspace = CfnWorkspace.Builder.create(this, "MyCfnWorkspace")
+ * .bundleId("bundleId")
+ * .directoryId("directoryId")
+ * .userName("userName")
+ * // the properties below are optional
+ * .rootVolumeEncryptionEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userVolumeEncryptionEnabled(false)
+ * .volumeEncryptionKey("volumeEncryptionKey")
+ * .workspaceProperties(WorkspacePropertiesProperty.builder()
+ * .computeTypeName("computeTypeName")
+ * .rootVolumeSizeGib(123)
+ * .runningMode("runningMode")
+ * .runningModeAutoStopTimeoutInMinutes(123)
+ * .userVolumeSizeGib(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceDsl(
   scope: Construct,

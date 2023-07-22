@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnVolume
 
+/**
+ * Specifies the configuration of the ONTAP volume that you are creating.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * OntapConfigurationProperty ontapConfigurationProperty = OntapConfigurationProperty.builder()
+ * .sizeInMegabytes("sizeInMegabytes")
+ * .storageVirtualMachineId("storageVirtualMachineId")
+ * // the properties below are optional
+ * .copyTagsToBackups("copyTagsToBackups")
+ * .junctionPath("junctionPath")
+ * .ontapVolumeType("ontapVolumeType")
+ * .securityStyle("securityStyle")
+ * .snapshotPolicy("snapshotPolicy")
+ * .storageEfficiencyEnabled("storageEfficiencyEnabled")
+ * .tieringPolicy(TieringPolicyProperty.builder()
+ * .coolingPeriod(123)
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-ontapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnVolumeOntapConfigurationPropertyDsl {
   private val cdkBuilder: CfnVolume.OntapConfigurationProperty.Builder =

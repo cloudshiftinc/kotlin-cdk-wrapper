@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Provides information about how AWS Ground Station should track the satellite through the sky
+ * during a contact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * TrackingConfigProperty trackingConfigProperty = TrackingConfigProperty.builder()
+ * .autotrack("autotrack")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-trackingconfig.html)
+ */
 @CdkDslMarker
 public class CfnConfigTrackingConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.TrackingConfigProperty.Builder =

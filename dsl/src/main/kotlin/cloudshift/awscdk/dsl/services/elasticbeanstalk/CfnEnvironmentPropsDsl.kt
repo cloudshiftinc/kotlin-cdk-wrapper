@@ -14,6 +14,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironmentProps
 
+/**
+ * Properties for defining a `CfnEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .applicationName("applicationName")
+ * // the properties below are optional
+ * .cnamePrefix("cnamePrefix")
+ * .description("description")
+ * .environmentName("environmentName")
+ * .operationsRole("operationsRole")
+ * .optionSettings(List.of(OptionSettingProperty.builder()
+ * .namespace("namespace")
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .resourceName("resourceName")
+ * .value("value")
+ * .build()))
+ * .platformArn("platformArn")
+ * .solutionStackName("solutionStackName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateName("templateName")
+ * .tier(TierProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .version("version")
+ * .build())
+ * .versionLabel("versionLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()

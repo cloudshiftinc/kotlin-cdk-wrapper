@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.rds.PostgresEngineFeatures
 
+/**
+ * Features supported by the Postgres database engine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * PostgresEngineFeatures postgresEngineFeatures = PostgresEngineFeatures.builder()
+ * .s3Export(false)
+ * .s3Import(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PostgresEngineFeaturesDsl {
   private val cdkBuilder: PostgresEngineFeatures.Builder = PostgresEngineFeatures.builder()

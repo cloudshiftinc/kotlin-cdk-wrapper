@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * Define and configure the output AMIs of the pipeline.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * AmiDistributionConfigurationProperty amiDistributionConfigurationProperty =
+ * AmiDistributionConfigurationProperty.builder()
+ * .amiTags(Map.of(
+ * "amiTagsKey", "amiTags"))
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .launchPermissionConfiguration(LaunchPermissionConfigurationProperty.builder()
+ * .organizationalUnitArns(List.of("organizationalUnitArns"))
+ * .organizationArns(List.of("organizationArns"))
+ * .userGroups(List.of("userGroups"))
+ * .userIds(List.of("userIds"))
+ * .build())
+ * .name("name")
+ * .targetAccountIds(List.of("targetAccountIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-amidistributionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationAmiDistributionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDistributionConfiguration.AmiDistributionConfigurationProperty.Builder

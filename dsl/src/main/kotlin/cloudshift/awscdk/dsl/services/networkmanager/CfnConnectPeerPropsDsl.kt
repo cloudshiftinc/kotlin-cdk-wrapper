@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
 import software.amazon.awscdk.services.networkmanager.CfnConnectPeerProps
 
+/**
+ * Properties for defining a `CfnConnectPeer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnConnectPeerProps cfnConnectPeerProps = CfnConnectPeerProps.builder()
+ * .connectAttachmentId("connectAttachmentId")
+ * .peerAddress("peerAddress")
+ * // the properties below are optional
+ * .bgpOptions(BgpOptionsProperty.builder()
+ * .peerAsn(123)
+ * .build())
+ * .coreNetworkAddress("coreNetworkAddress")
+ * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html)
+ */
 @CdkDslMarker
 public class CfnConnectPeerPropsDsl {
   private val cdkBuilder: CfnConnectPeerProps.Builder = CfnConnectPeerProps.builder()

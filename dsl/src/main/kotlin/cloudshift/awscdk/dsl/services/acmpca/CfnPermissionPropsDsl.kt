@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.acmpca.CfnPermissionProps
 
+/**
+ * Properties for defining a `CfnPermission`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * CfnPermissionProps cfnPermissionProps = CfnPermissionProps.builder()
+ * .actions(List.of("actions"))
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .principal("principal")
+ * // the properties below are optional
+ * .sourceAccount("sourceAccount")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-permission.html)
+ */
 @CdkDslMarker
 public class CfnPermissionPropsDsl {
   private val cdkBuilder: CfnPermissionProps.Builder = CfnPermissionProps.builder()

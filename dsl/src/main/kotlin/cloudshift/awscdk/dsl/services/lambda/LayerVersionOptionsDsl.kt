@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.lambda.LayerVersionOptions
 
+/**
+ * Non runtime options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * LayerVersionOptions layerVersionOptions = LayerVersionOptions.builder()
+ * .description("description")
+ * .layerVersionName("layerVersionName")
+ * .license("license")
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LayerVersionOptionsDsl {
   private val cdkBuilder: LayerVersionOptions.Builder = LayerVersionOptions.builder()

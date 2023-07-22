@@ -7,6 +7,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 
+/**
+ * Configuration properties of the network to which the member belongs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * NetworkConfigurationProperty networkConfigurationProperty =
+ * NetworkConfigurationProperty.builder()
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .name("name")
+ * .votingPolicy(VotingPolicyProperty.builder()
+ * .approvalThresholdPolicy(ApprovalThresholdPolicyProperty.builder()
+ * .proposalDurationInHours(123)
+ * .thresholdComparator("thresholdComparator")
+ * .thresholdPercentage(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .networkFrameworkConfiguration(NetworkFrameworkConfigurationProperty.builder()
+ * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
+ * .edition("edition")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMemberNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.NetworkConfigurationProperty.Builder =

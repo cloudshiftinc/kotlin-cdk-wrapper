@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wisdom.CfnAssistant
 import software.constructs.Construct
 
+/**
+ * Specifies an Amazon Connect Wisdom assistant.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * CfnAssistant cfnAssistant = CfnAssistant.Builder.create(this, "MyCfnAssistant")
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistant.html)
+ */
 @CdkDslMarker
 public class CfnAssistantDsl(
   scope: Construct,

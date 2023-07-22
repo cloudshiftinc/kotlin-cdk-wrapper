@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociation
 import software.constructs.Construct
 
+/**
+ * In the response to an
+ * [AssociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_AssociateResolverRule.html)
+ * ,
+ * [DisassociateResolverRule](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_DisassociateResolverRule.html)
+ * , or
+ * [ListResolverRuleAssociations](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListResolverRuleAssociations.html)
+ * request, provides information about an association between a resolver rule and a VPC. The
+ * association determines which DNS queries that originate in the VPC are forwarded to your network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverRuleAssociation cfnResolverRuleAssociation =
+ * CfnResolverRuleAssociation.Builder.create(this, "MyCfnResolverRuleAssociation")
+ * .resolverRuleId("resolverRuleId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html)
+ */
 @CdkDslMarker
 public class CfnResolverRuleAssociationDsl(
   scope: Construct,

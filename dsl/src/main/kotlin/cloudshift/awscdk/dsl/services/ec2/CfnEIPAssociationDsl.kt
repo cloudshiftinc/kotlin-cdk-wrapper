@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEIPAssociation
 import software.constructs.Construct
 
+/**
+ * Associates an Elastic IP address with an instance or a network interface.
+ *
+ * Before you can use an Elastic IP address, you must allocate it to your account. For more
+ * information about working with Elastic IP addresses, see [Elastic IP address concepts and
+ * rules](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-eips.html#vpc-eip-overview) .
+ *
+ * You must specify `AllocationId` and either `InstanceId` , `NetworkInterfaceId` , or
+ * `PrivateIpAddress` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnEIPAssociation cfnEIPAssociation = CfnEIPAssociation.Builder.create(this,
+ * "MyCfnEIPAssociation")
+ * .allocationId("allocationId")
+ * .eip("eip")
+ * .instanceId("instanceId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html)
+ */
 @CdkDslMarker
 public class CfnEIPAssociationDsl(
   scope: Construct,

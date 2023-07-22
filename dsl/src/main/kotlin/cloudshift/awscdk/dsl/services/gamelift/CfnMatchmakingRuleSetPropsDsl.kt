@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSetProps
 
+/**
+ * Properties for defining a `CfnMatchmakingRuleSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnMatchmakingRuleSetProps cfnMatchmakingRuleSetProps = CfnMatchmakingRuleSetProps.builder()
+ * .name("name")
+ * .ruleSetBody("ruleSetBody")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html)
+ */
 @CdkDslMarker
 public class CfnMatchmakingRuleSetPropsDsl {
   private val cdkBuilder: CfnMatchmakingRuleSetProps.Builder = CfnMatchmakingRuleSetProps.builder()

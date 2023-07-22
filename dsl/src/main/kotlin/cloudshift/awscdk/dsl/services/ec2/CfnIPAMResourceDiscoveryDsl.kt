@@ -14,6 +14,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery
 import software.constructs.Construct
 
+/**
+ * A resource discovery is an IPAM component that enables IPAM to manage and monitor resources that
+ * belong to the owning account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMResourceDiscovery cfnIPAMResourceDiscovery = CfnIPAMResourceDiscovery.Builder.create(this,
+ * "MyCfnIPAMResourceDiscovery")
+ * .description("description")
+ * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
+ * .regionName("regionName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html)
+ */
 @CdkDslMarker
 public class CfnIPAMResourceDiscoveryDsl(
   scope: Construct,

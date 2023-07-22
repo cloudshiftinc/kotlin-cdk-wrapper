@@ -9,6 +9,66 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
+/**
+ * The entity definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataTypeProperty dataTypeProperty_;
+ * DataValueProperty dataValueProperty_;
+ * Object relationshipValue;
+ * DefinitionProperty definitionProperty = DefinitionProperty.builder()
+ * .configuration(Map.of(
+ * "configurationKey", "configuration"))
+ * .dataType(DataTypeProperty.builder()
+ * .allowedValues(List.of(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build()))
+ * .nestedType(dataTypeProperty_)
+ * .relationship(RelationshipProperty.builder()
+ * .relationshipType("relationshipType")
+ * .targetComponentTypeId("targetComponentTypeId")
+ * .build())
+ * .type("type")
+ * .unitOfMeasure("unitOfMeasure")
+ * .build())
+ * .defaultValue(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .isExternalId(false)
+ * .isFinal(false)
+ * .isImported(false)
+ * .isInherited(false)
+ * .isRequiredInEntity(false)
+ * .isStoredExternally(false)
+ * .isTimeSeries(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-definition.html)
+ */
 @CdkDslMarker
 public class CfnEntityDefinitionPropertyDsl {
   private val cdkBuilder: CfnEntity.DefinitionProperty.Builder =

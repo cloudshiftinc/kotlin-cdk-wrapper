@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.codebuild.DockerImageOptions
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * The options when creating a CodeBuild Docker build image using
+ * `LinuxBuildImage.fromDockerRegistry` or `WindowsBuildImage.fromDockerRegistry`.
+ *
+ * Example:
+ *
+ * ```
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(LinuxBuildImage.fromDockerRegistry("my-registry/my-repo",
+ * DockerImageOptions.builder()
+ * .secretsManagerCredentials(secrets)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageOptionsDsl {
   private val cdkBuilder: DockerImageOptions.Builder = DockerImageOptions.builder()

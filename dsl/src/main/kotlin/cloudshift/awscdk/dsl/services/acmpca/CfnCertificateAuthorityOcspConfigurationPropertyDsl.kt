@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+/**
+ * Contains information to enable and configure Online Certificate Status Protocol (OCSP) for
+ * validating certificate revocation status.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * OcspConfigurationProperty ocspConfigurationProperty = OcspConfigurationProperty.builder()
+ * .enabled(false)
+ * .ocspCustomCname("ocspCustomCname")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityOcspConfigurationPropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.OcspConfigurationProperty.Builder =

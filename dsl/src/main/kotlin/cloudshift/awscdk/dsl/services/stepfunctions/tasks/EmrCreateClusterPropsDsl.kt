@@ -23,6 +23,41 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateClusterProps
 
+/**
+ * Properties for EmrCreateCluster.
+ *
+ * See the RunJobFlow API for complete documentation on input parameters
+ *
+ * Example:
+ *
+ * ```
+ * Role clusterRole = Role.Builder.create(this, "ClusterRole")
+ * .assumedBy(new ServicePrincipal("ec2.amazonaws.com"))
+ * .build();
+ * Role serviceRole = Role.Builder.create(this, "ServiceRole")
+ * .assumedBy(new ServicePrincipal("elasticmapreduce.amazonaws.com"))
+ * .build();
+ * Role autoScalingRole = Role.Builder.create(this, "AutoScalingRole")
+ * .assumedBy(new ServicePrincipal("elasticmapreduce.amazonaws.com"))
+ * .build();
+ * autoScalingRole.assumeRolePolicy.addStatements(
+ * PolicyStatement.Builder.create()
+ * .effect(Effect.ALLOW)
+ * .principals(List.of(
+ * new ServicePrincipal("application-autoscaling.amazonaws.com")))
+ * .actions(List.of("sts:AssumeRole"))
+ * .build());
+ * EmrCreateCluster.Builder.create(this, "Create Cluster")
+ * .instances(InstancesConfigProperty.builder().build())
+ * .clusterRole(clusterRole)
+ * .name(TaskInput.fromJsonPathAt("$.ClusterName").getValue())
+ * .serviceRole(serviceRole)
+ * .autoScalingRole(autoScalingRole)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_RunJobFlow.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterPropsDsl {
   private val cdkBuilder: EmrCreateClusterProps.Builder = EmrCreateClusterProps.builder()

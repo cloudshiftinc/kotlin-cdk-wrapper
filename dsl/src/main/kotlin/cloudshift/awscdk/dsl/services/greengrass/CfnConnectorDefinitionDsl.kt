@@ -11,6 +11,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::ConnectorDefinition` resource represents a connector definition for AWS IoT
+ * Greengrass .
+ *
+ * Connector definitions are used to organize your connector definition versions.
+ *
+ * Connector definitions can reference multiple connector definition versions. All connector
+ * definition versions must be associated with a connector definition. Each connector definition
+ * version can contain one or more connectors.
+ *
+ *
+ * When you create a connector definition, you can optionally include an initial connector
+ * definition version. To associate a connector definition version later, create an
+ * [`AWS::Greengrass::ConnectorDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html)
+ * resource and specify the ID of this connector definition.
+ *
+ * After you create the connector definition version that contains the connectors you want to
+ * deploy, you must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object parameters;
+ * Object tags;
+ * CfnConnectorDefinition cfnConnectorDefinition = CfnConnectorDefinition.Builder.create(this,
+ * "MyCfnConnectorDefinition")
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(ConnectorDefinitionVersionProperty.builder()
+ * .connectors(List.of(ConnectorProperty.builder()
+ * .connectorArn("connectorArn")
+ * .id("id")
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDefinitionDsl(
   scope: Construct,

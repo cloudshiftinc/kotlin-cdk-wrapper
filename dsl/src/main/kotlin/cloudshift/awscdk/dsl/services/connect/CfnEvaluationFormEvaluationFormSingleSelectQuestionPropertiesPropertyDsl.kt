@@ -10,6 +10,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about the options in single select questions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormSingleSelectQuestionPropertiesProperty
+ * evaluationFormSingleSelectQuestionPropertiesProperty =
+ * EvaluationFormSingleSelectQuestionPropertiesProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionOptionProperty.builder()
+ * .refId("refId")
+ * .text("text")
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * // the properties below are optional
+ * .automation(EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+ * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+ * .category("category")
+ * .condition("condition")
+ * .optionRefId("optionRefId")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .defaultOptionRefId("defaultOptionRefId")
+ * .build())
+ * .displayAs("displayAs")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionproperties.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormSingleSelectQuestionPropertiesPropertyDsl {
   private val cdkBuilder:

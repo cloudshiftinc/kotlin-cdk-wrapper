@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.rds.SqlServerEngineVersion
 import software.amazon.awscdk.services.rds.SqlServerExInstanceEngineProps
 
+/**
+ * Properties for SQL Server Express Edition instance engines.
+ *
+ * Used in `DatabaseInstanceEngine.sqlServerEx`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * SqlServerEngineVersion sqlServerEngineVersion;
+ * SqlServerExInstanceEngineProps sqlServerExInstanceEngineProps =
+ * SqlServerExInstanceEngineProps.builder()
+ * .version(sqlServerEngineVersion)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SqlServerExInstanceEnginePropsDsl {
   private val cdkBuilder: SqlServerExInstanceEngineProps.Builder =

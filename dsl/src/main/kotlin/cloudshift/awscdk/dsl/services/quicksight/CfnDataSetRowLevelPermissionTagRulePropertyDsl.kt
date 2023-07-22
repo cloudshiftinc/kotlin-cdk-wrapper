@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Permission for the resource.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RowLevelPermissionTagRuleProperty rowLevelPermissionTagRuleProperty =
+ * RowLevelPermissionTagRuleProperty.builder()
+ * .columnName("columnName")
+ * .tagKey("tagKey")
+ * // the properties below are optional
+ * .matchAllValue("matchAllValue")
+ * .tagMultiValueDelimiter("tagMultiValueDelimiter")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-rowlevelpermissiontagrule.html)
+ */
 @CdkDslMarker
 public class CfnDataSetRowLevelPermissionTagRulePropertyDsl {
   private val cdkBuilder: CfnDataSet.RowLevelPermissionTagRuleProperty.Builder =

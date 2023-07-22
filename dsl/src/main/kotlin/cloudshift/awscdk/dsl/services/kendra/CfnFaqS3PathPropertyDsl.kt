@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnFaq
 
+/**
+ * Information required to find a specific file in an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * S3PathProperty s3PathProperty = S3PathProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-faq-s3path.html)
+ */
 @CdkDslMarker
 public class CfnFaqS3PathPropertyDsl {
   private val cdkBuilder: CfnFaq.S3PathProperty.Builder = CfnFaq.S3PathProperty.builder()

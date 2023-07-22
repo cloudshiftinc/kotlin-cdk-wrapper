@@ -13,6 +13,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupProps
 
+/**
+ * Properties for defining a `CfnFirewallRuleGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnFirewallRuleGroupProps cfnFirewallRuleGroupProps = CfnFirewallRuleGroupProps.builder()
+ * .firewallRules(List.of(FirewallRuleProperty.builder()
+ * .action("action")
+ * .firewallDomainListId("firewallDomainListId")
+ * .priority(123)
+ * // the properties below are optional
+ * .blockOverrideDnsType("blockOverrideDnsType")
+ * .blockOverrideDomain("blockOverrideDomain")
+ * .blockOverrideTtl(123)
+ * .blockResponse("blockResponse")
+ * .build()))
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroup.html)
+ */
 @CdkDslMarker
 public class CfnFirewallRuleGroupPropsDsl {
   private val cdkBuilder: CfnFirewallRuleGroupProps.Builder = CfnFirewallRuleGroupProps.builder()

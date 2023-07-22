@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The field well configuration of a `GaugeChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-gaugechartfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisGaugeChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GaugeChartFieldWellsProperty.Builder =

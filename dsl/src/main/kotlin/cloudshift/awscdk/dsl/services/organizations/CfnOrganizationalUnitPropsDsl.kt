@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps
 
+/**
+ * Properties for defining a `CfnOrganizationalUnit`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * CfnOrganizationalUnitProps cfnOrganizationalUnitProps = CfnOrganizationalUnitProps.builder()
+ * .name("name")
+ * .parentId("parentId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organizationalunit.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationalUnitPropsDsl {
   private val cdkBuilder: CfnOrganizationalUnitProps.Builder = CfnOrganizationalUnitProps.builder()

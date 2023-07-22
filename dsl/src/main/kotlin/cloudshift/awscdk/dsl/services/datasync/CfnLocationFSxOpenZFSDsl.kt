@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationFSxOpenZFS` resource specifies an endpoint for an Amazon FSx for
+ * OpenZFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxOpenZFS cfnLocationFSxOpenZFS = CfnLocationFSxOpenZFS.Builder.create(this,
+ * "MyCfnLocationFSxOpenZFS")
+ * .protocol(ProtocolProperty.builder()
+ * .nfs(NFSProperty.builder()
+ * .mountOptions(MountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .build())
+ * .build())
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * // the properties below are optional
+ * .fsxFilesystemArn("fsxFilesystemArn")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxopenzfs.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxOpenZFSDsl(
   scope: Construct,

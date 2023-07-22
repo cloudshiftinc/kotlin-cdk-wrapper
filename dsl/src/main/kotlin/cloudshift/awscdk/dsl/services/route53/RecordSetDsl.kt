@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.route53.RecordTarget
 import software.amazon.awscdk.services.route53.RecordType
 import software.constructs.Construct
 
+/**
+ * A record set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * RecordTarget recordTarget;
+ * RecordSet recordSet = RecordSet.Builder.create(this, "MyRecordSet")
+ * .recordType(RecordType.A)
+ * .target(recordTarget)
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RecordSetDsl(
   scope: Construct,

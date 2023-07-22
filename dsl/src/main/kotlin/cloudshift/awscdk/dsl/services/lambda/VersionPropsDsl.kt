@@ -11,6 +11,18 @@ import software.amazon.awscdk.services.lambda.IDestination
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.lambda.VersionProps
 
+/**
+ * Properties for a new Lambda version.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * Version version = Version.Builder.create(this, "MyVersion")
+ * .lambda(fn)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VersionPropsDsl {
   private val cdkBuilder: VersionProps.Builder = VersionProps.builder()

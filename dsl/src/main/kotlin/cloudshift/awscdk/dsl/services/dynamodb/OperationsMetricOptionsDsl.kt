@@ -12,6 +12,27 @@ import software.amazon.awscdk.services.cloudwatch.Unit
 import software.amazon.awscdk.services.dynamodb.Operation
 import software.amazon.awscdk.services.dynamodb.OperationsMetricOptions
 
+/**
+ * Options for configuring metrics that considers multiple operations.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Table table = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
+ * .build();
+ * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
+ * .operations(List.of(Operation.PUT_ITEM))
+ * .period(Duration.minutes(1))
+ * .build());
+ * Alarm.Builder.create(this, "Alarm")
+ * .metric(metric)
+ * .evaluationPeriods(1)
+ * .threshold(1)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OperationsMetricOptionsDsl {
   private val cdkBuilder: OperationsMetricOptions.Builder = OperationsMetricOptions.builder()

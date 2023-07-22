@@ -11,6 +11,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.CfnManagedPolicyProps
 
+/**
+ * Properties for defining a `CfnManagedPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnManagedPolicyProps cfnManagedPolicyProps = CfnManagedPolicyProps.builder()
+ * .policyDocument(policyDocument)
+ * // the properties below are optional
+ * .description("description")
+ * .groups(List.of("groups"))
+ * .managedPolicyName("managedPolicyName")
+ * .path("path")
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html)
+ */
 @CdkDslMarker
 public class CfnManagedPolicyPropsDsl {
   private val cdkBuilder: CfnManagedPolicyProps.Builder = CfnManagedPolicyProps.builder()

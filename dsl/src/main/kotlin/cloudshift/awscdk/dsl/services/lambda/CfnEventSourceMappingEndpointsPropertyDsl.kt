@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * The list of bootstrap servers for your Kafka brokers in the following format:
+ * `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * EndpointsProperty endpointsProperty = EndpointsProperty.builder()
+ * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-endpoints.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingEndpointsPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.EndpointsProperty.Builder =

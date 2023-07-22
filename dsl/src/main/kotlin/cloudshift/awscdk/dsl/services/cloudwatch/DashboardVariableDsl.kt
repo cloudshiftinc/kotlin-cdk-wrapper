@@ -11,6 +11,35 @@ import software.amazon.awscdk.services.cloudwatch.Values
 import software.amazon.awscdk.services.cloudwatch.VariableInputType
 import software.amazon.awscdk.services.cloudwatch.VariableType
 
+/**
+ * Dashboard Variable.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
+ * .defaultInterval(Duration.days(7))
+ * .variables(List.of(DashboardVariable.Builder.create()
+ * .id("functionName")
+ * .type(VariableType.PATTERN)
+ * .label("Function")
+ * .inputType(VariableInputType.RADIO)
+ * .value("originalFuncNameInDashboard")
+ * // equivalent to cw.Values.fromSearch('{AWS/Lambda,FunctionName} MetricName=\"Duration\"',
+ * 'FunctionName')
+ * .values(Values.fromSearchComponents(SearchComponents.builder()
+ * .namespace("AWS/Lambda")
+ * .dimensions(List.of("FunctionName"))
+ * .metricName("Duration")
+ * .populateFrom("FunctionName")
+ * .build()))
+ * .defaultValue(DefaultValue.FIRST)
+ * .visible(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DashboardVariableDsl {
   private val cdkBuilder: DashboardVariable.Builder = DashboardVariable.Builder.create()

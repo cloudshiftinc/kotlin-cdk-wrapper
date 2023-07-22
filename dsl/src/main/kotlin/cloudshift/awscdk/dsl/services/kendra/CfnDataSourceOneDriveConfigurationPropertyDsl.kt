@@ -11,6 +11,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to OneDrive as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * OneDriveConfigurationProperty oneDriveConfigurationProperty =
+ * OneDriveConfigurationProperty.builder()
+ * .oneDriveUsers(OneDriveUsersProperty.builder()
+ * .oneDriveUserList(List.of("oneDriveUserList"))
+ * .oneDriveUserS3Path(S3PathProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .secretArn("secretArn")
+ * .tenantDomain("tenantDomain")
+ * // the properties below are optional
+ * .disableLocalGroups(false)
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceOneDriveConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.OneDriveConfigurationProperty.Builder =

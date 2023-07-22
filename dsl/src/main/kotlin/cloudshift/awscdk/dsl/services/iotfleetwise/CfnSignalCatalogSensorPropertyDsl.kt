@@ -9,6 +9,34 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * An input component that reports the environmental condition of a vehicle.
+ *
+ *
+ * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
+ * sensors.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * SensorProperty sensorProperty = SensorProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogSensorPropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.SensorProperty.Builder =

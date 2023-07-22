@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnWorkflow
 
+/**
+ * A workflow parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * WorkflowParameterProperty workflowParameterProperty = WorkflowParameterProperty.builder()
+ * .description("description")
+ * .optional(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowWorkflowParameterPropertyDsl {
   private val cdkBuilder: CfnWorkflow.WorkflowParameterProperty.Builder =

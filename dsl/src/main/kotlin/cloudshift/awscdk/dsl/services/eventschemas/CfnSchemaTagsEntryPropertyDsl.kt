@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.eventschemas.CfnSchema
 
+/**
+ * Tags to associate with the schema.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * TagsEntryProperty tagsEntryProperty = TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-schema-tagsentry.html)
+ */
 @CdkDslMarker
 public class CfnSchemaTagsEntryPropertyDsl {
   private val cdkBuilder: CfnSchema.TagsEntryProperty.Builder =

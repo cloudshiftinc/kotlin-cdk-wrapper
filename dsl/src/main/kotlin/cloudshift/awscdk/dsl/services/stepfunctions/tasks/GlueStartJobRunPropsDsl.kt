@@ -17,6 +17,21 @@ import software.amazon.awscdk.services.stepfunctions.TaskInput
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRunProps
 
+/**
+ * Properties for starting an AWS Glue job as a task.
+ *
+ * Example:
+ *
+ * ```
+ * GlueStartJobRun.Builder.create(this, "Task")
+ * .glueJobName("my-glue-job")
+ * .arguments(TaskInput.fromObject(Map.of(
+ * "key", "value")))
+ * .taskTimeout(Timeout.duration(Duration.minutes(30)))
+ * .notifyDelayAfter(Duration.minutes(5))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GlueStartJobRunPropsDsl {
   private val cdkBuilder: GlueStartJobRunProps.Builder = GlueStartJobRunProps.builder()

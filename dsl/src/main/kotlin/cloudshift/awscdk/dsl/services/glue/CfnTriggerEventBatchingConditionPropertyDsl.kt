@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.glue.CfnTrigger
 
+/**
+ * Batch condition that must be met (specified number of events received or batch time window
+ * expired) before EventBridge event trigger fires.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * EventBatchingConditionProperty eventBatchingConditionProperty =
+ * EventBatchingConditionProperty.builder()
+ * .batchSize(123)
+ * // the properties below are optional
+ * .batchWindow(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-eventbatchingcondition.html)
+ */
 @CdkDslMarker
 public class CfnTriggerEventBatchingConditionPropertyDsl {
   private val cdkBuilder: CfnTrigger.EventBatchingConditionProperty.Builder =

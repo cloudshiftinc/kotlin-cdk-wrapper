@@ -10,6 +10,23 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.iam.ServicePrincipalOpts
 
+/**
+ * Options for a service principal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object conditions;
+ * ServicePrincipalOpts servicePrincipalOpts = ServicePrincipalOpts.builder()
+ * .conditions(Map.of(
+ * "conditionsKey", conditions))
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServicePrincipalOptsDsl {
   private val cdkBuilder: ServicePrincipalOpts.Builder = ServicePrincipalOpts.builder()

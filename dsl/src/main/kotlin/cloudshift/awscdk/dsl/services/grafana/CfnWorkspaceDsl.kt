@@ -10,6 +10,68 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 import software.constructs.Construct
 
+/**
+ * Specifies a *workspace* .
+ *
+ * In a workspace, you can create Grafana dashboards and visualizations to analyze your metrics,
+ * logs, and traces. You don't have to build, package, or deploy any hardware to run the Grafana
+ * server.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * CfnWorkspace cfnWorkspace = CfnWorkspace.Builder.create(this, "MyCfnWorkspace")
+ * .accountAccessType("accountAccessType")
+ * .authenticationProviders(List.of("authenticationProviders"))
+ * .permissionType("permissionType")
+ * // the properties below are optional
+ * .clientToken("clientToken")
+ * .dataSources(List.of("dataSources"))
+ * .description("description")
+ * .grafanaVersion("grafanaVersion")
+ * .name("name")
+ * .networkAccessControl(NetworkAccessControlProperty.builder()
+ * .prefixListIds(List.of("prefixListIds"))
+ * .vpceIds(List.of("vpceIds"))
+ * .build())
+ * .notificationDestinations(List.of("notificationDestinations"))
+ * .organizationalUnits(List.of("organizationalUnits"))
+ * .organizationRoleName("organizationRoleName")
+ * .roleArn("roleArn")
+ * .samlConfiguration(SamlConfigurationProperty.builder()
+ * .idpMetadata(IdpMetadataProperty.builder()
+ * .url("url")
+ * .xml("xml")
+ * .build())
+ * // the properties below are optional
+ * .allowedOrganizations(List.of("allowedOrganizations"))
+ * .assertionAttributes(AssertionAttributesProperty.builder()
+ * .email("email")
+ * .groups("groups")
+ * .login("login")
+ * .name("name")
+ * .org("org")
+ * .role("role")
+ * .build())
+ * .loginValidityDuration(123)
+ * .roleValues(RoleValuesProperty.builder()
+ * .admin(List.of("admin"))
+ * .editor(List.of("editor"))
+ * .build())
+ * .build())
+ * .stackSetName("stackSetName")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-grafana-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceDsl(
   scope: Construct,

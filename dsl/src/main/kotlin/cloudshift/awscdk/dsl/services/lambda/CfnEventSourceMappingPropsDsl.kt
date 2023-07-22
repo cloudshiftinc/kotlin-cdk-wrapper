@@ -13,6 +13,70 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 import software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps
 
+/**
+ * Properties for defining a `CfnEventSourceMapping`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnEventSourceMappingProps cfnEventSourceMappingProps = CfnEventSourceMappingProps.builder()
+ * .functionName("functionName")
+ * // the properties below are optional
+ * .amazonManagedKafkaEventSourceConfig(AmazonManagedKafkaEventSourceConfigProperty.builder()
+ * .consumerGroupId("consumerGroupId")
+ * .build())
+ * .batchSize(123)
+ * .bisectBatchOnFunctionError(false)
+ * .destinationConfig(DestinationConfigProperty.builder()
+ * .onFailure(OnFailureProperty.builder()
+ * .destination("destination")
+ * .build())
+ * .build())
+ * .documentDbEventSourceConfig(DocumentDBEventSourceConfigProperty.builder()
+ * .collectionName("collectionName")
+ * .databaseName("databaseName")
+ * .fullDocument("fullDocument")
+ * .build())
+ * .enabled(false)
+ * .eventSourceArn("eventSourceArn")
+ * .filterCriteria(FilterCriteriaProperty.builder()
+ * .filters(List.of(FilterProperty.builder()
+ * .pattern("pattern")
+ * .build()))
+ * .build())
+ * .functionResponseTypes(List.of("functionResponseTypes"))
+ * .maximumBatchingWindowInSeconds(123)
+ * .maximumRecordAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .parallelizationFactor(123)
+ * .queues(List.of("queues"))
+ * .scalingConfig(ScalingConfigProperty.builder()
+ * .maximumConcurrency(123)
+ * .build())
+ * .selfManagedEventSource(SelfManagedEventSourceProperty.builder()
+ * .endpoints(EndpointsProperty.builder()
+ * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+ * .build())
+ * .build())
+ * .selfManagedKafkaEventSourceConfig(SelfManagedKafkaEventSourceConfigProperty.builder()
+ * .consumerGroupId("consumerGroupId")
+ * .build())
+ * .sourceAccessConfigurations(List.of(SourceAccessConfigurationProperty.builder()
+ * .type("type")
+ * .uri("uri")
+ * .build()))
+ * .startingPosition("startingPosition")
+ * .startingPositionTimestamp(123)
+ * .topics(List.of("topics"))
+ * .tumblingWindowInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingPropsDsl {
   private val cdkBuilder: CfnEventSourceMappingProps.Builder = CfnEventSourceMappingProps.builder()

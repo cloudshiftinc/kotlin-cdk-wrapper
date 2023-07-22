@@ -7,6 +7,26 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnRoute
 import software.amazon.awscdk.services.appmesh.QueryParameterMatchConfig
 
+/**
+ * Configuration for `QueryParameterMatch`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * QueryParameterMatchConfig queryParameterMatchConfig = QueryParameterMatchConfig.builder()
+ * .queryParameterMatch(QueryParameterProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .match(HttpQueryParameterMatchProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueryParameterMatchConfigDsl {
   private val cdkBuilder: QueryParameterMatchConfig.Builder = QueryParameterMatchConfig.builder()

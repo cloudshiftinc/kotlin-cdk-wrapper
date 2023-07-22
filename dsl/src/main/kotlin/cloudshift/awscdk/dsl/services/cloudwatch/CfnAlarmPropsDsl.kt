@@ -12,6 +12,68 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAlarmProps
 
+/**
+ * Properties for defining a `CfnAlarm`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnAlarmProps cfnAlarmProps = CfnAlarmProps.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .evaluationPeriods(123)
+ * // the properties below are optional
+ * .actionsEnabled(false)
+ * .alarmActions(List.of("alarmActions"))
+ * .alarmDescription("alarmDescription")
+ * .alarmName("alarmName")
+ * .datapointsToAlarm(123)
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .evaluateLowSampleCountPercentile("evaluateLowSampleCountPercentile")
+ * .extendedStatistic("extendedStatistic")
+ * .insufficientDataActions(List.of("insufficientDataActions"))
+ * .metricName("metricName")
+ * .metrics(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build()))
+ * .namespace("namespace")
+ * .okActions(List.of("okActions"))
+ * .period(123)
+ * .statistic("statistic")
+ * .threshold(123)
+ * .thresholdMetricId("thresholdMetricId")
+ * .treatMissingData("treatMissingData")
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html)
+ */
 @CdkDslMarker
 public class CfnAlarmPropsDsl {
   private val cdkBuilder: CfnAlarmProps.Builder = CfnAlarmProps.builder()

@@ -8,6 +8,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The profile properties required by the custom connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * CustomConnectorProfilePropertiesProperty customConnectorProfilePropertiesProperty =
+ * CustomConnectorProfilePropertiesProperty.builder()
+ * .oAuth2Properties(OAuth2PropertiesProperty.builder()
+ * .oAuth2GrantType("oAuth2GrantType")
+ * .tokenUrl("tokenUrl")
+ * .tokenUrlCustomProperties(Map.of(
+ * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
+ * .build())
+ * .profileProperties(Map.of(
+ * "profilePropertiesKey", "profileProperties"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofileproperties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileCustomConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.CustomConnectorProfilePropertiesProperty.Builder =

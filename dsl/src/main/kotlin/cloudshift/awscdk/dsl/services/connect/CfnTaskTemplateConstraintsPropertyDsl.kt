@@ -9,6 +9,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 
+/**
+ * Describes constraints that apply to the template fields.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * ConstraintsProperty constraintsProperty = ConstraintsProperty.builder()
+ * .invisibleFields(List.of(InvisibleFieldInfoProperty.builder()
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .readOnlyFields(List.of(ReadOnlyFieldInfoProperty.builder()
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .requiredFields(List.of(RequiredFieldInfoProperty.builder()
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-constraints.html)
+ */
 @CdkDslMarker
 public class CfnTaskTemplateConstraintsPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.ConstraintsProperty.Builder =

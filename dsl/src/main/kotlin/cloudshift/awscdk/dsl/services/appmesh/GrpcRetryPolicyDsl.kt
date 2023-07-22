@@ -12,6 +12,32 @@ import software.amazon.awscdk.services.appmesh.GrpcRetryPolicy
 import software.amazon.awscdk.services.appmesh.HttpRetryEvent
 import software.amazon.awscdk.services.appmesh.TcpRetryEvent
 
+/**
+ * gRPC retry policy.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-grpc-retry", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.grpc(GrpcRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder().virtualNode(node).build()))
+ * .match(GrpcRouteMatch.builder().serviceName("servicename").build())
+ * .retryPolicy(GrpcRetryPolicy.builder()
+ * .tcpRetryEvents(List.of(TcpRetryEvent.CONNECTION_ERROR))
+ * .httpRetryEvents(List.of(HttpRetryEvent.GATEWAY_ERROR))
+ * // Retry if gRPC responds that the request was cancelled, a resource
+ * // was exhausted, or if the service is unavailable
+ * .grpcRetryEvents(List.of(GrpcRetryEvent.CANCELLED, GrpcRetryEvent.RESOURCE_EXHAUSTED,
+ * GrpcRetryEvent.UNAVAILABLE))
+ * .retryAttempts(5)
+ * .retryTimeout(Duration.seconds(1))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcRetryPolicyDsl {
   private val cdkBuilder: GrpcRetryPolicy.Builder = GrpcRetryPolicy.builder()

@@ -14,6 +14,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps
 
+/**
+ * Properties for defining a `CfnMaintenanceWindow`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnMaintenanceWindowProps cfnMaintenanceWindowProps = CfnMaintenanceWindowProps.builder()
+ * .allowUnassociatedTargets(false)
+ * .cutoff(123)
+ * .duration(123)
+ * .name("name")
+ * .schedule("schedule")
+ * // the properties below are optional
+ * .description("description")
+ * .endDate("endDate")
+ * .scheduleOffset(123)
+ * .scheduleTimezone("scheduleTimezone")
+ * .startDate("startDate")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowPropsDsl {
   private val cdkBuilder: CfnMaintenanceWindowProps.Builder = CfnMaintenanceWindowProps.builder()

@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
 import software.constructs.Construct
 
+/**
+ * Creates a core network Connect peer for a specified core network connect attachment between a
+ * core network and an appliance.
+ *
+ * The peer address and transit gateway address must be the same IP address family (IPv4 or IPv6).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnConnectPeer cfnConnectPeer = CfnConnectPeer.Builder.create(this, "MyCfnConnectPeer")
+ * .connectAttachmentId("connectAttachmentId")
+ * .peerAddress("peerAddress")
+ * // the properties below are optional
+ * .bgpOptions(BgpOptionsProperty.builder()
+ * .peerAsn(123)
+ * .build())
+ * .coreNetworkAddress("coreNetworkAddress")
+ * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectpeer.html)
+ */
 @CdkDslMarker
 public class CfnConnectPeerDsl(
   scope: Construct,

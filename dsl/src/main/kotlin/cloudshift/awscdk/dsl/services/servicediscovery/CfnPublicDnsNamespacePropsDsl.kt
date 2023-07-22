@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespaceProps
 
+/**
+ * Properties for defining a `CfnPublicDnsNamespace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * CfnPublicDnsNamespaceProps cfnPublicDnsNamespaceProps = CfnPublicDnsNamespaceProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .properties(PropertiesProperty.builder()
+ * .dnsProperties(PublicDnsPropertiesMutableProperty.builder()
+ * .soa(SOAProperty.builder()
+ * .ttl(123)
+ * .build())
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnPublicDnsNamespacePropsDsl {
   private val cdkBuilder: CfnPublicDnsNamespaceProps.Builder = CfnPublicDnsNamespaceProps.builder()

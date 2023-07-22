@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnCustomMetricProps
 
+/**
+ * Properties for defining a `CfnCustomMetric`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCustomMetricProps cfnCustomMetricProps = CfnCustomMetricProps.builder()
+ * .metricType("metricType")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .metricName("metricName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html)
+ */
 @CdkDslMarker
 public class CfnCustomMetricPropsDsl {
   private val cdkBuilder: CfnCustomMetricProps.Builder = CfnCustomMetricProps.builder()

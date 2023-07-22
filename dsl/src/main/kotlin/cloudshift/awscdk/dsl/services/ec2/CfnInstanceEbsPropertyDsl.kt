@@ -9,6 +9,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies a block device for an EBS volume.
+ *
+ * `Ebs` is a property of the [Amazon EC2
+ * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-blockdev-mapping.html)
+ * property.
+ *
+ *
+ * After the instance is running, you can modify only the `DeleteOnTermination` parameters for the
+ * attached volumes without interrupting the instance. Modifying any other parameter results in
+ * instance
+ * [replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EbsProperty ebsProperty = EbsProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ebs.html)
+ */
 @CdkDslMarker
 public class CfnInstanceEbsPropertyDsl {
   private val cdkBuilder: CfnInstance.EbsProperty.Builder = CfnInstance.EbsProperty.builder()

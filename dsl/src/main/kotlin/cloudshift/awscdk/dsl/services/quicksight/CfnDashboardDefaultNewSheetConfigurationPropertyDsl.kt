@@ -7,6 +7,57 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration for default new sheet settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DefaultNewSheetConfigurationProperty defaultNewSheetConfigurationProperty =
+ * DefaultNewSheetConfigurationProperty.builder()
+ * .interactiveLayoutConfiguration(DefaultInteractiveLayoutConfigurationProperty.builder()
+ * .freeForm(DefaultFreeFormLayoutConfigurationProperty.builder()
+ * .canvasSizeOptions(FreeFormLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(FreeFormLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build())
+ * .grid(DefaultGridLayoutConfigurationProperty.builder()
+ * .canvasSizeOptions(GridLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(GridLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .resizeOption("resizeOption")
+ * // the properties below are optional
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .paginatedLayoutConfiguration(DefaultPaginatedLayoutConfigurationProperty.builder()
+ * .sectionBased(DefaultSectionBasedLayoutConfigurationProperty.builder()
+ * .canvasSizeOptions(SectionBasedLayoutCanvasSizeOptionsProperty.builder()
+ * .paperCanvasSizeOptions(SectionBasedLayoutPaperCanvasSizeOptionsProperty.builder()
+ * .paperMargin(SpacingProperty.builder()
+ * .bottom("bottom")
+ * .left("left")
+ * .right("right")
+ * .top("top")
+ * .build())
+ * .paperOrientation("paperOrientation")
+ * .paperSize("paperSize")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .sheetContentType("sheetContentType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-defaultnewsheetconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDefaultNewSheetConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.DefaultNewSheetConfigurationProperty.Builder =

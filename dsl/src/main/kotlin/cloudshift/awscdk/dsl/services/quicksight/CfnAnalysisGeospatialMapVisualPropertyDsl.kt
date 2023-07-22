@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A geospatial map or a points on map visual.
+ *
+ * For more information, see [Creating point
+ * maps](https://docs.aws.amazon.com/quicksight/latest/user/point-maps.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-geospatialmapvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisGeospatialMapVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialMapVisualProperty.Builder =

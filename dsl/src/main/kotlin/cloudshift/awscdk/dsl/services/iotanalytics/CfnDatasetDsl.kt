@@ -14,6 +14,113 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 import software.constructs.Construct
 
+/**
+ * The AWS::IoTAnalytics::Dataset resource stores data retrieved from a data store by applying a
+ * `queryAction` (an SQL query) or a `containerAction` (executing a containerized application).
+ *
+ * The data set can be populated manually by calling `CreateDatasetContent` or automatically
+ * according to a `trigger` you specify. For more information, see [How to Use AWS IoT
+ * Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how)
+ * in the *AWS IoT Analytics User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * CfnDataset cfnDataset = CfnDataset.Builder.create(this, "MyCfnDataset")
+ * .actions(List.of(ActionProperty.builder()
+ * .actionName("actionName")
+ * // the properties below are optional
+ * .containerAction(ContainerActionProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .image("image")
+ * .resourceConfiguration(ResourceConfigurationProperty.builder()
+ * .computeType("computeType")
+ * .volumeSizeInGb(123)
+ * .build())
+ * // the properties below are optional
+ * .variables(List.of(VariableProperty.builder()
+ * .variableName("variableName")
+ * // the properties below are optional
+ * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+ * .datasetName("datasetName")
+ * .build())
+ * .doubleValue(123)
+ * .outputFileUriValue(OutputFileUriValueProperty.builder()
+ * .fileName("fileName")
+ * .build())
+ * .stringValue("stringValue")
+ * .build()))
+ * .build())
+ * .queryAction(QueryActionProperty.builder()
+ * .sqlQuery("sqlQuery")
+ * // the properties below are optional
+ * .filters(List.of(FilterProperty.builder()
+ * .deltaTime(DeltaTimeProperty.builder()
+ * .offsetSeconds(123)
+ * .timeExpression("timeExpression")
+ * .build())
+ * .build()))
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .contentDeliveryRules(List.of(DatasetContentDeliveryRuleProperty.builder()
+ * .destination(DatasetContentDeliveryRuleDestinationProperty.builder()
+ * .iotEventsDestinationConfiguration(IotEventsDestinationConfigurationProperty.builder()
+ * .inputName("inputName")
+ * .roleArn("roleArn")
+ * .build())
+ * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .glueConfiguration(GlueConfigurationProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .entryName("entryName")
+ * .build()))
+ * .datasetName("datasetName")
+ * .lateDataRules(List.of(LateDataRuleProperty.builder()
+ * .ruleConfiguration(LateDataRuleConfigurationProperty.builder()
+ * .deltaTimeSessionWindowConfiguration(DeltaTimeSessionWindowConfigurationProperty.builder()
+ * .timeoutInMinutes(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .ruleName("ruleName")
+ * .build()))
+ * .retentionPeriod(RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .triggers(List.of(TriggerProperty.builder()
+ * .schedule(ScheduleProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .triggeringDataset(TriggeringDatasetProperty.builder()
+ * .datasetName("datasetName")
+ * .build())
+ * .build()))
+ * .versioningConfiguration(VersioningConfigurationProperty.builder()
+ * .maxVersions(123)
+ * .unlimited(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDsl(
   scope: Construct,

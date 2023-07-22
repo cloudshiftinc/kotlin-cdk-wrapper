@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion
 import software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps
 
+/**
+ * Properties for defining a `CfnApplicationVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnApplicationVersionProps cfnApplicationVersionProps = CfnApplicationVersionProps.builder()
+ * .applicationName("applicationName")
+ * .sourceBundle(SourceBundleProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-applicationversion.html)
+ */
 @CdkDslMarker
 public class CfnApplicationVersionPropsDsl {
   private val cdkBuilder: CfnApplicationVersionProps.Builder = CfnApplicationVersionProps.builder()

@@ -16,6 +16,84 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnApi
 import software.amazon.awscdk.services.sam.CfnApiProps
 
+/**
+ * Properties for defining a `CfnApi`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object authorizers;
+ * Object definitionBody;
+ * Object gatewayResponses;
+ * Object methodSettings;
+ * Object models;
+ * CfnApiProps cfnApiProps = CfnApiProps.builder()
+ * .stageName("stageName")
+ * // the properties below are optional
+ * .accessLogSetting(AccessLogSettingProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .auth(AuthProperty.builder()
+ * .addDefaultAuthorizerToCorsPreflight(false)
+ * .authorizers(authorizers)
+ * .defaultAuthorizer("defaultAuthorizer")
+ * .build())
+ * .binaryMediaTypes(List.of("binaryMediaTypes"))
+ * .cacheClusterEnabled(false)
+ * .cacheClusterSize("cacheClusterSize")
+ * .canarySetting(CanarySettingProperty.builder()
+ * .deploymentId("deploymentId")
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build())
+ * .cors("cors")
+ * .definitionBody(definitionBody)
+ * .definitionUri("definitionUri")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .domain(DomainConfigurationProperty.builder()
+ * .certificateArn("certificateArn")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath(List.of("basePath"))
+ * .endpointConfiguration("endpointConfiguration")
+ * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion("truststoreVersion")
+ * .build())
+ * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+ * .route53(Route53ConfigurationProperty.builder()
+ * .distributedDomainName("distributedDomainName")
+ * .evaluateTargetHealth(false)
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .ipV6(false)
+ * .build())
+ * .securityPolicy("securityPolicy")
+ * .build())
+ * .endpointConfiguration("endpointConfiguration")
+ * .gatewayResponses(gatewayResponses)
+ * .methodSettings(List.of(methodSettings))
+ * .minimumCompressionSize(123)
+ * .models(models)
+ * .name("name")
+ * .openApiVersion("openApiVersion")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .tracingEnabled(false)
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-api.html)
+ */
 @CdkDslMarker
 public class CfnApiPropsDsl {
   private val cdkBuilder: CfnApiProps.Builder = CfnApiProps.builder()

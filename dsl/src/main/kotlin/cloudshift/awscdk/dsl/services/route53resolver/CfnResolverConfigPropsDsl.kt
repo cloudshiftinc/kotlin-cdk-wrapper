@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnResolverConfigProps
 
+/**
+ * Properties for defining a `CfnResolverConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverConfigProps cfnResolverConfigProps = CfnResolverConfigProps.builder()
+ * .autodefinedReverseFlag("autodefinedReverseFlag")
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html)
+ */
 @CdkDslMarker
 public class CfnResolverConfigPropsDsl {
   private val cdkBuilder: CfnResolverConfigProps.Builder = CfnResolverConfigProps.builder()

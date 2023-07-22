@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.codebuild.ReportGroupType
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * The ReportGroup resource class.
+ *
+ * Example:
+ *
+ * ```
+ * Source source;
+ * // create a new ReportGroup
+ * ReportGroup reportGroup = new ReportGroup(this, "ReportGroup");
+ * Project project = Project.Builder.create(this, "Project")
+ * .source(source)
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * // ...
+ * "reports", Map.of(
+ * reportGroup.getReportGroupArn(), Map.of(
+ * "files", "**&#47;*",
+ * "base-directory", "build/test-results")))))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReportGroupDsl(
   scope: Construct,

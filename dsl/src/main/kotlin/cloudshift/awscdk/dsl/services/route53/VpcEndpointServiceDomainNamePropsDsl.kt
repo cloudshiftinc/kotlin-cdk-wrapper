@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.ec2.IVpcEndpointService
 import software.amazon.awscdk.services.route53.IPublicHostedZone
 import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps
 
+/**
+ * Properties to configure a VPC Endpoint Service domain name.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.route53.HostedZone;
+ * import software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName;
+ * HostedZone zone;
+ * VpcEndpointService vpces;
+ * VpcEndpointServiceDomainName.Builder.create(this, "EndpointDomain")
+ * .endpointService(vpces)
+ * .domainName("my-stuff.aws-cdk.dev")
+ * .publicHostedZone(zone)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcEndpointServiceDomainNamePropsDsl {
   private val cdkBuilder: VpcEndpointServiceDomainNameProps.Builder =

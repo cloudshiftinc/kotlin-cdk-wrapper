@@ -34,6 +34,21 @@ import software.amazon.awscdk.services.rds.NetworkType
 import software.amazon.awscdk.services.rds.SnapshotCredentials
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Properties for `DatabaseClusterFromSnapshot`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseClusterFromSnapshot.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.aurora(AuroraClusterEngineProps.builder().version(AuroraEngineVersion.VER_1_22_2).build()))
+ * .writer(ClusterInstance.provisioned("writer"))
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterFromSnapshotPropsDsl {
   private val cdkBuilder: DatabaseClusterFromSnapshotProps.Builder =

@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps
 
+/**
+ * Properties for defining a `CfnServiceNetworkServiceAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnServiceNetworkServiceAssociationProps cfnServiceNetworkServiceAssociationProps =
+ * CfnServiceNetworkServiceAssociationProps.builder()
+ * .dnsEntry(DnsEntryProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneId("hostedZoneId")
+ * .build())
+ * .serviceIdentifier("serviceIdentifier")
+ * .serviceNetworkIdentifier("serviceNetworkIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkServiceAssociationPropsDsl {
   private val cdkBuilder: CfnServiceNetworkServiceAssociationProps.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object that represents the path to rewrite.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpGatewayRoutePathRewriteProperty httpGatewayRoutePathRewriteProperty =
+ * HttpGatewayRoutePathRewriteProperty.builder()
+ * .exact("exact")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutepathrewrite.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRoutePathRewritePropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Builder =

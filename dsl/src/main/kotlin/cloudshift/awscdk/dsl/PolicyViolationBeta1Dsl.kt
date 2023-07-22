@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.PolicyViolatingResourceBeta1
 import software.amazon.awscdk.PolicyViolationBeta1
 
+/**
+ * Violation produced by the validation plugin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * PolicyViolationBeta1 policyViolationBeta1 = PolicyViolationBeta1.builder()
+ * .description("description")
+ * .ruleName("ruleName")
+ * .violatingResources(List.of(PolicyViolatingResourceBeta1.builder()
+ * .locations(List.of("locations"))
+ * .resourceLogicalId("resourceLogicalId")
+ * .templatePath("templatePath")
+ * .build()))
+ * // the properties below are optional
+ * .fix("fix")
+ * .ruleMetadata(Map.of(
+ * "ruleMetadataKey", "ruleMetadata"))
+ * .severity("severity")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PolicyViolationBeta1Dsl {
   private val cdkBuilder: PolicyViolationBeta1.Builder = PolicyViolationBeta1.builder()

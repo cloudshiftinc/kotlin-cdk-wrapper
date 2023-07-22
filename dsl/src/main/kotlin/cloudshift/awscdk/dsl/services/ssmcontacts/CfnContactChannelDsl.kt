@@ -9,6 +9,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnContactChannel
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSMContacts::ContactChannel` resource specifies a contact channel as the method that
+ * Incident Manager uses to engage your contact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnContactChannel cfnContactChannel = CfnContactChannel.Builder.create(this,
+ * "MyCfnContactChannel")
+ * .channelAddress("channelAddress")
+ * .channelName("channelName")
+ * .channelType("channelType")
+ * .contactId("contactId")
+ * // the properties below are optional
+ * .deferActivation(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contactchannel.html)
+ */
 @CdkDslMarker
 public class CfnContactChannelDsl(
   scope: Construct,

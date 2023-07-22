@@ -7,6 +7,28 @@ import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnTrackerProps
 
+/**
+ * Properties for defining a `CfnTracker`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnTrackerProps cfnTrackerProps = CfnTrackerProps.builder()
+ * .trackerName("trackerName")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .positionFiltering("positionFiltering")
+ * .pricingPlan("pricingPlan")
+ * .pricingPlanDataSource("pricingPlanDataSource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)
+ */
 @CdkDslMarker
 public class CfnTrackerPropsDsl {
   private val cdkBuilder: CfnTrackerProps.Builder = CfnTrackerProps.builder()

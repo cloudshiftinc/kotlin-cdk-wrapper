@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration for how much storage a user or group can use on the volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * UserAndGroupQuotasProperty userAndGroupQuotasProperty = UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-userandgroupquotas.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemUserAndGroupQuotasPropertyDsl {
   private val cdkBuilder: CfnFileSystem.UserAndGroupQuotasProperty.Builder =

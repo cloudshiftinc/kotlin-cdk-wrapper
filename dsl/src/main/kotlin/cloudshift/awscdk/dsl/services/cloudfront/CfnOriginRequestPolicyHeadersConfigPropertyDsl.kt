@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
 
+/**
+ * An object that determines whether any HTTP headers (and if so, which headers) are included in
+ * requests that CloudFront sends to the origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * HeadersConfigProperty headersConfigProperty = HeadersConfigProperty.builder()
+ * .headerBehavior("headerBehavior")
+ * // the properties below are optional
+ * .headers(List.of("headers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-headersconfig.html)
+ */
 @CdkDslMarker
 public class CfnOriginRequestPolicyHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnOriginRequestPolicy.HeadersConfigProperty.Builder =

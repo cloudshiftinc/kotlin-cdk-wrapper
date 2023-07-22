@@ -8,6 +8,77 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The table cell style for a cell in pivot table or table visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TableCellStyleProperty tableCellStyleProperty = TableCellStyleProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .border(GlobalTableBorderOptionsProperty.builder()
+ * .sideSpecificBorder(TableSideBorderOptionsProperty.builder()
+ * .bottom(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .innerHorizontal(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .innerVertical(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .left(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .right(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .top(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .build())
+ * .uniformBorder(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .build())
+ * .fontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .height(123)
+ * .horizontalTextAlignment("horizontalTextAlignment")
+ * .textWrap("textWrap")
+ * .verticalTextAlignment("verticalTextAlignment")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablecellstyle.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisTableCellStylePropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableCellStyleProperty.Builder =

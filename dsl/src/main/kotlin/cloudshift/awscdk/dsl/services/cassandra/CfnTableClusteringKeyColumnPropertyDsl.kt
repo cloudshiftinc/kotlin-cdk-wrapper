@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cassandra.CfnTable
 
+/**
+ * Defines an individual column within the clustering key.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * ClusteringKeyColumnProperty clusteringKeyColumnProperty = ClusteringKeyColumnProperty.builder()
+ * .column(ColumnProperty.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build())
+ * // the properties below are optional
+ * .orderBy("orderBy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-clusteringkeycolumn.html)
+ */
 @CdkDslMarker
 public class CfnTableClusteringKeyColumnPropertyDsl {
   private val cdkBuilder: CfnTable.ClusteringKeyColumnProperty.Builder =

@@ -7,6 +7,30 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 import software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig
 
+/**
+ * All Properties for TLS Validation Trusts for both Client Policy and Listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TlsValidationTrustConfig tlsValidationTrustConfig = TlsValidationTrustConfig.builder()
+ * .tlsValidationTrust(TlsValidationContextTrustProperty.builder()
+ * .acm(TlsValidationContextAcmTrustProperty.builder()
+ * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+ * .build())
+ * .file(TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TlsValidationTrustConfigDsl {
   private val cdkBuilder: TlsValidationTrustConfig.Builder = TlsValidationTrustConfig.builder()

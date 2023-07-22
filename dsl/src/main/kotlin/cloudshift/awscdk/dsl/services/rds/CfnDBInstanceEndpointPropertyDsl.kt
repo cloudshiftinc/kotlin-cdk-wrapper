@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.CfnDBInstance
 
+/**
+ * This data type represents the information you need to connect to an Amazon RDS DB instance.
+ *
+ * This data type is used as a response element in the following actions:
+ *
+ * * `CreateDBInstance`
+ * * `DescribeDBInstances`
+ * * `DeleteDBInstance`
+ *
+ * For the data structure that represents Amazon Aurora DB cluster endpoints, see
+ * `DBClusterEndpoint` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * EndpointProperty endpointProperty = EndpointProperty.builder()
+ * .address("address")
+ * .hostedZoneId("hostedZoneId")
+ * .port("port")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnDBInstanceEndpointPropertyDsl {
   private val cdkBuilder: CfnDBInstance.EndpointProperty.Builder =

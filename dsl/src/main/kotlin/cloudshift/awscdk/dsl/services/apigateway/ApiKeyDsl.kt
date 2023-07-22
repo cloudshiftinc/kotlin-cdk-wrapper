@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.constructs.Construct
 
+/**
+ * An API Gateway ApiKey.
+ *
+ * An ApiKey can be distributed to API clients that are executing requests
+ * for Method resources that require an Api Key.
+ *
+ * Example:
+ *
+ * ```
+ * IApiKey importedKey = ApiKey.fromApiKeyId(this, "imported-key", "&lt;api-key-id&gt;");
+ * ```
+ */
 @CdkDslMarker
 public class ApiKeyDsl(
   scope: Construct,

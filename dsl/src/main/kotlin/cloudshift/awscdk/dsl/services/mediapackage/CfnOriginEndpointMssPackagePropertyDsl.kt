@@ -7,6 +7,42 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 
+/**
+ * Parameters for Microsoft Smooth Streaming packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * MssPackageProperty mssPackageProperty = MssPackageProperty.builder()
+ * .encryption(MssEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .manifestWindowSeconds(123)
+ * .segmentDurationSeconds(123)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-msspackage.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointMssPackagePropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.MssPackageProperty.Builder =

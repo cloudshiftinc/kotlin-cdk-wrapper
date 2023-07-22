@@ -10,6 +10,33 @@ import software.amazon.awscdk.services.events.HttpMethod
 import software.amazon.awscdk.services.events.HttpParameter
 import software.amazon.awscdk.services.events.OAuthAuthorizationProps
 
+/**
+ * Properties for `Authorization.oauth()`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.*;
+ * HttpParameter httpParameter;
+ * SecretValue secretValue;
+ * OAuthAuthorizationProps oAuthAuthorizationProps = OAuthAuthorizationProps.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .clientSecret(secretValue)
+ * .httpMethod(HttpMethod.POST)
+ * // the properties below are optional
+ * .bodyParameters(Map.of(
+ * "bodyParametersKey", httpParameter))
+ * .headerParameters(Map.of(
+ * "headerParametersKey", httpParameter))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", httpParameter))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OAuthAuthorizationPropsDsl {
   private val cdkBuilder: OAuthAuthorizationProps.Builder = OAuthAuthorizationProps.builder()

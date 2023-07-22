@@ -14,6 +14,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnAsset
 import software.constructs.Construct
 
+/**
+ * Creates an asset to ingest VOD content.
+ *
+ * After it's created, the asset starts ingesting content and generates playback URLs for the
+ * packaging configurations associated with it. When ingest is complete, downstream devices use the
+ * appropriate URL to request VOD content from AWS Elemental MediaPackage .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnAsset cfnAsset = CfnAsset.Builder.create(this, "MyCfnAsset")
+ * .id("id")
+ * .packagingGroupId("packagingGroupId")
+ * .sourceArn("sourceArn")
+ * .sourceRoleArn("sourceRoleArn")
+ * // the properties below are optional
+ * .egressEndpoints(List.of(EgressEndpointProperty.builder()
+ * .packagingConfigurationId("packagingConfigurationId")
+ * .url("url")
+ * .build()))
+ * .resourceId("resourceId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)
+ */
 @CdkDslMarker
 public class CfnAssetDsl(
   scope: Construct,

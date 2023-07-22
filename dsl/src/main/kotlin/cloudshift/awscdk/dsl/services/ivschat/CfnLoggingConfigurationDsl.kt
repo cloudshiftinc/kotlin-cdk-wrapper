@@ -13,6 +13,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVSChat::LoggingConfiguration` resource specifies an  logging configuration that allows
+ * clients to store and record sent messages.
+ *
+ * For more information, see
+ * [CreateLoggingConfiguration](https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_CreateLoggingConfiguration.html)
+ * in the *Amazon Interactive Video Service Chat API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * CfnLoggingConfiguration cfnLoggingConfiguration = CfnLoggingConfiguration.Builder.create(this,
+ * "MyCfnLoggingConfiguration")
+ * .destinationConfiguration(DestinationConfigurationProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsDestinationConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .firehose(FirehoseDestinationConfigurationProperty.builder()
+ * .deliveryStreamName("deliveryStreamName")
+ * .build())
+ * .s3(S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationDsl(
   scope: Construct,

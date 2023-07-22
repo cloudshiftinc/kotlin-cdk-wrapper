@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * Details about delivering logs to Amazon S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * S3LogDeliveryProperty s3LogDeliveryProperty = S3LogDeliveryProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-s3logdelivery.html)
+ */
 @CdkDslMarker
 public class CfnConnectorS3LogDeliveryPropertyDsl {
   private val cdkBuilder: CfnConnector.S3LogDeliveryProperty.Builder =

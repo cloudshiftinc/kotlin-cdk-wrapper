@@ -8,6 +8,41 @@ import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersion
 import software.constructs.Construct
 
+/**
+ * Create a new configuration in the AWS AppConfig hosted configuration store.
+ *
+ * Configurations must be 1 MB or smaller. The AWS AppConfig hosted configuration store provides the
+ * following benefits over other configuration store options.
+ *
+ * * You don't need to set up and configure other services such as Amazon Simple Storage Service (
+ * Amazon S3 ) or Parameter Store.
+ * * You don't need to configure AWS Identity and Access Management ( IAM ) permissions to use the
+ * configuration store.
+ * * You can store configurations in any content type.
+ * * There is no cost to use the store.
+ * * You can create a configuration and add it to the store when you create a configuration profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnHostedConfigurationVersion cfnHostedConfigurationVersion =
+ * CfnHostedConfigurationVersion.Builder.create(this, "MyCfnHostedConfigurationVersion")
+ * .applicationId("applicationId")
+ * .configurationProfileId("configurationProfileId")
+ * .content("content")
+ * .contentType("contentType")
+ * // the properties below are optional
+ * .description("description")
+ * .latestVersionNumber(123)
+ * .versionLabel("versionLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html)
+ */
 @CdkDslMarker
 public class CfnHostedConfigurationVersionDsl(
   scope: Construct,

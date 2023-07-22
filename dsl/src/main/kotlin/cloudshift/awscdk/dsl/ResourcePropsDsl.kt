@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.ResourceProps
 
+/**
+ * Construction properties for `Resource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ResourceProps resourceProps = ResourceProps.builder()
+ * .account("account")
+ * .environmentFromArn("environmentFromArn")
+ * .physicalName("physicalName")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResourcePropsDsl {
   private val cdkBuilder: ResourceProps.Builder = ResourceProps.builder()

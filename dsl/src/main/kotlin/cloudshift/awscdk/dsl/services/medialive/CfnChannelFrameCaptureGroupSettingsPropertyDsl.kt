@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for a frame capture output group.
+ *
+ * The parent of this entity is OutputGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * FrameCaptureGroupSettingsProperty frameCaptureGroupSettingsProperty =
+ * FrameCaptureGroupSettingsProperty.builder()
+ * .destination(OutputLocationRefProperty.builder()
+ * .destinationRefId("destinationRefId")
+ * .build())
+ * .frameCaptureCdnSettings(FrameCaptureCdnSettingsProperty.builder()
+ * .frameCaptureS3Settings(FrameCaptureS3SettingsProperty.builder()
+ * .cannedAcl("cannedAcl")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturegroupsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelFrameCaptureGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FrameCaptureGroupSettingsProperty.Builder =

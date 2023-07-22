@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnPackage
 import software.amazon.awscdk.services.panorama.CfnPackageProps
 
+/**
+ * Properties for defining a `CfnPackage`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnPackageProps cfnPackageProps = CfnPackageProps.builder()
+ * .packageName("packageName")
+ * // the properties below are optional
+ * .storageLocation(StorageLocationProperty.builder()
+ * .binaryPrefixLocation("binaryPrefixLocation")
+ * .bucket("bucket")
+ * .generatedPrefixLocation("generatedPrefixLocation")
+ * .manifestPrefixLocation("manifestPrefixLocation")
+ * .repoPrefixLocation("repoPrefixLocation")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-package.html)
+ */
 @CdkDslMarker
 public class CfnPackagePropsDsl {
   private val cdkBuilder: CfnPackageProps.Builder = CfnPackageProps.builder()

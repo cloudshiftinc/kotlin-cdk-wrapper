@@ -7,6 +7,34 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that controls:.
+ *
+ * * Whether CloudFront replaces HTTP status codes in the 4xx and 5xx range with custom error
+ * messages before returning the response to the viewer.
+ * * How long CloudFront caches HTTP status codes in the 4xx and 5xx range.
+ *
+ * For more information about custom error pages, see [Customizing Error
+ * Responses](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/custom-error-pages.html)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CustomErrorResponseProperty customErrorResponseProperty = CustomErrorResponseProperty.builder()
+ * .errorCode(123)
+ * // the properties below are optional
+ * .errorCachingMinTtl(123)
+ * .responseCode(123)
+ * .responsePagePath("responsePagePath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html)
+ */
 @CdkDslMarker
 public class CfnDistributionCustomErrorResponsePropertyDsl {
   private val cdkBuilder: CfnDistribution.CustomErrorResponseProperty.Builder =

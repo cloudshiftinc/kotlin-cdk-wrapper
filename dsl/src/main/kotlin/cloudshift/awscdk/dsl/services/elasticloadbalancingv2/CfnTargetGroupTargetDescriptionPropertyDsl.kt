@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 
+/**
+ * Specifies a target to add to a target group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * TargetDescriptionProperty targetDescriptionProperty = TargetDescriptionProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetdescription.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupTargetDescriptionPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.TargetDescriptionProperty.Builder =

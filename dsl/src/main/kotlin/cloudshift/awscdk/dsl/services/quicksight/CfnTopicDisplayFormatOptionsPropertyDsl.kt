@@ -9,6 +9,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents additional options for display formatting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DisplayFormatOptionsProperty displayFormatOptionsProperty =
+ * DisplayFormatOptionsProperty.builder()
+ * .blankCellFormat("blankCellFormat")
+ * .currencySymbol("currencySymbol")
+ * .dateFormat("dateFormat")
+ * .decimalSeparator("decimalSeparator")
+ * .fractionDigits(123)
+ * .groupingSeparator("groupingSeparator")
+ * .negativeFormat(NegativeFormatProperty.builder()
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .build())
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .unitScaler("unitScaler")
+ * .useBlankCellFormat(false)
+ * .useGrouping(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-displayformatoptions.html)
+ */
 @CdkDslMarker
 public class CfnTopicDisplayFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnTopic.DisplayFormatOptionsProperty.Builder =

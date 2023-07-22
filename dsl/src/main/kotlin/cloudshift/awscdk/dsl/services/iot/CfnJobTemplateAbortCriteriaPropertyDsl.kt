@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 
+/**
+ * The criteria that determine when and how a job abort takes place.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AbortCriteriaProperty abortCriteriaProperty = AbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-abortcriteria.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateAbortCriteriaPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.AbortCriteriaProperty.Builder =

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ce.CfnCostCategoryProps
 
+/**
+ * Properties for defining a `CfnCostCategory`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnCostCategoryProps cfnCostCategoryProps = CfnCostCategoryProps.builder()
+ * .name("name")
+ * .rules("rules")
+ * .ruleVersion("ruleVersion")
+ * // the properties below are optional
+ * .defaultValue("defaultValue")
+ * .splitChargeRules("splitChargeRules")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-costcategory.html)
+ */
 @CdkDslMarker
 public class CfnCostCategoryPropsDsl {
   private val cdkBuilder: CfnCostCategoryProps.Builder = CfnCostCategoryProps.builder()

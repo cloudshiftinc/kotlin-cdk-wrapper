@@ -11,6 +11,54 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
+/**
+ * The entity component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataValueProperty dataValueProperty_;
+ * Object definition;
+ * Object error;
+ * Object relationshipValue;
+ * ComponentProperty componentProperty = ComponentProperty.builder()
+ * .componentName("componentName")
+ * .componentTypeId("componentTypeId")
+ * .definedIn("definedIn")
+ * .description("description")
+ * .properties(Map.of(
+ * "propertiesKey", PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build()))
+ * .propertyGroups(Map.of(
+ * "propertyGroupsKey", PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build()))
+ * .status(StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-component.html)
+ */
 @CdkDslMarker
 public class CfnEntityComponentPropertyDsl {
   private val cdkBuilder: CfnEntity.ComponentProperty.Builder =

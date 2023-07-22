@@ -11,6 +11,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides configuration information for a locale.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-botlocale.html)
+ */
 @CdkDslMarker
 public class CfnBotBotLocalePropertyDsl {
   private val cdkBuilder: CfnBot.BotLocaleProperty.Builder = CfnBot.BotLocaleProperty.builder()

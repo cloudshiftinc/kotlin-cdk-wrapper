@@ -11,6 +11,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The OpenZFS configuration for the file system that's being created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * OpenZFSConfigurationProperty openZFSConfigurationProperty =
+ * OpenZFSConfigurationProperty.builder()
+ * .deploymentType("deploymentType")
+ * // the properties below are optional
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .copyTagsToVolumes(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
+ * .options(List.of("options"))
+ * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
+ * .copyTagsToSnapshots(false)
+ * .dataCompressionType("dataCompressionType")
+ * .nfsExports(List.of(NfsExportsProperty.builder()
+ * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build()))
+ * .build()))
+ * .readOnly(false)
+ * .recordSizeKiB(123)
+ * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .throughputCapacity(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemOpenZFSConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.OpenZFSConfigurationProperty.Builder =

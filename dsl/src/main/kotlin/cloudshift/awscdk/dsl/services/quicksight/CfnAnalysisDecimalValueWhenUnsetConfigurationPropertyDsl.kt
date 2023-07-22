@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration that defines the default value of a `Decimal` parameter when a value has not
+ * been set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DecimalValueWhenUnsetConfigurationProperty decimalValueWhenUnsetConfigurationProperty =
+ * DecimalValueWhenUnsetConfigurationProperty.builder()
+ * .customValue(123)
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-decimalvaluewhenunsetconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisDecimalValueWhenUnsetConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DecimalValueWhenUnsetConfigurationProperty.Builder =

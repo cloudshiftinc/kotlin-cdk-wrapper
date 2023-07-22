@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.auditmanager.CfnAssessment
 
+/**
+ * The `Role` property type specifies the wrapper that contains AWS Audit Manager role information,
+ * such as the role type and IAM Amazon Resource Name (ARN).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.auditmanager.*;
+ * RoleProperty roleProperty = RoleProperty.builder()
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentRolePropertyDsl {
   private val cdkBuilder: CfnAssessment.RoleProperty.Builder = CfnAssessment.RoleProperty.builder()

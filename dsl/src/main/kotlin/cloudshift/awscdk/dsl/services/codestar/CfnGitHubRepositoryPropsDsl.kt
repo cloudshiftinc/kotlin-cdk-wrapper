@@ -9,6 +9,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codestar.CfnGitHubRepository
 import software.amazon.awscdk.services.codestar.CfnGitHubRepositoryProps
 
+/**
+ * Properties for defining a `CfnGitHubRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestar.*;
+ * CfnGitHubRepositoryProps cfnGitHubRepositoryProps = CfnGitHubRepositoryProps.builder()
+ * .repositoryName("repositoryName")
+ * .repositoryOwner("repositoryOwner")
+ * // the properties below are optional
+ * .code(CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build())
+ * .connectionArn("connectionArn")
+ * .enableIssues(false)
+ * .isPrivate(false)
+ * .repositoryAccessToken("repositoryAccessToken")
+ * .repositoryDescription("repositoryDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html)
+ */
 @CdkDslMarker
 public class CfnGitHubRepositoryPropsDsl {
   private val cdkBuilder: CfnGitHubRepositoryProps.Builder = CfnGitHubRepositoryProps.builder()

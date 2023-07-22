@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A parameter created in the dataset of date time data type.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DateTimeDatasetParameterProperty dateTimeDatasetParameterProperty =
+ * DateTimeDatasetParameterProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .valueType("valueType")
+ * // the properties below are optional
+ * .defaultValues(DateTimeDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of("staticValues"))
+ * .build())
+ * .timeGranularity("timeGranularity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datetimedatasetparameter.html)
+ */
 @CdkDslMarker
 public class CfnDataSetDateTimeDatasetParameterPropertyDsl {
   private val cdkBuilder: CfnDataSet.DateTimeDatasetParameterProperty.Builder =

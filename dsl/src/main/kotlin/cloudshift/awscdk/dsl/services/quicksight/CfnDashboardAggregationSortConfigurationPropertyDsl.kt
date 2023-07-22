@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration options to sort aggregated values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AggregationSortConfigurationProperty aggregationSortConfigurationProperty =
+ * AggregationSortConfigurationProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sortDirection("sortDirection")
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-aggregationsortconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardAggregationSortConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.AggregationSortConfigurationProperty.Builder =

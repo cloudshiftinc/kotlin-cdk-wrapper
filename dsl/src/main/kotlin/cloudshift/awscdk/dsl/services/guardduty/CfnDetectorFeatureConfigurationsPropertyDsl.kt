@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnDetector
 
+/**
+ * Describes the configuration for a feature.
+ *
+ * Although the `Required` field associated with the following properties specifies `No` , if you
+ * provide information for `Name` , you will need to provide the information for `Status` too. For
+ * information about the available feature configurations, see
+ * [DetectorFeatureConfiguration](https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DetectorFeatureConfiguration.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * FeatureConfigurationsProperty featureConfigurationsProperty =
+ * FeatureConfigurationsProperty.builder()
+ * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
+ * .name("name")
+ * .status("status")
+ * .build()))
+ * .name("name")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-detector-featureconfigurations.html)
+ */
 @CdkDslMarker
 public class CfnDetectorFeatureConfigurationsPropertyDsl {
   private val cdkBuilder: CfnDetector.FeatureConfigurationsProperty.Builder =

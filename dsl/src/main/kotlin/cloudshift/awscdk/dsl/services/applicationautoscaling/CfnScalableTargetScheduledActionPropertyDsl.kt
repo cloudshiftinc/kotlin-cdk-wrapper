@@ -8,6 +8,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
 
+/**
+ * `ScheduledAction` is a property of the
+ * [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
+ * resource that specifies a scheduled action for a scalable target.
+ *
+ * For more information, see [Scheduled
+ * scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-scheduled-scaling.html)
+ * in the *Application Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * ScheduledActionProperty scheduledActionProperty = ScheduledActionProperty.builder()
+ * .schedule("schedule")
+ * .scheduledActionName("scheduledActionName")
+ * // the properties below are optional
+ * .endTime(new Date())
+ * .scalableTargetAction(ScalableTargetActionProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .startTime(new Date())
+ * .timezone("timezone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-scheduledaction.html)
+ */
 @CdkDslMarker
 public class CfnScalableTargetScheduledActionPropertyDsl {
   private val cdkBuilder: CfnScalableTarget.ScheduledActionProperty.Builder =

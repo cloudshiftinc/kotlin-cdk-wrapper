@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about a source IP condition.
+ *
+ * You can use this condition to route based on the IP address of the source that connects to the
+ * load balancer. If a client is behind a proxy, this is the IP address of the proxy not the IP address
+ * of the client.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * SourceIpConfigProperty sourceIpConfigProperty = SourceIpConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-sourceipconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleSourceIpConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.SourceIpConfigProperty.Builder =

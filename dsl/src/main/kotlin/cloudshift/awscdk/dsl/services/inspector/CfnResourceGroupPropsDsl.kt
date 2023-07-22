@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspector.CfnResourceGroupProps
 
+/**
+ * Properties for defining a `CfnResourceGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspector.*;
+ * CfnResourceGroupProps cfnResourceGroupProps = CfnResourceGroupProps.builder()
+ * .resourceGroupTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html)
+ */
 @CdkDslMarker
 public class CfnResourceGroupPropsDsl {
   private val cdkBuilder: CfnResourceGroupProps.Builder = CfnResourceGroupProps.builder()

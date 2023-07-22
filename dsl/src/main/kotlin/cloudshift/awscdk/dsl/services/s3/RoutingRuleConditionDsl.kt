@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.RoutingRuleCondition
 
+/**
+ * Example:
+ *
+ * ```
+ * Bucket bucket = Bucket.Builder.create(this, "MyRedirectedBucket")
+ * .websiteRoutingRules(List.of(RoutingRule.builder()
+ * .hostName("www.example.com")
+ * .httpRedirectCode("302")
+ * .protocol(RedirectProtocol.HTTPS)
+ * .replaceKey(ReplaceKey.prefixWith("test/"))
+ * .condition(RoutingRuleCondition.builder()
+ * .httpErrorCodeReturnedEquals("200")
+ * .keyPrefixEquals("prefix")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RoutingRuleConditionDsl {
   private val cdkBuilder: RoutingRuleCondition.Builder = RoutingRuleCondition.builder()

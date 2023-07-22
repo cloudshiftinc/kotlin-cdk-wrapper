@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.appmesh.VirtualServiceProps
 import software.amazon.awscdk.services.appmesh.VirtualServiceProvider
 
+/**
+ * The properties applied to the VirtualService being defined.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.dns("node"))
+ * .build();
+ * VirtualService virtualService = VirtualService.Builder.create(this, "service-1")
+ * .virtualServiceProvider(VirtualServiceProvider.virtualNode(node))
+ * .virtualServiceName("service1.domain.local")
+ * .build();
+ * node.addBackend(Backend.virtualService(virtualService));
+ * ```
+ */
 @CdkDslMarker
 public class VirtualServicePropsDsl {
   private val cdkBuilder: VirtualServiceProps.Builder = VirtualServiceProps.builder()

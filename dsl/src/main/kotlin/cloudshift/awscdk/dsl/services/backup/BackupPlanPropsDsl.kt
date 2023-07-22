@@ -12,6 +12,17 @@ import software.amazon.awscdk.services.backup.BackupPlanProps
 import software.amazon.awscdk.services.backup.BackupPlanRule
 import software.amazon.awscdk.services.backup.IBackupVault
 
+/**
+ * Properties for a BackupPlan.
+ *
+ * Example:
+ *
+ * ```
+ * BackupPlan plan = BackupPlan.Builder.create(this, "Plan")
+ * .windowsVss(true)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackupPlanPropsDsl {
   private val cdkBuilder: BackupPlanProps.Builder = BackupPlanProps.builder()

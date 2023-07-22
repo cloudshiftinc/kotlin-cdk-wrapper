@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
 
+/**
+ * The `Predicate` property specifies information for generating Amplify DataStore queries.
+ *
+ * Use `Predicate` to retrieve a subset of the data in a collection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * PredicateProperty predicateProperty_;
+ * PredicateProperty predicateProperty = PredicateProperty.builder()
+ * .and(List.of(predicateProperty_))
+ * .field("field")
+ * .operand("operand")
+ * .operator("operator")
+ * .or(List.of(predicateProperty_))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-predicate.html)
+ */
 @CdkDslMarker
 public class CfnComponentPredicatePropertyDsl {
   private val cdkBuilder: CfnComponent.PredicateProperty.Builder =

@@ -13,6 +13,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnDeviceProfile
 import software.amazon.awscdk.services.iotwireless.CfnDeviceProfileProps
 
+/**
+ * Properties for defining a `CfnDeviceProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnDeviceProfileProps cfnDeviceProfileProps = CfnDeviceProfileProps.builder()
+ * .loRaWan(LoRaWANDeviceProfileProperty.builder()
+ * .classBTimeout(123)
+ * .classCTimeout(123)
+ * .factoryPresetFreqsList(List.of(123))
+ * .macVersion("macVersion")
+ * .maxDutyCycle(123)
+ * .maxEirp(123)
+ * .pingSlotDr(123)
+ * .pingSlotFreq(123)
+ * .pingSlotPeriod(123)
+ * .regParamsRevision("regParamsRevision")
+ * .rfRegion("rfRegion")
+ * .rxDataRate2(123)
+ * .rxDelay1(123)
+ * .rxDrOffset1(123)
+ * .rxFreq2(123)
+ * .supports32BitFCnt(false)
+ * .supportsClassB(false)
+ * .supportsClassC(false)
+ * .supportsJoin(false)
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-deviceprofile.html)
+ */
 @CdkDslMarker
 public class CfnDeviceProfilePropsDsl {
   private val cdkBuilder: CfnDeviceProfileProps.Builder = CfnDeviceProfileProps.builder()

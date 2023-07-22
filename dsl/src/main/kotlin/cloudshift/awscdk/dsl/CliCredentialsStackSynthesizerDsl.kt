@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CliCredentialsStackSynthesizer
 
+/**
+ * A synthesizer that uses conventional asset locations, but not conventional deployment roles.
+ *
+ * Instead of assuming the bootstrapped deployment roles, all stack operations will be performed
+ * using the CLI's current credentials.
+ *
+ * * This synthesizer does not support deploying to accounts to which the CLI does not have
+ * credentials. It also does not support deploying using **CDK Pipelines**. For either of those
+ * features, use `DefaultStackSynthesizer`.
+ * * This synthesizer requires an S3 bucket and ECR repository with well-known names. To
+ * not depend on those, use `LegacyStackSynthesizer`.
+ *
+ * Be aware that your CLI credentials must be valid for the duration of the
+ * entire deployment. If you are using session credentials, make sure the
+ * session lifetime is long enough.
+ *
+ * By default, expects the environment to have been bootstrapped with just the staging resources
+ * of the Bootstrap Stack V2 (also known as "modern bootstrap stack"). You can override
+ * the default names using the synthesizer's construction properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CliCredentialsStackSynthesizer cliCredentialsStackSynthesizer =
+ * CliCredentialsStackSynthesizer.Builder.create()
+ * .bucketPrefix("bucketPrefix")
+ * .dockerTagPrefix("dockerTagPrefix")
+ * .fileAssetsBucketName("fileAssetsBucketName")
+ * .imageAssetsRepositoryName("imageAssetsRepositoryName")
+ * .qualifier("qualifier")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CliCredentialsStackSynthesizerDsl {
   private val cdkBuilder: CliCredentialsStackSynthesizer.Builder =

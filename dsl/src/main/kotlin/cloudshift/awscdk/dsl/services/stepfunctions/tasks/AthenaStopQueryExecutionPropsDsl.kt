@@ -16,6 +16,18 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.AthenaStopQueryExecutionProps
 
+/**
+ * Properties for stoping a Query Execution.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaStopQueryExecution stopQueryExecutionJob = AthenaStopQueryExecution.Builder.create(this,
+ * "Stop Query Execution")
+ * .queryExecutionId(JsonPath.stringAt("$.QueryExecutionId"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AthenaStopQueryExecutionPropsDsl {
   private val cdkBuilder: AthenaStopQueryExecutionProps.Builder =

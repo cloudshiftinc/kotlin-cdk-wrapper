@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.ec2.FlowLogResourceType
 import software.amazon.awscdk.services.ec2.FlowLogTrafficType
 import software.amazon.awscdk.services.ec2.LogFormat
 
+/**
+ * Properties of a VPC Flow Log.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
+ * Role role = Role.Builder.create(this, "MyCustomRole")
+ * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
+ * .build();
+ * FlowLog.Builder.create(this, "FlowLog")
+ * .resourceType(FlowLogResourceType.fromVpc(vpc))
+ * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FlowLogPropsDsl {
   private val cdkBuilder: FlowLogProps.Builder = FlowLogProps.builder()

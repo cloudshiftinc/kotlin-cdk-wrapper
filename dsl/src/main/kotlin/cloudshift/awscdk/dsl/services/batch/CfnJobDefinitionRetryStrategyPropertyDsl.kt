@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The retry strategy that's associated with a job.
+ *
+ * For more information, see [Automated job
+ * retries](https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html) in the *AWS Batch User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * RetryStrategyProperty retryStrategyProperty = RetryStrategyProperty.builder()
+ * .attempts(123)
+ * .evaluateOnExit(List.of(EvaluateOnExitProperty.builder()
+ * .action("action")
+ * // the properties below are optional
+ * .onExitCode("onExitCode")
+ * .onReason("onReason")
+ * .onStatusReason("onStatusReason")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-retrystrategy.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionRetryStrategyPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.RetryStrategyProperty.Builder =

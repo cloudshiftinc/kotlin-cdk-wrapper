@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents a virtual gateway's listener's Transport Layer Security (TLS)
+ * validation context trust.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayListenerTlsValidationContextTrustProperty
+ * virtualGatewayListenerTlsValidationContextTrustProperty =
+ * VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+ * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsvalidationcontexttrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayListenerTlsValidationContextTrustPropertyDsl {
   private val cdkBuilder:

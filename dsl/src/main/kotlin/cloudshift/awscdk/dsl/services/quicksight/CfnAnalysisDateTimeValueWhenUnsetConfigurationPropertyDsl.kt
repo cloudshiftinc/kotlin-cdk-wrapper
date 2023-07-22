@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration that defines the default value of a `DateTime` parameter when a value has not
+ * been set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DateTimeValueWhenUnsetConfigurationProperty dateTimeValueWhenUnsetConfigurationProperty =
+ * DateTimeValueWhenUnsetConfigurationProperty.builder()
+ * .customValue("customValue")
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-datetimevaluewhenunsetconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisDateTimeValueWhenUnsetConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DateTimeValueWhenUnsetConfigurationProperty.Builder =

@@ -13,6 +13,58 @@ import software.amazon.awscdk.services.ses.SNSActionConfig
 import software.amazon.awscdk.services.ses.StopActionConfig
 import software.amazon.awscdk.services.ses.WorkmailActionConfig
 
+/**
+ * Properties for a receipt rule action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ReceiptRuleActionConfig receiptRuleActionConfig = ReceiptRuleActionConfig.builder()
+ * .addHeaderAction(AddHeaderActionConfig.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build())
+ * .bounceAction(BounceActionConfig.builder()
+ * .message("message")
+ * .sender("sender")
+ * .smtpReplyCode("smtpReplyCode")
+ * // the properties below are optional
+ * .statusCode("statusCode")
+ * .topicArn("topicArn")
+ * .build())
+ * .lambdaAction(LambdaActionConfig.builder()
+ * .functionArn("functionArn")
+ * // the properties below are optional
+ * .invocationType("invocationType")
+ * .topicArn("topicArn")
+ * .build())
+ * .s3Action(S3ActionConfig.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .topicArn("topicArn")
+ * .build())
+ * .snsAction(SNSActionConfig.builder()
+ * .encoding("encoding")
+ * .topicArn("topicArn")
+ * .build())
+ * .stopAction(StopActionConfig.builder()
+ * .scope("scope")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build())
+ * .workmailAction(WorkmailActionConfig.builder()
+ * .organizationArn("organizationArn")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptRuleActionConfigDsl {
   private val cdkBuilder: ReceiptRuleActionConfig.Builder = ReceiptRuleActionConfig.builder()

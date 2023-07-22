@@ -8,6 +8,41 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 
+/**
+ * The configuration settings for in-bound network access to your workspace.
+ *
+ * When this is configured, only listed IP addresses and VPC endpoints will be able to access your
+ * workspace. Standard Grafana authentication and authorization are still required.
+ *
+ * Access is granted to a caller that is in either the IP address list or the VPC endpoint list -
+ * they do not need to be in both.
+ *
+ * If this is not configured, or is removed, then all IP addresses and VPC endpoints are allowed.
+ * Standard Grafana authentication and authorization are still required.
+ *
+ *
+ * While both `prefixListIds` and `vpceIds` are required, you can pass in an empty array of strings
+ * for either parameter if you do not want to allow any of that type.
+ *
+ * If both are passed as empty arrays, no traffic is allowed to the workspace, because only
+ * *explicitly* allowed connections are accepted.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * NetworkAccessControlProperty networkAccessControlProperty =
+ * NetworkAccessControlProperty.builder()
+ * .prefixListIds(List.of("prefixListIds"))
+ * .vpceIds(List.of("vpceIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-networkaccesscontrol.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceNetworkAccessControlPropertyDsl {
   private val cdkBuilder: CfnWorkspace.NetworkAccessControlProperty.Builder =

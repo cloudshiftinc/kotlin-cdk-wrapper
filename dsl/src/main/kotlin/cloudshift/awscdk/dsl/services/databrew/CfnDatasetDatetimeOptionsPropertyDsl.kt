@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents additional options for correct interpretation of datetime parameters used in the
+ * Amazon S3 path of a dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * DatetimeOptionsProperty datetimeOptionsProperty = DatetimeOptionsProperty.builder()
+ * .format("format")
+ * // the properties below are optional
+ * .localeCode("localeCode")
+ * .timezoneOffset("timezoneOffset")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datetimeoptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDatetimeOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.DatetimeOptionsProperty.Builder =

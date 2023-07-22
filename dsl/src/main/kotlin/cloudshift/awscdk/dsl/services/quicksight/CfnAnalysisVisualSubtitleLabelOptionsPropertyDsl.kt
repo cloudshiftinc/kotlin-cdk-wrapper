@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The subtitle label options for a visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * VisualSubtitleLabelOptionsProperty visualSubtitleLabelOptionsProperty =
+ * VisualSubtitleLabelOptionsProperty.builder()
+ * .formatText(LongFormatTextProperty.builder()
+ * .plainText("plainText")
+ * .richText("richText")
+ * .build())
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-visualsubtitlelabeloptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisVisualSubtitleLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.VisualSubtitleLabelOptionsProperty.Builder =

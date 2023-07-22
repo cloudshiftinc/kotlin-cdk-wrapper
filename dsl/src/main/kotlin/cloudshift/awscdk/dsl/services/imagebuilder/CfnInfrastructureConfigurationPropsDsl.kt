@@ -12,6 +12,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfigurationProps
 
+/**
+ * Properties for defining a `CfnInfrastructureConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnInfrastructureConfigurationProps cfnInfrastructureConfigurationProps =
+ * CfnInfrastructureConfigurationProps.builder()
+ * .instanceProfileName("instanceProfileName")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .instanceMetadataOptions(InstanceMetadataOptionsProperty.builder()
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build())
+ * .instanceTypes(List.of("instanceTypes"))
+ * .keyPair("keyPair")
+ * .logging(LoggingProperty.builder()
+ * .s3Logs(S3LogsProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .build())
+ * .resourceTags(Map.of(
+ * "resourceTagsKey", "resourceTags"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .snsTopicArn("snsTopicArn")
+ * .subnetId("subnetId")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .terminateInstanceOnFailure(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInfrastructureConfigurationPropsDsl {
   private val cdkBuilder: CfnInfrastructureConfigurationProps.Builder =

@@ -8,6 +8,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.eks.BootstrapOptions
 
+/**
+ * EKS node bootstrapping options.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.addAutoScalingGroupCapacity("spot", AutoScalingGroupCapacityOptions.builder()
+ * .instanceType(new InstanceType("t3.large"))
+ * .minCapacity(2)
+ * .bootstrapOptions(BootstrapOptions.builder()
+ * .kubeletExtraArgs("--node-labels foo=bar,goo=far")
+ * .awsApiRetryAttempts(5)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BootstrapOptionsDsl {
   private val cdkBuilder: BootstrapOptions.Builder = BootstrapOptions.builder()

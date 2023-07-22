@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnScript
 
+/**
+ * The location in Amazon S3 where build or script files can be stored for access by Amazon
+ * GameLift.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-script-s3location.html)
+ */
 @CdkDslMarker
 public class CfnScriptS3LocationPropertyDsl {
   private val cdkBuilder: CfnScript.S3LocationProperty.Builder =

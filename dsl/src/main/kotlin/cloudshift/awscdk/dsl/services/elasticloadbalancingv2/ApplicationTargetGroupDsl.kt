@@ -19,6 +19,23 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBal
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 import software.constructs.Construct
 
+/**
+ * Define an Application Target Group.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer alb;
+ * ApplicationListener listener = alb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * ApplicationTargetGroup targetGroup = listener.addTargets("Fleet",
+ * AddApplicationTargetsProps.builder().port(80).build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancer(LoadBalancer.application(targetGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationTargetGroupDsl(
   scope: Construct,

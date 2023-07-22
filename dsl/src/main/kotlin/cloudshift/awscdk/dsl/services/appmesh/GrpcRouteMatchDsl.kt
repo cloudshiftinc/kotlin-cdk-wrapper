@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appmesh.GrpcRouteMatch
 import software.amazon.awscdk.services.appmesh.HeaderMatch
 
+/**
+ * The criterion for determining a request match for this Route.
+ *
+ * At least one match type must be selected.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-grpc-retry", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.grpc(GrpcRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder().virtualNode(node).build()))
+ * .match(GrpcRouteMatch.builder()
+ * // When method name is specified, service name must be also specified.
+ * .methodName("methodname")
+ * .serviceName("servicename")
+ * .metadata(List.of(HeaderMatch.valueStartsWith("Content-Type", "application/"),
+ * HeaderMatch.valueDoesNotStartWith("Content-Type", "text/")))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcRouteMatchDsl {
   private val cdkBuilder: GrpcRouteMatch.Builder = GrpcRouteMatch.builder()

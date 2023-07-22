@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.common.Alarms
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.common.*;
+ * Alarms alarms = Alarms.builder()
+ * .lowerAlarmIntervalIndex(123)
+ * .upperAlarmIntervalIndex(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AlarmsDsl {
   private val cdkBuilder: Alarms.Builder = Alarms.builder()

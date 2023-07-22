@@ -8,6 +8,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when the custom connector is being used as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * CustomConnectorSourcePropertiesProperty customConnectorSourcePropertiesProperty =
+ * CustomConnectorSourcePropertiesProperty.builder()
+ * .entityName("entityName")
+ * // the properties below are optional
+ * .customProperties(Map.of(
+ * "customPropertiesKey", "customProperties"))
+ * .dataTransferApi(DataTransferApiProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-customconnectorsourceproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowCustomConnectorSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.CustomConnectorSourcePropertiesProperty.Builder =

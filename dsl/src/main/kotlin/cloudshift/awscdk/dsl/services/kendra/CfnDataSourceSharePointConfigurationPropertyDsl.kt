@@ -11,6 +11,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to Microsoft SharePoint as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SharePointConfigurationProperty sharePointConfigurationProperty =
+ * SharePointConfigurationProperty.builder()
+ * .secretArn("secretArn")
+ * .sharePointVersion("sharePointVersion")
+ * .urls(List.of("urls"))
+ * // the properties below are optional
+ * .crawlAttachments(false)
+ * .disableLocalGroups(false)
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .sslCertificateS3Path(S3PathProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .useChangeLog(false)
+ * .vpcConfiguration(DataSourceVpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sharepointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSharePointConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SharePointConfigurationProperty.Builder =

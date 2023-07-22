@@ -10,6 +10,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.macie.CfnCustomDataIdentifier
 import software.constructs.Construct
 
+/**
+ * The `AWS::Macie::CustomDataIdentifier` resource specifies a custom data identifier.
+ *
+ * A *custom data identifier* is a set of custom criteria for Amazon Macie to use when it inspects
+ * data sources for sensitive data. The criteria consist of a regular expression ( *regex* ) that
+ * defines a text pattern to match and, optionally, character sequences and a proximity rule that
+ * refine the results. The character sequences can be:
+ *
+ * * *Keywords* , which are words or phrases that must be in proximity of text that matches the
+ * regex, or
+ * * *Ignore words* , which are words or phrases to exclude from the results.
+ *
+ * By using custom data identifiers, you can supplement the managed data identifiers that Macie
+ * provides and detect sensitive data that reflects your particular scenarios, intellectual property,
+ * or proprietary data. For more information, see [Building custom data
+ * identifiers](https://docs.aws.amazon.com/macie/latest/user/custom-data-identifiers.html) in the
+ * *Amazon Macie User Guide* .
+ *
+ * An `AWS::Macie::Session` resource must exist for an AWS account before you can create an
+ * `AWS::Macie::CustomDataIdentifier` resource for the account. Use a [DependsOn
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * to ensure that an `AWS::Macie::Session` resource is created before other Macie resources are created
+ * for an account. For example, `"DependsOn": "Session"` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnCustomDataIdentifier cfnCustomDataIdentifier = CfnCustomDataIdentifier.Builder.create(this,
+ * "MyCfnCustomDataIdentifier")
+ * .name("name")
+ * .regex("regex")
+ * // the properties below are optional
+ * .description("description")
+ * .ignoreWords(List.of("ignoreWords"))
+ * .keywords(List.of("keywords"))
+ * .maximumMatchDistance(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)
+ */
 @CdkDslMarker
 public class CfnCustomDataIdentifierDsl(
   scope: Construct,

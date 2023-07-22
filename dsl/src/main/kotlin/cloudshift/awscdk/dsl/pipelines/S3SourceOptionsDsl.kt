@@ -8,6 +8,25 @@ import software.amazon.awscdk.pipelines.S3SourceOptions
 import software.amazon.awscdk.services.codepipeline.actions.S3Trigger
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for S3 sources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.pipelines.*;
+ * Role role;
+ * S3SourceOptions s3SourceOptions = S3SourceOptions.builder()
+ * .actionName("actionName")
+ * .role(role)
+ * .trigger(S3Trigger.NONE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3SourceOptionsDsl {
   private val cdkBuilder: S3SourceOptions.Builder = S3SourceOptions.builder()

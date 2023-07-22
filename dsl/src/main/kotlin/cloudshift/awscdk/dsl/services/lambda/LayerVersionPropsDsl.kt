@@ -12,6 +12,17 @@ import software.amazon.awscdk.services.lambda.Code
 import software.amazon.awscdk.services.lambda.LayerVersionProps
 import software.amazon.awscdk.services.lambda.Runtime
 
+/**
+ * Example:
+ *
+ * ```
+ * LayerVersion.Builder.create(this, "MyLayer")
+ * .removalPolicy(RemovalPolicy.RETAIN)
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .compatibleArchitectures(List.of(Architecture.X86_64, Architecture.ARM_64))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LayerVersionPropsDsl {
   private val cdkBuilder: LayerVersionProps.Builder = LayerVersionProps.builder()

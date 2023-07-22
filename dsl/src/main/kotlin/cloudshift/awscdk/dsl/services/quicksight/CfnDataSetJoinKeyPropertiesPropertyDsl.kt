@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Properties associated with the columns participating in a join.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * JoinKeyPropertiesProperty joinKeyPropertiesProperty = JoinKeyPropertiesProperty.builder()
+ * .uniqueKey(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-joinkeyproperties.html)
+ */
 @CdkDslMarker
 public class CfnDataSetJoinKeyPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSet.JoinKeyPropertiesProperty.Builder =

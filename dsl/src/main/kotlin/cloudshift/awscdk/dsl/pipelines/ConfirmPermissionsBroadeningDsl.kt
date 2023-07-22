@@ -8,6 +8,22 @@ import software.amazon.awscdk.Stage
 import software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Pause the pipeline if a deployment would add IAM permissions or Security Group rules.
+ *
+ * This step is only supported in CodePipeline pipelines.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline;
+ * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
+ * pipeline.addStage(stage, AddStageOpts.builder()
+ * .pre(List.of(
+ * ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ConfirmPermissionsBroadeningDsl(
   id: String,

@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.connect.CfnApprovedOrigin
 import software.constructs.Construct
 
+/**
+ * The approved origin for the instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnApprovedOrigin cfnApprovedOrigin = CfnApprovedOrigin.Builder.create(this,
+ * "MyCfnApprovedOrigin")
+ * .instanceId("instanceId")
+ * .origin("origin")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-approvedorigin.html)
+ */
 @CdkDslMarker
 public class CfnApprovedOriginDsl(
   scope: Construct,

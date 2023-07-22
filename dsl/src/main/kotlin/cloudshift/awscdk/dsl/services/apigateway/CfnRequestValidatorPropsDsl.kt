@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps
 
+/**
+ * Properties for defining a `CfnRequestValidator`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnRequestValidatorProps cfnRequestValidatorProps = CfnRequestValidatorProps.builder()
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .name("name")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html)
+ */
 @CdkDslMarker
 public class CfnRequestValidatorPropsDsl {
   private val cdkBuilder: CfnRequestValidatorProps.Builder = CfnRequestValidatorProps.builder()

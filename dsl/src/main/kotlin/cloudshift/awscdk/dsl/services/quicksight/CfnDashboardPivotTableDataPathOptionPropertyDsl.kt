@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The data path options for the pivot table field options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTableDataPathOptionProperty pivotTableDataPathOptionProperty =
+ * PivotTableDataPathOptionProperty.builder()
+ * .dataPathList(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * // the properties below are optional
+ * .width("width")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-pivottabledatapathoption.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPivotTableDataPathOptionPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotTableDataPathOptionProperty.Builder =

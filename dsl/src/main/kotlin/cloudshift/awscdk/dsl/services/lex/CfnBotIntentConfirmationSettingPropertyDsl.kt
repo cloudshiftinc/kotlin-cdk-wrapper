@@ -7,6 +7,16 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides a prompt for making sure that the user is ready for the intent to be fulfilled.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intentconfirmationsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotIntentConfirmationSettingPropertyDsl {
   private val cdkBuilder: CfnBot.IntentConfirmationSettingProperty.Builder =

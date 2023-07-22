@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Send data to an HTTPS endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * HttpActionProperty httpActionProperty = HttpActionProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .auth(HttpAuthorizationProperty.builder()
+ * .sigv4(SigV4AuthorizationProperty.builder()
+ * .roleArn("roleArn")
+ * .serviceName("serviceName")
+ * .signingRegion("signingRegion")
+ * .build())
+ * .build())
+ * .confirmationUrl("confirmationUrl")
+ * .headers(List.of(HttpActionHeaderProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleHttpActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.HttpActionProperty.Builder =

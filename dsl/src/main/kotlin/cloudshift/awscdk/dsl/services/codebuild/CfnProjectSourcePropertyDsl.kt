@@ -9,6 +9,44 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `Source` is a property of the
+ * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that specifies the source code settings for the project, such as the source code's
+ * repository type and location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * SourceProperty sourceProperty = SourceProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .auth(SourceAuthProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .resource("resource")
+ * .build())
+ * .buildSpec("buildSpec")
+ * .buildStatusConfig(BuildStatusConfigProperty.builder()
+ * .context("context")
+ * .targetUrl("targetUrl")
+ * .build())
+ * .gitCloneDepth(123)
+ * .gitSubmodulesConfig(GitSubmodulesConfigProperty.builder()
+ * .fetchSubmodules(false)
+ * .build())
+ * .insecureSsl(false)
+ * .location("location")
+ * .reportBuildStatus(false)
+ * .sourceIdentifier("sourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+ */
 @CdkDslMarker
 public class CfnProjectSourcePropertyDsl {
   private val cdkBuilder: CfnProject.SourceProperty.Builder = CfnProject.SourceProperty.builder()

@@ -28,6 +28,72 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.QueueProcessingServiceBaseProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * The properties for the base QueueProcessingEc2Service or QueueProcessingFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Cluster cluster;
+ * ContainerImage containerImage;
+ * LogDriver logDriver;
+ * Queue queue;
+ * Secret secret;
+ * Vpc vpc;
+ * QueueProcessingServiceBaseProps queueProcessingServiceBaseProps =
+ * QueueProcessingServiceBaseProps.builder()
+ * .image(containerImage)
+ * // the properties below are optional
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .rollback(false)
+ * .build())
+ * .cluster(cluster)
+ * .command(List.of("command"))
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.ECS)
+ * .build())
+ * .enableECSManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .enableLogging(false)
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .family("family")
+ * .logDriver(logDriver)
+ * .maxHealthyPercent(123)
+ * .maxReceiveCount(123)
+ * .maxScalingCapacity(123)
+ * .minHealthyPercent(123)
+ * .minScalingCapacity(123)
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .queue(queue)
+ * .retentionPeriod(Duration.minutes(30))
+ * .scalingSteps(List.of(ScalingInterval.builder()
+ * .change(123)
+ * // the properties below are optional
+ * .lower(123)
+ * .upper(123)
+ * .build()))
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .serviceName("serviceName")
+ * .visibilityTimeout(Duration.minutes(30))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueProcessingServiceBasePropsDsl {
   private val cdkBuilder: QueueProcessingServiceBaseProps.Builder =

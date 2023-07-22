@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
+/**
+ * The configuration for a streaming session’s upload storage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * StreamConfigurationSessionStorageProperty streamConfigurationSessionStorageProperty =
+ * StreamConfigurationSessionStorageProperty.builder()
+ * .mode(List.of("mode"))
+ * // the properties below are optional
+ * .root(StreamingSessionStorageRootProperty.builder()
+ * .linux("linux")
+ * .windows("windows")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionstorage.html)
+ */
 @CdkDslMarker
 public class CfnLaunchProfileStreamConfigurationSessionStoragePropertyDsl {
   private val cdkBuilder: CfnLaunchProfile.StreamConfigurationSessionStorageProperty.Builder =

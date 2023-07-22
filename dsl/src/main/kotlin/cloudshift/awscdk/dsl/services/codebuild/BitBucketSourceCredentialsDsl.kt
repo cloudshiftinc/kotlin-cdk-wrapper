@@ -8,6 +8,24 @@ import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials
 import software.constructs.Construct
 
+/**
+ * The source credentials used when contacting the BitBucket API.
+ *
+ * **Note**: CodeBuild only allows a single credential for BitBucket
+ * to be saved in a given AWS account in a given region -
+ * any attempt to add more than one will result in an error.
+ *
+ * Example:
+ *
+ * ```
+ * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
+ * .username(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("username").build()))
+ * .password(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("password").build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BitBucketSourceCredentialsDsl(
   scope: Construct,

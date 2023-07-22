@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.billingconductor.CfnPricingPlanProps
 
+/**
+ * Properties for defining a `CfnPricingPlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnPricingPlanProps cfnPricingPlanProps = CfnPricingPlanProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingRuleArns(List.of("pricingRuleArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingplan.html)
+ */
 @CdkDslMarker
 public class CfnPricingPlanPropsDsl {
   private val cdkBuilder: CfnPricingPlanProps.Builder = CfnPricingPlanProps.builder()

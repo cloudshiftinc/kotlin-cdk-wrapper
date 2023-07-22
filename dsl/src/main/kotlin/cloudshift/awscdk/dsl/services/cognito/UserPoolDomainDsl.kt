@@ -11,6 +11,28 @@ import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolDomain
 import software.constructs.Construct
 
+/**
+ * Define a user pool domain.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = UserPool.Builder.create(this, "UserPool").build();
+ * UserPoolClient client = userpool.addClient("Client", UserPoolClientOptions.builder()
+ * // ...
+ * .oAuth(OAuthSettings.builder()
+ * .flows(OAuthFlows.builder()
+ * .implicitCodeGrant(true)
+ * .build())
+ * .callbackUrls(List.of("https://myapp.com/home", "https://myapp.com/users"))
+ * .build())
+ * .build());
+ * UserPoolDomain domain = userpool.addDomain("Domain", UserPoolDomainOptions.builder().build());
+ * String signInUrl = domain.signInUrl(client, SignInUrlOptions.builder()
+ * .redirectUri("https://myapp.com/home")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolDomainDsl(
   scope: Construct,

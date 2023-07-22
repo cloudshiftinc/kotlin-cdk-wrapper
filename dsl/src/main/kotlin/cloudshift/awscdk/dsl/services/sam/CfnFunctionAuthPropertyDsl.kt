@@ -10,6 +10,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object customStatements;
+ * AuthProperty authProperty = AuthProperty.builder()
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizer("authorizer")
+ * .resourcePolicy(AuthResourcePolicyProperty.builder()
+ * .awsAccountBlacklist(List.of("awsAccountBlacklist"))
+ * .awsAccountWhitelist(List.of("awsAccountWhitelist"))
+ * .customStatements(List.of(customStatements))
+ * .intrinsicVpcBlacklist(List.of("intrinsicVpcBlacklist"))
+ * .intrinsicVpceBlacklist(List.of("intrinsicVpceBlacklist"))
+ * .intrinsicVpceWhitelist(List.of("intrinsicVpceWhitelist"))
+ * .intrinsicVpcWhitelist(List.of("intrinsicVpcWhitelist"))
+ * .ipRangeBlacklist(List.of("ipRangeBlacklist"))
+ * .ipRangeWhitelist(List.of("ipRangeWhitelist"))
+ * .sourceVpcBlacklist(List.of("sourceVpcBlacklist"))
+ * .sourceVpcWhitelist(List.of("sourceVpcWhitelist"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-auth.html)
+ */
 @CdkDslMarker
 public class CfnFunctionAuthPropertyDsl {
   private val cdkBuilder: CfnFunction.AuthProperty.Builder = CfnFunction.AuthProperty.builder()

@@ -11,6 +11,32 @@ import software.amazon.awscdk.pipelines.StackSteps
 import software.amazon.awscdk.pipelines.StageDeploymentProps
 import software.amazon.awscdk.pipelines.Step
 
+/**
+ * Properties for a `StageDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.pipelines.*;
+ * Stack stack;
+ * Step step;
+ * StageDeploymentProps stageDeploymentProps = StageDeploymentProps.builder()
+ * .post(List.of(step))
+ * .pre(List.of(step))
+ * .stackSteps(List.of(StackSteps.builder()
+ * .stack(stack)
+ * // the properties below are optional
+ * .changeSet(List.of(step))
+ * .post(List.of(step))
+ * .pre(List.of(step))
+ * .build()))
+ * .stageName("stageName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StageDeploymentPropsDsl {
   private val cdkBuilder: StageDeploymentProps.Builder = StageDeploymentProps.builder()

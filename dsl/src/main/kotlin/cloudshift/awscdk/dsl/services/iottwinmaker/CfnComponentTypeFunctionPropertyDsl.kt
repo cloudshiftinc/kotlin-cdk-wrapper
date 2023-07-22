@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
+/**
+ * The function body.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * FunctionProperty functionProperty = FunctionProperty.builder()
+ * .implementedBy(DataConnectorProperty.builder()
+ * .isNative(false)
+ * .lambda(LambdaFunctionProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .build())
+ * .requiredProperties(List.of("requiredProperties"))
+ * .scope("scope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-function.html)
+ */
 @CdkDslMarker
 public class CfnComponentTypeFunctionPropertyDsl {
   private val cdkBuilder: CfnComponentType.FunctionProperty.Builder =

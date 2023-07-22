@@ -45,6 +45,20 @@ import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.triggers.TriggerFunctionProps
 import software.constructs.Construct
 
+/**
+ * Props for `InvokeFunction`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.triggers.*;
+ * TriggerFunction.Builder.create(this, "MyTrigger")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(__dirname + "/my-trigger"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TriggerFunctionPropsDsl {
   private val cdkBuilder: TriggerFunctionProps.Builder = TriggerFunctionProps.builder()

@@ -12,6 +12,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.scheduler.CfnScheduleGroup
 import software.constructs.Construct
 
+/**
+ * A *schedule group* is an Amazon EventBridge Scheduler resource you use to organize your
+ * schedules.
+ *
+ * Your AWS account comes with a `default` scheduler group. You associate a new schedule with the
+ * `default` group or with schedule groups that you create and manage. You can create up to [500
+ * schedule groups](https://docs.aws.amazon.com/scheduler/latest/UserGuide/scheduler-quotas.html) in
+ * your AWS account. With EventBridge Scheduler, you apply
+ * [tags](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) to schedule groups, not to
+ * individual schedules to organize your resources.
+ *
+ * For more information about managing schedule groups, see [Managing a schedule
+ * group](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule-group.html) in the
+ * *EventBridge Scheduler User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * CfnScheduleGroup cfnScheduleGroup = CfnScheduleGroup.Builder.create(this, "MyCfnScheduleGroup")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedulegroup.html)
+ */
 @CdkDslMarker
 public class CfnScheduleGroupDsl(
   scope: Construct,

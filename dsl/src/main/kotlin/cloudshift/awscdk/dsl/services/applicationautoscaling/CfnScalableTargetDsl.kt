@@ -12,6 +12,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApplicationAutoScaling::ScalableTarget` resource specifies a resource that Application
+ * Auto Scaling can scale, such as an AWS::DynamoDB::Table or AWS::ECS::Service resource.
+ *
+ * For more information, see [Getting
+ * started](https://docs.aws.amazon.com/autoscaling/application/userguide/getting-started.html) in the
+ * *Application Auto Scaling User Guide* .
+ *
+ *
+ * If the resource that you want Application Auto Scaling to scale is not yet created in your
+ * account, add a dependency on the resource when registering it as a scalable target using the
+ * [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * attribute.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * CfnScalableTarget cfnScalableTarget = CfnScalableTarget.Builder.create(this,
+ * "MyCfnScalableTarget")
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .resourceId("resourceId")
+ * .scalableDimension("scalableDimension")
+ * .serviceNamespace("serviceNamespace")
+ * // the properties below are optional
+ * .roleArn("roleArn")
+ * .scheduledActions(List.of(ScheduledActionProperty.builder()
+ * .schedule("schedule")
+ * .scheduledActionName("scheduledActionName")
+ * // the properties below are optional
+ * .endTime(new Date())
+ * .scalableTargetAction(ScalableTargetActionProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .startTime(new Date())
+ * .timezone("timezone")
+ * .build()))
+ * .suspendedState(SuspendedStateProperty.builder()
+ * .dynamicScalingInSuspended(false)
+ * .dynamicScalingOutSuspended(false)
+ * .scheduledScalingSuspended(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
+ */
 @CdkDslMarker
 public class CfnScalableTargetDsl(
   scope: Construct,

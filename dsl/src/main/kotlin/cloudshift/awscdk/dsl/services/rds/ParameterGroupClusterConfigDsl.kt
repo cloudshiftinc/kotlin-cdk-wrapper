@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.ParameterGroupClusterConfig
 
+/**
+ * The type returned from `IParameterGroup.bindToCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ParameterGroupClusterConfig parameterGroupClusterConfig = ParameterGroupClusterConfig.builder()
+ * .parameterGroupName("parameterGroupName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ParameterGroupClusterConfigDsl {
   private val cdkBuilder: ParameterGroupClusterConfig.Builder =

@@ -11,6 +11,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppConfig::DeploymentStrategy` resource creates an AWS AppConfig deployment strategy.
+ *
+ * A deployment strategy defines important criteria for rolling out your configuration to the
+ * designated targets. A deployment strategy includes: the overall duration required, a percentage of
+ * targets to receive the deployment during each interval, an algorithm that defines how percentage
+ * grows, and bake time.
+ *
+ * AWS AppConfig requires that you create resources and deploy a configuration in the following
+ * order:
+ *
+ * * Create an application
+ * * Create an environment
+ * * Create a configuration profile
+ * * Create a deployment strategy
+ * * Deploy the configuration
+ *
+ * For more information, see [AWS
+ * AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the
+ * *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnDeploymentStrategy cfnDeploymentStrategy = CfnDeploymentStrategy.Builder.create(this,
+ * "MyCfnDeploymentStrategy")
+ * .deploymentDurationInMinutes(123)
+ * .growthFactor(123)
+ * .name("name")
+ * .replicateTo("replicateTo")
+ * // the properties below are optional
+ * .description("description")
+ * .finalBakeTimeInMinutes(123)
+ * .growthType("growthType")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentStrategyDsl(
   scope: Construct,

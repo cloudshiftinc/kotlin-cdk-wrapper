@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.panorama.CfnPackage
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * StorageLocationProperty storageLocationProperty = StorageLocationProperty.builder()
+ * .binaryPrefixLocation("binaryPrefixLocation")
+ * .bucket("bucket")
+ * .generatedPrefixLocation("generatedPrefixLocation")
+ * .manifestPrefixLocation("manifestPrefixLocation")
+ * .repoPrefixLocation("repoPrefixLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-panorama-package-storagelocation.html)
+ */
 @CdkDslMarker
 public class CfnPackageStorageLocationPropertyDsl {
   private val cdkBuilder: CfnPackage.StorageLocationProperty.Builder =

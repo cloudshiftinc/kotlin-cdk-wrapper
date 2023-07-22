@@ -10,6 +10,27 @@ import software.amazon.awscdk.pipelines.AddStageOpts
 import software.amazon.awscdk.pipelines.StackSteps
 import software.amazon.awscdk.pipelines.Step
 
+/**
+ * Options to pass to `addStage`.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline;
+ * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
+ * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
+ * pipeline.addStage(preprod, AddStageOpts.builder()
+ * .post(List.of(
+ * ShellStep.Builder.create("Validate Endpoint")
+ * .commands(List.of("curl -Ssf https://my.webservice.com/"))
+ * .build()))
+ * .build());
+ * pipeline.addStage(prod, AddStageOpts.builder()
+ * .pre(List.of(
+ * new ManualApprovalStep("PromoteToProd")))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddStageOptsDsl {
   private val cdkBuilder: AddStageOpts.Builder = AddStageOpts.builder()

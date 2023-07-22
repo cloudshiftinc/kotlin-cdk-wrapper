@@ -7,6 +7,24 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 import software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatchConfig
 
+/**
+ * Configuration for gateway route host name match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GatewayRouteHostnameMatchConfig gatewayRouteHostnameMatchConfig =
+ * GatewayRouteHostnameMatchConfig.builder()
+ * .hostnameMatch(GatewayRouteHostnameMatchProperty.builder()
+ * .exact("exact")
+ * .suffix("suffix")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GatewayRouteHostnameMatchConfigDsl {
   private val cdkBuilder: GatewayRouteHostnameMatchConfig.Builder =

@@ -12,6 +12,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
 import software.constructs.Construct
 
+/**
+ * A real-time log configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnRealtimeLogConfig cfnRealtimeLogConfig = CfnRealtimeLogConfig.Builder.create(this,
+ * "MyCfnRealtimeLogConfig")
+ * .endPoints(List.of(EndPointProperty.builder()
+ * .kinesisStreamConfig(KinesisStreamConfigProperty.builder()
+ * .roleArn("roleArn")
+ * .streamArn("streamArn")
+ * .build())
+ * .streamType("streamType")
+ * .build()))
+ * .fields(List.of("fields"))
+ * .name("name")
+ * .samplingRate(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-realtimelogconfig.html)
+ */
 @CdkDslMarker
 public class CfnRealtimeLogConfigDsl(
   scope: Construct,

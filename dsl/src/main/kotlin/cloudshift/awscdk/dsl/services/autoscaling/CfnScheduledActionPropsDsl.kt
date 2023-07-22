@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnScheduledActionProps
 
+/**
+ * Properties for defining a `CfnScheduledAction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnScheduledActionProps cfnScheduledActionProps = CfnScheduledActionProps.builder()
+ * .autoScalingGroupName("autoScalingGroupName")
+ * // the properties below are optional
+ * .desiredCapacity(123)
+ * .endTime("endTime")
+ * .maxSize(123)
+ * .minSize(123)
+ * .recurrence("recurrence")
+ * .startTime("startTime")
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scheduledaction.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionPropsDsl {
   private val cdkBuilder: CfnScheduledActionProps.Builder = CfnScheduledActionProps.builder()

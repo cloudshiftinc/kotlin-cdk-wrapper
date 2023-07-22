@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 
+/**
+ * An HTTP Live Streaming (HLS) manifest configuration on a CMAF endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * HlsManifestProperty hlsManifestProperty = HlsManifestProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .adMarkers("adMarkers")
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .playlistType("playlistType")
+ * .playlistWindowSeconds(123)
+ * .programDateTimeIntervalSeconds(123)
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-hlsmanifest.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointHlsManifestPropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.HlsManifestProperty.Builder =

@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The field well configuration of a waterfall visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-waterfallchartaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateWaterfallChartAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.WaterfallChartAggregatedFieldWellsProperty.Builder =

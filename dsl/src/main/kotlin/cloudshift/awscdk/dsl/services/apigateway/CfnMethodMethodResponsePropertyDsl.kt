@@ -11,6 +11,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnMethod
 
+/**
+ * Represents a method response of a given HTTP status code returned to the client.
+ *
+ * The method response is passed from the back end through the associated integration response that
+ * can be transformed using a mapping template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * MethodResponseProperty methodResponseProperty = MethodResponseProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .responseModels(Map.of(
+ * "responseModelsKey", "responseModels"))
+ * .responseParameters(Map.of(
+ * "responseParametersKey", false))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-methodresponse.html)
+ */
 @CdkDslMarker
 public class CfnMethodMethodResponsePropertyDsl {
   private val cdkBuilder: CfnMethod.MethodResponseProperty.Builder =

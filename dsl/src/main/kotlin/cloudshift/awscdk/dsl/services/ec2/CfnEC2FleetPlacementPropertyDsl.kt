@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Describes the placement of an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PlacementProperty placementProperty = PlacementProperty.builder()
+ * .affinity("affinity")
+ * .availabilityZone("availabilityZone")
+ * .groupName("groupName")
+ * .hostId("hostId")
+ * .hostResourceGroupArn("hostResourceGroupArn")
+ * .partitionNumber(123)
+ * .spreadDomain("spreadDomain")
+ * .tenancy("tenancy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-placement.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetPlacementPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.PlacementProperty.Builder =

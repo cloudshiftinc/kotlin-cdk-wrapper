@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolDomain
 import software.constructs.Construct
 
+/**
+ * The AWS::Cognito::UserPoolDomain resource creates a new domain for a user pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolDomain cfnUserPoolDomain = CfnUserPoolDomain.Builder.create(this,
+ * "MyCfnUserPoolDomain")
+ * .domain("domain")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .customDomainConfig(CustomDomainConfigTypeProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolDomainDsl(
   scope: Construct,

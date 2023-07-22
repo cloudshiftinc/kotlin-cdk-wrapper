@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps
 
+/**
+ * Construction properties for a ResourcePolicy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * ResourcePolicyProps resourcePolicyProps = ResourcePolicyProps.builder()
+ * .secret(secret)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResourcePolicyPropsDsl {
   private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()

@@ -13,6 +13,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfigurationProps
 
+/**
+ * Properties for defining a `CfnNetworkAnalyzerConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * Object traceContent;
+ * CfnNetworkAnalyzerConfigurationProps cfnNetworkAnalyzerConfigurationProps =
+ * CfnNetworkAnalyzerConfigurationProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .traceContent(traceContent)
+ * .wirelessDevices(List.of("wirelessDevices"))
+ * .wirelessGateways(List.of("wirelessGateways"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnNetworkAnalyzerConfigurationPropsDsl {
   private val cdkBuilder: CfnNetworkAnalyzerConfigurationProps.Builder =

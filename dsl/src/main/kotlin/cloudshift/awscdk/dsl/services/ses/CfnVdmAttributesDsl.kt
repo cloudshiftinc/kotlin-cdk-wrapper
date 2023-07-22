@@ -8,6 +8,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnVdmAttributes
 import software.constructs.Construct
 
+/**
+ * The Virtual Deliverability Manager (VDM) attributes that apply to your Amazon SES account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnVdmAttributes cfnVdmAttributes = CfnVdmAttributes.Builder.create(this, "MyCfnVdmAttributes")
+ * .dashboardAttributes(DashboardAttributesProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianAttributes(GuardianAttributesProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html)
+ */
 @CdkDslMarker
 public class CfnVdmAttributesDsl(
   scope: Construct,

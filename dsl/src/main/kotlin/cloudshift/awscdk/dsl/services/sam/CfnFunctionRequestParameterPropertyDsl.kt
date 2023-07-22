@@ -7,6 +7,21 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * RequestParameterProperty requestParameterProperty = RequestParameterProperty.builder()
+ * .caching(false)
+ * .required(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-requestparameter.html)
+ */
 @CdkDslMarker
 public class CfnFunctionRequestParameterPropertyDsl {
   private val cdkBuilder: CfnFunction.RequestParameterProperty.Builder =

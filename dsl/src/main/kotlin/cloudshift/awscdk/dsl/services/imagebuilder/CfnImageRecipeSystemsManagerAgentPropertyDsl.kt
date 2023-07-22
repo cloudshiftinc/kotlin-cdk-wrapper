@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 
+/**
+ * Contains settings for the Systems Manager agent on your build instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * SystemsManagerAgentProperty systemsManagerAgentProperty = SystemsManagerAgentProperty.builder()
+ * .uninstallAfterBuild(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-systemsmanageragent.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipeSystemsManagerAgentPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.SystemsManagerAgentProperty.Builder =

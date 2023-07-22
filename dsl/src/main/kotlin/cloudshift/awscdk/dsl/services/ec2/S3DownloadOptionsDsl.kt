@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.S3DownloadOptions
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Options when downloading files from S3.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.assets.Asset;
+ * Instance instance;
+ * Asset asset = Asset.Builder.create(this, "Asset")
+ * .path("./configure.sh")
+ * .build();
+ * String localPath = instance.userData.addS3DownloadCommand(S3DownloadOptions.builder()
+ * .bucket(asset.getBucket())
+ * .bucketKey(asset.getS3ObjectKey())
+ * .region("us-east-1")
+ * .build());
+ * instance.userData.addExecuteFileCommand(ExecuteFileOptions.builder()
+ * .filePath(localPath)
+ * .arguments("--verbose -y")
+ * .build());
+ * asset.grantRead(instance.getRole());
+ * ```
+ */
 @CdkDslMarker
 public class S3DownloadOptionsDsl {
   private val cdkBuilder: S3DownloadOptions.Builder = S3DownloadOptions.builder()

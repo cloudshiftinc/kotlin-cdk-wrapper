@@ -11,6 +11,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings to configure the conditions that will define the input as unhealthy and that will make
+ * MediaLive fail over to the other input in the input failover pair.
+ *
+ * The parent of this entity is InputAttachment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AutomaticInputFailoverSettingsProperty automaticInputFailoverSettingsProperty =
+ * AutomaticInputFailoverSettingsProperty.builder()
+ * .errorClearTimeMsec(123)
+ * .failoverConditions(List.of(FailoverConditionProperty.builder()
+ * .failoverConditionSettings(FailoverConditionSettingsProperty.builder()
+ * .audioSilenceSettings(AudioSilenceFailoverSettingsProperty.builder()
+ * .audioSelectorName("audioSelectorName")
+ * .audioSilenceThresholdMsec(123)
+ * .build())
+ * .inputLossSettings(InputLossFailoverSettingsProperty.builder()
+ * .inputLossThresholdMsec(123)
+ * .build())
+ * .videoBlackSettings(VideoBlackFailoverSettingsProperty.builder()
+ * .blackDetectThreshold(123)
+ * .videoBlackThresholdMsec(123)
+ * .build())
+ * .build())
+ * .build()))
+ * .inputPreference("inputPreference")
+ * .secondaryInputId("secondaryInputId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-automaticinputfailoversettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAutomaticInputFailoverSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AutomaticInputFailoverSettingsProperty.Builder =

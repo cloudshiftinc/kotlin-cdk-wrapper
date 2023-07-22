@@ -8,6 +8,37 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnOrganizationConfigRule
 
+/**
+ * organization custom rule metadata such as resource type, resource ID of AWS resource, Lambda
+ * function ARN, and organization trigger types that trigger AWS Config to evaluate your AWS resources
+ * against a rule.
+ *
+ * It also provides the frequency with which you want AWS Config to run evaluations for the rule if
+ * the trigger type is periodic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * OrganizationCustomRuleMetadataProperty organizationCustomRuleMetadataProperty =
+ * OrganizationCustomRuleMetadataProperty.builder()
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
+ * // the properties below are optional
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustomrulemetadata.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConfigRuleOrganizationCustomRuleMetadataPropertyDsl {
   private val cdkBuilder: CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.Builder =

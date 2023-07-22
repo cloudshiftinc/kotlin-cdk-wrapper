@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field well configuration of a sankey diagram.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardSankeyDiagramAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.SankeyDiagramAggregatedFieldWellsProperty.Builder =

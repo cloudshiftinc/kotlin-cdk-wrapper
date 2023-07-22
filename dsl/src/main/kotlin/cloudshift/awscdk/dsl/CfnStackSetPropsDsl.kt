@@ -14,6 +14,66 @@ import software.amazon.awscdk.CfnStackSetProps
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 
+/**
+ * Properties for defining a `CfnStackSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * Object managedExecution;
+ * CfnStackSetProps cfnStackSetProps = CfnStackSetProps.builder()
+ * .permissionModel("permissionModel")
+ * .stackSetName("stackSetName")
+ * // the properties below are optional
+ * .administrationRoleArn("administrationRoleArn")
+ * .autoDeployment(AutoDeploymentProperty.builder()
+ * .enabled(false)
+ * .retainStacksOnAccountRemoval(false)
+ * .build())
+ * .callAs("callAs")
+ * .capabilities(List.of("capabilities"))
+ * .description("description")
+ * .executionRoleName("executionRoleName")
+ * .managedExecution(managedExecution)
+ * .operationPreferences(OperationPreferencesProperty.builder()
+ * .failureToleranceCount(123)
+ * .failureTolerancePercentage(123)
+ * .maxConcurrentCount(123)
+ * .maxConcurrentPercentage(123)
+ * .regionConcurrencyType("regionConcurrencyType")
+ * .regionOrder(List.of("regionOrder"))
+ * .build())
+ * .parameters(List.of(ParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .stackInstancesGroup(List.of(StackInstancesProperty.builder()
+ * .deploymentTargets(DeploymentTargetsProperty.builder()
+ * .accountFilterType("accountFilterType")
+ * .accounts(List.of("accounts"))
+ * .organizationalUnitIds(List.of("organizationalUnitIds"))
+ * .build())
+ * .regions(List.of("regions"))
+ * // the properties below are optional
+ * .parameterOverrides(List.of(ParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateBody("templateBody")
+ * .templateUrl("templateUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)
+ */
 @CdkDslMarker
 public class CfnStackSetPropsDsl {
   private val cdkBuilder: CfnStackSetProps.Builder = CfnStackSetProps.builder()

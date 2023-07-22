@@ -16,6 +16,22 @@ import software.amazon.awscdk.services.ecr.TagMutability
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * Define an ECR repository.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.*;
+ * Service.Builder.create(this, "Service")
+ * .source(Source.fromEcr(EcrProps.builder()
+ * .imageConfiguration(ImageConfiguration.builder().port(80).build())
+ * .repository(Repository.fromRepositoryName(this, "NginxRepository", "nginx"))
+ * .tagOrDigest("latest")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryDsl(
   scope: Construct,

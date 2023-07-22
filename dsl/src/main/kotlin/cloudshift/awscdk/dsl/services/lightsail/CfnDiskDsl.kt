@@ -15,6 +15,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDisk
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Disk` resource specifies a disk that can be attached to an Amazon Lightsail
+ * instance that is in the same AWS Region and Availability Zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnDisk cfnDisk = CfnDisk.Builder.create(this, "MyCfnDisk")
+ * .diskName("diskName")
+ * .sizeInGb(123)
+ * // the properties below are optional
+ * .addOns(List.of(AddOnProperty.builder()
+ * .addOnType("addOnType")
+ * // the properties below are optional
+ * .autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty.builder()
+ * .snapshotTimeOfDay("snapshotTimeOfDay")
+ * .build())
+ * .status("status")
+ * .build()))
+ * .availabilityZone("availabilityZone")
+ * .location(LocationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .regionName("regionName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html)
+ */
 @CdkDslMarker
 public class CfnDiskDsl(
   scope: Construct,

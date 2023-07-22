@@ -8,6 +8,89 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::AccountAuditConfiguration` resource to configure or reconfigure the Device
+ * Defender audit settings for your account.
+ *
+ * Settings include how audit notifications are sent and which audit checks are enabled or disabled.
+ * For API reference, see
+ * [UpdateAccountAuditConfiguration](https://docs.aws.amazon.com/iot/latest/apireference/API_UpdateAccountAuditConfiguration.html)
+ * and for detailed information on all available audit checks, see [Audit
+ * checks](https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-audit-checks.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnAccountAuditConfiguration cfnAccountAuditConfiguration =
+ * CfnAccountAuditConfiguration.Builder.create(this, "MyCfnAccountAuditConfiguration")
+ * .accountId("accountId")
+ * .auditCheckConfigurations(AuditCheckConfigurationsProperty.builder()
+ * .authenticatedCognitoRoleOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .caCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .caCertificateKeyQualityCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .conflictingClientIdsCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateKeyQualityCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateSharedCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .intermediateCaRevokedForActiveDeviceCertificatesCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotPolicyOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .ioTPolicyPotentialMisConfigurationCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotRoleAliasAllowsAccessToUnusedServicesCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotRoleAliasOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .loggingDisabledCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .revokedCaCertificateStillActiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .revokedDeviceCertificateStillActiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .unauthenticatedCognitoRoleOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .auditNotificationTargetConfigurations(AuditNotificationTargetConfigurationsProperty.builder()
+ * .sns(AuditNotificationTargetProperty.builder()
+ * .enabled(false)
+ * .roleArn("roleArn")
+ * .targetArn("targetArn")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-accountauditconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAccountAuditConfigurationDsl(
   scope: Construct,

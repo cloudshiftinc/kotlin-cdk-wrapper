@@ -6,6 +6,15 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.s3.BlockPublicAccess
 
+/**
+ * Example:
+ *
+ * ```
+ * Bucket bucket = Bucket.Builder.create(this, "MyBlockedBucket")
+ * .blockPublicAccess(BlockPublicAccess.BLOCK_ALL)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BlockPublicAccessDsl {
   private val cdkBuilder: BlockPublicAccess.Builder = BlockPublicAccess.Builder.create()

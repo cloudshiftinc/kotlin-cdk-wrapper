@@ -13,6 +13,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnAddonProps
 
+/**
+ * Properties for defining a `CfnAddon`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnAddonProps cfnAddonProps = CfnAddonProps.builder()
+ * .addonName("addonName")
+ * .clusterName("clusterName")
+ * // the properties below are optional
+ * .addonVersion("addonVersion")
+ * .configurationValues("configurationValues")
+ * .preserveOnDelete(false)
+ * .resolveConflicts("resolveConflicts")
+ * .serviceAccountRoleArn("serviceAccountRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)
+ */
 @CdkDslMarker
 public class CfnAddonPropsDsl {
   private val cdkBuilder: CfnAddonProps.Builder = CfnAddonProps.builder()

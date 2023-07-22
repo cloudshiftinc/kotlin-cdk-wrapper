@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTarg
 import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition
 
+/**
+ * Properties for adding a new target group to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationTargetGroup applicationTargetGroup;
+ * ListenerCondition listenerCondition;
+ * AddApplicationTargetGroupsProps addApplicationTargetGroupsProps =
+ * AddApplicationTargetGroupsProps.builder()
+ * .targetGroups(List.of(applicationTargetGroup))
+ * // the properties below are optional
+ * .conditions(List.of(listenerCondition))
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddApplicationTargetGroupsPropsDsl {
   private val cdkBuilder: AddApplicationTargetGroupsProps.Builder =

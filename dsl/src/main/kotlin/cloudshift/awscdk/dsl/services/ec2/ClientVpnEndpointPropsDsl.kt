@@ -20,6 +20,56 @@ import software.amazon.awscdk.services.ec2.VpnPort
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.ILogStream
 
+/**
+ * Properties for a client VPN endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * IClientVpnConnectionHandler clientVpnConnectionHandler;
+ * ClientVpnUserBasedAuthentication clientVpnUserBasedAuthentication;
+ * LogGroup logGroup;
+ * LogStream logStream;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * ClientVpnEndpointProps clientVpnEndpointProps = ClientVpnEndpointProps.builder()
+ * .cidr("cidr")
+ * .serverCertificateArn("serverCertificateArn")
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .authorizeAllUsersToVpcCidr(false)
+ * .clientCertificateArn("clientCertificateArn")
+ * .clientConnectionHandler(clientVpnConnectionHandler)
+ * .clientLoginBanner("clientLoginBanner")
+ * .description("description")
+ * .dnsServers(List.of("dnsServers"))
+ * .logging(false)
+ * .logGroup(logGroup)
+ * .logStream(logStream)
+ * .port(VpnPort.HTTPS)
+ * .securityGroups(List.of(securityGroup))
+ * .selfServicePortal(false)
+ * .sessionTimeout(ClientVpnSessionTimeout.EIGHT_HOURS)
+ * .splitTunnel(false)
+ * .transportProtocol(TransportProtocol.TCP)
+ * .userBasedAuthentication(clientVpnUserBasedAuthentication)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnEndpointPropsDsl {
   private val cdkBuilder: ClientVpnEndpointProps.Builder = ClientVpnEndpointProps.builder()

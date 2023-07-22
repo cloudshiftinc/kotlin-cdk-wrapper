@@ -13,6 +13,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource;
+ * Function fn;
+ * Queue queue = Queue.Builder.create(this, "MyQueue")
+ * .visibilityTimeout(Duration.seconds(30)) // default,
+ * .receiveMessageWaitTime(Duration.seconds(20))
+ * .build();
+ * fn.addEventSource(SqsEventSource.Builder.create(queue)
+ * .batchSize(10) // default
+ * .maxBatchingWindow(Duration.minutes(5))
+ * .reportBatchItemFailures(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SqsEventSourcePropsDsl {
   private val cdkBuilder: SqsEventSourceProps.Builder = SqsEventSourceProps.builder()

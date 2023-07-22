@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.ArnComponents
 import software.amazon.awscdk.ArnFormat
 
+/**
+ * Example:
+ *
+ * ```
+ * PublicHostedZone subZone = PublicHostedZone.Builder.create(this, "SubZone")
+ * .zoneName("sub.someexample.com")
+ * .build();
+ * // import the delegation role by constructing the roleArn
+ * String delegationRoleArn = Stack.of(this).formatArn(ArnComponents.builder()
+ * .region("") // IAM is global in each partition
+ * .service("iam")
+ * .account("parent-account-id")
+ * .resource("role")
+ * .resourceName("MyDelegationRole")
+ * .build());
+ * IRole delegationRole = Role.fromRoleArn(this, "DelegationRole", delegationRoleArn);
+ * // create the record
+ * // create the record
+ * CrossAccountZoneDelegationRecord.Builder.create(this, "delegate")
+ * .delegatedZone(subZone)
+ * .parentHostedZoneName("someexample.com") // or you can use parentHostedZoneId
+ * .delegationRole(delegationRole)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ArnComponentsDsl {
   private val cdkBuilder: ArnComponents.Builder = ArnComponents.builder()

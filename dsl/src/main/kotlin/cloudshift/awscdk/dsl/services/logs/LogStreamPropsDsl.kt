@@ -8,6 +8,25 @@ import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.LogStreamProps
 
+/**
+ * Properties for a LogStream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * LogStreamProps logStreamProps = LogStreamProps.builder()
+ * .logGroup(logGroup)
+ * // the properties below are optional
+ * .logStreamName("logStreamName")
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogStreamPropsDsl {
   private val cdkBuilder: LogStreamProps.Builder = LogStreamProps.builder()

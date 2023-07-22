@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.cloudfront.EdgeLambda
 import software.amazon.awscdk.services.cloudfront.LambdaEdgeEventType
 import software.amazon.awscdk.services.lambda.IVersion
 
+/**
+ * Represents a Lambda function version and event type when using Lambda&#64;Edge.
+ *
+ * The type of the `AddBehaviorOptions.edgeLambdas` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Version version;
+ * EdgeLambda edgeLambda = EdgeLambda.builder()
+ * .eventType(LambdaEdgeEventType.ORIGIN_REQUEST)
+ * .functionVersion(version)
+ * // the properties below are optional
+ * .includeBody(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EdgeLambdaDsl {
   private val cdkBuilder: EdgeLambda.Builder = EdgeLambda.builder()

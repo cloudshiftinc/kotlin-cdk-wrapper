@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Sends an input to an AWS IoT Events detector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * IotEventsActionProperty iotEventsActionProperty = IotEventsActionProperty.builder()
+ * .inputName("inputName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .batchMode(false)
+ * .messageId("messageId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-ioteventsaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleIotEventsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.IotEventsActionProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.forecast.CfnDataset
 
+/**
+ * An AWS Key Management Service (KMS) key and an AWS Identity and Access Management (IAM) role that
+ * Amazon Forecast can assume to access the key.
+ *
+ * You can specify this optional object in the `CreateDataset` and `CreatePredictor` requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
+ * .kmsKeyArn("kmsKeyArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-encryptionconfig.html)
+ */
 @CdkDslMarker
 public class CfnDatasetEncryptionConfigPropertyDsl {
   private val cdkBuilder: CfnDataset.EncryptionConfigProperty.Builder =

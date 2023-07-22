@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.gamelift.CfnLocationProps
 
+/**
+ * Properties for defining a `CfnLocation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnLocationProps cfnLocationProps = CfnLocationProps.builder()
+ * .locationName("locationName")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-location.html)
+ */
 @CdkDslMarker
 public class CfnLocationPropsDsl {
   private val cdkBuilder: CfnLocationProps.Builder = CfnLocationProps.builder()

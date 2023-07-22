@@ -9,6 +9,33 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The `DockerVolumeConfiguration` property specifies a Docker volume configuration and is used when
+ * you use Docker volumes.
+ *
+ * Docker volumes are only supported when you are using the EC2 launch type. Windows containers only
+ * support the use of the `local` driver. To use bind mounts, specify a `host` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * DockerVolumeConfigurationProperty dockerVolumeConfigurationProperty =
+ * DockerVolumeConfigurationProperty.builder()
+ * .autoprovision(false)
+ * .driver("driver")
+ * .driverOpts(Map.of(
+ * "driverOptsKey", "driverOpts"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .scope("scope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionDockerVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.DockerVolumeConfigurationProperty.Builder =

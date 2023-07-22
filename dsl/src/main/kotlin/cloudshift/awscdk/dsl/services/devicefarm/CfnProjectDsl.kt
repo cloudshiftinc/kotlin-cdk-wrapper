@@ -14,6 +14,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devicefarm.CfnProject
 import software.constructs.Construct
 
+/**
+ * Creates a project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .name("name")
+ * // the properties below are optional
+ * .defaultJobTimeoutMinutes(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

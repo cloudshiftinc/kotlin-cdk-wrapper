@@ -13,6 +13,76 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 import software.amazon.awscdk.services.amazonmq.CfnBrokerProps
 
+/**
+ * Properties for defining a `CfnBroker`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * CfnBrokerProps cfnBrokerProps = CfnBrokerProps.builder()
+ * .autoMinorVersionUpgrade(false)
+ * .brokerName("brokerName")
+ * .deploymentMode("deploymentMode")
+ * .engineType("engineType")
+ * .engineVersion("engineVersion")
+ * .hostInstanceType("hostInstanceType")
+ * .publiclyAccessible(false)
+ * .users(List.of(UserProperty.builder()
+ * .password("password")
+ * .username("username")
+ * // the properties below are optional
+ * .consoleAccess(false)
+ * .groups(List.of("groups"))
+ * .build()))
+ * // the properties below are optional
+ * .authenticationStrategy("authenticationStrategy")
+ * .configuration(ConfigurationIdProperty.builder()
+ * .id("id")
+ * .revision(123)
+ * .build())
+ * .encryptionOptions(EncryptionOptionsProperty.builder()
+ * .useAwsOwnedKey(false)
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .ldapServerMetadata(LdapServerMetadataProperty.builder()
+ * .hosts(List.of("hosts"))
+ * .roleBase("roleBase")
+ * .roleSearchMatching("roleSearchMatching")
+ * .serviceAccountPassword("serviceAccountPassword")
+ * .serviceAccountUsername("serviceAccountUsername")
+ * .userBase("userBase")
+ * .userSearchMatching("userSearchMatching")
+ * // the properties below are optional
+ * .roleName("roleName")
+ * .roleSearchSubtree(false)
+ * .userRoleName("userRoleName")
+ * .userSearchSubtree(false)
+ * .build())
+ * .logs(LogListProperty.builder()
+ * .audit(false)
+ * .general(false)
+ * .build())
+ * .maintenanceWindowStartTime(MaintenanceWindowProperty.builder()
+ * .dayOfWeek("dayOfWeek")
+ * .timeOfDay("timeOfDay")
+ * .timeZone("timeZone")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .storageType("storageType")
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)
+ */
 @CdkDslMarker
 public class CfnBrokerPropsDsl {
   private val cdkBuilder: CfnBrokerProps.Builder = CfnBrokerProps.builder()

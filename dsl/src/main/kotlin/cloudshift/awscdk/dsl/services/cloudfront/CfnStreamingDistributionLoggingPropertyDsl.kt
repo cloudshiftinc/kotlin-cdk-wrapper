@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 
+/**
+ * A complex type that controls whether access logs are written for the streaming distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * LoggingProperty loggingProperty = LoggingProperty.builder()
+ * .bucket("bucket")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html)
+ */
 @CdkDslMarker
 public class CfnStreamingDistributionLoggingPropertyDsl {
   private val cdkBuilder: CfnStreamingDistribution.LoggingProperty.Builder =

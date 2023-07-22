@@ -11,6 +11,25 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationListen
 import software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate
 import software.constructs.Construct
 
+/**
+ * Add certificates to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationListener applicationListener;
+ * ListenerCertificate listenerCertificate;
+ * ApplicationListenerCertificate applicationListenerCertificate =
+ * ApplicationListenerCertificate.Builder.create(this, "MyApplicationListenerCertificate")
+ * .listener(applicationListener)
+ * // the properties below are optional
+ * .certificates(List.of(listenerCertificate))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerCertificateDsl(
   scope: Construct,

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * A scheduling object using a `cron` statement to schedule an event.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schedule.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerSchedulePropertyDsl {
   private val cdkBuilder: CfnCrawler.ScheduleProperty.Builder =

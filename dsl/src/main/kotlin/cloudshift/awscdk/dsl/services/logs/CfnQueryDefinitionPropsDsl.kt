@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.logs.CfnQueryDefinitionProps
 
+/**
+ * Properties for defining a `CfnQueryDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnQueryDefinitionProps cfnQueryDefinitionProps = CfnQueryDefinitionProps.builder()
+ * .name("name")
+ * .queryString("queryString")
+ * // the properties below are optional
+ * .logGroupNames(List.of("logGroupNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html)
+ */
 @CdkDslMarker
 public class CfnQueryDefinitionPropsDsl {
   private val cdkBuilder: CfnQueryDefinitionProps.Builder = CfnQueryDefinitionProps.builder()

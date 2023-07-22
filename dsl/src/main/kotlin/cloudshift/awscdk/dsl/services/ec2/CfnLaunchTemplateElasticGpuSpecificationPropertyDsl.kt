@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies a specification for an Elastic GPU for an Amazon EC2 launch template.
+ *
+ * `ElasticGpuSpecification` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
+ * ElasticGpuSpecificationProperty.builder()
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-elasticgpuspecification.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateElasticGpuSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.ElasticGpuSpecificationProperty.Builder =

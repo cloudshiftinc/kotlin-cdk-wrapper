@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig
 import software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig
 import software.amazon.awscdk.services.codedeploy.TrafficRoutingConfig
 
+/**
+ * Represents the structure to pass into the underlying CfnDeploymentConfig class.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * TrafficRoutingConfig trafficRoutingConfig = TrafficRoutingConfig.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .timeBasedCanary(CanaryTrafficRoutingConfig.builder()
+ * .canaryInterval(123)
+ * .canaryPercentage(123)
+ * .build())
+ * .timeBasedLinear(LinearTrafficRoutingConfig.builder()
+ * .linearInterval(123)
+ * .linearPercentage(123)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TrafficRoutingConfigDsl {
   private val cdkBuilder: TrafficRoutingConfig.Builder = TrafficRoutingConfig.builder()

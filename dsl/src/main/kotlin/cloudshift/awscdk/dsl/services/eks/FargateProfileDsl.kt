@@ -16,6 +16,36 @@ import software.amazon.awscdk.services.eks.Selector
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * Fargate profiles allows an administrator to declare which pods run on Fargate.
+ *
+ * This declaration is done through the profile’s selectors. Each
+ * profile can have up to five selectors that contain a namespace and optional
+ * labels. You must define a namespace for every selector. The label field
+ * consists of multiple optional key-value pairs. Pods that match a selector (by
+ * matching a namespace for the selector and all of the labels specified in the
+ * selector) are scheduled on Fargate. If a namespace selector is defined
+ * without any labels, Amazon EKS will attempt to schedule all pods that run in
+ * that namespace onto Fargate using the profile. If a to-be-scheduled pod
+ * matches any of the selectors in the Fargate profile, then that pod is
+ * scheduled on Fargate.
+ *
+ * If a pod matches multiple Fargate profiles, Amazon EKS picks one of the
+ * matches at random. In this case, you can specify which profile a pod should
+ * use by adding the following Kubernetes label to the pod specification:
+ * eks.amazonaws.com/fargate-profile: profile_name. However, the pod must still
+ * match a selector in that profile in order to be scheduled onto Fargate.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * FargateProfile.Builder.create(this, "MyProfile")
+ * .cluster(cluster)
+ * .selectors(List.of(Selector.builder().namespace("default").build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateProfileDsl(
   scope: Construct,

@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 
+/**
+ * Configuration properties of the member.
+ *
+ * Applies only to Hyperledger Fabric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * MemberConfigurationProperty memberConfigurationProperty = MemberConfigurationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .memberFrameworkConfiguration(MemberFrameworkConfigurationProperty.builder()
+ * .memberFabricConfiguration(MemberFabricConfigurationProperty.builder()
+ * .adminPassword("adminPassword")
+ * .adminUsername("adminUsername")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-memberconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMemberMemberConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.MemberConfigurationProperty.Builder =

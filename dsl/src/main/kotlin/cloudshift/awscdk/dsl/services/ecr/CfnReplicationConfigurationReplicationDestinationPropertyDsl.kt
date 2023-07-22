@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecr.CfnReplicationConfiguration
 
+/**
+ * An array of objects representing the destination for a replication rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * ReplicationDestinationProperty replicationDestinationProperty =
+ * ReplicationDestinationProperty.builder()
+ * .region("region")
+ * .registryId("registryId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationdestination.html)
+ */
 @CdkDslMarker
 public class CfnReplicationConfigurationReplicationDestinationPropertyDsl {
   private val cdkBuilder: CfnReplicationConfiguration.ReplicationDestinationProperty.Builder =

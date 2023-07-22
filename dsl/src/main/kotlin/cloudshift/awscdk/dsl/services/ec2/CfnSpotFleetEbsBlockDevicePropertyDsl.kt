@@ -9,6 +9,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes a block device for an EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EbsBlockDeviceProperty ebsBlockDeviceProperty = EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-ebsblockdevice.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetEbsBlockDevicePropertyDsl {
   private val cdkBuilder: CfnSpotFleet.EbsBlockDeviceProperty.Builder =

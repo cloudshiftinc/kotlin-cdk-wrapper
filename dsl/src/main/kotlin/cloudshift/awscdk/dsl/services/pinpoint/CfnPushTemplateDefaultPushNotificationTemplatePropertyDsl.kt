@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 
+/**
+ * Specifies the default settings and content for a message template that can be used in messages
+ * that are sent through a push notification channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * DefaultPushNotificationTemplateProperty defaultPushNotificationTemplateProperty =
+ * DefaultPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-defaultpushnotificationtemplate.html)
+ */
 @CdkDslMarker
 public class CfnPushTemplateDefaultPushNotificationTemplatePropertyDsl {
   private val cdkBuilder: CfnPushTemplate.DefaultPushNotificationTemplateProperty.Builder =

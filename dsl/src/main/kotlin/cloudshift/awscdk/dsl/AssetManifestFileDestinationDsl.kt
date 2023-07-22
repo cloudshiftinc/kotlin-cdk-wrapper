@@ -8,6 +8,28 @@ import kotlin.Unit
 import software.amazon.awscdk.AssetManifestFileDestination
 import software.amazon.awscdk.RoleOptions
 
+/**
+ * The destination for a file asset, when it is given to the AssetManifestBuilder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * AssetManifestFileDestination assetManifestFileDestination =
+ * AssetManifestFileDestination.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .role(RoleOptions.builder()
+ * .assumeRoleArn("assumeRoleArn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetManifestFileDestinationDsl {
   private val cdkBuilder: AssetManifestFileDestination.Builder =

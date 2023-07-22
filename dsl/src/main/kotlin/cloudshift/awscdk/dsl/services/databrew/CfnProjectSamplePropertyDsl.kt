@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnProject
 
+/**
+ * Represents the sample size and sampling type for DataBrew to use for interactive data analysis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * SampleProperty sampleProperty = SampleProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .size(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-project-sample.html)
+ */
 @CdkDslMarker
 public class CfnProjectSamplePropertyDsl {
   private val cdkBuilder: CfnProject.SampleProperty.Builder = CfnProject.SampleProperty.builder()

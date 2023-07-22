@@ -14,6 +14,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnListener
 import software.constructs.Construct
 
+/**
+ * Creates a listener for a service.
+ *
+ * Before you start using your Amazon VPC Lattice service, you must add one or more listeners. A
+ * listener is a process that checks for connection requests to your services. For more information,
+ * see [Listeners](https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html) in the *Amazon VPC
+ * Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnListener cfnListener = CfnListener.Builder.create(this, "MyCfnListener")
+ * .defaultAction(DefaultActionProperty.builder()
+ * .fixedResponse(FixedResponseProperty.builder()
+ * .statusCode(123)
+ * .build())
+ * .forward(ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build())
+ * .build())
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .name("name")
+ * .port(123)
+ * .serviceIdentifier("serviceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html)
+ */
 @CdkDslMarker
 public class CfnListenerDsl(
   scope: Construct,

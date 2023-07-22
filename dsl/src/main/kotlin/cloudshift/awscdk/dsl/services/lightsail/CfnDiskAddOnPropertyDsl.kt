@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDisk
 
+/**
+ * `AddOn` is a property of the
+ * [AWS::Lightsail::Disk](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html)
+ * resource. It describes the add-ons for a disk.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * AddOnProperty addOnProperty = AddOnProperty.builder()
+ * .addOnType("addOnType")
+ * // the properties below are optional
+ * .autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty.builder()
+ * .snapshotTimeOfDay("snapshotTimeOfDay")
+ * .build())
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html)
+ */
 @CdkDslMarker
 public class CfnDiskAddOnPropertyDsl {
   private val cdkBuilder: CfnDisk.AddOnProperty.Builder = CfnDisk.AddOnProperty.builder()

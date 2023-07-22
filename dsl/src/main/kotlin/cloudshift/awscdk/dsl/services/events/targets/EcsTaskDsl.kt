@@ -22,6 +22,30 @@ import software.amazon.awscdk.services.events.targets.Tag
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Start a task on an ECS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecs.*;
+ * ICluster cluster;
+ * TaskDefinition taskDefinition;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(EcsTask.Builder.create()
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .taskCount(1)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerName("TheContainer")
+ * .command(List.of("echo", EventField.fromPath("$.detail.event")))
+ * .build()))
+ * .enableExecuteCommand(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EcsTaskDsl {
   private val cdkBuilder: EcsTask.Builder = EcsTask.Builder.create()

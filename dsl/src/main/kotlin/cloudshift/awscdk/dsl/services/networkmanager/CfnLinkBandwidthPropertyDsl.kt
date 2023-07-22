@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.networkmanager.CfnLink
 
+/**
+ * Describes bandwidth information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * BandwidthProperty bandwidthProperty = BandwidthProperty.builder()
+ * .downloadSpeed(123)
+ * .uploadSpeed(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-link-bandwidth.html)
+ */
 @CdkDslMarker
 public class CfnLinkBandwidthPropertyDsl {
   private val cdkBuilder: CfnLink.BandwidthProperty.Builder = CfnLink.BandwidthProperty.builder()

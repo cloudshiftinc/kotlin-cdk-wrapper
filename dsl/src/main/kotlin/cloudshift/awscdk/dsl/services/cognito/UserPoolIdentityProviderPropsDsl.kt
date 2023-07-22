@@ -8,6 +8,45 @@ import software.amazon.awscdk.services.cognito.AttributeMapping
 import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderProps
 
+/**
+ * Properties to create a new instance of UserPoolIdentityProvider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * ProviderAttribute providerAttribute;
+ * UserPool userPool;
+ * UserPoolIdentityProviderProps userPoolIdentityProviderProps =
+ * UserPoolIdentityProviderProps.builder()
+ * .userPool(userPool)
+ * // the properties below are optional
+ * .attributeMapping(AttributeMapping.builder()
+ * .address(providerAttribute)
+ * .birthdate(providerAttribute)
+ * .custom(Map.of(
+ * "customKey", providerAttribute))
+ * .email(providerAttribute)
+ * .familyName(providerAttribute)
+ * .fullname(providerAttribute)
+ * .gender(providerAttribute)
+ * .givenName(providerAttribute)
+ * .lastUpdateTime(providerAttribute)
+ * .locale(providerAttribute)
+ * .middleName(providerAttribute)
+ * .nickname(providerAttribute)
+ * .phoneNumber(providerAttribute)
+ * .preferredUsername(providerAttribute)
+ * .profilePage(providerAttribute)
+ * .profilePicture(providerAttribute)
+ * .timezone(providerAttribute)
+ * .website(providerAttribute)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderPropsDsl {
   private val cdkBuilder: UserPoolIdentityProviderProps.Builder =

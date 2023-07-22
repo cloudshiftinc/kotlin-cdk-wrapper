@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestination
 
+/**
+ * The properties of a virtual private cloud (VPC) destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * VpcDestinationPropertiesProperty vpcDestinationPropertiesProperty =
+ * VpcDestinationPropertiesProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicruledestination-vpcdestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleDestinationVpcDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnTopicRuleDestination.VpcDestinationPropertiesProperty.Builder =

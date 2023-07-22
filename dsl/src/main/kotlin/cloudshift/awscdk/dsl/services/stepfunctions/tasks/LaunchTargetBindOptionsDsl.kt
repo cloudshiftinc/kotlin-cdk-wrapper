@@ -7,6 +7,25 @@ import software.amazon.awscdk.services.ecs.ICluster
 import software.amazon.awscdk.services.ecs.ITaskDefinition
 import software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions
 
+/**
+ * Options for binding a launch target to an ECS run job task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * LaunchTargetBindOptions launchTargetBindOptions = LaunchTargetBindOptions.builder()
+ * .taskDefinition(taskDefinition)
+ * // the properties below are optional
+ * .cluster(cluster)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LaunchTargetBindOptionsDsl {
   private val cdkBuilder: LaunchTargetBindOptions.Builder = LaunchTargetBindOptions.builder()

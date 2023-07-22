@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnSubnetGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a subnet group.
+ *
+ * A subnet group is a collection of subnets (typically private) that you can designate for your
+ * cluster s running in an Amazon Virtual Private Cloud (VPC) environment. When you create a cluster in
+ * an Amazon VPC , you must specify a subnet group. MemoryDB uses that subnet group to choose a subnet
+ * and IP addresses within that subnet to associate with your nodes. For more information, see [Subnets
+ * and subnet groups](https://docs.aws.amazon.com/memorydb/latest/devguide/subnetgroups.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * CfnSubnetGroup cfnSubnetGroup = CfnSubnetGroup.Builder.create(this, "MyCfnSubnetGroup")
+ * .subnetGroupName("subnetGroupName")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnSubnetGroupDsl(
   scope: Construct,

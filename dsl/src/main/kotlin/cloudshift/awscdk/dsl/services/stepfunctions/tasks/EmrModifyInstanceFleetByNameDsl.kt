@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByName
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to to modify an InstanceFleet on an EMR Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrModifyInstanceFleetByName.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .instanceFleetName("InstanceFleetName")
+ * .targetOnDemandCapacity(2)
+ * .targetSpotCapacity(0)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrModifyInstanceFleetByNameDsl(
   scope: Construct,

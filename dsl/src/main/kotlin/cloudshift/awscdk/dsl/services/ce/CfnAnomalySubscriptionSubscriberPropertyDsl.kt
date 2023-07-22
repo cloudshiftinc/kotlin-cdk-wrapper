@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ce.CfnAnomalySubscription
 
+/**
+ * The recipient of `AnomalySubscription` notifications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
+ * .address("address")
+ * .type("type")
+ * // the properties below are optional
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ce-anomalysubscription-subscriber.html)
+ */
 @CdkDslMarker
 public class CfnAnomalySubscriptionSubscriberPropertyDsl {
   private val cdkBuilder: CfnAnomalySubscription.SubscriberProperty.Builder =

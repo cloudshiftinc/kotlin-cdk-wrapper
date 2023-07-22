@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualService
 import software.amazon.awscdk.services.appmesh.CfnVirtualServiceProps
 
+/**
+ * Properties for defining a `CfnVirtualService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * CfnVirtualServiceProps cfnVirtualServiceProps = CfnVirtualServiceProps.builder()
+ * .meshName("meshName")
+ * .spec(VirtualServiceSpecProperty.builder()
+ * .provider(VirtualServiceProviderProperty.builder()
+ * .virtualNode(VirtualNodeServiceProviderProperty.builder()
+ * .virtualNodeName("virtualNodeName")
+ * .build())
+ * .virtualRouter(VirtualRouterServiceProviderProperty.builder()
+ * .virtualRouterName("virtualRouterName")
+ * .build())
+ * .build())
+ * .build())
+ * .virtualServiceName("virtualServiceName")
+ * // the properties below are optional
+ * .meshOwner("meshOwner")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualservice.html)
+ */
 @CdkDslMarker
 public class CfnVirtualServicePropsDsl {
   private val cdkBuilder: CfnVirtualServiceProps.Builder = CfnVirtualServiceProps.builder()

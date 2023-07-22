@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnProject
 import software.constructs.Construct
 
+/**
+ * Creates a project, which is the logical object in Evidently that can contain features, launches,
+ * and experiments.
+ *
+ * Use projects to group similar features together.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .name("name")
+ * // the properties below are optional
+ * .appConfigResource(AppConfigResourceObjectProperty.builder()
+ * .applicationId("applicationId")
+ * .environmentId("environmentId")
+ * .build())
+ * .dataDelivery(DataDeliveryObjectProperty.builder()
+ * .logGroup("logGroup")
+ * .s3(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

@@ -14,6 +14,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroupProps
 
+/**
+ * Properties for defining a `CfnProfilingGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codeguruprofiler.*;
+ * Object agentPermissions;
+ * CfnProfilingGroupProps cfnProfilingGroupProps = CfnProfilingGroupProps.builder()
+ * .profilingGroupName("profilingGroupName")
+ * // the properties below are optional
+ * .agentPermissions(agentPermissions)
+ * .anomalyDetectionNotificationConfiguration(List.of(ChannelProperty.builder()
+ * .channelUri("channelUri")
+ * // the properties below are optional
+ * .channelId("channelId")
+ * .build()))
+ * .computePlatform("computePlatform")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeguruprofiler-profilinggroup.html)
+ */
 @CdkDslMarker
 public class CfnProfilingGroupPropsDsl {
   private val cdkBuilder: CfnProfilingGroupProps.Builder = CfnProfilingGroupProps.builder()

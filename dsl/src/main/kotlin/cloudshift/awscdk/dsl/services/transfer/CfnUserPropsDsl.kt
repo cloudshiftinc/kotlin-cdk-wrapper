@@ -14,6 +14,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnUser
 import software.amazon.awscdk.services.transfer.CfnUserProps
 
+/**
+ * Properties for defining a `CfnUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnUserProps cfnUserProps = CfnUserProps.builder()
+ * .role("role")
+ * .serverId("serverId")
+ * .userName("userName")
+ * // the properties below are optional
+ * .homeDirectory("homeDirectory")
+ * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
+ * .entry("entry")
+ * .target("target")
+ * .build()))
+ * .homeDirectoryType("homeDirectoryType")
+ * .policy("policy")
+ * .posixProfile(PosixProfileProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * // the properties below are optional
+ * .secondaryGids(List.of(123))
+ * .build())
+ * .sshPublicKeys(List.of("sshPublicKeys"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
+ */
 @CdkDslMarker
 public class CfnUserPropsDsl {
   private val cdkBuilder: CfnUserProps.Builder = CfnUserProps.builder()

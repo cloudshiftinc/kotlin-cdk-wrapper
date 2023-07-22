@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * The tags for a Spot Fleet resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SpotFleetTagSpecificationProperty spotFleetTagSpecificationProperty =
+ * SpotFleetTagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleettagspecification.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetSpotFleetTagSpecificationPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.SpotFleetTagSpecificationProperty.Builder =

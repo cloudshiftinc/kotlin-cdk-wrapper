@@ -11,6 +11,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The Linux-specific options that are applied to the container, such as Linux
+ * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LinuxParametersProperty linuxParametersProperty = LinuxParametersProperty.builder()
+ * .capabilities(KernelCapabilitiesProperty.builder()
+ * .add(List.of("add"))
+ * .drop(List.of("drop"))
+ * .build())
+ * .devices(List.of(DeviceProperty.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * .permissions(List.of("permissions"))
+ * .build()))
+ * .initProcessEnabled(false)
+ * .maxSwap(123)
+ * .sharedMemorySize(123)
+ * .swappiness(123)
+ * .tmpfs(List.of(TmpfsProperty.builder()
+ * .size(123)
+ * // the properties below are optional
+ * .containerPath("containerPath")
+ * .mountOptions(List.of("mountOptions"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-linuxparameters.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionLinuxParametersPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.LinuxParametersProperty.Builder =

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig
 
+/**
+ * Stores information about the location of an object in Amazon S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * S3LocationConfig s3LocationConfig = S3LocationConfig.builder()
+ * .uri("uri")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3LocationConfigDsl {
   private val cdkBuilder: S3LocationConfig.Builder = S3LocationConfig.builder()

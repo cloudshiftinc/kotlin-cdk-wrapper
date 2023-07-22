@@ -33,6 +33,24 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImage
 import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * The properties for the NetworkLoadBalancedFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * NetworkLoadBalancedFargateService loadBalancedFargateService =
+ * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .cpu(512)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancedFargateServicePropsDsl {
   private val cdkBuilder: NetworkLoadBalancedFargateServiceProps.Builder =

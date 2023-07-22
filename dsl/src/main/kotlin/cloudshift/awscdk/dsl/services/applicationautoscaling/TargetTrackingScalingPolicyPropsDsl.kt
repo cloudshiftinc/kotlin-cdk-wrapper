@@ -12,6 +12,36 @@ import software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric
 import software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicyProps
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Properties for a concrete TargetTrackingPolicy.
+ *
+ * Adds the scalingTarget.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric;
+ * ScalableTarget scalableTarget;
+ * TargetTrackingScalingPolicyProps targetTrackingScalingPolicyProps =
+ * TargetTrackingScalingPolicyProps.builder()
+ * .scalingTarget(scalableTarget)
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customMetric(metric)
+ * .disableScaleIn(false)
+ * .policyName("policyName")
+ * .predefinedMetric(PredefinedMetric.APPSTREAM_AVERAGE_CAPACITY_UTILIZATION)
+ * .resourceLabel("resourceLabel")
+ * .scaleInCooldown(Duration.minutes(30))
+ * .scaleOutCooldown(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TargetTrackingScalingPolicyPropsDsl {
   private val cdkBuilder: TargetTrackingScalingPolicyProps.Builder =

@@ -7,6 +7,48 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnConnection
 
+/**
+ * Contains the OAuth authorization parameters to use for the connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * OAuthParametersProperty oAuthParametersProperty = OAuthParametersProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientParameters(ClientParametersProperty.builder()
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .build())
+ * .httpMethod("httpMethod")
+ * // the properties below are optional
+ * .oAuthHttpParameters(ConnectionHttpParametersProperty.builder()
+ * .bodyParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .headerParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .queryStringParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-oauthparameters.html)
+ */
 @CdkDslMarker
 public class CfnConnectionOAuthParametersPropertyDsl {
   private val cdkBuilder: CfnConnection.OAuthParametersProperty.Builder =

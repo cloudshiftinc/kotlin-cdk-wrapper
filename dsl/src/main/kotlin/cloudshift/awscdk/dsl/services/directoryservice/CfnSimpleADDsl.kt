@@ -9,6 +9,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.directoryservice.CfnSimpleAD
 import software.constructs.Construct
 
+/**
+ * The `AWS::DirectoryService::SimpleAD` resource specifies an AWS Directory Service Simple Active
+ * Directory ( Simple AD ) in AWS so that your directory users and groups can access the AWS Management
+ * Console and AWS applications using their existing credentials.
+ *
+ * Simple AD is a Microsoft Active Directory–compatible directory. For more information, see [Simple
+ * Active
+ * Directory](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/directory_simple_ad.html)
+ * in the *AWS Directory Service Admin Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.directoryservice.*;
+ * CfnSimpleAD cfnSimpleAD = CfnSimpleAD.Builder.create(this, "MyCfnSimpleAD")
+ * .name("name")
+ * .size("size")
+ * .vpcSettings(VpcSettingsProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * // the properties below are optional
+ * .createAlias(false)
+ * .description("description")
+ * .enableSso(false)
+ * .password("password")
+ * .shortName("shortName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html)
+ */
 @CdkDslMarker
 public class CfnSimpleADDsl(
   scope: Construct,

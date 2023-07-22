@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 
+/**
+ * The list of information about logs to be enabled for the specified broker.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * LogListProperty logListProperty = LogListProperty.builder()
+ * .audit(false)
+ * .general(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html)
+ */
 @CdkDslMarker
 public class CfnBrokerLogListPropertyDsl {
   private val cdkBuilder: CfnBroker.LogListProperty.Builder = CfnBroker.LogListProperty.builder()

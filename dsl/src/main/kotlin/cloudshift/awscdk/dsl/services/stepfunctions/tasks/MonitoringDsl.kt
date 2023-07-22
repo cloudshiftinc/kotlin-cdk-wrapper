@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.stepfunctions.tasks.Monitoring
 
+/**
+ * Configuration setting for monitoring.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersStartJobRun.Builder.create(this, "EMR Containers Start Job Run")
+ * .virtualCluster(VirtualClusterInput.fromVirtualClusterId("de92jdei2910fwedz"))
+ * .releaseLabel(ReleaseLabel.EMR_6_2_0)
+ * .jobDriver(JobDriver.builder()
+ * .sparkSubmitJobDriver(SparkSubmitJobDriver.builder()
+ * .entryPoint(TaskInput.fromText("local:///usr/lib/spark/examples/src/main/python/pi.py"))
+ * .sparkSubmitParameters("--conf spark.executor.instances=2 --conf spark.executor.memory=2G --conf
+ * spark.executor.cores=2 --conf spark.driver.cores=1")
+ * .build())
+ * .build())
+ * .monitoring(Monitoring.builder()
+ * .logging(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MonitoringDsl {
   private val cdkBuilder: Monitoring.Builder = Monitoring.builder()

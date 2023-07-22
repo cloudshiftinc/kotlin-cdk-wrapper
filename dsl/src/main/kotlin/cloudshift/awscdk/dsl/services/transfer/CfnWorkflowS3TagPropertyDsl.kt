@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Specifies the key-value pair that are assigned to a file during the execution of a Tagging step.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * S3TagProperty s3TagProperty = S3TagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowS3TagPropertyDsl {
   private val cdkBuilder: CfnWorkflow.S3TagProperty.Builder = CfnWorkflow.S3TagProperty.builder()

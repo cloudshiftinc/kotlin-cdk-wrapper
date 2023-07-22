@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents the cell value synonym.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CellValueSynonymProperty cellValueSynonymProperty = CellValueSynonymProperty.builder()
+ * .cellValue("cellValue")
+ * .synonyms(List.of("synonyms"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-cellvaluesynonym.html)
+ */
 @CdkDslMarker
 public class CfnTopicCellValueSynonymPropertyDsl {
   private val cdkBuilder: CfnTopic.CellValueSynonymProperty.Builder =

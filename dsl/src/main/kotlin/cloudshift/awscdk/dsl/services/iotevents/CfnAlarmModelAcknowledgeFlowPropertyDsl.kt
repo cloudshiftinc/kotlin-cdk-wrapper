@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Specifies whether to get notified for alarm state changes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * AcknowledgeFlowProperty acknowledgeFlowProperty = AcknowledgeFlowProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-acknowledgeflow.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelAcknowledgeFlowPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.AcknowledgeFlowProperty.Builder =

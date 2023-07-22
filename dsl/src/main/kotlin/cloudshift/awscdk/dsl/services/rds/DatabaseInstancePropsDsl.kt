@@ -33,6 +33,37 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
 import software.amazon.awscdk.services.rds.StorageType
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for a DatabaseInstance.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc;
+ * DatabaseInstance instance1 = DatabaseInstance.Builder.create(this, "PostgresInstance1")
+ * .engine(DatabaseInstanceEngine.POSTGRES)
+ * // Generate the secret with admin username `postgres` and random password
+ * .credentials(Credentials.fromGeneratedSecret("postgres"))
+ * .vpc(vpc)
+ * .build();
+ * // Templated secret with username and password fields
+ * Secret templatedSecret = Secret.Builder.create(this, "TemplatedSecret")
+ * .generateSecretString(SecretStringGenerator.builder()
+ * .secretStringTemplate(JSON.stringify(Map.of("username", "postgres")))
+ * .generateStringKey("password")
+ * .excludeCharacters("/&#64;\"")
+ * .build())
+ * .build();
+ * // Using the templated secret as credentials
+ * DatabaseInstance instance2 = DatabaseInstance.Builder.create(this, "PostgresInstance2")
+ * .engine(DatabaseInstanceEngine.POSTGRES)
+ * .credentials(Map.of(
+ * "username", templatedSecret.secretValueFromJson("username").toString(),
+ * "password", templatedSecret.secretValueFromJson("password")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstancePropsDsl {
   private val cdkBuilder: DatabaseInstanceProps.Builder = DatabaseInstanceProps.builder()

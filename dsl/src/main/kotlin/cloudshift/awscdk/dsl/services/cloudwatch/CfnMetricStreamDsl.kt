@@ -15,6 +15,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnMetricStream
 import software.constructs.Construct
 
+/**
+ * Creates or updates a metric stream.
+ *
+ * Metrics streams can automatically stream CloudWatch metrics to AWS destinations including Amazon
+ * S3 and to many third-party solutions. For more information, see [Metric
+ * streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Metric-Streams.html)
+ * .
+ *
+ * To create a metric stream, you must be logged on to an account that has the `iam:PassRole`
+ * permission and either the *CloudWatchFullAccess* policy or the `cloudwatch:PutMetricStream`
+ * permission.
+ *
+ * When you create or update a metric stream, you choose one of the following:
+ *
+ * * Stream metrics from all metric namespaces in the account.
+ * * Stream metrics from all metric namespaces in the account, except for the namespaces that you
+ * list in `ExcludeFilters` .
+ * * Stream metrics from only the metric namespaces that you list in `IncludeFilters` .
+ *
+ * When you create a metric stream, the stream is created in the `running` state. If you update an
+ * existing metric stream, the state does not change.
+ *
+ * If you create a metric stream in an account that has been set up as a monitoring account in
+ * CloudWatch cross-account observability, you can choose whether to include metrics from linked source
+ * accounts in the metric stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnMetricStream cfnMetricStream = CfnMetricStream.Builder.create(this, "MyCfnMetricStream")
+ * .firehoseArn("firehoseArn")
+ * .outputFormat("outputFormat")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .excludeFilters(List.of(MetricStreamFilterProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .metricNames(List.of("metricNames"))
+ * .build()))
+ * .includeFilters(List.of(MetricStreamFilterProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .metricNames(List.of("metricNames"))
+ * .build()))
+ * .includeLinkedAccountsMetrics(false)
+ * .name("name")
+ * .statisticsConfigurations(List.of(MetricStreamStatisticsConfigurationProperty.builder()
+ * .additionalStatistics(List.of("additionalStatistics"))
+ * .includeMetrics(List.of(MetricStreamStatisticsMetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html)
+ */
 @CdkDslMarker
 public class CfnMetricStreamDsl(
   scope: Construct,

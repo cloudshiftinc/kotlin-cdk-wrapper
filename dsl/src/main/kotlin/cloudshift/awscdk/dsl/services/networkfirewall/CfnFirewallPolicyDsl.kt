@@ -13,6 +13,69 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 import software.constructs.Construct
 
+/**
+ * Use the `FirewallPolicy` to define the stateless and stateful network traffic filtering behavior
+ * for your `Firewall` .
+ *
+ * You can use one firewall policy for multiple firewalls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * CfnFirewallPolicy cfnFirewallPolicy = CfnFirewallPolicy.Builder.create(this,
+ * "MyCfnFirewallPolicy")
+ * .firewallPolicy(FirewallPolicyProperty.builder()
+ * .statelessDefaultActions(List.of("statelessDefaultActions"))
+ * .statelessFragmentDefaultActions(List.of("statelessFragmentDefaultActions"))
+ * // the properties below are optional
+ * .policyVariables(PolicyVariablesProperty.builder()
+ * .ruleVariables(Map.of(
+ * "ruleVariablesKey", Map.of(
+ * "definition", List.of("definition"))))
+ * .build())
+ * .statefulDefaultActions(List.of("statefulDefaultActions"))
+ * .statefulEngineOptions(StatefulEngineOptionsProperty.builder()
+ * .ruleOrder("ruleOrder")
+ * .streamExceptionPolicy("streamExceptionPolicy")
+ * .build())
+ * .statefulRuleGroupReferences(List.of(StatefulRuleGroupReferenceProperty.builder()
+ * .resourceArn("resourceArn")
+ * // the properties below are optional
+ * .override(StatefulRuleGroupOverrideProperty.builder()
+ * .action("action")
+ * .build())
+ * .priority(123)
+ * .build()))
+ * .statelessCustomActions(List.of(CustomActionProperty.builder()
+ * .actionDefinition(ActionDefinitionProperty.builder()
+ * .publishMetricAction(PublishMetricActionProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .actionName("actionName")
+ * .build()))
+ * .statelessRuleGroupReferences(List.of(StatelessRuleGroupReferenceProperty.builder()
+ * .priority(123)
+ * .resourceArn("resourceArn")
+ * .build()))
+ * .build())
+ * .firewallPolicyName("firewallPolicyName")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewallpolicy.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyDsl(
   scope: Construct,

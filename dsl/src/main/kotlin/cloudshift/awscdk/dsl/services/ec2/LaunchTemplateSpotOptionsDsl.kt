@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions
 import software.amazon.awscdk.services.ec2.SpotInstanceInterruption
 import software.amazon.awscdk.services.ec2.SpotRequestType
 
+/**
+ * Interface for the Spot market instance options provided in a LaunchTemplate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * Expiration expiration;
+ * LaunchTemplateSpotOptions launchTemplateSpotOptions = LaunchTemplateSpotOptions.builder()
+ * .blockDuration(Duration.minutes(30))
+ * .interruptionBehavior(SpotInstanceInterruption.STOP)
+ * .maxPrice(123)
+ * .requestType(SpotRequestType.ONE_TIME)
+ * .validUntil(expiration)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LaunchTemplateSpotOptionsDsl {
   private val cdkBuilder: LaunchTemplateSpotOptions.Builder = LaunchTemplateSpotOptions.builder()

@@ -18,6 +18,22 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 import software.constructs.Construct
 
+/**
+ * Define a Network Target Group.
+ *
+ * Example:
+ *
+ * ```
+ * NetworkListener listener;
+ * AutoScalingGroup asg1;
+ * AutoScalingGroup asg2;
+ * NetworkTargetGroup group = listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
+ * .port(443)
+ * .targets(List.of(asg1))
+ * .build());
+ * group.addTarget(asg2);
+ * ```
+ */
 @CdkDslMarker
 public class NetworkTargetGroupDsl(
   scope: Construct,

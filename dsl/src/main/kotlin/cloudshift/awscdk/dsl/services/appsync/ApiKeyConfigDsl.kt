@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.Expiration
 import software.amazon.awscdk.services.appsync.ApiKeyConfig
 
+/**
+ * Configuration for API Key authorization in AppSync.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appsync.*;
+ * Expiration expiration;
+ * ApiKeyConfig apiKeyConfig = ApiKeyConfig.builder()
+ * .description("description")
+ * .expires(expiration)
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApiKeyConfigDsl {
   private val cdkBuilder: ApiKeyConfig.Builder = ApiKeyConfig.builder()

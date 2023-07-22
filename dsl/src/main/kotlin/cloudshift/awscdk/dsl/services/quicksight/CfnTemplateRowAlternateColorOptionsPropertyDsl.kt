@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Determines the row alternate color options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RowAlternateColorOptionsProperty rowAlternateColorOptionsProperty =
+ * RowAlternateColorOptionsProperty.builder()
+ * .rowAlternateColors(List.of("rowAlternateColors"))
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-rowalternatecoloroptions.html)
+ */
 @CdkDslMarker
 public class CfnTemplateRowAlternateColorOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.RowAlternateColorOptionsProperty.Builder =

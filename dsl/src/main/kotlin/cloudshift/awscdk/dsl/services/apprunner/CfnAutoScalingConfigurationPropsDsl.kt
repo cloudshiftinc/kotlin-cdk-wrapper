@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps
 
+/**
+ * Properties for defining a `CfnAutoScalingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnAutoScalingConfigurationProps cfnAutoScalingConfigurationProps =
+ * CfnAutoScalingConfigurationProps.builder()
+ * .autoScalingConfigurationName("autoScalingConfigurationName")
+ * .maxConcurrency(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-autoscalingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingConfigurationPropsDsl {
   private val cdkBuilder: CfnAutoScalingConfigurationProps.Builder =

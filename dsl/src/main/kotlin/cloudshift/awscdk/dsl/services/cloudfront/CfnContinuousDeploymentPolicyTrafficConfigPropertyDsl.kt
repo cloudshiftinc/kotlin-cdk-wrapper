@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
 
+/**
+ * The traffic configuration of your continuous deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * TrafficConfigProperty trafficConfigProperty = TrafficConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .singleHeaderConfig(SingleHeaderConfigProperty.builder()
+ * .header("header")
+ * .value("value")
+ * .build())
+ * .singleWeightConfig(SingleWeightConfigProperty.builder()
+ * .weight(123)
+ * // the properties below are optional
+ * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+ * .idleTtl(123)
+ * .maximumTtl(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-trafficconfig.html)
+ */
 @CdkDslMarker
 public class CfnContinuousDeploymentPolicyTrafficConfigPropertyDsl {
   private val cdkBuilder: CfnContinuousDeploymentPolicy.TrafficConfigProperty.Builder =

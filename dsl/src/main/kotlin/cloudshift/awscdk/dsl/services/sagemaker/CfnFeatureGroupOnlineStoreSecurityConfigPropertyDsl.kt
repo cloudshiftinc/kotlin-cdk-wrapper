@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * The security configuration for `OnlineStore` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * OnlineStoreSecurityConfigProperty onlineStoreSecurityConfigProperty =
+ * OnlineStoreSecurityConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoresecurityconfig.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupOnlineStoreSecurityConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.OnlineStoreSecurityConfigProperty.Builder =

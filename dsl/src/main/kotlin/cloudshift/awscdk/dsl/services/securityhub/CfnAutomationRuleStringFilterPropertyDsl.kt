@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * A string filter for querying findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * StringFilterProperty stringFilterProperty = StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-stringfilter.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleStringFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.StringFilterProperty.Builder =

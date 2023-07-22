@@ -13,6 +13,53 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupProps
 
+/**
+ * Properties for defining a `CfnSecurityGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSecurityGroupProps cfnSecurityGroupProps = CfnSecurityGroupProps.builder()
+ * .groupDescription("groupDescription")
+ * // the properties below are optional
+ * .groupName("groupName")
+ * .securityGroupEgress(List.of(EgressProperty.builder()
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .destinationPrefixListId("destinationPrefixListId")
+ * .destinationSecurityGroupId("destinationSecurityGroupId")
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .securityGroupIngress(List.of(IngressProperty.builder()
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .fromPort(123)
+ * .sourcePrefixListId("sourcePrefixListId")
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
+ * .sourceSecurityGroupName("sourceSecurityGroupName")
+ * .sourceSecurityGroupOwnerId("sourceSecurityGroupOwnerId")
+ * .toPort(123)
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupPropsDsl {
   private val cdkBuilder: CfnSecurityGroupProps.Builder = CfnSecurityGroupProps.builder()

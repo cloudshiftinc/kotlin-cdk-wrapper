@@ -9,6 +9,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.apigateway.IModel
 import software.amazon.awscdk.services.apigateway.MethodResponse
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Model model;
+ * MethodResponse methodResponse = MethodResponse.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .responseModels(Map.of(
+ * "responseModelsKey", model))
+ * .responseParameters(Map.of(
+ * "responseParametersKey", false))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MethodResponseDsl {
   private val cdkBuilder: MethodResponse.Builder = MethodResponse.builder()

@@ -9,6 +9,22 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * (deprecated) Configures a custom domain endpoint for the ES domain.
+ *
+ * Example:
+ *
+ * ```
+ * Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_7)
+ * .customEndpoint(CustomEndpointOptions.builder()
+ * .domainName("search.example.com")
+ * .build())
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class CustomEndpointOptionsDsl {

@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.PolicyDocumentProps
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Properties for a new PolicyDocument.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.iam.*;
+ * PolicyDocument myFileSystemPolicy = PolicyDocument.Builder.create()
+ * .statements(List.of(PolicyStatement.Builder.create()
+ * .actions(List.of("elasticfilesystem:ClientWrite", "elasticfilesystem:ClientMount"))
+ * .principals(List.of(new AccountRootPrincipal()))
+ * .resources(List.of("*"))
+ * .conditions(Map.of(
+ * "Bool", Map.of(
+ * "elasticfilesystem:AccessedViaMountTarget", "true")))
+ * .build()))
+ * .build();
+ * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
+ * .vpc(new Vpc(this, "VPC"))
+ * .fileSystemPolicy(myFileSystemPolicy)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PolicyDocumentPropsDsl {
   private val cdkBuilder: PolicyDocumentProps.Builder = PolicyDocumentProps.builder()

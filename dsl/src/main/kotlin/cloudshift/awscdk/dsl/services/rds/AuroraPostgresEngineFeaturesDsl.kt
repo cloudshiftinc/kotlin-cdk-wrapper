@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.rds.AuroraPostgresEngineFeatures
 
+/**
+ * Features supported by this version of the Aurora Postgres cluster engine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * AuroraPostgresEngineFeatures auroraPostgresEngineFeatures =
+ * AuroraPostgresEngineFeatures.builder()
+ * .s3Export(false)
+ * .s3Import(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AuroraPostgresEngineFeaturesDsl {
   private val cdkBuilder: AuroraPostgresEngineFeatures.Builder =

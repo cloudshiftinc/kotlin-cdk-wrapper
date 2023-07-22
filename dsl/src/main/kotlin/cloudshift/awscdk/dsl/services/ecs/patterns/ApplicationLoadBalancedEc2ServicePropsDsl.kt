@@ -34,6 +34,29 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * The properties for the ApplicationLoadBalancedEc2Service service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedEc2Service loadBalancedEcsService =
+ * ApplicationLoadBalancedEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("test"))
+ * .environment(Map.of(
+ * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
+ * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entry", "point"))
+ * .build())
+ * .desiredCount(2)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancedEc2ServicePropsDsl {
   private val cdkBuilder: ApplicationLoadBalancedEc2ServiceProps.Builder =

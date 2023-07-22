@@ -10,6 +10,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rum.CfnAppMonitor
 
+/**
+ * Creates or updates a destination to receive extended metrics from CloudWatch RUM.
+ *
+ * You can send extended metrics to CloudWatch or to a CloudWatch Evidently experiment.
+ *
+ * For more information about extended metrics, see [Extended metrics that you can send to
+ * CloudWatch and CloudWatch
+ * Evidently](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-vended-metrics.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rum.*;
+ * MetricDestinationProperty metricDestinationProperty = MetricDestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .destinationArn("destinationArn")
+ * .iamRoleArn("iamRoleArn")
+ * .metricDefinitions(List.of(MetricDefinitionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dimensionKeys(Map.of(
+ * "dimensionKeysKey", "dimensionKeys"))
+ * .eventPattern("eventPattern")
+ * .namespace("namespace")
+ * .unitLabel("unitLabel")
+ * .valueKey("valueKey")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-metricdestination.html)
+ */
 @CdkDslMarker
 public class CfnAppMonitorMetricDestinationPropertyDsl {
   private val cdkBuilder: CfnAppMonitor.MetricDestinationProperty.Builder =

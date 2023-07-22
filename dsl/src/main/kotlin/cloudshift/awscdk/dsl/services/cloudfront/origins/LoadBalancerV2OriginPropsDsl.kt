@@ -14,6 +14,23 @@ import software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy
 import software.amazon.awscdk.services.cloudfront.OriginSslPolicy
 import software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2OriginProps
 
+/**
+ * Properties for an Origin backed by a v2 load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationLoadBalancer loadBalancer;
+ * LoadBalancerV2Origin origin = LoadBalancerV2Origin.Builder.create(loadBalancer)
+ * .connectionAttempts(3)
+ * .connectionTimeout(Duration.seconds(5))
+ * .readTimeout(Duration.seconds(45))
+ * .keepaliveTimeout(Duration.seconds(45))
+ * .protocolPolicy(OriginProtocolPolicy.MATCH_VIEWER)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerV2OriginPropsDsl {
   private val cdkBuilder: LoadBalancerV2OriginProps.Builder = LoadBalancerV2OriginProps.builder()

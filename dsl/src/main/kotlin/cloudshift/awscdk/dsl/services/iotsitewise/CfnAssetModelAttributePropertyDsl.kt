@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains an asset attribute property.
+ *
+ * For more information, see [Defining data
+ * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#attributes)
+ * in the *AWS IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * AttributeProperty attributeProperty = AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-attribute.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelAttributePropertyDsl {
   private val cdkBuilder: CfnAssetModel.AttributeProperty.Builder =

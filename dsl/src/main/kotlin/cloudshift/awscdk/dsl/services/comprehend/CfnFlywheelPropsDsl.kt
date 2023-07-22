@@ -13,6 +13,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 import software.amazon.awscdk.services.comprehend.CfnFlywheelProps
 
+/**
+ * Properties for defining a `CfnFlywheel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * CfnFlywheelProps cfnFlywheelProps = CfnFlywheelProps.builder()
+ * .dataAccessRoleArn("dataAccessRoleArn")
+ * .dataLakeS3Uri("dataLakeS3Uri")
+ * .flywheelName("flywheelName")
+ * // the properties below are optional
+ * .activeModelArn("activeModelArn")
+ * .dataSecurityConfig(DataSecurityConfigProperty.builder()
+ * .dataLakeKmsKeyId("dataLakeKmsKeyId")
+ * .modelKmsKeyId("modelKmsKeyId")
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .modelType("modelType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskConfig(TaskConfigProperty.builder()
+ * .languageCode("languageCode")
+ * // the properties below are optional
+ * .documentClassificationConfig(DocumentClassificationConfigProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .labels(List.of("labels"))
+ * .build())
+ * .entityRecognitionConfig(EntityRecognitionConfigProperty.builder()
+ * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelPropsDsl {
   private val cdkBuilder: CfnFlywheelProps.Builder = CfnFlywheelProps.builder()

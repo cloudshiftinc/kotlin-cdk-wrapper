@@ -28,6 +28,86 @@ import software.amazon.awscdk.services.rds.ProcessorFeatures
 import software.amazon.awscdk.services.rds.StorageType
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for a DatabaseInstanceNew.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * Key key;
+ * OptionGroup optionGroup;
+ * ParameterGroup parameterGroup;
+ * Role role;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * SubnetGroup subnetGroup;
+ * Vpc vpc;
+ * DatabaseInstanceNewProps databaseInstanceNewProps = DatabaseInstanceNewProps.builder()
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .backupRetention(Duration.minutes(30))
+ * .cloudwatchLogsExports(List.of("cloudwatchLogsExports"))
+ * .cloudwatchLogsRetention(RetentionDays.ONE_DAY)
+ * .cloudwatchLogsRetentionRole(role)
+ * .copyTagsToSnapshot(false)
+ * .deleteAutomatedBackups(false)
+ * .deletionProtection(false)
+ * .domain("domain")
+ * .domainRole(role)
+ * .enablePerformanceInsights(false)
+ * .iamAuthentication(false)
+ * .instanceIdentifier("instanceIdentifier")
+ * .iops(123)
+ * .maxAllocatedStorage(123)
+ * .monitoringInterval(Duration.minutes(30))
+ * .monitoringRole(role)
+ * .multiAz(false)
+ * .networkType(NetworkType.IPV4)
+ * .optionGroup(optionGroup)
+ * .parameterGroup(parameterGroup)
+ * .performanceInsightEncryptionKey(key)
+ * .performanceInsightRetention(PerformanceInsightRetention.DEFAULT)
+ * .port(123)
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .processorFeatures(ProcessorFeatures.builder()
+ * .coreCount(123)
+ * .threadsPerCore(123)
+ * .build())
+ * .publiclyAccessible(false)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .s3ExportBuckets(List.of(bucket))
+ * .s3ExportRole(role)
+ * .s3ImportBuckets(List.of(bucket))
+ * .s3ImportRole(role)
+ * .securityGroups(List.of(securityGroup))
+ * .storageThroughput(123)
+ * .storageType(StorageType.STANDARD)
+ * .subnetGroup(subnetGroup)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstanceNewPropsDsl {
   private val cdkBuilder: DatabaseInstanceNewProps.Builder = DatabaseInstanceNewProps.builder()

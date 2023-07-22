@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.SyslogLogDriverProps
 
+/**
+ * Specifies the syslog log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/syslog/)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * SyslogLogDriverProps syslogLogDriverProps = SyslogLogDriverProps.builder()
+ * .address("address")
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .facility("facility")
+ * .format("format")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .tlsCaCert("tlsCaCert")
+ * .tlsCert("tlsCert")
+ * .tlsKey("tlsKey")
+ * .tlsSkipVerify(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SyslogLogDriverPropsDsl {
   private val cdkBuilder: SyslogLogDriverProps.Builder = SyslogLogDriverProps.builder()

@@ -17,6 +17,25 @@ import software.amazon.awscdk.services.ecr.assets.NetworkMode
 import software.amazon.awscdk.services.ecr.assets.Platform
 import software.constructs.Construct
 
+/**
+ * An asset that represents a Docker image.
+ *
+ * The image will be created in build time and uploaded to an ECR repository.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.assets.DockerImageAsset;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .buildArgs(Map.of(
+ * "HTTP_PROXY", "http://10.20.30.2:1234"))
+ * .invalidation(DockerImageAssetInvalidationOptions.builder()
+ * .buildArgs(false)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageAssetDsl(
   scope: Construct,

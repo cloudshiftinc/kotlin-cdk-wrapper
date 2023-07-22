@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration of a `BarChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-barchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardBarChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.BarChartConfigurationProperty.Builder =

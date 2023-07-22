@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.cognito.UserVerificationConfig
 import software.amazon.awscdk.services.cognito.VerificationEmailStyle
 
+/**
+ * User pool configuration for user self sign up.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .selfSignUpEnabled(true)
+ * .userVerification(UserVerificationConfig.builder()
+ * .emailSubject("Verify your email for our awesome app!")
+ * .emailBody("Thanks for signing up to our awesome app! Your verification code is {####}")
+ * .emailStyle(VerificationEmailStyle.CODE)
+ * .smsMessage("Thanks for signing up to our awesome app! Your verification code is {####}")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserVerificationConfigDsl {
   private val cdkBuilder: UserVerificationConfig.Builder = UserVerificationConfig.builder()

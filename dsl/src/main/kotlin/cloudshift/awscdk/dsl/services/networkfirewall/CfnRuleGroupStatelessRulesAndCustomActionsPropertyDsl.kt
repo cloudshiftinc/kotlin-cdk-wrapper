@@ -9,6 +9,63 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * Stateless inspection criteria.
+ *
+ * Each stateless rule group uses exactly one of these data types to define its stateless rules.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatelessRulesAndCustomActionsProperty statelessRulesAndCustomActionsProperty =
+ * StatelessRulesAndCustomActionsProperty.builder()
+ * .statelessRules(List.of(StatelessRuleProperty.builder()
+ * .priority(123)
+ * .ruleDefinition(RuleDefinitionProperty.builder()
+ * .actions(List.of("actions"))
+ * .matchAttributes(MatchAttributesProperty.builder()
+ * .destinationPorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .destinations(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .protocols(List.of(123))
+ * .sourcePorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .sources(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+ * .flags(List.of("flags"))
+ * // the properties below are optional
+ * .masks(List.of("masks"))
+ * .build()))
+ * .build())
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .customActions(List.of(CustomActionProperty.builder()
+ * .actionDefinition(ActionDefinitionProperty.builder()
+ * .publishMetricAction(PublishMetricActionProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .actionName("actionName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statelessrulesandcustomactions.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupStatelessRulesAndCustomActionsPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.StatelessRulesAndCustomActionsProperty.Builder =

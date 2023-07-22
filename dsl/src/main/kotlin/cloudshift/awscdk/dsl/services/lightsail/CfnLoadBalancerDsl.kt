@@ -15,6 +15,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnLoadBalancer
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::LoadBalancer` resource specifies a load balancer that can be used with
+ * Lightsail instances.
+ *
+ *
+ * You cannot attach a TLS certificate to a load balancer using the `AWS::Lightsail::LoadBalancer`
+ * resource type. Instead, use the `AWS::Lightsail::LoadBalancerTlsCertificate` resource type to create
+ * a certificate and attach it to a load balancer.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+ * .instancePort(123)
+ * .loadBalancerName("loadBalancerName")
+ * // the properties below are optional
+ * .attachedInstances(List.of("attachedInstances"))
+ * .healthCheckPath("healthCheckPath")
+ * .ipAddressType("ipAddressType")
+ * .sessionStickinessEnabled(false)
+ * .sessionStickinessLbCookieDurationSeconds("sessionStickinessLbCookieDurationSeconds")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tlsPolicyName("tlsPolicyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerDsl(
   scope: Construct,

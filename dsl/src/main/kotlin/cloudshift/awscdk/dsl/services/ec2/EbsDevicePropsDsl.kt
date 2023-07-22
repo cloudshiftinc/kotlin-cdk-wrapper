@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.ec2.EbsDeviceProps
 import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties of an EBS block device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * EbsDeviceProps ebsDeviceProps = EbsDeviceProps.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKey(key)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType(EbsDeviceVolumeType.STANDARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDevicePropsDsl {
   private val cdkBuilder: EbsDeviceProps.Builder = EbsDeviceProps.builder()

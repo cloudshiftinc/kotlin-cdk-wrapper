@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.rds.ClusterInstanceOptions
 import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 
+/**
+ * Common options for creating a cluster instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * Key key;
+ * ParameterGroup parameterGroup;
+ * ClusterInstanceOptions clusterInstanceOptions = ClusterInstanceOptions.builder()
+ * .allowMajorVersionUpgrade(false)
+ * .autoMinorVersionUpgrade(false)
+ * .enablePerformanceInsights(false)
+ * .instanceIdentifier("instanceIdentifier")
+ * .parameterGroup(parameterGroup)
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .performanceInsightEncryptionKey(key)
+ * .performanceInsightRetention(PerformanceInsightRetention.DEFAULT)
+ * .publiclyAccessible(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterInstanceOptionsDsl {
   private val cdkBuilder: ClusterInstanceOptions.Builder = ClusterInstanceOptions.builder()

@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions
 import software.amazon.awscdk.services.cloudtrail.ManagementEventSources
 import software.amazon.awscdk.services.cloudtrail.ReadWriteType
 
+/**
+ * Options for adding an event selector.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * Bucket sourceBucket;
+ * Artifact sourceOutput = new Artifact();
+ * String key = "some/key.zip";
+ * Trail trail = new Trail(this, "CloudTrail");
+ * trail.addS3EventSelector(List.of(S3EventSelector.builder()
+ * .bucket(sourceBucket)
+ * .objectPrefix(key)
+ * .build()), AddEventSelectorOptions.builder()
+ * .readWriteType(ReadWriteType.WRITE_ONLY)
+ * .build());
+ * S3SourceAction sourceAction = S3SourceAction.Builder.create()
+ * .actionName("S3Source")
+ * .bucketKey(key)
+ * .bucket(sourceBucket)
+ * .output(sourceOutput)
+ * .trigger(S3Trigger.EVENTS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddEventSelectorOptionsDsl {
   private val cdkBuilder: AddEventSelectorOptions.Builder = AddEventSelectorOptions.builder()

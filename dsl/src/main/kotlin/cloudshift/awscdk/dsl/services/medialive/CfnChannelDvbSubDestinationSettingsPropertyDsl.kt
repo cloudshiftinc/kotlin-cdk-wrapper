@@ -8,6 +8,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for DVB Sub captions in the output.
+ *
+ * The parent of this entity is CaptionDestinationSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * DvbSubDestinationSettingsProperty dvbSubDestinationSettingsProperty =
+ * DvbSubDestinationSettingsProperty.builder()
+ * .alignment("alignment")
+ * .backgroundColor("backgroundColor")
+ * .backgroundOpacity(123)
+ * .font(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .fontColor("fontColor")
+ * .fontOpacity(123)
+ * .fontResolution(123)
+ * .fontSize("fontSize")
+ * .outlineColor("outlineColor")
+ * .outlineSize(123)
+ * .shadowColor("shadowColor")
+ * .shadowOpacity(123)
+ * .shadowXOffset(123)
+ * .shadowYOffset(123)
+ * .teletextGridControl("teletextGridControl")
+ * .xPosition(123)
+ * .yPosition(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsubdestinationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelDvbSubDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.DvbSubDestinationSettingsProperty.Builder =

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 
+/**
+ * The JupyterServer app settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * JupyterServerAppSettingsProperty jupyterServerAppSettingsProperty =
+ * JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-jupyterserverappsettings.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileJupyterServerAppSettingsPropertyDsl {
   private val cdkBuilder: CfnUserProfile.JupyterServerAppSettingsProperty.Builder =

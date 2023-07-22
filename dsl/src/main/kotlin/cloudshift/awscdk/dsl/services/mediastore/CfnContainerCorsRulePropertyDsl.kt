@@ -9,6 +9,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.mediastore.CfnContainer
 
+/**
+ * A rule for a CORS policy.
+ *
+ * You can add up to 100 rules to a CORS policy. If more than one rule applies, the service uses the
+ * first applicable rule listed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediastore.*;
+ * CorsRuleProperty corsRuleProperty = CorsRuleProperty.builder()
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .allowedMethods(List.of("allowedMethods"))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAgeSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-corsrule.html)
+ */
 @CdkDslMarker
 public class CfnContainerCorsRulePropertyDsl {
   private val cdkBuilder: CfnContainer.CorsRuleProperty.Builder =

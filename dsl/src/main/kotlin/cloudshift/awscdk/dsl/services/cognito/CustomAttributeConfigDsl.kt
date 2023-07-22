@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.cognito.CustomAttributeConfig
 import software.amazon.awscdk.services.cognito.NumberAttributeConstraints
 import software.amazon.awscdk.services.cognito.StringAttributeConstraints
 
+/**
+ * Configuration that will be fed into CloudFormation for any custom attribute type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CustomAttributeConfig customAttributeConfig = CustomAttributeConfig.builder()
+ * .dataType("dataType")
+ * // the properties below are optional
+ * .mutable(false)
+ * .numberConstraints(NumberAttributeConstraints.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .stringConstraints(StringAttributeConstraints.builder()
+ * .maxLen(123)
+ * .minLen(123)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomAttributeConfigDsl {
   private val cdkBuilder: CustomAttributeConfig.Builder = CustomAttributeConfig.builder()

@@ -12,6 +12,61 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.forecast.CfnDataset
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon Forecast dataset.
+ *
+ * The information about the dataset that you provide helps Forecast understand how to consume the
+ * data for model training. This includes the following:
+ *
+ * * *`DataFrequency`* - How frequently your historical time-series data is collected.
+ * * *`Domain`* and *`DatasetType`* - Each dataset has an associated dataset domain and a type
+ * within the domain. Amazon Forecast provides a list of predefined domains and types within each
+ * domain. For each unique dataset domain and type within the domain, Amazon Forecast requires your
+ * data to include a minimum set of predefined fields.
+ * * *`Schema`* - A schema specifies the fields in the dataset, including the field name and data
+ * type.
+ *
+ * After creating a dataset, you import your training data into it and add the dataset to a dataset
+ * group. You use the dataset group to create a predictor. For more information, see [Importing
+ * datasets](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html) .
+ *
+ * To get a list of all your datasets, use the
+ * [ListDatasets](https://docs.aws.amazon.com/forecast/latest/dg/API_ListDatasets.html) operation.
+ *
+ * For example Forecast datasets, see the [Amazon Forecast Sample GitHub
+ * repository](https://docs.aws.amazon.com/https://github.com/aws-samples/amazon-forecast-samples) .
+ *
+ *
+ * The `Status` of a dataset must be `ACTIVE` before you can import training data. Use the
+ * [DescribeDataset](https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDataset.html) operation
+ * to get the status.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * Object encryptionConfig;
+ * Object schema;
+ * CfnDataset cfnDataset = CfnDataset.Builder.create(this, "MyCfnDataset")
+ * .datasetName("datasetName")
+ * .datasetType("datasetType")
+ * .domain("domain")
+ * .schema(schema)
+ * // the properties below are optional
+ * .dataFrequency("dataFrequency")
+ * .encryptionConfig(encryptionConfig)
+ * .tags(List.of(TagsItemsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDsl(
   scope: Construct,

@@ -11,6 +11,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
 import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps
 
+/**
+ * Properties for defining a `CfnFlowEntitlement`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowEntitlementProps cfnFlowEntitlementProps = CfnFlowEntitlementProps.builder()
+ * .description("description")
+ * .flowArn("flowArn")
+ * .name("name")
+ * .subscribers(List.of("subscribers"))
+ * // the properties below are optional
+ * .dataTransferSubscriberFeePercent(123)
+ * .encryption(EncryptionProperty.builder()
+ * .algorithm("algorithm")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .deviceId("deviceId")
+ * .keyType("keyType")
+ * .region("region")
+ * .resourceId("resourceId")
+ * .secretArn("secretArn")
+ * .url("url")
+ * .build())
+ * .entitlementStatus("entitlementStatus")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html)
+ */
 @CdkDslMarker
 public class CfnFlowEntitlementPropsDsl {
   private val cdkBuilder: CfnFlowEntitlementProps.Builder = CfnFlowEntitlementProps.builder()

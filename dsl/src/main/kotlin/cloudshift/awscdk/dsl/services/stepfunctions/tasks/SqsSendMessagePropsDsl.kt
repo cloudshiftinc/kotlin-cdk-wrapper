@@ -18,6 +18,28 @@ import software.amazon.awscdk.services.stepfunctions.TaskInput
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps
 
+/**
+ * Properties for sending a message to an SQS queue.
+ *
+ * Example:
+ *
+ * ```
+ * Queue queue = new Queue(this, "Queue");
+ * // Use a field from the execution data as message.
+ * SqsSendMessage task1 = SqsSendMessage.Builder.create(this, "Send1")
+ * .queue(queue)
+ * .messageBody(TaskInput.fromJsonPathAt("$.message"))
+ * .build();
+ * // Combine a field from the execution data with
+ * // a literal object.
+ * SqsSendMessage task2 = SqsSendMessage.Builder.create(this, "Send2")
+ * .queue(queue)
+ * .messageBody(TaskInput.fromObject(Map.of(
+ * "field1", "somedata",
+ * "field2", JsonPath.stringAt("$.field2"))))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SqsSendMessagePropsDsl {
   private val cdkBuilder: SqsSendMessageProps.Builder = SqsSendMessageProps.builder()

@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.glue.CfnRegistryProps
 
+/**
+ * Properties for defining a `CfnRegistry`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnRegistryProps cfnRegistryProps = CfnRegistryProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)
+ */
 @CdkDslMarker
 public class CfnRegistryPropsDsl {
   private val cdkBuilder: CfnRegistryProps.Builder = CfnRegistryProps.builder()

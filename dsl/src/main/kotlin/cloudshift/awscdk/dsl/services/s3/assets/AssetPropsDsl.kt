@@ -16,6 +16,21 @@ import software.amazon.awscdk.SymlinkFollowMode
 import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.s3.assets.AssetProps
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * Asset asset = Asset.Builder.create(this, "BundledAsset")
+ * .path("/path/to/asset")
+ * .bundling(BundlingOptions.builder()
+ * .image(DockerImage.fromRegistry("alpine"))
+ * .command(List.of("command-that-produces-an-archive.sh"))
+ * .outputType(BundlingOutput.NOT_ARCHIVED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetPropsDsl {
   private val cdkBuilder: AssetProps.Builder = AssetProps.builder()

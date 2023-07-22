@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.neptune.CfnDBCluster
 
+/**
+ * Contains the scaling configuration of an Neptune Serverless DB cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * ServerlessScalingConfigurationProperty serverlessScalingConfigurationProperty =
+ * ServerlessScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-neptune-dbcluster-serverlessscalingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterServerlessScalingConfigurationPropertyDsl {
   private val cdkBuilder: CfnDBCluster.ServerlessScalingConfigurationProperty.Builder =

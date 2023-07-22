@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.detective.CfnMemberInvitation
 import software.constructs.Construct
 
+/**
+ * The `AWS::Detective::MemberInvitation` resource is an Amazon Detective resource type that creates
+ * an invitation to join a Detective behavior graph.
+ *
+ * The administrator account can choose whether to send an email notification of the invitation to
+ * the root user email address of the AWS account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.detective.*;
+ * CfnMemberInvitation cfnMemberInvitation = CfnMemberInvitation.Builder.create(this,
+ * "MyCfnMemberInvitation")
+ * .graphArn("graphArn")
+ * .memberEmailAddress("memberEmailAddress")
+ * .memberId("memberId")
+ * // the properties below are optional
+ * .disableEmailNotification(false)
+ * .message("message")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-memberinvitation.html)
+ */
 @CdkDslMarker
 public class CfnMemberInvitationDsl(
   scope: Construct,

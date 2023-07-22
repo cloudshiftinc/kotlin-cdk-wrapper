@@ -7,6 +7,56 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to ServiceNow as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ServiceNowConfigurationProperty serviceNowConfigurationProperty =
+ * ServiceNowConfigurationProperty.builder()
+ * .hostUrl("hostUrl")
+ * .secretArn("secretArn")
+ * .serviceNowBuildVersion("serviceNowBuildVersion")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .knowledgeArticleConfiguration(ServiceNowKnowledgeArticleConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .crawlAttachments(false)
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .excludeAttachmentFilePatterns(List.of("excludeAttachmentFilePatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .filterQuery("filterQuery")
+ * .includeAttachmentFilePatterns(List.of("includeAttachmentFilePatterns"))
+ * .build())
+ * .serviceCatalogConfiguration(ServiceNowServiceCatalogConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .crawlAttachments(false)
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .excludeAttachmentFilePatterns(List.of("excludeAttachmentFilePatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .includeAttachmentFilePatterns(List.of("includeAttachmentFilePatterns"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceServiceNowConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ServiceNowConfigurationProperty.Builder =

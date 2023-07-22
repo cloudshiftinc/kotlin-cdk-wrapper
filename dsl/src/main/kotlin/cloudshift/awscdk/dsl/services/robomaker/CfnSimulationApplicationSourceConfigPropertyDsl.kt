@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.robomaker.CfnSimulationApplication
 
+/**
+ * Information about a source configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * SourceConfigProperty sourceConfigProperty = SourceConfigProperty.builder()
+ * .architecture("architecture")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-robomaker-simulationapplication-sourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnSimulationApplicationSourceConfigPropertyDsl {
   private val cdkBuilder: CfnSimulationApplication.SourceConfigProperty.Builder =

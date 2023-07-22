@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.frauddetector.CfnVariable
 import software.constructs.Construct
 
+/**
+ * Manages a variable.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnVariable cfnVariable = CfnVariable.Builder.create(this, "MyCfnVariable")
+ * .dataSource("dataSource")
+ * .dataType("dataType")
+ * .defaultValue("defaultValue")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableType("variableType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-variable.html)
+ */
 @CdkDslMarker
 public class CfnVariableDsl(
   scope: Construct,

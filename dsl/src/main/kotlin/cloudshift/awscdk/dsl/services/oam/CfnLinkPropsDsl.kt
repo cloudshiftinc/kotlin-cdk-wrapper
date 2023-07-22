@@ -9,6 +9,27 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.oam.CfnLinkProps
 
+/**
+ * Properties for defining a `CfnLink`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.oam.*;
+ * CfnLinkProps cfnLinkProps = CfnLinkProps.builder()
+ * .resourceTypes(List.of("resourceTypes"))
+ * .sinkIdentifier("sinkIdentifier")
+ * // the properties below are optional
+ * .labelTemplate("labelTemplate")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html)
+ */
 @CdkDslMarker
 public class CfnLinkPropsDsl {
   private val cdkBuilder: CfnLinkProps.Builder = CfnLinkProps.builder()

@@ -9,6 +9,30 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The range setup of a numeric axis display range.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * Object dataDriven;
+ * AxisDisplayRangeProperty axisDisplayRangeProperty = AxisDisplayRangeProperty.builder()
+ * .dataDriven(dataDriven)
+ * .minMax(AxisDisplayMinMaxRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-axisdisplayrange.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisAxisDisplayRangePropertyDsl {
   private val cdkBuilder: CfnAnalysis.AxisDisplayRangeProperty.Builder =

@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnDeployment
 import software.amazon.awscdk.services.appconfig.CfnDeploymentProps
 
+/**
+ * Properties for defining a `CfnDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnDeploymentProps cfnDeploymentProps = CfnDeploymentProps.builder()
+ * .applicationId("applicationId")
+ * .configurationProfileId("configurationProfileId")
+ * .configurationVersion("configurationVersion")
+ * .deploymentStrategyId("deploymentStrategyId")
+ * .environmentId("environmentId")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentPropsDsl {
   private val cdkBuilder: CfnDeploymentProps.Builder = CfnDeploymentProps.builder()

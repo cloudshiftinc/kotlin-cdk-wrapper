@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup
 
+/**
+ * The VPC endpoint object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * EndpointProperty endpointProperty = EndpointProperty.builder()
+ * .address("address")
+ * .port(123)
+ * .vpcEndpoints(List.of(VpcEndpointProperty.builder()
+ * .networkInterfaces(List.of(NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnWorkgroupEndpointPropertyDsl {
   private val cdkBuilder: CfnWorkgroup.EndpointProperty.Builder =

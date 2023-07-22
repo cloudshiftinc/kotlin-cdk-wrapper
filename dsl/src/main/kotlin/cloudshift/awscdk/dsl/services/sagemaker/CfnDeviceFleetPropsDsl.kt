@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDeviceFleet
 import software.amazon.awscdk.services.sagemaker.CfnDeviceFleetProps
 
+/**
+ * Properties for defining a `CfnDeviceFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDeviceFleetProps cfnDeviceFleetProps = CfnDeviceFleetProps.builder()
+ * .deviceFleetName("deviceFleetName")
+ * .outputConfig(EdgeOutputConfigProperty.builder()
+ * .s3OutputLocation("s3OutputLocation")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-devicefleet.html)
+ */
 @CdkDslMarker
 public class CfnDeviceFleetPropsDsl {
   private val cdkBuilder: CfnDeviceFleetProps.Builder = CfnDeviceFleetProps.builder()

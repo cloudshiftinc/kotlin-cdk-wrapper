@@ -11,6 +11,104 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.IConstruct
 
+/**
+ * Properties for an event rule target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * Role role;
+ * RuleTargetInput ruleTargetInput;
+ * RuleTargetConfig ruleTargetConfig = RuleTargetConfig.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .batchParameters(BatchParametersProperty.builder()
+ * .jobDefinition("jobDefinition")
+ * .jobName("jobName")
+ * // the properties below are optional
+ * .arrayProperties(BatchArrayPropertiesProperty.builder()
+ * .size(123)
+ * .build())
+ * .retryStrategy(BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build())
+ * .build())
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tagList(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskCount(123)
+ * .build())
+ * .httpParameters(HttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build())
+ * .input(ruleTargetInput)
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKeyPath("partitionKeyPath")
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .role(role)
+ * .runCommandParameters(RunCommandParametersProperty.builder()
+ * .runCommandTargets(List.of(RunCommandTargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .targetResource(construct)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RuleTargetConfigDsl {
   private val cdkBuilder: RuleTargetConfig.Builder = RuleTargetConfig.builder()

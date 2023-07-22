@@ -22,6 +22,41 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Options for customizing a single CodeBuild project.
+ *
+ * Example:
+ *
+ * ```
+ * IFileSetProducer source; // the repository source
+ * String[] synthCommands; // Commands to synthesize your app
+ * String[] installCommands;
+ * // Commands to install your toolchain
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * // Standard CodePipeline properties...
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(source)
+ * .commands(synthCommands)
+ * .build())
+ * // Configure CodeBuild to use a drop-in Docker replacement.
+ * .codeBuildDefaults(CodeBuildOptions.builder()
+ * .partialBuildSpec(BuildSpec.fromObject(Map.of(
+ * "phases", Map.of(
+ * "install", Map.of(
+ * // Add the shell commands to install your drop-in Docker
+ * // replacement to the CodeBuild enviromment.
+ * "commands", installCommands)))))
+ * .buildEnvironment(BuildEnvironment.builder()
+ * .environmentVariables(Map.of(
+ * // Instruct the AWS CDK to use `drop-in-replacement` instead of
+ * // `docker` when building / publishing docker images.
+ * // e.g., `drop-in-replacement build . -f path/to/Dockerfile`
+ * "CDK_DOCKER", BuildEnvironmentVariable.builder().value("drop-in-replacement").build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildOptionsDsl {
   private val cdkBuilder: CodeBuildOptions.Builder = CodeBuildOptions.builder()

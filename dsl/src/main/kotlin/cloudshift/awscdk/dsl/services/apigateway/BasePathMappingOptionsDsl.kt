@@ -8,6 +8,17 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.BasePathMappingOptions
 import software.amazon.awscdk.services.apigateway.Stage
 
+/**
+ * Example:
+ *
+ * ```
+ * DomainName domain;
+ * RestApi api1;
+ * RestApi api2;
+ * domain.addBasePathMapping(api1, BasePathMappingOptions.builder().basePath("go-to-api1").build());
+ * domain.addBasePathMapping(api2, BasePathMappingOptions.builder().basePath("boom").build());
+ * ```
+ */
 @CdkDslMarker
 public class BasePathMappingOptionsDsl {
   private val cdkBuilder: BasePathMappingOptions.Builder = BasePathMappingOptions.builder()

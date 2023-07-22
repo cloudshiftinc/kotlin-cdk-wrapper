@@ -10,6 +10,22 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties for `CodeStarConnectionsSourceAction`.
+ *
+ * Example:
+ *
+ * ```
+ * Artifact sourceOutput = new Artifact();
+ * CodeStarConnectionsSourceAction sourceAction = CodeStarConnectionsSourceAction.Builder.create()
+ * .actionName("BitBucket_Source")
+ * .owner("aws")
+ * .repo("aws-cdk")
+ * .output(sourceOutput)
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:123456789012:connection/12345678-abcd-12ab-34cdef5678gh")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeStarConnectionsSourceActionPropsDsl {
   private val cdkBuilder: CodeStarConnectionsSourceActionProps.Builder =

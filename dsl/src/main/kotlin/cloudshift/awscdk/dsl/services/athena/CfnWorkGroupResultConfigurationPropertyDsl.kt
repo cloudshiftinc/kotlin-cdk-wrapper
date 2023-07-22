@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * The location in Amazon S3 where query and calculation results are stored and the encryption
+ * option, if any, used for query and calculation results.
+ *
+ * These are known as "client-side settings". If workgroup settings override client-side settings,
+ * then the query uses the workgroup settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * ResultConfigurationProperty resultConfigurationProperty = ResultConfigurationProperty.builder()
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .expectedBucketOwner("expectedBucketOwner")
+ * .outputLocation("outputLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupResultConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.ResultConfigurationProperty.Builder =

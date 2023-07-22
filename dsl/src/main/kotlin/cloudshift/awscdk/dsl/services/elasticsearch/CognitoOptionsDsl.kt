@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.services.elasticsearch.CognitoOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * (deprecated) Configures Amazon ES to use Amazon Cognito authentication for Kibana.
+ *
+ * Example:
+ *
+ * ```
+ * Domain.Builder.create(this, "Domain")
+ * .cognitoKibanaAuth(CognitoOptions.builder()
+ * .identityPoolId("test-identity-pool-id")
+ * .userPoolId("test-user-pool-id")
+ * .role(role)
+ * .build())
+ * .version(elasticsearchVersion)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-cognito-auth.html)
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class CognitoOptionsDsl {

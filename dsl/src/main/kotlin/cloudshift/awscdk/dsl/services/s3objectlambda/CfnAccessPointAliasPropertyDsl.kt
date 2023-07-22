@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 
+/**
+ * The alias of an Object Lambda Access Point.
+ *
+ * For more information, see [How to use a bucket-style alias for your S3 bucket Object Lambda
+ * Access
+ * Point](https://docs.aws.amazon.com/AmazonS3/latest/userguide/olap-use.html#ol-access-points-alias) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3objectlambda.*;
+ * AliasProperty aliasProperty = AliasProperty.builder()
+ * .status("status")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-alias.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointAliasPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.AliasProperty.Builder =

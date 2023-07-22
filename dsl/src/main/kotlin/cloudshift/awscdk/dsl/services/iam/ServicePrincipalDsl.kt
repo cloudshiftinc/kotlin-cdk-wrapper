@@ -10,6 +10,23 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.iam.ServicePrincipal
 
+/**
+ * An IAM principal that represents an AWS service (i.e. `sqs.amazonaws.com`).
+ *
+ * Example:
+ *
+ * ```
+ * Role lambdaRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .description("Example role...")
+ * .build();
+ * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .build();
+ * // give lambda permissions to read stream
+ * stream.grantRead(lambdaRole);
+ * ```
+ */
 @CdkDslMarker
 public class ServicePrincipalDsl(
   service: String,

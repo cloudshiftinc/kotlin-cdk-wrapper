@@ -17,6 +17,19 @@ import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.LegendPosition
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * A dashboard widget that displays metrics.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(GraphWidget.Builder.create()
+ * // ...
+ * .legendPosition(LegendPosition.RIGHT)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GraphWidgetDsl {
   private val cdkBuilder: GraphWidget.Builder = GraphWidget.Builder.create()

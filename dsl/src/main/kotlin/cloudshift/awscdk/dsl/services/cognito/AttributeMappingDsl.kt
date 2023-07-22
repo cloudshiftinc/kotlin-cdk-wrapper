@@ -8,6 +8,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.cognito.AttributeMapping
 import software.amazon.awscdk.services.cognito.ProviderAttribute
 
+/**
+ * The mapping of user pool attributes to the attributes provided by the identity providers.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = new UserPool(this, "Pool");
+ * UserPoolIdentityProviderAmazon.Builder.create(this, "Amazon")
+ * .clientId("amzn-client-id")
+ * .clientSecret("amzn-client-secret")
+ * .userPool(userpool)
+ * .attributeMapping(AttributeMapping.builder()
+ * .email(ProviderAttribute.AMAZON_EMAIL)
+ * .website(ProviderAttribute.other("url")) // use other() when an attribute is not pre-defined in
+ * the CDK
+ * .custom(Map.of(
+ * // custom user pool attributes go here
+ * "uniqueId", ProviderAttribute.AMAZON_USER_ID))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AttributeMappingDsl {
   private val cdkBuilder: AttributeMapping.Builder = AttributeMapping.builder()

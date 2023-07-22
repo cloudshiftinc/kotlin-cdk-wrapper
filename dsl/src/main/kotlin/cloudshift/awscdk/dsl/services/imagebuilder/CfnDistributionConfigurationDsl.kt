@@ -12,6 +12,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 import software.constructs.Construct
 
+/**
+ * A distribution configuration allows you to specify the name and description of your output AMI,
+ * authorize other AWS account s to launch the AMI, and replicate the AMI to other AWS Regions .
+ *
+ * It also allows you to export the AMI to Amazon S3 .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * Object amiDistributionConfiguration;
+ * Object containerDistributionConfiguration;
+ * CfnDistributionConfiguration cfnDistributionConfiguration =
+ * CfnDistributionConfiguration.Builder.create(this, "MyCfnDistributionConfiguration")
+ * .distributions(List.of(DistributionProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .amiDistributionConfiguration(amiDistributionConfiguration)
+ * .containerDistributionConfiguration(containerDistributionConfiguration)
+ * .fastLaunchConfigurations(List.of(FastLaunchConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .enabled(false)
+ * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .launchTemplateVersion("launchTemplateVersion")
+ * .build())
+ * .maxParallelLaunches(123)
+ * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
+ * .targetResourceCount(123)
+ * .build())
+ * .build()))
+ * .launchTemplateConfigurations(List.of(LaunchTemplateConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .launchTemplateId("launchTemplateId")
+ * .setDefaultVersion(false)
+ * .build()))
+ * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationDsl(
   scope: Construct,

@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * The configuration information for syncing a Salesforce chatter feed.
+ *
+ * The contents of the object comes from the Salesforce FeedItem table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SalesforceChatterFeedConfigurationProperty salesforceChatterFeedConfigurationProperty =
+ * SalesforceChatterFeedConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .includeFilterTypes(List.of("includeFilterTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcechatterfeedconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSalesforceChatterFeedConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SalesforceChatterFeedConfigurationProperty.Builder =

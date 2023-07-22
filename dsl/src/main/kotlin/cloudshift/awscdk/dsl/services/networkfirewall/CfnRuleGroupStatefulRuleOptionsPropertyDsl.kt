@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * Additional options governing how Network Firewall handles the rule group.
+ *
+ * You can only use these for stateful rule groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatefulRuleOptionsProperty statefulRuleOptionsProperty = StatefulRuleOptionsProperty.builder()
+ * .ruleOrder("ruleOrder")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-statefulruleoptions.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupStatefulRuleOptionsPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.StatefulRuleOptionsProperty.Builder =

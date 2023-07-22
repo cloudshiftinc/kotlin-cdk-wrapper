@@ -15,6 +15,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cloud9::EnvironmentEC2` resource creates an Amazon EC2 development environment in AWS
+ * Cloud9 .
+ *
+ * For more information, see [Creating an
+ * Environment](https://docs.aws.amazon.com/cloud9/latest/user-guide/create-environment.html) in the
+ * *AWS Cloud9 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloud9.*;
+ * CfnEnvironmentEC2 cfnEnvironmentEC2 = CfnEnvironmentEC2.Builder.create(this,
+ * "MyCfnEnvironmentEC2")
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .automaticStopTimeMinutes(123)
+ * .connectionType("connectionType")
+ * .description("description")
+ * .imageId("imageId")
+ * .name("name")
+ * .ownerArn("ownerArn")
+ * .repositories(List.of(RepositoryProperty.builder()
+ * .pathComponent("pathComponent")
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .subnetId("subnetId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentEC2Dsl(
   scope: Construct,

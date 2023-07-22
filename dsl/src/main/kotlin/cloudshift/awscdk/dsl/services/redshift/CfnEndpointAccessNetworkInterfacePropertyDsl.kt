@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnEndpointAccess
 
+/**
+ * Describes a network interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAccessNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnEndpointAccess.NetworkInterfaceProperty.Builder =

@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.services.lambda.Runtime
 import software.amazon.awscdk.services.lambda.RuntimeFamily
 
+/**
+ * Lambda function runtime environment.
+ *
+ * If you need to use a runtime name that doesn't exist as a static member, you
+ * can instantiate a `Runtime` object, e.g: `new Runtime('nodejs99.99')`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RuntimeDsl(
   name: String,

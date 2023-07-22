@@ -6,6 +6,48 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The serializer that you want Kinesis Data Firehose to use to convert data to the target format
+ * before writing it to Amazon S3.
+ *
+ * Kinesis Data Firehose supports two types of serializers: the [ORC
+ * SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/orc/OrcSerde.html)
+ * and the [Parquet
+ * SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/parquet/serde/ParquetHiveSerDe.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * SerializerProperty serializerProperty = SerializerProperty.builder()
+ * .orcSerDe(OrcSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .bloomFilterColumns(List.of("bloomFilterColumns"))
+ * .bloomFilterFalsePositiveProbability(123)
+ * .compression("compression")
+ * .dictionaryKeyThreshold(123)
+ * .enablePadding(false)
+ * .formatVersion("formatVersion")
+ * .paddingTolerance(123)
+ * .rowIndexStride(123)
+ * .stripeSizeBytes(123)
+ * .build())
+ * .parquetSerDe(ParquetSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .compression("compression")
+ * .enableDictionaryCompression(false)
+ * .maxPaddingBytes(123)
+ * .pageSizeBytes(123)
+ * .writerVersion("writerVersion")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-serializer.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamSerializerPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.SerializerProperty.Builder =

@@ -11,6 +11,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::Chatbot::MicrosoftTeamsChannelConfiguration` resource configures a Microsoft Teams
+ * channel to allow users to use AWS Chatbot with AWS CloudFormation templates.
+ *
+ * This resource requires some setup to be done in the AWS Chatbot console. To provide the required
+ * Microsoft Teams team and tenant IDs, you must perform the initial authorization flow with Microsoft
+ * Teams in the AWS Chatbot console, then copy and paste the IDs from the console. For more details,
+ * see steps 1-4 in [Setting Up AWS Chatbot with Microsoft
+ * Teams](https://docs.aws.amazon.com/chatbot/latest/adminguide/teams-setup.html#teams-client-setup) in
+ * the *AWS Chatbot Administrator Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.chatbot.*;
+ * CfnMicrosoftTeamsChannelConfiguration cfnMicrosoftTeamsChannelConfiguration =
+ * CfnMicrosoftTeamsChannelConfiguration.Builder.create(this,
+ * "MyCfnMicrosoftTeamsChannelConfiguration")
+ * .configurationName("configurationName")
+ * .iamRoleArn("iamRoleArn")
+ * .teamId("teamId")
+ * .teamsChannelId("teamsChannelId")
+ * .teamsTenantId("teamsTenantId")
+ * // the properties below are optional
+ * .guardrailPolicies(List.of("guardrailPolicies"))
+ * .loggingLevel("loggingLevel")
+ * .snsTopicArns(List.of("snsTopicArns"))
+ * .userRoleRequired(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMicrosoftTeamsChannelConfigurationDsl(
   scope: Construct,

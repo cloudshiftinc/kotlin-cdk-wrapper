@@ -11,6 +11,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A single rule, which you can use in a `WebACL` or `RuleGroup` to identify web requests that you
+ * want to allow, block, or count.
+ *
+ * Each rule includes one top-level `Statement` that AWS WAF uses to identify matching web requests,
+ * and parameters that govern how AWS WAF handles them.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-rule.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRulePropertyDsl {
   private val cdkBuilder: CfnWebACL.RuleProperty.Builder = CfnWebACL.RuleProperty.builder()

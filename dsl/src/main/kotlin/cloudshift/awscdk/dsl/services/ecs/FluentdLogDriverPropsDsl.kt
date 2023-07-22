@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.FluentdLogDriverProps
 
+/**
+ * Specifies the fluentd log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/fluentd/)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * FluentdLogDriverProps fluentdLogDriverProps = FluentdLogDriverProps.builder()
+ * .address("address")
+ * .asyncConnect(false)
+ * .bufferLimit(123)
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .maxRetries(123)
+ * .retryWait(Duration.minutes(30))
+ * .subSecondPrecision(false)
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FluentdLogDriverPropsDsl {
   private val cdkBuilder: FluentdLogDriverProps.Builder = FluentdLogDriverProps.builder()

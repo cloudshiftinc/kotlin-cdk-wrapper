@@ -13,6 +13,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnService
 import software.amazon.awscdk.services.servicediscovery.CfnServiceProps
 
+/**
+ * Properties for defining a `CfnService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
+ * .description("description")
+ * .dnsConfig(DnsConfigProperty.builder()
+ * .dnsRecords(List.of(DnsRecordProperty.builder()
+ * .ttl(123)
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .namespaceId("namespaceId")
+ * .routingPolicy("routingPolicy")
+ * .build())
+ * .healthCheckConfig(HealthCheckConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .failureThreshold(123)
+ * .resourcePath("resourcePath")
+ * .build())
+ * .healthCheckCustomConfig(HealthCheckCustomConfigProperty.builder()
+ * .failureThreshold(123)
+ * .build())
+ * .name("name")
+ * .namespaceId("namespaceId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html)
+ */
 @CdkDslMarker
 public class CfnServicePropsDsl {
   private val cdkBuilder: CfnServiceProps.Builder = CfnServiceProps.builder()

@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.CfnDedicatedIpPool
 import software.constructs.Construct
 
+/**
+ * Create a new pool of dedicated IP addresses.
+ *
+ * A pool can include one or more dedicated IP addresses that are associated with your AWS account .
+ * You can associate a pool with a configuration set. When you send an email that uses that
+ * configuration set, the message is sent from one of the addresses in the associated pool.
+ *
+ *
+ * You can't delete dedicated IP pools that have a `STANDARD` scaling mode with one or more
+ * dedicated IP addresses. This constraint doesn't apply to dedicated IP pools that have a `MANAGED`
+ * scaling mode.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnDedicatedIpPool cfnDedicatedIpPool = CfnDedicatedIpPool.Builder.create(this,
+ * "MyCfnDedicatedIpPool")
+ * .poolName("poolName")
+ * .scalingMode("scalingMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-dedicatedippool.html)
+ */
 @CdkDslMarker
 public class CfnDedicatedIpPoolDsl(
   scope: Construct,

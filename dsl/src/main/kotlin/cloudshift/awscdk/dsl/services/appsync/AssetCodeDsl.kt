@@ -16,6 +16,54 @@ import software.amazon.awscdk.SymlinkFollowMode
 import software.amazon.awscdk.services.appsync.AssetCode
 import software.amazon.awscdk.services.iam.IGrantable
 
+/**
+ * Represents a local file with source code used for an AppSync Function or Resolver.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * DockerImage dockerImage;
+ * IGrantable grantable;
+ * ILocalBundling localBundling;
+ * AssetCode assetCode = AssetCode.Builder.create("path")
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .deployTime(false)
+ * .exclude(List.of("exclude"))
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .readers(List.of(grantable))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetCodeDsl(
   path: String,

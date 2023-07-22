@@ -14,6 +14,22 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 import software.constructs.Construct
 
+/**
+ * Creates a dashboard from a template. To first create a template, see the `CreateTemplate` API
+ * operation.
+ *
+ * A dashboard is an entity in Amazon QuickSight that identifies Amazon QuickSight reports, created
+ * from analyses. You can share Amazon QuickSight dashboards. With the right permissions, you can
+ * create scheduled email reports from them. If you have the correct permissions, you can create a
+ * dashboard from a template that exists in a different AWS account .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDsl(
   scope: Construct,

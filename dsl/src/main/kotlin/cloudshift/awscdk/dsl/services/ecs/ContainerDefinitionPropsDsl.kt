@@ -23,6 +23,87 @@ import software.amazon.awscdk.services.ecs.SystemControl
 import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.amazon.awscdk.services.ecs.Ulimit
 
+/**
+ * The properties in a container definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * AppProtocol appProtocol;
+ * ContainerImage containerImage;
+ * EnvironmentFile environmentFile;
+ * LinuxParameters linuxParameters;
+ * LogDriver logDriver;
+ * Secret secret;
+ * TaskDefinition taskDefinition;
+ * ContainerDefinitionProps containerDefinitionProps = ContainerDefinitionProps.builder()
+ * .image(containerImage)
+ * .taskDefinition(taskDefinition)
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .containerName("containerName")
+ * .cpu(123)
+ * .disableNetworking(false)
+ * .dnsSearchDomains(List.of("dnsSearchDomains"))
+ * .dnsServers(List.of("dnsServers"))
+ * .dockerLabels(Map.of(
+ * "dockerLabelsKey", "dockerLabels"))
+ * .dockerSecurityOptions(List.of("dockerSecurityOptions"))
+ * .entryPoint(List.of("entryPoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .environmentFiles(List.of(environmentFile))
+ * .essential(false)
+ * .extraHosts(Map.of(
+ * "extraHostsKey", "extraHosts"))
+ * .gpuCount(123)
+ * .healthCheck(HealthCheck.builder()
+ * .command(List.of("command"))
+ * // the properties below are optional
+ * .interval(Duration.minutes(30))
+ * .retries(123)
+ * .startPeriod(Duration.minutes(30))
+ * .timeout(Duration.minutes(30))
+ * .build())
+ * .hostname("hostname")
+ * .inferenceAcceleratorResources(List.of("inferenceAcceleratorResources"))
+ * .linuxParameters(linuxParameters)
+ * .logging(logDriver)
+ * .memoryLimitMiB(123)
+ * .memoryReservationMiB(123)
+ * .portMappings(List.of(PortMapping.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .appProtocol(appProtocol)
+ * .hostPort(123)
+ * .name("name")
+ * .protocol(Protocol.TCP)
+ * .build()))
+ * .privileged(false)
+ * .pseudoTerminal(false)
+ * .readonlyRootFilesystem(false)
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .startTimeout(Duration.minutes(30))
+ * .stopTimeout(Duration.minutes(30))
+ * .systemControls(List.of(SystemControl.builder()
+ * .namespace("namespace")
+ * .value("value")
+ * .build()))
+ * .ulimits(List.of(Ulimit.builder()
+ * .hardLimit(123)
+ * .name(UlimitName.CORE)
+ * .softLimit(123)
+ * .build()))
+ * .user("user")
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerDefinitionPropsDsl {
   private val cdkBuilder: ContainerDefinitionProps.Builder = ContainerDefinitionProps.builder()

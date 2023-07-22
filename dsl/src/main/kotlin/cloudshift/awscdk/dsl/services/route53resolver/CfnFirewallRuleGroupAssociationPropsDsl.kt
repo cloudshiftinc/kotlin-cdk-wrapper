@@ -12,6 +12,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociationProps
 
+/**
+ * Properties for defining a `CfnFirewallRuleGroupAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnFirewallRuleGroupAssociationProps cfnFirewallRuleGroupAssociationProps =
+ * CfnFirewallRuleGroupAssociationProps.builder()
+ * .firewallRuleGroupId("firewallRuleGroupId")
+ * .priority(123)
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .mutationProtection("mutationProtection")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html)
+ */
 @CdkDslMarker
 public class CfnFirewallRuleGroupAssociationPropsDsl {
   private val cdkBuilder: CfnFirewallRuleGroupAssociationProps.Builder =

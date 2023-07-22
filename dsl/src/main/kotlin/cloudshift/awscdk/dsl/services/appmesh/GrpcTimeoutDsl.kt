@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.appmesh.GrpcTimeout
 
+/**
+ * Represents timeouts for GRPC protocols.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-http", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.grpc(GrpcRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder()
+ * .virtualNode(node)
+ * .build()))
+ * .match(GrpcRouteMatch.builder()
+ * .serviceName("my-service.default.svc.cluster.local")
+ * .build())
+ * .timeout(GrpcTimeout.builder()
+ * .idle(Duration.seconds(2))
+ * .perRequest(Duration.seconds(1))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcTimeoutDsl {
   private val cdkBuilder: GrpcTimeout.Builder = GrpcTimeout.builder()

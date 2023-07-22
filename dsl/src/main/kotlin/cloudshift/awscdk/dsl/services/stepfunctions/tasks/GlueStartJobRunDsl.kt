@@ -18,6 +18,26 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun
 import software.constructs.Construct
 
+/**
+ * Starts an AWS Glue job in a Task state.
+ *
+ * OUTPUT: the output of this task is a JobRun structure, for details consult
+ * https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-runs.html#aws-glue-api-jobs-runs-JobRun
+ *
+ * Example:
+ *
+ * ```
+ * GlueStartJobRun.Builder.create(this, "Task")
+ * .glueJobName("my-glue-job")
+ * .arguments(TaskInput.fromObject(Map.of(
+ * "key", "value")))
+ * .taskTimeout(Timeout.duration(Duration.minutes(30)))
+ * .notifyDelayAfter(Duration.minutes(5))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-glue.html)
+ */
 @CdkDslMarker
 public class GlueStartJobRunDsl(
   scope: Construct,

@@ -6,6 +6,45 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
+/**
+ * Specifies demographic-based criteria, such as device platform, for the segment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * DemographicProperty demographicProperty = DemographicProperty.builder()
+ * .appVersion(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .channel(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .deviceType(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .make(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .model(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .platform(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-demographic.html)
+ */
 @CdkDslMarker
 public class CfnSegmentDemographicPropertyDsl {
   private val cdkBuilder: CfnSegment.DemographicProperty.Builder =

@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Details of the CloudWatch Logs destination for broker logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CloudWatchLogsProperty cloudWatchLogsProperty = CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-cloudwatchlogs.html)
+ */
 @CdkDslMarker
 public class CfnClusterCloudWatchLogsPropertyDsl {
   private val cdkBuilder: CfnCluster.CloudWatchLogsProperty.Builder =

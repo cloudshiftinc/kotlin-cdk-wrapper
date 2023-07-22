@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnConnectPeer
 
+/**
+ * Describes a core network Connect peer configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * ConnectPeerConfigurationProperty connectPeerConfigurationProperty =
+ * ConnectPeerConfigurationProperty.builder()
+ * .bgpConfigurations(List.of(ConnectPeerBgpConfigurationProperty.builder()
+ * .coreNetworkAddress("coreNetworkAddress")
+ * .coreNetworkAsn(123)
+ * .peerAddress("peerAddress")
+ * .peerAsn(123)
+ * .build()))
+ * .coreNetworkAddress("coreNetworkAddress")
+ * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .peerAddress("peerAddress")
+ * .protocol("protocol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-connectpeer-connectpeerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnConnectPeerConnectPeerConfigurationPropertyDsl {
   private val cdkBuilder: CfnConnectPeer.ConnectPeerConfigurationProperty.Builder =

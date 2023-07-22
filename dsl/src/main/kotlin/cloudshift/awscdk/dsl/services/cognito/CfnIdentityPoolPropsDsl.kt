@@ -14,6 +14,23 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPool
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolProps
 
+/**
+ * Properties for defining a `CfnIdentityPool`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cognito.*;
+ * OpenIdConnectProvider myProvider;
+ * CfnIdentityPool.Builder.create(this, "IdentityPool")
+ * .openIdConnectProviderArns(List.of(myProvider.getOpenIdConnectProviderArn()))
+ * // And the other properties for your identity pool
+ * .allowUnauthenticatedIdentities(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolPropsDsl {
   private val cdkBuilder: CfnIdentityPoolProps.Builder = CfnIdentityPoolProps.builder()

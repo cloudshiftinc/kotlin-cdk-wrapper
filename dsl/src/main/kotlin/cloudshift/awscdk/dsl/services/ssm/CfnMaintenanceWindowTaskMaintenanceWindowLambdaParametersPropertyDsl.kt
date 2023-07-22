@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * The `MaintenanceWindowLambdaParameters` property type specifies the parameters for a `LAMBDA`
+ * task type for a maintenance window task in AWS Systems Manager .
+ *
+ * `MaintenanceWindowLambdaParameters` is a property of the
+ * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * MaintenanceWindowLambdaParametersProperty maintenanceWindowLambdaParametersProperty =
+ * MaintenanceWindowLambdaParametersProperty.builder()
+ * .clientContext("clientContext")
+ * .payload("payload")
+ * .qualifier("qualifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskMaintenanceWindowLambdaParametersPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty.Builder

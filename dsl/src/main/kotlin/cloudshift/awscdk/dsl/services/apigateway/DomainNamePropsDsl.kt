@@ -12,6 +12,20 @@ import software.amazon.awscdk.services.apigateway.MTLSConfig
 import software.amazon.awscdk.services.apigateway.SecurityPolicy
 import software.amazon.awscdk.services.certificatemanager.ICertificate
 
+/**
+ * Example:
+ *
+ * ```
+ * Object acmCertificateForExampleCom;
+ * RestApi restApi;
+ * DomainName.Builder.create(this, "custom-domain")
+ * .domainName("example.com")
+ * .certificate(acmCertificateForExampleCom)
+ * .mapping(restApi)
+ * .basePath("orders/v1/api")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DomainNamePropsDsl {
   private val cdkBuilder: DomainNameProps.Builder = DomainNameProps.builder()

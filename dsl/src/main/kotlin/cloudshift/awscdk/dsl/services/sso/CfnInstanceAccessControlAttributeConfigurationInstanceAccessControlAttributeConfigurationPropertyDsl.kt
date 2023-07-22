@@ -9,6 +9,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 
+/**
+ * The InstanceAccessControlAttributeConfiguration property has been deprecated but is still
+ * supported for backwards compatibility purposes.
+ *
+ * We recomend that you use  AccessControlAttributes property instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * InstanceAccessControlAttributeConfigurationProperty
+ * instanceAccessControlAttributeConfigurationProperty =
+ * InstanceAccessControlAttributeConfigurationProperty.builder()
+ * .accessControlAttributes(List.of(AccessControlAttributeProperty.builder()
+ * .key("key")
+ * .value(AccessControlAttributeValueProperty.builder()
+ * .source(List.of("source"))
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-instanceaccesscontrolattributeconfiguration.html)
+ */
 @CdkDslMarker
 public class
     CfnInstanceAccessControlAttributeConfigurationInstanceAccessControlAttributeConfigurationPropertyDsl

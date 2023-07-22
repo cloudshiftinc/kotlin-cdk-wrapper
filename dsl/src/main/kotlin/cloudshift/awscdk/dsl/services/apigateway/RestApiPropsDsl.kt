@@ -25,6 +25,22 @@ import software.amazon.awscdk.services.apigateway.RestApiProps
 import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 
+/**
+ * Props to create a new instance of RestApi.
+ *
+ * Example:
+ *
+ * ```
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
+ * .build();
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
+ * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+ * ```
+ */
 @CdkDslMarker
 public class RestApiPropsDsl {
   private val cdkBuilder: RestApiProps.Builder = RestApiProps.builder()

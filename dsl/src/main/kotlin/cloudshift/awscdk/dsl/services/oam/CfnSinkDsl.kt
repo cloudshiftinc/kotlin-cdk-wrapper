@@ -11,6 +11,37 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.oam.CfnSink
 import software.constructs.Construct
 
+/**
+ * Creates or updates a *sink* in the current account, so that it can be used as a monitoring
+ * account in CloudWatch cross-account observability.
+ *
+ * A sink is a resource that represents an attachment point in a monitoring account, which source
+ * accounts can link to to be able to send observability data.
+ *
+ * After you create a sink, you must create a sink policy that allows source accounts to attach to
+ * it. For more information, see
+ * [PutSinkPolicy](https://docs.aws.amazon.com/OAM/latest/APIReference/API_PutSinkPolicy.html) .
+ *
+ * An account can have one sink.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.oam.*;
+ * Object policy;
+ * CfnSink cfnSink = CfnSink.Builder.create(this, "MyCfnSink")
+ * .name("name")
+ * // the properties below are optional
+ * .policy(policy)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html)
+ */
 @CdkDslMarker
 public class CfnSinkDsl(
   scope: Construct,

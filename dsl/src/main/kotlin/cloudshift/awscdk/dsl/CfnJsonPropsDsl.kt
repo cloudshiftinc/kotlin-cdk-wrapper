@@ -8,6 +8,20 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.CfnJsonProps
 
+/**
+ * Example:
+ *
+ * ```
+ * CfnParameter tagParam = new CfnParameter(this, "TagName");
+ * CfnJson stringEquals = CfnJson.Builder.create(this, "ConditionJson")
+ * .value(Map.of(
+ * String.format("aws:PrincipalTag/%s", tagParam.getValueAsString()), true))
+ * .build();
+ * PrincipalBase principal = new AccountRootPrincipal().withConditions(Map.of(
+ * "StringEquals", stringEquals));
+ * Role.Builder.create(this, "MyRole").assumedBy(principal).build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnJsonPropsDsl {
   private val cdkBuilder: CfnJsonProps.Builder = CfnJsonProps.builder()

@@ -8,6 +8,24 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
+/**
+ * The Shutdown event configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * ShutdownEventConfigurationProperty shutdownEventConfigurationProperty =
+ * ShutdownEventConfigurationProperty.builder()
+ * .delayUntilElbConnectionsDrained(false)
+ * .executionTimeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-shutdowneventconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLayerShutdownEventConfigurationPropertyDsl {
   private val cdkBuilder: CfnLayer.ShutdownEventConfigurationProperty.Builder =

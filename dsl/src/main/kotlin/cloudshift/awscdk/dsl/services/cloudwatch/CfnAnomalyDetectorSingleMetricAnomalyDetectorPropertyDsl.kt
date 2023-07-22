@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 
+/**
+ * Designates the CloudWatch metric and statistic that provides the time series the anomaly detector
+ * uses as input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * SingleMetricAnomalyDetectorProperty singleMetricAnomalyDetectorProperty =
+ * SingleMetricAnomalyDetectorProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .stat("stat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-singlemetricanomalydetector.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorSingleMetricAnomalyDetectorPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.Builder =

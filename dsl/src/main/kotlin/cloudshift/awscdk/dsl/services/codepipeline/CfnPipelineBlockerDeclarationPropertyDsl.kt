@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Reserved for future use.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * BlockerDeclarationProperty blockerDeclarationProperty = BlockerDeclarationProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-blockerdeclaration.html)
+ */
 @CdkDslMarker
 public class CfnPipelineBlockerDeclarationPropertyDsl {
   private val cdkBuilder: CfnPipeline.BlockerDeclarationProperty.Builder =

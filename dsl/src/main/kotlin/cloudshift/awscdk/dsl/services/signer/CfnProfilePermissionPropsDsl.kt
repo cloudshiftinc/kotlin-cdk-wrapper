@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.signer.CfnProfilePermissionProps
 
+/**
+ * Properties for defining a `CfnProfilePermission`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * CfnProfilePermissionProps cfnProfilePermissionProps = CfnProfilePermissionProps.builder()
+ * .action("action")
+ * .principal("principal")
+ * .profileName("profileName")
+ * .statementId("statementId")
+ * // the properties below are optional
+ * .profileVersion("profileVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html)
+ */
 @CdkDslMarker
 public class CfnProfilePermissionPropsDsl {
   private val cdkBuilder: CfnProfilePermissionProps.Builder = CfnProfilePermissionProps.builder()

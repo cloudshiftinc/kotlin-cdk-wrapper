@@ -6,6 +6,18 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.pipelines.ECRSourceOptions
 
+/**
+ * Options for ECR sources.
+ *
+ * Example:
+ *
+ * ```
+ * IRepository repository;
+ * CodePipelineSource.ecr(repository, ECRSourceOptions.builder()
+ * .imageTag("latest")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ECRSourceOptionsDsl {
   private val cdkBuilder: ECRSourceOptions.Builder = ECRSourceOptions.builder()

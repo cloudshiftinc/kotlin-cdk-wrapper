@@ -8,6 +8,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * *[Snapshot and AMI policies only]* Specifies a cross-Region copy rule for snapshot and AMI
+ * policies.
+ *
+ *
+ * To specify a cross-Region copy action for event-based polices, use `CrossRegionCopyAction` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * CrossRegionCopyRuleProperty crossRegionCopyRuleProperty = CrossRegionCopyRuleProperty.builder()
+ * .encrypted(false)
+ * // the properties below are optional
+ * .cmkArn("cmkArn")
+ * .copyTags(false)
+ * .deprecateRule(CrossRegionCopyDeprecateRuleProperty.builder()
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .retainRule(CrossRegionCopyRetainRuleProperty.builder()
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .target("target")
+ * .targetRegion("targetRegion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyrule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyCrossRegionCopyRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.CrossRegionCopyRuleProperty.Builder =

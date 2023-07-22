@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon Web Services site-to-site VPN attachment on an edge location of a core network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnSiteToSiteVpnAttachment cfnSiteToSiteVpnAttachment =
+ * CfnSiteToSiteVpnAttachment.Builder.create(this, "MyCfnSiteToSiteVpnAttachment")
+ * .coreNetworkId("coreNetworkId")
+ * .vpnConnectionArn("vpnConnectionArn")
+ * // the properties below are optional
+ * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-sitetositevpnattachment.html)
+ */
 @CdkDslMarker
 public class CfnSiteToSiteVpnAttachmentDsl(
   scope: Construct,

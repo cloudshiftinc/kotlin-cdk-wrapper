@@ -11,6 +11,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProviderProps
 
+/**
+ * Properties for defining a `CfnUserPoolIdentityProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object attributeMapping;
+ * Object providerDetails;
+ * CfnUserPoolIdentityProviderProps cfnUserPoolIdentityProviderProps =
+ * CfnUserPoolIdentityProviderProps.builder()
+ * .providerName("providerName")
+ * .providerType("providerType")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .attributeMapping(attributeMapping)
+ * .idpIdentifiers(List.of("idpIdentifiers"))
+ * .providerDetails(providerDetails)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolIdentityProviderPropsDsl {
   private val cdkBuilder: CfnUserPoolIdentityProviderProps.Builder =

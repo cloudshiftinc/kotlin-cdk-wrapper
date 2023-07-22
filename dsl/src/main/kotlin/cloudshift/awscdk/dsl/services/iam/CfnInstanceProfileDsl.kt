@@ -9,6 +9,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.CfnInstanceProfile
 import software.constructs.Construct
 
+/**
+ * Creates a new instance profile. For information about instance profiles, see [Using instance
+ * profiles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2_instance-profiles.html)
+ * .
+ *
+ * For information about the number of instance profiles you can create, see [IAM object
+ * quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnInstanceProfile cfnInstanceProfile = CfnInstanceProfile.Builder.create(this,
+ * "MyCfnInstanceProfile")
+ * .roles(List.of("roles"))
+ * // the properties below are optional
+ * .instanceProfileName("instanceProfileName")
+ * .path("path")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-instanceprofile.html)
+ */
 @CdkDslMarker
 public class CfnInstanceProfileDsl(
   scope: Construct,

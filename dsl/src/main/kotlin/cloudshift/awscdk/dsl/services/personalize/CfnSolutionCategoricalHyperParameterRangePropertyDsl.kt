@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * Provides the name and values of a Categorical hyperparameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * CategoricalHyperParameterRangeProperty categoricalHyperParameterRangeProperty =
+ * CategoricalHyperParameterRangeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-categoricalhyperparameterrange.html)
+ */
 @CdkDslMarker
 public class CfnSolutionCategoricalHyperParameterRangePropertyDsl {
   private val cdkBuilder: CfnSolution.CategoricalHyperParameterRangeProperty.Builder =

@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociation
 import software.constructs.Construct
 
+/**
+ * Associates the specified product with the specified portfolio.
+ *
+ * A delegated admin is authorized to invoke this command.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolioProductAssociation cfnPortfolioProductAssociation =
+ * CfnPortfolioProductAssociation.Builder.create(this, "MyCfnPortfolioProductAssociation")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .sourcePortfolioId("sourcePortfolioId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioProductAssociationDsl(
   scope: Construct,

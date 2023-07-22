@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 
+/**
+ * The `IntegrationOverrides` property overrides the integration settings for an API Gateway-managed
+ * integration.
+ *
+ * If you remove this property, API Gateway restores the default values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * IntegrationOverridesProperty integrationOverridesProperty =
+ * IntegrationOverridesProperty.builder()
+ * .description("description")
+ * .integrationMethod("integrationMethod")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .timeoutInMillis(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-integrationoverrides.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesIntegrationOverridesPropertyDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.Builder =

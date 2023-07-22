@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 
+/**
+ * A custom SageMaker image.
+ *
+ * For more information, see [Bring your own SageMaker
+ * image](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CustomImageProperty customImageProperty = CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-customimage.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileCustomImagePropertyDsl {
   private val cdkBuilder: CfnUserProfile.CustomImageProperty.Builder =

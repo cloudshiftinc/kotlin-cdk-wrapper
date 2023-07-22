@@ -10,6 +10,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnAutoScalingRollingUpdate
 
+/**
+ * To specify how AWS CloudFormation handles rolling updates for an Auto Scaling group, use the
+ * AutoScalingRollingUpdate policy.
+ *
+ * Rolling updates enable you to specify whether AWS CloudFormation updates instances that are in an
+ * Auto Scaling
+ * group in batches or all at once.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnAutoScalingRollingUpdate cfnAutoScalingRollingUpdate = CfnAutoScalingRollingUpdate.builder()
+ * .maxBatchSize(123)
+ * .minInstancesInService(123)
+ * .minSuccessfulInstancesPercent(123)
+ * .pauseTime("pauseTime")
+ * .suspendProcesses(List.of("suspendProcesses"))
+ * .waitOnResourceSignals(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnAutoScalingRollingUpdateDsl {
   private val cdkBuilder: CfnAutoScalingRollingUpdate.Builder =

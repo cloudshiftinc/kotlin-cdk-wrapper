@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sso.CfnAssignmentProps
 
+/**
+ * Properties for defining a `CfnAssignment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * CfnAssignmentProps cfnAssignmentProps = CfnAssignmentProps.builder()
+ * .instanceArn("instanceArn")
+ * .permissionSetArn("permissionSetArn")
+ * .principalId("principalId")
+ * .principalType("principalType")
+ * .targetId("targetId")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html)
+ */
 @CdkDslMarker
 public class CfnAssignmentPropsDsl {
   private val cdkBuilder: CfnAssignmentProps.Builder = CfnAssignmentProps.builder()

@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Information about the partition dimensions in a data store.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DatastorePartitionsProperty datastorePartitionsProperty = DatastorePartitionsProperty.builder()
+ * .partitions(List.of(DatastorePartitionProperty.builder()
+ * .partition(PartitionProperty.builder()
+ * .attributeName("attributeName")
+ * .build())
+ * .timestampPartition(TimestampPartitionProperty.builder()
+ * .attributeName("attributeName")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartitions.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreDatastorePartitionsPropertyDsl {
   private val cdkBuilder: CfnDatastore.DatastorePartitionsProperty.Builder =

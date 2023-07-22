@@ -10,6 +10,143 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Creates a new MSK cluster.
+ *
+ * The following Python 3.6 examples shows how you can create a cluster that's distributed over two
+ * Availability Zones. Before you run this Python script, replace the example subnet and security-group
+ * IDs with the IDs of your subnets and security group. When you create an MSK cluster, its brokers get
+ * evenly distributed over a number of Availability Zones that's equal to the number of subnets that
+ * you specify in the `BrokerNodeGroupInfo` parameter. In this example, you can add a third subnet to
+ * get a cluster that's distributed over three Availability Zones.
+ *
+ * ```
+ * import boto3 client = boto3.client('kafka') response = client.create_cluster(
+ * BrokerNodeGroupInfo={ 'BrokerAZDistribution': 'DEFAULT', 'ClientSubnets': [
+ * 'subnet-012345678901fedcba', 'subnet-9876543210abcdef01' ], 'InstanceType': 'kafka.m5.large',
+ * 'SecurityGroups': [ 'sg-012345abcdef789789' ] }, ClusterName='SalesCluster', EncryptionInfo={
+ * 'EncryptionInTransit': { 'ClientBroker': 'TLS_PLAINTEXT', 'InCluster': True } },
+ * EnhancedMonitoring='PER_TOPIC_PER_BROKER', KafkaVersion='2.2.1', NumberOfBrokerNodes=2
+ * ) print(response)
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .brokerNodeGroupInfo(BrokerNodeGroupInfoProperty.builder()
+ * .clientSubnets(List.of("clientSubnets"))
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .brokerAzDistribution("brokerAzDistribution")
+ * .connectivityInfo(ConnectivityInfoProperty.builder()
+ * .publicAccess(PublicAccessProperty.builder()
+ * .type("type")
+ * .build())
+ * .vpcConnectivity(VpcConnectivityProperty.builder()
+ * .clientAuthentication(VpcConnectivityClientAuthenticationProperty.builder()
+ * .sasl(VpcConnectivitySaslProperty.builder()
+ * .iam(VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(VpcConnectivityScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(VpcConnectivityTlsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .storageInfo(StorageInfoProperty.builder()
+ * .ebsStorageInfo(EBSStorageInfoProperty.builder()
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .enabled(false)
+ * .volumeThroughput(123)
+ * .build())
+ * .volumeSize(123)
+ * .build())
+ * .build())
+ * .build())
+ * .clusterName("clusterName")
+ * .kafkaVersion("kafkaVersion")
+ * .numberOfBrokerNodes(123)
+ * // the properties below are optional
+ * .clientAuthentication(ClientAuthenticationProperty.builder()
+ * .sasl(SaslProperty.builder()
+ * .iam(IamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(ScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(TlsProperty.builder()
+ * .certificateAuthorityArnList(List.of("certificateAuthorityArnList"))
+ * .enabled(false)
+ * .build())
+ * .unauthenticated(UnauthenticatedProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .configurationInfo(ConfigurationInfoProperty.builder()
+ * .arn("arn")
+ * .revision(123)
+ * .build())
+ * .currentVersion("currentVersion")
+ * .encryptionInfo(EncryptionInfoProperty.builder()
+ * .encryptionAtRest(EncryptionAtRestProperty.builder()
+ * .dataVolumeKmsKeyId("dataVolumeKmsKeyId")
+ * .build())
+ * .encryptionInTransit(EncryptionInTransitProperty.builder()
+ * .clientBroker("clientBroker")
+ * .inCluster(false)
+ * .build())
+ * .build())
+ * .enhancedMonitoring("enhancedMonitoring")
+ * .loggingInfo(LoggingInfoProperty.builder()
+ * .brokerLogs(BrokerLogsProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build())
+ * .firehose(FirehoseProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .s3(S3Property.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .build())
+ * .openMonitoring(OpenMonitoringProperty.builder()
+ * .prometheus(PrometheusProperty.builder()
+ * .jmxExporter(JmxExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .nodeExporter(NodeExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .build())
+ * .build())
+ * .storageMode("storageMode")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnSite
 import software.constructs.Construct
 
+/**
+ * Creates a new site in a global network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnSite cfnSite = CfnSite.Builder.create(this, "MyCfnSite")
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .description("description")
+ * .location(LocationProperty.builder()
+ * .address("address")
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-site.html)
+ */
 @CdkDslMarker
 public class CfnSiteDsl(
   scope: Construct,

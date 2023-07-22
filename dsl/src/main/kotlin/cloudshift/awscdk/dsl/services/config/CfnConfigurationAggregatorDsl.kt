@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationAggregator
 import software.constructs.Construct
 
+/**
+ * The details about the configuration aggregator, including information about source accounts,
+ * regions, and metadata of the aggregator.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnConfigurationAggregator cfnConfigurationAggregator =
+ * CfnConfigurationAggregator.Builder.create(this, "MyCfnConfigurationAggregator")
+ * .accountAggregationSources(List.of(AccountAggregationSourceProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build()))
+ * .configurationAggregatorName("configurationAggregatorName")
+ * .organizationAggregationSource(OrganizationAggregationSourceProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAggregatorDsl(
   scope: Construct,

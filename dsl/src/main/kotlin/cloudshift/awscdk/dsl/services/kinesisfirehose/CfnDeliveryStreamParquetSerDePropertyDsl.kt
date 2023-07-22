@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * A serializer to use for converting data to the Parquet format before storing it in Amazon S3.
+ *
+ * For more information, see [Apache
+ * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * ParquetSerDeProperty parquetSerDeProperty = ParquetSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .compression("compression")
+ * .enableDictionaryCompression(false)
+ * .maxPaddingBytes(123)
+ * .pageSizeBytes(123)
+ * .writerVersion("writerVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-parquetserde.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamParquetSerDePropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.ParquetSerDeProperty.Builder =

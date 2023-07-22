@@ -7,6 +7,35 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnCapacityProvider
 
+/**
+ * The managed scaling settings for the Auto Scaling group capacity provider.
+ *
+ * When managed scaling is turned on, Amazon ECS manages the scale-in and scale-out actions of the
+ * Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed
+ * CloudWatch metric with the specified `targetCapacity` value as the target value for the metric. For
+ * more information, see [Using managed
+ * scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * If managed scaling is off, the user must manage the scaling of the Auto Scaling group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ManagedScalingProperty managedScalingProperty = ManagedScalingProperty.builder()
+ * .instanceWarmupPeriod(123)
+ * .maximumScalingStepSize(123)
+ * .minimumScalingStepSize(123)
+ * .status("status")
+ * .targetCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-managedscaling.html)
+ */
 @CdkDslMarker
 public class CfnCapacityProviderManagedScalingPropertyDsl {
   private val cdkBuilder: CfnCapacityProvider.ManagedScalingProperty.Builder =

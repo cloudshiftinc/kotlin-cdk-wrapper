@@ -14,6 +14,41 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.neptune.CfnDBClusterParameterGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::Neptune::DBClusterParameterGroup` resource creates a new Amazon Neptune DB cluster
+ * parameter group.
+ *
+ *
+ * Applying a parameter group to a DB cluster might require instances to reboot, resulting in a
+ * database outage while the instances reboot. &gt; If you provide a custom `DBClusterParameterGroup`
+ * that you associate with the `DBCluster` , it is best to specify an `EngineVersion` property in the
+ * `DBCluster` . That `EngineVersion` needs to be compatible with the value of the `Family` property in
+ * the `DBClusterParameterGroup` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * Object parameters;
+ * CfnDBClusterParameterGroup cfnDBClusterParameterGroup =
+ * CfnDBClusterParameterGroup.Builder.create(this, "MyCfnDBClusterParameterGroup")
+ * .description("description")
+ * .family("family")
+ * .parameters(parameters)
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbclusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterParameterGroupDsl(
   scope: Construct,

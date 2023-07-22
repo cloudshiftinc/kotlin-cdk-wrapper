@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters for S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * S3ParametersProperty s3ParametersProperty = S3ParametersProperty.builder()
+ * .manifestFileLocation(ManifestFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-s3parameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceS3ParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.S3ParametersProperty.Builder =

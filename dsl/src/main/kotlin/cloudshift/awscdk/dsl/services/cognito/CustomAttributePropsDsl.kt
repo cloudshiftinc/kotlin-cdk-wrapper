@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.CustomAttributeProps
 
+/**
+ * Constraints that can be applied to a custom attribute of any type.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .standardAttributes(StandardAttributes.builder()
+ * .fullname(StandardAttribute.builder()
+ * .required(true)
+ * .mutable(false)
+ * .build())
+ * .address(StandardAttribute.builder()
+ * .required(false)
+ * .mutable(true)
+ * .build())
+ * .build())
+ * .customAttributes(Map.of(
+ * "myappid", StringAttribute.Builder.create().minLen(5).maxLen(15).mutable(false).build(),
+ * "callingcode", NumberAttribute.Builder.create().min(1).max(3).mutable(true).build(),
+ * "isEmployee", BooleanAttribute.Builder.create().mutable(true).build(),
+ * "joinedOn", new DateTimeAttribute()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomAttributePropsDsl {
   private val cdkBuilder: CustomAttributeProps.Builder = CustomAttributeProps.builder()

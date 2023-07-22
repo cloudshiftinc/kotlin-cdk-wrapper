@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnProject
 import software.constructs.Construct
 
+/**
+ * Specifies a new AWS Glue DataBrew project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .datasetName("datasetName")
+ * .name("name")
+ * .recipeName("recipeName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .sample(SampleProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .size(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

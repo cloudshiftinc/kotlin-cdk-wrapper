@@ -17,6 +17,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnExtension
 import software.constructs.Construct
 
+/**
+ * Creates an AWS AppConfig extension.
+ *
+ * An extension augments your ability to inject logic or behavior at different points during the AWS
+ * AppConfig workflow of creating or deploying a configuration.
+ *
+ * You can create your own extensions or use the AWS authored extensions provided by AWS AppConfig .
+ * For an AWS AppConfig extension that uses AWS Lambda , you must create a Lambda function to perform
+ * any computation and processing defined in the extension. If you plan to create custom versions of
+ * the AWS authored notification extensions, you only need to specify an Amazon Resource Name (ARN) in
+ * the `Uri` field for the new extension version.
+ *
+ * * For a custom EventBridge notification extension, enter the ARN of the EventBridge default
+ * events in the `Uri` field.
+ * * For a custom Amazon SNS notification extension, enter the ARN of an Amazon SNS topic in the
+ * `Uri` field.
+ * * For a custom Amazon SQS notification extension, enter the ARN of an Amazon SQS message queue in
+ * the `Uri` field.
+ *
+ * For more information about extensions, see [Working with AWS AppConfig
+ * extensions](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
+ * in the *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * Object actions;
+ * CfnExtension cfnExtension = CfnExtension.Builder.create(this, "MyCfnExtension")
+ * .actions(actions)
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .latestVersionNumber(123)
+ * .parameters(Map.of(
+ * "parametersKey", ParameterProperty.builder()
+ * .required(false)
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extension.html)
+ */
 @CdkDslMarker
 public class CfnExtensionDsl(
   scope: Construct,

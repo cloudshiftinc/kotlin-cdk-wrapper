@@ -11,6 +11,30 @@ import software.amazon.awscdk.services.route53.RecordSetProps
 import software.amazon.awscdk.services.route53.RecordTarget
 import software.amazon.awscdk.services.route53.RecordType
 
+/**
+ * Construction properties for a RecordSet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * RecordTarget recordTarget;
+ * RecordSetProps recordSetProps = RecordSetProps.builder()
+ * .recordType(RecordType.A)
+ * .target(recordTarget)
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RecordSetPropsDsl {
   private val cdkBuilder: RecordSetProps.Builder = RecordSetProps.builder()

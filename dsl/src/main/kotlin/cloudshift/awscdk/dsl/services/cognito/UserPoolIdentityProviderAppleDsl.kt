@@ -12,6 +12,50 @@ import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderApple
 import software.constructs.Construct
 
+/**
+ * Represents a identity provider that integrates with 'Apple'.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * ProviderAttribute providerAttribute;
+ * UserPool userPool;
+ * UserPoolIdentityProviderApple userPoolIdentityProviderApple =
+ * UserPoolIdentityProviderApple.Builder.create(this, "MyUserPoolIdentityProviderApple")
+ * .clientId("clientId")
+ * .keyId("keyId")
+ * .privateKey("privateKey")
+ * .teamId("teamId")
+ * .userPool(userPool)
+ * // the properties below are optional
+ * .attributeMapping(AttributeMapping.builder()
+ * .address(providerAttribute)
+ * .birthdate(providerAttribute)
+ * .custom(Map.of(
+ * "customKey", providerAttribute))
+ * .email(providerAttribute)
+ * .familyName(providerAttribute)
+ * .fullname(providerAttribute)
+ * .gender(providerAttribute)
+ * .givenName(providerAttribute)
+ * .lastUpdateTime(providerAttribute)
+ * .locale(providerAttribute)
+ * .middleName(providerAttribute)
+ * .nickname(providerAttribute)
+ * .phoneNumber(providerAttribute)
+ * .preferredUsername(providerAttribute)
+ * .profilePage(providerAttribute)
+ * .profilePicture(providerAttribute)
+ * .timezone(providerAttribute)
+ * .website(providerAttribute)
+ * .build())
+ * .scopes(List.of("scopes"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderAppleDsl(
   scope: Construct,

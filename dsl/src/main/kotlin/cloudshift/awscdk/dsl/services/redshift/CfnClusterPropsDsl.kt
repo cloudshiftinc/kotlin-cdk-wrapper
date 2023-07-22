@@ -15,6 +15,80 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnCluster
 import software.amazon.awscdk.services.redshift.CfnClusterProps
 
+/**
+ * Properties for defining a `CfnCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
+ * .clusterType("clusterType")
+ * .dbName("dbName")
+ * .masterUsername("masterUsername")
+ * .masterUserPassword("masterUserPassword")
+ * .nodeType("nodeType")
+ * // the properties below are optional
+ * .allowVersionUpgrade(false)
+ * .aquaConfigurationStatus("aquaConfigurationStatus")
+ * .automatedSnapshotRetentionPeriod(123)
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneRelocation(false)
+ * .availabilityZoneRelocationStatus("availabilityZoneRelocationStatus")
+ * .classic(false)
+ * .clusterIdentifier("clusterIdentifier")
+ * .clusterParameterGroupName("clusterParameterGroupName")
+ * .clusterSecurityGroups(List.of("clusterSecurityGroups"))
+ * .clusterSubnetGroupName("clusterSubnetGroupName")
+ * .clusterVersion("clusterVersion")
+ * .deferMaintenance(false)
+ * .deferMaintenanceDuration(123)
+ * .deferMaintenanceEndTime("deferMaintenanceEndTime")
+ * .deferMaintenanceStartTime("deferMaintenanceStartTime")
+ * .destinationRegion("destinationRegion")
+ * .elasticIp("elasticIp")
+ * .encrypted(false)
+ * .endpoint(EndpointProperty.builder()
+ * .address("address")
+ * .port("port")
+ * .build())
+ * .enhancedVpcRouting(false)
+ * .hsmClientCertificateIdentifier("hsmClientCertificateIdentifier")
+ * .hsmConfigurationIdentifier("hsmConfigurationIdentifier")
+ * .iamRoles(List.of("iamRoles"))
+ * .kmsKeyId("kmsKeyId")
+ * .loggingProperties(LoggingPropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .maintenanceTrackName("maintenanceTrackName")
+ * .manualSnapshotRetentionPeriod(123)
+ * .numberOfNodes(123)
+ * .ownerAccount("ownerAccount")
+ * .port(123)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .resourceAction("resourceAction")
+ * .revisionTarget("revisionTarget")
+ * .rotateEncryptionKey(false)
+ * .snapshotClusterIdentifier("snapshotClusterIdentifier")
+ * .snapshotCopyGrantName("snapshotCopyGrantName")
+ * .snapshotCopyManual(false)
+ * .snapshotCopyRetentionPeriod(123)
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterPropsDsl {
   private val cdkBuilder: CfnClusterProps.Builder = CfnClusterProps.builder()

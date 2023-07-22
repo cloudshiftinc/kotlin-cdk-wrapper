@@ -14,6 +14,30 @@ import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.TagOptions
 import software.constructs.Construct
 
+/**
+ * A Service Catalog Cloudformation Product.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProduct");
+ * }
+ * }
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "Product")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(CloudFormationProductVersion.builder()
+ * .productVersionName("v1")
+ * .cloudFormationTemplate(CloudFormationTemplate.fromProductStack(new S3BucketProduct(this,
+ * "S3BucketProduct")))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationProductDsl(
   scope: Construct,

@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.rds.CfnDBProxyEndpoint
 import software.amazon.awscdk.services.rds.CfnDBProxyEndpointProps
 
+/**
+ * Properties for defining a `CfnDBProxyEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBProxyEndpointProps cfnDBProxyEndpointProps = CfnDBProxyEndpointProps.builder()
+ * .dbProxyEndpointName("dbProxyEndpointName")
+ * .dbProxyName("dbProxyName")
+ * .vpcSubnetIds(List.of("vpcSubnetIds"))
+ * // the properties below are optional
+ * .tags(List.of(TagFormatProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetRole("targetRole")
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyEndpointPropsDsl {
   private val cdkBuilder: CfnDBProxyEndpointProps.Builder = CfnDBProxyEndpointProps.builder()

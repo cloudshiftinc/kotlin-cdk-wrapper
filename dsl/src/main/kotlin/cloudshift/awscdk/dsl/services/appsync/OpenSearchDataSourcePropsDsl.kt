@@ -9,6 +9,30 @@ import software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.opensearchservice.IDomain
 
+/**
+ * Properties for the OpenSearch Data Source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * Domain domain;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * OpenSearchDataSourceProps openSearchDataSourceProps = OpenSearchDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .domain(domain)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OpenSearchDataSourcePropsDsl {
   private val cdkBuilder: OpenSearchDataSourceProps.Builder = OpenSearchDataSourceProps.builder()

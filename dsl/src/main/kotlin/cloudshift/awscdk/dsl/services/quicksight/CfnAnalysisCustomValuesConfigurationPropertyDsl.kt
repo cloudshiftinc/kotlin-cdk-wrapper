@@ -7,6 +7,31 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of custom values for the destination parameter in
+ * `DestinationParameterValueConfiguration` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomValuesConfigurationProperty customValuesConfigurationProperty =
+ * CustomValuesConfigurationProperty.builder()
+ * .customValues(CustomParameterValuesProperty.builder()
+ * .dateTimeValues(List.of("dateTimeValues"))
+ * .decimalValues(List.of(123))
+ * .integerValues(List.of(123))
+ * .stringValues(List.of("stringValues"))
+ * .build())
+ * // the properties below are optional
+ * .includeNullValue(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-customvaluesconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisCustomValuesConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CustomValuesConfigurationProperty.Builder =

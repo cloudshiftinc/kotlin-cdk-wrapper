@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 
+/**
+ * The settings for source failover.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * FailoverConfigProperty failoverConfigProperty = FailoverConfigProperty.builder()
+ * .failoverMode("failoverMode")
+ * // the properties below are optional
+ * .sourcePriority(SourcePriorityProperty.builder()
+ * .primarySource("primarySource")
+ * .build())
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-failoverconfig.html)
+ */
 @CdkDslMarker
 public class CfnBridgeFailoverConfigPropertyDsl {
   private val cdkBuilder: CfnBridge.FailoverConfigProperty.Builder =

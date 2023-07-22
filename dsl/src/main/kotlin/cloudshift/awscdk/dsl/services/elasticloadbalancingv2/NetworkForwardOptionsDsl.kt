@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions
 
+/**
+ * Options for `NetworkListenerAction.forward()`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * NetworkForwardOptions networkForwardOptions = NetworkForwardOptions.builder()
+ * .stickinessDuration(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkForwardOptionsDsl {
   private val cdkBuilder: NetworkForwardOptions.Builder = NetworkForwardOptions.builder()

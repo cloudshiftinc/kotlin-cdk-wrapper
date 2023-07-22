@@ -17,6 +17,43 @@ import software.amazon.awscdk.services.autoscaling.StepScalingPolicy
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.constructs.Construct
 
+/**
+ * Define a acaling strategy which scales depending on absolute values of some metric.
+ *
+ * You can specify the scaling behavior for various values of the metric.
+ *
+ * Implemented using one or more CloudWatch alarms and Step Scaling Policies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Metric metric;
+ * StepScalingPolicy stepScalingPolicy = StepScalingPolicy.Builder.create(this,
+ * "MyStepScalingPolicy")
+ * .autoScalingGroup(autoScalingGroup)
+ * .metric(metric)
+ * .scalingSteps(List.of(ScalingInterval.builder()
+ * .change(123)
+ * // the properties below are optional
+ * .lower(123)
+ * .upper(123)
+ * .build()))
+ * // the properties below are optional
+ * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
+ * .cooldown(Duration.minutes(30))
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .evaluationPeriods(123)
+ * .metricAggregationType(MetricAggregationType.AVERAGE)
+ * .minAdjustmentMagnitude(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepScalingPolicyDsl(
   scope: Construct,

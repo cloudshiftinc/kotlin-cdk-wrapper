@@ -10,6 +10,23 @@ import software.amazon.awscdk.FileFingerprintOptions
 import software.amazon.awscdk.IgnoreMode
 import software.amazon.awscdk.SymlinkFollowMode
 
+/**
+ * Options related to calculating source hash.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * FileFingerprintOptions fileFingerprintOptions = FileFingerprintOptions.builder()
+ * .exclude(List.of("exclude"))
+ * .extraHash("extraHash")
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileFingerprintOptionsDsl {
   private val cdkBuilder: FileFingerprintOptions.Builder = FileFingerprintOptions.builder()

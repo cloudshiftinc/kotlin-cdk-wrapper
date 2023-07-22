@@ -9,6 +9,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnTagOption
 import software.constructs.Construct
 
+/**
+ * Specifies a TagOption.
+ *
+ * A TagOption is a key-value pair managed by AWS Service Catalog that serves as a template for
+ * creating an AWS tag.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnTagOption cfnTagOption = CfnTagOption.Builder.create(this, "MyCfnTagOption")
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .active(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html)
+ */
 @CdkDslMarker
 public class CfnTagOptionDsl(
   scope: Construct,

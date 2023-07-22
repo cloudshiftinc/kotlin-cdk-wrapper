@@ -12,6 +12,35 @@ import software.amazon.awscdk.services.applicationautoscaling.MetricAggregationT
 import software.amazon.awscdk.services.applicationautoscaling.StepScalingAction
 import software.constructs.Construct
 
+/**
+ * Define a step scaling action.
+ *
+ * This kind of scaling policy adjusts the target capacity in configurable
+ * steps. The size of the step is configurable based on the metric's distance
+ * to its alarm threshold.
+ *
+ * This Action must be used as the target of a CloudWatch alarm to take effect.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * ScalableTarget scalableTarget;
+ * StepScalingAction stepScalingAction = StepScalingAction.Builder.create(this,
+ * "MyStepScalingAction")
+ * .scalingTarget(scalableTarget)
+ * // the properties below are optional
+ * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
+ * .cooldown(Duration.minutes(30))
+ * .metricAggregationType(MetricAggregationType.AVERAGE)
+ * .minAdjustmentMagnitude(123)
+ * .policyName("policyName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepScalingActionDsl(
   scope: Construct,

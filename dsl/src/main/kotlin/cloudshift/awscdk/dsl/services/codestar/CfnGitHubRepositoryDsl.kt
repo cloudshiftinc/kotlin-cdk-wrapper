@@ -9,6 +9,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codestar.CfnGitHubRepository
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeStar::GitHubRepository` resource creates a GitHub repository where users can store
+ * source code for use with AWS workflows.
+ *
+ * You must provide a location for the source code ZIP file in the AWS CloudFormation template, so
+ * the code can be uploaded to the created repository. You must have created a personal access token in
+ * GitHub to provide in the AWS CloudFormation template. AWS uses this token to connect to GitHub on
+ * your behalf. For more information about using a GitHub source repository with AWS CodeStar projects,
+ * see [AWS CodeStar Project Files and
+ * Resources](https://docs.aws.amazon.com/codestar/latest/userguide/templates.html#templates-whatis) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestar.*;
+ * CfnGitHubRepository cfnGitHubRepository = CfnGitHubRepository.Builder.create(this,
+ * "MyCfnGitHubRepository")
+ * .repositoryName("repositoryName")
+ * .repositoryOwner("repositoryOwner")
+ * // the properties below are optional
+ * .code(CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build())
+ * .connectionArn("connectionArn")
+ * .enableIssues(false)
+ * .isPrivate(false)
+ * .repositoryAccessToken("repositoryAccessToken")
+ * .repositoryDescription("repositoryDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestar-githubrepository.html)
+ */
 @CdkDslMarker
 public class CfnGitHubRepositoryDsl(
   scope: Construct,

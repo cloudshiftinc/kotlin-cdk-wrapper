@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.ResourceAttributes
 
+/**
+ * Attributes that can be specified when importing a Resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi restApi;
+ * ResourceAttributes resourceAttributes = ResourceAttributes.builder()
+ * .path("path")
+ * .resourceId("resourceId")
+ * .restApi(restApi)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResourceAttributesDsl {
   private val cdkBuilder: ResourceAttributes.Builder = ResourceAttributes.builder()

@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * Information about the VPC in which the connector resides.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * VpcProperty vpcProperty = VpcProperty.builder()
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-vpc.html)
+ */
 @CdkDslMarker
 public class CfnConnectorVpcPropertyDsl {
   private val cdkBuilder: CfnConnector.VpcProperty.Builder = CfnConnector.VpcProperty.builder()

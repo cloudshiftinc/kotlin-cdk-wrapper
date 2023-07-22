@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnDirectoryConfig
 
+/**
+ * The certificate-based authentication properties used to authenticate SAML 2.0 Identity Provider
+ * (IdP) user identities to Active Directory domain-joined streaming instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CertificateBasedAuthPropertiesProperty certificateBasedAuthPropertiesProperty =
+ * CertificateBasedAuthPropertiesProperty.builder()
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-directoryconfig-certificatebasedauthproperties.html)
+ */
 @CdkDslMarker
 public class CfnDirectoryConfigCertificateBasedAuthPropertiesPropertyDsl {
   private val cdkBuilder: CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty.Builder =

@@ -15,6 +15,38 @@ import software.amazon.awscdk.services.events.targets.ApiGateway
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an API Gateway REST APIs as a target for Amazon EventBridge rules.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .build();
+ * Function fn = Function.Builder.create(this, "MyFunc")
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .code(Code.fromInline("exports.handler = e =&gt; {}"))
+ * .build();
+ * LambdaRestApi restApi = LambdaRestApi.Builder.create(this, "MyRestAPI").handler(fn).build();
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * rule.addTarget(
+ * ApiGateway.Builder.create(restApi)
+ * .path("/ *&#47;test")
+ * .method("GET")
+ * .stage("prod")
+ * .pathParameterValues(List.of("path-value"))
+ * .headerParameters(Map.of(
+ * "Header1", "header1"))
+ * .queryStringParameters(Map.of(
+ * "QueryParam1", "query-param-1"))
+ * .deadLetterQueue(dlq)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApiGatewayDsl(
   restApi: RestApi,

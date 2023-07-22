@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnStorageSystem
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::StorageSystem` resource creates an AWS resource for an on-premises storage
+ * system that you want DataSync Discovery to collect information about.
+ *
+ * For more information, see [discovering your storage with DataSync
+ * Discovery.](https://docs.aws.amazon.com/datasync/latest/userguide/understanding-your-storage.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnStorageSystem cfnStorageSystem = CfnStorageSystem.Builder.create(this, "MyCfnStorageSystem")
+ * .agentArns(List.of("agentArns"))
+ * .serverConfiguration(ServerConfigurationProperty.builder()
+ * .serverHostname("serverHostname")
+ * // the properties below are optional
+ * .serverPort(123)
+ * .build())
+ * .systemType("systemType")
+ * // the properties below are optional
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .name("name")
+ * .serverCredentials(ServerCredentialsProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-storagesystem.html)
+ */
 @CdkDslMarker
 public class CfnStorageSystemDsl(
   scope: Construct,

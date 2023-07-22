@@ -11,6 +11,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `ProjectTriggers` is a property of the [AWS CodeBuild
+ * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that specifies webhooks that trigger an AWS CodeBuild build.
+ *
+ *
+ * The Webhook feature isn't available in AWS CloudFormation for GitHub Enterprise projects. Use the
+ * AWS CLI or AWS CodeBuild console to create the webhook.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ProjectTriggersProperty projectTriggersProperty = ProjectTriggersProperty.builder()
+ * .buildType("buildType")
+ * .filterGroups(List.of(List.of(WebhookFilterProperty.builder()
+ * .pattern("pattern")
+ * .type("type")
+ * // the properties below are optional
+ * .excludeMatchedPattern(false)
+ * .build())))
+ * .webhook(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projecttriggers.html)
+ */
 @CdkDslMarker
 public class CfnProjectProjectTriggersPropertyDsl {
   private val cdkBuilder: CfnProject.ProjectTriggersProperty.Builder =

@@ -8,6 +8,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 import software.constructs.Construct
 
+/**
+ * Creates a refresh schedule for a dataset in Amazon QuickSight .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CfnRefreshSchedule cfnRefreshSchedule = CfnRefreshSchedule.Builder.create(this,
+ * "MyCfnRefreshSchedule")
+ * .awsAccountId("awsAccountId")
+ * .dataSetId("dataSetId")
+ * .schedule(RefreshScheduleMapProperty.builder()
+ * .refreshType("refreshType")
+ * .scheduleFrequency(ScheduleFrequencyProperty.builder()
+ * .interval("interval")
+ * .refreshOnDay(RefreshOnDayProperty.builder()
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .build())
+ * .timeOfTheDay("timeOfTheDay")
+ * .timeZone("timeZone")
+ * .build())
+ * .scheduleId("scheduleId")
+ * .startAfterDateTime("startAfterDateTime")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html)
+ */
 @CdkDslMarker
 public class CfnRefreshScheduleDsl(
   scope: Construct,

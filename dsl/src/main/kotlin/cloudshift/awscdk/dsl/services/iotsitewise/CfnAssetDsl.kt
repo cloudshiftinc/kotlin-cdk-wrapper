@@ -14,6 +14,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAsset
 import software.constructs.Construct
 
+/**
+ * Creates an asset from an existing asset model.
+ *
+ * For more information, see [Creating
+ * assets](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/create-assets.html) in the *AWS
+ * IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnAsset cfnAsset = CfnAsset.Builder.create(this, "MyCfnAsset")
+ * .assetModelId("assetModelId")
+ * .assetName("assetName")
+ * // the properties below are optional
+ * .assetDescription("assetDescription")
+ * .assetHierarchies(List.of(AssetHierarchyProperty.builder()
+ * .childAssetId("childAssetId")
+ * .logicalId("logicalId")
+ * .build()))
+ * .assetProperties(List.of(AssetPropertyProperty.builder()
+ * .logicalId("logicalId")
+ * // the properties below are optional
+ * .alias("alias")
+ * .notificationState("notificationState")
+ * .unit("unit")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html)
+ */
 @CdkDslMarker
 public class CfnAssetDsl(
   scope: Construct,

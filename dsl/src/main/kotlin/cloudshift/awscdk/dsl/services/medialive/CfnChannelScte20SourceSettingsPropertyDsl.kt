@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the SCTE-20 captions to extract from the input.
+ *
+ * The parent of this entity is CaptionSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Scte20SourceSettingsProperty scte20SourceSettingsProperty =
+ * Scte20SourceSettingsProperty.builder()
+ * .convert608To708("convert608To708")
+ * .source608ChannelNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte20sourcesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelScte20SourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Scte20SourceSettingsProperty.Builder =

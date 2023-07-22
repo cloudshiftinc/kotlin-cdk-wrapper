@@ -7,6 +7,28 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.robomaker.CfnRobotProps
 
+/**
+ * Properties for defining a `CfnRobot`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnRobotProps cfnRobotProps = CfnRobotProps.builder()
+ * .architecture("architecture")
+ * .greengrassGroupId("greengrassGroupId")
+ * // the properties below are optional
+ * .fleet("fleet")
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robot.html)
+ */
 @CdkDslMarker
 public class CfnRobotPropsDsl {
   private val cdkBuilder: CfnRobotProps.Builder = CfnRobotProps.builder()

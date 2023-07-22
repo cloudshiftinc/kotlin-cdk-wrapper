@@ -11,6 +11,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents the criteria for determining a request match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GrpcRouteMatchProperty grpcRouteMatchProperty = GrpcRouteMatchProperty.builder()
+ * .metadata(List.of(GrpcRouteMetadataProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .invert(false)
+ * .match(GrpcRouteMetadataMatchMethodProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(MatchRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build())
+ * .build()))
+ * .methodName("methodName")
+ * .port(123)
+ * .serviceName("serviceName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutematch.html)
+ */
 @CdkDslMarker
 public class CfnRouteGrpcRouteMatchPropertyDsl {
   private val cdkBuilder: CfnRoute.GrpcRouteMatchProperty.Builder =

@@ -10,6 +10,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnDeployment
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppConfig::Deployment` resource starts a deployment.
+ *
+ * Starting a deployment in AWS AppConfig calls the `StartDeployment` API action. This call includes
+ * the IDs of the AWS AppConfig application, the environment, the configuration profile, and
+ * (optionally) the configuration data version to deploy. The call also includes the ID of the
+ * deployment strategy to use, which determines how the configuration data is deployed.
+ *
+ * AWS AppConfig monitors the distribution to all hosts and reports status. If a distribution fails,
+ * then AWS AppConfig rolls back the configuration.
+ *
+ * AWS AppConfig requires that you create resources and deploy a configuration in the following
+ * order:
+ *
+ * * Create an application
+ * * Create an environment
+ * * Create a configuration profile
+ * * Create a deployment strategy
+ * * Deploy the configuration
+ *
+ * For more information, see [AWS
+ * AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the
+ * *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnDeployment cfnDeployment = CfnDeployment.Builder.create(this, "MyCfnDeployment")
+ * .applicationId("applicationId")
+ * .configurationProfileId("configurationProfileId")
+ * .configurationVersion("configurationVersion")
+ * .deploymentStrategyId("deploymentStrategyId")
+ * .environmentId("environmentId")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDsl(
   scope: Construct,

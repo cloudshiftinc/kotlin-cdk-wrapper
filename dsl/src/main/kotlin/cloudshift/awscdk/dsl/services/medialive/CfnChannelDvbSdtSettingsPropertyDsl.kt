@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * A DVB Service Description Table (SDT).
+ *
+ * The parent of this entity is M2tsSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * DvbSdtSettingsProperty dvbSdtSettingsProperty = DvbSdtSettingsProperty.builder()
+ * .outputSdt("outputSdt")
+ * .repInterval(123)
+ * .serviceName("serviceName")
+ * .serviceProviderName("serviceProviderName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dvbsdtsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelDvbSdtSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.DvbSdtSettingsProperty.Builder =

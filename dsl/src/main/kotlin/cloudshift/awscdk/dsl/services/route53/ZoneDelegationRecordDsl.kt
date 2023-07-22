@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.ZoneDelegationRecord
 import software.constructs.Construct
 
+/**
+ * A record to delegate further lookups to a different set of name servers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * ZoneDelegationRecord zoneDelegationRecord = ZoneDelegationRecord.Builder.create(this,
+ * "MyZoneDelegationRecord")
+ * .nameServers(List.of("nameServers"))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ZoneDelegationRecordDsl(
   scope: Construct,

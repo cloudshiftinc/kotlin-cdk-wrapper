@@ -7,6 +7,62 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * When you configure the application input for a SQL-based Kinesis Data Analytics application, you
+ * specify the streaming source, the in-application stream name that is created, and the mapping
+ * between the two.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * InputProperty inputProperty = InputProperty.builder()
+ * .inputSchema(InputSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build())
+ * .namePrefix("namePrefix")
+ * // the properties below are optional
+ * .inputParallelism(InputParallelismProperty.builder()
+ * .count(123)
+ * .build())
+ * .inputProcessingConfiguration(InputProcessingConfigurationProperty.builder()
+ * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .build())
+ * .kinesisFirehoseInput(KinesisFirehoseInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .kinesisStreamsInput(KinesisStreamsInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2InputPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.InputProperty.Builder =

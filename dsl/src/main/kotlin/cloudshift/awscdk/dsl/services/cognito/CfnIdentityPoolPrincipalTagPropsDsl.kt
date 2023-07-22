@@ -11,6 +11,28 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps
 
+/**
+ * Properties for defining a `CfnIdentityPoolPrincipalTag`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object principalTags;
+ * CfnIdentityPoolPrincipalTagProps cfnIdentityPoolPrincipalTagProps =
+ * CfnIdentityPoolPrincipalTagProps.builder()
+ * .identityPoolId("identityPoolId")
+ * .identityProviderName("identityProviderName")
+ * // the properties below are optional
+ * .principalTags(principalTags)
+ * .useDefaults(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolprincipaltag.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolPrincipalTagPropsDsl {
   private val cdkBuilder: CfnIdentityPoolPrincipalTagProps.Builder =

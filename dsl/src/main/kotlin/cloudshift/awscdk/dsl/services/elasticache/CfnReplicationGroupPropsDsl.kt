@@ -15,6 +15,82 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnReplicationGroupProps
 
+/**
+ * Properties for defining a `CfnReplicationGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnReplicationGroupProps cfnReplicationGroupProps = CfnReplicationGroupProps.builder()
+ * .replicationGroupDescription("replicationGroupDescription")
+ * // the properties below are optional
+ * .atRestEncryptionEnabled(false)
+ * .authToken("authToken")
+ * .automaticFailoverEnabled(false)
+ * .autoMinorVersionUpgrade(false)
+ * .cacheNodeType("cacheNodeType")
+ * .cacheParameterGroupName("cacheParameterGroupName")
+ * .cacheSecurityGroupNames(List.of("cacheSecurityGroupNames"))
+ * .cacheSubnetGroupName("cacheSubnetGroupName")
+ * .clusterMode("clusterMode")
+ * .dataTieringEnabled(false)
+ * .engine("engine")
+ * .engineVersion("engineVersion")
+ * .globalReplicationGroupId("globalReplicationGroupId")
+ * .ipDiscovery("ipDiscovery")
+ * .kmsKeyId("kmsKeyId")
+ * .logDeliveryConfigurations(List.of(LogDeliveryConfigurationRequestProperty.builder()
+ * .destinationDetails(DestinationDetailsProperty.builder()
+ * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+ * .logGroup("logGroup")
+ * .build())
+ * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .build())
+ * .destinationType("destinationType")
+ * .logFormat("logFormat")
+ * .logType("logType")
+ * .build()))
+ * .multiAzEnabled(false)
+ * .networkType("networkType")
+ * .nodeGroupConfiguration(List.of(NodeGroupConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .primaryAvailabilityZone("primaryAvailabilityZone")
+ * .replicaAvailabilityZones(List.of("replicaAvailabilityZones"))
+ * .replicaCount(123)
+ * .slots("slots")
+ * .build()))
+ * .notificationTopicArn("notificationTopicArn")
+ * .numCacheClusters(123)
+ * .numNodeGroups(123)
+ * .port(123)
+ * .preferredCacheClusterAZs(List.of("preferredCacheClusterAZs"))
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .primaryClusterId("primaryClusterId")
+ * .replicasPerNodeGroup(123)
+ * .replicationGroupId("replicationGroupId")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .snapshotArns(List.of("snapshotArns"))
+ * .snapshotName("snapshotName")
+ * .snapshotRetentionLimit(123)
+ * .snapshottingClusterId("snapshottingClusterId")
+ * .snapshotWindow("snapshotWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitEncryptionEnabled(false)
+ * .transitEncryptionMode("transitEncryptionMode")
+ * .userGroupIds(List.of("userGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)
+ */
 @CdkDslMarker
 public class CfnReplicationGroupPropsDsl {
   private val cdkBuilder: CfnReplicationGroupProps.Builder = CfnReplicationGroupProps.builder()

@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
 
+/**
+ * Contains configuration information for maintaining Data Catalog security.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * DataCatalogEncryptionSettingsProperty dataCatalogEncryptionSettingsProperty =
+ * DataCatalogEncryptionSettingsProperty.builder()
+ * .connectionPasswordEncryption(ConnectionPasswordEncryptionProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .returnConnectionPasswordEncrypted(false)
+ * .build())
+ * .encryptionAtRest(EncryptionAtRestProperty.builder()
+ * .catalogEncryptionMode("catalogEncryptionMode")
+ * .sseAwsKmsKeyId("sseAwsKmsKeyId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-datacatalogencryptionsettings-datacatalogencryptionsettings.html)
+ */
 @CdkDslMarker
 public class CfnDataCatalogEncryptionSettingsDataCatalogEncryptionSettingsPropertyDsl {
   private val cdkBuilder:

@@ -15,6 +15,59 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 import software.amazon.awscdk.services.sagemaker.CfnEndpointProps
 
+/**
+ * Properties for defining a `CfnEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnEndpointProps cfnEndpointProps = CfnEndpointProps.builder()
+ * .endpointConfigName("endpointConfigName")
+ * // the properties below are optional
+ * .deploymentConfig(DeploymentConfigProperty.builder()
+ * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
+ * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .canarySize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .linearStepSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .terminationWaitInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
+ * .build())
+ * .endpointName("endpointName")
+ * .excludeRetainedVariantProperties(List.of(VariantPropertyProperty.builder()
+ * .variantPropertyType("variantPropertyType")
+ * .build()))
+ * .retainAllVariantProperties(false)
+ * .retainDeploymentConfig(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointPropsDsl {
   private val cdkBuilder: CfnEndpointProps.Builder = CfnEndpointProps.builder()

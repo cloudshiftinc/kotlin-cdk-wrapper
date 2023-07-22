@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnCustomerGatewayProps
 
+/**
+ * Properties for defining a `CfnCustomerGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnCustomerGatewayProps cfnCustomerGatewayProps = CfnCustomerGatewayProps.builder()
+ * .bgpAsn(123)
+ * .ipAddress("ipAddress")
+ * .type("type")
+ * // the properties below are optional
+ * .deviceName("deviceName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html)
+ */
 @CdkDslMarker
 public class CfnCustomerGatewayPropsDsl {
   private val cdkBuilder: CfnCustomerGatewayProps.Builder = CfnCustomerGatewayProps.builder()

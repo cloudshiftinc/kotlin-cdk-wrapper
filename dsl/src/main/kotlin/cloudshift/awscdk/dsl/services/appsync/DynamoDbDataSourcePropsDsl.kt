@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.dynamodb.ITable
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for an AppSync DynamoDB datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * Table table;
+ * DynamoDbDataSourceProps dynamoDbDataSourceProps = DynamoDbDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .table(table)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .readOnlyAccess(false)
+ * .serviceRole(role)
+ * .useCallerCredentials(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoDbDataSourcePropsDsl {
   private val cdkBuilder: DynamoDbDataSourceProps.Builder = DynamoDbDataSourceProps.builder()

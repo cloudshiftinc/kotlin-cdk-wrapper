@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies how requests are redirected.
+ *
+ * In the event of an error, you can specify a different error code to return.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * RedirectRuleProperty redirectRuleProperty = RedirectRuleProperty.builder()
+ * .hostName("hostName")
+ * .httpRedirectCode("httpRedirectCode")
+ * .protocol("protocol")
+ * .replaceKeyPrefixWith("replaceKeyPrefixWith")
+ * .replaceKeyWith("replaceKeyWith")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-redirectrule.html)
+ */
 @CdkDslMarker
 public class CfnBucketRedirectRulePropertyDsl {
   private val cdkBuilder: CfnBucket.RedirectRuleProperty.Builder =

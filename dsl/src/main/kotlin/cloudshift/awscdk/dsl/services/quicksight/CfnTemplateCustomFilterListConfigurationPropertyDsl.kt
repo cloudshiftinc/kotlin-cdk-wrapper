@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A list of custom filter values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomFilterListConfigurationProperty customFilterListConfigurationProperty =
+ * CustomFilterListConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .categoryValues(List.of("categoryValues"))
+ * .selectAllOptions("selectAllOptions")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-customfilterlistconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateCustomFilterListConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.CustomFilterListConfigurationProperty.Builder =

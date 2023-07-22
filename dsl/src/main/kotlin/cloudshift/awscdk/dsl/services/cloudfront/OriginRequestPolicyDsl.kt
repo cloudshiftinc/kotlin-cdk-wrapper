@@ -10,6 +10,22 @@ import software.amazon.awscdk.services.cloudfront.OriginRequestPolicy
 import software.amazon.awscdk.services.cloudfront.OriginRequestQueryStringBehavior
 import software.constructs.Construct
 
+/**
+ * A Origin Request Policy configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // Using an existing origin request policy for a Distribution
+ * S3Origin bucketOrigin;
+ * Distribution.Builder.create(this, "myDistManagedPolicy")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(bucketOrigin)
+ * .originRequestPolicy(OriginRequestPolicy.CORS_S3_ORIGIN)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginRequestPolicyDsl(
   scope: Construct,

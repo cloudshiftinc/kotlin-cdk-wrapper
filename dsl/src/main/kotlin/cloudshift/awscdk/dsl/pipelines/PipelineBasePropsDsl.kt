@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.pipelines.IFileSetProducer
 import software.amazon.awscdk.pipelines.PipelineBaseProps
 
+/**
+ * Properties for a `Pipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.pipelines.*;
+ * IFileSetProducer fileSetProducer;
+ * PipelineBaseProps pipelineBaseProps = PipelineBaseProps.builder()
+ * .synth(fileSetProducer)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PipelineBasePropsDsl {
   private val cdkBuilder: PipelineBaseProps.Builder = PipelineBaseProps.builder()

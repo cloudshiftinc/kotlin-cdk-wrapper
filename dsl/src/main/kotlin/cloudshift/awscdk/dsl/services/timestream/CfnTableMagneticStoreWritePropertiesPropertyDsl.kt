@@ -7,6 +7,33 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnTable
 
+/**
+ * The set of properties on a table for configuring magnetic store writes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * MagneticStoreWritePropertiesProperty magneticStoreWritePropertiesProperty =
+ * MagneticStoreWritePropertiesProperty.builder()
+ * .enableMagneticStoreWrites(false)
+ * // the properties below are optional
+ * .magneticStoreRejectedDataLocation(MagneticStoreRejectedDataLocationProperty.builder()
+ * .s3Configuration(S3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorewriteproperties.html)
+ */
 @CdkDslMarker
 public class CfnTableMagneticStoreWritePropertiesPropertyDsl {
   private val cdkBuilder: CfnTable.MagneticStoreWritePropertiesProperty.Builder =

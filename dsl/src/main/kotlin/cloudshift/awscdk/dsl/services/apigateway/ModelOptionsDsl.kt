@@ -8,6 +8,39 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigateway.JsonSchema
 import software.amazon.awscdk.services.apigateway.ModelOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * // We define the JSON Schema for the transformed valid response
+ * Model responseModel = api.addModel("ResponseModel", ModelOptions.builder()
+ * .contentType("application/json")
+ * .modelName("ResponseModel")
+ * .schema(JsonSchema.builder()
+ * .schema(JsonSchemaVersion.DRAFT4)
+ * .title("pollResponse")
+ * .type(JsonSchemaType.OBJECT)
+ * .properties(Map.of(
+ * "state", JsonSchema.builder().type(JsonSchemaType.STRING).build(),
+ * "greeting", JsonSchema.builder().type(JsonSchemaType.STRING).build()))
+ * .build())
+ * .build());
+ * // We define the JSON Schema for the transformed error response
+ * Model errorResponseModel = api.addModel("ErrorResponseModel", ModelOptions.builder()
+ * .contentType("application/json")
+ * .modelName("ErrorResponseModel")
+ * .schema(JsonSchema.builder()
+ * .schema(JsonSchemaVersion.DRAFT4)
+ * .title("errorResponse")
+ * .type(JsonSchemaType.OBJECT)
+ * .properties(Map.of(
+ * "state", JsonSchema.builder().type(JsonSchemaType.STRING).build(),
+ * "message", JsonSchema.builder().type(JsonSchemaType.STRING).build()))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ModelOptionsDsl {
   private val cdkBuilder: ModelOptions.Builder = ModelOptions.builder()

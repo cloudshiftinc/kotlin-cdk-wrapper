@@ -10,6 +10,25 @@ import software.amazon.awscdk.services.cloudwatch.ComparisonOperator
 import software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions
 import software.amazon.awscdk.services.cloudwatch.TreatMissingData
 
+/**
+ * Properties needed to make an alarm from a metric.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * HostedZone myHostedZone;
+ * Certificate certificate = Certificate.Builder.create(this, "Certificate")
+ * .domainName("hello.example.com")
+ * .validation(CertificateValidation.fromDns(myHostedZone))
+ * .build();
+ * certificate.metricDaysToExpiry().createAlarm(this, "Alarm", CreateAlarmOptions.builder()
+ * .comparisonOperator(ComparisonOperator.LESS_THAN_THRESHOLD)
+ * .evaluationPeriods(1)
+ * .threshold(45)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CreateAlarmOptionsDsl {
   private val cdkBuilder: CreateAlarmOptions.Builder = CreateAlarmOptions.builder()

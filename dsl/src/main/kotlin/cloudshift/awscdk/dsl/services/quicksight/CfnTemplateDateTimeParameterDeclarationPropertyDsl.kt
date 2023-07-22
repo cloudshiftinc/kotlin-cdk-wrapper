@@ -10,6 +10,56 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A parameter declaration for the `DateTime` data type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DateTimeParameterDeclarationProperty dateTimeParameterDeclarationProperty =
+ * DateTimeParameterDeclarationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .defaultValues(DateTimeDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .staticValues(List.of("staticValues"))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .timeGranularity("timeGranularity")
+ * .valueWhenUnset(DateTimeValueWhenUnsetConfigurationProperty.builder()
+ * .customValue("customValue")
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datetimeparameterdeclaration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDateTimeParameterDeclarationPropertyDsl {
   private val cdkBuilder: CfnTemplate.DateTimeParameterDeclarationProperty.Builder =

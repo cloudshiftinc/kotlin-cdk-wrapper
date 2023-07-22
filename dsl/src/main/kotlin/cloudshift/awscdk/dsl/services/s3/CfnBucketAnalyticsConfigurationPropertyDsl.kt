@@ -10,6 +10,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * AnalyticsConfigurationProperty analyticsConfigurationProperty =
+ * AnalyticsConfigurationProperty.builder()
+ * .id("id")
+ * .storageClassAnalysis(StorageClassAnalysisProperty.builder()
+ * .dataExport(DataExportProperty.builder()
+ * .destination(DestinationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .format("format")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .prefix("prefix")
+ * .build())
+ * .outputSchemaVersion("outputSchemaVersion")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-analyticsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketAnalyticsConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.AnalyticsConfigurationProperty.Builder =

@@ -10,6 +10,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.apigateway.AwsIntegration
 import software.amazon.awscdk.services.apigateway.IntegrationOptions
 
+/**
+ * This type of integration lets an API expose AWS service actions.
+ *
+ * It is
+ * intended for calling all AWS service actions, but is not recommended for
+ * calling a Lambda function, because the Lambda custom integration is a legacy
+ * technology.
+ *
+ * Example:
+ *
+ * ```
+ * AwsIntegration getMessageIntegration = AwsIntegration.Builder.create()
+ * .service("sqs")
+ * .path("queueName")
+ * .region("eu-west-1")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsIntegrationDsl {
   private val cdkBuilder: AwsIntegration.Builder = AwsIntegration.Builder.create()

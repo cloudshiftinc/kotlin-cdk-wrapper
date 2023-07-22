@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.dms.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::DMS::Certificate` resource creates an Secure Sockets Layer (SSL) certificate that
+ * encrypts connections between AWS DMS endpoints and the replication instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .certificateIdentifier("certificateIdentifier")
+ * .certificatePem("certificatePem")
+ * .certificateWallet("certificateWallet")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

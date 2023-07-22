@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.sns.FilterOrPolicy
 import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties forwarded to the Lambda Subscription.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.SnsEventSource;
+ * Topic topic;
+ * Function fn;
+ * Queue deadLetterQueue = new Queue(this, "deadLetterQueue");
+ * fn.addEventSource(SnsEventSource.Builder.create(topic)
+ * .filterPolicy(Map.of())
+ * .deadLetterQueue(deadLetterQueue)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SnsEventSourcePropsDsl {
   private val cdkBuilder: SnsEventSourceProps.Builder = SnsEventSourceProps.builder()

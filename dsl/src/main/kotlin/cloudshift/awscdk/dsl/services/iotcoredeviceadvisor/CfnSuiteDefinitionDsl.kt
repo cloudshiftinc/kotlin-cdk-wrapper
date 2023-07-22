@@ -14,6 +14,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition
 import software.constructs.Construct
 
+/**
+ * Creates a Device Advisor test suite.
+ *
+ * Requires permission to access the
+ * [CreateSuiteDefinition](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
+ * action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotcoredeviceadvisor.*;
+ * Object suiteDefinitionConfiguration;
+ * CfnSuiteDefinition cfnSuiteDefinition = CfnSuiteDefinition.Builder.create(this,
+ * "MyCfnSuiteDefinition")
+ * .suiteDefinitionConfiguration(suiteDefinitionConfiguration)
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotcoredeviceadvisor-suitedefinition.html)
+ */
 @CdkDslMarker
 public class CfnSuiteDefinitionDsl(
   scope: Construct,

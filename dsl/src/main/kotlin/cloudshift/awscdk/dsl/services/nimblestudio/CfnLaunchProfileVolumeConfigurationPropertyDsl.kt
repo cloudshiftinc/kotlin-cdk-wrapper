@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
+/**
+ * Custom volume configuration for the root volumes that are attached to streaming            
+ * sessions.</p>          This parameter is only allowed when `sessionPersistenceMode` is              
+ *   `ACTIVATED`.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * VolumeConfigurationProperty volumeConfigurationProperty = VolumeConfigurationProperty.builder()
+ * .iops(123)
+ * .size(123)
+ * .throughput(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLaunchProfileVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnLaunchProfile.VolumeConfigurationProperty.Builder =

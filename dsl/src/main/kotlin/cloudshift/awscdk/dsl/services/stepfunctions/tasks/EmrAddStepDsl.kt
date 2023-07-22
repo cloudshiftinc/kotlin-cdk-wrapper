@@ -20,6 +20,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ActionOnFailure
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrAddStep
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to add a Step to an EMR Cluster.
+ *
+ * The StepConfiguration is defined as Parameters in the state machine definition.
+ *
+ * OUTPUT: the StepId
+ *
+ * Example:
+ *
+ * ```
+ * EmrAddStep.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .name("StepName")
+ * .jar("Jar")
+ * .actionOnFailure(ActionOnFailure.CONTINUE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrAddStepDsl(
   scope: Construct,

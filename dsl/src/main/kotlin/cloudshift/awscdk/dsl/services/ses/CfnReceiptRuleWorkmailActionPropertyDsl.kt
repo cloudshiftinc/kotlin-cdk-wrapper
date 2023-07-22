@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action calls Amazon WorkMail and, optionally, publishes a
+ * notification to Amazon Simple Notification Service (Amazon SNS).
+ *
+ * It usually isn't necessary to set this up manually, because Amazon WorkMail adds the rule
+ * automatically during its setup procedure.
+ *
+ * For information using a receipt rule to call Amazon WorkMail, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-workmail.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * WorkmailActionProperty workmailActionProperty = WorkmailActionProperty.builder()
+ * .organizationArn("organizationArn")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-workmailaction.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleWorkmailActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.WorkmailActionProperty.Builder =

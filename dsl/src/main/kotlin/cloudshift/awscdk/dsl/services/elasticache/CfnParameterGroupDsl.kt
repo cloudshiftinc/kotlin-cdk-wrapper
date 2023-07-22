@@ -14,6 +14,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnParameterGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::ElastiCache::ParameterGroup` type creates a new cache parameter group.
+ *
+ * Cache parameter groups control the parameters for a cache cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnParameterGroup cfnParameterGroup = CfnParameterGroup.Builder.create(this,
+ * "MyCfnParameterGroup")
+ * .cacheParameterGroupFamily("cacheParameterGroupFamily")
+ * .description("description")
+ * // the properties below are optional
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html)
+ */
 @CdkDslMarker
 public class CfnParameterGroupDsl(
   scope: Construct,

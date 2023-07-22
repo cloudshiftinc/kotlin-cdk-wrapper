@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarmProps
 
+/**
+ * Properties for defining a `CfnCompositeAlarm`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnCompositeAlarmProps cfnCompositeAlarmProps = CfnCompositeAlarmProps.builder()
+ * .alarmRule("alarmRule")
+ * // the properties below are optional
+ * .actionsEnabled(false)
+ * .actionsSuppressor("actionsSuppressor")
+ * .actionsSuppressorExtensionPeriod(123)
+ * .actionsSuppressorWaitPeriod(123)
+ * .alarmActions(List.of("alarmActions"))
+ * .alarmDescription("alarmDescription")
+ * .alarmName("alarmName")
+ * .insufficientDataActions(List.of("insufficientDataActions"))
+ * .okActions(List.of("okActions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html)
+ */
 @CdkDslMarker
 public class CfnCompositeAlarmPropsDsl {
   private val cdkBuilder: CfnCompositeAlarmProps.Builder = CfnCompositeAlarmProps.builder()

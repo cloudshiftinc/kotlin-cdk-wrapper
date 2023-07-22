@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation
 import software.constructs.Construct
 
+/**
+ * Associates an application to an entitlement.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnApplicationEntitlementAssociation cfnApplicationEntitlementAssociation =
+ * CfnApplicationEntitlementAssociation.Builder.create(this, "MyCfnApplicationEntitlementAssociation")
+ * .applicationIdentifier("applicationIdentifier")
+ * .entitlementName("entitlementName")
+ * .stackName("stackName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html)
+ */
 @CdkDslMarker
 public class CfnApplicationEntitlementAssociationDsl(
   scope: Construct,

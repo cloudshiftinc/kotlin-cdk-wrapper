@@ -13,6 +13,37 @@ import software.amazon.awscdk.services.rds.ClusterInstanceType
 import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 
+/**
+ * Common options for creating cluster instances (both serverless and provisioned).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * ClusterInstanceType clusterInstanceType;
+ * Key key;
+ * ParameterGroup parameterGroup;
+ * ClusterInstanceProps clusterInstanceProps = ClusterInstanceProps.builder()
+ * .instanceType(clusterInstanceType)
+ * // the properties below are optional
+ * .allowMajorVersionUpgrade(false)
+ * .autoMinorVersionUpgrade(false)
+ * .enablePerformanceInsights(false)
+ * .instanceIdentifier("instanceIdentifier")
+ * .isFromLegacyInstanceProps(false)
+ * .parameterGroup(parameterGroup)
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .performanceInsightEncryptionKey(key)
+ * .performanceInsightRetention(PerformanceInsightRetention.DEFAULT)
+ * .promotionTier(123)
+ * .publiclyAccessible(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterInstancePropsDsl {
   private val cdkBuilder: ClusterInstanceProps.Builder = ClusterInstanceProps.builder()

@@ -13,6 +13,94 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnConfig
 import software.constructs.Construct
 
+/**
+ * Creates a `Config` with the specified parameters.
+ *
+ * Config objects provide Ground Station with the details necessary in order to schedule and execute
+ * satellite contacts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * CfnConfig cfnConfig = CfnConfig.Builder.create(this, "MyCfnConfig")
+ * .configData(ConfigDataProperty.builder()
+ * .antennaDownlinkConfig(AntennaDownlinkConfigProperty.builder()
+ * .spectrumConfig(SpectrumConfigProperty.builder()
+ * .bandwidth(FrequencyBandwidthProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .centerFrequency(FrequencyProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .polarization("polarization")
+ * .build())
+ * .build())
+ * .antennaDownlinkDemodDecodeConfig(AntennaDownlinkDemodDecodeConfigProperty.builder()
+ * .decodeConfig(DecodeConfigProperty.builder()
+ * .unvalidatedJson("unvalidatedJson")
+ * .build())
+ * .demodulationConfig(DemodulationConfigProperty.builder()
+ * .unvalidatedJson("unvalidatedJson")
+ * .build())
+ * .spectrumConfig(SpectrumConfigProperty.builder()
+ * .bandwidth(FrequencyBandwidthProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .centerFrequency(FrequencyProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .polarization("polarization")
+ * .build())
+ * .build())
+ * .antennaUplinkConfig(AntennaUplinkConfigProperty.builder()
+ * .spectrumConfig(UplinkSpectrumConfigProperty.builder()
+ * .centerFrequency(FrequencyProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .polarization("polarization")
+ * .build())
+ * .targetEirp(EirpProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .transmitDisabled(false)
+ * .build())
+ * .dataflowEndpointConfig(DataflowEndpointConfigProperty.builder()
+ * .dataflowEndpointName("dataflowEndpointName")
+ * .dataflowEndpointRegion("dataflowEndpointRegion")
+ * .build())
+ * .s3RecordingConfig(S3RecordingConfigProperty.builder()
+ * .bucketArn("bucketArn")
+ * .prefix("prefix")
+ * .roleArn("roleArn")
+ * .build())
+ * .trackingConfig(TrackingConfigProperty.builder()
+ * .autotrack("autotrack")
+ * .build())
+ * .uplinkEchoConfig(UplinkEchoConfigProperty.builder()
+ * .antennaUplinkConfigArn("antennaUplinkConfigArn")
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html)
+ */
 @CdkDslMarker
 public class CfnConfigDsl(
   scope: Construct,

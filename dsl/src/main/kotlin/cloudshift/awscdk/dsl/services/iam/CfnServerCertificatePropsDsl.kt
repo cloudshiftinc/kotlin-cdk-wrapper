@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iam.CfnServerCertificateProps
 
+/**
+ * Properties for defining a `CfnServerCertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnServerCertificateProps cfnServerCertificateProps = CfnServerCertificateProps.builder()
+ * .certificateBody("certificateBody")
+ * .certificateChain("certificateChain")
+ * .path("path")
+ * .privateKey("privateKey")
+ * .serverCertificateName("serverCertificateName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servercertificate.html)
+ */
 @CdkDslMarker
 public class CfnServerCertificatePropsDsl {
   private val cdkBuilder: CfnServerCertificateProps.Builder = CfnServerCertificateProps.builder()

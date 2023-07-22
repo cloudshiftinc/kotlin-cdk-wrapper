@@ -9,6 +9,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare
 import software.constructs.Construct
 
+/**
+ * Shares the specified portfolio with the specified account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolioShare cfnPortfolioShare = CfnPortfolioShare.Builder.create(this,
+ * "MyCfnPortfolioShare")
+ * .accountId("accountId")
+ * .portfolioId("portfolioId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .shareTagOptions(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioshare.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioShareDsl(
   scope: Construct,

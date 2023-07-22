@@ -9,6 +9,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnFunction
 import software.constructs.Construct
 
+/**
+ * Creates a CloudFront function.
+ *
+ * To create a function, you provide the function code and some configuration information about the
+ * function. The response contains an Amazon Resource Name (ARN) that uniquely identifies the function,
+ * and the function’s stage.
+ *
+ * By default, when you create a function, it’s in the `DEVELOPMENT` stage. In this stage, you can
+ * [test the
+ * function](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/test-function.html) in
+ * the CloudFront console (or with `TestFunction` in the CloudFront API).
+ *
+ * When you’re ready to use your function with a CloudFront distribution, publish the function to
+ * the `LIVE` stage. You can do this in the CloudFront console, with `PublishFunction` in the
+ * CloudFront API, or by updating the `AWS::CloudFront::Function` resource with the `AutoPublish`
+ * property set to `true` . When the function is published to the `LIVE` stage, you can attach it to a
+ * distribution’s cache behavior, using the function’s ARN.
+ *
+ * To automatically publish the function to the `LIVE` stage when it’s created, set the
+ * `AutoPublish` property to `true` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnFunction cfnFunction = CfnFunction.Builder.create(this, "MyCfnFunction")
+ * .functionCode("functionCode")
+ * .functionConfig(FunctionConfigProperty.builder()
+ * .comment("comment")
+ * .runtime("runtime")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .autoPublish(false)
+ * .functionMetadata(FunctionMetadataProperty.builder()
+ * .functionArn("functionArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDsl(
   scope: Construct,

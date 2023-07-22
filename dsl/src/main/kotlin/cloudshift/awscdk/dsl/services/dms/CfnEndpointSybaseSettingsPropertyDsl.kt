@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a SAP ASE endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Extra connection attributes when using SAP ASE as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SAP.html#CHAP_Source.SAP.ConnectionAttrib)
+ * and [Extra connection attributes when using SAP ASE as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.SAP.html#CHAP_Target.SAP.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * SybaseSettingsProperty sybaseSettingsProperty = SybaseSettingsProperty.builder()
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-sybasesettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointSybaseSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.SybaseSettingsProperty.Builder =

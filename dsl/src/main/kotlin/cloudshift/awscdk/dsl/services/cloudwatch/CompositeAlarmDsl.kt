@@ -11,6 +11,24 @@ import software.amazon.awscdk.services.cloudwatch.IAlarm
 import software.amazon.awscdk.services.cloudwatch.IAlarmRule
 import software.constructs.Construct
 
+/**
+ * A Composite Alarm based on Alarm Rule.
+ *
+ * Example:
+ *
+ * ```
+ * Alarm alarm1;
+ * Alarm alarm2;
+ * Alarm alarm3;
+ * Alarm alarm4;
+ * IAlarmRule alarmRule = AlarmRule.anyOf(AlarmRule.allOf(AlarmRule.anyOf(alarm1,
+ * AlarmRule.fromAlarm(alarm2, AlarmState.OK), alarm3), AlarmRule.not(AlarmRule.fromAlarm(alarm4,
+ * AlarmState.INSUFFICIENT_DATA))), AlarmRule.fromBoolean(false));
+ * CompositeAlarm.Builder.create(this, "MyAwesomeCompositeAlarm")
+ * .alarmRule(alarmRule)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CompositeAlarmDsl(
   scope: Construct,

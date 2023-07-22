@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnScript
 import software.amazon.awscdk.services.gamelift.CfnScriptProps
 
+/**
+ * Properties for defining a `CfnScript`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnScriptProps cfnScriptProps = CfnScriptProps.builder()
+ * .storageLocation(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html)
+ */
 @CdkDslMarker
 public class CfnScriptPropsDsl {
   private val cdkBuilder: CfnScriptProps.Builder = CfnScriptProps.builder()

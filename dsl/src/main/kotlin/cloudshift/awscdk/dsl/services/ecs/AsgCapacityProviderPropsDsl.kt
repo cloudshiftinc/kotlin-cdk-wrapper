@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.ecs.AsgCapacityProviderProps
 import software.amazon.awscdk.services.ecs.MachineImageType
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * The options for creating an Auto Scaling Group Capacity Provider.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "ASG-LaunchTemplate")
+ * .instanceType(new InstanceType("t3.medium"))
+ * .machineImage(EcsOptimizedImage.amazonLinux2())
+ * .userData(UserData.forLinux())
+ * .build();
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .mixedInstancesPolicy(MixedInstancesPolicy.builder()
+ * .instancesDistribution(InstancesDistribution.builder()
+ * .onDemandPercentageAboveBaseCapacity(50)
+ * .build())
+ * .launchTemplate(launchTemplate)
+ * .build())
+ * .build();
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster").vpc(vpc).build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .machineImageType(MachineImageType.AMAZON_LINUX_2)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * ```
+ */
 @CdkDslMarker
 public class AsgCapacityProviderPropsDsl {
   private val cdkBuilder: AsgCapacityProviderProps.Builder = AsgCapacityProviderProps.builder()

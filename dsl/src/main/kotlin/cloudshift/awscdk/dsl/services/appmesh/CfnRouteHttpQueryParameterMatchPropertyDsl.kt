@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object representing the query parameter to match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpQueryParameterMatchProperty httpQueryParameterMatchProperty =
+ * HttpQueryParameterMatchProperty.builder()
+ * .exact("exact")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httpqueryparametermatch.html)
+ */
 @CdkDslMarker
 public class CfnRouteHttpQueryParameterMatchPropertyDsl {
   private val cdkBuilder: CfnRoute.HttpQueryParameterMatchProperty.Builder =

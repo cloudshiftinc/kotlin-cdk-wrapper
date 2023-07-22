@@ -16,6 +16,17 @@ import software.amazon.awscdk.SymlinkFollowMode
 import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.stepfunctions.FileDefinitionBody
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * IChainable chainable;
+ * DefinitionBody fileDefinitionBody = FileDefinitionBody.fromChainable(chainable);
+ * ```
+ */
 @CdkDslMarker
 public class FileDefinitionBodyDsl(
   path: String,

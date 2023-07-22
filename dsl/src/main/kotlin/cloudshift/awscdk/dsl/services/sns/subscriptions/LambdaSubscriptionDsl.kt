@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use a Lambda function as a subscription target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function fn;
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * // Lambda should receive only message matching the following conditions on message body:
+ * // color: 'red' or 'orange'
+ * myTopic.addSubscription(LambdaSubscription.Builder.create(fn)
+ * .filterPolicyWithMessageBody(Map.of(
+ * "background", FilterOrPolicy.policy(Map.of(
+ * "color", FilterOrPolicy.filter(SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .allowlist(List.of("red", "orange"))
+ * .build()))))))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LambdaSubscriptionDsl(
   fn: IFunction,

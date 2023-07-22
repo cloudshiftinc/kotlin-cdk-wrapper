@@ -10,6 +10,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * The overview of a training job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TrainingJobDetailsProperty trainingJobDetailsProperty = TrainingJobDetailsProperty.builder()
+ * .hyperParameters(List.of(TrainingHyperParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .trainingArn("trainingArn")
+ * .trainingDatasets(List.of("trainingDatasets"))
+ * .trainingEnvironment(TrainingEnvironmentProperty.builder()
+ * .containerImage(List.of("containerImage"))
+ * .build())
+ * .trainingMetrics(List.of(TrainingMetricProperty.builder()
+ * .name("name")
+ * .value(123)
+ * // the properties below are optional
+ * .notes("notes")
+ * .build()))
+ * .userProvidedHyperParameters(List.of(TrainingHyperParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .userProvidedTrainingMetrics(List.of(TrainingMetricProperty.builder()
+ * .name("name")
+ * .value(123)
+ * // the properties below are optional
+ * .notes("notes")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingjobdetails.html)
+ */
 @CdkDslMarker
 public class CfnModelCardTrainingJobDetailsPropertyDsl {
   private val cdkBuilder: CfnModelCard.TrainingJobDetailsProperty.Builder =

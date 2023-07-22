@@ -9,6 +9,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnGlobalCluster
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::GlobalCluster` resource creates or updates an Amazon Aurora global database spread
+ * across multiple AWS Regions.
+ *
+ * The global database contains a single primary cluster with read-write capability, and a read-only
+ * secondary cluster that receives data from the primary cluster through high-speed replication
+ * performed by the Aurora storage subsystem.
+ *
+ * You can create a global database that is initially empty, and then add a primary cluster and a
+ * secondary cluster to it.
+ *
+ * For information about Aurora global databases, see [Working with Amazon Aurora Global
+ * Databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html)
+ * in the *Amazon Aurora User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnGlobalCluster cfnGlobalCluster = CfnGlobalCluster.Builder.create(this, "MyCfnGlobalCluster")
+ * .deletionProtection(false)
+ * .engine("engine")
+ * .engineVersion("engineVersion")
+ * .globalClusterIdentifier("globalClusterIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .storageEncrypted(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html)
+ */
 @CdkDslMarker
 public class CfnGlobalClusterDsl(
   scope: Construct,

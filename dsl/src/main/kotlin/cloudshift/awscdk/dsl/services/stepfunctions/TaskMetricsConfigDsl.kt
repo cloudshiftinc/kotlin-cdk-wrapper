@@ -10,6 +10,24 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.TaskMetricsConfig
 
+/**
+ * Task Metrics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object metricDimensions;
+ * TaskMetricsConfig taskMetricsConfig = TaskMetricsConfig.builder()
+ * .metricDimensions(Map.of(
+ * "metricDimensionsKey", metricDimensions))
+ * .metricPrefixPlural("metricPrefixPlural")
+ * .metricPrefixSingular("metricPrefixSingular")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TaskMetricsConfigDsl {
   private val cdkBuilder: TaskMetricsConfig.Builder = TaskMetricsConfig.builder()

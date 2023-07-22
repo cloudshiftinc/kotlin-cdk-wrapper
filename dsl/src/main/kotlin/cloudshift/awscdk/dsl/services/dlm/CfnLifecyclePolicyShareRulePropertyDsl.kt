@@ -9,6 +9,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * *[Snapshot policies only]* Specifies a rule for sharing snapshots across AWS accounts .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * ShareRuleProperty shareRuleProperty = ShareRuleProperty.builder()
+ * .targetAccounts(List.of("targetAccounts"))
+ * .unshareInterval(123)
+ * .unshareIntervalUnit("unshareIntervalUnit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-sharerule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyShareRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.ShareRuleProperty.Builder =

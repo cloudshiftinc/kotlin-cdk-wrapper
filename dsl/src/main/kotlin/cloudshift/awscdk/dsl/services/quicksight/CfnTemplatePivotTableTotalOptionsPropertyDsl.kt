@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The total options for a pivot table visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottabletotaloptions.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePivotTableTotalOptionsPropertyDsl {
   private val cdkBuilder: CfnTemplate.PivotTableTotalOptionsProperty.Builder =

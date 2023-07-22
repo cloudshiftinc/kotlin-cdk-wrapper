@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CommonActionProps
 
+/**
+ * Common properties shared by all Actions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CommonActionProps commonActionProps = CommonActionProps.builder()
+ * .actionName("actionName")
+ * // the properties below are optional
+ * .runOrder(123)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonActionPropsDsl {
   private val cdkBuilder: CommonActionProps.Builder = CommonActionProps.builder()

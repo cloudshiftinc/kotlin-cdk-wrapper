@@ -13,6 +13,59 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fms.CfnPolicy
 import software.amazon.awscdk.services.fms.CfnPolicyProps
 
+/**
+ * Properties for defining a `CfnPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * CfnPolicyProps cfnPolicyProps = CfnPolicyProps.builder()
+ * .excludeResourceTags(false)
+ * .policyName("policyName")
+ * .remediationEnabled(false)
+ * .securityServicePolicyData(SecurityServicePolicyDataProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .managedServiceData("managedServiceData")
+ * .policyOption(PolicyOptionProperty.builder()
+ * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .thirdPartyFirewallPolicy(ThirdPartyFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .deleteAllPolicyResources(false)
+ * .excludeMap(Map.of(
+ * "account", List.of("account"),
+ * "orgunit", List.of("orgunit")))
+ * .includeMap(Map.of(
+ * "account", List.of("account"),
+ * "orgunit", List.of("orgunit")))
+ * .policyDescription("policyDescription")
+ * .resourcesCleanUp(false)
+ * .resourceSetIds(List.of("resourceSetIds"))
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .resourceType("resourceType")
+ * .resourceTypeList(List.of("resourceTypeList"))
+ * .tags(List.of(PolicyTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyPropsDsl {
   private val cdkBuilder: CfnPolicyProps.Builder = CfnPolicyProps.builder()

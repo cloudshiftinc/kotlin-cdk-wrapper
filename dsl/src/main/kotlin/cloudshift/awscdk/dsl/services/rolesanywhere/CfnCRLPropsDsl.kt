@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnCRLProps
 
+/**
+ * Properties for defining a `CfnCRL`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * CfnCRLProps cfnCRLProps = CfnCRLProps.builder()
+ * .crlData("crlData")
+ * .name("name")
+ * // the properties below are optional
+ * .enabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trustAnchorArn("trustAnchorArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html)
+ */
 @CdkDslMarker
 public class CfnCRLPropsDsl {
   private val cdkBuilder: CfnCRLProps.Builder = CfnCRLProps.builder()

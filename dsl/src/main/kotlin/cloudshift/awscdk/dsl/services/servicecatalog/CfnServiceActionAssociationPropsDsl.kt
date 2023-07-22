@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociationProps
 
+/**
+ * Properties for defining a `CfnServiceActionAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnServiceActionAssociationProps cfnServiceActionAssociationProps =
+ * CfnServiceActionAssociationProps.builder()
+ * .productId("productId")
+ * .provisioningArtifactId("provisioningArtifactId")
+ * .serviceActionId("serviceActionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)
+ */
 @CdkDslMarker
 public class CfnServiceActionAssociationPropsDsl {
   private val cdkBuilder: CfnServiceActionAssociationProps.Builder =

@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The conﬁguration for an application to automatically stop after a certain amount of time being
+ * idle.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * AutoStopConfigurationProperty autoStopConfigurationProperty =
+ * AutoStopConfigurationProperty.builder()
+ * .enabled(false)
+ * .idleTimeoutMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostopconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationAutoStopConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.AutoStopConfigurationProperty.Builder =

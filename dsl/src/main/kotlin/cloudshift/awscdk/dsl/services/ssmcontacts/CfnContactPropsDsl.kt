@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnContactProps
 
+/**
+ * Properties for defining a `CfnContact`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnContactProps cfnContactProps = CfnContactProps.builder()
+ * .alias("alias")
+ * .displayName("displayName")
+ * .type("type")
+ * // the properties below are optional
+ * .plan(List.of(StageProperty.builder()
+ * .durationInMinutes(123)
+ * .rotationIds(List.of("rotationIds"))
+ * .targets(List.of(TargetsProperty.builder()
+ * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+ * .channelId("channelId")
+ * .retryIntervalInMinutes(123)
+ * .build())
+ * .contactTargetInfo(ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build())
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)
+ */
 @CdkDslMarker
 public class CfnContactPropsDsl {
   private val cdkBuilder: CfnContactProps.Builder = CfnContactProps.builder()

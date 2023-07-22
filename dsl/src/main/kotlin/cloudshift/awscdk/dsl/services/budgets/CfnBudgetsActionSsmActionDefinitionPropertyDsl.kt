@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
 
+/**
+ * The Amazon EC2 Systems Manager ( SSM ) action definition details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * SsmActionDefinitionProperty ssmActionDefinitionProperty = SsmActionDefinitionProperty.builder()
+ * .instanceIds(List.of("instanceIds"))
+ * .region("region")
+ * .subtype("subtype")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-ssmactiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnBudgetsActionSsmActionDefinitionPropertyDsl {
   private val cdkBuilder: CfnBudgetsAction.SsmActionDefinitionProperty.Builder =

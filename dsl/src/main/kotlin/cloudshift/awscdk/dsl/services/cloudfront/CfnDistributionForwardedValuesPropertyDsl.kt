@@ -10,6 +10,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * This field is deprecated.
+ *
+ * We recommend that you use a cache policy or an origin request policy instead of this field.
+ *
+ * If you want to include values in the cache key, use a cache policy. For more information, see
+ * [Creating cache
+ * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-the-cache-key.html#cache-key-create-cache-policy)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * If you want to send values to the origin but not include them in the cache key, use an origin
+ * request policy. For more information, see [Creating origin request
+ * policies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/controlling-origin-requests.html#origin-request-create-origin-request-policy)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * A complex type that specifies how CloudFront handles query strings, cookies, and HTTP headers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * ForwardedValuesProperty forwardedValuesProperty = ForwardedValuesProperty.builder()
+ * .queryString(false)
+ * // the properties below are optional
+ * .cookies(CookiesProperty.builder()
+ * .forward("forward")
+ * // the properties below are optional
+ * .whitelistedNames(List.of("whitelistedNames"))
+ * .build())
+ * .headers(List.of("headers"))
+ * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-forwardedvalues.html)
+ */
 @CdkDslMarker
 public class CfnDistributionForwardedValuesPropertyDsl {
   private val cdkBuilder: CfnDistribution.ForwardedValuesProperty.Builder =

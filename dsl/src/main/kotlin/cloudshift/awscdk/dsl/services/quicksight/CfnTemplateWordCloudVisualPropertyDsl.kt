@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A word cloud.
+ *
+ * For more information, see [Using word
+ * clouds](https://docs.aws.amazon.com/quicksight/latest/user/word-cloud.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-wordcloudvisual.html)
+ */
 @CdkDslMarker
 public class CfnTemplateWordCloudVisualPropertyDsl {
   private val cdkBuilder: CfnTemplate.WordCloudVisualProperty.Builder =

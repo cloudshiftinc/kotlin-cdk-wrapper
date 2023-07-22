@@ -9,6 +9,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.macie.CfnFindingsFilter
 import software.constructs.Construct
 
+/**
+ * The `AWS::Macie::FindingsFilter` resource specifies a findings filter.
+ *
+ * In Amazon Macie , a *findings filter* , also referred to as a *filter rule* , is a set of custom
+ * criteria that specifies which findings to include or exclude from the results of a query for
+ * findings. The criteria can help you identify and focus on findings that have specific
+ * characteristics, such as severity, type, or the name of an affected AWS resource. You can also
+ * configure a findings filter to suppress (automatically archive) findings that match the filter's
+ * criteria. For more information, see [Filtering
+ * findings](https://docs.aws.amazon.com/macie/latest/user/findings-filter-overview.html) in the
+ * *Amazon Macie User Guide* .
+ *
+ * An `AWS::Macie::Session` resource must exist for an AWS account before you can create an
+ * `AWS::Macie::FindingsFilter` resource for the account. Use a [DependsOn
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * to ensure that an `AWS::Macie::Session` resource is created before other Macie resources are created
+ * for an account. For example, `"DependsOn": "Session"` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnFindingsFilter cfnFindingsFilter = CfnFindingsFilter.Builder.create(this,
+ * "MyCfnFindingsFilter")
+ * .findingCriteria(FindingCriteriaProperty.builder()
+ * .criterion(Map.of(
+ * "criterionKey", CriterionAdditionalPropertiesProperty.builder()
+ * .eq(List.of("eq"))
+ * .gt(123)
+ * .gte(123)
+ * .lt(123)
+ * .lte(123)
+ * .neq(List.of("neq"))
+ * .build()))
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .action("action")
+ * .description("description")
+ * .position(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html)
+ */
 @CdkDslMarker
 public class CfnFindingsFilterDsl(
   scope: Construct,

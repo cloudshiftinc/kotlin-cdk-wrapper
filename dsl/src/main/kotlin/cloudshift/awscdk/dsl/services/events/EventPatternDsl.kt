@@ -12,6 +12,57 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.events.EventPattern
 
+/**
+ * Events in Amazon CloudWatch Events are represented as JSON objects. For more information about
+ * JSON objects, see RFC 7159.
+ *
+ * **Important**: this class can only be used with a `Rule` class. In particular,
+ * do not use it with `CfnRule` class: your pattern will not be rendered
+ * correctly. In a `CfnRule` class, write the pattern as you normally would when
+ * directly writing CloudFormation.
+ *
+ * Rules use event patterns to select events and route them to targets. A
+ * pattern either matches an event or it doesn't. Event patterns are represented
+ * as JSON objects with a structure that is similar to that of events.
+ *
+ * It is important to remember the following about event pattern matching:
+ *
+ * * For a pattern to match an event, the event must contain all the field names
+ * listed in the pattern. The field names must appear in the event with the
+ * same nesting structure.
+ * * Other fields of the event not mentioned in the pattern are ignored;
+ * effectively, there is a `"*": "*"` wildcard for fields not mentioned.
+ * * The matching is exact (character-by-character), without case-folding or any
+ * other string normalization.
+ * * The values being matched follow JSON rules: Strings enclosed in quotes,
+ * numbers, and the unquoted keywords true, false, and null.
+ * * Number matching is at the string representation level. For example, 300,
+ * 300.0, and 3.0e2 are not considered equal.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function fn = Function.Builder.create(this, "MyFunc")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromInline("exports.handler = handler.toString()"))
+ * .build();
+ * Rule rule = Rule.Builder.create(this, "rule")
+ * .eventPattern(EventPattern.builder()
+ * .source(List.of("aws.ec2"))
+ * .build())
+ * .build();
+ * Queue queue = new Queue(this, "Queue");
+ * rule.addTarget(LambdaFunction.Builder.create(fn)
+ * .deadLetterQueue(queue) // Optional: add a dead letter queue
+ * .maxEventAge(Duration.hours(2)) // Optional: set the maxEventAge retry policy
+ * .retryAttempts(2)
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html)
+ */
 @CdkDslMarker
 public class EventPatternDsl {
   private val cdkBuilder: EventPattern.Builder = EventPattern.builder()

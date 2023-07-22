@@ -15,6 +15,51 @@ import software.amazon.awscdk.services.ecs.ClusterAttributes
 import software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration
 import software.amazon.awscdk.services.servicediscovery.INamespace
 
+/**
+ * The properties to import from the ECS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Bucket bucket;
+ * Key key;
+ * LogGroup logGroup;
+ * INamespace namespace;
+ * SecurityGroup securityGroup;
+ * Vpc vpc;
+ * ClusterAttributes clusterAttributes = ClusterAttributes.builder()
+ * .clusterName("clusterName")
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .autoscalingGroup(autoScalingGroup)
+ * .clusterArn("clusterArn")
+ * .defaultCloudMapNamespace(namespace)
+ * .executeCommandConfiguration(ExecuteCommandConfiguration.builder()
+ * .kmsKey(key)
+ * .logConfiguration(ExecuteCommandLogConfiguration.builder()
+ * .cloudWatchEncryptionEnabled(false)
+ * .cloudWatchLogGroup(logGroup)
+ * .s3Bucket(bucket)
+ * .s3EncryptionEnabled(false)
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .logging(ExecuteCommandLogging.NONE)
+ * .build())
+ * .hasEc2Capacity(false)
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterAttributesDsl {
   private val cdkBuilder: ClusterAttributes.Builder = ClusterAttributes.builder()

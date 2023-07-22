@@ -8,6 +8,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.apigateway.GatewayResponseOptions
 import software.amazon.awscdk.services.apigateway.ResponseType
 
+/**
+ * Options to add gateway response.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api = new RestApi(this, "books-api");
+ * api.addGatewayResponse("test-response", GatewayResponseOptions.builder()
+ * .type(ResponseType.ACCESS_DENIED)
+ * .statusCode("500")
+ * .responseHeaders(Map.of(
+ * // Note that values must be enclosed within a pair of single quotes
+ * "Access-Control-Allow-Origin", "'test.com'",
+ * "test-key", "'test-value'"))
+ * .templates(Map.of(
+ * "application/json", "{ \"message\": $context.error.messageString, \"statusCode\": \"488\",
+ * \"type\": \"$context.error.responseType\" }"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GatewayResponseOptionsDsl {
   private val cdkBuilder: GatewayResponseOptions.Builder = GatewayResponseOptions.builder()

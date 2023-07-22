@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.codedeploy.ServerApplication
 import software.constructs.Construct
 
+/**
+ * A CodeDeploy Application that deploys to EC2/on-premise instances.
+ *
+ * Example:
+ *
+ * ```
+ * ServerApplication application = ServerApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerApplicationDsl(
   scope: Construct,

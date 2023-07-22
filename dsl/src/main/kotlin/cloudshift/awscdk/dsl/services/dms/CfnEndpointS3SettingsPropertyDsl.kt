@@ -9,6 +9,67 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines an Amazon S3 endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about the available settings,
+ * see [Extra connection attributes when using Amazon S3 as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.S3.html#CHAP_Source.S3.Configuring)
+ * and [Extra connection attributes when using Amazon S3 as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * S3SettingsProperty s3SettingsProperty = S3SettingsProperty.builder()
+ * .addColumnName(false)
+ * .bucketFolder("bucketFolder")
+ * .bucketName("bucketName")
+ * .cannedAclForObjects("cannedAclForObjects")
+ * .cdcInsertsAndUpdates(false)
+ * .cdcInsertsOnly(false)
+ * .cdcMaxBatchInterval(123)
+ * .cdcMinFileSize(123)
+ * .cdcPath("cdcPath")
+ * .compressionType("compressionType")
+ * .csvDelimiter("csvDelimiter")
+ * .csvNoSupValue("csvNoSupValue")
+ * .csvNullValue("csvNullValue")
+ * .csvRowDelimiter("csvRowDelimiter")
+ * .dataFormat("dataFormat")
+ * .dataPageSize(123)
+ * .datePartitionDelimiter("datePartitionDelimiter")
+ * .datePartitionEnabled(false)
+ * .datePartitionSequence("datePartitionSequence")
+ * .datePartitionTimezone("datePartitionTimezone")
+ * .dictPageSizeLimit(123)
+ * .enableStatistics(false)
+ * .encodingType("encodingType")
+ * .encryptionMode("encryptionMode")
+ * .externalTableDefinition("externalTableDefinition")
+ * .ignoreHeaderRows(123)
+ * .includeOpForFullLoad(false)
+ * .maxFileSize(123)
+ * .parquetTimestampInMillisecond(false)
+ * .parquetVersion("parquetVersion")
+ * .preserveTransactions(false)
+ * .rfc4180(false)
+ * .rowGroupLength(123)
+ * .serverSideEncryptionKmsKeyId("serverSideEncryptionKmsKeyId")
+ * .serviceAccessRoleArn("serviceAccessRoleArn")
+ * .timestampColumnName("timestampColumnName")
+ * .useCsvNoSupValue(false)
+ * .useTaskStartTimeForFullLoadTimestamp(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointS3SettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.S3SettingsProperty.Builder =

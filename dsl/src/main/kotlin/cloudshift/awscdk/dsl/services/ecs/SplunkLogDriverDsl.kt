@@ -12,6 +12,37 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.SplunkLogDriver
 import software.amazon.awscdk.services.ecs.SplunkLogFormat
 
+/**
+ * A log driver that sends log information to splunk Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Secret secret;
+ * SplunkLogDriver splunkLogDriver = SplunkLogDriver.Builder.create()
+ * .secretToken(secret)
+ * .url("url")
+ * // the properties below are optional
+ * .caName("caName")
+ * .caPath("caPath")
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .format(SplunkLogFormat.INLINE)
+ * .gzip(false)
+ * .gzipLevel(123)
+ * .index("index")
+ * .insecureSkipVerify("insecureSkipVerify")
+ * .labels(List.of("labels"))
+ * .source("source")
+ * .sourceType("sourceType")
+ * .tag("tag")
+ * .verifyConnection(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SplunkLogDriverDsl {
   private val cdkBuilder: SplunkLogDriver.Builder = SplunkLogDriver.Builder.create()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ContainerProperty containerProperty = ContainerProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .modelDataUrl("modelDataUrl")
+ * .nearestModelName("nearestModelName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-container.html)
+ */
 @CdkDslMarker
 public class CfnModelCardContainerPropertyDsl {
   private val cdkBuilder: CfnModelCard.ContainerProperty.Builder =

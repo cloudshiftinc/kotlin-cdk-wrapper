@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The percent range in the visible range.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PercentVisibleRangeProperty percentVisibleRangeProperty = PercentVisibleRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-percentvisiblerange.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePercentVisibleRangePropertyDsl {
   private val cdkBuilder: CfnTemplate.PercentVisibleRangeProperty.Builder =

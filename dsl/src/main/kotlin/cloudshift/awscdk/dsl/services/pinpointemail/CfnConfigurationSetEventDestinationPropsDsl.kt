@@ -8,6 +8,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestinationProps
 
+/**
+ * Properties for defining a `CfnConfigurationSetEventDestination`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnConfigurationSetEventDestinationProps cfnConfigurationSetEventDestinationProps =
+ * CfnConfigurationSetEventDestinationProps.builder()
+ * .configurationSetName("configurationSetName")
+ * .eventDestinationName("eventDestinationName")
+ * // the properties below are optional
+ * .eventDestination(EventDestinationProperty.builder()
+ * .matchingEventTypes(List.of("matchingEventTypes"))
+ * // the properties below are optional
+ * .cloudWatchDestination(CloudWatchDestinationProperty.builder()
+ * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+ * .defaultDimensionValue("defaultDimensionValue")
+ * .dimensionName("dimensionName")
+ * .dimensionValueSource("dimensionValueSource")
+ * .build()))
+ * .build())
+ * .enabled(false)
+ * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .iamRoleArn("iamRoleArn")
+ * .build())
+ * .pinpointDestination(PinpointDestinationProperty.builder()
+ * .applicationArn("applicationArn")
+ * .build())
+ * .snsDestination(SnsDestinationProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationseteventdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationPropsDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestinationProps.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 
+/**
+ * Specifies the configuration of a button with settings that are specific to a certain device type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * OverrideButtonConfigurationProperty overrideButtonConfigurationProperty =
+ * OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-overridebuttonconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInAppTemplateOverrideButtonConfigurationPropertyDsl {
   private val cdkBuilder: CfnInAppTemplate.OverrideButtonConfigurationProperty.Builder =

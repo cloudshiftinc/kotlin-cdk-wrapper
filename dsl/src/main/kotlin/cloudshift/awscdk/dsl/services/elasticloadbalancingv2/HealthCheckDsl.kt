@@ -10,6 +10,29 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck
 import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 
+/**
+ * Properties for configuring a health check.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entry", "point"))
+ * .build())
+ * .build();
+ * loadBalancedFargateService.targetGroup.configureHealthCheck(HealthCheck.builder()
+ * .path("/custom-health-path")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HealthCheckDsl {
   private val cdkBuilder: HealthCheck.Builder = HealthCheck.builder()

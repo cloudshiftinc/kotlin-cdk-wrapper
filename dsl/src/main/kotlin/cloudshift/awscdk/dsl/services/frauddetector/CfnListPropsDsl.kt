@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.frauddetector.CfnListProps
 
+/**
+ * Properties for defining a `CfnList`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnListProps cfnListProps = CfnListProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .elements(List.of("elements"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableType("variableType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-list.html)
+ */
 @CdkDslMarker
 public class CfnListPropsDsl {
   private val cdkBuilder: CfnListProps.Builder = CfnListProps.builder()

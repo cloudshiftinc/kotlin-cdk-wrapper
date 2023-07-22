@@ -14,6 +14,122 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 import software.amazon.awscdk.services.fsx.CfnFileSystemProps
 
+/**
+ * Properties for defining a `CfnFileSystem`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnFileSystemProps cfnFileSystemProps = CfnFileSystemProps.builder()
+ * .fileSystemType("fileSystemType")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .backupId("backupId")
+ * .fileSystemTypeVersion("fileSystemTypeVersion")
+ * .kmsKeyId("kmsKeyId")
+ * .lustreConfiguration(LustreConfigurationProperty.builder()
+ * .autoImportPolicy("autoImportPolicy")
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .dataCompressionType("dataCompressionType")
+ * .deploymentType("deploymentType")
+ * .driveCacheType("driveCacheType")
+ * .exportPath("exportPath")
+ * .importedFileChunkSize(123)
+ * .importPath("importPath")
+ * .perUnitStorageThroughput(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build())
+ * .ontapConfiguration(OntapConfigurationProperty.builder()
+ * .deploymentType("deploymentType")
+ * // the properties below are optional
+ * .automaticBackupRetentionDays(123)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
+ * .endpointIpAddressRange("endpointIpAddressRange")
+ * .fsxAdminPassword("fsxAdminPassword")
+ * .preferredSubnetId("preferredSubnetId")
+ * .routeTableIds(List.of("routeTableIds"))
+ * .throughputCapacity(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build())
+ * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
+ * .deploymentType("deploymentType")
+ * // the properties below are optional
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .copyTagsToVolumes(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
+ * .options(List.of("options"))
+ * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
+ * .copyTagsToSnapshots(false)
+ * .dataCompressionType("dataCompressionType")
+ * .nfsExports(List.of(NfsExportsProperty.builder()
+ * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build()))
+ * .build()))
+ * .readOnly(false)
+ * .recordSizeKiB(123)
+ * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .throughputCapacity(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build())
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .storageCapacity(123)
+ * .storageType("storageType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .windowsConfiguration(WindowsConfigurationProperty.builder()
+ * .throughputCapacity(123)
+ * // the properties below are optional
+ * .activeDirectoryId("activeDirectoryId")
+ * .aliases(List.of("aliases"))
+ * .auditLogConfiguration(AuditLogConfigurationProperty.builder()
+ * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
+ * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
+ * // the properties below are optional
+ * .auditLogDestination("auditLogDestination")
+ * .build())
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .deploymentType("deploymentType")
+ * .preferredSubnetId("preferredSubnetId")
+ * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
+ * .dnsIps(List.of("dnsIps"))
+ * .domainName("domainName")
+ * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .password("password")
+ * .userName("userName")
+ * .build())
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemPropsDsl {
   private val cdkBuilder: CfnFileSystemProps.Builder = CfnFileSystemProps.builder()

@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnFleet
 
+/**
+ * A collection of server process configurations that describe the set of processes to run on each
+ * instance in a fleet.
+ *
+ * Server processes run either an executable in a custom game build or a Realtime Servers script.
+ * GameLift launches the configured processes, manages their life cycle, and replaces them as needed.
+ * Each instance checks regularly for an updated runtime configuration.
+ *
+ * A GameLift instance is limited to 50 processes running concurrently. To calculate the total
+ * number of processes in a runtime configuration, add the values of the `ConcurrentExecutions`
+ * parameter for each ServerProcess. Learn more about [Running Multiple Processes on a
+ * Fleet](https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-multiprocess.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * RuntimeConfigurationProperty runtimeConfigurationProperty =
+ * RuntimeConfigurationProperty.builder()
+ * .gameSessionActivationTimeoutSeconds(123)
+ * .maxConcurrentGameSessionActivations(123)
+ * .serverProcesses(List.of(ServerProcessProperty.builder()
+ * .concurrentExecutions(123)
+ * .launchPath("launchPath")
+ * // the properties below are optional
+ * .parameters("parameters")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-runtimeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFleetRuntimeConfigurationPropertyDsl {
   private val cdkBuilder: CfnFleet.RuntimeConfigurationProperty.Builder =

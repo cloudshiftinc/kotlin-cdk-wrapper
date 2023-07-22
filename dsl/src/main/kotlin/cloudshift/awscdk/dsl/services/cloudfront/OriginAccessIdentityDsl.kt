@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudfront.OriginAccessIdentity
 import software.constructs.Construct
 
+/**
+ * An origin access identity is a special CloudFront user that you can associate with Amazon S3
+ * origins, so that you can secure all or just some of your Amazon S3 content.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginAccessIdentity originAccessIdentity = OriginAccessIdentity.Builder.create(this,
+ * "MyOriginAccessIdentity")
+ * .comment("comment")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginAccessIdentityDsl(
   scope: Construct,

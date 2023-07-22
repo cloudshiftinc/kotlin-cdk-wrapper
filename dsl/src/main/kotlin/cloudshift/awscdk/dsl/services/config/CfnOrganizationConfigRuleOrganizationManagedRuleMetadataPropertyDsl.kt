@@ -8,6 +8,35 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnOrganizationConfigRule
 
+/**
+ * organization managed rule metadata such as resource type and ID of AWS resource along with the
+ * rule identifier.
+ *
+ * It also provides the frequency with which you want AWS Config to run evaluations for the rule if
+ * the trigger type is periodic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * OrganizationManagedRuleMetadataProperty organizationManagedRuleMetadataProperty =
+ * OrganizationManagedRuleMetadataProperty.builder()
+ * .ruleIdentifier("ruleIdentifier")
+ * // the properties below are optional
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationmanagedrulemetadata.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConfigRuleOrganizationManagedRuleMetadataPropertyDsl {
   private val cdkBuilder: CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty.Builder

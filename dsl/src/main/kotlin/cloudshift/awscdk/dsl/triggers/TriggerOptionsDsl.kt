@@ -9,6 +9,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.triggers.TriggerOptions
 import software.constructs.Construct
 
+/**
+ * Options for `Trigger`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.triggers.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * TriggerOptions triggerOptions = TriggerOptions.builder()
+ * .executeAfter(List.of(construct))
+ * .executeBefore(List.of(construct))
+ * .executeOnHandlerChange(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TriggerOptionsDsl {
   private val cdkBuilder: TriggerOptions.Builder = TriggerOptions.builder()

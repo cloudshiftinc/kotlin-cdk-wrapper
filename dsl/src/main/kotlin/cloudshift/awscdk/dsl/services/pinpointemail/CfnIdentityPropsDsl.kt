@@ -12,6 +12,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnIdentity
 import software.amazon.awscdk.services.pinpointemail.CfnIdentityProps
 
+/**
+ * Properties for defining a `CfnIdentity`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnIdentityProps cfnIdentityProps = CfnIdentityProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dkimSigningEnabled(false)
+ * .feedbackForwardingEnabled(false)
+ * .mailFromAttributes(MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build())
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-identity.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPropsDsl {
   private val cdkBuilder: CfnIdentityProps.Builder = CfnIdentityProps.builder()

@@ -10,6 +10,21 @@ import software.amazon.awscdk.services.route53.ARecordProps
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 
+/**
+ * Construction properties for a ARecord.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * HostedZone zone;
+ * LambdaRestApi restApi;
+ * ARecord.Builder.create(this, "AliasRecord")
+ * .zone(zone)
+ * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ARecordPropsDsl {
   private val cdkBuilder: ARecordProps.Builder = ARecordProps.builder()

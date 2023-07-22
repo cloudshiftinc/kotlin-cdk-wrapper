@@ -9,6 +9,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration for the Amazon FSx for Lustre file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * LustreConfigurationProperty lustreConfigurationProperty = LustreConfigurationProperty.builder()
+ * .autoImportPolicy("autoImportPolicy")
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .dataCompressionType("dataCompressionType")
+ * .deploymentType("deploymentType")
+ * .driveCacheType("driveCacheType")
+ * .exportPath("exportPath")
+ * .importedFileChunkSize(123)
+ * .importPath("importPath")
+ * .perUnitStorageThroughput(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemLustreConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.LustreConfigurationProperty.Builder =

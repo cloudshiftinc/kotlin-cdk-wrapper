@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 
+/**
+ * An object that defines an Amazon CloudWatch destination for email events.
+ *
+ * You can use Amazon CloudWatch to monitor and gain insights on your email sending metrics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CloudWatchDestinationProperty cloudWatchDestinationProperty =
+ * CloudWatchDestinationProperty.builder()
+ * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+ * .defaultDimensionValue("defaultDimensionValue")
+ * .dimensionName("dimensionName")
+ * .dimensionValueSource("dimensionValueSource")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-cloudwatchdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationCloudWatchDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.CloudWatchDestinationProperty.Builder

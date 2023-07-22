@@ -8,6 +8,21 @@ import software.amazon.awscdk.services.codeguruprofiler.ComputePlatform
 import software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup
 import software.constructs.Construct
 
+/**
+ * A new Profiling Group.
+ *
+ * Example:
+ *
+ * ```
+ * // The execution role of your application that publishes to the ProfilingGroup via CodeGuru
+ * Profiler Profiling Agent. (the following is merely an example)
+ * Role publishAppRole = Role.Builder.create(this, "PublishAppRole")
+ * .assumedBy(new AccountRootPrincipal())
+ * .build();
+ * ProfilingGroup profilingGroup = new ProfilingGroup(this, "MyProfilingGroup");
+ * profilingGroup.grantPublish(publishAppRole);
+ * ```
+ */
 @CdkDslMarker
 public class ProfilingGroupDsl(
   scope: Construct,

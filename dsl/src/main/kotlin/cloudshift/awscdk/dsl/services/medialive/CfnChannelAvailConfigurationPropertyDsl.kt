@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The setup of ad avail handling in the output.
+ *
+ * The parent of this entity is EncoderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AvailConfigurationProperty availConfigurationProperty = AvailConfigurationProperty.builder()
+ * .availSettings(AvailSettingsProperty.builder()
+ * .esam(EsamProperty.builder()
+ * .acquisitionPointId("acquisitionPointId")
+ * .adAvailOffset(123)
+ * .passwordParam("passwordParam")
+ * .poisEndpoint("poisEndpoint")
+ * .username("username")
+ * .zoneIdentity("zoneIdentity")
+ * .build())
+ * .scte35SpliceInsert(Scte35SpliceInsertProperty.builder()
+ * .adAvailOffset(123)
+ * .noRegionalBlackoutFlag("noRegionalBlackoutFlag")
+ * .webDeliveryAllowedFlag("webDeliveryAllowedFlag")
+ * .build())
+ * .scte35TimeSignalApos(Scte35TimeSignalAposProperty.builder()
+ * .adAvailOffset(123)
+ * .noRegionalBlackoutFlag("noRegionalBlackoutFlag")
+ * .webDeliveryAllowedFlag("webDeliveryAllowedFlag")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-availconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnChannelAvailConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.AvailConfigurationProperty.Builder =

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Describes the retry behavior in case Kinesis Data Firehose is unable to deliver data to the
+ * specified HTTP endpoint destination, or if it doesn't receive a valid acknowledgment of receipt from
+ * the specified HTTP endpoint destination.
+ *
+ * Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported
+ * third-party service providers, including Datadog, MongoDB, and New Relic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * RetryOptionsProperty retryOptionsProperty = RetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-retryoptions.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamRetryOptionsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.RetryOptionsProperty.Builder =

@@ -7,6 +7,31 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstance
 
+/**
+ * *This is a preview release for Amazon Connect .
+ *
+ * It is subject to change.*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * AttributesProperty attributesProperty = AttributesProperty.builder()
+ * .inboundCalls(false)
+ * .outboundCalls(false)
+ * // the properties below are optional
+ * .autoResolveBestVoices(false)
+ * .contactflowLogs(false)
+ * .contactLens(false)
+ * .earlyMedia(false)
+ * .useCustomTtsVoices(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instance-attributes.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAttributesPropertyDsl {
   private val cdkBuilder: CfnInstance.AttributesProperty.Builder =

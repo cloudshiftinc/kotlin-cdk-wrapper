@@ -12,6 +12,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnMLTransform
 import software.constructs.Construct
 
+/**
+ * The AWS::Glue::MLTransform is an AWS Glue resource type that manages machine learning transforms.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object tags;
+ * CfnMLTransform cfnMLTransform = CfnMLTransform.Builder.create(this, "MyCfnMLTransform")
+ * .inputRecordTables(InputRecordTablesProperty.builder()
+ * .glueTables(List.of(GlueTablesProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .catalogId("catalogId")
+ * .connectionName("connectionName")
+ * .build()))
+ * .build())
+ * .role("role")
+ * .transformParameters(TransformParametersProperty.builder()
+ * .transformType("transformType")
+ * // the properties below are optional
+ * .findMatchesParameters(FindMatchesParametersProperty.builder()
+ * .primaryKeyColumnName("primaryKeyColumnName")
+ * // the properties below are optional
+ * .accuracyCostTradeoff(123)
+ * .enforceProvidedLabels(false)
+ * .precisionRecallTradeoff(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .glueVersion("glueVersion")
+ * .maxCapacity(123)
+ * .maxRetries(123)
+ * .name("name")
+ * .numberOfWorkers(123)
+ * .tags(tags)
+ * .timeout(123)
+ * .transformEncryption(TransformEncryptionProperty.builder()
+ * .mlUserDataEncryption(MLUserDataEncryptionProperty.builder()
+ * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .taskRunSecurityConfigurationName("taskRunSecurityConfigurationName")
+ * .build())
+ * .workerType("workerType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-mltransform.html)
+ */
 @CdkDslMarker
 public class CfnMLTransformDsl(
   scope: Construct,

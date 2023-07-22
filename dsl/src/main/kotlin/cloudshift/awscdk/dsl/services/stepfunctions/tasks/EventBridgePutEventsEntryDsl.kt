@@ -8,6 +8,30 @@ import software.amazon.awscdk.services.events.IEventBus
 import software.amazon.awscdk.services.stepfunctions.TaskInput
 import software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry
 
+/**
+ * An entry to be sent to EventBridge.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * EventBus eventBus;
+ * TaskInput taskInput;
+ * EventBridgePutEventsEntry eventBridgePutEventsEntry = EventBridgePutEventsEntry.builder()
+ * .detail(taskInput)
+ * .detailType("detailType")
+ * .source("source")
+ * // the properties below are optional
+ * .eventBus(eventBus)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutEventsRequestEntry.html)
+ */
 @CdkDslMarker
 public class EventBridgePutEventsEntryDsl {
   private val cdkBuilder: EventBridgePutEventsEntry.Builder = EventBridgePutEventsEntry.builder()

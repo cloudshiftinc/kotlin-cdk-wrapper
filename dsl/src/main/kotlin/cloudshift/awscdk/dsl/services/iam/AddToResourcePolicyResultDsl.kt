@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.iam.AddToResourcePolicyResult
 import software.constructs.IDependable
 
+/**
+ * Result of calling addToResourcePolicy.
+ *
+ * Example:
+ *
+ * ```
+ * IBucket bucket = Bucket.fromBucketName(this, "existingBucket", "bucket-name");
+ * // No policy statement will be added to the resource
+ * AddToResourcePolicyResult result = bucket.addToResourcePolicy(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("s3:GetObject"))
+ * .resources(List.of(bucket.arnForObjects("file.txt")))
+ * .principals(List.of(new AccountRootPrincipal()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddToResourcePolicyResultDsl {
   private val cdkBuilder: AddToResourcePolicyResult.Builder = AddToResourcePolicyResult.builder()

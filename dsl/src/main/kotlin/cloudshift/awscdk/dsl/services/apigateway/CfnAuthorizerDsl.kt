@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigateway.CfnAuthorizer
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::Authorizer` resource creates an authorization layer that API Gateway
+ * activates for methods that have authorization enabled.
+ *
+ * API Gateway activates the authorizer when a client calls those methods.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnAuthorizer cfnAuthorizer = CfnAuthorizer.Builder.create(this, "MyCfnAuthorizer")
+ * .name("name")
+ * .restApiId("restApiId")
+ * .type("type")
+ * // the properties below are optional
+ * .authorizerCredentials("authorizerCredentials")
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .authType("authType")
+ * .identitySource("identitySource")
+ * .identityValidationExpression("identityValidationExpression")
+ * .providerArns(List.of("providerArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerDsl(
   scope: Construct,

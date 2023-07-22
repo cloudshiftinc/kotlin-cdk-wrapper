@@ -8,6 +8,23 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * Object limits;
+ * Object requests;
+ * ResourcesProperty resourcesProperty = ResourcesProperty.builder()
+ * .limits(limits)
+ * .requests(requests)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-resources.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionResourcesPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.ResourcesProperty.Builder =

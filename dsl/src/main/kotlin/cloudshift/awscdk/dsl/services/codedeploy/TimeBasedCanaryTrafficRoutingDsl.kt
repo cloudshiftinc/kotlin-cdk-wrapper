@@ -7,6 +7,21 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting
 
+/**
+ * Define a traffic routing config of type 'TimeBasedCanary'.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .deploymentConfigName("MyDeploymentConfig")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TimeBasedCanaryTrafficRoutingDsl {
   private val cdkBuilder: TimeBasedCanaryTrafficRouting.Builder =

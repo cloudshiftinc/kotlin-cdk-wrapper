@@ -14,6 +14,87 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 import software.constructs.Construct
 
+/**
+ * Creates a theme.
+ *
+ * A *theme* is set of configuration options for color and layout. Themes apply to analyses and
+ * dashboards. For more information, see [Using Themes in Amazon
+ * QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html) in the
+ * *Amazon QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CfnTheme cfnTheme = CfnTheme.Builder.create(this, "MyCfnTheme")
+ * .awsAccountId("awsAccountId")
+ * .baseThemeId("baseThemeId")
+ * .configuration(ThemeConfigurationProperty.builder()
+ * .dataColorPalette(DataColorPaletteProperty.builder()
+ * .colors(List.of("colors"))
+ * .emptyFillColor("emptyFillColor")
+ * .minMaxGradient(List.of("minMaxGradient"))
+ * .build())
+ * .sheet(SheetStyleProperty.builder()
+ * .tile(TileStyleProperty.builder()
+ * .border(BorderStyleProperty.builder()
+ * .show(false)
+ * .build())
+ * .build())
+ * .tileLayout(TileLayoutStyleProperty.builder()
+ * .gutter(GutterStyleProperty.builder()
+ * .show(false)
+ * .build())
+ * .margin(MarginStyleProperty.builder()
+ * .show(false)
+ * .build())
+ * .build())
+ * .build())
+ * .typography(TypographyProperty.builder()
+ * .fontFamilies(List.of(FontProperty.builder()
+ * .fontFamily("fontFamily")
+ * .build()))
+ * .build())
+ * .uiColorPalette(UIColorPaletteProperty.builder()
+ * .accent("accent")
+ * .accentForeground("accentForeground")
+ * .danger("danger")
+ * .dangerForeground("dangerForeground")
+ * .dimension("dimension")
+ * .dimensionForeground("dimensionForeground")
+ * .measure("measure")
+ * .measureForeground("measureForeground")
+ * .primaryBackground("primaryBackground")
+ * .primaryForeground("primaryForeground")
+ * .secondaryBackground("secondaryBackground")
+ * .secondaryForeground("secondaryForeground")
+ * .success("success")
+ * .successForeground("successForeground")
+ * .warning("warning")
+ * .warningForeground("warningForeground")
+ * .build())
+ * .build())
+ * .name("name")
+ * .themeId("themeId")
+ * // the properties below are optional
+ * .permissions(List.of(ResourcePermissionProperty.builder()
+ * .actions(List.of("actions"))
+ * .principal("principal")
+ * // the properties below are optional
+ * .resource("resource")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .versionDescription("versionDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-theme.html)
+ */
 @CdkDslMarker
 public class CfnThemeDsl(
   scope: Construct,

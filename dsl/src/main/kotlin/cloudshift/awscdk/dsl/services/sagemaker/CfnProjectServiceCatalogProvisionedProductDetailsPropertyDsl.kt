@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnProject
 
+/**
+ * Details of a provisioned service catalog product.
+ *
+ * For information about service catalog, see [What is AWS Service
+ * Catalog](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ServiceCatalogProvisionedProductDetailsProperty serviceCatalogProvisionedProductDetailsProperty =
+ * ServiceCatalogProvisionedProductDetailsProperty.builder()
+ * .provisionedProductId("provisionedProductId")
+ * .provisionedProductStatusMessage("provisionedProductStatusMessage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-project-servicecatalogprovisionedproductdetails.html)
+ */
 @CdkDslMarker
 public class CfnProjectServiceCatalogProvisionedProductDetailsPropertyDsl {
   private val cdkBuilder: CfnProject.ServiceCatalogProvisionedProductDetailsProperty.Builder =

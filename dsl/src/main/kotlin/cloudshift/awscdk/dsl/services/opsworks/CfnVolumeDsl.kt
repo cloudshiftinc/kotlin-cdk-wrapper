@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnVolume
 import software.constructs.Construct
 
+/**
+ * Describes an instance's Amazon EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnVolume cfnVolume = CfnVolume.Builder.create(this, "MyCfnVolume")
+ * .ec2VolumeId("ec2VolumeId")
+ * .stackId("stackId")
+ * // the properties below are optional
+ * .mountPoint("mountPoint")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)
+ */
 @CdkDslMarker
 public class CfnVolumeDsl(
   scope: Construct,

@@ -7,6 +7,25 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps
 
+/**
+ * Properties for defining a `CfnIndex`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourceexplorer2.*;
+ * CfnIndexProps cfnIndexProps = CfnIndexProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html)
+ */
 @CdkDslMarker
 public class CfnIndexPropsDsl {
   private val cdkBuilder: CfnIndexProps.Builder = CfnIndexProps.builder()

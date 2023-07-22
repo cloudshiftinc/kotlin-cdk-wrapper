@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrationProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayRegistration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnTransitGatewayRegistrationProps cfnTransitGatewayRegistrationProps =
+ * CfnTransitGatewayRegistrationProps.builder()
+ * .globalNetworkId("globalNetworkId")
+ * .transitGatewayArn("transitGatewayArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayRegistrationPropsDsl {
   private val cdkBuilder: CfnTransitGatewayRegistrationProps.Builder =

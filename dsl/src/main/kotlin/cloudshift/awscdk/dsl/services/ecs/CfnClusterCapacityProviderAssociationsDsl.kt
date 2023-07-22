@@ -11,6 +11,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations
 import software.constructs.Construct
 
+/**
+ * The `AWS::ECS::ClusterCapacityProviderAssociations` resource associates one or more capacity
+ * providers and a default capacity provider strategy with a cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnClusterCapacityProviderAssociations cfnClusterCapacityProviderAssociations =
+ * CfnClusterCapacityProviderAssociations.Builder.create(this,
+ * "MyCfnClusterCapacityProviderAssociations")
+ * .capacityProviders(List.of("capacityProviders"))
+ * .cluster("cluster")
+ * .defaultCapacityProviderStrategy(List.of(CapacityProviderStrategyProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-clustercapacityproviderassociations.html)
+ */
 @CdkDslMarker
 public class CfnClusterCapacityProviderAssociationsDsl(
   scope: Construct,

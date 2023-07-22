@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig
 
+/**
+ * Properties returned by a Subscription destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * Role role;
+ * LogSubscriptionDestinationConfig logSubscriptionDestinationConfig =
+ * LogSubscriptionDestinationConfig.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogSubscriptionDestinationConfigDsl {
   private val cdkBuilder: LogSubscriptionDestinationConfig.Builder =

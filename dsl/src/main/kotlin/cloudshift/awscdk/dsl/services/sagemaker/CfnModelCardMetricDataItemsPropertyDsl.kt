@@ -11,6 +11,33 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Metric data.
+ *
+ * The `type` determines the data types that you specify for `value` , `XAxisName` and `YAxisName` .
+ * For information about specifying values for metrics, see [model card JSON
+ * schema](https://docs.aws.amazon.com/sagemaker/latest/dg/model-cards.html#model-cards-json-schema) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object value;
+ * MetricDataItemsProperty metricDataItemsProperty = MetricDataItemsProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .value(value)
+ * // the properties below are optional
+ * .notes("notes")
+ * .xAxisName(List.of("xAxisName"))
+ * .yAxisName(List.of("yAxisName"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-metricdataitems.html)
+ */
 @CdkDslMarker
 public class CfnModelCardMetricDataItemsPropertyDsl {
   private val cdkBuilder: CfnModelCard.MetricDataItemsProperty.Builder =

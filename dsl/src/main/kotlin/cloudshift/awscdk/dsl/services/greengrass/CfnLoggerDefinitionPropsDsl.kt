@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
 import software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps
 
+/**
+ * Properties for defining a `CfnLoggerDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnLoggerDefinitionProps cfnLoggerDefinitionProps = CfnLoggerDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(LoggerDefinitionVersionProperty.builder()
+ * .loggers(List.of(LoggerProperty.builder()
+ * .component("component")
+ * .id("id")
+ * .level("level")
+ * .type("type")
+ * // the properties below are optional
+ * .space(123)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html)
+ */
 @CdkDslMarker
 public class CfnLoggerDefinitionPropsDsl {
   private val cdkBuilder: CfnLoggerDefinitionProps.Builder = CfnLoggerDefinitionProps.builder()

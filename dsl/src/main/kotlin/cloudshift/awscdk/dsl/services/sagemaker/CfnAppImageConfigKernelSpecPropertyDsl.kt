@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 
+/**
+ * The specification of a Jupyter kernel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * KernelSpecProperty kernelSpecProperty = KernelSpecProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelspec.html)
+ */
 @CdkDslMarker
 public class CfnAppImageConfigKernelSpecPropertyDsl {
   private val cdkBuilder: CfnAppImageConfig.KernelSpecProperty.Builder =

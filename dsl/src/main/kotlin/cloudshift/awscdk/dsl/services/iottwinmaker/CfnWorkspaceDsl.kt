@@ -8,6 +8,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.iottwinmaker.CfnWorkspace
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoTTwinMaker::Workspace` resource to declare a workspace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * CfnWorkspace cfnWorkspace = CfnWorkspace.Builder.create(this, "MyCfnWorkspace")
+ * .role("role")
+ * .s3Location("s3Location")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceDsl(
   scope: Construct,

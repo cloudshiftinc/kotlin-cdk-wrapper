@@ -8,6 +8,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 import software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps
 
+/**
+ * Properties for defining a `CfnRefreshSchedule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CfnRefreshScheduleProps cfnRefreshScheduleProps = CfnRefreshScheduleProps.builder()
+ * .awsAccountId("awsAccountId")
+ * .dataSetId("dataSetId")
+ * .schedule(RefreshScheduleMapProperty.builder()
+ * .refreshType("refreshType")
+ * .scheduleFrequency(ScheduleFrequencyProperty.builder()
+ * .interval("interval")
+ * .refreshOnDay(RefreshOnDayProperty.builder()
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .build())
+ * .timeOfTheDay("timeOfTheDay")
+ * .timeZone("timeZone")
+ * .build())
+ * .scheduleId("scheduleId")
+ * .startAfterDateTime("startAfterDateTime")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-refreshschedule.html)
+ */
 @CdkDslMarker
 public class CfnRefreshSchedulePropsDsl {
   private val cdkBuilder: CfnRefreshScheduleProps.Builder = CfnRefreshScheduleProps.builder()

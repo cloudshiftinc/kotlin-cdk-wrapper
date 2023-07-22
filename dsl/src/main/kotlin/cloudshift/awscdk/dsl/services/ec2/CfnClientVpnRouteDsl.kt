@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnClientVpnRoute
 import software.constructs.Construct
 
+/**
+ * Specifies a network route to add to a Client VPN endpoint.
+ *
+ * Each Client VPN endpoint has a route table that describes the available destination network
+ * routes. Each route in the route table specifies the path for traffic to specific resources or
+ * networks.
+ *
+ * A target network association must be created before you can specify a route. If you're setting up
+ * all the components of a Client VPN endpoint at the same time, you must use the [DependsOn
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * to declare a dependency on the `AWS::EC2::ClientVpnTargetNetworkAssociation` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnClientVpnRoute cfnClientVpnRoute = CfnClientVpnRoute.Builder.create(this,
+ * "MyCfnClientVpnRoute")
+ * .clientVpnEndpointId("clientVpnEndpointId")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .targetVpcSubnetId("targetVpcSubnetId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnroute.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnRouteDsl(
   scope: Construct,

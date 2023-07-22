@@ -14,6 +14,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
 import software.constructs.Construct
 
+/**
+ * Specify an AWS Elastic Beanstalk environment by using the AWS::ElasticBeanstalk::Environment
+ * resource in an AWS CloudFormation template.
+ *
+ * The AWS::ElasticBeanstalk::Environment resource is an AWS Elastic Beanstalk resource type that
+ * specifies an Elastic Beanstalk environment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnEnvironment cfnEnvironment = CfnEnvironment.Builder.create(this, "MyCfnEnvironment")
+ * .applicationName("applicationName")
+ * // the properties below are optional
+ * .cnamePrefix("cnamePrefix")
+ * .description("description")
+ * .environmentName("environmentName")
+ * .operationsRole("operationsRole")
+ * .optionSettings(List.of(OptionSettingProperty.builder()
+ * .namespace("namespace")
+ * .optionName("optionName")
+ * // the properties below are optional
+ * .resourceName("resourceName")
+ * .value("value")
+ * .build()))
+ * .platformArn("platformArn")
+ * .solutionStackName("solutionStackName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateName("templateName")
+ * .tier(TierProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .version("version")
+ * .build())
+ * .versionLabel("versionLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentDsl(
   scope: Construct,

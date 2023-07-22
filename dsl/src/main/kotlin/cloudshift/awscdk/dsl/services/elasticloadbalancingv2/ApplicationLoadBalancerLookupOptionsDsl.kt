@@ -7,6 +7,18 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions
 
+/**
+ * Options for looking up an ApplicationLoadBalancer.
+ *
+ * Example:
+ *
+ * ```
+ * IApplicationLoadBalancer loadBalancer = ApplicationLoadBalancer.fromLookup(this, "ALB",
+ * ApplicationLoadBalancerLookupOptions.builder()
+ * .loadBalancerArn("arn:aws:elasticloadbalancing:us-east-2:123456789012:loadbalancer/app/my-load-balancer/1234567890123456")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerLookupOptionsDsl {
   private val cdkBuilder: ApplicationLoadBalancerLookupOptions.Builder =

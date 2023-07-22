@@ -7,6 +7,21 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.StageAttributes
 
+/**
+ * The attributes of an imported Stage.
+ *
+ * Example:
+ *
+ * ```
+ * IRestApi restApi;
+ * IStage importedStage = Stage.fromStageAttributes(this, "imported-stage",
+ * StageAttributes.builder()
+ * .stageName("myStageName")
+ * .restApi(restApi)
+ * .build());
+ * importedStage.addApiKey("MyApiKey");
+ * ```
+ */
 @CdkDslMarker
 public class StageAttributesDsl {
   private val cdkBuilder: StageAttributes.Builder = StageAttributes.builder()

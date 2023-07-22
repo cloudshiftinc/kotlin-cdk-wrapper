@@ -13,6 +13,91 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 import software.constructs.Construct
 
+/**
+ * Creates a message template that you can use to send in-app messages.
+ *
+ * A message template is a set of content and settings that you can define, save, and reuse in
+ * messages for any of your Amazon Pinpoint applications. The In-App channel is unavailable in AWS
+ * GovCloud (US).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object customConfig;
+ * Object tags;
+ * CfnInAppTemplate cfnInAppTemplate = CfnInAppTemplate.Builder.create(this, "MyCfnInAppTemplate")
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .content(List.of(InAppMessageContentProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .bodyConfig(BodyConfigProperty.builder()
+ * .alignment("alignment")
+ * .body("body")
+ * .textColor("textColor")
+ * .build())
+ * .headerConfig(HeaderConfigProperty.builder()
+ * .alignment("alignment")
+ * .header("header")
+ * .textColor("textColor")
+ * .build())
+ * .imageUrl("imageUrl")
+ * .primaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .secondaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .build()))
+ * .customConfig(customConfig)
+ * .layout("layout")
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-inapptemplate.html)
+ */
 @CdkDslMarker
 public class CfnInAppTemplateDsl(
   scope: Construct,

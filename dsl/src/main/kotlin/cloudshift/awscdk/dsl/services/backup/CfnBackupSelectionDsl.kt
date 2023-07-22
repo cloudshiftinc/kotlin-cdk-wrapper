@@ -8,6 +8,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupSelection
 import software.constructs.Construct
 
+/**
+ * Specifies a set of resources to assign to a backup plan.
+ *
+ * For a sample AWS CloudFormation template, see the [AWS Backup Developer
+ * Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object conditions;
+ * CfnBackupSelection cfnBackupSelection = CfnBackupSelection.Builder.create(this,
+ * "MyCfnBackupSelection")
+ * .backupPlanId("backupPlanId")
+ * .backupSelection(BackupSelectionResourceTypeProperty.builder()
+ * .iamRoleArn("iamRoleArn")
+ * .selectionName("selectionName")
+ * // the properties below are optional
+ * .conditions(conditions)
+ * .listOfTags(List.of(ConditionResourceTypeProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionType("conditionType")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .notResources(List.of("notResources"))
+ * .resources(List.of("resources"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html)
+ */
 @CdkDslMarker
 public class CfnBackupSelectionDsl(
   scope: Construct,

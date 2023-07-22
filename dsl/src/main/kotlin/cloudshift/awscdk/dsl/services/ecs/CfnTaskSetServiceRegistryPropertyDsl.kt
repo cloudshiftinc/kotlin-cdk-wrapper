@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 
+/**
+ * The details for the service registry.
+ *
+ * Each service may be associated with one service registry. Multiple service registries for each
+ * service are not supported.
+ *
+ * When you add, update, or remove the service registries configuration, Amazon ECS starts a new
+ * deployment. New tasks are registered and deregistered to the updated service registry configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceRegistryProperty serviceRegistryProperty = ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-serviceregistry.html)
+ */
 @CdkDslMarker
 public class CfnTaskSetServiceRegistryPropertyDsl {
   private val cdkBuilder: CfnTaskSet.ServiceRegistryProperty.Builder =

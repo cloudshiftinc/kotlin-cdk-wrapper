@@ -8,6 +8,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
 
+/**
+ * The batch transform input for a monitoring job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * BatchTransformInputProperty batchTransformInputProperty = BatchTransformInputProperty.builder()
+ * .dataCapturedDestinationS3Uri("dataCapturedDestinationS3Uri")
+ * .datasetFormat(DatasetFormatProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .header(false)
+ * .build())
+ * .json(JsonProperty.builder()
+ * .line(false)
+ * .build())
+ * .parquet(false)
+ * .build())
+ * .localPath("localPath")
+ * // the properties below are optional
+ * .endTimeOffset("endTimeOffset")
+ * .inferenceAttribute("inferenceAttribute")
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityThresholdAttribute(123)
+ * .s3DataDistributionType("s3DataDistributionType")
+ * .s3InputMode("s3InputMode")
+ * .startTimeOffset("startTimeOffset")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-batchtransforminput.html)
+ */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionBatchTransformInputPropertyDsl {
   private val cdkBuilder: CfnModelQualityJobDefinition.BatchTransformInputProperty.Builder =

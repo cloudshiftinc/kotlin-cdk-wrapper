@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnWorkteam
 
+/**
+ * Defines an Amazon Cognito or your own OIDC IdP user group that is part of a work team.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MemberDefinitionProperty memberDefinitionProperty = MemberDefinitionProperty.builder()
+ * .cognitoMemberDefinition(CognitoMemberDefinitionProperty.builder()
+ * .cognitoClientId("cognitoClientId")
+ * .cognitoUserGroup("cognitoUserGroup")
+ * .cognitoUserPool("cognitoUserPool")
+ * .build())
+ * .oidcMemberDefinition(OidcMemberDefinitionProperty.builder()
+ * .oidcGroups(List.of("oidcGroups"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-memberdefinition.html)
+ */
 @CdkDslMarker
 public class CfnWorkteamMemberDefinitionPropertyDsl {
   private val cdkBuilder: CfnWorkteam.MemberDefinitionProperty.Builder =

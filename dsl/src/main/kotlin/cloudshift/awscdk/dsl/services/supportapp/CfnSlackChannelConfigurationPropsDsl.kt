@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps
 
+/**
+ * Properties for defining a `CfnSlackChannelConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.supportapp.*;
+ * CfnSlackChannelConfigurationProps cfnSlackChannelConfigurationProps =
+ * CfnSlackChannelConfigurationProps.builder()
+ * .channelId("channelId")
+ * .channelRoleArn("channelRoleArn")
+ * .notifyOnCaseSeverity("notifyOnCaseSeverity")
+ * .teamId("teamId")
+ * // the properties below are optional
+ * .channelName("channelName")
+ * .notifyOnAddCorrespondenceToCase(false)
+ * .notifyOnCreateOrReopenCase(false)
+ * .notifyOnResolveCase(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-slackchannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSlackChannelConfigurationPropsDsl {
   private val cdkBuilder: CfnSlackChannelConfigurationProps.Builder =

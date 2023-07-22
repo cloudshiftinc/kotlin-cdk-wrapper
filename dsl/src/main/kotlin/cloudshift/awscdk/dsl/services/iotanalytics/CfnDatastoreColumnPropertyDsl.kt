@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Contains information about a column that stores your data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * ColumnProperty columnProperty = ColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-column.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreColumnPropertyDsl {
   private val cdkBuilder: CfnDatastore.ColumnProperty.Builder =

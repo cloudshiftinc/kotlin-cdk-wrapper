@@ -12,6 +12,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies a network interface that is to be attached to an instance.
+ *
+ * You can create a network interface when launching an instance. For an example, see the
+ * [AWS::EC2::Instance
+ * examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#aws-properties-ec2-instance--examples--Automatically_assign_a_public_IP_address)
+ * .
+ *
+ * Alternatively, you can attach an existing network interface when launching an instance. For an
+ * example, see the [AWS::EC2:NetworkInterface
+ * examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#aws-resource-ec2-networkinterface--examples)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+ * .deviceIndex("deviceIndex")
+ * // the properties below are optional
+ * .associateCarrierIpAddress(false)
+ * .associatePublicIpAddress(false)
+ * .deleteOnTermination(false)
+ * .description("description")
+ * .groupSet(List.of("groupSet"))
+ * .ipv6AddressCount(123)
+ * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
+ * .ipv6Address("ipv6Address")
+ * .build()))
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
+ * .primary(false)
+ * .privateIpAddress("privateIpAddress")
+ * .build()))
+ * .secondaryPrivateIpAddressCount(123)
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnInstanceNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnInstance.NetworkInterfaceProperty.Builder =

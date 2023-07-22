@@ -6,6 +6,57 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents timeouts for different protocols.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ListenerTimeoutProperty listenerTimeoutProperty = ListenerTimeoutProperty.builder()
+ * .grpc(GrpcTimeoutProperty.builder()
+ * .idle(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .perRequest(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build())
+ * .http(HttpTimeoutProperty.builder()
+ * .idle(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .perRequest(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build())
+ * .http2(HttpTimeoutProperty.builder()
+ * .idle(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .perRequest(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build())
+ * .tcp(TcpTimeoutProperty.builder()
+ * .idle(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertimeout.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeListenerTimeoutPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTimeoutProperty.Builder =

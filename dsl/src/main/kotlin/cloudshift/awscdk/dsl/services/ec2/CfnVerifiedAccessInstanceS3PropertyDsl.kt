@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
+/**
+ * Options for Amazon S3 as a logging destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * S3Property s3Property = S3Property.builder()
+ * .bucketName("bucketName")
+ * .bucketOwner("bucketOwner")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-s3.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceS3PropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.S3Property.Builder =

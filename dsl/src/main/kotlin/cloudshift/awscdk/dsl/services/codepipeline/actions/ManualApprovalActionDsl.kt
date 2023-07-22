@@ -11,6 +11,24 @@ import software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Manual approval action.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * IStage approveStage = pipeline.addStage(StageOptions.builder().stageName("Approve").build());
+ * ManualApprovalAction manualApprovalAction = ManualApprovalAction.Builder.create()
+ * .actionName("Approve")
+ * .build();
+ * approveStage.addAction(manualApprovalAction);
+ * IRole role = Role.fromRoleArn(this, "Admin",
+ * Arn.format(ArnComponents.builder().service("iam").resource("role").resourceName("Admin").build(),
+ * this));
+ * manualApprovalAction.grantManualApproval(role);
+ * ```
+ */
 @CdkDslMarker
 public class ManualApprovalActionDsl {
   private val cdkBuilder: ManualApprovalAction.Builder = ManualApprovalAction.Builder.create()

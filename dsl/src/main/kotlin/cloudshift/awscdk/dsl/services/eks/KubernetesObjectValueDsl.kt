@@ -9,6 +9,33 @@ import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.KubernetesObjectValue
 import software.constructs.Construct
 
+/**
+ * Represents a value of a specific object deployed in the cluster.
+ *
+ * Use this to fetch any information available by the `kubectl get` command.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // query the load balancer address
+ * KubernetesObjectValue myServiceAddress = KubernetesObjectValue.Builder.create(this,
+ * "LoadBalancerAttribute")
+ * .cluster(cluster)
+ * .objectType("service")
+ * .objectName("my-service")
+ * .jsonPath(".status.loadBalancer.ingress[0].hostname")
+ * .build();
+ * // pass the address to a lambda function
+ * Function proxyFunction = Function.Builder.create(this, "ProxyFunction")
+ * .handler("index.handler")
+ * .code(Code.fromInline("my-code"))
+ * .runtime(Runtime.NODEJS_14_X)
+ * .environment(Map.of(
+ * "myServiceAddress", myServiceAddress.getValue()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KubernetesObjectValueDsl(
   scope: Construct,

@@ -16,6 +16,76 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.synthetics.CfnCanary
 import software.amazon.awscdk.services.synthetics.CfnCanaryProps
 
+/**
+ * Properties for defining a `CfnCanary`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * CfnCanaryProps cfnCanaryProps = CfnCanaryProps.builder()
+ * .artifactS3Location("artifactS3Location")
+ * .code(CodeProperty.builder()
+ * .handler("handler")
+ * // the properties below are optional
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .script("script")
+ * .sourceLocationArn("sourceLocationArn")
+ * .build())
+ * .executionRoleArn("executionRoleArn")
+ * .name("name")
+ * .runtimeVersion("runtimeVersion")
+ * .schedule(ScheduleProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .durationInSeconds("durationInSeconds")
+ * .build())
+ * // the properties below are optional
+ * .artifactConfig(ArtifactConfigProperty.builder()
+ * .s3Encryption(S3EncryptionProperty.builder()
+ * .encryptionMode("encryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build())
+ * .deleteLambdaResourcesOnCanaryDeletion(false)
+ * .failureRetentionPeriod(123)
+ * .runConfig(RunConfigProperty.builder()
+ * .activeTracing(false)
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
+ * .memoryInMb(123)
+ * .timeoutInSeconds(123)
+ * .build())
+ * .startCanaryAfterCreation(false)
+ * .successRetentionPeriod(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .visualReference(VisualReferenceProperty.builder()
+ * .baseCanaryRunId("baseCanaryRunId")
+ * // the properties below are optional
+ * .baseScreenshots(List.of(BaseScreenshotProperty.builder()
+ * .screenshotName("screenshotName")
+ * // the properties below are optional
+ * .ignoreCoordinates(List.of("ignoreCoordinates"))
+ * .build()))
+ * .build())
+ * .vpcConfig(VPCConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html)
+ */
 @CdkDslMarker
 public class CfnCanaryPropsDsl {
   private val cdkBuilder: CfnCanaryProps.Builder = CfnCanaryProps.builder()

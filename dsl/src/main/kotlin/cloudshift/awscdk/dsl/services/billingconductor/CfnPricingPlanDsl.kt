@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.billingconductor.CfnPricingPlan
 import software.constructs.Construct
 
+/**
+ * Creates a pricing plan that is used for computing AWS charges for billing groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnPricingPlan cfnPricingPlan = CfnPricingPlan.Builder.create(this, "MyCfnPricingPlan")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingRuleArns(List.of("pricingRuleArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingplan.html)
+ */
 @CdkDslMarker
 public class CfnPricingPlanDsl(
   scope: Construct,

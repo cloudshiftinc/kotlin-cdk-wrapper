@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.appmesh.GatewayRouteSpec
 import software.amazon.awscdk.services.appmesh.IVirtualGateway
 import software.constructs.Construct
 
+/**
+ * GatewayRoute represents a new or existing gateway route attached to a VirtualGateway and Mesh.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GatewayRouteSpec gatewayRouteSpec;
+ * VirtualGateway virtualGateway;
+ * GatewayRoute gatewayRoute = GatewayRoute.Builder.create(this, "MyGatewayRoute")
+ * .routeSpec(gatewayRouteSpec)
+ * .virtualGateway(virtualGateway)
+ * // the properties below are optional
+ * .gatewayRouteName("gatewayRouteName")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/gateway-routes.html)
+ */
 @CdkDslMarker
 public class GatewayRouteDsl(
   scope: Construct,

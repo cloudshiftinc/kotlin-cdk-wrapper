@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * The definition of a CloudWatch metric alarm, which determines when an automatic scaling activity
+ * is triggered.
+ *
+ * When the defined alarm conditions
+ * are satisfied, scaling activity begins.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * CloudWatchAlarmDefinitionProperty cloudWatchAlarmDefinitionProperty =
+ * CloudWatchAlarmDefinitionProperty.builder()
+ * .comparisonOperator(EmrCreateCluster.getCloudWatchAlarmComparisonOperator().GREATER_THAN_OR_EQUAL)
+ * .metricName("metricName")
+ * .period(Duration.minutes(30))
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .evaluationPeriods(123)
+ * .namespace("namespace")
+ * .statistic(EmrCreateCluster.getCloudWatchAlarmStatistic().SAMPLE_COUNT)
+ * .threshold(123)
+ * .unit(EmrCreateCluster.getCloudWatchAlarmUnit().NONE)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_CloudWatchAlarmDefinition.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterCloudWatchAlarmDefinitionPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.CloudWatchAlarmDefinitionProperty.Builder =

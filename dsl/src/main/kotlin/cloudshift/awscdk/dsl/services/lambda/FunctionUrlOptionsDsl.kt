@@ -9,6 +9,19 @@ import software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions
 import software.amazon.awscdk.services.lambda.FunctionUrlOptions
 import software.amazon.awscdk.services.lambda.InvokeMode
 
+/**
+ * Options to add a url to a Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * fn.addFunctionUrl(FunctionUrlOptions.builder()
+ * .authType(FunctionUrlAuthType.NONE)
+ * .invokeMode(InvokeMode.RESPONSE_STREAM)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FunctionUrlOptionsDsl {
   private val cdkBuilder: FunctionUrlOptions.Builder = FunctionUrlOptions.builder()

@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * This structure specifies the VPC subnets and security groups for the task, and whether a public
+ * IP address is to be used.
+ *
+ * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * AwsVpcConfigurationProperty awsVpcConfigurationProperty = AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-awsvpcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPipeAwsVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnPipe.AwsVpcConfigurationProperty.Builder =

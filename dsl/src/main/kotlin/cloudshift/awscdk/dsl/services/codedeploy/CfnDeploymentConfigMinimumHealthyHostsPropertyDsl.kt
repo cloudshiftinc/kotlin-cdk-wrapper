@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
 
+/**
+ * `MinimumHealthyHosts` is a property of the
+ * [DeploymentConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html)
+ * resource that defines how many instances must remain healthy during an AWS CodeDeploy deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * MinimumHealthyHostsProperty minimumHealthyHostsProperty = MinimumHealthyHostsProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentConfigMinimumHealthyHostsPropertyDsl {
   private val cdkBuilder: CfnDeploymentConfig.MinimumHealthyHostsProperty.Builder =

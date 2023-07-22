@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnChannel
 import software.amazon.awscdk.services.iotanalytics.CfnChannelProps
 
+/**
+ * Properties for defining a `CfnChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object serviceManagedS3;
+ * CfnChannelProps cfnChannelProps = CfnChannelProps.builder()
+ * .channelName("channelName")
+ * .channelStorage(ChannelStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build())
+ * .retentionPeriod(RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelPropsDsl {
   private val cdkBuilder: CfnChannelProps.Builder = CfnChannelProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnFunction
 
+/**
+ * The function's [SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * SnapStartResponseProperty snapStartResponseProperty = SnapStartResponseProperty.builder()
+ * .applyOn("applyOn")
+ * .optimizationStatus("optimizationStatus")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-snapstartresponse.html)
+ */
 @CdkDslMarker
 public class CfnFunctionSnapStartResponsePropertyDsl {
   private val cdkBuilder: CfnFunction.SnapStartResponseProperty.Builder =

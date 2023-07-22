@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A physical table type built from the results of the custom SQL query.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomSqlProperty customSqlProperty = CustomSqlProperty.builder()
+ * .columns(List.of(InputColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .dataSourceArn("dataSourceArn")
+ * .name("name")
+ * .sqlQuery("sqlQuery")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-customsql.html)
+ */
 @CdkDslMarker
 public class CfnDataSetCustomSqlPropertyDsl {
   private val cdkBuilder: CfnDataSet.CustomSqlProperty.Builder =

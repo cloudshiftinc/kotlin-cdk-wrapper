@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Describes a button to use on a response card used to gather slot values from a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * ButtonProperty buttonProperty = ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-button.html)
+ */
 @CdkDslMarker
 public class CfnBotButtonPropertyDsl {
   private val cdkBuilder: CfnBot.ButtonProperty.Builder = CfnBot.ButtonProperty.builder()

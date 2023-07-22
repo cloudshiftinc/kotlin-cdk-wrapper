@@ -7,6 +7,30 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 
+/**
+ * Determines if tests should run after building the image.
+ *
+ * Image Builder defaults to enable tests to run following the image build, before image
+ * distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ImageScanningConfigurationProperty imageScanningConfigurationProperty =
+ * ImageScanningConfigurationProperty.builder()
+ * .ecrConfiguration(EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build())
+ * .imageScanningEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-imagescanningconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnImagePipelineImageScanningConfigurationPropertyDsl {
   private val cdkBuilder: CfnImagePipeline.ImageScanningConfigurationProperty.Builder =

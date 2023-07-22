@@ -11,6 +11,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 import software.amazon.awscdk.services.ecs.CfnTaskSetProps
 
+/**
+ * Properties for defining a `CfnTaskSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnTaskSetProps cfnTaskSetProps = CfnTaskSetProps.builder()
+ * .cluster("cluster")
+ * .service("service")
+ * .taskDefinition("taskDefinition")
+ * // the properties below are optional
+ * .externalId("externalId")
+ * .launchType("launchType")
+ * .loadBalancers(List.of(LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .platformVersion("platformVersion")
+ * .scale(ScaleProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .serviceRegistries(List.of(ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)
+ */
 @CdkDslMarker
 public class CfnTaskSetPropsDsl {
   private val cdkBuilder: CfnTaskSetProps.Builder = CfnTaskSetProps.builder()

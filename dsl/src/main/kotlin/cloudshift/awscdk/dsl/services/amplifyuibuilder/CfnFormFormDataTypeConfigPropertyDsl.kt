@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `FormDataTypeConfig` property specifies the data type configuration for the data source
+ * associated with a form.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FormDataTypeConfigProperty formDataTypeConfigProperty = FormDataTypeConfigProperty.builder()
+ * .dataSourceType("dataSourceType")
+ * .dataTypeName("dataTypeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formdatatypeconfig.html)
+ */
 @CdkDslMarker
 public class CfnFormFormDataTypeConfigPropertyDsl {
   private val cdkBuilder: CfnForm.FormDataTypeConfigProperty.Builder =

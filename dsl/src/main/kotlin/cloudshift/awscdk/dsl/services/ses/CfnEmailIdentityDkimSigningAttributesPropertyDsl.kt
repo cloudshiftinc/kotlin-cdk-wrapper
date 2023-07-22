@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 
+/**
+ * Used to configure or change the DKIM authentication settings for an email domain identity.
+ *
+ * You can use this operation to do any of the following:
+ *
+ * * Update the signing attributes for an identity that uses Bring Your Own DKIM (BYODKIM).
+ * * Update the key length that should be used for Easy DKIM.
+ * * Change from using no DKIM authentication to using Easy DKIM.
+ * * Change from using no DKIM authentication to using BYODKIM.
+ * * Change from using Easy DKIM to using BYODKIM.
+ * * Change from using BYODKIM to using Easy DKIM.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DkimSigningAttributesProperty dkimSigningAttributesProperty =
+ * DkimSigningAttributesProperty.builder()
+ * .domainSigningPrivateKey("domainSigningPrivateKey")
+ * .domainSigningSelector("domainSigningSelector")
+ * .nextSigningKeyLength("nextSigningKeyLength")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimsigningattributes.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityDkimSigningAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.DkimSigningAttributesProperty.Builder =

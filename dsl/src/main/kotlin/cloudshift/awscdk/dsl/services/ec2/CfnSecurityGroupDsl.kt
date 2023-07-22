@@ -14,6 +14,77 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSecurityGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a security group.
+ *
+ * To create a security group, use the
+ * [VpcId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-vpcid)
+ * property to specify the VPC for which to create the security group.
+ *
+ * If you do not specify an egress rule, we add egress rules that allow IPv4 and IPv6 traffic on all
+ * ports and protocols to any destination. We do not add these rules if you specify your own egress
+ * rules. If you later remove your egress rules, we restore the default egress rules.
+ *
+ * This type supports updates. For more information about updating stacks, see [AWS CloudFormation
+ * Stacks
+ * Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
+ * .
+ *
+ *
+ * To cross-reference two security groups in the ingress and egress rules of those security groups,
+ * use the
+ * [AWS::EC2::SecurityGroupEgress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-egress.html)
+ * and
+ * [AWS::EC2::SecurityGroupIngress](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-security-group-ingress.html)
+ * resources to define your rules. Do not use the embedded ingress and egress rules in the
+ * `AWS::EC2::SecurityGroup` . Doing so creates a circular dependency, which AWS CloudFormation doesn't
+ * allow.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSecurityGroup cfnSecurityGroup = CfnSecurityGroup.Builder.create(this, "MyCfnSecurityGroup")
+ * .groupDescription("groupDescription")
+ * // the properties below are optional
+ * .groupName("groupName")
+ * .securityGroupEgress(List.of(EgressProperty.builder()
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .destinationPrefixListId("destinationPrefixListId")
+ * .destinationSecurityGroupId("destinationSecurityGroupId")
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .securityGroupIngress(List.of(IngressProperty.builder()
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .fromPort(123)
+ * .sourcePrefixListId("sourcePrefixListId")
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
+ * .sourceSecurityGroupName("sourceSecurityGroupName")
+ * .sourceSecurityGroupOwnerId("sourceSecurityGroupOwnerId")
+ * .toPort(123)
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroup.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupDsl(
   scope: Construct,

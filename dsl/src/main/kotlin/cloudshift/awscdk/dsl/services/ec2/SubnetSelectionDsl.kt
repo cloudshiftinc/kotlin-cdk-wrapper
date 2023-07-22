@@ -12,6 +12,31 @@ import software.amazon.awscdk.services.ec2.SubnetFilter
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ec2.SubnetType
 
+/**
+ * Customize subnets that are selected for placement of ENIs.
+ *
+ * Constructs that allow customization of VPC placement use parameters of this
+ * type to provide placement settings.
+ *
+ * By default, the instances are placed in the private subnets.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder()
+ * .version(AuroraMysqlEngineVersion.VER_3_03_0)
+ * .build()))
+ * .instances(2)
+ * .instanceProps(InstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
+ * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
+ * .vpc(vpc)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetSelectionDsl {
   private val cdkBuilder: SubnetSelection.Builder = SubnetSelection.builder()

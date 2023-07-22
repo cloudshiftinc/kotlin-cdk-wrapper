@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codestar.CfnGitHubRepository
 
+/**
+ * The `Code` property type specifies information about code to be committed.
+ *
+ * `Code` is a property of the `AWS::CodeStar::GitHubRepository` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestar.*;
+ * CodeProperty codeProperty = CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestar-githubrepository-code.html)
+ */
 @CdkDslMarker
 public class CfnGitHubRepositoryCodePropertyDsl {
   private val cdkBuilder: CfnGitHubRepository.CodeProperty.Builder =

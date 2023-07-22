@@ -11,6 +11,72 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplateProps
 
+/**
+ * Properties for defining a `CfnPushTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnPushTemplateProps cfnPushTemplateProps = CfnPushTemplateProps.builder()
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .adm(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .apns(APNSPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .mediaUrl("mediaUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .baidu(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .default(DefaultPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .defaultSubstitutions("defaultSubstitutions")
+ * .gcm(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html)
+ */
 @CdkDslMarker
 public class CfnPushTemplatePropsDsl {
   private val cdkBuilder: CfnPushTemplateProps.Builder = CfnPushTemplateProps.builder()

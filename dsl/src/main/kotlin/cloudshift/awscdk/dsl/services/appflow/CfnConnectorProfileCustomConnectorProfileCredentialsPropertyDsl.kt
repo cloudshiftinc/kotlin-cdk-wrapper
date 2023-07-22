@@ -7,6 +7,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile credentials that are required when using the custom connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * CustomConnectorProfileCredentialsProperty customConnectorProfileCredentialsProperty =
+ * CustomConnectorProfileCredentialsProperty.builder()
+ * .authenticationType("authenticationType")
+ * // the properties below are optional
+ * .apiKey(ApiKeyCredentialsProperty.builder()
+ * .apiKey("apiKey")
+ * // the properties below are optional
+ * .apiSecretKey("apiSecretKey")
+ * .build())
+ * .basic(BasicAuthCredentialsProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .custom(CustomAuthCredentialsProperty.builder()
+ * .customAuthenticationType("customAuthenticationType")
+ * // the properties below are optional
+ * .credentialsMap(Map.of(
+ * "credentialsMapKey", "credentialsMap"))
+ * .build())
+ * .oauth2(OAuth2CredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .oAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .refreshToken("refreshToken")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-customconnectorprofilecredentials.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileCustomConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.CustomConnectorProfileCredentialsProperty.Builder =

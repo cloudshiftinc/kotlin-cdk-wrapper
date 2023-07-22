@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnPartition
 
+/**
+ * A column in a `Table` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * ColumnProperty columnProperty = ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-column.html)
+ */
 @CdkDslMarker
 public class CfnPartitionColumnPropertyDsl {
   private val cdkBuilder: CfnPartition.ColumnProperty.Builder =

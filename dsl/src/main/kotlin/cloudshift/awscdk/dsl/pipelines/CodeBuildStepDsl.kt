@@ -27,6 +27,48 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Run a script as a CodeBuild Project.
+ *
+ * The BuildSpec must be available inline--it cannot reference a file
+ * on disk. If your current build instructions are in a file like
+ * `buildspec.yml` in your repository, extract them to a script
+ * (say, `build.sh`) and invoke that script as part of the build:
+ *
+ * ```
+ * CodeBuildStep.Builder.create("Synth")
+ * .commands(List.of("./build.sh"))
+ * .build();
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+ * .build()))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * // Turn this on because the pipeline uses Docker image assets
+ * .dockerEnabledForSelfMutation(true)
+ * .build();
+ * pipeline.addWave("MyWave", WaveOptions.builder()
+ * .post(List.of(
+ * CodeBuildStep.Builder.create("RunApproval")
+ * .commands(List.of("command-from-image"))
+ * .buildEnvironment(BuildEnvironment.builder()
+ * // The user of a Docker image asset in the pipeline requires turning on
+ * // 'dockerEnabledForSelfMutation'.
+ * .buildImage(LinuxBuildImage.fromAsset(this, "Image", DockerImageAssetProps.builder()
+ * .directory("./docker-image")
+ * .build()))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildStepDsl(
   id: String,

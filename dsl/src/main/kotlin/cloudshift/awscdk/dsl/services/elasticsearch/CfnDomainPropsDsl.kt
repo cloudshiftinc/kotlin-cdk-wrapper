@@ -16,6 +16,97 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticsearch.CfnDomain
 import software.amazon.awscdk.services.elasticsearch.CfnDomainProps
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticsearch.*;
+ * Object accessPolicies;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .accessPolicies(accessPolicies)
+ * .advancedOptions(Map.of(
+ * "advancedOptionsKey", "advancedOptions"))
+ * .advancedSecurityOptions(AdvancedSecurityOptionsInputProperty.builder()
+ * .anonymousAuthEnabled(false)
+ * .enabled(false)
+ * .internalUserDatabaseEnabled(false)
+ * .masterUserOptions(MasterUserOptionsProperty.builder()
+ * .masterUserArn("masterUserArn")
+ * .masterUserName("masterUserName")
+ * .masterUserPassword("masterUserPassword")
+ * .build())
+ * .build())
+ * .cognitoOptions(CognitoOptionsProperty.builder()
+ * .enabled(false)
+ * .identityPoolId("identityPoolId")
+ * .roleArn("roleArn")
+ * .userPoolId("userPoolId")
+ * .build())
+ * .domainArn("domainArn")
+ * .domainEndpointOptions(DomainEndpointOptionsProperty.builder()
+ * .customEndpoint("customEndpoint")
+ * .customEndpointCertificateArn("customEndpointCertificateArn")
+ * .customEndpointEnabled(false)
+ * .enforceHttps(false)
+ * .tlsSecurityPolicy("tlsSecurityPolicy")
+ * .build())
+ * .domainName("domainName")
+ * .ebsOptions(EBSOptionsProperty.builder()
+ * .ebsEnabled(false)
+ * .iops(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .elasticsearchClusterConfig(ElasticsearchClusterConfigProperty.builder()
+ * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .dedicatedMasterCount(123)
+ * .dedicatedMasterEnabled(false)
+ * .dedicatedMasterType("dedicatedMasterType")
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .warmCount(123)
+ * .warmEnabled(false)
+ * .warmType("warmType")
+ * .zoneAwarenessConfig(ZoneAwarenessConfigProperty.builder()
+ * .availabilityZoneCount(123)
+ * .build())
+ * .zoneAwarenessEnabled(false)
+ * .build())
+ * .elasticsearchVersion("elasticsearchVersion")
+ * .encryptionAtRestOptions(EncryptionAtRestOptionsProperty.builder()
+ * .enabled(false)
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .logPublishingOptions(Map.of(
+ * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
+ * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+ * .enabled(false)
+ * .build()))
+ * .nodeToNodeEncryptionOptions(NodeToNodeEncryptionOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .snapshotOptions(SnapshotOptionsProperty.builder()
+ * .automatedSnapshotStartHour(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcOptions(VPCOptionsProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()

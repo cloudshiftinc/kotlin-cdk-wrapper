@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `Environment` is a property of the
+ * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that specifies the environment for an AWS CodeBuild project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * EnvironmentProperty environmentProperty = EnvironmentProperty.builder()
+ * .computeType("computeType")
+ * .image("image")
+ * .type("type")
+ * // the properties below are optional
+ * .certificate("certificate")
+ * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * // the properties below are optional
+ * .type("type")
+ * .build()))
+ * .imagePullCredentialsType("imagePullCredentialsType")
+ * .privilegedMode(false)
+ * .registryCredential(RegistryCredentialProperty.builder()
+ * .credential("credential")
+ * .credentialProvider("credentialProvider")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+ */
 @CdkDslMarker
 public class CfnProjectEnvironmentPropertyDsl {
   private val cdkBuilder: CfnProject.EnvironmentProperty.Builder =

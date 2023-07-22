@@ -15,6 +15,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnMissionProfile
 import software.constructs.Construct
 
+/**
+ * Mission profiles specify parameters and provide references to config objects to define how Ground
+ * Station lists and executes contacts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * CfnMissionProfile cfnMissionProfile = CfnMissionProfile.Builder.create(this,
+ * "MyCfnMissionProfile")
+ * .dataflowEdges(List.of(DataflowEdgeProperty.builder()
+ * .destination("destination")
+ * .source("source")
+ * .build()))
+ * .minimumViableContactDurationSeconds(123)
+ * .name("name")
+ * .trackingConfigArn("trackingConfigArn")
+ * // the properties below are optional
+ * .contactPostPassDurationSeconds(123)
+ * .contactPrePassDurationSeconds(123)
+ * .streamsKmsKey(StreamsKmsKeyProperty.builder()
+ * .kmsAliasArn("kmsAliasArn")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .streamsKmsRole("streamsKmsRole")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+ */
 @CdkDslMarker
 public class CfnMissionProfileDsl(
   scope: Construct,

@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.redshift.CfnEndpointAccess
 import software.constructs.Construct
 
+/**
+ * Creates a Redshift-managed VPC endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnEndpointAccess cfnEndpointAccess = CfnEndpointAccess.Builder.create(this,
+ * "MyCfnEndpointAccess")
+ * .clusterIdentifier("clusterIdentifier")
+ * .endpointName("endpointName")
+ * .subnetGroupName("subnetGroupName")
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * // the properties below are optional
+ * .resourceOwner("resourceOwner")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAccessDsl(
   scope: Construct,

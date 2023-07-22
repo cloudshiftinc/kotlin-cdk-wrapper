@@ -8,6 +8,27 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.omics.CfnRunGroupProps
 
+/**
+ * Properties for defining a `CfnRunGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * CfnRunGroupProps cfnRunGroupProps = CfnRunGroupProps.builder()
+ * .maxCpus(123)
+ * .maxDuration(123)
+ * .maxRuns(123)
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)
+ */
 @CdkDslMarker
 public class CfnRunGroupPropsDsl {
   private val cdkBuilder: CfnRunGroupProps.Builder = CfnRunGroupProps.builder()

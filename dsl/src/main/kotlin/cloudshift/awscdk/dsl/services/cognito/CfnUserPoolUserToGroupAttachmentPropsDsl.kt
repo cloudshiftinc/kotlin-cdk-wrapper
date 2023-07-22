@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps
 
+/**
+ * Properties for defining a `CfnUserPoolUserToGroupAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolUserToGroupAttachmentProps cfnUserPoolUserToGroupAttachmentProps =
+ * CfnUserPoolUserToGroupAttachmentProps.builder()
+ * .groupName("groupName")
+ * .username("username")
+ * .userPoolId("userPoolId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUserToGroupAttachmentPropsDsl {
   private val cdkBuilder: CfnUserPoolUserToGroupAttachmentProps.Builder =

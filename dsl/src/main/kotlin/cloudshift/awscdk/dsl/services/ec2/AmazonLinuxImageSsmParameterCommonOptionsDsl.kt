@@ -9,6 +9,25 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxEdition
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterCommonOptions
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Common options across all generations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * AmazonLinuxImageSsmParameterCommonOptions amazonLinuxImageSsmParameterCommonOptions =
+ * AmazonLinuxImageSsmParameterCommonOptions.builder()
+ * .cachedInContext(false)
+ * .cpuType(AmazonLinuxCpuType.ARM_64)
+ * .edition(AmazonLinuxEdition.STANDARD)
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinuxImageSsmParameterCommonOptionsDsl {
   private val cdkBuilder: AmazonLinuxImageSsmParameterCommonOptions.Builder =

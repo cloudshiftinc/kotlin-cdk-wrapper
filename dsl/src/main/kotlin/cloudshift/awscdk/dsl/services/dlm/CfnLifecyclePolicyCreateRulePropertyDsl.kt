@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * *[Snapshot and AMI policies only]* Specifies when the policy should create snapshots or AMIs.
+ *
+ *
+ * * You must specify either *CronExpression* , or *Interval* , *IntervalUnit* , and *Times* .
+ * * If you need to specify an `ArchiveRule` for the schedule, then you must specify a creation
+ * frequency of at least 28 days.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * CreateRuleProperty createRuleProperty = CreateRuleProperty.builder()
+ * .cronExpression("cronExpression")
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .location("location")
+ * .times(List.of("times"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-createrule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyCreateRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.CreateRuleProperty.Builder =

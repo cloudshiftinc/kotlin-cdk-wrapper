@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cognito.CfnIdentityPool
 
+/**
+ * `PushSync` is a property of the
+ * [AWS::Cognito::IdentityPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
+ * resource that defines the configuration options to be applied to an Amazon Cognito identity pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * PushSyncProperty pushSyncProperty = PushSyncProperty.builder()
+ * .applicationArns(List.of("applicationArns"))
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolPushSyncPropertyDsl {
   private val cdkBuilder: CfnIdentityPool.PushSyncProperty.Builder =

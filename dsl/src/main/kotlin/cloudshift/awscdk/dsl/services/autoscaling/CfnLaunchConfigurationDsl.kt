@@ -12,6 +12,83 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::AutoScaling::LaunchConfiguration` resource specifies the launch configuration that can
+ * be used by an Auto Scaling group to configure Amazon EC2 instances.
+ *
+ * When you update the launch configuration for an Auto Scaling group, CloudFormation deletes that
+ * resource and creates a new launch configuration with the updated properties and a new name. Existing
+ * instances are not affected. To update existing instances when you update the
+ * `AWS::AutoScaling::LaunchConfiguration` resource, you can specify an [UpdatePolicy
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
+ * for the group. You can find sample update policies for rolling updates in [Auto scaling template
+ * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * .
+ *
+ *
+ * Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using
+ * either a [launch
+ * template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ * or a launch configuration. We strongly recommend that you do not use launch configurations. They do
+ * not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more information, see
+ * [Launch
+ * configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
+ * and [Migrate AWS CloudFormation stacks from launch configurations to launch
+ * templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnLaunchConfiguration cfnLaunchConfiguration = CfnLaunchConfiguration.Builder.create(this,
+ * "MyCfnLaunchConfiguration")
+ * .imageId("imageId")
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .associatePublicIpAddress(false)
+ * .blockDeviceMappings(List.of(BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .ebs(BlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice(false)
+ * .virtualName("virtualName")
+ * .build()))
+ * .classicLinkVpcId("classicLinkVpcId")
+ * .classicLinkVpcSecurityGroups(List.of("classicLinkVpcSecurityGroups"))
+ * .ebsOptimized(false)
+ * .iamInstanceProfile("iamInstanceProfile")
+ * .instanceId("instanceId")
+ * .instanceMonitoring(false)
+ * .kernelId("kernelId")
+ * .keyName("keyName")
+ * .launchConfigurationName("launchConfigurationName")
+ * .metadataOptions(MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build())
+ * .placementTenancy("placementTenancy")
+ * .ramDiskId("ramDiskId")
+ * .securityGroups(List.of("securityGroups"))
+ * .spotPrice("spotPrice")
+ * .userData("userData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLaunchConfigurationDsl(
   scope: Construct,

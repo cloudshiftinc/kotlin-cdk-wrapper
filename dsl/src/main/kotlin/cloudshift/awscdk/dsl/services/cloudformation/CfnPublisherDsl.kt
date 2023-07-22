@@ -9,6 +9,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnPublisher
 import software.constructs.Construct
 
+/**
+ * Registers your account as a publisher of public extensions in the CloudFormation registry.
+ *
+ * Public extensions are available for use by all CloudFormation users.
+ *
+ * For information on requirements for registering as a public extension publisher, see [Registering
+ * your account to publish CloudFormation
+ * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
+ * in the *CloudFormation CLI User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnPublisher cfnPublisher = CfnPublisher.Builder.create(this, "MyCfnPublisher")
+ * .acceptTermsAndConditions(false)
+ * // the properties below are optional
+ * .connectionArn("connectionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)
+ */
 @CdkDslMarker
 public class CfnPublisherDsl(
   scope: Construct,

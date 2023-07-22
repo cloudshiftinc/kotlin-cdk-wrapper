@@ -8,6 +8,36 @@ import software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.TrafficRouting
 import software.constructs.Construct
 
+/**
+ * A custom Deployment Configuration for an ECS Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * FargateService service;
+ * ITargetGroup blueTargetGroup;
+ * ITargetGroup greenTargetGroup;
+ * IApplicationListener listener;
+ * IApplicationListener testListener;
+ * EcsDeploymentGroup.Builder.create(this, "BlueGreenDG")
+ * .autoRollback(AutoRollbackConfig.builder()
+ * // CodeDeploy will automatically roll back if the 8-hour approval period times out and the
+ * deployment stops
+ * .stoppedDeployment(true)
+ * .build())
+ * .service(service)
+ * .blueGreenDeploymentConfig(EcsBlueGreenDeploymentConfig.builder()
+ * // The deployment will wait for approval for up to 8 hours before stopping the deployment
+ * .deploymentApprovalWaitTime(Duration.hours(8))
+ * .blueTargetGroup(blueTargetGroup)
+ * .greenTargetGroup(greenTargetGroup)
+ * .listener(listener)
+ * .testListener(testListener)
+ * .build())
+ * .deploymentConfig(EcsDeploymentConfig.CANARY_10PERCENT_5MINUTES)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsDeploymentConfigDsl(
   scope: Construct,

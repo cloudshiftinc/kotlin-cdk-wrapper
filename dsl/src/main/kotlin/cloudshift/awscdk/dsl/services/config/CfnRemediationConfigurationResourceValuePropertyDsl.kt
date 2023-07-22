@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
+/**
+ * The dynamic value of the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * ResourceValueProperty resourceValueProperty = ResourceValueProperty.builder()
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-resourcevalue.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationResourceValuePropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.ResourceValueProperty.Builder =

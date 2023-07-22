@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.AclCidrConfig
 
+/**
+ * Acl Configuration for CIDR.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclCidrConfig aclCidrConfig = AclCidrConfig.builder()
+ * .cidrBlock("cidrBlock")
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AclCidrConfigDsl {
   private val cdkBuilder: AclCidrConfig.Builder = AclCidrConfig.builder()

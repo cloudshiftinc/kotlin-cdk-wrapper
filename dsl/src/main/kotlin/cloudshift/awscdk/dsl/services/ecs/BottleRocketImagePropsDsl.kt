@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.ec2.InstanceArchitecture
 import software.amazon.awscdk.services.ecs.BottleRocketImageProps
 import software.amazon.awscdk.services.ecs.BottlerocketEcsVariant
 
+/**
+ * Properties for BottleRocketImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * BottleRocketImageProps bottleRocketImageProps = BottleRocketImageProps.builder()
+ * .architecture(InstanceArchitecture.ARM_64)
+ * .cachedInContext(false)
+ * .variant(BottlerocketEcsVariant.AWS_ECS_1)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BottleRocketImagePropsDsl {
   private val cdkBuilder: BottleRocketImageProps.Builder = BottleRocketImageProps.builder()

@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The initial capacity configuration per worker.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * InitialCapacityConfigKeyValuePairProperty initialCapacityConfigKeyValuePairProperty =
+ * InitialCapacityConfigKeyValuePairProperty.builder()
+ * .key("key")
+ * .value(InitialCapacityConfigProperty.builder()
+ * .workerConfiguration(WorkerConfigurationProperty.builder()
+ * .cpu("cpu")
+ * .memory("memory")
+ * // the properties below are optional
+ * .disk("disk")
+ * .build())
+ * .workerCount(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-initialcapacityconfigkeyvaluepair.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInitialCapacityConfigKeyValuePairPropertyDsl {
   private val cdkBuilder: CfnApplication.InitialCapacityConfigKeyValuePairProperty.Builder =

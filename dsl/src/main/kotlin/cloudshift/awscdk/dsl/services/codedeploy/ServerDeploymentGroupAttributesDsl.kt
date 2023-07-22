@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.codedeploy.IServerApplication
 import software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupAttributes
 
+/**
+ * Properties of a reference to a CodeDeploy EC2/on-premise Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * ServerApplication application;
+ * IServerDeploymentGroup deploymentGroup =
+ * ServerDeploymentGroup.fromServerDeploymentGroupAttributes(this, "ExistingCodeDeployDeploymentGroup",
+ * ServerDeploymentGroupAttributes.builder()
+ * .application(application)
+ * .deploymentGroupName("MyExistingDeploymentGroup")
+ * .build());
+ * ```
+ *
+ * [Documentation](ServerDeploymentGroup# import)
+ */
 @CdkDslMarker
 public class ServerDeploymentGroupAttributesDsl {
   private val cdkBuilder: ServerDeploymentGroupAttributes.Builder =

@@ -20,6 +20,87 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps
 import software.amazon.awscdk.services.ecs.patterns.NetworkMultipleTargetGroupsServiceBaseProps
 import software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps
 
+/**
+ * The properties for the base NetworkMultipleTargetGroupsEc2Service or
+ * NetworkMultipleTargetGroupsFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Cluster cluster;
+ * ContainerDefinition containerDefinition;
+ * ContainerImage containerImage;
+ * HostedZone hostedZone;
+ * LogDriver logDriver;
+ * INamespace namespace;
+ * Role role;
+ * Secret secret;
+ * Vpc vpc;
+ * NetworkMultipleTargetGroupsServiceBaseProps networkMultipleTargetGroupsServiceBaseProps =
+ * NetworkMultipleTargetGroupsServiceBaseProps.builder()
+ * .cloudMapOptions(CloudMapOptions.builder()
+ * .cloudMapNamespace(namespace)
+ * .container(containerDefinition)
+ * .containerPort(123)
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.minutes(30))
+ * .failureThreshold(123)
+ * .name("name")
+ * .build())
+ * .cluster(cluster)
+ * .desiredCount(123)
+ * .enableECSManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriod(Duration.minutes(30))
+ * .loadBalancers(List.of(NetworkLoadBalancerProps.builder()
+ * .listeners(List.of(NetworkListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .port(123)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .domainName("domainName")
+ * .domainZone(hostedZone)
+ * .publicLoadBalancer(false)
+ * .build()))
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .serviceName("serviceName")
+ * .targetGroups(List.of(NetworkTargetProps.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .listener("listener")
+ * .build()))
+ * .taskImageOptions(NetworkLoadBalancedTaskImageProps.builder()
+ * .image(containerImage)
+ * // the properties below are optional
+ * .containerName("containerName")
+ * .containerPorts(List.of(123))
+ * .dockerLabels(Map.of(
+ * "dockerLabelsKey", "dockerLabels"))
+ * .enableLogging(false)
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .executionRole(role)
+ * .family("family")
+ * .logDriver(logDriver)
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .taskRole(role)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkMultipleTargetGroupsServiceBasePropsDsl {
   private val cdkBuilder: NetworkMultipleTargetGroupsServiceBaseProps.Builder =

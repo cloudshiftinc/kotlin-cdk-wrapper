@@ -11,6 +11,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
 
+/**
+ * Modify the size or configurations of an instance group.
+ *
+ * Example:
+ *
+ * ```
+ * EmrModifyInstanceGroupByName.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .instanceGroupName(JsonPath.stringAt("$.InstanceGroupName"))
+ * .instanceGroup(InstanceGroupModifyConfigProperty.builder()
+ * .instanceCount(1)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceGroupModifyConfig.html)
+ */
 @CdkDslMarker
 public class EmrModifyInstanceGroupByNameInstanceGroupModifyConfigPropertyDsl {
   private val cdkBuilder: EmrModifyInstanceGroupByName.InstanceGroupModifyConfigProperty.Builder =

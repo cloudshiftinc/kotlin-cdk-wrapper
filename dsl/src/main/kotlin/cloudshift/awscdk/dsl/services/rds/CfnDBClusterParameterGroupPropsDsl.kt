@@ -13,6 +13,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBClusterParameterGroupProps
 
+/**
+ * Properties for defining a `CfnDBClusterParameterGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * Object parameters;
+ * CfnDBClusterParameterGroupProps cfnDBClusterParameterGroupProps =
+ * CfnDBClusterParameterGroupProps.builder()
+ * .description("description")
+ * .family("family")
+ * .parameters(parameters)
+ * // the properties below are optional
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterParameterGroupPropsDsl {
   private val cdkBuilder: CfnDBClusterParameterGroupProps.Builder =

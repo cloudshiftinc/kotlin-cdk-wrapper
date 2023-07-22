@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy
 
+/**
+ * An object that determines whether any URL query strings in viewer requests (and if so, which
+ * query strings) are included in requests that CloudFront sends to the origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * QueryStringsConfigProperty queryStringsConfigProperty = QueryStringsConfigProperty.builder()
+ * .queryStringBehavior("queryStringBehavior")
+ * // the properties below are optional
+ * .queryStrings(List.of("queryStrings"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-originrequestpolicy-querystringsconfig.html)
+ */
 @CdkDslMarker
 public class CfnOriginRequestPolicyQueryStringsConfigPropertyDsl {
   private val cdkBuilder: CfnOriginRequestPolicy.QueryStringsConfigProperty.Builder =

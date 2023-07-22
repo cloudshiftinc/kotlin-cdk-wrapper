@@ -11,6 +11,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.efs.CfnAccessPoint
 import software.constructs.Construct
 
+/**
+ * The `AWS::EFS::AccessPoint` resource creates an EFS access point.
+ *
+ * An access point is an application-specific view into an EFS file system that applies an operating
+ * system user and group, and a file system path, to any file system request made through the access
+ * point. The operating system user and group override any identity information provided by the NFS
+ * client. The file system path is exposed as the access point's root directory. Applications using the
+ * access point can only access data in its own directory and below. To learn more, see [Mounting a
+ * file system using EFS access
+ * points](https://docs.aws.amazon.com/efs/latest/ug/efs-access-points.html) .
+ *
+ * This operation requires permissions for the `elasticfilesystem:CreateAccessPoint` action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * CfnAccessPoint cfnAccessPoint = CfnAccessPoint.Builder.create(this, "MyCfnAccessPoint")
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .accessPointTags(List.of(AccessPointTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .clientToken("clientToken")
+ * .posixUser(PosixUserProperty.builder()
+ * .gid("gid")
+ * .uid("uid")
+ * // the properties below are optional
+ * .secondaryGids(List.of("secondaryGids"))
+ * .build())
+ * .rootDirectory(RootDirectoryProperty.builder()
+ * .creationInfo(CreationInfoProperty.builder()
+ * .ownerGid("ownerGid")
+ * .ownerUid("ownerUid")
+ * .permissions("permissions")
+ * .build())
+ * .path("path")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointDsl(
   scope: Construct,

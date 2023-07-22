@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `EbsConfiguration` is a subproperty of `InstanceFleetConfig` or `InstanceGroupConfig` .
+ *
+ * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ebsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnClusterEbsConfigurationPropertyDsl {
   private val cdkBuilder: CfnCluster.EbsConfigurationProperty.Builder =

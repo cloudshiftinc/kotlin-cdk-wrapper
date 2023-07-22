@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.cxapi.LoadBalancerContextResponse
 import software.amazon.awscdk.cxapi.LoadBalancerIpAddressType
 
+/**
+ * Properties of a discovered load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * LoadBalancerContextResponse loadBalancerContextResponse = LoadBalancerContextResponse.builder()
+ * .ipAddressType(LoadBalancerIpAddressType.IPV4)
+ * .loadBalancerArn("loadBalancerArn")
+ * .loadBalancerCanonicalHostedZoneId("loadBalancerCanonicalHostedZoneId")
+ * .loadBalancerDnsName("loadBalancerDnsName")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerContextResponseDsl {
   private val cdkBuilder: LoadBalancerContextResponse.Builder =

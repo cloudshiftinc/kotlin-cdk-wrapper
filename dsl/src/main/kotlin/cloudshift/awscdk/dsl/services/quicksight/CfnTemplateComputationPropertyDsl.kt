@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The computation union that is used in an insight visual.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-computation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ComputationProperty.Builder =

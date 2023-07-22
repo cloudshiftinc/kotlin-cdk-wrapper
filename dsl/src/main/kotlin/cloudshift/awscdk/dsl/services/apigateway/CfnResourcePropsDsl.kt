@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnResourceProps
 
+/**
+ * Properties for defining a `CfnResource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnResourceProps cfnResourceProps = CfnResourceProps.builder()
+ * .parentId("parentId")
+ * .pathPart("pathPart")
+ * .restApiId("restApiId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html)
+ */
 @CdkDslMarker
 public class CfnResourcePropsDsl {
   private val cdkBuilder: CfnResourceProps.Builder = CfnResourceProps.builder()

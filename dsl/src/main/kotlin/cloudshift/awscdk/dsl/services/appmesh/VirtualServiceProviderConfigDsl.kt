@@ -8,6 +8,29 @@ import software.amazon.awscdk.services.appmesh.CfnVirtualService
 import software.amazon.awscdk.services.appmesh.IMesh
 import software.amazon.awscdk.services.appmesh.VirtualServiceProviderConfig
 
+/**
+ * Properties for a VirtualService provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * Mesh mesh;
+ * VirtualServiceProviderConfig virtualServiceProviderConfig =
+ * VirtualServiceProviderConfig.builder()
+ * .mesh(mesh)
+ * // the properties below are optional
+ * .virtualNodeProvider(VirtualNodeServiceProviderProperty.builder()
+ * .virtualNodeName("virtualNodeName")
+ * .build())
+ * .virtualRouterProvider(VirtualRouterServiceProviderProperty.builder()
+ * .virtualRouterName("virtualRouterName")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VirtualServiceProviderConfigDsl {
   private val cdkBuilder: VirtualServiceProviderConfig.Builder =

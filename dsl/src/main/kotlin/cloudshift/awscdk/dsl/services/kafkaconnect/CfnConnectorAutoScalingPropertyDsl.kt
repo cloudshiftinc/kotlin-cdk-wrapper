@@ -7,6 +7,30 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * Specifies how the connector scales.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * AutoScalingProperty autoScalingProperty = AutoScalingProperty.builder()
+ * .maxWorkerCount(123)
+ * .mcuCount(123)
+ * .minWorkerCount(123)
+ * .scaleInPolicy(ScaleInPolicyProperty.builder()
+ * .cpuUtilizationPercentage(123)
+ * .build())
+ * .scaleOutPolicy(ScaleOutPolicyProperty.builder()
+ * .cpuUtilizationPercentage(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-autoscaling.html)
+ */
 @CdkDslMarker
 public class CfnConnectorAutoScalingPropertyDsl {
   private val cdkBuilder: CfnConnector.AutoScalingProperty.Builder =

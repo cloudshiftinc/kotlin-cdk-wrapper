@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration of an insight visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-insightconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardInsightConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.InsightConfigurationProperty.Builder =

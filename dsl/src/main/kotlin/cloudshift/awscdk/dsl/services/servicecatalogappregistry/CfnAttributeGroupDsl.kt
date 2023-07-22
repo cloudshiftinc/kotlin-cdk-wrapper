@@ -11,6 +11,32 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup
 import software.constructs.Construct
 
+/**
+ * Creates a new attribute group as a container for user-defined attributes.
+ *
+ * This feature enables users to have full control over their cloud application's metadata in a rich
+ * machine-readable format to facilitate integration with automated workflows and third-party tools.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalogappregistry.*;
+ * Object attributes;
+ * CfnAttributeGroup cfnAttributeGroup = CfnAttributeGroup.Builder.create(this,
+ * "MyCfnAttributeGroup")
+ * .attributes(attributes)
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html)
+ */
 @CdkDslMarker
 public class CfnAttributeGroupDsl(
   scope: Construct,

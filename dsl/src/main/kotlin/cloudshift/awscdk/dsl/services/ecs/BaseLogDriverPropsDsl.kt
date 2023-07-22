@@ -8,6 +8,21 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.BaseLogDriverProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * BaseLogDriverProps baseLogDriverProps = BaseLogDriverProps.builder()
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseLogDriverPropsDsl {
   private val cdkBuilder: BaseLogDriverProps.Builder = BaseLogDriverProps.builder()

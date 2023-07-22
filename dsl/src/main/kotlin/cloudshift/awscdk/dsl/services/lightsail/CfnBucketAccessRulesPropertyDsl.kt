@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnBucket
 
+/**
+ * `AccessRules` is a property of the
+ * [AWS::Lightsail::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-bucket.html)
+ * resource. It describes access rules for a bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * AccessRulesProperty accessRulesProperty = AccessRulesProperty.builder()
+ * .allowPublicOverrides(false)
+ * .objectAccess("objectAccess")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-bucket-accessrules.html)
+ */
 @CdkDslMarker
 public class CfnBucketAccessRulesPropertyDsl {
   private val cdkBuilder: CfnBucket.AccessRulesProperty.Builder =

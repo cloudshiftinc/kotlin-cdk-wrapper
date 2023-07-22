@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker
 
+/**
+ * The deployment circuit breaker to use for the service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .circuitBreaker(DeploymentCircuitBreaker.builder().rollback(true).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeploymentCircuitBreakerDsl {
   private val cdkBuilder: DeploymentCircuitBreaker.Builder = DeploymentCircuitBreaker.builder()

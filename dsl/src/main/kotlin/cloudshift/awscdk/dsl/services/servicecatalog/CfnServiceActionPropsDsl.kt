@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnServiceActionProps
 
+/**
+ * Properties for defining a `CfnServiceAction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnServiceActionProps cfnServiceActionProps = CfnServiceActionProps.builder()
+ * .definition(List.of(DefinitionParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .definitionType("definitionType")
+ * .name("name")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html)
+ */
 @CdkDslMarker
 public class CfnServiceActionPropsDsl {
   private val cdkBuilder: CfnServiceActionProps.Builder = CfnServiceActionProps.builder()

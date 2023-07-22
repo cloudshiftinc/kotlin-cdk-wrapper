@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 
+/**
+ * Details associated with the issuer of a license.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * IssuerDataProperty issuerDataProperty = IssuerDataProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .signKey("signKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-issuerdata.html)
+ */
 @CdkDslMarker
 public class CfnLicenseIssuerDataPropertyDsl {
   private val cdkBuilder: CfnLicense.IssuerDataProperty.Builder =

@@ -19,6 +19,37 @@ import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.InstanceProps
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 
+/**
+ * Instance properties for database instances.
+ *
+ * Example:
+ *
+ * ```
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(stack, "Database")
+ * .engine(DatabaseClusterEngine.AURORA)
+ * .instanceProps(InstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
+ * .vpc(vpc)
+ * .build())
+ * .build();
+ * cluster.addRotationSingleUser();
+ * DatabaseCluster clusterWithCustomRotationOptions = DatabaseCluster.Builder.create(stack,
+ * "CustomRotationOptions")
+ * .engine(DatabaseClusterEngine.AURORA)
+ * .instanceProps(InstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
+ * .vpc(vpc)
+ * .build())
+ * .build();
+ * clusterWithCustomRotationOptions.addRotationSingleUser(RotationSingleUserOptions.builder()
+ * .automaticallyAfter(Duration.days(7))
+ * .excludeCharacters("!&#64;#$%^&amp;*")
+ * .securityGroup(securityGroup)
+ * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
+ * .endpoint(endpoint)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class InstancePropsDsl {
   private val cdkBuilder: InstanceProps.Builder = InstanceProps.builder()

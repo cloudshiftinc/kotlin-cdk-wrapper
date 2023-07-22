@@ -7,6 +7,27 @@ import software.amazon.awscdk.services.autoscaling.BindHookTargetOptions
 import software.amazon.awscdk.services.autoscaling.LifecycleHook
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options needed to bind a target to a lifecycle hook.
+ *
+ * [disable-awslint:ref-via-interface] The lifecycle hook to attach to and an IRole to use
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * LifecycleHook lifecycleHook;
+ * Role role;
+ * BindHookTargetOptions bindHookTargetOptions = BindHookTargetOptions.builder()
+ * .lifecycleHook(lifecycleHook)
+ * // the properties below are optional
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BindHookTargetOptionsDsl {
   private val cdkBuilder: BindHookTargetOptions.Builder = BindHookTargetOptions.builder()

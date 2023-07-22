@@ -7,6 +7,37 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.budgets.CfnBudget
 
+/**
+ * A notification that's associated with a budget. A budget can have up to ten notifications.
+ *
+ * Each notification must have at least one subscriber. A notification can have one SNS subscriber
+ * and up to 10 email subscribers, for a total of 11 subscribers.
+ *
+ * For example, if you have a budget for 200 dollars and you want to be notified when you go over
+ * 160 dollars, create a notification with the following parameters:
+ *
+ * * A notificationType of `ACTUAL`
+ * * A `thresholdType` of `PERCENTAGE`
+ * * A `comparisonOperator` of `GREATER_THAN`
+ * * A notification `threshold` of `80`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * NotificationProperty notificationProperty = NotificationProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .notificationType("notificationType")
+ * .threshold(123)
+ * // the properties below are optional
+ * .thresholdType("thresholdType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-notification.html)
+ */
 @CdkDslMarker
 public class CfnBudgetNotificationPropertyDsl {
   private val cdkBuilder: CfnBudget.NotificationProperty.Builder =

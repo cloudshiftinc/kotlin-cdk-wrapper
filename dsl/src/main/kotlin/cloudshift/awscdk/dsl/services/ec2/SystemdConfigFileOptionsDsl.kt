@@ -7,6 +7,28 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ec2.SystemdConfigFileOptions
 
+/**
+ * Options for creating a SystemD configuration file.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * Instance.Builder.create(this, "Instance")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .init(CloudFormationInit.fromElements(InitService.systemdConfigFile("simpleserver",
+ * SystemdConfigFileOptions.builder()
+ * .command("/usr/bin/python3 -m http.server 8080")
+ * .cwd("/var/www/html")
+ * .build()), InitService.enable("simpleserver", InitServiceOptions.builder()
+ * .serviceManager(ServiceManager.SYSTEMD)
+ * .build()), InitFile.fromString("/var/www/html/index.html", "Hello! It's working!")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SystemdConfigFileOptionsDsl {
   private val cdkBuilder: SystemdConfigFileOptions.Builder = SystemdConfigFileOptions.builder()

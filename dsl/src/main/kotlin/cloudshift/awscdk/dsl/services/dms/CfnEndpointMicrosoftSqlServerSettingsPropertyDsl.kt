@@ -9,6 +9,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a Microsoft SQL Server endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Extra connection attributes when using SQL Server as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.SQLServer.html#CHAP_Source.SQLServer.ConnectionAttrib)
+ * and [Extra connection attributes when using SQL Server as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.SQLServer.html#CHAP_Target.SQLServer.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * MicrosoftSqlServerSettingsProperty microsoftSqlServerSettingsProperty =
+ * MicrosoftSqlServerSettingsProperty.builder()
+ * .bcpPacketSize(123)
+ * .controlTablesFileGroup("controlTablesFileGroup")
+ * .querySingleAlwaysOnNode(false)
+ * .readBackupOnly(false)
+ * .safeguardPolicy("safeguardPolicy")
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .useBcpFullLoad(false)
+ * .useThirdPartyBackupDevice(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-microsoftsqlserversettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointMicrosoftSqlServerSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.MicrosoftSqlServerSettingsProperty.Builder =

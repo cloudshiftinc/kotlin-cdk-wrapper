@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.msk.CfnClusterPolicyProps
 
+/**
+ * Properties for defining a `CfnClusterPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * Object policy;
+ * CfnClusterPolicyProps cfnClusterPolicyProps = CfnClusterPolicyProps.builder()
+ * .clusterArn("clusterArn")
+ * .policy(policy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)
+ */
 @CdkDslMarker
 public class CfnClusterPolicyPropsDsl {
   private val cdkBuilder: CfnClusterPolicyProps.Builder = CfnClusterPolicyProps.builder()

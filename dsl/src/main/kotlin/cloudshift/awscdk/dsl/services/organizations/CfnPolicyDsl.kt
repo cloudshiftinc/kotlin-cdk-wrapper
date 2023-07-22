@@ -14,6 +14,47 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnPolicy
 import software.constructs.Construct
 
+/**
+ * Creates a policy of a specified type that you can attach to a root, an organizational unit (OU),
+ * or an individual AWS account .
+ *
+ * For more information about policies and their use, see [Managing Organization
+ * Policies](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html) .
+ *
+ * If the request includes tags, then the requester must have the `organizations:TagResource`
+ * permission.
+ *
+ * This operation can be called only from the organization's management account.
+ *
+ *
+ * Before you can create a policy of a given type, you must first [enable that policy
+ * type](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_enable-disable.html)
+ * in your organization.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * Object content;
+ * CfnPolicy cfnPolicy = CfnPolicy.Builder.create(this, "MyCfnPolicy")
+ * .content(content)
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetIds(List.of("targetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyDsl(
   scope: Construct,

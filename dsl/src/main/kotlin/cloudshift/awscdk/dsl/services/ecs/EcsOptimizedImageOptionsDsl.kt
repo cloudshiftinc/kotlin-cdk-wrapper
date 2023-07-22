@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ecs.EcsOptimizedImageOptions
 
+/**
+ * Additional configuration properties for EcsOptimizedImage factory functions.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .machineImage(EcsOptimizedImage.amazonLinux(EcsOptimizedImageOptions.builder().cachedInContext(true).build()))
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.micro"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsOptimizedImageOptionsDsl {
   private val cdkBuilder: EcsOptimizedImageOptions.Builder = EcsOptimizedImageOptions.builder()

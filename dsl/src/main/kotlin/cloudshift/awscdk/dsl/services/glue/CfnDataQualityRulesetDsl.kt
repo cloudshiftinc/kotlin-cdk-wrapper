@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::DataQualityRuleset` resource specifies a data quality ruleset with DQDL rules
+ * applied to a specified AWS Glue table.
+ *
+ * For more information, see AWS Glue Data Quality in the AWS Glue Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object tags;
+ * CfnDataQualityRuleset cfnDataQualityRuleset = CfnDataQualityRuleset.Builder.create(this,
+ * "MyCfnDataQualityRuleset")
+ * .clientToken("clientToken")
+ * .description("description")
+ * .name("name")
+ * .ruleset("ruleset")
+ * .tags(tags)
+ * .targetTable(DataQualityTargetTableProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityRulesetDsl(
   scope: Construct,

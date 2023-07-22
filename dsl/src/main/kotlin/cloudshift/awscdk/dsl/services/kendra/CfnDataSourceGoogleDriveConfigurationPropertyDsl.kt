@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to Google Drive as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * GoogleDriveConfigurationProperty googleDriveConfigurationProperty =
+ * GoogleDriveConfigurationProperty.builder()
+ * .secretArn("secretArn")
+ * // the properties below are optional
+ * .excludeMimeTypes(List.of("excludeMimeTypes"))
+ * .excludeSharedDrives(List.of("excludeSharedDrives"))
+ * .excludeUserAccounts(List.of("excludeUserAccounts"))
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-googledriveconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceGoogleDriveConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.GoogleDriveConfigurationProperty.Builder =

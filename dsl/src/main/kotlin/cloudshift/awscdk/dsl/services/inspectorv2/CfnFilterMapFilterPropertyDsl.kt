@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 
+/**
+ * An object that describes details of a map filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspectorv2.*;
+ * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
+ * .comparison("comparison")
+ * // the properties below are optional
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-mapfilter.html)
+ */
 @CdkDslMarker
 public class CfnFilterMapFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.MapFilterProperty.Builder =

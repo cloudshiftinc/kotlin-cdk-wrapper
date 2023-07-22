@@ -7,6 +7,25 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.KinesisFirehoseStream
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Customize the Firehose Stream Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * CfnDeliveryStream cfnDeliveryStream;
+ * RuleTargetInput ruleTargetInput;
+ * KinesisFirehoseStream kinesisFirehoseStream =
+ * KinesisFirehoseStream.Builder.create(cfnDeliveryStream)
+ * .message(ruleTargetInput)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KinesisFirehoseStreamDsl(
   stream: CfnDeliveryStream,

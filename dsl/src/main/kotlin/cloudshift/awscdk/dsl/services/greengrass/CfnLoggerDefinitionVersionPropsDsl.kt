@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnLoggerDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnLoggerDefinitionVersionProps cfnLoggerDefinitionVersionProps =
+ * CfnLoggerDefinitionVersionProps.builder()
+ * .loggerDefinitionId("loggerDefinitionId")
+ * .loggers(List.of(LoggerProperty.builder()
+ * .component("component")
+ * .id("id")
+ * .level("level")
+ * .type("type")
+ * // the properties below are optional
+ * .space(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnLoggerDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnLoggerDefinitionVersionProps.Builder =

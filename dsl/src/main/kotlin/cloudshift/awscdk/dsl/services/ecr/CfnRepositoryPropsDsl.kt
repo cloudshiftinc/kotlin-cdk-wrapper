@@ -15,6 +15,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecr.CfnRepository
 import software.amazon.awscdk.services.ecr.CfnRepositoryProps
 
+/**
+ * Properties for defining a `CfnRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object repositoryPolicyText;
+ * CfnRepositoryProps cfnRepositoryProps = CfnRepositoryProps.builder()
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionType("encryptionType")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
+ * .scanOnPush(false)
+ * .build())
+ * .imageTagMutability("imageTagMutability")
+ * .lifecyclePolicy(LifecyclePolicyProperty.builder()
+ * .lifecyclePolicyText("lifecyclePolicyText")
+ * .registryId("registryId")
+ * .build())
+ * .repositoryName("repositoryName")
+ * .repositoryPolicyText(repositoryPolicyText)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryPropsDsl {
   private val cdkBuilder: CfnRepositoryProps.Builder = CfnRepositoryProps.builder()

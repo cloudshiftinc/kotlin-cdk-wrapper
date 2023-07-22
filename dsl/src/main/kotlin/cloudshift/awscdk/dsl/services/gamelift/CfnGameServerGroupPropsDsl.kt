@@ -15,6 +15,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps
 
+/**
+ * Properties for defining a `CfnGameServerGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnGameServerGroupProps cfnGameServerGroupProps = CfnGameServerGroupProps.builder()
+ * .gameServerGroupName("gameServerGroupName")
+ * .instanceDefinitions(List.of(InstanceDefinitionProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .weightedCapacity("weightedCapacity")
+ * .build()))
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
+ * .targetTrackingConfiguration(TargetTrackingConfigurationProperty.builder()
+ * .targetValue(123)
+ * .build())
+ * // the properties below are optional
+ * .estimatedInstanceWarmup(123)
+ * .build())
+ * .balancingStrategy("balancingStrategy")
+ * .deleteOption("deleteOption")
+ * .gameServerProtectionPolicy("gameServerProtectionPolicy")
+ * .launchTemplate(LaunchTemplateProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build())
+ * .maxSize(123)
+ * .minSize(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSubnets(List.of("vpcSubnets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html)
+ */
 @CdkDslMarker
 public class CfnGameServerGroupPropsDsl {
   private val cdkBuilder: CfnGameServerGroupProps.Builder = CfnGameServerGroupProps.builder()

@@ -7,6 +7,33 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for an archive output group.
+ *
+ * The parent of this entity is OutputGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * ArchiveGroupSettingsProperty archiveGroupSettingsProperty =
+ * ArchiveGroupSettingsProperty.builder()
+ * .archiveCdnSettings(ArchiveCdnSettingsProperty.builder()
+ * .archiveS3Settings(ArchiveS3SettingsProperty.builder()
+ * .cannedAcl("cannedAcl")
+ * .build())
+ * .build())
+ * .destination(OutputLocationRefProperty.builder()
+ * .destinationRefId("destinationRefId")
+ * .build())
+ * .rolloverInterval(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-archivegroupsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelArchiveGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.ArchiveGroupSettingsProperty.Builder =

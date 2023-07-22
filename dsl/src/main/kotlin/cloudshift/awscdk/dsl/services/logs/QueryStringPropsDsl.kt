@@ -10,6 +10,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.logs.QueryStringProps
 
+/**
+ * Properties for a QueryString.
+ *
+ * Example:
+ *
+ * ```
+ * QueryDefinition.Builder.create(this, "QueryDefinition")
+ * .queryDefinitionName("MyQuery")
+ * .queryString(QueryString.Builder.create()
+ * .fields(List.of("&#64;timestamp", "&#64;message"))
+ * .parseStatements(List.of("&#64;message \"[*] *\" as loggingType, loggingMessage", "&#64;message
+ * \"&lt;*&gt;: *\" as differentLoggingType, differentLoggingMessage"))
+ * .filterStatements(List.of("loggingType = \"ERROR\"", "loggingMessage = \"A very strange error
+ * occurred!\""))
+ * .sort("&#64;timestamp desc")
+ * .limit(20)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueryStringPropsDsl {
   private val cdkBuilder: QueryStringProps.Builder = QueryStringProps.builder()

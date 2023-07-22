@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryProps
 
+/**
+ * Properties for defining a `CfnIPAMResourceDiscovery`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMResourceDiscoveryProps cfnIPAMResourceDiscoveryProps =
+ * CfnIPAMResourceDiscoveryProps.builder()
+ * .description("description")
+ * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
+ * .regionName("regionName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscovery.html)
+ */
 @CdkDslMarker
 public class CfnIPAMResourceDiscoveryPropsDsl {
   private val cdkBuilder: CfnIPAMResourceDiscoveryProps.Builder =

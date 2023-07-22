@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your
+ * underlying data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SslPropertiesProperty sslPropertiesProperty = SslPropertiesProperty.builder()
+ * .disableSsl(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sslproperties.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSslPropertiesPropertyDsl {
   private val cdkBuilder: CfnDataSource.SslPropertiesProperty.Builder =

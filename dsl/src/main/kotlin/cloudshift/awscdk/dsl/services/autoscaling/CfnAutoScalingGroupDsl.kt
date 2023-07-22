@@ -14,6 +14,176 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::AutoScaling::AutoScalingGroup` resource defines an Amazon EC2 Auto Scaling group, which
+ * is a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of
+ * automatic scaling and management.
+ *
+ * For more information about Amazon EC2 Auto Scaling, see the [Amazon EC2 Auto Scaling User
+ * Guide](https://docs.aws.amazon.com/autoscaling/ec2/userguide/what-is-amazon-ec2-auto-scaling.html) .
+ *
+ *
+ * Amazon EC2 Auto Scaling configures instances launched as part of an Auto Scaling group using
+ * either a [launch
+ * template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ * or a launch configuration. We strongly recommend that you do not use launch configurations. They do
+ * not provide full functionality for Amazon EC2 Auto Scaling or Amazon EC2. For more information, see
+ * [Launch
+ * configurations](https://docs.aws.amazon.com/autoscaling/ec2/userguide/launch-configurations.html)
+ * and [Migrate AWS CloudFormation stacks from launch configurations to launch
+ * templates](https://docs.aws.amazon.com/autoscaling/ec2/userguide/migrate-launch-configurations-with-cloudformation.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnAutoScalingGroup cfnAutoScalingGroup = CfnAutoScalingGroup.Builder.create(this,
+ * "MyCfnAutoScalingGroup")
+ * .maxSize("maxSize")
+ * .minSize("minSize")
+ * // the properties below are optional
+ * .autoScalingGroupName("autoScalingGroupName")
+ * .availabilityZones(List.of("availabilityZones"))
+ * .capacityRebalance(false)
+ * .context("context")
+ * .cooldown("cooldown")
+ * .defaultInstanceWarmup(123)
+ * .desiredCapacity("desiredCapacity")
+ * .desiredCapacityType("desiredCapacityType")
+ * .healthCheckGracePeriod(123)
+ * .healthCheckType("healthCheckType")
+ * .instanceId("instanceId")
+ * .launchConfigurationName("launchConfigurationName")
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build())
+ * .lifecycleHookSpecificationList(List.of(LifecycleHookSpecificationProperty.builder()
+ * .lifecycleHookName("lifecycleHookName")
+ * .lifecycleTransition("lifecycleTransition")
+ * // the properties below are optional
+ * .defaultResult("defaultResult")
+ * .heartbeatTimeout(123)
+ * .notificationMetadata("notificationMetadata")
+ * .notificationTargetArn("notificationTargetArn")
+ * .roleArn("roleArn")
+ * .build()))
+ * .loadBalancerNames(List.of("loadBalancerNames"))
+ * .maxInstanceLifetime(123)
+ * .metricsCollection(List.of(MetricsCollectionProperty.builder()
+ * .granularity("granularity")
+ * // the properties below are optional
+ * .metrics(List.of("metrics"))
+ * .build()))
+ * .mixedInstancesPolicy(MixedInstancesPolicyProperty.builder()
+ * .launchTemplate(LaunchTemplateProperty.builder()
+ * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build())
+ * // the properties below are optional
+ * .overrides(List.of(LaunchTemplateOverridesProperty.builder()
+ * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build())
+ * .instanceType("instanceType")
+ * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build())
+ * .weightedCapacity("weightedCapacity")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .instancesDistribution(InstancesDistributionProperty.builder()
+ * .onDemandAllocationStrategy("onDemandAllocationStrategy")
+ * .onDemandBaseCapacity(123)
+ * .onDemandPercentageAboveBaseCapacity(123)
+ * .spotAllocationStrategy("spotAllocationStrategy")
+ * .spotInstancePools(123)
+ * .spotMaxPrice("spotMaxPrice")
+ * .build())
+ * .build())
+ * .newInstancesProtectedFromScaleIn(false)
+ * .notificationConfigurations(List.of(NotificationConfigurationProperty.builder()
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .notificationTypes(List.of("notificationTypes"))
+ * .build()))
+ * .placementGroup("placementGroup")
+ * .serviceLinkedRoleArn("serviceLinkedRoleArn")
+ * .tags(List.of(TagPropertyProperty.builder()
+ * .key("key")
+ * .propagateAtLaunch(false)
+ * .value("value")
+ * .build()))
+ * .targetGroupArns(List.of("targetGroupArns"))
+ * .terminationPolicies(List.of("terminationPolicies"))
+ * .vpcZoneIdentifier(List.of("vpcZoneIdentifier"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupDsl(
   scope: Construct,

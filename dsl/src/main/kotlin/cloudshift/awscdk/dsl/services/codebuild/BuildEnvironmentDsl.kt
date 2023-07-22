@@ -13,6 +13,48 @@ import software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable
 import software.amazon.awscdk.services.codebuild.ComputeType
 import software.amazon.awscdk.services.codebuild.IBuildImage
 
+/**
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup mySecurityGroup;
+ * CodeBuildStep.Builder.create("Synth")
+ * // ...standard ShellStep props...
+ * .commands(List.of())
+ * .env(Map.of())
+ * // If you are using a CodeBuildStep explicitly, set the 'cdk.out' directory
+ * // to be the synth step's output.
+ * .primaryOutputDirectory("cdk.out")
+ * // Control the name of the project
+ * .projectName("MyProject")
+ * // Control parts of the BuildSpec other than the regular 'build' and 'install' commands
+ * .partialBuildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * // Control the build environment
+ * .buildEnvironment(BuildEnvironment.builder()
+ * .computeType(ComputeType.LARGE)
+ * .privileged(true)
+ * .build())
+ * .timeout(Duration.minutes(90))
+ * .fileSystemLocations(List.of(FileSystemLocation.efs(EfsFileSystemLocationProps.builder()
+ * .identifier("myidentifier2")
+ * .location("myclodation.mydnsroot.com:/loc")
+ * .mountPoint("/media")
+ * .mountOptions("opts")
+ * .build())))
+ * // Control Elastic Network Interface creation
+ * .vpc(vpc)
+ * .subnetSelection(SubnetSelection.builder().subnetType(SubnetType.PRIVATE_WITH_EGRESS).build())
+ * .securityGroups(List.of(mySecurityGroup))
+ * // Control caching
+ * .cache(Cache.bucket(new Bucket(this, "Cache")))
+ * // Additional policy statements for the execution role
+ * .rolePolicyStatements(List.of(
+ * PolicyStatement.Builder.create().build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BuildEnvironmentDsl {
   private val cdkBuilder: BuildEnvironment.Builder = BuildEnvironment.builder()

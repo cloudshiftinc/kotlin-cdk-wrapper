@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnFeature
 
+/**
+ * A set of key-value pairs that specify users who should always be served a specific variation of a
+ * feature.
+ *
+ * Each key specifies a user using their user ID, account ID, or some other identifier. The value
+ * specifies the name of the variation that the user is to be served.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * EntityOverrideProperty entityOverrideProperty = EntityOverrideProperty.builder()
+ * .entityId("entityId")
+ * .variation("variation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-feature-entityoverride.html)
+ */
 @CdkDslMarker
 public class CfnFeatureEntityOverridePropertyDsl {
   private val cdkBuilder: CfnFeature.EntityOverrideProperty.Builder =

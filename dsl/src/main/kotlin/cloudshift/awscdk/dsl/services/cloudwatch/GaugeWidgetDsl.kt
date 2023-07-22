@@ -16,6 +16,24 @@ import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.LegendPosition
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * A dashboard gauge widget that displays metrics.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * Metric gaugeMetric;
+ * dashboard.addWidgets(GaugeWidget.Builder.create()
+ * .metrics(List.of(gaugeMetric))
+ * .leftYAxis(YAxisProps.builder()
+ * .min(0)
+ * .max(1000)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GaugeWidgetDsl {
   private val cdkBuilder: GaugeWidget.Builder = GaugeWidget.Builder.create()

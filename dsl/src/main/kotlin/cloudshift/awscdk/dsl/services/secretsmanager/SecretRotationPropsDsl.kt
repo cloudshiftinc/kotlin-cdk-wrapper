@@ -17,6 +17,25 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 import software.amazon.awscdk.services.secretsmanager.SecretRotationProps
 
+/**
+ * Construction properties for a SecretRotation.
+ *
+ * Example:
+ *
+ * ```
+ * Secret myUserSecret;
+ * Secret myMasterSecret;
+ * IConnectable myDatabase;
+ * Vpc myVpc;
+ * SecretRotation.Builder.create(this, "SecretRotation")
+ * .application(SecretRotationApplication.MYSQL_ROTATION_MULTI_USER)
+ * .secret(myUserSecret) // The secret that will be rotated
+ * .masterSecret(myMasterSecret) // The secret used for the rotation
+ * .target(myDatabase)
+ * .vpc(myVpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretRotationPropsDsl {
   private val cdkBuilder: SecretRotationProps.Builder = SecretRotationProps.builder()

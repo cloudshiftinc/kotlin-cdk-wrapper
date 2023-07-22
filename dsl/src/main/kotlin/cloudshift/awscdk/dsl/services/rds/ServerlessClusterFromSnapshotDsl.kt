@@ -22,6 +22,20 @@ import software.amazon.awscdk.services.rds.ServerlessScalingOptions
 import software.amazon.awscdk.services.rds.SnapshotCredentials
 import software.constructs.Construct
 
+/**
+ * A Aurora Serverless Cluster restored from a snapshot.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * ServerlessClusterFromSnapshot.Builder.create(this, "Cluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerlessClusterFromSnapshotDsl(
   scope: Construct,

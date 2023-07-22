@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * The Spot Instance replacement strategy to use when Amazon EC2 emits a signal that your Spot
+ * Instance is at an elevated risk of being interrupted.
+ *
+ * For more information, see [Capacity
+ * rebalancing](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-capacity-rebalance.html)
+ * in the *Amazon EC2 User Guide for Linux Instances* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SpotCapacityRebalanceProperty spotCapacityRebalanceProperty =
+ * SpotCapacityRebalanceProperty.builder()
+ * .replacementStrategy("replacementStrategy")
+ * .terminationDelay(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotcapacityrebalance.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetSpotCapacityRebalancePropertyDsl {
   private val cdkBuilder: CfnSpotFleet.SpotCapacityRebalanceProperty.Builder =

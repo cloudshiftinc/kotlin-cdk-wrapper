@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.devicefarm.CfnTestGridProject
 
+/**
+ * The VPC security groups and subnets attached to the `TestGrid` project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devicefarm-testgridproject-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnTestGridProjectVpcConfigPropertyDsl {
   private val cdkBuilder: CfnTestGridProject.VpcConfigProperty.Builder =

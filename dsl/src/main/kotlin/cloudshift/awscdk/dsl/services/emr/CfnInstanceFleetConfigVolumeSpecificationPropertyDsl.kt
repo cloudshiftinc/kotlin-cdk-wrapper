@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
 
+/**
+ * `VolumeSpecification` is a subproperty of the `EbsBlockDeviceConfig` property type.
+ *
+ * `VolumeSecification` determines the volume type, IOPS, and size (GiB) for EBS volumes attached to
+ * EC2 instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * VolumeSpecificationProperty volumeSpecificationProperty = VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-volumespecification.html)
+ */
 @CdkDslMarker
 public class CfnInstanceFleetConfigVolumeSpecificationPropertyDsl {
   private val cdkBuilder: CfnInstanceFleetConfig.VolumeSpecificationProperty.Builder =

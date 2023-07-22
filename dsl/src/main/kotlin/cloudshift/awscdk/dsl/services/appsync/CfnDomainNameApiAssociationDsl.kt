@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::DomainNameApiAssociation` resource represents the mapping of your custom
+ * domain name to the assigned API URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnDomainNameApiAssociation cfnDomainNameApiAssociation =
+ * CfnDomainNameApiAssociation.Builder.create(this, "MyCfnDomainNameApiAssociation")
+ * .apiId("apiId")
+ * .domainName("domainName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html)
+ */
 @CdkDslMarker
 public class CfnDomainNameApiAssociationDsl(
   scope: Construct,

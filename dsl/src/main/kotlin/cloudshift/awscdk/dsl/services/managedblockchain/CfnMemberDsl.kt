@@ -8,6 +8,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 import software.constructs.Construct
 
+/**
+ * Creates a member within a Managed Blockchain network.
+ *
+ * Applies only to Hyperledger Fabric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnMember cfnMember = CfnMember.Builder.create(this, "MyCfnMember")
+ * .memberConfiguration(MemberConfigurationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .memberFrameworkConfiguration(MemberFrameworkConfigurationProperty.builder()
+ * .memberFabricConfiguration(MemberFabricConfigurationProperty.builder()
+ * .adminPassword("adminPassword")
+ * .adminUsername("adminUsername")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .invitationId("invitationId")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .name("name")
+ * .votingPolicy(VotingPolicyProperty.builder()
+ * .approvalThresholdPolicy(ApprovalThresholdPolicyProperty.builder()
+ * .proposalDurationInHours(123)
+ * .thresholdComparator("thresholdComparator")
+ * .thresholdPercentage(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .networkFrameworkConfiguration(NetworkFrameworkConfigurationProperty.builder()
+ * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
+ * .edition("edition")
+ * .build())
+ * .build())
+ * .build())
+ * .networkId("networkId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html)
+ */
 @CdkDslMarker
 public class CfnMemberDsl(
   scope: Construct,

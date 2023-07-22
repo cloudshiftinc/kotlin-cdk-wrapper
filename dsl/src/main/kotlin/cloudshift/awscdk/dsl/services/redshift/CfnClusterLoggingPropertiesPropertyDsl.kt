@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnCluster
 
+/**
+ * Specifies logging information, such as queries and connection attempts, for the specified Amazon
+ * Redshift cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * LoggingPropertiesProperty loggingPropertiesProperty = LoggingPropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html)
+ */
 @CdkDslMarker
 public class CfnClusterLoggingPropertiesPropertyDsl {
   private val cdkBuilder: CfnCluster.LoggingPropertiesProperty.Builder =

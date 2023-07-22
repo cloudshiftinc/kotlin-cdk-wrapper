@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A radar chart visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-radarchartvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisRadarChartVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.RadarChartVisualProperty.Builder =

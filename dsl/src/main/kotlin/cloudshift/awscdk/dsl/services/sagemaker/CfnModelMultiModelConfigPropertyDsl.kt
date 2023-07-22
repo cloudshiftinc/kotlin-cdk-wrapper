@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModel
 
+/**
+ * Specifies additional configuration for hosting multi-model endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MultiModelConfigProperty multiModelConfigProperty = MultiModelConfigProperty.builder()
+ * .modelCacheSetting("modelCacheSetting")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-multimodelconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelMultiModelConfigPropertyDsl {
   private val cdkBuilder: CfnModel.MultiModelConfigProperty.Builder =

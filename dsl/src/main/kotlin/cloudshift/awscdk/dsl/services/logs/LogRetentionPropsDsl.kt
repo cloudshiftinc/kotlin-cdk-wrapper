@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.logs.LogRetentionProps
 import software.amazon.awscdk.services.logs.LogRetentionRetryOptions
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * Construction properties for a LogRetention.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * Role role;
+ * LogRetentionProps logRetentionProps = LogRetentionProps.builder()
+ * .logGroupName("logGroupName")
+ * .retention(RetentionDays.ONE_DAY)
+ * // the properties below are optional
+ * .logGroupRegion("logGroupRegion")
+ * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
+ * .base(Duration.minutes(30))
+ * .maxRetries(123)
+ * .build())
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogRetentionPropsDsl {
   private val cdkBuilder: LogRetentionProps.Builder = LogRetentionProps.builder()

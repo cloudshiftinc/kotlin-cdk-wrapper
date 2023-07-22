@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.elasticache.CfnUserGroup
 import software.constructs.Construct
 
+/**
+ * For Redis engine version 6.0 onwards: Creates a Redis user group. For more information, see
+ * [Using Role Based Access Control
+ * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnUserGroup cfnUserGroup = CfnUserGroup.Builder.create(this, "MyCfnUserGroup")
+ * .engine("engine")
+ * .userGroupId("userGroupId")
+ * .userIds(List.of("userIds"))
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)
+ */
 @CdkDslMarker
 public class CfnUserGroupDsl(
   scope: Construct,

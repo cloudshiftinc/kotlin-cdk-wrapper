@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteProps
 
+/**
+ * Properties for defining a `CfnLocalGatewayRoute`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteProps cfnLocalGatewayRouteProps = CfnLocalGatewayRouteProps.builder()
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * // the properties below are optional
+ * .localGatewayVirtualInterfaceGroupId("localGatewayVirtualInterfaceGroupId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRoutePropsDsl {
   private val cdkBuilder: CfnLocalGatewayRouteProps.Builder = CfnLocalGatewayRouteProps.builder()

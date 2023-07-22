@@ -13,6 +13,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codeartifact.CfnRepositoryProps
 
+/**
+ * Properties for defining a `CfnRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codeartifact.*;
+ * Object permissionsPolicyDocument;
+ * CfnRepositoryProps cfnRepositoryProps = CfnRepositoryProps.builder()
+ * .domainName("domainName")
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .description("description")
+ * .domainOwner("domainOwner")
+ * .externalConnections(List.of("externalConnections"))
+ * .permissionsPolicyDocument(permissionsPolicyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .upstreams(List.of("upstreams"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryPropsDsl {
   private val cdkBuilder: CfnRepositoryProps.Builder = CfnRepositoryProps.builder()

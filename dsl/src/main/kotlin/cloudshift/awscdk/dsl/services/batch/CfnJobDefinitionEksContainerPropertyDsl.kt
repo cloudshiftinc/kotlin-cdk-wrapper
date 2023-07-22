@@ -10,6 +10,53 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * EKS container properties are used in job definitions for Amazon EKS based job definitions to
+ * describe the properties for a container node in the pod that's launched as part of a job.
+ *
+ * This can't be specified for Amazon ECS based job definitions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * Object limits;
+ * Object requests;
+ * EksContainerProperty eksContainerProperty = EksContainerProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .command(List.of("command"))
+ * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .imagePullPolicy("imagePullPolicy")
+ * .name("name")
+ * .resources(ResourcesProperty.builder()
+ * .limits(limits)
+ * .requests(requests)
+ * .build())
+ * .securityContext(SecurityContextProperty.builder()
+ * .privileged(false)
+ * .readOnlyRootFilesystem(false)
+ * .runAsGroup(123)
+ * .runAsNonRoot(false)
+ * .runAsUser(123)
+ * .build())
+ * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+ * .mountPath("mountPath")
+ * .name("name")
+ * .readOnly(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekscontainer.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEksContainerPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EksContainerProperty.Builder =

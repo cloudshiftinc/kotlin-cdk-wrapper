@@ -9,6 +9,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * The configuration of a Kinesis Data Analytics Studio notebook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * ZeppelinApplicationConfigurationProperty zeppelinApplicationConfigurationProperty =
+ * ZeppelinApplicationConfigurationProperty.builder()
+ * .catalogConfiguration(CatalogConfigurationProperty.builder()
+ * .glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty.builder()
+ * .databaseArn("databaseArn")
+ * .build())
+ * .build())
+ * .customArtifactsConfiguration(List.of(CustomArtifactConfigurationProperty.builder()
+ * .artifactType("artifactType")
+ * // the properties below are optional
+ * .mavenReference(MavenReferenceProperty.builder()
+ * .artifactId("artifactId")
+ * .groupId("groupId")
+ * .version("version")
+ * .build())
+ * .s3ContentLocation(S3ContentLocationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build()))
+ * .deployAsApplicationConfiguration(DeployAsApplicationConfigurationProperty.builder()
+ * .s3ContentLocation(S3ContentBaseLocationProperty.builder()
+ * .bucketArn("bucketArn")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .build())
+ * .build())
+ * .monitoringConfiguration(ZeppelinMonitoringConfigurationProperty.builder()
+ * .logLevel("logLevel")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-zeppelinapplicationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationZeppelinApplicationConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.ZeppelinApplicationConfigurationProperty.Builder =

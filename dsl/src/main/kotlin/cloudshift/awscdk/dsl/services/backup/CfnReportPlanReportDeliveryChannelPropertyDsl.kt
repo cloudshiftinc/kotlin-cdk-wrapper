@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.backup.CfnReportPlan
 
+/**
+ * Contains information from your report plan about where to deliver your reports, specifically your
+ * Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * ReportDeliveryChannelProperty reportDeliveryChannelProperty =
+ * ReportDeliveryChannelProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * // the properties below are optional
+ * .formats(List.of("formats"))
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html)
+ */
 @CdkDslMarker
 public class CfnReportPlanReportDeliveryChannelPropertyDsl {
   private val cdkBuilder: CfnReportPlan.ReportDeliveryChannelProperty.Builder =

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.assertions.TemplateParsingOptions
 
+/**
+ * Options to configure template parsing behavior, such as disregarding circular dependencies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.assertions.*;
+ * TemplateParsingOptions templateParsingOptions = TemplateParsingOptions.builder()
+ * .skipCyclicalDependenciesCheck(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TemplateParsingOptionsDsl {
   private val cdkBuilder: TemplateParsingOptions.Builder = TemplateParsingOptions.builder()

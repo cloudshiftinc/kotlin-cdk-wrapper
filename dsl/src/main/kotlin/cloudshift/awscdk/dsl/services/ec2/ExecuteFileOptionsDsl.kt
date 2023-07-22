@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.ExecuteFileOptions
 
+/**
+ * Options when executing a file.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.assets.Asset;
+ * Instance instance;
+ * Asset asset = Asset.Builder.create(this, "Asset")
+ * .path("./configure.sh")
+ * .build();
+ * String localPath = instance.userData.addS3DownloadCommand(S3DownloadOptions.builder()
+ * .bucket(asset.getBucket())
+ * .bucketKey(asset.getS3ObjectKey())
+ * .region("us-east-1")
+ * .build());
+ * instance.userData.addExecuteFileCommand(ExecuteFileOptions.builder()
+ * .filePath(localPath)
+ * .arguments("--verbose -y")
+ * .build());
+ * asset.grantRead(instance.getRole());
+ * ```
+ */
 @CdkDslMarker
 public class ExecuteFileOptionsDsl {
   private val cdkBuilder: ExecuteFileOptions.Builder = ExecuteFileOptions.builder()

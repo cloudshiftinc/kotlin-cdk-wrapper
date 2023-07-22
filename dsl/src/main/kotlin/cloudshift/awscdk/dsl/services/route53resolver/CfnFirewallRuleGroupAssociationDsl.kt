@@ -13,6 +13,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroupAssociation
 import software.constructs.Construct
 
+/**
+ * An association between a firewall rule group and a VPC, which enables DNS filtering for the VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnFirewallRuleGroupAssociation cfnFirewallRuleGroupAssociation =
+ * CfnFirewallRuleGroupAssociation.Builder.create(this, "MyCfnFirewallRuleGroupAssociation")
+ * .firewallRuleGroupId("firewallRuleGroupId")
+ * .priority(123)
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .mutationProtection("mutationProtection")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewallrulegroupassociation.html)
+ */
 @CdkDslMarker
 public class CfnFirewallRuleGroupAssociationDsl(
   scope: Construct,

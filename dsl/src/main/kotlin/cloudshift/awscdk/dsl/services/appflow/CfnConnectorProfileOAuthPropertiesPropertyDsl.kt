@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The OAuth properties required for OAuth type authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * OAuthPropertiesProperty oAuthPropertiesProperty = OAuthPropertiesProperty.builder()
+ * .authCodeUrl("authCodeUrl")
+ * .oAuthScopes(List.of("oAuthScopes"))
+ * .tokenUrl("tokenUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-oauthproperties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileOAuthPropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.OAuthPropertiesProperty.Builder =

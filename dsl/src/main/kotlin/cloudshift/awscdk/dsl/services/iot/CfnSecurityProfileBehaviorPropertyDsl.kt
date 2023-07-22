@@ -8,6 +8,50 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * A Device Defender security profile behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * BehaviorProperty behaviorProperty = BehaviorProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .criteria(BehaviorCriteriaProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .consecutiveDatapointsToAlarm(123)
+ * .consecutiveDatapointsToClear(123)
+ * .durationSeconds(123)
+ * .mlDetectionConfig(MachineLearningDetectionConfigProperty.builder()
+ * .confidenceLevel("confidenceLevel")
+ * .build())
+ * .statisticalThreshold(StatisticalThresholdProperty.builder()
+ * .statistic("statistic")
+ * .build())
+ * .value(MetricValueProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .count("count")
+ * .number(123)
+ * .numbers(List.of(123))
+ * .ports(List.of(123))
+ * .strings(List.of("strings"))
+ * .build())
+ * .build())
+ * .metric("metric")
+ * .metricDimension(MetricDimensionProperty.builder()
+ * .dimensionName("dimensionName")
+ * // the properties below are optional
+ * .operator("operator")
+ * .build())
+ * .suppressAlerts(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behavior.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileBehaviorPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.BehaviorProperty.Builder =

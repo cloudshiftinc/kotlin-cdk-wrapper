@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationAggregator
 
+/**
+ * This object contains regions to set up the aggregator and an IAM role to retrieve organization
+ * details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * OrganizationAggregationSourceProperty organizationAggregationSourceProperty =
+ * OrganizationAggregationSourceProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-organizationaggregationsource.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAggregatorOrganizationAggregationSourcePropertyDsl {
   private val cdkBuilder: CfnConfigurationAggregator.OrganizationAggregationSourceProperty.Builder =

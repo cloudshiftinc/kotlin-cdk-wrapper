@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplify.CfnDomainProps
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .appId("appId")
+ * .domainName("domainName")
+ * .subDomainSettings(List.of(SubDomainSettingProperty.builder()
+ * .branchName("branchName")
+ * .prefix("prefix")
+ * .build()))
+ * // the properties below are optional
+ * .autoSubDomainCreationPatterns(List.of("autoSubDomainCreationPatterns"))
+ * .autoSubDomainIamRole("autoSubDomainIamRole")
+ * .enableAutoSubDomain(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()

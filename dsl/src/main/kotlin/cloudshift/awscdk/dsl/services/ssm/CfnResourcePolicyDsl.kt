@@ -10,6 +10,31 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ssm.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Creates or updates a Systems Manager resource policy.
+ *
+ * A resource policy helps you to define the IAM entity (for example, an AWS account ) that can
+ * manage your Systems Manager resources. Currently, `OpsItemGroup` is the only resource that supports
+ * Systems Manager resource policies. The resource policy for `OpsItemGroup` enables AWS accounts to
+ * view and interact with OpsCenter operational work items (OpsItems). OpsCenter is a capability of
+ * Systems Manager .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object policy;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policy(policy)
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

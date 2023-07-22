@@ -9,6 +9,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * The cluster configuration for the OpenSearch Service domain.
+ *
+ * You can specify options such as the instance type and the number of instances. For more
+ * information, see [Creating and managing Amazon OpenSearch Service
+ * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+ * in the *Amazon OpenSearch Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+ * .dedicatedMasterCount(123)
+ * .dedicatedMasterEnabled(false)
+ * .dedicatedMasterType("dedicatedMasterType")
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .multiAzWithStandbyEnabled(false)
+ * .warmCount(123)
+ * .warmEnabled(false)
+ * .warmType("warmType")
+ * .zoneAwarenessConfig(ZoneAwarenessConfigProperty.builder()
+ * .availabilityZoneCount(123)
+ * .build())
+ * .zoneAwarenessEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-clusterconfig.html)
+ */
 @CdkDslMarker
 public class CfnDomainClusterConfigPropertyDsl {
   private val cdkBuilder: CfnDomain.ClusterConfigProperty.Builder =

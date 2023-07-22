@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * The Athena engine version for running queries, or the PySpark engine version for running
+ * sessions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * EngineVersionProperty engineVersionProperty = EngineVersionProperty.builder()
+ * .effectiveEngineVersion("effectiveEngineVersion")
+ * .selectedEngineVersion("selectedEngineVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-engineversion.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupEngineVersionPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.EngineVersionProperty.Builder =

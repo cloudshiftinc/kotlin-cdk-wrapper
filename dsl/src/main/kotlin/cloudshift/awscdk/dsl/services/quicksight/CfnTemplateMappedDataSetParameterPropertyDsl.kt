@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A dataset parameter that is mapped to an analysis parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * MappedDataSetParameterProperty mappedDataSetParameterProperty =
+ * MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-mappeddatasetparameter.html)
+ */
 @CdkDslMarker
 public class CfnTemplateMappedDataSetParameterPropertyDsl {
   private val cdkBuilder: CfnTemplate.MappedDataSetParameterProperty.Builder =

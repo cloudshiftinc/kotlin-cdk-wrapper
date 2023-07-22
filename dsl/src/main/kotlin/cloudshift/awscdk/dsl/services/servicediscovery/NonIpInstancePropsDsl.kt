@@ -8,6 +8,23 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.IService
 import software.amazon.awscdk.services.servicediscovery.NonIpInstanceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * NonIpInstanceProps nonIpInstanceProps = NonIpInstanceProps.builder()
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NonIpInstancePropsDsl {
   private val cdkBuilder: NonIpInstanceProps.Builder = NonIpInstanceProps.builder()

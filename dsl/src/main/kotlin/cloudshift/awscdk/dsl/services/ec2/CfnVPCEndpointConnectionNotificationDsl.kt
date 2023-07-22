@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointConnectionNotification
 import software.constructs.Construct
 
+/**
+ * Specifies a connection notification for a VPC endpoint or VPC endpoint service.
+ *
+ * A connection notification notifies you of specific endpoint events. You must create an SNS topic
+ * to receive notifications. For more information, see [Create a
+ * Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html) in the *Amazon Simple
+ * Notification Service Developer Guide* .
+ *
+ * You can create a connection notification for interface endpoints only.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointConnectionNotification cfnVPCEndpointConnectionNotification =
+ * CfnVPCEndpointConnectionNotification.Builder.create(this, "MyCfnVPCEndpointConnectionNotification")
+ * .connectionEvents(List.of("connectionEvents"))
+ * .connectionNotificationArn("connectionNotificationArn")
+ * // the properties below are optional
+ * .serviceId("serviceId")
+ * .vpcEndpointId("vpcEndpointId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointconnectionnotification.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointConnectionNotificationDsl(
   scope: Construct,

@@ -15,6 +15,84 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 import software.amazon.awscdk.services.codepipeline.CfnPipelineProps
 
+/**
+ * Properties for defining a `CfnPipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * Object configuration;
+ * CfnPipelineProps cfnPipelineProps = CfnPipelineProps.builder()
+ * .roleArn("roleArn")
+ * .stages(List.of(StageDeclarationProperty.builder()
+ * .actions(List.of(ActionDeclarationProperty.builder()
+ * .actionTypeId(ActionTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .namespace("namespace")
+ * .outputArtifacts(List.of(OutputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .region("region")
+ * .roleArn("roleArn")
+ * .runOrder(123)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .blockers(List.of(BlockerDeclarationProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .artifactStore(ArtifactStoreProperty.builder()
+ * .location("location")
+ * .type("type")
+ * // the properties below are optional
+ * .encryptionKey(EncryptionKeyProperty.builder()
+ * .id("id")
+ * .type("type")
+ * .build())
+ * .build())
+ * .artifactStores(List.of(ArtifactStoreMapProperty.builder()
+ * .artifactStore(ArtifactStoreProperty.builder()
+ * .location("location")
+ * .type("type")
+ * // the properties below are optional
+ * .encryptionKey(EncryptionKeyProperty.builder()
+ * .id("id")
+ * .type("type")
+ * .build())
+ * .build())
+ * .region("region")
+ * .build()))
+ * .disableInboundStageTransitions(List.of(StageTransitionProperty.builder()
+ * .reason("reason")
+ * .stageName("stageName")
+ * .build()))
+ * .name("name")
+ * .restartExecutionOnUpdate(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelinePropsDsl {
   private val cdkBuilder: CfnPipelineProps.Builder = CfnPipelineProps.builder()

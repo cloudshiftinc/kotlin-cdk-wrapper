@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.AthenaStopQueryExecution
 import software.constructs.Construct
 
+/**
+ * Stop an Athena Query Execution as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaStopQueryExecution stopQueryExecutionJob = AthenaStopQueryExecution.Builder.create(this,
+ * "Stop Query Execution")
+ * .queryExecutionId(JsonPath.stringAt("$.QueryExecutionId"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-athena.html)
+ */
 @CdkDslMarker
 public class AthenaStopQueryExecutionDsl(
   scope: Construct,

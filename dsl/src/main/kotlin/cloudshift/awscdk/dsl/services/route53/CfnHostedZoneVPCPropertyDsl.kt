@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnHostedZone
 
+/**
+ * *Private hosted zones only:* A complex type that contains information about an Amazon VPC.
+ *
+ * Route 53 Resolver uses the records in the private hosted zone to route traffic in that VPC.
+ *
+ *
+ * For public hosted zones, omit `VPCs` , `VPCId` , and `VPCRegion` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * VPCProperty vPCProperty = VPCProperty.builder()
+ * .vpcId("vpcId")
+ * .vpcRegion("vpcRegion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-vpc.html)
+ */
 @CdkDslMarker
 public class CfnHostedZoneVPCPropertyDsl {
   private val cdkBuilder: CfnHostedZone.VPCProperty.Builder = CfnHostedZone.VPCProperty.builder()

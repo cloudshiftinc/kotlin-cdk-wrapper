@@ -8,6 +8,55 @@ import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnScheduledAction
 import software.constructs.Construct
 
+/**
+ * The `AWS::AutoScaling::ScheduledAction` resource specifies an Amazon EC2 Auto Scaling scheduled
+ * action so that the Auto Scaling group can change the number of instances available for your
+ * application in response to predictable load changes.
+ *
+ * When you update a stack with an Auto Scaling group and scheduled action, CloudFormation always
+ * sets the min size, max size, and desired capacity properties of your group to the values that are
+ * defined in the `AWS::AutoScaling::AutoScalingGroup` section of your template. However, you might not
+ * want CloudFormation to do that when you have a scheduled action in effect. You can use an
+ * [UpdatePolicy
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
+ * to prevent CloudFormation from changing the min size, max size, or desired capacity property values
+ * during a stack update unless you modified the individual values in your template. If you have
+ * rolling updates enabled, before you can update the Auto Scaling group, you must suspend scheduled
+ * actions by specifying an [UpdatePolicy
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html)
+ * for the Auto Scaling group. You can find a sample update policy for rolling updates in [Auto scaling
+ * template
+ * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * .
+ *
+ * For more information, see [Scheduled
+ * scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html) and [Suspending
+ * and resuming scaling
+ * processes](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-suspend-resume-processes.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnScheduledAction cfnScheduledAction = CfnScheduledAction.Builder.create(this,
+ * "MyCfnScheduledAction")
+ * .autoScalingGroupName("autoScalingGroupName")
+ * // the properties below are optional
+ * .desiredCapacity(123)
+ * .endTime("endTime")
+ * .maxSize(123)
+ * .minSize(123)
+ * .recurrence("recurrence")
+ * .startTime("startTime")
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scheduledaction.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionDsl(
   scope: Construct,

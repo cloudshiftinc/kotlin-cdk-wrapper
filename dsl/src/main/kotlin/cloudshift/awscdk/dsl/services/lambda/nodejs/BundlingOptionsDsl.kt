@@ -22,6 +22,19 @@ import software.amazon.awscdk.services.lambda.nodejs.LogLevel
 import software.amazon.awscdk.services.lambda.nodejs.OutputFormat
 import software.amazon.awscdk.services.lambda.nodejs.SourceMapMode
 
+/**
+ * Bundling options.
+ *
+ * Example:
+ *
+ * ```
+ * NodejsFunction.Builder.create(this, "my-handler")
+ * .bundling(BundlingOptions.builder()
+ * .dockerImage(DockerImage.fromBuild("/path/to/Dockerfile"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BundlingOptionsDsl {
   private val cdkBuilder: BundlingOptions.Builder = BundlingOptions.builder()

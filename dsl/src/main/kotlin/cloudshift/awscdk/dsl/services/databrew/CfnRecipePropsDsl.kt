@@ -13,6 +13,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnRecipeProps
 
+/**
+ * Properties for defining a `CfnRecipe`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnRecipeProps cfnRecipeProps = CfnRecipeProps.builder()
+ * .name("name")
+ * .steps(List.of(RecipeStepProperty.builder()
+ * .action(ActionProperty.builder()
+ * .operation("operation")
+ * // the properties below are optional
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .build())
+ * // the properties below are optional
+ * .conditionExpressions(List.of(ConditionExpressionProperty.builder()
+ * .condition("condition")
+ * .targetColumn("targetColumn")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-recipe.html)
+ */
 @CdkDslMarker
 public class CfnRecipePropsDsl {
   private val cdkBuilder: CfnRecipeProps.Builder = CfnRecipeProps.builder()

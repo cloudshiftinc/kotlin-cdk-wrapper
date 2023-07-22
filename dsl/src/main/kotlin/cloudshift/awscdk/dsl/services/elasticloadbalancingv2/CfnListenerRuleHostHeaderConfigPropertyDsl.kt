@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about a host header condition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * HostHeaderConfigProperty hostHeaderConfigProperty = HostHeaderConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-hostheaderconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleHostHeaderConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.HostHeaderConfigProperty.Builder =

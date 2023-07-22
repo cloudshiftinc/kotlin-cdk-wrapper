@@ -9,6 +9,38 @@ import software.amazon.awscdk.services.s3.deployment.ServerSideEncryption
 import software.amazon.awscdk.services.servicecatalog.ProductStack
 import software.constructs.Construct
 
+/**
+ * A Service Catalog product stack, which is similar in form to a Cloudformation nested stack.
+ *
+ * You can add the resources to this stack that you want to define for your service catalog product.
+ *
+ * This stack will not be treated as an independent deployment
+ * artifact (won't be listed in "cdk list" or deployable through "cdk deploy"),
+ * but rather only synthesized as a template and uploaded as an asset to S3.
+ *
+ * Example:
+ *
+ * ```
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProductV2");
+ * }
+ * }
+ * ProductStackHistory productStackHistory = ProductStackHistory.Builder.create(this,
+ * "ProductStackHistory")
+ * .productStack(new S3BucketProduct(this, "S3BucketProduct"))
+ * .currentVersionName("v2")
+ * .currentVersionLocked(true)
+ * .build();
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "MyFirstProduct")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(productStackHistory.currentVersion(),
+ * productStackHistory.versionFromSnapshot("v1")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProductStackDsl(
   scope: Construct,

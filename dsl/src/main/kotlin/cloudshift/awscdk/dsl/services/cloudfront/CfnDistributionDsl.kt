@@ -13,6 +13,25 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 import software.constructs.Construct
 
+/**
+ * A distribution tells CloudFront where you want content to be delivered from, and the details
+ * about how to track and manage content delivery.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket;
+ * Distribution myDistribution = Distribution.Builder.create(this, "MyCfWebDistribution")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(sourceBucket))
+ * .build())
+ * .build();
+ * CfnDistribution cfnDistribution = (CfnDistribution)myDistribution.getNode().getDefaultChild();
+ * cfnDistribution.overrideLogicalId("MyDistributionCFDistribution3H55TI9Q");
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html)
+ */
 @CdkDslMarker
 public class CfnDistributionDsl(
   scope: Construct,

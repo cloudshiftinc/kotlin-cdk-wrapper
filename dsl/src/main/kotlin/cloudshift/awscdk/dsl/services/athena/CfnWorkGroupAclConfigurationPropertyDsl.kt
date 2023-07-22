@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * Indicates that an Amazon S3 canned ACL should be set to control ownership of stored query
+ * results.
+ *
+ * When Athena stores query results in Amazon S3, the canned ACL is set with the `x-amz-acl` request
+ * header. For more information about S3 Object Ownership, see [Object Ownership
+ * settings](https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html#object-ownership-overview)
+ * in the *Amazon S3 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * AclConfigurationProperty aclConfigurationProperty = AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-aclconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupAclConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.AclConfigurationProperty.Builder =

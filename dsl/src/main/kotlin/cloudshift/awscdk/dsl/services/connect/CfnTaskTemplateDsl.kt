@@ -15,6 +15,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 import software.constructs.Construct
 
+/**
+ * Specifies a task template for a Amazon Connect instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * Object constraints;
+ * CfnTaskTemplate cfnTaskTemplate = CfnTaskTemplate.Builder.create(this, "MyCfnTaskTemplate")
+ * .instanceArn("instanceArn")
+ * // the properties below are optional
+ * .clientToken("clientToken")
+ * .constraints(constraints)
+ * .contactFlowArn("contactFlowArn")
+ * .defaults(List.of(DefaultFieldValueProperty.builder()
+ * .defaultValue("defaultValue")
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .fields(List.of(FieldProperty.builder()
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .singleSelectOptions(List.of("singleSelectOptions"))
+ * .build()))
+ * .name("name")
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-tasktemplate.html)
+ */
 @CdkDslMarker
 public class CfnTaskTemplateDsl(
   scope: Construct,

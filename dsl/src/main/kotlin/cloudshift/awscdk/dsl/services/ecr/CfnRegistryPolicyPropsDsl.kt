@@ -8,6 +8,23 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.ecr.CfnRegistryPolicyProps
 
+/**
+ * Properties for defining a `CfnRegistryPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object policyText;
+ * CfnRegistryPolicyProps cfnRegistryPolicyProps = CfnRegistryPolicyProps.builder()
+ * .policyText(policyText)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnRegistryPolicyPropsDsl {
   private val cdkBuilder: CfnRegistryPolicyProps.Builder = CfnRegistryPolicyProps.builder()

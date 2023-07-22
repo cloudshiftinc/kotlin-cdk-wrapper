@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents an access log file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * FileAccessLogProperty fileAccessLogProperty = FileAccessLogProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .format(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-fileaccesslog.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeFileAccessLogPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.FileAccessLogProperty.Builder =

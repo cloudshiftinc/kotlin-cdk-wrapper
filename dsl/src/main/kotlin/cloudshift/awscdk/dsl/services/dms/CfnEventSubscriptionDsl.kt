@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEventSubscription
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::DMS::EventSubscription` resource to get notifications for AWS Database Migration
+ * Service events through the Amazon Simple Notification Service .
+ *
+ * For more information, see [Working with events and notifications in AWS Database Migration
+ * Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Events.html) in the *AWS Database
+ * Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnEventSubscription cfnEventSubscription = CfnEventSubscription.Builder.create(this,
+ * "MyCfnEventSubscription")
+ * .snsTopicArn("snsTopicArn")
+ * // the properties below are optional
+ * .enabled(false)
+ * .eventCategories(List.of("eventCategories"))
+ * .sourceIds(List.of("sourceIds"))
+ * .sourceType("sourceType")
+ * .subscriptionName("subscriptionName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-eventsubscription.html)
+ */
 @CdkDslMarker
 public class CfnEventSubscriptionDsl(
   scope: Construct,

@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * Imports the signing and encryption certificates that you need to create local (AS2) profiles and
+ * partner profiles.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .certificate("certificate")
+ * .usage("usage")
+ * // the properties below are optional
+ * .activeDate("activeDate")
+ * .certificateChain("certificateChain")
+ * .description("description")
+ * .inactiveDate("inactiveDate")
+ * .privateKey("privateKey")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

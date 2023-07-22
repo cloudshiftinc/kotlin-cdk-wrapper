@@ -10,6 +10,20 @@ import kotlin.Unit
 import software.amazon.awscdk.services.eks.AlbControllerOptions
 import software.amazon.awscdk.services.eks.AlbControllerVersion
 
+/**
+ * Options for `AlbController`.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster.Builder.create(this, "HelloEKS")
+ * .version(KubernetesVersion.V1_21)
+ * .albController(AlbControllerOptions.builder()
+ * .version(AlbControllerVersion.V2_4_1)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AlbControllerOptionsDsl {
   private val cdkBuilder: AlbControllerOptions.Builder = AlbControllerOptions.builder()

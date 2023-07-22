@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.ApiMappingOptions
 
+/**
+ * Options for creating an api mapping.
+ *
+ * Example:
+ *
+ * ```
+ * Object acmCertificateForExampleCom;
+ * RestApi restApi;
+ * RestApi secondRestApi;
+ * DomainName domain = DomainName.Builder.create(this, "custom-domain")
+ * .domainName("example.com")
+ * .certificate(acmCertificateForExampleCom)
+ * .mapping(restApi)
+ * .build();
+ * domain.addApiMapping(secondRestApi.getDeploymentStage(), ApiMappingOptions.builder()
+ * .basePath("orders/v2/api")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApiMappingOptionsDsl {
   private val cdkBuilder: ApiMappingOptions.Builder = ApiMappingOptions.builder()

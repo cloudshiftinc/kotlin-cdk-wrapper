@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apprunner.CfnVpcConnector
 import software.constructs.Construct
 
+/**
+ * Specify an AWS App Runner VPC connector by using the `AWS::AppRunner::VpcConnector` resource in
+ * an AWS CloudFormation template.
+ *
+ * The `AWS::AppRunner::VpcConnector` resource is an AWS App Runner resource type that specifies an
+ * App Runner VPC connector.
+ *
+ * App Runner requires this resource when you want to associate your App Runner service to a custom
+ * Amazon Virtual Private Cloud ( Amazon VPC ).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnVpcConnector cfnVpcConnector = CfnVpcConnector.Builder.create(this, "MyCfnVpcConnector")
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConnectorName("vpcConnectorName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html)
+ */
 @CdkDslMarker
 public class CfnVpcConnectorDsl(
   scope: Construct,

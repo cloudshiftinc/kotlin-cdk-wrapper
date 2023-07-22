@@ -9,6 +9,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a GCP MySQL endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. These settings are much the same as the settings for
+ * any MySQL-compatible endpoint. For more information, see [Extra connection attributes when using
+ * MySQL as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * GcpMySQLSettingsProperty gcpMySQLSettingsProperty = GcpMySQLSettingsProperty.builder()
+ * .afterConnectScript("afterConnectScript")
+ * .cleanSourceMetadataOnMismatch(false)
+ * .databaseName("databaseName")
+ * .eventsPollInterval(123)
+ * .maxFileSize(123)
+ * .parallelLoadThreads(123)
+ * .password("password")
+ * .port(123)
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverName("serverName")
+ * .serverTimezone("serverTimezone")
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-gcpmysqlsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointGcpMySQLSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.GcpMySQLSettingsProperty.Builder =

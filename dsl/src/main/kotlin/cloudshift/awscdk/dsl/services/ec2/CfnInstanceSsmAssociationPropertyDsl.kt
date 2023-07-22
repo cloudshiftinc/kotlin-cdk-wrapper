@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies the SSM document and parameter values in AWS Systems Manager to associate with an
+ * instance.
+ *
+ * `SsmAssociations` is a property of the
+ * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SsmAssociationProperty ssmAssociationProperty = SsmAssociationProperty.builder()
+ * .documentName("documentName")
+ * // the properties below are optional
+ * .associationParameters(List.of(AssociationParameterProperty.builder()
+ * .key("key")
+ * .value(List.of("value"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociation.html)
+ */
 @CdkDslMarker
 public class CfnInstanceSsmAssociationPropertyDsl {
   private val cdkBuilder: CfnInstance.SsmAssociationProperty.Builder =

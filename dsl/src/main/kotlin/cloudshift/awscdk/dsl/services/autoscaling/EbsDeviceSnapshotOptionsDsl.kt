@@ -8,6 +8,24 @@ import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.EbsDeviceSnapshotOptions
 import software.amazon.awscdk.services.autoscaling.EbsDeviceVolumeType
 
+/**
+ * Block device options for an EBS volume created from a snapshot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * EbsDeviceSnapshotOptions ebsDeviceSnapshotOptions = EbsDeviceSnapshotOptions.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType(EbsDeviceVolumeType.STANDARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDeviceSnapshotOptionsDsl {
   private val cdkBuilder: EbsDeviceSnapshotOptions.Builder = EbsDeviceSnapshotOptions.builder()

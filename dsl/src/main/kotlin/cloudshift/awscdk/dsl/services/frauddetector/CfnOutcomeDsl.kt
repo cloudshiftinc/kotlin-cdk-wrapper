@@ -12,6 +12,28 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.frauddetector.CfnOutcome
 import software.constructs.Construct
 
+/**
+ * Creates or updates an outcome.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnOutcome cfnOutcome = CfnOutcome.Builder.create(this, "MyCfnOutcome")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-outcome.html)
+ */
 @CdkDslMarker
 public class CfnOutcomeDsl(
   scope: Construct,

@@ -15,6 +15,23 @@ import software.amazon.awscdk.services.backup.BackupPlanRuleProps
 import software.amazon.awscdk.services.backup.IBackupVault
 import software.amazon.awscdk.services.events.Schedule
 
+/**
+ * Properties for a BackupPlanRule.
+ *
+ * Example:
+ *
+ * ```
+ * BackupPlan plan;
+ * BackupVault secondaryVault;
+ * plan.addRule(BackupPlanRule.Builder.create()
+ * .copyActions(List.of(BackupPlanCopyActionProps.builder()
+ * .destinationBackupVault(secondaryVault)
+ * .moveToColdStorageAfter(Duration.days(30))
+ * .deleteAfter(Duration.days(120))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BackupPlanRulePropsDsl {
   private val cdkBuilder: BackupPlanRuleProps.Builder = BackupPlanRuleProps.builder()

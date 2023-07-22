@@ -9,6 +9,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnVariantStore
 import software.constructs.Construct
 
+/**
+ * Create a store for variant data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * CfnVariantStore cfnVariantStore = CfnVariantStore.Builder.create(this, "MyCfnVariantStore")
+ * .name("name")
+ * .reference(ReferenceItemProperty.builder()
+ * .referenceArn("referenceArn")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .sseConfig(SseConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .keyArn("keyArn")
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-variantstore.html)
+ */
 @CdkDslMarker
 public class CfnVariantStoreDsl(
   scope: Construct,

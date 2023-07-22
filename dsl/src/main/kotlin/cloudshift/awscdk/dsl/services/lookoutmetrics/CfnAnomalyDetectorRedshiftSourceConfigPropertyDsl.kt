@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
 
+/**
+ * Provides information about the Amazon Redshift database configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * RedshiftSourceConfigProperty redshiftSourceConfigProperty =
+ * RedshiftSourceConfigProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .databaseHost("databaseHost")
+ * .databaseName("databaseName")
+ * .databasePort(123)
+ * .roleArn("roleArn")
+ * .secretManagerArn("secretManagerArn")
+ * .tableName("tableName")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .securityGroupIdList(List.of("securityGroupIdList"))
+ * .subnetIdList(List.of("subnetIdList"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-redshiftsourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorRedshiftSourceConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.RedshiftSourceConfigProperty.Builder =

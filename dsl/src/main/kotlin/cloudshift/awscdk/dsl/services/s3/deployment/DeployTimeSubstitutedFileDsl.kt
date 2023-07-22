@@ -9,6 +9,24 @@ import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile
 import software.constructs.Construct
 
+/**
+ * `DeployTimeSubstitutedFile` is an extension of `BucketDeployment` that allows users to upload
+ * individual files and specify to make substitutions in the file.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function myLambdaFunction;
+ * Bucket destinationBucket;
+ * DeployTimeSubstitutedFile.Builder.create(this, "MyFile")
+ * .source("my-file.yaml")
+ * .destinationBucket(destinationBucket)
+ * .substitutions(Map.of(
+ * "variableName", myLambdaFunction.getFunctionName()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeployTimeSubstitutedFileDsl(
   scope: Construct,

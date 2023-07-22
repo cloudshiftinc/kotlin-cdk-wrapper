@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup
 
+/**
+ * Specifies the settings that control the size and behavior of the connection pool associated with
+ * a `DBProxyTargetGroup` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ConnectionPoolConfigurationInfoFormatProperty connectionPoolConfigurationInfoFormatProperty =
+ * ConnectionPoolConfigurationInfoFormatProperty.builder()
+ * .connectionBorrowTimeout(123)
+ * .initQuery("initQuery")
+ * .maxConnectionsPercent(123)
+ * .maxIdleConnectionsPercent(123)
+ * .sessionPinningFilters(List.of("sessionPinningFilters"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxytargetgroup-connectionpoolconfigurationinfoformat.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyTargetGroupConnectionPoolConfigurationInfoFormatPropertyDsl {
   private val cdkBuilder:

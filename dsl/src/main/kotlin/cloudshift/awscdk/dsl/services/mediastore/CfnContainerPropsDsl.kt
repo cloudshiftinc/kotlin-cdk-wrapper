@@ -15,6 +15,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediastore.CfnContainer
 import software.amazon.awscdk.services.mediastore.CfnContainerProps
 
+/**
+ * Properties for defining a `CfnContainer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediastore.*;
+ * CfnContainerProps cfnContainerProps = CfnContainerProps.builder()
+ * .containerName("containerName")
+ * // the properties below are optional
+ * .accessLoggingEnabled(false)
+ * .corsPolicy(List.of(CorsRuleProperty.builder()
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .allowedMethods(List.of("allowedMethods"))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAgeSeconds(123)
+ * .build()))
+ * .lifecyclePolicy("lifecyclePolicy")
+ * .metricPolicy(MetricPolicyProperty.builder()
+ * .containerLevelMetrics("containerLevelMetrics")
+ * // the properties below are optional
+ * .metricPolicyRules(List.of(MetricPolicyRuleProperty.builder()
+ * .objectGroup("objectGroup")
+ * .objectGroupName("objectGroupName")
+ * .build()))
+ * .build())
+ * .policy("policy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html)
+ */
 @CdkDslMarker
 public class CfnContainerPropsDsl {
   private val cdkBuilder: CfnContainerProps.Builder = CfnContainerProps.builder()

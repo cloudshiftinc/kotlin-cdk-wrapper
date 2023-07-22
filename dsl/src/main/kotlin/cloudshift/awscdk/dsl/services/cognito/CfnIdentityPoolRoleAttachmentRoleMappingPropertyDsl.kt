@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment
 
+/**
+ * `RoleMapping` is a property of the
+ * [AWS::Cognito::IdentityPoolRoleAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html)
+ * resource that defines the role-mapping attributes of an Amazon Cognito identity pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * RoleMappingProperty roleMappingProperty = RoleMappingProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .ambiguousRoleResolution("ambiguousRoleResolution")
+ * .identityProvider("identityProvider")
+ * .rulesConfiguration(RulesConfigurationTypeProperty.builder()
+ * .rules(List.of(MappingRuleProperty.builder()
+ * .claim("claim")
+ * .matchType("matchType")
+ * .roleArn("roleArn")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolRoleAttachmentRoleMappingPropertyDsl {
   private val cdkBuilder: CfnIdentityPoolRoleAttachment.RoleMappingProperty.Builder =

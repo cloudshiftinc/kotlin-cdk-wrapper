@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnIdentityPool
 
+/**
+ * `CognitoStreams` is a property of the
+ * [AWS::Cognito::IdentityPool](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
+ * resource that defines configuration options for Amazon Cognito streams.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CognitoStreamsProperty cognitoStreamsProperty = CognitoStreamsProperty.builder()
+ * .roleArn("roleArn")
+ * .streamingStatus("streamingStatus")
+ * .streamName("streamName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolCognitoStreamsPropertyDsl {
   private val cdkBuilder: CfnIdentityPool.CognitoStreamsProperty.Builder =

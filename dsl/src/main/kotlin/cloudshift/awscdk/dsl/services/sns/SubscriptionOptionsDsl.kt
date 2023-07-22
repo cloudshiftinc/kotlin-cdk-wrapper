@@ -12,6 +12,34 @@ import software.amazon.awscdk.services.sns.SubscriptionOptions
 import software.amazon.awscdk.services.sns.SubscriptionProtocol
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Options for creating a new subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * SubscriptionOptions subscriptionOptions = SubscriptionOptions.builder()
+ * .endpoint("endpoint")
+ * .protocol(SubscriptionProtocol.HTTP)
+ * // the properties below are optional
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .rawMessageDelivery(false)
+ * .region("region")
+ * .subscriptionRoleArn("subscriptionRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionOptionsDsl {
   private val cdkBuilder: SubscriptionOptions.Builder = SubscriptionOptions.builder()

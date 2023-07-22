@@ -10,6 +10,54 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ssm.CfnParameter
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSM::Parameter` resource creates an SSM parameter in AWS Systems Manager Parameter
+ * Store.
+ *
+ *
+ * To create an SSM parameter, you must have the AWS Identity and Access Management ( IAM )
+ * permissions `ssm:PutParameter` and `ssm:AddTagsToResource` . On stack creation, AWS CloudFormation
+ * adds the following three tags to the parameter: `aws:cloudformation:stack-name` ,
+ * `aws:cloudformation:logical-id` , and `aws:cloudformation:stack-id` , in addition to any custom tags
+ * you specify.
+ *
+ * To add, update, or remove tags during stack update, you must have IAM permissions for both
+ * `ssm:AddTagsToResource` and `ssm:RemoveTagsFromResource` . For more information, see [Managing
+ * Access Using
+ * Policies](https://docs.aws.amazon.com/systems-manager/latest/userguide/security-iam.html#security_iam_access-manage)
+ * in the *AWS Systems Manager User Guide* .
+ *
+ *
+ * For information about valid values for parameters, see [Requirements and Constraints for
+ * Parameter
+ * Names](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-paramstore-su-create.html#sysman-parameter-name-constraints)
+ * in the *AWS Systems Manager User Guide* and
+ * [PutParameter](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutParameter.html)
+ * in the *AWS Systems Manager API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object tags;
+ * CfnParameter cfnParameter = CfnParameter.Builder.create(this, "MyCfnParameter")
+ * .type("type")
+ * .value("value")
+ * // the properties below are optional
+ * .allowedPattern("allowedPattern")
+ * .dataType("dataType")
+ * .description("description")
+ * .name("name")
+ * .policies("policies")
+ * .tags(tags)
+ * .tier("tier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
+ */
 @CdkDslMarker
 public class CfnParameterDsl(
   scope: Construct,

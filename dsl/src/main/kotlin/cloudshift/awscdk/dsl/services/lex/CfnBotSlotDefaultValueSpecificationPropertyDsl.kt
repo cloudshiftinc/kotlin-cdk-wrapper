@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * The default value to use when a user doesn't provide a value for a slot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotDefaultValueSpecificationProperty slotDefaultValueSpecificationProperty =
+ * SlotDefaultValueSpecificationProperty.builder()
+ * .defaultValueList(List.of(SlotDefaultValueProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotdefaultvaluespecification.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotDefaultValueSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.SlotDefaultValueSpecificationProperty.Builder =

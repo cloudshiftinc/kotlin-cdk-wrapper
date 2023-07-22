@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A list of filter configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FilterListConfigurationProperty filterListConfigurationProperty =
+ * FilterListConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * // the properties below are optional
+ * .categoryValues(List.of("categoryValues"))
+ * .selectAllOptions("selectAllOptions")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-filterlistconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFilterListConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FilterListConfigurationProperty.Builder =

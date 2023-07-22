@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a tree map.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-treemapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTreeMapConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.TreeMapConfigurationProperty.Builder =

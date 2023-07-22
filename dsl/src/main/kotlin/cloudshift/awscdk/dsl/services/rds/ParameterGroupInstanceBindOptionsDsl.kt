@@ -5,6 +5,19 @@ package cloudshift.awscdk.dsl.services.rds
 import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.rds.ParameterGroupInstanceBindOptions
 
+/**
+ * Options for `IParameterGroup.bindToInstance`. Empty for now, but can be extended later.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ParameterGroupInstanceBindOptions parameterGroupInstanceBindOptions =
+ * ParameterGroupInstanceBindOptions.builder().build();
+ * ```
+ */
 @CdkDslMarker
 public class ParameterGroupInstanceBindOptionsDsl {
   private val cdkBuilder: ParameterGroupInstanceBindOptions.Builder =

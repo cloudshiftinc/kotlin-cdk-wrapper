@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.eks.AlbScheme
 import software.amazon.awscdk.services.eks.KubernetesManifestOptions
 
+/**
+ * Options for `KubernetesManifest`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * KubernetesManifestOptions kubernetesManifestOptions = KubernetesManifestOptions.builder()
+ * .ingressAlb(false)
+ * .ingressAlbScheme(AlbScheme.INTERNAL)
+ * .prune(false)
+ * .skipValidation(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KubernetesManifestOptionsDsl {
   private val cdkBuilder: KubernetesManifestOptions.Builder = KubernetesManifestOptions.builder()

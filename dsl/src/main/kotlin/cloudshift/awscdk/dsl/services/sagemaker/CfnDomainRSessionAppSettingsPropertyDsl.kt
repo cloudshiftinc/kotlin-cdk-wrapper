@@ -9,6 +9,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 
+/**
+ * A collection of settings that apply to an `RSessionGateway` app.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * RSessionAppSettingsProperty rSessionAppSettingsProperty = RSessionAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-rsessionappsettings.html)
+ */
 @CdkDslMarker
 public class CfnDomainRSessionAppSettingsPropertyDsl {
   private val cdkBuilder: CfnDomain.RSessionAppSettingsProperty.Builder =

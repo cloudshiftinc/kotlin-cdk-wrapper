@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * The Amazon EC2 Availability Zone configuration of the cluster (job flow).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * PlacementTypeProperty placementTypeProperty = PlacementTypeProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .availabilityZones(List.of("availabilityZones"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_PlacementType.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterPlacementTypePropertyDsl {
   private val cdkBuilder: EmrCreateCluster.PlacementTypeProperty.Builder =

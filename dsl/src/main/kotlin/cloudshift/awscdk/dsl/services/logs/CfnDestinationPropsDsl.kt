@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.logs.CfnDestinationProps
 
+/**
+ * Properties for defining a `CfnDestination`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnDestinationProps cfnDestinationProps = CfnDestinationProps.builder()
+ * .destinationName("destinationName")
+ * .roleArn("roleArn")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .destinationPolicy("destinationPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html)
+ */
 @CdkDslMarker
 public class CfnDestinationPropsDsl {
   private val cdkBuilder: CfnDestinationProps.Builder = CfnDestinationProps.builder()

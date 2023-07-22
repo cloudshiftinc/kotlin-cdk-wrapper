@@ -14,6 +14,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.finspace.CfnEnvironment
 import software.amazon.awscdk.services.finspace.CfnEnvironmentProps
 
+/**
+ * Properties for defining a `CfnEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.finspace.*;
+ * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dataBundles(List.of("dataBundles"))
+ * .description("description")
+ * .federationMode("federationMode")
+ * .federationParameters(FederationParametersProperty.builder()
+ * .applicationCallBackUrl("applicationCallBackUrl")
+ * .attributeMap(List.of(AttributeMapItemsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .federationProviderName("federationProviderName")
+ * .federationUrn("federationUrn")
+ * .samlMetadataDocument("samlMetadataDocument")
+ * .samlMetadataUrl("samlMetadataUrl")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .superuserParameters(SuperuserParametersProperty.builder()
+ * .emailAddress("emailAddress")
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-finspace-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()

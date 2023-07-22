@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.KubernetesPatchProps
 import software.amazon.awscdk.services.eks.PatchType
 
+/**
+ * Properties for KubernetesPatch.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * KubernetesPatch.Builder.create(this, "hello-kub-deployment-label")
+ * .cluster(cluster)
+ * .resourceName("deployment/hello-kubernetes")
+ * .applyPatch(Map.of("spec", Map.of("replicas", 5)))
+ * .restorePatch(Map.of("spec", Map.of("replicas", 3)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KubernetesPatchPropsDsl {
   private val cdkBuilder: KubernetesPatchProps.Builder = KubernetesPatchProps.builder()

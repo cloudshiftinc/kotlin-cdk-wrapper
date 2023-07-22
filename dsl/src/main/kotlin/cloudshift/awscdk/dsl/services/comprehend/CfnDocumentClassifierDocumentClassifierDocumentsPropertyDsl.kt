@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 
+/**
+ * The location of the training documents.
+ *
+ * This parameter is required in a request to create a native document model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DocumentClassifierDocumentsProperty documentClassifierDocumentsProperty =
+ * DocumentClassifierDocumentsProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .testS3Uri("testS3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentclassifierdocuments.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierDocumentClassifierDocumentsPropertyDsl {
   private val cdkBuilder: CfnDocumentClassifier.DocumentClassifierDocumentsProperty.Builder =

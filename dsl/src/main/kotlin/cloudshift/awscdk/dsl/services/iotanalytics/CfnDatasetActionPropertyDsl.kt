@@ -7,6 +7,54 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * Information needed to run the "containerAction" to produce data set contents.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .actionName("actionName")
+ * // the properties below are optional
+ * .containerAction(ContainerActionProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .image("image")
+ * .resourceConfiguration(ResourceConfigurationProperty.builder()
+ * .computeType("computeType")
+ * .volumeSizeInGb(123)
+ * .build())
+ * // the properties below are optional
+ * .variables(List.of(VariableProperty.builder()
+ * .variableName("variableName")
+ * // the properties below are optional
+ * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+ * .datasetName("datasetName")
+ * .build())
+ * .doubleValue(123)
+ * .outputFileUriValue(OutputFileUriValueProperty.builder()
+ * .fileName("fileName")
+ * .build())
+ * .stringValue("stringValue")
+ * .build()))
+ * .build())
+ * .queryAction(QueryActionProperty.builder()
+ * .sqlQuery("sqlQuery")
+ * // the properties below are optional
+ * .filters(List.of(FilterProperty.builder()
+ * .deltaTime(DeltaTimeProperty.builder()
+ * .offsetSeconds(123)
+ * .timeExpression("timeExpression")
+ * .build())
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-action.html)
+ */
 @CdkDslMarker
 public class CfnDatasetActionPropertyDsl {
   private val cdkBuilder: CfnDataset.ActionProperty.Builder = CfnDataset.ActionProperty.builder()

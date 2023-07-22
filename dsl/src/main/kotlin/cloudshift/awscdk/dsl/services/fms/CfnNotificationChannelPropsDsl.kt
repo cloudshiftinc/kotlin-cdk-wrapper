@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.fms.CfnNotificationChannelProps
 
+/**
+ * Properties for defining a `CfnNotificationChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * CfnNotificationChannelProps cfnNotificationChannelProps = CfnNotificationChannelProps.builder()
+ * .snsRoleName("snsRoleName")
+ * .snsTopicArn("snsTopicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-notificationchannel.html)
+ */
 @CdkDslMarker
 public class CfnNotificationChannelPropsDsl {
   private val cdkBuilder: CfnNotificationChannelProps.Builder =

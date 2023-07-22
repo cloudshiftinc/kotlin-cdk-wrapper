@@ -12,6 +12,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnFramework
 
+/**
+ * Contains detailed information about all of the controls of a framework.
+ *
+ * Each framework must contain at least one control.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object controlScope;
+ * FrameworkControlProperty frameworkControlProperty = FrameworkControlProperty.builder()
+ * .controlName("controlName")
+ * // the properties below are optional
+ * .controlInputParameters(List.of(ControlInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .controlScope(controlScope)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html)
+ */
 @CdkDslMarker
 public class CfnFrameworkFrameworkControlPropertyDsl {
   private val cdkBuilder: CfnFramework.FrameworkControlProperty.Builder =

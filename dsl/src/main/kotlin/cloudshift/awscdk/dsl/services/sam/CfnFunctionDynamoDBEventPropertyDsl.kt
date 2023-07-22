@@ -9,6 +9,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * DynamoDBEventProperty dynamoDBEventProperty = DynamoDBEventProperty.builder()
+ * .startingPosition("startingPosition")
+ * .stream("stream")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .bisectBatchOnFunctionError(false)
+ * .destinationConfig(DestinationConfigProperty.builder()
+ * .onFailure(DestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .type("type")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .maximumBatchingWindowInSeconds(123)
+ * .maximumRecordAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .parallelizationFactor(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-dynamodbevent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDynamoDBEventPropertyDsl {
   private val cdkBuilder: CfnFunction.DynamoDBEventProperty.Builder =

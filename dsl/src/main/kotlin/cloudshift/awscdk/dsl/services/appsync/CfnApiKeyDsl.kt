@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnApiKey
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::ApiKey` resource creates a unique key that you can distribute to clients who
+ * are executing GraphQL operations with AWS AppSync that require an API key.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnApiKey cfnApiKey = CfnApiKey.Builder.create(this, "MyCfnApiKey")
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .apiKeyId("apiKeyId")
+ * .description("description")
+ * .expires(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)
+ */
 @CdkDslMarker
 public class CfnApiKeyDsl(
   scope: Construct,

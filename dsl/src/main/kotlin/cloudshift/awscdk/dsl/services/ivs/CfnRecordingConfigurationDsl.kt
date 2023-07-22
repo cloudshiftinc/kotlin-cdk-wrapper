@@ -14,6 +14,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVS::RecordingConfiguration` resource specifies an  recording configuration.
+ *
+ * A recording configuration enables the recording of a channel’s live streams to a data store.
+ * Multiple channels can reference the same recording configuration. For more information, see
+ * [RecordingConfiguration](https://docs.aws.amazon.com/ivs/latest/APIReference/API_RecordingConfiguration.html)
+ * in the *Amazon Interactive Video Service API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnRecordingConfiguration cfnRecordingConfiguration =
+ * CfnRecordingConfiguration.Builder.create(this, "MyCfnRecordingConfiguration")
+ * .destinationConfiguration(DestinationConfigurationProperty.builder()
+ * .s3(S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .recordingReconnectWindowSeconds(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .thumbnailConfiguration(ThumbnailConfigurationProperty.builder()
+ * .recordingMode("recordingMode")
+ * // the properties below are optional
+ * .targetIntervalSeconds(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRecordingConfigurationDsl(
   scope: Construct,

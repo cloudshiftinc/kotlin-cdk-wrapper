@@ -8,6 +8,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDeployment
 import software.amazon.awscdk.services.apigateway.CfnDeploymentProps
 
+/**
+ * Properties for defining a `CfnDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDeploymentProps cfnDeploymentProps = CfnDeploymentProps.builder()
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .deploymentCanarySettings(DeploymentCanarySettingsProperty.builder()
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build())
+ * .description("description")
+ * .stageDescription(StageDescriptionProperty.builder()
+ * .accessLogSetting(AccessLogSettingProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .cacheClusterEnabled(false)
+ * .cacheClusterSize("cacheClusterSize")
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .canarySetting(CanarySettingProperty.builder()
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build())
+ * .clientCertificateId("clientCertificateId")
+ * .dataTraceEnabled(false)
+ * .description("description")
+ * .documentationVersion("documentationVersion")
+ * .loggingLevel("loggingLevel")
+ * .methodSettings(List.of(MethodSettingProperty.builder()
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .dataTraceEnabled(false)
+ * .httpMethod("httpMethod")
+ * .loggingLevel("loggingLevel")
+ * .metricsEnabled(false)
+ * .resourcePath("resourcePath")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build()))
+ * .metricsEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .tracingEnabled(false)
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .stageName("stageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentPropsDsl {
   private val cdkBuilder: CfnDeploymentProps.Builder = CfnDeploymentProps.builder()

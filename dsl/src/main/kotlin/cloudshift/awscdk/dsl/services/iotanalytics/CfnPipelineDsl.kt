@@ -14,6 +14,101 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 import software.constructs.Construct
 
+/**
+ * The AWS::IoTAnalytics::Pipeline resource consumes messages from one or more channels and allows
+ * you to process the messages before storing them in a data store.
+ *
+ * You must specify both a `channel` and a `datastore` activity and, optionally, as many as 23
+ * additional activities in the `pipelineActivities` array. For more information, see [How to Use AWS
+ * IoT
+ * Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how)
+ * in the *AWS IoT Analytics User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * CfnPipeline cfnPipeline = CfnPipeline.Builder.create(this, "MyCfnPipeline")
+ * .pipelineActivities(List.of(ActivityProperty.builder()
+ * .addAttributes(AddAttributesProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .channel(ChannelProperty.builder()
+ * .channelName("channelName")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .datastore(DatastoreProperty.builder()
+ * .datastoreName("datastoreName")
+ * .name("name")
+ * .build())
+ * .deviceRegistryEnrich(DeviceRegistryEnrichProperty.builder()
+ * .attribute("attribute")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .thingName("thingName")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .deviceShadowEnrich(DeviceShadowEnrichProperty.builder()
+ * .attribute("attribute")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .thingName("thingName")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .filter(FilterProperty.builder()
+ * .filter("filter")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .lambda(LambdaProperty.builder()
+ * .batchSize(123)
+ * .lambdaName("lambdaName")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .math(MathProperty.builder()
+ * .attribute("attribute")
+ * .math("math")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .removeAttributes(RemoveAttributesProperty.builder()
+ * .attributes(List.of("attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .selectAttributes(SelectAttributesProperty.builder()
+ * .attributes(List.of("attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .pipelineName("pipelineName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDsl(
   scope: Construct,

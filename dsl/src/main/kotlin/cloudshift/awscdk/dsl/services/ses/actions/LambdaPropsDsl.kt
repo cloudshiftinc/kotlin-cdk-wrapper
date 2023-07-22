@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.ses.actions.LambdaInvocationType
 import software.amazon.awscdk.services.ses.actions.LambdaProps
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Construction properties for a Lambda action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * Function function_;
+ * Topic topic;
+ * LambdaProps lambdaProps = LambdaProps.builder()
+ * .function(function_)
+ * // the properties below are optional
+ * .invocationType(LambdaInvocationType.EVENT)
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaPropsDsl {
   private val cdkBuilder: LambdaProps.Builder = LambdaProps.builder()

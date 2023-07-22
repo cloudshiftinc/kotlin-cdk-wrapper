@@ -17,6 +17,38 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType
 
+/**
+ * Properties for adding new targets to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.autoscaling.AutoScalingGroup;
+ * AutoScalingGroup asg;
+ * Vpc vpc;
+ * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+ * // by default, which creates an internal load balancer.
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .build();
+ * // Add a listener and open up the load balancer's security group
+ * // to the world.
+ * ApplicationListener listener = lb.addListener("Listener", BaseApplicationListenerProps.builder()
+ * .port(80)
+ * // 'open: true' is the default, you can leave it out if you want. Set it
+ * // to 'false' and use `listener.connections` if you want to be selective
+ * // about who can access the load balancer.
+ * .open(true)
+ * .build());
+ * // Create an AutoScaling group and add it as a load balancing
+ * // target to the listener.
+ * listener.addTargets("ApplicationFleet", AddApplicationTargetsProps.builder()
+ * .port(8080)
+ * .targets(List.of(asg))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddApplicationTargetsPropsDsl {
   private val cdkBuilder: AddApplicationTargetsProps.Builder = AddApplicationTargetsProps.builder()

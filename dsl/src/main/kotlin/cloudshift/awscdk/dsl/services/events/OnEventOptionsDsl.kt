@@ -10,6 +10,35 @@ import software.amazon.awscdk.services.events.IRuleTarget
 import software.amazon.awscdk.services.events.OnEventOptions
 import software.constructs.Construct
 
+/**
+ * Standard set of options for `onXxx` event handlers on construct.
+ *
+ * Example:
+ *
+ * ```
+ * // Lambda function containing logic that evaluates compliance with the rule.
+ * Function evalComplianceFn = Function.Builder.create(this, "CustomFunction")
+ * .code(AssetCode.fromInline("exports.handler = (event) =&gt; console.log(event);"))
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .build();
+ * // A custom rule that runs on configuration changes of EC2 instances
+ * CustomRule customRule = CustomRule.Builder.create(this, "Custom")
+ * .configurationChanges(true)
+ * .lambdaFunction(evalComplianceFn)
+ * .ruleScope(RuleScope.fromResource(ResourceType.EC2_INSTANCE))
+ * .build();
+ * // A rule to detect stack drifts
+ * CloudFormationStackDriftDetectionCheck driftRule = new
+ * CloudFormationStackDriftDetectionCheck(this, "Drift");
+ * // Topic to which compliance notification events will be published
+ * Topic complianceTopic = new Topic(this, "ComplianceTopic");
+ * // Send notification on compliance change events
+ * driftRule.onComplianceChange("ComplianceChange", OnEventOptions.builder()
+ * .target(new SnsTopic(complianceTopic))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class OnEventOptionsDsl {
   private val cdkBuilder: OnEventOptions.Builder = OnEventOptions.builder()

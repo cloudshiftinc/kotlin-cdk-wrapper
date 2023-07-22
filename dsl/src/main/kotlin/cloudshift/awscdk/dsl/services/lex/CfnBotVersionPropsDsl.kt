@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBotVersionProps
 
+/**
+ * Properties for defining a `CfnBotVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * CfnBotVersionProps cfnBotVersionProps = CfnBotVersionProps.builder()
+ * .botId("botId")
+ * .botVersionLocaleSpecification(List.of(BotVersionLocaleSpecificationProperty.builder()
+ * .botVersionLocaleDetails(BotVersionLocaleDetailsProperty.builder()
+ * .sourceBotVersion("sourceBotVersion")
+ * .build())
+ * .localeId("localeId")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-botversion.html)
+ */
 @CdkDslMarker
 public class CfnBotVersionPropsDsl {
   private val cdkBuilder: CfnBotVersionProps.Builder = CfnBotVersionProps.builder()

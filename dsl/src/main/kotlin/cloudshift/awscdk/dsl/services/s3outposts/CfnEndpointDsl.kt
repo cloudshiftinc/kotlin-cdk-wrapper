@@ -8,6 +8,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 import software.constructs.Construct
 
+/**
+ * This AWS::S3Outposts::Endpoint resource specifies an endpoint and associates it with the
+ * specified Outpost.
+ *
+ * Amazon S3 on Outposts access points simplify managing data access at scale for shared datasets in
+ * S3 on Outposts. S3 on Outposts uses endpoints to connect to S3 on Outposts buckets so that you can
+ * perform actions within your virtual private cloud (VPC). For more information, see [Accessing S3 on
+ * Outposts using VPC-only access
+ * points](https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html) .
+ *
+ *
+ * It can take up to 5 minutes for this resource to be created.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * CfnEndpoint cfnEndpoint = CfnEndpoint.Builder.create(this, "MyCfnEndpoint")
+ * .outpostId("outpostId")
+ * .securityGroupId("securityGroupId")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .accessType("accessType")
+ * .customerOwnedIpv4Pool("customerOwnedIpv4Pool")
+ * .failedReason(FailedReasonProperty.builder()
+ * .errorCode("errorCode")
+ * .message("message")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointDsl(
   scope: Construct,

@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnDHCPOptionsProps
 
+/**
+ * Properties for defining a `CfnDHCPOptions`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnDHCPOptionsProps cfnDHCPOptionsProps = CfnDHCPOptionsProps.builder()
+ * .domainName("domainName")
+ * .domainNameServers(List.of("domainNameServers"))
+ * .netbiosNameServers(List.of("netbiosNameServers"))
+ * .netbiosNodeType(123)
+ * .ntpServers(List.of("ntpServers"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html)
+ */
 @CdkDslMarker
 public class CfnDHCPOptionsPropsDsl {
   private val cdkBuilder: CfnDHCPOptionsProps.Builder = CfnDHCPOptionsProps.builder()

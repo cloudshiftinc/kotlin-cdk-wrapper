@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Details for client authentication using SASL for VpcConnectivity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * VpcConnectivitySaslProperty vpcConnectivitySaslProperty = VpcConnectivitySaslProperty.builder()
+ * .iam(VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(VpcConnectivityScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-vpcconnectivitysasl.html)
+ */
 @CdkDslMarker
 public class CfnClusterVpcConnectivitySaslPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivitySaslProperty.Builder =

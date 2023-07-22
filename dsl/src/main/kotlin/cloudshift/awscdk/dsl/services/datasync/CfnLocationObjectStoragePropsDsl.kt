@@ -12,6 +12,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationObjectStorageProps
 
+/**
+ * Properties for defining a `CfnLocationObjectStorage`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationObjectStorageProps cfnLocationObjectStorageProps =
+ * CfnLocationObjectStorageProps.builder()
+ * .agentArns(List.of("agentArns"))
+ * // the properties below are optional
+ * .accessKey("accessKey")
+ * .bucketName("bucketName")
+ * .secretKey("secretKey")
+ * .serverCertificate("serverCertificate")
+ * .serverHostname("serverHostname")
+ * .serverPort(123)
+ * .serverProtocol("serverProtocol")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html)
+ */
 @CdkDslMarker
 public class CfnLocationObjectStoragePropsDsl {
   private val cdkBuilder: CfnLocationObjectStorageProps.Builder =

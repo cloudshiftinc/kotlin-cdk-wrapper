@@ -12,6 +12,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.customresources.AwsSdkCall
 import software.amazon.awscdk.customresources.PhysicalResourceId
 
+/**
+ * An AWS SDK call.
+ *
+ * Example:
+ *
+ * ```
+ * AwsCustomResource awsCustom = AwsCustomResource.Builder.create(this, "aws-custom")
+ * .onCreate(AwsSdkCall.builder()
+ * .service("...")
+ * .action("...")
+ * .parameters(Map.of(
+ * "text", "..."))
+ * .physicalResourceId(PhysicalResourceId.of("..."))
+ * .build())
+ * .onUpdate(AwsSdkCall.builder()
+ * .service("...")
+ * .action("...")
+ * .parameters(Map.of(
+ * "text", "...",
+ * "resourceId", new PhysicalResourceIdReference()))
+ * .build())
+ * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
+ * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsSdkCallDsl {
   private val cdkBuilder: AwsSdkCall.Builder = AwsSdkCall.builder()

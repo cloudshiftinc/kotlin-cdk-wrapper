@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.secretsmanager.HostedRotation
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.RotationScheduleProps
 
+/**
+ * Construction properties for a RotationSchedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Function function_;
+ * HostedRotation hostedRotation;
+ * Secret secret;
+ * RotationScheduleProps rotationScheduleProps = RotationScheduleProps.builder()
+ * .secret(secret)
+ * // the properties below are optional
+ * .automaticallyAfter(Duration.minutes(30))
+ * .hostedRotation(hostedRotation)
+ * .rotateImmediatelyOnUpdate(false)
+ * .rotationLambda(function_)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RotationSchedulePropsDsl {
   private val cdkBuilder: RotationScheduleProps.Builder = RotationScheduleProps.builder()

@@ -9,6 +9,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about the automation configuration in single select questions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormSingleSelectQuestionOptionProperty evaluationFormSingleSelectQuestionOptionProperty
+ * = EvaluationFormSingleSelectQuestionOptionProperty.builder()
+ * .refId("refId")
+ * .text("text")
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionoption.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormSingleSelectQuestionOptionPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty.Builder

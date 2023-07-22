@@ -14,6 +14,20 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
 import software.constructs.Construct
 
+/**
+ * The AWS::AmplifyUIBuilder::Component resource specifies a component within an Amplify app.
+ *
+ * A component is a user interface (UI) element that you can customize. Use `ComponentChild` to
+ * configure an instance of a `Component` . A `ComponentChild` instance inherits the configuration of
+ * the main `Component` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-component.html)
+ */
 @CdkDslMarker
 public class CfnComponentDsl(
   scope: Construct,

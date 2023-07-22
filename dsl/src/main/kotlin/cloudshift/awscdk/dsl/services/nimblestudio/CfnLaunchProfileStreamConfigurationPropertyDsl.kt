@@ -10,6 +10,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
+/**
+ * A configuration for a streaming session.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * StreamConfigurationProperty streamConfigurationProperty = StreamConfigurationProperty.builder()
+ * .clipboardMode("clipboardMode")
+ * .ec2InstanceTypes(List.of("ec2InstanceTypes"))
+ * .streamingImageIds(List.of("streamingImageIds"))
+ * // the properties below are optional
+ * .automaticTerminationMode("automaticTerminationMode")
+ * .maxSessionLengthInMinutes(123)
+ * .maxStoppedSessionLengthInMinutes(123)
+ * .sessionBackup(StreamConfigurationSessionBackupProperty.builder()
+ * .maxBackupsToRetain(123)
+ * .mode("mode")
+ * .build())
+ * .sessionPersistenceMode("sessionPersistenceMode")
+ * .sessionStorage(StreamConfigurationSessionStorageProperty.builder()
+ * .mode(List.of("mode"))
+ * // the properties below are optional
+ * .root(StreamingSessionStorageRootProperty.builder()
+ * .linux("linux")
+ * .windows("windows")
+ * .build())
+ * .build())
+ * .volumeConfiguration(VolumeConfigurationProperty.builder()
+ * .iops(123)
+ * .size(123)
+ * .throughput(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLaunchProfileStreamConfigurationPropertyDsl {
   private val cdkBuilder: CfnLaunchProfile.StreamConfigurationProperty.Builder =

@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnVersion
 import software.amazon.awscdk.services.lambda.CfnVersionProps
 
+/**
+ * Properties for defining a `CfnVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnVersionProps cfnVersionProps = CfnVersionProps.builder()
+ * .functionName("functionName")
+ * // the properties below are optional
+ * .codeSha256("codeSha256")
+ * .description("description")
+ * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
+ * .provisionedConcurrentExecutions(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html)
+ */
 @CdkDslMarker
 public class CfnVersionPropsDsl {
   private val cdkBuilder: CfnVersionProps.Builder = CfnVersionProps.builder()

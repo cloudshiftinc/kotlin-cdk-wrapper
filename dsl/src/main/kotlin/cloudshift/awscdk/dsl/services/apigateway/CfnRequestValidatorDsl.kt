@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnRequestValidator
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::RequestValidator` resource sets up basic validation rules for incoming
+ * requests to your API.
+ *
+ * For more information, see [Enable Basic Request Validation for an API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-method-request-validation.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnRequestValidator cfnRequestValidator = CfnRequestValidator.Builder.create(this,
+ * "MyCfnRequestValidator")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .name("name")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-requestvalidator.html)
+ */
 @CdkDslMarker
 public class CfnRequestValidatorDsl(
   scope: Construct,

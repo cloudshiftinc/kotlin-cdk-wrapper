@@ -7,6 +7,25 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity
 import software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentityProps
 
+/**
+ * Properties for defining a `CfnCloudFrontOriginAccessIdentity`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnCloudFrontOriginAccessIdentityProps cfnCloudFrontOriginAccessIdentityProps =
+ * CfnCloudFrontOriginAccessIdentityProps.builder()
+ * .cloudFrontOriginAccessIdentityConfig(CloudFrontOriginAccessIdentityConfigProperty.builder()
+ * .comment("comment")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html)
+ */
 @CdkDslMarker
 public class CfnCloudFrontOriginAccessIdentityPropsDsl {
   private val cdkBuilder: CfnCloudFrontOriginAccessIdentityProps.Builder =

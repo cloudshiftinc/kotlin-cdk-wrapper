@@ -14,6 +14,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomain
 import software.constructs.Construct
 
+/**
+ * Creates a multicast domain using the specified transit gateway.
+ *
+ * The transit gateway must be in the available state before you create a domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object options;
+ * CfnTransitGatewayMulticastDomain cfnTransitGatewayMulticastDomain =
+ * CfnTransitGatewayMulticastDomain.Builder.create(this, "MyCfnTransitGatewayMulticastDomain")
+ * .transitGatewayId("transitGatewayId")
+ * // the properties below are optional
+ * .options(options)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainDsl(
   scope: Construct,

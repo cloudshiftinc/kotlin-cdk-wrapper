@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration of a sankey diagram.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sankeydiagramchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardSankeyDiagramChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.SankeyDiagramChartConfigurationProperty.Builder =

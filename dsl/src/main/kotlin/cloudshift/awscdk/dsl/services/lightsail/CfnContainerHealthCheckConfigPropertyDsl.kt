@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnContainer
 
+/**
+ * `HealthCheckConfig` is a property of the
+ * [PublicEndpoint](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html)
+ * property. It describes the healthcheck configuration of a container deployment on a container
+ * service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * HealthCheckConfigProperty healthCheckConfigProperty = HealthCheckConfigProperty.builder()
+ * .healthyThreshold(123)
+ * .intervalSeconds(123)
+ * .path("path")
+ * .successCodes("successCodes")
+ * .timeoutSeconds(123)
+ * .unhealthyThreshold(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html)
+ */
 @CdkDslMarker
 public class CfnContainerHealthCheckConfigPropertyDsl {
   private val cdkBuilder: CfnContainer.HealthCheckConfigProperty.Builder =

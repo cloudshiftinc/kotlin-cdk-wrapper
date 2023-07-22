@@ -8,6 +8,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * `Deployment` is a property of the
+ * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+ * resource that specifies an AWS CodeDeploy application revision to be deployed to instances in the
+ * deployment group. If you specify an application revision, your target revision is deployed as soon
+ * as the provisioning process is complete.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * DeploymentProperty deploymentProperty = DeploymentProperty.builder()
+ * .revision(RevisionLocationProperty.builder()
+ * .gitHubLocation(GitHubLocationProperty.builder()
+ * .commitId("commitId")
+ * .repository("repository")
+ * .build())
+ * .revisionType("revisionType")
+ * .s3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .bundleType("bundleType")
+ * .eTag("eTag")
+ * .version("version")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .ignoreApplicationStopFailures(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupDeploymentPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.DeploymentProperty.Builder =

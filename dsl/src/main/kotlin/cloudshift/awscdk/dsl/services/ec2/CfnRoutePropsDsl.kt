@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnRouteProps
 
+/**
+ * Properties for defining a `CfnRoute`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnRouteProps cfnRouteProps = CfnRouteProps.builder()
+ * .routeTableId("routeTableId")
+ * // the properties below are optional
+ * .carrierGatewayId("carrierGatewayId")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+ * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
+ * .gatewayId("gatewayId")
+ * .instanceId("instanceId")
+ * .localGatewayId("localGatewayId")
+ * .natGatewayId("natGatewayId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .transitGatewayId("transitGatewayId")
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcPeeringConnectionId("vpcPeeringConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
+ */
 @CdkDslMarker
 public class CfnRoutePropsDsl {
   private val cdkBuilder: CfnRouteProps.Builder = CfnRouteProps.builder()

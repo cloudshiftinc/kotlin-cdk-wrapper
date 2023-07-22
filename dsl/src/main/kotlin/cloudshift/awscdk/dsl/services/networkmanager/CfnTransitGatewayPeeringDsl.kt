@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering
 import software.constructs.Construct
 
+/**
+ * Creates a transit gateway peering connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnTransitGatewayPeering cfnTransitGatewayPeering = CfnTransitGatewayPeering.Builder.create(this,
+ * "MyCfnTransitGatewayPeering")
+ * .coreNetworkId("coreNetworkId")
+ * .transitGatewayArn("transitGatewayArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayPeeringDsl(
   scope: Construct,

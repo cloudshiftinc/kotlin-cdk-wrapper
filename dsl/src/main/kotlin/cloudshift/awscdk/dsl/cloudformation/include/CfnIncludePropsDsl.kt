@@ -11,6 +11,21 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.cloudformation.include.CfnIncludeProps
 
+/**
+ * Construction properties of `CfnInclude`.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude parentTemplate = CfnInclude.Builder.create(this, "ParentStack")
+ * .templateFile("path/to/my-parent-template.json")
+ * .loadNestedStacks(Map.of(
+ * "ChildStack", CfnIncludeProps.builder()
+ * .templateFile("path/to/my-nested-template.json")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnIncludePropsDsl {
   private val cdkBuilder: CfnIncludeProps.Builder = CfnIncludeProps.builder()

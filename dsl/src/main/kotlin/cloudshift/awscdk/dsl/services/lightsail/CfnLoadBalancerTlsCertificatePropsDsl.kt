@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificateProps
 
+/**
+ * Properties for defining a `CfnLoadBalancerTlsCertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnLoadBalancerTlsCertificateProps cfnLoadBalancerTlsCertificateProps =
+ * CfnLoadBalancerTlsCertificateProps.builder()
+ * .certificateDomainName("certificateDomainName")
+ * .certificateName("certificateName")
+ * .loadBalancerName("loadBalancerName")
+ * // the properties below are optional
+ * .certificateAlternativeNames(List.of("certificateAlternativeNames"))
+ * .httpsRedirectionEnabled(false)
+ * .isAttached(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancertlscertificate.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerTlsCertificatePropsDsl {
   private val cdkBuilder: CfnLoadBalancerTlsCertificateProps.Builder =

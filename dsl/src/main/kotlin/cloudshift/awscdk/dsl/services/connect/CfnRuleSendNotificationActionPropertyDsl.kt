@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnRule
 
+/**
+ * Information about the send notification action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * SendNotificationActionProperty sendNotificationActionProperty =
+ * SendNotificationActionProperty.builder()
+ * .content("content")
+ * .contentType("contentType")
+ * .deliveryMethod("deliveryMethod")
+ * .recipient(NotificationRecipientTypeProperty.builder()
+ * .userArns(List.of("userArns"))
+ * .userTags(Map.of(
+ * "userTagsKey", "userTags"))
+ * .build())
+ * // the properties below are optional
+ * .subject("subject")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-sendnotificationaction.html)
+ */
 @CdkDslMarker
 public class CfnRuleSendNotificationActionPropertyDsl {
   private val cdkBuilder: CfnRule.SendNotificationActionProperty.Builder =

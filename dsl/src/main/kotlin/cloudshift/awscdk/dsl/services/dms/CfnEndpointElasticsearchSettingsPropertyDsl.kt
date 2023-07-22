@@ -7,6 +7,32 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines an OpenSearch endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about the available settings,
+ * see [Extra connection attributes when using OpenSearch as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Elasticsearch.html#CHAP_Target.Elasticsearch.Configuration)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * ElasticsearchSettingsProperty elasticsearchSettingsProperty =
+ * ElasticsearchSettingsProperty.builder()
+ * .endpointUri("endpointUri")
+ * .errorRetryDuration(123)
+ * .fullLoadErrorPercentage(123)
+ * .serviceAccessRoleArn("serviceAccessRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-elasticsearchsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointElasticsearchSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.ElasticsearchSettingsProperty.Builder =

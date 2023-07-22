@@ -12,6 +12,18 @@ import software.amazon.awscdk.services.ec2.InitCommandOptions
 import software.amazon.awscdk.services.ec2.InitCommandWaitDuration
 import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 
+/**
+ * Options for InitCommand.
+ *
+ * Example:
+ *
+ * ```
+ * InitServiceRestartHandle handle = new InitServiceRestartHandle();
+ * CloudFormationInit.fromElements(InitCommand.shellCommand("/usr/bin/custom-nginx-install.sh",
+ * InitCommandOptions.builder().serviceRestartHandles(List.of(handle)).build()),
+ * InitService.enable("nginx", InitServiceOptions.builder().serviceRestartHandle(handle).build()));
+ * ```
+ */
 @CdkDslMarker
 public class InitCommandOptionsDsl {
   private val cdkBuilder: InitCommandOptions.Builder = InitCommandOptions.builder()

@@ -9,6 +9,27 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 
+/**
+ * Specifies an object containing resource type and backup options.
+ *
+ * This is only supported for Windows VSS backups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object backupOptions;
+ * AdvancedBackupSettingResourceTypeProperty advancedBackupSettingResourceTypeProperty =
+ * AdvancedBackupSettingResourceTypeProperty.builder()
+ * .backupOptions(backupOptions)
+ * .resourceType("resourceType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-advancedbackupsettingresourcetype.html)
+ */
 @CdkDslMarker
 public class CfnBackupPlanAdvancedBackupSettingResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupPlan.AdvancedBackupSettingResourceTypeProperty.Builder =

@@ -8,6 +8,20 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Configures a custom domain endpoint for the Amazon OpenSearch Service domain.
+ *
+ * Example:
+ *
+ * ```
+ * Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .customEndpoint(CustomEndpointOptions.builder()
+ * .domainName("search.example.com")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomEndpointOptionsDsl {
   private val cdkBuilder: CustomEndpointOptions.Builder = CustomEndpointOptions.builder()

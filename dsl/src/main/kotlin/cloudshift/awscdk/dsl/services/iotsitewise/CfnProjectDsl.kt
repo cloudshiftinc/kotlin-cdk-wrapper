@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnProject
 import software.constructs.Construct
 
+/**
+ * Creates a project in the specified portal.
+ *
+ *
+ * Make sure that the project name and description don't contain confidential information.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .portalId("portalId")
+ * .projectName("projectName")
+ * // the properties below are optional
+ * .assetIds(List.of("assetIds"))
+ * .projectDescription("projectDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

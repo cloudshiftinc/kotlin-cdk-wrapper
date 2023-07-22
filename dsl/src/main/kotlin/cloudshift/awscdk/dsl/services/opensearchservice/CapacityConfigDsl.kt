@@ -8,6 +8,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.opensearchservice.CapacityConfig
 
+/**
+ * Configures the capacity of the cluster such as the instance type and the number of instances.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .capacity(CapacityConfig.builder()
+ * .masterNodes(2)
+ * .warmNodes(2)
+ * .warmInstanceType("ultrawarm1.medium.search")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CapacityConfigDsl {
   private val cdkBuilder: CapacityConfig.Builder = CapacityConfig.builder()

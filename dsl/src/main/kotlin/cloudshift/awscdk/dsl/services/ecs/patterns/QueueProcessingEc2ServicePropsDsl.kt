@@ -30,6 +30,29 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.QueueProcessingEc2ServiceProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * The properties for the QueueProcessingEc2Service service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * QueueProcessingEc2Service queueProcessingEc2Service =
+ * QueueProcessingEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .image(ContainerImage.fromRegistry("test"))
+ * .command(List.of("-c", "4", "amazon.com"))
+ * .enableLogging(false)
+ * .desiredTaskCount(2)
+ * .environment(Map.of(
+ * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
+ * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
+ * .maxScalingCapacity(5)
+ * .containerName("test")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueProcessingEc2ServicePropsDsl {
   private val cdkBuilder: QueueProcessingEc2ServiceProps.Builder =

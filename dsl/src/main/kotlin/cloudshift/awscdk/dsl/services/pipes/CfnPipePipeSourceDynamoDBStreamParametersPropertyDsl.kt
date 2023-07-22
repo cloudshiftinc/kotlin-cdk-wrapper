@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a DynamoDB stream as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceDynamoDBStreamParametersProperty pipeSourceDynamoDBStreamParametersProperty =
+ * PipeSourceDynamoDBStreamParametersProperty.builder()
+ * .startingPosition("startingPosition")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .maximumBatchingWindowInSeconds(123)
+ * .maximumRecordAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .onPartialBatchItemFailure("onPartialBatchItemFailure")
+ * .parallelizationFactor(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcedynamodbstreamparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceDynamoDBStreamParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceDynamoDBStreamParametersProperty.Builder =

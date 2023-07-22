@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * The cluster control plane logging configuration for your cluster.
+ *
+ *
+ * When updating a resource, you must include this `ClusterLogging` property if the previous
+ * CloudFormation template of the resource had it.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * ClusterLoggingProperty clusterLoggingProperty = ClusterLoggingProperty.builder()
+ * .enabledTypes(List.of(LoggingTypeConfigProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-clusterlogging.html)
+ */
 @CdkDslMarker
 public class CfnClusterClusterLoggingPropertyDsl {
   private val cdkBuilder: CfnCluster.ClusterLoggingProperty.Builder =

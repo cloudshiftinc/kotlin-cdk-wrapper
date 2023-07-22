@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps
 
+/**
+ * Properties for defining a `CfnRegistryPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * Object policy;
+ * CfnRegistryPolicyProps cfnRegistryPolicyProps = CfnRegistryPolicyProps.builder()
+ * .policy(policy)
+ * .registryName("registryName")
+ * // the properties below are optional
+ * .revisionId("revisionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnRegistryPolicyPropsDsl {
   private val cdkBuilder: CfnRegistryPolicyProps.Builder = CfnRegistryPolicyProps.builder()

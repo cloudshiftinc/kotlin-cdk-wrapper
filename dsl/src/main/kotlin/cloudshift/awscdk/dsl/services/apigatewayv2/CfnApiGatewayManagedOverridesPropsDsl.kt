@@ -8,6 +8,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps
 
+/**
+ * Properties for defining a `CfnApiGatewayManagedOverrides`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object routeSettings;
+ * Object stageVariables;
+ * CfnApiGatewayManagedOverridesProps cfnApiGatewayManagedOverridesProps =
+ * CfnApiGatewayManagedOverridesProps.builder()
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .integration(IntegrationOverridesProperty.builder()
+ * .description("description")
+ * .integrationMethod("integrationMethod")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .timeoutInMillis(123)
+ * .build())
+ * .route(RouteOverridesProperty.builder()
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .operationName("operationName")
+ * .target("target")
+ * .build())
+ * .stage(StageOverridesProperty.builder()
+ * .accessLogSettings(AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .autoDeploy(false)
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .description("description")
+ * .routeSettings(routeSettings)
+ * .stageVariables(stageVariables)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesPropsDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverridesProps.Builder =

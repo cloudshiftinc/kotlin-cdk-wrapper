@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer
 import software.constructs.Construct
 
+/**
+ * Specifies an Application Load Balancer, a Network Load Balancer, or a Gateway Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+ * .ipAddressType("ipAddressType")
+ * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .scheme("scheme")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetMappings(List.of(SubnetMappingProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .allocationId("allocationId")
+ * .iPv6Address("iPv6Address")
+ * .privateIPv4Address("privateIPv4Address")
+ * .build()))
+ * .subnets(List.of("subnets"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerDsl(
   scope: Construct,

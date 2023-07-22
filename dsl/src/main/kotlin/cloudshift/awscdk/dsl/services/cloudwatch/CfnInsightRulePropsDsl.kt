@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps
 
+/**
+ * Properties for defining a `CfnInsightRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnInsightRuleProps cfnInsightRuleProps = CfnInsightRuleProps.builder()
+ * .ruleBody("ruleBody")
+ * .ruleName("ruleName")
+ * .ruleState("ruleState")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html)
+ */
 @CdkDslMarker
 public class CfnInsightRulePropsDsl {
   private val cdkBuilder: CfnInsightRuleProps.Builder = CfnInsightRuleProps.builder()

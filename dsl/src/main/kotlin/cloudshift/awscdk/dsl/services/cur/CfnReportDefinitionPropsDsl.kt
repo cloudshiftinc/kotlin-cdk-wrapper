@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cur.CfnReportDefinitionProps
 
+/**
+ * Properties for defining a `CfnReportDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cur.*;
+ * CfnReportDefinitionProps cfnReportDefinitionProps = CfnReportDefinitionProps.builder()
+ * .compression("compression")
+ * .format("format")
+ * .refreshClosedReports(false)
+ * .reportName("reportName")
+ * .reportVersioning("reportVersioning")
+ * .s3Bucket("s3Bucket")
+ * .s3Prefix("s3Prefix")
+ * .s3Region("s3Region")
+ * .timeUnit("timeUnit")
+ * // the properties below are optional
+ * .additionalArtifacts(List.of("additionalArtifacts"))
+ * .additionalSchemaElements(List.of("additionalSchemaElements"))
+ * .billingViewArn("billingViewArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cur-reportdefinition.html)
+ */
 @CdkDslMarker
 public class CfnReportDefinitionPropsDsl {
   private val cdkBuilder: CfnReportDefinitionProps.Builder = CfnReportDefinitionProps.builder()

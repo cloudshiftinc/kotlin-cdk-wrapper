@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::Chatbot::SlackChannelConfiguration` resource configures a Slack channel to allow users
+ * to use AWS Chatbot with AWS CloudFormation templates.
+ *
+ * This resource requires some setup to be done in the AWS Chatbot console. To provide the required
+ * Slack workspace ID, you must perform the initial authorization flow with Slack in the AWS Chatbot
+ * console, then copy and paste the workspace ID from the console. For more details, see steps 1-4 in
+ * [Setting Up AWS Chatbot with
+ * Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/setting-up.html#Setup_intro) in the
+ * *AWS Chatbot User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.chatbot.*;
+ * CfnSlackChannelConfiguration cfnSlackChannelConfiguration =
+ * CfnSlackChannelConfiguration.Builder.create(this, "MyCfnSlackChannelConfiguration")
+ * .configurationName("configurationName")
+ * .iamRoleArn("iamRoleArn")
+ * .slackChannelId("slackChannelId")
+ * .slackWorkspaceId("slackWorkspaceId")
+ * // the properties below are optional
+ * .guardrailPolicies(List.of("guardrailPolicies"))
+ * .loggingLevel("loggingLevel")
+ * .snsTopicArns(List.of("snsTopicArns"))
+ * .userRoleRequired(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSlackChannelConfigurationDsl(
   scope: Construct,

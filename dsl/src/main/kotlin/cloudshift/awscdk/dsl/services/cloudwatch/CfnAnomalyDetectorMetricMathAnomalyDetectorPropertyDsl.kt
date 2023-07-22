@@ -9,6 +9,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 
+/**
+ * Indicates the CloudWatch math expression that provides the time series the anomaly detector uses
+ * as input.
+ *
+ * The designated math expression must return a single time series.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricMathAnomalyDetectorProperty metricMathAnomalyDetectorProperty =
+ * MetricMathAnomalyDetectorProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricmathanomalydetector.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorMetricMathAnomalyDetectorPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.Builder =

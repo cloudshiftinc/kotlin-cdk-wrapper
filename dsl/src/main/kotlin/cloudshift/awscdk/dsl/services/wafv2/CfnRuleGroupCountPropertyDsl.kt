@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * Count traffic towards application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CountProperty countProperty = CountProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-count.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupCountPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.CountProperty.Builder = CfnRuleGroup.CountProperty.builder()

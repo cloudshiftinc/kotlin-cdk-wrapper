@@ -14,6 +14,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ram.CfnResourceShare
 import software.constructs.Construct
 
+/**
+ * Creates a resource share.
+ *
+ * You can provide a list of the Amazon Resource Names (ARNs) for the resources that you want to
+ * share, a list of principals you want to share the resources with, and the permissions to grant those
+ * principals.
+ *
+ *
+ * Sharing a resource makes it available for use by principals outside of the AWS account that
+ * created the resource. Sharing doesn't change any permissions or quotas that apply to the resource in
+ * the account that created it.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ram.*;
+ * CfnResourceShare cfnResourceShare = CfnResourceShare.Builder.create(this, "MyCfnResourceShare")
+ * .name("name")
+ * // the properties below are optional
+ * .allowExternalPrincipals(false)
+ * .permissionArns(List.of("permissionArns"))
+ * .principals(List.of("principals"))
+ * .resourceArns(List.of("resourceArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+ */
 @CdkDslMarker
 public class CfnResourceShareDsl(
   scope: Construct,

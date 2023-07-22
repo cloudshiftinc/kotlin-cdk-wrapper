@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe
 
+/**
+ * Configuration details of the component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ComponentConfigurationProperty componentConfigurationProperty =
+ * ComponentConfigurationProperty.builder()
+ * .componentArn("componentArn")
+ * .parameters(List.of(ComponentParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-componentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnContainerRecipeComponentConfigurationPropertyDsl {
   private val cdkBuilder: CfnContainerRecipe.ComponentConfigurationProperty.Builder =

@@ -6,6 +6,54 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A configuration for a set of security-related HTTP response headers.
+ *
+ * CloudFront adds these headers to HTTP responses that it sends for requests that match a cache
+ * behavior associated with this response headers policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * SecurityHeadersConfigProperty securityHeadersConfigProperty =
+ * SecurityHeadersConfigProperty.builder()
+ * .contentSecurityPolicy(ContentSecurityPolicyProperty.builder()
+ * .contentSecurityPolicy("contentSecurityPolicy")
+ * .override(false)
+ * .build())
+ * .contentTypeOptions(ContentTypeOptionsProperty.builder()
+ * .override(false)
+ * .build())
+ * .frameOptions(FrameOptionsProperty.builder()
+ * .frameOption("frameOption")
+ * .override(false)
+ * .build())
+ * .referrerPolicy(ReferrerPolicyProperty.builder()
+ * .override(false)
+ * .referrerPolicy("referrerPolicy")
+ * .build())
+ * .strictTransportSecurity(StrictTransportSecurityProperty.builder()
+ * .accessControlMaxAgeSec(123)
+ * .override(false)
+ * // the properties below are optional
+ * .includeSubdomains(false)
+ * .preload(false)
+ * .build())
+ * .xssProtection(XSSProtectionProperty.builder()
+ * .override(false)
+ * .protection(false)
+ * // the properties below are optional
+ * .modeBlock(false)
+ * .reportUri("reportUri")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-securityheadersconfig.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicySecurityHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.SecurityHeadersConfigProperty.Builder =

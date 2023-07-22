@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable
 import software.constructs.Construct
 
+/**
+ * Describes a local gateway route table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTable cfnLocalGatewayRouteTable =
+ * CfnLocalGatewayRouteTable.Builder.create(this, "MyCfnLocalGatewayRouteTable")
+ * .localGatewayId("localGatewayId")
+ * // the properties below are optional
+ * .mode("mode")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetable.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableDsl(
   scope: Construct,

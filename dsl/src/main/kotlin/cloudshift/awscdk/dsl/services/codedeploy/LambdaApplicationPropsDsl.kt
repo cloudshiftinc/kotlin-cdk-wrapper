@@ -6,6 +6,17 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.LambdaApplicationProps
 
+/**
+ * Construction properties for `LambdaApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application = LambdaApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaApplicationPropsDsl {
   private val cdkBuilder: LambdaApplicationProps.Builder = LambdaApplicationProps.builder()

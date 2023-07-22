@@ -8,6 +8,21 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.services.sqs.QueuePolicyProps
 
+/**
+ * Properties to associate SQS queues with a policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * QueuePolicyProps queuePolicyProps = QueuePolicyProps.builder()
+ * .queues(List.of(queue))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueuePolicyPropsDsl {
   private val cdkBuilder: QueuePolicyProps.Builder = QueuePolicyProps.builder()

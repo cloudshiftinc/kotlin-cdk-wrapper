@@ -7,6 +7,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Inspect the body of the web request as JSON. The body immediately follows the request headers.
+ *
+ * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+ * specification.
+ *
+ * Use the specifications in this object to indicate which parts of the JSON body to inspect using
+ * the rule's inspection criteria. AWS WAF inspects only the parts of the JSON that result from the
+ * matches that you indicate.
+ *
+ * Example JSON: `"JsonBody": { "MatchPattern": { "All": {} }, "MatchScope": "ALL" }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * JsonBodyProperty jsonBodyProperty = JsonBodyProperty.builder()
+ * .matchPattern(JsonMatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build())
+ * .matchScope("matchScope")
+ * // the properties below are optional
+ * .invalidFallbackBehavior("invalidFallbackBehavior")
+ * .oversizeHandling("oversizeHandling")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-jsonbody.html)
+ */
 @CdkDslMarker
 public class CfnWebACLJsonBodyPropertyDsl {
   private val cdkBuilder: CfnWebACL.JsonBodyProperty.Builder = CfnWebACL.JsonBodyProperty.builder()

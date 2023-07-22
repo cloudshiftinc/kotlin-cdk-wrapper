@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CapacityProviderStrategy
 
+/**
+ * A Capacity Provider strategy to use for the service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CapacityProviderStrategy capacityProviderStrategy = CapacityProviderStrategy.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CapacityProviderStrategyDsl {
   private val cdkBuilder: CapacityProviderStrategy.Builder = CapacityProviderStrategy.builder()

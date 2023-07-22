@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnGatewayProps
 
+/**
+ * Properties for defining a `CfnGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnGatewayProps cfnGatewayProps = CfnGatewayProps.builder()
+ * .egressCidrBlocks(List.of("egressCidrBlocks"))
+ * .name("name")
+ * .networks(List.of(GatewayNetworkProperty.builder()
+ * .cidrBlock("cidrBlock")
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html)
+ */
 @CdkDslMarker
 public class CfnGatewayPropsDsl {
   private val cdkBuilder: CfnGatewayProps.Builder = CfnGatewayProps.builder()

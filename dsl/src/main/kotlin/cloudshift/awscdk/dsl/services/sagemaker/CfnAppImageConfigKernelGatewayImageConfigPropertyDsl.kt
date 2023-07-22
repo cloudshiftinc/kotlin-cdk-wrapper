@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 
+/**
+ * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway
+ * app.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * KernelGatewayImageConfigProperty kernelGatewayImageConfigProperty =
+ * KernelGatewayImageConfigProperty.builder()
+ * .kernelSpecs(List.of(KernelSpecProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build()))
+ * // the properties below are optional
+ * .fileSystemConfig(FileSystemConfigProperty.builder()
+ * .defaultGid(123)
+ * .defaultUid(123)
+ * .mountPath("mountPath")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-kernelgatewayimageconfig.html)
+ */
 @CdkDslMarker
 public class CfnAppImageConfigKernelGatewayImageConfigPropertyDsl {
   private val cdkBuilder: CfnAppImageConfig.KernelGatewayImageConfigProperty.Builder =

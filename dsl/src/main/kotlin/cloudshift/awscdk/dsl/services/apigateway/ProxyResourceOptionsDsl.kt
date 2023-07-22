@@ -10,6 +10,19 @@ import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.ProxyResourceOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * Resource resource;
+ * Function handler;
+ * ProxyResource proxy = resource.addProxy(ProxyResourceOptions.builder()
+ * .defaultIntegration(new LambdaIntegration(handler))
+ * // "false" will require explicitly adding methods on the `proxy` resource
+ * .anyMethod(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ProxyResourceOptionsDsl {
   private val cdkBuilder: ProxyResourceOptions.Builder = ProxyResourceOptions.builder()

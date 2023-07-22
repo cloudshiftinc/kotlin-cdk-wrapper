@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The aggregated field well configuration of a `RadarChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-radarchartaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateRadarChartAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.RadarChartAggregatedFieldWellsProperty.Builder =

@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.devopsguru.CfnNotificationChannel
 
+/**
+ * The filter configurations for the Amazon SNS notification topic you use with DevOps Guru.
+ *
+ * You can choose to specify which events or message types to receive notifications for. You can
+ * also choose to specify which severity levels to receive notifications for.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devopsguru.*;
+ * NotificationFilterConfigProperty notificationFilterConfigProperty =
+ * NotificationFilterConfigProperty.builder()
+ * .messageTypes(List.of("messageTypes"))
+ * .severities(List.of("severities"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationfilterconfig.html)
+ */
 @CdkDslMarker
 public class CfnNotificationChannelNotificationFilterConfigPropertyDsl {
   private val cdkBuilder: CfnNotificationChannel.NotificationFilterConfigProperty.Builder =

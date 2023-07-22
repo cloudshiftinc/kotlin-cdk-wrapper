@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * The function that is optimized during model training.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ObjectiveFunctionProperty objectiveFunctionProperty = ObjectiveFunctionProperty.builder()
+ * .function(FunctionProperty.builder()
+ * .condition("condition")
+ * .facet("facet")
+ * .function("function")
+ * .build())
+ * .notes("notes")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-objectivefunction.html)
+ */
 @CdkDslMarker
 public class CfnModelCardObjectiveFunctionPropertyDsl {
   private val cdkBuilder: CfnModelCard.ObjectiveFunctionProperty.Builder =

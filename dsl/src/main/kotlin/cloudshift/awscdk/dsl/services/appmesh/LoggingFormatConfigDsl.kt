@@ -7,6 +7,26 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 import software.amazon.awscdk.services.appmesh.LoggingFormatConfig
 
+/**
+ * All Properties for Envoy Access Logging Format for mesh endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * LoggingFormatConfig loggingFormatConfig = LoggingFormatConfig.builder()
+ * .formatConfig(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoggingFormatConfigDsl {
   private val cdkBuilder: LoggingFormatConfig.Builder = LoggingFormatConfig.builder()

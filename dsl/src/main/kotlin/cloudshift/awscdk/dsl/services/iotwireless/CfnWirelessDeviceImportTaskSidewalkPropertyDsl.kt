@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask
 
+/**
+ * Sidewalk-related information about a wireless device import task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SidewalkProperty sidewalkProperty = SidewalkProperty.builder()
+ * .deviceCreationFile("deviceCreationFile")
+ * .deviceCreationFileList(List.of("deviceCreationFileList"))
+ * .role("role")
+ * .sidewalkManufacturingSn("sidewalkManufacturingSn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdeviceimporttask-sidewalk.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceImportTaskSidewalkPropertyDsl {
   private val cdkBuilder: CfnWirelessDeviceImportTask.SidewalkProperty.Builder =

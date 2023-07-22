@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datapipeline.CfnPipeline
 
+/**
+ * A value or list of parameter values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * ParameterValueProperty parameterValueProperty = ParameterValueProperty.builder()
+ * .id("id")
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalue.html)
+ */
 @CdkDslMarker
 public class CfnPipelineParameterValuePropertyDsl {
   private val cdkBuilder: CfnPipeline.ParameterValueProperty.Builder =

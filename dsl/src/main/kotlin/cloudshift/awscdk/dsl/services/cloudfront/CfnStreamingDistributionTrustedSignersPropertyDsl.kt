@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 
+/**
+ * A list of AWS accounts whose public keys CloudFront can use to verify the signatures of signed
+ * URLs and signed cookies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * TrustedSignersProperty trustedSignersProperty = TrustedSignersProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .awsAccountNumbers(List.of("awsAccountNumbers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-trustedsigners.html)
+ */
 @CdkDslMarker
 public class CfnStreamingDistributionTrustedSignersPropertyDsl {
   private val cdkBuilder: CfnStreamingDistribution.TrustedSignersProperty.Builder =

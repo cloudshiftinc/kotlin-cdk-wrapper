@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.sqs.IQueue
 import software.amazon.awscdk.services.sqs.QueuePolicy
 import software.constructs.Construct
 
+/**
+ * The policy for an SQS Queue.
+ *
+ * Policies define the operations that are allowed on this resource.
+ *
+ * You almost never need to define this construct directly.
+ *
+ * All AWS resources that support resource policies have a method called
+ * `addToResourcePolicy()`, which will automatically create a new resource
+ * policy if one doesn't exist yet, otherwise it will add to the existing
+ * policy.
+ *
+ * Prefer to use `addToResourcePolicy()` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * QueuePolicy queuePolicy = QueuePolicy.Builder.create(this, "MyQueuePolicy")
+ * .queues(List.of(queue))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueuePolicyDsl(
   scope: Construct,

@@ -11,6 +11,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnAccessPoint
 import software.constructs.Construct
 
+/**
+ * The AWS::S3::AccessPoint resource is an Amazon S3 resource type that you can use to access
+ * buckets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object policy;
+ * CfnAccessPoint cfnAccessPoint = CfnAccessPoint.Builder.create(this, "MyCfnAccessPoint")
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .name("name")
+ * .policy(policy)
+ * .publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty.builder()
+ * .blockPublicAcls(false)
+ * .blockPublicPolicy(false)
+ * .ignorePublicAcls(false)
+ * .restrictPublicBuckets(false)
+ * .build())
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointDsl(
   scope: Construct,

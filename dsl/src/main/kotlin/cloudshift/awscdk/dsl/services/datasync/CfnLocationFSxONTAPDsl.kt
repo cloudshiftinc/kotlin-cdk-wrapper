@@ -13,6 +13,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationFSxONTAP` resource creates an endpoint for an Amazon FSx for NetApp
+ * ONTAP file system.
+ *
+ * AWS DataSync can access this endpoint as a source or destination location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxONTAP cfnLocationFSxONTAP = CfnLocationFSxONTAP.Builder.create(this,
+ * "MyCfnLocationFSxONTAP")
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .storageVirtualMachineArn("storageVirtualMachineArn")
+ * // the properties below are optional
+ * .protocol(ProtocolProperty.builder()
+ * .nfs(NFSProperty.builder()
+ * .mountOptions(NfsMountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .build())
+ * .smb(SMBProperty.builder()
+ * .mountOptions(SmbMountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .password("password")
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .build())
+ * .build())
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxontap.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxONTAPDsl(
   scope: Construct,

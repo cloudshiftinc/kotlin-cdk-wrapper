@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
 import software.constructs.Construct
 
+/**
+ * The `AWS::AccessAnalyzer::Analyzer` resource specifies a new analyzer.
+ *
+ * The analyzer is an object that represents the IAM Access Analyzer feature. An analyzer is
+ * required for Access Analyzer to become operational.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.accessanalyzer.*;
+ * CfnAnalyzer cfnAnalyzer = CfnAnalyzer.Builder.create(this, "MyCfnAnalyzer")
+ * .type("type")
+ * // the properties below are optional
+ * .analyzerName("analyzerName")
+ * .archiveRules(List.of(ArchiveRuleProperty.builder()
+ * .filter(List.of(FilterProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .contains(List.of("contains"))
+ * .eq(List.of("eq"))
+ * .exists(false)
+ * .neq(List.of("neq"))
+ * .build()))
+ * .ruleName("ruleName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html)
+ */
 @CdkDslMarker
 public class CfnAnalyzerDsl(
   scope: Construct,

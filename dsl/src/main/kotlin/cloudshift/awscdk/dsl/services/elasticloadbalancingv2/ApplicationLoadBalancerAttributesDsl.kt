@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerAttributes
 
+/**
+ * Properties to reference an existing load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Vpc vpc;
+ * ApplicationLoadBalancerAttributes applicationLoadBalancerAttributes =
+ * ApplicationLoadBalancerAttributes.builder()
+ * .loadBalancerArn("loadBalancerArn")
+ * .securityGroupId("securityGroupId")
+ * // the properties below are optional
+ * .loadBalancerCanonicalHostedZoneId("loadBalancerCanonicalHostedZoneId")
+ * .loadBalancerDnsName("loadBalancerDnsName")
+ * .securityGroupAllowsAllOutbound(false)
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerAttributesDsl {
   private val cdkBuilder: ApplicationLoadBalancerAttributes.Builder =

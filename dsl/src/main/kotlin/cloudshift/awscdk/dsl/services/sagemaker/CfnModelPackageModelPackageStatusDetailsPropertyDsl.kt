@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Specifies the validation and image scan statuses of the model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelPackageStatusDetailsProperty modelPackageStatusDetailsProperty =
+ * ModelPackageStatusDetailsProperty.builder()
+ * .validationStatuses(List.of(ModelPackageStatusItemProperty.builder()
+ * .name("name")
+ * .status("status")
+ * // the properties below are optional
+ * .failureReason("failureReason")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusdetails.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageModelPackageStatusDetailsPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ModelPackageStatusDetailsProperty.Builder =

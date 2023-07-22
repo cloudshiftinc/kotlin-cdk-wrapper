@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.ecs.Ec2TaskDefinition
 import software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskDefinitionOptions
 
+/**
+ * The properties for the ScheduledEc2Task using a task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * Ec2TaskDefinition ec2TaskDefinition;
+ * ScheduledEc2TaskDefinitionOptions scheduledEc2TaskDefinitionOptions =
+ * ScheduledEc2TaskDefinitionOptions.builder()
+ * .taskDefinition(ec2TaskDefinition)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledEc2TaskDefinitionOptionsDsl {
   private val cdkBuilder: ScheduledEc2TaskDefinitionOptions.Builder =

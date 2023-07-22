@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnTaskDefinition
 
+/**
+ * LoRaWANUpdateGatewayTaskEntry object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * LoRaWANUpdateGatewayTaskEntryProperty loRaWANUpdateGatewayTaskEntryProperty =
+ * LoRaWANUpdateGatewayTaskEntryProperty.builder()
+ * .currentVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .updateVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-taskdefinition-lorawanupdategatewaytaskentry.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionLoRaWANUpdateGatewayTaskEntryPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty.Builder =

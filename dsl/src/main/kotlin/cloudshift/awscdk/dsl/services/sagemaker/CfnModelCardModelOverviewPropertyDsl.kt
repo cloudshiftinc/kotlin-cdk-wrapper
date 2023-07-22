@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * An overview about the model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelOverviewProperty modelOverviewProperty = ModelOverviewProperty.builder()
+ * .algorithmType("algorithmType")
+ * .inferenceEnvironment(InferenceEnvironmentProperty.builder()
+ * .containerImage(List.of("containerImage"))
+ * .build())
+ * .modelArtifact(List.of("modelArtifact"))
+ * .modelCreator("modelCreator")
+ * .modelDescription("modelDescription")
+ * .modelId("modelId")
+ * .modelName("modelName")
+ * .modelOwner("modelOwner")
+ * .modelVersion(123)
+ * .problemType("problemType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-modeloverview.html)
+ */
 @CdkDslMarker
 public class CfnModelCardModelOverviewPropertyDsl {
   private val cdkBuilder: CfnModelCard.ModelOverviewProperty.Builder =

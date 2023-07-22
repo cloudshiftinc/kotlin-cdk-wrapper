@@ -10,6 +10,19 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A sheet is an object that contains a set of visuals that are viewed together on one page in a
+ * paginated report.
+ *
+ * Every analysis and dashboard must contain at least one sheet.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sheetdefinition.html)
+ */
 @CdkDslMarker
 public class CfnDashboardSheetDefinitionPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetDefinitionProperty.Builder =

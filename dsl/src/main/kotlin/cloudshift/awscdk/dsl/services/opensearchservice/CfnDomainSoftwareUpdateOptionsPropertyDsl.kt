@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Options for configuring service software updates for a domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * SoftwareUpdateOptionsProperty softwareUpdateOptionsProperty =
+ * SoftwareUpdateOptionsProperty.builder()
+ * .autoSoftwareUpdateEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-softwareupdateoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainSoftwareUpdateOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.SoftwareUpdateOptionsProperty.Builder =

@@ -9,6 +9,17 @@ import software.amazon.awscdk.services.eks.AutoScalingGroupOptions
 import software.amazon.awscdk.services.eks.BootstrapOptions
 import software.amazon.awscdk.services.eks.MachineImageType
 
+/**
+ * Options for adding an AutoScalingGroup as capacity.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * AutoScalingGroup asg;
+ * cluster.connectAutoScalingGroupCapacity(asg, AutoScalingGroupOptions.builder().build());
+ * ```
+ */
 @CdkDslMarker
 public class AutoScalingGroupOptionsDsl {
   private val cdkBuilder: AutoScalingGroupOptions.Builder = AutoScalingGroupOptions.builder()

@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.InventoryDestination
 
+/**
+ * The destination of the inventory.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket inventoryBucket = new Bucket(this, "InventoryBucket");
+ * Bucket dataBucket = Bucket.Builder.create(this, "DataBucket")
+ * .inventories(List.of(Inventory.builder()
+ * .frequency(InventoryFrequency.DAILY)
+ * .includeObjectVersions(InventoryObjectVersion.CURRENT)
+ * .destination(InventoryDestination.builder()
+ * .bucket(inventoryBucket)
+ * .build())
+ * .build(), Inventory.builder()
+ * .frequency(InventoryFrequency.WEEKLY)
+ * .includeObjectVersions(InventoryObjectVersion.ALL)
+ * .destination(InventoryDestination.builder()
+ * .bucket(inventoryBucket)
+ * .prefix("with-all-versions")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InventoryDestinationDsl {
   private val cdkBuilder: InventoryDestination.Builder = InventoryDestination.builder()

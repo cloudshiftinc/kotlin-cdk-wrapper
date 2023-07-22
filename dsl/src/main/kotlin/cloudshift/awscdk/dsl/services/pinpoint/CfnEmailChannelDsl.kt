@@ -9,6 +9,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnEmailChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * You can use the email channel to send email to users. Before you can use Amazon Pinpoint to send
+ * email, you must enable the email channel for an Amazon Pinpoint application.
+ *
+ * The EmailChannel resource represents the status, identity, and other settings of the email
+ * channel for an application
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnEmailChannel cfnEmailChannel = CfnEmailChannel.Builder.create(this, "MyCfnEmailChannel")
+ * .applicationId("applicationId")
+ * .fromAddress("fromAddress")
+ * .identity("identity")
+ * // the properties below are optional
+ * .configurationSet("configurationSet")
+ * .enabled(false)
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html)
+ */
 @CdkDslMarker
 public class CfnEmailChannelDsl(
   scope: Construct,

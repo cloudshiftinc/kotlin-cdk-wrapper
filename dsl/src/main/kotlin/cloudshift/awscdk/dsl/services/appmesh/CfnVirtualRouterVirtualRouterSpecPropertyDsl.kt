@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
 
+/**
+ * An object that represents the specification of a virtual router.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualRouterSpecProperty virtualRouterSpecProperty = VirtualRouterSpecProperty.builder()
+ * .listeners(List.of(VirtualRouterListenerProperty.builder()
+ * .portMapping(PortMappingProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html)
+ */
 @CdkDslMarker
 public class CfnVirtualRouterVirtualRouterSpecPropertyDsl {
   private val cdkBuilder: CfnVirtualRouter.VirtualRouterSpecProperty.Builder =

@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * The S3 Intelligent-Tiering storage class is designed to optimize storage costs by automatically
+ * moving data to the most cost-effective storage access tier, without additional operational overhead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * TieringProperty tieringProperty = TieringProperty.builder()
+ * .accessTier("accessTier")
+ * .days(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-tiering.html)
+ */
 @CdkDslMarker
 public class CfnBucketTieringPropertyDsl {
   private val cdkBuilder: CfnBucket.TieringProperty.Builder = CfnBucket.TieringProperty.builder()

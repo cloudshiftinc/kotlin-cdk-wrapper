@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appsync.OpenIdConnectConfig
 
+/**
+ * Configuration for OpenID Connect authorization in AppSync.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * OpenIdConnectConfig openIdConnectConfig = OpenIdConnectConfig.builder()
+ * .oidcProvider("oidcProvider")
+ * // the properties below are optional
+ * .clientId("clientId")
+ * .tokenExpiryFromAuth(123)
+ * .tokenExpiryFromIssue(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OpenIdConnectConfigDsl {
   private val cdkBuilder: OpenIdConnectConfig.Builder = OpenIdConnectConfig.builder()

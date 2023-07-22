@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * Error information for the data source creation or update.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataSourceErrorInfoProperty dataSourceErrorInfoProperty = DataSourceErrorInfoProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceerrorinfo.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceDataSourceErrorInfoPropertyDsl {
   private val cdkBuilder: CfnDataSource.DataSourceErrorInfoProperty.Builder =

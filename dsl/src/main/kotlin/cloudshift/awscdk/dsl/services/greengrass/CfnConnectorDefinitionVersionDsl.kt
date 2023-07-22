@@ -11,6 +11,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::ConnectorDefinitionVersion` resource represents a connector definition
+ * version for AWS IoT Greengrass .
+ *
+ * A connector definition version contains a list of connectors.
+ *
+ *
+ * To create a connector definition version, you must specify the ID of the connector definition
+ * that you want to associate with the version. For information about creating a connector definition,
+ * see
+ * [`AWS::Greengrass::ConnectorDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
+ * .
+ *
+ * After you create a connector definition version that contains the connectors you want to deploy,
+ * you must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object parameters;
+ * CfnConnectorDefinitionVersion cfnConnectorDefinitionVersion =
+ * CfnConnectorDefinitionVersion.Builder.create(this, "MyCfnConnectorDefinitionVersion")
+ * .connectorDefinitionId("connectorDefinitionId")
+ * .connectors(List.of(ConnectorProperty.builder()
+ * .connectorArn("connectorArn")
+ * .id("id")
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDefinitionVersionDsl(
   scope: Construct,

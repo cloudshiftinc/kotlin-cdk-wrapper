@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 
+/**
+ * Describes a default field and its corresponding value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * DefaultFieldValueProperty defaultFieldValueProperty = DefaultFieldValueProperty.builder()
+ * .defaultValue("defaultValue")
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-defaultfieldvalue.html)
+ */
 @CdkDslMarker
 public class CfnTaskTemplateDefaultFieldValuePropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.DefaultFieldValueProperty.Builder =

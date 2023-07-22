@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule
 import software.constructs.Construct
 
+/**
+ * Specifies an ingress authorization rule to add to a Client VPN endpoint.
+ *
+ * Ingress authorization rules act as firewall rules that grant access to networks. You must
+ * configure ingress authorization rules to enable clients to access resources in AWS or on-premises
+ * networks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnClientVpnAuthorizationRule cfnClientVpnAuthorizationRule =
+ * CfnClientVpnAuthorizationRule.Builder.create(this, "MyCfnClientVpnAuthorizationRule")
+ * .clientVpnEndpointId("clientVpnEndpointId")
+ * .targetNetworkCidr("targetNetworkCidr")
+ * // the properties below are optional
+ * .accessGroupId("accessGroupId")
+ * .authorizeAllGroups(false)
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnAuthorizationRuleDsl(
   scope: Construct,

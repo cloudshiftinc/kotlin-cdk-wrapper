@@ -9,6 +9,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.macie.CfnCustomDataIdentifierProps
 
+/**
+ * Properties for defining a `CfnCustomDataIdentifier`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnCustomDataIdentifierProps cfnCustomDataIdentifierProps =
+ * CfnCustomDataIdentifierProps.builder()
+ * .name("name")
+ * .regex("regex")
+ * // the properties below are optional
+ * .description("description")
+ * .ignoreWords(List.of("ignoreWords"))
+ * .keywords(List.of("keywords"))
+ * .maximumMatchDistance(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-customdataidentifier.html)
+ */
 @CdkDslMarker
 public class CfnCustomDataIdentifierPropsDsl {
   private val cdkBuilder: CfnCustomDataIdentifierProps.Builder =

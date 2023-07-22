@@ -11,6 +11,65 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnEntityProps
 
+/**
+ * Properties for defining a `CfnEntity`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataValueProperty dataValueProperty_;
+ * Object definition;
+ * Object error;
+ * Object relationshipValue;
+ * CfnEntityProps cfnEntityProps = CfnEntityProps.builder()
+ * .entityName("entityName")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .components(Map.of(
+ * "componentsKey", ComponentProperty.builder()
+ * .componentName("componentName")
+ * .componentTypeId("componentTypeId")
+ * .definedIn("definedIn")
+ * .description("description")
+ * .properties(Map.of(
+ * "propertiesKey", PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build()))
+ * .propertyGroups(Map.of(
+ * "propertyGroupsKey", PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build()))
+ * .status(StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .entityId("entityId")
+ * .parentEntityId("parentEntityId")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html)
+ */
 @CdkDslMarker
 public class CfnEntityPropsDsl {
   private val cdkBuilder: CfnEntityProps.Builder = CfnEntityProps.builder()

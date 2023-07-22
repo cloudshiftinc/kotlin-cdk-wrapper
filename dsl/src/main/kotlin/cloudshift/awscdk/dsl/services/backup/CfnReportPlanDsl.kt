@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnReportPlan
 import software.constructs.Construct
 
+/**
+ * Creates a report plan.
+ *
+ * A report plan is a document that contains information about the contents of the report and where
+ * AWS Backup will deliver it.
+ *
+ * If you call `CreateReportPlan` with a plan that already exists, you receive an
+ * `AlreadyExistsException` exception.
+ *
+ * For a sample AWS CloudFormation template, see the [AWS Backup Developer
+ * Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object reportDeliveryChannel;
+ * Object reportSetting;
+ * CfnReportPlan cfnReportPlan = CfnReportPlan.Builder.create(this, "MyCfnReportPlan")
+ * .reportDeliveryChannel(reportDeliveryChannel)
+ * .reportSetting(reportSetting)
+ * // the properties below are optional
+ * .reportPlanDescription("reportPlanDescription")
+ * .reportPlanName("reportPlanName")
+ * .reportPlanTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html)
+ */
 @CdkDslMarker
 public class CfnReportPlanDsl(
   scope: Construct,

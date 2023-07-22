@@ -11,6 +11,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnThemeProps
 
+/**
+ * Properties for defining a `CfnTheme`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * ThemeValuesProperty themeValuesProperty_;
+ * CfnThemeProps cfnThemeProps = CfnThemeProps.builder()
+ * .name("name")
+ * .values(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(ThemeValueProperty.builder()
+ * .children(List.of(themeValuesProperty_))
+ * .value("value")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .appId("appId")
+ * .environmentName("environmentName")
+ * .overrides(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(ThemeValueProperty.builder()
+ * .children(List.of(themeValuesProperty_))
+ * .value("value")
+ * .build())
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-theme.html)
+ */
 @CdkDslMarker
 public class CfnThemePropsDsl {
   private val cdkBuilder: CfnThemeProps.Builder = CfnThemeProps.builder()

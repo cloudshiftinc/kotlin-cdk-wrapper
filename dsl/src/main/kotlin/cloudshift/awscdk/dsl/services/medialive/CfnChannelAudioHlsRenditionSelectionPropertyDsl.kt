@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Selector for HLS audio rendition.
+ *
+ * The parent of this entity is AudioSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioHlsRenditionSelectionProperty audioHlsRenditionSelectionProperty =
+ * AudioHlsRenditionSelectionProperty.builder()
+ * .groupId("groupId")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiohlsrenditionselection.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioHlsRenditionSelectionPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioHlsRenditionSelectionProperty.Builder =

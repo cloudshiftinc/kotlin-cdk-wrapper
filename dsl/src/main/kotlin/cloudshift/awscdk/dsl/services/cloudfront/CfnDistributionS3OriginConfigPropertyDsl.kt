@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that contains information about the Amazon S3 origin.
+ *
+ * If the origin is a custom origin or an S3 bucket that is configured as a website endpoint, use
+ * the `CustomOriginConfig` element instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * S3OriginConfigProperty s3OriginConfigProperty = S3OriginConfigProperty.builder()
+ * .originAccessIdentity("originAccessIdentity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-s3originconfig.html)
+ */
 @CdkDslMarker
 public class CfnDistributionS3OriginConfigPropertyDsl {
   private val cdkBuilder: CfnDistribution.S3OriginConfigProperty.Builder =

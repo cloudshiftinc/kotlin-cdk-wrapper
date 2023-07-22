@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnBasePathMapping
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::BasePathMapping` resource creates a base path that clients who call your
+ * API must use in the invocation URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnBasePathMapping cfnBasePathMapping = CfnBasePathMapping.Builder.create(this,
+ * "MyCfnBasePathMapping")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .id("id")
+ * .restApiId("restApiId")
+ * .stage("stage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html)
+ */
 @CdkDslMarker
 public class CfnBasePathMappingDsl(
   scope: Construct,

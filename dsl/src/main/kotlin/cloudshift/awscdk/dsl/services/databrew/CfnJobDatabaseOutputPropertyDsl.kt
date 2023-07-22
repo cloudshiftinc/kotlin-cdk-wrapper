@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Represents a JDBC database output object which defines the output destination for a DataBrew
+ * recipe job to write into.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * DatabaseOutputProperty databaseOutputProperty = DatabaseOutputProperty.builder()
+ * .databaseOptions(DatabaseTableOutputOptionsProperty.builder()
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * .build())
+ * .glueConnectionName("glueConnectionName")
+ * // the properties below are optional
+ * .databaseOutputMode("databaseOutputMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-databaseoutput.html)
+ */
 @CdkDslMarker
 public class CfnJobDatabaseOutputPropertyDsl {
   private val cdkBuilder: CfnJob.DatabaseOutputProperty.Builder =

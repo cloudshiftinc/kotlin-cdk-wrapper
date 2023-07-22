@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents a Transport Layer Security (TLS) Secret Discovery Service validation
+ * context trust.
+ *
+ * The proxy must be configured with a local SDS provider via a Unix Domain Socket. See App Mesh
+ * [TLS documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) for more info.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TlsValidationContextSdsTrustProperty tlsValidationContextSdsTrustProperty =
+ * TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextsdstrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeTlsValidationContextSdsTrustPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TlsValidationContextSdsTrustProperty.Builder =

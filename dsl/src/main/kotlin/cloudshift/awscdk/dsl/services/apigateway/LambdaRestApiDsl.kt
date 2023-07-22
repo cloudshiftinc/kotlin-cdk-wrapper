@@ -28,6 +28,31 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * Defines an API Gateway REST API with AWS Lambda proxy integration.
+ *
+ * Use the `proxy` property to define a greedy proxy ("{proxy+}") and "ANY"
+ * method from the specified path. If not defined, you will need to explicity
+ * add resources and methods to the API.
+ *
+ * Example:
+ *
+ * ```
+ * Function backend;
+ * LambdaRestApi api = LambdaRestApi.Builder.create(this, "myapi")
+ * .handler(backend)
+ * .proxy(false)
+ * .build();
+ * Resource items = api.root.addResource("items");
+ * items.addMethod("GET"); // GET /items
+ * items.addMethod("POST"); // POST /items
+ * Resource item = items.addResource("{item}");
+ * item.addMethod("GET"); // GET /items/{item}
+ * // the default integration for methods is "handler", but one can
+ * // customize this behavior per method or even a sub path.
+ * item.addMethod("DELETE", new HttpIntegration("http://amazon.com"));
+ * ```
+ */
 @CdkDslMarker
 public class LambdaRestApiDsl(
   scope: Construct,

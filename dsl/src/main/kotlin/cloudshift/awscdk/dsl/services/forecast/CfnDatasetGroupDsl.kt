@@ -12,6 +12,48 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.forecast.CfnDatasetGroup
 import software.constructs.Construct
 
+/**
+ * Creates a dataset group, which holds a collection of related datasets.
+ *
+ * You can add datasets to the dataset group when you create the dataset group, or later by using
+ * the [UpdateDatasetGroup](https://docs.aws.amazon.com/forecast/latest/dg/API_UpdateDatasetGroup.html)
+ * operation.
+ *
+ * After creating a dataset group and adding datasets, you use the dataset group when you create a
+ * predictor. For more information, see [Dataset
+ * groups](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html) .
+ *
+ * To get a list of all your datasets groups, use the
+ * [ListDatasetGroups](https://docs.aws.amazon.com/forecast/latest/dg/API_ListDatasetGroups.html)
+ * operation.
+ *
+ *
+ * The `Status` of a dataset group must be `ACTIVE` before you can use the dataset group to create a
+ * predictor. To get the status, use the
+ * [DescribeDatasetGroup](https://docs.aws.amazon.com/forecast/latest/dg/API_DescribeDatasetGroup.html)
+ * operation.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * CfnDatasetGroup cfnDatasetGroup = CfnDatasetGroup.Builder.create(this, "MyCfnDatasetGroup")
+ * .datasetGroupName("datasetGroupName")
+ * .domain("domain")
+ * // the properties below are optional
+ * .datasetArns(List.of("datasetArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDatasetGroupDsl(
   scope: Construct,

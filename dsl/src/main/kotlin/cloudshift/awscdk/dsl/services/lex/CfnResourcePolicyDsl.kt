@@ -10,6 +10,27 @@ import kotlin.Unit
 import software.amazon.awscdk.services.lex.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Amazon Lex V2 is the only supported version in AWS CloudFormation .
+ *
+ * Specifies a new resource policy with the specified policy statements.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * Object policy;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policy(policy)
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnContactFlow
 import software.constructs.Construct
 
+/**
+ * Specifies a flow for an Amazon Connect instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnContactFlow cfnContactFlow = CfnContactFlow.Builder.create(this, "MyCfnContactFlow")
+ * .content("content")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .state("state")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflow.html)
+ */
 @CdkDslMarker
 public class CfnContactFlowDsl(
   scope: Construct,

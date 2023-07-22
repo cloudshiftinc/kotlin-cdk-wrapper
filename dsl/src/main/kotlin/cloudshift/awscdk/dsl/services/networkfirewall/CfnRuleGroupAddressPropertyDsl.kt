@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * A single IP address specification.
+ *
+ * This is used in the `RuleGroup.MatchAttributes` source and destination specifications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * AddressProperty addressProperty = AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-address.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupAddressPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.AddressProperty.Builder =

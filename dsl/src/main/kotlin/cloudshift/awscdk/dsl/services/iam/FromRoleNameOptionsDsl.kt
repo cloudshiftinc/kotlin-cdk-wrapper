@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.iam.FromRoleNameOptions
 
+/**
+ * Options allowing customizing the behavior of `Role.fromRoleName`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * FromRoleNameOptions fromRoleNameOptions = FromRoleNameOptions.builder()
+ * .addGrantsToResources(false)
+ * .defaultPolicyName("defaultPolicyName")
+ * .mutable(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FromRoleNameOptionsDsl {
   private val cdkBuilder: FromRoleNameOptions.Builder = FromRoleNameOptions.builder()

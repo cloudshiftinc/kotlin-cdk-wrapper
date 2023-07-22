@@ -23,6 +23,41 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to create an EMR Cluster.
+ *
+ * The ClusterConfiguration is defined as Parameters in the state machine definition.
+ *
+ * OUTPUT: the ClusterId.
+ *
+ * Example:
+ *
+ * ```
+ * Role clusterRole = Role.Builder.create(this, "ClusterRole")
+ * .assumedBy(new ServicePrincipal("ec2.amazonaws.com"))
+ * .build();
+ * Role serviceRole = Role.Builder.create(this, "ServiceRole")
+ * .assumedBy(new ServicePrincipal("elasticmapreduce.amazonaws.com"))
+ * .build();
+ * Role autoScalingRole = Role.Builder.create(this, "AutoScalingRole")
+ * .assumedBy(new ServicePrincipal("elasticmapreduce.amazonaws.com"))
+ * .build();
+ * autoScalingRole.assumeRolePolicy.addStatements(
+ * PolicyStatement.Builder.create()
+ * .effect(Effect.ALLOW)
+ * .principals(List.of(
+ * new ServicePrincipal("application-autoscaling.amazonaws.com")))
+ * .actions(List.of("sts:AssumeRole"))
+ * .build());
+ * EmrCreateCluster.Builder.create(this, "Create Cluster")
+ * .instances(InstancesConfigProperty.builder().build())
+ * .clusterRole(clusterRole)
+ * .name(TaskInput.fromJsonPathAt("$.ClusterName").getValue())
+ * .serviceRole(serviceRole)
+ * .autoScalingRole(autoScalingRole)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrCreateClusterDsl(
   scope: Construct,

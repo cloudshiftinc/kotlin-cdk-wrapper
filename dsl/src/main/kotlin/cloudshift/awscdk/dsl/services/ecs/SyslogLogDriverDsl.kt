@@ -9,6 +9,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.SyslogLogDriver
 
+/**
+ * A log driver that sends log information to syslog Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * SyslogLogDriver syslogLogDriver = SyslogLogDriver.Builder.create()
+ * .address("address")
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .facility("facility")
+ * .format("format")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .tlsCaCert("tlsCaCert")
+ * .tlsCert("tlsCert")
+ * .tlsKey("tlsKey")
+ * .tlsSkipVerify(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SyslogLogDriverDsl {
   private val cdkBuilder: SyslogLogDriver.Builder = SyslogLogDriver.Builder.create()

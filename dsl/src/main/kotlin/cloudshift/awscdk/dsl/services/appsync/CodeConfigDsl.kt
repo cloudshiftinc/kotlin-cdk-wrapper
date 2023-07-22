@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CodeConfig
 
+/**
+ * Result of binding `Code` into a `Function`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CodeConfig codeConfig = CodeConfig.builder()
+ * .inlineCode("inlineCode")
+ * .s3Location("s3Location")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeConfigDsl {
   private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()

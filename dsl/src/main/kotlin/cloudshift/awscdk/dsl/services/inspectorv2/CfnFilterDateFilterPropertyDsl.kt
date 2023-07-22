@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 
+/**
+ * Contains details on the time range used to filter findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspectorv2.*;
+ * DateFilterProperty dateFilterProperty = DateFilterProperty.builder()
+ * .endInclusive(123)
+ * .startInclusive(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-datefilter.html)
+ */
 @CdkDslMarker
 public class CfnFilterDateFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.DateFilterProperty.Builder =

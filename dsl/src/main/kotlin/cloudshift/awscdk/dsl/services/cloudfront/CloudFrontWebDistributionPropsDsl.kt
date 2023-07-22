@@ -18,6 +18,26 @@ import software.amazon.awscdk.services.cloudfront.SourceConfiguration
 import software.amazon.awscdk.services.cloudfront.ViewerCertificate
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 
+/**
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket;
+ * ViewerCertificate viewerCertificate = ViewerCertificate.fromIamCertificate("MYIAMROLEIDENTIFIER",
+ * ViewerCertificateOptions.builder()
+ * .aliases(List.of("MYALIAS"))
+ * .build());
+ * CloudFrontWebDistribution.Builder.create(this, "MyCfWebDistribution")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(sourceBucket)
+ * .build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build()))
+ * .viewerCertificate(viewerCertificate)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFrontWebDistributionPropsDsl {
   private val cdkBuilder: CloudFrontWebDistributionProps.Builder =

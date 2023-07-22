@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies next steps to run after the dialog code hook finishes.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-postdialogcodehookinvocationspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotPostDialogCodeHookInvocationSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.PostDialogCodeHookInvocationSpecificationProperty.Builder =

@@ -7,6 +7,20 @@ import kotlin.String
 import software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps
 import software.amazon.awscdk.services.codedeploy.TrafficRouting
 
+/**
+ * Construction properties of `EcsDeploymentConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * EcsDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsDeploymentConfigPropsDsl {
   private val cdkBuilder: EcsDeploymentConfigProps.Builder = EcsDeploymentConfigProps.builder()

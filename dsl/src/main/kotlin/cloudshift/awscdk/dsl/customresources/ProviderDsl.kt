@@ -19,6 +19,24 @@ import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
+/**
+ * Defines an AWS CloudFormation custom resource provider.
+ *
+ * Example:
+ *
+ * ```
+ * Function onEvent;
+ * Function isComplete;
+ * Role myRole;
+ * Provider myProvider = Provider.Builder.create(this, "MyProvider")
+ * .onEventHandler(onEvent)
+ * .isCompleteHandler(isComplete)
+ * .logRetention(RetentionDays.ONE_DAY)
+ * .role(myRole)
+ * .providerFunctionName("the-lambda-name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProviderDsl(
   scope: Construct,

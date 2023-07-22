@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains information about a platform that a component supports.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * ComponentPlatformProperty componentPlatformProperty = ComponentPlatformProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-componentplatform.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionComponentPlatformPropertyDsl {
   private val cdkBuilder: CfnComponentVersion.ComponentPlatformProperty.Builder =

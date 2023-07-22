@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A parameter created in the dataset of decimal data type.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DecimalDatasetParameterProperty decimalDatasetParameterProperty =
+ * DecimalDatasetParameterProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .valueType("valueType")
+ * // the properties below are optional
+ * .defaultValues(DecimalDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of(123))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-decimaldatasetparameter.html)
+ */
 @CdkDslMarker
 public class CfnDataSetDecimalDatasetParameterPropertyDsl {
   private val cdkBuilder: CfnDataSet.DecimalDatasetParameterProperty.Builder =

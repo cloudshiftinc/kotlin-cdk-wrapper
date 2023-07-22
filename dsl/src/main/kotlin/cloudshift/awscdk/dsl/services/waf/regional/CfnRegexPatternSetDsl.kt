@@ -9,6 +9,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet
 import software.constructs.Construct
 
+/**
+ * The `RegexPatternSet` specifies the regular expression (regex) pattern that you want AWS WAF to
+ * search for, such as `B[a&#64;]dB[o0]t` .
+ *
+ * You can then configure AWS WAF to reject those requests.
+ *
+ * Note that you can only create regex pattern sets using a AWS CloudFormation template. To add the
+ * regex pattern sets created through AWS CloudFormation to a RegexMatchSet, use the AWS WAF console,
+ * API, or command line interface (CLI). For more information, see
+ * [UpdateRegexMatchSet](https://docs.aws.amazon.com/waf/latest/APIReference/API_regional_UpdateRegexMatchSet.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnRegexPatternSet cfnRegexPatternSet = CfnRegexPatternSet.Builder.create(this,
+ * "MyCfnRegexPatternSet")
+ * .name("name")
+ * .regexPatternStrings(List.of("regexPatternStrings"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-regexpatternset.html)
+ */
 @CdkDslMarker
 public class CfnRegexPatternSetDsl(
   scope: Construct,

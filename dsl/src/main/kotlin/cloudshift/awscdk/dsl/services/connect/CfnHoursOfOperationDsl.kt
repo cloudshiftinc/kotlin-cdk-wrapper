@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnHoursOfOperation
 import software.constructs.Construct
 
+/**
+ * Specifies hours of operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnHoursOfOperation cfnHoursOfOperation = CfnHoursOfOperation.Builder.create(this,
+ * "MyCfnHoursOfOperation")
+ * .config(List.of(HoursOfOperationConfigProperty.builder()
+ * .day("day")
+ * .endTime(HoursOfOperationTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .startTime(HoursOfOperationTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .build()))
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * .timeZone("timeZone")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html)
+ */
 @CdkDslMarker
 public class CfnHoursOfOperationDsl(
   scope: Construct,

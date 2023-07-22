@@ -8,6 +8,35 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
 
+/**
+ * Settings for a secret resource, which references a secret from AWS Secrets Manager .
+ *
+ * AWS IoT Greengrass stores a local, encrypted copy of the secret on the Greengrass core, where it
+ * can be securely accessed by connectors and Lambda functions. For more information, see [Deploy
+ * Secrets to the AWS IoT Greengrass
+ * Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html) in the *Developer
+ * Guide* .
+ *
+ * In an AWS CloudFormation template, `SecretsManagerSecretResourceData` can be used in the
+ * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourcedatacontainer.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * SecretsManagerSecretResourceDataProperty secretsManagerSecretResourceDataProperty =
+ * SecretsManagerSecretResourceDataProperty.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-secretsmanagersecretresourcedata.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionSecretsManagerSecretResourceDataPropertyDsl {
   private val cdkBuilder: CfnResourceDefinition.SecretsManagerSecretResourceDataProperty.Builder =

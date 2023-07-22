@@ -11,6 +11,56 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 
+/**
+ * Parameters for DASH packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * DashPackageProperty dashPackageProperty = DashPackageProperty.builder()
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .encryption(DashEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .keyRotationIntervalSeconds(123)
+ * .build())
+ * .includeIframeOnlyStream(false)
+ * .manifestLayout("manifestLayout")
+ * .manifestWindowSeconds(123)
+ * .minBufferTimeSeconds(123)
+ * .minUpdatePeriodSeconds(123)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .profile("profile")
+ * .segmentDurationSeconds(123)
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .suggestedPresentationDelaySeconds(123)
+ * .utcTiming("utcTiming")
+ * .utcTimingUri("utcTimingUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-dashpackage.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointDashPackagePropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.DashPackageProperty.Builder =

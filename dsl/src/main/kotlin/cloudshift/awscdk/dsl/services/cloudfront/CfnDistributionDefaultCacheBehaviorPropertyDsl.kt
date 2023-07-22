@@ -12,6 +12,63 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that describes the default cache behavior if you don't specify a `CacheBehavior`
+ * element or if request URLs don't match any of the values of `PathPattern` in `CacheBehavior`
+ * elements.
+ *
+ * You must create exactly one default cache behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * DefaultCacheBehaviorProperty defaultCacheBehaviorProperty =
+ * DefaultCacheBehaviorProperty.builder()
+ * .targetOriginId("targetOriginId")
+ * .viewerProtocolPolicy("viewerProtocolPolicy")
+ * // the properties below are optional
+ * .allowedMethods(List.of("allowedMethods"))
+ * .cachedMethods(List.of("cachedMethods"))
+ * .cachePolicyId("cachePolicyId")
+ * .compress(false)
+ * .defaultTtl(123)
+ * .fieldLevelEncryptionId("fieldLevelEncryptionId")
+ * .forwardedValues(ForwardedValuesProperty.builder()
+ * .queryString(false)
+ * // the properties below are optional
+ * .cookies(CookiesProperty.builder()
+ * .forward("forward")
+ * // the properties below are optional
+ * .whitelistedNames(List.of("whitelistedNames"))
+ * .build())
+ * .headers(List.of("headers"))
+ * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
+ * .build())
+ * .functionAssociations(List.of(FunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .functionArn("functionArn")
+ * .build()))
+ * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .includeBody(false)
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .build()))
+ * .maxTtl(123)
+ * .minTtl(123)
+ * .originRequestPolicyId("originRequestPolicyId")
+ * .realtimeLogConfigArn("realtimeLogConfigArn")
+ * .responseHeadersPolicyId("responseHeadersPolicyId")
+ * .smoothStreaming(false)
+ * .trustedKeyGroups(List.of("trustedKeyGroups"))
+ * .trustedSigners(List.of("trustedSigners"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-defaultcachebehavior.html)
+ */
 @CdkDslMarker
 public class CfnDistributionDefaultCacheBehaviorPropertyDsl {
   private val cdkBuilder: CfnDistribution.DefaultCacheBehaviorProperty.Builder =

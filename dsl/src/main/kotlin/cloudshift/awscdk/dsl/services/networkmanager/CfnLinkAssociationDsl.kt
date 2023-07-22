@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.networkmanager.CfnLinkAssociation
 import software.constructs.Construct
 
+/**
+ * Describes the association between a device and a link.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnLinkAssociation cfnLinkAssociation = CfnLinkAssociation.Builder.create(this,
+ * "MyCfnLinkAssociation")
+ * .deviceId("deviceId")
+ * .globalNetworkId("globalNetworkId")
+ * .linkId("linkId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-linkassociation.html)
+ */
 @CdkDslMarker
 public class CfnLinkAssociationDsl(
   scope: Construct,

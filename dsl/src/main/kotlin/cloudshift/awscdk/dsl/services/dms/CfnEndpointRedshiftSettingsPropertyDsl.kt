@@ -9,6 +9,53 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines an Amazon Redshift endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about other available settings,
+ * see [Extra connection attributes when using Amazon Redshift as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redshift.html#CHAP_Target.Redshift.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * RedshiftSettingsProperty redshiftSettingsProperty = RedshiftSettingsProperty.builder()
+ * .acceptAnyDate(false)
+ * .afterConnectScript("afterConnectScript")
+ * .bucketFolder("bucketFolder")
+ * .bucketName("bucketName")
+ * .caseSensitiveNames(false)
+ * .compUpdate(false)
+ * .connectionTimeout(123)
+ * .dateFormat("dateFormat")
+ * .emptyAsNull(false)
+ * .encryptionMode("encryptionMode")
+ * .explicitIds(false)
+ * .fileTransferUploadStreams(123)
+ * .loadTimeout(123)
+ * .mapBooleanAsBoolean(false)
+ * .maxFileSize(123)
+ * .removeQuotes(false)
+ * .replaceChars("replaceChars")
+ * .replaceInvalidChars("replaceInvalidChars")
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverSideEncryptionKmsKeyId("serverSideEncryptionKmsKeyId")
+ * .serviceAccessRoleArn("serviceAccessRoleArn")
+ * .timeFormat("timeFormat")
+ * .trimBlanks(false)
+ * .truncateColumns(false)
+ * .writeBufferSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redshiftsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointRedshiftSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.RedshiftSettingsProperty.Builder =

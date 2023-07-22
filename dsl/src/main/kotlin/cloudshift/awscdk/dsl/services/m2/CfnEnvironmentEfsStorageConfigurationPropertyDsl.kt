@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.m2.CfnEnvironment
 
+/**
+ * Defines the storage configuration for an Amazon EFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * EfsStorageConfigurationProperty efsStorageConfigurationProperty =
+ * EfsStorageConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .mountPoint("mountPoint")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-m2-environment-efsstorageconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentEfsStorageConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.EfsStorageConfigurationProperty.Builder =

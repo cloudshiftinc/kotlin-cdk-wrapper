@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
 
+/**
+ * A component for DNS/routing control readiness checks and architecture checks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * DNSTargetResourceProperty dNSTargetResourceProperty = DNSTargetResourceProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneArn("hostedZoneArn")
+ * .recordSetId("recordSetId")
+ * .recordType("recordType")
+ * .targetResource(TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-dnstargetresource.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetDNSTargetResourcePropertyDsl {
   private val cdkBuilder: CfnResourceSet.DNSTargetResourceProperty.Builder =

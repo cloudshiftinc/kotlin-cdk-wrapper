@@ -14,6 +14,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnCustomActionType
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodePipeline::CustomActionType` resource creates a custom action for activities that
+ * aren't included in the CodePipeline default actions, such as running an internally developed build
+ * process or a test suite.
+ *
+ * You can use these custom actions in the stage of a pipeline. For more information, see [Create
+ * and Add a Custom Action in AWS
+ * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html)
+ * in the *AWS CodePipeline User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CfnCustomActionType cfnCustomActionType = CfnCustomActionType.Builder.create(this,
+ * "MyCfnCustomActionType")
+ * .category("category")
+ * .inputArtifactDetails(ArtifactDetailsProperty.builder()
+ * .maximumCount(123)
+ * .minimumCount(123)
+ * .build())
+ * .outputArtifactDetails(ArtifactDetailsProperty.builder()
+ * .maximumCount(123)
+ * .minimumCount(123)
+ * .build())
+ * .provider("provider")
+ * .version("version")
+ * // the properties below are optional
+ * .configurationProperties(List.of(ConfigurationPropertiesProperty.builder()
+ * .key(false)
+ * .name("name")
+ * .required(false)
+ * .secret(false)
+ * // the properties below are optional
+ * .description("description")
+ * .queryable(false)
+ * .type("type")
+ * .build()))
+ * .settings(SettingsProperty.builder()
+ * .entityUrlTemplate("entityUrlTemplate")
+ * .executionUrlTemplate("executionUrlTemplate")
+ * .revisionUrlTemplate("revisionUrlTemplate")
+ * .thirdPartyConfigurationUrl("thirdPartyConfigurationUrl")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html)
+ */
 @CdkDslMarker
 public class CfnCustomActionTypeDsl(
   scope: Construct,

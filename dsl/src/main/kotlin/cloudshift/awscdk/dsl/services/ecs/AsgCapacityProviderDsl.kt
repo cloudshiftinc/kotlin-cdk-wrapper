@@ -12,6 +12,43 @@ import software.amazon.awscdk.services.ecs.MachineImageType
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * An Auto Scaling Group Capacity Provider.
+ *
+ * This allows an ECS cluster to target
+ * a specific EC2 Auto Scaling Group for the placement of tasks. Optionally (and
+ * recommended), ECS can manage the number of instances in the ASG to fit the
+ * tasks, and can ensure that instances are not prematurely terminated while
+ * there are still tasks running on them.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
+ * .build();
+ * // Either add default capacity
+ * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .desiredCapacity(3)
+ * .build());
+ * // Or add customized capacity. Be sure to start the Amazon ECS-optimized AMI.
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .machineImage(EcsOptimizedImage.amazonLinux())
+ * // Or use Amazon ECS-Optimized Amazon Linux 2 AMI
+ * // machineImage: EcsOptimizedImage.amazonLinux2(),
+ * .desiredCapacity(3)
+ * .build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * ```
+ */
 @CdkDslMarker
 public class AsgCapacityProviderDsl(
   scope: Construct,

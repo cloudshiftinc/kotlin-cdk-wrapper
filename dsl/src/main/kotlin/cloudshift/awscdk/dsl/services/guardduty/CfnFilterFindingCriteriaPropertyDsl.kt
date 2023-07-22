@@ -9,6 +9,38 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnFilter
 
+/**
+ * Represents a map of finding properties that match specified conditions and values when querying
+ * findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * Object criterion;
+ * FindingCriteriaProperty findingCriteriaProperty = FindingCriteriaProperty.builder()
+ * .criterion(criterion)
+ * .itemType(ConditionProperty.builder()
+ * .eq(List.of("eq"))
+ * .equalTo(List.of("equalTo"))
+ * .greaterThan(123)
+ * .greaterThanOrEqual(123)
+ * .gt(123)
+ * .gte(123)
+ * .lessThan(123)
+ * .lessThanOrEqual(123)
+ * .lt(123)
+ * .lte(123)
+ * .neq(List.of("neq"))
+ * .notEquals(List.of("notEquals"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-findingcriteria.html)
+ */
 @CdkDslMarker
 public class CfnFilterFindingCriteriaPropertyDsl {
   private val cdkBuilder: CfnFilter.FindingCriteriaProperty.Builder =

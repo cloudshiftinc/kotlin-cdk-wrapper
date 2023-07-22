@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 
+/**
+ * Information about a collection scheme that uses a time period to decide how often to collect
+ * data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * TimeBasedCollectionSchemeProperty timeBasedCollectionSchemeProperty =
+ * TimeBasedCollectionSchemeProperty.builder()
+ * .periodMs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedcollectionscheme.html)
+ */
 @CdkDslMarker
 public class CfnCampaignTimeBasedCollectionSchemePropertyDsl {
   private val cdkBuilder: CfnCampaign.TimeBasedCollectionSchemeProperty.Builder =

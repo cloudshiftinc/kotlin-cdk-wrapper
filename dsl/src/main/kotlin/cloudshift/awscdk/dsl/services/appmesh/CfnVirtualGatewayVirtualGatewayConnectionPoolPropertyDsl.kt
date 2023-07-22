@@ -6,6 +6,38 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents the type of virtual gateway connection pool.
+ *
+ * Only one protocol is used at a time and should be the same protocol as the one chosen under port
+ * mapping.
+ *
+ * If not present the default value for `maxPendingRequests` is `2147483647` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayConnectionPoolProperty virtualGatewayConnectionPoolProperty =
+ * VirtualGatewayConnectionPoolProperty.builder()
+ * .grpc(VirtualGatewayGrpcConnectionPoolProperty.builder()
+ * .maxRequests(123)
+ * .build())
+ * .http(VirtualGatewayHttpConnectionPoolProperty.builder()
+ * .maxConnections(123)
+ * // the properties below are optional
+ * .maxPendingRequests(123)
+ * .build())
+ * .http2(VirtualGatewayHttp2ConnectionPoolProperty.builder()
+ * .maxRequests(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayconnectionpool.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayConnectionPoolProperty.Builder =

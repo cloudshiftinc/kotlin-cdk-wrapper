@@ -13,6 +13,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnChannel
 import software.constructs.Construct
 
+/**
+ * Creates a channel to receive content.
+ *
+ * After it's created, a channel provides static input URLs. These URLs remain the same throughout
+ * the lifetime of the channel, regardless of any failures or upgrades that might occur. Use these URLs
+ * to configure the outputs of your upstream encoder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnChannel cfnChannel = CfnChannel.Builder.create(this, "MyCfnChannel")
+ * .id("id")
+ * // the properties below are optional
+ * .description("description")
+ * .egressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .hlsIngest(HlsIngestProperty.builder()
+ * .ingestEndpoints(List.of(IngestEndpointProperty.builder()
+ * .id("id")
+ * .password("password")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .build())
+ * .ingressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelDsl(
   scope: Construct,

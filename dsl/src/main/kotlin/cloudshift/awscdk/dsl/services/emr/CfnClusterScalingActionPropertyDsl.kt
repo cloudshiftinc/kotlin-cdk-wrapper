@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `ScalingAction` is a subproperty of the `ScalingRule` property type.
+ *
+ * `ScalingAction` determines the type of adjustment the automatic scaling activity makes when
+ * triggered, and the periodicity of the adjustment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ScalingActionProperty scalingActionProperty = ScalingActionProperty.builder()
+ * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType("adjustmentType")
+ * .coolDown(123)
+ * .build())
+ * // the properties below are optional
+ * .market("market")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scalingaction.html)
+ */
 @CdkDslMarker
 public class CfnClusterScalingActionPropertyDsl {
   private val cdkBuilder: CfnCluster.ScalingActionProperty.Builder =

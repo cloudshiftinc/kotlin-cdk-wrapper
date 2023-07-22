@@ -16,6 +16,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iam.CfnRole
 import software.constructs.Construct
 
+/**
+ * Creates a new role for your AWS account .
+ *
+ * For more information about roles, see [IAM
+ * roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html) in the *IAM User Guide* . For
+ * information about quotas for role names and the number of roles you can create, see [IAM and AWS STS
+ * quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object assumeRolePolicyDocument;
+ * Object policyDocument;
+ * CfnRole cfnRole = CfnRole.Builder.create(this, "MyCfnRole")
+ * .assumeRolePolicyDocument(assumeRolePolicyDocument)
+ * // the properties below are optional
+ * .description("description")
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .maxSessionDuration(123)
+ * .path("path")
+ * .permissionsBoundary("permissionsBoundary")
+ * .policies(List.of(PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build()))
+ * .roleName("roleName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html)
+ */
 @CdkDslMarker
 public class CfnRoleDsl(
   scope: Construct,

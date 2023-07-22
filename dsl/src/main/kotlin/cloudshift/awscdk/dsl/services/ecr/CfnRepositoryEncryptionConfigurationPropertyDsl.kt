@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecr.CfnRepository
 
+/**
+ * The encryption configuration for the repository. This determines how the contents of your
+ * repository are encrypted at rest.
+ *
+ * By default, when no encryption configuration is set or the `AES256` encryption type is used,
+ * Amazon ECR uses server-side encryption with Amazon S3-managed encryption keys which encrypts your
+ * data at rest using an AES-256 encryption algorithm. This does not require any action on your part.
+ *
+ * For more control over the encryption of the contents of your repository, you can use server-side
+ * encryption with AWS Key Management Service key stored in AWS Key Management Service ( AWS KMS ) to
+ * encrypt your images. For more information, see [Amazon ECR encryption at
+ * rest](https://docs.aws.amazon.com/AmazonECR/latest/userguide/encryption-at-rest.html) in the *Amazon
+ * Elastic Container Registry User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * EncryptionConfigurationProperty encryptionConfigurationProperty =
+ * EncryptionConfigurationProperty.builder()
+ * .encryptionType("encryptionType")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-repository-encryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnRepository.EncryptionConfigurationProperty.Builder =

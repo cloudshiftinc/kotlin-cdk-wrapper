@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.rds.CfnDBProxyEndpoint
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBProxyEndpoint` resource creates or updates a DB proxy endpoint.
+ *
+ * You can use custom proxy endpoints to access a proxy through a different VPC than the proxy's
+ * default VPC.
+ *
+ * For more information about RDS Proxy, see
+ * [AWS::RDS::DBProxy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBProxyEndpoint cfnDBProxyEndpoint = CfnDBProxyEndpoint.Builder.create(this,
+ * "MyCfnDBProxyEndpoint")
+ * .dbProxyEndpointName("dbProxyEndpointName")
+ * .dbProxyName("dbProxyName")
+ * .vpcSubnetIds(List.of("vpcSubnetIds"))
+ * // the properties below are optional
+ * .tags(List.of(TagFormatProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetRole("targetRole")
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxyendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyEndpointDsl(
   scope: Construct,

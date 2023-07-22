@@ -9,6 +9,22 @@ import software.amazon.awscdk.services.apigateway.TokenAuthorizerProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Properties for TokenAuthorizer.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * TokenAuthorizer auth = TokenAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TokenAuthorizerPropsDsl {
   private val cdkBuilder: TokenAuthorizerProps.Builder = TokenAuthorizerProps.builder()

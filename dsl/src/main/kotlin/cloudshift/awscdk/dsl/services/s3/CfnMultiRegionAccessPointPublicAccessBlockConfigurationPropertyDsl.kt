@@ -7,6 +7,32 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint
 
+/**
+ * The PublicAccessBlock configuration that you want to apply to this Amazon S3 Multi-Region Access
+ * Point.
+ *
+ * You can enable the configuration options in any combination. For more information about when
+ * Amazon S3 considers an object public, see [The Meaning of
+ * "Public"](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status)
+ * in the *Amazon S3 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * PublicAccessBlockConfigurationProperty publicAccessBlockConfigurationProperty =
+ * PublicAccessBlockConfigurationProperty.builder()
+ * .blockPublicAcls(false)
+ * .blockPublicPolicy(false)
+ * .ignorePublicAcls(false)
+ * .restrictPublicBuckets(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspoint-publicaccessblockconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMultiRegionAccessPointPublicAccessBlockConfigurationPropertyDsl {
   private val cdkBuilder: CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty.Builder =

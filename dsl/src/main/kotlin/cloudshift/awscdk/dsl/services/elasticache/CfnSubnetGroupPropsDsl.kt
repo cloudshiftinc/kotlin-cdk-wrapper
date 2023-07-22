@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.elasticache.CfnSubnetGroupProps
 
+/**
+ * Properties for defining a `CfnSubnetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnSubnetGroupProps cfnSubnetGroupProps = CfnSubnetGroupProps.builder()
+ * .description("description")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .cacheSubnetGroupName("cacheSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-subnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnSubnetGroupPropsDsl {
   private val cdkBuilder: CfnSubnetGroupProps.Builder = CfnSubnetGroupProps.builder()

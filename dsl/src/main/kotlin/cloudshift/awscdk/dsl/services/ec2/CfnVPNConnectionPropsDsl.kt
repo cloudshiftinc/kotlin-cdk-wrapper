@@ -14,6 +14,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPNConnectionProps
 
+/**
+ * Properties for defining a `CfnVPNConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPNConnectionProps cfnVPNConnectionProps = CfnVPNConnectionProps.builder()
+ * .customerGatewayId("customerGatewayId")
+ * .type("type")
+ * // the properties below are optional
+ * .staticRoutesOnly(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitGatewayId("transitGatewayId")
+ * .vpnGatewayId("vpnGatewayId")
+ * .vpnTunnelOptionsSpecifications(List.of(VpnTunnelOptionsSpecificationProperty.builder()
+ * .preSharedKey("preSharedKey")
+ * .tunnelInsideCidr("tunnelInsideCidr")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnection.html)
+ */
 @CdkDslMarker
 public class CfnVPNConnectionPropsDsl {
   private val cdkBuilder: CfnVPNConnectionProps.Builder = CfnVPNConnectionProps.builder()

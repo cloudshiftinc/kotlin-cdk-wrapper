@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.servicediscovery.CfnInstanceProps
 
+/**
+ * Properties for defining a `CfnInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Object instanceAttributes;
+ * CfnInstanceProps cfnInstanceProps = CfnInstanceProps.builder()
+ * .instanceAttributes(instanceAttributes)
+ * .serviceId("serviceId")
+ * // the properties below are optional
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstancePropsDsl {
   private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()

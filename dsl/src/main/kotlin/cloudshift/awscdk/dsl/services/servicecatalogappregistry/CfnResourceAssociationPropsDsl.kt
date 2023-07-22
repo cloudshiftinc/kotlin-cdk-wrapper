@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalogappregistry.CfnResourceAssociationProps
 
+/**
+ * Properties for defining a `CfnResourceAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalogappregistry.*;
+ * CfnResourceAssociationProps cfnResourceAssociationProps = CfnResourceAssociationProps.builder()
+ * .application("application")
+ * .resource("resource")
+ * .resourceType("resourceType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-resourceassociation.html)
+ */
 @CdkDslMarker
 public class CfnResourceAssociationPropsDsl {
   private val cdkBuilder: CfnResourceAssociationProps.Builder =

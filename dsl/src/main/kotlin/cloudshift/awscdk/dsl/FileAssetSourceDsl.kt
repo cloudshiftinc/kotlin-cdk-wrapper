@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.FileAssetPackaging
 import software.amazon.awscdk.FileAssetSource
 
+/**
+ * Represents the source for a file asset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * FileAssetSource fileAssetSource = FileAssetSource.builder()
+ * .sourceHash("sourceHash")
+ * // the properties below are optional
+ * .deployTime(false)
+ * .executable(List.of("executable"))
+ * .fileName("fileName")
+ * .packaging(FileAssetPackaging.ZIP_DIRECTORY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileAssetSourceDsl {
   private val cdkBuilder: FileAssetSource.Builder = FileAssetSource.builder()

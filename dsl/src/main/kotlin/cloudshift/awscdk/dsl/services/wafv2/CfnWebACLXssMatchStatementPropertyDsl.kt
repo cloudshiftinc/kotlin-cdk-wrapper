@@ -9,6 +9,74 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement that inspects for cross-site scripting (XSS) attacks.
+ *
+ * In XSS attacks, the attacker uses vulnerabilities in a benign website as a vehicle to inject
+ * malicious client-site scripts into other legitimate web browsers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * Object allQueryArguments;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object singleQueryArgument;
+ * Object uriPath;
+ * XssMatchStatementProperty xssMatchStatementProperty = XssMatchStatementProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .allQueryArguments(allQueryArguments)
+ * .body(BodyProperty.builder()
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .cookies(CookiesProperty.builder()
+ * .matchPattern(CookieMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedCookies(List.of("excludedCookies"))
+ * .includedCookies(List.of("includedCookies"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .headers(HeadersProperty.builder()
+ * .matchPattern(HeaderMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedHeaders(List.of("excludedHeaders"))
+ * .includedHeaders(List.of("includedHeaders"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .jsonBody(JsonBodyProperty.builder()
+ * .matchPattern(JsonMatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build())
+ * .matchScope("matchScope")
+ * // the properties below are optional
+ * .invalidFallbackBehavior("invalidFallbackBehavior")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .singleQueryArgument(singleQueryArgument)
+ * .uriPath(uriPath)
+ * .build())
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-xssmatchstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLXssMatchStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.XssMatchStatementProperty.Builder =

@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigateway.VpcLinkProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 
+/**
+ * Properties for a VpcLink.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * NetworkLoadBalancer nlb = NetworkLoadBalancer.Builder.create(this, "NLB")
+ * .vpc(vpc)
+ * .build();
+ * VpcLink link = VpcLink.Builder.create(this, "link")
+ * .targets(List.of(nlb))
+ * .build();
+ * Integration integration = Integration.Builder.create()
+ * .type(IntegrationType.HTTP_PROXY)
+ * .options(IntegrationOptions.builder()
+ * .connectionType(ConnectionType.VPC_LINK)
+ * .vpcLink(link)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcLinkPropsDsl {
   private val cdkBuilder: VpcLinkProps.Builder = VpcLinkProps.builder()

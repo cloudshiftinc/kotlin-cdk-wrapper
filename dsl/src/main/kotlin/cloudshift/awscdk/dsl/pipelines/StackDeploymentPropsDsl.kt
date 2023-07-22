@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.StackAsset
 import software.amazon.awscdk.pipelines.StackDeploymentProps
 
+/**
+ * Properties for a `StackDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.pipelines.*;
+ * StackDeploymentProps stackDeploymentProps = StackDeploymentProps.builder()
+ * .absoluteTemplatePath("absoluteTemplatePath")
+ * .constructPath("constructPath")
+ * .stackArtifactId("stackArtifactId")
+ * .stackName("stackName")
+ * // the properties below are optional
+ * .account("account")
+ * .assets(List.of(StackAsset.builder()
+ * .assetId("assetId")
+ * .assetManifestPath("assetManifestPath")
+ * .assetSelector("assetSelector")
+ * .assetType(AssetType.FILE)
+ * .isTemplate(false)
+ * // the properties below are optional
+ * .assetPublishingRoleArn("assetPublishingRoleArn")
+ * .build()))
+ * .assumeRoleArn("assumeRoleArn")
+ * .executionRoleArn("executionRoleArn")
+ * .region("region")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .templateS3Uri("templateS3Uri")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StackDeploymentPropsDsl {
   private val cdkBuilder: StackDeploymentProps.Builder = StackDeploymentProps.builder()

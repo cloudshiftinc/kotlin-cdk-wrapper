@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnVolumeProps
 
+/**
+ * Properties for defining a `CfnVolume`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnVolumeProps cfnVolumeProps = CfnVolumeProps.builder()
+ * .ec2VolumeId("ec2VolumeId")
+ * .stackId("stackId")
+ * // the properties below are optional
+ * .mountPoint("mountPoint")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-volume.html)
+ */
 @CdkDslMarker
 public class CfnVolumePropsDsl {
   private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()

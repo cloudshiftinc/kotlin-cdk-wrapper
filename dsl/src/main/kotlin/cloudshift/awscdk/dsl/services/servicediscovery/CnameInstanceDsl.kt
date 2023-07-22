@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.servicediscovery.CnameInstance
 import software.amazon.awscdk.services.servicediscovery.IService
 import software.constructs.Construct
 
+/**
+ * Instance that is accessible using a domain name (CNAME).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * CnameInstance cnameInstance = CnameInstance.Builder.create(this, "MyCnameInstance")
+ * .instanceCname("instanceCname")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CnameInstanceDsl(
   scope: Construct,

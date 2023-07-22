@@ -8,6 +8,18 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eks.AwsAuthMapping
 
+/**
+ * AwsAuth mapping.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * User adminUser = new User(this, "Admin");
+ * cluster.awsAuth.addUserMapping(adminUser,
+ * AwsAuthMapping.builder().groups(List.of("system:masters")).build());
+ * ```
+ */
 @CdkDslMarker
 public class AwsAuthMappingDsl {
   private val cdkBuilder: AwsAuthMapping.Builder = AwsAuthMapping.builder()

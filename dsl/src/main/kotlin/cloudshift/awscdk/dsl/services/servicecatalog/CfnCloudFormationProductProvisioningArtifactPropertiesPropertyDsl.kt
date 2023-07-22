@@ -11,6 +11,29 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 
+/**
+ * Information about a provisioning artifact (also known as a version) for a product.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * Object info;
+ * ProvisioningArtifactPropertiesProperty provisioningArtifactPropertiesProperty =
+ * ProvisioningArtifactPropertiesProperty.builder()
+ * .info(info)
+ * // the properties below are optional
+ * .description("description")
+ * .disableTemplateValidation(false)
+ * .name("name")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-provisioningartifactproperties.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProductProvisioningArtifactPropertiesPropertyDsl {
   private val cdkBuilder: CfnCloudFormationProduct.ProvisioningArtifactPropertiesProperty.Builder =

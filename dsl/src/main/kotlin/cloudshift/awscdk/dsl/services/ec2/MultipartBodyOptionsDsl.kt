@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.MultipartBodyOptions
 
+/**
+ * Options when creating `MultipartBody`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * MultipartBodyOptions multipartBodyOptions = MultipartBodyOptions.builder()
+ * .contentType("contentType")
+ * // the properties below are optional
+ * .body("body")
+ * .transferEncoding("transferEncoding")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MultipartBodyOptionsDsl {
   private val cdkBuilder: MultipartBodyOptions.Builder = MultipartBodyOptions.builder()

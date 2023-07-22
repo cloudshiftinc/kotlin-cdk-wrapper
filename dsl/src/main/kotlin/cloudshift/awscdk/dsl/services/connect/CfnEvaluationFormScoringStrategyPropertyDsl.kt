@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * A scoring strategy of the evaluation form.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * ScoringStrategyProperty scoringStrategyProperty = ScoringStrategyProperty.builder()
+ * .mode("mode")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-scoringstrategy.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormScoringStrategyPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.ScoringStrategyProperty.Builder =

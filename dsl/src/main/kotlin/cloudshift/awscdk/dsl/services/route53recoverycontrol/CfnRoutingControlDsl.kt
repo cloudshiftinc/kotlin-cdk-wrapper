@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl
 import software.constructs.Construct
 
+/**
+ * Creates a routing control in Amazon Route 53 Application Recovery Controller.
+ *
+ * Routing control states are maintained on the highly reliable cluster data plane.
+ *
+ * To get or update the state of the routing control, you must specify a cluster endpoint, which is
+ * an endpoint URL and an AWS Region. For more information, see [Code
+ * examples](https://docs.aws.amazon.com/r53recovery/latest/dg/service_code_examples.html) in the
+ * Amazon Route 53 Application Recovery Controller Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnRoutingControl cfnRoutingControl = CfnRoutingControl.Builder.create(this,
+ * "MyCfnRoutingControl")
+ * .name("name")
+ * // the properties below are optional
+ * .clusterArn("clusterArn")
+ * .controlPanelArn("controlPanelArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-routingcontrol.html)
+ */
 @CdkDslMarker
 public class CfnRoutingControlDsl(
   scope: Construct,

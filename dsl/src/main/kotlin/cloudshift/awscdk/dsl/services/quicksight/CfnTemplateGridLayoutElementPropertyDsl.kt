@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * An element within a grid layout.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GridLayoutElementProperty gridLayoutElementProperty = GridLayoutElementProperty.builder()
+ * .columnSpan(123)
+ * .elementId("elementId")
+ * .elementType("elementType")
+ * .rowSpan(123)
+ * // the properties below are optional
+ * .columnIndex(123)
+ * .rowIndex(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gridlayoutelement.html)
+ */
 @CdkDslMarker
 public class CfnTemplateGridLayoutElementPropertyDsl {
   private val cdkBuilder: CfnTemplate.GridLayoutElementProperty.Builder =

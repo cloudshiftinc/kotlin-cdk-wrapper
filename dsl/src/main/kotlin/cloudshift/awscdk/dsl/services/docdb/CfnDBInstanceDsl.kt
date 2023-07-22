@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.docdb.CfnDBInstance
 import software.constructs.Construct
 
+/**
+ * The `AWS::DocDB::DBInstance` Amazon DocumentDB (with MongoDB compatibility) resource describes a
+ * DBInstance.
+ *
+ * For more information, see
+ * [DBInstance](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBInstance.html) in
+ * the *Amazon DocumentDB Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * CfnDBInstance cfnDBInstance = CfnDBInstance.Builder.create(this, "MyCfnDBInstance")
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbInstanceClass("dbInstanceClass")
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .dbInstanceIdentifier("dbInstanceIdentifier")
+ * .enablePerformanceInsights(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html)
+ */
 @CdkDslMarker
 public class CfnDBInstanceDsl(
   scope: Construct,

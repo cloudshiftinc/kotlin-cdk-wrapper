@@ -13,6 +13,32 @@ import software.amazon.awscdk.services.route53.CaaRecordProps
 import software.amazon.awscdk.services.route53.CaaRecordValue
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Construction properties for a CaaRecord.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * CaaRecordProps caaRecordProps = CaaRecordProps.builder()
+ * .values(List.of(CaaRecordValue.builder()
+ * .flag(123)
+ * .tag(CaaTag.ISSUE)
+ * .value("value")
+ * .build()))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CaaRecordPropsDsl {
   private val cdkBuilder: CaaRecordProps.Builder = CaaRecordProps.builder()

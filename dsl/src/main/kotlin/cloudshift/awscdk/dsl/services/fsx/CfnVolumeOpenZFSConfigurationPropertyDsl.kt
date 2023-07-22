@@ -12,6 +12,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnVolume
 
+/**
+ * Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * OpenZFSConfigurationProperty openZFSConfigurationProperty =
+ * OpenZFSConfigurationProperty.builder()
+ * .parentVolumeId("parentVolumeId")
+ * // the properties below are optional
+ * .copyTagsToSnapshots(false)
+ * .dataCompressionType("dataCompressionType")
+ * .nfsExports(List.of(NfsExportsProperty.builder()
+ * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build()))
+ * .build()))
+ * .options(List.of("options"))
+ * .originSnapshot(OriginSnapshotProperty.builder()
+ * .copyStrategy("copyStrategy")
+ * .snapshotArn("snapshotArn")
+ * .build())
+ * .readOnly(false)
+ * .recordSizeKiB(123)
+ * .storageCapacityQuotaGiB(123)
+ * .storageCapacityReservationGiB(123)
+ * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-openzfsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnVolumeOpenZFSConfigurationPropertyDsl {
   private val cdkBuilder: CfnVolume.OpenZFSConfigurationProperty.Builder =

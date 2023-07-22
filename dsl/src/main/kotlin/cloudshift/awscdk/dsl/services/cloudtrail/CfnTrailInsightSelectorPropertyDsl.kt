@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudtrail.CfnTrail
 
+/**
+ * A JSON string that contains a list of Insights types that are logged on a trail.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * InsightSelectorProperty insightSelectorProperty = InsightSelectorProperty.builder()
+ * .insightType("insightType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-insightselector.html)
+ */
 @CdkDslMarker
 public class CfnTrailInsightSelectorPropertyDsl {
   private val cdkBuilder: CfnTrail.InsightSelectorProperty.Builder =

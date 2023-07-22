@@ -10,6 +10,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Allows you to specify a global secondary index for the global table.
+ *
+ * The index will be defined on all replicas.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * GlobalSecondaryIndexProperty globalSecondaryIndexProperty =
+ * GlobalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * // the properties below are optional
+ * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+ * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableGlobalSecondaryIndexPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.GlobalSecondaryIndexProperty.Builder =

@@ -9,6 +9,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnEventInvokeConfig
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::EventInvokeConfig` resource configures options for [asynchronous
+ * invocation](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html) on a version or an
+ * alias.
+ *
+ * By default, Lambda retries an asynchronous invocation twice if the function returns an error. It
+ * retains events in a queue for up to six hours. When an event fails all processing attempts or stays
+ * in the asynchronous invocation queue for too long, Lambda discards it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnEventInvokeConfig cfnEventInvokeConfig = CfnEventInvokeConfig.Builder.create(this,
+ * "MyCfnEventInvokeConfig")
+ * .functionName("functionName")
+ * .qualifier("qualifier")
+ * // the properties below are optional
+ * .destinationConfig(DestinationConfigProperty.builder()
+ * .onFailure(OnFailureProperty.builder()
+ * .destination("destination")
+ * .build())
+ * .onSuccess(OnSuccessProperty.builder()
+ * .destination("destination")
+ * .build())
+ * .build())
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html)
+ */
 @CdkDslMarker
 public class CfnEventInvokeConfigDsl(
   scope: Construct,

@@ -12,6 +12,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegration
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Integration` resource creates an integration for an API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object requestParameters;
+ * Object requestTemplates;
+ * Object responseParameters;
+ * CfnIntegration cfnIntegration = CfnIntegration.Builder.create(this, "MyCfnIntegration")
+ * .apiId("apiId")
+ * .integrationType("integrationType")
+ * // the properties below are optional
+ * .connectionId("connectionId")
+ * .connectionType("connectionType")
+ * .contentHandlingStrategy("contentHandlingStrategy")
+ * .credentialsArn("credentialsArn")
+ * .description("description")
+ * .integrationMethod("integrationMethod")
+ * .integrationSubtype("integrationSubtype")
+ * .integrationUri("integrationUri")
+ * .passthroughBehavior("passthroughBehavior")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .requestParameters(requestParameters)
+ * .requestTemplates(requestTemplates)
+ * .responseParameters(responseParameters)
+ * .templateSelectionExpression("templateSelectionExpression")
+ * .timeoutInMillis(123)
+ * .tlsConfig(TlsConfigProperty.builder()
+ * .serverNameToVerify("serverNameToVerify")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationDsl(
   scope: Construct,

@@ -7,6 +7,27 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CustomActionProperty
 
+/**
+ * The creation attributes used for defining a configuration property of a custom Action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CustomActionProperty customActionProperty = CustomActionProperty.builder()
+ * .name("name")
+ * .required(false)
+ * // the properties below are optional
+ * .description("description")
+ * .key(false)
+ * .queryable(false)
+ * .secret(false)
+ * .type("type")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomActionPropertyDsl {
   private val cdkBuilder: CustomActionProperty.Builder = CustomActionProperty.builder()

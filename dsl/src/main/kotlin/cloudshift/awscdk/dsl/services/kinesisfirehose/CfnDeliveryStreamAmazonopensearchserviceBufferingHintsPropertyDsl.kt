@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Describes the buffering to perform before delivering data to the Amazon OpenSearch Service
+ * destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * AmazonopensearchserviceBufferingHintsProperty amazonopensearchserviceBufferingHintsProperty =
+ * AmazonopensearchserviceBufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-amazonopensearchservicebufferinghints.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamAmazonopensearchserviceBufferingHintsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty.Builder =

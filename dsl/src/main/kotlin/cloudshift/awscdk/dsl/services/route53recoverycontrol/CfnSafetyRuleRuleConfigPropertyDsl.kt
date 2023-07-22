@@ -9,6 +9,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
 
+/**
+ * The rule configuration for an assertion rule.
+ *
+ * That is, the criteria that you set for specific assertion controls (routing controls) that
+ * specify how many controls must be enabled after a transaction completes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * RuleConfigProperty ruleConfigProperty = RuleConfigProperty.builder()
+ * .inverted(false)
+ * .threshold(123)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-ruleconfig.html)
+ */
 @CdkDslMarker
 public class CfnSafetyRuleRuleConfigPropertyDsl {
   private val cdkBuilder: CfnSafetyRule.RuleConfigProperty.Builder =

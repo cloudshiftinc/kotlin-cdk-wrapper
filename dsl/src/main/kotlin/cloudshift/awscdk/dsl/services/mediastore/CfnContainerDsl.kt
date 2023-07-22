@@ -15,6 +15,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediastore.CfnContainer
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaStore::Container resource specifies a storage container to hold objects.
+ *
+ * A container is similar to a bucket in Amazon S3.
+ *
+ * When you create a container using AWS CloudFormation , the template manages data for five API
+ * actions: creating a container, setting access logging, updating the default container policy, adding
+ * a cross-origin resource sharing (CORS) policy, and adding an object lifecycle policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediastore.*;
+ * CfnContainer cfnContainer = CfnContainer.Builder.create(this, "MyCfnContainer")
+ * .containerName("containerName")
+ * // the properties below are optional
+ * .accessLoggingEnabled(false)
+ * .corsPolicy(List.of(CorsRuleProperty.builder()
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .allowedMethods(List.of("allowedMethods"))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAgeSeconds(123)
+ * .build()))
+ * .lifecyclePolicy("lifecyclePolicy")
+ * .metricPolicy(MetricPolicyProperty.builder()
+ * .containerLevelMetrics("containerLevelMetrics")
+ * // the properties below are optional
+ * .metricPolicyRules(List.of(MetricPolicyRuleProperty.builder()
+ * .objectGroup("objectGroup")
+ * .objectGroupName("objectGroupName")
+ * .build()))
+ * .build())
+ * .policy("policy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html)
+ */
 @CdkDslMarker
 public class CfnContainerDsl(
   scope: Construct,

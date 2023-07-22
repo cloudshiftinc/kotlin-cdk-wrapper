@@ -8,6 +8,26 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.cxapi.AwsCloudFormationStackProperties
 
+/**
+ * Artifact properties for CloudFormation stacks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * AwsCloudFormationStackProperties awsCloudFormationStackProperties =
+ * AwsCloudFormationStackProperties.builder()
+ * .templateFile("templateFile")
+ * // the properties below are optional
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .stackName("stackName")
+ * .terminationProtection(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsCloudFormationStackPropertiesDsl {
   private val cdkBuilder: AwsCloudFormationStackProperties.Builder =

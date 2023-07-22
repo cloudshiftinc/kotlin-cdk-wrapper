@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupSource
 import software.constructs.Construct
 
+/**
+ * Registers sources (network interfaces) with the specified transit gateway multicast domain.
+ *
+ * A multicast source is a network interface attached to a supported instance that sends multicast
+ * traffic. For information about supported instances, see [Multicast
+ * Considerations](https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits)
+ * in *Amazon VPC Transit Gateways* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayMulticastGroupSource cfnTransitGatewayMulticastGroupSource =
+ * CfnTransitGatewayMulticastGroupSource.Builder.create(this,
+ * "MyCfnTransitGatewayMulticastGroupSource")
+ * .groupIpAddress("groupIpAddress")
+ * .networkInterfaceId("networkInterfaceId")
+ * .transitGatewayMulticastDomainId("transitGatewayMulticastDomainId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupsource.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastGroupSourceDsl(
   scope: Construct,

@@ -10,6 +10,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information required for Amazon Kendra Web Crawler.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * WebCrawlerConfigurationProperty webCrawlerConfigurationProperty =
+ * WebCrawlerConfigurationProperty.builder()
+ * .urls(WebCrawlerUrlsProperty.builder()
+ * .seedUrlConfiguration(WebCrawlerSeedUrlConfigurationProperty.builder()
+ * .seedUrls(List.of("seedUrls"))
+ * // the properties below are optional
+ * .webCrawlerMode("webCrawlerMode")
+ * .build())
+ * .siteMapsConfiguration(WebCrawlerSiteMapsConfigurationProperty.builder()
+ * .siteMaps(List.of("siteMaps"))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .authenticationConfiguration(WebCrawlerAuthenticationConfigurationProperty.builder()
+ * .basicAuthentication(List.of(WebCrawlerBasicAuthenticationProperty.builder()
+ * .credentials("credentials")
+ * .host("host")
+ * .port(123)
+ * .build()))
+ * .build())
+ * .crawlDepth(123)
+ * .maxContentSizePerPageInMegaBytes(123)
+ * .maxLinksPerPage(123)
+ * .maxUrlsPerMinuteCrawlRate(123)
+ * .proxyConfiguration(ProxyConfigurationProperty.builder()
+ * .host("host")
+ * .port(123)
+ * // the properties below are optional
+ * .credentials("credentials")
+ * .build())
+ * .urlExclusionPatterns(List.of("urlExclusionPatterns"))
+ * .urlInclusionPatterns(List.of("urlInclusionPatterns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-webcrawlerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceWebCrawlerConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.WebCrawlerConfigurationProperty.Builder =

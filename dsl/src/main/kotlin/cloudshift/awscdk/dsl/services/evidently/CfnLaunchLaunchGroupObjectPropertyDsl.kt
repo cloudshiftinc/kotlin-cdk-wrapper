@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * A structure that defines one launch group in a launch.
+ *
+ * A launch group is a variation of the feature that you are including in the launch.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * LaunchGroupObjectProperty launchGroupObjectProperty = LaunchGroupObjectProperty.builder()
+ * .feature("feature")
+ * .groupName("groupName")
+ * .variation("variation")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-launchgroupobject.html)
+ */
 @CdkDslMarker
 public class CfnLaunchLaunchGroupObjectPropertyDsl {
   private val cdkBuilder: CfnLaunch.LaunchGroupObjectProperty.Builder =

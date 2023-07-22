@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.AllocatedSubnet
 import software.amazon.awscdk.services.ec2.SubnetIpamOptions
 
+/**
+ * Cidr Allocated Subnets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SubnetIpamOptions subnetIpamOptions = SubnetIpamOptions.builder()
+ * .allocatedSubnets(List.of(AllocatedSubnet.builder()
+ * .cidr("cidr")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetIpamOptionsDsl {
   private val cdkBuilder: SubnetIpamOptions.Builder = SubnetIpamOptions.builder()

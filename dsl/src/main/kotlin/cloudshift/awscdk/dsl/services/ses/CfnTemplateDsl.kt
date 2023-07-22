@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnTemplate
 import software.constructs.Construct
 
+/**
+ * Specifies an email template.
+ *
+ * Email templates enable you to send personalized email to one or more destinations in a single API
+ * operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnTemplate cfnTemplate = CfnTemplate.Builder.create(this, "MyCfnTemplate")
+ * .template(TemplateProperty.builder()
+ * .subjectPart("subjectPart")
+ * // the properties below are optional
+ * .htmlPart("htmlPart")
+ * .templateName("templateName")
+ * .textPart("textPart")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDsl(
   scope: Construct,

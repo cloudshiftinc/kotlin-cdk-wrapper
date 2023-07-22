@@ -17,6 +17,83 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 import software.amazon.awscdk.services.opsworks.CfnLayerProps
 
+/**
+ * Properties for defining a `CfnLayer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * Object customJson;
+ * CfnLayerProps cfnLayerProps = CfnLayerProps.builder()
+ * .autoAssignElasticIps(false)
+ * .autoAssignPublicIps(false)
+ * .enableAutoHealing(false)
+ * .name("name")
+ * .shortname("shortname")
+ * .stackId("stackId")
+ * .type("type")
+ * // the properties below are optional
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .customInstanceProfileArn("customInstanceProfileArn")
+ * .customJson(customJson)
+ * .customRecipes(RecipesProperty.builder()
+ * .configure(List.of("configure"))
+ * .deploy(List.of("deploy"))
+ * .setup(List.of("setup"))
+ * .shutdown(List.of("shutdown"))
+ * .undeploy(List.of("undeploy"))
+ * .build())
+ * .customSecurityGroupIds(List.of("customSecurityGroupIds"))
+ * .installUpdatesOnBoot(false)
+ * .lifecycleEventConfiguration(LifecycleEventConfigurationProperty.builder()
+ * .shutdownEventConfiguration(ShutdownEventConfigurationProperty.builder()
+ * .delayUntilElbConnectionsDrained(false)
+ * .executionTimeout(123)
+ * .build())
+ * .build())
+ * .loadBasedAutoScaling(LoadBasedAutoScalingProperty.builder()
+ * .downScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .enable(false)
+ * .upScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .build())
+ * .packages(List.of("packages"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useEbsOptimizedInstances(false)
+ * .volumeConfigurations(List.of(VolumeConfigurationProperty.builder()
+ * .encrypted(false)
+ * .iops(123)
+ * .mountPoint("mountPoint")
+ * .numberOfDisks(123)
+ * .raidLevel(123)
+ * .size(123)
+ * .volumeType("volumeType")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html)
+ */
 @CdkDslMarker
 public class CfnLayerPropsDsl {
   private val cdkBuilder: CfnLayerProps.Builder = CfnLayerProps.builder()

@@ -9,6 +9,22 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.route53.PrivateHostedZone
 import software.constructs.Construct
 
+/**
+ * Create a Route53 private hosted zone for use in one or more VPCs.
+ *
+ * Note that `enableDnsHostnames` and `enableDnsSupport` must have been enabled
+ * for the VPC you're configuring for private hosted zones.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * PrivateHostedZone zone = PrivateHostedZone.Builder.create(this, "HostedZone")
+ * .zoneName("fully.qualified.domain.com")
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrivateHostedZoneDsl(
   scope: Construct,

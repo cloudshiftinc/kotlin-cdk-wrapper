@@ -15,6 +15,44 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnFlowLog
 import software.constructs.Construct
 
+/**
+ * Specifies a VPC flow log that captures IP traffic for a specified network interface, subnet, or
+ * VPC.
+ *
+ * To view the log data, use Amazon CloudWatch Logs (CloudWatch Logs) to help troubleshoot
+ * connection issues. For example, you can use a flow log to investigate why certain traffic isn't
+ * reaching an instance, which can help you diagnose overly restrictive security group rules. For more
+ * information, see [VPC Flow Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html) in
+ * the *Amazon VPC User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object destinationOptions;
+ * CfnFlowLog cfnFlowLog = CfnFlowLog.Builder.create(this, "MyCfnFlowLog")
+ * .resourceId("resourceId")
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .deliverLogsPermissionArn("deliverLogsPermissionArn")
+ * .destinationOptions(destinationOptions)
+ * .logDestination("logDestination")
+ * .logDestinationType("logDestinationType")
+ * .logFormat("logFormat")
+ * .logGroupName("logGroupName")
+ * .maxAggregationInterval(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trafficType("trafficType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html)
+ */
 @CdkDslMarker
 public class CfnFlowLogDsl(
   scope: Construct,

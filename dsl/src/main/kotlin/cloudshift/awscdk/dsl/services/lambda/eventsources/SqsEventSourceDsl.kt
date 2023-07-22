@@ -14,6 +14,21 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an Amazon SQS queue as an event source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.eventsources.SqsEventSource;
+ * Function fn;
+ * Queue queue = new Queue(this, "MyQueue");
+ * SqsEventSource eventSource = new SqsEventSource(queue);
+ * fn.addEventSource(eventSource);
+ * String eventSourceId = eventSource.getEventSourceMappingId();
+ * String eventSourceMappingArn = eventSource.getEventSourceMappingArn();
+ * ```
+ */
 @CdkDslMarker
 public class SqsEventSourceDsl(
   queue: IQueue,

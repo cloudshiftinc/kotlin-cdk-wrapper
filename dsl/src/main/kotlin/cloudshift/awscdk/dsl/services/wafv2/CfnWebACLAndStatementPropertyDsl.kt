@@ -9,6 +9,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A logical rule statement used to combine other rule statements with AND logic.
+ *
+ * You provide more than one `Statement` within the `AndStatement` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-andstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLAndStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.AndStatementProperty.Builder =

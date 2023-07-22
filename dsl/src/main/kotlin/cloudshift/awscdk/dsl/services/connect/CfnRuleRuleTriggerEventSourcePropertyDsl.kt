@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnRule
 
+/**
+ * The name of the event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * RuleTriggerEventSourceProperty ruleTriggerEventSourceProperty =
+ * RuleTriggerEventSourceProperty.builder()
+ * .eventSourceName("eventSourceName")
+ * // the properties below are optional
+ * .integrationAssociationArn("integrationAssociationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-ruletriggereventsource.html)
+ */
 @CdkDslMarker
 public class CfnRuleRuleTriggerEventSourcePropertyDsl {
   private val cdkBuilder: CfnRule.RuleTriggerEventSourceProperty.Builder =

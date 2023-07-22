@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.opensearchservice.AdvancedSecurityOptions
 
+/**
+ * Specifies options for fine-grained access control.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .enforceHttps(true)
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .fineGrainedAccessControl(AdvancedSecurityOptions.builder()
+ * .masterUserName("master-user")
+ * .build())
+ * .logging(LoggingOptions.builder()
+ * .auditLogEnabled(true)
+ * .slowSearchLogEnabled(true)
+ * .appLogEnabled(true)
+ * .slowIndexLogEnabled(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AdvancedSecurityOptionsDsl {
   private val cdkBuilder: AdvancedSecurityOptions.Builder = AdvancedSecurityOptions.builder()

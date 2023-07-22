@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
+/**
+ * Attribute mapping for MULTI value measures.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * MultiMeasureAttributeMappingProperty multiMeasureAttributeMappingProperty =
+ * MultiMeasureAttributeMappingProperty.builder()
+ * .measureValueType("measureValueType")
+ * .sourceColumn("sourceColumn")
+ * // the properties below are optional
+ * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-multimeasureattributemapping.html)
+ */
 @CdkDslMarker
 public class CfnScheduledQueryMultiMeasureAttributeMappingPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.MultiMeasureAttributeMappingProperty.Builder =

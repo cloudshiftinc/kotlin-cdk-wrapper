@@ -9,6 +9,30 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.MetricOptions
 import software.amazon.awscdk.services.cloudwatch.Unit
 
+/**
+ * Properties of a metric that can be changed.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * DeliveryStream deliveryStream;
+ * // Alarm that triggers when the per-second average of incoming bytes exceeds 90% of the current
+ * service limit
+ * MathExpression incomingBytesPercentOfLimit = MathExpression.Builder.create()
+ * .expression("incomingBytes / 300 / bytePerSecLimit")
+ * .usingMetrics(Map.of(
+ * "incomingBytes",
+ * deliveryStream.metricIncomingBytes(MetricOptions.builder().statistic(Statistic.SUM).build()),
+ * "bytePerSecLimit", deliveryStream.metric("BytesPerSecondLimit")))
+ * .build();
+ * Alarm.Builder.create(this, "Alarm")
+ * .metric(incomingBytesPercentOfLimit)
+ * .threshold(0.9)
+ * .evaluationPeriods(3)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricOptionsDsl {
   private val cdkBuilder: MetricOptions.Builder = MetricOptions.builder()

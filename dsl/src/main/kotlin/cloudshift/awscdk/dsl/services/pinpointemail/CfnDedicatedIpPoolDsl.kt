@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool
 import software.constructs.Construct
 
+/**
+ * A request to create a new dedicated IP pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnDedicatedIpPool cfnDedicatedIpPool = CfnDedicatedIpPool.Builder.create(this,
+ * "MyCfnDedicatedIpPool")
+ * .poolName("poolName")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html)
+ */
 @CdkDslMarker
 public class CfnDedicatedIpPoolDsl(
   scope: Construct,

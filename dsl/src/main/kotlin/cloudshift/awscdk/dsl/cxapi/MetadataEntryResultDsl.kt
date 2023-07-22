@@ -13,6 +13,22 @@ import software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry
 import software.amazon.awscdk.cloudassembly.schema.Tag
 import software.amazon.awscdk.cxapi.MetadataEntryResult
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * MetadataEntryResult metadataEntryResult = MetadataEntryResult.builder()
+ * .path("path")
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .trace(List.of("trace"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetadataEntryResultDsl {
   private val cdkBuilder: MetadataEntryResult.Builder = MetadataEntryResult.builder()

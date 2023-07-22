@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnApplication
 import software.amazon.awscdk.services.appconfig.CfnApplicationProps
 
+/**
+ * Properties for defining a `CfnApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()

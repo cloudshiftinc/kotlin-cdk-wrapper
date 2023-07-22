@@ -13,6 +13,59 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApi
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Api` resource creates an API.
+ *
+ * WebSocket APIs and HTTP APIs are supported. For more information about WebSocket APIs, see [About
+ * WebSocket APIs in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-overview.html)
+ * in the *API Gateway Developer Guide* . For more information about HTTP APIs, see [HTTP
+ * APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) in the *API
+ * Gateway Developer Guide.*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object body;
+ * CfnApi cfnApi = CfnApi.Builder.create(this, "MyCfnApi")
+ * .apiKeySelectionExpression("apiKeySelectionExpression")
+ * .basePath("basePath")
+ * .body(body)
+ * .bodyS3Location(BodyS3LocationProperty.builder()
+ * .bucket("bucket")
+ * .etag("etag")
+ * .key("key")
+ * .version("version")
+ * .build())
+ * .corsConfiguration(CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build())
+ * .credentialsArn("credentialsArn")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .disableSchemaValidation(false)
+ * .failOnWarnings(false)
+ * .name("name")
+ * .protocolType("protocolType")
+ * .routeKey("routeKey")
+ * .routeSelectionExpression("routeSelectionExpression")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .target("target")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-api.html)
+ */
 @CdkDslMarker
 public class CfnApiDsl(
   scope: Construct,

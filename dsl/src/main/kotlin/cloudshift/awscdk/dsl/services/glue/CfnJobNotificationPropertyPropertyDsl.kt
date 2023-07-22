@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.glue.CfnJob
 
+/**
+ * Specifies configuration properties of a notification.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * NotificationPropertyProperty notificationPropertyProperty =
+ * NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-notificationproperty.html)
+ */
 @CdkDslMarker
 public class CfnJobNotificationPropertyPropertyDsl {
   private val cdkBuilder: CfnJob.NotificationPropertyProperty.Builder =

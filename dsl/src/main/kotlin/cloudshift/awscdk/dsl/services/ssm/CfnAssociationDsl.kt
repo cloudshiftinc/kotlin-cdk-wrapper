@@ -15,6 +15,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnAssociation
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSM::Association` resource creates a State Manager association for your managed
+ * instances.
+ *
+ * A State Manager association defines the state that you want to maintain on your instances. For
+ * example, an association can specify that anti-virus software must be installed and running on your
+ * instances, or that certain ports must be closed. For static targets, the association specifies a
+ * schedule for when the configuration is reapplied. For dynamic targets, such as an AWS Resource
+ * Groups or an AWS Auto Scaling Group, State Manager applies the configuration when new instances are
+ * added to the group. The association also specifies actions to take when applying the configuration.
+ * For example, an association for anti-virus software might run once a day. If the software is not
+ * installed, then State Manager installs it. If the software is installed, but the service is not
+ * running, then the association might instruct State Manager to start the service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object parameters;
+ * CfnAssociation cfnAssociation = CfnAssociation.Builder.create(this, "MyCfnAssociation")
+ * .name("name")
+ * // the properties below are optional
+ * .applyOnlyAtCronInterval(false)
+ * .associationName("associationName")
+ * .automationTargetParameterName("automationTargetParameterName")
+ * .calendarNames(List.of("calendarNames"))
+ * .complianceSeverity("complianceSeverity")
+ * .documentVersion("documentVersion")
+ * .instanceId("instanceId")
+ * .maxConcurrency("maxConcurrency")
+ * .maxErrors("maxErrors")
+ * .outputLocation(InstanceAssociationOutputLocationProperty.builder()
+ * .s3Location(S3OutputLocationProperty.builder()
+ * .outputS3BucketName("outputS3BucketName")
+ * .outputS3KeyPrefix("outputS3KeyPrefix")
+ * .outputS3Region("outputS3Region")
+ * .build())
+ * .build())
+ * .parameters(parameters)
+ * .scheduleExpression("scheduleExpression")
+ * .scheduleOffset(123)
+ * .syncCompliance("syncCompliance")
+ * .targets(List.of(TargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .waitForSuccessTimeoutSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
+ */
 @CdkDslMarker
 public class CfnAssociationDsl(
   scope: Construct,

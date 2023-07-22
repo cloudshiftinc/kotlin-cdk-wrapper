@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A filled map.
+ *
+ * For more information, see [Creating filled
+ * maps](https://docs.aws.amazon.com/quicksight/latest/user/filled-maps.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-filledmapvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardFilledMapVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.FilledMapVisualProperty.Builder =

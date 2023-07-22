@@ -16,6 +16,105 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnReplicationGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache Redis replication
+ * group.
+ *
+ * A Redis (cluster mode disabled) replication group is a collection of cache clusters, where one of
+ * the clusters is a primary read-write cluster and the others are read-only replicas.
+ *
+ * A Redis (cluster mode enabled) cluster is comprised of from 1 to 90 shards (API/CLI: node
+ * groups). Each shard has a primary node and up to 5 read-only replica nodes. The configuration can
+ * range from 90 shards and 0 replicas to 15 shards and 5 replicas, which is the maximum number or
+ * replicas allowed.
+ *
+ * The node or shard limit can be increased to a maximum of 500 per cluster if the Redis engine
+ * version is 5.0.6 or higher. For example, you can choose to configure a 500 node cluster that ranges
+ * between 83 shards (one primary and 5 replicas per shard) and 500 shards (single primary and no
+ * replicas). Make sure there are enough available IP addresses to accommodate the increase. Common
+ * pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are
+ * shared and heavily used by other clusters. For more information, see [Creating a Subnet
+ * Group](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.Creating.html) . For
+ * versions below 5.0.6, the limit is 250 per cluster.
+ *
+ * To request a limit increase, see [Amazon Service
+ * Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) and choose the limit
+ * type *Nodes per cluster per instance type* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnReplicationGroup cfnReplicationGroup = CfnReplicationGroup.Builder.create(this,
+ * "MyCfnReplicationGroup")
+ * .replicationGroupDescription("replicationGroupDescription")
+ * // the properties below are optional
+ * .atRestEncryptionEnabled(false)
+ * .authToken("authToken")
+ * .automaticFailoverEnabled(false)
+ * .autoMinorVersionUpgrade(false)
+ * .cacheNodeType("cacheNodeType")
+ * .cacheParameterGroupName("cacheParameterGroupName")
+ * .cacheSecurityGroupNames(List.of("cacheSecurityGroupNames"))
+ * .cacheSubnetGroupName("cacheSubnetGroupName")
+ * .clusterMode("clusterMode")
+ * .dataTieringEnabled(false)
+ * .engine("engine")
+ * .engineVersion("engineVersion")
+ * .globalReplicationGroupId("globalReplicationGroupId")
+ * .ipDiscovery("ipDiscovery")
+ * .kmsKeyId("kmsKeyId")
+ * .logDeliveryConfigurations(List.of(LogDeliveryConfigurationRequestProperty.builder()
+ * .destinationDetails(DestinationDetailsProperty.builder()
+ * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+ * .logGroup("logGroup")
+ * .build())
+ * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .build())
+ * .destinationType("destinationType")
+ * .logFormat("logFormat")
+ * .logType("logType")
+ * .build()))
+ * .multiAzEnabled(false)
+ * .networkType("networkType")
+ * .nodeGroupConfiguration(List.of(NodeGroupConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .primaryAvailabilityZone("primaryAvailabilityZone")
+ * .replicaAvailabilityZones(List.of("replicaAvailabilityZones"))
+ * .replicaCount(123)
+ * .slots("slots")
+ * .build()))
+ * .notificationTopicArn("notificationTopicArn")
+ * .numCacheClusters(123)
+ * .numNodeGroups(123)
+ * .port(123)
+ * .preferredCacheClusterAZs(List.of("preferredCacheClusterAZs"))
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .primaryClusterId("primaryClusterId")
+ * .replicasPerNodeGroup(123)
+ * .replicationGroupId("replicationGroupId")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .snapshotArns(List.of("snapshotArns"))
+ * .snapshotName("snapshotName")
+ * .snapshotRetentionLimit(123)
+ * .snapshottingClusterId("snapshottingClusterId")
+ * .snapshotWindow("snapshotWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitEncryptionEnabled(false)
+ * .transitEncryptionMode("transitEncryptionMode")
+ * .userGroupIds(List.of("userGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html)
+ */
 @CdkDslMarker
 public class CfnReplicationGroupDsl(
   scope: Construct,

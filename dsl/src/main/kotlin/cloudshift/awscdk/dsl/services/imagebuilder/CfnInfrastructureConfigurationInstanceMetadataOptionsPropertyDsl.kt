@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 
+/**
+ * The instance metadata options that apply to the HTTP requests that pipeline builds use to launch
+ * EC2 build and test instances.
+ *
+ * For more information about instance metadata options, see [Configure the instance metadata
+ * options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html)
+ * in the **Amazon EC2 User Guide** for Linux instances, or [Configure the instance metadata
+ * options](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html)
+ * in the **Amazon EC2 Windows Guide** for Windows instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * InstanceMetadataOptionsProperty instanceMetadataOptionsProperty =
+ * InstanceMetadataOptionsProperty.builder()
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-instancemetadataoptions.html)
+ */
 @CdkDslMarker
 public class CfnInfrastructureConfigurationInstanceMetadataOptionsPropertyDsl {
   private val cdkBuilder: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty.Builder =

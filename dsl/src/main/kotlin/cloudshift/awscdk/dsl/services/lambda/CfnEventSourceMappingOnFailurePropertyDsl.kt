@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * A destination for events that failed processing.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * OnFailureProperty onFailureProperty = OnFailureProperty.builder()
+ * .destination("destination")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-onfailure.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingOnFailurePropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.OnFailureProperty.Builder =

@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnFuotaTask
 import software.amazon.awscdk.services.iotwireless.CfnFuotaTaskProps
 
+/**
+ * Properties for defining a `CfnFuotaTask`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnFuotaTaskProps cfnFuotaTaskProps = CfnFuotaTaskProps.builder()
+ * .firmwareUpdateImage("firmwareUpdateImage")
+ * .firmwareUpdateRole("firmwareUpdateRole")
+ * .loRaWan(LoRaWANProperty.builder()
+ * .rfRegion("rfRegion")
+ * // the properties below are optional
+ * .startTime("startTime")
+ * .build())
+ * // the properties below are optional
+ * .associateMulticastGroup("associateMulticastGroup")
+ * .associateWirelessDevice("associateWirelessDevice")
+ * .description("description")
+ * .disassociateMulticastGroup("disassociateMulticastGroup")
+ * .disassociateWirelessDevice("disassociateWirelessDevice")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-fuotatask.html)
+ */
 @CdkDslMarker
 public class CfnFuotaTaskPropsDsl {
   private val cdkBuilder: CfnFuotaTaskProps.Builder = CfnFuotaTaskProps.builder()

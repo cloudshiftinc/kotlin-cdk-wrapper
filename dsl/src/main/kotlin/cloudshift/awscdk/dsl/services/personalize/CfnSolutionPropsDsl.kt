@@ -9,6 +9,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 import software.amazon.awscdk.services.personalize.CfnSolutionProps
 
+/**
+ * Properties for defining a `CfnSolution`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object autoMlConfig;
+ * Object hpoConfig;
+ * CfnSolutionProps cfnSolutionProps = CfnSolutionProps.builder()
+ * .datasetGroupArn("datasetGroupArn")
+ * .name("name")
+ * // the properties below are optional
+ * .eventType("eventType")
+ * .performAutoMl(false)
+ * .performHpo(false)
+ * .recipeArn("recipeArn")
+ * .solutionConfig(SolutionConfigProperty.builder()
+ * .algorithmHyperParameters(Map.of(
+ * "algorithmHyperParametersKey", "algorithmHyperParameters"))
+ * .autoMlConfig(autoMlConfig)
+ * .eventValueThreshold("eventValueThreshold")
+ * .featureTransformationParameters(Map.of(
+ * "featureTransformationParametersKey", "featureTransformationParameters"))
+ * .hpoConfig(hpoConfig)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-solution.html)
+ */
 @CdkDslMarker
 public class CfnSolutionPropsDsl {
   private val cdkBuilder: CfnSolutionProps.Builder = CfnSolutionProps.builder()

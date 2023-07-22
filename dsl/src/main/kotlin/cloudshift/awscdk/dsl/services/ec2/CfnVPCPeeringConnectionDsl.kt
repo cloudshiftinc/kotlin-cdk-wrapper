@@ -12,6 +12,49 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnVPCPeeringConnection
 import software.constructs.Construct
 
+/**
+ * Requests a VPC peering connection between two VPCs: a requester VPC that you own and an accepter
+ * VPC with which to create the connection.
+ *
+ * The accepter VPC can belong to a different AWS account and can be in a different Region than the
+ * requester VPC.
+ *
+ * The requester VPC and accepter VPC cannot have overlapping CIDR blocks. If you create a VPC
+ * peering connection request between VPCs with overlapping CIDR blocks, the VPC peering connection has
+ * a status of `failed` .
+ *
+ * If the VPCs belong to different accounts, the acceptor account must have a role that allows the
+ * requester account to accept the VPC peering connection. For more information, see [Walkthough: Peer
+ * with a VPC in another AWS
+ * account](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/peer-with-vpc-in-another-account.html)
+ * .
+ *
+ * If the requester and acceptor VPCs are in the same account, the peering request is accepted
+ * without a peering role.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCPeeringConnection cfnVPCPeeringConnection = CfnVPCPeeringConnection.Builder.create(this,
+ * "MyCfnVPCPeeringConnection")
+ * .peerVpcId("peerVpcId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .peerOwnerId("peerOwnerId")
+ * .peerRegion("peerRegion")
+ * .peerRoleArn("peerRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html)
+ */
 @CdkDslMarker
 public class CfnVPCPeeringConnectionDsl(
   scope: Construct,

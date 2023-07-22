@@ -12,6 +12,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTargetProps
 
+/**
+ * Properties for defining a `CfnScalableTarget`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * CfnScalableTargetProps cfnScalableTargetProps = CfnScalableTargetProps.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .resourceId("resourceId")
+ * .scalableDimension("scalableDimension")
+ * .serviceNamespace("serviceNamespace")
+ * // the properties below are optional
+ * .roleArn("roleArn")
+ * .scheduledActions(List.of(ScheduledActionProperty.builder()
+ * .schedule("schedule")
+ * .scheduledActionName("scheduledActionName")
+ * // the properties below are optional
+ * .endTime(new Date())
+ * .scalableTargetAction(ScalableTargetActionProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .startTime(new Date())
+ * .timezone("timezone")
+ * .build()))
+ * .suspendedState(SuspendedStateProperty.builder()
+ * .dynamicScalingInSuspended(false)
+ * .dynamicScalingOutSuspended(false)
+ * .scheduledScalingSuspended(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
+ */
 @CdkDslMarker
 public class CfnScalableTargetPropsDsl {
   private val cdkBuilder: CfnScalableTargetProps.Builder = CfnScalableTargetProps.builder()

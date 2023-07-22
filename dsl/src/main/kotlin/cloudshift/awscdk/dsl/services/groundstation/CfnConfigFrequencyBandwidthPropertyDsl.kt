@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Defines a bandwidth.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * FrequencyBandwidthProperty frequencyBandwidthProperty = FrequencyBandwidthProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequencybandwidth.html)
+ */
 @CdkDslMarker
 public class CfnConfigFrequencyBandwidthPropertyDsl {
   private val cdkBuilder: CfnConfig.FrequencyBandwidthProperty.Builder =

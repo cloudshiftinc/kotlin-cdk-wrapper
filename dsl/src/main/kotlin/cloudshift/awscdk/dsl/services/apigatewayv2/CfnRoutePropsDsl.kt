@@ -13,6 +13,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnRouteProps
 
+/**
+ * Properties for defining a `CfnRoute`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object requestModels;
+ * Object requestParameters;
+ * CfnRouteProps cfnRouteProps = CfnRouteProps.builder()
+ * .apiId("apiId")
+ * .routeKey("routeKey")
+ * // the properties below are optional
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .modelSelectionExpression("modelSelectionExpression")
+ * .operationName("operationName")
+ * .requestModels(requestModels)
+ * .requestParameters(requestParameters)
+ * .routeResponseSelectionExpression("routeResponseSelectionExpression")
+ * .target("target")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html)
+ */
 @CdkDslMarker
 public class CfnRoutePropsDsl {
   private val cdkBuilder: CfnRouteProps.Builder = CfnRouteProps.builder()

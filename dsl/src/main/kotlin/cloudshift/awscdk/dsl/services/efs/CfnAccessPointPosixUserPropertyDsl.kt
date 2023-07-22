@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.efs.CfnAccessPoint
 
+/**
+ * The full POSIX identity, including the user ID, group ID, and any secondary group IDs, on the
+ * access point that is used for all file system operations performed by NFS clients using the access
+ * point.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * PosixUserProperty posixUserProperty = PosixUserProperty.builder()
+ * .gid("gid")
+ * .uid("uid")
+ * // the properties below are optional
+ * .secondaryGids(List.of("secondaryGids"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-posixuser.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointPosixUserPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.PosixUserProperty.Builder =

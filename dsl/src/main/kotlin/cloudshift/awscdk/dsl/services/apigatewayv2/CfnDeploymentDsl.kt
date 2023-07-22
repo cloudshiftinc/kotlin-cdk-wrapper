@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.apigatewayv2.CfnDeployment
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Deployment` resource creates a deployment for an API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CfnDeployment cfnDeployment = CfnDeployment.Builder.create(this, "MyCfnDeployment")
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .description("description")
+ * .stageName("stageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDsl(
   scope: Construct,

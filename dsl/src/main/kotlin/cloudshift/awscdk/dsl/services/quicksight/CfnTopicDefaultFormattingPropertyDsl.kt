@@ -7,6 +7,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a default formatting definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DefaultFormattingProperty defaultFormattingProperty = DefaultFormattingProperty.builder()
+ * .displayFormat("displayFormat")
+ * .displayFormatOptions(DisplayFormatOptionsProperty.builder()
+ * .blankCellFormat("blankCellFormat")
+ * .currencySymbol("currencySymbol")
+ * .dateFormat("dateFormat")
+ * .decimalSeparator("decimalSeparator")
+ * .fractionDigits(123)
+ * .groupingSeparator("groupingSeparator")
+ * .negativeFormat(NegativeFormatProperty.builder()
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .build())
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .unitScaler("unitScaler")
+ * .useBlankCellFormat(false)
+ * .useGrouping(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-defaultformatting.html)
+ */
 @CdkDslMarker
 public class CfnTopicDefaultFormattingPropertyDsl {
   private val cdkBuilder: CfnTopic.DefaultFormattingProperty.Builder =

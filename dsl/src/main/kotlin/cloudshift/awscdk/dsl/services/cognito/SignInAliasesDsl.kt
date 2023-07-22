@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.SignInAliases
 
+/**
+ * The different ways in which users of this pool can sign up or sign in.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * // ...
+ * .signInAliases(SignInAliases.builder().username(true).email(true).build())
+ * .autoVerify(AutoVerifiedAttrs.builder().email(true).phone(true).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SignInAliasesDsl {
   private val cdkBuilder: SignInAliases.Builder = SignInAliases.builder()

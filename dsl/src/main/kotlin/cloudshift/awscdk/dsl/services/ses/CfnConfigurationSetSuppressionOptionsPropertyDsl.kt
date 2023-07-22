@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 
+/**
+ * An object that contains information about the suppression list preferences for your account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * SuppressionOptionsProperty suppressionOptionsProperty = SuppressionOptionsProperty.builder()
+ * .suppressedReasons(List.of("suppressedReasons"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-suppressionoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetSuppressionOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.SuppressionOptionsProperty.Builder =

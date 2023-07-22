@@ -11,6 +11,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.DockerCacheOption
 import software.amazon.awscdk.cloudassembly.schema.DockerImageSource
 
+/**
+ * Properties for how to produce a Docker image from a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * DockerImageSource dockerImageSource = DockerImageSource.builder()
+ * .cacheFrom(List.of(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build()))
+ * .cacheTo(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build())
+ * .directory("directory")
+ * .dockerBuildArgs(Map.of(
+ * "dockerBuildArgsKey", "dockerBuildArgs"))
+ * .dockerBuildSecrets(Map.of(
+ * "dockerBuildSecretsKey", "dockerBuildSecrets"))
+ * .dockerBuildTarget("dockerBuildTarget")
+ * .dockerFile("dockerFile")
+ * .dockerOutputs(List.of("dockerOutputs"))
+ * .executable(List.of("executable"))
+ * .networkMode("networkMode")
+ * .platform("platform")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageSourceDsl {
   private val cdkBuilder: DockerImageSource.Builder = DockerImageSource.builder()

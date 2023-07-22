@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnCluster
 
+/**
+ * The `CapacityProviderStrategyItem` property specifies the details of the default capacity
+ * provider strategy for the cluster.
+ *
+ * When services or tasks are run in the cluster with no launch type or capacity provider strategy
+ * specified, the default capacity provider strategy is used.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+ * CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-capacityproviderstrategyitem.html)
+ */
 @CdkDslMarker
 public class CfnClusterCapacityProviderStrategyItemPropertyDsl {
   private val cdkBuilder: CfnCluster.CapacityProviderStrategyItemProperty.Builder =

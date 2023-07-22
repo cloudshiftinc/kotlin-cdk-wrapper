@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnConnection
 
+/**
+ * Specifies the physical requirements for a connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * PhysicalConnectionRequirementsProperty physicalConnectionRequirementsProperty =
+ * PhysicalConnectionRequirementsProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .securityGroupIdList(List.of("securityGroupIdList"))
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-physicalconnectionrequirements.html)
+ */
 @CdkDslMarker
 public class CfnConnectionPhysicalConnectionRequirementsPropertyDsl {
   private val cdkBuilder: CfnConnection.PhysicalConnectionRequirementsProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters for PostgreSQL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PostgreSqlParametersProperty postgreSqlParametersProperty =
+ * PostgreSqlParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-postgresqlparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourcePostgreSqlParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.PostgreSqlParametersProperty.Builder =

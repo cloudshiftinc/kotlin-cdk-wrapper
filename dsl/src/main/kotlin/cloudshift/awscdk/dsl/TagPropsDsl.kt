@@ -10,6 +10,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.TagProps
 
+/**
+ * Properties for a tag.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * TagProps tagProps = TagProps.builder()
+ * .applyToLaunchedInstances(false)
+ * .excludeResourceTypes(List.of("excludeResourceTypes"))
+ * .includeResourceTypes(List.of("includeResourceTypes"))
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TagPropsDsl {
   private val cdkBuilder: TagProps.Builder = TagProps.builder()

@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnKeyGroup
 
+/**
+ * A key group configuration.
+ *
+ * A key group contains a list of public keys that you can use with [CloudFront signed URLs and
+ * signed
+ * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * KeyGroupConfigProperty keyGroupConfigProperty = KeyGroupConfigProperty.builder()
+ * .items(List.of("items"))
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-keygroup-keygroupconfig.html)
+ */
 @CdkDslMarker
 public class CfnKeyGroupKeyGroupConfigPropertyDsl {
   private val cdkBuilder: CfnKeyGroup.KeyGroupConfigProperty.Builder =

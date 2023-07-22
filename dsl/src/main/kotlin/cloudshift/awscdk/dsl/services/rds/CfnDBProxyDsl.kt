@@ -14,6 +14,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBProxy
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBProxy` resource creates or updates a DB proxy.
+ *
+ * For information about RDS Proxy for Amazon RDS, see [Managing Connections with Amazon RDS
+ * Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html) in the *Amazon RDS
+ * User Guide* .
+ *
+ * For information about RDS Proxy for Amazon Aurora, see [Managing Connections with Amazon RDS
+ * Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html) in the *Amazon
+ * Aurora User Guide* .
+ *
+ *
+ * Limitations apply to RDS Proxy, including DB engine version limitations and AWS Region
+ * limitations.
+ *
+ * For information about limitations that apply to RDS Proxy for Amazon RDS, see [Limitations for
+ * RDS
+ * Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy.limitations)
+ * in the *Amazon RDS User Guide* .
+ *
+ * For information about that apply to RDS Proxy for Amazon Aurora, see [Limitations for RDS
+ * Proxy](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/rds-proxy.html#rds-proxy.limitations)
+ * in the *Amazon Aurora User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBProxy cfnDBProxy = CfnDBProxy.Builder.create(this, "MyCfnDBProxy")
+ * .auth(List.of(AuthFormatProperty.builder()
+ * .authScheme("authScheme")
+ * .clientPasswordAuthType("clientPasswordAuthType")
+ * .description("description")
+ * .iamAuth("iamAuth")
+ * .secretArn("secretArn")
+ * .build()))
+ * .dbProxyName("dbProxyName")
+ * .engineFamily("engineFamily")
+ * .roleArn("roleArn")
+ * .vpcSubnetIds(List.of("vpcSubnetIds"))
+ * // the properties below are optional
+ * .debugLogging(false)
+ * .idleClientTimeout(123)
+ * .requireTls(false)
+ * .tags(List.of(TagFormatProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyDsl(
   scope: Construct,

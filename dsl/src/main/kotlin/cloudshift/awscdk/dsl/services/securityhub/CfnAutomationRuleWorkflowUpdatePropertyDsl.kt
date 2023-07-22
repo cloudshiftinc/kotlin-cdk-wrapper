@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * Used to update information about the investigation into the finding.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * WorkflowUpdateProperty workflowUpdateProperty = WorkflowUpdateProperty.builder()
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleWorkflowUpdatePropertyDsl {
   private val cdkBuilder: CfnAutomationRule.WorkflowUpdateProperty.Builder =

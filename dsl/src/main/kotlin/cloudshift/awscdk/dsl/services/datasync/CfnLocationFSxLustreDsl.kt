@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationFSxLustre
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationFSxLustre` resource specifies an endpoint for an Amazon FSx for
+ * Lustre file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxLustre cfnLocationFSxLustre = CfnLocationFSxLustre.Builder.create(this,
+ * "MyCfnLocationFSxLustre")
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * // the properties below are optional
+ * .fsxFilesystemArn("fsxFilesystemArn")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxlustre.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxLustreDsl(
   scope: Construct,

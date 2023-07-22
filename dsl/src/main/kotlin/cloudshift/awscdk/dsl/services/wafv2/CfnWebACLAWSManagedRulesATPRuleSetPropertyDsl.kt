@@ -7,6 +7,56 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Details for your use of the account takeover prevention managed rule group,
+ * `AWSManagedRulesATPRuleSet` .
+ *
+ * This configuration is used in `ManagedRuleGroupConfig` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * AWSManagedRulesATPRuleSetProperty aWSManagedRulesATPRuleSetProperty =
+ * AWSManagedRulesATPRuleSetProperty.builder()
+ * .loginPath("loginPath")
+ * // the properties below are optional
+ * .requestInspection(RequestInspectionProperty.builder()
+ * .passwordField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .payloadType("payloadType")
+ * .usernameField(FieldIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .build())
+ * .build())
+ * .responseInspection(ResponseInspectionProperty.builder()
+ * .bodyContains(ResponseInspectionBodyContainsProperty.builder()
+ * .failureStrings(List.of("failureStrings"))
+ * .successStrings(List.of("successStrings"))
+ * .build())
+ * .header(ResponseInspectionHeaderProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .name("name")
+ * .successValues(List.of("successValues"))
+ * .build())
+ * .json(ResponseInspectionJsonProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .identifier("identifier")
+ * .successValues(List.of("successValues"))
+ * .build())
+ * .statusCode(ResponseInspectionStatusCodeProperty.builder()
+ * .failureCodes(List.of(123))
+ * .successCodes(List.of(123))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-awsmanagedrulesatpruleset.html)
+ */
 @CdkDslMarker
 public class CfnWebACLAWSManagedRulesATPRuleSetPropertyDsl {
   private val cdkBuilder: CfnWebACL.AWSManagedRulesATPRuleSetProperty.Builder =

@@ -17,6 +17,21 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByNameProps
 
+/**
+ * Properties for EmrModifyInstanceGroupByName.
+ *
+ * Example:
+ *
+ * ```
+ * EmrModifyInstanceGroupByName.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .instanceGroupName(JsonPath.stringAt("$.InstanceGroupName"))
+ * .instanceGroup(InstanceGroupModifyConfigProperty.builder()
+ * .instanceCount(1)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrModifyInstanceGroupByNamePropsDsl {
   private val cdkBuilder: EmrModifyInstanceGroupByNameProps.Builder =

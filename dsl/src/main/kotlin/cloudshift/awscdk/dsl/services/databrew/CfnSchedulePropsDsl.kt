@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.databrew.CfnScheduleProps
 
+/**
+ * Properties for defining a `CfnSchedule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnScheduleProps cfnScheduleProps = CfnScheduleProps.builder()
+ * .cronExpression("cronExpression")
+ * .name("name")
+ * // the properties below are optional
+ * .jobNames(List.of("jobNames"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html)
+ */
 @CdkDslMarker
 public class CfnSchedulePropsDsl {
   private val cdkBuilder: CfnScheduleProps.Builder = CfnScheduleProps.builder()

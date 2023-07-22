@@ -8,6 +8,33 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codecommit.CfnRepository
 
+/**
+ * Information about a trigger for a repository.
+ *
+ *
+ * If you want to receive notifications about repository events, consider using notifications
+ * instead of triggers. For more information, see [Configuring notifications for repository
+ * events](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-repository-email.html) .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * RepositoryTriggerProperty repositoryTriggerProperty = RepositoryTriggerProperty.builder()
+ * .destinationArn("destinationArn")
+ * .events(List.of("events"))
+ * .name("name")
+ * // the properties below are optional
+ * .branches(List.of("branches"))
+ * .customData("customData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryRepositoryTriggerPropertyDsl {
   private val cdkBuilder: CfnRepository.RepositoryTriggerProperty.Builder =

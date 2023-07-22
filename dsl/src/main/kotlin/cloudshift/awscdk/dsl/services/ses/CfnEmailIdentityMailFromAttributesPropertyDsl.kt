@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 
+/**
+ * Used to enable or disable the custom Mail-From domain configuration for an email identity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * MailFromAttributesProperty mailFromAttributesProperty = MailFromAttributesProperty.builder()
+ * .behaviorOnMxFailure("behaviorOnMxFailure")
+ * .mailFromDomain("mailFromDomain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-mailfromattributes.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityMailFromAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.MailFromAttributesProperty.Builder =

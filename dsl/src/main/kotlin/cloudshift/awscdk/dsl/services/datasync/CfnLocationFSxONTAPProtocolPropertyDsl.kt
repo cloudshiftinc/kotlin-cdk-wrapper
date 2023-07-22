@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 
+/**
+ * Specifies the data transfer protocol that AWS DataSync uses to access your Amazon FSx file
+ * system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * ProtocolProperty protocolProperty = ProtocolProperty.builder()
+ * .nfs(NFSProperty.builder()
+ * .mountOptions(NfsMountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .build())
+ * .smb(SMBProperty.builder()
+ * .mountOptions(SmbMountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .password("password")
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-protocol.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxONTAPProtocolPropertyDsl {
   private val cdkBuilder: CfnLocationFSxONTAP.ProtocolProperty.Builder =

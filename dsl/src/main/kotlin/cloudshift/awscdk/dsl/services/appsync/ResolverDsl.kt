@@ -18,6 +18,25 @@ import software.amazon.awscdk.services.appsync.MappingTemplate
 import software.amazon.awscdk.services.appsync.Resolver
 import software.constructs.Construct
 
+/**
+ * An AppSync resolver.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api;
+ * AppsyncFunction appsyncFunction;
+ * Resolver pipelineResolver = Resolver.Builder.create(this, "pipeline")
+ * .api(api)
+ * .dataSource(api.addNoneDataSource("none"))
+ * .typeName("typeName")
+ * .fieldName("fieldName")
+ * .requestMappingTemplate(MappingTemplate.fromFile("beforeRequest.vtl"))
+ * .pipelineConfig(List.of(appsyncFunction))
+ * .responseMappingTemplate(MappingTemplate.fromFile("afterResponse.vtl"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResolverDsl(
   scope: Construct,

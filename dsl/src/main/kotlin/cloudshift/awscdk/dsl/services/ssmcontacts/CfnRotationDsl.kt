@@ -13,6 +13,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 import software.constructs.Construct
 
+/**
+ * Specifies a rotation in an on-call schedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnRotation cfnRotation = CfnRotation.Builder.create(this, "MyCfnRotation")
+ * .contactIds(List.of("contactIds"))
+ * .name("name")
+ * .recurrence(RecurrenceSettingsProperty.builder()
+ * .numberOfOnCalls(123)
+ * .recurrenceMultiplier(123)
+ * // the properties below are optional
+ * .dailySettings(List.of("dailySettings"))
+ * .monthlySettings(List.of(MonthlySettingProperty.builder()
+ * .dayOfMonth(123)
+ * .handOffTime("handOffTime")
+ * .build()))
+ * .shiftCoverages(List.of(ShiftCoverageProperty.builder()
+ * .coverageTimes(List.of(CoverageTimeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build()))
+ * .dayOfWeek("dayOfWeek")
+ * .build()))
+ * .weeklySettings(List.of(WeeklySettingProperty.builder()
+ * .dayOfWeek("dayOfWeek")
+ * .handOffTime("handOffTime")
+ * .build()))
+ * .build())
+ * .startTime("startTime")
+ * .timeZoneId("timeZoneId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html)
+ */
 @CdkDslMarker
 public class CfnRotationDsl(
   scope: Construct,

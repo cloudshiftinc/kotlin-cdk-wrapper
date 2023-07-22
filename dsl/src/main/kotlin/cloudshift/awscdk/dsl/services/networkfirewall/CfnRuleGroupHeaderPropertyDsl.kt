@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * The 5-tuple criteria for AWS Network Firewall to use to inspect packet headers in stateful
+ * traffic flow inspection.
+ *
+ * Traffic flows that match the criteria are a match for the corresponding stateful rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * HeaderProperty headerProperty = HeaderProperty.builder()
+ * .destination("destination")
+ * .destinationPort("destinationPort")
+ * .direction("direction")
+ * .protocol("protocol")
+ * .source("source")
+ * .sourcePort("sourcePort")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-header.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupHeaderPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.HeaderProperty.Builder =

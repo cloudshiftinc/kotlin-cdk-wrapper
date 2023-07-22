@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters for Spark.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SparkParametersProperty sparkParametersProperty = SparkParametersProperty.builder()
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-sparkparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSparkParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.SparkParametersProperty.Builder =

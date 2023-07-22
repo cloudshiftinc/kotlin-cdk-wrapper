@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The required parameters that are needed to connect to a Databricks data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DatabricksParametersProperty databricksParametersProperty =
+ * DatabricksParametersProperty.builder()
+ * .host("host")
+ * .port(123)
+ * .sqlEndpointPath("sqlEndpointPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-databricksparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceDatabricksParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.DatabricksParametersProperty.Builder =

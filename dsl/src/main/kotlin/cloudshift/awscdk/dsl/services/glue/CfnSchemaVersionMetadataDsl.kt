@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSchemaVersionMetadata
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::SchemaVersionMetadata` is an AWS Glue resource type that defines the metadata
+ * key-value pairs for a schema version in AWS Glue Schema Registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnSchemaVersionMetadata cfnSchemaVersionMetadata = CfnSchemaVersionMetadata.Builder.create(this,
+ * "MyCfnSchemaVersionMetadata")
+ * .key("key")
+ * .schemaVersionId("schemaVersionId")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schemaversionmetadata.html)
+ */
 @CdkDslMarker
 public class CfnSchemaVersionMetadataDsl(
   scope: Construct,

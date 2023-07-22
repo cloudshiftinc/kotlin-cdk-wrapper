@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.OAuthFlows
 
+/**
+ * Types of OAuth grant flows.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = UserPool.Builder.create(this, "UserPool").build();
+ * UserPoolClient client = userpool.addClient("Client", UserPoolClientOptions.builder()
+ * // ...
+ * .oAuth(OAuthSettings.builder()
+ * .flows(OAuthFlows.builder()
+ * .implicitCodeGrant(true)
+ * .build())
+ * .callbackUrls(List.of("https://myapp.com/home", "https://myapp.com/users"))
+ * .build())
+ * .build());
+ * UserPoolDomain domain = userpool.addDomain("Domain", UserPoolDomainOptions.builder().build());
+ * String signInUrl = domain.signInUrl(client, SignInUrlOptions.builder()
+ * .redirectUri("https://myapp.com/home")
+ * .build());
+ * ```
+ *
+ * [Documentation]( - the 'Allowed OAuth Flows' section at
+ * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html)
+ */
 @CdkDslMarker
 public class OAuthFlowsDsl {
   private val cdkBuilder: OAuthFlows.Builder = OAuthFlows.builder()

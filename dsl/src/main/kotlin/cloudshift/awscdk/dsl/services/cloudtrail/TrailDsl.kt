@@ -17,6 +17,24 @@ import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.sns.ITopic
 import software.constructs.Construct
 
+/**
+ * Cloud trail allows you to log events that happen in your AWS account For example:.
+ *
+ * import { CloudTrail } from '&#64;aws-cdk/aws-cloudtrail'
+ *
+ * const cloudTrail = new CloudTrail(this, 'MyTrail');
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * IAlias myKeyAlias = Alias.fromAliasName(this, "myKey", "alias/aws/s3");
+ * Trail trail = Trail.Builder.create(this, "myCloudTrail")
+ * .sendToCloudWatchLogs(true)
+ * .kmsKey(myKeyAlias)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TrailDsl(
   scope: Construct,

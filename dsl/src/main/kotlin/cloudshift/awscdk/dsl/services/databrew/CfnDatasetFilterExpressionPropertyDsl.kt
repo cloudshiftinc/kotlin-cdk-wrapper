@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents a structure for defining parameter conditions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * FilterExpressionProperty filterExpressionProperty = FilterExpressionProperty.builder()
+ * .expression("expression")
+ * .valuesMap(List.of(FilterValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-filterexpression.html)
+ */
 @CdkDslMarker
 public class CfnDatasetFilterExpressionPropertyDsl {
   private val cdkBuilder: CfnDataset.FilterExpressionProperty.Builder =

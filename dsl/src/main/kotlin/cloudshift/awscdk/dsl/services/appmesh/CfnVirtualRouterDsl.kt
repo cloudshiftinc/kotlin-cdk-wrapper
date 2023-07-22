@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
 import software.constructs.Construct
 
+/**
+ * Creates a virtual router within a service mesh.
+ *
+ * Specify a `listener` for any inbound traffic that your virtual router receives. Create a virtual
+ * router for each protocol and port that you need to route. Virtual routers handle traffic for one or
+ * more virtual services within your mesh. After you create your virtual router, create and associate
+ * routes for your virtual router that direct incoming requests to different virtual nodes.
+ *
+ * For more information about virtual routers, see [Virtual
+ * routers](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_routers.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * CfnVirtualRouter cfnVirtualRouter = CfnVirtualRouter.Builder.create(this, "MyCfnVirtualRouter")
+ * .meshName("meshName")
+ * .spec(VirtualRouterSpecProperty.builder()
+ * .listeners(List.of(VirtualRouterListenerProperty.builder()
+ * .portMapping(PortMappingProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .meshOwner("meshOwner")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .virtualRouterName("virtualRouterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html)
+ */
 @CdkDslMarker
 public class CfnVirtualRouterDsl(
   scope: Construct,

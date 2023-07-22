@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.KeepOriginalAttrs
 
+/**
+ * Attributes that will be kept until the user verifies the changed attribute.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .signInAliases(SignInAliases.builder().username(true).build())
+ * .autoVerify(AutoVerifiedAttrs.builder().email(true).phone(true).build())
+ * .keepOriginal(KeepOriginalAttrs.builder()
+ * .email(true)
+ * .phone(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KeepOriginalAttrsDsl {
   private val cdkBuilder: KeepOriginalAttrs.Builder = KeepOriginalAttrs.builder()

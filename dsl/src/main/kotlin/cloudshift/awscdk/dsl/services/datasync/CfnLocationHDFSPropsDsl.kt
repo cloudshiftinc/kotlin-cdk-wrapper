@@ -15,6 +15,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationHDFS
 import software.amazon.awscdk.services.datasync.CfnLocationHDFSProps
 
+/**
+ * Properties for defining a `CfnLocationHDFS`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationHDFSProps cfnLocationHDFSProps = CfnLocationHDFSProps.builder()
+ * .agentArns(List.of("agentArns"))
+ * .authenticationType("authenticationType")
+ * .nameNodes(List.of(NameNodeProperty.builder()
+ * .hostname("hostname")
+ * .port(123)
+ * .build()))
+ * // the properties below are optional
+ * .blockSize(123)
+ * .kerberosKeytab("kerberosKeytab")
+ * .kerberosKrb5Conf("kerberosKrb5Conf")
+ * .kerberosPrincipal("kerberosPrincipal")
+ * .kmsKeyProviderUri("kmsKeyProviderUri")
+ * .qopConfiguration(QopConfigurationProperty.builder()
+ * .dataTransferProtection("dataTransferProtection")
+ * .rpcProtection("rpcProtection")
+ * .build())
+ * .replicationFactor(123)
+ * .simpleUser("simpleUser")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationhdfs.html)
+ */
 @CdkDslMarker
 public class CfnLocationHDFSPropsDsl {
   private val cdkBuilder: CfnLocationHDFSProps.Builder = CfnLocationHDFSProps.builder()

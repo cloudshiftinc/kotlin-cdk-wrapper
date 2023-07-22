@@ -8,6 +8,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.globalaccelerator.RawEndpoint
 
+/**
+ * Untyped endpoint implementation.
+ *
+ * Prefer using the classes in the `aws-globalaccelerator-endpoints` package instead,
+ * as they accept typed constructs. You can use this class if you want to use an
+ * endpoint type that does not have an appropriate class in that package yet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * RawEndpoint rawEndpoint = RawEndpoint.Builder.create()
+ * .endpointId("endpointId")
+ * // the properties below are optional
+ * .preserveClientIp(false)
+ * .region("region")
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RawEndpointDsl {
   private val cdkBuilder: RawEndpoint.Builder = RawEndpoint.Builder.create()

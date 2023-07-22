@@ -12,6 +12,41 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnAgreement
 import software.constructs.Construct
 
+/**
+ * Creates an agreement.
+ *
+ * An agreement is a bilateral trading partner agreement, or partnership, between an AWS Transfer
+ * Family server and an AS2 process. The agreement defines the file and message transfer relationship
+ * between the server and the AS2 process. To define an agreement, Transfer Family combines a server,
+ * local profile, partner profile, certificate, and other attributes.
+ *
+ * The partner is identified with the `PartnerProfileId` , and the AS2 process is identified with
+ * the `LocalProfileId` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnAgreement cfnAgreement = CfnAgreement.Builder.create(this, "MyCfnAgreement")
+ * .accessRole("accessRole")
+ * .baseDirectory("baseDirectory")
+ * .localProfileId("localProfileId")
+ * .partnerProfileId("partnerProfileId")
+ * .serverId("serverId")
+ * // the properties below are optional
+ * .description("description")
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html)
+ */
 @CdkDslMarker
 public class CfnAgreementDsl(
   scope: Construct,

@@ -11,6 +11,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.CfnWebACL
 import software.constructs.Construct
 
+/**
+ * This is *AWS WAF Classic* documentation.
+ *
+ * For more information, see [AWS WAF
+ * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
+ * developer guide.
+ *
+ *
+ * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
+ * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
+ * version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ *
+ * Contains the `Rules` that identify the requests that you want to allow, block, or count. In a
+ * `WebACL` , you also specify a default action ( `ALLOW` or `BLOCK` ), and the action for each `Rule`
+ * that you add to a `WebACL` , for example, block requests from specified IP addresses or block
+ * requests from specified referrers. You also associate the `WebACL` with a Amazon CloudFront
+ * distribution to identify the requests that you want AWS WAF to filter. If you add more than one
+ * `Rule` to a `WebACL` , a request needs to match only one of the specifications to be allowed,
+ * blocked, or counted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.*;
+ * CfnWebACL cfnWebACL = CfnWebACL.Builder.create(this, "MyCfnWebACL")
+ * .defaultAction(WafActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .metricName("metricName")
+ * .name("name")
+ * // the properties below are optional
+ * .rules(List.of(ActivatedRuleProperty.builder()
+ * .priority(123)
+ * .ruleId("ruleId")
+ * // the properties below are optional
+ * .action(WafActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-webacl.html)
+ */
 @CdkDslMarker
 public class CfnWebACLDsl(
   scope: Construct,

@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.FluentdLogDriver
 
+/**
+ * A log driver that sends log information to journald Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * FluentdLogDriver fluentdLogDriver = FluentdLogDriver.Builder.create()
+ * .address("address")
+ * .asyncConnect(false)
+ * .bufferLimit(123)
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .maxRetries(123)
+ * .retryWait(Duration.minutes(30))
+ * .subSecondPrecision(false)
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FluentdLogDriverDsl {
   private val cdkBuilder: FluentdLogDriver.Builder = FluentdLogDriver.Builder.create()

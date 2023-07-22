@@ -11,6 +11,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 
+/**
+ * A configuration used when creating an Object Lambda Access Point transformation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3objectlambda.*;
+ * Object contentTransformation;
+ * TransformationConfigurationProperty transformationConfigurationProperty =
+ * TransformationConfigurationProperty.builder()
+ * .actions(List.of("actions"))
+ * .contentTransformation(contentTransformation)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3objectlambda-accesspoint-transformationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointTransformationConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.TransformationConfigurationProperty.Builder =

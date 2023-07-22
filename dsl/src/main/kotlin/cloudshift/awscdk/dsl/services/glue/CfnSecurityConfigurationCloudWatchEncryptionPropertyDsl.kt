@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 
+/**
+ * Specifies how Amazon CloudWatch data should be encrypted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CloudWatchEncryptionProperty cloudWatchEncryptionProperty =
+ * CloudWatchEncryptionProperty.builder()
+ * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-cloudwatchencryption.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationCloudWatchEncryptionPropertyDsl {
   private val cdkBuilder: CfnSecurityConfiguration.CloudWatchEncryptionProperty.Builder =

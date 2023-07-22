@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnTable
 
+/**
+ * The location to write error reports for records rejected, asynchronously, during magnetic store
+ * writes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * MagneticStoreRejectedDataLocationProperty magneticStoreRejectedDataLocationProperty =
+ * MagneticStoreRejectedDataLocationProperty.builder()
+ * .s3Configuration(S3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-magneticstorerejecteddatalocation.html)
+ */
 @CdkDslMarker
 public class CfnTableMagneticStoreRejectedDataLocationPropertyDsl {
   private val cdkBuilder: CfnTable.MagneticStoreRejectedDataLocationProperty.Builder =

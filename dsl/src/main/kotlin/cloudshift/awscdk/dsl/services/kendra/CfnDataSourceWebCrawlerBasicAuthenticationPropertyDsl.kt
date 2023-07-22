@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to websites that require basic user
+ * authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * WebCrawlerBasicAuthenticationProperty webCrawlerBasicAuthenticationProperty =
+ * WebCrawlerBasicAuthenticationProperty.builder()
+ * .credentials("credentials")
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-webcrawlerbasicauthentication.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceWebCrawlerBasicAuthenticationPropertyDsl {
   private val cdkBuilder: CfnDataSource.WebCrawlerBasicAuthenticationProperty.Builder =

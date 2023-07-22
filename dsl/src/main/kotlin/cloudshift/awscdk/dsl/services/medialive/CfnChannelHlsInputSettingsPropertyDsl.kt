@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about how to connect to the upstream system.
+ *
+ * The parent of this entity is NetworkInputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsInputSettingsProperty hlsInputSettingsProperty = HlsInputSettingsProperty.builder()
+ * .bandwidth(123)
+ * .bufferSegments(123)
+ * .retries(123)
+ * .retryInterval(123)
+ * .scte35Source("scte35Source")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsinputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsInputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsInputSettingsProperty.Builder =

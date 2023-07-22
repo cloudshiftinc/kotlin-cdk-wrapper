@@ -27,6 +27,25 @@ import software.amazon.awscdk.services.s3.RedirectTarget
 import software.amazon.awscdk.services.s3.RoutingRule
 import software.constructs.Construct
 
+/**
+ * An S3 bucket with associated policy objects.
+ *
+ * This bucket does not yet have all features that exposed by the underlying
+ * BucketResource.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.RemovalPolicy;
+ * Bucket.Builder.create(scope, "Bucket")
+ * .blockPublicAccess(BlockPublicAccess.BLOCK_ALL)
+ * .encryption(BucketEncryption.S3_MANAGED)
+ * .enforceSSL(true)
+ * .versioned(true)
+ * .removalPolicy(RemovalPolicy.RETAIN)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BucketDsl(
   scope: Construct,

@@ -9,6 +9,60 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Configuration for profile jobs.
+ *
+ * Configuration can be used to select columns, do evaluations, and override default parameters of
+ * evaluations. When configuration is undefined, the profile job will apply default settings to all
+ * supported columns.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ProfileConfigurationProperty profileConfigurationProperty =
+ * ProfileConfigurationProperty.builder()
+ * .columnStatisticsConfigurations(List.of(ColumnStatisticsConfigurationProperty.builder()
+ * .statistics(StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .selectors(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .build()))
+ * .datasetStatisticsConfiguration(StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build())
+ * .entityDetectorConfiguration(EntityDetectorConfigurationProperty.builder()
+ * .entityTypes(List.of("entityTypes"))
+ * // the properties below are optional
+ * .allowedStatistics(AllowedStatisticsProperty.builder()
+ * .statistics(List.of("statistics"))
+ * .build())
+ * .build())
+ * .profileColumns(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-profileconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobProfileConfigurationPropertyDsl {
   private val cdkBuilder: CfnJob.ProfileConfigurationProperty.Builder =

@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnCapacityReservation
 
+/**
+ * An array of key-value pairs to apply to this resource.
+ *
+ * For more information, see
+ * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservation-tagspecification.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationTagSpecificationPropertyDsl {
   private val cdkBuilder: CfnCapacityReservation.TagSpecificationProperty.Builder =

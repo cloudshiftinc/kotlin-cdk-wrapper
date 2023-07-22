@@ -7,6 +7,15 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.DedicatedIpPool
 import software.constructs.Construct
 
+/**
+ * A dedicated IP pool.
+ *
+ * Example:
+ *
+ * ```
+ * new DedicatedIpPool(this, "Pool");
+ * ```
+ */
 @CdkDslMarker
 public class DedicatedIpPoolDsl(
   scope: Construct,

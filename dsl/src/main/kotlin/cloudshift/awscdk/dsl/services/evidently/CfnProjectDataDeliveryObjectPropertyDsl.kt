@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnProject
 
+/**
+ * A structure that contains information about where Evidently is to store evaluation events for
+ * longer term storage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * DataDeliveryObjectProperty dataDeliveryObjectProperty = DataDeliveryObjectProperty.builder()
+ * .logGroup("logGroup")
+ * .s3(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-project-datadeliveryobject.html)
+ */
 @CdkDslMarker
 public class CfnProjectDataDeliveryObjectPropertyDsl {
   private val cdkBuilder: CfnProject.DataDeliveryObjectProperty.Builder =

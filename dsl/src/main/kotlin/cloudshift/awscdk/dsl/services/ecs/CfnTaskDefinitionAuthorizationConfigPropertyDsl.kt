@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The authorization configuration details for the Amazon EFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * AuthorizationConfigProperty authorizationConfigProperty = AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-authorizationconfig.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionAuthorizationConfigPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.AuthorizationConfigProperty.Builder =

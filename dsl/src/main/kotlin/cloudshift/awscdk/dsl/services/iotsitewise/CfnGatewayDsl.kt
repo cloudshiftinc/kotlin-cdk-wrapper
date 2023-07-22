@@ -14,6 +14,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnGateway
 import software.constructs.Construct
 
+/**
+ * Creates a gateway, which is a virtual or edge device that delivers industrial data streams from
+ * local servers to AWS IoT SiteWise .
+ *
+ * For more information, see [Ingesting data using a
+ * gateway](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/gateway-connector.html) in the
+ * *AWS IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnGateway cfnGateway = CfnGateway.Builder.create(this, "MyCfnGateway")
+ * .gatewayName("gatewayName")
+ * .gatewayPlatform(GatewayPlatformProperty.builder()
+ * .greengrass(GreengrassProperty.builder()
+ * .groupArn("groupArn")
+ * .build())
+ * .greengrassV2(GreengrassV2Property.builder()
+ * .coreDeviceThingName("coreDeviceThingName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .gatewayCapabilitySummaries(List.of(GatewayCapabilitySummaryProperty.builder()
+ * .capabilityNamespace("capabilityNamespace")
+ * // the properties below are optional
+ * .capabilityConfiguration("capabilityConfiguration")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-gateway.html)
+ */
 @CdkDslMarker
 public class CfnGatewayDsl(
   scope: Construct,

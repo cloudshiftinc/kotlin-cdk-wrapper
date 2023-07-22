@@ -7,6 +7,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.eks.ServiceAccountOptions
 
+/**
+ * Options for `ServiceAccount`.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // add service account with annotations and labels
+ * ServiceAccount serviceAccount = cluster.addServiceAccount("MyServiceAccount",
+ * ServiceAccountOptions.builder()
+ * .annotations(Map.of(
+ * "eks.amazonaws.com/sts-regional-endpoints", "false"))
+ * .labels(Map.of(
+ * "some-label", "with-some-value"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ServiceAccountOptionsDsl {
   private val cdkBuilder: ServiceAccountOptions.Builder = ServiceAccountOptions.builder()

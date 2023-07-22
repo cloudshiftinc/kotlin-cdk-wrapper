@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps
 
+/**
+ * Properties for a NetworkLoadBalancerEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * CfnEIP eip;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * CfnEipEndpoint.Builder.create(eip)
+ * .weight(128)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CfnEipEndpointPropsDsl {
   private val cdkBuilder: CfnEipEndpointProps.Builder = CfnEipEndpointProps.builder()

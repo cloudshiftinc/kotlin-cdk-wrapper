@@ -17,6 +17,27 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * A CDK Pipeline that uses CodePipeline to deploy CDK apps.
+ *
+ * This is a `Pipeline` with its `engine` property set to
+ * `CodePipelineEngine`, and exists for nicer ergonomics for
+ * users that don't need to switch out engines.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline codePipeline;
+ * Artifact sourceArtifact = new Artifact("MySourceArtifact");
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .codePipeline(codePipeline)
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodePipelineDsl(
   scope: Construct,

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The environment variables to send to the container.
+ *
+ * You can add new environment variables, which are added to the container at launch, or you can
+ * override the existing environment variables from the Docker image or the task definition. You must
+ * also specify a container name.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * EcsEnvironmentVariableProperty ecsEnvironmentVariableProperty =
+ * EcsEnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-ecsenvironmentvariable.html)
+ */
 @CdkDslMarker
 public class CfnPipeEcsEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnPipe.EcsEnvironmentVariableProperty.Builder =

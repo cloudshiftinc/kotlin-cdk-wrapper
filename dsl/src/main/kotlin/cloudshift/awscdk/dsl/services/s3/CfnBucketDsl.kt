@@ -15,6 +15,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 import software.constructs.Construct
 
+/**
+ * The `AWS::S3::Bucket` resource creates an Amazon S3 bucket in the same AWS Region where you
+ * create the AWS CloudFormation stack.
+ *
+ * To control how AWS CloudFormation handles the bucket when the stack is deleted, you can set a
+ * deletion policy for your bucket. You can choose to *retain* the bucket or to *delete* the bucket.
+ * For more information, see [DeletionPolicy
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * .
+ *
+ *
+ * You can only delete empty buckets. Deletion fails for buckets that have contents.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * CfnBucket cfnBucket = (CfnBucket)cfnTemplate.getResource("Bucket");
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new AnyPrincipal())
+ * .build();
+ * role.addToPolicy(PolicyStatement.Builder.create()
+ * .actions(List.of("s3:*"))
+ * .resources(List.of(cfnBucket.getAttrArn()))
+ * .build());
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html)
+ */
 @CdkDslMarker
 public class CfnBucketDsl(
   scope: Construct,

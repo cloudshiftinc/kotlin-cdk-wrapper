@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
 
+/**
+ * Sidewalk update.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SidewalkUpdateAccountProperty sidewalkUpdateAccountProperty =
+ * SidewalkUpdateAccountProperty.builder()
+ * .appServerPrivateKey("appServerPrivateKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkupdateaccount.html)
+ */
 @CdkDslMarker
 public class CfnPartnerAccountSidewalkUpdateAccountPropertyDsl {
   private val cdkBuilder: CfnPartnerAccount.SidewalkUpdateAccountProperty.Builder =

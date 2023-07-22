@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnBaiduChannelProps
 
+/**
+ * Properties for defining a `CfnBaiduChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnBaiduChannelProps cfnBaiduChannelProps = CfnBaiduChannelProps.builder()
+ * .apiKey("apiKey")
+ * .applicationId("applicationId")
+ * .secretKey("secretKey")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-baiduchannel.html)
+ */
 @CdkDslMarker
 public class CfnBaiduChannelPropsDsl {
   private val cdkBuilder: CfnBaiduChannelProps.Builder = CfnBaiduChannelProps.builder()

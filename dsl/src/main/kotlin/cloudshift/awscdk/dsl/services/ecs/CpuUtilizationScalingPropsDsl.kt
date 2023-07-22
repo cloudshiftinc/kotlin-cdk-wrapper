@@ -9,6 +9,25 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.CpuUtilizationScalingProps
 
+/**
+ * The properties for enabling scaling based on CPU utilization.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationTargetGroup target;
+ * BaseService service;
+ * ScalableTaskCount scaling =
+ * service.autoScaleTaskCount(EnableScalingProps.builder().maxCapacity(10).build());
+ * scaling.scaleOnCpuUtilization("CpuScaling", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * scaling.scaleOnRequestCount("RequestScaling", RequestCountScalingProps.builder()
+ * .requestsPerTarget(10000)
+ * .targetGroup(target)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CpuUtilizationScalingPropsDsl {
   private val cdkBuilder: CpuUtilizationScalingProps.Builder = CpuUtilizationScalingProps.builder()

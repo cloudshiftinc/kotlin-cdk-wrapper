@@ -9,6 +9,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnScheduledAction
 import software.constructs.Construct
 
+/**
+ * Creates a scheduled action.
+ *
+ * A scheduled action contains a schedule and an Amazon Redshift API action. For example, you can
+ * create a schedule of when to run the `ResizeCluster` API operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnScheduledAction cfnScheduledAction = CfnScheduledAction.Builder.create(this,
+ * "MyCfnScheduledAction")
+ * .scheduledActionName("scheduledActionName")
+ * // the properties below are optional
+ * .enable(false)
+ * .endTime("endTime")
+ * .iamRole("iamRole")
+ * .schedule("schedule")
+ * .scheduledActionDescription("scheduledActionDescription")
+ * .startTime("startTime")
+ * .targetAction(ScheduledActionTypeProperty.builder()
+ * .pauseCluster(PauseClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .resizeCluster(ResizeClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .classic(false)
+ * .clusterType("clusterType")
+ * .nodeType("nodeType")
+ * .numberOfNodes(123)
+ * .build())
+ * .resumeCluster(ResumeClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionDsl(
   scope: Construct,

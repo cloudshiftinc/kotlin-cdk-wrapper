@@ -11,6 +11,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnEndpoint
 import software.amazon.awscdk.services.events.CfnEndpointProps
 
+/**
+ * Properties for defining a `CfnEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnEndpointProps cfnEndpointProps = CfnEndpointProps.builder()
+ * .eventBuses(List.of(EndpointEventBusProperty.builder()
+ * .eventBusArn("eventBusArn")
+ * .build()))
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .failoverConfig(FailoverConfigProperty.builder()
+ * .primary(PrimaryProperty.builder()
+ * .healthCheck("healthCheck")
+ * .build())
+ * .secondary(SecondaryProperty.builder()
+ * .route("route")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .replicationConfig(ReplicationConfigProperty.builder()
+ * .state("state")
+ * .build())
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointPropsDsl {
   private val cdkBuilder: CfnEndpointProps.Builder = CfnEndpointProps.builder()

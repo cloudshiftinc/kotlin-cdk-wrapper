@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Provides information about how AWS Ground Station should echo back uplink transmissions to a
+ * dataflow endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * UplinkEchoConfigProperty uplinkEchoConfigProperty = UplinkEchoConfigProperty.builder()
+ * .antennaUplinkConfigArn("antennaUplinkConfigArn")
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkechoconfig.html)
+ */
 @CdkDslMarker
 public class CfnConfigUplinkEchoConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.UplinkEchoConfigProperty.Builder =

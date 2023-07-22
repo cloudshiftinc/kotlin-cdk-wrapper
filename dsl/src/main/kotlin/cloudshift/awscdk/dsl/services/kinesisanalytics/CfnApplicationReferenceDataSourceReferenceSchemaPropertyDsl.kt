@@ -10,6 +10,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource
 
+/**
+ * The ReferenceSchema property type specifies the format of the data in the reference source for a
+ * SQL-based Amazon Kinesis Data Analytics application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * ReferenceSchemaProperty referenceSchemaProperty = ReferenceSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html)
+ */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceReferenceSchemaPropertyDsl {
   private val cdkBuilder: CfnApplicationReferenceDataSource.ReferenceSchemaProperty.Builder =

@@ -10,6 +10,22 @@ import kotlin.collections.Map
 import software.amazon.awscdk.CfnMapping
 import software.constructs.Construct
 
+/**
+ * Represents a CloudFormation mapping.
+ *
+ * Example:
+ *
+ * ```
+ * CfnMapping regionTable = CfnMapping.Builder.create(this, "RegionTable")
+ * .mapping(Map.of(
+ * "us-east-1", Map.of(
+ * "regionName", "US East (N. Virginia)"),
+ * "us-east-2", Map.of(
+ * "regionName", "US East (Ohio)")))
+ * .build();
+ * regionTable.findInMap(Aws.REGION, "regionName");
+ * ```
+ */
 @CdkDslMarker
 public class CfnMappingDsl(
   scope: Construct,

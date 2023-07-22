@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnProjectProps
 
+/**
+ * Properties for defining a `CfnProject`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnProjectProps cfnProjectProps = CfnProjectProps.builder()
+ * .portalId("portalId")
+ * .projectName("projectName")
+ * // the properties below are optional
+ * .assetIds(List.of("assetIds"))
+ * .projectDescription("projectDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectPropsDsl {
   private val cdkBuilder: CfnProjectProps.Builder = CfnProjectProps.builder()

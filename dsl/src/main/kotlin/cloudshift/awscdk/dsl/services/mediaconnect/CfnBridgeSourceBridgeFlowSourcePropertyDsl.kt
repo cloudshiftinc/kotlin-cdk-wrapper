@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 
+/**
+ * The source of the bridge.
+ *
+ * A flow source originates in MediaConnect as an existing cloud flow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * BridgeFlowSourceProperty bridgeFlowSourceProperty = BridgeFlowSourceProperty.builder()
+ * .flowArn("flowArn")
+ * // the properties below are optional
+ * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridgesource-bridgeflowsource.html)
+ */
 @CdkDslMarker
 public class CfnBridgeSourceBridgeFlowSourcePropertyDsl {
   private val cdkBuilder: CfnBridgeSource.BridgeFlowSourceProperty.Builder =

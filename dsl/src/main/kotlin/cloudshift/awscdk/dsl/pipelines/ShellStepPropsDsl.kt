@@ -11,6 +11,23 @@ import software.amazon.awscdk.CfnOutput
 import software.amazon.awscdk.pipelines.IFileSetProducer
 import software.amazon.awscdk.pipelines.ShellStepProps
 
+/**
+ * Construction properties for a `ShellStep`.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline codePipeline;
+ * Artifact sourceArtifact = new Artifact("MySourceArtifact");
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .codePipeline(codePipeline)
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ShellStepPropsDsl {
   private val cdkBuilder: ShellStepProps.Builder = ShellStepProps.builder()

@@ -16,6 +16,59 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a target group for an Application Load Balancer, a Network Load Balancer, or a Gateway
+ * Load Balancer.
+ *
+ * Before you register a Lambda function as a target, you must create a `AWS::Lambda::Permission`
+ * resource that grants the Elastic Load Balancing service principal permission to invoke the Lambda
+ * function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnTargetGroup cfnTargetGroup = CfnTargetGroup.Builder.create(this, "MyCfnTargetGroup")
+ * .healthCheckEnabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckPath("healthCheckPath")
+ * .healthCheckPort("healthCheckPort")
+ * .healthCheckProtocol("healthCheckProtocol")
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .ipAddressType("ipAddressType")
+ * .matcher(MatcherProperty.builder()
+ * .grpcCode("grpcCode")
+ * .httpCode("httpCode")
+ * .build())
+ * .name("name")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetGroupAttributes(List.of(TargetGroupAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targets(List.of(TargetDescriptionProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .port(123)
+ * .build()))
+ * .targetType("targetType")
+ * .unhealthyThresholdCount(123)
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupDsl(
   scope: Construct,

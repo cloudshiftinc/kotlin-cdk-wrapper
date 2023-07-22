@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission
 import software.constructs.Construct
 
+/**
+ * Specifies a permission for an Amazon EC2 network interface.
+ *
+ * For example, you can grant an AWS authorized partner account permission to attach the specified
+ * network interface to an instance in their account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInterfacePermission cfnNetworkInterfacePermission =
+ * CfnNetworkInterfacePermission.Builder.create(this, "MyCfnNetworkInterfacePermission")
+ * .awsAccountId("awsAccountId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .permission("permission")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfacepermission.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInterfacePermissionDsl(
   scope: Construct,

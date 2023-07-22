@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * This structure specifies how often a canary is to make runs and the date and time when it should
+ * stop making runs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .durationInSeconds("durationInSeconds")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-schedule.html)
+ */
 @CdkDslMarker
 public class CfnCanarySchedulePropertyDsl {
   private val cdkBuilder: CfnCanary.ScheduleProperty.Builder = CfnCanary.ScheduleProperty.builder()

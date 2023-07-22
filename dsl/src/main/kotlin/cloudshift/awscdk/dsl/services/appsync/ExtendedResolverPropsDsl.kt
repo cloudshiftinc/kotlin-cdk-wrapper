@@ -16,6 +16,40 @@ import software.amazon.awscdk.services.appsync.FunctionRuntime
 import software.amazon.awscdk.services.appsync.IAppsyncFunction
 import software.amazon.awscdk.services.appsync.MappingTemplate
 
+/**
+ * Additional property for an AppSync resolver for data source reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appsync.*;
+ * AppsyncFunction appsyncFunction;
+ * BaseDataSource baseDataSource;
+ * Code code;
+ * FunctionRuntime functionRuntime;
+ * MappingTemplate mappingTemplate;
+ * ExtendedResolverProps extendedResolverProps = ExtendedResolverProps.builder()
+ * .fieldName("fieldName")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .cachingConfig(CachingConfig.builder()
+ * .ttl(Duration.minutes(30))
+ * // the properties below are optional
+ * .cachingKeys(List.of("cachingKeys"))
+ * .build())
+ * .code(code)
+ * .dataSource(baseDataSource)
+ * .maxBatchSize(123)
+ * .pipelineConfig(List.of(appsyncFunction))
+ * .requestMappingTemplate(mappingTemplate)
+ * .responseMappingTemplate(mappingTemplate)
+ * .runtime(functionRuntime)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExtendedResolverPropsDsl {
   private val cdkBuilder: ExtendedResolverProps.Builder = ExtendedResolverProps.builder()

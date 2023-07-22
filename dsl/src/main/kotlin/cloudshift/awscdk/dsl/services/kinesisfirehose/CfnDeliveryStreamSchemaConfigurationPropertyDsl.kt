@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Specifies the schema to which you want Kinesis Data Firehose to configure your data before it
+ * writes it to Amazon S3.
+ *
+ * This parameter is required if `Enabled` is set to true.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * SchemaConfigurationProperty schemaConfigurationProperty = SchemaConfigurationProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .tableName("tableName")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-schemaconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamSchemaConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.SchemaConfigurationProperty.Builder =

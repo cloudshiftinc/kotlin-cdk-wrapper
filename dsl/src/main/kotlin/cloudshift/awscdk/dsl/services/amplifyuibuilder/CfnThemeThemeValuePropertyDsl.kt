@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnTheme
 
+/**
+ * The `ThemeValue` property specifies the configuration of a theme's properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * ThemeValueProperty themeValueProperty_;
+ * ThemeValueProperty themeValueProperty = ThemeValueProperty.builder()
+ * .children(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(themeValueProperty_)
+ * .build()))
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-theme-themevalue.html)
+ */
 @CdkDslMarker
 public class CfnThemeThemeValuePropertyDsl {
   private val cdkBuilder: CfnTheme.ThemeValueProperty.Builder =

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The maximum allowed cumulative resources for an application.
+ *
+ * No new resources will be created once the limit is hit.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * MaximumAllowedResourcesProperty maximumAllowedResourcesProperty =
+ * MaximumAllowedResourcesProperty.builder()
+ * .cpu("cpu")
+ * .memory("memory")
+ * // the properties below are optional
+ * .disk("disk")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-maximumallowedresources.html)
+ */
 @CdkDslMarker
 public class CfnApplicationMaximumAllowedResourcesPropertyDsl {
   private val cdkBuilder: CfnApplication.MaximumAllowedResourcesProperty.Builder =

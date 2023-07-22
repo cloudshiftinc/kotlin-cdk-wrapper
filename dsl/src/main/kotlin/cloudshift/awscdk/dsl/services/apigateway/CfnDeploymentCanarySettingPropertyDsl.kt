@@ -10,6 +10,29 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDeployment
 
+/**
+ * The `CanarySetting` property type specifies settings for the canary deployment in this stage.
+ *
+ * `CanarySetting` is a property of the
+ * [StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-canarysetting.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentCanarySettingPropertyDsl {
   private val cdkBuilder: CfnDeployment.CanarySettingProperty.Builder =

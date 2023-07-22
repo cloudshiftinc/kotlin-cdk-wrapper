@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 
+/**
+ * The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
+ *
+ * Amazon S3 is an object storage service that stores data as objects within buckets. For more
+ * information, see [Creating, configuring, and working with Amazon S3
+ * buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html) in the
+ * *Amazon Simple Storage Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * S3ConfigProperty s3ConfigProperty = S3ConfigProperty.builder()
+ * .bucketArn("bucketArn")
+ * // the properties below are optional
+ * .dataFormat("dataFormat")
+ * .prefix("prefix")
+ * .storageCompressionFormat("storageCompressionFormat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-s3config.html)
+ */
 @CdkDslMarker
 public class CfnCampaignS3ConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.S3ConfigProperty.Builder =

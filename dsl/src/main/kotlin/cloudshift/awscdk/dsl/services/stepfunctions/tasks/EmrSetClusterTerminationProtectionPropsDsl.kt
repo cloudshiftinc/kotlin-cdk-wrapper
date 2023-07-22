@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtectionProps
 
+/**
+ * Properties for EmrSetClusterTerminationProtection.
+ *
+ * Example:
+ *
+ * ```
+ * EmrSetClusterTerminationProtection.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .terminationProtected(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrSetClusterTerminationProtectionPropsDsl {
   private val cdkBuilder: EmrSetClusterTerminationProtectionProps.Builder =

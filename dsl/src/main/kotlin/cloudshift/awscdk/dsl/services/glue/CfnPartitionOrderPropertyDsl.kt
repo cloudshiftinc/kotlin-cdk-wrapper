@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnPartition
 
+/**
+ * Specifies the sort order of a sorted column.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * OrderProperty orderProperty = OrderProperty.builder()
+ * .column("column")
+ * // the properties below are optional
+ * .sortOrder(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-order.html)
+ */
 @CdkDslMarker
 public class CfnPartitionOrderPropertyDsl {
   private val cdkBuilder: CfnPartition.OrderProperty.Builder = CfnPartition.OrderProperty.builder()

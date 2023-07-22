@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnBucket
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Bucket` resource specifies a bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnBucket cfnBucket = CfnBucket.Builder.create(this, "MyCfnBucket")
+ * .bucketName("bucketName")
+ * .bundleId("bundleId")
+ * // the properties below are optional
+ * .accessRules(AccessRulesProperty.builder()
+ * .allowPublicOverrides(false)
+ * .objectAccess("objectAccess")
+ * .build())
+ * .objectVersioning(false)
+ * .readOnlyAccessAccounts(List.of("readOnlyAccessAccounts"))
+ * .resourcesReceivingAccess(List.of("resourcesReceivingAccess"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-bucket.html)
+ */
 @CdkDslMarker
 public class CfnBucketDsl(
   scope: Construct,

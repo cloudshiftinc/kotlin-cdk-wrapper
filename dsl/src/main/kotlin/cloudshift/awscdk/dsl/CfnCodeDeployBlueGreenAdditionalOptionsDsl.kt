@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions
 
+/**
+ * Additional options for the blue/green deployment.
+ *
+ * The type of the `CfnCodeDeployBlueGreenHookProps.additionalOptions` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCodeDeployBlueGreenAdditionalOptions cfnCodeDeployBlueGreenAdditionalOptions =
+ * CfnCodeDeployBlueGreenAdditionalOptions.builder()
+ * .terminationWaitTimeInMinutes(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenAdditionalOptionsDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenAdditionalOptions.Builder =

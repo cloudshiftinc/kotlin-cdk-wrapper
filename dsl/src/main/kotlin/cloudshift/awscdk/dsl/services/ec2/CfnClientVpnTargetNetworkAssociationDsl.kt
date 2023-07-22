@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation
 import software.constructs.Construct
 
+/**
+ * Specifies a target network to associate with a Client VPN endpoint.
+ *
+ * A target network is a subnet in a VPC. You can associate multiple subnets from the same VPC with
+ * a Client VPN endpoint. You can associate only one subnet in each Availability Zone. We recommend
+ * that you associate at least two subnets to provide Availability Zone redundancy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnClientVpnTargetNetworkAssociation cfnClientVpnTargetNetworkAssociation =
+ * CfnClientVpnTargetNetworkAssociation.Builder.create(this, "MyCfnClientVpnTargetNetworkAssociation")
+ * .clientVpnEndpointId("clientVpnEndpointId")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpntargetnetworkassociation.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnTargetNetworkAssociationDsl(
   scope: Construct,

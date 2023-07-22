@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDevice
 import software.constructs.Construct
 
+/**
+ * The `AWS::SageMaker::Device` resource is an Amazon SageMaker resource type that allows you to
+ * register your Devices against an existing SageMaker Edge Manager DeviceFleet.
+ *
+ * Each device must be listed individually in the CFN specification.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDevice cfnDevice = CfnDevice.Builder.create(this, "MyCfnDevice")
+ * .deviceFleetName("deviceFleetName")
+ * // the properties below are optional
+ * .device(DeviceProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .description("description")
+ * .iotThingName("iotThingName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDsl(
   scope: Construct,

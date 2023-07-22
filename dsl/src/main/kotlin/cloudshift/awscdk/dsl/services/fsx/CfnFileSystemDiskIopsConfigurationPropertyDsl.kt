@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp
+ * ONTAP or FSx for OpenZFS file system.
+ *
+ * By default, Amazon FSx automatically provisions 3 IOPS per GB of storage capacity. You can
+ * provision additional IOPS per GB of storage. The configuration consists of the total number of
+ * provisioned SSD IOPS and how it is was provisioned, or the mode (by the customer or by Amazon FSx).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * DiskIopsConfigurationProperty diskIopsConfigurationProperty =
+ * DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-diskiopsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemDiskIopsConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.DiskIopsConfigurationProperty.Builder =

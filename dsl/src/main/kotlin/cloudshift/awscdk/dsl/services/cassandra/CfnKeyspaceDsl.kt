@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cassandra.CfnKeyspace
 import software.constructs.Construct
 
+/**
+ * You can use the `AWS::Cassandra::Keyspace` resource to create a new keyspace in Amazon Keyspaces
+ * (for Apache Cassandra).
+ *
+ * For more information, see [Create a keyspace and a
+ * table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the
+ * *Amazon Keyspaces Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * CfnKeyspace cfnKeyspace = CfnKeyspace.Builder.create(this, "MyCfnKeyspace")
+ * .keyspaceName("keyspaceName")
+ * .replicationSpecification(ReplicationSpecificationProperty.builder()
+ * .regionList(List.of("regionList"))
+ * .replicationStrategy("replicationStrategy")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-keyspace.html)
+ */
 @CdkDslMarker
 public class CfnKeyspaceDsl(
   scope: Construct,

@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * These are custom parameters to be used when the target is a Amazon Redshift cluster to invoke the
+ * Amazon Redshift Data API BatchExecuteStatement.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetRedshiftDataParametersProperty pipeTargetRedshiftDataParametersProperty =
+ * PipeTargetRedshiftDataParametersProperty.builder()
+ * .database("database")
+ * .sqls(List.of("sqls"))
+ * // the properties below are optional
+ * .dbUser("dbUser")
+ * .secretManagerArn("secretManagerArn")
+ * .statementName("statementName")
+ * .withEvent(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetredshiftdataparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetRedshiftDataParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetRedshiftDataParametersProperty.Builder =

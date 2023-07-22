@@ -8,6 +8,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.alexa.ask.CfnSkill
 import software.constructs.Construct
 
+/**
+ * The `Alexa::ASK::Skill` resource creates an Alexa skill that enables customers to access new
+ * abilities.
+ *
+ * For more information about developing a skill, see the  .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.alexa.ask.*;
+ * Object manifest;
+ * CfnSkill cfnSkill = CfnSkill.Builder.create(this, "MyCfnSkill")
+ * .authenticationConfiguration(AuthenticationConfigurationProperty.builder()
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .refreshToken("refreshToken")
+ * .build())
+ * .skillPackage(SkillPackageProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * // the properties below are optional
+ * .overrides(OverridesProperty.builder()
+ * .manifest(manifest)
+ * .build())
+ * .s3BucketRole("s3BucketRole")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .build())
+ * .vendorId("vendorId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html)
+ */
 @CdkDslMarker
 public class CfnSkillDsl(
   scope: Construct,

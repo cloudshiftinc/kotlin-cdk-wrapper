@@ -8,6 +8,53 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnWaitCondition
 import software.constructs.Construct
 
+/**
+ * For Amazon EC2 and Auto Scaling resources, we recommend that you use a `CreationPolicy` attribute
+ * instead of wait conditions.
+ *
+ * Add a CreationPolicy attribute to those resources, and use the cfn-signal helper script to signal
+ * when an instance creation process has completed successfully.
+ *
+ * You can use a wait condition for situations like the following:
+ *
+ * * To coordinate stack resource creation with configuration actions that are external to the stack
+ * creation.
+ * * To track the status of a configuration process.
+ *
+ * For these situations, we recommend that you associate a
+ * [CreationPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-creationpolicy.html)
+ * attribute with the wait condition so that you don't have to use a wait condition handle. For more
+ * information and an example, see [Creating wait conditions in a
+ * template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-waitcondition.html)
+ * . If you use a CreationPolicy with a wait condition, don't specify any of the wait condition's
+ * properties.
+ *
+ *
+ * If you use the [VPC
+ * endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html) feature, resources
+ * in the VPC that respond to wait conditions must have access to CloudFormation , specific Amazon
+ * Simple Storage Service ( Amazon S3 ) buckets. Resources must send wait condition responses to a
+ * presigned Amazon S3 URL. If they can't send responses to Amazon S3 , CloudFormation won't receive a
+ * response and the stack operation fails. For more information, see [Setting up VPC endpoints for AWS
+ * CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-vpce-bucketnames.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnWaitCondition cfnWaitCondition = CfnWaitCondition.Builder.create(this, "MyCfnWaitCondition")
+ * .count(123)
+ * .handle("handle")
+ * .timeout("timeout")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitcondition.html)
+ */
 @CdkDslMarker
 public class CfnWaitConditionDsl(
   scope: Construct,

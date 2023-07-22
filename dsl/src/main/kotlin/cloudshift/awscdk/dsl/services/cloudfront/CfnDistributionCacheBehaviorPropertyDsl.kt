@@ -12,6 +12,83 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that describes how CloudFront processes requests.
+ *
+ * You must create at least as many cache behaviors (including the default cache behavior) as you
+ * have origins if you want CloudFront to serve objects from all of the origins. Each cache behavior
+ * specifies the one origin from which you want CloudFront to get objects. If you have two origins and
+ * only the default cache behavior, the default cache behavior will cause CloudFront to get objects
+ * from one of the origins, but the other origin is never used.
+ *
+ * For the current quota (formerly known as limit) on the number of cache behaviors that you can add
+ * to a distribution, see
+ * [Quotas](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * If you don't want to specify any cache behaviors, include only an empty `CacheBehaviors` element.
+ * Don't include an empty `CacheBehavior` element because this is invalid.
+ *
+ * To delete all cache behaviors in an existing distribution, update the distribution configuration
+ * and include only an empty `CacheBehaviors` element.
+ *
+ * To add, change, or remove one or more cache behaviors, update the distribution configuration and
+ * specify all of the cache behaviors that you want to include in the updated distribution.
+ *
+ * For more information about cache behaviors, see [Cache Behavior
+ * Settings](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesCacheBehavior)
+ * in the *Amazon CloudFront Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CacheBehaviorProperty cacheBehaviorProperty = CacheBehaviorProperty.builder()
+ * .pathPattern("pathPattern")
+ * .targetOriginId("targetOriginId")
+ * .viewerProtocolPolicy("viewerProtocolPolicy")
+ * // the properties below are optional
+ * .allowedMethods(List.of("allowedMethods"))
+ * .cachedMethods(List.of("cachedMethods"))
+ * .cachePolicyId("cachePolicyId")
+ * .compress(false)
+ * .defaultTtl(123)
+ * .fieldLevelEncryptionId("fieldLevelEncryptionId")
+ * .forwardedValues(ForwardedValuesProperty.builder()
+ * .queryString(false)
+ * // the properties below are optional
+ * .cookies(CookiesProperty.builder()
+ * .forward("forward")
+ * // the properties below are optional
+ * .whitelistedNames(List.of("whitelistedNames"))
+ * .build())
+ * .headers(List.of("headers"))
+ * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
+ * .build())
+ * .functionAssociations(List.of(FunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .functionArn("functionArn")
+ * .build()))
+ * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .includeBody(false)
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .build()))
+ * .maxTtl(123)
+ * .minTtl(123)
+ * .originRequestPolicyId("originRequestPolicyId")
+ * .realtimeLogConfigArn("realtimeLogConfigArn")
+ * .responseHeadersPolicyId("responseHeadersPolicyId")
+ * .smoothStreaming(false)
+ * .trustedKeyGroups(List.of("trustedKeyGroups"))
+ * .trustedSigners(List.of("trustedSigners"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-cachebehavior.html)
+ */
 @CdkDslMarker
 public class CfnDistributionCacheBehaviorPropertyDsl {
   private val cdkBuilder: CfnDistribution.CacheBehaviorProperty.Builder =

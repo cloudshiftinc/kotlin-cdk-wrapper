@@ -10,6 +10,82 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A container for replication rules.
+ *
+ * You can add up to 1,000 rules. The maximum size of a replication configuration is 2 MB.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ReplicationConfigurationProperty replicationConfigurationProperty =
+ * ReplicationConfigurationProperty.builder()
+ * .role("role")
+ * .rules(List.of(ReplicationRuleProperty.builder()
+ * .destination(ReplicationDestinationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .accessControlTranslation(AccessControlTranslationProperty.builder()
+ * .owner("owner")
+ * .build())
+ * .account("account")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .replicaKmsKeyId("replicaKmsKeyId")
+ * .build())
+ * .metrics(MetricsProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .eventThreshold(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .replicationTime(ReplicationTimeProperty.builder()
+ * .status("status")
+ * .time(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .storageClass("storageClass")
+ * .build())
+ * .status("status")
+ * // the properties below are optional
+ * .deleteMarkerReplication(DeleteMarkerReplicationProperty.builder()
+ * .status("status")
+ * .build())
+ * .filter(ReplicationRuleFilterProperty.builder()
+ * .and(ReplicationRuleAndOperatorProperty.builder()
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .prefix("prefix")
+ * .tagFilter(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build())
+ * .build())
+ * .id("id")
+ * .prefix("prefix")
+ * .priority(123)
+ * .sourceSelectionCriteria(SourceSelectionCriteriaProperty.builder()
+ * .replicaModifications(ReplicaModificationsProperty.builder()
+ * .status("status")
+ * .build())
+ * .sseKmsEncryptedObjects(SseKmsEncryptedObjectsProperty.builder()
+ * .status("status")
+ * .build())
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketReplicationConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationConfigurationProperty.Builder =

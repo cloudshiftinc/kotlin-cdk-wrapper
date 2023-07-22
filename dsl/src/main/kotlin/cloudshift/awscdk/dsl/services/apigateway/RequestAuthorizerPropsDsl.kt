@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.apigateway.RequestAuthorizerProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Properties for RequestAuthorizer.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * RequestAuthorizer auth = RequestAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization")))
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RequestAuthorizerPropsDsl {
   private val cdkBuilder: RequestAuthorizerProps.Builder = RequestAuthorizerProps.builder()

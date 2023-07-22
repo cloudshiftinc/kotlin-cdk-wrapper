@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.autoscaling.PoolState
 import software.amazon.awscdk.services.autoscaling.WarmPool
 import software.constructs.Construct
 
+/**
+ * Define a warm pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * AutoScalingGroup autoScalingGroup;
+ * WarmPool warmPool = WarmPool.Builder.create(this, "MyWarmPool")
+ * .autoScalingGroup(autoScalingGroup)
+ * // the properties below are optional
+ * .maxGroupPreparedCapacity(123)
+ * .minSize(123)
+ * .poolState(PoolState.HIBERNATED)
+ * .reuseOnScaleIn(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WarmPoolDsl(
   scope: Construct,

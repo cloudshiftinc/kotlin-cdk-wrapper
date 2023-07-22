@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Configuration of blog settings for the Confluence data source.
+ *
+ * Blogs are always indexed unless filtered from the index by the `ExclusionPatterns` or
+ * `InclusionPatterns` fields in the `ConfluenceConfiguration` object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConfluenceBlogConfigurationProperty confluenceBlogConfigurationProperty =
+ * ConfluenceBlogConfigurationProperty.builder()
+ * .blogFieldMappings(List.of(ConfluenceBlogToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-confluenceblogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConfluenceBlogConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConfluenceBlogConfigurationProperty.Builder =

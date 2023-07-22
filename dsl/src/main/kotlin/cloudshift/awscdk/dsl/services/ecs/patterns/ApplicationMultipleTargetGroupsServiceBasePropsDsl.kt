@@ -20,6 +20,98 @@ import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsServiceBaseProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps
 
+/**
+ * The properties for the base ApplicationMultipleTargetGroupsEc2Service or
+ * ApplicationMultipleTargetGroupsFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Certificate certificate;
+ * Cluster cluster;
+ * ContainerDefinition containerDefinition;
+ * ContainerImage containerImage;
+ * HostedZone hostedZone;
+ * LogDriver logDriver;
+ * INamespace namespace;
+ * Role role;
+ * Secret secret;
+ * Vpc vpc;
+ * ApplicationMultipleTargetGroupsServiceBaseProps applicationMultipleTargetGroupsServiceBaseProps =
+ * ApplicationMultipleTargetGroupsServiceBaseProps.builder()
+ * .cloudMapOptions(CloudMapOptions.builder()
+ * .cloudMapNamespace(namespace)
+ * .container(containerDefinition)
+ * .containerPort(123)
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.minutes(30))
+ * .failureThreshold(123)
+ * .name("name")
+ * .build())
+ * .cluster(cluster)
+ * .desiredCount(123)
+ * .enableECSManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriod(Duration.minutes(30))
+ * .loadBalancers(List.of(ApplicationLoadBalancerProps.builder()
+ * .listeners(List.of(ApplicationListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .certificate(certificate)
+ * .port(123)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .domainName("domainName")
+ * .domainZone(hostedZone)
+ * .idleTimeout(Duration.minutes(30))
+ * .publicLoadBalancer(false)
+ * .build()))
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .serviceName("serviceName")
+ * .targetGroups(List.of(ApplicationTargetProps.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .hostHeader("hostHeader")
+ * .listener("listener")
+ * .pathPattern("pathPattern")
+ * .priority(123)
+ * .protocol(Protocol.TCP)
+ * .build()))
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageProps.builder()
+ * .image(containerImage)
+ * // the properties below are optional
+ * .containerName("containerName")
+ * .containerPorts(List.of(123))
+ * .dockerLabels(Map.of(
+ * "dockerLabelsKey", "dockerLabels"))
+ * .enableLogging(false)
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .executionRole(role)
+ * .family("family")
+ * .logDriver(logDriver)
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .taskRole(role)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationMultipleTargetGroupsServiceBasePropsDsl {
   private val cdkBuilder: ApplicationMultipleTargetGroupsServiceBaseProps.Builder =

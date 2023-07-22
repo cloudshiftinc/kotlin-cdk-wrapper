@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The aggregation settings that you can use to customize the output format of your flow data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * AggregationConfigProperty aggregationConfigProperty = AggregationConfigProperty.builder()
+ * .aggregationType("aggregationType")
+ * .targetFileSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-aggregationconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlowAggregationConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.AggregationConfigProperty.Builder =

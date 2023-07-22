@@ -9,6 +9,23 @@ import software.amazon.awscdk.services.ec2.EbsDeviceOptions
 import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Block device options for an EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
+ * .vpc(vpc)
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("EBSBastionHost")
+ * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
+ * .encrypted(true)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDeviceOptionsDsl {
   private val cdkBuilder: EbsDeviceOptions.Builder = EbsDeviceOptions.builder()

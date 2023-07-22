@@ -9,6 +9,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * The Windows faster-launching configuration to use for AMI distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * FastLaunchConfigurationProperty fastLaunchConfigurationProperty =
+ * FastLaunchConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .enabled(false)
+ * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .launchTemplateVersion("launchTemplateVersion")
+ * .build())
+ * .maxParallelLaunches(123)
+ * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
+ * .targetResourceCount(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationFastLaunchConfigurationPropertyDsl {
   private val cdkBuilder: CfnDistributionConfiguration.FastLaunchConfigurationProperty.Builder =

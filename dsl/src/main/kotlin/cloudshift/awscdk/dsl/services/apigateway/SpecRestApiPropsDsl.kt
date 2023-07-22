@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.apigateway.SpecRestApiProps
 import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 
+/**
+ * Props to instantiate a new SpecRestApi.
+ *
+ * Example:
+ *
+ * ```
+ * Integration integration;
+ * SpecRestApi api = SpecRestApi.Builder.create(this, "books-api")
+ * .apiDefinition(ApiDefinition.fromAsset("path-to-file.json"))
+ * .build();
+ * Resource booksResource = api.root.addResource("books");
+ * booksResource.addMethod("GET", integration);
+ * ```
+ */
 @CdkDslMarker
 public class SpecRestApiPropsDsl {
   private val cdkBuilder: SpecRestApiProps.Builder = SpecRestApiProps.builder()

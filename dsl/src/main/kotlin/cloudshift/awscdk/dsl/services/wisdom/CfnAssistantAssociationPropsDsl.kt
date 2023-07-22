@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wisdom.CfnAssistantAssociation
 import software.amazon.awscdk.services.wisdom.CfnAssistantAssociationProps
 
+/**
+ * Properties for defining a `CfnAssistantAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * CfnAssistantAssociationProps cfnAssistantAssociationProps =
+ * CfnAssistantAssociationProps.builder()
+ * .assistantId("assistantId")
+ * .association(AssociationDataProperty.builder()
+ * .knowledgeBaseId("knowledgeBaseId")
+ * .build())
+ * .associationType("associationType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html)
+ */
 @CdkDslMarker
 public class CfnAssistantAssociationPropsDsl {
   private val cdkBuilder: CfnAssistantAssociationProps.Builder =

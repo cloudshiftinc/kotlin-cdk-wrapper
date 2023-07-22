@@ -11,6 +11,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 import software.constructs.Construct
 
+/**
+ * Create a configuration set.
+ *
+ * *Configuration sets* are groups of rules that you can apply to the emails you send using Amazon
+ * Pinpoint. You apply a configuration set to an email by including a reference to the configuration
+ * set in the headers of the email. When you apply a configuration set to an email, all of the rules in
+ * that configuration set are applied to the email.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnConfigurationSet cfnConfigurationSet = CfnConfigurationSet.Builder.create(this,
+ * "MyCfnConfigurationSet")
+ * .name("name")
+ * // the properties below are optional
+ * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .build())
+ * .reputationOptions(ReputationOptionsProperty.builder()
+ * .reputationMetricsEnabled(false)
+ * .build())
+ * .sendingOptions(SendingOptionsProperty.builder()
+ * .sendingEnabled(false)
+ * .build())
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trackingOptions(TrackingOptionsProperty.builder()
+ * .customRedirectDomain("customRedirectDomain")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetDsl(
   scope: Construct,

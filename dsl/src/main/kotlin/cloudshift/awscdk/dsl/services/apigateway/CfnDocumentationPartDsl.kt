@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDocumentationPart
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::DocumentationPart` resource creates a documentation part for an API.
+ *
+ * For more information, see [Representation of API Documentation in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDocumentationPart cfnDocumentationPart = CfnDocumentationPart.Builder.create(this,
+ * "MyCfnDocumentationPart")
+ * .location(LocationProperty.builder()
+ * .method("method")
+ * .name("name")
+ * .path("path")
+ * .statusCode("statusCode")
+ * .type("type")
+ * .build())
+ * .properties("properties")
+ * .restApiId("restApiId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html)
+ */
 @CdkDslMarker
 public class CfnDocumentationPartDsl(
   scope: Construct,

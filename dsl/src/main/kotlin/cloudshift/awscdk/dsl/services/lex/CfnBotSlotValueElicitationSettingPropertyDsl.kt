@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the elicitation setting details eliciting a slot.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotvalueelicitationsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotValueElicitationSettingPropertyDsl {
   private val cdkBuilder: CfnBot.SlotValueElicitationSettingProperty.Builder =

@@ -12,6 +12,24 @@ import software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch
 import software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch
 import software.amazon.awscdk.services.appmesh.HeaderMatch
 
+/**
+ * The criterion for determining a request match for this GatewayRoute.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-grpc", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.grpc(GrpcGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(GrpcGatewayRouteMatch.builder()
+ * .hostname(GatewayRouteHostnameMatch.endsWith(".example.com"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcGatewayRouteMatchDsl {
   private val cdkBuilder: GrpcGatewayRouteMatch.Builder = GrpcGatewayRouteMatch.builder()

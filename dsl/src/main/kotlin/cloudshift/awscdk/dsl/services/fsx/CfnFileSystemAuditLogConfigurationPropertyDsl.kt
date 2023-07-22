@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of
+ * files, folders, and file shares on the Amazon FSx for Windows File Server file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * AuditLogConfigurationProperty auditLogConfigurationProperty =
+ * AuditLogConfigurationProperty.builder()
+ * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
+ * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
+ * // the properties below are optional
+ * .auditLogDestination("auditLogDestination")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-auditlogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemAuditLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.AuditLogConfigurationProperty.Builder =

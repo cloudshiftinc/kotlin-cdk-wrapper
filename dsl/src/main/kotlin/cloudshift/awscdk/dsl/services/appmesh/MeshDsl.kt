@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.appmesh.MeshFilterType
 import software.amazon.awscdk.services.appmesh.MeshServiceDiscovery
 import software.constructs.Construct
 
+/**
+ * Define a new AppMesh mesh.
+ *
+ * Example:
+ *
+ * ```
+ * // This is the ARN for the mesh from different AWS IAM account ID.
+ * // Ensure mesh is properly shared with your account. For more details, see:
+ * https://github.com/aws/aws-cdk/issues/15404
+ * String arn = "arn:aws:appmesh:us-east-1:123456789012:mesh/testMesh";
+ * IMesh sharedMesh = Mesh.fromMeshArn(this, "imported-mesh", arn);
+ * // This VirtualNode resource can communicate with the resources in the mesh from different AWS
+ * IAM account ID.
+ * // This VirtualNode resource can communicate with the resources in the mesh from different AWS
+ * IAM account ID.
+ * VirtualNode.Builder.create(this, "test-node")
+ * .mesh(sharedMesh)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html)
+ */
 @CdkDslMarker
 public class MeshDsl(
   scope: Construct,

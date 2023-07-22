@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * The value of a document attribute.
+ *
+ * You can only provide one value for a document attribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * DocumentAttributeValueProperty documentAttributeValueProperty =
+ * DocumentAttributeValueProperty.builder()
+ * .dateValue("dateValue")
+ * .longValue(123)
+ * .stringListValue(List.of("stringListValue"))
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-documentattributevalue.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceDocumentAttributeValuePropertyDsl {
   private val cdkBuilder: CfnDataSource.DocumentAttributeValueProperty.Builder =

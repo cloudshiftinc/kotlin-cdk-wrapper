@@ -12,6 +12,33 @@ import software.amazon.awscdk.services.codestarnotifications.INotificationRuleSo
 import software.amazon.awscdk.services.codestarnotifications.INotificationRuleTarget
 import software.amazon.awscdk.services.codestarnotifications.NotificationRuleProps
 
+/**
+ * Properties for a new notification rule.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * import software.amazon.awscdk.services.codebuild.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.chatbot.*;
+ * PipelineProject project = new PipelineProject(this, "MyProject");
+ * Topic topic = new Topic(this, "MyTopic1");
+ * SlackChannelConfiguration slack = SlackChannelConfiguration.Builder.create(this,
+ * "MySlackChannel")
+ * .slackChannelConfigurationName("YOUR_CHANNEL_NAME")
+ * .slackWorkspaceId("YOUR_SLACK_WORKSPACE_ID")
+ * .slackChannelId("YOUR_SLACK_CHANNEL_ID")
+ * .build();
+ * NotificationRule rule = NotificationRule.Builder.create(this, "NotificationRule")
+ * .source(project)
+ * .events(List.of("codebuild-project-build-state-succeeded",
+ * "codebuild-project-build-state-failed"))
+ * .targets(List.of(topic))
+ * .build();
+ * rule.addTarget(slack);
+ * ```
+ */
 @CdkDslMarker
 public class NotificationRulePropsDsl {
   private val cdkBuilder: NotificationRuleProps.Builder = NotificationRuleProps.builder()

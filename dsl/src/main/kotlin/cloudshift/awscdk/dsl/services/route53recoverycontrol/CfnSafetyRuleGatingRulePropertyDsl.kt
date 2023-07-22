@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
 
+/**
+ * A gating rule verifies that a gating routing control or set of gating routing controls, evaluates
+ * as true, based on a rule configuration that you specify, which allows a set of routing control state
+ * changes to complete.
+ *
+ * For example, if you specify one gating routing control and you set the `Type` in the rule
+ * configuration to `OR` , that indicates that you must set the gating routing control to `On` for the
+ * rule to evaluate as true; that is, for the gating control switch to be On. When you do that, then
+ * you can update the routing control states for the target routing controls that you specify in the
+ * gating rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * GatingRuleProperty gatingRuleProperty = GatingRuleProperty.builder()
+ * .gatingControls(List.of("gatingControls"))
+ * .targetControls(List.of("targetControls"))
+ * .waitPeriodMs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoverycontrol-safetyrule-gatingrule.html)
+ */
 @CdkDslMarker
 public class CfnSafetyRuleGatingRulePropertyDsl {
   private val cdkBuilder: CfnSafetyRule.GatingRuleProperty.Builder =

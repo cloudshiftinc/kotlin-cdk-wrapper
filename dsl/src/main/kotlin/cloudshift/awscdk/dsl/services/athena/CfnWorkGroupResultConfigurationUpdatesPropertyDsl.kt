@@ -8,6 +8,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * The result configuration information about the queries in this workgroup that will be updated.
+ *
+ * Includes the updated results location and an updated option for encrypting query results.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * ResultConfigurationUpdatesProperty resultConfigurationUpdatesProperty =
+ * ResultConfigurationUpdatesProperty.builder()
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .expectedBucketOwner("expectedBucketOwner")
+ * .outputLocation("outputLocation")
+ * .removeAclConfiguration(false)
+ * .removeEncryptionConfiguration(false)
+ * .removeExpectedBucketOwner(false)
+ * .removeOutputLocation(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-resultconfigurationupdates.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupResultConfigurationUpdatesPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.ResultConfigurationUpdatesProperty.Builder =

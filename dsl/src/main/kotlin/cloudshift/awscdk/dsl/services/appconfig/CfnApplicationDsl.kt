@@ -10,6 +10,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnApplication
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppConfig::Application` resource creates an application.
+ *
+ * In AWS AppConfig , an application is simply an organizational construct like a folder. This
+ * organizational construct has a relationship with some unit of executable code. For example, you
+ * could create an application called MyMobileApp to organize and manage configuration data for a
+ * mobile application installed by your users.
+ *
+ * AWS AppConfig requires that you create resources and deploy a configuration in the following
+ * order:
+ *
+ * * Create an application
+ * * Create an environment
+ * * Create a configuration profile
+ * * Create a deployment strategy
+ * * Deploy the configuration
+ *
+ * For more information, see [AWS
+ * AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the
+ * *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

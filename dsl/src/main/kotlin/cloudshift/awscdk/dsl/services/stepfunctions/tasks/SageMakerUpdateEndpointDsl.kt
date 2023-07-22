@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpoint
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to update a SageMaker endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerUpdateEndpoint.Builder.create(this, "SagemakerEndpoint")
+ * .endpointName(JsonPath.stringAt("$.Endpoint.Name"))
+ * .endpointConfigName(JsonPath.stringAt("$.Endpoint.EndpointConfig"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerUpdateEndpointDsl(
   scope: Construct,

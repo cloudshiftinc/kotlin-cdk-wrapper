@@ -14,6 +14,33 @@ import software.amazon.awscdk.services.route53.SrvRecord
 import software.amazon.awscdk.services.route53.SrvRecordValue
 import software.constructs.Construct
 
+/**
+ * A DNS SRV record.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * SrvRecord srvRecord = SrvRecord.Builder.create(this, "MySrvRecord")
+ * .values(List.of(SrvRecordValue.builder()
+ * .hostName("hostName")
+ * .port(123)
+ * .priority(123)
+ * .weight(123)
+ * .build()))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SrvRecordDsl(
   scope: Construct,

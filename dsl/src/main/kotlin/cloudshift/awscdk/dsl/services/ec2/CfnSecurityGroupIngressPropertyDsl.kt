@@ -7,6 +7,52 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSecurityGroup
 
+/**
+ * Adds an inbound rule to a security group.
+ *
+ * An inbound rule permits instances to receive traffic from the specified IPv4 or IPv6 CIDR address
+ * range, or from the instances associated with the specified security group.
+ *
+ * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
+ * `SourcePrefixListId` , `SourceSecurityGroupId` , or `SourceSecurityGroupName` .
+ *
+ * You specify a protocol for each rule (for example, TCP). For TCP and UDP, you must also specify a
+ * port or port range. For ICMP/ICMPv6, you must also specify the ICMP/ICMPv6 type and code. You can
+ * use -1 to mean all types or all codes.
+ *
+ * You must specify a source security group ( `SourcePrefixListId` , `SourceSecurityGroupId` , or
+ * `SourceSecurityGroupName` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not specify one of
+ * these parameters, the stack will launch successfully but the rule will not be added to the security
+ * group.
+ *
+ * Rule changes are propagated to instances within the security group as quickly as possible.
+ * However, a small delay might occur.
+ *
+ * The EC2 Security Group Rule is an embedded property of the `AWS::EC2::SecurityGroup` type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * IngressProperty ingressProperty = IngressProperty.builder()
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .fromPort(123)
+ * .sourcePrefixListId("sourcePrefixListId")
+ * .sourceSecurityGroupId("sourceSecurityGroupId")
+ * .sourceSecurityGroupName("sourceSecurityGroupName")
+ * .sourceSecurityGroupOwnerId("sourceSecurityGroupOwnerId")
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-ingress.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupIngressPropertyDsl {
   private val cdkBuilder: CfnSecurityGroup.IngressProperty.Builder =

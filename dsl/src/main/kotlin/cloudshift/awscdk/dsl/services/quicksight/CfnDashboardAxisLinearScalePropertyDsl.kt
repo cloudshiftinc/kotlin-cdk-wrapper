@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The liner axis scale setup.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AxisLinearScaleProperty axisLinearScaleProperty = AxisLinearScaleProperty.builder()
+ * .stepCount(123)
+ * .stepSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-axislinearscale.html)
+ */
 @CdkDslMarker
 public class CfnDashboardAxisLinearScalePropertyDsl {
   private val cdkBuilder: CfnDashboard.AxisLinearScaleProperty.Builder =

@@ -8,6 +8,28 @@ import kotlin.Unit
 import software.amazon.awscdk.AssetManifestDockerImageDestination
 import software.amazon.awscdk.RoleOptions
 
+/**
+ * The destination for a docker image asset, when it is given to the AssetManifestBuilder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * AssetManifestDockerImageDestination assetManifestDockerImageDestination =
+ * AssetManifestDockerImageDestination.builder()
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .dockerTagPrefix("dockerTagPrefix")
+ * .role(RoleOptions.builder()
+ * .assumeRoleArn("assumeRoleArn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetManifestDockerImageDestinationDsl {
   private val cdkBuilder: AssetManifestDockerImageDestination.Builder =

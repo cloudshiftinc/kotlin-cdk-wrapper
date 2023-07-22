@@ -8,6 +8,71 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * H265 Settings.
+ *
+ * The parent of this entity is VideoCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * H265SettingsProperty h265SettingsProperty = H265SettingsProperty.builder()
+ * .adaptiveQuantization("adaptiveQuantization")
+ * .afdSignaling("afdSignaling")
+ * .alternativeTransferFunction("alternativeTransferFunction")
+ * .bitrate(123)
+ * .bufSize(123)
+ * .colorMetadata("colorMetadata")
+ * .colorSpaceSettings(H265ColorSpaceSettingsProperty.builder()
+ * .colorSpacePassthroughSettings(ColorSpacePassthroughSettingsProperty.builder().build())
+ * .dolbyVision81Settings(DolbyVision81SettingsProperty.builder().build())
+ * .hdr10Settings(Hdr10SettingsProperty.builder()
+ * .maxCll(123)
+ * .maxFall(123)
+ * .build())
+ * .rec601Settings(Rec601SettingsProperty.builder().build())
+ * .rec709Settings(Rec709SettingsProperty.builder().build())
+ * .build())
+ * .filterSettings(H265FilterSettingsProperty.builder()
+ * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
+ * .postFilterSharpening("postFilterSharpening")
+ * .strength("strength")
+ * .build())
+ * .build())
+ * .fixedAfd("fixedAfd")
+ * .flickerAq("flickerAq")
+ * .framerateDenominator(123)
+ * .framerateNumerator(123)
+ * .gopClosedCadence(123)
+ * .gopSize(123)
+ * .gopSizeUnits("gopSizeUnits")
+ * .level("level")
+ * .lookAheadRateControl("lookAheadRateControl")
+ * .maxBitrate(123)
+ * .minIInterval(123)
+ * .parDenominator(123)
+ * .parNumerator(123)
+ * .profile("profile")
+ * .qvbrQualityLevel(123)
+ * .rateControlMode("rateControlMode")
+ * .scanType("scanType")
+ * .sceneChangeDetect("sceneChangeDetect")
+ * .slices(123)
+ * .tier("tier")
+ * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+ * .fontSize("fontSize")
+ * .position("position")
+ * .prefix("prefix")
+ * .build())
+ * .timecodeInsertion("timecodeInsertion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelH265SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.H265SettingsProperty.Builder =

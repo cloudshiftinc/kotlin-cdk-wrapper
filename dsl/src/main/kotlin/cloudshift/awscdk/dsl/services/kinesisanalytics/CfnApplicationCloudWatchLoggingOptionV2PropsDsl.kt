@@ -8,6 +8,26 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props
 
+/**
+ * Properties for defining a `CfnApplicationCloudWatchLoggingOption`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplicationCloudWatchLoggingOptionV2Props cfnApplicationCloudWatchLoggingOptionV2Props =
+ * CfnApplicationCloudWatchLoggingOptionV2Props.builder()
+ * .applicationName("applicationName")
+ * .cloudWatchLoggingOption(CloudWatchLoggingOptionProperty.builder()
+ * .logStreamArn("logStreamArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html)
+ */
 @CdkDslMarker
 public class CfnApplicationCloudWatchLoggingOptionV2PropsDsl {
   private val cdkBuilder: CfnApplicationCloudWatchLoggingOptionV2Props.Builder =

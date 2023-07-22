@@ -15,6 +15,64 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessorProps
 
+/**
+ * Properties for defining a `CfnStreamProcessor`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * Object polygonRegionsOfInterest;
+ * CfnStreamProcessorProps cfnStreamProcessorProps = CfnStreamProcessorProps.builder()
+ * .kinesisVideoStream(KinesisVideoStreamProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .boundingBoxRegionsOfInterest(List.of(BoundingBoxProperty.builder()
+ * .height(123)
+ * .left(123)
+ * .top(123)
+ * .width(123)
+ * .build()))
+ * .connectedHomeSettings(ConnectedHomeSettingsProperty.builder()
+ * .labels(List.of("labels"))
+ * // the properties below are optional
+ * .minConfidence(123)
+ * .build())
+ * .dataSharingPreference(DataSharingPreferenceProperty.builder()
+ * .optIn(false)
+ * .build())
+ * .faceSearchSettings(FaceSearchSettingsProperty.builder()
+ * .collectionId("collectionId")
+ * // the properties below are optional
+ * .faceMatchThreshold(123)
+ * .build())
+ * .kinesisDataStream(KinesisDataStreamProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .name("name")
+ * .notificationChannel(NotificationChannelProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .polygonRegionsOfInterest(polygonRegionsOfInterest)
+ * .s3Destination(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-streamprocessor.html)
+ */
 @CdkDslMarker
 public class CfnStreamProcessorPropsDsl {
   private val cdkBuilder: CfnStreamProcessorProps.Builder = CfnStreamProcessorProps.builder()

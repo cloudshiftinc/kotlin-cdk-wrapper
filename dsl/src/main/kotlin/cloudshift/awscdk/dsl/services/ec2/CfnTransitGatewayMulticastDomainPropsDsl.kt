@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayMulticastDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object options;
+ * CfnTransitGatewayMulticastDomainProps cfnTransitGatewayMulticastDomainProps =
+ * CfnTransitGatewayMulticastDomainProps.builder()
+ * .transitGatewayId("transitGatewayId")
+ * // the properties below are optional
+ * .options(options)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomain.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainPropsDsl {
   private val cdkBuilder: CfnTransitGatewayMulticastDomainProps.Builder =

@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::RoboMaker::RobotApplicationVersion` resource creates an AWS RoboMaker robot version.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnRobotApplicationVersion cfnRobotApplicationVersion =
+ * CfnRobotApplicationVersion.Builder.create(this, "MyCfnRobotApplicationVersion")
+ * .application("application")
+ * // the properties below are optional
+ * .currentRevisionId("currentRevisionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplicationversion.html)
+ */
 @CdkDslMarker
 public class CfnRobotApplicationVersionDsl(
   scope: Construct,

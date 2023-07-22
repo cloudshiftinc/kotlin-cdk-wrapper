@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnHostedZone
 
+/**
+ * A complex type that contains information about a tag that you want to add or edit for the
+ * specified health check or hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZoneTagProperty hostedZoneTagProperty = HostedZoneTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetag.html)
+ */
 @CdkDslMarker
 public class CfnHostedZoneHostedZoneTagPropertyDsl {
   private val cdkBuilder: CfnHostedZone.HostedZoneTagProperty.Builder =

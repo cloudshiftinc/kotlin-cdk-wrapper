@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnPricingRule
 import software.constructs.Construct
 
+/**
+ * Creates a pricing rule which can be associated with a pricing plan, or a set of pricing plans.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnPricingRule cfnPricingRule = CfnPricingRule.Builder.create(this, "MyCfnPricingRule")
+ * .name("name")
+ * .scope("scope")
+ * .type("type")
+ * // the properties below are optional
+ * .billingEntity("billingEntity")
+ * .description("description")
+ * .modifierPercentage(123)
+ * .operation("operation")
+ * .service("service")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tiering(TieringProperty.builder()
+ * .freeTier(FreeTierProperty.builder()
+ * .activated(false)
+ * .build())
+ * .build())
+ * .usageType("usageType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-pricingrule.html)
+ */
 @CdkDslMarker
 public class CfnPricingRuleDsl(
   scope: Construct,

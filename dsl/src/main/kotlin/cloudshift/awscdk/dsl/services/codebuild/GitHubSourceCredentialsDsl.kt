@@ -8,6 +8,21 @@ import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.GitHubSourceCredentials
 import software.constructs.Construct
 
+/**
+ * The source credentials used when contacting the GitHub API.
+ *
+ * **Note**: CodeBuild only allows a single credential for GitHub
+ * to be saved in a given AWS account in a given region -
+ * any attempt to add more than one will result in an error.
+ *
+ * Example:
+ *
+ * ```
+ * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
+ * .accessToken(SecretValue.secretsManager("my-token"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourceCredentialsDsl(
   scope: Construct,

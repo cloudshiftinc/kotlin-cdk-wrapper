@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.KinesisStreamProps
 
+/**
+ * Customize the Kinesis Stream Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * RuleTargetInput ruleTargetInput;
+ * KinesisStreamProps kinesisStreamProps = KinesisStreamProps.builder()
+ * .message(ruleTargetInput)
+ * .partitionKeyPath("partitionKeyPath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KinesisStreamPropsDsl {
   private val cdkBuilder: KinesisStreamProps.Builder = KinesisStreamProps.builder()

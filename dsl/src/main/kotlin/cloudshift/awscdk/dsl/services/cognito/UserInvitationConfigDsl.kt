@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.UserInvitationConfig
 
+/**
+ * User pool configuration when administrators sign users up.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .userInvitation(UserInvitationConfig.builder()
+ * .emailSubject("Invite to join our awesome app!")
+ * .emailBody("Hello {username}, you have been invited to join our awesome app! Your temporary
+ * password is {####}")
+ * .smsMessage("Hello {username}, your temporary password for our awesome app is {####}")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserInvitationConfigDsl {
   private val cdkBuilder: UserInvitationConfig.Builder = UserInvitationConfig.builder()

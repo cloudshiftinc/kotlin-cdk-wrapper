@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Prometheus settings for open monitoring.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * PrometheusProperty prometheusProperty = PrometheusProperty.builder()
+ * .jmxExporter(JmxExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .nodeExporter(NodeExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-prometheus.html)
+ */
 @CdkDslMarker
 public class CfnClusterPrometheusPropertyDsl {
   private val cdkBuilder: CfnCluster.PrometheusProperty.Builder =

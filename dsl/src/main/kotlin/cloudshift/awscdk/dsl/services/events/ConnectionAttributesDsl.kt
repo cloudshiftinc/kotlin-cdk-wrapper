@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.ConnectionAttributes
 
+/**
+ * Interface with properties necessary to import a reusable Connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * ConnectionAttributes connectionAttributes = ConnectionAttributes.builder()
+ * .connectionArn("connectionArn")
+ * .connectionName("connectionName")
+ * .connectionSecretArn("connectionSecretArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConnectionAttributesDsl {
   private val cdkBuilder: ConnectionAttributes.Builder = ConnectionAttributes.builder()

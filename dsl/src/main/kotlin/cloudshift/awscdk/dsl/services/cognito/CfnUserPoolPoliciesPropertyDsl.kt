@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The policy associated with a user pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * PoliciesProperty policiesProperty = PoliciesProperty.builder()
+ * .passwordPolicy(PasswordPolicyProperty.builder()
+ * .minimumLength(123)
+ * .requireLowercase(false)
+ * .requireNumbers(false)
+ * .requireSymbols(false)
+ * .requireUppercase(false)
+ * .temporaryPasswordValidityDays(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolPoliciesPropertyDsl {
   private val cdkBuilder: CfnUserPool.PoliciesProperty.Builder =

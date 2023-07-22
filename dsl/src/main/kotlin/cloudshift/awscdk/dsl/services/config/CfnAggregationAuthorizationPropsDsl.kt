@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.config.CfnAggregationAuthorizationProps
 
+/**
+ * Properties for defining a `CfnAggregationAuthorization`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnAggregationAuthorizationProps cfnAggregationAuthorizationProps =
+ * CfnAggregationAuthorizationProps.builder()
+ * .authorizedAccountId("authorizedAccountId")
+ * .authorizedAwsRegion("authorizedAwsRegion")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html)
+ */
 @CdkDslMarker
 public class CfnAggregationAuthorizationPropsDsl {
   private val cdkBuilder: CfnAggregationAuthorizationProps.Builder =

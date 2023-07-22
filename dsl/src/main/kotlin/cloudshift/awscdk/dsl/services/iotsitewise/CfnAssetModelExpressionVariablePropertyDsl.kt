@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains expression variable information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * ExpressionVariableProperty expressionVariableProperty = ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-expressionvariable.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelExpressionVariablePropertyDsl {
   private val cdkBuilder: CfnAssetModel.ExpressionVariableProperty.Builder =

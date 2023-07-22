@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * Text transformations eliminate some of the unusual formatting that attackers use in web requests
+ * in an effort to bypass detection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * TextTransformationProperty textTransformationProperty = TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-texttransformation.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupTextTransformationPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.TextTransformationProperty.Builder =

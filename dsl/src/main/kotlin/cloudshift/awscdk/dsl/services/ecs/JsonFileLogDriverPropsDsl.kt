@@ -10,6 +10,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.JsonFileLogDriverProps
 
+/**
+ * Specifies the json-file log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/json-file/)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * JsonFileLogDriverProps jsonFileLogDriverProps = JsonFileLogDriverProps.builder()
+ * .compress(false)
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .maxFile(123)
+ * .maxSize("maxSize")
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JsonFileLogDriverPropsDsl {
   private val cdkBuilder: JsonFileLogDriverProps.Builder = JsonFileLogDriverProps.builder()

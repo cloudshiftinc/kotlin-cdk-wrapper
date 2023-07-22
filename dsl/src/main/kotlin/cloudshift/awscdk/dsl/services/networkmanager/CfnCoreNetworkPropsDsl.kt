@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.networkmanager.CfnCoreNetworkProps
 
+/**
+ * Properties for defining a `CfnCoreNetwork`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * Object policyDocument;
+ * CfnCoreNetworkProps cfnCoreNetworkProps = CfnCoreNetworkProps.builder()
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .description("description")
+ * .policyDocument(policyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-corenetwork.html)
+ */
 @CdkDslMarker
 public class CfnCoreNetworkPropsDsl {
   private val cdkBuilder: CfnCoreNetworkProps.Builder = CfnCoreNetworkProps.builder()

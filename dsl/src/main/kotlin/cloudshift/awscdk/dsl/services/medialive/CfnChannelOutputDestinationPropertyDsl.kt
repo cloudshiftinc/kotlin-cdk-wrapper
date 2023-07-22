@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Configuration information for an output.
+ *
+ * This entity is at the top level in the channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * OutputDestinationProperty outputDestinationProperty = OutputDestinationProperty.builder()
+ * .id("id")
+ * .mediaPackageSettings(List.of(MediaPackageOutputDestinationSettingsProperty.builder()
+ * .channelId("channelId")
+ * .build()))
+ * .multiplexSettings(MultiplexProgramChannelDestinationSettingsProperty.builder()
+ * .multiplexId("multiplexId")
+ * .programName("programName")
+ * .build())
+ * .settings(List.of(OutputDestinationSettingsProperty.builder()
+ * .passwordParam("passwordParam")
+ * .streamName("streamName")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html)
+ */
 @CdkDslMarker
 public class CfnChannelOutputDestinationPropertyDsl {
   private val cdkBuilder: CfnChannel.OutputDestinationProperty.Builder =

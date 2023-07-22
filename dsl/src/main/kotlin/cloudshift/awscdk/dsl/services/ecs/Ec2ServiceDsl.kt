@@ -27,6 +27,25 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.constructs.Construct
 
+/**
+ * This creates a service using the EC2 launch type on an ECS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * Ec2Service service = Ec2Service.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
+ * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
+ * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
+ * .containerName("MyContainer")
+ * .containerPort(80)
+ * .build()));
+ * ```
+ */
 @CdkDslMarker
 public class Ec2ServiceDsl(
   scope: Construct,

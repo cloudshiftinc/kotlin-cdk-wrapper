@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachine
 
+/**
+ * Defines a CloudWatch log group.
+ *
+ *
+ * For more information see [Standard Versus Express
+ * Workflows](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-standard-vs-express.html)
+ * in the AWS Step Functions Developer Guide.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CloudWatchLogsLogGroupProperty cloudWatchLogsLogGroupProperty =
+ * CloudWatchLogsLogGroupProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-cloudwatchlogsloggroup.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineCloudWatchLogsLogGroupPropertyDsl {
   private val cdkBuilder: CfnStateMachine.CloudWatchLogsLogGroupProperty.Builder =

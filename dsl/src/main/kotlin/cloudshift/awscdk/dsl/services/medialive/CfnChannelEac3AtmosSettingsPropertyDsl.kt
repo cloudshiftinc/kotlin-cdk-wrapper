@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Eac3AtmosSettingsProperty eac3AtmosSettingsProperty = Eac3AtmosSettingsProperty.builder()
+ * .bitrate(123)
+ * .codingMode("codingMode")
+ * .dialnorm(123)
+ * .drcLine("drcLine")
+ * .drcRf("drcRf")
+ * .heightTrim(123)
+ * .surroundTrim(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-eac3atmossettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelEac3AtmosSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Eac3AtmosSettingsProperty.Builder =

@@ -10,6 +10,48 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.BatchJobProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the Batch Job Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.batch.alpha.*;
+ * import software.amazon.awscdk.services.ecs.ContainerImage;
+ * Vpc vpc;
+ * FargateComputeEnvironment computeEnvironment = FargateComputeEnvironment.Builder.create(this,
+ * "ComputeEnv")
+ * .vpc(vpc)
+ * .build();
+ * JobQueue jobQueue = JobQueue.Builder.create(this, "JobQueue")
+ * .priority(1)
+ * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+ * .computeEnvironment(computeEnvironment)
+ * .order(1)
+ * .build()))
+ * .build();
+ * EcsJobDefinition jobDefinition = EcsJobDefinition.Builder.create(this, "MyJob")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "Container")
+ * .image(ContainerImage.fromRegistry("test-repo"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .build())
+ * .build();
+ * Queue queue = new Queue(this, "Queue");
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(BatchJob.Builder.create(jobQueue.getJobQueueArn(), jobQueue,
+ * jobDefinition.getJobDefinitionArn(), jobDefinition)
+ * .deadLetterQueue(queue)
+ * .event(RuleTargetInput.fromObject(Map.of("SomeParam", "SomeValue")))
+ * .retryAttempts(2)
+ * .maxEventAge(Duration.hours(2))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BatchJobPropsDsl {
   private val cdkBuilder: BatchJobProps.Builder = BatchJobProps.builder()

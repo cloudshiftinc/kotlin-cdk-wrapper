@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnChannel
 
+/**
+ * HLS ingest configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * HlsIngestProperty hlsIngestProperty = HlsIngestProperty.builder()
+ * .ingestEndpoints(List.of(IngestEndpointProperty.builder()
+ * .id("id")
+ * .password("password")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-hlsingest.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsIngestPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsIngestProperty.Builder =

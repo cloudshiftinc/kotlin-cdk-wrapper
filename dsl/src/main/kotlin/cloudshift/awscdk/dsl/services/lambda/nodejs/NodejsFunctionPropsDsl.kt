@@ -44,6 +44,23 @@ import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties for a NodejsFunction.
+ *
+ * Example:
+ *
+ * ```
+ * NodejsFunction.Builder.create(this, "my-handler")
+ * .bundling(BundlingOptions.builder()
+ * .network("host")
+ * .securityOpt("no-new-privileges")
+ * .user("user:group")
+ * .volumesFrom(List.of("777f7dc92da7"))
+ * .volumes(List.of(DockerVolume.builder().hostPath("/host-path").containerPath("/container-path").build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NodejsFunctionPropsDsl {
   private val cdkBuilder: NodejsFunctionProps.Builder = NodejsFunctionProps.builder()

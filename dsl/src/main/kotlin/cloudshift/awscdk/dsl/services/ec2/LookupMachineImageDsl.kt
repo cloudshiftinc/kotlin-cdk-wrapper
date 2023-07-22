@@ -12,6 +12,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.LookupMachineImage
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * A machine image whose AMI ID will be searched using DescribeImages.
+ *
+ * The most recent, available, launchable image matching the given filter
+ * criteria will be used. Looking up AMIs may take a long time; specify
+ * as many filter criteria as possible to narrow down the search.
+ *
+ * The AMI selected will be cached in `cdk.context.json` and the same value
+ * will be used on future runs. To refresh the AMI lookup, you will have to
+ * evict the value from the cache using the `cdk context` command. See
+ * https://docs.aws.amazon.com/cdk/latest/guide/context.html for more information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * LookupMachineImage lookupMachineImage = LookupMachineImage.Builder.create()
+ * .name("name")
+ * // the properties below are optional
+ * .filters(Map.of(
+ * "filtersKey", List.of("filters")))
+ * .owners(List.of("owners"))
+ * .userData(userData)
+ * .windows(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LookupMachineImageDsl {
   private val cdkBuilder: LookupMachineImage.Builder = LookupMachineImage.Builder.create()

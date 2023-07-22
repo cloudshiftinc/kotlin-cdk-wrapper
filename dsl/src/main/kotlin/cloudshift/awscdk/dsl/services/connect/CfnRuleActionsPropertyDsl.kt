@@ -9,6 +9,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnRule
 
+/**
+ * A list of actions to be run when the rule is triggered.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * Object assignContactCategoryActions;
+ * ActionsProperty actionsProperty = ActionsProperty.builder()
+ * .assignContactCategoryActions(List.of(assignContactCategoryActions))
+ * .eventBridgeActions(List.of(EventBridgeActionProperty.builder()
+ * .name("name")
+ * .build()))
+ * .sendNotificationActions(List.of(SendNotificationActionProperty.builder()
+ * .content("content")
+ * .contentType("contentType")
+ * .deliveryMethod("deliveryMethod")
+ * .recipient(NotificationRecipientTypeProperty.builder()
+ * .userArns(List.of("userArns"))
+ * .userTags(Map.of(
+ * "userTagsKey", "userTags"))
+ * .build())
+ * // the properties below are optional
+ * .subject("subject")
+ * .build()))
+ * .taskActions(List.of(TaskActionProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .references(Map.of(
+ * "referencesKey", ReferenceProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-actions.html)
+ */
 @CdkDslMarker
 public class CfnRuleActionsPropertyDsl {
   private val cdkBuilder: CfnRule.ActionsProperty.Builder = CfnRule.ActionsProperty.builder()

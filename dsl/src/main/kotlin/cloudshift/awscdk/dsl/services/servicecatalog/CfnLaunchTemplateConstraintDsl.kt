@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint
 import software.constructs.Construct
 
+/**
+ * Specifies a template constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnLaunchTemplateConstraint cfnLaunchTemplateConstraint =
+ * CfnLaunchTemplateConstraint.Builder.create(this, "MyCfnLaunchTemplateConstraint")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .rules("rules")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateConstraintDsl(
   scope: Construct,

@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
 
+/**
+ * Contains information about the Amazon Kinesis data stream where you are sending real-time log
+ * data in a real-time log configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * EndPointProperty endPointProperty = EndPointProperty.builder()
+ * .kinesisStreamConfig(KinesisStreamConfigProperty.builder()
+ * .roleArn("roleArn")
+ * .streamArn("streamArn")
+ * .build())
+ * .streamType("streamType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnRealtimeLogConfigEndPointPropertyDsl {
   private val cdkBuilder: CfnRealtimeLogConfig.EndPointProperty.Builder =

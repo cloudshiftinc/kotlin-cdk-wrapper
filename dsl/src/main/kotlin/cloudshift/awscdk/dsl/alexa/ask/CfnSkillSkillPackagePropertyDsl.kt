@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.alexa.ask.CfnSkill
 
+/**
+ * The `SkillPackage` property type contains configuration details for the skill package that
+ * contains the components of the Alexa skill.
+ *
+ * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update the
+ * skill. More details about the skill package format are located in the  .
+ *
+ * `SkillPackage` is a property of the `Alexa::ASK::Skill` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.alexa.ask.*;
+ * Object manifest;
+ * SkillPackageProperty skillPackageProperty = SkillPackageProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * // the properties below are optional
+ * .overrides(OverridesProperty.builder()
+ * .manifest(manifest)
+ * .build())
+ * .s3BucketRole("s3BucketRole")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html)
+ */
 @CdkDslMarker
 public class CfnSkillSkillPackagePropertyDsl {
   private val cdkBuilder: CfnSkill.SkillPackageProperty.Builder =

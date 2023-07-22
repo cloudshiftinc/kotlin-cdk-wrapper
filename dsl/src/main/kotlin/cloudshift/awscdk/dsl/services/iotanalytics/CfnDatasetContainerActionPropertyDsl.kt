@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * Information needed to run the "containerAction" to produce data set contents.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * ContainerActionProperty containerActionProperty = ContainerActionProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .image("image")
+ * .resourceConfiguration(ResourceConfigurationProperty.builder()
+ * .computeType("computeType")
+ * .volumeSizeInGb(123)
+ * .build())
+ * // the properties below are optional
+ * .variables(List.of(VariableProperty.builder()
+ * .variableName("variableName")
+ * // the properties below are optional
+ * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+ * .datasetName("datasetName")
+ * .build())
+ * .doubleValue(123)
+ * .outputFileUriValue(OutputFileUriValueProperty.builder()
+ * .fileName("fileName")
+ * .build())
+ * .stringValue("stringValue")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-containeraction.html)
+ */
 @CdkDslMarker
 public class CfnDatasetContainerActionPropertyDsl {
   private val cdkBuilder: CfnDataset.ContainerActionProperty.Builder =

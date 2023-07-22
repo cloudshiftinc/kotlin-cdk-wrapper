@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a singular filter constant, used in filters to specify a single value
+ * to match against.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicSingularFilterConstantProperty topicSingularFilterConstantProperty =
+ * TopicSingularFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicsingularfilterconstant.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicSingularFilterConstantPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicSingularFilterConstantProperty.Builder =

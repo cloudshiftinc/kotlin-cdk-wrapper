@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnector
 import software.amazon.awscdk.services.appflow.CfnConnectorProps
 
+/**
+ * Properties for defining a `CfnConnector`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * CfnConnectorProps cfnConnectorProps = CfnConnectorProps.builder()
+ * .connectorProvisioningConfig(ConnectorProvisioningConfigProperty.builder()
+ * .lambda(LambdaConnectorProvisioningConfigProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build())
+ * .connectorProvisioningType("connectorProvisioningType")
+ * // the properties below are optional
+ * .connectorLabel("connectorLabel")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorPropsDsl {
   private val cdkBuilder: CfnConnectorProps.Builder = CfnConnectorProps.builder()

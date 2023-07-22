@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudfront.PublicKey
 import software.constructs.Construct
 
+/**
+ * A Public Key Configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // Validating signed URLs or signed cookies with Trusted Key Groups
+ * // public key in PEM format
+ * String publicKey;
+ * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
+ * .encodedKey(publicKey)
+ * .build();
+ * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
+ * .items(List.of(pubKey))
+ * .build();
+ * Distribution.Builder.create(this, "Dist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("www.example.com"))
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PublicKeyDsl(
   scope: Construct,

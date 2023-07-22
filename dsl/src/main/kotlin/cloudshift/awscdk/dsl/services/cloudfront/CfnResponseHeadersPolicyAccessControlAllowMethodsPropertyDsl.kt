@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A list of HTTP methods that CloudFront includes as values for the `Access-Control-Allow-Methods`
+ * HTTP response header.
+ *
+ * For more information about the `Access-Control-Allow-Methods` HTTP response header, see
+ * [Access-Control-Allow-Methods](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+ * in the MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * AccessControlAllowMethodsProperty accessControlAllowMethodsProperty =
+ * AccessControlAllowMethodsProperty.builder()
+ * .items(List.of("items"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-accesscontrolallowmethods.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyAccessControlAllowMethodsPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty.Builder =

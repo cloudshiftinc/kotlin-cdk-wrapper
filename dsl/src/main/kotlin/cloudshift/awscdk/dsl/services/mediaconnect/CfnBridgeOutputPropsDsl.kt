@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeOutputProps
 
+/**
+ * Properties for defining a `CfnBridgeOutput`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnBridgeOutputProps cfnBridgeOutputProps = CfnBridgeOutputProps.builder()
+ * .bridgeArn("bridgeArn")
+ * .name("name")
+ * .networkOutput(BridgeNetworkOutputProperty.builder()
+ * .ipAddress("ipAddress")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .ttl(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html)
+ */
 @CdkDslMarker
 public class CfnBridgeOutputPropsDsl {
   private val cdkBuilder: CfnBridgeOutputProps.Builder = CfnBridgeOutputProps.builder()

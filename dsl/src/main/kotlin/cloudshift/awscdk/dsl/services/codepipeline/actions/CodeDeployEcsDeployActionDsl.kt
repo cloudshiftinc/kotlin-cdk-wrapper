@@ -15,6 +15,39 @@ import software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContain
 import software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Artifact artifact;
+ * ArtifactPath artifactPath;
+ * EcsDeploymentGroup ecsDeploymentGroup;
+ * Role role;
+ * CodeDeployEcsDeployAction codeDeployEcsDeployAction = CodeDeployEcsDeployAction.Builder.create()
+ * .actionName("actionName")
+ * .deploymentGroup(ecsDeploymentGroup)
+ * // the properties below are optional
+ * .appSpecTemplateFile(artifactPath)
+ * .appSpecTemplateInput(artifact)
+ * .containerImageInputs(List.of(CodeDeployEcsContainerImageInput.builder()
+ * .input(artifact)
+ * // the properties below are optional
+ * .taskDefinitionPlaceholder("taskDefinitionPlaceholder")
+ * .build()))
+ * .role(role)
+ * .runOrder(123)
+ * .taskDefinitionTemplateFile(artifactPath)
+ * .taskDefinitionTemplateInput(artifact)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeDeployEcsDeployActionDsl {
   private val cdkBuilder: CodeDeployEcsDeployAction.Builder =

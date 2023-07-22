@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The detailed definition of a template.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-templateversiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTemplateVersionDefinitionPropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateVersionDefinitionProperty.Builder =

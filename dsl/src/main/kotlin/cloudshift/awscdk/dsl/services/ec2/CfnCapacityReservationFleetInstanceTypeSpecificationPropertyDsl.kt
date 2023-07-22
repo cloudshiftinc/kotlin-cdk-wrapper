@@ -9,6 +9,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet
 
+/**
+ * Specifies information about an instance type to use in a Capacity Reservation Fleet.
+ *
+ * `InstanceTypeSpecification` is a property of the
+ * [AWS::EC2::CapacityReservationFleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InstanceTypeSpecificationProperty instanceTypeSpecificationProperty =
+ * InstanceTypeSpecificationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
+ * .ebsOptimized(false)
+ * .instancePlatform("instancePlatform")
+ * .instanceType("instanceType")
+ * .priority(123)
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-instancetypespecification.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationFleetInstanceTypeSpecificationPropertyDsl {
   private val cdkBuilder: CfnCapacityReservationFleet.InstanceTypeSpecificationProperty.Builder =

@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointProps
 
+/**
+ * Properties for defining a `CfnMultiRegionAccessPoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * CfnMultiRegionAccessPointProps cfnMultiRegionAccessPointProps =
+ * CfnMultiRegionAccessPointProps.builder()
+ * .regions(List.of(RegionProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .build()))
+ * // the properties below are optional
+ * .name("name")
+ * .publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty.builder()
+ * .blockPublicAcls(false)
+ * .blockPublicPolicy(false)
+ * .ignorePublicAcls(false)
+ * .restrictPublicBuckets(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html)
+ */
 @CdkDslMarker
 public class CfnMultiRegionAccessPointPropsDsl {
   private val cdkBuilder: CfnMultiRegionAccessPointProps.Builder =

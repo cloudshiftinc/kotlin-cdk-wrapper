@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
+/**
+ * Summary of information about the last monitoring job to run.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MonitoringExecutionSummaryProperty monitoringExecutionSummaryProperty =
+ * MonitoringExecutionSummaryProperty.builder()
+ * .creationTime("creationTime")
+ * .lastModifiedTime("lastModifiedTime")
+ * .monitoringExecutionStatus("monitoringExecutionStatus")
+ * .monitoringScheduleName("monitoringScheduleName")
+ * .scheduledTime("scheduledTime")
+ * // the properties below are optional
+ * .endpointName("endpointName")
+ * .failureReason("failureReason")
+ * .processingJobArn("processingJobArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringexecutionsummary.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringScheduleMonitoringExecutionSummaryPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.MonitoringExecutionSummaryProperty.Builder =

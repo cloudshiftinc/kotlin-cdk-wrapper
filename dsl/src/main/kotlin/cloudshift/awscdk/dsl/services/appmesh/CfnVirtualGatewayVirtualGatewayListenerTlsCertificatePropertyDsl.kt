@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents a listener's Transport Layer Security (TLS) certificate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayListenerTlsCertificateProperty virtualGatewayListenerTlsCertificateProperty =
+ * VirtualGatewayListenerTlsCertificateProperty.builder()
+ * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlscertificate.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayListenerTlsCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty.Builder =

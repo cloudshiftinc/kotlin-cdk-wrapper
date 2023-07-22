@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps
 
+/**
+ * Properties for defining a `CfnResourcePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * Object resourcePolicy;
+ * CfnResourcePolicyProps cfnResourcePolicyProps = CfnResourcePolicyProps.builder()
+ * .resourceArn("resourceArn")
+ * .resourcePolicy(resourcePolicy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()

@@ -15,6 +15,34 @@ import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * The details of a task definition run on a Fargate cluster.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "FargateCPCluster")
+ * .vpc(vpc)
+ * .enableFargateCapacityProviders(true)
+ * .build();
+ * FargateTaskDefinition taskDefinition = new FargateTaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build());
+ * FargateService.Builder.create(this, "FargateService")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE_SPOT")
+ * .weight(2)
+ * .build(), CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE")
+ * .weight(1)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateTaskDefinitionDsl(
   scope: Construct,

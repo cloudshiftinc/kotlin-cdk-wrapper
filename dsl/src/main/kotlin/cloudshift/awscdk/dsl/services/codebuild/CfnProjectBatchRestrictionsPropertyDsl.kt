@@ -9,6 +9,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * Specifies restrictions for the batch build.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * BatchRestrictionsProperty batchRestrictionsProperty = BatchRestrictionsProperty.builder()
+ * .computeTypesAllowed(List.of("computeTypesAllowed"))
+ * .maximumBuildsAllowed(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-batchrestrictions.html)
+ */
 @CdkDslMarker
 public class CfnProjectBatchRestrictionsPropertyDsl {
   private val cdkBuilder: CfnProject.BatchRestrictionsProperty.Builder =

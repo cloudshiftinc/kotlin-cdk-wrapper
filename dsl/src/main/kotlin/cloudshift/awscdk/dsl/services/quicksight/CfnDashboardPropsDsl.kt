@@ -14,6 +14,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 import software.amazon.awscdk.services.quicksight.CfnDashboardProps
 
+/**
+ * Properties for defining a `CfnDashboard`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPropsDsl {
   private val cdkBuilder: CfnDashboardProps.Builder = CfnDashboardProps.builder()

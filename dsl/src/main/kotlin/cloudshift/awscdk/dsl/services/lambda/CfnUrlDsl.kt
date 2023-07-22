@@ -8,6 +8,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnUrl
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::Url` resource creates a function URL with the specified configuration
+ * parameters.
+ *
+ * A [function URL](https://docs.aws.amazon.com/lambda/latest/dg/lambda-urls.html) is a dedicated
+ * HTTP(S) endpoint that you can use to invoke your function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnUrl cfnUrl = CfnUrl.Builder.create(this, "MyCfnUrl")
+ * .authType("authType")
+ * .targetFunctionArn("targetFunctionArn")
+ * // the properties below are optional
+ * .cors(CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build())
+ * .invokeMode("invokeMode")
+ * .qualifier("qualifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-url.html)
+ */
 @CdkDslMarker
 public class CfnUrlDsl(
   scope: Construct,

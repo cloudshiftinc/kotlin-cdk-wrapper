@@ -12,6 +12,28 @@ import software.amazon.awscdk.services.ses.EmailSendingEvent
 import software.amazon.awscdk.services.ses.EventDestination
 import software.amazon.awscdk.services.ses.IConfigurationSet
 
+/**
+ * Properties for a configuration set event destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ConfigurationSet configurationSet;
+ * EventDestination eventDestination;
+ * ConfigurationSetEventDestinationProps configurationSetEventDestinationProps =
+ * ConfigurationSetEventDestinationProps.builder()
+ * .configurationSet(configurationSet)
+ * .destination(eventDestination)
+ * // the properties below are optional
+ * .configurationSetEventDestinationName("configurationSetEventDestinationName")
+ * .enabled(false)
+ * .events(List.of(EmailSendingEvent.SEND))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConfigurationSetEventDestinationPropsDsl {
   private val cdkBuilder: ConfigurationSetEventDestinationProps.Builder =

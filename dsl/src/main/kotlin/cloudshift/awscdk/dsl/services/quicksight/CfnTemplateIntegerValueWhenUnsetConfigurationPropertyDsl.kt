@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A parameter declaration for the `Integer` data type.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * IntegerValueWhenUnsetConfigurationProperty integerValueWhenUnsetConfigurationProperty =
+ * IntegerValueWhenUnsetConfigurationProperty.builder()
+ * .customValue(123)
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-integervaluewhenunsetconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateIntegerValueWhenUnsetConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.IntegerValueWhenUnsetConfigurationProperty.Builder =

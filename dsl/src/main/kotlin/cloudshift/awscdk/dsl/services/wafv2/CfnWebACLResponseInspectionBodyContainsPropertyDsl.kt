@@ -8,6 +8,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Configures inspection of the response body.
+ *
+ * AWS WAF can inspect the first 65,536 bytes (64 KB) of the response body. This is part of the
+ * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+ *
+ *
+ * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * ResponseInspectionBodyContainsProperty responseInspectionBodyContainsProperty =
+ * ResponseInspectionBodyContainsProperty.builder()
+ * .failureStrings(List.of("failureStrings"))
+ * .successStrings(List.of("successStrings"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-responseinspectionbodycontains.html)
+ */
 @CdkDslMarker
 public class CfnWebACLResponseInspectionBodyContainsPropertyDsl {
   private val cdkBuilder: CfnWebACL.ResponseInspectionBodyContainsProperty.Builder =

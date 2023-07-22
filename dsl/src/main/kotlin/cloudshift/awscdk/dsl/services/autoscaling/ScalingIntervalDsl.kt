@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.ScalingInterval
 
+/**
+ * A range of metric values in which to apply a certain scaling operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * ScalingInterval scalingInterval = ScalingInterval.builder()
+ * .change(123)
+ * // the properties below are optional
+ * .lower(123)
+ * .upper(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScalingIntervalDsl {
   private val cdkBuilder: ScalingInterval.Builder = ScalingInterval.builder()

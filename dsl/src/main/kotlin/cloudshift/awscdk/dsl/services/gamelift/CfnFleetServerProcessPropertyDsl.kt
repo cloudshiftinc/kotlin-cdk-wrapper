@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnFleet
 
+/**
+ * A set of instructions for launching server processes on each instance in a fleet.
+ *
+ * Server processes run either an executable in a custom game build or a Realtime Servers script.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * ServerProcessProperty serverProcessProperty = ServerProcessProperty.builder()
+ * .concurrentExecutions(123)
+ * .launchPath("launchPath")
+ * // the properties below are optional
+ * .parameters("parameters")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-serverprocess.html)
+ */
 @CdkDslMarker
 public class CfnFleetServerProcessPropertyDsl {
   private val cdkBuilder: CfnFleet.ServerProcessProperty.Builder =

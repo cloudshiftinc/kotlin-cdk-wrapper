@@ -7,6 +7,24 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.appmesh.TcpHealthCheckOptions
 
+/**
+ * Properties used to define TCP Based healthchecks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TcpHealthCheckOptions tcpHealthCheckOptions = TcpHealthCheckOptions.builder()
+ * .healthyThreshold(123)
+ * .interval(Duration.minutes(30))
+ * .timeout(Duration.minutes(30))
+ * .unhealthyThreshold(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TcpHealthCheckOptionsDsl {
   private val cdkBuilder: TcpHealthCheckOptions.Builder = TcpHealthCheckOptions.builder()

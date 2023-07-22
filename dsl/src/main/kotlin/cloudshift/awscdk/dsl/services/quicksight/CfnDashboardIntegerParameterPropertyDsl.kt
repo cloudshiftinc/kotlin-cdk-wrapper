@@ -10,6 +10,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * An integer parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * IntegerParameterProperty integerParameterProperty = IntegerParameterProperty.builder()
+ * .name("name")
+ * .values(List.of(123))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-integerparameter.html)
+ */
 @CdkDslMarker
 public class CfnDashboardIntegerParameterPropertyDsl {
   private val cdkBuilder: CfnDashboard.IntegerParameterProperty.Builder =

@@ -8,6 +8,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The top movers and bottom movers computation setup.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-topbottommoverscomputation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTopBottomMoversComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.TopBottomMoversComputationProperty.Builder =

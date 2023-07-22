@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Dashboard version.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DashboardVersionProperty dashboardVersionProperty = DashboardVersionProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .dataSetArns(List.of("dataSetArns"))
+ * .description("description")
+ * .errors(List.of(DashboardErrorProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .violatedEntities(List.of(EntityProperty.builder()
+ * .path("path")
+ * .build()))
+ * .build()))
+ * .sheets(List.of(SheetProperty.builder()
+ * .name("name")
+ * .sheetId("sheetId")
+ * .build()))
+ * .sourceEntityArn("sourceEntityArn")
+ * .status("status")
+ * .themeArn("themeArn")
+ * .versionNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardversion.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDashboardVersionPropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardVersionProperty.Builder =

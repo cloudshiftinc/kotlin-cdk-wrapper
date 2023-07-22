@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * Contains metric pair information for the `PredefinedMetricPairSpecification` property of the
+ * [AWS::AutoScaling::ScalingPolicy
+ * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+ * property type.
+ *
+ * For more information, see [Predictive
+ * scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * PredictiveScalingPredefinedMetricPairProperty predictiveScalingPredefinedMetricPairProperty =
+ * PredictiveScalingPredefinedMetricPairProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedmetricpair.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPredictiveScalingPredefinedMetricPairPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.PredictiveScalingPredefinedMetricPairProperty.Builder =

@@ -11,6 +11,239 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 import software.constructs.Construct
 
+/**
+ * The `AWS::DynamoDB::GlobalTable` resource enables you to create and manage a Version 2019.11.21
+ * global table. This resource cannot be used to create or manage a Version 2017.11.29 global table.
+ * For more information, see [Global
+ * tables](https://docs.aws.amazon.com//amazondynamodb/latest/developerguide/GlobalTables.html) .
+ *
+ *
+ * You cannot convert a resource of type `AWS::DynamoDB::Table` into a resource of type
+ * `AWS::DynamoDB::GlobalTable` by changing its type in your template. *Doing so might result in the
+ * deletion of your DynamoDB table.*
+ *
+ * You can instead use the GlobalTable resource to create a new table in a single Region. This will
+ * be billed the same as a single Region table. If you later update the stack to add other Regions then
+ * Global Tables pricing will apply.
+ *
+ *
+ * You should be aware of the following behaviors when working with DynamoDB global tables.
+ *
+ * * The IAM Principal executing the stack operation must have the permissions listed below in all
+ * regions where you plan to have a global table replica. The IAM Principal's permissions should not
+ * have restrictions based on IP source address. Some global tables operations (for example, adding a
+ * replica) are asynchronous, and require that the IAM Principal is valid until they complete. You
+ * should not delete the Principal (user or IAM role) until CloudFormation has finished updating your
+ * stack.
+ * * `dynamodb:CreateTable`
+ * * `dynamodb:UpdateTable`
+ * * `dynamodb:DeleteTable`
+ * * `dynamodb:DescribeContinuousBackups`
+ * * `dynamodb:DescribeContributorInsights`
+ * * `dynamodb:DescribeTable`
+ * * `dynamodb:DescribeTableReplicaAutoScaling`
+ * * `dynamodb:DescribeTimeToLive`
+ * * `dynamodb:ListTables`
+ * * `dynamodb:UpdateTimeToLive`
+ * * `dynamodb:UpdateContributorInsights`
+ * * `dynamodb:UpdateContinuousBackups`
+ * * `dynamodb:ListTagsOfResource`
+ * * `dynamodb:TableClass`
+ * * `dynamodb:TagResource`
+ * * `dynamodb:UntagResource`
+ * * `dynamodb:BatchWriteItem`
+ * * `dynamodb:CreateTableReplica`
+ * * `dynamodb:DeleteItem`
+ * * `dynamodb:DeleteTableReplica`
+ * * `dynamodb:DisableKinesisStreamingDestination`
+ * * `dynamodb:EnableKinesisStreamingDestination`
+ * * `dynamodb:GetItem`
+ * * `dynamodb:PutItem`
+ * * `dynamodb:Query`
+ * * `dynamodb:Scan`
+ * * `dynamodb:UpdateItem`
+ * * `dynamodb:DescribeTableReplicaAutoScaling`
+ * * `dynamodb:UpdateTableReplicaAutoScaling`
+ * * `iam:CreateServiceLinkedRole`
+ * * `kms:CreateGrant`
+ * * `kms:DescribeKey`
+ * * `application-autoscaling:DeleteScalingPolicy`
+ * * `application-autoscaling:DeleteScheduledAction`
+ * * `application-autoscaling:DeregisterScalableTarget`
+ * * `application-autoscaling:DescribeScalingPolicies`
+ * * `application-autoscaling:DescribeScalableTargets`
+ * * `application-autoscaling:PutScalingPolicy`
+ * * `application-autoscaling:PutScheduledAction`
+ * * `application-autoscaling:RegisterScalableTarget`
+ * * When using provisioned billing mode, CloudFormation will create an auto scaling policy on each
+ * of your replicas to control their write capacities. You must configure this policy using the
+ * `WriteProvisionedThroughputSettings` property. CloudFormation will ensure that all replicas have the
+ * same write capacity auto scaling property. You cannot directly specify a value for write capacity
+ * for a global table.
+ * * If your table uses provisioned capacity, you must configure auto scaling directly in the
+ * `AWS::DynamoDB::GlobalTable` resource. You should not configure additional auto scaling policies on
+ * any of the table replicas or global secondary indexes, either via API or via
+ * `AWS::ApplicationAutoScaling::ScalableTarget` or `AWS::ApplicationAutoScaling::ScalingPolicy` .
+ * Doing so might result in unexpected behavior and is unsupported.
+ * * In AWS CloudFormation , each global table is controlled by a single stack, in a single region,
+ * regardless of the number of replicas. When you deploy your template, CloudFormation will
+ * create/update all replicas as part of a single stack operation. You should not deploy the same
+ * `AWS::DynamoDB::GlobalTable` resource in multiple regions. Doing so will result in errors, and is
+ * unsupported. If you deploy your application template in multiple regions, you can use conditions to
+ * only create the resource in a single region. Alternatively, you can choose to define your
+ * `AWS::DynamoDB::GlobalTable` resources in a stack separate from your application stack, and make
+ * sure it is only deployed to a single region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * CfnGlobalTable cfnGlobalTable = CfnGlobalTable.Builder.create(this, "MyCfnGlobalTable")
+ * .attributeDefinitions(List.of(AttributeDefinitionProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeType("attributeType")
+ * .build()))
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .replicas(List.of(ReplicaSpecificationProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deletionProtectionEnabled(false)
+ * .globalSecondaryIndexes(List.of(ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .build()))
+ * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .sseSpecification(ReplicaSSESpecificationProperty.builder()
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .build())
+ * .tableClass("tableClass")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .billingMode("billingMode")
+ * .globalSecondaryIndexes(List.of(GlobalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * // the properties below are optional
+ * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+ * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .build())
+ * .build()))
+ * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * .build()))
+ * .sseSpecification(SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * // the properties below are optional
+ * .sseType("sseType")
+ * .build())
+ * .streamSpecification(StreamSpecificationProperty.builder()
+ * .streamViewType("streamViewType")
+ * .build())
+ * .tableName("tableName")
+ * .timeToLiveSpecification(TimeToLiveSpecificationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .attributeName("attributeName")
+ * .build())
+ * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+ * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableDsl(
   scope: Construct,

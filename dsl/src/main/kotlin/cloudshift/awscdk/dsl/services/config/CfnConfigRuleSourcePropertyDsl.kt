@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 
+/**
+ * Provides the CustomPolicyDetails, the rule owner ( `AWS` for managed rules, `CUSTOM_POLICY` for
+ * Custom Policy rules, and `CUSTOM_LAMBDA` for Custom Lambda rules), the rule identifier, and the
+ * events that cause the evaluation of your AWS resources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * SourceProperty sourceProperty = SourceProperty.builder()
+ * .owner("owner")
+ * // the properties below are optional
+ * .customPolicyDetails(CustomPolicyDetailsProperty.builder()
+ * .enableDebugLogDelivery(false)
+ * .policyRuntime("policyRuntime")
+ * .policyText("policyText")
+ * .build())
+ * .sourceDetails(List.of(SourceDetailProperty.builder()
+ * .eventSource("eventSource")
+ * .messageType("messageType")
+ * // the properties below are optional
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .build()))
+ * .sourceIdentifier("sourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-source.html)
+ */
 @CdkDslMarker
 public class CfnConfigRuleSourcePropertyDsl {
   private val cdkBuilder: CfnConfigRule.SourceProperty.Builder =

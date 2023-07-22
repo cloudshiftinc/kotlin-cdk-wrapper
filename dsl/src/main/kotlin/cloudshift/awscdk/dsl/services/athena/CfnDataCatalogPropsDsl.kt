@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnDataCatalogProps
 
+/**
+ * Properties for defining a `CfnDataCatalog`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnDataCatalogProps cfnDataCatalogProps = CfnDataCatalogProps.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html)
+ */
 @CdkDslMarker
 public class CfnDataCatalogPropsDsl {
   private val cdkBuilder: CfnDataCatalogProps.Builder = CfnDataCatalogProps.builder()

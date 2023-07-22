@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect
 
+/**
+ * Aspect that applies IMDS configuration on EC2 Instance constructs.
+ *
+ * This aspect configures IMDS on an EC2 instance by creating a Launch Template with the
+ * IMDS configuration and associating that Launch Template with the instance. If an Instance
+ * is already associated with a Launch Template, a warning will (optionally) be added to the
+ * construct node and it will be skipped.
+ *
+ * To cover Instances already associated with Launch Templates, use `LaunchTemplateImdsAspect`.
+ *
+ * Example:
+ *
+ * ```
+ * InstanceRequireImdsv2Aspect aspect = new InstanceRequireImdsv2Aspect();
+ * Aspects.of(this).add(aspect);
+ * ```
+ */
 @CdkDslMarker
 public class InstanceRequireImdsv2AspectDsl {
   private val cdkBuilder: InstanceRequireImdsv2Aspect.Builder =

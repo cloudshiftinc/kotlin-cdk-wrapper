@@ -7,6 +7,63 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A control to display a dropdown list with buttons that are used to select a single value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ParameterDropDownControlProperty parameterDropDownControlProperty =
+ * ParameterDropDownControlProperty.builder()
+ * .parameterControlId("parameterControlId")
+ * .sourceParameterName("sourceParameterName")
+ * .title("title")
+ * // the properties below are optional
+ * .cascadingControlConfiguration(CascadingControlConfigurationProperty.builder()
+ * .sourceControls(List.of(CascadingControlSourceProperty.builder()
+ * .columnToMatch(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceSheetControlId("sourceSheetControlId")
+ * .build()))
+ * .build())
+ * .displayOptions(DropDownControlDisplayOptionsProperty.builder()
+ * .selectAllOptions(ListControlSelectAllOptionsProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .titleOptions(LabelOptionsProperty.builder()
+ * .customLabel("customLabel")
+ * .fontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .visibility("visibility")
+ * .build())
+ * .build())
+ * .selectableValues(ParameterSelectableValuesProperty.builder()
+ * .linkToDataSetColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .values(List.of("values"))
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-parameterdropdowncontrol.html)
+ */
 @CdkDslMarker
 public class CfnTemplateParameterDropDownControlPropertyDsl {
   private val cdkBuilder: CfnTemplate.ParameterDropDownControlProperty.Builder =

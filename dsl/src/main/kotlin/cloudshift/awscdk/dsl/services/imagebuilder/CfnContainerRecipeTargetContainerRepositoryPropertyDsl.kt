@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe
 
+/**
+ * The container repository where the output container image is stored.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * TargetContainerRepositoryProperty targetContainerRepositoryProperty =
+ * TargetContainerRepositoryProperty.builder()
+ * .repositoryName("repositoryName")
+ * .service("service")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html)
+ */
 @CdkDslMarker
 public class CfnContainerRecipeTargetContainerRepositoryPropertyDsl {
   private val cdkBuilder: CfnContainerRecipe.TargetContainerRepositoryProperty.Builder =

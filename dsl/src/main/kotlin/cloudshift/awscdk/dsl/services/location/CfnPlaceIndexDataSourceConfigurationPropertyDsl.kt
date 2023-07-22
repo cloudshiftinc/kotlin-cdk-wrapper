@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnPlaceIndex
 
+/**
+ * Specifies the data storage option requesting Places.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * DataSourceConfigurationProperty dataSourceConfigurationProperty =
+ * DataSourceConfigurationProperty.builder()
+ * .intendedUse("intendedUse")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-location-placeindex-datasourceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPlaceIndexDataSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnPlaceIndex.DataSourceConfigurationProperty.Builder =

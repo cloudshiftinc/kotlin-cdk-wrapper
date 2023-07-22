@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dynamodb.ProjectionType
 import software.amazon.awscdk.services.dynamodb.SecondaryIndexProps
 
+/**
+ * Properties for a secondary index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * SecondaryIndexProps secondaryIndexProps = SecondaryIndexProps.builder()
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType(ProjectionType.KEYS_ONLY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecondaryIndexPropsDsl {
   private val cdkBuilder: SecondaryIndexProps.Builder = SecondaryIndexProps.builder()

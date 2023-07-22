@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.cxapi.CloudAssembly
 
+/**
+ * Represents a deployable cloud application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * CloudAssembly cloudAssembly = CloudAssembly.Builder.create("directory")
+ * .skipEnumCheck(false)
+ * .skipVersionCheck(false)
+ * .topoSort(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudAssemblyDsl(
   directory: String,

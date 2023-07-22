@@ -10,6 +10,28 @@ import kotlin.Unit
 import software.amazon.awscdk.services.vpclattice.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Retrieves information about the resource policy.
+ *
+ * The resource policy is an IAM policy created on behalf of the resource owner when they share a
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * Object policy;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policy(policy)
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

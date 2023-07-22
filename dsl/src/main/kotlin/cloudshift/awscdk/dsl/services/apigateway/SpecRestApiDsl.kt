@@ -19,6 +19,32 @@ import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.constructs.Construct
 
+/**
+ * Represents a REST API in Amazon API Gateway, created with an OpenAPI specification.
+ *
+ * Some properties normally accessible on
+ *
+ * Example:
+ *
+ * ```
+ * Integration integration;
+ * SpecRestApi api = SpecRestApi.Builder.create(this, "books-api")
+ * .apiDefinition(ApiDefinition.fromAsset("path-to-file.json"))
+ * .build();
+ * Resource booksResource = api.root.addResource("books");
+ * booksResource.addMethod("GET", integration);
+ * ```
+ *
+ * @see <a href=" `RestApi` - such as the description -
+ * must be declared in the specification. All Resources and Methods need to be defined as
+ * part of the OpenAPI specification file, and cannot be added via the CDK.
+ * By default, the API will automatically be deployed and accessible from a
+ * public endpoint."> `RestApi` - such as the description -
+ * must be declared in the specification. All Resources and Methods need to be defined as
+ * part of the OpenAPI specification file, and cannot be added via the CDK.
+ * By default, the API will automatically be deployed and accessible from a
+ * public endpoint.</a>
+ */
 @CdkDslMarker
 public class SpecRestApiDsl(
   scope: Construct,

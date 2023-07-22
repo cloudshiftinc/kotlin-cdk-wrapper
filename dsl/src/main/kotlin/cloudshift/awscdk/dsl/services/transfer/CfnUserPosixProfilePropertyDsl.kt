@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnUser
 
+/**
+ * The full POSIX identity, including user ID ( `Uid` ), group ID ( `Gid` ), and any secondary
+ * groups IDs ( `SecondaryGids` ), that controls your users' access to your Amazon EFS file systems.
+ *
+ * The POSIX permissions that are set on files and directories in your file system determine the
+ * level of access your users get when transferring files into and out of your Amazon EFS file systems.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * PosixProfileProperty posixProfileProperty = PosixProfileProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * // the properties below are optional
+ * .secondaryGids(List.of(123))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-user-posixprofile.html)
+ */
 @CdkDslMarker
 public class CfnUserPosixProfilePropertyDsl {
   private val cdkBuilder: CfnUser.PosixProfileProperty.Builder =

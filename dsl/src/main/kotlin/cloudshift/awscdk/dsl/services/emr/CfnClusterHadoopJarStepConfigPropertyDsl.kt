@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * The `HadoopJarStepConfig` property type specifies a job flow step consisting of a JAR file whose
+ * main function will be executed.
+ *
+ * The main function submits a job for the cluster to execute as a step on the master node, and then
+ * waits for the job to finish or fail before executing subsequent steps.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * HadoopJarStepConfigProperty hadoopJarStepConfigProperty = HadoopJarStepConfigProperty.builder()
+ * .jar("jar")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .mainClass("mainClass")
+ * .stepProperties(List.of(KeyValueProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-hadoopjarstepconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterHadoopJarStepConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.HadoopJarStepConfigProperty.Builder =

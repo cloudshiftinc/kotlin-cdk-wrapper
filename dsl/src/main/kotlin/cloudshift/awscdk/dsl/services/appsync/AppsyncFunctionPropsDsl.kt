@@ -11,6 +11,22 @@ import software.amazon.awscdk.services.appsync.FunctionRuntime
 import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.appsync.MappingTemplate
 
+/**
+ * the CDK properties for AppSync Functions.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api;
+ * AppsyncFunction appsyncFunction = AppsyncFunction.Builder.create(this, "function")
+ * .name("appsync_function")
+ * .api(api)
+ * .dataSource(api.addNoneDataSource("none"))
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AppsyncFunctionPropsDsl {
   private val cdkBuilder: AppsyncFunctionProps.Builder = AppsyncFunctionProps.builder()

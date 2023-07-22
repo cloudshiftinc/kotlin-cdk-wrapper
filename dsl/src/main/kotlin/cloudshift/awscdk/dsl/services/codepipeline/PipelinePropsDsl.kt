@@ -14,6 +14,40 @@ import software.amazon.awscdk.services.codepipeline.StageProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Example:
+ *
+ * ```
+ * PipelineProject project;
+ * Repository repository = Repository.Builder.create(this, "MyRepository")
+ * .repositoryName("MyRepository")
+ * .build();
+ * PipelineProject project = new PipelineProject(this, "MyProject");
+ * Artifact sourceOutput = new Artifact();
+ * CodeCommitSourceAction sourceAction = CodeCommitSourceAction.Builder.create()
+ * .actionName("CodeCommit")
+ * .repository(repository)
+ * .output(sourceOutput)
+ * .build();
+ * CodeBuildAction buildAction = CodeBuildAction.Builder.create()
+ * .actionName("CodeBuild")
+ * .project(project)
+ * .input(sourceOutput)
+ * .outputs(List.of(new Artifact())) // optional
+ * .executeBatchBuild(true) // optional, defaults to false
+ * .combineBatchBuildArtifacts(true)
+ * .build();
+ * Pipeline.Builder.create(this, "MyPipeline")
+ * .stages(List.of(StageProps.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build(), StageProps.builder()
+ * .stageName("Build")
+ * .actions(List.of(buildAction))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PipelinePropsDsl {
   private val cdkBuilder: PipelineProps.Builder = PipelineProps.builder()

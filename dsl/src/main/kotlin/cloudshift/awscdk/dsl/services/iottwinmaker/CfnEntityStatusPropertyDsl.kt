@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
+/**
+ * The current status of the entity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * Object error;
+ * StatusProperty statusProperty = StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-status.html)
+ */
 @CdkDslMarker
 public class CfnEntityStatusPropertyDsl {
   private val cdkBuilder: CfnEntity.StatusProperty.Builder = CfnEntity.StatusProperty.builder()

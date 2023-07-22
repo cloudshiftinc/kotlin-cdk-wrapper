@@ -18,6 +18,23 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Properties of the bastion host.
+ *
+ * Example:
+ *
+ * ```
+ * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
+ * .vpc(vpc)
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("EBSBastionHost")
+ * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
+ * .encrypted(true)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BastionHostLinuxPropsDsl {
   private val cdkBuilder: BastionHostLinuxProps.Builder = BastionHostLinuxProps.builder()

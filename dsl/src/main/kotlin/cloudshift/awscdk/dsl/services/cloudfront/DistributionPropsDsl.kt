@@ -20,6 +20,28 @@ import software.amazon.awscdk.services.cloudfront.SSLMethod
 import software.amazon.awscdk.services.cloudfront.SecurityPolicyProtocol
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Properties for a Distribution.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DistributionPropsDsl {
   private val cdkBuilder: DistributionProps.Builder = DistributionProps.builder()

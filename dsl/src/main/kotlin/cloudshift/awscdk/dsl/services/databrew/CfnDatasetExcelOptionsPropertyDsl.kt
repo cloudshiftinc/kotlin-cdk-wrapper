@@ -11,6 +11,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents a set of options that define how DataBrew will interpret a Microsoft Excel file when
+ * creating a dataset from that file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ExcelOptionsProperty excelOptionsProperty = ExcelOptionsProperty.builder()
+ * .headerRow(false)
+ * .sheetIndexes(List.of(123))
+ * .sheetNames(List.of("sheetNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-exceloptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetExcelOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.ExcelOptionsProperty.Builder =

@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.route53.CfnKeySigningKey
 import software.constructs.Construct
 
+/**
+ * The `AWS::Route53::KeySigningKey` resource creates a new key-signing key (KSK) in a hosted zone.
+ *
+ * The hosted zone ID is passed as a parameter in the KSK properties. You can specify the properties
+ * of this KSK using the `Name` , `Status` , and `KeyManagementServiceArn` properties of the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnKeySigningKey cfnKeySigningKey = CfnKeySigningKey.Builder.create(this, "MyCfnKeySigningKey")
+ * .hostedZoneId("hostedZoneId")
+ * .keyManagementServiceArn("keyManagementServiceArn")
+ * .name("name")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-keysigningkey.html)
+ */
 @CdkDslMarker
 public class CfnKeySigningKeyDsl(
   scope: Construct,

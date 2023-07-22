@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 
+/**
+ * Amazon S3 logging configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * S3LogsProperty s3LogsProperty = S3LogsProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-s3logs.html)
+ */
 @CdkDslMarker
 public class CfnInfrastructureConfigurationS3LogsPropertyDsl {
   private val cdkBuilder: CfnInfrastructureConfiguration.S3LogsProperty.Builder =

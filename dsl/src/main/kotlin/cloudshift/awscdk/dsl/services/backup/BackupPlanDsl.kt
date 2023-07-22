@@ -13,6 +13,16 @@ import software.amazon.awscdk.services.backup.BackupPlanRule
 import software.amazon.awscdk.services.backup.IBackupVault
 import software.constructs.Construct
 
+/**
+ * A backup plan.
+ *
+ * Example:
+ *
+ * ```
+ * // Daily, weekly and monthly with 5 year retention
+ * BackupPlan plan = BackupPlan.dailyWeeklyMonthly5YearRetention(this, "Plan");
+ * ```
+ */
 @CdkDslMarker
 public class BackupPlanDsl(
   scope: Construct,

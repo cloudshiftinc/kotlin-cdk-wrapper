@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.efs.CfnMountTargetProps
 
+/**
+ * Properties for defining a `CfnMountTarget`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * CfnMountTargetProps cfnMountTargetProps = CfnMountTargetProps.builder()
+ * .fileSystemId("fileSystemId")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ipAddress("ipAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
+ */
 @CdkDslMarker
 public class CfnMountTargetPropsDsl {
   private val cdkBuilder: CfnMountTargetProps.Builder = CfnMountTargetProps.builder()

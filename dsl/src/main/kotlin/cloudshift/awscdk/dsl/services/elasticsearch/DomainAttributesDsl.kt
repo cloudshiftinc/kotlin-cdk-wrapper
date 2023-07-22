@@ -7,6 +7,23 @@ import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.elasticsearch.DomainAttributes
 
+/**
+ * (deprecated) Reference to an Elasticsearch domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticsearch.*;
+ * DomainAttributes domainAttributes = DomainAttributes.builder()
+ * .domainArn("domainArn")
+ * .domainEndpoint("domainEndpoint")
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class DomainAttributesDsl {

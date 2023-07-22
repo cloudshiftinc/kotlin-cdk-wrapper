@@ -8,6 +8,28 @@ import software.amazon.awscdk.services.appmesh.VirtualService
 import software.amazon.awscdk.services.appmesh.VirtualServiceProvider
 import software.constructs.Construct
 
+/**
+ * VirtualService represents a service inside an AppMesh.
+ *
+ * It routes traffic either to a Virtual Node or to a Virtual Router.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.dns("node"))
+ * .build();
+ * VirtualService virtualService = VirtualService.Builder.create(this, "service-1")
+ * .virtualServiceProvider(VirtualServiceProvider.virtualNode(node))
+ * .virtualServiceName("service1.domain.local")
+ * .build();
+ * node.addBackend(Backend.virtualService(virtualService));
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_services.html)
+ */
 @CdkDslMarker
 public class VirtualServiceDsl(
   scope: Construct,

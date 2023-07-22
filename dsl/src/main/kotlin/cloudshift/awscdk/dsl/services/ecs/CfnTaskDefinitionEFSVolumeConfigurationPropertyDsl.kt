@@ -8,6 +8,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * This parameter is specified when you're using an Amazon Elastic File System file system for task
+ * storage.
+ *
+ * For more information, see [Amazon EFS
+ * volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/efs-volumes.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * EFSVolumeConfigurationProperty eFSVolumeConfigurationProperty =
+ * EFSVolumeConfigurationProperty.builder()
+ * .filesystemId("filesystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-efsvolumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionEFSVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.EFSVolumeConfigurationProperty.Builder =

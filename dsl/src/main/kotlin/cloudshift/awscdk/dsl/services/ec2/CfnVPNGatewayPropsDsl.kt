@@ -12,6 +12,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnVPNGatewayProps
 
+/**
+ * Properties for defining a `CfnVPNGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPNGatewayProps cfnVPNGatewayProps = CfnVPNGatewayProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .amazonSideAsn(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngateway.html)
+ */
 @CdkDslMarker
 public class CfnVPNGatewayPropsDsl {
   private val cdkBuilder: CfnVPNGatewayProps.Builder = CfnVPNGatewayProps.builder()

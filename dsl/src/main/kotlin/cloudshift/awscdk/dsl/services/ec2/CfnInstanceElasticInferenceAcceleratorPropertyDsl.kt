@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies the Elastic Inference Accelerator for the instance.
+ *
+ * `ElasticInferenceAccelerator` is a property of the
+ * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ElasticInferenceAcceleratorProperty elasticInferenceAcceleratorProperty =
+ * ElasticInferenceAcceleratorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .count(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticinferenceaccelerator.html)
+ */
 @CdkDslMarker
 public class CfnInstanceElasticInferenceAcceleratorPropertyDsl {
   private val cdkBuilder: CfnInstance.ElasticInferenceAcceleratorProperty.Builder =

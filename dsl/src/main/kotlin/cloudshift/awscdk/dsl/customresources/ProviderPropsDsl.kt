@@ -18,6 +18,24 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * Initialization properties for the `Provider` construct.
+ *
+ * Example:
+ *
+ * ```
+ * Function onEvent;
+ * Function isComplete;
+ * Role myRole;
+ * Provider myProvider = Provider.Builder.create(this, "MyProvider")
+ * .onEventHandler(onEvent)
+ * .isCompleteHandler(isComplete)
+ * .logRetention(RetentionDays.ONE_DAY)
+ * .role(myRole)
+ * .providerFunctionName("the-lambda-name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProviderPropsDsl {
   private val cdkBuilder: ProviderProps.Builder = ProviderProps.builder()

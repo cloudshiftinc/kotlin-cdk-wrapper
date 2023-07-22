@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup
 
+/**
+ * Contains information about a network interface in an Amazon Redshift Serverless managed VPC
+ * endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-workgroup-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnWorkgroupNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnWorkgroup.NetworkInterfaceProperty.Builder =

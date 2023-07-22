@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnHealthCheck
 
+/**
+ * The `HealthCheckTag` property describes one key-value pair that is associated with an
+ * `AWS::Route53::HealthCheck` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * HealthCheckTagProperty healthCheckTagProperty = HealthCheckTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html)
+ */
 @CdkDslMarker
 public class CfnHealthCheckHealthCheckTagPropertyDsl {
   private val cdkBuilder: CfnHealthCheck.HealthCheckTagProperty.Builder =

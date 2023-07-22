@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * The configuration for a shared file storage system that is associated with a studio resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * SharedFileSystemConfigurationProperty sharedFileSystemConfigurationProperty =
+ * SharedFileSystemConfigurationProperty.builder()
+ * .endpoint("endpoint")
+ * .fileSystemId("fileSystemId")
+ * .linuxMountPoint("linuxMountPoint")
+ * .shareName("shareName")
+ * .windowsMountDrive("windowsMountDrive")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-sharedfilesystemconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentSharedFileSystemConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudioComponent.SharedFileSystemConfigurationProperty.Builder =

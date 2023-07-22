@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `ServiceRegistry` property specifies details of the service registry.
+ *
+ * For more information, see [Service
+ * Discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) in
+ * the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceRegistryProperty serviceRegistryProperty = ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceregistry.html)
+ */
 @CdkDslMarker
 public class CfnServiceServiceRegistryPropertyDsl {
   private val cdkBuilder: CfnService.ServiceRegistryProperty.Builder =

@@ -8,6 +8,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnAlias
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::Alias` resource creates an alias for an Amazon GameLift (GameLift) fleet
+ * destination.
+ *
+ * There are two types of routing strategies for aliases: simple and terminal. A simple alias points
+ * to an active fleet. A terminal alias displays a message instead of routing players to an active
+ * fleet. For example, a terminal alias might display a URL link that directs players to an upgrade
+ * site. You can use aliases to define destinations in a game session queue or when requesting new game
+ * sessions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnAlias cfnAlias = CfnAlias.Builder.create(this, "MyCfnAlias")
+ * .name("name")
+ * .routingStrategy(RoutingStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .fleetId("fleetId")
+ * .message("message")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html)
+ */
 @CdkDslMarker
 public class CfnAliasDsl(
   scope: Construct,

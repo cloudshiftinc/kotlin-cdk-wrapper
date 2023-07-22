@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The aggregated field well for the pivot table.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-pivottableaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPivotTableAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotTableAggregatedFieldWellsProperty.Builder =

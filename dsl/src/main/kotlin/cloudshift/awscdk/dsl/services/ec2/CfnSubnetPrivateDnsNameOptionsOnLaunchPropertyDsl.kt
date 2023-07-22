@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSubnet
 
+/**
+ * Describes the options for instance hostnames.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateDnsNameOptionsOnLaunchProperty privateDnsNameOptionsOnLaunchProperty =
+ * PrivateDnsNameOptionsOnLaunchProperty.builder()
+ * .enableResourceNameDnsAaaaRecord(false)
+ * .enableResourceNameDnsARecord(false)
+ * .hostnameType("hostnameType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-subnet-privatednsnameoptionsonlaunch.html)
+ */
 @CdkDslMarker
 public class CfnSubnetPrivateDnsNameOptionsOnLaunchPropertyDsl {
   private val cdkBuilder: CfnSubnet.PrivateDnsNameOptionsOnLaunchProperty.Builder =

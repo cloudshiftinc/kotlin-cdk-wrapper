@@ -9,6 +9,78 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The sort configuration of a `RadarChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RadarChartSortConfigurationProperty radarChartSortConfigurationProperty =
+ * RadarChartSortConfigurationProperty.builder()
+ * .categoryItemsLimit(ItemsLimitConfigurationProperty.builder()
+ * .itemsLimit(123)
+ * .otherCategories("otherCategories")
+ * .build())
+ * .categorySort(List.of(FieldSortOptionsProperty.builder()
+ * .columnSort(ColumnSortProperty.builder()
+ * .direction("direction")
+ * .sortBy(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .build())
+ * .fieldSort(FieldSortProperty.builder()
+ * .direction("direction")
+ * .fieldId("fieldId")
+ * .build())
+ * .build()))
+ * .colorItemsLimit(ItemsLimitConfigurationProperty.builder()
+ * .itemsLimit(123)
+ * .otherCategories("otherCategories")
+ * .build())
+ * .colorSort(List.of(FieldSortOptionsProperty.builder()
+ * .columnSort(ColumnSortProperty.builder()
+ * .direction("direction")
+ * .sortBy(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .build())
+ * .fieldSort(FieldSortProperty.builder()
+ * .direction("direction")
+ * .fieldId("fieldId")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-radarchartsortconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardRadarChartSortConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.RadarChartSortConfigurationProperty.Builder =

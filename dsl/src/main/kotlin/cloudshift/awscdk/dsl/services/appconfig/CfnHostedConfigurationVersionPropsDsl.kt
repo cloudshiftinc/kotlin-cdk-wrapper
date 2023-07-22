@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnHostedConfigurationVersionProps
 
+/**
+ * Properties for defining a `CfnHostedConfigurationVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnHostedConfigurationVersionProps cfnHostedConfigurationVersionProps =
+ * CfnHostedConfigurationVersionProps.builder()
+ * .applicationId("applicationId")
+ * .configurationProfileId("configurationProfileId")
+ * .content("content")
+ * .contentType("contentType")
+ * // the properties below are optional
+ * .description("description")
+ * .latestVersionNumber(123)
+ * .versionLabel("versionLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-hostedconfigurationversion.html)
+ */
 @CdkDslMarker
 public class CfnHostedConfigurationVersionPropsDsl {
   private val cdkBuilder: CfnHostedConfigurationVersionProps.Builder =

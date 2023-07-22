@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.aps.CfnRuleGroupsNamespaceProps
 
+/**
+ * Properties for defining a `CfnRuleGroupsNamespace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.aps.*;
+ * CfnRuleGroupsNamespaceProps cfnRuleGroupsNamespaceProps = CfnRuleGroupsNamespaceProps.builder()
+ * .data("data")
+ * .name("name")
+ * .workspace("workspace")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupsNamespacePropsDsl {
   private val cdkBuilder: CfnRuleGroupsNamespaceProps.Builder =

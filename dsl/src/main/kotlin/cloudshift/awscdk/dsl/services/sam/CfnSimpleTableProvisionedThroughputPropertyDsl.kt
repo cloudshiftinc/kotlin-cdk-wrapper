@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.sam.CfnSimpleTable
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * ProvisionedThroughputProperty provisionedThroughputProperty =
+ * ProvisionedThroughputProperty.builder()
+ * .writeCapacityUnits(123)
+ * // the properties below are optional
+ * .readCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-simpletable-provisionedthroughput.html)
+ */
 @CdkDslMarker
 public class CfnSimpleTableProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnSimpleTable.ProvisionedThroughputProperty.Builder =

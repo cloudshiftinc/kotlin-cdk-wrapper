@@ -12,6 +12,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList
 import software.constructs.Construct
 
+/**
+ * High-level information about a list of firewall domains for use in a
+ * [AWS::Route53Resolver::FirewallRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-rule.html)
+ * . This is returned by
+ * [GetFirewallDomainList](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallDomainList.html)
+ * .
+ *
+ * To retrieve the domains that are defined for this domain list, call
+ * [ListFirewallDomains](https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomains.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnFirewallDomainList cfnFirewallDomainList = CfnFirewallDomainList.Builder.create(this,
+ * "MyCfnFirewallDomainList")
+ * .domainFileUrl("domainFileUrl")
+ * .domains(List.of("domains"))
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-firewalldomainlist.html)
+ */
 @CdkDslMarker
 public class CfnFirewallDomainListDsl(
   scope: Construct,

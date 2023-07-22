@@ -9,6 +9,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Describes an application's checkpointing configuration.
+ *
+ * Checkpointing is the process of persisting application state for fault tolerance. For more
+ * information, see [Checkpoints for Fault
+ * Tolerance](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/concepts/programming-model.html#checkpoints-for-fault-tolerance)
+ * in the [Apache Flink
+ * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * CheckpointConfigurationProperty checkpointConfigurationProperty =
+ * CheckpointConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .checkpointingEnabled(false)
+ * .checkpointInterval(123)
+ * .minPauseBetweenCheckpoints(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-checkpointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationCheckpointConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.CheckpointConfigurationProperty.Builder =

@@ -13,6 +13,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnAssetProps
 
+/**
+ * Properties for defining a `CfnAsset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnAssetProps cfnAssetProps = CfnAssetProps.builder()
+ * .id("id")
+ * .packagingGroupId("packagingGroupId")
+ * .sourceArn("sourceArn")
+ * .sourceRoleArn("sourceRoleArn")
+ * // the properties below are optional
+ * .egressEndpoints(List.of(EgressEndpointProperty.builder()
+ * .packagingConfigurationId("packagingConfigurationId")
+ * .url("url")
+ * .build()))
+ * .resourceId("resourceId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-asset.html)
+ */
 @CdkDslMarker
 public class CfnAssetPropsDsl {
   private val cdkBuilder: CfnAssetProps.Builder = CfnAssetProps.builder()

@@ -16,6 +16,69 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnExperiment
 import software.constructs.Construct
 
+/**
+ * Creates or updates an Evidently *experiment* .
+ *
+ * Before you create an experiment, you must create the feature to use for the experiment.
+ *
+ * An experiment helps you make feature design decisions based on evidence and data. An experiment
+ * can test as many as five variations at once. Evidently collects experiment data and analyzes it by
+ * statistical methods, and provides clear recommendations about which variations perform better.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnExperiment cfnExperiment = CfnExperiment.Builder.create(this, "MyCfnExperiment")
+ * .metricGoals(List.of(MetricGoalObjectProperty.builder()
+ * .desiredChange("desiredChange")
+ * .entityIdKey("entityIdKey")
+ * .metricName("metricName")
+ * .valueKey("valueKey")
+ * // the properties below are optional
+ * .eventPattern("eventPattern")
+ * .unitLabel("unitLabel")
+ * .build()))
+ * .name("name")
+ * .onlineAbConfig(OnlineAbConfigObjectProperty.builder()
+ * .controlTreatmentName("controlTreatmentName")
+ * .treatmentWeights(List.of(TreatmentToWeightProperty.builder()
+ * .splitWeight(123)
+ * .treatment("treatment")
+ * .build()))
+ * .build())
+ * .project("project")
+ * .treatments(List.of(TreatmentObjectProperty.builder()
+ * .feature("feature")
+ * .treatmentName("treatmentName")
+ * .variation("variation")
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .randomizationSalt("randomizationSalt")
+ * .removeSegment(false)
+ * .runningStatus(RunningStatusObjectProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .analysisCompleteTime("analysisCompleteTime")
+ * .desiredState("desiredState")
+ * .reason("reason")
+ * .build())
+ * .samplingRate(123)
+ * .segment("segment")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-experiment.html)
+ */
 @CdkDslMarker
 public class CfnExperimentDsl(
   scope: Construct,

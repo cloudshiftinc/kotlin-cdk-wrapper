@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion
 
+/**
+ * Settings for an Secrets Manager machine learning resource.
+ *
+ * For more information, see [Perform Machine Learning
+ * Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html) in the
+ * *Developer Guide* .
+ *
+ * In an AWS CloudFormation template, `SageMakerMachineLearningModelResourceData` can be used in the
+ * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * SageMakerMachineLearningModelResourceDataProperty
+ * sageMakerMachineLearningModelResourceDataProperty =
+ * SageMakerMachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sageMakerJobArn("sageMakerJobArn")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-sagemakermachinelearningmodelresourcedata.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionVersionSageMakerMachineLearningModelResourceDataPropertyDsl {
   private val cdkBuilder:

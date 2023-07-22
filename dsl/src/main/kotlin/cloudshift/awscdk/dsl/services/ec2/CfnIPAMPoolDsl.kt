@@ -16,6 +16,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAMPool
 import software.constructs.Construct
 
+/**
+ * In IPAM, a pool is a collection of contiguous IP addresses CIDRs.
+ *
+ * Pools enable you to organize your IP addresses according to your routing and security needs. For
+ * example, if you have separate routing and security needs for development and production
+ * applications, you can create a pool for each.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMPool cfnIPAMPool = CfnIPAMPool.Builder.create(this, "MyCfnIPAMPool")
+ * .addressFamily("addressFamily")
+ * .ipamScopeId("ipamScopeId")
+ * // the properties below are optional
+ * .allocationDefaultNetmaskLength(123)
+ * .allocationMaxNetmaskLength(123)
+ * .allocationMinNetmaskLength(123)
+ * .allocationResourceTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .autoImport(false)
+ * .awsService("awsService")
+ * .description("description")
+ * .locale("locale")
+ * .provisionedCidrs(List.of(ProvisionedCidrProperty.builder()
+ * .cidr("cidr")
+ * .build()))
+ * .publicIpSource("publicIpSource")
+ * .publiclyAdvertisable(false)
+ * .sourceIpamPoolId("sourceIpamPoolId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampool.html)
+ */
 @CdkDslMarker
 public class CfnIPAMPoolDsl(
   scope: Construct,

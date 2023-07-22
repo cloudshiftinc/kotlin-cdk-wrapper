@@ -14,6 +14,20 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 import software.constructs.Construct
 
+/**
+ * Checks whether the active access keys are rotated within the number of days specified in
+ * `maxAge`.
+ *
+ * Example:
+ *
+ * ```
+ * // compliant if access keys have been rotated within the last 90 days
+ * // compliant if access keys have been rotated within the last 90 days
+ * new AccessKeysRotated(this, "AccessKeyRotated");
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html)
+ */
 @CdkDslMarker
 public class AccessKeysRotatedDsl(
   scope: Construct,

@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociation
 import software.constructs.Construct
 
+/**
+ * Associates the specified VPC with the specified local gateway route table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableVPCAssociation cfnLocalGatewayRouteTableVPCAssociation =
+ * CfnLocalGatewayRouteTableVPCAssociation.Builder.create(this,
+ * "MyCfnLocalGatewayRouteTableVPCAssociation")
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableVPCAssociationDsl(
   scope: Construct,

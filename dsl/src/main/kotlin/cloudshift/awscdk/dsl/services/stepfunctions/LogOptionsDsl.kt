@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.stepfunctions.LogLevel
 import software.amazon.awscdk.services.stepfunctions.LogOptions
 
+/**
+ * Defines what execution history events are logged and where they are logged.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup = new LogGroup(this, "MyLogGroup");
+ * StateMachine.Builder.create(this, "MyStateMachine")
+ * .definition(Chain.start(new Pass(this, "Pass")))
+ * .logs(LogOptions.builder()
+ * .destination(logGroup)
+ * .level(LogLevel.ALL)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogOptionsDsl {
   private val cdkBuilder: LogOptions.Builder = LogOptions.builder()

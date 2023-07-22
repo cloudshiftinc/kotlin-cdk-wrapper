@@ -15,6 +15,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnDetector
 import software.amazon.awscdk.services.guardduty.CfnDetectorProps
 
+/**
+ * Properties for defining a `CfnDetector`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnDetectorProps cfnDetectorProps = CfnDetectorProps.builder()
+ * .enable(false)
+ * // the properties below are optional
+ * .dataSources(CFNDataSourceConfigurationsProperty.builder()
+ * .kubernetes(CFNKubernetesConfigurationProperty.builder()
+ * .auditLogs(CFNKubernetesAuditLogsConfigurationProperty.builder()
+ * .enable(false)
+ * .build())
+ * .build())
+ * .malwareProtection(CFNMalwareProtectionConfigurationProperty.builder()
+ * .scanEc2InstanceWithFindings(CFNScanEc2InstanceWithFindingsConfigurationProperty.builder()
+ * .ebsVolumes(false)
+ * .build())
+ * .build())
+ * .s3Logs(CFNS3LogsConfigurationProperty.builder()
+ * .enable(false)
+ * .build())
+ * .build())
+ * .features(List.of(FeatureConfigurationsProperty.builder()
+ * .additionalConfiguration(List.of(FeatureAdditionalConfigurationProperty.builder()
+ * .name("name")
+ * .status("status")
+ * .build()))
+ * .name("name")
+ * .status("status")
+ * .build()))
+ * .findingPublishingFrequency("findingPublishingFrequency")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html)
+ */
 @CdkDslMarker
 public class CfnDetectorPropsDsl {
   private val cdkBuilder: CfnDetectorProps.Builder = CfnDetectorProps.builder()

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.FileDestination
 
+/**
+ * Where in S3 a file asset needs to be published.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * FileDestination fileDestination = FileDestination.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * // the properties below are optional
+ * .assumeRoleArn("assumeRoleArn")
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileDestinationDsl {
   private val cdkBuilder: FileDestination.Builder = FileDestination.builder()

@@ -13,6 +13,34 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sns.TopicPolicy
 import software.constructs.Construct
 
+/**
+ * The policy for an SNS Topic.
+ *
+ * Policies define the operations that are allowed on this resource.
+ *
+ * You almost never need to define this construct directly.
+ *
+ * All AWS resources that support resource policies have a method called
+ * `addToResourcePolicy()`, which will automatically create a new resource
+ * policy if one doesn't exist yet, otherwise it will add to the existing
+ * policy.
+ *
+ * Prefer to use `addToResourcePolicy()` instead.
+ *
+ * Example:
+ *
+ * ```
+ * Topic topic = new Topic(this, "Topic");
+ * TopicPolicy topicPolicy = TopicPolicy.Builder.create(this, "TopicPolicy")
+ * .topics(List.of(topic))
+ * .build();
+ * topicPolicy.document.addStatements(PolicyStatement.Builder.create()
+ * .actions(List.of("sns:Subscribe"))
+ * .principals(List.of(new AnyPrincipal()))
+ * .resources(List.of(topic.getTopicArn()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TopicPolicyDsl(
   scope: Construct,

@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnDocumentationVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::DocumentationVersion` resource creates a snapshot of the documentation for
+ * an API.
+ *
+ * For more information, see [Representation of API Documentation in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-documenting-api-content-representation.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDocumentationVersion cfnDocumentationVersion = CfnDocumentationVersion.Builder.create(this,
+ * "MyCfnDocumentationVersion")
+ * .documentationVersion("documentationVersion")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html)
+ */
 @CdkDslMarker
 public class CfnDocumentationVersionDsl(
   scope: Construct,

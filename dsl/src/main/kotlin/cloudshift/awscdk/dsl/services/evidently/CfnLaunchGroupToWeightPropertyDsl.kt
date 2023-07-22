@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * A structure containing the percentage of launch traffic to allocate to one launch group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * GroupToWeightProperty groupToWeightProperty = GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-grouptoweight.html)
+ */
 @CdkDslMarker
 public class CfnLaunchGroupToWeightPropertyDsl {
   private val cdkBuilder: CfnLaunch.GroupToWeightProperty.Builder =

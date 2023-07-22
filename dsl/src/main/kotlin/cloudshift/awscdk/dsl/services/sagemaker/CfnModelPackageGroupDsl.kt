@@ -14,6 +14,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.sagemaker.CfnModelPackageGroup
 import software.constructs.Construct
 
+/**
+ * A group of versioned models in the model registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object modelPackageGroupPolicy;
+ * CfnModelPackageGroup cfnModelPackageGroup = CfnModelPackageGroup.Builder.create(this,
+ * "MyCfnModelPackageGroup")
+ * .modelPackageGroupName("modelPackageGroupName")
+ * // the properties below are optional
+ * .modelPackageGroupDescription("modelPackageGroupDescription")
+ * .modelPackageGroupPolicy(modelPackageGroupPolicy)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageGroupDsl(
   scope: Construct,

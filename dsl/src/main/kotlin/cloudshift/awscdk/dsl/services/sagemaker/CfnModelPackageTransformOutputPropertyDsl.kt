@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Describes the results of a transform job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TransformOutputProperty transformOutputProperty = TransformOutputProperty.builder()
+ * .s3OutputPath("s3OutputPath")
+ * // the properties below are optional
+ * .accept("accept")
+ * .assembleWith("assembleWith")
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformoutput.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageTransformOutputPropertyDsl {
   private val cdkBuilder: CfnModelPackage.TransformOutputProperty.Builder =

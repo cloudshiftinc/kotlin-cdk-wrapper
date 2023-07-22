@@ -12,6 +12,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.CfnPolicy
 import software.constructs.Construct
 
+/**
+ * Adds or updates an inline policy document that is embedded in the specified IAM user, group, or
+ * role.
+ *
+ * An IAM user can also have a managed policy attached to it. For information about policies, see
+ * [Managed Policies and Inline
+ * Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/policies-managed-vs-inline.html) in the
+ * *IAM User Guide* .
+ *
+ * The Groups, Roles, and Users properties are optional. However, you must specify at least one of
+ * these properties.
+ *
+ * For information about policy documents see [Creating IAM
+ * policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) in the *IAM
+ * User Guide* .
+ *
+ * For information about limits on the number of inline policies that you can embed in an identity,
+ * see [Limitations on IAM
+ * Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnPolicy cfnPolicy = CfnPolicy.Builder.create(this, "MyCfnPolicy")
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * // the properties below are optional
+ * .groups(List.of("groups"))
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyDsl(
   scope: Construct,

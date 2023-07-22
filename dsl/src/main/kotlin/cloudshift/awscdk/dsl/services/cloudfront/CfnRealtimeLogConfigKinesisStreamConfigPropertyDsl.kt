@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig
 
+/**
+ * Contains information about the Amazon Kinesis data stream where you are sending real-time log
+ * data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * KinesisStreamConfigProperty kinesisStreamConfigProperty = KinesisStreamConfigProperty.builder()
+ * .roleArn("roleArn")
+ * .streamArn("streamArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-realtimelogconfig-kinesisstreamconfig.html)
+ */
 @CdkDslMarker
 public class CfnRealtimeLogConfigKinesisStreamConfigPropertyDsl {
   private val cdkBuilder: CfnRealtimeLogConfig.KinesisStreamConfigProperty.Builder =

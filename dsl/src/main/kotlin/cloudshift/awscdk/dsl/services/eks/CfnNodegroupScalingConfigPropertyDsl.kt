@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.eks.CfnNodegroup
 
+/**
+ * An object representing the scaling configuration details for the Auto Scaling group that is
+ * associated with your node group.
+ *
+ * When creating a node group, you must specify all or none of the properties. When updating a node
+ * group, you can specify any or none of the properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
+ * .desiredSize(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-scalingconfig.html)
+ */
 @CdkDslMarker
 public class CfnNodegroupScalingConfigPropertyDsl {
   private val cdkBuilder: CfnNodegroup.ScalingConfigProperty.Builder =

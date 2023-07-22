@@ -9,6 +9,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appsync.CfnResolver
 
+/**
+ * The caching configuration for a resolver that has caching activated.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CachingConfigProperty cachingConfigProperty = CachingConfigProperty.builder()
+ * .ttl(123)
+ * // the properties below are optional
+ * .cachingKeys(List.of("cachingKeys"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-resolver-cachingconfig.html)
+ */
 @CdkDslMarker
 public class CfnResolverCachingConfigPropertyDsl {
   private val cdkBuilder: CfnResolver.CachingConfigProperty.Builder =

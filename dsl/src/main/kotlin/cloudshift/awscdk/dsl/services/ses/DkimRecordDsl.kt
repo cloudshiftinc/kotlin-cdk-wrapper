@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.DkimRecord
 
+/**
+ * A DKIM record.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DkimRecord dkimRecord = DkimRecord.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DkimRecordDsl {
   private val cdkBuilder: DkimRecord.Builder = DkimRecord.builder()

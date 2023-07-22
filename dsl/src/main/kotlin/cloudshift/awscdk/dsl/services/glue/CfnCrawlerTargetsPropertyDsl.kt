@@ -9,6 +9,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * Specifies data stores to crawl.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * TargetsProperty targetsProperty = TargetsProperty.builder()
+ * .catalogTargets(List.of(CatalogTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .databaseName("databaseName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .tables(List.of("tables"))
+ * .build()))
+ * .deltaTargets(List.of(DeltaTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .createNativeDeltaTable(false)
+ * .deltaTables(List.of("deltaTables"))
+ * .writeManifest(false)
+ * .build()))
+ * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
+ * .path("path")
+ * .build()))
+ * .jdbcTargets(List.of(JdbcTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .build()))
+ * .mongoDbTargets(List.of(MongoDBTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .path("path")
+ * .build()))
+ * .s3Targets(List.of(S3TargetProperty.builder()
+ * .connectionName("connectionName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .sampleSize(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-targets.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerTargetsPropertyDsl {
   private val cdkBuilder: CfnCrawler.TargetsProperty.Builder = CfnCrawler.TargetsProperty.builder()

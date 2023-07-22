@@ -8,6 +8,45 @@ import software.amazon.awscdk.CfnResourceVersion
 import software.amazon.awscdk.IResolvable
 import software.constructs.Construct
 
+/**
+ * Registers a resource version with the CloudFormation service.
+ *
+ * Registering a resource version makes it available for use in CloudFormation templates in your AWS
+ * account , and includes:
+ *
+ * * Validating the resource schema.
+ * * Determining which handlers, if any, have been specified for the resource.
+ * * Making the resource available for use in your account.
+ *
+ * For more information on how to develop resources and ready them for registration, see [Creating
+ * Resource
+ * Providers](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-types.html) in
+ * the *CloudFormation CLI User Guide* .
+ *
+ * You can have a maximum of 50 resource versions registered at a time. This maximum is per account
+ * and per Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnResourceVersion cfnResourceVersion = CfnResourceVersion.Builder.create(this,
+ * "MyCfnResourceVersion")
+ * .schemaHandlerPackage("schemaHandlerPackage")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .executionRoleArn("executionRoleArn")
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourceversion.html)
+ */
 @CdkDslMarker
 public class CfnResourceVersionDsl(
   scope: Construct,

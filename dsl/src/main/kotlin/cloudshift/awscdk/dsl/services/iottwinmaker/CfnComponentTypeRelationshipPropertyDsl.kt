@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
+/**
+ * An object that specifies a relationship with another component type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * RelationshipProperty relationshipProperty = RelationshipProperty.builder()
+ * .relationshipType("relationshipType")
+ * .targetComponentTypeId("targetComponentTypeId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-relationship.html)
+ */
 @CdkDslMarker
 public class CfnComponentTypeRelationshipPropertyDsl {
   private val cdkBuilder: CfnComponentType.RelationshipProperty.Builder =

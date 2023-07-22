@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps
 
+/**
+ * Properties for defining a `CfnPublicRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object repositoryCatalogData;
+ * Object repositoryPolicyText;
+ * CfnPublicRepositoryProps cfnPublicRepositoryProps = CfnPublicRepositoryProps.builder()
+ * .repositoryCatalogData(repositoryCatalogData)
+ * .repositoryName("repositoryName")
+ * .repositoryPolicyText(repositoryPolicyText)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html)
+ */
 @CdkDslMarker
 public class CfnPublicRepositoryPropsDsl {
   private val cdkBuilder: CfnPublicRepositoryProps.Builder = CfnPublicRepositoryProps.builder()

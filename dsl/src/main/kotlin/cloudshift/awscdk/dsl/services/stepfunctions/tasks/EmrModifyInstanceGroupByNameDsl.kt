@@ -17,6 +17,21 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to to modify an InstanceGroup on an EMR Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrModifyInstanceGroupByName.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .instanceGroupName(JsonPath.stringAt("$.InstanceGroupName"))
+ * .instanceGroup(InstanceGroupModifyConfigProperty.builder()
+ * .instanceCount(1)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrModifyInstanceGroupByNameDsl(
   scope: Construct,

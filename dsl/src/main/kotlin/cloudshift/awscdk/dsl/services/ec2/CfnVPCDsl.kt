@@ -15,6 +15,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPC
 import software.constructs.Construct
 
+/**
+ * Specifies a virtual private cloud (VPC).
+ *
+ * You can optionally request an IPv6 CIDR block for the VPC. You can request an Amazon-provided
+ * IPv6 CIDR block from Amazon's pool of IPv6 addresses, or an IPv6 CIDR block from an IPv6 address
+ * pool that you provisioned through bring your own IP addresses (BYOIP).
+ *
+ * For more information, see [Virtual private clouds
+ * (VPC)](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/configure-your-vpc.html) in the
+ * *Amazon VPC User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * // using from*Attributes()
+ * CfnSubnet privateCfnSubnet1;
+ * CfnSubnet privateCfnSubnet2;
+ * // using from*Name()
+ * CfnBucket cfnBucket = (CfnBucket)cfnTemplate.getResource("Bucket");
+ * IBucket bucket = Bucket.fromBucketName(this, "L2Bucket", cfnBucket.getRef());
+ * // using from*Arn()
+ * CfnKey cfnKey = (CfnKey)cfnTemplate.getResource("Key");
+ * IKey key = Key.fromKeyArn(this, "L2Key", cfnKey.getAttrArn());
+ * CfnVPC cfnVpc = (CfnVPC)cfnTemplate.getResource("Vpc");
+ * IVpc vpc = Vpc.fromVpcAttributes(this, "L2Vpc", VpcAttributes.builder()
+ * .vpcId(cfnVpc.getRef())
+ * .availabilityZones(Fn.getAzs())
+ * .privateSubnetIds(List.of(privateCfnSubnet1.getRef(), privateCfnSubnet2.getRef()))
+ * .build());
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html)
+ */
 @CdkDslMarker
 public class CfnVPCDsl(
   scope: Construct,

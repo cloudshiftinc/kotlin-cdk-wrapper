@@ -14,6 +14,21 @@ import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * The details of a task definition run on an External cluster.
+ *
+ * Example:
+ *
+ * ```
+ * ExternalTaskDefinition externalTaskDefinition = new ExternalTaskDefinition(this, "TaskDef");
+ * ContainerDefinition container = externalTaskDefinition.addContainer("WebContainer",
+ * ContainerDefinitionOptions.builder()
+ * // Use an image from DockerHub
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(1024)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ExternalTaskDefinitionDsl(
   scope: Construct,

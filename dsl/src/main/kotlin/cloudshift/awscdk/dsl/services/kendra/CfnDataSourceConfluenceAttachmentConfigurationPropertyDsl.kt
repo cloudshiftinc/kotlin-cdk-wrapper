@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Configuration of attachment settings for the Confluence data source.
+ *
+ * Attachment settings are optional, if you don't specify settings attachments, Amazon Kendra won't
+ * index them.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConfluenceAttachmentConfigurationProperty confluenceAttachmentConfigurationProperty =
+ * ConfluenceAttachmentConfigurationProperty.builder()
+ * .attachmentFieldMappings(List.of(ConfluenceAttachmentToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .crawlAttachments(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-confluenceattachmentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConfluenceAttachmentConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConfluenceAttachmentConfigurationProperty.Builder =

@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastoreProps
 
+/**
+ * Properties for defining a `CfnFHIRDatastore`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.healthlake.*;
+ * CfnFHIRDatastoreProps cfnFHIRDatastoreProps = CfnFHIRDatastoreProps.builder()
+ * .datastoreTypeVersion("datastoreTypeVersion")
+ * // the properties below are optional
+ * .datastoreName("datastoreName")
+ * .identityProviderConfiguration(IdentityProviderConfigurationProperty.builder()
+ * .authorizationStrategy("authorizationStrategy")
+ * // the properties below are optional
+ * .fineGrainedAuthorizationEnabled(false)
+ * .idpLambdaArn("idpLambdaArn")
+ * .metadata("metadata")
+ * .build())
+ * .preloadDataConfig(PreloadDataConfigProperty.builder()
+ * .preloadDataType("preloadDataType")
+ * .build())
+ * .sseConfiguration(SseConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KmsEncryptionConfigProperty.builder()
+ * .cmkType("cmkType")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-healthlake-fhirdatastore.html)
+ */
 @CdkDslMarker
 public class CfnFHIRDatastorePropsDsl {
   private val cdkBuilder: CfnFHIRDatastoreProps.Builder = CfnFHIRDatastoreProps.builder()

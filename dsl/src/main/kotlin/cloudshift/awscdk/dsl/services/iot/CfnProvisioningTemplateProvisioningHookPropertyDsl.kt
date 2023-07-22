@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnProvisioningTemplate
 
+/**
+ * Structure that contains payloadVersion and targetArn.
+ *
+ * Provisioning hooks can be used when fleet provisioning to validate device parameters before
+ * allowing the device to be provisioned.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * ProvisioningHookProperty provisioningHookProperty = ProvisioningHookProperty.builder()
+ * .payloadVersion("payloadVersion")
+ * .targetArn("targetArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-provisioningtemplate-provisioninghook.html)
+ */
 @CdkDslMarker
 public class CfnProvisioningTemplateProvisioningHookPropertyDsl {
   private val cdkBuilder: CfnProvisioningTemplate.ProvisioningHookProperty.Builder =

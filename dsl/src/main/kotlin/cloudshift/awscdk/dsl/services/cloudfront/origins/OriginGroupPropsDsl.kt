@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.IOrigin
 import software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps
 
+/**
+ * Construction properties for `OriginGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myBucket = new Bucket(this, "myBucket");
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(OriginGroup.Builder.create()
+ * .primaryOrigin(new S3Origin(myBucket))
+ * .fallbackOrigin(new HttpOrigin("www.example.com"))
+ * // optional, defaults to: 500, 502, 503 and 504
+ * .fallbackStatusCodes(List.of(404))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginGroupPropsDsl {
   private val cdkBuilder: OriginGroupProps.Builder = OriginGroupProps.builder()

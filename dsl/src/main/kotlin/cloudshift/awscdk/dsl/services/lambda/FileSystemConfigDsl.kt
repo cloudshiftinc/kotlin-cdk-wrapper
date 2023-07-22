@@ -14,6 +14,31 @@ import software.amazon.awscdk.services.iam.PolicyStatement
 import software.amazon.awscdk.services.lambda.FileSystemConfig
 import software.constructs.IDependable
 
+/**
+ * FileSystem configurations for the Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.constructs.*;
+ * Connections connections;
+ * IDependable dependable;
+ * PolicyStatement policyStatement;
+ * FileSystemConfig fileSystemConfig = FileSystemConfig.builder()
+ * .arn("arn")
+ * .localMountPath("localMountPath")
+ * // the properties below are optional
+ * .connections(connections)
+ * .dependency(List.of(dependable))
+ * .policies(List.of(policyStatement))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileSystemConfigDsl {
   private val cdkBuilder: FileSystemConfig.Builder = FileSystemConfig.builder()

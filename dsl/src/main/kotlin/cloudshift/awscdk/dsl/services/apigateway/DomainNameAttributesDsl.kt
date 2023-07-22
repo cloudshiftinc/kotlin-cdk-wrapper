@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.DomainNameAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * IDomainName domainName = DomainName.fromDomainNameAttributes(this, "DomainName",
+ * DomainNameAttributes.builder()
+ * .domainName("domainName")
+ * .domainNameAliasHostedZoneId("domainNameAliasHostedZoneId")
+ * .domainNameAliasTarget("domainNameAliasTarget")
+ * .build());
+ * BasePathMapping.Builder.create(this, "BasePathMapping")
+ * .domainName(domainName)
+ * .restApi(api)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DomainNameAttributesDsl {
   private val cdkBuilder: DomainNameAttributes.Builder = DomainNameAttributes.builder()

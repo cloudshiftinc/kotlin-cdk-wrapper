@@ -11,6 +11,174 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 import software.constructs.Construct
 
+/**
+ * The `AWS::Batch::ComputeEnvironment` resource defines your AWS Batch compute environment.
+ *
+ * You can define `MANAGED` or `UNMANAGED` compute environments. `MANAGED` compute environments can
+ * use Amazon EC2 or AWS Fargate resources. `UNMANAGED` compute environments can only use EC2
+ * resources. For more information, see [Compute
+ * Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the
+ * ** .
+ *
+ * In a managed compute environment, AWS Batch manages the capacity and instance types of the
+ * compute resources within the environment. This is based on the compute resource specification that
+ * you define or the [launch
+ * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html) that you
+ * specify when you create the compute environment. You can choose either to use EC2 On-Demand
+ * Instances and EC2 Spot Instances, or to use Fargate and Fargate Spot capacity in your managed
+ * compute environment. You can optionally set a maximum price so that Spot Instances only launch when
+ * the Spot Instance price is below a specified percentage of the On-Demand price.
+ *
+ *
+ * Multi-node parallel jobs are not supported on Spot Instances.
+ *
+ *
+ * In an unmanaged compute environment, you can manage your own EC2 compute resources and have a lot
+ * of flexibility with how you configure your compute resources. For example, you can use custom AMI.
+ * However, you need to verify that your AMI meets the Amazon ECS container instance AMI specification.
+ * For more information, see [container instance
+ * AMIs](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container_instance_AMIs.html) in
+ * the *Amazon Elastic Container Service Developer Guide* . After you have created your unmanaged
+ * compute environment, you can use the
+ * [DescribeComputeEnvironments](https://docs.aws.amazon.com/batch/latest/APIReference/API_DescribeComputeEnvironments.html)
+ * operation to find the Amazon ECS cluster that is associated with it. Then, manually launch your
+ * container instances into that Amazon ECS cluster. For more information, see [Launching an Amazon ECS
+ * container
+ * instance](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_container_instance.html)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ *
+ * To create a compute environment that uses EKS resources, the caller must have permissions to call
+ * `eks:DescribeCluster` . &gt; AWS Batch doesn't upgrade the AMIs in a compute environment after it's
+ * created except under specific conditions. For example, it doesn't automatically update the AMIs when
+ * a newer version of the Amazon ECS optimized AMI is available. Therefore, you're responsible for the
+ * management of the guest operating system (including updates and security patches) and any additional
+ * application software or utilities that you install on the compute resources. There are two ways to
+ * use a new AMI for your AWS Batch jobs. The original method is to complete these steps:
+ *
+ * * Create a new compute environment with the new AMI.
+ * * Add the compute environment to an existing job queue.
+ * * Remove the earlier compute environment from your job queue.
+ * * Delete the earlier compute environment.
+ *
+ * In April 2022, AWS Batch added enhanced support for updating compute environments. For example,
+ * the `UpdateComputeEnvironent` API lets you use the `ReplaceComputeEnvironment` property to
+ * dynamically update compute environment parameters such as the launch template or instance type
+ * without replacement. For more information, see [Updating compute
+ * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+ * in the *AWS Batch User Guide* .
+ *
+ * To use the enhanced updating of compute environments to update AMIs, follow these rules:
+ *
+ * * Either do not set the
+ * [ServiceRole](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-servicerole)
+ * property or set it to the *AWSServiceRoleForBatch* service-linked role.
+ * * Set the
+ * [AllocationStrategy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-allocationstrategy)
+ * property to `BEST_FIT_PROGRESSIVE` or `SPOT_CAPACITY_OPTIMIZED` .
+ * * Set the
+ * [ReplaceComputeEnvironment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html#cfn-batch-computeenvironment-replacecomputeenvironment)
+ * property to `false` .
+ *
+ *
+ * Set the `ReplaceComputeEnvironment` property to `false` if the compute environment uses the
+ * `BEST_FIT` allocation strategy. &gt; If the `ReplaceComputeEnvironment` property is set to `false` ,
+ * you might receive an error message when you update the CFN template for a compute environment. This
+ * issue occurs if the updated `desiredvcpus` value is less than the current `desiredvcpus` value. As a
+ * workaround, delete the `desiredvcpus` value from the updated template or use the `minvcpus` property
+ * to manage the number of vCPUs. For information, see [Error message when you update the
+ * `DesiredvCpus`
+ * setting](https://docs.aws.amazon.com/batch/latest/userguide/troubleshooting.html#error-desired-vcpus-update)
+ * .
+ *
+ *
+ * * Set the
+ * [UpdateToLatestImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-updatetolatestimageversion)
+ * property to `true` . This property is used when you update a compute environment. The
+ * [UpdateToLatestImageVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-updatetolatestimageversion)
+ * property is ignored when you create a compute environment.
+ * * Either do not specify an image ID in
+ * [ImageId](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-imageid)
+ * or
+ * [ImageIdOverride](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html#cfn-batch-computeenvironment-ec2configurationobject-imageidoverride)
+ * properties, or in the launch template identified by the [Launch
+ * Template](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html#cfn-batch-computeenvironment-computeresources-launchtemplate)
+ * property. In that case AWS Batch will select the latest Amazon ECS optimized AMI supported by AWS
+ * Batch at the time the infrastructure update is initiated. Alternatively you can specify the AMI ID
+ * in the `ImageId` or `ImageIdOverride` properties, or the launch template identified by the
+ * `LaunchTemplate` properties. Changing any of these properties will trigger an infrastructure update.
+ *
+ * If these rules are followed, any update that triggers an infrastructure update will cause the AMI
+ * ID to be re-selected. If the
+ * [Version](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
+ * property of the
+ * [LaunchTemplateSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html)
+ * is set to `$Latest` or `$Default` , the latest or default version of the launch template will be
+ * evaluated up at the time of the infrastructure update, even if the `LaunchTemplateSpecification` was
+ * not updated.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnComputeEnvironment cfnComputeEnvironment = CfnComputeEnvironment.Builder.create(this,
+ * "MyCfnComputeEnvironment")
+ * .type("type")
+ * // the properties below are optional
+ * .computeEnvironmentName("computeEnvironmentName")
+ * .computeResources(ComputeResourcesProperty.builder()
+ * .maxvCpus(123)
+ * .subnets(List.of("subnets"))
+ * .type("type")
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .bidPercentage(123)
+ * .desiredvCpus(123)
+ * .ec2Configuration(List.of(Ec2ConfigurationObjectProperty.builder()
+ * .imageType("imageType")
+ * // the properties below are optional
+ * .imageIdOverride("imageIdOverride")
+ * .imageKubernetesVersion("imageKubernetesVersion")
+ * .build()))
+ * .ec2KeyPair("ec2KeyPair")
+ * .imageId("imageId")
+ * .instanceRole("instanceRole")
+ * .instanceTypes(List.of("instanceTypes"))
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build())
+ * .minvCpus(123)
+ * .placementGroup("placementGroup")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .spotIamFleetRole("spotIamFleetRole")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .updateToLatestImageVersion(false)
+ * .build())
+ * .eksConfiguration(EksConfigurationProperty.builder()
+ * .eksClusterArn("eksClusterArn")
+ * .kubernetesNamespace("kubernetesNamespace")
+ * .build())
+ * .replaceComputeEnvironment(false)
+ * .serviceRole("serviceRole")
+ * .state("state")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .unmanagedvCpus(123)
+ * .updatePolicy(UpdatePolicyProperty.builder()
+ * .jobExecutionTimeoutMinutes(123)
+ * .terminateJobsOnUpdate(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentDsl(
   scope: Construct,

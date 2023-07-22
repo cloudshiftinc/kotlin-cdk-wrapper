@@ -13,6 +13,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnFleet
 import software.amazon.awscdk.services.gamelift.CfnFleetProps
 
+/**
+ * Properties for defining a `CfnFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnFleetProps cfnFleetProps = CfnFleetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .anywhereConfiguration(AnywhereConfigurationProperty.builder()
+ * .cost("cost")
+ * .build())
+ * .buildId("buildId")
+ * .certificateConfiguration(CertificateConfigurationProperty.builder()
+ * .certificateType("certificateType")
+ * .build())
+ * .computeType("computeType")
+ * .description("description")
+ * .desiredEc2Instances(123)
+ * .ec2InboundPermissions(List.of(IpPermissionProperty.builder()
+ * .fromPort(123)
+ * .ipRange("ipRange")
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build()))
+ * .ec2InstanceType("ec2InstanceType")
+ * .fleetType("fleetType")
+ * .instanceRoleArn("instanceRoleArn")
+ * .locations(List.of(LocationConfigurationProperty.builder()
+ * .location("location")
+ * // the properties below are optional
+ * .locationCapacity(LocationCapacityProperty.builder()
+ * .desiredEc2Instances(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build())
+ * .build()))
+ * .logPaths(List.of("logPaths"))
+ * .maxSize(123)
+ * .metricGroups(List.of("metricGroups"))
+ * .minSize(123)
+ * .newGameSessionProtectionPolicy("newGameSessionProtectionPolicy")
+ * .peerVpcAwsAccountId("peerVpcAwsAccountId")
+ * .peerVpcId("peerVpcId")
+ * .resourceCreationLimitPolicy(ResourceCreationLimitPolicyProperty.builder()
+ * .newGameSessionsPerCreator(123)
+ * .policyPeriodInMinutes(123)
+ * .build())
+ * .runtimeConfiguration(RuntimeConfigurationProperty.builder()
+ * .gameSessionActivationTimeoutSeconds(123)
+ * .maxConcurrentGameSessionActivations(123)
+ * .serverProcesses(List.of(ServerProcessProperty.builder()
+ * .concurrentExecutions(123)
+ * .launchPath("launchPath")
+ * // the properties below are optional
+ * .parameters("parameters")
+ * .build()))
+ * .build())
+ * .scriptId("scriptId")
+ * .serverLaunchParameters("serverLaunchParameters")
+ * .serverLaunchPath("serverLaunchPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
   private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()

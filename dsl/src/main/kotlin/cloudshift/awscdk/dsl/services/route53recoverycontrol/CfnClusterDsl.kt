@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoverycontrol.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Creates a cluster in Amazon Route 53 Application Recovery Controller.
+ *
+ * A cluster is a set of redundant Regional endpoints that you can run Route 53 ARC API calls
+ * against to update or get the state of one or more routing controls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

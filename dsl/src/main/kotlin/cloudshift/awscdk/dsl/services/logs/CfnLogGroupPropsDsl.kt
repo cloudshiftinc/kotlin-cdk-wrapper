@@ -14,6 +14,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.logs.CfnLogGroupProps
 
+/**
+ * Properties for defining a `CfnLogGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * Object dataProtectionPolicy;
+ * CfnLogGroupProps cfnLogGroupProps = CfnLogGroupProps.builder()
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .kmsKeyId("kmsKeyId")
+ * .logGroupName("logGroupName")
+ * .retentionInDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+ */
 @CdkDslMarker
 public class CfnLogGroupPropsDsl {
   private val cdkBuilder: CfnLogGroupProps.Builder = CfnLogGroupProps.builder()

@@ -11,6 +11,60 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The log configuration for the container.
+ *
+ * This parameter maps to `LogConfig` in the [Create a
+ * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+ * section of the [Docker Remote
+ * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--log-driver`
+ * option to [`docker
+ * run`](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/commandline/run/) .
+ *
+ * By default, containers use the same logging driver that the Docker daemon uses. However, the
+ * container might use a different logging driver than the Docker daemon by specifying a log driver
+ * configuration in the container definition. For more information about the options for different
+ * supported log drivers, see [Configure logging
+ * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in the
+ * Docker documentation.
+ *
+ * Understand the following when specifying a log configuration for your containers.
+ *
+ * * Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon
+ * (shown in the valid values below). Additional log drivers may be available in future releases of the
+ * Amazon ECS container agent.
+ * * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+ * instance.
+ * * For tasks that are hosted on Amazon EC2 instances, the Amazon ECS container agent must register
+ * the available logging drivers with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment variable before
+ * containers placed on that instance can use these log configuration options. For more information,
+ * see [Amazon ECS container agent
+ * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html) in
+ * the *Amazon Elastic Container Service Developer Guide* .
+ * * For tasks that are on AWS Fargate , because you don't have access to the underlying
+ * infrastructure your tasks are hosted on, any additional software needed must be installed outside of
+ * the task. For example, the Fluentd output aggregators or a remote host running Logstash to send Gelf
+ * logs to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-logconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.LogConfigurationProperty.Builder =

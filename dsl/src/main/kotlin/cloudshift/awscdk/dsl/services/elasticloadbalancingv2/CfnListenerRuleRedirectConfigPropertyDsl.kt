@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about a redirect action.
+ *
+ * A URI consists of the following components: protocol://hostname:port/path?query. You must modify
+ * at least one of the following components to avoid a redirect loop: protocol, hostname, port, or
+ * path. Any components that you do not modify retain their original values.
+ *
+ * You can reuse URI components using the following reserved keywords:
+ *
+ * * #{protocol}
+ * * #{host}
+ * * #{port}
+ * * #{path} (the leading "/" is removed)
+ * * #{query}
+ *
+ * For example, you can change the path to "/new/#{path}", the hostname to "example.#{host}", or the
+ * query to "#{query}&amp;value=xyz".
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * RedirectConfigProperty redirectConfigProperty = RedirectConfigProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .host("host")
+ * .path("path")
+ * .port("port")
+ * .protocol("protocol")
+ * .query("query")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleRedirectConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.RedirectConfigProperty.Builder =

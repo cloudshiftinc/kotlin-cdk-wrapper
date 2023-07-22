@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 
+/**
+ * Used to enable or disable DKIM authentication for an email identity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DkimAttributesProperty dkimAttributesProperty = DkimAttributesProperty.builder()
+ * .signingEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-dkimattributes.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityDkimAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.DkimAttributesProperty.Builder =

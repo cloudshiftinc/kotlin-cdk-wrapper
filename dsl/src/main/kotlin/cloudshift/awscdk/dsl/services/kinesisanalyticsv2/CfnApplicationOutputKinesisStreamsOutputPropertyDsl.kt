@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 
+/**
+ * When you configure a SQL-based Kinesis Data Analytics application's output, identifies a Kinesis
+ * data stream as the destination.
+ *
+ * You provide the stream Amazon Resource Name (ARN).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * KinesisStreamsOutputProperty kinesisStreamsOutputProperty =
+ * KinesisStreamsOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationoutput-kinesisstreamsoutput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationOutputKinesisStreamsOutputPropertyDsl {
   private val cdkBuilder: CfnApplicationOutput.KinesisStreamsOutputProperty.Builder =

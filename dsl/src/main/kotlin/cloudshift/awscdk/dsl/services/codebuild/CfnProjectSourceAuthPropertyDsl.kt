@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `SourceAuth` is a property of the [AWS CodeBuild Project
+ * Source](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-source.html)
+ * property type that specifies authorization settings for AWS CodeBuild to access the source code to
+ * be built.
+ *
+ * `SourceAuth` is for use by the CodeBuild console only. Do not get or set it directly.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * SourceAuthProperty sourceAuthProperty = SourceAuthProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .resource("resource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-sourceauth.html)
+ */
 @CdkDslMarker
 public class CfnProjectSourceAuthPropertyDsl {
   private val cdkBuilder: CfnProject.SourceAuthProperty.Builder =

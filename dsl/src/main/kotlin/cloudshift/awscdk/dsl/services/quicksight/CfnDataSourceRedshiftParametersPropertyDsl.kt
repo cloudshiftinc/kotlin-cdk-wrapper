@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters for Amazon Redshift.
+ *
+ * The `ClusterId` field can be blank if `Host` and `Port` are both set. The `Host` and `Port`
+ * fields can be blank if the `ClusterId` field is set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RedshiftParametersProperty redshiftParametersProperty = RedshiftParametersProperty.builder()
+ * .database("database")
+ * // the properties below are optional
+ * .clusterId("clusterId")
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-redshiftparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceRedshiftParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.RedshiftParametersProperty.Builder =

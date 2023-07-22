@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eventschemas.CfnSchema
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::EventSchemas::Schema` resource to specify an event schema.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnSchema cfnSchema = CfnSchema.Builder.create(this, "MyCfnSchema")
+ * .content("content")
+ * .registryName("registryName")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .schemaName("schemaName")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html)
+ */
 @CdkDslMarker
 public class CfnSchemaDsl(
   scope: Construct,

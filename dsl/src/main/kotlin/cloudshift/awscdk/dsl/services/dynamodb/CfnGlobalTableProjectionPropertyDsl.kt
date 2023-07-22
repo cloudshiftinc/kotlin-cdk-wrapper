@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Represents attributes that are copied (projected) from the table into an index.
+ *
+ * These are in addition to the primary key attributes and index key attributes, which are
+ * automatically projected.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * ProjectionProperty projectionProperty = ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-projection.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableProjectionPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.ProjectionProperty.Builder =

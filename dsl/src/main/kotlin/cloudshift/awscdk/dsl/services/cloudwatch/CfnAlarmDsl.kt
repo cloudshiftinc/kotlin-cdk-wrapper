@@ -13,6 +13,76 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAlarm
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudWatch::Alarm` type specifies an alarm and associates it with the specified metric
+ * or metric math expression.
+ *
+ * When this operation creates an alarm, the alarm state is immediately set to `INSUFFICIENT_DATA` .
+ * The alarm is then evaluated and its state is set appropriately. Any actions associated with the new
+ * state are then executed.
+ *
+ * When you update an existing alarm, its state is left unchanged, but the update completely
+ * overwrites the previous configuration of the alarm.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnAlarm cfnAlarm = CfnAlarm.Builder.create(this, "MyCfnAlarm")
+ * .comparisonOperator("comparisonOperator")
+ * .evaluationPeriods(123)
+ * // the properties below are optional
+ * .actionsEnabled(false)
+ * .alarmActions(List.of("alarmActions"))
+ * .alarmDescription("alarmDescription")
+ * .alarmName("alarmName")
+ * .datapointsToAlarm(123)
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .evaluateLowSampleCountPercentile("evaluateLowSampleCountPercentile")
+ * .extendedStatistic("extendedStatistic")
+ * .insufficientDataActions(List.of("insufficientDataActions"))
+ * .metricName("metricName")
+ * .metrics(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build()))
+ * .namespace("namespace")
+ * .okActions(List.of("okActions"))
+ * .period(123)
+ * .statistic("statistic")
+ * .threshold(123)
+ * .thresholdMetricId("thresholdMetricId")
+ * .treatMissingData("treatMissingData")
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html)
+ */
 @CdkDslMarker
 public class CfnAlarmDsl(
   scope: Construct,

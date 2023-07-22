@@ -9,6 +9,35 @@ import kotlin.Unit
 import software.amazon.awscdk.cloudassembly.schema.DestroyCommand
 import software.amazon.awscdk.cloudassembly.schema.DestroyOptions
 
+/**
+ * Represents a cdk destroy command.
+ *
+ * Example:
+ *
+ * ```
+ * App app = new App();
+ * Stack stackUnderTest = new Stack(app, "StackUnderTest");
+ * Stack stack = new Stack(app, "stack");
+ * IntegTest testCase = IntegTest.Builder.create(app, "CustomizedDeploymentWorkflow")
+ * .testCases(List.of(stackUnderTest))
+ * .diffAssets(true)
+ * .stackUpdateWorkflow(true)
+ * .cdkCommandOptions(CdkCommands.builder()
+ * .deploy(DeployCommand.builder()
+ * .args(DeployOptions.builder()
+ * .requireApproval(RequireApproval.NEVER)
+ * .json(true)
+ * .build())
+ * .build())
+ * .destroy(DestroyCommand.builder()
+ * .args(DestroyOptions.builder()
+ * .force(true)
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DestroyCommandDsl {
   private val cdkBuilder: DestroyCommand.Builder = DestroyCommand.builder()

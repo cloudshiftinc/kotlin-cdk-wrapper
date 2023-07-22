@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
 import software.constructs.Construct
 
+/**
+ * Use the AWS CloudFormation `AWS::AmazonMQ::ConfigurationAssociation` resource to associate a
+ * configuration with a broker, or return information about the specified ConfigurationAssociation.
+ *
+ * Only use one per broker, and don't use a configuration on the broker resource if you have
+ * associated a configuration with that broker.
+ *
+ *
+ * Does not apply to RabbitMQ brokers.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * CfnConfigurationAssociation cfnConfigurationAssociation =
+ * CfnConfigurationAssociation.Builder.create(this, "MyCfnConfigurationAssociation")
+ * .broker("broker")
+ * .configuration(ConfigurationIdProperty.builder()
+ * .id("id")
+ * .revision(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAssociationDsl(
   scope: Construct,

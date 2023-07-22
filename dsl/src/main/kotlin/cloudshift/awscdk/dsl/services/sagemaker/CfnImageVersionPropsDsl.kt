@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnImageVersionProps
 
+/**
+ * Properties for defining a `CfnImageVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnImageVersionProps cfnImageVersionProps = CfnImageVersionProps.builder()
+ * .baseImage("baseImage")
+ * .imageName("imageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)
+ */
 @CdkDslMarker
 public class CfnImageVersionPropsDsl {
   private val cdkBuilder: CfnImageVersionProps.Builder = CfnImageVersionProps.builder()

@@ -7,6 +7,57 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+/**
+ * Describes an ASN.1 X.400 `GeneralName` as defined in [RFC
+ * 5280](https://docs.aws.amazon.com/https://datatracker.ietf.org/doc/html/rfc5280) . Only one of the
+ * following naming options should be provided. Providing more than one option results in an
+ * `InvalidArgsException` error.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * GeneralNameProperty generalNameProperty = GeneralNameProperty.builder()
+ * .directoryName(SubjectProperty.builder()
+ * .commonName("commonName")
+ * .country("country")
+ * .customAttributes(List.of(CustomAttributeProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * .build()))
+ * .distinguishedNameQualifier("distinguishedNameQualifier")
+ * .generationQualifier("generationQualifier")
+ * .givenName("givenName")
+ * .initials("initials")
+ * .locality("locality")
+ * .organization("organization")
+ * .organizationalUnit("organizationalUnit")
+ * .pseudonym("pseudonym")
+ * .serialNumber("serialNumber")
+ * .state("state")
+ * .surname("surname")
+ * .title("title")
+ * .build())
+ * .dnsName("dnsName")
+ * .ediPartyName(EdiPartyNameProperty.builder()
+ * .nameAssigner("nameAssigner")
+ * .partyName("partyName")
+ * .build())
+ * .ipAddress("ipAddress")
+ * .otherName(OtherNameProperty.builder()
+ * .typeId("typeId")
+ * .value("value")
+ * .build())
+ * .registeredId("registeredId")
+ * .rfc822Name("rfc822Name")
+ * .uniformResourceIdentifier("uniformResourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-generalname.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityGeneralNamePropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.GeneralNameProperty.Builder =

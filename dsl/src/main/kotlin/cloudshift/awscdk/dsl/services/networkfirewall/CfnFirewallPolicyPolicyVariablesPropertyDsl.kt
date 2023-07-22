@@ -11,6 +11,25 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
+/**
+ * Contains variables that you can use to override default Suricata settings in your firewall
+ * policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * PolicyVariablesProperty policyVariablesProperty = PolicyVariablesProperty.builder()
+ * .ruleVariables(Map.of(
+ * "ruleVariablesKey", Map.of(
+ * "definition", List.of("definition"))))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-policyvariables.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyPolicyVariablesPropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.PolicyVariablesProperty.Builder =

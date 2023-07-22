@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudtrail.CfnEventDataStore
 
+/**
+ * A single selector statement in an advanced event selector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * AdvancedFieldSelectorProperty advancedFieldSelectorProperty =
+ * AdvancedFieldSelectorProperty.builder()
+ * .field("field")
+ * // the properties below are optional
+ * .endsWith(List.of("endsWith"))
+ * .equalTo(List.of("equalTo"))
+ * .notEndsWith(List.of("notEndsWith"))
+ * .notEquals(List.of("notEquals"))
+ * .notStartsWith(List.of("notStartsWith"))
+ * .startsWith(List.of("startsWith"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-eventdatastore-advancedfieldselector.html)
+ */
 @CdkDslMarker
 public class CfnEventDataStoreAdvancedFieldSelectorPropertyDsl {
   private val cdkBuilder: CfnEventDataStore.AdvancedFieldSelectorProperty.Builder =

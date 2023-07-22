@@ -14,6 +14,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
 import software.constructs.Construct
 
+/**
+ * An SAP application registered with AWS Systems Manager for SAP.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.systemsmanagersap.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .applicationId("applicationId")
+ * .applicationType("applicationType")
+ * // the properties below are optional
+ * .credentials(List.of(CredentialProperty.builder()
+ * .credentialType("credentialType")
+ * .databaseName("databaseName")
+ * .secretId("secretId")
+ * .build()))
+ * .instances(List.of("instances"))
+ * .sapInstanceNumber("sapInstanceNumber")
+ * .sid("sid")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-systemsmanagersap-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

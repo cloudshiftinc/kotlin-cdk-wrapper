@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnChannel
 import software.constructs.Construct
 
+/**
+ * The AWS::IoTAnalytics::Channel resource collects data from an MQTT topic and archives the raw,
+ * unprocessed messages before publishing the data to a pipeline.
+ *
+ * For more information, see [How to Use AWS IoT
+ * Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how)
+ * in the *AWS IoT Analytics User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object serviceManagedS3;
+ * CfnChannel cfnChannel = CfnChannel.Builder.create(this, "MyCfnChannel")
+ * .channelName("channelName")
+ * .channelStorage(ChannelStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build())
+ * .retentionPeriod(RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelDsl(
   scope: Construct,

@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.opensearchservice.CognitoOptions
 
+/**
+ * Configures Amazon OpenSearch Service to use Amazon Cognito authentication for OpenSearch
+ * Dashboards.
+ *
+ * Example:
+ *
+ * ```
+ * Domain.Builder.create(this, "Domain")
+ * .cognitoDashboardsAuth(CognitoOptions.builder()
+ * .identityPoolId("test-identity-pool-id")
+ * .userPoolId("test-user-pool-id")
+ * .role(role)
+ * .build())
+ * .version(openSearchVersion)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html)
+ */
 @CdkDslMarker
 public class CognitoOptionsDsl {
   private val cdkBuilder: CognitoOptions.Builder = CognitoOptions.builder()

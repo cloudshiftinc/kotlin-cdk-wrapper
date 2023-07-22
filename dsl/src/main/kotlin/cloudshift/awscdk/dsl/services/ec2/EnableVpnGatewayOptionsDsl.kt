@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.EnableVpnGatewayOptions
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Options for the Vpc.enableVpnGateway() method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * EnableVpnGatewayOptions enableVpnGatewayOptions = EnableVpnGatewayOptions.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .amazonSideAsn(123)
+ * .vpnRoutePropagation(List.of(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnableVpnGatewayOptionsDsl {
   private val cdkBuilder: EnableVpnGatewayOptions.Builder = EnableVpnGatewayOptions.builder()

@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the audio track to extract.
+ *
+ * The parent of this entity is AudioSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioTrackSelectionProperty audioTrackSelectionProperty = AudioTrackSelectionProperty.builder()
+ * .dolbyEDecode(AudioDolbyEDecodeProperty.builder()
+ * .programSelection("programSelection")
+ * .build())
+ * .tracks(List.of(AudioTrackProperty.builder()
+ * .track(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiotrackselection.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioTrackSelectionPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioTrackSelectionProperty.Builder =

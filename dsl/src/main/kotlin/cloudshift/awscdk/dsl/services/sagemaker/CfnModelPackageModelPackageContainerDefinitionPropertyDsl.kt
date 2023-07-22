@@ -11,6 +11,34 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Describes the Docker container for the model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object modelInput;
+ * ModelPackageContainerDefinitionProperty modelPackageContainerDefinitionProperty =
+ * ModelPackageContainerDefinitionProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .containerHostname("containerHostname")
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .imageDigest("imageDigest")
+ * .modelDataUrl("modelDataUrl")
+ * .modelInput(modelInput)
+ * .nearestModelName("nearestModelName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagecontainerdefinition.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageModelPackageContainerDefinitionPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ModelPackageContainerDefinitionProperty.Builder =

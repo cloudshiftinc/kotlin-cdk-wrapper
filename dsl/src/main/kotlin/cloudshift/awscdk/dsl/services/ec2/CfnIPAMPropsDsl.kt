@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAMProps
 
+/**
+ * Properties for defining a `CfnIPAM`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMProps cfnIPAMProps = CfnIPAMProps.builder()
+ * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
+ * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
+ * .description("description")
+ * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
+ * .regionName("regionName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html)
+ */
 @CdkDslMarker
 public class CfnIPAMPropsDsl {
   private val cdkBuilder: CfnIPAMProps.Builder = CfnIPAMProps.builder()

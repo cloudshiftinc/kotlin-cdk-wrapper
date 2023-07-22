@@ -9,6 +9,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
+/**
+ * The health check configuration of a target group.
+ *
+ * Health check configurations aren't used for `LAMBDA` and `ALB` target groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * HealthCheckConfigProperty healthCheckConfigProperty = HealthCheckConfigProperty.builder()
+ * .enabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .matcher(MatcherProperty.builder()
+ * .httpCode("httpCode")
+ * .build())
+ * .path("path")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .unhealthyThresholdCount(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-healthcheckconfig.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupHealthCheckConfigPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.HealthCheckConfigProperty.Builder =

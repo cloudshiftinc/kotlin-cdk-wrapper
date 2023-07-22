@@ -11,6 +11,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ce.CfnAnomalySubscriptionProps
 
+/**
+ * Properties for defining a `CfnAnomalySubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnAnomalySubscriptionProps cfnAnomalySubscriptionProps = CfnAnomalySubscriptionProps.builder()
+ * .frequency("frequency")
+ * .monitorArnList(List.of("monitorArnList"))
+ * .subscribers(List.of(SubscriberProperty.builder()
+ * .address("address")
+ * .type("type")
+ * // the properties below are optional
+ * .status("status")
+ * .build()))
+ * .subscriptionName("subscriptionName")
+ * // the properties below are optional
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .threshold(123)
+ * .thresholdExpression("thresholdExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html)
+ */
 @CdkDslMarker
 public class CfnAnomalySubscriptionPropsDsl {
   private val cdkBuilder: CfnAnomalySubscriptionProps.Builder =

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.EncodingOptions
 
+/**
+ * Properties to string encodings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * EncodingOptions encodingOptions = EncodingOptions.builder()
+ * .displayHint("displayHint")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EncodingOptionsDsl {
   private val cdkBuilder: EncodingOptions.Builder = EncodingOptions.builder()

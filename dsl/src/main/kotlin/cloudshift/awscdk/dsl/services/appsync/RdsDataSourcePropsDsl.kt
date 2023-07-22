@@ -10,6 +10,34 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.rds.IServerlessCluster
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Properties for an AppSync RDS datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * Secret secret;
+ * ServerlessCluster serverlessCluster;
+ * RdsDataSourceProps rdsDataSourceProps = RdsDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .secretStore(secret)
+ * .serverlessCluster(serverlessCluster)
+ * // the properties below are optional
+ * .databaseName("databaseName")
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RdsDataSourcePropsDsl {
   private val cdkBuilder: RdsDataSourceProps.Builder = RdsDataSourceProps.builder()

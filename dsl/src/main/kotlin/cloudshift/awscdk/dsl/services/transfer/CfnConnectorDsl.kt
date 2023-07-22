@@ -14,6 +14,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnConnector
 import software.constructs.Construct
 
+/**
+ * Creates the connector, which captures the parameters for an outbound connection for the AS2
+ * protocol.
+ *
+ * The connector is required for sending files to an externally hosted AS2 server. For more details
+ * about connectors, see [Create AS2
+ * connectors](https://docs.aws.amazon.com/transfer/latest/userguide/create-b2b-server.html#configure-as2-connector)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * Object as2Config;
+ * CfnConnector cfnConnector = CfnConnector.Builder.create(this, "MyCfnConnector")
+ * .accessRole("accessRole")
+ * .as2Config(as2Config)
+ * .url("url")
+ * // the properties below are optional
+ * .loggingRole("loggingRole")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDsl(
   scope: Construct,

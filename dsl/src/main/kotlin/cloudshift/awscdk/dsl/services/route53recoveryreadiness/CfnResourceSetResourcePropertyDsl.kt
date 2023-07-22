@@ -9,6 +9,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
 
+/**
+ * The resource element of a resource set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * ResourceProperty resourceProperty = ResourceProperty.builder()
+ * .componentId("componentId")
+ * .dnsTargetResource(DNSTargetResourceProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneArn("hostedZoneArn")
+ * .recordSetId("recordSetId")
+ * .recordType("recordType")
+ * .targetResource(TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build())
+ * .build())
+ * .readinessScopes(List.of("readinessScopes"))
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-resource.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetResourcePropertyDsl {
   private val cdkBuilder: CfnResourceSet.ResourceProperty.Builder =

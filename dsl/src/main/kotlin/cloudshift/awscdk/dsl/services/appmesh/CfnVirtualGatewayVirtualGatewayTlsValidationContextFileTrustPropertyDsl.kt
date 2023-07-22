@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents a Transport Layer Security (TLS) validation context trust for a local
+ * file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayTlsValidationContextFileTrustProperty
+ * virtualGatewayTlsValidationContextFileTrustProperty =
+ * VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaytlsvalidationcontextfiletrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayTlsValidationContextFileTrustPropertyDsl {
   private val cdkBuilder:

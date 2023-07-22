@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Marker styles options for a line series in `LineChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * LineChartMarkerStyleSettingsProperty lineChartMarkerStyleSettingsProperty =
+ * LineChartMarkerStyleSettingsProperty.builder()
+ * .markerColor("markerColor")
+ * .markerShape("markerShape")
+ * .markerSize("markerSize")
+ * .markerVisibility("markerVisibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-linechartmarkerstylesettings.html)
+ */
 @CdkDslMarker
 public class CfnDashboardLineChartMarkerStyleSettingsPropertyDsl {
   private val cdkBuilder: CfnDashboard.LineChartMarkerStyleSettingsProperty.Builder =

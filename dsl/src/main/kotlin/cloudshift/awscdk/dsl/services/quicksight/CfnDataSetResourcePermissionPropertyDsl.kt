@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Permission for the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
+ * .actions(List.of("actions"))
+ * .principal("principal")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-resourcepermission.html)
+ */
 @CdkDslMarker
 public class CfnDataSetResourcePermissionPropertyDsl {
   private val cdkBuilder: CfnDataSet.ResourcePermissionProperty.Builder =

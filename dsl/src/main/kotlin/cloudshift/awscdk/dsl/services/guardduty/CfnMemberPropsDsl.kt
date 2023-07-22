@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnMemberProps
 
+/**
+ * Properties for defining a `CfnMember`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnMemberProps cfnMemberProps = CfnMemberProps.builder()
+ * .detectorId("detectorId")
+ * .email("email")
+ * .memberId("memberId")
+ * // the properties below are optional
+ * .disableEmailNotification(false)
+ * .message("message")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-member.html)
+ */
 @CdkDslMarker
 public class CfnMemberPropsDsl {
   private val cdkBuilder: CfnMemberProps.Builder = CfnMemberProps.builder()

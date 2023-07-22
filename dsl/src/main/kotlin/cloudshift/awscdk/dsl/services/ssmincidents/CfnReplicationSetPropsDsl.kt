@@ -13,6 +13,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnReplicationSetProps
 
+/**
+ * Properties for defining a `CfnReplicationSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * CfnReplicationSetProps cfnReplicationSetProps = CfnReplicationSetProps.builder()
+ * .regions(List.of(ReplicationRegionProperty.builder()
+ * .regionConfiguration(RegionConfigurationProperty.builder()
+ * .sseKmsKeyId("sseKmsKeyId")
+ * .build())
+ * .regionName("regionName")
+ * .build()))
+ * // the properties below are optional
+ * .deletionProtected(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html)
+ */
 @CdkDslMarker
 public class CfnReplicationSetPropsDsl {
   private val cdkBuilder: CfnReplicationSetProps.Builder = CfnReplicationSetProps.builder()

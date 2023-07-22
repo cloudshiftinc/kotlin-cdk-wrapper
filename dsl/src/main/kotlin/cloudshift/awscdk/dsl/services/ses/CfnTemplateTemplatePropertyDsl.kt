@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnTemplate
 
+/**
+ * The content of the email, composed of a subject line and either an HTML part or a text-only part.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * TemplateProperty templateProperty = TemplateProperty.builder()
+ * .subjectPart("subjectPart")
+ * // the properties below are optional
+ * .htmlPart("htmlPart")
+ * .templateName("templateName")
+ * .textPart("textPart")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTemplatePropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateProperty.Builder =

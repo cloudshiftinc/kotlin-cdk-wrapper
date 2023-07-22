@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.AutoVerifiedAttrs
 
+/**
+ * Attributes that can be automatically verified for users in a user pool.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * // ...
+ * .signInAliases(SignInAliases.builder().username(true).email(true).build())
+ * .autoVerify(AutoVerifiedAttrs.builder().email(true).phone(true).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AutoVerifiedAttrsDsl {
   private val cdkBuilder: AutoVerifiedAttrs.Builder = AutoVerifiedAttrs.builder()

@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+/**
+ * ASN1 subject for the certificate authority.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * SubjectProperty subjectProperty = SubjectProperty.builder()
+ * .commonName("commonName")
+ * .country("country")
+ * .customAttributes(List.of(CustomAttributeProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * .build()))
+ * .distinguishedNameQualifier("distinguishedNameQualifier")
+ * .generationQualifier("generationQualifier")
+ * .givenName("givenName")
+ * .initials("initials")
+ * .locality("locality")
+ * .organization("organization")
+ * .organizationalUnit("organizationalUnit")
+ * .pseudonym("pseudonym")
+ * .serialNumber("serialNumber")
+ * .state("state")
+ * .surname("surname")
+ * .title("title")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-subject.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthoritySubjectPropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.SubjectProperty.Builder =

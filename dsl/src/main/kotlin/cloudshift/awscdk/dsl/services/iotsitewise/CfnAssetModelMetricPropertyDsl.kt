@@ -10,6 +10,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains an asset metric property.
+ *
+ * With metrics, you can calculate aggregate functions, such as an average, maximum, or minimum, as
+ * specified through an expression. A metric maps several values to a single value (such as a sum).
+ *
+ * The maximum number of dependent/cascading variables used in any one metric calculation is 10.
+ * Therefore, a *root* metric can have up to 10 cascading metrics in its computational dependency tree.
+ * Additionally, a metric can only have a data type of `DOUBLE` and consume properties with data types
+ * of `INTEGER` or `DOUBLE` .
+ *
+ * For more information, see [Defining data
+ * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#metrics)
+ * in the *AWS IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * MetricProperty metricProperty = MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metric.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelMetricPropertyDsl {
   private val cdkBuilder: CfnAssetModel.MetricProperty.Builder =

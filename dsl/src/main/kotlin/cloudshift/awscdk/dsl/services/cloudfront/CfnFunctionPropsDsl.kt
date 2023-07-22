@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnFunction
 import software.amazon.awscdk.services.cloudfront.CfnFunctionProps
 
+/**
+ * Properties for defining a `CfnFunction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnFunctionProps cfnFunctionProps = CfnFunctionProps.builder()
+ * .functionCode("functionCode")
+ * .functionConfig(FunctionConfigProperty.builder()
+ * .comment("comment")
+ * .runtime("runtime")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .autoPublish(false)
+ * .functionMetadata(FunctionMetadataProperty.builder()
+ * .functionArn("functionArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-function.html)
+ */
 @CdkDslMarker
 public class CfnFunctionPropsDsl {
   private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()

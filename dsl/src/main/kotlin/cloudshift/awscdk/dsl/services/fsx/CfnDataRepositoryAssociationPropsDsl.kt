@@ -15,6 +15,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociationProps
 
+/**
+ * Properties for defining a `CfnDataRepositoryAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnDataRepositoryAssociationProps cfnDataRepositoryAssociationProps =
+ * CfnDataRepositoryAssociationProps.builder()
+ * .dataRepositoryPath("dataRepositoryPath")
+ * .fileSystemId("fileSystemId")
+ * .fileSystemPath("fileSystemPath")
+ * // the properties below are optional
+ * .batchImportMetaDataOnCreate(false)
+ * .importedFileChunkSize(123)
+ * .s3(S3Property.builder()
+ * .autoExportPolicy(AutoExportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .autoImportPolicy(AutoImportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-datarepositoryassociation.html)
+ */
 @CdkDslMarker
 public class CfnDataRepositoryAssociationPropsDsl {
   private val cdkBuilder: CfnDataRepositoryAssociationProps.Builder =

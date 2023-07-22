@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 
+/**
+ * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * FlexibleTimeWindowProperty flexibleTimeWindowProperty = FlexibleTimeWindowProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .maximumWindowInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-flexibletimewindow.html)
+ */
 @CdkDslMarker
 public class CfnScheduleFlexibleTimeWindowPropertyDsl {
   private val cdkBuilder: CfnSchedule.FlexibleTimeWindowProperty.Builder =

@@ -10,6 +10,51 @@ import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.MethodProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Authorizer authorizer;
+ * Integration integration;
+ * Model model;
+ * RequestValidator requestValidator;
+ * Resource resource;
+ * MethodProps methodProps = MethodProps.builder()
+ * .httpMethod("httpMethod")
+ * .resource(resource)
+ * // the properties below are optional
+ * .integration(integration)
+ * .options(MethodOptions.builder()
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType(AuthorizationType.NONE)
+ * .authorizer(authorizer)
+ * .methodResponses(List.of(MethodResponse.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .responseModels(Map.of(
+ * "responseModelsKey", model))
+ * .responseParameters(Map.of(
+ * "responseParametersKey", false))
+ * .build()))
+ * .operationName("operationName")
+ * .requestModels(Map.of(
+ * "requestModelsKey", model))
+ * .requestParameters(Map.of(
+ * "requestParametersKey", false))
+ * .requestValidator(requestValidator)
+ * .requestValidatorOptions(RequestValidatorOptions.builder()
+ * .requestValidatorName("requestValidatorName")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MethodPropsDsl {
   private val cdkBuilder: MethodProps.Builder = MethodProps.builder()

@@ -10,6 +10,27 @@ import software.amazon.awscdk.services.lambda.CodeSigningConfigProps
 import software.amazon.awscdk.services.lambda.UntrustedArtifactOnDeployment
 import software.amazon.awscdk.services.signer.ISigningProfile
 
+/**
+ * Construction properties for a Code Signing Config object.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeSigningConfigPropsDsl {
   private val cdkBuilder: CodeSigningConfigProps.Builder = CodeSigningConfigProps.builder()

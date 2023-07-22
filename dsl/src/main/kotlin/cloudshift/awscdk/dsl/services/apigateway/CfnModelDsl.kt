@@ -10,6 +10,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigateway.CfnModel
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::Model` resource defines the structure of a request or response payload for
+ * an API method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Object schema;
+ * CfnModel cfnModel = CfnModel.Builder.create(this, "MyCfnModel")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .contentType("contentType")
+ * .description("description")
+ * .name("name")
+ * .schema(schema)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-model.html)
+ */
 @CdkDslMarker
 public class CfnModelDsl(
   scope: Construct,

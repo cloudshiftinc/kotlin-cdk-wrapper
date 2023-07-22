@@ -13,6 +13,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnWebhook
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodePipeline::Webhook` resource creates and registers your webhook.
+ *
+ * After the webhook is created and registered, it triggers your pipeline to start every time an
+ * external event occurs. For more information, see [Migrate polling pipelines to use event-based
+ * change
+ * detection](https://docs.aws.amazon.com/codepipeline/latest/userguide/update-change-detection.html)
+ * in the *AWS CodePipeline User Guide* .
+ *
+ * We strongly recommend that you use AWS Secrets Manager to store your credentials. If you use
+ * Secrets Manager, you must have already configured and stored your secret parameters in Secrets
+ * Manager. For more information, see [Using Dynamic References to Specify Template
+ * Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+ * .
+ *
+ *
+ * When passing secret parameters, do not enter the value directly into the template. The value is
+ * rendered as plaintext and is therefore readable. For security reasons, do not use plaintext in your
+ * AWS CloudFormation template to store your credentials.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CfnWebhook cfnWebhook = CfnWebhook.Builder.create(this, "MyCfnWebhook")
+ * .authentication("authentication")
+ * .authenticationConfiguration(WebhookAuthConfigurationProperty.builder()
+ * .allowedIpRange("allowedIpRange")
+ * .secretToken("secretToken")
+ * .build())
+ * .filters(List.of(WebhookFilterRuleProperty.builder()
+ * .jsonPath("jsonPath")
+ * // the properties below are optional
+ * .matchEquals("matchEquals")
+ * .build()))
+ * .targetAction("targetAction")
+ * .targetPipeline("targetPipeline")
+ * .targetPipelineVersion(123)
+ * // the properties below are optional
+ * .name("name")
+ * .registerWithThirdParty(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html)
+ */
 @CdkDslMarker
 public class CfnWebhookDsl(
   scope: Construct,

@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.fms.CfnResourceSetProps
 
+/**
+ * Properties for defining a `CfnResourceSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * CfnResourceSetProps cfnResourceSetProps = CfnResourceSetProps.builder()
+ * .name("name")
+ * .resourceTypeList(List.of("resourceTypeList"))
+ * // the properties below are optional
+ * .description("description")
+ * .resources(List.of("resources"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetPropsDsl {
   private val cdkBuilder: CfnResourceSetProps.Builder = CfnResourceSetProps.builder()

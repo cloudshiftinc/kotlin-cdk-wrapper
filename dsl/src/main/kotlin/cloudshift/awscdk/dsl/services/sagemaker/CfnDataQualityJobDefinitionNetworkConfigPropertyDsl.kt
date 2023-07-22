@@ -7,6 +7,29 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
+/**
+ * Networking options for a job, such as network traffic encryption between containers, whether to
+ * allow inbound and outbound network calls to and from containers, and the VPC subnets and security
+ * groups to use for VPC-enabled jobs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * NetworkConfigProperty networkConfigProperty = NetworkConfigProperty.builder()
+ * .enableInterContainerTrafficEncryption(false)
+ * .enableNetworkIsolation(false)
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-dataqualityjobdefinition-networkconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionNetworkConfigPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.NetworkConfigProperty.Builder =

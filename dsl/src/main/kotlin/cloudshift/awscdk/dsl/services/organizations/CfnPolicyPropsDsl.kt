@@ -13,6 +13,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnPolicyProps
 
+/**
+ * Properties for defining a `CfnPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * Object content;
+ * CfnPolicyProps cfnPolicyProps = CfnPolicyProps.builder()
+ * .content(content)
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetIds(List.of("targetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyPropsDsl {
   private val cdkBuilder: CfnPolicyProps.Builder = CfnPolicyProps.builder()

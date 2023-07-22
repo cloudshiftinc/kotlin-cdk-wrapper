@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnRecipe
 
+/**
+ * Represents an individual condition that evaluates to true or false.
+ *
+ * Conditions are used with recipe actions. The action is only performed for column values where the
+ * condition evaluates to true.
+ *
+ * If a recipe requires more than one condition, then the recipe must specify multiple
+ * `ConditionExpression` elements. Each condition is applied to the rows in a dataset first, before the
+ * recipe action is performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ConditionExpressionProperty conditionExpressionProperty = ConditionExpressionProperty.builder()
+ * .condition("condition")
+ * .targetColumn("targetColumn")
+ * // the properties below are optional
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-conditionexpression.html)
+ */
 @CdkDslMarker
 public class CfnRecipeConditionExpressionPropertyDsl {
   private val cdkBuilder: CfnRecipe.ConditionExpressionProperty.Builder =

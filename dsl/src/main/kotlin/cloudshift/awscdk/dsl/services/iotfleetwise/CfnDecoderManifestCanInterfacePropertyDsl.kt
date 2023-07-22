@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * A single controller area network (CAN) device interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CanInterfaceProperty canInterfaceProperty = CanInterfaceProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .protocolName("protocolName")
+ * .protocolVersion("protocolVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-caninterface.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestCanInterfacePropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.CanInterfaceProperty.Builder =

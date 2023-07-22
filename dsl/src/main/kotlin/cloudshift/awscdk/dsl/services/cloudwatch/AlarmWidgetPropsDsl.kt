@@ -10,6 +10,20 @@ import software.amazon.awscdk.services.cloudwatch.AlarmWidgetProps
 import software.amazon.awscdk.services.cloudwatch.IAlarm
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * Properties for an AlarmWidget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * dashboard.addWidgets(AlarmWidget.Builder.create()
+ * .title("Errors")
+ * .alarm(errorAlarm)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AlarmWidgetPropsDsl {
   private val cdkBuilder: AlarmWidgetProps.Builder = AlarmWidgetProps.builder()

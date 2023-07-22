@@ -11,6 +11,19 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.MapProps
 
+/**
+ * Properties for defining a Map state.
+ *
+ * Example:
+ *
+ * ```
+ * Map map = Map.Builder.create(this, "Map State")
+ * .maxConcurrency(1)
+ * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * .build();
+ * map.iterator(new Pass(this, "Pass State"));
+ * ```
+ */
 @CdkDslMarker
 public class MapPropsDsl {
   private val cdkBuilder: MapProps.Builder = MapProps.builder()

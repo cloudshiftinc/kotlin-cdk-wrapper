@@ -18,6 +18,47 @@ import software.amazon.awscdk.services.codepipeline.ArtifactPath
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to delete a stack.
+ *
+ * Deletes a stack. If you specify a stack that doesn't exist, the action completes successfully
+ * without deleting a stack.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Artifact artifact;
+ * ArtifactPath artifactPath;
+ * Object parameterOverrides;
+ * Role role;
+ * CloudFormationDeleteStackAction cloudFormationDeleteStackAction =
+ * CloudFormationDeleteStackAction.Builder.create()
+ * .actionName("actionName")
+ * .adminPermissions(false)
+ * .stackName("stackName")
+ * // the properties below are optional
+ * .account("account")
+ * .cfnCapabilities(List.of(CfnCapabilities.NONE))
+ * .deploymentRole(role)
+ * .extraInputs(List.of(artifact))
+ * .output(artifact)
+ * .outputFileName("outputFileName")
+ * .parameterOverrides(Map.of(
+ * "parameterOverridesKey", parameterOverrides))
+ * .region("region")
+ * .role(role)
+ * .runOrder(123)
+ * .templateConfiguration(artifactPath)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationDeleteStackActionDsl {
   private val cdkBuilder: CloudFormationDeleteStackAction.Builder =

@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A visual displayed on a sheet in an analysis, dashboard, or template.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-visual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.VisualProperty.Builder =

@@ -6,6 +6,38 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The options that determine the default settings for interactive layout configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DefaultInteractiveLayoutConfigurationProperty defaultInteractiveLayoutConfigurationProperty =
+ * DefaultInteractiveLayoutConfigurationProperty.builder()
+ * .freeForm(DefaultFreeFormLayoutConfigurationProperty.builder()
+ * .canvasSizeOptions(FreeFormLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(FreeFormLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build())
+ * .grid(DefaultGridLayoutConfigurationProperty.builder()
+ * .canvasSizeOptions(GridLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(GridLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .resizeOption("resizeOption")
+ * // the properties below are optional
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-defaultinteractivelayoutconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDefaultInteractiveLayoutConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.DefaultInteractiveLayoutConfigurationProperty.Builder =

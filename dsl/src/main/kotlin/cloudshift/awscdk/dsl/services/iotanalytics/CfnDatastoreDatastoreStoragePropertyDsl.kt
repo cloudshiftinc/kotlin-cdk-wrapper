@@ -9,6 +9,36 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Where data store data is stored.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object serviceManagedS3;
+ * DatastoreStorageProperty datastoreStorageProperty = DatastoreStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .iotSiteWiseMultiLayerStorage(IotSiteWiseMultiLayerStorageProperty.builder()
+ * .customerManagedS3Storage(CustomerManagedS3StorageProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorestorage.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreDatastoreStoragePropertyDsl {
   private val cdkBuilder: CfnDatastore.DatastoreStorageProperty.Builder =

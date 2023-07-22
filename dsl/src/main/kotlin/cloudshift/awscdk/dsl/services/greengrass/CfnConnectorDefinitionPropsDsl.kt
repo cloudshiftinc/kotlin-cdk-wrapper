@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinition
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionProps
 
+/**
+ * Properties for defining a `CfnConnectorDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object parameters;
+ * Object tags;
+ * CfnConnectorDefinitionProps cfnConnectorDefinitionProps = CfnConnectorDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(ConnectorDefinitionVersionProperty.builder()
+ * .connectors(List.of(ConnectorProperty.builder()
+ * .connectorArn("connectorArn")
+ * .id("id")
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinition.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDefinitionPropsDsl {
   private val cdkBuilder: CfnConnectorDefinitionProps.Builder =

@@ -14,6 +14,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
 import software.constructs.Construct
 
+/**
+ * Network analyzer configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * Object traceContent;
+ * CfnNetworkAnalyzerConfiguration cfnNetworkAnalyzerConfiguration =
+ * CfnNetworkAnalyzerConfiguration.Builder.create(this, "MyCfnNetworkAnalyzerConfiguration")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .traceContent(traceContent)
+ * .wirelessDevices(List.of("wirelessDevices"))
+ * .wirelessGateways(List.of("wirelessGateways"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-networkanalyzerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnNetworkAnalyzerConfigurationDsl(
   scope: Construct,

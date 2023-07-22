@@ -10,6 +10,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.RequestCountScalingProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroup
 
+/**
+ * The properties for enabling scaling based on Application Load Balancer (ALB) request counts.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationTargetGroup target;
+ * BaseService service;
+ * ScalableTaskCount scaling =
+ * service.autoScaleTaskCount(EnableScalingProps.builder().maxCapacity(10).build());
+ * scaling.scaleOnCpuUtilization("CpuScaling", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * scaling.scaleOnRequestCount("RequestScaling", RequestCountScalingProps.builder()
+ * .requestsPerTarget(10000)
+ * .targetGroup(target)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RequestCountScalingPropsDsl {
   private val cdkBuilder: RequestCountScalingProps.Builder = RequestCountScalingProps.builder()

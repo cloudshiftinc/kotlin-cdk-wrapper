@@ -9,6 +9,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig
 
+/**
+ * Properties for a concrete metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric;
+ * MetricExpressionConfig metricExpressionConfig = MetricExpressionConfig.builder()
+ * .expression("expression")
+ * .period(123)
+ * .usingMetrics(Map.of(
+ * "usingMetricsKey", metric))
+ * // the properties below are optional
+ * .searchAccount("searchAccount")
+ * .searchRegion("searchRegion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricExpressionConfigDsl {
   private val cdkBuilder: MetricExpressionConfig.Builder = MetricExpressionConfig.builder()

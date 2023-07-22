@@ -7,6 +7,21 @@ import kotlin.String
 import software.amazon.awscdk.services.efs.AccessPointAttributes
 import software.amazon.awscdk.services.efs.IFileSystem
 
+/**
+ * Attributes that can be specified when importing an AccessPoint.
+ *
+ * Example:
+ *
+ * ```
+ * AccessPoint.fromAccessPointAttributes(this, "ap", AccessPointAttributes.builder()
+ * .accessPointId("fsap-1293c4d9832fo0912")
+ * .fileSystem(FileSystem.fromFileSystemAttributes(this, "efs", FileSystemAttributes.builder()
+ * .fileSystemId("fs-099d3e2f")
+ * .securityGroup(SecurityGroup.fromSecurityGroupId(this, "sg", "sg-51530134"))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AccessPointAttributesDsl {
   private val cdkBuilder: AccessPointAttributes.Builder = AccessPointAttributes.builder()

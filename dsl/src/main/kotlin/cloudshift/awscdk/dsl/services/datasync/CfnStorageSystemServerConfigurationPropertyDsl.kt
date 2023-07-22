@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnStorageSystem
 
+/**
+ * The network settings that DataSync Discovery uses to connect with your on-premises storage
+ * system's management interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * ServerConfigurationProperty serverConfigurationProperty = ServerConfigurationProperty.builder()
+ * .serverHostname("serverHostname")
+ * // the properties below are optional
+ * .serverPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-storagesystem-serverconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStorageSystemServerConfigurationPropertyDsl {
   private val cdkBuilder: CfnStorageSystem.ServerConfigurationProperty.Builder =

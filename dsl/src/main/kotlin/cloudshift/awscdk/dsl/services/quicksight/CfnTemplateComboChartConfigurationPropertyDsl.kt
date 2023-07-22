@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a `ComboChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-combochartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateComboChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ComboChartConfigurationProperty.Builder =

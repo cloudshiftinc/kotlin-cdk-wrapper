@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 
+/**
+ * Parameters to define a mitigation action that changes the state of the device certificate to
+ * inactive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * UpdateDeviceCertificateParamsProperty updateDeviceCertificateParamsProperty =
+ * UpdateDeviceCertificateParamsProperty.builder()
+ * .action("action")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatedevicecertificateparams.html)
+ */
 @CdkDslMarker
 public class CfnMitigationActionUpdateDeviceCertificateParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.UpdateDeviceCertificateParamsProperty.Builder =

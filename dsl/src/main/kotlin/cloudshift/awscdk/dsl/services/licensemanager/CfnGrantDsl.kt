@@ -9,6 +9,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.licensemanager.CfnGrant
 import software.constructs.Construct
 
+/**
+ * Specifies a grant.
+ *
+ * A grant shares the use of license entitlements with specific AWS accounts . For more information,
+ * see [Granted
+ * licenses](https://docs.aws.amazon.com/license-manager/latest/userguide/granted-licenses.html) in the
+ * *AWS License Manager User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * CfnGrant cfnGrant = CfnGrant.Builder.create(this, "MyCfnGrant")
+ * .allowedOperations(List.of("allowedOperations"))
+ * .grantName("grantName")
+ * .homeRegion("homeRegion")
+ * .licenseArn("licenseArn")
+ * .principals(List.of("principals"))
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-grant.html)
+ */
 @CdkDslMarker
 public class CfnGrantDsl(
   scope: Construct,

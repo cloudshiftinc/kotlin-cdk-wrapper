@@ -10,6 +10,69 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationProps
 
+/**
+ * Properties for defining a `CfnApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .inputs(List.of(InputProperty.builder()
+ * .inputSchema(InputSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build())
+ * .namePrefix("namePrefix")
+ * // the properties below are optional
+ * .inputParallelism(InputParallelismProperty.builder()
+ * .count(123)
+ * .build())
+ * .inputProcessingConfiguration(InputProcessingConfigurationProperty.builder()
+ * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .build())
+ * .kinesisFirehoseInput(KinesisFirehoseInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .kinesisStreamsInput(KinesisStreamsInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .applicationCode("applicationCode")
+ * .applicationDescription("applicationDescription")
+ * .applicationName("applicationName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()

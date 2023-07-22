@@ -13,6 +13,29 @@ import software.amazon.awscdk.services.config.AccessKeysRotatedProps
 import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 
+/**
+ * Construction properties for a AccessKeysRotated.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.config.*;
+ * Object inputParameters;
+ * RuleScope ruleScope;
+ * AccessKeysRotatedProps accessKeysRotatedProps = AccessKeysRotatedProps.builder()
+ * .configRuleName("configRuleName")
+ * .description("description")
+ * .inputParameters(Map.of(
+ * "inputParametersKey", inputParameters))
+ * .maxAge(Duration.minutes(30))
+ * .maximumExecutionFrequency(MaximumExecutionFrequency.ONE_HOUR)
+ * .ruleScope(ruleScope)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AccessKeysRotatedPropsDsl {
   private val cdkBuilder: AccessKeysRotatedProps.Builder = AccessKeysRotatedProps.builder()

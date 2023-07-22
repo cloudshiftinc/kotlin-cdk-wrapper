@@ -15,6 +15,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import software.amazon.awscdk.services.ssm.CfnPatchBaselineProps
 
+/**
+ * Properties for defining a `CfnPatchBaseline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnPatchBaselineProps cfnPatchBaselineProps = CfnPatchBaselineProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .approvalRules(RuleGroupProperty.builder()
+ * .patchRules(List.of(RuleProperty.builder()
+ * .approveAfterDays(123)
+ * .approveUntilDate("approveUntilDate")
+ * .complianceLevel("complianceLevel")
+ * .enableNonSecurity(false)
+ * .patchFilterGroup(PatchFilterGroupProperty.builder()
+ * .patchFilters(List.of(PatchFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .build()))
+ * .build())
+ * .approvedPatches(List.of("approvedPatches"))
+ * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
+ * .approvedPatchesEnableNonSecurity(false)
+ * .description("description")
+ * .globalFilters(PatchFilterGroupProperty.builder()
+ * .patchFilters(List.of(PatchFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .operatingSystem("operatingSystem")
+ * .patchGroups(List.of("patchGroups"))
+ * .rejectedPatches(List.of("rejectedPatches"))
+ * .rejectedPatchesAction("rejectedPatchesAction")
+ * .sources(List.of(PatchSourceProperty.builder()
+ * .configuration("configuration")
+ * .name("name")
+ * .products(List.of("products"))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
+ */
 @CdkDslMarker
 public class CfnPatchBaselinePropsDsl {
   private val cdkBuilder: CfnPatchBaselineProps.Builder = CfnPatchBaselineProps.builder()

@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 
+/**
+ * Specifies a filter used for the target resource input in an experiment template.
+ *
+ * For more information, see [Resource
+ * filters](https://docs.aws.amazon.com/fis/latest/userguide/targets.html#target-filters) in the *AWS
+ * Fault Injection Simulator User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fis.*;
+ * ExperimentTemplateTargetFilterProperty experimentTemplateTargetFilterProperty =
+ * ExperimentTemplateTargetFilterProperty.builder()
+ * .path("path")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatetargetfilter.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTemplateExperimentTemplateTargetFilterPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty.Builder =

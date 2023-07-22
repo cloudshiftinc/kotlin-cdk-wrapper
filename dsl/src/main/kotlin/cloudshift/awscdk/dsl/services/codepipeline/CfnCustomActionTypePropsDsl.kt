@@ -14,6 +14,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnCustomActionType
 import software.amazon.awscdk.services.codepipeline.CfnCustomActionTypeProps
 
+/**
+ * Properties for defining a `CfnCustomActionType`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * CfnCustomActionTypeProps cfnCustomActionTypeProps = CfnCustomActionTypeProps.builder()
+ * .category("category")
+ * .inputArtifactDetails(ArtifactDetailsProperty.builder()
+ * .maximumCount(123)
+ * .minimumCount(123)
+ * .build())
+ * .outputArtifactDetails(ArtifactDetailsProperty.builder()
+ * .maximumCount(123)
+ * .minimumCount(123)
+ * .build())
+ * .provider("provider")
+ * .version("version")
+ * // the properties below are optional
+ * .configurationProperties(List.of(ConfigurationPropertiesProperty.builder()
+ * .key(false)
+ * .name("name")
+ * .required(false)
+ * .secret(false)
+ * // the properties below are optional
+ * .description("description")
+ * .queryable(false)
+ * .type("type")
+ * .build()))
+ * .settings(SettingsProperty.builder()
+ * .entityUrlTemplate("entityUrlTemplate")
+ * .executionUrlTemplate("executionUrlTemplate")
+ * .revisionUrlTemplate("revisionUrlTemplate")
+ * .thirdPartyConfigurationUrl("thirdPartyConfigurationUrl")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html)
+ */
 @CdkDslMarker
 public class CfnCustomActionTypePropsDsl {
   private val cdkBuilder: CfnCustomActionTypeProps.Builder = CfnCustomActionTypeProps.builder()

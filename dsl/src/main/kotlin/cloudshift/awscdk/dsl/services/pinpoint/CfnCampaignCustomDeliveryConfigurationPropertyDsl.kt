@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the delivery configuration settings for sending a campaign or campaign treatment
+ * through a custom channel.
+ *
+ * This object is required if you use the `CampaignCustomMessage` object to define the message to
+ * send for the campaign or campaign treatment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CustomDeliveryConfigurationProperty customDeliveryConfigurationProperty =
+ * CustomDeliveryConfigurationProperty.builder()
+ * .deliveryUri("deliveryUri")
+ * .endpointTypes(List.of("endpointTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-customdeliveryconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnCampaignCustomDeliveryConfigurationPropertyDsl {
   private val cdkBuilder: CfnCampaign.CustomDeliveryConfigurationProperty.Builder =

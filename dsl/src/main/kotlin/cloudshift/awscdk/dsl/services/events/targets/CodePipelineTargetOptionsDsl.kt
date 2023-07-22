@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.events.targets.CodePipelineTargetOptions
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customization options when creating a `CodePipeline` event target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * Role role;
+ * CodePipelineTargetOptions codePipelineTargetOptions = CodePipelineTargetOptions.builder()
+ * .deadLetterQueue(queue)
+ * .eventRole(role)
+ * .maxEventAge(Duration.minutes(30))
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodePipelineTargetOptionsDsl {
   private val cdkBuilder: CodePipelineTargetOptions.Builder = CodePipelineTargetOptions.builder()

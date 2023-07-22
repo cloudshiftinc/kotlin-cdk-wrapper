@@ -7,6 +7,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.backup.BackupPlanCopyActionProps
 import software.amazon.awscdk.services.backup.IBackupVault
 
+/**
+ * Properties for a BackupPlanCopyAction.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.backup.*;
+ * BackupVault backupVault;
+ * BackupPlanCopyActionProps backupPlanCopyActionProps = BackupPlanCopyActionProps.builder()
+ * .destinationBackupVault(backupVault)
+ * // the properties below are optional
+ * .deleteAfter(Duration.minutes(30))
+ * .moveToColdStorageAfter(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackupPlanCopyActionPropsDsl {
   private val cdkBuilder: BackupPlanCopyActionProps.Builder = BackupPlanCopyActionProps.builder()

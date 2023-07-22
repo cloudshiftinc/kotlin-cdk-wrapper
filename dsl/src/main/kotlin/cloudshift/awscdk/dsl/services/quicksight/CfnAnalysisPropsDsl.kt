@@ -14,6 +14,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import software.amazon.awscdk.services.quicksight.CfnAnalysisProps
 
+/**
+ * Properties for defining a `CfnAnalysis`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisPropsDsl {
   private val cdkBuilder: CfnAnalysisProps.Builder = CfnAnalysisProps.builder()

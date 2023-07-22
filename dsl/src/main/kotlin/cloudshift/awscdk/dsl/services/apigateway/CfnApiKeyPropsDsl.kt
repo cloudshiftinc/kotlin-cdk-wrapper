@@ -14,6 +14,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnApiKeyProps
 
+/**
+ * Properties for defining a `CfnApiKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnApiKeyProps cfnApiKeyProps = CfnApiKeyProps.builder()
+ * .customerId("customerId")
+ * .description("description")
+ * .enabled(false)
+ * .generateDistinctId(false)
+ * .name("name")
+ * .stageKeys(List.of(StageKeyProperty.builder()
+ * .restApiId("restApiId")
+ * .stageName("stageName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)
+ */
 @CdkDslMarker
 public class CfnApiKeyPropsDsl {
   private val cdkBuilder: CfnApiKeyProps.Builder = CfnApiKeyProps.builder()

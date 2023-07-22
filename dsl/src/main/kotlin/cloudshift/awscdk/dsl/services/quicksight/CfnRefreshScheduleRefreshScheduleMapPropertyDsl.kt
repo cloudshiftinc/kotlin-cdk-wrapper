@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 
+/**
+ * A summary of a configured refresh schedule for a dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RefreshScheduleMapProperty refreshScheduleMapProperty = RefreshScheduleMapProperty.builder()
+ * .refreshType("refreshType")
+ * .scheduleFrequency(ScheduleFrequencyProperty.builder()
+ * .interval("interval")
+ * .refreshOnDay(RefreshOnDayProperty.builder()
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .build())
+ * .timeOfTheDay("timeOfTheDay")
+ * .timeZone("timeZone")
+ * .build())
+ * .scheduleId("scheduleId")
+ * .startAfterDateTime("startAfterDateTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-refreshschedulemap.html)
+ */
 @CdkDslMarker
 public class CfnRefreshScheduleRefreshScheduleMapPropertyDsl {
   private val cdkBuilder: CfnRefreshSchedule.RefreshScheduleMapProperty.Builder =

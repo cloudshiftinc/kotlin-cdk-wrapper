@@ -11,6 +11,21 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.DsRecordProps
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Construction properties for a DSRecord.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone myZone;
+ * DsRecord.Builder.create(this, "DSRecord")
+ * .zone(myZone)
+ * .recordName("foo")
+ * .values(List.of("12345 3 1 123456789abcdef67890123456789abcdef67890"))
+ * .ttl(Duration.minutes(90))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DsRecordPropsDsl {
   private val cdkBuilder: DsRecordProps.Builder = DsRecordProps.builder()

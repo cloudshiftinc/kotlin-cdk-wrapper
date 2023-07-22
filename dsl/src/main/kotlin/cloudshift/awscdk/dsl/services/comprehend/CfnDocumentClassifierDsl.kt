@@ -13,6 +13,73 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 import software.constructs.Construct
 
+/**
+ * This resource creates and trains a document classifier to categorize documents.
+ *
+ * You provide a set of training documents that are labeled with the categories that you want to
+ * identify. After the classifier is trained you can use it to categorize a set of labeled documents
+ * into the categories. For more information, see [Document
+ * Classification](https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html)
+ * in the Comprehend Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * CfnDocumentClassifier cfnDocumentClassifier = CfnDocumentClassifier.Builder.create(this,
+ * "MyCfnDocumentClassifier")
+ * .dataAccessRoleArn("dataAccessRoleArn")
+ * .documentClassifierName("documentClassifierName")
+ * .inputDataConfig(DocumentClassifierInputDataConfigProperty.builder()
+ * .augmentedManifests(List.of(AugmentedManifestsListItemProperty.builder()
+ * .attributeNames(List.of("attributeNames"))
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .split("split")
+ * .build()))
+ * .dataFormat("dataFormat")
+ * .documentReaderConfig(DocumentReaderConfigProperty.builder()
+ * .documentReadAction("documentReadAction")
+ * // the properties below are optional
+ * .documentReadMode("documentReadMode")
+ * .featureTypes(List.of("featureTypes"))
+ * .build())
+ * .documents(DocumentClassifierDocumentsProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .testS3Uri("testS3Uri")
+ * .build())
+ * .documentType("documentType")
+ * .labelDelimiter("labelDelimiter")
+ * .s3Uri("s3Uri")
+ * .testS3Uri("testS3Uri")
+ * .build())
+ * .languageCode("languageCode")
+ * // the properties below are optional
+ * .mode("mode")
+ * .modelKmsKeyId("modelKmsKeyId")
+ * .modelPolicy("modelPolicy")
+ * .outputDataConfig(DocumentClassifierOutputDataConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .s3Uri("s3Uri")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .versionName("versionName")
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-documentclassifier.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierDsl(
   scope: Construct,

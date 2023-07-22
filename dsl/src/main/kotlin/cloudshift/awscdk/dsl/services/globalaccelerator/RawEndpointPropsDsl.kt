@@ -8,6 +8,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.globalaccelerator.RawEndpointProps
 
+/**
+ * Properties for RawEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * RawEndpointProps rawEndpointProps = RawEndpointProps.builder()
+ * .endpointId("endpointId")
+ * // the properties below are optional
+ * .preserveClientIp(false)
+ * .region("region")
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RawEndpointPropsDsl {
   private val cdkBuilder: RawEndpointProps.Builder = RawEndpointProps.builder()

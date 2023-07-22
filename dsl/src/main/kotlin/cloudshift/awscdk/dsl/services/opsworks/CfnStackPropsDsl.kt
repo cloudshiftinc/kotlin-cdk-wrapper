@@ -17,6 +17,73 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnStack
 import software.amazon.awscdk.services.opsworks.CfnStackProps
 
+/**
+ * Properties for defining a `CfnStack`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * Object customJson;
+ * CfnStackProps cfnStackProps = CfnStackProps.builder()
+ * .defaultInstanceProfileArn("defaultInstanceProfileArn")
+ * .name("name")
+ * .serviceRoleArn("serviceRoleArn")
+ * // the properties below are optional
+ * .agentVersion("agentVersion")
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .chefConfiguration(ChefConfigurationProperty.builder()
+ * .berkshelfVersion("berkshelfVersion")
+ * .manageBerkshelf(false)
+ * .build())
+ * .cloneAppIds(List.of("cloneAppIds"))
+ * .clonePermissions(false)
+ * .configurationManager(StackConfigurationManagerProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .customCookbooksSource(SourceProperty.builder()
+ * .password("password")
+ * .revision("revision")
+ * .sshKey("sshKey")
+ * .type("type")
+ * .url("url")
+ * .username("username")
+ * .build())
+ * .customJson(customJson)
+ * .defaultAvailabilityZone("defaultAvailabilityZone")
+ * .defaultOs("defaultOs")
+ * .defaultRootDeviceType("defaultRootDeviceType")
+ * .defaultSshKeyName("defaultSshKeyName")
+ * .defaultSubnetId("defaultSubnetId")
+ * .ecsClusterArn("ecsClusterArn")
+ * .elasticIps(List.of(ElasticIpProperty.builder()
+ * .ip("ip")
+ * // the properties below are optional
+ * .name("name")
+ * .build()))
+ * .hostnameTheme("hostnameTheme")
+ * .rdsDbInstances(List.of(RdsDbInstanceProperty.builder()
+ * .dbPassword("dbPassword")
+ * .dbUser("dbUser")
+ * .rdsDbInstanceArn("rdsDbInstanceArn")
+ * .build()))
+ * .sourceStackId("sourceStackId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useCustomCookbooks(false)
+ * .useOpsworksSecurityGroups(false)
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html)
+ */
 @CdkDslMarker
 public class CfnStackPropsDsl {
   private val cdkBuilder: CfnStackProps.Builder = CfnStackProps.builder()

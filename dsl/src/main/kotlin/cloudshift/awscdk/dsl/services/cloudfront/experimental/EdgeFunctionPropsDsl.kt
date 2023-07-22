@@ -44,6 +44,31 @@ import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties for creating a Lambda&#64;Edge function.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myBucket;
+ * // A Lambda&#64;Edge function added to default behavior of a Distribution
+ * // and triggered on every request
+ * EdgeFunction myFunc = EdgeFunction.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(myBucket))
+ * .edgeLambdas(List.of(EdgeLambda.builder()
+ * .functionVersion(myFunc.getCurrentVersion())
+ * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EdgeFunctionPropsDsl {
   private val cdkBuilder: EdgeFunctionProps.Builder = EdgeFunctionProps.builder()

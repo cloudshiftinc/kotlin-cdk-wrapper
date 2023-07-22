@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * The container element for specifying the default Object Lock retention settings for new objects
+ * placed in the specified bucket.
+ *
+ *
+ * * The `DefaultRetention` settings require both a mode and a period.
+ * * The `DefaultRetention` period can be either `Days` or `Years` but you must select one. You
+ * cannot specify `Days` and `Years` at the same time.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * DefaultRetentionProperty defaultRetentionProperty = DefaultRetentionProperty.builder()
+ * .days(123)
+ * .mode("mode")
+ * .years(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-defaultretention.html)
+ */
 @CdkDslMarker
 public class CfnBucketDefaultRetentionPropertyDsl {
   private val cdkBuilder: CfnBucket.DefaultRetentionProperty.Builder =

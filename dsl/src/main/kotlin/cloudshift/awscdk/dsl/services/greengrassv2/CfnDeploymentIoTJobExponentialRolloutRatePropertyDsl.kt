@@ -9,6 +9,26 @@ import kotlin.Number
 import kotlin.Unit
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about an exponential rollout rate for a configuration deployment job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * Object rateIncreaseCriteria;
+ * IoTJobExponentialRolloutRateProperty ioTJobExponentialRolloutRateProperty =
+ * IoTJobExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(rateIncreaseCriteria)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobexponentialrolloutrate.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentIoTJobExponentialRolloutRatePropertyDsl {
   private val cdkBuilder: CfnDeployment.IoTJobExponentialRolloutRateProperty.Builder =

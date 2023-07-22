@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 
+/**
+ * Specifies channel-specific content and settings for a message template that can be used in push
+ * notifications that are sent through the APNs (Apple Push Notification service) channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * APNSPushNotificationTemplateProperty aPNSPushNotificationTemplateProperty =
+ * APNSPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .mediaUrl("mediaUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-apnspushnotificationtemplate.html)
+ */
 @CdkDslMarker
 public class CfnPushTemplateAPNSPushNotificationTemplatePropertyDsl {
   private val cdkBuilder: CfnPushTemplate.APNSPushNotificationTemplateProperty.Builder =

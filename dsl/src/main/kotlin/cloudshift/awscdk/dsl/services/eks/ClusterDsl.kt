@@ -29,6 +29,27 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.ILayerVersion
 import software.constructs.Construct
 
+/**
+ * A Cluster represents a managed Kubernetes Service (EKS).
+ *
+ * This is a fully managed cluster of API Servers (control-plane)
+ * The user is still required to create the worker nodes.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
+ * .version(KubernetesVersion.V1_27)
+ * .defaultCapacity(0)
+ * .build();
+ * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
+ * .instanceTypes(List.of(new InstanceType("m5.large")))
+ * .minSize(4)
+ * .diskSize(100)
+ * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ClusterDsl(
   scope: Construct,

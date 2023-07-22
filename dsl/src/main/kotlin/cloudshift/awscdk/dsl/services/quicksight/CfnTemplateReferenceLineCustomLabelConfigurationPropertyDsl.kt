@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration for a custom label on a `ReferenceLine` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ReferenceLineCustomLabelConfigurationProperty referenceLineCustomLabelConfigurationProperty =
+ * ReferenceLineCustomLabelConfigurationProperty.builder()
+ * .customLabel("customLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-referencelinecustomlabelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateReferenceLineCustomLabelConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ReferenceLineCustomLabelConfigurationProperty.Builder =

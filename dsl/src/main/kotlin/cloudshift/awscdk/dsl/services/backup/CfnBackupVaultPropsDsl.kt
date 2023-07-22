@@ -12,6 +12,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupVault
 import software.amazon.awscdk.services.backup.CfnBackupVaultProps
 
+/**
+ * Properties for defining a `CfnBackupVault`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object accessPolicy;
+ * CfnBackupVaultProps cfnBackupVaultProps = CfnBackupVaultProps.builder()
+ * .backupVaultName("backupVaultName")
+ * // the properties below are optional
+ * .accessPolicy(accessPolicy)
+ * .backupVaultTags(Map.of(
+ * "backupVaultTagsKey", "backupVaultTags"))
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .lockConfiguration(LockConfigurationTypeProperty.builder()
+ * .minRetentionDays(123)
+ * // the properties below are optional
+ * .changeableForDays(123)
+ * .maxRetentionDays(123)
+ * .build())
+ * .notifications(NotificationObjectTypeProperty.builder()
+ * .backupVaultEvents(List.of("backupVaultEvents"))
+ * .snsTopicArn("snsTopicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html)
+ */
 @CdkDslMarker
 public class CfnBackupVaultPropsDsl {
   private val cdkBuilder: CfnBackupVaultProps.Builder = CfnBackupVaultProps.builder()

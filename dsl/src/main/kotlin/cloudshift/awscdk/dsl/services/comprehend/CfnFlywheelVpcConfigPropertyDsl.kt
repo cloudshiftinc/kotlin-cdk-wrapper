@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * Configuration parameters for an optional private Virtual Private Cloud (VPC) containing the
+ * resources you are using for the job.
+ *
+ * For more information, see [Amazon
+ * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelVpcConfigPropertyDsl {
   private val cdkBuilder: CfnFlywheel.VpcConfigProperty.Builder =

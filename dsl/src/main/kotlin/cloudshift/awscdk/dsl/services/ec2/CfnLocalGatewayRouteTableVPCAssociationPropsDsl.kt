@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVPCAssociationProps
 
+/**
+ * Properties for defining a `CfnLocalGatewayRouteTableVPCAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableVPCAssociationProps cfnLocalGatewayRouteTableVPCAssociationProps =
+ * CfnLocalGatewayRouteTableVPCAssociationProps.builder()
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevpcassociation.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableVPCAssociationPropsDsl {
   private val cdkBuilder: CfnLocalGatewayRouteTableVPCAssociationProps.Builder =

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `NetworkConfiguration` property specifies an object representing the network configuration
+ * for a task or service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * NetworkConfigurationProperty networkConfigurationProperty =
+ * NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-networkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.NetworkConfigurationProperty.Builder =

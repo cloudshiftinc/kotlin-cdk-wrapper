@@ -11,6 +11,59 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 
+/**
+ * Parameters for Common Media Application Format (CMAF) packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CmafPackageProperty cmafPackageProperty = CmafPackageProperty.builder()
+ * .encryption(CmafEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .encryptionMethod("encryptionMethod")
+ * .keyRotationIntervalSeconds(123)
+ * .build())
+ * .hlsManifests(List.of(HlsManifestProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .adMarkers("adMarkers")
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .playlistType("playlistType")
+ * .playlistWindowSeconds(123)
+ * .programDateTimeIntervalSeconds(123)
+ * .url("url")
+ * .build()))
+ * .segmentDurationSeconds(123)
+ * .segmentPrefix("segmentPrefix")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-cmafpackage.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointCmafPackagePropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.CmafPackageProperty.Builder =

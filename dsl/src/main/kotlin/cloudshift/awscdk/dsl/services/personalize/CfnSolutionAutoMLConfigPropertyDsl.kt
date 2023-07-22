@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * The AutoMLConfig object containing a list of recipes to search when AutoML is performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * AutoMLConfigProperty autoMLConfigProperty = AutoMLConfigProperty.builder()
+ * .metricName("metricName")
+ * .recipeList(List.of("recipeList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-automlconfig.html)
+ */
 @CdkDslMarker
 public class CfnSolutionAutoMLConfigPropertyDsl {
   private val cdkBuilder: CfnSolution.AutoMLConfigProperty.Builder =

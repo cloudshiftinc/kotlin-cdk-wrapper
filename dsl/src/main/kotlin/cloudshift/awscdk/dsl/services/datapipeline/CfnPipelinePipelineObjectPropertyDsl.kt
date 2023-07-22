@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datapipeline.CfnPipeline
 
+/**
+ * PipelineObject is property of the AWS::DataPipeline::Pipeline resource that contains information
+ * about a pipeline object.
+ *
+ * This can be a logical, physical, or physical attempt pipeline object. The complete set of
+ * components of a pipeline defines the pipeline.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * PipelineObjectProperty pipelineObjectProperty = PipelineObjectProperty.builder()
+ * .fields(List.of(FieldProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .refValue("refValue")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-pipelineobject.html)
+ */
 @CdkDslMarker
 public class CfnPipelinePipelineObjectPropertyDsl {
   private val cdkBuilder: CfnPipeline.PipelineObjectProperty.Builder =

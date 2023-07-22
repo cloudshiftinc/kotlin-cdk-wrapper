@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes the target groups to attach to a Spot Fleet.
+ *
+ * Spot Fleet registers the running Spot Instances with these target groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TargetGroupsConfigProperty targetGroupsConfigProperty = TargetGroupsConfigProperty.builder()
+ * .targetGroups(List.of(TargetGroupProperty.builder()
+ * .arn("arn")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-targetgroupsconfig.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetTargetGroupsConfigPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.TargetGroupsConfigProperty.Builder =

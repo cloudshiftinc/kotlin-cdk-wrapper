@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnUsagePlanKeyProps
 
+/**
+ * Properties for defining a `CfnUsagePlanKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnUsagePlanKeyProps cfnUsagePlanKeyProps = CfnUsagePlanKeyProps.builder()
+ * .keyId("keyId")
+ * .keyType("keyType")
+ * .usagePlanId("usagePlanId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanKeyPropsDsl {
   private val cdkBuilder: CfnUsagePlanKeyProps.Builder = CfnUsagePlanKeyProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnDatabase
 
+/**
+ * A structure that describes a target database for resource linking.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * DatabaseIdentifierProperty databaseIdentifierProperty = DatabaseIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseidentifier.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseDatabaseIdentifierPropertyDsl {
   private val cdkBuilder: CfnDatabase.DatabaseIdentifierProperty.Builder =

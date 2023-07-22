@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.oam.CfnLink
 import software.constructs.Construct
 
+/**
+ * Creates a link between a source account and a sink that you have created in a monitoring account.
+ *
+ * Before you create a link, you must create a sink in the monitoring account. The sink must have a
+ * sink policy that permits the source account to link to it. You can grant permission to source
+ * accounts by granting permission to an entire organization, an organizational unit, or to individual
+ * accounts.
+ *
+ * For more information, see
+ * [CreateSink](https://docs.aws.amazon.com/OAM/latest/APIReference/API_CreateSink.html) and
+ * [PutSinkPolicy](https://docs.aws.amazon.com/OAM/latest/APIReference/API_PutSinkPolicy.html) .
+ *
+ * Each monitoring account can be linked to as many as 100,000 source accounts.
+ *
+ * Each source account can be linked to as many as five monitoring accounts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.oam.*;
+ * CfnLink cfnLink = CfnLink.Builder.create(this, "MyCfnLink")
+ * .resourceTypes(List.of("resourceTypes"))
+ * .sinkIdentifier("sinkIdentifier")
+ * // the properties below are optional
+ * .labelTemplate("labelTemplate")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html)
+ */
 @CdkDslMarker
 public class CfnLinkDsl(
   scope: Construct,

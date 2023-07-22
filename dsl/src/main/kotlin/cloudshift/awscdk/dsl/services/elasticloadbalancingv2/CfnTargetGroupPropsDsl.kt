@@ -16,6 +16,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroupProps
 
+/**
+ * Properties for defining a `CfnTargetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnTargetGroupProps cfnTargetGroupProps = CfnTargetGroupProps.builder()
+ * .healthCheckEnabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckPath("healthCheckPath")
+ * .healthCheckPort("healthCheckPort")
+ * .healthCheckProtocol("healthCheckProtocol")
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .ipAddressType("ipAddressType")
+ * .matcher(MatcherProperty.builder()
+ * .grpcCode("grpcCode")
+ * .httpCode("httpCode")
+ * .build())
+ * .name("name")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetGroupAttributes(List.of(TargetGroupAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targets(List.of(TargetDescriptionProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .port(123)
+ * .build()))
+ * .targetType("targetType")
+ * .unhealthyThresholdCount(123)
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupPropsDsl {
   private val cdkBuilder: CfnTargetGroupProps.Builder = CfnTargetGroupProps.builder()

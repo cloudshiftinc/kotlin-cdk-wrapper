@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * A single dimension to partition a data store.
+ *
+ * The dimension must be an `AttributePartition` or a `TimestampPartition` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DatastorePartitionProperty datastorePartitionProperty = DatastorePartitionProperty.builder()
+ * .partition(PartitionProperty.builder()
+ * .attributeName("attributeName")
+ * .build())
+ * .timestampPartition(TimestampPartitionProperty.builder()
+ * .attributeName("attributeName")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-datastorepartition.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreDatastorePartitionPropertyDsl {
   private val cdkBuilder: CfnDatastore.DatastorePartitionProperty.Builder =

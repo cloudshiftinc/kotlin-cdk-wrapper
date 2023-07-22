@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The field series item configuration of a line chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FieldSeriesItemProperty fieldSeriesItemProperty = FieldSeriesItemProperty.builder()
+ * .axisBinding("axisBinding")
+ * .fieldId("fieldId")
+ * // the properties below are optional
+ * .settings(LineChartSeriesSettingsProperty.builder()
+ * .lineStyleSettings(LineChartLineStyleSettingsProperty.builder()
+ * .lineInterpolation("lineInterpolation")
+ * .lineStyle("lineStyle")
+ * .lineVisibility("lineVisibility")
+ * .lineWidth("lineWidth")
+ * .build())
+ * .markerStyleSettings(LineChartMarkerStyleSettingsProperty.builder()
+ * .markerColor("markerColor")
+ * .markerShape("markerShape")
+ * .markerSize("markerSize")
+ * .markerVisibility("markerVisibility")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-fieldseriesitem.html)
+ */
 @CdkDslMarker
 public class CfnTemplateFieldSeriesItemPropertyDsl {
   private val cdkBuilder: CfnTemplate.FieldSeriesItemProperty.Builder =

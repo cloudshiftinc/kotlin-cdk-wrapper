@@ -11,6 +11,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::LoggerDefinition` resource represents a logger definition for AWS IoT
+ * Greengrass .
+ *
+ * Logger definitions are used to organize your logger definition versions.
+ *
+ * Logger definitions can reference multiple logger definition versions. All logger definition
+ * versions must be associated with a logger definition. Each logger definition version can contain one
+ * or more loggers.
+ *
+ *
+ * When you create a logger definition, you can optionally include an initial logger definition
+ * version. To associate a logger definition version later, create an
+ * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+ * resource and specify the ID of this logger definition.
+ *
+ * After you create the logger definition version that contains the loggers you want to deploy, you
+ * must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnLoggerDefinition cfnLoggerDefinition = CfnLoggerDefinition.Builder.create(this,
+ * "MyCfnLoggerDefinition")
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(LoggerDefinitionVersionProperty.builder()
+ * .loggers(List.of(LoggerProperty.builder()
+ * .component("component")
+ * .id("id")
+ * .level("level")
+ * .type("type")
+ * // the properties below are optional
+ * .space(123)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html)
+ */
 @CdkDslMarker
 public class CfnLoggerDefinitionDsl(
   scope: Construct,

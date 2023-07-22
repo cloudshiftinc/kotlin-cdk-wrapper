@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociationProps
 
+/**
+ * Properties for defining a `CfnSubnetNetworkAclAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSubnetNetworkAclAssociationProps cfnSubnetNetworkAclAssociationProps =
+ * CfnSubnetNetworkAclAssociationProps.builder()
+ * .networkAclId("networkAclId")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetnetworkaclassociation.html)
+ */
 @CdkDslMarker
 public class CfnSubnetNetworkAclAssociationPropsDsl {
   private val cdkBuilder: CfnSubnetNetworkAclAssociationProps.Builder =

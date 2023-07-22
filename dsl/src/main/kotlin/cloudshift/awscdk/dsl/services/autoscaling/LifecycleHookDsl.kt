@@ -13,6 +13,33 @@ import software.amazon.awscdk.services.autoscaling.LifecycleTransition
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * Define a life cycle hook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * AutoScalingGroup autoScalingGroup;
+ * ILifecycleHookTarget lifecycleHookTarget;
+ * Role role;
+ * LifecycleHook lifecycleHook = LifecycleHook.Builder.create(this, "MyLifecycleHook")
+ * .autoScalingGroup(autoScalingGroup)
+ * .lifecycleTransition(LifecycleTransition.INSTANCE_LAUNCHING)
+ * // the properties below are optional
+ * .defaultResult(DefaultResult.CONTINUE)
+ * .heartbeatTimeout(Duration.minutes(30))
+ * .lifecycleHookName("lifecycleHookName")
+ * .notificationMetadata("notificationMetadata")
+ * .notificationTarget(lifecycleHookTarget)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LifecycleHookDsl(
   scope: Construct,

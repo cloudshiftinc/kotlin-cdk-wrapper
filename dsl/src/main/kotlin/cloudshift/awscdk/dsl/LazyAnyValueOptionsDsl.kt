@@ -7,6 +7,21 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.LazyAnyValueOptions
 
+/**
+ * Options for creating lazy untyped tokens.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * LazyAnyValueOptions lazyAnyValueOptions = LazyAnyValueOptions.builder()
+ * .displayHint("displayHint")
+ * .omitEmptyArray(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LazyAnyValueOptionsDsl {
   private val cdkBuilder: LazyAnyValueOptions.Builder = LazyAnyValueOptions.builder()

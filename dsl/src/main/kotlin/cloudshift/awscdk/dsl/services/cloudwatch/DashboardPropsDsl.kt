@@ -13,6 +13,27 @@ import software.amazon.awscdk.services.cloudwatch.IVariable
 import software.amazon.awscdk.services.cloudwatch.IWidget
 import software.amazon.awscdk.services.cloudwatch.PeriodOverride
 
+/**
+ * Properties for defining a CloudWatch Dashboard.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
+ * .defaultInterval(Duration.days(7))
+ * .variables(List.of(DashboardVariable.Builder.create()
+ * .id("region2")
+ * .type(VariableType.PATTERN)
+ * .label("RegionPattern")
+ * .inputType(VariableInputType.INPUT)
+ * .value("us-east-1")
+ * .defaultValue(DefaultValue.value("us-east-1"))
+ * .visible(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DashboardPropsDsl {
   private val cdkBuilder: DashboardProps.Builder = DashboardProps.builder()

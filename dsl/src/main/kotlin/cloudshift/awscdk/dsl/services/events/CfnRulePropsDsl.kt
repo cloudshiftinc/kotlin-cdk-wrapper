@@ -12,6 +12,133 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRuleProps
 
+/**
+ * Properties for defining a `CfnRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * Object eventPattern;
+ * CfnRuleProps cfnRuleProps = CfnRuleProps.builder()
+ * .description("description")
+ * .eventBusName("eventBusName")
+ * .eventPattern(eventPattern)
+ * .name("name")
+ * .roleArn("roleArn")
+ * .scheduleExpression("scheduleExpression")
+ * .state("state")
+ * .targets(List.of(TargetProperty.builder()
+ * .arn("arn")
+ * .id("id")
+ * // the properties below are optional
+ * .batchParameters(BatchParametersProperty.builder()
+ * .jobDefinition("jobDefinition")
+ * .jobName("jobName")
+ * // the properties below are optional
+ * .arrayProperties(BatchArrayPropertiesProperty.builder()
+ * .size(123)
+ * .build())
+ * .retryStrategy(BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build())
+ * .build())
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tagList(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskCount(123)
+ * .build())
+ * .httpParameters(HttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build())
+ * .input("input")
+ * .inputPath("inputPath")
+ * .inputTransformer(InputTransformerProperty.builder()
+ * .inputTemplate("inputTemplate")
+ * // the properties below are optional
+ * .inputPathsMap(Map.of(
+ * "inputPathsMapKey", "inputPathsMap"))
+ * .build())
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKeyPath("partitionKeyPath")
+ * .build())
+ * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
+ * .database("database")
+ * .sql("sql")
+ * // the properties below are optional
+ * .dbUser("dbUser")
+ * .secretManagerArn("secretManagerArn")
+ * .statementName("statementName")
+ * .withEvent(false)
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .roleArn("roleArn")
+ * .runCommandParameters(RunCommandParametersProperty.builder()
+ * .runCommandTargets(List.of(RunCommandTargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .sageMakerPipelineParameters(SageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-rule.html)
+ */
 @CdkDslMarker
 public class CfnRulePropsDsl {
   private val cdkBuilder: CfnRuleProps.Builder = CfnRuleProps.builder()

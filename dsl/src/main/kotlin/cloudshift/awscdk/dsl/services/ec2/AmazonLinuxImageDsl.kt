@@ -13,6 +13,45 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxStorage
 import software.amazon.awscdk.services.ec2.AmazonLinuxVirt
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Selects the latest version of Amazon Linux.
+ *
+ * This Machine Image automatically updates to the latest version on every
+ * deployment. Be aware this will cause your instances to be replaced when a
+ * new version of the image becomes available. Do not store stateful information
+ * on the instance if you are using this image.
+ *
+ * The AMI ID is selected using the values published to the SSM parameter store.
+ *
+ * Example:
+ *
+ * ```
+ * ISecurityGroup sg = SecurityGroup.fromSecurityGroupId(this, "FsxSecurityGroup",
+ * "{SECURITY-GROUP-ID}");
+ * IFileSystem fs = LustreFileSystem.fromLustreFileSystemAttributes(this, "FsxLustreFileSystem",
+ * FileSystemAttributes.builder()
+ * .dnsName("{FILE-SYSTEM-DNS-NAME}")
+ * .fileSystemId("{FILE-SYSTEM-ID}")
+ * .securityGroup(sg)
+ * .build());
+ * IVpc vpc = Vpc.fromVpcAttributes(this, "Vpc", VpcAttributes.builder()
+ * .availabilityZones(List.of("us-west-2a", "us-west-2b"))
+ * .publicSubnetIds(List.of("{US-WEST-2A-SUBNET-ID}", "{US-WEST-2B-SUBNET-ID}"))
+ * .vpcId("{VPC-ID}")
+ * .build());
+ * Instance inst = Instance.Builder.create(this, "inst")
+ * .instanceType(InstanceType.of(InstanceClass.T2, InstanceSize.LARGE))
+ * .machineImage(AmazonLinuxImage.Builder.create()
+ * .generation(AmazonLinuxGeneration.AMAZON_LINUX_2)
+ * .build())
+ * .vpc(vpc)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PUBLIC)
+ * .build())
+ * .build();
+ * fs.connections.allowDefaultPortFrom(inst);
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinuxImageDsl {
   private val cdkBuilder: AmazonLinuxImage.Builder = AmazonLinuxImage.Builder.create()

@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions
 
+/**
+ * Properties for deploying with Stackset, which creates a StackSet constraint.
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio portfolio;
+ * CloudFormationProduct product;
+ * Role adminRole = Role.Builder.create(this, "AdminRole")
+ * .assumedBy(new AccountRootPrincipal())
+ * .build();
+ * portfolio.deployWithStackSets(product, StackSetsConstraintOptions.builder()
+ * .accounts(List.of("012345678901", "012345678902", "012345678903"))
+ * .regions(List.of("us-west-1", "us-east-1", "us-west-2", "us-east-1"))
+ * .adminRole(adminRole)
+ * .executionRoleName("SCStackSetExecutionRole") // Name of role deployed in end users accounts.
+ * .allowStackSetInstanceOperations(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StackSetsConstraintOptionsDsl {
   private val cdkBuilder: StackSetsConstraintOptions.Builder = StackSetsConstraintOptions.builder()

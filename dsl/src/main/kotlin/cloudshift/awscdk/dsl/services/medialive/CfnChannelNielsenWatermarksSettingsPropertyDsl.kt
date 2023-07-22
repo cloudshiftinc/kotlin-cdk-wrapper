@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings to configure Nielsen Watermarks in the audio encode.
+ *
+ * The parent of this entity is AudioWatermarkSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * NielsenWatermarksSettingsProperty nielsenWatermarksSettingsProperty =
+ * NielsenWatermarksSettingsProperty.builder()
+ * .nielsenCbetSettings(NielsenCBETProperty.builder()
+ * .cbetCheckDigitString("cbetCheckDigitString")
+ * .cbetStepaside("cbetStepaside")
+ * .csid("csid")
+ * .build())
+ * .nielsenDistributionType("nielsenDistributionType")
+ * .nielsenNaesIiNwSettings(NielsenNaesIiNwProperty.builder()
+ * .checkDigitString("checkDigitString")
+ * .sid(123)
+ * .timezone("timezone")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsenwatermarkssettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelNielsenWatermarksSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.NielsenWatermarksSettingsProperty.Builder =

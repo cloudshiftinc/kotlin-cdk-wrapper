@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.WorkmailActionConfig
 
+/**
+ * WorkmailAction configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * WorkmailActionConfig workmailActionConfig = WorkmailActionConfig.builder()
+ * .organizationArn("organizationArn")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WorkmailActionConfigDsl {
   private val cdkBuilder: WorkmailActionConfig.Builder = WorkmailActionConfig.builder()

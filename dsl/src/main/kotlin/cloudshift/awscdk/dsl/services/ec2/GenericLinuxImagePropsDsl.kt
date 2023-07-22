@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.ec2.GenericLinuxImageProps
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Configuration options for GenericLinuxImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * GenericLinuxImageProps genericLinuxImageProps = GenericLinuxImageProps.builder()
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GenericLinuxImagePropsDsl {
   private val cdkBuilder: GenericLinuxImageProps.Builder = GenericLinuxImageProps.builder()

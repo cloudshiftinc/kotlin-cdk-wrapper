@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents a Transport Layer Security (TLS) validation context trust for a local
+ * file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TlsValidationContextFileTrustProperty tlsValidationContextFileTrustProperty =
+ * TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontextfiletrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeTlsValidationContextFileTrustPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TlsValidationContextFileTrustProperty.Builder =

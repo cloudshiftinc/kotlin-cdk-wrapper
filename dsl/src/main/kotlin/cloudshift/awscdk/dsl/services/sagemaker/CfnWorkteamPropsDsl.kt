@@ -14,6 +14,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnWorkteam
 import software.amazon.awscdk.services.sagemaker.CfnWorkteamProps
 
+/**
+ * Properties for defining a `CfnWorkteam`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnWorkteamProps cfnWorkteamProps = CfnWorkteamProps.builder()
+ * .description("description")
+ * .memberDefinitions(List.of(MemberDefinitionProperty.builder()
+ * .cognitoMemberDefinition(CognitoMemberDefinitionProperty.builder()
+ * .cognitoClientId("cognitoClientId")
+ * .cognitoUserGroup("cognitoUserGroup")
+ * .cognitoUserPool("cognitoUserPool")
+ * .build())
+ * .oidcMemberDefinition(OidcMemberDefinitionProperty.builder()
+ * .oidcGroups(List.of("oidcGroups"))
+ * .build())
+ * .build()))
+ * .notificationConfiguration(NotificationConfigurationProperty.builder()
+ * .notificationTopicArn("notificationTopicArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workforceName("workforceName")
+ * .workteamName("workteamName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-workteam.html)
+ */
 @CdkDslMarker
 public class CfnWorkteamPropsDsl {
   private val cdkBuilder: CfnWorkteamProps.Builder = CfnWorkteamProps.builder()

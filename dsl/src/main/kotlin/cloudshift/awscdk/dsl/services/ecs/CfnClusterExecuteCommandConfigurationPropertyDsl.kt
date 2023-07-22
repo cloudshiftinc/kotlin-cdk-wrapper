@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCluster
 
+/**
+ * The details of the execute command configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ExecuteCommandConfigurationProperty executeCommandConfigurationProperty =
+ * ExecuteCommandConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
+ * .cloudWatchEncryptionEnabled(false)
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .s3BucketName("s3BucketName")
+ * .s3EncryptionEnabled(false)
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .logging("logging")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnClusterExecuteCommandConfigurationPropertyDsl {
   private val cdkBuilder: CfnCluster.ExecuteCommandConfigurationProperty.Builder =

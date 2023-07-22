@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Specifies an algorithm that was used to create the model package.
+ *
+ * The algorithm must be either an algorithm resource in your SageMaker account or an algorithm in
+ * AWS Marketplace that you are subscribed to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * SourceAlgorithmProperty sourceAlgorithmProperty = SourceAlgorithmProperty.builder()
+ * .algorithmName("algorithmName")
+ * // the properties below are optional
+ * .modelDataUrl("modelDataUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-sourcealgorithm.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageSourceAlgorithmPropertyDsl {
   private val cdkBuilder: CfnModelPackage.SourceAlgorithmProperty.Builder =

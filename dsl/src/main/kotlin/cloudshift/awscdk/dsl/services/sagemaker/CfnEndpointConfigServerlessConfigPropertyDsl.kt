@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies the serverless configuration for an endpoint variant.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ServerlessConfigProperty serverlessConfigProperty = ServerlessConfigProperty.builder()
+ * .maxConcurrency(123)
+ * .memorySizeInMb(123)
+ * // the properties below are optional
+ * .provisionedConcurrency(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-serverlessconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigServerlessConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ServerlessConfigProperty.Builder =

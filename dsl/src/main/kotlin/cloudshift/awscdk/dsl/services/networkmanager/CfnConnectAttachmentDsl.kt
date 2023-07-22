@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnConnectAttachment
 import software.constructs.Construct
 
+/**
+ * Creates a core network Connect attachment from a specified core network attachment.
+ *
+ * A core network Connect attachment is a GRE-based tunnel attachment that you can use to establish
+ * a connection between a core network and an appliance. A core network Connect attachment uses an
+ * existing VPC attachment as the underlying transport mechanism.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnConnectAttachment cfnConnectAttachment = CfnConnectAttachment.Builder.create(this,
+ * "MyCfnConnectAttachment")
+ * .coreNetworkId("coreNetworkId")
+ * .edgeLocation("edgeLocation")
+ * .options(ConnectAttachmentOptionsProperty.builder()
+ * .protocol("protocol")
+ * .build())
+ * .transportAttachmentId("transportAttachmentId")
+ * // the properties below are optional
+ * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html)
+ */
 @CdkDslMarker
 public class CfnConnectAttachmentDsl(
   scope: Construct,

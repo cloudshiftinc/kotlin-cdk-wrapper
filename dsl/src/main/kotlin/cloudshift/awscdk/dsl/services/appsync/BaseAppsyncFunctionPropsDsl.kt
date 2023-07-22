@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.appsync.Code
 import software.amazon.awscdk.services.appsync.FunctionRuntime
 import software.amazon.awscdk.services.appsync.MappingTemplate
 
+/**
+ * the base properties for AppSync Functions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * Code code;
+ * FunctionRuntime functionRuntime;
+ * MappingTemplate mappingTemplate;
+ * BaseAppsyncFunctionProps baseAppsyncFunctionProps = BaseAppsyncFunctionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .code(code)
+ * .description("description")
+ * .requestMappingTemplate(mappingTemplate)
+ * .responseMappingTemplate(mappingTemplate)
+ * .runtime(functionRuntime)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseAppsyncFunctionPropsDsl {
   private val cdkBuilder: BaseAppsyncFunctionProps.Builder = BaseAppsyncFunctionProps.builder()

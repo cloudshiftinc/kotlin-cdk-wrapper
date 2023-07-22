@@ -22,6 +22,22 @@ import software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrid
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps
 
+/**
+ * Properties for RunBatchJob.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.batch.alpha.*;
+ * EcsJobDefinition batchJobDefinition;
+ * JobQueue batchQueue;
+ * BatchSubmitJob task = BatchSubmitJob.Builder.create(this, "Submit Job")
+ * .jobDefinitionArn(batchJobDefinition.getJobDefinitionArn())
+ * .jobName("MyJob")
+ * .jobQueueArn(batchQueue.getJobQueueArn())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BatchSubmitJobPropsDsl {
   private val cdkBuilder: BatchSubmitJobProps.Builder = BatchSubmitJobProps.builder()

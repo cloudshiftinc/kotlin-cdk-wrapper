@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes a secondary private IPv4 address for a network interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateIpAddressSpecificationProperty privateIpAddressSpecificationProperty =
+ * PrivateIpAddressSpecificationProperty.builder()
+ * .privateIpAddress("privateIpAddress")
+ * // the properties below are optional
+ * .primary(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-privateipaddressspecification.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetPrivateIpAddressSpecificationPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.PrivateIpAddressSpecificationProperty.Builder =

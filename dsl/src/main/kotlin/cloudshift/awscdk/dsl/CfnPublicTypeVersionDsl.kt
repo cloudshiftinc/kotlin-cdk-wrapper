@@ -7,6 +7,51 @@ import kotlin.String
 import software.amazon.awscdk.CfnPublicTypeVersion
 import software.constructs.Construct
 
+/**
+ * Tests and publishes a registered extension as a public, third-party extension.
+ *
+ * CloudFormation first tests the extension to make sure it meets all necessary requirements for
+ * being published in the CloudFormation registry. If it does, CloudFormation then publishes it to the
+ * registry as a public third-party extension in this Region. Public extensions are available for use
+ * by all CloudFormation users.
+ *
+ * * For resource types, testing includes passing all contracts tests defined for the type.
+ * * For modules, testing includes determining if the module's model meets all necessary
+ * requirements.
+ *
+ * For more information, see [Testing your public extension prior to
+ * publishing](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-testing)
+ * in the *CloudFormation CLI User Guide* .
+ *
+ * If you don't specify a version, CloudFormation uses the default version of the extension in your
+ * account and Region for testing.
+ *
+ * To perform testing, CloudFormation assumes the execution role specified when the type was
+ * registered.
+ *
+ * An extension must have a test status of `PASSED` before it can be published. For more
+ * information, see [Publishing extensions to make them available for public
+ * use](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-publish.html) in
+ * the *CloudFormation CLI User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnPublicTypeVersion cfnPublicTypeVersion = CfnPublicTypeVersion.Builder.create(this,
+ * "MyCfnPublicTypeVersion")
+ * .arn("arn")
+ * .logDeliveryBucket("logDeliveryBucket")
+ * .publicVersionNumber("publicVersionNumber")
+ * .type("type")
+ * .typeName("typeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)
+ */
 @CdkDslMarker
 public class CfnPublicTypeVersionDsl(
   scope: Construct,

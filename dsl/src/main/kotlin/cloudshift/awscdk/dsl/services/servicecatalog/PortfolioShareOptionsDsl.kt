@@ -7,6 +7,21 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 import software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions
 
+/**
+ * Options for portfolio share.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * PortfolioShareOptions portfolioShareOptions = PortfolioShareOptions.builder()
+ * .messageLanguage(MessageLanguage.EN)
+ * .shareTagOptions(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PortfolioShareOptionsDsl {
   private val cdkBuilder: PortfolioShareOptions.Builder = PortfolioShareOptions.builder()

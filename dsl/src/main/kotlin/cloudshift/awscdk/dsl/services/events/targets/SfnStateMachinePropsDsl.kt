@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.events.targets.SfnStateMachineProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the Step Functions State Machine target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .build();
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("events.amazonaws.com"))
+ * .build();
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "SM")
+ * .definition(Wait.Builder.create(this,
+ * "Hello").time(WaitTime.duration(Duration.seconds(10))).build())
+ * .build();
+ * rule.addTarget(SfnStateMachine.Builder.create(stateMachine)
+ * .input(RuleTargetInput.fromObject(Map.of("SomeParam", "SomeValue")))
+ * .deadLetterQueue(dlq)
+ * .role(role)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SfnStateMachinePropsDsl {
   private val cdkBuilder: SfnStateMachineProps.Builder = SfnStateMachineProps.builder()

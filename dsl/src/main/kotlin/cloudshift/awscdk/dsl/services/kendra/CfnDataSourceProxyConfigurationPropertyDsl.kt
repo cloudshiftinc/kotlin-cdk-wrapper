@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for a web proxy to connect to website hosts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ProxyConfigurationProperty proxyConfigurationProperty = ProxyConfigurationProperty.builder()
+ * .host("host")
+ * .port(123)
+ * // the properties below are optional
+ * .credentials("credentials")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-proxyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceProxyConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ProxyConfigurationProperty.Builder =

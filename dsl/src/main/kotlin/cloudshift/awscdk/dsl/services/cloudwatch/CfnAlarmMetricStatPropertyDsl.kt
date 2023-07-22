@@ -8,6 +8,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAlarm
 
+/**
+ * This structure defines the metric to be returned, along with the statistics, period, and units.
+ *
+ * `MetricStat` is a property of the
+ * [MetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricStatProperty metricStatProperty = MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricstat.html)
+ */
 @CdkDslMarker
 public class CfnAlarmMetricStatPropertyDsl {
   private val cdkBuilder: CfnAlarm.MetricStatProperty.Builder =

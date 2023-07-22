@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.cloudwatch.ComparisonOperator
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.TreatMissingData
 
+/**
+ * Properties for Alarms.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Alias alias;
+ * // or add alarms to an existing group
+ * Alias blueGreenAlias;
+ * Alarm alarm = Alarm.Builder.create(this, "Errors")
+ * .comparisonOperator(ComparisonOperator.GREATER_THAN_THRESHOLD)
+ * .threshold(1)
+ * .evaluationPeriods(1)
+ * .metric(alias.metricErrors())
+ * .build();
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .alias(alias)
+ * .deploymentConfig(LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE)
+ * .alarms(List.of(alarm))
+ * .build();
+ * deploymentGroup.addAlarm(Alarm.Builder.create(this, "BlueGreenErrors")
+ * .comparisonOperator(ComparisonOperator.GREATER_THAN_THRESHOLD)
+ * .threshold(1)
+ * .evaluationPeriods(1)
+ * .metric(blueGreenAlias.metricErrors())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AlarmPropsDsl {
   private val cdkBuilder: AlarmProps.Builder = AlarmProps.builder()

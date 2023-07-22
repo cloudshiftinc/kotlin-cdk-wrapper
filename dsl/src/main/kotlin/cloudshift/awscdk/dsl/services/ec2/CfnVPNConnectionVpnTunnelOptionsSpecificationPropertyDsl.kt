@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVPNConnection
 
+/**
+ * The tunnel options for a single VPN tunnel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * VpnTunnelOptionsSpecificationProperty vpnTunnelOptionsSpecificationProperty =
+ * VpnTunnelOptionsSpecificationProperty.builder()
+ * .preSharedKey("preSharedKey")
+ * .tunnelInsideCidr("tunnelInsideCidr")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-vpnconnection-vpntunneloptionsspecification.html)
+ */
 @CdkDslMarker
 public class CfnVPNConnectionVpnTunnelOptionsSpecificationPropertyDsl {
   private val cdkBuilder: CfnVPNConnection.VpnTunnelOptionsSpecificationProperty.Builder =

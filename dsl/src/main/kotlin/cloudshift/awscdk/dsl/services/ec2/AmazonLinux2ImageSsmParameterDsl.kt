@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxStorage
 import software.amazon.awscdk.services.ec2.AmazonLinuxVirt
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * A SSM Parameter that contains the AMI ID for Amazon Linux 2.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AmazonLinux2Kernel amazonLinux2Kernel;
+ * UserData userData;
+ * AmazonLinux2ImageSsmParameter amazonLinux2ImageSsmParameter =
+ * AmazonLinux2ImageSsmParameter.Builder.create()
+ * .cachedInContext(false)
+ * .cpuType(AmazonLinuxCpuType.ARM_64)
+ * .edition(AmazonLinuxEdition.STANDARD)
+ * .kernel(amazonLinux2Kernel)
+ * .storage(AmazonLinuxStorage.EBS)
+ * .userData(userData)
+ * .virtualization(AmazonLinuxVirt.HVM)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinux2ImageSsmParameterDsl {
   private val cdkBuilder: AmazonLinux2ImageSsmParameter.Builder =

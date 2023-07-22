@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.events.targets.LogGroupProps
 import software.amazon.awscdk.services.events.targets.LogGroupTargetInput
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the CloudWatch LogGroup Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * Rule rule;
+ * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
+ * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .timestamp(EventField.fromPath("$.time"))
+ * .message(EventField.fromPath("$.detail-type"))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LogGroupPropsDsl {
   private val cdkBuilder: LogGroupProps.Builder = LogGroupProps.builder()

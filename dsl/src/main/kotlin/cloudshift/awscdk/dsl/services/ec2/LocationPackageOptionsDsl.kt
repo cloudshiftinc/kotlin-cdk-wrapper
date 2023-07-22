@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 import software.amazon.awscdk.services.ec2.LocationPackageOptions
 
+/**
+ * Options for InitPackage.rpm/InitPackage.msi.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InitServiceRestartHandle initServiceRestartHandle;
+ * LocationPackageOptions locationPackageOptions = LocationPackageOptions.builder()
+ * .key("key")
+ * .serviceRestartHandles(List.of(initServiceRestartHandle))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LocationPackageOptionsDsl {
   private val cdkBuilder: LocationPackageOptions.Builder = LocationPackageOptions.builder()

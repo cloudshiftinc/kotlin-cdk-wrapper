@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnConnection
 
+/**
+ * Additional query string parameter for the connection.
+ *
+ * You can include up to 100 additional query string parameters per request. Each additional
+ * parameter counts towards the event payload size, which cannot exceed 64 KB.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * ParameterProperty parameterProperty = ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-parameter.html)
+ */
 @CdkDslMarker
 public class CfnConnectionParameterPropertyDsl {
   private val cdkBuilder: CfnConnection.ParameterProperty.Builder =

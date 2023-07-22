@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * Describes the configuration for the file uploader field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FileUploaderFieldConfigProperty fileUploaderFieldConfigProperty =
+ * FileUploaderFieldConfigProperty.builder()
+ * .acceptedFileTypes(List.of("acceptedFileTypes"))
+ * .accessLevel("accessLevel")
+ * // the properties below are optional
+ * .isResumable(false)
+ * .maxFileCount(123)
+ * .maxSize(123)
+ * .showThumbnails(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fileuploaderfieldconfig.html)
+ */
 @CdkDslMarker
 public class CfnFormFileUploaderFieldConfigPropertyDsl {
   private val cdkBuilder: CfnForm.FileUploaderFieldConfigProperty.Builder =

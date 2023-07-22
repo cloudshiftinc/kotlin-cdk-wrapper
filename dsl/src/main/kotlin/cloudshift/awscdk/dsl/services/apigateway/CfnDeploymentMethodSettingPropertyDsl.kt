@@ -9,6 +9,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDeployment
 
+/**
+ * The `MethodSetting` property type configures settings for all methods in a stage.
+ *
+ * The `MethodSettings` property of the [Amazon API Gateway Deployment
+ * StageDescription](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-stagedescription.html)
+ * property type contains a list of `MethodSetting` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * MethodSettingProperty methodSettingProperty = MethodSettingProperty.builder()
+ * .cacheDataEncrypted(false)
+ * .cacheTtlInSeconds(123)
+ * .cachingEnabled(false)
+ * .dataTraceEnabled(false)
+ * .httpMethod("httpMethod")
+ * .loggingLevel("loggingLevel")
+ * .metricsEnabled(false)
+ * .resourcePath("resourcePath")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-deployment-methodsetting.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentMethodSettingPropertyDsl {
   private val cdkBuilder: CfnDeployment.MethodSettingProperty.Builder =

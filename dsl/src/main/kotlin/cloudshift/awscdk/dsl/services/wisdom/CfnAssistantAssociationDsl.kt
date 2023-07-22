@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wisdom.CfnAssistantAssociation
 import software.constructs.Construct
 
+/**
+ * Specifies an association between an Amazon Connect Wisdom assistant and another resource.
+ *
+ * Currently, the only supported association is with a knowledge base. An assistant can have only a
+ * single association.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * CfnAssistantAssociation cfnAssistantAssociation = CfnAssistantAssociation.Builder.create(this,
+ * "MyCfnAssistantAssociation")
+ * .assistantId("assistantId")
+ * .association(AssociationDataProperty.builder()
+ * .knowledgeBaseId("knowledgeBaseId")
+ * .build())
+ * .associationType("associationType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistantassociation.html)
+ */
 @CdkDslMarker
 public class CfnAssistantAssociationDsl(
   scope: Construct,

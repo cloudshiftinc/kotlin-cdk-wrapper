@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * The `MaintenanceWindowStepFunctionsParameters` property type specifies the parameters for the
+ * execution of a `STEP_FUNCTIONS` task in a Systems Manager maintenance window.
+ *
+ * `MaintenanceWindowStepFunctionsParameters` is a property of the
+ * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * MaintenanceWindowStepFunctionsParametersProperty maintenanceWindowStepFunctionsParametersProperty
+ * = MaintenanceWindowStepFunctionsParametersProperty.builder()
+ * .input("input")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskMaintenanceWindowStepFunctionsParametersPropertyDsl {
   private val cdkBuilder:

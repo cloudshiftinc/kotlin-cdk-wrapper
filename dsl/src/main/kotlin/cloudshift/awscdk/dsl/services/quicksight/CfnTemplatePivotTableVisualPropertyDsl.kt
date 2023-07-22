@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A pivot table.
+ *
+ * For more information, see [Using pivot
+ * tables](https://docs.aws.amazon.com/quicksight/latest/user/pivot-table.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottablevisual.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePivotTableVisualPropertyDsl {
   private val cdkBuilder: CfnTemplate.PivotTableVisualProperty.Builder =

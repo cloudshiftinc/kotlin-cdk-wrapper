@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * List of default values defined for a given string date time parameter type.
+ *
+ * Currently only static values are supported.</p>
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DateTimeDatasetParameterDefaultValuesProperty dateTimeDatasetParameterDefaultValuesProperty =
+ * DateTimeDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of("staticValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-datetimedatasetparameterdefaultvalues.html)
+ */
 @CdkDslMarker
 public class CfnDataSetDateTimeDatasetParameterDefaultValuesPropertyDsl {
   private val cdkBuilder: CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty.Builder =

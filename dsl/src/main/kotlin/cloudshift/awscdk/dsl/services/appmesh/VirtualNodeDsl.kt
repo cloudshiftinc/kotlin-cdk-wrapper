@@ -16,6 +16,39 @@ import software.amazon.awscdk.services.appmesh.VirtualNode
 import software.amazon.awscdk.services.appmesh.VirtualNodeListener
 import software.constructs.Construct
 
+/**
+ * VirtualNode represents a newly defined AppMesh VirtualNode.
+ *
+ * Any inbound traffic that your virtual node expects should be specified as a
+ * listener. Any outbound traffic that your virtual node expects to reach
+ * should be specified as a backend.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * // Cloud Map service discovery is currently required for host ejection by outlier detection
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .outlierDetection(OutlierDetection.builder()
+ * .baseEjectionDuration(Duration.seconds(10))
+ * .interval(Duration.seconds(30))
+ * .maxEjectionPercent(50)
+ * .maxServerErrors(5)
+ * .build())
+ * .build())))
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html)
+ */
 @CdkDslMarker
 public class VirtualNodeDsl(
   scope: Construct,

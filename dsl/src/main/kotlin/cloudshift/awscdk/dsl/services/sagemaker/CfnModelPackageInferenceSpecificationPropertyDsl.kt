@@ -10,6 +10,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Defines how to perform inference generation after a training job is run.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object modelInput;
+ * InferenceSpecificationProperty inferenceSpecificationProperty =
+ * InferenceSpecificationProperty.builder()
+ * .containers(List.of(ModelPackageContainerDefinitionProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .containerHostname("containerHostname")
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .imageDigest("imageDigest")
+ * .modelDataUrl("modelDataUrl")
+ * .modelInput(modelInput)
+ * .nearestModelName("nearestModelName")
+ * .build()))
+ * .supportedContentTypes(List.of("supportedContentTypes"))
+ * .supportedResponseMimeTypes(List.of("supportedResponseMimeTypes"))
+ * // the properties below are optional
+ * .supportedRealtimeInferenceInstanceTypes(List.of("supportedRealtimeInferenceInstanceTypes"))
+ * .supportedTransformInstanceTypes(List.of("supportedTransformInstanceTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-inferencespecification.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageInferenceSpecificationPropertyDsl {
   private val cdkBuilder: CfnModelPackage.InferenceSpecificationProperty.Builder =

@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Indicates whether the instance is enabled for AWS Nitro Enclaves.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EnclaveOptionsProperty enclaveOptionsProperty = EnclaveOptionsProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-enclaveoptions.html)
+ */
 @CdkDslMarker
 public class CfnInstanceEnclaveOptionsPropertyDsl {
   private val cdkBuilder: CfnInstance.EnclaveOptionsProperty.Builder =

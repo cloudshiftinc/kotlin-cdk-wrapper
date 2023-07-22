@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `PlacementType` is a property of the `AWS::EMR::Cluster` resource.
+ *
+ * `PlacementType` determines the Amazon EC2 Availability Zone configuration of the cluster (job
+ * flow).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * PlacementTypeProperty placementTypeProperty = PlacementTypeProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-placementtype.html)
+ */
 @CdkDslMarker
 public class CfnClusterPlacementTypePropertyDsl {
   private val cdkBuilder: CfnCluster.PlacementTypeProperty.Builder =

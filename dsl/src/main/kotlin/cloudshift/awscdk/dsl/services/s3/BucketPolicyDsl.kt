@@ -9,6 +9,35 @@ import software.amazon.awscdk.services.s3.BucketPolicy
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * The bucket policy for an Amazon S3 bucket.
+ *
+ * Policies define the operations that are allowed on this resource.
+ *
+ * You almost never need to define this construct directly.
+ *
+ * All AWS resources that support resource policies have a method called
+ * `addToResourcePolicy()`, which will automatically create a new resource
+ * policy if one doesn't exist yet, otherwise it will add to the existing
+ * policy.
+ *
+ * Prefer to use `addToResourcePolicy()` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * BucketPolicy bucketPolicy = BucketPolicy.Builder.create(this, "MyBucketPolicy")
+ * .bucket(bucket)
+ * // the properties below are optional
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BucketPolicyDsl(
   scope: Construct,

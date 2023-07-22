@@ -8,6 +8,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnUrl
 import software.amazon.awscdk.services.lambda.CfnUrlProps
 
+/**
+ * Properties for defining a `CfnUrl`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnUrlProps cfnUrlProps = CfnUrlProps.builder()
+ * .authType("authType")
+ * .targetFunctionArn("targetFunctionArn")
+ * // the properties below are optional
+ * .cors(CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build())
+ * .invokeMode("invokeMode")
+ * .qualifier("qualifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-url.html)
+ */
 @CdkDslMarker
 public class CfnUrlPropsDsl {
   private val cdkBuilder: CfnUrlProps.Builder = CfnUrlProps.builder()

@@ -16,6 +16,86 @@ import software.amazon.awscdk.services.apigateway.RestApiBaseProps
 import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 
+/**
+ * Represents the props that all Rest APIs share.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * IAccessLogDestination accessLogDestination;
+ * AccessLogFormat accessLogFormat;
+ * Bucket bucket;
+ * Certificate certificate;
+ * PolicyDocument policyDocument;
+ * RestApiBaseProps restApiBaseProps = RestApiBaseProps.builder()
+ * .cloudWatchRole(false)
+ * .deploy(false)
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(accessLogDestination)
+ * .accessLogFormat(accessLogFormat)
+ * .cacheClusterEnabled(false)
+ * .cacheClusterSize("cacheClusterSize")
+ * .cacheDataEncrypted(false)
+ * .cacheTtl(Duration.minutes(30))
+ * .cachingEnabled(false)
+ * .clientCertificateId("clientCertificateId")
+ * .dataTraceEnabled(false)
+ * .description("description")
+ * .documentationVersion("documentationVersion")
+ * .loggingLevel(MethodLoggingLevel.OFF)
+ * .methodOptions(Map.of(
+ * "methodOptionsKey", MethodDeploymentOptions.builder()
+ * .cacheDataEncrypted(false)
+ * .cacheTtl(Duration.minutes(30))
+ * .cachingEnabled(false)
+ * .dataTraceEnabled(false)
+ * .loggingLevel(MethodLoggingLevel.OFF)
+ * .metricsEnabled(false)
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build()))
+ * .metricsEnabled(false)
+ * .stageName("stageName")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .tracingEnabled(false)
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .domainName(DomainNameOptions.builder()
+ * .certificate(certificate)
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .endpointType(EndpointType.EDGE)
+ * .mtls(MTLSConfig.builder()
+ * .bucket(bucket)
+ * .key("key")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .securityPolicy(SecurityPolicy.TLS_1_0)
+ * .build())
+ * .endpointExportName("endpointExportName")
+ * .endpointTypes(List.of(EndpointType.EDGE))
+ * .failOnWarnings(false)
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .policy(policyDocument)
+ * .restApiName("restApiName")
+ * .retainDeployments(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RestApiBasePropsDsl {
   private val cdkBuilder: RestApiBaseProps.Builder = RestApiBaseProps.builder()

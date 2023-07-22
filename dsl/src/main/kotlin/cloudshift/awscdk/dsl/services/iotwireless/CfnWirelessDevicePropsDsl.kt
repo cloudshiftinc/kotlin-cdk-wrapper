@@ -13,6 +13,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceProps
 
+/**
+ * Properties for defining a `CfnWirelessDevice`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnWirelessDeviceProps cfnWirelessDeviceProps = CfnWirelessDeviceProps.builder()
+ * .destinationName("destinationName")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .lastUplinkReceivedAt("lastUplinkReceivedAt")
+ * .loRaWan(LoRaWANDeviceProperty.builder()
+ * .abpV10X(AbpV10xProperty.builder()
+ * .devAddr("devAddr")
+ * .sessionKeys(SessionKeysAbpV10xProperty.builder()
+ * .appSKey("appSKey")
+ * .nwkSKey("nwkSKey")
+ * .build())
+ * .build())
+ * .abpV11(AbpV11Property.builder()
+ * .devAddr("devAddr")
+ * .sessionKeys(SessionKeysAbpV11Property.builder()
+ * .appSKey("appSKey")
+ * .fNwkSIntKey("fNwkSIntKey")
+ * .nwkSEncKey("nwkSEncKey")
+ * .sNwkSIntKey("sNwkSIntKey")
+ * .build())
+ * .build())
+ * .devEui("devEui")
+ * .deviceProfileId("deviceProfileId")
+ * .otaaV10X(OtaaV10xProperty.builder()
+ * .appEui("appEui")
+ * .appKey("appKey")
+ * .build())
+ * .otaaV11(OtaaV11Property.builder()
+ * .appKey("appKey")
+ * .joinEui("joinEui")
+ * .nwkKey("nwkKey")
+ * .build())
+ * .serviceProfileId("serviceProfileId")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .thingArn("thingArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdevice.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDevicePropsDsl {
   private val cdkBuilder: CfnWirelessDeviceProps.Builder = CfnWirelessDeviceProps.builder()

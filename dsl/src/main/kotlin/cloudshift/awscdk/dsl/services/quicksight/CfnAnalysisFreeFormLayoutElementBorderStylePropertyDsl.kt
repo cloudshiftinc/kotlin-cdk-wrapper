@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The background style configuration of a free-form layout element.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FreeFormLayoutElementBorderStyleProperty freeFormLayoutElementBorderStyleProperty =
+ * FreeFormLayoutElementBorderStyleProperty.builder()
+ * .color("color")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-freeformlayoutelementborderstyle.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFreeFormLayoutElementBorderStylePropertyDsl {
   private val cdkBuilder: CfnAnalysis.FreeFormLayoutElementBorderStyleProperty.Builder =

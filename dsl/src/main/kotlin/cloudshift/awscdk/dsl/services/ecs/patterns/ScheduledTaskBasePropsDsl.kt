@@ -20,6 +20,49 @@ import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.patterns.ScheduledTaskBaseProps
 import software.amazon.awscdk.services.events.targets.Tag
 
+/**
+ * The properties for the base ScheduledEc2Task or ScheduledFargateTask task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * Cluster cluster;
+ * Schedule schedule;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * ScheduledTaskBaseProps scheduledTaskBaseProps = ScheduledTaskBaseProps.builder()
+ * .schedule(schedule)
+ * // the properties below are optional
+ * .cluster(cluster)
+ * .desiredTaskCount(123)
+ * .enabled(false)
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .ruleName("ruleName")
+ * .securityGroups(List.of(securityGroup))
+ * .subnetSelection(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .tags(List.of(Tag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledTaskBasePropsDsl {
   private val cdkBuilder: ScheduledTaskBaseProps.Builder = ScheduledTaskBaseProps.builder()

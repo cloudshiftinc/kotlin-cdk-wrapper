@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.RoleOptions
 
+/**
+ * Options for specifying a role.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * RoleOptions roleOptions = RoleOptions.builder()
+ * .assumeRoleArn("assumeRoleArn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RoleOptionsDsl {
   private val cdkBuilder: RoleOptions.Builder = RoleOptions.builder()

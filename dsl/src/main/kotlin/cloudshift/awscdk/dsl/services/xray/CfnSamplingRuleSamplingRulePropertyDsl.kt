@@ -9,6 +9,39 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnSamplingRule
 
+/**
+ * A sampling rule that services use to decide whether to instrument a request.
+ *
+ * Rule fields can match properties of the service, or properties of a request. The service can
+ * ignore rules that don't match its properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * SamplingRuleProperty samplingRuleProperty = SamplingRuleProperty.builder()
+ * .fixedRate(123)
+ * .host("host")
+ * .httpMethod("httpMethod")
+ * .priority(123)
+ * .reservoirSize(123)
+ * .resourceArn("resourceArn")
+ * .serviceName("serviceName")
+ * .serviceType("serviceType")
+ * .urlPath("urlPath")
+ * // the properties below are optional
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .ruleArn("ruleArn")
+ * .ruleName("ruleName")
+ * .version(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-samplingrule-samplingrule.html)
+ */
 @CdkDslMarker
 public class CfnSamplingRuleSamplingRulePropertyDsl {
   private val cdkBuilder: CfnSamplingRule.SamplingRuleProperty.Builder =

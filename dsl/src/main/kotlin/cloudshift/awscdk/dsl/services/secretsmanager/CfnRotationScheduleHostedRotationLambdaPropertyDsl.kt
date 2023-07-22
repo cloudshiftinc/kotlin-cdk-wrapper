@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
 
+/**
+ * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
+ * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+ * .
+ *
+ * You must specify `Transform: AWS::SecretsManager-2020-07-23` at the beginning of the
+ * CloudFormation template.
+ *
+ * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+ * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * HostedRotationLambdaProperty hostedRotationLambdaProperty =
+ * HostedRotationLambdaProperty.builder()
+ * .rotationType("rotationType")
+ * // the properties below are optional
+ * .excludeCharacters("excludeCharacters")
+ * .kmsKeyArn("kmsKeyArn")
+ * .masterSecretArn("masterSecretArn")
+ * .masterSecretKmsKeyArn("masterSecretKmsKeyArn")
+ * .rotationLambdaName("rotationLambdaName")
+ * .runtime("runtime")
+ * .superuserSecretArn("superuserSecretArn")
+ * .superuserSecretKmsKeyArn("superuserSecretKmsKeyArn")
+ * .vpcSecurityGroupIds("vpcSecurityGroupIds")
+ * .vpcSubnetIds("vpcSubnetIds")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-hostedrotationlambda.html)
+ */
 @CdkDslMarker
 public class CfnRotationScheduleHostedRotationLambdaPropertyDsl {
   private val cdkBuilder: CfnRotationSchedule.HostedRotationLambdaProperty.Builder =

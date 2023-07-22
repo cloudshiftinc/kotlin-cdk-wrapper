@@ -14,6 +14,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnIndex
 import software.amazon.awscdk.services.kendra.CfnIndexProps
 
+/**
+ * Properties for defining a `CfnIndex`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * CfnIndexProps cfnIndexProps = CfnIndexProps.builder()
+ * .edition("edition")
+ * .name("name")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .capacityUnits(CapacityUnitsConfigurationProperty.builder()
+ * .queryCapacityUnits(123)
+ * .storageCapacityUnits(123)
+ * .build())
+ * .description("description")
+ * .documentMetadataConfigurations(List.of(DocumentMetadataConfigurationProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .relevance(RelevanceProperty.builder()
+ * .duration("duration")
+ * .freshness(false)
+ * .importance(123)
+ * .rankOrder("rankOrder")
+ * .valueImportanceItems(List.of(ValueImportanceItemProperty.builder()
+ * .key("key")
+ * .value(123)
+ * .build()))
+ * .build())
+ * .search(SearchProperty.builder()
+ * .displayable(false)
+ * .facetable(false)
+ * .searchable(false)
+ * .sortable(false)
+ * .build())
+ * .build()))
+ * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userContextPolicy("userContextPolicy")
+ * .userTokenConfigurations(List.of(UserTokenConfigurationProperty.builder()
+ * .jsonTokenTypeConfiguration(JsonTokenTypeConfigurationProperty.builder()
+ * .groupAttributeField("groupAttributeField")
+ * .userNameAttributeField("userNameAttributeField")
+ * .build())
+ * .jwtTokenTypeConfiguration(JwtTokenTypeConfigurationProperty.builder()
+ * .keyLocation("keyLocation")
+ * // the properties below are optional
+ * .claimRegex("claimRegex")
+ * .groupAttributeField("groupAttributeField")
+ * .issuer("issuer")
+ * .secretManagerArn("secretManagerArn")
+ * .url("url")
+ * .userNameAttributeField("userNameAttributeField")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-index.html)
+ */
 @CdkDslMarker
 public class CfnIndexPropsDsl {
   private val cdkBuilder: CfnIndexProps.Builder = CfnIndexProps.builder()

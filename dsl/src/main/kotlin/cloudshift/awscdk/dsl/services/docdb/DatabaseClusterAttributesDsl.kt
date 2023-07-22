@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.docdb.DatabaseClusterAttributes
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 
+/**
+ * Properties that describe an existing cluster instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * SecurityGroup securityGroup;
+ * DatabaseClusterAttributes databaseClusterAttributes = DatabaseClusterAttributes.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .clusterEndpointAddress("clusterEndpointAddress")
+ * .instanceEndpointAddresses(List.of("instanceEndpointAddresses"))
+ * .instanceIdentifiers(List.of("instanceIdentifiers"))
+ * .port(123)
+ * .readerEndpointAddress("readerEndpointAddress")
+ * .securityGroup(securityGroup)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterAttributesDsl {
   private val cdkBuilder: DatabaseClusterAttributes.Builder = DatabaseClusterAttributes.builder()

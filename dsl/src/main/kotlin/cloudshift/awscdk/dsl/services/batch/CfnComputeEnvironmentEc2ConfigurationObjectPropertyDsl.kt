@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 
+/**
+ * Provides information used to select Amazon Machine Images (AMIs) for instances in the compute
+ * environment.
+ *
+ * If `Ec2Configuration` isn't specified, the default is `ECS_AL2` ( [Amazon Linux
+ * 2](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html#al2ami) ).
+ *
+ *
+ * This object isn't applicable to jobs that are running on Fargate resources.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * Ec2ConfigurationObjectProperty ec2ConfigurationObjectProperty =
+ * Ec2ConfigurationObjectProperty.builder()
+ * .imageType("imageType")
+ * // the properties below are optional
+ * .imageIdOverride("imageIdOverride")
+ * .imageKubernetesVersion("imageKubernetesVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-ec2configurationobject.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentEc2ConfigurationObjectPropertyDsl {
   private val cdkBuilder: CfnComputeEnvironment.Ec2ConfigurationObjectProperty.Builder =

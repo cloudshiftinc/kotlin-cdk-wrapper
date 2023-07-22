@@ -13,6 +13,34 @@ import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.iam.IPrincipal
 import software.amazon.awscdk.services.iam.IResourceWithPolicy
 
+/**
+ * Options for a grant operation to both identity and resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object conditions;
+ * IGrantable grantable;
+ * IPrincipal principal;
+ * IResourceWithPolicy resourceWithPolicy;
+ * GrantOnPrincipalAndResourceOptions grantOnPrincipalAndResourceOptions =
+ * GrantOnPrincipalAndResourceOptions.builder()
+ * .actions(List.of("actions"))
+ * .grantee(grantable)
+ * .resource(resourceWithPolicy)
+ * .resourceArns(List.of("resourceArns"))
+ * // the properties below are optional
+ * .conditions(Map.of(
+ * "conditionsKey", Map.of(
+ * "conditionsKey", conditions)))
+ * .resourcePolicyPrincipal(principal)
+ * .resourceSelfArns(List.of("resourceSelfArns"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GrantOnPrincipalAndResourceOptionsDsl {
   private val cdkBuilder: GrantOnPrincipalAndResourceOptions.Builder =

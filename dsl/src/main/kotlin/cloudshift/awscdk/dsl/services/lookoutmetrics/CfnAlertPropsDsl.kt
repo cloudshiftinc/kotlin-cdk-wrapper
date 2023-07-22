@@ -9,6 +9,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAlert
 import software.amazon.awscdk.services.lookoutmetrics.CfnAlertProps
 
+/**
+ * Properties for defining a `CfnAlert`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * CfnAlertProps cfnAlertProps = CfnAlertProps.builder()
+ * .action(ActionProperty.builder()
+ * .lambdaConfiguration(LambdaConfigurationProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .snsConfiguration(SNSConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * .snsTopicArn("snsTopicArn")
+ * .build())
+ * .build())
+ * .alertSensitivityThreshold(123)
+ * .anomalyDetectorArn("anomalyDetectorArn")
+ * // the properties below are optional
+ * .alertDescription("alertDescription")
+ * .alertName("alertName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html)
+ */
 @CdkDslMarker
 public class CfnAlertPropsDsl {
   private val cdkBuilder: CfnAlertProps.Builder = CfnAlertProps.builder()

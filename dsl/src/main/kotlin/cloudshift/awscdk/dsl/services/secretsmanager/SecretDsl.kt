@@ -18,6 +18,23 @@ import software.amazon.awscdk.services.secretsmanager.SecretStringGenerator
 import software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1
 import software.constructs.Construct
 
+/**
+ * Creates a new secret in AWS SecretsManager.
+ *
+ * Example:
+ *
+ * ```
+ * Stack stack;
+ * User user = new User(this, "User");
+ * AccessKey accessKey = AccessKey.Builder.create(this, "AccessKey").user(user).build();
+ * Secret.Builder.create(this, "Secret")
+ * .secretObjectValue(Map.of(
+ * "username", SecretValue.unsafePlainText(user.getUserName()),
+ * "database", SecretValue.unsafePlainText("foo"),
+ * "password", accessKey.getSecretAccessKey()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretDsl(
   scope: Construct,

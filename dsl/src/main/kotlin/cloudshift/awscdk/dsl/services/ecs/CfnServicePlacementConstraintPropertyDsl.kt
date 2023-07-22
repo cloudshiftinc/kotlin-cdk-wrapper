@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `PlacementConstraint` property specifies an object representing a constraint on task
+ * placement in the task definition.
+ *
+ * For more information, see [Task Placement
+ * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .expression("expression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementconstraint.html)
+ */
 @CdkDslMarker
 public class CfnServicePlacementConstraintPropertyDsl {
   private val cdkBuilder: CfnService.PlacementConstraintProperty.Builder =

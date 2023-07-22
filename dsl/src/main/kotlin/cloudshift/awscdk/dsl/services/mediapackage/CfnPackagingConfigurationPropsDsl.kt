@@ -13,6 +13,147 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfigurationProps
 
+/**
+ * Properties for defining a `CfnPackagingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnPackagingConfigurationProps cfnPackagingConfigurationProps =
+ * CfnPackagingConfigurationProps.builder()
+ * .id("id")
+ * .packagingGroupId("packagingGroupId")
+ * // the properties below are optional
+ * .cmafPackage(CmafPackageProperty.builder()
+ * .hlsManifests(List.of(HlsManifestProperty.builder()
+ * .adMarkers("adMarkers")
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .programDateTimeIntervalSeconds(123)
+ * .repeatExtXKey(false)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(CmafEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .includeEncoderConfigurationInSegments(false)
+ * .segmentDurationSeconds(123)
+ * .build())
+ * .dashPackage(DashPackageProperty.builder()
+ * .dashManifests(List.of(DashManifestProperty.builder()
+ * .manifestLayout("manifestLayout")
+ * .manifestName("manifestName")
+ * .minBufferTimeSeconds(123)
+ * .profile("profile")
+ * .scteMarkersSource("scteMarkersSource")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(DashEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .includeEncoderConfigurationInSegments(false)
+ * .includeIframeOnlyStream(false)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .segmentDurationSeconds(123)
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .build())
+ * .hlsPackage(HlsPackageProperty.builder()
+ * .hlsManifests(List.of(HlsManifestProperty.builder()
+ * .adMarkers("adMarkers")
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .programDateTimeIntervalSeconds(123)
+ * .repeatExtXKey(false)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(HlsEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .encryptionMethod("encryptionMethod")
+ * .build())
+ * .includeDvbSubtitles(false)
+ * .segmentDurationSeconds(123)
+ * .useAudioRenditionGroup(false)
+ * .build())
+ * .mssPackage(MssPackageProperty.builder()
+ * .mssManifests(List.of(MssManifestProperty.builder()
+ * .manifestName("manifestName")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(MssEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .segmentDurationSeconds(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packagingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationPropsDsl {
   private val cdkBuilder: CfnPackagingConfigurationProps.Builder =

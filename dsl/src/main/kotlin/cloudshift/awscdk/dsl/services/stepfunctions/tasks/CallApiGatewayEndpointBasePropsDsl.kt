@@ -19,6 +19,47 @@ import software.amazon.awscdk.services.stepfunctions.tasks.AuthType
 import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayEndpointBaseProps
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
 
+/**
+ * Base CallApiGatewayEdnpoint Task Props.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Object resultSelector;
+ * TaskInput taskInput;
+ * TaskRole taskRole;
+ * Timeout timeout;
+ * CallApiGatewayEndpointBaseProps callApiGatewayEndpointBaseProps =
+ * CallApiGatewayEndpointBaseProps.builder()
+ * .method(HttpMethod.GET)
+ * // the properties below are optional
+ * .apiPath("apiPath")
+ * .authType(AuthType.NO_AUTH)
+ * .comment("comment")
+ * .credentials(Credentials.builder()
+ * .role(taskRole)
+ * .build())
+ * .headers(taskInput)
+ * .heartbeat(Duration.minutes(30))
+ * .heartbeatTimeout(timeout)
+ * .inputPath("inputPath")
+ * .integrationPattern(IntegrationPattern.REQUEST_RESPONSE)
+ * .outputPath("outputPath")
+ * .queryParameters(taskInput)
+ * .requestBody(taskInput)
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .taskTimeout(timeout)
+ * .timeout(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CallApiGatewayEndpointBasePropsDsl {
   private val cdkBuilder: CallApiGatewayEndpointBaseProps.Builder =

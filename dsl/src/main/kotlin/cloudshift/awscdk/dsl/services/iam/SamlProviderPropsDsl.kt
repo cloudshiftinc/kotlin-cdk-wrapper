@@ -7,6 +7,20 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.SamlMetadataDocument
 import software.amazon.awscdk.services.iam.SamlProviderProps
 
+/**
+ * Properties for a SAML provider.
+ *
+ * Example:
+ *
+ * ```
+ * SamlProvider provider = SamlProvider.Builder.create(this, "Provider")
+ * .metadataDocument(SamlMetadataDocument.fromFile("/path/to/saml-metadata-document.xml"))
+ * .build();
+ * Role.Builder.create(this, "Role")
+ * .assumedBy(new SamlConsolePrincipal(provider))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SamlProviderPropsDsl {
   private val cdkBuilder: SamlProviderProps.Builder = SamlProviderProps.builder()

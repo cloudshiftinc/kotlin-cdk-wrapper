@@ -15,6 +15,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnMethod
 import software.amazon.awscdk.services.apigateway.CfnMethodProps
 
+/**
+ * Properties for defining a `CfnMethod`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnMethodProps cfnMethodProps = CfnMethodProps.builder()
+ * .httpMethod("httpMethod")
+ * .resourceId("resourceId")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .integration(IntegrationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .cacheKeyParameters(List.of("cacheKeyParameters"))
+ * .cacheNamespace("cacheNamespace")
+ * .connectionId("connectionId")
+ * .connectionType("connectionType")
+ * .contentHandling("contentHandling")
+ * .credentials("credentials")
+ * .integrationHttpMethod("integrationHttpMethod")
+ * .integrationResponses(List.of(IntegrationResponseProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentHandling("contentHandling")
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .selectionPattern("selectionPattern")
+ * .build()))
+ * .passthroughBehavior("passthroughBehavior")
+ * .requestParameters(Map.of(
+ * "requestParametersKey", "requestParameters"))
+ * .requestTemplates(Map.of(
+ * "requestTemplatesKey", "requestTemplates"))
+ * .timeoutInMillis(123)
+ * .uri("uri")
+ * .build())
+ * .methodResponses(List.of(MethodResponseProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .responseModels(Map.of(
+ * "responseModelsKey", "responseModels"))
+ * .responseParameters(Map.of(
+ * "responseParametersKey", false))
+ * .build()))
+ * .operationName("operationName")
+ * .requestModels(Map.of(
+ * "requestModelsKey", "requestModels"))
+ * .requestParameters(Map.of(
+ * "requestParametersKey", false))
+ * .requestValidatorId("requestValidatorId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html)
+ */
 @CdkDslMarker
 public class CfnMethodPropsDsl {
   private val cdkBuilder: CfnMethodProps.Builder = CfnMethodProps.builder()

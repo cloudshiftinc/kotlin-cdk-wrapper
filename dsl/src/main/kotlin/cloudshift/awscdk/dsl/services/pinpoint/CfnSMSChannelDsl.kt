@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnSMSChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * To send an SMS text message, you send the message through the SMS channel. Before you can use
+ * Amazon Pinpoint to send text messages, you have to enable the SMS channel for an Amazon Pinpoint
+ * application.
+ *
+ * The SMSChannel resource represents the status, sender ID, and other settings for the SMS channel
+ * for an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnSMSChannel cfnSMSChannel = CfnSMSChannel.Builder.create(this, "MyCfnSMSChannel")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .enabled(false)
+ * .senderId("senderId")
+ * .shortCode("shortCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-smschannel.html)
+ */
 @CdkDslMarker
 public class CfnSMSChannelDsl(
   scope: Construct,

@@ -14,6 +14,30 @@ import software.amazon.awscdk.services.lambda.IDestination
 import software.amazon.awscdk.services.lambda.IVersion
 import software.amazon.awscdk.services.lambda.VersionWeight
 
+/**
+ * Properties for a new Lambda alias.
+ *
+ * Example:
+ *
+ * ```
+ * CfnParametersCode lambdaCode = Code.fromCfnParameters();
+ * Function func = Function.Builder.create(this, "Lambda")
+ * .code(lambdaCode)
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .build();
+ * // used to make sure each CDK synthesis produces a different Version
+ * Version version = func.getCurrentVersion();
+ * Alias alias = Alias.Builder.create(this, "LambdaAlias")
+ * .aliasName("Prod")
+ * .version(version)
+ * .build();
+ * LambdaDeploymentGroup.Builder.create(this, "DeploymentGroup")
+ * .alias(alias)
+ * .deploymentConfig(LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasPropsDsl {
   private val cdkBuilder: AliasProps.Builder = AliasProps.builder()

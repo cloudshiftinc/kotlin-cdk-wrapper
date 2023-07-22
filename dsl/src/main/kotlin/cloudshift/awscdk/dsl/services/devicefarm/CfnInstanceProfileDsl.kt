@@ -14,6 +14,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devicefarm.CfnInstanceProfile
 import software.constructs.Construct
 
+/**
+ * Creates a profile that can be applied to one or more private fleet device instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnInstanceProfile cfnInstanceProfile = CfnInstanceProfile.Builder.create(this,
+ * "MyCfnInstanceProfile")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .excludeAppPackagesFromCleanup(List.of("excludeAppPackagesFromCleanup"))
+ * .packageCleanup(false)
+ * .rebootAfterUse(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-instanceprofile.html)
+ */
 @CdkDslMarker
 public class CfnInstanceProfileDsl(
   scope: Construct,

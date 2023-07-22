@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options that determine the default presentation of all line series in `LineChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * LineChartDefaultSeriesSettingsProperty lineChartDefaultSeriesSettingsProperty =
+ * LineChartDefaultSeriesSettingsProperty.builder()
+ * .axisBinding("axisBinding")
+ * .lineStyleSettings(LineChartLineStyleSettingsProperty.builder()
+ * .lineInterpolation("lineInterpolation")
+ * .lineStyle("lineStyle")
+ * .lineVisibility("lineVisibility")
+ * .lineWidth("lineWidth")
+ * .build())
+ * .markerStyleSettings(LineChartMarkerStyleSettingsProperty.builder()
+ * .markerColor("markerColor")
+ * .markerShape("markerShape")
+ * .markerSize("markerSize")
+ * .markerVisibility("markerVisibility")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-linechartdefaultseriessettings.html)
+ */
 @CdkDslMarker
 public class CfnDashboardLineChartDefaultSeriesSettingsPropertyDsl {
   private val cdkBuilder: CfnDashboard.LineChartDefaultSeriesSettingsProperty.Builder =

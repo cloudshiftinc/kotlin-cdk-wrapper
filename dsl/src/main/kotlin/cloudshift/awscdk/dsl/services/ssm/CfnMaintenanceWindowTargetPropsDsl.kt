@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps
 
+/**
+ * Properties for defining a `CfnMaintenanceWindowTarget`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnMaintenanceWindowTargetProps cfnMaintenanceWindowTargetProps =
+ * CfnMaintenanceWindowTargetProps.builder()
+ * .resourceType("resourceType")
+ * .targets(List.of(TargetsProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .windowId("windowId")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .ownerInformation("ownerInformation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTargetPropsDsl {
   private val cdkBuilder: CfnMaintenanceWindowTargetProps.Builder =

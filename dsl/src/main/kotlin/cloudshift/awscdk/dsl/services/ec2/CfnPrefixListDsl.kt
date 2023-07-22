@@ -15,6 +15,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnPrefixList
 import software.constructs.Construct
 
+/**
+ * Specifies a managed prefix list.
+ *
+ * You can add one or more entries to the prefix list. Each entry consists of a CIDR block and an
+ * optional description.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnPrefixList cfnPrefixList = CfnPrefixList.Builder.create(this, "MyCfnPrefixList")
+ * .addressFamily("addressFamily")
+ * .maxEntries(123)
+ * .prefixListName("prefixListName")
+ * // the properties below are optional
+ * .entries(List.of(EntryProperty.builder()
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)
+ */
 @CdkDslMarker
 public class CfnPrefixListDsl(
   scope: Construct,

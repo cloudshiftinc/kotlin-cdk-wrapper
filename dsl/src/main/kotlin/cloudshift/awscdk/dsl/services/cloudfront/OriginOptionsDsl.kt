@@ -10,6 +10,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudfront.OriginOptions
 
+/**
+ * Options to define an Origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginOptions originOptions = OriginOptions.builder()
+ * .connectionAttempts(123)
+ * .connectionTimeout(Duration.minutes(30))
+ * .customHeaders(Map.of(
+ * "customHeadersKey", "customHeaders"))
+ * .originId("originId")
+ * .originShieldEnabled(false)
+ * .originShieldRegion("originShieldRegion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginOptionsDsl {
   private val cdkBuilder: OriginOptions.Builder = OriginOptions.builder()

@@ -11,6 +11,30 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.EmailSubscriptionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Options for email subscriptions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sns.subscriptions.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * EmailSubscriptionProps emailSubscriptionProps = EmailSubscriptionProps.builder()
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .json(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmailSubscriptionPropsDsl {
   private val cdkBuilder: EmailSubscriptionProps.Builder = EmailSubscriptionProps.builder()

@@ -12,6 +12,25 @@ import software.amazon.awscdk.services.appmesh.BackendDefaults
 import software.amazon.awscdk.services.appmesh.VirtualGatewayBaseProps
 import software.amazon.awscdk.services.appmesh.VirtualGatewayListener
 
+/**
+ * Basic configuration properties for a VirtualGateway.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualGateway gateway = mesh.addVirtualGateway("gateway", VirtualGatewayBaseProps.builder()
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .virtualGatewayName("virtualGateway")
+ * .listeners(List.of(VirtualGatewayListener.http(HttpGatewayListenerOptions.builder()
+ * .port(443)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .interval(Duration.seconds(10))
+ * .build()))
+ * .build())))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class VirtualGatewayBasePropsDsl {
   private val cdkBuilder: VirtualGatewayBaseProps.Builder = VirtualGatewayBaseProps.builder()

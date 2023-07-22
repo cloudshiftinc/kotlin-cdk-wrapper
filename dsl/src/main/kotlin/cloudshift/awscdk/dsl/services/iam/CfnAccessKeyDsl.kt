@@ -8,6 +8,38 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.CfnAccessKey
 import software.constructs.Construct
 
+/**
+ * Creates a new AWS secret access key and corresponding AWS access key ID for the specified user.
+ *
+ * The default status for new keys is `Active` .
+ *
+ * For information about quotas on the number of keys you can create, see [IAM and AWS STS
+ * quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User
+ * Guide* .
+ *
+ *
+ * To ensure the security of your AWS account , the secret access key is accessible only during key
+ * and user creation. You must save the key (for example, in a text file) if you want to be able to
+ * access it again. If a secret key is lost, you can rotate access keys by increasing the value of the
+ * `serial` property.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnAccessKey cfnAccessKey = CfnAccessKey.Builder.create(this, "MyCfnAccessKey")
+ * .userName("userName")
+ * // the properties below are optional
+ * .serial(123)
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-accesskey.html)
+ */
 @CdkDslMarker
 public class CfnAccessKeyDsl(
   scope: Construct,

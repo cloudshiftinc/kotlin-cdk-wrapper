@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ecs.FargateServiceAttributes
 import software.amazon.awscdk.services.ecs.ICluster
 
+/**
+ * The properties to import from the service using the Fargate launch type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Cluster cluster;
+ * FargateServiceAttributes fargateServiceAttributes = FargateServiceAttributes.builder()
+ * .cluster(cluster)
+ * // the properties below are optional
+ * .serviceArn("serviceArn")
+ * .serviceName("serviceName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateServiceAttributesDsl {
   private val cdkBuilder: FargateServiceAttributes.Builder = FargateServiceAttributes.builder()

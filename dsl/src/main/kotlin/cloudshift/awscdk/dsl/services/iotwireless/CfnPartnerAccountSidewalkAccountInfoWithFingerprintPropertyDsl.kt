@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
 
+/**
+ * Information about a Sidewalk account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SidewalkAccountInfoWithFingerprintProperty sidewalkAccountInfoWithFingerprintProperty =
+ * SidewalkAccountInfoWithFingerprintProperty.builder()
+ * .amazonId("amazonId")
+ * .arn("arn")
+ * .fingerprint("fingerprint")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfowithfingerprint.html)
+ */
 @CdkDslMarker
 public class CfnPartnerAccountSidewalkAccountInfoWithFingerprintPropertyDsl {
   private val cdkBuilder: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty.Builder =

@@ -9,6 +9,28 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.iot1click.CfnPlacementProps
 
+/**
+ * Properties for defining a `CfnPlacement`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot1click.*;
+ * Object associatedDevices;
+ * Object attributes;
+ * CfnPlacementProps cfnPlacementProps = CfnPlacementProps.builder()
+ * .projectName("projectName")
+ * // the properties below are optional
+ * .associatedDevices(associatedDevices)
+ * .attributes(attributes)
+ * .placementName("placementName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-placement.html)
+ */
 @CdkDslMarker
 public class CfnPlacementPropsDsl {
   private val cdkBuilder: CfnPlacementProps.Builder = CfnPlacementProps.builder()

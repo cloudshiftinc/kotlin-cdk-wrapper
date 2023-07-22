@@ -13,6 +13,42 @@ import software.amazon.awscdk.CustomResource
 import software.amazon.awscdk.RemovalPolicy
 import software.constructs.Construct
 
+/**
+ * Instantiation of a custom resource, whose implementation is provided a Provider.
+ *
+ * This class is intended to be used by construct library authors. Application
+ * builder should not be able to tell whether or not a construct is backed by
+ * a custom resource, and so the use of this class should be invisible.
+ *
+ * Instead, construct library authors declare a custom construct that hides the
+ * choice of provider, and accepts a strongly-typed properties object with the
+ * properties your provider accepts.
+ *
+ * Your custom resource provider (identified by the `serviceToken` property)
+ * can be one of 4 constructs:
+ *
+ * * If you are authoring a construct library or application, we recommend you
+ * use the `Provider` class in the `custom-resources` module.
+ * * If you are authoring a construct for the CDK's AWS Construct Library,
+ * you should use the `CustomResourceProvider` construct in this package.
+ * * If you want full control over the provider, you can always directly use
+ * a Lambda Function or SNS Topic by passing the ARN into `serviceToken`.
+ *
+ * Example:
+ *
+ * ```
+ * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
+ * CustomResourceProviderProps.builder()
+ * .codeDirectory(String.format("%s/my-handler", __dirname))
+ * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+ * .description("Lambda function created by the custom resource provider")
+ * .build());
+ * CustomResource.Builder.create(this, "MyResource")
+ * .resourceType("Custom::MyCustomResourceType")
+ * .serviceToken(serviceToken)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomResourceDsl(
   scope: Construct,

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotthingsgraph.*;
+ * DefinitionDocumentProperty definitionDocumentProperty = DefinitionDocumentProperty.builder()
+ * .language("language")
+ * .text("text")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotthingsgraph-flowtemplate-definitiondocument.html)
+ */
 @CdkDslMarker
 public class CfnFlowTemplateDefinitionDocumentPropertyDsl {
   private val cdkBuilder: CfnFlowTemplate.DefinitionDocumentProperty.Builder =

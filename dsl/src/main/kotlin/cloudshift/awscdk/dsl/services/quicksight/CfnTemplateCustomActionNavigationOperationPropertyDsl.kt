@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The navigation operation that navigates between different sheets in the same analysis.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomActionNavigationOperationProperty customActionNavigationOperationProperty =
+ * CustomActionNavigationOperationProperty.builder()
+ * .localNavigationConfiguration(LocalNavigationConfigurationProperty.builder()
+ * .targetSheetId("targetSheetId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-customactionnavigationoperation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateCustomActionNavigationOperationPropertyDsl {
   private val cdkBuilder: CfnTemplate.CustomActionNavigationOperationProperty.Builder =

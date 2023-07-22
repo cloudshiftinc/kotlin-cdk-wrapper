@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A date-time parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DateTimeParameterProperty dateTimeParameterProperty = DateTimeParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-datetimeparameter.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDateTimeParameterPropertyDsl {
   private val cdkBuilder: CfnDashboard.DateTimeParameterProperty.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * A plugin is an AWS resource that contains the code that defines your connector logic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * PluginProperty pluginProperty = PluginProperty.builder()
+ * .customPlugin(CustomPluginProperty.builder()
+ * .customPluginArn("customPluginArn")
+ * .revision(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-plugin.html)
+ */
 @CdkDslMarker
 public class CfnConnectorPluginPropertyDsl {
   private val cdkBuilder: CfnConnector.PluginProperty.Builder =

@@ -9,6 +9,22 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.apigateway.MethodDeploymentOptions
 import software.amazon.awscdk.services.apigateway.MethodLoggingLevel
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api = new RestApi(this, "books");
+ * Deployment deployment = Deployment.Builder.create(this, "my-deployment").api(api).build();
+ * Stage stage = Stage.Builder.create(this, "my-stage")
+ * .deployment(deployment)
+ * .methodOptions(Map.of(
+ * "/ *&#47;*", MethodDeploymentOptions.builder() // This special path applies to all resource paths
+ * and all HTTP methods
+ * .throttlingRateLimit(100)
+ * .throttlingBurstLimit(200).build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MethodDeploymentOptionsDsl {
   private val cdkBuilder: MethodDeploymentOptions.Builder = MethodDeploymentOptions.builder()

@@ -14,6 +14,41 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * (deprecated) A certificate managed by AWS Certificate Manager.
+ *
+ * Will be automatically
+ * validated using DNS validation against the specified Route 53 hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * CertificateValidation certificateValidation;
+ * HostedZone hostedZone;
+ * Role role;
+ * DnsValidatedCertificate dnsValidatedCertificate = DnsValidatedCertificate.Builder.create(this,
+ * "MyDnsValidatedCertificate")
+ * .domainName("domainName")
+ * .hostedZone(hostedZone)
+ * // the properties below are optional
+ * .certificateName("certificateName")
+ * .cleanupRoute53Records(false)
+ * .customResourceRole(role)
+ * .region("region")
+ * .route53Endpoint("route53Endpoint")
+ * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
+ * .transparencyLoggingEnabled(false)
+ * .validation(certificateValidation)
+ * .build();
+ * ```
+ *
+ * @deprecated use [Certificate ] instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class DnsValidatedCertificateDsl(

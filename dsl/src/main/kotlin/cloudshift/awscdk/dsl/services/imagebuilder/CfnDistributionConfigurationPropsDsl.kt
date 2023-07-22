@@ -11,6 +11,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps
 
+/**
+ * Properties for defining a `CfnDistributionConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * Object amiDistributionConfiguration;
+ * Object containerDistributionConfiguration;
+ * CfnDistributionConfigurationProps cfnDistributionConfigurationProps =
+ * CfnDistributionConfigurationProps.builder()
+ * .distributions(List.of(DistributionProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .amiDistributionConfiguration(amiDistributionConfiguration)
+ * .containerDistributionConfiguration(containerDistributionConfiguration)
+ * .fastLaunchConfigurations(List.of(FastLaunchConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .enabled(false)
+ * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .launchTemplateVersion("launchTemplateVersion")
+ * .build())
+ * .maxParallelLaunches(123)
+ * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
+ * .targetResourceCount(123)
+ * .build())
+ * .build()))
+ * .launchTemplateConfigurations(List.of(LaunchTemplateConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .launchTemplateId("launchTemplateId")
+ * .setDefaultVersion(false)
+ * .build()))
+ * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-distributionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationPropsDsl {
   private val cdkBuilder: CfnDistributionConfigurationProps.Builder =

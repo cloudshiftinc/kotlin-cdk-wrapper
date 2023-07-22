@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The source analysis of the template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TemplateSourceAnalysisProperty templateSourceAnalysisProperty =
+ * TemplateSourceAnalysisProperty.builder()
+ * .arn("arn")
+ * .dataSetReferences(List.of(DataSetReferenceProperty.builder()
+ * .dataSetArn("dataSetArn")
+ * .dataSetPlaceholder("dataSetPlaceholder")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-templatesourceanalysis.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTemplateSourceAnalysisPropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateSourceAnalysisProperty.Builder =

@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a semantic type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SemanticTypeProperty semanticTypeProperty = SemanticTypeProperty.builder()
+ * .falseyCellValue("falseyCellValue")
+ * .falseyCellValueSynonyms(List.of("falseyCellValueSynonyms"))
+ * .subTypeName("subTypeName")
+ * .truthyCellValue("truthyCellValue")
+ * .truthyCellValueSynonyms(List.of("truthyCellValueSynonyms"))
+ * .typeName("typeName")
+ * .typeParameters(Map.of(
+ * "typeParametersKey", "typeParameters"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-semantictype.html)
+ */
 @CdkDslMarker
 public class CfnTopicSemanticTypePropertyDsl {
   private val cdkBuilder: CfnTopic.SemanticTypeProperty.Builder =

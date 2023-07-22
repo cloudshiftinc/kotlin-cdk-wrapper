@@ -9,6 +9,28 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Properties for enabling tracking of an arbitrary metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric;
+ * MetricTargetTrackingProps metricTargetTrackingProps = MetricTargetTrackingProps.builder()
+ * .metric(metric)
+ * .targetValue(123)
+ * // the properties below are optional
+ * .cooldown(Duration.minutes(30))
+ * .disableScaleIn(false)
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricTargetTrackingPropsDsl {
   private val cdkBuilder: MetricTargetTrackingProps.Builder = MetricTargetTrackingProps.builder()

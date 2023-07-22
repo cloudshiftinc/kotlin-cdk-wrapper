@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions
 import software.amazon.awscdk.services.servicecatalog.MessageLanguage
 
+/**
+ * Properties for governance mechanisms and constraints.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.sns.*;
+ * Portfolio portfolio;
+ * CloudFormationProduct product;
+ * Topic topic1 = new Topic(this, "Topic1");
+ * portfolio.notifyOnStackEvents(product, topic1);
+ * Topic topic2 = new Topic(this, "Topic2");
+ * portfolio.notifyOnStackEvents(product, topic2, CommonConstraintOptions.builder()
+ * .description("description for topic2")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CommonConstraintOptionsDsl {
   private val cdkBuilder: CommonConstraintOptions.Builder = CommonConstraintOptions.builder()

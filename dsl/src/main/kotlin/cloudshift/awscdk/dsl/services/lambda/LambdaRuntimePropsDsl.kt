@@ -7,6 +7,20 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.lambda.LambdaRuntimeProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * LambdaRuntimeProps lambdaRuntimeProps = LambdaRuntimeProps.builder()
+ * .bundlingDockerImage("bundlingDockerImage")
+ * .supportsCodeGuruProfiling(false)
+ * .supportsInlineCode(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaRuntimePropsDsl {
   private val cdkBuilder: LambdaRuntimeProps.Builder = LambdaRuntimeProps.builder()

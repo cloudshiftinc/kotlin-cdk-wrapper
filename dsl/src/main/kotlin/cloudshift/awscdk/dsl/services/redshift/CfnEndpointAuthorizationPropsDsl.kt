@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnEndpointAuthorizationProps
 
+/**
+ * Properties for defining a `CfnEndpointAuthorization`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnEndpointAuthorizationProps cfnEndpointAuthorizationProps =
+ * CfnEndpointAuthorizationProps.builder()
+ * .account("account")
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .force(false)
+ * .vpcIds(List.of("vpcIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointauthorization.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAuthorizationPropsDsl {
   private val cdkBuilder: CfnEndpointAuthorizationProps.Builder =

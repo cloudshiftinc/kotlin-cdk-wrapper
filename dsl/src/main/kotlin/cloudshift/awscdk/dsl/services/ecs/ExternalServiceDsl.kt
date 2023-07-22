@@ -23,6 +23,21 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.constructs.Construct
 
+/**
+ * This creates a service using the External launch type on an ECS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * ExternalService service = ExternalService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .desiredCount(5)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExternalServiceDsl(
   scope: Construct,

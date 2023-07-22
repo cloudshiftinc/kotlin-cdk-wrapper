@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.timestream.CfnDatabase
 import software.constructs.Construct
 
+/**
+ * Creates a new Timestream database.
+ *
+ * If the AWS KMS key is not specified, the database will be encrypted with a Timestream managed AWS
+ * KMS key located in your account. Refer to [AWS managed AWS KMS
+ * keys](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk) for more
+ * info. [Service quotas
+ * apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html) . See [code
+ * sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-db.html)
+ * for details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * CfnDatabase cfnDatabase = CfnDatabase.Builder.create(this, "MyCfnDatabase")
+ * .databaseName("databaseName")
+ * .kmsKeyId("kmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseDsl(
   scope: Construct,

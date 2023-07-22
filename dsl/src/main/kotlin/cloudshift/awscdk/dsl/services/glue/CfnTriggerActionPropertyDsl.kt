@@ -11,6 +11,30 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTrigger
 
+/**
+ * Defines an action to be initiated by a trigger.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object arguments_;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .arguments(arguments_)
+ * .crawlerName("crawlerName")
+ * .jobName("jobName")
+ * .notificationProperty(NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build())
+ * .securityConfiguration("securityConfiguration")
+ * .timeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html)
+ */
 @CdkDslMarker
 public class CfnTriggerActionPropertyDsl {
   private val cdkBuilder: CfnTrigger.ActionProperty.Builder = CfnTrigger.ActionProperty.builder()

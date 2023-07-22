@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.efs.CfnAccessPoint
 
+/**
+ * Specifies the directory on the Amazon EFS file system that the access point provides access to.
+ *
+ * The access point exposes the specified file system path as the root directory of your file system
+ * to applications using the access point. NFS clients using the access point can only access data in
+ * the access point's `RootDirectory` and it's subdirectories.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * RootDirectoryProperty rootDirectoryProperty = RootDirectoryProperty.builder()
+ * .creationInfo(CreationInfoProperty.builder()
+ * .ownerGid("ownerGid")
+ * .ownerUid("ownerUid")
+ * .permissions("permissions")
+ * .build())
+ * .path("path")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-accesspoint-rootdirectory.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointRootDirectoryPropertyDsl {
   private val cdkBuilder: CfnAccessPoint.RootDirectoryProperty.Builder =

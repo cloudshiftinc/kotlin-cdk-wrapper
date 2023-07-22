@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 
+/**
+ * Contains information about a phone number for a quick connect.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * PhoneNumberQuickConnectConfigProperty phoneNumberQuickConnectConfigProperty =
+ * PhoneNumberQuickConnectConfigProperty.builder()
+ * .phoneNumber("phoneNumber")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-phonenumberquickconnectconfig.html)
+ */
 @CdkDslMarker
 public class CfnQuickConnectPhoneNumberQuickConnectConfigPropertyDsl {
   private val cdkBuilder: CfnQuickConnect.PhoneNumberQuickConnectConfigProperty.Builder =

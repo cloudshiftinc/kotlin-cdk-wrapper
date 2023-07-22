@@ -9,6 +9,62 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationinsights.CfnApplication
 
+/**
+ * The `AWS::ApplicationInsights::Application ConfigurationDetails` property type specifies the
+ * configuration settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationinsights.*;
+ * ConfigurationDetailsProperty configurationDetailsProperty =
+ * ConfigurationDetailsProperty.builder()
+ * .alarmMetrics(List.of(AlarmMetricProperty.builder()
+ * .alarmMetricName("alarmMetricName")
+ * .build()))
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * // the properties below are optional
+ * .severity("severity")
+ * .build()))
+ * .haClusterPrometheusExporter(HAClusterPrometheusExporterProperty.builder()
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .hanaPrometheusExporter(HANAPrometheusExporterProperty.builder()
+ * .agreeToInstallHanadbClient(false)
+ * .hanaPort("hanaPort")
+ * .hanaSecretName("hanaSecretName")
+ * .hanasid("hanasid")
+ * // the properties below are optional
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .jmxPrometheusExporter(JMXPrometheusExporterProperty.builder()
+ * .hostPort("hostPort")
+ * .jmxurl("jmxurl")
+ * .prometheusPort("prometheusPort")
+ * .build())
+ * .logs(List.of(LogProperty.builder()
+ * .logType("logType")
+ * // the properties below are optional
+ * .encoding("encoding")
+ * .logGroupName("logGroupName")
+ * .logPath("logPath")
+ * .patternSet("patternSet")
+ * .build()))
+ * .windowsEvents(List.of(WindowsEventProperty.builder()
+ * .eventLevels(List.of("eventLevels"))
+ * .eventName("eventName")
+ * .logGroupName("logGroupName")
+ * // the properties below are optional
+ * .patternSet("patternSet")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-configurationdetails.html)
+ */
 @CdkDslMarker
 public class CfnApplicationConfigurationDetailsPropertyDsl {
   private val cdkBuilder: CfnApplication.ConfigurationDetailsProperty.Builder =

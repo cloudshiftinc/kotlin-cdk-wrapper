@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The navigation configuration for `CustomActionNavigationOperation` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * LocalNavigationConfigurationProperty localNavigationConfigurationProperty =
+ * LocalNavigationConfigurationProperty.builder()
+ * .targetSheetId("targetSheetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-localnavigationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateLocalNavigationConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.LocalNavigationConfigurationProperty.Builder =

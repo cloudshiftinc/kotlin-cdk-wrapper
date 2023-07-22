@@ -12,6 +12,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDatabase
 
+/**
+ * The structure used to create or update a database.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * DatabaseInputProperty databaseInputProperty = DatabaseInputProperty.builder()
+ * .createTableDefaultPermissions(List.of(PrincipalPrivilegesProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .federatedDatabase(FederatedDatabaseProperty.builder()
+ * .connectionName("connectionName")
+ * .identifier("identifier")
+ * .build())
+ * .locationUri("locationUri")
+ * .name("name")
+ * .parameters(parameters)
+ * .targetDatabase(DatabaseIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-databaseinput.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseDatabaseInputPropertyDsl {
   private val cdkBuilder: CfnDatabase.DatabaseInputProperty.Builder =

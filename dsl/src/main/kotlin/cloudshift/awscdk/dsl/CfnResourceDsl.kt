@@ -11,6 +11,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.CfnResource
 import software.constructs.Construct
 
+/**
+ * Represents a CloudFormation resource.
+ *
+ * Example:
+ *
+ * ```
+ * public class MyConstruct extends Resource implements ITaggable {
+ * public final Object tags;
+ * public MyConstruct(Construct scope, String id) {
+ * super(scope, id);
+ * CfnResource.Builder.create(this, "Resource")
+ * .type("Whatever::The::Type")
+ * .properties(Map.of(
+ * // ...
+ * "Tags", this.tags.getRenderedTags()))
+ * .build();
+ * }
+ * }
+ * ```
+ */
 @CdkDslMarker
 public class CfnResourceDsl(
   scope: Construct,

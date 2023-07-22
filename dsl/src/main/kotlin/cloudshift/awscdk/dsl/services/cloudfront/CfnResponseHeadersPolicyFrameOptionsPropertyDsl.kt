@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * Determines whether CloudFront includes the `X-Frame-Options` HTTP response header and the
+ * header's value.
+ *
+ * For more information about the `X-Frame-Options` HTTP response header, see
+ * [X-Frame-Options](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options)
+ * in the MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * FrameOptionsProperty frameOptionsProperty = FrameOptionsProperty.builder()
+ * .frameOption("frameOption")
+ * .override(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-frameoptions.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyFrameOptionsPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.FrameOptionsProperty.Builder =

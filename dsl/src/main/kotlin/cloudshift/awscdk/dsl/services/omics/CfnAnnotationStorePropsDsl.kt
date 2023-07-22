@@ -9,6 +9,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnAnnotationStore
 import software.amazon.awscdk.services.omics.CfnAnnotationStoreProps
 
+/**
+ * Properties for defining a `CfnAnnotationStore`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * Object schema;
+ * CfnAnnotationStoreProps cfnAnnotationStoreProps = CfnAnnotationStoreProps.builder()
+ * .name("name")
+ * .storeFormat("storeFormat")
+ * // the properties below are optional
+ * .description("description")
+ * .reference(ReferenceItemProperty.builder()
+ * .referenceArn("referenceArn")
+ * .build())
+ * .sseConfig(SseConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .keyArn("keyArn")
+ * .build())
+ * .storeOptions(StoreOptionsProperty.builder()
+ * .tsvStoreOptions(TsvStoreOptionsProperty.builder()
+ * .annotationType("annotationType")
+ * .formatToHeader(Map.of(
+ * "formatToHeaderKey", "formatToHeader"))
+ * .schema(schema)
+ * .build())
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-annotationstore.html)
+ */
 @CdkDslMarker
 public class CfnAnnotationStorePropsDsl {
   private val cdkBuilder: CfnAnnotationStoreProps.Builder = CfnAnnotationStoreProps.builder()

@@ -9,6 +9,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
 import software.amazon.awscdk.services.appsync.CfnFunctionConfigurationProps
 
+/**
+ * Properties for defining a `CfnFunctionConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnFunctionConfigurationProps cfnFunctionConfigurationProps =
+ * CfnFunctionConfigurationProps.builder()
+ * .apiId("apiId")
+ * .dataSourceName("dataSourceName")
+ * .name("name")
+ * // the properties below are optional
+ * .code("code")
+ * .codeS3Location("codeS3Location")
+ * .description("description")
+ * .functionVersion("functionVersion")
+ * .maxBatchSize(123)
+ * .requestMappingTemplate("requestMappingTemplate")
+ * .requestMappingTemplateS3Location("requestMappingTemplateS3Location")
+ * .responseMappingTemplate("responseMappingTemplate")
+ * .responseMappingTemplateS3Location("responseMappingTemplateS3Location")
+ * .runtime(AppSyncRuntimeProperty.builder()
+ * .name("name")
+ * .runtimeVersion("runtimeVersion")
+ * .build())
+ * .syncConfig(SyncConfigProperty.builder()
+ * .conflictDetection("conflictDetection")
+ * // the properties below are optional
+ * .conflictHandler("conflictHandler")
+ * .lambdaConflictHandlerConfig(LambdaConflictHandlerConfigProperty.builder()
+ * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFunctionConfigurationPropsDsl {
   private val cdkBuilder: CfnFunctionConfigurationProps.Builder =

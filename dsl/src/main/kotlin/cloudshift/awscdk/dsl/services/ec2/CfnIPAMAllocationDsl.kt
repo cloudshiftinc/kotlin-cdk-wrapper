@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnIPAMAllocation
 import software.constructs.Construct
 
+/**
+ * In IPAM, an allocation is a CIDR assignment from an IPAM pool to another IPAM pool or to a
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMAllocation cfnIPAMAllocation = CfnIPAMAllocation.Builder.create(this,
+ * "MyCfnIPAMAllocation")
+ * .ipamPoolId("ipamPoolId")
+ * // the properties below are optional
+ * .cidr("cidr")
+ * .description("description")
+ * .netmaskLength(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamallocation.html)
+ */
 @CdkDslMarker
 public class CfnIPAMAllocationDsl(
   scope: Construct,

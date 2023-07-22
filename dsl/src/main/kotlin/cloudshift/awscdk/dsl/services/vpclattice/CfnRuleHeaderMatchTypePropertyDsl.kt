@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * Describes a header match type.
+ *
+ * Only one can be provided.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * HeaderMatchTypeProperty headerMatchTypeProperty = HeaderMatchTypeProperty.builder()
+ * .contains("contains")
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-headermatchtype.html)
+ */
 @CdkDslMarker
 public class CfnRuleHeaderMatchTypePropertyDsl {
   private val cdkBuilder: CfnRule.HeaderMatchTypeProperty.Builder =

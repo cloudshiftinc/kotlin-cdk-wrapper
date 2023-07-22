@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnDocumentationVersionProps
 
+/**
+ * Properties for defining a `CfnDocumentationVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDocumentationVersionProps cfnDocumentationVersionProps =
+ * CfnDocumentationVersionProps.builder()
+ * .documentationVersion("documentationVersion")
+ * .restApiId("restApiId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html)
+ */
 @CdkDslMarker
 public class CfnDocumentationVersionPropsDsl {
   private val cdkBuilder: CfnDocumentationVersionProps.Builder =

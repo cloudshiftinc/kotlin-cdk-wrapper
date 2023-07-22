@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a SageMaker pipeline as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetSageMakerPipelineParametersProperty pipeTargetSageMakerPipelineParametersProperty =
+ * PipeTargetSageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetsagemakerpipelineparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetSageMakerPipelineParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetSageMakerPipelineParametersProperty.Builder =

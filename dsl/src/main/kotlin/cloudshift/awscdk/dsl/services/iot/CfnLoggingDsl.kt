@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.iot.CfnLogging
 import software.constructs.Construct
 
+/**
+ * Configure logging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnLogging cfnLogging = CfnLogging.Builder.create(this, "MyCfnLogging")
+ * .accountId("accountId")
+ * .defaultLogLevel("defaultLogLevel")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-logging.html)
+ */
 @CdkDslMarker
 public class CfnLoggingDsl(
   scope: Construct,

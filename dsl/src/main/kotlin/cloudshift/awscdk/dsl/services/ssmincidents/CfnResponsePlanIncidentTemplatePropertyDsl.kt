@@ -11,6 +11,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * The `IncidentTemplate` property type specifies details used to create an incident when using this
+ * response plan.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * IncidentTemplateProperty incidentTemplateProperty = IncidentTemplateProperty.builder()
+ * .impact(123)
+ * .title("title")
+ * // the properties below are optional
+ * .dedupeString("dedupeString")
+ * .incidentTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .notificationTargets(List.of(NotificationTargetItemProperty.builder()
+ * .snsTopicArn("snsTopicArn")
+ * .build()))
+ * .summary("summary")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-incidenttemplate.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanIncidentTemplatePropertyDsl {
   private val cdkBuilder: CfnResponsePlan.IncidentTemplateProperty.Builder =

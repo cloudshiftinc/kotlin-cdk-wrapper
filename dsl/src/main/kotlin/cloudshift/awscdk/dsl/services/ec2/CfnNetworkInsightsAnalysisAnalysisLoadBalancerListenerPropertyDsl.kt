@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a load balancer listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisLoadBalancerListenerProperty analysisLoadBalancerListenerProperty =
+ * AnalysisLoadBalancerListenerProperty.builder()
+ * .instancePort(123)
+ * .loadBalancerPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancerlistener.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisLoadBalancerListenerPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisLoadBalancerListenerProperty.Builder =

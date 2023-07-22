@@ -9,6 +9,29 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.ecs.DockerVolumeConfiguration
 import software.amazon.awscdk.services.ecs.Scope
 
+/**
+ * The configuration for a Docker volume.
+ *
+ * Docker volumes are only supported when you are using the EC2 launch type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * DockerVolumeConfiguration dockerVolumeConfiguration = DockerVolumeConfiguration.builder()
+ * .driver("driver")
+ * .scope(Scope.TASK)
+ * // the properties below are optional
+ * .autoprovision(false)
+ * .driverOpts(Map.of(
+ * "driverOptsKey", "driverOpts"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerVolumeConfigurationDsl {
   private val cdkBuilder: DockerVolumeConfiguration.Builder = DockerVolumeConfiguration.builder()

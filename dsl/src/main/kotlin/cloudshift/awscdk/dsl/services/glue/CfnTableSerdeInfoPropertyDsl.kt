@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.glue.CfnTable
 
+/**
+ * Information about a serialization/deserialization program (SerDe) that serves as an extractor and
+ * loader.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * SerdeInfoProperty serdeInfoProperty = SerdeInfoProperty.builder()
+ * .name("name")
+ * .parameters(parameters)
+ * .serializationLibrary("serializationLibrary")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html)
+ */
 @CdkDslMarker
 public class CfnTableSerdeInfoPropertyDsl {
   private val cdkBuilder: CfnTable.SerdeInfoProperty.Builder = CfnTable.SerdeInfoProperty.builder()

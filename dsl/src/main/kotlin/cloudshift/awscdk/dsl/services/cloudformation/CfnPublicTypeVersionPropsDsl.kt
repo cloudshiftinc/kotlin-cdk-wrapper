@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnPublicTypeVersionProps
 
+/**
+ * Properties for defining a `CfnPublicTypeVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnPublicTypeVersionProps cfnPublicTypeVersionProps = CfnPublicTypeVersionProps.builder()
+ * .arn("arn")
+ * .logDeliveryBucket("logDeliveryBucket")
+ * .publicVersionNumber("publicVersionNumber")
+ * .type("type")
+ * .typeName("typeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publictypeversion.html)
+ */
 @CdkDslMarker
 public class CfnPublicTypeVersionPropsDsl {
   private val cdkBuilder: CfnPublicTypeVersionProps.Builder = CfnPublicTypeVersionProps.builder()

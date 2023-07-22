@@ -8,6 +8,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.simspaceweaver.CfnSimulation
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::SimSpaceWeaver::Simulation` resource to specify a simulation that AWS
+ * CloudFormation starts in the AWS Cloud , in your AWS account .
+ *
+ * In the resource properties section of your template, provide the name of an existing IAM role
+ * configured with the proper permissions, and the name of an existing Amazon S3 bucket. Your account
+ * must have permissions to read the Amazon S3 bucket. The Amazon S3 bucket must contain a valid
+ * schema. The schema must refer to simulation assets that are already uploaded to the AWS Cloud . For
+ * more information, see the [detailed
+ * tutorial](https://docs.aws.amazon.com/simspaceweaver/latest/userguide/getting-started_detailed.html)
+ * in the *AWS SimSpace Weaver User Guide* .
+ *
+ * Specify a `SnapshotS3Location` to start a simulation from a snapshot instead of from a schema.
+ * When you start a simulation from a snapshot, SimSpace Weaver initializes the entity data in the
+ * State Fabric with data saved in the snapshot, starts the spatial and service apps that were running
+ * when the snapshot was created, and restores the clock to the appropriate tick. Your app zip files
+ * must be in the same location in Amazon S3 as they were in for the original simulation. You must
+ * start any custom apps separately. For more information about snapshots, see
+ * [Snapshots](https://docs.aws.amazon.com/simspaceweaver/latest/userguide/working-with_snapshots.html)
+ * in the *AWS SimSpace Weaver User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.simspaceweaver.*;
+ * CfnSimulation cfnSimulation = CfnSimulation.Builder.create(this, "MyCfnSimulation")
+ * .name("name")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .maximumDuration("maximumDuration")
+ * .schemaS3Location(S3LocationProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build())
+ * .snapshotS3Location(S3LocationProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-simspaceweaver-simulation.html)
+ */
 @CdkDslMarker
 public class CfnSimulationDsl(
   scope: Construct,

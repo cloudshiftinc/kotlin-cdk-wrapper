@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Whether the domain should encrypt data at rest, and if so, the AWS Key Management Service key to
+ * use.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * EncryptionAtRestOptionsProperty encryptionAtRestOptionsProperty =
+ * EncryptionAtRestOptionsProperty.builder()
+ * .enabled(false)
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainEncryptionAtRestOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.EncryptionAtRestOptionsProperty.Builder =

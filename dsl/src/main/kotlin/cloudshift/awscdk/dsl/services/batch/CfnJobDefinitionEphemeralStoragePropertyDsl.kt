@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The amount of ephemeral storage to allocate for the task.
+ *
+ * This parameter is used to expand the total amount of ephemeral storage available, beyond the
+ * default amount, for tasks hosted on AWS Fargate .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EphemeralStorageProperty ephemeralStorageProperty = EphemeralStorageProperty.builder()
+ * .sizeInGiB(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ephemeralstorage.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEphemeralStoragePropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EphemeralStorageProperty.Builder =

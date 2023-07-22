@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnGatewayRouteTableAssociationProps
 
+/**
+ * Properties for defining a `CfnGatewayRouteTableAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnGatewayRouteTableAssociationProps cfnGatewayRouteTableAssociationProps =
+ * CfnGatewayRouteTableAssociationProps.builder()
+ * .gatewayId("gatewayId")
+ * .routeTableId("routeTableId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-gatewayroutetableassociation.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteTableAssociationPropsDsl {
   private val cdkBuilder: CfnGatewayRouteTableAssociationProps.Builder =

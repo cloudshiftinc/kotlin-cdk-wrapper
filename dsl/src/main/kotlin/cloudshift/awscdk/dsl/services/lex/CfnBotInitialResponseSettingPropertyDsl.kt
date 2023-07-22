@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Configuration setting for a response sent to the user before Amazon Lex starts eliciting slots.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-initialresponsesetting.html)
+ */
 @CdkDslMarker
 public class CfnBotInitialResponseSettingPropertyDsl {
   private val cdkBuilder: CfnBot.InitialResponseSettingProperty.Builder =

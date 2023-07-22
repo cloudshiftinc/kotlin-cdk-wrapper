@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediastore.CfnContainer
 
+/**
+ * The metric policy that is associated with the container.
+ *
+ * A metric policy allows AWS Elemental MediaStore to send metrics to Amazon CloudWatch. In the
+ * policy, you must indicate whether you want MediaStore to send container-level metrics. You can also
+ * include rules to define groups of objects that you want MediaStore to send object-level metrics for.
+ *
+ * To view examples of how to construct a metric policy for your use case, see [Example Metric
+ * Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediastore.*;
+ * MetricPolicyProperty metricPolicyProperty = MetricPolicyProperty.builder()
+ * .containerLevelMetrics("containerLevelMetrics")
+ * // the properties below are optional
+ * .metricPolicyRules(List.of(MetricPolicyRuleProperty.builder()
+ * .objectGroup("objectGroup")
+ * .objectGroupName("objectGroupName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediastore-container-metricpolicy.html)
+ */
 @CdkDslMarker
 public class CfnContainerMetricPolicyPropertyDsl {
   private val cdkBuilder: CfnContainer.MetricPolicyProperty.Builder =

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The template for verification messages.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * VerificationMessageTemplateProperty verificationMessageTemplateProperty =
+ * VerificationMessageTemplateProperty.builder()
+ * .defaultEmailOption("defaultEmailOption")
+ * .emailMessage("emailMessage")
+ * .emailMessageByLink("emailMessageByLink")
+ * .emailSubject("emailSubject")
+ * .emailSubjectByLink("emailSubjectByLink")
+ * .smsMessage("smsMessage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-verificationmessagetemplate.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolVerificationMessageTemplatePropertyDsl {
   private val cdkBuilder: CfnUserPool.VerificationMessageTemplateProperty.Builder =

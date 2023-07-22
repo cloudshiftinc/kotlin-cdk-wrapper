@@ -10,6 +10,76 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement that inspects for malicious SQL code.
+ *
+ * Attackers insert malicious SQL code into web requests to do things like modify your database or
+ * extract data from it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * Object allQueryArguments;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object singleQueryArgument;
+ * Object uriPath;
+ * SqliMatchStatementProperty sqliMatchStatementProperty = SqliMatchStatementProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .allQueryArguments(allQueryArguments)
+ * .body(BodyProperty.builder()
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .cookies(CookiesProperty.builder()
+ * .matchPattern(CookieMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedCookies(List.of("excludedCookies"))
+ * .includedCookies(List.of("includedCookies"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .headers(HeadersProperty.builder()
+ * .matchPattern(HeaderMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedHeaders(List.of("excludedHeaders"))
+ * .includedHeaders(List.of("includedHeaders"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .jsonBody(JsonBodyProperty.builder()
+ * .matchPattern(JsonMatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build())
+ * .matchScope("matchScope")
+ * // the properties below are optional
+ * .invalidFallbackBehavior("invalidFallbackBehavior")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .singleQueryArgument(singleQueryArgument)
+ * .uriPath(uriPath)
+ * .build())
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .sensitivityLevel("sensitivityLevel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-sqlimatchstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLSqliMatchStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.SqliMatchStatementProperty.Builder =

@@ -6,6 +6,40 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents how the proxy will validate its peer during Transport Layer Security
+ * (TLS) negotiation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * TlsValidationContextProperty tlsValidationContextProperty =
+ * TlsValidationContextProperty.builder()
+ * .trust(TlsValidationContextTrustProperty.builder()
+ * .acm(TlsValidationContextAcmTrustProperty.builder()
+ * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+ * .build())
+ * .file(TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+ * .match(SubjectAlternativeNameMatchersProperty.builder()
+ * .exact(List.of("exact"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-tlsvalidationcontext.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeTlsValidationContextPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.TlsValidationContextProperty.Builder =

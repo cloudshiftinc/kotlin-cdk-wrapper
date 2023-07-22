@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions
 
+/**
+ * Options for `ListenerAction.fixedResponse()`.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationListener listener;
+ * listener.addAction("Fixed", AddApplicationActionProps.builder()
+ * .priority(10)
+ * .conditions(List.of(ListenerCondition.pathPatterns(List.of("/ok"))))
+ * .action(ListenerAction.fixedResponse(200, FixedResponseOptions.builder()
+ * .contentType("text/plain")
+ * .messageBody("OK")
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FixedResponseOptionsDsl {
   private val cdkBuilder: FixedResponseOptions.Builder = FixedResponseOptions.builder()

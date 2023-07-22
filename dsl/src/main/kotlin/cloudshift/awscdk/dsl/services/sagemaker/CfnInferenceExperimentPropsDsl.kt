@@ -14,6 +14,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperimentProps
 
+/**
+ * Properties for defining a `CfnInferenceExperiment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnInferenceExperimentProps cfnInferenceExperimentProps = CfnInferenceExperimentProps.builder()
+ * .endpointName("endpointName")
+ * .modelVariants(List.of(ModelVariantConfigProperty.builder()
+ * .infrastructureConfig(ModelInfrastructureConfigProperty.builder()
+ * .infrastructureType("infrastructureType")
+ * .realTimeInferenceConfig(RealTimeInferenceConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .build())
+ * .build())
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * .build()))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .type("type")
+ * // the properties below are optional
+ * .dataStorageConfig(DataStorageConfigProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .contentType(CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build())
+ * .kmsKey("kmsKey")
+ * .build())
+ * .description("description")
+ * .desiredState("desiredState")
+ * .kmsKey("kmsKey")
+ * .schedule(InferenceExperimentScheduleProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build())
+ * .shadowModeConfig(ShadowModeConfigProperty.builder()
+ * .shadowModelVariants(List.of(ShadowModelVariantConfigProperty.builder()
+ * .samplingPercentage(123)
+ * .shadowModelVariantName("shadowModelVariantName")
+ * .build()))
+ * .sourceModelVariantName("sourceModelVariantName")
+ * .build())
+ * .statusReason("statusReason")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferenceexperiment.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentPropsDsl {
   private val cdkBuilder: CfnInferenceExperimentProps.Builder =

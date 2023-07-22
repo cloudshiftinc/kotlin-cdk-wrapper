@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConformancePack
 import software.constructs.Construct
 
+/**
+ * A conformance pack is a collection of AWS Config rules and remediation actions that can be easily
+ * deployed in an account and a region.
+ *
+ * ConformancePack creates a service linked role in your account. The service linked role is created
+ * only when the role does not exist in your account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object templateSsmDocumentDetails;
+ * CfnConformancePack cfnConformancePack = CfnConformancePack.Builder.create(this,
+ * "MyCfnConformancePack")
+ * .conformancePackName("conformancePackName")
+ * // the properties below are optional
+ * .conformancePackInputParameters(List.of(ConformancePackInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .deliveryS3Bucket("deliveryS3Bucket")
+ * .deliveryS3KeyPrefix("deliveryS3KeyPrefix")
+ * .templateBody("templateBody")
+ * .templateS3Uri("templateS3Uri")
+ * .templateSsmDocumentDetails(templateSsmDocumentDetails)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html)
+ */
 @CdkDslMarker
 public class CfnConformancePackDsl(
   scope: Construct,

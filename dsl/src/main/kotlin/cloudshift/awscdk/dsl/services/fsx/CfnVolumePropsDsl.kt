@@ -13,6 +13,70 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnVolume
 import software.amazon.awscdk.services.fsx.CfnVolumeProps
 
+/**
+ * Properties for defining a `CfnVolume`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnVolumeProps cfnVolumeProps = CfnVolumeProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .backupId("backupId")
+ * .ontapConfiguration(OntapConfigurationProperty.builder()
+ * .sizeInMegabytes("sizeInMegabytes")
+ * .storageVirtualMachineId("storageVirtualMachineId")
+ * // the properties below are optional
+ * .copyTagsToBackups("copyTagsToBackups")
+ * .junctionPath("junctionPath")
+ * .ontapVolumeType("ontapVolumeType")
+ * .securityStyle("securityStyle")
+ * .snapshotPolicy("snapshotPolicy")
+ * .storageEfficiencyEnabled("storageEfficiencyEnabled")
+ * .tieringPolicy(TieringPolicyProperty.builder()
+ * .coolingPeriod(123)
+ * .name("name")
+ * .build())
+ * .build())
+ * .openZfsConfiguration(OpenZFSConfigurationProperty.builder()
+ * .parentVolumeId("parentVolumeId")
+ * // the properties below are optional
+ * .copyTagsToSnapshots(false)
+ * .dataCompressionType("dataCompressionType")
+ * .nfsExports(List.of(NfsExportsProperty.builder()
+ * .clientConfigurations(List.of(ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build()))
+ * .build()))
+ * .options(List.of("options"))
+ * .originSnapshot(OriginSnapshotProperty.builder()
+ * .copyStrategy("copyStrategy")
+ * .snapshotArn("snapshotArn")
+ * .build())
+ * .readOnly(false)
+ * .recordSizeKiB(123)
+ * .storageCapacityQuotaGiB(123)
+ * .storageCapacityReservationGiB(123)
+ * .userAndGroupQuotas(List.of(UserAndGroupQuotasProperty.builder()
+ * .id(123)
+ * .storageCapacityQuotaGiB(123)
+ * .type("type")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-volume.html)
+ */
 @CdkDslMarker
 public class CfnVolumePropsDsl {
   private val cdkBuilder: CfnVolumeProps.Builder = CfnVolumeProps.builder()

@@ -11,6 +11,26 @@ import software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter
 import software.amazon.awscdk.cloudassembly.schema.LoadBalancerType
 import software.amazon.awscdk.cloudassembly.schema.Tag
 
+/**
+ * Filters for selecting load balancers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * LoadBalancerFilter loadBalancerFilter = LoadBalancerFilter.builder()
+ * .loadBalancerType(LoadBalancerType.NETWORK)
+ * // the properties below are optional
+ * .loadBalancerArn("loadBalancerArn")
+ * .loadBalancerTags(List.of(Tag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerFilterDsl {
   private val cdkBuilder: LoadBalancerFilter.Builder = LoadBalancerFilter.builder()

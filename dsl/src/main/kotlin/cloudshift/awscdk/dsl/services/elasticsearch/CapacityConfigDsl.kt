@@ -8,6 +8,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.elasticsearch.CapacityConfig
 
+/**
+ * (deprecated) Configures the capacity of the cluster such as the instance type and the number of
+ * instances.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_10)
+ * .capacity(CapacityConfig.builder()
+ * .masterNodes(2)
+ * .warmNodes(2)
+ * .warmInstanceType("ultrawarm1.medium.elasticsearch")
+ * .build())
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class CapacityConfigDsl {

@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents how metadata stored in the AWS Glue Data Catalog is defined in a DataBrew dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * DataCatalogInputDefinitionProperty dataCatalogInputDefinitionProperty =
+ * DataCatalogInputDefinitionProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-datacataloginputdefinition.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDataCatalogInputDefinitionPropertyDsl {
   private val cdkBuilder: CfnDataset.DataCatalogInputDefinitionProperty.Builder =

@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTrigger
 
+/**
+ * Defines the predicate of the trigger, which determines when it fires.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * PredicateProperty predicateProperty = PredicateProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .crawlerName("crawlerName")
+ * .crawlState("crawlState")
+ * .jobName("jobName")
+ * .logicalOperator("logicalOperator")
+ * .state("state")
+ * .build()))
+ * .logical("logical")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html)
+ */
 @CdkDslMarker
 public class CfnTriggerPredicatePropertyDsl {
   private val cdkBuilder: CfnTrigger.PredicateProperty.Builder =

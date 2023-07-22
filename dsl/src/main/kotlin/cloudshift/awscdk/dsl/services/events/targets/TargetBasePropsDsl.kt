@@ -8,6 +8,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.events.targets.TargetBaseProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * The generic properties for an RuleTarget.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * TargetBaseProps targetBaseProps = TargetBaseProps.builder()
+ * .deadLetterQueue(queue)
+ * .maxEventAge(Duration.minutes(30))
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TargetBasePropsDsl {
   private val cdkBuilder: TargetBaseProps.Builder = TargetBaseProps.builder()

@@ -10,6 +10,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.InitFileOptions
 import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 
+/**
+ * Options for InitFile.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myBucket;
+ * InitServiceRestartHandle handle = new InitServiceRestartHandle();
+ * CloudFormationInit.fromElements(InitFile.fromString("/etc/nginx/nginx.conf", "...",
+ * InitFileOptions.builder().serviceRestartHandles(List.of(handle)).build()),
+ * InitSource.fromS3Object("/var/www/html", myBucket, "html.zip",
+ * InitSourceOptions.builder().serviceRestartHandles(List.of(handle)).build()),
+ * InitService.enable("nginx", InitServiceOptions.builder()
+ * .serviceRestartHandle(handle)
+ * .build()));
+ * ```
+ */
 @CdkDslMarker
 public class InitFileOptionsDsl {
   private val cdkBuilder: InitFileOptions.Builder = InitFileOptions.builder()

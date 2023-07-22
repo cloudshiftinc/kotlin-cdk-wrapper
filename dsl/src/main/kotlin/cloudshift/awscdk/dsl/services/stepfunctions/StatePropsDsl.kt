@@ -10,6 +10,29 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.StateProps
 
+/**
+ * Properties shared by all states.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object parameters;
+ * Object resultSelector;
+ * StateProps stateProps = StateProps.builder()
+ * .comment("comment")
+ * .inputPath("inputPath")
+ * .outputPath("outputPath")
+ * .parameters(Map.of(
+ * "parametersKey", parameters))
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StatePropsDsl {
   private val cdkBuilder: StateProps.Builder = StateProps.builder()

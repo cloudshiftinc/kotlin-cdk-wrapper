@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.pipelines.AssetType
 import software.amazon.awscdk.pipelines.StackAsset
 
+/**
+ * An asset used by a Stack.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.pipelines.*;
+ * StackAsset stackAsset = StackAsset.builder()
+ * .assetId("assetId")
+ * .assetManifestPath("assetManifestPath")
+ * .assetSelector("assetSelector")
+ * .assetType(AssetType.FILE)
+ * .isTemplate(false)
+ * // the properties below are optional
+ * .assetPublishingRoleArn("assetPublishingRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StackAssetDsl {
   private val cdkBuilder: StackAsset.Builder = StackAsset.builder()

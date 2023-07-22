@@ -11,6 +11,31 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnBucket
 
+/**
+ * A container for an Amazon S3 on Outposts bucket lifecycle rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * Object filter;
+ * RuleProperty ruleProperty = RuleProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .abortIncompleteMultipartUpload(AbortIncompleteMultipartUploadProperty.builder()
+ * .daysAfterInitiation(123)
+ * .build())
+ * .expirationDate("expirationDate")
+ * .expirationInDays(123)
+ * .filter(filter)
+ * .id("id")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html)
+ */
 @CdkDslMarker
 public class CfnBucketRulePropertyDsl {
   private val cdkBuilder: CfnBucket.RuleProperty.Builder = CfnBucket.RuleProperty.builder()

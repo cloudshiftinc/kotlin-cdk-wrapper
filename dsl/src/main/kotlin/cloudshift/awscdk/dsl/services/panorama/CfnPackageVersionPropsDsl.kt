@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnPackageVersionProps
 
+/**
+ * Properties for defining a `CfnPackageVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnPackageVersionProps cfnPackageVersionProps = CfnPackageVersionProps.builder()
+ * .packageId("packageId")
+ * .packageVersion("packageVersion")
+ * .patchVersion("patchVersion")
+ * // the properties below are optional
+ * .markLatest(false)
+ * .ownerAccount("ownerAccount")
+ * .updatedLatestPatchVersion("updatedLatestPatchVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-packageversion.html)
+ */
 @CdkDslMarker
 public class CfnPackageVersionPropsDsl {
   private val cdkBuilder: CfnPackageVersionProps.Builder = CfnPackageVersionProps.builder()

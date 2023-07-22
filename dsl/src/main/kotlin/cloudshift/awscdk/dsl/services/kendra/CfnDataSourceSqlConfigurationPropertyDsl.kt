@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides information that configures Amazon Kendra to use a SQL database.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SqlConfigurationProperty sqlConfigurationProperty = SqlConfigurationProperty.builder()
+ * .queryIdentifiersEnclosingOption("queryIdentifiersEnclosingOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-sqlconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSqlConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SqlConfigurationProperty.Builder =

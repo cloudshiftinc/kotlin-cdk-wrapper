@@ -9,6 +9,31 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps
 
+/**
+ * Properties for defining a `CfnIntegrationResponse`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object responseParameters;
+ * Object responseTemplates;
+ * CfnIntegrationResponseProps cfnIntegrationResponseProps = CfnIntegrationResponseProps.builder()
+ * .apiId("apiId")
+ * .integrationId("integrationId")
+ * .integrationResponseKey("integrationResponseKey")
+ * // the properties below are optional
+ * .contentHandlingStrategy("contentHandlingStrategy")
+ * .responseParameters(responseParameters)
+ * .responseTemplates(responseTemplates)
+ * .templateSelectionExpression("templateSelectionExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationResponsePropsDsl {
   private val cdkBuilder: CfnIntegrationResponseProps.Builder =

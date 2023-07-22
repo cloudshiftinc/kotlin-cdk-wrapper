@@ -12,6 +12,64 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnContainerRecipeProps
 
+/**
+ * Properties for defining a `CfnContainerRecipe`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnContainerRecipeProps cfnContainerRecipeProps = CfnContainerRecipeProps.builder()
+ * .components(List.of(ComponentConfigurationProperty.builder()
+ * .componentArn("componentArn")
+ * .parameters(List.of(ComponentParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .build()))
+ * .containerType("containerType")
+ * .name("name")
+ * .parentImage("parentImage")
+ * .targetRepository(TargetContainerRepositoryProperty.builder()
+ * .repositoryName("repositoryName")
+ * .service("service")
+ * .build())
+ * .version("version")
+ * // the properties below are optional
+ * .description("description")
+ * .dockerfileTemplateData("dockerfileTemplateData")
+ * .dockerfileTemplateUri("dockerfileTemplateUri")
+ * .imageOsVersionOverride("imageOsVersionOverride")
+ * .instanceConfiguration(InstanceConfigurationProperty.builder()
+ * .blockDeviceMappings(List.of(InstanceBlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsInstanceBlockDeviceSpecificationProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build()))
+ * .image("image")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .platformOverride("platformOverride")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-containerrecipe.html)
+ */
 @CdkDslMarker
 public class CfnContainerRecipePropsDsl {
   private val cdkBuilder: CfnContainerRecipeProps.Builder = CfnContainerRecipeProps.builder()

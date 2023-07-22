@@ -15,6 +15,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnImageBuilder
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::ImageBuilder` resource creates an image builder for Amazon AppStream 2.0. An
+ * image builder is a virtual machine that is used to create an image.
+ *
+ * The initial state of the image builder is `PENDING` . When it is ready, the state is `RUNNING` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnImageBuilder cfnImageBuilder = CfnImageBuilder.Builder.create(this, "MyCfnImageBuilder")
+ * .instanceType("instanceType")
+ * .name("name")
+ * // the properties below are optional
+ * .accessEndpoints(List.of(AccessEndpointProperty.builder()
+ * .endpointType("endpointType")
+ * .vpceId("vpceId")
+ * .build()))
+ * .appstreamAgentVersion("appstreamAgentVersion")
+ * .description("description")
+ * .displayName("displayName")
+ * .domainJoinInfo(DomainJoinInfoProperty.builder()
+ * .directoryName("directoryName")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build())
+ * .enableDefaultInternetAccess(false)
+ * .iamRoleArn("iamRoleArn")
+ * .imageArn("imageArn")
+ * .imageName("imageName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)
+ */
 @CdkDslMarker
 public class CfnImageBuilderDsl(
   scope: Construct,

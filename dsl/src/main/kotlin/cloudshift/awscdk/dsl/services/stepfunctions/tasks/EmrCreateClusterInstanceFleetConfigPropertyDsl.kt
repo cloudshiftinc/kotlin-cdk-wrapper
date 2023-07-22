@@ -10,6 +10,64 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * The configuration that defines an instance fleet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ConfigurationProperty configurationProperty_;
+ * Size size;
+ * InstanceFleetConfigProperty instanceFleetConfigProperty = InstanceFleetConfigProperty.builder()
+ * .instanceFleetType(EmrCreateCluster.getInstanceRoleType().MASTER)
+ * // the properties below are optional
+ * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .bidPrice("bidPrice")
+ * .bidPriceAsPercentageOfOnDemandPrice(123)
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurations(List.of(configurationProperty_))
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .build()))
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .weightedCapacity(123)
+ * .build()))
+ * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+ * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+ * .timeoutAction(EmrCreateCluster.getSpotTimeoutAction().SWITCH_TO_ON_DEMAND)
+ * .timeoutDurationMinutes(123)
+ * // the properties below are optional
+ * .allocationStrategy(EmrCreateCluster.getSpotAllocationStrategy().CAPACITY_OPTIMIZED)
+ * .blockDurationMinutes(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .targetOnDemandCapacity(123)
+ * .targetSpotCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceFleetConfig.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterInstanceFleetConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.InstanceFleetConfigProperty.Builder =

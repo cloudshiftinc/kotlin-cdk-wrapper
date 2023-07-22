@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes
 
+/**
+ * Properties to reference an existing target group.
+ *
+ * Example:
+ *
+ * ```
+ * Stack stack;
+ * IApplicationTargetGroup targetGroup = ApplicationTargetGroup.fromTargetGroupAttributes(this,
+ * "MyTargetGroup", TargetGroupAttributes.builder()
+ * .targetGroupArn(Fn.importValue("TargetGroupArn"))
+ * .loadBalancerArns(Fn.importValue("LoadBalancerArn"))
+ * .build());
+ * IApplicationTargetGroupMetrics targetGroupMetrics = targetGroup.getMetrics();
+ * ```
+ */
 @CdkDslMarker
 public class TargetGroupAttributesDsl {
   private val cdkBuilder: TargetGroupAttributes.Builder = TargetGroupAttributes.builder()

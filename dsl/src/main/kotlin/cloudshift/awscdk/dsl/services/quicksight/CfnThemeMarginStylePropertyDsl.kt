@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * The display options for margins around the outside edge of sheets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * MarginStyleProperty marginStyleProperty = MarginStyleProperty.builder()
+ * .show(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-marginstyle.html)
+ */
 @CdkDslMarker
 public class CfnThemeMarginStylePropertyDsl {
   private val cdkBuilder: CfnTheme.MarginStyleProperty.Builder =

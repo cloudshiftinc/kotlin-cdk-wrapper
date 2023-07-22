@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A table visual.
+ *
+ * For more information, see [Using tables as
+ * visuals](https://docs.aws.amazon.com/quicksight/latest/user/tabular.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-tablevisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisTableVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.TableVisualProperty.Builder =

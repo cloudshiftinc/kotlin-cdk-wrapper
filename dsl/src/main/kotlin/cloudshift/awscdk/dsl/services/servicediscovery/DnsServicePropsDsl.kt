@@ -14,6 +14,39 @@ import software.amazon.awscdk.services.servicediscovery.HealthCheckConfig
 import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
 import software.amazon.awscdk.services.servicediscovery.RoutingPolicy
 
+/**
+ * Service props needed to create a service in a given namespace.
+ *
+ * Used by createService() for PrivateDnsNamespace and
+ * PublicDnsNamespace
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
+ * .name("foobar.com")
+ * .build();
+ * Service service = namespace.createService("Service", DnsServiceProps.builder()
+ * .name("foo")
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.seconds(30))
+ * .healthCheck(HealthCheckConfig.builder()
+ * .type(HealthCheckType.HTTPS)
+ * .resourcePath("/healthcheck")
+ * .failureThreshold(2)
+ * .build())
+ * .build());
+ * service.registerIpInstance("IpInstance", IpInstanceBaseProps.builder()
+ * .ipv4("54.239.25.192")
+ * .port(443)
+ * .build());
+ * app.synth();
+ * ```
+ */
 @CdkDslMarker
 public class DnsServicePropsDsl {
   private val cdkBuilder: DnsServiceProps.Builder = DnsServiceProps.builder()

@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of
+ * using the IP address that's reported by the web request origin.
+ *
+ * Commonly, this is the X-Forwarded-For (XFF) header, but you can specify any header name.
+ *
+ *
+ * If the specified header isn't present in the request, AWS WAF doesn't apply the rule to the web
+ * request at all.
+ *
+ *
+ * This configuration is used only for `IPSetReferenceStatement` . For `GeoMatchStatement` and
+ * `RateBasedStatement` , use `ForwardedIPConfig` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * IPSetForwardedIPConfigurationProperty iPSetForwardedIPConfigurationProperty = Map.of(
+ * "fallbackBehavior", "fallbackBehavior",
+ * "headerName", "headerName",
+ * "position", "position");
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ipsetforwardedipconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWebACLIPSetForwardedIPConfigurationPropertyDsl {
   private val cdkBuilder: CfnWebACL.IPSetForwardedIPConfigurationProperty.Builder =

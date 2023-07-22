@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.frauddetector.CfnEntityType
 import software.constructs.Construct
 
+/**
+ * Manages an entity type.
+ *
+ * An entity represents who is performing the event. As part of a fraud prediction, you pass the
+ * entity ID to indicate the specific entity who performed the event. An entity type classifies the
+ * entity. Example classifications include customer, merchant, or account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnEntityType cfnEntityType = CfnEntityType.Builder.create(this, "MyCfnEntityType")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html)
+ */
 @CdkDslMarker
 public class CfnEntityTypeDsl(
   scope: Construct,

@@ -15,6 +15,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnApiKey
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::ApiKey` resource creates a unique key that you can distribute to clients
+ * who are executing API Gateway `Method` resources that require an API key.
+ *
+ * To specify which API key clients must use, map the API key with the `RestApi` and `Stage`
+ * resources that include the methods that require a key.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnApiKey cfnApiKey = CfnApiKey.Builder.create(this, "MyCfnApiKey")
+ * .customerId("customerId")
+ * .description("description")
+ * .enabled(false)
+ * .generateDistinctId(false)
+ * .name("name")
+ * .stageKeys(List.of(StageKeyProperty.builder()
+ * .restApiId("restApiId")
+ * .stageName("stageName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html)
+ */
 @CdkDslMarker
 public class CfnApiKeyDsl(
   scope: Construct,

@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition
 
+/**
+ * The relative time period over which data is included in the aggregation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * RangeProperty rangeProperty = RangeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-range.html)
+ */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionRangePropertyDsl {
   private val cdkBuilder: CfnCalculatedAttributeDefinition.RangeProperty.Builder =

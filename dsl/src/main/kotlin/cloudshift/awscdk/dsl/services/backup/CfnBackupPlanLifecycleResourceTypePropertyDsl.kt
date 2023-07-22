@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 
+/**
+ * Specifies an object containing an array of `Transition` objects that determine how long in days
+ * before a recovery point transitions to cold storage or is deleted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * LifecycleResourceTypeProperty lifecycleResourceTypeProperty =
+ * LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html)
+ */
 @CdkDslMarker
 public class CfnBackupPlanLifecycleResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupPlan.LifecycleResourceTypeProperty.Builder =

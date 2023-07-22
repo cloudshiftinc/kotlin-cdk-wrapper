@@ -11,6 +11,30 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.s3.IntelligentTieringConfiguration
 import software.amazon.awscdk.services.s3.Tag
 
+/**
+ * The intelligent tiering configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * IntelligentTieringConfiguration intelligentTieringConfiguration =
+ * IntelligentTieringConfiguration.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .archiveAccessTierTime(Duration.minutes(30))
+ * .deepArchiveAccessTierTime(Duration.minutes(30))
+ * .prefix("prefix")
+ * .tags(List.of(Tag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IntelligentTieringConfigurationDsl {
   private val cdkBuilder: IntelligentTieringConfiguration.Builder =

@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnConfigRule
 
+/**
+ * Defines which resources trigger an evaluation for an AWS Config rule.
+ *
+ * The scope can include one or more resource types, a combination of a tag key and value, or a
+ * combination of one resource type and one resource ID. Specify a scope to constrain which resources
+ * trigger an evaluation for a rule. Otherwise, evaluations for the rule are triggered when any
+ * resource in your recording group changes in configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * ScopeProperty scopeProperty = ScopeProperty.builder()
+ * .complianceResourceId("complianceResourceId")
+ * .complianceResourceTypes(List.of("complianceResourceTypes"))
+ * .tagKey("tagKey")
+ * .tagValue("tagValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-scope.html)
+ */
 @CdkDslMarker
 public class CfnConfigRuleScopePropertyDsl {
   private val cdkBuilder: CfnConfigRule.ScopeProperty.Builder =

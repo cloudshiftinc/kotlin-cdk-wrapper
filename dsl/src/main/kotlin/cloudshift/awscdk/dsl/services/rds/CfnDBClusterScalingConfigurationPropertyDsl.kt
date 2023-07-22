@@ -9,6 +9,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBCluster
 
+/**
+ * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
+ * Serverless DB cluster.
+ *
+ * For more information, see [Using Amazon Aurora
+ * Serverless](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html) in
+ * the *Amazon Aurora User Guide* .
+ *
+ * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, use
+ * `ServerlessV2ScalingConfiguration` property.
+ *
+ * Valid for: Aurora DB clusters only
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ScalingConfigurationProperty scalingConfigurationProperty =
+ * ScalingConfigurationProperty.builder()
+ * .autoPause(false)
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .secondsBeforeTimeout(123)
+ * .secondsUntilAutoPause(123)
+ * .timeoutAction("timeoutAction")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-scalingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterScalingConfigurationPropertyDsl {
   private val cdkBuilder: CfnDBCluster.ScalingConfigurationProperty.Builder =

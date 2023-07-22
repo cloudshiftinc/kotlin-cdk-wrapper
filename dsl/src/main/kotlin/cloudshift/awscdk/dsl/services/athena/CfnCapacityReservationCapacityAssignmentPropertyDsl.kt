@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.athena.CfnCapacityReservation
 
+/**
+ * A mapping between one or more workgroups and a capacity reservation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CapacityAssignmentProperty capacityAssignmentProperty = CapacityAssignmentProperty.builder()
+ * .workgroupNames(List.of("workgroupNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-capacityreservation-capacityassignment.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationCapacityAssignmentPropertyDsl {
   private val cdkBuilder: CfnCapacityReservation.CapacityAssignmentProperty.Builder =

@@ -9,6 +9,36 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.personalize.CfnDataset
 
+/**
+ * Describes a job that imports training data from a data source (Amazon S3 bucket) to an Amazon
+ * Personalize dataset.
+ *
+ * For more information, see
+ * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
+ * .
+ *
+ * A dataset import job can be in one of the following states:
+ *
+ * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object dataSource;
+ * DatasetImportJobProperty datasetImportJobProperty = DatasetImportJobProperty.builder()
+ * .datasetArn("datasetArn")
+ * .datasetImportJobArn("datasetImportJobArn")
+ * .dataSource(dataSource)
+ * .jobName("jobName")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-dataset-datasetimportjob.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDatasetImportJobPropertyDsl {
   private val cdkBuilder: CfnDataset.DatasetImportJobProperty.Builder =

@@ -14,6 +14,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 import software.constructs.Construct
 
+/**
+ * Creates an analysis in Amazon QuickSight.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisDsl(
   scope: Construct,

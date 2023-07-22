@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.ActivityProps
 
+/**
+ * Properties for defining a new Step Functions Activity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * ActivityProps activityProps = ActivityProps.builder()
+ * .activityName("activityName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ActivityPropsDsl {
   private val cdkBuilder: ActivityProps.Builder = ActivityProps.builder()

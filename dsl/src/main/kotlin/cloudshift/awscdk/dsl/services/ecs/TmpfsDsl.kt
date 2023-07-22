@@ -10,6 +10,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.Tmpfs
 import software.amazon.awscdk.services.ecs.TmpfsMountOption
 
+/**
+ * The details of a tmpfs mount for a container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Tmpfs tmpfs = Tmpfs.builder()
+ * .containerPath("containerPath")
+ * .size(123)
+ * // the properties below are optional
+ * .mountOptions(List.of(TmpfsMountOption.DEFAULTS))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TmpfsDsl {
   private val cdkBuilder: Tmpfs.Builder = Tmpfs.builder()

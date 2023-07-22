@@ -13,6 +13,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnRule
 import software.constructs.Construct
 
+/**
+ * Creates a rule for the specified Amazon Connect instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * Object assignContactCategoryActions;
+ * CfnRule cfnRule = CfnRule.Builder.create(this, "MyCfnRule")
+ * .actions(ActionsProperty.builder()
+ * .assignContactCategoryActions(List.of(assignContactCategoryActions))
+ * .eventBridgeActions(List.of(EventBridgeActionProperty.builder()
+ * .name("name")
+ * .build()))
+ * .sendNotificationActions(List.of(SendNotificationActionProperty.builder()
+ * .content("content")
+ * .contentType("contentType")
+ * .deliveryMethod("deliveryMethod")
+ * .recipient(NotificationRecipientTypeProperty.builder()
+ * .userArns(List.of("userArns"))
+ * .userTags(Map.of(
+ * "userTagsKey", "userTags"))
+ * .build())
+ * // the properties below are optional
+ * .subject("subject")
+ * .build()))
+ * .taskActions(List.of(TaskActionProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .references(Map.of(
+ * "referencesKey", ReferenceProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .build())
+ * .function("function")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * .publishStatus("publishStatus")
+ * .triggerEventSource(RuleTriggerEventSourceProperty.builder()
+ * .eventSourceName("eventSourceName")
+ * // the properties below are optional
+ * .integrationAssociationArn("integrationAssociationArn")
+ * .build())
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-rule.html)
+ */
 @CdkDslMarker
 public class CfnRuleDsl(
   scope: Construct,

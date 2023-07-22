@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfigType
 import software.constructs.Construct
 
+/**
+ * (deprecated) A custom Deployment Configuration for a Lambda Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CustomLambdaDeploymentConfig customLambdaDeploymentConfig =
+ * CustomLambdaDeploymentConfig.Builder.create(this, "MyCustomLambdaDeploymentConfig")
+ * .interval(Duration.minutes(30))
+ * .percentage(123)
+ * .type(CustomLambdaDeploymentConfigType.CANARY)
+ * // the properties below are optional
+ * .deploymentConfigName("deploymentConfigName")
+ * .build();
+ * ```
+ *
+ * @deprecated CloudFormation now supports Lambda deployment configurations without custom
+ * resources. Use `LambdaDeploymentConfig`.
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class CustomLambdaDeploymentConfigDsl(

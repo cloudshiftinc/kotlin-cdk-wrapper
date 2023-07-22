@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVPNConnectionRoute
 import software.constructs.Construct
 
+/**
+ * Specifies a static route for a VPN connection between an existing virtual private gateway and a
+ * VPN customer gateway.
+ *
+ * The static route allows traffic to be routed from the virtual private gateway to the VPN customer
+ * gateway.
+ *
+ * For more information, see [AWS Site-to-Site
+ * VPN](https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html) in the *AWS Site-to-Site VPN User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPNConnectionRoute cfnVPNConnectionRoute = CfnVPNConnectionRoute.Builder.create(this,
+ * "MyCfnVPNConnectionRoute")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .vpnConnectionId("vpnConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpnconnectionroute.html)
+ */
 @CdkDslMarker
 public class CfnVPNConnectionRouteDsl(
   scope: Construct,

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * An object that represents a job timeout configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * TimeoutProperty timeoutProperty = TimeoutProperty.builder()
+ * .attemptDurationSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-timeout.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionTimeoutPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.TimeoutProperty.Builder =

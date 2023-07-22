@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * The options for imported source files in CSV format.
+ *
+ * The values are Delimiter and HeaderList.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * CsvProperty csvProperty = CsvProperty.builder()
+ * .delimiter("delimiter")
+ * .headerList(List.of("headerList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-csv.html)
+ */
 @CdkDslMarker
 public class CfnTableCsvPropertyDsl {
   private val cdkBuilder: CfnTable.CsvProperty.Builder = CfnTable.CsvProperty.builder()

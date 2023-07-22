@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * Updates to the severity information for a finding.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * SeverityUpdateProperty severityUpdateProperty = SeverityUpdateProperty.builder()
+ * .label("label")
+ * .normalized(123)
+ * .product(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-severityupdate.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleSeverityUpdatePropertyDsl {
   private val cdkBuilder: CfnAutomationRule.SeverityUpdateProperty.Builder =

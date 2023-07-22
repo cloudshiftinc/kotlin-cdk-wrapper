@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseProps
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Base properties for an Amazon Linux SSM Parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * AmazonLinuxImageSsmParameterBaseProps amazonLinuxImageSsmParameterBaseProps =
+ * AmazonLinuxImageSsmParameterBaseProps.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .cachedInContext(false)
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinuxImageSsmParameterBasePropsDsl {
   private val cdkBuilder: AmazonLinuxImageSsmParameterBaseProps.Builder =

@@ -12,6 +12,18 @@ import software.amazon.awscdk.services.ssm.ParameterType
 import software.amazon.awscdk.services.ssm.StringParameter
 import software.constructs.Construct
 
+/**
+ * Creates a new String SSM Parameter.
+ *
+ * Example:
+ *
+ * ```
+ * StringParameter ssmParameter = StringParameter.Builder.create(this, "mySsmParameter")
+ * .parameterName("mySsmParameter")
+ * .stringValue("mySsmParameterValue")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StringParameterDsl(
   scope: Construct,

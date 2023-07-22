@@ -8,6 +8,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicyProps
 
+/**
+ * Properties for defining a `CfnScalingPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * CfnScalingPolicyProps cfnScalingPolicyProps = CfnScalingPolicyProps.builder()
+ * .policyName("policyName")
+ * .policyType("policyType")
+ * // the properties below are optional
+ * .resourceId("resourceId")
+ * .scalableDimension("scalableDimension")
+ * .scalingTargetId("scalingTargetId")
+ * .serviceNamespace("serviceNamespace")
+ * .stepScalingPolicyConfiguration(StepScalingPolicyConfigurationProperty.builder()
+ * .adjustmentType("adjustmentType")
+ * .cooldown(123)
+ * .metricAggregationType("metricAggregationType")
+ * .minAdjustmentMagnitude(123)
+ * .stepAdjustments(List.of(StepAdjustmentProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .metricIntervalLowerBound(123)
+ * .metricIntervalUpperBound(123)
+ * .build()))
+ * .build())
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableScaleIn(false)
+ * .predefinedMetricSpecification(PredefinedMetricSpecificationProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPropsDsl {
   private val cdkBuilder: CfnScalingPolicyProps.Builder = CfnScalingPolicyProps.builder()

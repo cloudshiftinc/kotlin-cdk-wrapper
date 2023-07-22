@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.timestream.CfnScheduledQuery
 
+/**
+ * MixedMeasureMappings are mappings that can be used to ingest data into a mixture of narrow and
+ * multi measures in the derived table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * MixedMeasureMappingProperty mixedMeasureMappingProperty = MixedMeasureMappingProperty.builder()
+ * .measureValueType("measureValueType")
+ * // the properties below are optional
+ * .measureName("measureName")
+ * .multiMeasureAttributeMappings(List.of(MultiMeasureAttributeMappingProperty.builder()
+ * .measureValueType("measureValueType")
+ * .sourceColumn("sourceColumn")
+ * // the properties below are optional
+ * .targetMultiMeasureAttributeName("targetMultiMeasureAttributeName")
+ * .build()))
+ * .sourceColumn("sourceColumn")
+ * .targetMeasureName("targetMeasureName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-scheduledquery-mixedmeasuremapping.html)
+ */
 @CdkDslMarker
 public class CfnScheduledQueryMixedMeasureMappingPropertyDsl {
   private val cdkBuilder: CfnScheduledQuery.MixedMeasureMappingProperty.Builder =

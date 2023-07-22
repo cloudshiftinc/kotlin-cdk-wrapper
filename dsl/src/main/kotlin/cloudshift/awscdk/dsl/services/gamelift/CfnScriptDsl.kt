@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnScript
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::Script` resource creates a new script record for your Realtime Servers
+ * script.
+ *
+ * Realtime scripts are JavaScript that provide configuration settings and optional custom game
+ * logic for your game. The script is deployed when you create a Realtime Servers fleet to host your
+ * game sessions. Script logic is executed during an active game session.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnScript cfnScript = CfnScript.Builder.create(this, "MyCfnScript")
+ * .storageLocation(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-script.html)
+ */
 @CdkDslMarker
 public class CfnScriptDsl(
   scope: Construct,

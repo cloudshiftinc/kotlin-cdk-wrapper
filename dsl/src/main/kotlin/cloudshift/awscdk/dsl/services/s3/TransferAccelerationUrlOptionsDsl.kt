@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions
 
+/**
+ * Options for creating a Transfer Acceleration URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * TransferAccelerationUrlOptions transferAccelerationUrlOptions =
+ * TransferAccelerationUrlOptions.builder()
+ * .dualStack(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TransferAccelerationUrlOptionsDsl {
   private val cdkBuilder: TransferAccelerationUrlOptions.Builder =

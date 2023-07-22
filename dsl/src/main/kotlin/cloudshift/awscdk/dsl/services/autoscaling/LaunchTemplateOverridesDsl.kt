@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides
 import software.amazon.awscdk.services.ec2.ILaunchTemplate
 import software.amazon.awscdk.services.ec2.InstanceType
 
+/**
+ * LaunchTemplateOverrides is a subproperty of LaunchTemplate that describes an override for a
+ * launch template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * InstanceType instanceType;
+ * LaunchTemplate launchTemplate;
+ * LaunchTemplateOverrides launchTemplateOverrides = LaunchTemplateOverrides.builder()
+ * .instanceType(instanceType)
+ * // the properties below are optional
+ * .launchTemplate(launchTemplate)
+ * .weightedCapacity(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LaunchTemplateOverridesDsl {
   private val cdkBuilder: LaunchTemplateOverrides.Builder = LaunchTemplateOverrides.builder()

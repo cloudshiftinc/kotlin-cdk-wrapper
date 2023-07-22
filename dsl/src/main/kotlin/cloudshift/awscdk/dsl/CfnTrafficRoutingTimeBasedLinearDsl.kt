@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear
 
+/**
+ * The traffic routing configuration if `CfnTrafficRoutingConfig.type` is
+ * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnTrafficRoutingTimeBasedLinear cfnTrafficRoutingTimeBasedLinear =
+ * CfnTrafficRoutingTimeBasedLinear.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnTrafficRoutingTimeBasedLinearDsl {
   private val cdkBuilder: CfnTrafficRoutingTimeBasedLinear.Builder =

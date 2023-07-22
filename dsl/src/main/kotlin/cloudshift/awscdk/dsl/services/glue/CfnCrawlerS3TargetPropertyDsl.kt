@@ -9,6 +9,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * Specifies a data store in Amazon Simple Storage Service (Amazon S3).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * S3TargetProperty s3TargetProperty = S3TargetProperty.builder()
+ * .connectionName("connectionName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .sampleSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-s3target.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerS3TargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.S3TargetProperty.Builder =

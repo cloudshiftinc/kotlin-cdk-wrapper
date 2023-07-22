@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The settings for updates to user attributes.
+ *
+ * These settings include the property `AttributesRequireVerificationBeforeUpdate` ,
+ * a user-pool setting that tells Amazon Cognito how to handle changes to the value of your users'
+ * email address and phone number attributes. For
+ * more information, see [Verifying updates to email addresses and phone
+ * numbers](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-email-phone-verification.html#user-pool-settings-verifications-verify-attribute-updates)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * UserAttributeUpdateSettingsProperty userAttributeUpdateSettingsProperty =
+ * UserAttributeUpdateSettingsProperty.builder()
+ * .attributesRequireVerificationBeforeUpdate(List.of("attributesRequireVerificationBeforeUpdate"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-userattributeupdatesettings.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUserAttributeUpdateSettingsPropertyDsl {
   private val cdkBuilder: CfnUserPool.UserAttributeUpdateSettingsProperty.Builder =

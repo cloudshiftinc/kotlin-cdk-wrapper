@@ -11,6 +11,58 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * The `MaintenanceWindowRunCommandParameters` property type specifies the parameters for a
+ * `RUN_COMMAND` task type for a maintenance window task in AWS Systems Manager .
+ *
+ * This means that these parameters are the same as those for the `SendCommand` API call. For more
+ * information about `SendCommand` parameters, see
+ * [SendCommand](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_SendCommand.html)
+ * in the *AWS Systems Manager API Reference* .
+ *
+ * For information about available parameters in SSM Command documents, you can view the content of
+ * the document itself in the Systems Manager console. For information, see [Viewing SSM command
+ * document
+ * content](https://docs.aws.amazon.com/systems-manager/latest/userguide/viewing-ssm-document-content.html)
+ * in the *AWS Systems Manager User Guide* .
+ *
+ * `MaintenanceWindowRunCommandParameters` is a property of the
+ * [TaskInvocationParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object parameters;
+ * MaintenanceWindowRunCommandParametersProperty maintenanceWindowRunCommandParametersProperty =
+ * MaintenanceWindowRunCommandParametersProperty.builder()
+ * .cloudWatchOutputConfig(CloudWatchOutputConfigProperty.builder()
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .cloudWatchOutputEnabled(false)
+ * .build())
+ * .comment("comment")
+ * .documentHash("documentHash")
+ * .documentHashType("documentHashType")
+ * .documentVersion("documentVersion")
+ * .notificationConfig(NotificationConfigProperty.builder()
+ * .notificationArn("notificationArn")
+ * // the properties below are optional
+ * .notificationEvents(List.of("notificationEvents"))
+ * .notificationType("notificationType")
+ * .build())
+ * .outputS3BucketName("outputS3BucketName")
+ * .outputS3KeyPrefix("outputS3KeyPrefix")
+ * .parameters(parameters)
+ * .serviceRoleArn("serviceRoleArn")
+ * .timeoutSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskMaintenanceWindowRunCommandParametersPropertyDsl {
   private val cdkBuilder:

@@ -11,6 +11,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnGateway
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConnect::Gateway resource is used to create a new gateway.
+ *
+ * AWS Elemental MediaConnect Gateway is a feature of MediaConnect that allows the deployment of
+ * on-premises resources for transporting live video to and from the AWS Cloud. MediaConnect Gateway
+ * allows you to contribute live video to the AWS Cloud from on-premises hardware, as well as
+ * distribute live video from the AWS Cloud to your local data center.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnGateway cfnGateway = CfnGateway.Builder.create(this, "MyCfnGateway")
+ * .egressCidrBlocks(List.of("egressCidrBlocks"))
+ * .name("name")
+ * .networks(List.of(GatewayNetworkProperty.builder()
+ * .cidrBlock("cidrBlock")
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-gateway.html)
+ */
 @CdkDslMarker
 public class CfnGatewayDsl(
   scope: Construct,

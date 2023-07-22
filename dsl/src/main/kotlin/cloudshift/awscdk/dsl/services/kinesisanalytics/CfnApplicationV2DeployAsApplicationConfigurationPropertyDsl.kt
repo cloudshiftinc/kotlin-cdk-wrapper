@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * The information required to deploy a Kinesis Data Analytics Studio notebook as an application
+ * with durable state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * DeployAsApplicationConfigurationProperty deployAsApplicationConfigurationProperty =
+ * DeployAsApplicationConfigurationProperty.builder()
+ * .s3ContentLocation(S3ContentBaseLocationProperty.builder()
+ * .bucketArn("bucketArn")
+ * // the properties below are optional
+ * .basePath("basePath")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-deployasapplicationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2DeployAsApplicationConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.DeployAsApplicationConfigurationProperty.Builder =

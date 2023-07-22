@@ -8,6 +8,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The FireLens configuration for the container.
+ *
+ * This is used to specify and configure a log router for container logs. For more information, see
+ * [Custom log
+ * routing](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * FirelensConfigurationProperty firelensConfigurationProperty =
+ * FirelensConfigurationProperty.builder()
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-firelensconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionFirelensConfigurationPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.FirelensConfigurationProperty.Builder =

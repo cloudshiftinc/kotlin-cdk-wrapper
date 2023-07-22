@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnInput
 import software.constructs.Construct
 
+/**
+ * The AWS::IoTEvents::Input resource creates an input.
+ *
+ * To monitor your devices and processes, they must have a way to get telemetry data into AWS IoT
+ * Events . This is done by sending messages as *inputs* to AWS IoT Events . For more information, see
+ * [How to Use AWS IoT
+ * Events](https://docs.aws.amazon.com/iotevents/latest/developerguide/how-to-use-iotevents.html) in
+ * the *AWS IoT Events Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * CfnInput cfnInput = CfnInput.Builder.create(this, "MyCfnInput")
+ * .inputDefinition(InputDefinitionProperty.builder()
+ * .attributes(List.of(AttributeProperty.builder()
+ * .jsonPath("jsonPath")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .inputDescription("inputDescription")
+ * .inputName("inputName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-input.html)
+ */
 @CdkDslMarker
 public class CfnInputDsl(
   scope: Construct,

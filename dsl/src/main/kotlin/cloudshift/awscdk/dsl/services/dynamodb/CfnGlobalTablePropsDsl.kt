@@ -11,6 +11,159 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps
 
+/**
+ * Properties for defining a `CfnGlobalTable`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * CfnGlobalTableProps cfnGlobalTableProps = CfnGlobalTableProps.builder()
+ * .attributeDefinitions(List.of(AttributeDefinitionProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeType("attributeType")
+ * .build()))
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .replicas(List.of(ReplicaSpecificationProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deletionProtectionEnabled(false)
+ * .globalSecondaryIndexes(List.of(ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .build()))
+ * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .sseSpecification(ReplicaSSESpecificationProperty.builder()
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .build())
+ * .tableClass("tableClass")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .billingMode("billingMode")
+ * .globalSecondaryIndexes(List.of(GlobalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * // the properties below are optional
+ * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+ * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .build())
+ * .build()))
+ * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * .build()))
+ * .sseSpecification(SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * // the properties below are optional
+ * .sseType("sseType")
+ * .build())
+ * .streamSpecification(StreamSpecificationProperty.builder()
+ * .streamViewType("streamViewType")
+ * .build())
+ * .tableName("tableName")
+ * .timeToLiveSpecification(TimeToLiveSpecificationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .attributeName("attributeName")
+ * .build())
+ * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
+ * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTablePropsDsl {
   private val cdkBuilder: CfnGlobalTableProps.Builder = CfnGlobalTableProps.builder()

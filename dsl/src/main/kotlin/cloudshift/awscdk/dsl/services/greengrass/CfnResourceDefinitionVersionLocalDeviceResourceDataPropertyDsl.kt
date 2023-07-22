@@ -7,6 +7,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion
 
+/**
+ * Settings for a local device resource, which represents a file under `/dev` .
+ *
+ * For more information, see [Access Local Resources with Lambda
+ * Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+ * in the *Developer Guide* .
+ *
+ * In an AWS CloudFormation template, `LocalDeviceResourceData` can be used in the
+ * [`ResourceDataContainer`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourcedatacontainer.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * LocalDeviceResourceDataProperty localDeviceResourceDataProperty =
+ * LocalDeviceResourceDataProperty.builder()
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-localdeviceresourcedata.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionVersionLocalDeviceResourceDataPropertyDsl {
   private val cdkBuilder: CfnResourceDefinitionVersion.LocalDeviceResourceDataProperty.Builder =

@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnRouteTableProps
 
+/**
+ * Properties for defining a `CfnRouteTable`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnRouteTableProps cfnRouteTableProps = CfnRouteTableProps.builder()
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html)
+ */
 @CdkDslMarker
 public class CfnRouteTablePropsDsl {
   private val cdkBuilder: CfnRouteTableProps.Builder = CfnRouteTableProps.builder()

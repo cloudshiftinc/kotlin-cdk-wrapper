@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.refactorspaces.CfnService
 
+/**
+ * The configuration for the URL endpoint type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * UrlEndpointInputProperty urlEndpointInputProperty = UrlEndpointInputProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .healthUrl("healthUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-urlendpointinput.html)
+ */
 @CdkDslMarker
 public class CfnServiceUrlEndpointInputPropertyDsl {
   private val cdkBuilder: CfnService.UrlEndpointInputProperty.Builder =

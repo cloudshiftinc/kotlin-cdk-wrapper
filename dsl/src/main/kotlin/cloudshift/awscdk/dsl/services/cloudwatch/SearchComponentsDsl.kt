@@ -8,6 +8,35 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudwatch.SearchComponents
 
+/**
+ * Search components for use with [Values.fromSearchComponents].
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
+ * .defaultInterval(Duration.days(7))
+ * .variables(List.of(DashboardVariable.Builder.create()
+ * .id("functionName")
+ * .type(VariableType.PATTERN)
+ * .label("Function")
+ * .inputType(VariableInputType.RADIO)
+ * .value("originalFuncNameInDashboard")
+ * // equivalent to cw.Values.fromSearch('{AWS/Lambda,FunctionName} MetricName=\"Duration\"',
+ * 'FunctionName')
+ * .values(Values.fromSearchComponents(SearchComponents.builder()
+ * .namespace("AWS/Lambda")
+ * .dimensions(List.of("FunctionName"))
+ * .metricName("Duration")
+ * .populateFrom("FunctionName")
+ * .build()))
+ * .defaultValue(DefaultValue.FIRST)
+ * .visible(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SearchComponentsDsl {
   private val cdkBuilder: SearchComponents.Builder = SearchComponents.builder()

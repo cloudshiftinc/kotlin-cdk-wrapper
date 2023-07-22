@@ -14,6 +14,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroupProps
 
+/**
+ * Properties for defining a `CfnTargetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnTargetGroupProps cfnTargetGroupProps = CfnTargetGroupProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .config(TargetGroupConfigProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .vpcIdentifier("vpcIdentifier")
+ * // the properties below are optional
+ * .healthCheck(HealthCheckConfigProperty.builder()
+ * .enabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .matcher(MatcherProperty.builder()
+ * .httpCode("httpCode")
+ * .build())
+ * .path("path")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .unhealthyThresholdCount(123)
+ * .build())
+ * .ipAddressType("ipAddressType")
+ * .protocolVersion("protocolVersion")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targets(List.of(TargetProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .port(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupPropsDsl {
   private val cdkBuilder: CfnTargetGroupProps.Builder = CfnTargetGroupProps.builder()

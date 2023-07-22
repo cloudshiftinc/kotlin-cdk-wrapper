@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.memorydb.CfnCluster
 
+/**
+ * Represents the information required for client programs to connect to the cluster and its nodes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * EndpointProperty endpointProperty = EndpointProperty.builder()
+ * .address("address")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-memorydb-cluster-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnClusterEndpointPropertyDsl {
   private val cdkBuilder: CfnCluster.EndpointProperty.Builder =

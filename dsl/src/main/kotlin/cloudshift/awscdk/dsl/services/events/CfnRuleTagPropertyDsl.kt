@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * A key-value pair associated with an ECS Target of an EventBridge rule.
+ *
+ * The tag will be propagated to ECS by EventBridge when starting an ECS task based on a matched
+ * event.
+ *
+ *
+ * Currently, tags are only available when using ECS with EventBridge .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * TagProperty tagProperty = TagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-tag.html)
+ */
 @CdkDslMarker
 public class CfnRuleTagPropertyDsl {
   private val cdkBuilder: CfnRule.TagProperty.Builder = CfnRule.TagProperty.builder()

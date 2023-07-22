@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.ClusterEngineFeatures
 
+/**
+ * Represents Database Engine features.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ClusterEngineFeatures clusterEngineFeatures = ClusterEngineFeatures.builder()
+ * .s3Export("s3Export")
+ * .s3Import("s3Import")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterEngineFeaturesDsl {
   private val cdkBuilder: ClusterEngineFeatures.Builder = ClusterEngineFeatures.builder()

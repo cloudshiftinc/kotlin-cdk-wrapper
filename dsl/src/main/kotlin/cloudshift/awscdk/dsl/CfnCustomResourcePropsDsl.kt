@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CfnCustomResourceProps
 
+/**
+ * Properties for defining a `CfnCustomResource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCustomResourceProps cfnCustomResourceProps = CfnCustomResourceProps.builder()
+ * .serviceToken("serviceToken")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html)
+ */
 @CdkDslMarker
 public class CfnCustomResourcePropsDsl {
   private val cdkBuilder: CfnCustomResourceProps.Builder = CfnCustomResourceProps.builder()

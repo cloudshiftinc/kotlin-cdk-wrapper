@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents a listener's Transport Layer Security (TLS) validation context trust.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ListenerTlsValidationContextTrustProperty listenerTlsValidationContextTrustProperty =
+ * ListenerTlsValidationContextTrustProperty.builder()
+ * .file(TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlsvalidationcontexttrust.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeListenerTlsValidationContextTrustPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTlsValidationContextTrustProperty.Builder =

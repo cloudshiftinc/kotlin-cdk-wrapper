@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The paginated report options for a table visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TablePaginatedReportOptionsProperty tablePaginatedReportOptionsProperty =
+ * TablePaginatedReportOptionsProperty.builder()
+ * .overflowColumnHeaderVisibility("overflowColumnHeaderVisibility")
+ * .verticalOverflowVisibility("verticalOverflowVisibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-tablepaginatedreportoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTablePaginatedReportOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TablePaginatedReportOptionsProperty.Builder =

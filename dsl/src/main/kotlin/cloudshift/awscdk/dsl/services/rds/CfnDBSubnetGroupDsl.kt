@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBSubnetGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBSubnetGroup` resource creates a database subnet group.
+ *
+ * Subnet groups must contain at least two subnets in two different Availability Zones in the same
+ * region.
+ *
+ * For more information, see [Working with DB subnet
+ * groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_VPC.WorkingWithRDSInstanceinaVPC.html#USER_VPC.Subnets)
+ * in the *Amazon RDS User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBSubnetGroup cfnDBSubnetGroup = CfnDBSubnetGroup.Builder.create(this, "MyCfnDBSubnetGroup")
+ * .dbSubnetGroupDescription("dbSubnetGroupDescription")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDBSubnetGroupDsl(
   scope: Construct,

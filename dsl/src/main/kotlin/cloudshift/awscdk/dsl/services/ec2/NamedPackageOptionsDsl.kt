@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 import software.amazon.awscdk.services.ec2.NamedPackageOptions
 
+/**
+ * Options for InitPackage.yum/apt/rubyGem/python.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InitServiceRestartHandle initServiceRestartHandle;
+ * NamedPackageOptions namedPackageOptions = NamedPackageOptions.builder()
+ * .serviceRestartHandles(List.of(initServiceRestartHandle))
+ * .version(List.of("version"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NamedPackageOptionsDsl {
   private val cdkBuilder: NamedPackageOptions.Builder = NamedPackageOptions.builder()

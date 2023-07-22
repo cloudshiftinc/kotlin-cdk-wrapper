@@ -7,6 +7,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * Specifies the properties of data being imported from the S3 bucket source to the table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * ImportSourceSpecificationProperty importSourceSpecificationProperty =
+ * ImportSourceSpecificationProperty.builder()
+ * .inputFormat("inputFormat")
+ * .s3BucketSource(S3BucketSourceProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3BucketOwner("s3BucketOwner")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * // the properties below are optional
+ * .inputCompressionType("inputCompressionType")
+ * .inputFormatOptions(InputFormatOptionsProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .delimiter("delimiter")
+ * .headerList(List.of("headerList"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-importsourcespecification.html)
+ */
 @CdkDslMarker
 public class CfnTableImportSourceSpecificationPropertyDsl {
   private val cdkBuilder: CfnTable.ImportSourceSpecificationProperty.Builder =

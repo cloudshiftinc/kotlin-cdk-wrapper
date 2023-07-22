@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Specifies the configuration of a Kubernetes `secret` volume.
+ *
+ * For more information, see
+ * [secret](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/storage/volumes/#secret) in
+ * the *Kubernetes documentation* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EksSecretProperty eksSecretProperty = EksSecretProperty.builder()
+ * .secretName("secretName")
+ * // the properties below are optional
+ * .optional(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ekssecret.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEksSecretPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EksSecretProperty.Builder =

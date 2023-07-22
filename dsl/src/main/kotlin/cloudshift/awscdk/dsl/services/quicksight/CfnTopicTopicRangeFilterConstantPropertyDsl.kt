@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A constant value that is used in a range filter to specify the endpoints of the range.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicRangeFilterConstantProperty topicRangeFilterConstantProperty =
+ * TopicRangeFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .rangeConstant(RangeConstantProperty.builder()
+ * .maximum("maximum")
+ * .minimum("minimum")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicrangefilterconstant.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicRangeFilterConstantPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicRangeFilterConstantProperty.Builder =

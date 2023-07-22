@@ -8,6 +8,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnStep
 import software.amazon.awscdk.services.emr.CfnStepProps
 
+/**
+ * Properties for defining a `CfnStep`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStepProps cfnStepProps = CfnStepProps.builder()
+ * .actionOnFailure("actionOnFailure")
+ * .hadoopJarStep(HadoopJarStepConfigProperty.builder()
+ * .jar("jar")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .mainClass("mainClass")
+ * .stepProperties(List.of(KeyValueProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .jobFlowId("jobFlowId")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html)
+ */
 @CdkDslMarker
 public class CfnStepPropsDsl {
   private val cdkBuilder: CfnStepProps.Builder = CfnStepProps.builder()

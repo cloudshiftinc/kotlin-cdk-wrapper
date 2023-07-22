@@ -16,6 +16,32 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.PolicyStatement
 import software.constructs.Construct
 
+/**
+ * The AWS::IAM::Policy resource associates an IAM policy with IAM users, roles, or groups.
+ *
+ * For more information about IAM policies, see <a
+ * href="http://docs.aws.amazon.com/IAM/latest/UserGuide/policies_overview.html">Overview of IAM
+ * Policies</a>
+ * in the IAM User Guide guide.
+ *
+ * Example:
+ *
+ * ```
+ * Function postAuthFn;
+ * UserPool userpool = UserPool.Builder.create(this, "myuserpool")
+ * .lambdaTriggers(UserPoolTriggers.builder()
+ * .postAuthentication(postAuthFn)
+ * .build())
+ * .build();
+ * // provide permissions to describe the user pool scoped to the ARN the user pool
+ * postAuthFn.role.attachInlinePolicy(Policy.Builder.create(this, "userpool-policy")
+ * .statements(List.of(PolicyStatement.Builder.create()
+ * .actions(List.of("cognito-idp:DescribeUserPool"))
+ * .resources(List.of(userpool.getUserPoolArn()))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PolicyDsl(
   scope: Construct,

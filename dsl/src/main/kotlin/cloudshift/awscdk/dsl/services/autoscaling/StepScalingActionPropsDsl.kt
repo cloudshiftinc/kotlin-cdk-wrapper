@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.autoscaling.IAutoScalingGroup
 import software.amazon.awscdk.services.autoscaling.MetricAggregationType
 import software.amazon.awscdk.services.autoscaling.StepScalingActionProps
 
+/**
+ * Properties for a scaling policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * AutoScalingGroup autoScalingGroup;
+ * StepScalingActionProps stepScalingActionProps = StepScalingActionProps.builder()
+ * .autoScalingGroup(autoScalingGroup)
+ * // the properties below are optional
+ * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
+ * .cooldown(Duration.minutes(30))
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .metricAggregationType(MetricAggregationType.AVERAGE)
+ * .minAdjustmentMagnitude(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepScalingActionPropsDsl {
   private val cdkBuilder: StepScalingActionProps.Builder = StepScalingActionProps.builder()

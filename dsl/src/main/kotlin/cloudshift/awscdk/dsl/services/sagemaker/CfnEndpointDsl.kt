@@ -15,6 +15,67 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::SageMaker::Endpoint` resource to create an endpoint using the specified
+ * configuration in the request.
+ *
+ * Amazon SageMaker uses the endpoint to provision resources and deploy models. You create the
+ * endpoint configuration with the
+ * [AWS::SageMaker::EndpointConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)
+ * resource. For more information, see [Deploy a Model on Amazon SageMaker Hosting
+ * Services](https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-hosting.html) in the *Amazon
+ * SageMaker Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnEndpoint cfnEndpoint = CfnEndpoint.Builder.create(this, "MyCfnEndpoint")
+ * .endpointConfigName("endpointConfigName")
+ * // the properties below are optional
+ * .deploymentConfig(DeploymentConfigProperty.builder()
+ * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
+ * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .canarySize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .linearStepSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .terminationWaitInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
+ * .build())
+ * .endpointName("endpointName")
+ * .excludeRetainedVariantProperties(List.of(VariantPropertyProperty.builder()
+ * .variantPropertyType("variantPropertyType")
+ * .build()))
+ * .retainAllVariantProperties(false)
+ * .retainDeploymentConfig(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointDsl(
   scope: Construct,

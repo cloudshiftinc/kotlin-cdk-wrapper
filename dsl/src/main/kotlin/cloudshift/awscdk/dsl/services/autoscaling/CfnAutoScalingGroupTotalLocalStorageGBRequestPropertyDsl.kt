@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * `TotalLocalStorageGBRequest` is a property of the `InstanceRequirements` property of the
+ * [AWS::AutoScaling::AutoScalingGroup
+ * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+ * property type that describes the minimum and maximum total local storage size for an instance type,
+ * in GB.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * TotalLocalStorageGBRequestProperty totalLocalStorageGBRequestProperty =
+ * TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-totallocalstoragegbrequest.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupTotalLocalStorageGBRequestPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty.Builder =

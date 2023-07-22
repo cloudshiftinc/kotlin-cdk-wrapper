@@ -13,6 +13,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 import software.constructs.Construct
 
+/**
+ * Creates a configuration for running a SageMaker image as a KernelGateway app.
+ *
+ * The configuration specifies the Amazon Elastic File System (EFS) storage volume on the image, and
+ * a list of the kernels in the image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnAppImageConfig cfnAppImageConfig = CfnAppImageConfig.Builder.create(this,
+ * "MyCfnAppImageConfig")
+ * .appImageConfigName("appImageConfigName")
+ * // the properties below are optional
+ * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
+ * .kernelSpecs(List.of(KernelSpecProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build()))
+ * // the properties below are optional
+ * .fileSystemConfig(FileSystemConfigProperty.builder()
+ * .defaultGid(123)
+ * .defaultUid(123)
+ * .mountPath("mountPath")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html)
+ */
 @CdkDslMarker
 public class CfnAppImageConfigDsl(
   scope: Construct,

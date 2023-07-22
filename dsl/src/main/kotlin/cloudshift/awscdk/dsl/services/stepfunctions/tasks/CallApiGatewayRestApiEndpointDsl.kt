@@ -21,6 +21,43 @@ import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApi
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
 import software.constructs.Construct
 
+/**
+ * Call REST API endpoint as a Task.
+ *
+ * Be aware that the header values must be arrays. When passing the Task Token
+ * in the headers field `WAIT_FOR_TASK_TOKEN` integration, use
+ * `JsonPath.array()` to wrap the token in an array:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi api;
+ * CallApiGatewayRestApiEndpoint.Builder.create(this, "Endpoint")
+ * .api(api)
+ * .stageName("Stage")
+ * .method(HttpMethod.PUT)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .headers(TaskInput.fromObject(Map.of(
+ * "TaskToken", JsonPath.array(JsonPath.getTaskToken()))))
+ * .build();
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi api;
+ * CallApiGatewayRestApiEndpoint.Builder.create(this, "Endpoint")
+ * .api(api)
+ * .stageName("Stage")
+ * .method(HttpMethod.PUT)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .headers(TaskInput.fromObject(Map.of(
+ * "TaskToken", JsonPath.array(JsonPath.getTaskToken()))))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-api-gateway.html)
+ */
 @CdkDslMarker
 public class CallApiGatewayRestApiEndpointDsl(
   scope: Construct,

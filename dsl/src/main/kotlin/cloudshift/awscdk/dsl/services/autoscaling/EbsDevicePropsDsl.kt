@@ -9,6 +9,25 @@ import kotlin.String
 import software.amazon.awscdk.services.autoscaling.EbsDeviceProps
 import software.amazon.awscdk.services.autoscaling.EbsDeviceVolumeType
 
+/**
+ * Properties of an EBS block device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * EbsDeviceProps ebsDeviceProps = EbsDeviceProps.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType(EbsDeviceVolumeType.STANDARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDevicePropsDsl {
   private val cdkBuilder: EbsDeviceProps.Builder = EbsDeviceProps.builder()

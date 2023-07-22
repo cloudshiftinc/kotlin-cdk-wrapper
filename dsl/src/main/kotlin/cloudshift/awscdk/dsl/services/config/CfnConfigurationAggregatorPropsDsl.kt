@@ -14,6 +14,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationAggregator
 import software.amazon.awscdk.services.config.CfnConfigurationAggregatorProps
 
+/**
+ * Properties for defining a `CfnConfigurationAggregator`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnConfigurationAggregatorProps cfnConfigurationAggregatorProps =
+ * CfnConfigurationAggregatorProps.builder()
+ * .accountAggregationSources(List.of(AccountAggregationSourceProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build()))
+ * .configurationAggregatorName("configurationAggregatorName")
+ * .organizationAggregationSource(OrganizationAggregationSourceProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAggregatorPropsDsl {
   private val cdkBuilder: CfnConfigurationAggregatorProps.Builder =

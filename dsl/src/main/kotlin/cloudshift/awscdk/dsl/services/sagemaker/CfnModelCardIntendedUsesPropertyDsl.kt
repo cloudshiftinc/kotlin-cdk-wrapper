@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * The intended uses of a model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * IntendedUsesProperty intendedUsesProperty = IntendedUsesProperty.builder()
+ * .explanationsForRiskRating("explanationsForRiskRating")
+ * .factorsAffectingModelEfficiency("factorsAffectingModelEfficiency")
+ * .intendedUses("intendedUses")
+ * .purposeOfModel("purposeOfModel")
+ * .riskRating("riskRating")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-intendeduses.html)
+ */
 @CdkDslMarker
 public class CfnModelCardIntendedUsesPropertyDsl {
   private val cdkBuilder: CfnModelCard.IntendedUsesProperty.Builder =

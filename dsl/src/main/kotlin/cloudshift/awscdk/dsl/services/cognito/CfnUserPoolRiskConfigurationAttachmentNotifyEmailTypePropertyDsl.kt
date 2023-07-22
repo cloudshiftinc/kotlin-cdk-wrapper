@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
 
+/**
+ * The notify email type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * NotifyEmailTypeProperty notifyEmailTypeProperty = NotifyEmailTypeProperty.builder()
+ * .subject("subject")
+ * // the properties below are optional
+ * .htmlBody("htmlBody")
+ * .textBody("textBody")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyemailtype.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentNotifyEmailTypePropertyDsl {
   private val cdkBuilder: CfnUserPoolRiskConfigurationAttachment.NotifyEmailTypeProperty.Builder =

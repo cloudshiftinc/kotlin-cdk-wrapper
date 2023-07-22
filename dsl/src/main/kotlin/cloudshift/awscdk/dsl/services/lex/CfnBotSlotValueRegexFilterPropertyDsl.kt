@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides a regular expression used to validate the value of a slot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotValueRegexFilterProperty slotValueRegexFilterProperty =
+ * SlotValueRegexFilterProperty.builder()
+ * .pattern("pattern")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotvalueregexfilter.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotValueRegexFilterPropertyDsl {
   private val cdkBuilder: CfnBot.SlotValueRegexFilterProperty.Builder =

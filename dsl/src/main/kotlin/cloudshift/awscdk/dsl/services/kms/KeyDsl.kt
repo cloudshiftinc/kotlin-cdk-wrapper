@@ -18,6 +18,23 @@ import software.amazon.awscdk.services.kms.KeySpec
 import software.amazon.awscdk.services.kms.KeyUsage
 import software.constructs.Construct
 
+/**
+ * Defines a KMS key.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kms.*;
+ * Key encryptionKey = Key.Builder.create(this, "Key")
+ * .enableKeyRotation(true)
+ * .build();
+ * Table table = Table.Builder.create(this, "MyTable")
+ * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
+ * .encryption(TableEncryption.CUSTOMER_MANAGED)
+ * .encryptionKey(encryptionKey)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KeyDsl(
   scope: Construct,

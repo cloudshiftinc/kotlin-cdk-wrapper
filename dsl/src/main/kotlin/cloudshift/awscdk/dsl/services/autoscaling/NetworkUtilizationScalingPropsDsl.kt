@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps
 
+/**
+ * Properties for enabling scaling based on network utilization.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnIncomingBytes("LimitIngressPerInstance",
+ * NetworkUtilizationScalingProps.builder()
+ * .targetBytesPerSecond(10 * 1024 * 1024)
+ * .build());
+ * autoScalingGroup.scaleOnOutgoingBytes("LimitEgressPerInstance",
+ * NetworkUtilizationScalingProps.builder()
+ * .targetBytesPerSecond(10 * 1024 * 1024)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class NetworkUtilizationScalingPropsDsl {
   private val cdkBuilder: NetworkUtilizationScalingProps.Builder =

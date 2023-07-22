@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::UserPoolResourceServer` resource creates a new OAuth2.0 resource server and
+ * defines custom scopes in it.
+ *
+ *
+ * If you don't specify a value for a parameter, Amazon Cognito sets it to a default value.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolResourceServer cfnUserPoolResourceServer =
+ * CfnUserPoolResourceServer.Builder.create(this, "MyCfnUserPoolResourceServer")
+ * .identifier("identifier")
+ * .name("name")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .scopes(List.of(ResourceServerScopeTypeProperty.builder()
+ * .scopeDescription("scopeDescription")
+ * .scopeName("scopeName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolResourceServerDsl(
   scope: Construct,

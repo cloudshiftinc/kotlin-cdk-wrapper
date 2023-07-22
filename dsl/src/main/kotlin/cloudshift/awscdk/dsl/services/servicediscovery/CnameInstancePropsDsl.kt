@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.CnameInstanceProps
 import software.amazon.awscdk.services.servicediscovery.IService
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * CnameInstanceProps cnameInstanceProps = CnameInstanceProps.builder()
+ * .instanceCname("instanceCname")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CnameInstancePropsDsl {
   private val cdkBuilder: CnameInstanceProps.Builder = CnameInstanceProps.builder()

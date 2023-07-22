@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a `GaugeChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gaugechartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateGaugeChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.GaugeChartConfigurationProperty.Builder =

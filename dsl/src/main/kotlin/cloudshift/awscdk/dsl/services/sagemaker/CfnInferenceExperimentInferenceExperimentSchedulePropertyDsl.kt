@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The start and end times of an inference experiment.
+ *
+ * The maximum duration that you can set for an inference experiment is 30 days.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * InferenceExperimentScheduleProperty inferenceExperimentScheduleProperty =
+ * InferenceExperimentScheduleProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-inferenceexperimentschedule.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentInferenceExperimentSchedulePropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.InferenceExperimentScheduleProperty.Builder =

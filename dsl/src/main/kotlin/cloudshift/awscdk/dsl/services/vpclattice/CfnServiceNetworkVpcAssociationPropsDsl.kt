@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociationProps
 
+/**
+ * Properties for defining a `CfnServiceNetworkVpcAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnServiceNetworkVpcAssociationProps cfnServiceNetworkVpcAssociationProps =
+ * CfnServiceNetworkVpcAssociationProps.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .serviceNetworkIdentifier("serviceNetworkIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcIdentifier("vpcIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkvpcassociation.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkVpcAssociationPropsDsl {
   private val cdkBuilder: CfnServiceNetworkVpcAssociationProps.Builder =

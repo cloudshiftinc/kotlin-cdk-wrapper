@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sam.CfnApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * EndpointConfigurationProperty endpointConfigurationProperty =
+ * EndpointConfigurationProperty.builder()
+ * .type("type")
+ * .vpcEndpointIds(List.of("vpcEndpointIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-endpointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApiEndpointConfigurationPropertyDsl {
   private val cdkBuilder: CfnApi.EndpointConfigurationProperty.Builder =

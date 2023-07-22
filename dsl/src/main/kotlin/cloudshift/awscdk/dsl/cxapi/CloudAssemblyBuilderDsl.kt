@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 
+/**
+ * Can be used to build a cloud assembly.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * CloudAssemblyBuilder cloudAssemblyBuilder_;
+ * CloudAssemblyBuilder cloudAssemblyBuilder = CloudAssemblyBuilder.Builder.create("outdir")
+ * .assetOutdir("assetOutdir")
+ * .parentBuilder(cloudAssemblyBuilder_)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudAssemblyBuilderDsl(
   outdir: String,

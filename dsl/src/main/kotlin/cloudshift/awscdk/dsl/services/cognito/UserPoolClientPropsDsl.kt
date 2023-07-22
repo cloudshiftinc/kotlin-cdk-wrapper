@@ -16,6 +16,21 @@ import software.amazon.awscdk.services.cognito.OAuthSettings
 import software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider
 import software.amazon.awscdk.services.cognito.UserPoolClientProps
 
+/**
+ * Properties for the UserPoolClient construct.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool importedPool;
+ * UserPoolClient userPoolClient = UserPoolClient.Builder.create(this, "UserPoolClient")
+ * .userPool(importedPool)
+ * .generateSecret(true)
+ * .build();
+ * // Allows you to pass the generated secret to other pieces of infrastructure
+ * SecretValue secret = userPoolClient.getUserPoolClientSecret();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolClientPropsDsl {
   private val cdkBuilder: UserPoolClientProps.Builder = UserPoolClientProps.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnRouteCalculatorProps
 
+/**
+ * Properties for defining a `CfnRouteCalculator`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnRouteCalculatorProps cfnRouteCalculatorProps = CfnRouteCalculatorProps.builder()
+ * .calculatorName("calculatorName")
+ * .dataSource("dataSource")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-routecalculator.html)
+ */
 @CdkDslMarker
 public class CfnRouteCalculatorPropsDsl {
   private val cdkBuilder: CfnRouteCalculatorProps.Builder = CfnRouteCalculatorProps.builder()

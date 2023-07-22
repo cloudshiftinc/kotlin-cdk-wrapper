@@ -8,6 +8,18 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.KinesisStream
 import software.amazon.awscdk.services.kinesis.IStream
 
+/**
+ * Use a Kinesis Stream as a target for AWS CloudWatch event rules.
+ *
+ * Example:
+ *
+ * ```
+ * // put to a Kinesis stream every time code is committed
+ * // to a CodeCommit repository
+ * repository.onCommit("onCommit", OnCommitOptions.builder().target(new
+ * KinesisStream(stream)).build());
+ * ```
+ */
 @CdkDslMarker
 public class KinesisStreamDsl(
   stream: IStream,

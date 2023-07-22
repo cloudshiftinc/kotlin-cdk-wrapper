@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.athena.CfnPreparedStatementProps
 
+/**
+ * Properties for defining a `CfnPreparedStatement`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnPreparedStatementProps cfnPreparedStatementProps = CfnPreparedStatementProps.builder()
+ * .queryStatement("queryStatement")
+ * .statementName("statementName")
+ * .workGroup("workGroup")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-preparedstatement.html)
+ */
 @CdkDslMarker
 public class CfnPreparedStatementPropsDsl {
   private val cdkBuilder: CfnPreparedStatementProps.Builder = CfnPreparedStatementProps.builder()

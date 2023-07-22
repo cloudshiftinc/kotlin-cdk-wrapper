@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation
 import software.constructs.Construct
 
+/**
+ * Associates a service with a service network.
+ *
+ * You can't use this operation if the service and service network are already associated or if
+ * there is a disassociation or deletion in progress. If the association fails, you can retry the
+ * operation by deleting the association and recreating it.
+ *
+ * You cannot associate a service and service network that are shared with a caller. The caller must
+ * own either the service or the service network.
+ *
+ * As a result of this operation, the association is created in the service network account and the
+ * association owner account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnServiceNetworkServiceAssociation cfnServiceNetworkServiceAssociation =
+ * CfnServiceNetworkServiceAssociation.Builder.create(this, "MyCfnServiceNetworkServiceAssociation")
+ * .dnsEntry(DnsEntryProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneId("hostedZoneId")
+ * .build())
+ * .serviceIdentifier("serviceIdentifier")
+ * .serviceNetworkIdentifier("serviceNetworkIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkServiceAssociationDsl(
   scope: Construct,

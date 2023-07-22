@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 
+/**
+ * A structure for a data location object where permissions are granted or revoked.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * DataLocationResourceProperty dataLocationResourceProperty =
+ * DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .s3Resource("s3Resource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-datalocationresource.html)
+ */
 @CdkDslMarker
 public class CfnPermissionsDataLocationResourcePropertyDsl {
   private val cdkBuilder: CfnPermissions.DataLocationResourceProperty.Builder =

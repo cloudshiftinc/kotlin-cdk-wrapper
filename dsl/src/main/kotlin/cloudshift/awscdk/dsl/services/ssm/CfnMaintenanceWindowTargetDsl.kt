@@ -11,6 +11,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSM::MaintenanceWindowTarget` resource registers a target with a maintenance window for
+ * AWS Systems Manager .
+ *
+ * For more information, see
+ * [RegisterTargetWithMaintenanceWindow](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterTargetWithMaintenanceWindow.html)
+ * in the *AWS Systems Manager API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnMaintenanceWindowTarget cfnMaintenanceWindowTarget =
+ * CfnMaintenanceWindowTarget.Builder.create(this, "MyCfnMaintenanceWindowTarget")
+ * .resourceType("resourceType")
+ * .targets(List.of(TargetsProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .windowId("windowId")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .ownerInformation("ownerInformation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtarget.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTargetDsl(
   scope: Construct,

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
 
+/**
+ * Describes a port range.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * FilterPortRangeProperty filterPortRangeProperty = FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightspath-filterportrange.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsPathFilterPortRangePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsPath.FilterPortRangeProperty.Builder =

@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpoint
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to create a SageMaker endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateEndpoint.Builder.create(this, "SagemakerEndpoint")
+ * .endpointName(JsonPath.stringAt("$.EndpointName"))
+ * .endpointConfigName(JsonPath.stringAt("$.EndpointConfigName"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerCreateEndpointDsl(
   scope: Construct,

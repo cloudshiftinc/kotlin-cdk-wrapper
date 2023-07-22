@@ -10,6 +10,22 @@ import software.amazon.awscdk.services.logs.ILogSubscriptionDestination
 import software.amazon.awscdk.services.logs.SubscriptionFilter
 import software.constructs.Construct
 
+/**
+ * A new Subscription on a CloudWatch log group.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.destinations.*;
+ * Function fn;
+ * LogGroup logGroup;
+ * SubscriptionFilter.Builder.create(this, "Subscription")
+ * .logGroup(logGroup)
+ * .destination(new LambdaDestination(fn))
+ * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionFilterDsl(
   scope: Construct,

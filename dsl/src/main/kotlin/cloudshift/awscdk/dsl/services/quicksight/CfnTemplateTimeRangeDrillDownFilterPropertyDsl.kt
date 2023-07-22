@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The time range drill down filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TimeRangeDrillDownFilterProperty timeRangeDrillDownFilterProperty =
+ * TimeRangeDrillDownFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .rangeMaximum("rangeMaximum")
+ * .rangeMinimum("rangeMinimum")
+ * .timeGranularity("timeGranularity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-timerangedrilldownfilter.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTimeRangeDrillDownFilterPropertyDsl {
   private val cdkBuilder: CfnTemplate.TimeRangeDrillDownFilterProperty.Builder =

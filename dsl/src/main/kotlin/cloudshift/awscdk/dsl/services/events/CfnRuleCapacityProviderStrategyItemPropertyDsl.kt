@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * The details of a capacity provider strategy.
+ *
+ * To learn more, see
+ * [CapacityProviderStrategyItem](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CapacityProviderStrategyItem.html)
+ * in the Amazon ECS API Reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+ * CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-capacityproviderstrategyitem.html)
+ */
 @CdkDslMarker
 public class CfnRuleCapacityProviderStrategyItemPropertyDsl {
   private val cdkBuilder: CfnRule.CapacityProviderStrategyItemProperty.Builder =

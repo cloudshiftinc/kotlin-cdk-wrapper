@@ -15,6 +15,132 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnTable
 import software.constructs.Construct
 
+/**
+ * The `AWS::DynamoDB::Table` resource creates a DynamoDB table. For more information, see
+ * [CreateTable](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_CreateTable.html)
+ * in the *Amazon DynamoDB API Reference* .
+ *
+ * You should be aware of the following behaviors when working with DynamoDB tables:
+ *
+ * * AWS CloudFormation typically creates DynamoDB tables in parallel. However, if your template
+ * includes multiple DynamoDB tables with indexes, you must declare dependencies so that the tables are
+ * created sequentially. Amazon DynamoDB limits the number of tables with secondary indexes that are in
+ * the creating state. If you create multiple tables with indexes at the same time, DynamoDB returns an
+ * error and the stack operation fails. For an example, see [DynamoDB Table with a DependsOn
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#aws-resource-dynamodb-table--examples--DynamoDB_Table_with_a_DependsOn_Attribute)
+ * .
+ *
+ *
+ * Our guidance is to use the latest schema documented here for your AWS CloudFormation templates.
+ * This schema supports the provisioning of all table settings below. When using this schema in your
+ * AWS CloudFormation templates, please ensure that your Identity and Access Management ( IAM )
+ * policies are updated with appropriate permissions to allow for the authorization of these setting
+ * changes.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * CfnTable cfnTable = CfnTable.Builder.create(this, "MyCfnTable")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * // the properties below are optional
+ * .attributeDefinitions(List.of(AttributeDefinitionProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeType("attributeType")
+ * .build()))
+ * .billingMode("billingMode")
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deletionProtectionEnabled(false)
+ * .globalSecondaryIndexes(List.of(GlobalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build())
+ * .build()))
+ * .importSourceSpecification(ImportSourceSpecificationProperty.builder()
+ * .inputFormat("inputFormat")
+ * .s3BucketSource(S3BucketSourceProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3BucketOwner("s3BucketOwner")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * // the properties below are optional
+ * .inputCompressionType("inputCompressionType")
+ * .inputFormatOptions(InputFormatOptionsProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .delimiter("delimiter")
+ * .headerList(List.of("headerList"))
+ * .build())
+ * .build())
+ * .build())
+ * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
+ * .localSecondaryIndexes(List.of(LocalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * .build()))
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * .build())
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build())
+ * .sseSpecification(SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * // the properties below are optional
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .sseType("sseType")
+ * .build())
+ * .streamSpecification(StreamSpecificationProperty.builder()
+ * .streamViewType("streamViewType")
+ * .build())
+ * .tableClass("tableClass")
+ * .tableName("tableName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeToLiveSpecification(TimeToLiveSpecificationProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .attributeName("attributeName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html)
+ */
 @CdkDslMarker
 public class CfnTableDsl(
   scope: Construct,

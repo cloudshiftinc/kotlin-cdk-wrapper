@@ -16,6 +16,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnObjectType
 import software.constructs.Construct
 
+/**
+ * Specifies an Amazon Connect Customer Profiles Object Type Mapping.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * CfnObjectType cfnObjectType = CfnObjectType.Builder.create(this, "MyCfnObjectType")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .allowProfileCreation(false)
+ * .description("description")
+ * .encryptionKey("encryptionKey")
+ * .expirationDays(123)
+ * .fields(List.of(FieldMapProperty.builder()
+ * .name("name")
+ * .objectTypeField(ObjectTypeFieldProperty.builder()
+ * .contentType("contentType")
+ * .source("source")
+ * .target("target")
+ * .build())
+ * .build()))
+ * .keys(List.of(KeyMapProperty.builder()
+ * .name("name")
+ * .objectTypeKeyList(List.of(ObjectTypeKeyProperty.builder()
+ * .fieldNames(List.of("fieldNames"))
+ * .standardIdentifiers(List.of("standardIdentifiers"))
+ * .build()))
+ * .build()))
+ * .objectTypeName("objectTypeName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateId("templateId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-objecttype.html)
+ */
 @CdkDslMarker
 public class CfnObjectTypeDsl(
   scope: Construct,

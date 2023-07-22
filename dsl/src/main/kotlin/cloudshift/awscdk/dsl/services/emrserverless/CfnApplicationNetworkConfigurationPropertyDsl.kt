@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The network configuration for customer VPC connectivity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * NetworkConfigurationProperty networkConfigurationProperty =
+ * NetworkConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-networkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.NetworkConfigurationProperty.Builder =

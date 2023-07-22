@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * The configuration parameters for the default Amazon Glue database.
+ *
+ * You use this database for SQL queries that you write in a Kinesis Data Analytics Studio notebook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CatalogConfigurationProperty catalogConfigurationProperty =
+ * CatalogConfigurationProperty.builder()
+ * .glueDataCatalogConfiguration(GlueDataCatalogConfigurationProperty.builder()
+ * .databaseArn("databaseArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-catalogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2CatalogConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.CatalogConfigurationProperty.Builder =

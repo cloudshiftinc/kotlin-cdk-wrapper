@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 
+/**
+ * OTAA device object for v1.1 for create APIs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * OtaaV11Property otaaV11Property = OtaaV11Property.builder()
+ * .appKey("appKey")
+ * .joinEui("joinEui")
+ * .nwkKey("nwkKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-otaav11.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceOtaaV11PropertyDsl {
   private val cdkBuilder: CfnWirelessDevice.OtaaV11Property.Builder =

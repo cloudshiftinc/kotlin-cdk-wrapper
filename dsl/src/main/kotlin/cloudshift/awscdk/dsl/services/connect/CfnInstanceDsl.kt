@@ -8,6 +8,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.constructs.Construct
 
+/**
+ * *This is a preview release for Amazon Connect . It is subject to change.*.
+ *
+ * Initiates an Amazon Connect instance with all the supported channels enabled. It does not attach
+ * any storage, such as Amazon Simple Storage Service (Amazon S3) or Amazon Kinesis.
+ *
+ * Amazon Connect enforces a limit on the total number of instances that you can create or delete in
+ * 30 days. If you exceed this limit, you will get an error message indicating there has been an
+ * excessive number of attempts at creating or deleting instances. You must wait 30 days before you can
+ * restart creating and deleting instances in your account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnInstance cfnInstance = CfnInstance.Builder.create(this, "MyCfnInstance")
+ * .attributes(AttributesProperty.builder()
+ * .inboundCalls(false)
+ * .outboundCalls(false)
+ * // the properties below are optional
+ * .autoResolveBestVoices(false)
+ * .contactflowLogs(false)
+ * .contactLens(false)
+ * .earlyMedia(false)
+ * .useCustomTtsVoices(false)
+ * .build())
+ * .identityManagementType("identityManagementType")
+ * // the properties below are optional
+ * .directoryId("directoryId")
+ * .instanceAlias("instanceAlias")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstanceDsl(
   scope: Construct,

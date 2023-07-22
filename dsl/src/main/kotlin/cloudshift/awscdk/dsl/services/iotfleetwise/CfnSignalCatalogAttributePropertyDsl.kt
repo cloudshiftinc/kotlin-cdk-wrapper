@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * A signal that represents static information about the vehicle, such as engine type or
+ * manufacturing date.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * AttributeProperty attributeProperty = AttributeProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .assignedValue("assignedValue")
+ * .defaultValue("defaultValue")
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogAttributePropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.AttributeProperty.Builder =

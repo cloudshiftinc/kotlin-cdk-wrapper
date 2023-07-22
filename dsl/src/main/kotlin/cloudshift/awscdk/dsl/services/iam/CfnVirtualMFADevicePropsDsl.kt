@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps
 
+/**
+ * Properties for defining a `CfnVirtualMFADevice`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnVirtualMFADeviceProps cfnVirtualMFADeviceProps = CfnVirtualMFADeviceProps.builder()
+ * .users(List.of("users"))
+ * // the properties below are optional
+ * .path("path")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .virtualMfaDeviceName("virtualMfaDeviceName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-virtualmfadevice.html)
+ */
 @CdkDslMarker
 public class CfnVirtualMFADevicePropsDsl {
   private val cdkBuilder: CfnVirtualMFADeviceProps.Builder = CfnVirtualMFADeviceProps.builder()

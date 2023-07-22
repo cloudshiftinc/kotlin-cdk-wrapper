@@ -8,6 +8,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnSourceApiAssociation
 import software.constructs.Construct
 
+/**
+ * Describes the configuration of a source API.
+ *
+ * A source API is a GraphQL API that is linked to a merged API. There can be multiple source APIs
+ * attached to each merged API. When linked to a merged API, the source API's schema, data sources, and
+ * resolvers will be combined with other linked source API data to form a new, singular API. Source
+ * APIs can originate from your account or from other accounts via Resource Access Manager.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnSourceApiAssociation cfnSourceApiAssociation = CfnSourceApiAssociation.Builder.create(this,
+ * "MyCfnSourceApiAssociation")
+ * .description("description")
+ * .mergedApiIdentifier("mergedApiIdentifier")
+ * .sourceApiAssociationConfig(SourceApiAssociationConfigProperty.builder()
+ * .mergeType("mergeType")
+ * .build())
+ * .sourceApiIdentifier("sourceApiIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-sourceapiassociation.html)
+ */
 @CdkDslMarker
 public class CfnSourceApiAssociationDsl(
   scope: Construct,

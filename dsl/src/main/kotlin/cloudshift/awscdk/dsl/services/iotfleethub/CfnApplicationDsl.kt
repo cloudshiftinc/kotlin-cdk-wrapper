@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotfleethub.CfnApplication
 import software.constructs.Construct
 
+/**
+ * Represents a Fleet Hub for AWS IoT Device Management web application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleethub.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .applicationName("applicationName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .applicationDescription("applicationDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleethub-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

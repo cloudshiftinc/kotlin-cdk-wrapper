@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ram.CfnPermissionProps
 
+/**
+ * Properties for defining a `CfnPermission`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ram.*;
+ * Object policyTemplate;
+ * CfnPermissionProps cfnPermissionProps = CfnPermissionProps.builder()
+ * .name("name")
+ * .policyTemplate(policyTemplate)
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)
+ */
 @CdkDslMarker
 public class CfnPermissionPropsDsl {
   private val cdkBuilder: CfnPermissionProps.Builder = CfnPermissionProps.builder()

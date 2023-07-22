@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile credentials required when using SAPOData.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SAPODataConnectorProfileCredentialsProperty sAPODataConnectorProfileCredentialsProperty =
+ * SAPODataConnectorProfileCredentialsProperty.builder()
+ * .basicAuthCredentials(BasicAuthCredentialsProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .oAuthCredentials(OAuthCredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .refreshToken("refreshToken")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-sapodataconnectorprofilecredentials.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileSAPODataConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.SAPODataConnectorProfileCredentialsProperty.Builder =

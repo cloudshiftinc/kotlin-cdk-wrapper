@@ -7,6 +7,54 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The display options for the visual tooltip.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TooltipOptionsProperty tooltipOptionsProperty = TooltipOptionsProperty.builder()
+ * .fieldBasedTooltip(FieldBasedTooltipProperty.builder()
+ * .aggregationVisibility("aggregationVisibility")
+ * .tooltipFields(List.of(TooltipItemProperty.builder()
+ * .columnTooltipItem(ColumnTooltipItemProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .aggregation(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .label("label")
+ * .visibility("visibility")
+ * .build())
+ * .fieldTooltipItem(FieldTooltipItemProperty.builder()
+ * .fieldId("fieldId")
+ * // the properties below are optional
+ * .label("label")
+ * .visibility("visibility")
+ * .build())
+ * .build()))
+ * .tooltipTitleType("tooltipTitleType")
+ * .build())
+ * .selectedTooltipType("selectedTooltipType")
+ * .tooltipVisibility("tooltipVisibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-tooltipoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTooltipOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TooltipOptionsProperty.Builder =

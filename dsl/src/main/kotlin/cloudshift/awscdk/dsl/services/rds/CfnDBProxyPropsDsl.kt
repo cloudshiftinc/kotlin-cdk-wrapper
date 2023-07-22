@@ -14,6 +14,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBProxy
 import software.amazon.awscdk.services.rds.CfnDBProxyProps
 
+/**
+ * Properties for defining a `CfnDBProxy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBProxyProps cfnDBProxyProps = CfnDBProxyProps.builder()
+ * .auth(List.of(AuthFormatProperty.builder()
+ * .authScheme("authScheme")
+ * .clientPasswordAuthType("clientPasswordAuthType")
+ * .description("description")
+ * .iamAuth("iamAuth")
+ * .secretArn("secretArn")
+ * .build()))
+ * .dbProxyName("dbProxyName")
+ * .engineFamily("engineFamily")
+ * .roleArn("roleArn")
+ * .vpcSubnetIds(List.of("vpcSubnetIds"))
+ * // the properties below are optional
+ * .debugLogging(false)
+ * .idleClientTimeout(123)
+ * .requireTls(false)
+ * .tags(List.of(TagFormatProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxy.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyPropsDsl {
   private val cdkBuilder: CfnDBProxyProps.Builder = CfnDBProxyProps.builder()

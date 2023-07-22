@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues
 
+/**
+ * Return the appropriate values for the environment placeholders.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * EnvironmentPlaceholderValues environmentPlaceholderValues =
+ * EnvironmentPlaceholderValues.builder()
+ * .accountId("accountId")
+ * .partition("partition")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnvironmentPlaceholderValuesDsl {
   private val cdkBuilder: EnvironmentPlaceholderValues.Builder =

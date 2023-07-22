@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps
 
+/**
+ * Properties to define a EMR Containers CreateVirtualCluster Task on an EKS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersCreateVirtualCluster.Builder.create(this, "Create a Virtual Cluster")
+ * .eksCluster(EksClusterInput.fromTaskInput(TaskInput.fromText("clusterId")))
+ * .eksNamespace("specified-namespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrContainersCreateVirtualClusterPropsDsl {
   private val cdkBuilder: EmrContainersCreateVirtualClusterProps.Builder =

@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * Configuration options for sending command output to Amazon CloudWatch Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CloudWatchOutputConfigProperty cloudWatchOutputConfigProperty =
+ * CloudWatchOutputConfigProperty.builder()
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .cloudWatchOutputEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-cloudwatchoutputconfig.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskCloudWatchOutputConfigPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty.Builder =

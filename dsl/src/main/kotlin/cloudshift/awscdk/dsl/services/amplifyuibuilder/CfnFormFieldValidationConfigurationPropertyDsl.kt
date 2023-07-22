@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `FieldValidationConfiguration` property specifies the validation configuration for a field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FieldValidationConfigurationProperty fieldValidationConfigurationProperty =
+ * FieldValidationConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .numValues(List.of(123))
+ * .strValues(List.of("strValues"))
+ * .validationMessage("validationMessage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldvalidationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFormFieldValidationConfigurationPropertyDsl {
   private val cdkBuilder: CfnForm.FieldValidationConfigurationProperty.Builder =

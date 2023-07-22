@@ -14,6 +14,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 import software.constructs.Construct
 
+/**
+ * Creates a resource group with the specified name and description.
+ *
+ * You can optionally include either a resource query or a service configuration. For more
+ * information about constructing a resource query, see [Build queries and groups in AWS Resource
+ * Groups](https://docs.aws.amazon.com//ARG/latest/userguide/getting_started-query.html) in the *AWS
+ * Resource Groups User Guide* . For more information about service-linked groups and service
+ * configurations, see [Service configurations for Resource
+ * Groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) .
+ *
+ * *Minimum permissions*
+ *
+ * To run this command, you must have the following permissions:
+ *
+ * * `resource-groups:CreateGroup`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * CfnGroup cfnGroup = CfnGroup.Builder.create(this, "MyCfnGroup")
+ * .name("name")
+ * // the properties below are optional
+ * .configuration(List.of(ConfigurationItemProperty.builder()
+ * .parameters(List.of(ConfigurationParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .type("type")
+ * .build()))
+ * .description("description")
+ * .resourceQuery(ResourceQueryProperty.builder()
+ * .query(QueryProperty.builder()
+ * .resourceTypeFilters(List.of("resourceTypeFilters"))
+ * .stackIdentifier("stackIdentifier")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .type("type")
+ * .build())
+ * .resources(List.of("resources"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupDsl(
   scope: Construct,

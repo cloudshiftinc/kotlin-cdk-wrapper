@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 
+/**
+ * A complex type that contains information about the Amazon S3 bucket from which you want
+ * CloudFront to get your media files for distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * S3OriginProperty s3OriginProperty = S3OriginProperty.builder()
+ * .domainName("domainName")
+ * .originAccessIdentity("originAccessIdentity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-s3origin.html)
+ */
 @CdkDslMarker
 public class CfnStreamingDistributionS3OriginPropertyDsl {
   private val cdkBuilder: CfnStreamingDistribution.S3OriginProperty.Builder =

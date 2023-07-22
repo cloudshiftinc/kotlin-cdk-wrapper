@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 
+/**
+ * Specifies a production variant property type for an Endpoint.
+ *
+ * If you are updating an Endpoint with the
+ * [RetainAllVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-RetainAllVariantProperties)
+ * option set to `true` , the `VarientProperty` objects listed in
+ * [ExcludeRetainedVariantProperties](https://docs.aws.amazon.com/sagemaker/latest/dg/API_UpdateEndpoint.html#SageMaker-UpdateEndpoint-request-ExcludeRetainedVariantProperties)
+ * override the existing variant properties of the Endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * VariantPropertyProperty variantPropertyProperty = VariantPropertyProperty.builder()
+ * .variantPropertyType("variantPropertyType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-variantproperty.html)
+ */
 @CdkDslMarker
 public class CfnEndpointVariantPropertyPropertyDsl {
   private val cdkBuilder: CfnEndpoint.VariantPropertyProperty.Builder =

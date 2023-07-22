@@ -12,6 +12,27 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleProps
 import software.amazon.awscdk.services.config.RuleScope
 
+/**
+ * Construction properties for a new rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object inputParameters;
+ * RuleScope ruleScope;
+ * RuleProps ruleProps = RuleProps.builder()
+ * .configRuleName("configRuleName")
+ * .description("description")
+ * .inputParameters(Map.of(
+ * "inputParametersKey", inputParameters))
+ * .maximumExecutionFrequency(MaximumExecutionFrequency.ONE_HOUR)
+ * .ruleScope(ruleScope)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RulePropsDsl {
   private val cdkBuilder: RuleProps.Builder = RuleProps.builder()

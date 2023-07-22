@@ -6,6 +6,51 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents information on how DataBrew can find data, in either the AWS Glue Data Catalog or
+ * Amazon S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * InputProperty inputProperty = InputProperty.builder()
+ * .databaseInputDefinition(DatabaseInputDefinitionProperty.builder()
+ * .glueConnectionName("glueConnectionName")
+ * // the properties below are optional
+ * .databaseTableName("databaseTableName")
+ * .queryString("queryString")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .metadata(MetadataProperty.builder()
+ * .sourceArn("sourceArn")
+ * .build())
+ * .s3InputDefinition(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-input.html)
+ */
 @CdkDslMarker
 public class CfnDatasetInputPropertyDsl {
   private val cdkBuilder: CfnDataset.InputProperty.Builder = CfnDataset.InputProperty.builder()

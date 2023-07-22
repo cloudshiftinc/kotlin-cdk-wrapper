@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy
 
+/**
+ * `StepScalingPolicyConfiguration` is a property of the
+ * [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+ * resource that specifies a step scaling policy configuration for Application Auto Scaling.
+ *
+ * For more information, see [Step scaling
+ * policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-step-scaling-policies.html)
+ * in the *Application Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * StepScalingPolicyConfigurationProperty stepScalingPolicyConfigurationProperty =
+ * StepScalingPolicyConfigurationProperty.builder()
+ * .adjustmentType("adjustmentType")
+ * .cooldown(123)
+ * .metricAggregationType("metricAggregationType")
+ * .minAdjustmentMagnitude(123)
+ * .stepAdjustments(List.of(StepAdjustmentProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .metricIntervalLowerBound(123)
+ * .metricIntervalUpperBound(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyStepScalingPolicyConfigurationPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.StepScalingPolicyConfigurationProperty.Builder =

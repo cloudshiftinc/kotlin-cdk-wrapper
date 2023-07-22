@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy
 
+/**
+ * The AWS IoT SiteWise Monitor resource for this access policy.
+ *
+ * Choose either a portal or a project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * AccessPolicyResourceProperty accessPolicyResourceProperty =
+ * AccessPolicyResourceProperty.builder()
+ * .portal(PortalProperty.builder()
+ * .id("id")
+ * .build())
+ * .project(ProjectProperty.builder()
+ * .id("id")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-accesspolicy-accesspolicyresource.html)
+ */
 @CdkDslMarker
 public class CfnAccessPolicyAccessPolicyResourcePropertyDsl {
   private val cdkBuilder: CfnAccessPolicy.AccessPolicyResourceProperty.Builder =

@@ -6,6 +6,45 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Specifies the launch template to be used by the EC2 Fleet for configuring Amazon EC2 instances.
+ *
+ * You must specify the following:
+ *
+ * * The ID or the name of the launch template, but not both.
+ * * The version of the launch template.
+ *
+ * `FleetLaunchTemplateSpecificationRequest` is a property of the
+ * [FleetLaunchTemplateConfigRequest](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplateconfigrequest.html)
+ * property type.
+ *
+ * For information about creating a launch template, see
+ * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ * and [Create a launch
+ * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
+ * in the *Amazon EC2 User Guide* .
+ *
+ * For examples of launch templates, see
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * FleetLaunchTemplateSpecificationRequestProperty fleetLaunchTemplateSpecificationRequestProperty =
+ * FleetLaunchTemplateSpecificationRequestProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-fleetlaunchtemplatespecificationrequest.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetFleetLaunchTemplateSpecificationRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.FleetLaunchTemplateSpecificationRequestProperty.Builder =

@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.DockerVolume
 import software.amazon.awscdk.DockerVolumeConsistency
 
+/**
+ * A Docker volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerVolume dockerVolume = DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerVolumeDsl {
   private val cdkBuilder: DockerVolume.Builder = DockerVolume.builder()

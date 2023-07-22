@@ -9,6 +9,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The container path, mount options, and size of the `tmpfs` mount.
+ *
+ *
+ * This object isn't applicable to jobs that are running on Fargate resources.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * TmpfsProperty tmpfsProperty = TmpfsProperty.builder()
+ * .containerPath("containerPath")
+ * .size(123)
+ * // the properties below are optional
+ * .mountOptions(List.of("mountOptions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-tmpfs.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionTmpfsPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.TmpfsProperty.Builder =

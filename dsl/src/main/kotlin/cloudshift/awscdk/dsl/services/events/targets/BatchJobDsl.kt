@@ -11,6 +11,53 @@ import software.amazon.awscdk.services.events.targets.BatchJob
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.IConstruct
 
+/**
+ * Use an AWS Batch Job / Queue as an event rule target.
+ *
+ * Most likely the code will look something like this:
+ * `new BatchJob(jobQueue.jobQueueArn, jobQueue, jobDefinition.jobDefinitionArn, jobDefinition)`
+ *
+ * In the future this API will be improved to be fully typed
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.batch.alpha.*;
+ * import software.amazon.awscdk.services.ecs.ContainerImage;
+ * Vpc vpc;
+ * FargateComputeEnvironment computeEnvironment = FargateComputeEnvironment.Builder.create(this,
+ * "ComputeEnv")
+ * .vpc(vpc)
+ * .build();
+ * JobQueue jobQueue = JobQueue.Builder.create(this, "JobQueue")
+ * .priority(1)
+ * .computeEnvironments(List.of(OrderedComputeEnvironment.builder()
+ * .computeEnvironment(computeEnvironment)
+ * .order(1)
+ * .build()))
+ * .build();
+ * EcsJobDefinition jobDefinition = EcsJobDefinition.Builder.create(this, "MyJob")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "Container")
+ * .image(ContainerImage.fromRegistry("test-repo"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .build())
+ * .build();
+ * Queue queue = new Queue(this, "Queue");
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(BatchJob.Builder.create(jobQueue.getJobQueueArn(), jobQueue,
+ * jobDefinition.getJobDefinitionArn(), jobDefinition)
+ * .deadLetterQueue(queue)
+ * .event(RuleTargetInput.fromObject(Map.of("SomeParam", "SomeValue")))
+ * .retryAttempts(2)
+ * .maxEventAge(Duration.hours(2))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BatchJobDsl(
   jobQueueArn: String,

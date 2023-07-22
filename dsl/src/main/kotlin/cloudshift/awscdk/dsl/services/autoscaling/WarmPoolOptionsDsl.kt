@@ -8,6 +8,19 @@ import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.PoolState
 import software.amazon.awscdk.services.autoscaling.WarmPoolOptions
 
+/**
+ * Options for a warm pool.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.addWarmPool(WarmPoolOptions.builder()
+ * .minSize(1)
+ * .reuseOnScaleIn(true)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class WarmPoolOptionsDsl {
   private val cdkBuilder: WarmPoolOptions.Builder = WarmPoolOptions.builder()

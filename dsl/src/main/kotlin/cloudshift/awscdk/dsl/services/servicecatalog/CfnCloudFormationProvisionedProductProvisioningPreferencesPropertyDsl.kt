@@ -9,6 +9,41 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
 
+/**
+ * The user-defined preferences that will be applied when updating a provisioned product.
+ *
+ * Not all preferences are applicable to all provisioned product type
+ *
+ * One or more AWS accounts that will have access to the provisioned product.
+ *
+ * Applicable only to a `CFN_STACKSET` provisioned product type.
+ *
+ * The AWS accounts specified should be within the list of accounts in the `STACKSET` constraint. To
+ * get the list of accounts in the `STACKSET` constraint, use the `DescribeProvisioningParameters`
+ * operation.
+ *
+ * If no values are specified, the default value is all accounts from the `STACKSET` constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * ProvisioningPreferencesProperty provisioningPreferencesProperty =
+ * ProvisioningPreferencesProperty.builder()
+ * .stackSetAccounts(List.of("stackSetAccounts"))
+ * .stackSetFailureToleranceCount(123)
+ * .stackSetFailureTolerancePercentage(123)
+ * .stackSetMaxConcurrencyCount(123)
+ * .stackSetMaxConcurrencyPercentage(123)
+ * .stackSetOperationType("stackSetOperationType")
+ * .stackSetRegions(List.of("stackSetRegions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationprovisionedproduct-provisioningpreferences.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProvisionedProductProvisioningPreferencesPropertyDsl {
   private val cdkBuilder:

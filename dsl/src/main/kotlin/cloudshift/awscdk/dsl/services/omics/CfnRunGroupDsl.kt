@@ -9,6 +9,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.omics.CfnRunGroup
 import software.constructs.Construct
 
+/**
+ * Creates a run group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * CfnRunGroup cfnRunGroup = CfnRunGroup.Builder.create(this, "MyCfnRunGroup")
+ * .maxCpus(123)
+ * .maxDuration(123)
+ * .maxRuns(123)
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-rungroup.html)
+ */
 @CdkDslMarker
 public class CfnRunGroupDsl(
   scope: Construct,

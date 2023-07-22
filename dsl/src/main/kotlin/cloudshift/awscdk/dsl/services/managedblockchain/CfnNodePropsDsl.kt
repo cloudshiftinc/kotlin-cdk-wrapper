@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnNode
 import software.amazon.awscdk.services.managedblockchain.CfnNodeProps
 
+/**
+ * Properties for defining a `CfnNode`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnNodeProps cfnNodeProps = CfnNodeProps.builder()
+ * .networkId("networkId")
+ * .nodeConfiguration(NodeConfigurationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .instanceType("instanceType")
+ * .build())
+ * // the properties below are optional
+ * .memberId("memberId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html)
+ */
 @CdkDslMarker
 public class CfnNodePropsDsl {
   private val cdkBuilder: CfnNodeProps.Builder = CfnNodeProps.builder()

@@ -13,6 +13,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCapacityProvider
 import software.constructs.Construct
 
+/**
+ * Creates a new capacity provider.
+ *
+ * Capacity providers are associated with an Amazon ECS cluster and are used in capacity provider
+ * strategies to facilitate cluster auto scaling.
+ *
+ * Only capacity providers that use an Auto Scaling group can be created. Amazon ECS tasks on AWS
+ * Fargate use the `FARGATE` and `FARGATE_SPOT` capacity providers. These providers are available to
+ * all accounts in the AWS Regions that AWS Fargate supports.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnCapacityProvider cfnCapacityProvider = CfnCapacityProvider.Builder.create(this,
+ * "MyCfnCapacityProvider")
+ * .autoScalingGroupProvider(AutoScalingGroupProviderProperty.builder()
+ * .autoScalingGroupArn("autoScalingGroupArn")
+ * // the properties below are optional
+ * .managedScaling(ManagedScalingProperty.builder()
+ * .instanceWarmupPeriod(123)
+ * .maximumScalingStepSize(123)
+ * .minimumScalingStepSize(123)
+ * .status("status")
+ * .targetCapacity(123)
+ * .build())
+ * .managedTerminationProtection("managedTerminationProtection")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html)
+ */
 @CdkDslMarker
 public class CfnCapacityProviderDsl(
   scope: Construct,

@@ -8,6 +8,101 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 import software.amazon.awscdk.services.scheduler.CfnScheduleProps
 
+/**
+ * Properties for defining a `CfnSchedule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * Object tags;
+ * CfnScheduleProps cfnScheduleProps = CfnScheduleProps.builder()
+ * .flexibleTimeWindow(FlexibleTimeWindowProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .maximumWindowInMinutes(123)
+ * .build())
+ * .scheduleExpression("scheduleExpression")
+ * .target(TargetProperty.builder()
+ * .arn("arn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategy(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tags(tags)
+ * .taskCount(123)
+ * .build())
+ * .eventBridgeParameters(EventBridgeParametersProperty.builder()
+ * .detailType("detailType")
+ * .source("source")
+ * .build())
+ * .input("input")
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKey("partitionKey")
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .sageMakerPipelineParameters(SageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .endDate("endDate")
+ * .groupName("groupName")
+ * .kmsKeyArn("kmsKeyArn")
+ * .name("name")
+ * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+ * .startDate("startDate")
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedule.html)
+ */
 @CdkDslMarker
 public class CfnSchedulePropsDsl {
   private val cdkBuilder: CfnScheduleProps.Builder = CfnScheduleProps.builder()

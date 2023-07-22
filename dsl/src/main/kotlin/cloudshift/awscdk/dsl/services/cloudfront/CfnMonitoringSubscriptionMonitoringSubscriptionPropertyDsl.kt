@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription
 
+/**
+ * A monitoring subscription.
+ *
+ * This structure contains information about whether additional CloudWatch metrics are enabled for a
+ * given CloudFront distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * MonitoringSubscriptionProperty monitoringSubscriptionProperty =
+ * MonitoringSubscriptionProperty.builder()
+ * .realtimeMetricsSubscriptionConfig(RealtimeMetricsSubscriptionConfigProperty.builder()
+ * .realtimeMetricsSubscriptionStatus("realtimeMetricsSubscriptionStatus")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-monitoringsubscription-monitoringsubscription.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringSubscriptionMonitoringSubscriptionPropertyDsl {
   private val cdkBuilder: CfnMonitoringSubscription.MonitoringSubscriptionProperty.Builder =

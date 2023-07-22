@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnRuleset
 
+/**
+ * A key-value pair to associate an expression's substitution variable names with their values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * SubstitutionValueProperty substitutionValueProperty = SubstitutionValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-substitutionvalue.html)
+ */
 @CdkDslMarker
 public class CfnRulesetSubstitutionValuePropertyDsl {
   private val cdkBuilder: CfnRuleset.SubstitutionValueProperty.Builder =

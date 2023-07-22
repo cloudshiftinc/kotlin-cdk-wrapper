@@ -16,6 +16,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::MatchmakingConfiguration` resource defines a new matchmaking configuration
+ * for use with FlexMatch.
+ *
+ * Whether you're using FlexMatch with GameLift hosting or as a standalone matchmaking service, the
+ * matchmaking configuration sets out rules for matching players and forming teams. If you're using
+ * GameLift hosting, it also defines how to start game sessions for each match. Your matchmaking system
+ * can use multiple configurations to handle different game scenarios. All matchmaking requests
+ * identify the matchmaking configuration to use and provide player attributes that are consistent with
+ * that configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnMatchmakingConfiguration cfnMatchmakingConfiguration =
+ * CfnMatchmakingConfiguration.Builder.create(this, "MyCfnMatchmakingConfiguration")
+ * .acceptanceRequired(false)
+ * .name("name")
+ * .requestTimeoutSeconds(123)
+ * .ruleSetName("ruleSetName")
+ * // the properties below are optional
+ * .acceptanceTimeoutSeconds(123)
+ * .additionalPlayerCount(123)
+ * .backfillMode("backfillMode")
+ * .customEventData("customEventData")
+ * .description("description")
+ * .flexMatchMode("flexMatchMode")
+ * .gameProperties(List.of(GamePropertyProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .gameSessionData("gameSessionData")
+ * .gameSessionQueueArns(List.of("gameSessionQueueArns"))
+ * .notificationTarget("notificationTarget")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMatchmakingConfigurationDsl(
   scope: Construct,

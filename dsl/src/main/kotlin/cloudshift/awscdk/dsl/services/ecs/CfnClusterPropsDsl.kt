@@ -14,6 +14,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCluster
 import software.amazon.awscdk.services.ecs.CfnClusterProps
 
+/**
+ * Properties for defining a `CfnCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
+ * .capacityProviders(List.of("capacityProviders"))
+ * .clusterName("clusterName")
+ * .clusterSettings(List.of(ClusterSettingsProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .configuration(ClusterConfigurationProperty.builder()
+ * .executeCommandConfiguration(ExecuteCommandConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .logConfiguration(ExecuteCommandLogConfigurationProperty.builder()
+ * .cloudWatchEncryptionEnabled(false)
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .s3BucketName("s3BucketName")
+ * .s3EncryptionEnabled(false)
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .logging("logging")
+ * .build())
+ * .build())
+ * .defaultCapacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build()))
+ * .serviceConnectDefaults(ServiceConnectDefaultsProperty.builder()
+ * .namespace("namespace")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterPropsDsl {
   private val cdkBuilder: CfnClusterProps.Builder = CfnClusterProps.builder()

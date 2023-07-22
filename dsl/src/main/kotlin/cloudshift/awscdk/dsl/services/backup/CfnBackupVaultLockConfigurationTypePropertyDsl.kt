@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.backup.CfnBackupVault
 
+/**
+ * The `LockConfigurationType` property type specifies configuration for [AWS Backup Vault
+ * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * LockConfigurationTypeProperty lockConfigurationTypeProperty =
+ * LockConfigurationTypeProperty.builder()
+ * .minRetentionDays(123)
+ * // the properties below are optional
+ * .changeableForDays(123)
+ * .maxRetentionDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-lockconfigurationtype.html)
+ */
 @CdkDslMarker
 public class CfnBackupVaultLockConfigurationTypePropertyDsl {
   private val cdkBuilder: CfnBackupVault.LockConfigurationTypeProperty.Builder =

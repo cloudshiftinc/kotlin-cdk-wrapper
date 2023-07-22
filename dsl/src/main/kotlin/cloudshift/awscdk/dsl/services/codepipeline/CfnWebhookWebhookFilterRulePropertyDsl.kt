@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnWebhook
 
+/**
+ * The event criteria that specify when a webhook notification is sent to your URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * WebhookFilterRuleProperty webhookFilterRuleProperty = WebhookFilterRuleProperty.builder()
+ * .jsonPath("jsonPath")
+ * // the properties below are optional
+ * .matchEquals("matchEquals")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html)
+ */
 @CdkDslMarker
 public class CfnWebhookWebhookFilterRulePropertyDsl {
   private val cdkBuilder: CfnWebhook.WebhookFilterRuleProperty.Builder =

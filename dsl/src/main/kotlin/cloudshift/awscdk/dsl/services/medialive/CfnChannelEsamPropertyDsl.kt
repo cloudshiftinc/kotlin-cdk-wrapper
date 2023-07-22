@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * EsamProperty esamProperty = EsamProperty.builder()
+ * .acquisitionPointId("acquisitionPointId")
+ * .adAvailOffset(123)
+ * .passwordParam("passwordParam")
+ * .poisEndpoint("poisEndpoint")
+ * .username("username")
+ * .zoneIdentity("zoneIdentity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-esam.html)
+ */
 @CdkDslMarker
 public class CfnChannelEsamPropertyDsl {
   private val cdkBuilder: CfnChannel.EsamProperty.Builder = CfnChannel.EsamProperty.builder()

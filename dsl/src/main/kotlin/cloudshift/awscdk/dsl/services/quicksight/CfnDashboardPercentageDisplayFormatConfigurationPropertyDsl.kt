@@ -7,6 +7,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options that determine the percentage display format configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PercentageDisplayFormatConfigurationProperty percentageDisplayFormatConfigurationProperty =
+ * PercentageDisplayFormatConfigurationProperty.builder()
+ * .decimalPlacesConfiguration(DecimalPlacesConfigurationProperty.builder()
+ * .decimalPlaces(123)
+ * .build())
+ * .negativeValueConfiguration(NegativeValueConfigurationProperty.builder()
+ * .displayMode("displayMode")
+ * .build())
+ * .nullValueFormatConfiguration(NullValueFormatConfigurationProperty.builder()
+ * .nullString("nullString")
+ * .build())
+ * .prefix("prefix")
+ * .separatorConfiguration(NumericSeparatorConfigurationProperty.builder()
+ * .decimalSeparator("decimalSeparator")
+ * .thousandsSeparator(ThousandSeparatorOptionsProperty.builder()
+ * .symbol("symbol")
+ * .visibility("visibility")
+ * .build())
+ * .build())
+ * .suffix("suffix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-percentagedisplayformatconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPercentageDisplayFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.PercentageDisplayFormatConfigurationProperty.Builder =

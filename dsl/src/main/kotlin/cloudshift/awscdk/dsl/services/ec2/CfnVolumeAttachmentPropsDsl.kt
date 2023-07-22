@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVolumeAttachmentProps
 
+/**
+ * Properties for defining a `CfnVolumeAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVolumeAttachmentProps cfnVolumeAttachmentProps = CfnVolumeAttachmentProps.builder()
+ * .instanceId("instanceId")
+ * .volumeId("volumeId")
+ * // the properties below are optional
+ * .device("device")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-volumeattachment.html)
+ */
 @CdkDslMarker
 public class CfnVolumeAttachmentPropsDsl {
   private val cdkBuilder: CfnVolumeAttachmentProps.Builder = CfnVolumeAttachmentProps.builder()

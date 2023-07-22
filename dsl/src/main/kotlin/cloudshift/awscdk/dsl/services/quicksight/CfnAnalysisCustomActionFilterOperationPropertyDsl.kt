@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The filter operation that filters data included in a visual or in an entire sheet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomActionFilterOperationProperty customActionFilterOperationProperty =
+ * CustomActionFilterOperationProperty.builder()
+ * .selectedFieldsConfiguration(FilterOperationSelectedFieldsConfigurationProperty.builder()
+ * .selectedColumns(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .selectedFieldOptions("selectedFieldOptions")
+ * .selectedFields(List.of("selectedFields"))
+ * .build())
+ * .targetVisualsConfiguration(FilterOperationTargetVisualsConfigurationProperty.builder()
+ * .sameSheetTargetVisualConfiguration(SameSheetTargetVisualConfigurationProperty.builder()
+ * .targetVisualOptions("targetVisualOptions")
+ * .targetVisuals(List.of("targetVisuals"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-customactionfilteroperation.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisCustomActionFilterOperationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CustomActionFilterOperationProperty.Builder =

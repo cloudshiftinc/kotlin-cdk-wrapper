@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies encryption-related information for an Amazon S3 bucket that is a destination for
+ * replicated objects.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * EncryptionConfigurationProperty encryptionConfigurationProperty =
+ * EncryptionConfigurationProperty.builder()
+ * .replicaKmsKeyId("replicaKmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-encryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.EncryptionConfigurationProperty.Builder =

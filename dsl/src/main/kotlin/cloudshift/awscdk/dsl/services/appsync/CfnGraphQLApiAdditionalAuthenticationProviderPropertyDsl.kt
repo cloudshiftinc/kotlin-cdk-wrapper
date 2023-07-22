@@ -7,6 +7,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * Describes an additional authentication provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * AdditionalAuthenticationProviderProperty additionalAuthenticationProviderProperty =
+ * AdditionalAuthenticationProviderProperty.builder()
+ * .authenticationType("authenticationType")
+ * // the properties below are optional
+ * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .identityValidationExpression("identityValidationExpression")
+ * .build())
+ * .openIdConnectConfig(OpenIDConnectConfigProperty.builder()
+ * .authTtl(123)
+ * .clientId("clientId")
+ * .iatTtl(123)
+ * .issuer("issuer")
+ * .build())
+ * .userPoolConfig(CognitoUserPoolConfigProperty.builder()
+ * .appIdClientRegex("appIdClientRegex")
+ * .awsRegion("awsRegion")
+ * .userPoolId("userPoolId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-additionalauthenticationprovider.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiAdditionalAuthenticationProviderPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.AdditionalAuthenticationProviderProperty.Builder =

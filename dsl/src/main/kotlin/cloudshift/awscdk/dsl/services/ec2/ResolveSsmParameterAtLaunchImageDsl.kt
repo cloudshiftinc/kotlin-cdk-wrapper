@@ -9,6 +9,35 @@ import software.amazon.awscdk.services.ec2.OperatingSystemType
 import software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Select the image based on a given SSM parameter at instance launch time.
+ *
+ * This Machine Image comes with an imageId as `resolve:ssm:parameter-name` or
+ * `resolve:ssm:parameter-name:version` format
+ * as described in the document:
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * ResolveSsmParameterAtLaunchImage resolveSsmParameterAtLaunchImage =
+ * ResolveSsmParameterAtLaunchImage.Builder.create("parameterName")
+ * .cachedInContext(false)
+ * .os(OperatingSystemType.LINUX)
+ * .parameterVersion("parameterVersion")
+ * .userData(userData)
+ * .build();
+ * ```
+ *
+ * @see <a
+ * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/using-systems-manager-parameters.html
+ * The AMI ID would be selected at instance launch
+ * time.">https://docs.aws.amazon.com/autoscaling/ec2/userguide/using-systems-manager-parameters.html
+ * The AMI ID would be selected at instance launch time.</a>
+ */
 @CdkDslMarker
 public class ResolveSsmParameterAtLaunchImageDsl(
   parameterName: String,

@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ce.CfnAnomalyMonitor
 import software.constructs.Construct
 
+/**
+ * The `AWS::CE::AnomalyMonitor` resource is a Cost Explorer resource type that continuously
+ * inspects your account's cost data for anomalies, based on `MonitorType` and `MonitorSpecification` .
+ *
+ * The content consists of detailed metadata and the current status of the monitor object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnAnomalyMonitor cfnAnomalyMonitor = CfnAnomalyMonitor.Builder.create(this,
+ * "MyCfnAnomalyMonitor")
+ * .monitorName("monitorName")
+ * .monitorType("monitorType")
+ * // the properties below are optional
+ * .monitorDimension("monitorDimension")
+ * .monitorSpecification("monitorSpecification")
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyMonitorDsl(
   scope: Construct,

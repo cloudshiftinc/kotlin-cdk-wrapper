@@ -7,6 +7,25 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
 import software.amazon.awscdk.services.appmesh.VirtualRouterListenerConfig
 
+/**
+ * Properties for a VirtualRouter listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualRouterListenerConfig virtualRouterListenerConfig = VirtualRouterListenerConfig.builder()
+ * .listener(VirtualRouterListenerProperty.builder()
+ * .portMapping(PortMappingProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VirtualRouterListenerConfigDsl {
   private val cdkBuilder: VirtualRouterListenerConfig.Builder =

@@ -14,6 +14,48 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnMetricStreamProps
 
+/**
+ * Properties for defining a `CfnMetricStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnMetricStreamProps cfnMetricStreamProps = CfnMetricStreamProps.builder()
+ * .firehoseArn("firehoseArn")
+ * .outputFormat("outputFormat")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .excludeFilters(List.of(MetricStreamFilterProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .metricNames(List.of("metricNames"))
+ * .build()))
+ * .includeFilters(List.of(MetricStreamFilterProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .metricNames(List.of("metricNames"))
+ * .build()))
+ * .includeLinkedAccountsMetrics(false)
+ * .name("name")
+ * .statisticsConfigurations(List.of(MetricStreamStatisticsConfigurationProperty.builder()
+ * .additionalStatistics(List.of("additionalStatistics"))
+ * .includeMetrics(List.of(MetricStreamStatisticsMetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-metricstream.html)
+ */
 @CdkDslMarker
 public class CfnMetricStreamPropsDsl {
   private val cdkBuilder: CfnMetricStreamProps.Builder = CfnMetricStreamProps.builder()

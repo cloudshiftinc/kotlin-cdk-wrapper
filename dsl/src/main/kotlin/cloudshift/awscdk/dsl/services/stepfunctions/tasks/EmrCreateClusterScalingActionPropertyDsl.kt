@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * The type of adjustment the automatic scaling activity makes when triggered, and the periodicity
+ * of the adjustment.
+ *
+ * And an automatic scaling configuration, which describes how the policy adds or removes instances,
+ * the cooldown period,
+ * and the number of EC2 instances that will be added each time the CloudWatch metric alarm
+ * condition is satisfied.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ScalingActionProperty scalingActionProperty = ScalingActionProperty.builder()
+ * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType(EmrCreateCluster.getScalingAdjustmentType().CHANGE_IN_CAPACITY)
+ * .coolDown(123)
+ * .build())
+ * // the properties below are optional
+ * .market(EmrCreateCluster.getInstanceMarket().ON_DEMAND)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ScalingAction.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterScalingActionPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.ScalingActionProperty.Builder =

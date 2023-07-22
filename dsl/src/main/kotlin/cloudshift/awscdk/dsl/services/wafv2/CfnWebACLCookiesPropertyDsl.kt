@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Inspect the cookies in the web request.
+ *
+ * You can specify the parts of the cookies to inspect and you can narrow the set of cookies to
+ * inspect by including or excluding specific keys.
+ *
+ * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+ * specification.
+ *
+ * Example JSON: `"Cookies": { "MatchPattern": { "All": {} }, "MatchScope": "KEY",
+ * "OversizeHandling": "MATCH" }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * CookiesProperty cookiesProperty = CookiesProperty.builder()
+ * .matchPattern(CookieMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedCookies(List.of("excludedCookies"))
+ * .includedCookies(List.of("includedCookies"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-cookies.html)
+ */
 @CdkDslMarker
 public class CfnWebACLCookiesPropertyDsl {
   private val cdkBuilder: CfnWebACL.CookiesProperty.Builder = CfnWebACL.CookiesProperty.builder()

@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
 
+/**
+ * The criteria for an archive rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.accessanalyzer.*;
+ * ArchiveRuleProperty archiveRuleProperty = ArchiveRuleProperty.builder()
+ * .filter(List.of(FilterProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .contains(List.of("contains"))
+ * .eq(List.of("eq"))
+ * .exists(false)
+ * .neq(List.of("neq"))
+ * .build()))
+ * .ruleName("ruleName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-archiverule.html)
+ */
 @CdkDslMarker
 public class CfnAnalyzerArchiveRulePropertyDsl {
   private val cdkBuilder: CfnAnalyzer.ArchiveRuleProperty.Builder =

@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnFaq
 import software.amazon.awscdk.services.kendra.CfnFaqProps
 
+/**
+ * Properties for defining a `CfnFaq`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * CfnFaqProps cfnFaqProps = CfnFaqProps.builder()
+ * .indexId("indexId")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .s3Path(S3PathProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .fileFormat("fileFormat")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html)
+ */
 @CdkDslMarker
 public class CfnFaqPropsDsl {
   private val cdkBuilder: CfnFaqProps.Builder = CfnFaqProps.builder()

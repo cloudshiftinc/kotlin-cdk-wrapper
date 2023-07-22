@@ -10,6 +10,34 @@ import kotlin.Unit
 import software.amazon.awscdk.services.iot1click.CfnPlacement
 import software.constructs.Construct
 
+/**
+ * The `AWS::IoT1Click::Placement` resource creates a placement to be associated with an AWS IoT
+ * 1-Click project.
+ *
+ * A placement is an instance of a device in a location. For more information, see [Projects,
+ * Templates, and
+ * Placements](https://docs.aws.amazon.com/iot-1-click/latest/developerguide/1click-PTP.html) in the
+ * *AWS IoT 1-Click Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot1click.*;
+ * Object associatedDevices;
+ * Object attributes;
+ * CfnPlacement cfnPlacement = CfnPlacement.Builder.create(this, "MyCfnPlacement")
+ * .projectName("projectName")
+ * // the properties below are optional
+ * .associatedDevices(associatedDevices)
+ * .attributes(attributes)
+ * .placementName("placementName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-placement.html)
+ */
 @CdkDslMarker
 public class CfnPlacementDsl(
   scope: Construct,

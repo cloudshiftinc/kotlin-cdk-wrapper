@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.ServiceConnectService
 
+/**
+ * Interface for service connect Service props.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceConnectService serviceConnectService = ServiceConnectService.builder()
+ * .portMappingName("portMappingName")
+ * // the properties below are optional
+ * .discoveryName("discoveryName")
+ * .dnsName("dnsName")
+ * .ingressPortOverride(123)
+ * .port(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceConnectServiceDsl {
   private val cdkBuilder: ServiceConnectService.Builder = ServiceConnectService.builder()

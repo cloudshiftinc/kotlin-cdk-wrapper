@@ -15,6 +15,36 @@ import software.amazon.awscdk.services.servicediscovery.INamespace
 import software.amazon.awscdk.services.servicediscovery.RoutingPolicy
 import software.amazon.awscdk.services.servicediscovery.ServiceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * INamespace namespace;
+ * ServiceProps serviceProps = ServiceProps.builder()
+ * .namespace(namespace)
+ * // the properties below are optional
+ * .customHealthCheck(HealthCheckCustomConfig.builder()
+ * .failureThreshold(123)
+ * .build())
+ * .description("description")
+ * .discoveryType(DiscoveryType.API)
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.minutes(30))
+ * .healthCheck(HealthCheckConfig.builder()
+ * .failureThreshold(123)
+ * .resourcePath("resourcePath")
+ * .type(HealthCheckType.HTTP)
+ * .build())
+ * .loadBalancer(false)
+ * .name("name")
+ * .routingPolicy(RoutingPolicy.WEIGHTED)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServicePropsDsl {
   private val cdkBuilder: ServiceProps.Builder = ServiceProps.builder()

@@ -8,6 +8,25 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NamedEntityDefinitionMetricProperty namedEntityDefinitionMetricProperty =
+ * NamedEntityDefinitionMetricProperty.builder()
+ * .aggregation("aggregation")
+ * .aggregationFunctionParameters(Map.of(
+ * "aggregationFunctionParametersKey", "aggregationFunctionParameters"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-namedentitydefinitionmetric.html)
+ */
 @CdkDslMarker
 public class CfnTopicNamedEntityDefinitionMetricPropertyDsl {
   private val cdkBuilder: CfnTopic.NamedEntityDefinitionMetricProperty.Builder =

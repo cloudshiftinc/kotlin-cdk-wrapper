@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Override of a particular evaluation for a profile job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * StatisticOverrideProperty statisticOverrideProperty = StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-statisticoverride.html)
+ */
 @CdkDslMarker
 public class CfnJobStatisticOverridePropertyDsl {
   private val cdkBuilder: CfnJob.StatisticOverrideProperty.Builder =

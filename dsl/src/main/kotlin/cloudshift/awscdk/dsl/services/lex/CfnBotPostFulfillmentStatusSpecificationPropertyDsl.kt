@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides a setting that determines whether the post-fulfillment response is sent to the user.
+ *
+ * For more information, see
+ * [](https://docs.aws.amazon.com/lexv2/latest/dg/streaming-progress.html#progress-complete)
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-postfulfillmentstatusspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotPostFulfillmentStatusSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.PostFulfillmentStatusSpecificationProperty.Builder =

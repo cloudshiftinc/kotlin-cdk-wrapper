@@ -9,6 +9,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Parameters for a block device for an EBS volume in an Amazon EC2 launch template.
+ *
+ * `Ebs` is a property of [AWS::EC2::LaunchTemplate
+ * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EbsProperty ebsProperty = EbsProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateEbsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.EbsProperty.Builder =

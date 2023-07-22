@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * These are custom parameter to be used when the target is an API Gateway REST APIs or EventBridge
+ * ApiDestinations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetHttpParametersProperty pipeTargetHttpParametersProperty =
+ * PipeTargetHttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargethttpparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetHttpParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetHttpParametersProperty.Builder =

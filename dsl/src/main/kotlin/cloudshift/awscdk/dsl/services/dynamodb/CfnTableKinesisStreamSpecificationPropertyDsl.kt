@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * The Kinesis Data Streams configuration for the specified table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * KinesisStreamSpecificationProperty kinesisStreamSpecificationProperty =
+ * KinesisStreamSpecificationProperty.builder()
+ * .streamArn("streamArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-kinesisstreamspecification.html)
+ */
 @CdkDslMarker
 public class CfnTableKinesisStreamSpecificationPropertyDsl {
   private val cdkBuilder: CfnTable.KinesisStreamSpecificationProperty.Builder =

@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetwork
 import software.constructs.Construct
 
+/**
+ * Creates a service network.
+ *
+ * A service network is a logical boundary for a collection of services. You can associate services
+ * and VPCs with a service network.
+ *
+ * For more information, see [Service
+ * networks](https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-networks.html) in the *Amazon
+ * VPC Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnServiceNetwork cfnServiceNetwork = CfnServiceNetwork.Builder.create(this,
+ * "MyCfnServiceNetwork")
+ * .authType("authType")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkDsl(
   scope: Construct,

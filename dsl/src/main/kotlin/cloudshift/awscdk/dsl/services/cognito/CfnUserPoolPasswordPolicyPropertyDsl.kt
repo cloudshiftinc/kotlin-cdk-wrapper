@@ -8,6 +8,27 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The password policy type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * PasswordPolicyProperty passwordPolicyProperty = PasswordPolicyProperty.builder()
+ * .minimumLength(123)
+ * .requireLowercase(false)
+ * .requireNumbers(false)
+ * .requireSymbols(false)
+ * .requireUppercase(false)
+ * .temporaryPasswordValidityDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolPasswordPolicyPropertyDsl {
   private val cdkBuilder: CfnUserPool.PasswordPolicyProperty.Builder =

@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps
 
+/**
+ * Properties for defining a `CfnCell`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnCellProps cfnCellProps = CfnCellProps.builder()
+ * .cellName("cellName")
+ * .cells(List.of("cells"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-cell.html)
+ */
 @CdkDslMarker
 public class CfnCellPropsDsl {
   private val cdkBuilder: CfnCellProps.Builder = CfnCellProps.builder()

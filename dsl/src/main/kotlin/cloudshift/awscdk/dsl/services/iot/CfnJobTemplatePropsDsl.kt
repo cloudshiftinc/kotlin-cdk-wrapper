@@ -15,6 +15,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 import software.amazon.awscdk.services.iot.CfnJobTemplateProps
 
+/**
+ * Properties for defining a `CfnJobTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * Object abortConfig;
+ * Object jobExecutionsRolloutConfig;
+ * Object presignedUrlConfig;
+ * Object timeoutConfig;
+ * CfnJobTemplateProps cfnJobTemplateProps = CfnJobTemplateProps.builder()
+ * .description("description")
+ * .jobTemplateId("jobTemplateId")
+ * // the properties below are optional
+ * .abortConfig(abortConfig)
+ * .document("document")
+ * .documentSource("documentSource")
+ * .jobArn("jobArn")
+ * .jobExecutionsRetryConfig(JobExecutionsRetryConfigProperty.builder()
+ * .retryCriteriaList(List.of(RetryCriteriaProperty.builder()
+ * .failureType("failureType")
+ * .numberOfRetries(123)
+ * .build()))
+ * .build())
+ * .jobExecutionsRolloutConfig(jobExecutionsRolloutConfig)
+ * .maintenanceWindows(List.of(MaintenanceWindowProperty.builder()
+ * .durationInMinutes(123)
+ * .startTime("startTime")
+ * .build()))
+ * .presignedUrlConfig(presignedUrlConfig)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeoutConfig(timeoutConfig)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-jobtemplate.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplatePropsDsl {
   private val cdkBuilder: CfnJobTemplateProps.Builder = CfnJobTemplateProps.builder()

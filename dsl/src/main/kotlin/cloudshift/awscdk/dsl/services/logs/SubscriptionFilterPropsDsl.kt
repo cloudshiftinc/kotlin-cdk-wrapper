@@ -8,6 +8,22 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.ILogSubscriptionDestination
 import software.amazon.awscdk.services.logs.SubscriptionFilterProps
 
+/**
+ * Properties for a SubscriptionFilter.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.destinations.*;
+ * Function fn;
+ * LogGroup logGroup;
+ * SubscriptionFilter.Builder.create(this, "Subscription")
+ * .logGroup(logGroup)
+ * .destination(new LambdaDestination(fn))
+ * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionFilterPropsDsl {
   private val cdkBuilder: SubscriptionFilterProps.Builder = SubscriptionFilterProps.builder()

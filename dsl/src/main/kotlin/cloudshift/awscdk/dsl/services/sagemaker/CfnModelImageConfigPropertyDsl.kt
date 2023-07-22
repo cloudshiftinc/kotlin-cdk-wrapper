@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModel
 
+/**
+ * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible
+ * from your Amazon Virtual Private Cloud (VPC).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ImageConfigProperty imageConfigProperty = ImageConfigProperty.builder()
+ * .repositoryAccessMode("repositoryAccessMode")
+ * // the properties below are optional
+ * .repositoryAuthConfig(RepositoryAuthConfigProperty.builder()
+ * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-imageconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelImageConfigPropertyDsl {
   private val cdkBuilder: CfnModel.ImageConfigProperty.Builder =

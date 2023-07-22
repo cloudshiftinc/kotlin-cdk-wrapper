@@ -7,6 +7,24 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption
 
+/**
+ * Options for configuring the Docker cache backend.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * ContainerImageAssetCacheOption containerImageAssetCacheOption =
+ * ContainerImageAssetCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerImageAssetCacheOptionDsl {
   private val cdkBuilder: ContainerImageAssetCacheOption.Builder =

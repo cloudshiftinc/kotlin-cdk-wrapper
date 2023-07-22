@@ -11,6 +11,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datapipeline.CfnPipelineProps
 
+/**
+ * Properties for defining a `CfnPipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * CfnPipelineProps cfnPipelineProps = CfnPipelineProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .activate(false)
+ * .description("description")
+ * .parameterObjects(List.of(ParameterObjectProperty.builder()
+ * .attributes(List.of(ParameterAttributeProperty.builder()
+ * .key("key")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .build()))
+ * .parameterValues(List.of(ParameterValueProperty.builder()
+ * .id("id")
+ * .stringValue("stringValue")
+ * .build()))
+ * .pipelineObjects(List.of(PipelineObjectProperty.builder()
+ * .fields(List.of(FieldProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .refValue("refValue")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .name("name")
+ * .build()))
+ * .pipelineTags(List.of(PipelineTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelinePropsDsl {
   private val cdkBuilder: CfnPipelineProps.Builder = CfnPipelineProps.builder()

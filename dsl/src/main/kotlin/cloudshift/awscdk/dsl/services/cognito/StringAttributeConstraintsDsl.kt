@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.cognito.StringAttributeConstraints
 
+/**
+ * Constraints that can be applied to a custom attribute of string type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * StringAttributeConstraints stringAttributeConstraints = StringAttributeConstraints.builder()
+ * .maxLen(123)
+ * .minLen(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StringAttributeConstraintsDsl {
   private val cdkBuilder: StringAttributeConstraints.Builder = StringAttributeConstraints.builder()

@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.ses.ByoDkimOptions
 
+/**
+ * Options for BYO DKIM.
+ *
+ * Example:
+ *
+ * ```
+ * IPublicHostedZone myHostedZone;
+ * EmailIdentity.Builder.create(this, "Identity")
+ * .identity(Identity.publicHostedZone(myHostedZone))
+ * .dkimIdentity(DkimIdentity.byoDkim(ByoDkimOptions.builder()
+ * .privateKey(SecretValue.secretsManager("dkim-private-key"))
+ * .publicKey("...base64-encoded-public-key...")
+ * .selector("selector")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ByoDkimOptionsDsl {
   private val cdkBuilder: ByoDkimOptions.Builder = ByoDkimOptions.builder()

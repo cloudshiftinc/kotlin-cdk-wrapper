@@ -8,6 +8,96 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * This is the property of the Amazon S3 Storage Lens configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object sses3;
+ * StorageLensConfigurationProperty storageLensConfigurationProperty =
+ * StorageLensConfigurationProperty.builder()
+ * .accountLevel(AccountLevelProperty.builder()
+ * .bucketLevel(BucketLevelProperty.builder()
+ * .activityMetrics(ActivityMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .prefixLevel(PrefixLevelProperty.builder()
+ * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
+ * .isEnabled(false)
+ * .selectionCriteria(SelectionCriteriaProperty.builder()
+ * .delimiter("delimiter")
+ * .maxDepth(123)
+ * .minStorageBytesPercentage(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .activityMetrics(ActivityMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .build())
+ * .id("id")
+ * .isEnabled(false)
+ * // the properties below are optional
+ * .awsOrg(AwsOrgProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .dataExport(DataExportProperty.builder()
+ * .cloudWatchMetrics(CloudWatchMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .s3BucketDestination(S3BucketDestinationProperty.builder()
+ * .accountId("accountId")
+ * .arn("arn")
+ * .format("format")
+ * .outputSchemaVersion("outputSchemaVersion")
+ * // the properties below are optional
+ * .encryption(EncryptionProperty.builder()
+ * .ssekms(SSEKMSProperty.builder()
+ * .keyId("keyId")
+ * .build())
+ * .sses3(sses3)
+ * .build())
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .exclude(BucketsAndRegionsProperty.builder()
+ * .buckets(List.of("buckets"))
+ * .regions(List.of("regions"))
+ * .build())
+ * .include(BucketsAndRegionsProperty.builder()
+ * .buckets(List.of("buckets"))
+ * .regions(List.of("regions"))
+ * .build())
+ * .storageLensArn("storageLensArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-storagelensconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensStorageLensConfigurationPropertyDsl {
   private val cdkBuilder: CfnStorageLens.StorageLensConfigurationProperty.Builder =

@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnWebACL
 import software.amazon.awscdk.services.waf.regional.CfnWebACLProps
 
+/**
+ * Properties for defining a `CfnWebACL`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnWebACLProps cfnWebACLProps = CfnWebACLProps.builder()
+ * .defaultAction(ActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .metricName("metricName")
+ * .name("name")
+ * // the properties below are optional
+ * .rules(List.of(RuleProperty.builder()
+ * .action(ActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .priority(123)
+ * .ruleId("ruleId")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html)
+ */
 @CdkDslMarker
 public class CfnWebACLPropsDsl {
   private val cdkBuilder: CfnWebACLProps.Builder = CfnWebACLProps.builder()

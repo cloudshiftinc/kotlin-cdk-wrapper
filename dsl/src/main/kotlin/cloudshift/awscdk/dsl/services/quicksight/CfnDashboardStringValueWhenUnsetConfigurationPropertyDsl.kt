@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration that defines the default value of a `String` parameter when a value has not
+ * been set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * StringValueWhenUnsetConfigurationProperty stringValueWhenUnsetConfigurationProperty =
+ * StringValueWhenUnsetConfigurationProperty.builder()
+ * .customValue("customValue")
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-stringvaluewhenunsetconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardStringValueWhenUnsetConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.StringValueWhenUnsetConfigurationProperty.Builder =

@@ -11,6 +11,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetCacheOption
 import software.amazon.awscdk.cloudassembly.schema.ContainerImageAssetMetadataEntry
 
+/**
+ * Metadata Entry spec for container images.
+ *
+ * Example:
+ *
+ * ```
+ * Map&lt;String, String&gt; entry = Map.of(
+ * "packaging", "container-image",
+ * "repositoryName", "repository-name",
+ * "imageTag", "tag");
+ * ```
+ */
 @CdkDslMarker
 public class ContainerImageAssetMetadataEntryDsl {
   private val cdkBuilder: ContainerImageAssetMetadataEntry.Builder =

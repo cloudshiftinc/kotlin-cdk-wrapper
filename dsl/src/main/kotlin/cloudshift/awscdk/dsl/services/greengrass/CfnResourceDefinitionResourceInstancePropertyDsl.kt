@@ -7,6 +7,79 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinition
 
+/**
+ * A local resource, machine learning resource, or secret resource.
+ *
+ * For more information, see [Access Local Resources with Lambda
+ * Functions](https://docs.aws.amazon.com/greengrass/latest/developerguide/access-local-resources.html)
+ * , [Perform Machine Learning
+ * Inference](https://docs.aws.amazon.com/greengrass/latest/developerguide/ml-inference.html) , and
+ * [Deploy Secrets to the AWS IoT Greengrass
+ * Core](https://docs.aws.amazon.com/greengrass/latest/developerguide/secrets.html) in the *Developer
+ * Guide* .
+ *
+ * In an AWS CloudFormation template, the `Resources` property of the
+ * [`AWS::Greengrass::ResourceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinition.html)
+ * resource contains a list of `ResourceInstance` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * ResourceInstanceProperty resourceInstanceProperty = ResourceInstanceProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .resourceDataContainer(ResourceDataContainerProperty.builder()
+ * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sageMakerJobArn("sageMakerJobArn")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinition-resourceinstance.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionResourceInstancePropertyDsl {
   private val cdkBuilder: CfnResourceDefinition.ResourceInstanceProperty.Builder =

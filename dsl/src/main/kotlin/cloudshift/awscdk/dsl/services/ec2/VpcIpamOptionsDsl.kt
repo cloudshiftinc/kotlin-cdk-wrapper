@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.VpcIpamOptions
 
+/**
+ * Cidr Allocated Vpc.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * VpcIpamOptions vpcIpamOptions = VpcIpamOptions.builder()
+ * .cidrBlock("cidrBlock")
+ * .ipv4IpamPoolId("ipv4IpamPoolId")
+ * .ipv4NetmaskLength(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcIpamOptionsDsl {
   private val cdkBuilder: VpcIpamOptions.Builder = VpcIpamOptions.builder()

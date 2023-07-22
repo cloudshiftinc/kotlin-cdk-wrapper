@@ -13,6 +13,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnUser
 import software.constructs.Construct
 
+/**
+ * Specifies a user account for an Amazon Connect instance.
+ *
+ * For information about how to create user accounts using the Amazon Connect console, see [Add
+ * Users](https://docs.aws.amazon.com/connect/latest/adminguide/user-management.html) in the *Amazon
+ * Connect Administrator Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .instanceArn("instanceArn")
+ * .phoneConfig(UserPhoneConfigProperty.builder()
+ * .phoneType("phoneType")
+ * // the properties below are optional
+ * .afterContactWorkTimeLimit(123)
+ * .autoAccept(false)
+ * .deskPhoneNumber("deskPhoneNumber")
+ * .build())
+ * .routingProfileArn("routingProfileArn")
+ * .securityProfileArns(List.of("securityProfileArns"))
+ * .username("username")
+ * // the properties below are optional
+ * .directoryUserId("directoryUserId")
+ * .hierarchyGroupArn("hierarchyGroupArn")
+ * .identityInfo(UserIdentityInfoProperty.builder()
+ * .email("email")
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .mobile("mobile")
+ * .secondaryEmail("secondaryEmail")
+ * .build())
+ * .password("password")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

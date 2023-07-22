@@ -13,6 +13,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetProps
 
+/**
+ * Properties for defining a `CfnAsset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnAssetProps cfnAssetProps = CfnAssetProps.builder()
+ * .assetModelId("assetModelId")
+ * .assetName("assetName")
+ * // the properties below are optional
+ * .assetDescription("assetDescription")
+ * .assetHierarchies(List.of(AssetHierarchyProperty.builder()
+ * .childAssetId("childAssetId")
+ * .logicalId("logicalId")
+ * .build()))
+ * .assetProperties(List.of(AssetPropertyProperty.builder()
+ * .logicalId("logicalId")
+ * // the properties below are optional
+ * .alias("alias")
+ * .notificationState("notificationState")
+ * .unit("unit")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html)
+ */
 @CdkDslMarker
 public class CfnAssetPropsDsl {
   private val cdkBuilder: CfnAssetProps.Builder = CfnAssetProps.builder()

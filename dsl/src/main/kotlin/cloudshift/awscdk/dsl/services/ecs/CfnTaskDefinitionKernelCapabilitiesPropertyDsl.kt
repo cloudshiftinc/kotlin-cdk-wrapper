@@ -8,6 +8,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The `KernelCapabilities` property specifies the Linux capabilities for the container that are
+ * added to or dropped from the default configuration that is provided by Docker.
+ *
+ * For more information on the default capabilities and the non-default available capabilities, see
+ * [Runtime privilege and Linux
+ * capabilities](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities)
+ * in the *Docker run reference* . For more detailed information on these Linux capabilities, see the
+ * [capabilities(7)](https://docs.aws.amazon.com/http://man7.org/linux/man-pages/man7/capabilities.7.html)
+ * Linux manual page.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * KernelCapabilitiesProperty kernelCapabilitiesProperty = KernelCapabilitiesProperty.builder()
+ * .add(List.of("add"))
+ * .drop(List.of("drop"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-kernelcapabilities.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionKernelCapabilitiesPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.KernelCapabilitiesProperty.Builder =

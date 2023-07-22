@@ -11,6 +11,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnCidrCollection
 import software.constructs.Construct
 
+/**
+ * Creates a CIDR collection in the current AWS account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnCidrCollection cfnCidrCollection = CfnCidrCollection.Builder.create(this,
+ * "MyCfnCidrCollection")
+ * .name("name")
+ * // the properties below are optional
+ * .locations(List.of(LocationProperty.builder()
+ * .cidrList(List.of("cidrList"))
+ * .locationName("locationName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html)
+ */
 @CdkDslMarker
 public class CfnCidrCollectionDsl(
   scope: Construct,

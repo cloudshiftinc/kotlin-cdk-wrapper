@@ -6,6 +6,45 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 
+/**
+ * Contains information on the details of a package filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspectorv2.*;
+ * PackageFilterProperty packageFilterProperty = PackageFilterProperty.builder()
+ * .architecture(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .epoch(NumberFilterProperty.builder()
+ * .lowerInclusive(123)
+ * .upperInclusive(123)
+ * .build())
+ * .name(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .release(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .sourceLayerHash(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .version(StringFilterProperty.builder()
+ * .comparison("comparison")
+ * .value("value")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-packagefilter.html)
+ */
 @CdkDslMarker
 public class CfnFilterPackageFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.PackageFilterProperty.Builder =

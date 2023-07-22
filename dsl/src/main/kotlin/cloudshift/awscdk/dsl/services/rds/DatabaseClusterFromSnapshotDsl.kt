@@ -35,6 +35,21 @@ import software.amazon.awscdk.services.rds.SnapshotCredentials
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * A database cluster restored from a snapshot.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseClusterFromSnapshot.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.aurora(AuroraClusterEngineProps.builder().version(AuroraEngineVersion.VER_1_22_2).build()))
+ * .writer(ClusterInstance.provisioned("writer"))
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterFromSnapshotDsl(
   scope: Construct,

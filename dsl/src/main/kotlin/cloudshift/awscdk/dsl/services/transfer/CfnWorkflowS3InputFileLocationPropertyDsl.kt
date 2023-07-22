@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Specifies the details for the Amazon S3 location for an input file to a workflow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * S3InputFileLocationProperty s3InputFileLocationProperty = S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowS3InputFileLocationPropertyDsl {
   private val cdkBuilder: CfnWorkflow.S3InputFileLocationProperty.Builder =

@@ -8,6 +8,121 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 import software.constructs.Construct
 
+/**
+ * A *schedule* is the main resource you create, configure, and manage using Amazon EventBridge
+ * Scheduler.
+ *
+ * Every schedule has a *schedule expression* that determines when, and with what frequency, the
+ * schedule runs. EventBridge Scheduler supports three types of schedules: rate, cron, and one-time
+ * schedules. For more information about different schedule types, see [Schedule
+ * types](https://docs.aws.amazon.com/scheduler/latest/UserGuide/schedule-types.html) in the
+ * *EventBridge Scheduler User Guide* .
+ *
+ * When you create a schedule, you configure a target for the schedule to invoke. A target is an API
+ * operation that EventBridge Scheduler calls on your behalf every time your schedule runs. EventBridge
+ * Scheduler supports two types of targets: *templated* targets invoke common API operations across a
+ * core groups of services, and customizeable *universal* targets that you can use to call more than
+ * 6,000 operations across over 270 services. For more information about configuring targets, see
+ * [Managing targets](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-targets.html) in
+ * the *EventBridge Scheduler User Guide* .
+ *
+ * For more information about managing schedules, changing the schedule state, setting up flexible
+ * time windows, and configuring a dead-letter queue for a schedule, see [Managing a
+ * schedule](https://docs.aws.amazon.com/scheduler/latest/UserGuide/managing-schedule.html) in the
+ * *EventBridge Scheduler User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * Object tags;
+ * CfnSchedule cfnSchedule = CfnSchedule.Builder.create(this, "MyCfnSchedule")
+ * .flexibleTimeWindow(FlexibleTimeWindowProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .maximumWindowInMinutes(123)
+ * .build())
+ * .scheduleExpression("scheduleExpression")
+ * .target(TargetProperty.builder()
+ * .arn("arn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategy(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tags(tags)
+ * .taskCount(123)
+ * .build())
+ * .eventBridgeParameters(EventBridgeParametersProperty.builder()
+ * .detailType("detailType")
+ * .source("source")
+ * .build())
+ * .input("input")
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKey("partitionKey")
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .sageMakerPipelineParameters(SageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .endDate("endDate")
+ * .groupName("groupName")
+ * .kmsKeyArn("kmsKeyArn")
+ * .name("name")
+ * .scheduleExpressionTimezone("scheduleExpressionTimezone")
+ * .startDate("startDate")
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-scheduler-schedule.html)
+ */
 @CdkDslMarker
 public class CfnScheduleDsl(
   scope: Construct,

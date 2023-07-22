@@ -14,6 +14,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnCluster
 import software.amazon.awscdk.services.eks.CfnClusterProps
 
+/**
+ * Properties for defining a `CfnCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
+ * .resourcesVpcConfig(ResourcesVpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .endpointPrivateAccess(false)
+ * .endpointPublicAccess(false)
+ * .publicAccessCidrs(List.of("publicAccessCidrs"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
+ * .provider(ProviderProperty.builder()
+ * .keyArn("keyArn")
+ * .build())
+ * .resources(List.of("resources"))
+ * .build()))
+ * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
+ * .ipFamily("ipFamily")
+ * .serviceIpv4Cidr("serviceIpv4Cidr")
+ * .serviceIpv6Cidr("serviceIpv6Cidr")
+ * .build())
+ * .logging(LoggingProperty.builder()
+ * .clusterLogging(ClusterLoggingProperty.builder()
+ * .enabledTypes(List.of(LoggingTypeConfigProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .name("name")
+ * .outpostConfig(OutpostConfigProperty.builder()
+ * .controlPlaneInstanceType("controlPlaneInstanceType")
+ * .outpostArns(List.of("outpostArns"))
+ * // the properties below are optional
+ * .controlPlanePlacement(ControlPlanePlacementProperty.builder()
+ * .groupName("groupName")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterPropsDsl {
   private val cdkBuilder: CfnClusterProps.Builder = CfnClusterProps.builder()

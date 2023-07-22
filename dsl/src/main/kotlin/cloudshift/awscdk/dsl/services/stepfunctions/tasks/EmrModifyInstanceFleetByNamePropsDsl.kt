@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceFleetByNameProps
 
+/**
+ * Properties for EmrModifyInstanceFleetByName.
+ *
+ * Example:
+ *
+ * ```
+ * EmrModifyInstanceFleetByName.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .instanceFleetName("InstanceFleetName")
+ * .targetOnDemandCapacity(2)
+ * .targetSpotCapacity(0)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrModifyInstanceFleetByNamePropsDsl {
   private val cdkBuilder: EmrModifyInstanceFleetByNameProps.Builder =

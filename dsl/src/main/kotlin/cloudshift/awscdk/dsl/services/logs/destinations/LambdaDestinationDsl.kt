@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.logs.destinations.LambdaDestination
 
+/**
+ * Use a Lambda Function as the destination for a log subscription.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.destinations.*;
+ * Function fn;
+ * LogGroup logGroup;
+ * SubscriptionFilter.Builder.create(this, "Subscription")
+ * .logGroup(logGroup)
+ * .destination(new LambdaDestination(fn))
+ * .filterPattern(FilterPattern.allTerms("ERROR", "MainThread"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDestinationDsl(
   fn: IFunction,

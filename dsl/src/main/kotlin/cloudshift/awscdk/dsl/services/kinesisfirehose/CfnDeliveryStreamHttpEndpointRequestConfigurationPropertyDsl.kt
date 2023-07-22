@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The configuration of the HTTP endpoint request.
+ *
+ * Kinesis Firehose supports any custom HTTP endpoint or HTTP endpoints owned by supported
+ * third-party service providers, including Datadog, MongoDB, and New Relic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * HttpEndpointRequestConfigurationProperty httpEndpointRequestConfigurationProperty =
+ * HttpEndpointRequestConfigurationProperty.builder()
+ * .commonAttributes(List.of(HttpEndpointCommonAttributeProperty.builder()
+ * .attributeName("attributeName")
+ * .attributeValue("attributeValue")
+ * .build()))
+ * .contentEncoding("contentEncoding")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-httpendpointrequestconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamHttpEndpointRequestConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.HttpEndpointRequestConfigurationProperty.Builder =

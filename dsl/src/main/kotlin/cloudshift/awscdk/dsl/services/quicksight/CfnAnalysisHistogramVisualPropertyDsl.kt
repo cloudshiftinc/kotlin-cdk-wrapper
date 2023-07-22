@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A histogram.
+ *
+ * For more information, see [Using
+ * histograms](https://docs.aws.amazon.com/quicksight/latest/user/histogram-charts.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-histogramvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisHistogramVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.HistogramVisualProperty.Builder =

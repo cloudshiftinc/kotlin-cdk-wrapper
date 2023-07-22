@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.events.targets.AwsApiInput
 
+/**
+ * Rule target input for an AwsApi target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * Object parameters;
+ * AwsApiInput awsApiInput = AwsApiInput.builder()
+ * .action("action")
+ * .service("service")
+ * // the properties below are optional
+ * .apiVersion("apiVersion")
+ * .catchErrorPattern("catchErrorPattern")
+ * .parameters(parameters)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsApiInputDsl {
   private val cdkBuilder: AwsApiInput.Builder = AwsApiInput.builder()

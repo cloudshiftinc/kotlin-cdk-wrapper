@@ -22,6 +22,22 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 import software.constructs.Construct
 
+/**
+ * A StepFunctions task to call DynamoPutItem.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoPutItem.Builder.create(this, "PutItem")
+ * .item(Map.of(
+ * "MessageId", DynamoAttributeValue.fromString("message-007"),
+ * "Text", DynamoAttributeValue.fromString(JsonPath.stringAt("$.bar")),
+ * "TotalCount", DynamoAttributeValue.fromNumber(10)))
+ * .table(myTable)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoPutItemDsl(
   scope: Construct,

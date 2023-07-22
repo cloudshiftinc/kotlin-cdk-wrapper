@@ -11,6 +11,27 @@ import software.amazon.awscdk.services.apigateway.Stage
 import software.amazon.awscdk.services.apigateway.ThrottlingPerMethod
 import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
 
+/**
+ * Represents the API stages that a usage plan applies to.
+ *
+ * Example:
+ *
+ * ```
+ * UsagePlan plan;
+ * RestApi api;
+ * Method echoMethod;
+ * plan.addApiStage(UsagePlanPerApiStage.builder()
+ * .stage(api.getDeploymentStage())
+ * .throttle(List.of(ThrottlingPerMethod.builder()
+ * .method(echoMethod)
+ * .throttle(ThrottleSettings.builder()
+ * .rateLimit(10)
+ * .burstLimit(2)
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UsagePlanPerApiStageDsl {
   private val cdkBuilder: UsagePlanPerApiStage.Builder = UsagePlanPerApiStage.builder()

@@ -13,6 +13,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnUser
 import software.amazon.awscdk.services.connect.CfnUserProps
 
+/**
+ * Properties for defining a `CfnUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnUserProps cfnUserProps = CfnUserProps.builder()
+ * .instanceArn("instanceArn")
+ * .phoneConfig(UserPhoneConfigProperty.builder()
+ * .phoneType("phoneType")
+ * // the properties below are optional
+ * .afterContactWorkTimeLimit(123)
+ * .autoAccept(false)
+ * .deskPhoneNumber("deskPhoneNumber")
+ * .build())
+ * .routingProfileArn("routingProfileArn")
+ * .securityProfileArns(List.of("securityProfileArns"))
+ * .username("username")
+ * // the properties below are optional
+ * .directoryUserId("directoryUserId")
+ * .hierarchyGroupArn("hierarchyGroupArn")
+ * .identityInfo(UserIdentityInfoProperty.builder()
+ * .email("email")
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .mobile("mobile")
+ * .secondaryEmail("secondaryEmail")
+ * .build())
+ * .password("password")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-user.html)
+ */
 @CdkDslMarker
 public class CfnUserPropsDsl {
   private val cdkBuilder: CfnUserProps.Builder = CfnUserProps.builder()

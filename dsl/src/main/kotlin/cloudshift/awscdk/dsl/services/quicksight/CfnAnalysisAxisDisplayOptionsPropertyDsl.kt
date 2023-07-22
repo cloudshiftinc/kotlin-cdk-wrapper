@@ -7,6 +7,75 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The display options for the axis label.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * Object dataDriven;
+ * AxisDisplayOptionsProperty axisDisplayOptionsProperty = AxisDisplayOptionsProperty.builder()
+ * .axisLineVisibility("axisLineVisibility")
+ * .axisOffset("axisOffset")
+ * .dataOptions(AxisDataOptionsProperty.builder()
+ * .dateAxisOptions(DateAxisOptionsProperty.builder()
+ * .missingDateVisibility("missingDateVisibility")
+ * .build())
+ * .numericAxisOptions(NumericAxisOptionsProperty.builder()
+ * .range(AxisDisplayRangeProperty.builder()
+ * .dataDriven(dataDriven)
+ * .minMax(AxisDisplayMinMaxRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build())
+ * .build())
+ * .scale(AxisScaleProperty.builder()
+ * .linear(AxisLinearScaleProperty.builder()
+ * .stepCount(123)
+ * .stepSize(123)
+ * .build())
+ * .logarithmic(AxisLogarithmicScaleProperty.builder()
+ * .base(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .gridLineVisibility("gridLineVisibility")
+ * .scrollbarOptions(ScrollBarOptionsProperty.builder()
+ * .visibility("visibility")
+ * .visibleRange(VisibleRangeOptionsProperty.builder()
+ * .percentRange(PercentVisibleRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build())
+ * .build())
+ * .tickLabelOptions(AxisTickLabelOptionsProperty.builder()
+ * .labelOptions(LabelOptionsProperty.builder()
+ * .customLabel("customLabel")
+ * .fontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .visibility("visibility")
+ * .build())
+ * .rotationAngle(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-axisdisplayoptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisAxisDisplayOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AxisDisplayOptionsProperty.Builder =

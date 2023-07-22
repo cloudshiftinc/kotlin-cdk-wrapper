@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.autoscaling.LaunchTemplateOverrides
 import software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy
 import software.amazon.awscdk.services.ec2.ILaunchTemplate
 
+/**
+ * MixedInstancesPolicy allows you to configure a group that diversifies across On-Demand Instances
+ * and Spot Instances of multiple instance types.
+ *
+ * For more information, see Auto Scaling groups with
+ * multiple instance types and purchase options in the Amazon EC2 Auto Scaling User Guide:
+ *
+ * https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * LaunchTemplate launchTemplate1;
+ * LaunchTemplate launchTemplate2;
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .mixedInstancesPolicy(MixedInstancesPolicy.builder()
+ * .instancesDistribution(InstancesDistribution.builder()
+ * .onDemandPercentageAboveBaseCapacity(50)
+ * .build())
+ * .launchTemplate(launchTemplate1)
+ * .launchTemplateOverrides(List.of(LaunchTemplateOverrides.builder().instanceType(new
+ * InstanceType("t3.micro")).build(), LaunchTemplateOverrides.builder().instanceType(new
+ * InstanceType("t3a.micro")).build(), LaunchTemplateOverrides.builder().instanceType(new
+ * InstanceType("t4g.micro")).launchTemplate(launchTemplate2).build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MixedInstancesPolicyDsl {
   private val cdkBuilder: MixedInstancesPolicy.Builder = MixedInstancesPolicy.builder()

@@ -21,6 +21,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApi
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
 import software.constructs.Construct
 
+/**
+ * Call HTTP API endpoint as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigatewayv2.alpha.*;
+ * HttpApi httpApi = new HttpApi(this, "MyHttpApi");
+ * CallApiGatewayHttpApiEndpoint invokeTask = CallApiGatewayHttpApiEndpoint.Builder.create(this,
+ * "Call HTTP API")
+ * .apiId(httpApi.getApiId())
+ * .apiStack(Stack.of(httpApi))
+ * .method(HttpMethod.GET)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-api-gateway.html)
+ */
 @CdkDslMarker
 public class CallApiGatewayHttpApiEndpointDsl(
   scope: Construct,

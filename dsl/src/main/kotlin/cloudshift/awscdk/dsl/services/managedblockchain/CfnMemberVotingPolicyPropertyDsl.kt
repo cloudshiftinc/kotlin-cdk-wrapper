@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 
+/**
+ * The voting rules for the network to decide if a proposal is accepted.
+ *
+ * Applies only to Hyperledger Fabric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * VotingPolicyProperty votingPolicyProperty = VotingPolicyProperty.builder()
+ * .approvalThresholdPolicy(ApprovalThresholdPolicyProperty.builder()
+ * .proposalDurationInHours(123)
+ * .thresholdComparator("thresholdComparator")
+ * .thresholdPercentage(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-votingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnMemberVotingPolicyPropertyDsl {
   private val cdkBuilder: CfnMember.VotingPolicyProperty.Builder =

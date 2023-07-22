@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnStudio
 import software.amazon.awscdk.services.nimblestudio.CfnStudioProps
 
+/**
+ * Properties for defining a `CfnStudio`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * CfnStudioProps cfnStudioProps = CfnStudioProps.builder()
+ * .adminRoleArn("adminRoleArn")
+ * .displayName("displayName")
+ * .studioName("studioName")
+ * .userRoleArn("userRoleArn")
+ * // the properties below are optional
+ * .studioEncryptionConfiguration(StudioEncryptionConfigurationProperty.builder()
+ * .keyType("keyType")
+ * // the properties below are optional
+ * .keyArn("keyArn")
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studio.html)
+ */
 @CdkDslMarker
 public class CfnStudioPropsDsl {
   private val cdkBuilder: CfnStudioProps.Builder = CfnStudioProps.builder()

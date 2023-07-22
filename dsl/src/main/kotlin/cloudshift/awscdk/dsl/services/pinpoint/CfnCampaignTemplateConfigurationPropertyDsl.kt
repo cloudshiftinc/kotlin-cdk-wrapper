@@ -6,6 +6,38 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the message template to use for the message, for each type of channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * TemplateConfigurationProperty templateConfigurationProperty =
+ * TemplateConfigurationProperty.builder()
+ * .emailTemplate(TemplateProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .pushTemplate(TemplateProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .smsTemplate(TemplateProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .voiceTemplate(TemplateProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-templateconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnCampaignTemplateConfigurationPropertyDsl {
   private val cdkBuilder: CfnCampaign.TemplateConfigurationProperty.Builder =

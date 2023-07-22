@@ -13,6 +13,25 @@ import software.amazon.awscdk.services.cognito.AttributeMapping
 import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps
 
+/**
+ * Properties to initialize UserPoolGoogleIdentityProvider.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = new UserPool(this, "Pool");
+ * SecretValue secret = Secret.fromSecretAttributes(this, "CognitoClientSecret",
+ * SecretAttributes.builder()
+ * .secretCompleteArn("arn:aws:secretsmanager:xxx:xxx:secret:xxx-xxx")
+ * .build()).getSecretValue();
+ * UserPoolIdentityProviderGoogle provider = UserPoolIdentityProviderGoogle.Builder.create(this,
+ * "Google")
+ * .clientId("amzn-client-id")
+ * .clientSecretValue(secret)
+ * .userPool(userpool)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderGooglePropsDsl {
   private val cdkBuilder: UserPoolIdentityProviderGoogleProps.Builder =

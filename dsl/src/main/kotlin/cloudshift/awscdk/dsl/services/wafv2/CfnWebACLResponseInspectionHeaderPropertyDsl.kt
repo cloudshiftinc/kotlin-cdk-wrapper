@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Configures inspection of the response header. This is part of the `ResponseInspection`
+ * configuration for `AWSManagedRulesATPRuleSet` .
+ *
+ *
+ * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * ResponseInspectionHeaderProperty responseInspectionHeaderProperty =
+ * ResponseInspectionHeaderProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .name("name")
+ * .successValues(List.of("successValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-responseinspectionheader.html)
+ */
 @CdkDslMarker
 public class CfnWebACLResponseInspectionHeaderPropertyDsl {
   private val cdkBuilder: CfnWebACL.ResponseInspectionHeaderProperty.Builder =

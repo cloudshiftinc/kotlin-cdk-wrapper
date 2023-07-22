@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The details of the VPC of the Amazon ES destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-vpcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.VpcConfigurationProperty.Builder =

@@ -12,6 +12,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourceexplorer2.CfnView
 import software.constructs.Construct
 
+/**
+ * Creates a view that users can query by using the
+ * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+ * operation. Results from queries that you make using this view include only resources that match the
+ * view's `Filters` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourceexplorer2.*;
+ * CfnView cfnView = CfnView.Builder.create(this, "MyCfnView")
+ * .viewName("viewName")
+ * // the properties below are optional
+ * .filters(FiltersProperty.builder()
+ * .filterString("filterString")
+ * .build())
+ * .includedProperties(List.of(IncludedPropertyProperty.builder()
+ * .name("name")
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html)
+ */
 @CdkDslMarker
 public class CfnViewDsl(
   scope: Construct,

@@ -13,6 +13,22 @@ import software.amazon.awscdk.services.ec2.Volume
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * Creates a new EBS Volume in AWS EC2.
+ *
+ * Example:
+ *
+ * ```
+ * Instance instance;
+ * Role role;
+ * Volume volume = Volume.Builder.create(this, "Volume")
+ * .availabilityZone("us-west-2a")
+ * .size(Size.gibibytes(500))
+ * .encrypted(true)
+ * .build();
+ * volume.grantAttachVolume(role, List.of(instance));
+ * ```
+ */
 @CdkDslMarker
 public class VolumeDsl(
   scope: Construct,

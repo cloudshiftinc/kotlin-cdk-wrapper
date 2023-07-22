@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The bound options (north, south, west, east) of the geospatial window options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GeospatialCoordinateBoundsProperty geospatialCoordinateBoundsProperty =
+ * GeospatialCoordinateBoundsProperty.builder()
+ * .east(123)
+ * .north(123)
+ * .south(123)
+ * .west(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-geospatialcoordinatebounds.html)
+ */
 @CdkDslMarker
 public class CfnDashboardGeospatialCoordinateBoundsPropertyDsl {
   private val cdkBuilder: CfnDashboard.GeospatialCoordinateBoundsProperty.Builder =

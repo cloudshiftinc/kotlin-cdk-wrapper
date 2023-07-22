@@ -9,6 +9,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * Contains load metric information for the `CustomizedLoadMetricSpecification` property of the
+ * [AWS::AutoScaling::ScalingPolicy
+ * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * PredictiveScalingCustomizedLoadMetricProperty predictiveScalingCustomizedLoadMetricProperty =
+ * PredictiveScalingCustomizedLoadMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingcustomizedloadmetric.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPredictiveScalingCustomizedLoadMetricPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty.Builder =

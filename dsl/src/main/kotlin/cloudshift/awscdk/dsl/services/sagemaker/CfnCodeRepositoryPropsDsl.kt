@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnCodeRepository
 import software.amazon.awscdk.services.sagemaker.CfnCodeRepositoryProps
 
+/**
+ * Properties for defining a `CfnCodeRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnCodeRepositoryProps cfnCodeRepositoryProps = CfnCodeRepositoryProps.builder()
+ * .gitConfig(GitConfigProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * // the properties below are optional
+ * .branch("branch")
+ * .secretArn("secretArn")
+ * .build())
+ * // the properties below are optional
+ * .codeRepositoryName("codeRepositoryName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-coderepository.html)
+ */
 @CdkDslMarker
 public class CfnCodeRepositoryPropsDsl {
   private val cdkBuilder: CfnCodeRepositoryProps.Builder = CfnCodeRepositoryProps.builder()

@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnStep
 import software.constructs.Construct
 
+/**
+ * Use `Step` to specify a cluster (job flow) step, which runs only on the master node.
+ *
+ * Steps are used to submit data processing jobs to a cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStep cfnStep = CfnStep.Builder.create(this, "MyCfnStep")
+ * .actionOnFailure("actionOnFailure")
+ * .hadoopJarStep(HadoopJarStepConfigProperty.builder()
+ * .jar("jar")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .mainClass("mainClass")
+ * .stepProperties(List.of(KeyValueProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .jobFlowId("jobFlowId")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html)
+ */
 @CdkDslMarker
 public class CfnStepDsl(
   scope: Construct,

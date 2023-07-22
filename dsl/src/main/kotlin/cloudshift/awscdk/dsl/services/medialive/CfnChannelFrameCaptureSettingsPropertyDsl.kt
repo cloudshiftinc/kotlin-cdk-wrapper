@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The frame capture settings.
+ *
+ * The parent of this entity is VideoCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * FrameCaptureSettingsProperty frameCaptureSettingsProperty =
+ * FrameCaptureSettingsProperty.builder()
+ * .captureInterval(123)
+ * .captureIntervalUnits("captureIntervalUnits")
+ * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+ * .fontSize("fontSize")
+ * .position("position")
+ * .prefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-framecapturesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelFrameCaptureSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FrameCaptureSettingsProperty.Builder =

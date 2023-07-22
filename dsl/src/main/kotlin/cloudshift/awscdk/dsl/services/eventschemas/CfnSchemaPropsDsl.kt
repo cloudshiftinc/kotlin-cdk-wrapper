@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eventschemas.CfnSchema
 import software.amazon.awscdk.services.eventschemas.CfnSchemaProps
 
+/**
+ * Properties for defining a `CfnSchema`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnSchemaProps cfnSchemaProps = CfnSchemaProps.builder()
+ * .content("content")
+ * .registryName("registryName")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .schemaName("schemaName")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-schema.html)
+ */
 @CdkDslMarker
 public class CfnSchemaPropsDsl {
   private val cdkBuilder: CfnSchemaProps.Builder = CfnSchemaProps.builder()

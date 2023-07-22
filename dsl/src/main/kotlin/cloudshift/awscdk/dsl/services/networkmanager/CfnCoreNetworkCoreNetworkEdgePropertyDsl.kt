@@ -9,6 +9,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.networkmanager.CfnCoreNetwork
 
+/**
+ * Describes a core network edge.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CoreNetworkEdgeProperty coreNetworkEdgeProperty = CoreNetworkEdgeProperty.builder()
+ * .asn(123)
+ * .edgeLocation("edgeLocation")
+ * .insideCidrBlocks(List.of("insideCidrBlocks"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworkedge.html)
+ */
 @CdkDslMarker
 public class CfnCoreNetworkCoreNetworkEdgePropertyDsl {
   private val cdkBuilder: CfnCoreNetwork.CoreNetworkEdgeProperty.Builder =

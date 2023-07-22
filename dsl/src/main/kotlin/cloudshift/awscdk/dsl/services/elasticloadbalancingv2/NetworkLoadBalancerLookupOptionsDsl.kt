@@ -7,6 +7,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerLookupOptions
 
+/**
+ * Options for looking up an NetworkLoadBalancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * NetworkLoadBalancerLookupOptions networkLoadBalancerLookupOptions =
+ * NetworkLoadBalancerLookupOptions.builder()
+ * .loadBalancerArn("loadBalancerArn")
+ * .loadBalancerTags(Map.of(
+ * "loadBalancerTagsKey", "loadBalancerTags"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancerLookupOptionsDsl {
   private val cdkBuilder: NetworkLoadBalancerLookupOptions.Builder =

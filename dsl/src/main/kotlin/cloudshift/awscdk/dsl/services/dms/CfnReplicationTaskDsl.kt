@@ -13,6 +13,39 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.dms.CfnReplicationTask
 import software.constructs.Construct
 
+/**
+ * The `AWS::DMS::ReplicationTask` resource creates an AWS DMS replication task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnReplicationTask cfnReplicationTask = CfnReplicationTask.Builder.create(this,
+ * "MyCfnReplicationTask")
+ * .migrationType("migrationType")
+ * .replicationInstanceArn("replicationInstanceArn")
+ * .sourceEndpointArn("sourceEndpointArn")
+ * .tableMappings("tableMappings")
+ * .targetEndpointArn("targetEndpointArn")
+ * // the properties below are optional
+ * .cdcStartPosition("cdcStartPosition")
+ * .cdcStartTime(123)
+ * .cdcStopPosition("cdcStopPosition")
+ * .replicationTaskIdentifier("replicationTaskIdentifier")
+ * .replicationTaskSettings("replicationTaskSettings")
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskData("taskData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html)
+ */
 @CdkDslMarker
 public class CfnReplicationTaskDsl(
   scope: Construct,

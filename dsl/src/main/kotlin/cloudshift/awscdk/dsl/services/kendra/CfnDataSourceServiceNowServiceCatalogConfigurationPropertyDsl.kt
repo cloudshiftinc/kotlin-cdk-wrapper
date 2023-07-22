@@ -11,6 +11,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for crawling service catalog items in the ServiceNow site.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ServiceNowServiceCatalogConfigurationProperty serviceNowServiceCatalogConfigurationProperty =
+ * ServiceNowServiceCatalogConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .crawlAttachments(false)
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .excludeAttachmentFilePatterns(List.of("excludeAttachmentFilePatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .includeAttachmentFilePatterns(List.of("includeAttachmentFilePatterns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowservicecatalogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceServiceNowServiceCatalogConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ServiceNowServiceCatalogConfigurationProperty.Builder =

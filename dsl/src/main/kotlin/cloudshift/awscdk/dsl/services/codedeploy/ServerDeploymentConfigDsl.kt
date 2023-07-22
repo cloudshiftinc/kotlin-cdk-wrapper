@@ -8,6 +8,18 @@ import software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig
 import software.constructs.Construct
 
+/**
+ * A custom Deployment Configuration for an EC2/on-premise Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "CodeDeployDeploymentGroup")
+ * .deploymentConfig(ServerDeploymentConfig.ALL_AT_ONCE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerDeploymentConfigDsl(
   scope: Construct,

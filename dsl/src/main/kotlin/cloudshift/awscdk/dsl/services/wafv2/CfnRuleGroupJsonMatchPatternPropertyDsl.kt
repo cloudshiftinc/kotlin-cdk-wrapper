@@ -11,6 +11,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * The patterns to look for in the JSON body.
+ *
+ * AWS WAF inspects the results of these pattern matches against the rule inspection criteria. This
+ * is used with the `FieldToMatch` option `JsonBody` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * JsonMatchPatternProperty jsonMatchPatternProperty = JsonMatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-jsonmatchpattern.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupJsonMatchPatternPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.JsonMatchPatternProperty.Builder =

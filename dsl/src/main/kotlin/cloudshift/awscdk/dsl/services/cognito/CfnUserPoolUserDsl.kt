@@ -14,6 +14,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolUser
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::UserPoolUser` resource creates an Amazon Cognito user pool user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object clientMetadata;
+ * CfnUserPoolUser cfnUserPoolUser = CfnUserPoolUser.Builder.create(this, "MyCfnUserPoolUser")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .clientMetadata(clientMetadata)
+ * .desiredDeliveryMediums(List.of("desiredDeliveryMediums"))
+ * .forceAliasCreation(false)
+ * .messageAction("messageAction")
+ * .userAttributes(List.of(AttributeTypeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .username("username")
+ * .validationData(List.of(AttributeTypeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUserDsl(
   scope: Construct,

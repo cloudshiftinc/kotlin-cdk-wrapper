@@ -6,6 +6,46 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 
+/**
+ * The deployment configuration for an endpoint, which contains the desired deployment strategy and
+ * rollback configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DeploymentConfigProperty deploymentConfigProperty = DeploymentConfigProperty.builder()
+ * .blueGreenUpdatePolicy(BlueGreenUpdatePolicyProperty.builder()
+ * .trafficRoutingConfiguration(TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .canarySize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .linearStepSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .maximumExecutionTimeoutInSeconds(123)
+ * .terminationWaitInSeconds(123)
+ * .build())
+ * // the properties below are optional
+ * .autoRollbackConfiguration(AutoRollbackConfigProperty.builder()
+ * .alarms(List.of(AlarmProperty.builder()
+ * .alarmName("alarmName")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-deploymentconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointDeploymentConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.DeploymentConfigProperty.Builder =

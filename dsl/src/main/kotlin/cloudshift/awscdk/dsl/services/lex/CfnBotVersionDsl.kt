@@ -11,6 +11,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBotVersion
 import software.constructs.Construct
 
+/**
+ * Amazon Lex V2 is the only supported version in AWS CloudFormation .
+ *
+ * Specifies a new version of the bot based on the `DRAFT` version. If the `DRAFT` version of this
+ * resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version,
+ * it returns the last created version.
+ *
+ * When you specify the first version of a bot, Amazon Lex sets the version to 1. Subsequent
+ * versions increment by 1.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * CfnBotVersion cfnBotVersion = CfnBotVersion.Builder.create(this, "MyCfnBotVersion")
+ * .botId("botId")
+ * .botVersionLocaleSpecification(List.of(BotVersionLocaleSpecificationProperty.builder()
+ * .botVersionLocaleDetails(BotVersionLocaleDetailsProperty.builder()
+ * .sourceBotVersion("sourceBotVersion")
+ * .build())
+ * .localeId("localeId")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-botversion.html)
+ */
 @CdkDslMarker
 public class CfnBotVersionDsl(
   scope: Construct,

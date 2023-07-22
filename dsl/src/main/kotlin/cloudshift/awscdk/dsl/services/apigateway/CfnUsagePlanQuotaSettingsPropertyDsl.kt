@@ -7,6 +7,33 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnUsagePlan
 
+/**
+ * `QuotaSettings` is a property of the
+ * [AWS::ApiGateway::UsagePlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+ * resource that specifies a target for the maximum number of requests users can make to your REST
+ * APIs.
+ *
+ * In some cases clients can exceed the targets that you set. Don’t rely on usage plans to control
+ * costs. Consider using [AWS
+ * Budgets](https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html)
+ * to monitor costs and [AWS
+ * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) to manage API requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * QuotaSettingsProperty quotaSettingsProperty = QuotaSettingsProperty.builder()
+ * .limit(123)
+ * .offset(123)
+ * .period("period")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanQuotaSettingsPropertyDsl {
   private val cdkBuilder: CfnUsagePlan.QuotaSettingsProperty.Builder =

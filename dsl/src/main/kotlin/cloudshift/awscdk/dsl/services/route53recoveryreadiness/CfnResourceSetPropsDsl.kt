@@ -13,6 +13,48 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps
 
+/**
+ * Properties for defining a `CfnResourceSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnResourceSetProps cfnResourceSetProps = CfnResourceSetProps.builder()
+ * .resources(List.of(ResourceProperty.builder()
+ * .componentId("componentId")
+ * .dnsTargetResource(DNSTargetResourceProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneArn("hostedZoneArn")
+ * .recordSetId("recordSetId")
+ * .recordType("recordType")
+ * .targetResource(TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build())
+ * .build())
+ * .readinessScopes(List.of("readinessScopes"))
+ * .resourceArn("resourceArn")
+ * .build()))
+ * .resourceSetType("resourceSetType")
+ * // the properties below are optional
+ * .resourceSetName("resourceSetName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetPropsDsl {
   private val cdkBuilder: CfnResourceSetProps.Builder = CfnResourceSetProps.builder()

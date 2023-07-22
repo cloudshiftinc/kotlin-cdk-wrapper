@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iam.CfnUser
 import software.amazon.awscdk.services.iam.CfnUserProps
 
+/**
+ * Properties for defining a `CfnUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnUserProps cfnUserProps = CfnUserProps.builder()
+ * .groups(List.of("groups"))
+ * .loginProfile(LoginProfileProperty.builder()
+ * .password("password")
+ * // the properties below are optional
+ * .passwordResetRequired(false)
+ * .build())
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .path("path")
+ * .permissionsBoundary("permissionsBoundary")
+ * .policies(List.of(PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userName("userName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-user.html)
+ */
 @CdkDslMarker
 public class CfnUserPropsDsl {
   private val cdkBuilder: CfnUserProps.Builder = CfnUserProps.builder()

@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivs.CfnChannel
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVS::Channel` resource specifies an  channel.
+ *
+ * A channel stores configuration information related to your live stream. For more information, see
+ * [CreateChannel](https://docs.aws.amazon.com/ivs/latest/APIReference/API_CreateChannel.html) in the
+ * *Amazon Interactive Video Service API Reference* .
+ *
+ *
+ * By default, the IVS API CreateChannel endpoint creates a stream key in addition to a channel. The
+ *  Channel resource *does not* create a stream key; to create a stream key, use the StreamKey resource
+ * instead.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnChannel cfnChannel = CfnChannel.Builder.create(this, "MyCfnChannel")
+ * .authorized(false)
+ * .insecureIngest(false)
+ * .latencyMode("latencyMode")
+ * .name("name")
+ * .preset("preset")
+ * .recordingConfigurationArn("recordingConfigurationArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelDsl(
   scope: Construct,

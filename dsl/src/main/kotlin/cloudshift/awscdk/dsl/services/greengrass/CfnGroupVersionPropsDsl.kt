@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrass.CfnGroupVersionProps
 
+/**
+ * Properties for defining a `CfnGroupVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnGroupVersionProps cfnGroupVersionProps = CfnGroupVersionProps.builder()
+ * .groupId("groupId")
+ * // the properties below are optional
+ * .connectorDefinitionVersionArn("connectorDefinitionVersionArn")
+ * .coreDefinitionVersionArn("coreDefinitionVersionArn")
+ * .deviceDefinitionVersionArn("deviceDefinitionVersionArn")
+ * .functionDefinitionVersionArn("functionDefinitionVersionArn")
+ * .loggerDefinitionVersionArn("loggerDefinitionVersionArn")
+ * .resourceDefinitionVersionArn("resourceDefinitionVersionArn")
+ * .subscriptionDefinitionVersionArn("subscriptionDefinitionVersionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-groupversion.html)
+ */
 @CdkDslMarker
 public class CfnGroupVersionPropsDsl {
   private val cdkBuilder: CfnGroupVersionProps.Builder = CfnGroupVersionProps.builder()

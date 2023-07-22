@@ -11,6 +11,26 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.securityhub.CfnHubProps
 
+/**
+ * Properties for defining a `CfnHub`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * Object tags;
+ * CfnHubProps cfnHubProps = CfnHubProps.builder()
+ * .autoEnableControls(false)
+ * .controlFindingGenerator("controlFindingGenerator")
+ * .enableDefaultStandards(false)
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-hub.html)
+ */
 @CdkDslMarker
 public class CfnHubPropsDsl {
   private val cdkBuilder: CfnHubProps.Builder = CfnHubProps.builder()

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.fsx.CfnVolume
 
+/**
+ * The configuration object that specifies the snapshot to use as the origin of the data for the
+ * volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * OriginSnapshotProperty originSnapshotProperty = OriginSnapshotProperty.builder()
+ * .copyStrategy("copyStrategy")
+ * .snapshotArn("snapshotArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-volume-originsnapshot.html)
+ */
 @CdkDslMarker
 public class CfnVolumeOriginSnapshotPropertyDsl {
   private val cdkBuilder: CfnVolume.OriginSnapshotProperty.Builder =

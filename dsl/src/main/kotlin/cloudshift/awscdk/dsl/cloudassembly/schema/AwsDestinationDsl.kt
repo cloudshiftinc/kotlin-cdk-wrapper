@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.AwsDestination
 
+/**
+ * Destination for assets that need to be uploaded to AWS.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * AwsDestination awsDestination = AwsDestination.builder()
+ * .assumeRoleArn("assumeRoleArn")
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsDestinationDsl {
   private val cdkBuilder: AwsDestination.Builder = AwsDestination.builder()

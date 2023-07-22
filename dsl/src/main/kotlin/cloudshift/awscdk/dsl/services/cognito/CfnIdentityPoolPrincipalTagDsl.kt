@@ -12,6 +12,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag
 import software.constructs.Construct
 
+/**
+ * A list of the identity pool principal tag assignments for attributes for access control.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object principalTags;
+ * CfnIdentityPoolPrincipalTag cfnIdentityPoolPrincipalTag =
+ * CfnIdentityPoolPrincipalTag.Builder.create(this, "MyCfnIdentityPoolPrincipalTag")
+ * .identityPoolId("identityPoolId")
+ * .identityProviderName("identityProviderName")
+ * // the properties below are optional
+ * .principalTags(principalTags)
+ * .useDefaults(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolprincipaltag.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolPrincipalTagDsl(
   scope: Construct,

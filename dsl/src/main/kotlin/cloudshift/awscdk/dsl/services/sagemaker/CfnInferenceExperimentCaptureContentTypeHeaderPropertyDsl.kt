@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * Configuration specifying how to treat different headers.
+ *
+ * If no headers are specified SageMaker will by default base64 encode when capturing the data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CaptureContentTypeHeaderProperty captureContentTypeHeaderProperty =
+ * CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-capturecontenttypeheader.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentCaptureContentTypeHeaderPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.CaptureContentTypeHeaderProperty.Builder =

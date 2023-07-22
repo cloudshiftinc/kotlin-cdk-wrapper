@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnFunction
 
+/**
+ * The [deployment
+ * package](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html) for a Lambda
+ * function. To deploy a function defined as a container image, you specify the location of a container
+ * image in the Amazon ECR registry. For a .zip file deployment package, you can specify the location
+ * of an object in Amazon S3. For Node.js and Python functions, you can specify the function code
+ * inline in the template.
+ *
+ * Changes to a deployment package in Amazon S3 are not detected automatically during stack updates.
+ * To update the function code, change the object key or version in the template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CodeProperty codeProperty = CodeProperty.builder()
+ * .imageUri("imageUri")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .zipFile("zipFile")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html)
+ */
 @CdkDslMarker
 public class CfnFunctionCodePropertyDsl {
   private val cdkBuilder: CfnFunction.CodeProperty.Builder = CfnFunction.CodeProperty.builder()

@@ -8,6 +8,18 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.OpenIdConnectProviderProps
 
+/**
+ * Initialization properties for `OpenIdConnectProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * OpenIdConnectProvider provider = OpenIdConnectProvider.Builder.create(this, "MyProvider")
+ * .url("https://openid/connect")
+ * .clientIds(List.of("myclient1", "myclient2"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OpenIdConnectProviderPropsDsl {
   private val cdkBuilder: OpenIdConnectProviderProps.Builder = OpenIdConnectProviderProps.builder()

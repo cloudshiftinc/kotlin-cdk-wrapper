@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datapipeline.CfnPipeline
 
+/**
+ * Contains information about a parameter object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * ParameterObjectProperty parameterObjectProperty = ParameterObjectProperty.builder()
+ * .attributes(List.of(ParameterAttributeProperty.builder()
+ * .key("key")
+ * .stringValue("stringValue")
+ * .build()))
+ * .id("id")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parameterobject.html)
+ */
 @CdkDslMarker
 public class CfnPipelineParameterObjectPropertyDsl {
   private val cdkBuilder: CfnPipeline.ParameterObjectProperty.Builder =

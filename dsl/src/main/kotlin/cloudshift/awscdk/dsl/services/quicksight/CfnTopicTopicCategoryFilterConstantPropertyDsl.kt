@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A constant used in a category filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicCategoryFilterConstantProperty topicCategoryFilterConstantProperty =
+ * TopicCategoryFilterConstantProperty.builder()
+ * .collectiveConstant(CollectiveConstantProperty.builder()
+ * .valueList(List.of("valueList"))
+ * .build())
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccategoryfilterconstant.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicCategoryFilterConstantPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicCategoryFilterConstantProperty.Builder =

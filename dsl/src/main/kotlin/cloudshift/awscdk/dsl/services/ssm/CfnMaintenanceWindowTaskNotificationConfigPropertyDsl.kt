@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * The `NotificationConfig` property type specifies configurations for sending notifications for a
+ * maintenance window task in AWS Systems Manager .
+ *
+ * `NotificationConfig` is a property of the
+ * [MaintenanceWindowRunCommandParameters](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * NotificationConfigProperty notificationConfigProperty = NotificationConfigProperty.builder()
+ * .notificationArn("notificationArn")
+ * // the properties below are optional
+ * .notificationEvents(List.of("notificationEvents"))
+ * .notificationType("notificationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskNotificationConfigPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTask.NotificationConfigProperty.Builder =

@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Represents the drift check explainability baselines that can be used when the model monitor is
+ * set using the model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DriftCheckExplainabilityProperty driftCheckExplainabilityProperty =
+ * DriftCheckExplainabilityProperty.builder()
+ * .configFile(FileSourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .contentType("contentType")
+ * .build())
+ * .constraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckexplainability.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageDriftCheckExplainabilityPropertyDsl {
   private val cdkBuilder: CfnModelPackage.DriftCheckExplainabilityProperty.Builder =

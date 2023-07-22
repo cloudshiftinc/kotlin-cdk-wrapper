@@ -21,6 +21,26 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EksCall
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethods
 import software.constructs.Construct
 
+/**
+ * Call a EKS endpoint as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.eks.*;
+ * Cluster myEksCluster = Cluster.Builder.create(this, "my sample cluster")
+ * .version(KubernetesVersion.V1_18)
+ * .clusterName("myEksCluster")
+ * .build();
+ * EksCall.Builder.create(this, "Call a EKS Endpoint")
+ * .cluster(myEksCluster)
+ * .httpMethod(HttpMethods.GET)
+ * .httpPath("/api/v1/namespaces/default/pods")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-eks.html)
+ */
 @CdkDslMarker
 public class EksCallDsl(
   scope: Construct,

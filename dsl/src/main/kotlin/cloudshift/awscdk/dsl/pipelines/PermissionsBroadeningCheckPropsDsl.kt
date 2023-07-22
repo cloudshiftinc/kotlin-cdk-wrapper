@@ -7,6 +7,20 @@ import software.amazon.awscdk.Stage
 import software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Properties for a `PermissionsBroadeningCheck`.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline;
+ * MyApplicationStage stage = new MyApplicationStage(this, "MyApplication");
+ * pipeline.addStage(stage, AddStageOpts.builder()
+ * .pre(List.of(
+ * ConfirmPermissionsBroadening.Builder.create("Check").stage(stage).build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PermissionsBroadeningCheckPropsDsl {
   private val cdkBuilder: PermissionsBroadeningCheckProps.Builder =

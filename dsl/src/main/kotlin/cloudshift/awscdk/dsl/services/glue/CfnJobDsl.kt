@@ -12,6 +12,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnJob
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Job` resource specifies an AWS Glue job in the data catalog.
+ *
+ * For more information, see [Adding Jobs in AWS
+ * Glue](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) and [Job
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-job.html#aws-glue-api-jobs-job-Job)
+ * in the *AWS Glue Developer Guide.*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object defaultArguments;
+ * Object nonOverridableArguments;
+ * Object tags;
+ * CfnJob cfnJob = CfnJob.Builder.create(this, "MyCfnJob")
+ * .command(JobCommandProperty.builder()
+ * .name("name")
+ * .pythonVersion("pythonVersion")
+ * .runtime("runtime")
+ * .scriptLocation("scriptLocation")
+ * .build())
+ * .role("role")
+ * // the properties below are optional
+ * .allocatedCapacity(123)
+ * .connections(ConnectionsListProperty.builder()
+ * .connections(List.of("connections"))
+ * .build())
+ * .defaultArguments(defaultArguments)
+ * .description("description")
+ * .executionClass("executionClass")
+ * .executionProperty(ExecutionPropertyProperty.builder()
+ * .maxConcurrentRuns(123)
+ * .build())
+ * .glueVersion("glueVersion")
+ * .logUri("logUri")
+ * .maxCapacity(123)
+ * .maxRetries(123)
+ * .name("name")
+ * .nonOverridableArguments(nonOverridableArguments)
+ * .notificationProperty(NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build())
+ * .numberOfWorkers(123)
+ * .securityConfiguration("securityConfiguration")
+ * .tags(tags)
+ * .timeout(123)
+ * .workerType("workerType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)
+ */
 @CdkDslMarker
 public class CfnJobDsl(
   scope: Construct,

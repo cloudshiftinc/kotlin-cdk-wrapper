@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnKeyPairProps
 
+/**
+ * Properties for defining a `CfnKeyPair`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnKeyPairProps cfnKeyPairProps = CfnKeyPairProps.builder()
+ * .keyName("keyName")
+ * // the properties below are optional
+ * .keyFormat("keyFormat")
+ * .keyType("keyType")
+ * .publicKeyMaterial("publicKeyMaterial")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-keypair.html)
+ */
 @CdkDslMarker
 public class CfnKeyPairPropsDsl {
   private val cdkBuilder: CfnKeyPairProps.Builder = CfnKeyPairProps.builder()

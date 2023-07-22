@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationAggregator
 
+/**
+ * A collection of accounts and regions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * AccountAggregationSourceProperty accountAggregationSourceProperty =
+ * AccountAggregationSourceProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * // the properties below are optional
+ * .allAwsRegions(false)
+ * .awsRegions(List.of("awsRegions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAggregatorAccountAggregationSourcePropertyDsl {
   private val cdkBuilder: CfnConfigurationAggregator.AccountAggregationSourceProperty.Builder =

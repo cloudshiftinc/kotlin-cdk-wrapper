@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * The minimum and maximum amount of memory per vCPU, in GiB.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * MemoryGiBPerVCpuProperty memoryGiBPerVCpuProperty = MemoryGiBPerVCpuProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-memorygibpervcpu.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateMemoryGiBPerVCpuPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.MemoryGiBPerVCpuProperty.Builder =

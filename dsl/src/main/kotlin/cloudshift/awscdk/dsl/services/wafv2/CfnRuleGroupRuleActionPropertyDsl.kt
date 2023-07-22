@@ -8,6 +8,33 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * The action that AWS WAF should take on a web request when it matches a rule's statement.
+ *
+ * Settings at the web ACL level can override the rule action setting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object allow;
+ * Object block;
+ * Object captcha;
+ * Object challenge;
+ * Object count;
+ * RuleActionProperty ruleActionProperty = RuleActionProperty.builder()
+ * .allow(allow)
+ * .block(block)
+ * .captcha(captcha)
+ * .challenge(challenge)
+ * .count(count)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-ruleaction.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupRuleActionPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RuleActionProperty.Builder =

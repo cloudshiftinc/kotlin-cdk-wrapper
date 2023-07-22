@@ -12,6 +12,152 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicyProps
 
+/**
+ * Properties for defining a `CfnScalingPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnScalingPolicyProps cfnScalingPolicyProps = CfnScalingPolicyProps.builder()
+ * .autoScalingGroupName("autoScalingGroupName")
+ * // the properties below are optional
+ * .adjustmentType("adjustmentType")
+ * .cooldown("cooldown")
+ * .estimatedInstanceWarmup(123)
+ * .metricAggregationType("metricAggregationType")
+ * .minAdjustmentMagnitude(123)
+ * .policyType("policyType")
+ * .predictiveScalingConfiguration(PredictiveScalingConfigurationProperty.builder()
+ * .metricSpecifications(List.of(PredictiveScalingMetricSpecificationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .predefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedMetricPairSpecification(PredictiveScalingPredefinedMetricPairProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedScalingMetricSpecification(PredictiveScalingPredefinedScalingMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .maxCapacityBreachBehavior("maxCapacityBreachBehavior")
+ * .maxCapacityBuffer(123)
+ * .mode("mode")
+ * .schedulingBufferTime(123)
+ * .build())
+ * .scalingAdjustment(123)
+ * .stepAdjustments(List.of(StepAdjustmentProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .metricIntervalLowerBound(123)
+ * .metricIntervalUpperBound(123)
+ * .build()))
+ * .targetTrackingConfiguration(TargetTrackingConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableScaleIn(false)
+ * .predefinedMetricSpecification(PredefinedMetricSpecificationProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-scalingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPropsDsl {
   private val cdkBuilder: CfnScalingPolicyProps.Builder = CfnScalingPolicyProps.builder()

@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigurationRecorder
 import software.amazon.awscdk.services.config.CfnConfigurationRecorderProps
 
+/**
+ * Properties for defining a `CfnConfigurationRecorder`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnConfigurationRecorderProps cfnConfigurationRecorderProps =
+ * CfnConfigurationRecorderProps.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .name("name")
+ * .recordingGroup(RecordingGroupProperty.builder()
+ * .allSupported(false)
+ * .includeGlobalResourceTypes(false)
+ * .resourceTypes(List.of("resourceTypes"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationRecorderPropsDsl {
   private val cdkBuilder: CfnConfigurationRecorderProps.Builder =

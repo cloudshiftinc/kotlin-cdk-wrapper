@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
+/**
+ * Information about where and how you want to store the results of a monitoring job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * S3OutputProperty s3OutputProperty = S3OutputProperty.builder()
+ * .localPath("localPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .s3UploadMode("s3UploadMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-s3output.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringScheduleS3OutputPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.S3OutputProperty.Builder =

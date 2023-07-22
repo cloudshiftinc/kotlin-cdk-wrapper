@@ -7,6 +7,46 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A container for information about the replication destination and its configurations including
+ * enabling the S3 Replication Time Control (S3 RTC).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ReplicationDestinationProperty replicationDestinationProperty =
+ * ReplicationDestinationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .accessControlTranslation(AccessControlTranslationProperty.builder()
+ * .owner("owner")
+ * .build())
+ * .account("account")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .replicaKmsKeyId("replicaKmsKeyId")
+ * .build())
+ * .metrics(MetricsProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .eventThreshold(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .replicationTime(ReplicationTimeProperty.builder()
+ * .status("status")
+ * .time(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .storageClass("storageClass")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationdestination.html)
+ */
 @CdkDslMarker
 public class CfnBucketReplicationDestinationPropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationDestinationProperty.Builder =

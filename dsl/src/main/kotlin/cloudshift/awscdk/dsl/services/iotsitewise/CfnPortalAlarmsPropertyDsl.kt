@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotsitewise.CfnPortal
 
+/**
+ * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal.
+ *
+ * You can use the alarm to monitor an asset property and get notified when the asset property value
+ * is outside a specified range. For more information, see [Monitoring with
+ * alarms](https://docs.aws.amazon.com/iot-sitewise/latest/appguide/monitor-alarms.html) in the *AWS
+ * IoT SiteWise Application Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * AlarmsProperty alarmsProperty = AlarmsProperty.builder()
+ * .alarmRoleArn("alarmRoleArn")
+ * .notificationLambdaArn("notificationLambdaArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-portal-alarms.html)
+ */
 @CdkDslMarker
 public class CfnPortalAlarmsPropertyDsl {
   private val cdkBuilder: CfnPortal.AlarmsProperty.Builder = CfnPortal.AlarmsProperty.builder()

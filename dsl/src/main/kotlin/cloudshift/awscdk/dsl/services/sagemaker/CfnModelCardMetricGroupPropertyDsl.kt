@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * A group of metric data that you use to initialize a metric group object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object value;
+ * MetricGroupProperty metricGroupProperty = MetricGroupProperty.builder()
+ * .metricData(List.of(MetricDataItemsProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .value(value)
+ * // the properties below are optional
+ * .notes("notes")
+ * .xAxisName(List.of("xAxisName"))
+ * .yAxisName(List.of("yAxisName"))
+ * .build()))
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-metricgroup.html)
+ */
 @CdkDslMarker
 public class CfnModelCardMetricGroupPropertyDsl {
   private val cdkBuilder: CfnModelCard.MetricGroupProperty.Builder =

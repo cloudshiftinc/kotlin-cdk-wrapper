@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * The settings for encrypting data in transit.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * EncryptionInTransitProperty encryptionInTransitProperty = EncryptionInTransitProperty.builder()
+ * .clientBroker("clientBroker")
+ * .inCluster(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionintransit.html)
+ */
 @CdkDslMarker
 public class CfnClusterEncryptionInTransitPropertyDsl {
   private val cdkBuilder: CfnCluster.EncryptionInTransitProperty.Builder =

@@ -12,6 +12,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppConfig::ConfigurationProfile` resource creates a configuration profile that enables
+ * AWS AppConfig to access the configuration source.
+ *
+ * Valid configuration sources include AWS Systems Manager (SSM) documents, SSM Parameter Store
+ * parameters, and Amazon S3 . A configuration profile includes the following information.
+ *
+ * * The Uri location of the configuration data.
+ * * The AWS Identity and Access Management ( IAM ) role that provides access to the configuration
+ * data.
+ * * A validator for the configuration data. Available validators include either a JSON Schema or
+ * the Amazon Resource Name (ARN) of an AWS Lambda function.
+ *
+ * AWS AppConfig requires that you create resources and deploy a configuration in the following
+ * order:
+ *
+ * * Create an application
+ * * Create an environment
+ * * Create a configuration profile
+ * * Create a deployment strategy
+ * * Deploy the configuration
+ *
+ * For more information, see [AWS
+ * AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the
+ * *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnConfigurationProfile cfnConfigurationProfile = CfnConfigurationProfile.Builder.create(this,
+ * "MyCfnConfigurationProfile")
+ * .applicationId("applicationId")
+ * .locationUri("locationUri")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .retrievalRoleArn("retrievalRoleArn")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .validators(List.of(ValidatorsProperty.builder()
+ * .content("content")
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-configurationprofile.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationProfileDsl(
   scope: Construct,

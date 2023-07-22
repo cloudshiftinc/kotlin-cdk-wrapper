@@ -8,6 +8,29 @@ import software.amazon.awscdk.services.cognito.CognitoDomainOptions
 import software.amazon.awscdk.services.cognito.CustomDomainOptions
 import software.amazon.awscdk.services.cognito.UserPoolDomainOptions
 
+/**
+ * Options to create a UserPoolDomain.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * pool.addDomain("CognitoDomain", UserPoolDomainOptions.builder()
+ * .cognitoDomain(CognitoDomainOptions.builder()
+ * .domainPrefix("my-awesome-app")
+ * .build())
+ * .build());
+ * String certificateArn =
+ * "arn:aws:acm:us-east-1:123456789012:certificate/11-3336f1-44483d-adc7-9cd375c5169d";
+ * ICertificate domainCert = Certificate.fromCertificateArn(this, "domainCert", certificateArn);
+ * pool.addDomain("CustomDomain", UserPoolDomainOptions.builder()
+ * .customDomain(CustomDomainOptions.builder()
+ * .domainName("user.myapp.com")
+ * .certificate(domainCert)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolDomainOptionsDsl {
   private val cdkBuilder: UserPoolDomainOptions.Builder = UserPoolDomainOptions.builder()

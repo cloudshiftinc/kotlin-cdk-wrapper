@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the start and end times that define a time range when messages aren't sent to
+ * endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * QuietTimeProperty quietTimeProperty = QuietTimeProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-quiettime.html)
+ */
 @CdkDslMarker
 public class CfnCampaignQuietTimePropertyDsl {
   private val cdkBuilder: CfnCampaign.QuietTimeProperty.Builder =

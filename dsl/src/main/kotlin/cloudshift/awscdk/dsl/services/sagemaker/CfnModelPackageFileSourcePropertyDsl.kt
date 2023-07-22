@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Contains details regarding the file source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * FileSourceProperty fileSourceProperty = FileSourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .contentType("contentType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-filesource.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageFileSourcePropertyDsl {
   private val cdkBuilder: CfnModelPackage.FileSourceProperty.Builder =

@@ -23,6 +23,28 @@ import software.amazon.awscdk.services.iam.IInstanceProfile
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * This represents an EC2 LaunchTemplate.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup sg1 = SecurityGroup.Builder.create(this, "sg1")
+ * .vpc(vpc)
+ * .build();
+ * SecurityGroup sg2 = SecurityGroup.Builder.create(this, "sg2")
+ * .vpc(vpc)
+ * .build();
+ * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
+ * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .securityGroup(sg1)
+ * .build();
+ * launchTemplate.addSecurityGroup(sg2);
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html)
+ */
 @CdkDslMarker
 public class LaunchTemplateDsl(
   scope: Construct,

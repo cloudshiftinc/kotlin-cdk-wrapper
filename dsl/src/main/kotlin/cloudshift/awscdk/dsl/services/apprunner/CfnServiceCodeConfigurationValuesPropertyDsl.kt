@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes the basic configuration needed for building and running an AWS App Runner service.
+ *
+ * This type doesn't support the full set of possible configuration options. Fur full configuration
+ * capabilities, use a `apprunner.yaml` file in the source code repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CodeConfigurationValuesProperty codeConfigurationValuesProperty =
+ * CodeConfigurationValuesProperty.builder()
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .buildCommand("buildCommand")
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-codeconfigurationvalues.html)
+ */
 @CdkDslMarker
 public class CfnServiceCodeConfigurationValuesPropertyDsl {
   private val cdkBuilder: CfnService.CodeConfigurationValuesProperty.Builder =

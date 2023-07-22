@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * Defines and enables Amazon CloudWatch metrics and web request sample collection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * VisibilityConfigProperty visibilityConfigProperty = VisibilityConfigProperty.builder()
+ * .cloudWatchMetricsEnabled(false)
+ * .metricName("metricName")
+ * .sampledRequestsEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-visibilityconfig.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupVisibilityConfigPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.VisibilityConfigProperty.Builder =

@@ -15,6 +15,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnMissionProfile
 import software.amazon.awscdk.services.groundstation.CfnMissionProfileProps
 
+/**
+ * Properties for defining a `CfnMissionProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * CfnMissionProfileProps cfnMissionProfileProps = CfnMissionProfileProps.builder()
+ * .dataflowEdges(List.of(DataflowEdgeProperty.builder()
+ * .destination("destination")
+ * .source("source")
+ * .build()))
+ * .minimumViableContactDurationSeconds(123)
+ * .name("name")
+ * .trackingConfigArn("trackingConfigArn")
+ * // the properties below are optional
+ * .contactPostPassDurationSeconds(123)
+ * .contactPrePassDurationSeconds(123)
+ * .streamsKmsKey(StreamsKmsKeyProperty.builder()
+ * .kmsAliasArn("kmsAliasArn")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .streamsKmsRole("streamsKmsRole")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-missionprofile.html)
+ */
 @CdkDslMarker
 public class CfnMissionProfilePropsDsl {
   private val cdkBuilder: CfnMissionProfileProps.Builder = CfnMissionProfileProps.builder()

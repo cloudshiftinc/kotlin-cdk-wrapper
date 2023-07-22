@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about an HTTP method condition.
+ *
+ * HTTP defines a set of request methods, also referred to as HTTP verbs. For more information, see
+ * the [HTTP Method
+ * Registry](https://docs.aws.amazon.com/https://www.iana.org/assignments/http-methods/http-methods.xhtml)
+ * . You can also define custom HTTP methods.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * HttpRequestMethodConfigProperty httpRequestMethodConfigProperty =
+ * HttpRequestMethodConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httprequestmethodconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleHttpRequestMethodConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.HttpRequestMethodConfigProperty.Builder =

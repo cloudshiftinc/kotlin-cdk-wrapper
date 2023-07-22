@@ -19,6 +19,44 @@ import software.amazon.awscdk.services.apigateway.MethodResponse
 import software.amazon.awscdk.services.apigateway.RequestValidatorOptions
 import software.amazon.awscdk.services.lambda.eventsources.ApiEventSource
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.*;
+ * Authorizer authorizer;
+ * Model model;
+ * RequestValidator requestValidator;
+ * ApiEventSource apiEventSource = ApiEventSource.Builder.create("method", "path")
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType(AuthorizationType.NONE)
+ * .authorizer(authorizer)
+ * .methodResponses(List.of(MethodResponse.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .responseModels(Map.of(
+ * "responseModelsKey", model))
+ * .responseParameters(Map.of(
+ * "responseParametersKey", false))
+ * .build()))
+ * .operationName("operationName")
+ * .requestModels(Map.of(
+ * "requestModelsKey", model))
+ * .requestParameters(Map.of(
+ * "requestParametersKey", false))
+ * .requestValidator(requestValidator)
+ * .requestValidatorOptions(RequestValidatorOptions.builder()
+ * .requestValidatorName("requestValidatorName")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApiEventSourceDsl(
   method: String,

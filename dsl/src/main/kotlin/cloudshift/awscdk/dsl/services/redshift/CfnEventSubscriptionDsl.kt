@@ -14,6 +14,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnEventSubscription
 import software.constructs.Construct
 
+/**
+ * The `AWS::Redshift::EventSubscription` resource creates an Amazon Redshift Event Subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnEventSubscription cfnEventSubscription = CfnEventSubscription.Builder.create(this,
+ * "MyCfnEventSubscription")
+ * .subscriptionName("subscriptionName")
+ * // the properties below are optional
+ * .enabled(false)
+ * .eventCategories(List.of("eventCategories"))
+ * .severity("severity")
+ * .snsTopicArn("snsTopicArn")
+ * .sourceIds(List.of("sourceIds"))
+ * .sourceType("sourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-eventsubscription.html)
+ */
 @CdkDslMarker
 public class CfnEventSubscriptionDsl(
   scope: Construct,

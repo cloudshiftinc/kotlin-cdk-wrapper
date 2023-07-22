@@ -10,6 +10,32 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigatewayv2.CfnModel
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Model` resource updates data model for a WebSocket API.
+ *
+ * For more information, see [Model Selection
+ * Expressions](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object schema;
+ * CfnModel cfnModel = CfnModel.Builder.create(this, "MyCfnModel")
+ * .apiId("apiId")
+ * .name("name")
+ * .schema(schema)
+ * // the properties below are optional
+ * .contentType("contentType")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-model.html)
+ */
 @CdkDslMarker
 public class CfnModelDsl(
   scope: Construct,

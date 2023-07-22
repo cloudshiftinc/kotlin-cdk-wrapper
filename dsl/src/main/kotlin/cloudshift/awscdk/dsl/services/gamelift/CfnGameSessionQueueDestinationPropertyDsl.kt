@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
 
+/**
+ * A fleet or alias designated in a game session queue.
+ *
+ * Queues fulfill requests for new game sessions by placing a new game session on any of the queue's
+ * destinations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * DestinationProperty destinationProperty = DestinationProperty.builder()
+ * .destinationArn("destinationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gamesessionqueue-destination.html)
+ */
 @CdkDslMarker
 public class CfnGameSessionQueueDestinationPropertyDsl {
   private val cdkBuilder: CfnGameSessionQueue.DestinationProperty.Builder =

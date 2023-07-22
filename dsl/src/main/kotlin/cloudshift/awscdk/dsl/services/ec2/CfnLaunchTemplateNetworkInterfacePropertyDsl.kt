@@ -12,6 +12,53 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies the parameters for a network interface.
+ *
+ * `NetworkInterface` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+ * .associateCarrierIpAddress(false)
+ * .associatePublicIpAddress(false)
+ * .deleteOnTermination(false)
+ * .description("description")
+ * .deviceIndex(123)
+ * .groups(List.of("groups"))
+ * .interfaceType("interfaceType")
+ * .ipv4PrefixCount(123)
+ * .ipv4Prefixes(List.of(Ipv4PrefixSpecificationProperty.builder()
+ * .ipv4Prefix("ipv4Prefix")
+ * .build()))
+ * .ipv6AddressCount(123)
+ * .ipv6Addresses(List.of(Ipv6AddProperty.builder()
+ * .ipv6Address("ipv6Address")
+ * .build()))
+ * .ipv6PrefixCount(123)
+ * .ipv6Prefixes(List.of(Ipv6PrefixSpecificationProperty.builder()
+ * .ipv6Prefix("ipv6Prefix")
+ * .build()))
+ * .networkCardIndex(123)
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .privateIpAddresses(List.of(PrivateIpAddProperty.builder()
+ * .primary(false)
+ * .privateIpAddress("privateIpAddress")
+ * .build()))
+ * .secondaryPrivateIpAddressCount(123)
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.NetworkInterfaceProperty.Builder =

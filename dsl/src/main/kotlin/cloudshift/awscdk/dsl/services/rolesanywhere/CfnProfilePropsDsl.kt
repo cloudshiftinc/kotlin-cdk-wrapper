@@ -14,6 +14,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnProfileProps
 
+/**
+ * Properties for defining a `CfnProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * CfnProfileProps cfnProfileProps = CfnProfileProps.builder()
+ * .name("name")
+ * .roleArns(List.of("roleArns"))
+ * // the properties below are optional
+ * .durationSeconds(123)
+ * .enabled(false)
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .requireInstanceProperties(false)
+ * .sessionPolicy("sessionPolicy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html)
+ */
 @CdkDslMarker
 public class CfnProfilePropsDsl {
   private val cdkBuilder: CfnProfileProps.Builder = CfnProfileProps.builder()

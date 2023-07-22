@@ -7,6 +7,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnReceiptFilter
 import software.amazon.awscdk.services.ses.CfnReceiptFilterProps
 
+/**
+ * Properties for defining a `CfnReceiptFilter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnReceiptFilterProps cfnReceiptFilterProps = CfnReceiptFilterProps.builder()
+ * .filter(FilterProperty.builder()
+ * .ipFilter(IpFilterProperty.builder()
+ * .cidr("cidr")
+ * .policy("policy")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html)
+ */
 @CdkDslMarker
 public class CfnReceiptFilterPropsDsl {
   private val cdkBuilder: CfnReceiptFilterProps.Builder = CfnReceiptFilterProps.builder()

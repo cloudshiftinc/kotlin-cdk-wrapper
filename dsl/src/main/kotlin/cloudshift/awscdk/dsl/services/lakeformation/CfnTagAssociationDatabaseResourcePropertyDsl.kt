@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 
+/**
+ * A structure for the database object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * DatabaseResourceProperty databaseResourceProperty = DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-databaseresource.html)
+ */
 @CdkDslMarker
 public class CfnTagAssociationDatabaseResourcePropertyDsl {
   private val cdkBuilder: CfnTagAssociation.DatabaseResourceProperty.Builder =

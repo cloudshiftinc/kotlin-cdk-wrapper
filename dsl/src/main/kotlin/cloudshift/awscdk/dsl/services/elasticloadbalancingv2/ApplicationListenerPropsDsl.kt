@@ -15,6 +15,32 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertifica
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 
+/**
+ * Properties for defining a standalone ApplicationListener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationLoadBalancer applicationLoadBalancer;
+ * ApplicationTargetGroup applicationTargetGroup;
+ * ListenerAction listenerAction;
+ * ListenerCertificate listenerCertificate;
+ * ApplicationListenerProps applicationListenerProps = ApplicationListenerProps.builder()
+ * .loadBalancer(applicationLoadBalancer)
+ * // the properties below are optional
+ * .certificates(List.of(listenerCertificate))
+ * .defaultAction(listenerAction)
+ * .defaultTargetGroups(List.of(applicationTargetGroup))
+ * .open(false)
+ * .port(123)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerPropsDsl {
   private val cdkBuilder: ApplicationListenerProps.Builder = ApplicationListenerProps.builder()

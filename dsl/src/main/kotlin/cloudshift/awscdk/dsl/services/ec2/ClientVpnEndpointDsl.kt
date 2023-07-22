@@ -21,6 +21,25 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.ILogStream
 import software.constructs.Construct
 
+/**
+ * A client VPN connnection.
+ *
+ * Example:
+ *
+ * ```
+ * ClientVpnEndpoint endpoint = vpc.addClientVpnEndpoint("Endpoint",
+ * ClientVpnEndpointOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .serverCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/server-certificate-id")
+ * .userBasedAuthentication(ClientVpnUserBasedAuthentication.federated(samlProvider))
+ * .authorizeAllUsersToVpcCidr(false)
+ * .build());
+ * endpoint.addAuthorizationRule("Rule", ClientVpnAuthorizationRuleOptions.builder()
+ * .cidr("10.0.10.0/32")
+ * .groupId("group-id")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnEndpointDsl(
   scope: Construct,

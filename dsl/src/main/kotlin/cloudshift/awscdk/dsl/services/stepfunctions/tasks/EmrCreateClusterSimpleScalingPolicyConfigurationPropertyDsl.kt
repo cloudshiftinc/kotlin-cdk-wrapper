@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * An automatic scaling configuration, which describes how the policy adds or removes instances, the
+ * cooldown period, and the number of EC2 instances that will be added each time the CloudWatch metric
+ * alarm condition is satisfied.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * SimpleScalingPolicyConfigurationProperty simpleScalingPolicyConfigurationProperty =
+ * SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType(EmrCreateCluster.getScalingAdjustmentType().CHANGE_IN_CAPACITY)
+ * .coolDown(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_SimpleScalingPolicyConfiguration.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterSimpleScalingPolicyConfigurationPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.SimpleScalingPolicyConfigurationProperty.Builder =

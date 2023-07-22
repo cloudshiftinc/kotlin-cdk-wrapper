@@ -13,6 +13,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 import software.amazon.awscdk.services.iotanalytics.CfnDatastoreProps
 
+/**
+ * Properties for defining a `CfnDatastore`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object jsonConfiguration;
+ * Object serviceManagedS3;
+ * CfnDatastoreProps cfnDatastoreProps = CfnDatastoreProps.builder()
+ * .datastoreName("datastoreName")
+ * .datastorePartitions(DatastorePartitionsProperty.builder()
+ * .partitions(List.of(DatastorePartitionProperty.builder()
+ * .partition(PartitionProperty.builder()
+ * .attributeName("attributeName")
+ * .build())
+ * .timestampPartition(TimestampPartitionProperty.builder()
+ * .attributeName("attributeName")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .build())
+ * .build()))
+ * .build())
+ * .datastoreStorage(DatastoreStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .iotSiteWiseMultiLayerStorage(IotSiteWiseMultiLayerStorageProperty.builder()
+ * .customerManagedS3Storage(CustomerManagedS3StorageProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build())
+ * .fileFormatConfiguration(FileFormatConfigurationProperty.builder()
+ * .jsonConfiguration(jsonConfiguration)
+ * .parquetConfiguration(ParquetConfigurationProperty.builder()
+ * .schemaDefinition(SchemaDefinitionProperty.builder()
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .retentionPeriod(RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)
+ */
 @CdkDslMarker
 public class CfnDatastorePropsDsl {
   private val cdkBuilder: CfnDatastoreProps.Builder = CfnDatastoreProps.builder()

@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 
+/**
+ * Details about a consumption configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * ConsumptionConfigurationProperty consumptionConfigurationProperty =
+ * ConsumptionConfigurationProperty.builder()
+ * .borrowConfiguration(BorrowConfigurationProperty.builder()
+ * .allowEarlyCheckIn(false)
+ * .maxTimeToLiveInMinutes(123)
+ * .build())
+ * .provisionalConfiguration(ProvisionalConfigurationProperty.builder()
+ * .maxTimeToLiveInMinutes(123)
+ * .build())
+ * .renewType("renewType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-consumptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLicenseConsumptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnLicense.ConsumptionConfigurationProperty.Builder =

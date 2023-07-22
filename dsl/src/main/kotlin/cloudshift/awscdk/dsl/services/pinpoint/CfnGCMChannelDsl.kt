@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnGCMChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * You can use the GCM channel to send push notification messages to the Firebase Cloud Messaging
+ * (FCM) service, which replaced the Google Cloud Messaging (GCM) service. Before you use Amazon
+ * Pinpoint to send notifications to FCM, you have to enable the GCM channel for an Amazon Pinpoint
+ * application.
+ *
+ * The GCMChannel resource represents the status and authentication settings of the GCM channel for
+ * an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnGCMChannel cfnGCMChannel = CfnGCMChannel.Builder.create(this, "MyCfnGCMChannel")
+ * .apiKey("apiKey")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html)
+ */
 @CdkDslMarker
 public class CfnGCMChannelDsl(
   scope: Construct,

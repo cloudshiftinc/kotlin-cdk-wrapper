@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * The format options for the data that was imported into the target table.
+ *
+ * There is one value, CsvOption.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * InputFormatOptionsProperty inputFormatOptionsProperty = InputFormatOptionsProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .delimiter("delimiter")
+ * .headerList(List.of("headerList"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-inputformatoptions.html)
+ */
 @CdkDslMarker
 public class CfnTableInputFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnTable.InputFormatOptionsProperty.Builder =

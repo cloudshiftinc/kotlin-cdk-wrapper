@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnPublicKey
 
+/**
+ * Configuration information about a public key that you can use with [signed URLs and signed
+ * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) ,
+ * or with [field-level
+ * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * PublicKeyConfigProperty publicKeyConfigProperty = PublicKeyConfigProperty.builder()
+ * .callerReference("callerReference")
+ * .encodedKey("encodedKey")
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-publickey-publickeyconfig.html)
+ */
 @CdkDslMarker
 public class CfnPublicKeyPublicKeyConfigPropertyDsl {
   private val cdkBuilder: CfnPublicKey.PublicKeyConfigProperty.Builder =

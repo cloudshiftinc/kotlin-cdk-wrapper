@@ -12,6 +12,18 @@ import software.amazon.awscdk.services.ses.ReceiptRuleOptions
 import software.amazon.awscdk.services.ses.ReceiptRuleSet
 import software.constructs.Construct
 
+/**
+ * A new receipt rule set.
+ *
+ * Example:
+ *
+ * ```
+ * ReceiptRuleSet ruleSet = new ReceiptRuleSet(this, "RuleSet");
+ * ReceiptRule awsRule = ruleSet.addRule("Aws", ReceiptRuleOptions.builder()
+ * .recipients(List.of("aws.com"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptRuleSetDsl(
   scope: Construct,

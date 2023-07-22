@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lakeformation.CfnTagProps
 
+/**
+ * Properties for defining a `CfnTag`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * CfnTagProps cfnTagProps = CfnTagProps.builder()
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * // the properties below are optional
+ * .catalogId("catalogId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-tag.html)
+ */
 @CdkDslMarker
 public class CfnTagPropsDsl {
   private val cdkBuilder: CfnTagProps.Builder = CfnTagProps.builder()

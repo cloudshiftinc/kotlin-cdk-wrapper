@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 
+/**
+ * A structure containing information about how this workspace works with SAML.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * SamlConfigurationProperty samlConfigurationProperty = SamlConfigurationProperty.builder()
+ * .idpMetadata(IdpMetadataProperty.builder()
+ * .url("url")
+ * .xml("xml")
+ * .build())
+ * // the properties below are optional
+ * .allowedOrganizations(List.of("allowedOrganizations"))
+ * .assertionAttributes(AssertionAttributesProperty.builder()
+ * .email("email")
+ * .groups("groups")
+ * .login("login")
+ * .name("name")
+ * .org("org")
+ * .role("role")
+ * .build())
+ * .loginValidityDuration(123)
+ * .roleValues(RoleValuesProperty.builder()
+ * .admin(List.of("admin"))
+ * .editor(List.of("editor"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-samlconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceSamlConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkspace.SamlConfigurationProperty.Builder =

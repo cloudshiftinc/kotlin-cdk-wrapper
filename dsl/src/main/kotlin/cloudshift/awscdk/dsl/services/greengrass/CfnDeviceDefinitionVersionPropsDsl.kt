@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnDeviceDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnDeviceDefinitionVersionProps cfnDeviceDefinitionVersionProps =
+ * CfnDeviceDefinitionVersionProps.builder()
+ * .deviceDefinitionId("deviceDefinitionId")
+ * .devices(List.of(DeviceProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnDeviceDefinitionVersionProps.Builder =

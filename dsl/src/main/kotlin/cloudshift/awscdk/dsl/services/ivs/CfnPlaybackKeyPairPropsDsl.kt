@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ivs.CfnPlaybackKeyPairProps
 
+/**
+ * Properties for defining a `CfnPlaybackKeyPair`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnPlaybackKeyPairProps cfnPlaybackKeyPairProps = CfnPlaybackKeyPairProps.builder()
+ * .name("name")
+ * .publicKeyMaterial("publicKeyMaterial")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackKeyPairPropsDsl {
   private val cdkBuilder: CfnPlaybackKeyPairProps.Builder = CfnPlaybackKeyPairProps.builder()

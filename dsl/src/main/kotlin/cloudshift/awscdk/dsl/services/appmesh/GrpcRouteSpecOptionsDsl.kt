@@ -13,6 +13,28 @@ import software.amazon.awscdk.services.appmesh.GrpcRouteSpecOptions
 import software.amazon.awscdk.services.appmesh.GrpcTimeout
 import software.amazon.awscdk.services.appmesh.WeightedTarget
 
+/**
+ * Properties specific for a GRPC Based Routes.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-grpc-retry", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.grpc(GrpcRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder().virtualNode(node).build()))
+ * .match(GrpcRouteMatch.builder()
+ * // When method name is specified, service name must be also specified.
+ * .methodName("methodname")
+ * .serviceName("servicename")
+ * .metadata(List.of(HeaderMatch.valueStartsWith("Content-Type", "application/"),
+ * HeaderMatch.valueDoesNotStartWith("Content-Type", "text/")))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcRouteSpecOptionsDsl {
   private val cdkBuilder: GrpcRouteSpecOptions.Builder = GrpcRouteSpecOptions.builder()

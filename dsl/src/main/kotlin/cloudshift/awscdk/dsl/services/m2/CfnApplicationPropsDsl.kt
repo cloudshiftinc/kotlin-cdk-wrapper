@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.m2.CfnApplication
 import software.amazon.awscdk.services.m2.CfnApplicationProps
 
+/**
+ * Properties for defining a `CfnApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .definition(DefinitionProperty.builder()
+ * .content("content")
+ * .s3Location("s3Location")
+ * .build())
+ * .engineType("engineType")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .roleArn("roleArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationPropsDsl {
   private val cdkBuilder: CfnApplicationProps.Builder = CfnApplicationProps.builder()

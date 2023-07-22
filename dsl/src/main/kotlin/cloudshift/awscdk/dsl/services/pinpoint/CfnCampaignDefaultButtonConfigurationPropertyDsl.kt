@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the default behavior for a button that appears in an in-app message.
+ *
+ * You can optionally add button configurations that specifically apply to iOS, Android, or web
+ * browser users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * DefaultButtonConfigurationProperty defaultButtonConfigurationProperty =
+ * DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-defaultbuttonconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnCampaignDefaultButtonConfigurationPropertyDsl {
   private val cdkBuilder: CfnCampaign.DefaultButtonConfigurationProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the limits on the messages that a campaign can send.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * LimitsProperty limitsProperty = LimitsProperty.builder()
+ * .daily(123)
+ * .maximumDuration(123)
+ * .messagesPerSecond(123)
+ * .session(123)
+ * .total(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-limits.html)
+ */
 @CdkDslMarker
 public class CfnCampaignLimitsPropertyDsl {
   private val cdkBuilder: CfnCampaign.LimitsProperty.Builder = CfnCampaign.LimitsProperty.builder()

@@ -13,6 +13,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps
 
+/**
+ * Properties for defining a `CfnVehicle`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnVehicleProps cfnVehicleProps = CfnVehicleProps.builder()
+ * .decoderManifestArn("decoderManifestArn")
+ * .modelManifestArn("modelManifestArn")
+ * .name("name")
+ * // the properties below are optional
+ * .associationBehavior("associationBehavior")
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html)
+ */
 @CdkDslMarker
 public class CfnVehiclePropsDsl {
   private val cdkBuilder: CfnVehicleProps.Builder = CfnVehicleProps.builder()

@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents an access log file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayFileAccessLogProperty virtualGatewayFileAccessLogProperty =
+ * VirtualGatewayFileAccessLogProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .format(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayfileaccesslog.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayFileAccessLogPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayFileAccessLogProperty.Builder =

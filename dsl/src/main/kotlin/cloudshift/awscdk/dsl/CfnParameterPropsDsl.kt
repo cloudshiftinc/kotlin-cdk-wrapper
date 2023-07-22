@@ -13,6 +13,16 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnParameterProps
 
+/**
+ * Example:
+ *
+ * ```
+ * CfnParameter.Builder.create(this, "MyParameter")
+ * .type("Number")
+ * .default(1337)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnParameterPropsDsl {
   private val cdkBuilder: CfnParameterProps.Builder = CfnParameterProps.builder()

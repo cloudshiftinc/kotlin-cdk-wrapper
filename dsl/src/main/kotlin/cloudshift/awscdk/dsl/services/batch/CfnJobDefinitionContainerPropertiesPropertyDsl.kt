@@ -12,6 +12,109 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Container properties are used for Amazon ECS based job definitions.
+ *
+ * These properties to describe the container that's launched as part of a job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * Object options;
+ * ContainerPropertiesProperty containerPropertiesProperty = ContainerPropertiesProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .environment(List.of(EnvironmentProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .ephemeralStorage(EphemeralStorageProperty.builder()
+ * .sizeInGiB(123)
+ * .build())
+ * .executionRoleArn("executionRoleArn")
+ * .fargatePlatformConfiguration(FargatePlatformConfigurationProperty.builder()
+ * .platformVersion("platformVersion")
+ * .build())
+ * .instanceType("instanceType")
+ * .jobRoleArn("jobRoleArn")
+ * .linuxParameters(LinuxParametersProperty.builder()
+ * .devices(List.of(DeviceProperty.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * .permissions(List.of("permissions"))
+ * .build()))
+ * .initProcessEnabled(false)
+ * .maxSwap(123)
+ * .sharedMemorySize(123)
+ * .swappiness(123)
+ * .tmpfs(List.of(TmpfsProperty.builder()
+ * .containerPath("containerPath")
+ * .size(123)
+ * // the properties below are optional
+ * .mountOptions(List.of("mountOptions"))
+ * .build()))
+ * .build())
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * // the properties below are optional
+ * .options(options)
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build())
+ * .memory(123)
+ * .mountPoints(List.of(MountPointsProperty.builder()
+ * .containerPath("containerPath")
+ * .readOnly(false)
+ * .sourceVolume("sourceVolume")
+ * .build()))
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .assignPublicIp("assignPublicIp")
+ * .build())
+ * .privileged(false)
+ * .readonlyRootFilesystem(false)
+ * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .secrets(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .ulimits(List.of(UlimitProperty.builder()
+ * .hardLimit(123)
+ * .name("name")
+ * .softLimit(123)
+ * .build()))
+ * .user("user")
+ * .vcpus(123)
+ * .volumes(List.of(VolumesProperty.builder()
+ * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build())
+ * .host(VolumesHostProperty.builder()
+ * .sourcePath("sourcePath")
+ * .build())
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-containerproperties.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionContainerPropertiesPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.ContainerPropertiesProperty.Builder =

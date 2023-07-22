@@ -14,6 +14,78 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnInstance
 import software.amazon.awscdk.services.lightsail.CfnInstanceProps
 
+/**
+ * Properties for defining a `CfnInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnInstanceProps cfnInstanceProps = CfnInstanceProps.builder()
+ * .blueprintId("blueprintId")
+ * .bundleId("bundleId")
+ * .instanceName("instanceName")
+ * // the properties below are optional
+ * .addOns(List.of(AddOnProperty.builder()
+ * .addOnType("addOnType")
+ * // the properties below are optional
+ * .autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty.builder()
+ * .snapshotTimeOfDay("snapshotTimeOfDay")
+ * .build())
+ * .status("status")
+ * .build()))
+ * .availabilityZone("availabilityZone")
+ * .hardware(HardwareProperty.builder()
+ * .cpuCount(123)
+ * .disks(List.of(DiskProperty.builder()
+ * .diskName("diskName")
+ * .path("path")
+ * // the properties below are optional
+ * .attachedTo("attachedTo")
+ * .attachmentState("attachmentState")
+ * .iops(123)
+ * .isSystemDisk(false)
+ * .sizeInGb("sizeInGb")
+ * .build()))
+ * .ramSizeInGb(123)
+ * .build())
+ * .keyPairName("keyPairName")
+ * .location(LocationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .regionName("regionName")
+ * .build())
+ * .networking(NetworkingProperty.builder()
+ * .ports(List.of(PortProperty.builder()
+ * .accessDirection("accessDirection")
+ * .accessFrom("accessFrom")
+ * .accessType("accessType")
+ * .cidrListAliases(List.of("cidrListAliases"))
+ * .cidrs(List.of("cidrs"))
+ * .commonName("commonName")
+ * .fromPort(123)
+ * .ipv6Cidrs(List.of("ipv6Cidrs"))
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build()))
+ * // the properties below are optional
+ * .monthlyTransfer(123)
+ * .build())
+ * .state(StateProperty.builder()
+ * .code(123)
+ * .name("name")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userData("userData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstancePropsDsl {
   private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()

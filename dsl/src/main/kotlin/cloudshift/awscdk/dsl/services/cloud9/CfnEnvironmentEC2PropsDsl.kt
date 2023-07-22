@@ -14,6 +14,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2Props
 
+/**
+ * Properties for defining a `CfnEnvironmentEC2`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloud9.*;
+ * CfnEnvironmentEC2Props cfnEnvironmentEC2Props = CfnEnvironmentEC2Props.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .automaticStopTimeMinutes(123)
+ * .connectionType("connectionType")
+ * .description("description")
+ * .imageId("imageId")
+ * .name("name")
+ * .ownerArn("ownerArn")
+ * .repositories(List.of(RepositoryProperty.builder()
+ * .pathComponent("pathComponent")
+ * .repositoryUrl("repositoryUrl")
+ * .build()))
+ * .subnetId("subnetId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentEC2PropsDsl {
   private val cdkBuilder: CfnEnvironmentEC2Props.Builder = CfnEnvironmentEC2Props.builder()

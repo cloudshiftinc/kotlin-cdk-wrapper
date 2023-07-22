@@ -17,6 +17,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfigurationProps
 
+/**
+ * Properties for defining a `CfnPlaybackConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediatailor.*;
+ * Object configurationAliases;
+ * CfnPlaybackConfigurationProps cfnPlaybackConfigurationProps =
+ * CfnPlaybackConfigurationProps.builder()
+ * .adDecisionServerUrl("adDecisionServerUrl")
+ * .name("name")
+ * .videoContentSourceUrl("videoContentSourceUrl")
+ * // the properties below are optional
+ * .availSuppression(AvailSuppressionProperty.builder()
+ * .mode("mode")
+ * .value("value")
+ * .build())
+ * .bumper(BumperProperty.builder()
+ * .endUrl("endUrl")
+ * .startUrl("startUrl")
+ * .build())
+ * .cdnConfiguration(CdnConfigurationProperty.builder()
+ * .adSegmentUrlPrefix("adSegmentUrlPrefix")
+ * .contentSegmentUrlPrefix("contentSegmentUrlPrefix")
+ * .build())
+ * .configurationAliases(Map.of(
+ * "configurationAliasesKey", configurationAliases))
+ * .dashConfiguration(DashConfigurationProperty.builder()
+ * .manifestEndpointPrefix("manifestEndpointPrefix")
+ * .mpdLocation("mpdLocation")
+ * .originManifestType("originManifestType")
+ * .build())
+ * .hlsConfiguration(HlsConfigurationProperty.builder()
+ * .manifestEndpointPrefix("manifestEndpointPrefix")
+ * .build())
+ * .livePreRollConfiguration(LivePreRollConfigurationProperty.builder()
+ * .adDecisionServerUrl("adDecisionServerUrl")
+ * .maxDurationSeconds(123)
+ * .build())
+ * .manifestProcessingRules(ManifestProcessingRulesProperty.builder()
+ * .adMarkerPassthrough(AdMarkerPassthroughProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .personalizationThresholdSeconds(123)
+ * .slateAdUrl("slateAdUrl")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transcodeProfileName("transcodeProfileName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-playbackconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackConfigurationPropsDsl {
   private val cdkBuilder: CfnPlaybackConfigurationProps.Builder =

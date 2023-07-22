@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer
 
+/**
+ * The `JWTConfiguration` property specifies the configuration of a JWT authorizer.
+ *
+ * Required for the `JWT` authorizer type. Supported only for HTTP APIs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * JWTConfigurationProperty jWTConfigurationProperty = JWTConfigurationProperty.builder()
+ * .audience(List.of("audience"))
+ * .issuer("issuer")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-authorizer-jwtconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerJWTConfigurationPropertyDsl {
   private val cdkBuilder: CfnAuthorizer.JWTConfigurationProperty.Builder =

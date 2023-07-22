@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.autoscaling.IAutoScalingGroup
 import software.amazon.awscdk.services.autoscaling.PoolState
 import software.amazon.awscdk.services.autoscaling.WarmPoolProps
 
+/**
+ * Properties for a warm pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * AutoScalingGroup autoScalingGroup;
+ * WarmPoolProps warmPoolProps = WarmPoolProps.builder()
+ * .autoScalingGroup(autoScalingGroup)
+ * // the properties below are optional
+ * .maxGroupPreparedCapacity(123)
+ * .minSize(123)
+ * .poolState(PoolState.HIBERNATED)
+ * .reuseOnScaleIn(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WarmPoolPropsDsl {
   private val cdkBuilder: WarmPoolProps.Builder = WarmPoolProps.builder()

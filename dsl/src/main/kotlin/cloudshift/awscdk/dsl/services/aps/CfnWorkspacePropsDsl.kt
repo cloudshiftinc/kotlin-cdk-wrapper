@@ -13,6 +13,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.aps.CfnWorkspace
 import software.amazon.awscdk.services.aps.CfnWorkspaceProps
 
+/**
+ * Properties for defining a `CfnWorkspace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.aps.*;
+ * CfnWorkspaceProps cfnWorkspaceProps = CfnWorkspaceProps.builder()
+ * .alertManagerDefinition("alertManagerDefinition")
+ * .alias("alias")
+ * .loggingConfiguration(LoggingConfigurationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspacePropsDsl {
   private val cdkBuilder: CfnWorkspaceProps.Builder = CfnWorkspaceProps.builder()

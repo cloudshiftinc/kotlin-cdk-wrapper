@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct
 
+/**
+ * The subtype containing details about the Codestar connection `Type` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CodeStarParametersProperty codeStarParametersProperty = CodeStarParametersProperty.builder()
+ * .artifactPath("artifactPath")
+ * .branch("branch")
+ * .connectionArn("connectionArn")
+ * .repository("repository")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicecatalog-cloudformationproduct-codestarparameters.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProductCodeStarParametersPropertyDsl {
   private val cdkBuilder: CfnCloudFormationProduct.CodeStarParametersProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool
 
+/**
+ * An object that defines the tags (keys and values) that you want to associate with the dedicated
+ * IP pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * TagsProperty tagsProperty = TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-dedicatedippool-tags.html)
+ */
 @CdkDslMarker
 public class CfnDedicatedIpPoolTagsPropertyDsl {
   private val cdkBuilder: CfnDedicatedIpPool.TagsProperty.Builder =

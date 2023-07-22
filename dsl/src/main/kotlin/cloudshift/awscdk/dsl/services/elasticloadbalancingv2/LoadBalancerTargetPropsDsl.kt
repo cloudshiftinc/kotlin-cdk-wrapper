@@ -9,6 +9,23 @@ import kotlin.Unit
 import software.amazon.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 
+/**
+ * Result of attaching a target to load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Object targetJson;
+ * LoadBalancerTargetProps loadBalancerTargetProps = LoadBalancerTargetProps.builder()
+ * .targetType(TargetType.INSTANCE)
+ * // the properties below are optional
+ * .targetJson(targetJson)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerTargetPropsDsl {
   private val cdkBuilder: LoadBalancerTargetProps.Builder = LoadBalancerTargetProps.builder()

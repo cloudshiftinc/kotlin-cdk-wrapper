@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information system user and group that the AWS IoT Greengrass Core software uses to run
+ * component processes on the core device.
+ *
+ * For more information, see [Configure the user and group that run
+ * components](https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user)
+ * in the *AWS IoT Greengrass V2 Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * ComponentRunWithProperty componentRunWithProperty = ComponentRunWithProperty.builder()
+ * .posixUser("posixUser")
+ * .systemResourceLimits(SystemResourceLimitsProperty.builder()
+ * .cpus(123)
+ * .memory(123)
+ * .build())
+ * .windowsUser("windowsUser")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-componentrunwith.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentComponentRunWithPropertyDsl {
   private val cdkBuilder: CfnDeployment.ComponentRunWithProperty.Builder =

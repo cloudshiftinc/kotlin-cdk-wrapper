@@ -8,6 +8,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnPlaceIndex
 import software.amazon.awscdk.services.location.CfnPlaceIndexProps
 
+/**
+ * Properties for defining a `CfnPlaceIndex`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnPlaceIndexProps cfnPlaceIndexProps = CfnPlaceIndexProps.builder()
+ * .dataSource("dataSource")
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .dataSourceConfiguration(DataSourceConfigurationProperty.builder()
+ * .intendedUse("intendedUse")
+ * .build())
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html)
+ */
 @CdkDslMarker
 public class CfnPlaceIndexPropsDsl {
   private val cdkBuilder: CfnPlaceIndexProps.Builder = CfnPlaceIndexProps.builder()

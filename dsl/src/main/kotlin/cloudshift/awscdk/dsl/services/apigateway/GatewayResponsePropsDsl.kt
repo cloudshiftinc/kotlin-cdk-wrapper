@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.apigateway.GatewayResponseProps
 import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.ResponseType
 
+/**
+ * Properties for a new gateway response.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * ResponseType responseType;
+ * RestApi restApi;
+ * GatewayResponseProps gatewayResponseProps = GatewayResponseProps.builder()
+ * .restApi(restApi)
+ * .type(responseType)
+ * // the properties below are optional
+ * .responseHeaders(Map.of(
+ * "responseHeadersKey", "responseHeaders"))
+ * .statusCode("statusCode")
+ * .templates(Map.of(
+ * "templatesKey", "templates"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GatewayResponsePropsDsl {
   private val cdkBuilder: GatewayResponseProps.Builder = GatewayResponseProps.builder()

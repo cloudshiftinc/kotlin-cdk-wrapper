@@ -7,6 +7,40 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings for the M3U8 container.
+ *
+ * The parent of this entity is StandardHlsSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * M3u8SettingsProperty m3u8SettingsProperty = M3u8SettingsProperty.builder()
+ * .audioFramesPerPes(123)
+ * .audioPids("audioPids")
+ * .ecmPid("ecmPid")
+ * .nielsenId3Behavior("nielsenId3Behavior")
+ * .patInterval(123)
+ * .pcrControl("pcrControl")
+ * .pcrPeriod(123)
+ * .pcrPid("pcrPid")
+ * .pmtInterval(123)
+ * .pmtPid("pmtPid")
+ * .programNum(123)
+ * .scte35Behavior("scte35Behavior")
+ * .scte35Pid("scte35Pid")
+ * .timedMetadataBehavior("timedMetadataBehavior")
+ * .timedMetadataPid("timedMetadataPid")
+ * .transportStreamId(123)
+ * .videoPid("videoPid")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-m3u8settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelM3u8SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.M3u8SettingsProperty.Builder =

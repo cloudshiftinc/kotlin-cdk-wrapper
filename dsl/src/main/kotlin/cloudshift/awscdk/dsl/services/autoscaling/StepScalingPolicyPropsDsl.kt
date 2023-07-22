@@ -15,6 +15,36 @@ import software.amazon.awscdk.services.autoscaling.ScalingInterval
 import software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Metric metric;
+ * StepScalingPolicyProps stepScalingPolicyProps = StepScalingPolicyProps.builder()
+ * .autoScalingGroup(autoScalingGroup)
+ * .metric(metric)
+ * .scalingSteps(List.of(ScalingInterval.builder()
+ * .change(123)
+ * // the properties below are optional
+ * .lower(123)
+ * .upper(123)
+ * .build()))
+ * // the properties below are optional
+ * .adjustmentType(AdjustmentType.CHANGE_IN_CAPACITY)
+ * .cooldown(Duration.minutes(30))
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .evaluationPeriods(123)
+ * .metricAggregationType(MetricAggregationType.AVERAGE)
+ * .minAdjustmentMagnitude(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepScalingPolicyPropsDsl {
   private val cdkBuilder: StepScalingPolicyProps.Builder = StepScalingPolicyProps.builder()

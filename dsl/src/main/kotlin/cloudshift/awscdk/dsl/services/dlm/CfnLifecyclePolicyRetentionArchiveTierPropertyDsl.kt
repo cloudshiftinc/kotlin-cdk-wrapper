@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * RetentionArchiveTierProperty retentionArchiveTierProperty =
+ * RetentionArchiveTierProperty.builder()
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-retentionarchivetier.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyRetentionArchiveTierPropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.RetentionArchiveTierProperty.Builder =

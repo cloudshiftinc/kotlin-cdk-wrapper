@@ -9,6 +9,34 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * The Amazon EBS configuration of a cluster instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Size size;
+ * EbsConfigurationProperty ebsConfigurationProperty = EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_EbsConfiguration.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterEbsConfigurationPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.EbsConfigurationProperty.Builder =

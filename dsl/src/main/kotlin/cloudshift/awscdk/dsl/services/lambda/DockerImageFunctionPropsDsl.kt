@@ -40,6 +40,17 @@ import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties to configure a new DockerImageFunction construct.
+ *
+ * Example:
+ *
+ * ```
+ * DockerImageFunction.Builder.create(this, "AssetFunction")
+ * .code(DockerImageCode.fromImageAsset(join(__dirname, "docker-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageFunctionPropsDsl {
   private val cdkBuilder: DockerImageFunctionProps.Builder = DockerImageFunctionProps.builder()

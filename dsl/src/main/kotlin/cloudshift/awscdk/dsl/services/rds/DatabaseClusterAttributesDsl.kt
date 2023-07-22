@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.rds.DatabaseClusterAttributes
 import software.amazon.awscdk.services.rds.IClusterEngine
 
+/**
+ * Properties that describe an existing cluster instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * IClusterEngine clusterEngine;
+ * SecurityGroup securityGroup;
+ * DatabaseClusterAttributes databaseClusterAttributes = DatabaseClusterAttributes.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .clusterEndpointAddress("clusterEndpointAddress")
+ * .clusterResourceIdentifier("clusterResourceIdentifier")
+ * .engine(clusterEngine)
+ * .instanceEndpointAddresses(List.of("instanceEndpointAddresses"))
+ * .instanceIdentifiers(List.of("instanceIdentifiers"))
+ * .port(123)
+ * .readerEndpointAddress("readerEndpointAddress")
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterAttributesDsl {
   private val cdkBuilder: DatabaseClusterAttributes.Builder = DatabaseClusterAttributes.builder()

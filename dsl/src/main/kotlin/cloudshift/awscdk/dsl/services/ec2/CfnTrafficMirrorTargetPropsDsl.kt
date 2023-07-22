@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorTargetProps
 
+/**
+ * Properties for defining a `CfnTrafficMirrorTarget`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTrafficMirrorTargetProps cfnTrafficMirrorTargetProps = CfnTrafficMirrorTargetProps.builder()
+ * .description("description")
+ * .gatewayLoadBalancerEndpointId("gatewayLoadBalancerEndpointId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .networkLoadBalancerArn("networkLoadBalancerArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrortarget.html)
+ */
 @CdkDslMarker
 public class CfnTrafficMirrorTargetPropsDsl {
   private val cdkBuilder: CfnTrafficMirrorTargetProps.Builder =

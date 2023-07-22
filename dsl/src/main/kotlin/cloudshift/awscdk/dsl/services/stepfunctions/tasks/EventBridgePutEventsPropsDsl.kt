@@ -19,6 +19,27 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry
 import software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsProps
 
+/**
+ * Properties for sending events with PutEvents.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.events.*;
+ * EventBus myEventBus = EventBus.Builder.create(this, "EventBus")
+ * .eventBusName("MyEventBus1")
+ * .build();
+ * EventBridgePutEvents.Builder.create(this, "Send an event to EventBridge")
+ * .entries(List.of(EventBridgePutEventsEntry.builder()
+ * .detail(TaskInput.fromObject(Map.of(
+ * "Message", "Hello from Step Functions!")))
+ * .eventBus(myEventBus)
+ * .detailType("MessageFromStepFunctions")
+ * .source("step.functions")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBridgePutEventsPropsDsl {
   private val cdkBuilder: EventBridgePutEventsProps.Builder = EventBridgePutEventsProps.builder()

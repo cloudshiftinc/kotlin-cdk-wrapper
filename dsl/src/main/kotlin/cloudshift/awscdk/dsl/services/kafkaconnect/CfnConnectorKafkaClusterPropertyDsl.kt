@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * The details of the Apache Kafka cluster to which the connector is connected.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * KafkaClusterProperty kafkaClusterProperty = KafkaClusterProperty.builder()
+ * .apacheKafkaCluster(ApacheKafkaClusterProperty.builder()
+ * .bootstrapServers("bootstrapServers")
+ * .vpc(VpcProperty.builder()
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-kafkacluster.html)
+ */
 @CdkDslMarker
 public class CfnConnectorKafkaClusterPropertyDsl {
   private val cdkBuilder: CfnConnector.KafkaClusterProperty.Builder =

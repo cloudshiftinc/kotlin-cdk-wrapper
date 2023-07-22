@@ -20,6 +20,27 @@ import software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents
 import software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry
 import software.constructs.Construct
 
+/**
+ * A StepFunctions Task to send events to an EventBridge event bus.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.events.*;
+ * EventBus myEventBus = EventBus.Builder.create(this, "EventBus")
+ * .eventBusName("MyEventBus1")
+ * .build();
+ * EventBridgePutEvents.Builder.create(this, "Send an event to EventBridge")
+ * .entries(List.of(EventBridgePutEventsEntry.builder()
+ * .detail(TaskInput.fromObject(Map.of(
+ * "Message", "Hello from Step Functions!")))
+ * .eventBus(myEventBus)
+ * .detailType("MessageFromStepFunctions")
+ * .source("step.functions")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBridgePutEventsDsl(
   scope: Construct,

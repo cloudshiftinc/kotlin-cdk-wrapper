@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Allows you to specify a KMS key identifier to be used for server-side encryption.
+ *
+ * The key can be specified via ARN, key ID, or alias. The key must be created in the same region as
+ * the replica.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * ReplicaSSESpecificationProperty replicaSSESpecificationProperty =
+ * ReplicaSSESpecificationProperty.builder()
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicassespecification.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableReplicaSSESpecificationPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.ReplicaSSESpecificationProperty.Builder =

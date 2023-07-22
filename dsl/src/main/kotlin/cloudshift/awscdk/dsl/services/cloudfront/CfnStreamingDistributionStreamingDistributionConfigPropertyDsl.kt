@@ -10,6 +10,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 
+/**
+ * The RTMP distribution's configuration information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * StreamingDistributionConfigProperty streamingDistributionConfigProperty =
+ * StreamingDistributionConfigProperty.builder()
+ * .comment("comment")
+ * .enabled(false)
+ * .s3Origin(S3OriginProperty.builder()
+ * .domainName("domainName")
+ * .originAccessIdentity("originAccessIdentity")
+ * .build())
+ * .trustedSigners(TrustedSignersProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .awsAccountNumbers(List.of("awsAccountNumbers"))
+ * .build())
+ * // the properties below are optional
+ * .aliases(List.of("aliases"))
+ * .logging(LoggingProperty.builder()
+ * .bucket("bucket")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build())
+ * .priceClass("priceClass")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html)
+ */
 @CdkDslMarker
 public class CfnStreamingDistributionStreamingDistributionConfigPropertyDsl {
   private val cdkBuilder: CfnStreamingDistribution.StreamingDistributionConfigProperty.Builder =

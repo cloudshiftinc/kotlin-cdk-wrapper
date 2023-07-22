@@ -8,6 +8,30 @@ import software.amazon.awscdk.CfnHookVersion
 import software.amazon.awscdk.IResolvable
 import software.constructs.Construct
 
+/**
+ * The `HookVersion` resource publishes new or first hook version to the AWS CloudFormation
+ * registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnHookVersion cfnHookVersion = CfnHookVersion.Builder.create(this, "MyCfnHookVersion")
+ * .schemaHandlerPackage("schemaHandlerPackage")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .executionRoleArn("executionRoleArn")
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)
+ */
 @CdkDslMarker
 public class CfnHookVersionDsl(
   scope: Construct,

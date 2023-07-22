@@ -9,6 +9,33 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.guardduty.CfnFilter
 
+/**
+ * Specifies the condition to apply to a single field when filtering through GuardDuty findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * ConditionProperty conditionProperty = ConditionProperty.builder()
+ * .eq(List.of("eq"))
+ * .equalTo(List.of("equalTo"))
+ * .greaterThan(123)
+ * .greaterThanOrEqual(123)
+ * .gt(123)
+ * .gte(123)
+ * .lessThan(123)
+ * .lessThanOrEqual(123)
+ * .lt(123)
+ * .lte(123)
+ * .neq(List.of("neq"))
+ * .notEquals(List.of("notEquals"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html)
+ */
 @CdkDslMarker
 public class CfnFilterConditionPropertyDsl {
   private val cdkBuilder: CfnFilter.ConditionProperty.Builder =

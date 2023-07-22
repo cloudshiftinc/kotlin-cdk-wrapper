@@ -13,6 +13,63 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGateway
 import software.constructs.Construct
 
+/**
+ * Specifies a transit gateway.
+ *
+ * You can use a transit gateway to interconnect your virtual private clouds (VPC) and on-premises
+ * networks. After the transit gateway enters the `available` state, you can attach your VPCs and VPN
+ * connections to the transit gateway.
+ *
+ * To attach your VPCs, use
+ * [AWS::EC2::TransitGatewayAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayattachment.html)
+ * .
+ *
+ * To attach a VPN connection, use
+ * [AWS::EC2::CustomerGateway](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html)
+ * to create a customer gateway and specify the ID of the customer gateway and the ID of the transit
+ * gateway in a call to
+ * [AWS::EC2::VPNConnection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html)
+ * .
+ *
+ * When you create a transit gateway, we create a default transit gateway route table and use it as
+ * the default association route table and the default propagation route table. You can use
+ * [AWS::EC2::TransitGatewayRouteTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetable.html)
+ * to create additional transit gateway route tables. If you disable automatic route propagation, we do
+ * not create a default transit gateway route table. You can use
+ * [AWS::EC2::TransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html)
+ * to propagate routes from a resource attachment to a transit gateway route table. If you disable
+ * automatic associations, you can use
+ * [AWS::EC2::TransitGatewayRouteTableAssociation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetableassociation.html)
+ * to associate a resource attachment with a transit gateway route table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGateway cfnTransitGateway = CfnTransitGateway.Builder.create(this,
+ * "MyCfnTransitGateway")
+ * .amazonSideAsn(123)
+ * .associationDefaultRouteTableId("associationDefaultRouteTableId")
+ * .autoAcceptSharedAttachments("autoAcceptSharedAttachments")
+ * .defaultRouteTableAssociation("defaultRouteTableAssociation")
+ * .defaultRouteTablePropagation("defaultRouteTablePropagation")
+ * .description("description")
+ * .dnsSupport("dnsSupport")
+ * .multicastSupport("multicastSupport")
+ * .propagationDefaultRouteTableId("propagationDefaultRouteTableId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitGatewayCidrBlocks(List.of("transitGatewayCidrBlocks"))
+ * .vpnEcmpSupport("vpnEcmpSupport")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayDsl(
   scope: Construct,

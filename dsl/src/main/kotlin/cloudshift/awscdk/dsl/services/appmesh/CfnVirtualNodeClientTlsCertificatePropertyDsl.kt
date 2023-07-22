@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents the client's certificate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ClientTlsCertificateProperty clientTlsCertificateProperty =
+ * ClientTlsCertificateProperty.builder()
+ * .file(ListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(ListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clienttlscertificate.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeClientTlsCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ClientTlsCertificateProperty.Builder =

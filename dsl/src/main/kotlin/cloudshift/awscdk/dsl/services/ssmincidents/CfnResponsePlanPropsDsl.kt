@@ -14,6 +14,74 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlanProps
 
+/**
+ * Properties for defining a `CfnResponsePlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * CfnResponsePlanProps cfnResponsePlanProps = CfnResponsePlanProps.builder()
+ * .incidentTemplate(IncidentTemplateProperty.builder()
+ * .impact(123)
+ * .title("title")
+ * // the properties below are optional
+ * .dedupeString("dedupeString")
+ * .incidentTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .notificationTargets(List.of(NotificationTargetItemProperty.builder()
+ * .snsTopicArn("snsTopicArn")
+ * .build()))
+ * .summary("summary")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .actions(List.of(ActionProperty.builder()
+ * .ssmAutomation(SsmAutomationProperty.builder()
+ * .documentName("documentName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .documentVersion("documentVersion")
+ * .dynamicParameters(List.of(DynamicSsmParameterProperty.builder()
+ * .key("key")
+ * .value(DynamicSsmParameterValueProperty.builder()
+ * .variable("variable")
+ * .build())
+ * .build()))
+ * .parameters(List.of(SsmParameterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .targetAccount("targetAccount")
+ * .build())
+ * .build()))
+ * .chatChannel(ChatChannelProperty.builder()
+ * .chatbotSns(List.of("chatbotSns"))
+ * .build())
+ * .displayName("displayName")
+ * .engagements(List.of("engagements"))
+ * .integrations(List.of(IntegrationProperty.builder()
+ * .pagerDutyConfiguration(PagerDutyConfigurationProperty.builder()
+ * .name("name")
+ * .pagerDutyIncidentConfiguration(PagerDutyIncidentConfigurationProperty.builder()
+ * .serviceId("serviceId")
+ * .build())
+ * .secretId("secretId")
+ * .build())
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-responseplan.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanPropsDsl {
   private val cdkBuilder: CfnResponsePlanProps.Builder = CfnResponsePlanProps.builder()

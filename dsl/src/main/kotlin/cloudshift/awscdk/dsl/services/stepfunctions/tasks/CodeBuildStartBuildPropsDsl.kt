@@ -18,6 +18,32 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildProps
 
+/**
+ * Properties for CodeBuildStartBuild.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.codebuild.*;
+ * Project codebuildProject = Project.Builder.create(this, "Project")
+ * .projectName("MyTestProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("echo \"Hello, CodeBuild!\""))))))
+ * .build();
+ * CodeBuildStartBuild task = CodeBuildStartBuild.Builder.create(this, "Task")
+ * .project(codebuildProject)
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * .environmentVariablesOverride(Map.of(
+ * "ZONE", BuildEnvironmentVariable.builder()
+ * .type(BuildEnvironmentVariableType.PLAINTEXT)
+ * .value(JsonPath.stringAt("$.envVariables.zone"))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildStartBuildPropsDsl {
   private val cdkBuilder: CodeBuildStartBuildProps.Builder = CodeBuildStartBuildProps.builder()

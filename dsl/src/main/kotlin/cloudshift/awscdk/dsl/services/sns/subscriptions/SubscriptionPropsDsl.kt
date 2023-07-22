@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.SubscriptionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Options to subscribing to an SNS topic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sns.subscriptions.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * SubscriptionProps subscriptionProps = SubscriptionProps.builder()
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionPropsDsl {
   private val cdkBuilder: SubscriptionProps.Builder = SubscriptionProps.builder()

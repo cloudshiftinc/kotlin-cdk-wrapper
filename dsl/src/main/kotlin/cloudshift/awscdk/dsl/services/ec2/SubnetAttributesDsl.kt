@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.SubnetAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // Supply all properties
+ * ISubnet subnet1 = Subnet.fromSubnetAttributes(this, "SubnetFromAttributes",
+ * SubnetAttributes.builder()
+ * .subnetId("s-1234")
+ * .availabilityZone("pub-az-4465")
+ * .routeTableId("rt-145")
+ * .build());
+ * // Supply only subnet id
+ * ISubnet subnet2 = Subnet.fromSubnetId(this, "SubnetFromId", "s-1234");
+ * ```
+ */
 @CdkDslMarker
 public class SubnetAttributesDsl {
   private val cdkBuilder: SubnetAttributes.Builder = SubnetAttributes.builder()

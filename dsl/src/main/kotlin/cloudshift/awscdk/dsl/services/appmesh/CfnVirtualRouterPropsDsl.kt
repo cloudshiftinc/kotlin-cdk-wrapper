@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouter
 import software.amazon.awscdk.services.appmesh.CfnVirtualRouterProps
 
+/**
+ * Properties for defining a `CfnVirtualRouter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * CfnVirtualRouterProps cfnVirtualRouterProps = CfnVirtualRouterProps.builder()
+ * .meshName("meshName")
+ * .spec(VirtualRouterSpecProperty.builder()
+ * .listeners(List.of(VirtualRouterListenerProperty.builder()
+ * .portMapping(PortMappingProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .meshOwner("meshOwner")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .virtualRouterName("virtualRouterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html)
+ */
 @CdkDslMarker
 public class CfnVirtualRouterPropsDsl {
   private val cdkBuilder: CfnVirtualRouterProps.Builder = CfnVirtualRouterProps.builder()

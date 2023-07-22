@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnWebhook
 
+/**
+ * The authentication applied to incoming webhook trigger requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * WebhookAuthConfigurationProperty webhookAuthConfigurationProperty =
+ * WebhookAuthConfigurationProperty.builder()
+ * .allowedIpRange("allowedIpRange")
+ * .secretToken("secretToken")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookauthconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWebhookWebhookAuthConfigurationPropertyDsl {
   private val cdkBuilder: CfnWebhook.WebhookAuthConfigurationProperty.Builder =

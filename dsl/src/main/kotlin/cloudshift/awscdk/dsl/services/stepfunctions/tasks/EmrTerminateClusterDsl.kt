@@ -17,6 +17,17 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateCluster
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to terminate an EMR Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrTerminateCluster.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrTerminateClusterDsl(
   scope: Construct,

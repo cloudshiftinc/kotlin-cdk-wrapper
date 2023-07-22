@@ -7,6 +7,24 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnGroup
 
+/**
+ * The structure containing configurations related to insights.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * InsightsConfigurationProperty insightsConfigurationProperty =
+ * InsightsConfigurationProperty.builder()
+ * .insightsEnabled(false)
+ * .notificationsEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-xray-group-insightsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnGroupInsightsConfigurationPropertyDsl {
   private val cdkBuilder: CfnGroup.InsightsConfigurationProperty.Builder =

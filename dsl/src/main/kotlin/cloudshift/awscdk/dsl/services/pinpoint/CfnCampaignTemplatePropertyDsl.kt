@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the name and version of the message template to use for the message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * TemplateProperty templateProperty = TemplateProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-template.html)
+ */
 @CdkDslMarker
 public class CfnCampaignTemplatePropertyDsl {
   private val cdkBuilder: CfnCampaign.TemplateProperty.Builder =

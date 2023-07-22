@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
 
+/**
+ * Describes the VPC options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * VpcOptionsProperty vpcOptionsProperty = VpcOptionsProperty.builder()
+ * .applianceModeSupport(false)
+ * .ipv6Support(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-vpcattachment-vpcoptions.html)
+ */
 @CdkDslMarker
 public class CfnVpcAttachmentVpcOptionsPropertyDsl {
   private val cdkBuilder: CfnVpcAttachment.VpcOptionsProperty.Builder =

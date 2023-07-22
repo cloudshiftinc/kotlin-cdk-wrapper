@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps
 
+/**
+ * Customize the Firehose Stream Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * RuleTargetInput ruleTargetInput;
+ * KinesisFirehoseStreamProps kinesisFirehoseStreamProps = KinesisFirehoseStreamProps.builder()
+ * .message(ruleTargetInput)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KinesisFirehoseStreamPropsDsl {
   private val cdkBuilder: KinesisFirehoseStreamProps.Builder = KinesisFirehoseStreamProps.builder()

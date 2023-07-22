@@ -9,6 +9,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.cxapi.LoadBalancerListenerContextResponse
 
+/**
+ * Properties of a discovered load balancer listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * LoadBalancerListenerContextResponse loadBalancerListenerContextResponse =
+ * LoadBalancerListenerContextResponse.builder()
+ * .listenerArn("listenerArn")
+ * .listenerPort(123)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerListenerContextResponseDsl {
   private val cdkBuilder: LoadBalancerListenerContextResponse.Builder =

@@ -9,6 +9,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnSecret
 
+/**
+ * Generates a random password.
+ *
+ * We recommend that you specify the maximum length and include every character type that the system
+ * you are generating a password for can support.
+ *
+ * *Required permissions:* `secretsmanager:GetRandomPassword` . For more information, see [IAM
+ * policy actions for Secrets
+ * Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
+ * and [Authentication and access control in Secrets
+ * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * GenerateSecretStringProperty generateSecretStringProperty =
+ * GenerateSecretStringProperty.builder()
+ * .excludeCharacters("excludeCharacters")
+ * .excludeLowercase(false)
+ * .excludeNumbers(false)
+ * .excludePunctuation(false)
+ * .excludeUppercase(false)
+ * .generateStringKey("generateStringKey")
+ * .includeSpace(false)
+ * .passwordLength(123)
+ * .requireEachIncludedType(false)
+ * .secretStringTemplate("secretStringTemplate")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html)
+ */
 @CdkDslMarker
 public class CfnSecretGenerateSecretStringPropertyDsl {
   private val cdkBuilder: CfnSecret.GenerateSecretStringProperty.Builder =

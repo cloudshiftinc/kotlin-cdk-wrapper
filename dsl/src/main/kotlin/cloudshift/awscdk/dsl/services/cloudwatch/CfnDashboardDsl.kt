@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.CfnDashboard
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudWatch::Dashboard` resource specifies an Amazon CloudWatch dashboard.
+ *
+ * A dashboard is a customizable home page in the CloudWatch console that you can use to monitor
+ * your AWS resources in a single view.
+ *
+ * All dashboards in your account are global, not region-specific.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnDashboard cfnDashboard = CfnDashboard.Builder.create(this, "MyCfnDashboard")
+ * .dashboardBody("dashboardBody")
+ * // the properties below are optional
+ * .dashboardName("dashboardName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDsl(
   scope: Construct,

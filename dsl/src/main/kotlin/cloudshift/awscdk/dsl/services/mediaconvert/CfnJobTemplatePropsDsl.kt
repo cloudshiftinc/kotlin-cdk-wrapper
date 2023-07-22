@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconvert.CfnJobTemplate
 import software.amazon.awscdk.services.mediaconvert.CfnJobTemplateProps
 
+/**
+ * Properties for defining a `CfnJobTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object settingsJson;
+ * Object tags;
+ * CfnJobTemplateProps cfnJobTemplateProps = CfnJobTemplateProps.builder()
+ * .settingsJson(settingsJson)
+ * // the properties below are optional
+ * .accelerationSettings(AccelerationSettingsProperty.builder()
+ * .mode("mode")
+ * .build())
+ * .category("category")
+ * .description("description")
+ * .hopDestinations(List.of(HopDestinationProperty.builder()
+ * .priority(123)
+ * .queue("queue")
+ * .waitMinutes(123)
+ * .build()))
+ * .name("name")
+ * .priority(123)
+ * .queue("queue")
+ * .statusUpdateInterval("statusUpdateInterval")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplatePropsDsl {
   private val cdkBuilder: CfnJobTemplateProps.Builder = CfnJobTemplateProps.builder()

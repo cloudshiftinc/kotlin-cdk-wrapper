@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration for a `PivotTableVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-pivottableconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePivotTableConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.PivotTableConfigurationProperty.Builder =

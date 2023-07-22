@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * Use this structure to input your script code for the canary.
+ *
+ * This structure contains the Lambda handler with the location where the canary should start
+ * running the script. If the script is stored in an S3 bucket, the bucket name, key, and version are
+ * also included. If the script is passed into the canary directly, the script code is contained in the
+ * value of `Script` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * CodeProperty codeProperty = CodeProperty.builder()
+ * .handler("handler")
+ * // the properties below are optional
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .script("script")
+ * .sourceLocationArn("sourceLocationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-code.html)
+ */
 @CdkDslMarker
 public class CfnCanaryCodePropertyDsl {
   private val cdkBuilder: CfnCanary.CodeProperty.Builder = CfnCanary.CodeProperty.builder()

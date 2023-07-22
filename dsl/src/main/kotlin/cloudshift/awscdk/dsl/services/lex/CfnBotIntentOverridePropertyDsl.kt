@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Override settings to configure the intent state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotValueOverrideProperty slotValueOverrideProperty_;
+ * IntentOverrideProperty intentOverrideProperty = IntentOverrideProperty.builder()
+ * .name("name")
+ * .slots(List.of(SlotValueOverrideMapProperty.builder()
+ * .slotName("slotName")
+ * .slotValueOverride(SlotValueOverrideProperty.builder()
+ * .shape("shape")
+ * .value(SlotValueProperty.builder()
+ * .interpretedValue("interpretedValue")
+ * .build())
+ * .values(List.of(slotValueOverrideProperty_))
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intentoverride.html)
+ */
 @CdkDslMarker
 public class CfnBotIntentOverridePropertyDsl {
   private val cdkBuilder: CfnBot.IntentOverrideProperty.Builder =

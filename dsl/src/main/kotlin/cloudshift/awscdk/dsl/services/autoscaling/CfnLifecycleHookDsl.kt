@@ -8,6 +8,45 @@ import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnLifecycleHook
 import software.constructs.Construct
 
+/**
+ * The `AWS::AutoScaling::LifecycleHook` resource specifies lifecycle hooks for an Auto Scaling
+ * group.
+ *
+ * These hooks let you create solutions that are aware of events in the Auto Scaling instance
+ * lifecycle, and then perform a custom action on instances when the corresponding lifecycle event
+ * occurs. A lifecycle hook provides a specified amount of time (one hour by default) to wait for the
+ * action to complete before the instance transitions to the next state.
+ *
+ * Use lifecycle hooks to prepare new instances for use or to delay them from being registered
+ * behind a load balancer before their configuration has been applied completely. You can also use
+ * lifecycle hooks to prepare running instances to be terminated by, for example, downloading logs or
+ * other data.
+ *
+ * For more information, see [Amazon EC2 Auto Scaling lifecycle
+ * hooks](https://docs.aws.amazon.com/autoscaling/ec2/userguide/lifecycle-hooks.html) in the *Amazon
+ * EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnLifecycleHook cfnLifecycleHook = CfnLifecycleHook.Builder.create(this, "MyCfnLifecycleHook")
+ * .autoScalingGroupName("autoScalingGroupName")
+ * .lifecycleTransition("lifecycleTransition")
+ * // the properties below are optional
+ * .defaultResult("defaultResult")
+ * .heartbeatTimeout(123)
+ * .lifecycleHookName("lifecycleHookName")
+ * .notificationMetadata("notificationMetadata")
+ * .notificationTargetArn("notificationTargetArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html)
+ */
 @CdkDslMarker
 public class CfnLifecycleHookDsl(
   scope: Construct,

@@ -10,6 +10,33 @@ import software.amazon.awscdk.services.lambda.CodeConfig
 import software.amazon.awscdk.services.lambda.CodeImageConfig
 import software.amazon.awscdk.services.s3.Location
 
+/**
+ * Result of binding `Code` into a `Function`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CodeConfig codeConfig = CodeConfig.builder()
+ * .image(CodeImageConfig.builder()
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .cmd(List.of("cmd"))
+ * .entrypoint(List.of("entrypoint"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .inlineCode("inlineCode")
+ * .s3Location(Location.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeConfigDsl {
   private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()

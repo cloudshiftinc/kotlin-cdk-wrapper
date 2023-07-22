@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Metadata attributes of the time series that are written in each measure record.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * TimestreamDimensionProperty timestreamDimensionProperty = TimestreamDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-timestreamdimension.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleTimestreamDimensionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.TimestreamDimensionProperty.Builder =

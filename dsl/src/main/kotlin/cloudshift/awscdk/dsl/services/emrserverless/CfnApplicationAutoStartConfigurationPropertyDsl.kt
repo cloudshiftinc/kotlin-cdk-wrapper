@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The conﬁguration for an application to automatically start on job submission.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * AutoStartConfigurationProperty autoStartConfigurationProperty =
+ * AutoStartConfigurationProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-autostartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationAutoStartConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.AutoStartConfigurationProperty.Builder =

@@ -17,6 +17,23 @@ import software.amazon.awscdk.services.secretsmanager.SecretProps
 import software.amazon.awscdk.services.secretsmanager.SecretStringGenerator
 import software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1
 
+/**
+ * The properties required to create a new secret in AWS Secrets Manager.
+ *
+ * Example:
+ *
+ * ```
+ * Stack stack;
+ * User user = new User(this, "User");
+ * AccessKey accessKey = AccessKey.Builder.create(this, "AccessKey").user(user).build();
+ * Secret.Builder.create(this, "Secret")
+ * .secretObjectValue(Map.of(
+ * "username", SecretValue.unsafePlainText(user.getUserName()),
+ * "database", SecretValue.unsafePlainText("foo"),
+ * "password", accessKey.getSecretAccessKey()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretPropsDsl {
   private val cdkBuilder: SecretProps.Builder = SecretProps.builder()

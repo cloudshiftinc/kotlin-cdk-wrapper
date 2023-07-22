@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachmentProps
 
+/**
+ * Properties for defining a `CfnNetworkInterfaceAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInterfaceAttachmentProps cfnNetworkInterfaceAttachmentProps =
+ * CfnNetworkInterfaceAttachmentProps.builder()
+ * .deviceIndex("deviceIndex")
+ * .instanceId("instanceId")
+ * .networkInterfaceId("networkInterfaceId")
+ * // the properties below are optional
+ * .deleteOnTermination(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterfaceattachment.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInterfaceAttachmentPropsDsl {
   private val cdkBuilder: CfnNetworkInterfaceAttachmentProps.Builder =

@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cognito.PasswordPolicy
 
+/**
+ * Password policy for User Pools.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .passwordPolicy(PasswordPolicy.builder()
+ * .minLength(12)
+ * .requireLowercase(true)
+ * .requireUppercase(true)
+ * .requireDigits(true)
+ * .requireSymbols(true)
+ * .tempPasswordValidity(Duration.days(3))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PasswordPolicyDsl {
   private val cdkBuilder: PasswordPolicy.Builder = PasswordPolicy.builder()

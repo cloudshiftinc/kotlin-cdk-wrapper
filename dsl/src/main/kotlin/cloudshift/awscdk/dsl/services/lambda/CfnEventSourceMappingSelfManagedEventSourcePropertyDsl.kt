@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * The self-managed Apache Kafka cluster for your event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * SelfManagedEventSourceProperty selfManagedEventSourceProperty =
+ * SelfManagedEventSourceProperty.builder()
+ * .endpoints(EndpointsProperty.builder()
+ * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-selfmanagedeventsource.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingSelfManagedEventSourcePropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder =

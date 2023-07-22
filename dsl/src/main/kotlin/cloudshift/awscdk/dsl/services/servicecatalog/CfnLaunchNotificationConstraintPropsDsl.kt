@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchNotificationConstraintProps
 
+/**
+ * Properties for defining a `CfnLaunchNotificationConstraint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnLaunchNotificationConstraintProps cfnLaunchNotificationConstraintProps =
+ * CfnLaunchNotificationConstraintProps.builder()
+ * .notificationArns(List.of("notificationArns"))
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchnotificationconstraint.html)
+ */
 @CdkDslMarker
 public class CfnLaunchNotificationConstraintPropsDsl {
   private val cdkBuilder: CfnLaunchNotificationConstraintProps.Builder =

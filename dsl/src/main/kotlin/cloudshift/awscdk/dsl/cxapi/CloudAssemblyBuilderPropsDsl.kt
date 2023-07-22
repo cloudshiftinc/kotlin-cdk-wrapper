@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.cxapi.CloudAssemblyBuilder
 import software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps
 
+/**
+ * Construction properties for CloudAssemblyBuilder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * CloudAssemblyBuilder cloudAssemblyBuilder;
+ * CloudAssemblyBuilderProps cloudAssemblyBuilderProps = CloudAssemblyBuilderProps.builder()
+ * .assetOutdir("assetOutdir")
+ * .parentBuilder(cloudAssemblyBuilder)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudAssemblyBuilderPropsDsl {
   private val cdkBuilder: CloudAssemblyBuilderProps.Builder = CloudAssemblyBuilderProps.builder()

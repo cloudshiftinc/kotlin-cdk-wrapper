@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Specifies configuration information for indexing a single standard object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SalesforceStandardObjectConfigurationProperty salesforceStandardObjectConfigurationProperty =
+ * SalesforceStandardObjectConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * .name("name")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforcestandardobjectconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSalesforceStandardObjectConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SalesforceStandardObjectConfigurationProperty.Builder =

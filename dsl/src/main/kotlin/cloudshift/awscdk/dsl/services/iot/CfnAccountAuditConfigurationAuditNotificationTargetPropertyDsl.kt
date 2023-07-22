@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration
 
+/**
+ * Information about the targets to which audit notifications are sent.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AuditNotificationTargetProperty auditNotificationTargetProperty =
+ * AuditNotificationTargetProperty.builder()
+ * .enabled(false)
+ * .roleArn("roleArn")
+ * .targetArn("targetArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditnotificationtarget.html)
+ */
 @CdkDslMarker
 public class CfnAccountAuditConfigurationAuditNotificationTargetPropertyDsl {
   private val cdkBuilder: CfnAccountAuditConfiguration.AuditNotificationTargetProperty.Builder =

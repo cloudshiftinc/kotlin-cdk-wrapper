@@ -14,6 +14,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnStateMachine
 import software.amazon.awscdk.services.sam.CfnStateMachineProps
 
+/**
+ * Properties for defining a `CfnStateMachine`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object definition;
+ * CfnStateMachineProps cfnStateMachineProps = CfnStateMachineProps.builder()
+ * .definition(definition)
+ * .definitionSubstitutions(Map.of(
+ * "definitionSubstitutionsKey", "definitionSubstitutions"))
+ * .definitionUri("definitionUri")
+ * .events(Map.of(
+ * "eventsKey", EventSourceProperty.builder()
+ * .properties(ApiEventProperty.builder()
+ * .method("method")
+ * .path("path")
+ * // the properties below are optional
+ * .restApiId("restApiId")
+ * .build())
+ * .type("type")
+ * .build()))
+ * .logging(LoggingConfigurationProperty.builder()
+ * .destinations(List.of(LogDestinationProperty.builder()
+ * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .build()))
+ * .includeExecutionData(false)
+ * .level("level")
+ * .build())
+ * .name("name")
+ * .permissionsBoundaries("permissionsBoundaries")
+ * .policies("policies")
+ * .role("role")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .tracing(TracingConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-statemachine.html)
+ */
 @CdkDslMarker
 public class CfnStateMachinePropsDsl {
   private val cdkBuilder: CfnStateMachineProps.Builder = CfnStateMachineProps.builder()

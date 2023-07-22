@@ -33,6 +33,37 @@ import software.amazon.awscdk.services.ec2.UserData
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * A Fleet represents a managed set of EC2 instances.
+ *
+ * The Fleet models a number of AutoScalingGroups, a launch configuration, a
+ * security group and an instance role.
+ *
+ * It allows adding arbitrary commands to the startup scripts of the instances
+ * in the fleet.
+ *
+ * The ASG spans the availability zones specified by vpcSubnets, falling back to
+ * the Vpc default strategy if not specified.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
+ * during instance startup")))
+ * .signals(Signals.waitForAll(SignalsOptions.builder()
+ * .timeout(Duration.minutes(10))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AutoScalingGroupDsl(
   scope: Construct,

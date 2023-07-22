@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.forecast.CfnDataset
 
+/**
+ * A key-value pair to associate with a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * TagsItemsProperty tagsItemsProperty = TagsItemsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-forecast-dataset-tagsitems.html)
+ */
 @CdkDslMarker
 public class CfnDatasetTagsItemsPropertyDsl {
   private val cdkBuilder: CfnDataset.TagsItemsProperty.Builder =

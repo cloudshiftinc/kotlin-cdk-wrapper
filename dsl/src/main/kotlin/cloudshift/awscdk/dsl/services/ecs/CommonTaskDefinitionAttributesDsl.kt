@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.ecs.CommonTaskDefinitionAttributes
 import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * The common task definition attributes used across all types of task definitions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * CommonTaskDefinitionAttributes commonTaskDefinitionAttributes =
+ * CommonTaskDefinitionAttributes.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .executionRole(role)
+ * .networkMode(NetworkMode.NONE)
+ * .taskRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonTaskDefinitionAttributesDsl {
   private val cdkBuilder: CommonTaskDefinitionAttributes.Builder =

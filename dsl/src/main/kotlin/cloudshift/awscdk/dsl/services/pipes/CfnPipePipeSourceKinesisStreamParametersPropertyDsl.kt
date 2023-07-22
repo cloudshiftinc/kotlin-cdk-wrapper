@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a Kinesis stream as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceKinesisStreamParametersProperty pipeSourceKinesisStreamParametersProperty =
+ * PipeSourceKinesisStreamParametersProperty.builder()
+ * .startingPosition("startingPosition")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .maximumBatchingWindowInSeconds(123)
+ * .maximumRecordAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .onPartialBatchItemFailure("onPartialBatchItemFailure")
+ * .parallelizationFactor(123)
+ * .startingPositionTimestamp("startingPositionTimestamp")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcekinesisstreamparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceKinesisStreamParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceKinesisStreamParametersProperty.Builder =

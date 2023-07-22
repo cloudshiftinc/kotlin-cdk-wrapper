@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The share label options for the labels.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * LabelOptionsProperty labelOptionsProperty = LabelOptionsProperty.builder()
+ * .customLabel("customLabel")
+ * .fontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-labeloptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LabelOptionsProperty.Builder =

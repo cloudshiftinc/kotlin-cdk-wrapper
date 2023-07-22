@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * Specifies either the application code, or the location of the application code, for a Flink-based
+ * Kinesis Data Analytics application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CodeContentProperty codeContentProperty = CodeContentProperty.builder()
+ * .s3ContentLocation(S3ContentLocationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .textContent("textContent")
+ * .zipFileContent("zipFileContent")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-codecontent.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2CodeContentPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.CodeContentProperty.Builder =

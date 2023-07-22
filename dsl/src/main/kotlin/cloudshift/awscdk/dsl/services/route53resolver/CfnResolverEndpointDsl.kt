@@ -14,6 +14,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint
 import software.constructs.Construct
 
+/**
+ * Creates a Resolver endpoint. There are two types of Resolver endpoints, inbound and outbound:.
+ *
+ * * An *inbound Resolver endpoint* forwards DNS queries to the DNS service for a VPC from your
+ * network.
+ * * An *outbound Resolver endpoint* forwards DNS queries from the DNS service for a VPC to your
+ * network.
+ *
+ *
+ * * You cannot update `ResolverEndpointType` and `IpAddresses` in the same request.
+ * * When you update a dual-stack IP address, you must update both IP addresses. You can’t update
+ * only an IPv4 or IPv6 and keep an existing IP address.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverEndpoint cfnResolverEndpoint = CfnResolverEndpoint.Builder.create(this,
+ * "MyCfnResolverEndpoint")
+ * .direction("direction")
+ * .ipAddresses(List.of(IpAddressRequestProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ip("ip")
+ * .ipv6("ipv6")
+ * .build()))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * // the properties below are optional
+ * .name("name")
+ * .outpostArn("outpostArn")
+ * .preferredInstanceType("preferredInstanceType")
+ * .resolverEndpointType("resolverEndpointType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)
+ */
 @CdkDslMarker
 public class CfnResolverEndpointDsl(
   scope: Construct,

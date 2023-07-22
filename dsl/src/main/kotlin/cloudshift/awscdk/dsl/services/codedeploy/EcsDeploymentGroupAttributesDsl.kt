@@ -8,6 +8,22 @@ import software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupAttributes
 import software.amazon.awscdk.services.codedeploy.IEcsApplication
 import software.amazon.awscdk.services.codedeploy.IEcsDeploymentConfig
 
+/**
+ * Properties of a reference to a CodeDeploy ECS Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication application;
+ * IEcsDeploymentGroup deploymentGroup = EcsDeploymentGroup.fromEcsDeploymentGroupAttributes(this,
+ * "ExistingCodeDeployDeploymentGroup", EcsDeploymentGroupAttributes.builder()
+ * .application(application)
+ * .deploymentGroupName("MyExistingDeploymentGroup")
+ * .build());
+ * ```
+ *
+ * [Documentation](EcsDeploymentGroup#fromEcsDeploymentGroupAttributes)
+ */
 @CdkDslMarker
 public class EcsDeploymentGroupAttributesDsl {
   private val cdkBuilder: EcsDeploymentGroupAttributes.Builder =

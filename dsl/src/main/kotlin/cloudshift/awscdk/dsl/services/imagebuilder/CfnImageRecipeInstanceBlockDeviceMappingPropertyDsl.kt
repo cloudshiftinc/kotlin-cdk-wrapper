@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 
+/**
+ * Defines block device mappings for the instance used to configure your image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * InstanceBlockDeviceMappingProperty instanceBlockDeviceMappingProperty =
+ * InstanceBlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsInstanceBlockDeviceSpecificationProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-instanceblockdevicemapping.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipeInstanceBlockDeviceMappingPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.InstanceBlockDeviceMappingProperty.Builder =

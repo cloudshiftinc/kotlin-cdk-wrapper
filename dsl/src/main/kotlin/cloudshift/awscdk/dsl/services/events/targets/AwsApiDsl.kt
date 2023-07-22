@@ -11,6 +11,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.events.targets.AwsApi
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Use an AWS Lambda function that makes API calls as an event rule target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Object parameters;
+ * PolicyStatement policyStatement;
+ * AwsApi awsApi = AwsApi.Builder.create()
+ * .action("action")
+ * .service("service")
+ * // the properties below are optional
+ * .apiVersion("apiVersion")
+ * .catchErrorPattern("catchErrorPattern")
+ * .parameters(parameters)
+ * .policyStatement(policyStatement)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsApiDsl {
   private val cdkBuilder: AwsApi.Builder = AwsApi.Builder.create()

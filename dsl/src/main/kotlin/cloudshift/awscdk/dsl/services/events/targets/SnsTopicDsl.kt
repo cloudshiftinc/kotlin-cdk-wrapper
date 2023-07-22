@@ -10,6 +10,17 @@ import software.amazon.awscdk.services.events.targets.SnsTopic
 import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an SNS topic as a target for Amazon EventBridge rules.
+ *
+ * Example:
+ *
+ * ```
+ * // publish to an SNS topic every time code is committed
+ * // to a CodeCommit repository
+ * repository.onCommit("onCommit", OnCommitOptions.builder().target(new SnsTopic(topic)).build());
+ * ```
+ */
 @CdkDslMarker
 public class SnsTopicDsl(
   topic: ITopic,

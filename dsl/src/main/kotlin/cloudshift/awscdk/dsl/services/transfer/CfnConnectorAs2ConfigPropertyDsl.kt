@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnConnector
 
+/**
+ * A structure that contains the parameters for a connector object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * As2ConfigProperty as2ConfigProperty = As2ConfigProperty.builder()
+ * .compression("compression")
+ * .encryptionAlgorithm("encryptionAlgorithm")
+ * .localProfileId("localProfileId")
+ * .mdnResponse("mdnResponse")
+ * .mdnSigningAlgorithm("mdnSigningAlgorithm")
+ * .messageSubject("messageSubject")
+ * .partnerProfileId("partnerProfileId")
+ * .signingAlgorithm("signingAlgorithm")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html)
+ */
 @CdkDslMarker
 public class CfnConnectorAs2ConfigPropertyDsl {
   private val cdkBuilder: CfnConnector.As2ConfigProperty.Builder =

@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 
+/**
+ * Limitations for outputs from the endpoint, based on the video bitrate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * StreamSelectionProperty streamSelectionProperty = StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-originendpoint-streamselection.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointStreamSelectionPropertyDsl {
   private val cdkBuilder: CfnOriginEndpoint.StreamSelectionProperty.Builder =

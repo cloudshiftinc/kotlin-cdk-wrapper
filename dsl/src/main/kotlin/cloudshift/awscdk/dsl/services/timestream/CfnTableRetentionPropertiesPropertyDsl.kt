@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.timestream.CfnTable
 
+/**
+ * Retention properties contain the duration for which your time-series data must be stored in the
+ * magnetic store and the memory store.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * RetentionPropertiesProperty retentionPropertiesProperty = RetentionPropertiesProperty.builder()
+ * .magneticStoreRetentionPeriodInDays("magneticStoreRetentionPeriodInDays")
+ * .memoryStoreRetentionPeriodInHours("memoryStoreRetentionPeriodInHours")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-retentionproperties.html)
+ */
 @CdkDslMarker
 public class CfnTableRetentionPropertiesPropertyDsl {
   private val cdkBuilder: CfnTable.RetentionPropertiesProperty.Builder =

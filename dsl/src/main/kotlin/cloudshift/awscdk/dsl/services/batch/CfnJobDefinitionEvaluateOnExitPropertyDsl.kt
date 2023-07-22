@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Specifies an array of up to 5 conditions to be met, and an action to take ( `RETRY` or `EXIT` )
+ * if all conditions are met.
+ *
+ * If none of the `EvaluateOnExit` conditions in a `RetryStrategy` match, then the job is retried.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EvaluateOnExitProperty evaluateOnExitProperty = EvaluateOnExitProperty.builder()
+ * .action("action")
+ * // the properties below are optional
+ * .onExitCode("onExitCode")
+ * .onReason("onReason")
+ * .onStatusReason("onStatusReason")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-evaluateonexit.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEvaluateOnExitPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EvaluateOnExitProperty.Builder =

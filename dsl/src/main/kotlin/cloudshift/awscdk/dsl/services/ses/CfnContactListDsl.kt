@@ -14,6 +14,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnContactList
 import software.constructs.Construct
 
+/**
+ * A list that contains contacts that have subscribed to a particular topic or topics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnContactList cfnContactList = CfnContactList.Builder.create(this, "MyCfnContactList")
+ * .contactListName("contactListName")
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .topics(List.of(TopicProperty.builder()
+ * .defaultSubscriptionStatus("defaultSubscriptionStatus")
+ * .displayName("displayName")
+ * .topicName("topicName")
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-contactlist.html)
+ */
 @CdkDslMarker
 public class CfnContactListDsl(
   scope: Construct,

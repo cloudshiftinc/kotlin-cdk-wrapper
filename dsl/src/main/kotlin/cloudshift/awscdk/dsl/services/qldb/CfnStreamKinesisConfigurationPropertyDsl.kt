@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnStream
 
+/**
+ * The configuration settings of the Amazon Kinesis Data Streams destination for an Amazon QLDB
+ * journal stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.qldb.*;
+ * KinesisConfigurationProperty kinesisConfigurationProperty =
+ * KinesisConfigurationProperty.builder()
+ * .aggregationEnabled(false)
+ * .streamArn("streamArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qldb-stream-kinesisconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStreamKinesisConfigurationPropertyDsl {
   private val cdkBuilder: CfnStream.KinesisConfigurationProperty.Builder =

@@ -14,6 +14,36 @@ import software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy
 import software.amazon.awscdk.services.cloudfront.OriginSslPolicy
 import software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps
 
+/**
+ * Properties for an Origin backed by an S3 website-configured bucket, load balancer, or custom HTTP
+ * server.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * import software.amazon.awscdk.services.cloudfront.origins.*;
+ * HttpOriginProps httpOriginProps = HttpOriginProps.builder()
+ * .connectionAttempts(123)
+ * .connectionTimeout(Duration.minutes(30))
+ * .customHeaders(Map.of(
+ * "customHeadersKey", "customHeaders"))
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .keepaliveTimeout(Duration.minutes(30))
+ * .originId("originId")
+ * .originPath("originPath")
+ * .originShieldEnabled(false)
+ * .originShieldRegion("originShieldRegion")
+ * .originSslProtocols(List.of(OriginSslPolicy.SSL_V3))
+ * .protocolPolicy(OriginProtocolPolicy.HTTP_ONLY)
+ * .readTimeout(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpOriginPropsDsl {
   private val cdkBuilder: HttpOriginProps.Builder = HttpOriginProps.builder()

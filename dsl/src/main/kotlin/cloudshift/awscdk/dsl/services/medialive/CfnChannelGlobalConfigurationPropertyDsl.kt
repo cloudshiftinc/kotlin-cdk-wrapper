@@ -8,6 +8,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration settings that apply to the entire channel.
+ *
+ * The parent of this entity is EncoderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * GlobalConfigurationProperty globalConfigurationProperty = GlobalConfigurationProperty.builder()
+ * .initialAudioGain(123)
+ * .inputEndAction("inputEndAction")
+ * .inputLossBehavior(InputLossBehaviorProperty.builder()
+ * .blackFrameMsec(123)
+ * .inputLossImageColor("inputLossImageColor")
+ * .inputLossImageSlate(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .inputLossImageType("inputLossImageType")
+ * .repeatFrameMsec(123)
+ * .build())
+ * .outputLockingMode("outputLockingMode")
+ * .outputTimingSource("outputTimingSource")
+ * .supportLowFramerateInputs("supportLowFramerateInputs")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-globalconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnChannelGlobalConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.GlobalConfigurationProperty.Builder =

@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.forecast.CfnDatasetGroupProps
 
+/**
+ * Properties for defining a `CfnDatasetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * CfnDatasetGroupProps cfnDatasetGroupProps = CfnDatasetGroupProps.builder()
+ * .datasetGroupName("datasetGroupName")
+ * .domain("domain")
+ * // the properties below are optional
+ * .datasetArns(List.of("datasetArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDatasetGroupPropsDsl {
   private val cdkBuilder: CfnDatasetGroupProps.Builder = CfnDatasetGroupProps.builder()

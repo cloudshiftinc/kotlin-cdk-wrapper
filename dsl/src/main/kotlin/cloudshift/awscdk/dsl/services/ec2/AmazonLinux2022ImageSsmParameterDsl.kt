@@ -10,6 +10,27 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxCpuType
 import software.amazon.awscdk.services.ec2.AmazonLinuxEdition
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * A SSM Parameter that contains the AMI ID for Amazon Linux 2023.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AmazonLinux2022Kernel amazonLinux2022Kernel;
+ * UserData userData;
+ * AmazonLinux2022ImageSsmParameter amazonLinux2022ImageSsmParameter =
+ * AmazonLinux2022ImageSsmParameter.Builder.create()
+ * .cachedInContext(false)
+ * .cpuType(AmazonLinuxCpuType.ARM_64)
+ * .edition(AmazonLinuxEdition.STANDARD)
+ * .kernel(amazonLinux2022Kernel)
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinux2022ImageSsmParameterDsl {
   private val cdkBuilder: AmazonLinux2022ImageSsmParameter.Builder =

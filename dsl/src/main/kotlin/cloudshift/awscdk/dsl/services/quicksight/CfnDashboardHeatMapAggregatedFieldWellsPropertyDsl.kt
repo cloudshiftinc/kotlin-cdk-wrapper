@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The aggregated field wells of a heat map.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-heatmapaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardHeatMapAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.HeatMapAggregatedFieldWellsProperty.Builder =

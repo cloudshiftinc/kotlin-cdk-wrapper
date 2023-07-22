@@ -10,6 +10,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * For a SQL-based Kinesis Data Analytics application, describes the format of the data in the
+ * streaming source, and how each data element maps to corresponding columns created in the
+ * in-application stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * InputSchemaProperty inputSchemaProperty = InputSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-inputschema.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInputSchemaPropertyDsl {
   private val cdkBuilder: CfnApplication.InputSchemaProperty.Builder =

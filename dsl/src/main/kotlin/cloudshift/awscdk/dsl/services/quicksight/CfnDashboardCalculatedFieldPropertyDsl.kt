@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The calculated field of an analysis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CalculatedFieldProperty calculatedFieldProperty = CalculatedFieldProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .expression("expression")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-calculatedfield.html)
+ */
 @CdkDslMarker
 public class CfnDashboardCalculatedFieldPropertyDsl {
   private val cdkBuilder: CfnDashboard.CalculatedFieldProperty.Builder =

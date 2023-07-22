@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 
+/**
+ * The `RouteOverrides` property overrides the route configuration for an API Gateway-managed route.
+ *
+ * If you remove this property, API Gateway restores the default values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * RouteOverridesProperty routeOverridesProperty = RouteOverridesProperty.builder()
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .operationName("operationName")
+ * .target("target")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-routeoverrides.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesRouteOverridesPropertyDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverrides.RouteOverridesProperty.Builder =

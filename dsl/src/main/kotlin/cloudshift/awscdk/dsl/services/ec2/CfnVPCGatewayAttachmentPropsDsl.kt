@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachmentProps
 
+/**
+ * Properties for defining a `CfnVPCGatewayAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCGatewayAttachmentProps cfnVPCGatewayAttachmentProps =
+ * CfnVPCGatewayAttachmentProps.builder()
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .internetGatewayId("internetGatewayId")
+ * .vpnGatewayId("vpnGatewayId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcgatewayattachment.html)
+ */
 @CdkDslMarker
 public class CfnVPCGatewayAttachmentPropsDsl {
   private val cdkBuilder: CfnVPCGatewayAttachmentProps.Builder =

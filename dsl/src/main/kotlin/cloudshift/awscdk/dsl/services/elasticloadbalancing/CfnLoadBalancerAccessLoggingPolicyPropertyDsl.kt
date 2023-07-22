@@ -9,6 +9,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 
+/**
+ * Specifies where and how access logs are stored for your Classic Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * AccessLoggingPolicyProperty accessLoggingPolicyProperty = AccessLoggingPolicyProperty.builder()
+ * .enabled(false)
+ * .s3BucketName("s3BucketName")
+ * // the properties below are optional
+ * .emitInterval(123)
+ * .s3BucketPrefix("s3BucketPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-accessloggingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerAccessLoggingPolicyPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.AccessLoggingPolicyProperty.Builder =

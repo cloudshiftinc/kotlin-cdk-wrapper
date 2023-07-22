@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
+/**
+ * Options for Kinesis as a logging destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * KinesisDataFirehoseProperty kinesisDataFirehoseProperty = KinesisDataFirehoseProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-kinesisdatafirehose.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceKinesisDataFirehosePropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.KinesisDataFirehoseProperty.Builder =

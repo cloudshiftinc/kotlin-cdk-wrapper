@@ -12,6 +12,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupVault
 import software.constructs.Construct
 
+/**
+ * Creates a logical container where backups are stored.
+ *
+ * A `CreateBackupVault` request includes a name, optionally one or more resource tags, an
+ * encryption key, and a request ID.
+ *
+ * Do not include sensitive data, such as passport numbers, in the name of a backup vault.
+ *
+ * For a sample AWS CloudFormation template, see the [AWS Backup Developer
+ * Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/assigning-resources.html#assigning-resources-cfn)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object accessPolicy;
+ * CfnBackupVault cfnBackupVault = CfnBackupVault.Builder.create(this, "MyCfnBackupVault")
+ * .backupVaultName("backupVaultName")
+ * // the properties below are optional
+ * .accessPolicy(accessPolicy)
+ * .backupVaultTags(Map.of(
+ * "backupVaultTagsKey", "backupVaultTags"))
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .lockConfiguration(LockConfigurationTypeProperty.builder()
+ * .minRetentionDays(123)
+ * // the properties below are optional
+ * .changeableForDays(123)
+ * .maxRetentionDays(123)
+ * .build())
+ * .notifications(NotificationObjectTypeProperty.builder()
+ * .backupVaultEvents(List.of("backupVaultEvents"))
+ * .snsTopicArn("snsTopicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html)
+ */
 @CdkDslMarker
 public class CfnBackupVaultDsl(
   scope: Construct,

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 
+/**
+ * *This data type is used with the Amazon GameLift FleetIQ and game server groups.*.
+ *
+ * An allowed instance type for a `GameServerGroup` . All game server groups must have at least two
+ * instance types defined for it. GameLift FleetIQ periodically evaluates each defined instance type
+ * for viability. It then updates the Auto Scaling group with the list of viable instance types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * InstanceDefinitionProperty instanceDefinitionProperty = InstanceDefinitionProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .weightedCapacity("weightedCapacity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html)
+ */
 @CdkDslMarker
 public class CfnGameServerGroupInstanceDefinitionPropertyDsl {
   private val cdkBuilder: CfnGameServerGroup.InstanceDefinitionProperty.Builder =

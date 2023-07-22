@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.MetricWidgetProps
 
+/**
+ * Basic properties for widgets that display metrics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricWidgetProps metricWidgetProps = MetricWidgetProps.builder()
+ * .height(123)
+ * .region("region")
+ * .title("title")
+ * .width(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricWidgetPropsDsl {
   private val cdkBuilder: MetricWidgetProps.Builder = MetricWidgetProps.builder()

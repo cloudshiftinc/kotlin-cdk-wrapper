@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * The hostname type for EC2 instances launched into this subnet and how DNS A and AAAA record
+ * queries should be handled.
+ *
+ * For more information, see [Amazon EC2 instance hostname
+ * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the *Amazon
+ * Elastic Compute Cloud User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
+ * PrivateDnsNameOptionsProperty.builder()
+ * .enableResourceNameDnsAaaaRecord(false)
+ * .enableResourceNameDnsARecord(false)
+ * .hostnameType("hostnameType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privatednsnameoptions.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplatePrivateDnsNameOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.PrivateDnsNameOptionsProperty.Builder =

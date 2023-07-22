@@ -12,6 +12,40 @@ import software.amazon.awscdk.services.stepfunctions.ServiceIntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps
 import software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverride
 
+/**
+ * Basic properties for ECS Tasks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Cluster cluster;
+ * ContainerDefinition containerDefinition;
+ * TaskDefinition taskDefinition;
+ * CommonEcsRunTaskProps commonEcsRunTaskProps = CommonEcsRunTaskProps.builder()
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * // the properties below are optional
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerDefinition(containerDefinition)
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .environment(List.of(TaskEnvironmentVariable.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .memoryLimit(123)
+ * .memoryReservation(123)
+ * .build()))
+ * .integrationPattern(ServiceIntegrationPattern.FIRE_AND_FORGET)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonEcsRunTaskPropsDsl {
   private val cdkBuilder: CommonEcsRunTaskProps.Builder = CommonEcsRunTaskProps.builder()

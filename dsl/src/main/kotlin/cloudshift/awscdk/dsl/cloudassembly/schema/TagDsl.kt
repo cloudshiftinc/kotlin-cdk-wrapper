@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.Tag
 
+/**
+ * Metadata Entry spec for stack tag.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * Tag tag = Tag.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TagDsl {
   private val cdkBuilder: Tag.Builder = Tag.builder()

@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * VPC connection control settings for brokers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * VpcConnectivityProperty vpcConnectivityProperty = VpcConnectivityProperty.builder()
+ * .clientAuthentication(VpcConnectivityClientAuthenticationProperty.builder()
+ * .sasl(VpcConnectivitySaslProperty.builder()
+ * .iam(VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(VpcConnectivityScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(VpcConnectivityTlsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-vpcconnectivity.html)
+ */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityProperty.Builder =

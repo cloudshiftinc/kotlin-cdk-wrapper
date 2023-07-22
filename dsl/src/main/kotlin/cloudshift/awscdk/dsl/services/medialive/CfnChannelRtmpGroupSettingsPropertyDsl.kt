@@ -9,6 +9,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of an RTMP output group.
+ *
+ * The parent of this entity is OutputGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * RtmpGroupSettingsProperty rtmpGroupSettingsProperty = RtmpGroupSettingsProperty.builder()
+ * .adMarkers(List.of("adMarkers"))
+ * .authenticationScheme("authenticationScheme")
+ * .cacheFullBehavior("cacheFullBehavior")
+ * .cacheLength(123)
+ * .captionData("captionData")
+ * .inputLossAction("inputLossAction")
+ * .restartDelay(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpgroupsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelRtmpGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.RtmpGroupSettingsProperty.Builder =

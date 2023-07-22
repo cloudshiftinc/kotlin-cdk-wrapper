@@ -8,6 +8,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 import software.constructs.Construct
 
+/**
+ * Adds a reference data source to an existing SQL-based Kinesis Data Analytics application.
+ *
+ * Kinesis Data Analytics reads reference data (that is, an Amazon S3 object) and creates an
+ * in-application table within your application. In the request, you provide the source (S3 bucket name
+ * and object key name), name of the in-application table to create, and the necessary mapping
+ * information that describes how data in an Amazon S3 object maps to columns in the resulting
+ * in-application table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * CfnApplicationReferenceDataSource cfnApplicationReferenceDataSource =
+ * CfnApplicationReferenceDataSource.Builder.create(this, "MyCfnApplicationReferenceDataSource")
+ * .applicationName("applicationName")
+ * .referenceDataSource(ReferenceDataSourceProperty.builder()
+ * .referenceSchema(ReferenceSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build())
+ * // the properties below are optional
+ * .s3ReferenceDataSource(S3ReferenceDataSourceProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * .build())
+ * .tableName("tableName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html)
+ */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceDsl(
   scope: Construct,

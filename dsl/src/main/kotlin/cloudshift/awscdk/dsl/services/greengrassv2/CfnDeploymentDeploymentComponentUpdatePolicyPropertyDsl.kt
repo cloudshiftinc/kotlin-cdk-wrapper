@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains information about a deployment's policy that defines when components are safe to update.
+ *
+ * Each component on a device can report whether or not it's ready to update. After a component and
+ * its dependencies are ready, they can apply the update in the deployment. You can configure whether
+ * or not the deployment notifies components of an update and waits for a response. You specify the
+ * amount of time each component has to respond to the update notification.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * DeploymentComponentUpdatePolicyProperty deploymentComponentUpdatePolicyProperty =
+ * DeploymentComponentUpdatePolicyProperty.builder()
+ * .action("action")
+ * .timeoutInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-deploymentcomponentupdatepolicy.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentDeploymentComponentUpdatePolicyPropertyDsl {
   private val cdkBuilder: CfnDeployment.DeploymentComponentUpdatePolicyProperty.Builder =

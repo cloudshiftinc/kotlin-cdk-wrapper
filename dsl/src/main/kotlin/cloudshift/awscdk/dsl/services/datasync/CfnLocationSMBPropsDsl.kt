@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationSMB
 import software.amazon.awscdk.services.datasync.CfnLocationSMBProps
 
+/**
+ * Properties for defining a `CfnLocationSMB`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationSMBProps cfnLocationSMBProps = CfnLocationSMBProps.builder()
+ * .agentArns(List.of("agentArns"))
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .mountOptions(MountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .password("password")
+ * .serverHostname("serverHostname")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationsmb.html)
+ */
 @CdkDslMarker
 public class CfnLocationSMBPropsDsl {
   private val cdkBuilder: CfnLocationSMBProps.Builder = CfnLocationSMBProps.builder()

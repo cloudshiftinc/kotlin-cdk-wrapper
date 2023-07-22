@@ -10,6 +10,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DockerImage
 import software.amazon.awscdk.services.stepfunctions.tasks.Mode
 import software.amazon.awscdk.services.stepfunctions.tasks.S3Location
 
+/**
+ * Describes the container, as part of model definition.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateModel.Builder.create(this, "Sagemaker")
+ * .modelName("MyModel")
+ * .primaryContainer(ContainerDefinition.Builder.create()
+ * .image(DockerImage.fromJsonExpression(JsonPath.stringAt("$.Model.imageName")))
+ * .mode(Mode.SINGLE_MODEL)
+ * .modelS3Location(S3Location.fromJsonExpression("$.TrainingJob.ModelArtifacts.S3ModelArtifacts"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ContainerDefinition.html)
+ */
 @CdkDslMarker
 public class ContainerDefinitionDsl {
   private val cdkBuilder: ContainerDefinition.Builder = ContainerDefinition.Builder.create()

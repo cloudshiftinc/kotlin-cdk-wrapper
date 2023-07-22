@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.connect.CfnHoursOfOperation
 
+/**
+ * The start time or end time for an hours of operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * HoursOfOperationTimeSliceProperty hoursOfOperationTimeSliceProperty =
+ * HoursOfOperationTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationtimeslice.html)
+ */
 @CdkDslMarker
 public class CfnHoursOfOperationHoursOfOperationTimeSlicePropertyDsl {
   private val cdkBuilder: CfnHoursOfOperation.HoursOfOperationTimeSliceProperty.Builder =

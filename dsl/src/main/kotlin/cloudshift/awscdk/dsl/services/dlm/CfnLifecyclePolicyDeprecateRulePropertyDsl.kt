@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * DeprecateRuleProperty deprecateRuleProperty = DeprecateRuleProperty.builder()
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-deprecaterule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyDeprecateRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.DeprecateRuleProperty.Builder =

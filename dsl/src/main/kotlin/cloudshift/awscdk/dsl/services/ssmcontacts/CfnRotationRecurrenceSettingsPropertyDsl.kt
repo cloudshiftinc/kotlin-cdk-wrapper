@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 
+/**
+ * Information about when an on-call rotation is in effect and how long the rotation period lasts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * RecurrenceSettingsProperty recurrenceSettingsProperty = RecurrenceSettingsProperty.builder()
+ * .numberOfOnCalls(123)
+ * .recurrenceMultiplier(123)
+ * // the properties below are optional
+ * .dailySettings(List.of("dailySettings"))
+ * .monthlySettings(List.of(MonthlySettingProperty.builder()
+ * .dayOfMonth(123)
+ * .handOffTime("handOffTime")
+ * .build()))
+ * .shiftCoverages(List.of(ShiftCoverageProperty.builder()
+ * .coverageTimes(List.of(CoverageTimeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build()))
+ * .dayOfWeek("dayOfWeek")
+ * .build()))
+ * .weeklySettings(List.of(WeeklySettingProperty.builder()
+ * .dayOfWeek("dayOfWeek")
+ * .handOffTime("handOffTime")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-recurrencesettings.html)
+ */
 @CdkDslMarker
 public class CfnRotationRecurrenceSettingsPropertyDsl {
   private val cdkBuilder: CfnRotation.RecurrenceSettingsProperty.Builder =

@@ -18,6 +18,36 @@ import software.amazon.awscdk.services.ecr.assets.NetworkMode
 import software.amazon.awscdk.services.ecr.assets.Platform
 import software.amazon.awscdk.services.ecs.AssetImage
 
+/**
+ * An image that will be built from a local directory with a Dockerfile.
+ *
+ * Example:
+ *
+ * ```
+ * import software.constructs.Construct;
+ * import software.amazon.awscdk.App;
+ * import software.amazon.awscdk.Stack;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.cxapi.*;
+ * import path.*;
+ * public class MyStack extends Stack {
+ * public MyStack(Construct scope, String id) {
+ * super(scope, id);
+ * this.node.setContext(ECS_REMOVE_DEFAULT_DESIRED_COUNT, true);
+ * Vpc vpc = Vpc.Builder.create(this, "VPC")
+ * .maxAzs(2)
+ * .build();
+ * QueueProcessingFargateService.Builder.create(this, "QueueProcessingService")
+ * .vpc(vpc)
+ * .memoryLimitMiB(512)
+ * .image(new AssetImage(join(__dirname, "..", "sqs-reader")))
+ * .build();
+ * }
+ * }
+ * ```
+ */
 @CdkDslMarker
 public class AssetImageDsl(
   directory: String,

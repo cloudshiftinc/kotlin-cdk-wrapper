@@ -17,6 +17,44 @@ import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.SourceAccessConfiguration
 import software.amazon.awscdk.services.lambda.StartingPosition
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * IEventSourceDlq eventSourceDlq;
+ * Object filters;
+ * SourceAccessConfigurationType sourceAccessConfigurationType;
+ * EventSourceMappingOptions eventSourceMappingOptions = EventSourceMappingOptions.builder()
+ * .batchSize(123)
+ * .bisectBatchOnError(false)
+ * .enabled(false)
+ * .eventSourceArn("eventSourceArn")
+ * .filters(List.of(Map.of(
+ * "filtersKey", filters)))
+ * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+ * .kafkaConsumerGroupId("kafkaConsumerGroupId")
+ * .kafkaTopic("kafkaTopic")
+ * .maxBatchingWindow(Duration.minutes(30))
+ * .maxConcurrency(123)
+ * .maxRecordAge(Duration.minutes(30))
+ * .onFailure(eventSourceDlq)
+ * .parallelizationFactor(123)
+ * .reportBatchItemFailures(false)
+ * .retryAttempts(123)
+ * .sourceAccessConfigurations(List.of(SourceAccessConfiguration.builder()
+ * .type(sourceAccessConfigurationType)
+ * .uri("uri")
+ * .build()))
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .startingPositionTimestamp(123)
+ * .tumblingWindow(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventSourceMappingOptionsDsl {
   private val cdkBuilder: EventSourceMappingOptions.Builder = EventSourceMappingOptions.builder()

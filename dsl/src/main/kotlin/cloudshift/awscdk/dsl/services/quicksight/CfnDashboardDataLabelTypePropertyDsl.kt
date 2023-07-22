@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The option that determines the data label type.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataLabelTypeProperty dataLabelTypeProperty = DataLabelTypeProperty.builder()
+ * .dataPathLabelType(DataPathLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .visibility("visibility")
+ * .build())
+ * .fieldLabelType(FieldLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .visibility("visibility")
+ * .build())
+ * .maximumLabelType(MaximumLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .minimumLabelType(MinimumLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .rangeEndsLabelType(RangeEndsLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-datalabeltype.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDataLabelTypePropertyDsl {
   private val cdkBuilder: CfnDashboard.DataLabelTypeProperty.Builder =

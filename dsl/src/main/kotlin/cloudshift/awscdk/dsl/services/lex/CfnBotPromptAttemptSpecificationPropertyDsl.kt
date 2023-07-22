@@ -7,6 +7,45 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the settings on a prompt attempt.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * PromptAttemptSpecificationProperty promptAttemptSpecificationProperty =
+ * PromptAttemptSpecificationProperty.builder()
+ * .allowedInputTypes(AllowedInputTypesProperty.builder()
+ * .allowAudioInput(false)
+ * .allowDtmfInput(false)
+ * .build())
+ * // the properties below are optional
+ * .allowInterrupt(false)
+ * .audioAndDtmfInputSpecification(AudioAndDTMFInputSpecificationProperty.builder()
+ * .startTimeoutMs(123)
+ * // the properties below are optional
+ * .audioSpecification(AudioSpecificationProperty.builder()
+ * .endTimeoutMs(123)
+ * .maxLengthMs(123)
+ * .build())
+ * .dtmfSpecification(DTMFSpecificationProperty.builder()
+ * .deletionCharacter("deletionCharacter")
+ * .endCharacter("endCharacter")
+ * .endTimeoutMs(123)
+ * .maxLength(123)
+ * .build())
+ * .build())
+ * .textInputSpecification(TextInputSpecificationProperty.builder()
+ * .startTimeoutMs(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-promptattemptspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotPromptAttemptSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.PromptAttemptSpecificationProperty.Builder =

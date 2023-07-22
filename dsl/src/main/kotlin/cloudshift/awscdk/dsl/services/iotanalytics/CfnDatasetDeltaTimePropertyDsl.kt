@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * Used to limit data to that which has arrived since the last execution of the action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DeltaTimeProperty deltaTimeProperty = DeltaTimeProperty.builder()
+ * .offsetSeconds(123)
+ * .timeExpression("timeExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-deltatime.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDeltaTimePropertyDsl {
   private val cdkBuilder: CfnDataset.DeltaTimeProperty.Builder =

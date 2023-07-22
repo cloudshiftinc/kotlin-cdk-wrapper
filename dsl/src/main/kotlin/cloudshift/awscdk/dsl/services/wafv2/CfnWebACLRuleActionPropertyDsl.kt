@@ -6,6 +6,66 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * The action that AWS WAF should take on a web request when it matches a rule's statement.
+ *
+ * Settings at the web ACL level can override the rule action setting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * RuleActionProperty ruleActionProperty = RuleActionProperty.builder()
+ * .allow(AllowActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .block(BlockActionProperty.builder()
+ * .customResponse(CustomResponseProperty.builder()
+ * .responseCode(123)
+ * // the properties below are optional
+ * .customResponseBodyKey("customResponseBodyKey")
+ * .responseHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .captcha(CaptchaActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .challenge(ChallengeActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .count(CountActionProperty.builder()
+ * .customRequestHandling(CustomRequestHandlingProperty.builder()
+ * .insertHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ruleaction.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRuleActionPropertyDsl {
   private val cdkBuilder: CfnWebACL.RuleActionProperty.Builder =

@@ -13,6 +13,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBParameterGroupProps
 
+/**
+ * Properties for defining a `CfnDBParameterGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * Object parameters;
+ * CfnDBParameterGroupProps cfnDBParameterGroupProps = CfnDBParameterGroupProps.builder()
+ * .description("description")
+ * .family("family")
+ * // the properties below are optional
+ * .dbParameterGroupName("dbParameterGroupName")
+ * .parameters(parameters)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBParameterGroupPropsDsl {
   private val cdkBuilder: CfnDBParameterGroupProps.Builder = CfnDBParameterGroupProps.builder()

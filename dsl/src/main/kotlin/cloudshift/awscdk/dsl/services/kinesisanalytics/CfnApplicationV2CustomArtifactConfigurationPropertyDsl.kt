@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * The configuration of connectors and user-defined functions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CustomArtifactConfigurationProperty customArtifactConfigurationProperty =
+ * CustomArtifactConfigurationProperty.builder()
+ * .artifactType("artifactType")
+ * // the properties below are optional
+ * .mavenReference(MavenReferenceProperty.builder()
+ * .artifactId("artifactId")
+ * .groupId("groupId")
+ * .version("version")
+ * .build())
+ * .s3ContentLocation(S3ContentLocationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-customartifactconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2CustomArtifactConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.CustomArtifactConfigurationProperty.Builder =

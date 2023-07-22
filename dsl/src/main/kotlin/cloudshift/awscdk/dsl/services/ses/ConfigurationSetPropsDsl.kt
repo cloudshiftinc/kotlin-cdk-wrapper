@@ -10,6 +10,21 @@ import software.amazon.awscdk.services.ses.ConfigurationSetTlsPolicy
 import software.amazon.awscdk.services.ses.IDedicatedIpPool
 import software.amazon.awscdk.services.ses.SuppressionReasons
 
+/**
+ * Properties for a configuration set.
+ *
+ * Example:
+ *
+ * ```
+ * IDedicatedIpPool myPool;
+ * ConfigurationSet.Builder.create(this, "ConfigurationSet")
+ * .customTrackingRedirectDomain("track.cdk.dev")
+ * .suppressionReasons(SuppressionReasons.COMPLAINTS_ONLY)
+ * .tlsPolicy(ConfigurationSetTlsPolicy.REQUIRE)
+ * .dedicatedIpPool(myPool)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConfigurationSetPropsDsl {
   private val cdkBuilder: ConfigurationSetProps.Builder = ConfigurationSetProps.builder()

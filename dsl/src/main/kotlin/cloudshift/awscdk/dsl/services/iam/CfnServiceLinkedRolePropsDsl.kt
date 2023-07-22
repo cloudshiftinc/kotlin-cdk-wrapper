@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iam.CfnServiceLinkedRoleProps
 
+/**
+ * Properties for defining a `CfnServiceLinkedRole`.
+ *
+ * Example:
+ *
+ * ```
+ * CfnServiceLinkedRole slr = CfnServiceLinkedRole.Builder.create(this, "ElasticSLR")
+ * .awsServiceName("es.amazonaws.com")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html)
+ */
 @CdkDslMarker
 public class CfnServiceLinkedRolePropsDsl {
   private val cdkBuilder: CfnServiceLinkedRoleProps.Builder = CfnServiceLinkedRoleProps.builder()

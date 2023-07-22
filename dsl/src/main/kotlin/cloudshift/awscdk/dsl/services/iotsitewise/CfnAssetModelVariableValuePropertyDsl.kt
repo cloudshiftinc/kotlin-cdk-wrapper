@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Identifies a property value used in an expression.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * VariableValueProperty variableValueProperty = VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-variablevalue.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelVariableValuePropertyDsl {
   private val cdkBuilder: CfnAssetModel.VariableValueProperty.Builder =

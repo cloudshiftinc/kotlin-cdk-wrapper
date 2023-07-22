@@ -11,6 +11,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnPartition
 
+/**
+ * Specifies skewed values in a table.
+ *
+ * Skewed values are those that occur with very high frequency.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object skewedColumnValueLocationMaps;
+ * SkewedInfoProperty skewedInfoProperty = SkewedInfoProperty.builder()
+ * .skewedColumnNames(List.of("skewedColumnNames"))
+ * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+ * .skewedColumnValues(List.of("skewedColumnValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-skewedinfo.html)
+ */
 @CdkDslMarker
 public class CfnPartitionSkewedInfoPropertyDsl {
   private val cdkBuilder: CfnPartition.SkewedInfoProperty.Builder =

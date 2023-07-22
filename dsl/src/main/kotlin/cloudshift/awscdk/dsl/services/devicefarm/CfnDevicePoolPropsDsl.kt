@@ -14,6 +14,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devicefarm.CfnDevicePoolProps
 
+/**
+ * Properties for defining a `CfnDevicePool`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnDevicePoolProps cfnDevicePoolProps = CfnDevicePoolProps.builder()
+ * .name("name")
+ * .projectArn("projectArn")
+ * .rules(List.of(RuleProperty.builder()
+ * .attribute("attribute")
+ * .operator("operator")
+ * .value("value")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .maxDevices(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-devicepool.html)
+ */
 @CdkDslMarker
 public class CfnDevicePoolPropsDsl {
   private val cdkBuilder: CfnDevicePoolProps.Builder = CfnDevicePoolProps.builder()

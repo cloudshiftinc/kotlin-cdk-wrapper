@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagation
 import software.constructs.Construct
 
+/**
+ * Enables the specified attachment to propagate routes to the specified propagation route table.
+ *
+ * For more information about enabling transit gateway route propagation, see
+ * [EnableTransitGatewayRouteTablePropagation](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableTransitGatewayRouteTablePropagation.html)
+ * in the *Amazon EC2 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayRouteTablePropagation cfnTransitGatewayRouteTablePropagation =
+ * CfnTransitGatewayRouteTablePropagation.Builder.create(this,
+ * "MyCfnTransitGatewayRouteTablePropagation")
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .transitGatewayRouteTableId("transitGatewayRouteTableId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayRouteTablePropagationDsl(
   scope: Construct,

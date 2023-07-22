@@ -8,6 +8,29 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Send messages to an Amazon Managed Streaming for Apache Kafka (Amazon MSK) or self-managed Apache
+ * Kafka cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * KafkaActionProperty kafkaActionProperty = KafkaActionProperty.builder()
+ * .clientProperties(Map.of(
+ * "clientPropertiesKey", "clientProperties"))
+ * .destinationArn("destinationArn")
+ * .topic("topic")
+ * // the properties below are optional
+ * .key("key")
+ * .partition("partition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-kafkaaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleKafkaActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.KafkaActionProperty.Builder =

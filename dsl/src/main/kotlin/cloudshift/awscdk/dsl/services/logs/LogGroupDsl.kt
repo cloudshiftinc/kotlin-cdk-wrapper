@@ -12,6 +12,32 @@ import software.amazon.awscdk.services.logs.LogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
+/**
+ * Define a CloudWatch Log Group.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup = new LogGroup(this, "Log Group");
+ * Bucket logBucket = new Bucket(this, "S3 Bucket");
+ * EmrContainersStartJobRun.Builder.create(this, "EMR Containers Start Job Run")
+ * .virtualCluster(VirtualClusterInput.fromVirtualClusterId("de92jdei2910fwedz"))
+ * .releaseLabel(ReleaseLabel.EMR_6_2_0)
+ * .jobDriver(JobDriver.builder()
+ * .sparkSubmitJobDriver(SparkSubmitJobDriver.builder()
+ * .entryPoint(TaskInput.fromText("local:///usr/lib/spark/examples/src/main/python/pi.py"))
+ * .sparkSubmitParameters("--conf spark.executor.instances=2 --conf spark.executor.memory=2G --conf
+ * spark.executor.cores=2 --conf spark.driver.cores=1")
+ * .build())
+ * .build())
+ * .monitoring(Monitoring.builder()
+ * .logGroup(logGroup)
+ * .logBucket(logBucket)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogGroupDsl(
   scope: Construct,

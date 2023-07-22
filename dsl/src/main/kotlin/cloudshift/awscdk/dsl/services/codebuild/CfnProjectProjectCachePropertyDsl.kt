@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `ProjectCache` is a property of the [AWS CodeBuild
+ * Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that specifies information about the cache for the build project. If `ProjectCache` is not
+ * specified, then both of its properties default to `NO_CACHE` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ProjectCacheProperty projectCacheProperty = ProjectCacheProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .location("location")
+ * .modes(List.of("modes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectcache.html)
+ */
 @CdkDslMarker
 public class CfnProjectProjectCachePropertyDsl {
   private val cdkBuilder: CfnProject.ProjectCacheProperty.Builder =

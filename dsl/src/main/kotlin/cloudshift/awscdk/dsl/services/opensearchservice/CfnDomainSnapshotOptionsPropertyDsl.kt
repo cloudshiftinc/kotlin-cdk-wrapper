@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * *DEPRECATED* .
+ *
+ * This setting is only relevant to domains running legacy Elasticsearch OSS versions earlier than
+ * 5.3. It does not apply to OpenSearch domains.
+ *
+ * The automated snapshot configuration for the OpenSearch Service domain indexes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * SnapshotOptionsProperty snapshotOptionsProperty = SnapshotOptionsProperty.builder()
+ * .automatedSnapshotStartHour(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-snapshotoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainSnapshotOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.SnapshotOptionsProperty.Builder =

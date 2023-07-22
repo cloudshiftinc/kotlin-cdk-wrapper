@@ -15,6 +15,28 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.PolicyProps
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Properties for defining an IAM inline policy document.
+ *
+ * Example:
+ *
+ * ```
+ * Resource books;
+ * User iamUser;
+ * Method getBooks = books.addMethod("GET", new HttpIntegration("http://amazon.com"),
+ * MethodOptions.builder()
+ * .authorizationType(AuthorizationType.IAM)
+ * .build());
+ * iamUser.attachInlinePolicy(Policy.Builder.create(this, "AllowBooks")
+ * .statements(List.of(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("execute-api:Invoke"))
+ * .effect(Effect.ALLOW)
+ * .resources(List.of(getBooks.getMethodArn()))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PolicyPropsDsl {
   private val cdkBuilder: PolicyProps.Builder = PolicyProps.builder()

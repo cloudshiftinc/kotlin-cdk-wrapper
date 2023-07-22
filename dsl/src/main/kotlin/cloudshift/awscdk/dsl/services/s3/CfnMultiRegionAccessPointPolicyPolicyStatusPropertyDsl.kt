@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy
 
+/**
+ * The container element for a bucket's policy status.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * PolicyStatusProperty policyStatusProperty = PolicyStatusProperty.builder()
+ * .isPublic("isPublic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-multiregionaccesspointpolicy-policystatus.html)
+ */
 @CdkDslMarker
 public class CfnMultiRegionAccessPointPolicyPolicyStatusPropertyDsl {
   private val cdkBuilder: CfnMultiRegionAccessPointPolicy.PolicyStatusProperty.Builder =

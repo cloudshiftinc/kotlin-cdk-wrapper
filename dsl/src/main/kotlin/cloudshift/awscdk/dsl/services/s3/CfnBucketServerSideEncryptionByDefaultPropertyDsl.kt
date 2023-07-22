@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Describes the default server-side encryption to apply to new objects in the bucket.
+ *
+ * If a PUT Object request doesn't specify any server-side encryption, this default encryption will
+ * be applied. If you don't specify a customer managed key at configuration, Amazon S3 automatically
+ * creates an AWS KMS key in your AWS account the first time that you add an object encrypted with
+ * SSE-KMS to a bucket. By default, Amazon S3 uses this KMS key for SSE-KMS. For more information, see
+ * [PUT Bucket
+ * encryption](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTencryption.html) in the
+ * *Amazon S3 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ServerSideEncryptionByDefaultProperty serverSideEncryptionByDefaultProperty =
+ * ServerSideEncryptionByDefaultProperty.builder()
+ * .sseAlgorithm("sseAlgorithm")
+ * // the properties below are optional
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-serversideencryptionbydefault.html)
+ */
 @CdkDslMarker
 public class CfnBucketServerSideEncryptionByDefaultPropertyDsl {
   private val cdkBuilder: CfnBucket.ServerSideEncryptionByDefaultProperty.Builder =

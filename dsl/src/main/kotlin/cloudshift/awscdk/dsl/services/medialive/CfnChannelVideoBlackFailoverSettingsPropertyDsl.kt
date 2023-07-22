@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * MediaLive will perform a failover if content is considered black for the specified period.
+ *
+ * The parent of this entity is FailoverConditionSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VideoBlackFailoverSettingsProperty videoBlackFailoverSettingsProperty =
+ * VideoBlackFailoverSettingsProperty.builder()
+ * .blackDetectThreshold(123)
+ * .videoBlackThresholdMsec(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoblackfailoversettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelVideoBlackFailoverSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoBlackFailoverSettingsProperty.Builder =

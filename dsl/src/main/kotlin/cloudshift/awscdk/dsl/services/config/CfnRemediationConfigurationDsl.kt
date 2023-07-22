@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 import software.constructs.Construct
 
+/**
+ * An object that represents the details about the remediation configuration that includes the
+ * remediation action, parameters, and data to execute the action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object parameters;
+ * CfnRemediationConfiguration cfnRemediationConfiguration =
+ * CfnRemediationConfiguration.Builder.create(this, "MyCfnRemediationConfiguration")
+ * .configRuleName("configRuleName")
+ * .targetId("targetId")
+ * .targetType("targetType")
+ * // the properties below are optional
+ * .automatic(false)
+ * .executionControls(ExecutionControlsProperty.builder()
+ * .ssmControls(SsmControlsProperty.builder()
+ * .concurrentExecutionRatePercentage(123)
+ * .errorPercentage(123)
+ * .build())
+ * .build())
+ * .maximumAutomaticAttempts(123)
+ * .parameters(parameters)
+ * .resourceType("resourceType")
+ * .retryAttemptSeconds(123)
+ * .targetVersion("targetVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationDsl(
   scope: Construct,

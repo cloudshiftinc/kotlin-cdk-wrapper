@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation
 import software.constructs.Construct
 
+/**
+ * A self-service action association consisting of the Action ID, the Product ID, and the
+ * Provisioning Artifact ID.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnServiceActionAssociation cfnServiceActionAssociation =
+ * CfnServiceActionAssociation.Builder.create(this, "MyCfnServiceActionAssociation")
+ * .productId("productId")
+ * .provisioningArtifactId("provisioningArtifactId")
+ * .serviceActionId("serviceActionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceactionassociation.html)
+ */
 @CdkDslMarker
 public class CfnServiceActionAssociationDsl(
   scope: Construct,

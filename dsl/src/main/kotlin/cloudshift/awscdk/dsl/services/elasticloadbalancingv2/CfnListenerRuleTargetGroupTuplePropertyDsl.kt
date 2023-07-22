@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about how traffic will be distributed between multiple target groups in a forward
+ * rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * TargetGroupTupleProperty targetGroupTupleProperty = TargetGroupTupleProperty.builder()
+ * .targetGroupArn("targetGroupArn")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-targetgrouptuple.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleTargetGroupTuplePropertyDsl {
   private val cdkBuilder: CfnListenerRule.TargetGroupTupleProperty.Builder =

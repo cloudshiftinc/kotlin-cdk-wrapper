@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnCustomerGateway
 import software.constructs.Construct
 
+/**
+ * Specifies a customer gateway.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnCustomerGateway cfnCustomerGateway = CfnCustomerGateway.Builder.create(this,
+ * "MyCfnCustomerGateway")
+ * .bgpAsn(123)
+ * .ipAddress("ipAddress")
+ * .type("type")
+ * // the properties below are optional
+ * .deviceName("deviceName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html)
+ */
 @CdkDslMarker
 public class CfnCustomerGatewayDsl(
   scope: Construct,

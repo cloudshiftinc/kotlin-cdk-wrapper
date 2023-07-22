@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRuleProps
 
+/**
+ * Properties for defining a `CfnClientVpnAuthorizationRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnClientVpnAuthorizationRuleProps cfnClientVpnAuthorizationRuleProps =
+ * CfnClientVpnAuthorizationRuleProps.builder()
+ * .clientVpnEndpointId("clientVpnEndpointId")
+ * .targetNetworkCidr("targetNetworkCidr")
+ * // the properties below are optional
+ * .accessGroupId("accessGroupId")
+ * .authorizeAllGroups(false)
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-clientvpnauthorizationrule.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnAuthorizationRulePropsDsl {
   private val cdkBuilder: CfnClientVpnAuthorizationRuleProps.Builder =

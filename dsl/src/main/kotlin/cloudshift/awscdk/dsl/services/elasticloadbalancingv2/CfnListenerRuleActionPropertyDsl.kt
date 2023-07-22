@@ -8,6 +8,78 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Specifies an action for a listener rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .authenticateCognitoConfig(AuthenticateCognitoConfigProperty.builder()
+ * .userPoolArn("userPoolArn")
+ * .userPoolClientId("userPoolClientId")
+ * .userPoolDomain("userPoolDomain")
+ * // the properties below are optional
+ * .authenticationRequestExtraParams(Map.of(
+ * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+ * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+ * .scope("scope")
+ * .sessionCookieName("sessionCookieName")
+ * .sessionTimeout(123)
+ * .build())
+ * .authenticateOidcConfig(AuthenticateOidcConfigProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .issuer("issuer")
+ * .tokenEndpoint("tokenEndpoint")
+ * .userInfoEndpoint("userInfoEndpoint")
+ * // the properties below are optional
+ * .authenticationRequestExtraParams(Map.of(
+ * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+ * .clientSecret("clientSecret")
+ * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+ * .scope("scope")
+ * .sessionCookieName("sessionCookieName")
+ * .sessionTimeout(123)
+ * .useExistingClientSecret(false)
+ * .build())
+ * .fixedResponseConfig(FixedResponseConfigProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentType("contentType")
+ * .messageBody("messageBody")
+ * .build())
+ * .forwardConfig(ForwardConfigProperty.builder()
+ * .targetGroups(List.of(TargetGroupTupleProperty.builder()
+ * .targetGroupArn("targetGroupArn")
+ * .weight(123)
+ * .build()))
+ * .targetGroupStickinessConfig(TargetGroupStickinessConfigProperty.builder()
+ * .durationSeconds(123)
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .order(123)
+ * .redirectConfig(RedirectConfigProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .host("host")
+ * .path("path")
+ * .port("port")
+ * .protocol("protocol")
+ * .query("query")
+ * .build())
+ * .targetGroupArn("targetGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-action.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleActionPropertyDsl {
   private val cdkBuilder: CfnListenerRule.ActionProperty.Builder =

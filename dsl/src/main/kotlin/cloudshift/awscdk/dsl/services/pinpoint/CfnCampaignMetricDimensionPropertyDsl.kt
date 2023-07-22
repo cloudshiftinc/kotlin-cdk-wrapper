@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies metric-based criteria for including or excluding endpoints from a segment.
+ *
+ * These criteria derive from custom metrics that you define for endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * MetricDimensionProperty metricDimensionProperty = MetricDimensionProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-metricdimension.html)
+ */
 @CdkDslMarker
 public class CfnCampaignMetricDimensionPropertyDsl {
   private val cdkBuilder: CfnCampaign.MetricDimensionProperty.Builder =

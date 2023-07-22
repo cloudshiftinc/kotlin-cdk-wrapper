@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 
+/**
+ * The value used for mapping a specified attribute to an identity source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * AccessControlAttributeValueProperty accessControlAttributeValueProperty =
+ * AccessControlAttributeValueProperty.builder()
+ * .source(List.of("source"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattributevalue.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAccessControlAttributeConfigurationAccessControlAttributeValuePropertyDsl {
   private val cdkBuilder:

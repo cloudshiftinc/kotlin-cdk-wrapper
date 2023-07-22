@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * Details about the PagerDuty configuration for a response plan.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * PagerDutyConfigurationProperty pagerDutyConfigurationProperty =
+ * PagerDutyConfigurationProperty.builder()
+ * .name("name")
+ * .pagerDutyIncidentConfiguration(PagerDutyIncidentConfigurationProperty.builder()
+ * .serviceId("serviceId")
+ * .build())
+ * .secretId("secretId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-pagerdutyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanPagerDutyConfigurationPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.PagerDutyConfigurationProperty.Builder =

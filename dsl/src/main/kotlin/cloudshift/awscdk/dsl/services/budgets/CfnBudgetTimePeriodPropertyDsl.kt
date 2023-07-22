@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.budgets.CfnBudget
 
+/**
+ * The period of time that is covered by a budget.
+ *
+ * The period has a start date and an end date. The start date must come before the end date. There
+ * are no restrictions on the end date.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * TimePeriodProperty timePeriodProperty = TimePeriodProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-timeperiod.html)
+ */
 @CdkDslMarker
 public class CfnBudgetTimePeriodPropertyDsl {
   private val cdkBuilder: CfnBudget.TimePeriodProperty.Builder =

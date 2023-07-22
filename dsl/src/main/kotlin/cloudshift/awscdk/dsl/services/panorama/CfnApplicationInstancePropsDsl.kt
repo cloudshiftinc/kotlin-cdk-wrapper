@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnApplicationInstance
 import software.amazon.awscdk.services.panorama.CfnApplicationInstanceProps
 
+/**
+ * Properties for defining a `CfnApplicationInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnApplicationInstanceProps cfnApplicationInstanceProps = CfnApplicationInstanceProps.builder()
+ * .defaultRuntimeContextDevice("defaultRuntimeContextDevice")
+ * .manifestPayload(ManifestPayloadProperty.builder()
+ * .payloadData("payloadData")
+ * .build())
+ * // the properties below are optional
+ * .applicationInstanceIdToReplace("applicationInstanceIdToReplace")
+ * .description("description")
+ * .manifestOverridesPayload(ManifestOverridesPayloadProperty.builder()
+ * .payloadData("payloadData")
+ * .build())
+ * .name("name")
+ * .runtimeRoleArn("runtimeRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-applicationinstance.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInstancePropsDsl {
   private val cdkBuilder: CfnApplicationInstanceProps.Builder =

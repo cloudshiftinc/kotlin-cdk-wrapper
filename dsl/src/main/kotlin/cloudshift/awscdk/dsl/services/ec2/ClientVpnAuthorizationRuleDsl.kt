@@ -8,6 +8,26 @@ import software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule
 import software.amazon.awscdk.services.ec2.IClientVpnEndpoint
 import software.constructs.Construct
 
+/**
+ * A client VPN authorization rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientVpnEndpoint clientVpnEndpoint;
+ * ClientVpnAuthorizationRule clientVpnAuthorizationRule =
+ * ClientVpnAuthorizationRule.Builder.create(this, "MyClientVpnAuthorizationRule")
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .clientVpnEndpoint(clientVpnEndpoint)
+ * .description("description")
+ * .groupId("groupId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnAuthorizationRuleDsl(
   scope: Construct,

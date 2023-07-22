@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Information about how the model supports business goals.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * BusinessDetailsProperty businessDetailsProperty = BusinessDetailsProperty.builder()
+ * .businessProblem("businessProblem")
+ * .businessStakeholders("businessStakeholders")
+ * .lineOfBusiness("lineOfBusiness")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-businessdetails.html)
+ */
 @CdkDslMarker
 public class CfnModelCardBusinessDetailsPropertyDsl {
   private val cdkBuilder: CfnModelCard.BusinessDetailsProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
 
+/**
+ * The `LambdaConflictHandlerConfig` object when configuring `LAMBDA` as the Conflict Handler.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * LambdaConflictHandlerConfigProperty lambdaConflictHandlerConfigProperty =
+ * LambdaConflictHandlerConfigProperty.builder()
+ * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-lambdaconflicthandlerconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionConfigurationLambdaConflictHandlerConfigPropertyDsl {
   private val cdkBuilder: CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps
 
+/**
+ * Properties for defining a `CfnSubnetRouteTableAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSubnetRouteTableAssociationProps cfnSubnetRouteTableAssociationProps =
+ * CfnSubnetRouteTableAssociationProps.builder()
+ * .routeTableId("routeTableId")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html)
+ */
 @CdkDslMarker
 public class CfnSubnetRouteTableAssociationPropsDsl {
   private val cdkBuilder: CfnSubnetRouteTableAssociationProps.Builder =

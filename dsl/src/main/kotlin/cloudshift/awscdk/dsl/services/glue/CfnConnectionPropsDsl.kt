@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnConnection
 import software.amazon.awscdk.services.glue.CfnConnectionProps
 
+/**
+ * Properties for defining a `CfnConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object connectionProperties;
+ * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
+ * .catalogId("catalogId")
+ * .connectionInput(ConnectionInputProperty.builder()
+ * .connectionType("connectionType")
+ * // the properties below are optional
+ * .connectionProperties(connectionProperties)
+ * .description("description")
+ * .matchCriteria(List.of("matchCriteria"))
+ * .name("name")
+ * .physicalConnectionRequirements(PhysicalConnectionRequirementsProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .securityGroupIdList(List.of("securityGroupIdList"))
+ * .subnetId("subnetId")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html)
+ */
 @CdkDslMarker
 public class CfnConnectionPropsDsl {
   private val cdkBuilder: CfnConnectionProps.Builder = CfnConnectionProps.builder()

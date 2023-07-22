@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 
+/**
+ * The contact or contact channel that's being engaged.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * TargetsProperty targetsProperty = TargetsProperty.builder()
+ * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+ * .channelId("channelId")
+ * .retryIntervalInMinutes(123)
+ * .build())
+ * .contactTargetInfo(ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-plan-targets.html)
+ */
 @CdkDslMarker
 public class CfnPlanTargetsPropertyDsl {
   private val cdkBuilder: CfnPlan.TargetsProperty.Builder = CfnPlan.TargetsProperty.builder()

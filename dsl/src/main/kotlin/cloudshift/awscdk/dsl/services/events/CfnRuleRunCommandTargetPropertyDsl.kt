@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * Information about the EC2 instances that are to be sent the command, specified as key-value
+ * pairs.
+ *
+ * Each `RunCommandTarget` block can include only one key, but this key may specify multiple values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * RunCommandTargetProperty runCommandTargetProperty = RunCommandTargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html)
+ */
 @CdkDslMarker
 public class CfnRuleRunCommandTargetPropertyDsl {
   private val cdkBuilder: CfnRule.RunCommandTargetProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.CfnAlarm
 
+/**
+ * Dimension is an embedded property of the `AWS::CloudWatch::Alarm` type.
+ *
+ * Dimensions are name/value pairs that can be associated with a CloudWatch metric. You can specify
+ * a maximum of 10 dimensions for a given metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * DimensionProperty dimensionProperty = DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-dimension.html)
+ */
 @CdkDslMarker
 public class CfnAlarmDimensionPropertyDsl {
   private val cdkBuilder: CfnAlarm.DimensionProperty.Builder = CfnAlarm.DimensionProperty.builder()

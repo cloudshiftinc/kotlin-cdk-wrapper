@@ -14,6 +14,83 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon EKS control plane.
+ *
+ * The Amazon EKS control plane consists of control plane instances that run the Kubernetes
+ * software, such as `etcd` and the API server. The control plane runs in an account managed by AWS ,
+ * and the Kubernetes API is exposed by the Amazon EKS API server endpoint. Each Amazon EKS cluster
+ * control plane is single tenant and unique. It runs on its own set of Amazon EC2 instances.
+ *
+ * The cluster control plane is provisioned across multiple Availability Zones and fronted by an
+ * Elastic Load Balancing Network Load Balancer. Amazon EKS also provisions elastic network interfaces
+ * in your VPC subnets to provide connectivity from the control plane instances to the nodes (for
+ * example, to support `kubectl exec` , `logs` , and `proxy` data flows).
+ *
+ * Amazon EKS nodes run in your AWS account and connect to your cluster's control plane over the
+ * Kubernetes API server endpoint and a certificate file that is created for your cluster.
+ *
+ * In most cases, it takes several minutes to create a cluster. After you create an Amazon EKS
+ * cluster, you must configure your Kubernetes tooling to communicate with the API server and launch
+ * nodes into your cluster. For more information, see [Managing Cluster
+ * Authentication](https://docs.aws.amazon.com/eks/latest/userguide/managing-auth.html) and [Launching
+ * Amazon EKS nodes](https://docs.aws.amazon.com/eks/latest/userguide/launch-workers.html) in the
+ * *Amazon EKS User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .resourcesVpcConfig(ResourcesVpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .endpointPrivateAccess(false)
+ * .endpointPublicAccess(false)
+ * .publicAccessCidrs(List.of("publicAccessCidrs"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
+ * .provider(ProviderProperty.builder()
+ * .keyArn("keyArn")
+ * .build())
+ * .resources(List.of("resources"))
+ * .build()))
+ * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
+ * .ipFamily("ipFamily")
+ * .serviceIpv4Cidr("serviceIpv4Cidr")
+ * .serviceIpv6Cidr("serviceIpv6Cidr")
+ * .build())
+ * .logging(LoggingProperty.builder()
+ * .clusterLogging(ClusterLoggingProperty.builder()
+ * .enabledTypes(List.of(LoggingTypeConfigProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .name("name")
+ * .outpostConfig(OutpostConfigProperty.builder()
+ * .controlPlaneInstanceType("controlPlaneInstanceType")
+ * .outpostArns(List.of("outpostArns"))
+ * // the properties below are optional
+ * .controlPlanePlacement(ControlPlanePlacementProperty.builder()
+ * .groupName("groupName")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

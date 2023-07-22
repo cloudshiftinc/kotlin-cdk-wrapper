@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnDatabase
 
+/**
+ * A `FederatedDatabase` structure that references an entity outside the AWS Glue Data Catalog .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * FederatedDatabaseProperty federatedDatabaseProperty = FederatedDatabaseProperty.builder()
+ * .connectionName("connectionName")
+ * .identifier("identifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-database-federateddatabase.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseFederatedDatabasePropertyDsl {
   private val cdkBuilder: CfnDatabase.FederatedDatabaseProperty.Builder =

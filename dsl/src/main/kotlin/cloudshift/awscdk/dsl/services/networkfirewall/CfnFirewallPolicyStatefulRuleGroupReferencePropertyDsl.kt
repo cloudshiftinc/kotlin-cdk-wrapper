@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
+/**
+ * Identifier for a single stateful rule group, used in a firewall policy to refer to a rule group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatefulRuleGroupReferenceProperty statefulRuleGroupReferenceProperty =
+ * StatefulRuleGroupReferenceProperty.builder()
+ * .resourceArn("resourceArn")
+ * // the properties below are optional
+ * .override(StatefulRuleGroupOverrideProperty.builder()
+ * .action("action")
+ * .build())
+ * .priority(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulrulegroupreference.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyStatefulRuleGroupReferencePropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.StatefulRuleGroupReferenceProperty.Builder =

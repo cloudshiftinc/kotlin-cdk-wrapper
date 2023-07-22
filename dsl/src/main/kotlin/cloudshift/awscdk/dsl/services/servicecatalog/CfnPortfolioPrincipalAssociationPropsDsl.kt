@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociationProps
 
+/**
+ * Properties for defining a `CfnPortfolioPrincipalAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolioPrincipalAssociationProps cfnPortfolioPrincipalAssociationProps =
+ * CfnPortfolioPrincipalAssociationProps.builder()
+ * .portfolioId("portfolioId")
+ * .principalArn("principalArn")
+ * .principalType("principalType")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioPrincipalAssociationPropsDsl {
   private val cdkBuilder: CfnPortfolioPrincipalAssociationProps.Builder =

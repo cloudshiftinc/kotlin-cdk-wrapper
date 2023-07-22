@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.elasticloadbalancingv2.ForwardOptions
 
+/**
+ * Options for `ListenerAction.forward()`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ForwardOptions forwardOptions = ForwardOptions.builder()
+ * .stickinessDuration(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ForwardOptionsDsl {
   private val cdkBuilder: ForwardOptions.Builder = ForwardOptions.builder()

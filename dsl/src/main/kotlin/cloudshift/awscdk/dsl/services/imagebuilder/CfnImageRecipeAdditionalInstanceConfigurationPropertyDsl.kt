@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 
+/**
+ * In addition to your infrastructure configuration, these settings provide an extra layer of
+ * control over your build instances.
+ *
+ * You can also specify commands to run on launch for all of your build instances.
+ *
+ * Image Builder does not automatically install the Systems Manager agent on Windows instances. If
+ * your base image includes the Systems Manager agent, then the AMI that you create will also include
+ * the agent. For Linux instances, if the base image does not already include the Systems Manager
+ * agent, Image Builder installs it. For Linux instances where Image Builder installs the Systems
+ * Manager agent, you can choose whether to keep it for the AMI that you create.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * AdditionalInstanceConfigurationProperty additionalInstanceConfigurationProperty =
+ * AdditionalInstanceConfigurationProperty.builder()
+ * .systemsManagerAgent(SystemsManagerAgentProperty.builder()
+ * .uninstallAfterBuild(false)
+ * .build())
+ * .userDataOverride("userDataOverride")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-additionalinstanceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipeAdditionalInstanceConfigurationPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.AdditionalInstanceConfigurationProperty.Builder =

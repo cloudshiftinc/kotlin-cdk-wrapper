@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specify this only in a cross-account scenario (where source and destination bucket owners are not
+ * the same), and you want to change replica ownership to the AWS account that owns the destination
+ * bucket.
+ *
+ * If this is not specified in the replication configuration, the replicas are owned by same AWS
+ * account that owns the source object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * AccessControlTranslationProperty accessControlTranslationProperty =
+ * AccessControlTranslationProperty.builder()
+ * .owner("owner")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-accesscontroltranslation.html)
+ */
 @CdkDslMarker
 public class CfnBucketAccessControlTranslationPropertyDsl {
   private val cdkBuilder: CfnBucket.AccessControlTranslationProperty.Builder =

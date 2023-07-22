@@ -8,6 +8,21 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.CatchProps
 
+/**
+ * Error handler details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CatchProps catchProps = CatchProps.builder()
+ * .errors(List.of("errors"))
+ * .resultPath("resultPath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CatchPropsDsl {
   private val cdkBuilder: CatchProps.Builder = CatchProps.builder()

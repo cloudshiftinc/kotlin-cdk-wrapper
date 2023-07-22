@@ -16,6 +16,28 @@ import software.amazon.awscdk.services.globalaccelerator.IListener
 import software.amazon.awscdk.services.globalaccelerator.PortOverride
 import software.constructs.Construct
 
+/**
+ * EndpointGroup construct.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * // Non-open ALB
+ * ApplicationLoadBalancer alb;
+ * // Remember that there is only one AGA security group per VPC.
+ * Vpc vpc;
+ * EndpointGroup endpointGroup = listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * ApplicationLoadBalancerEndpoint.Builder.create(alb)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * IPeer agaSg = endpointGroup.connectionsPeer("GlobalAcceleratorSG", vpc);
+ * // Allow connections from the AGA to the ALB
+ * alb.connections.allowFrom(agaSg, Port.tcp(443));
+ * ```
+ */
 @CdkDslMarker
 public class EndpointGroupDsl(
   scope: Construct,

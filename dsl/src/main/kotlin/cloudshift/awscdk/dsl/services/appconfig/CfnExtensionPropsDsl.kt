@@ -16,6 +16,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnExtensionProps
 
+/**
+ * Properties for defining a `CfnExtension`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * Object actions;
+ * CfnExtensionProps cfnExtensionProps = CfnExtensionProps.builder()
+ * .actions(actions)
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .latestVersionNumber(123)
+ * .parameters(Map.of(
+ * "parametersKey", ParameterProperty.builder()
+ * .required(false)
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-extension.html)
+ */
 @CdkDslMarker
 public class CfnExtensionPropsDsl {
   private val cdkBuilder: CfnExtensionProps.Builder = CfnExtensionProps.builder()

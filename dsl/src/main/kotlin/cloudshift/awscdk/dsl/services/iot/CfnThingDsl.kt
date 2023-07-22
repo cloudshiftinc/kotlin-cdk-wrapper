@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnThing
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::Thing` resource to declare an AWS IoT thing.
+ *
+ * For information about working with things, see [How AWS IoT
+ * Works](https://docs.aws.amazon.com/iot/latest/developerguide/aws-iot-how-it-works.html) and [Device
+ * Registry for AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/thing-registry.html) in
+ * the *AWS IoT Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnThing cfnThing = CfnThing.Builder.create(this, "MyCfnThing")
+ * .attributePayload(AttributePayloadProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .build())
+ * .thingName("thingName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html)
+ */
 @CdkDslMarker
 public class CfnThingDsl(
   scope: Construct,

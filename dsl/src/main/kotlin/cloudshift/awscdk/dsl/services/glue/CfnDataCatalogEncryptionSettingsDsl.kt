@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings
 import software.constructs.Construct
 
+/**
+ * Sets the security configuration for a specified catalog.
+ *
+ * After the configuration has been set, the specified encryption is applied to every catalog write
+ * thereafter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnDataCatalogEncryptionSettings cfnDataCatalogEncryptionSettings =
+ * CfnDataCatalogEncryptionSettings.Builder.create(this, "MyCfnDataCatalogEncryptionSettings")
+ * .catalogId("catalogId")
+ * .dataCatalogEncryptionSettings(DataCatalogEncryptionSettingsProperty.builder()
+ * .connectionPasswordEncryption(ConnectionPasswordEncryptionProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .returnConnectionPasswordEncrypted(false)
+ * .build())
+ * .encryptionAtRest(EncryptionAtRestProperty.builder()
+ * .catalogEncryptionMode("catalogEncryptionMode")
+ * .sseAwsKmsKeyId("sseAwsKmsKeyId")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-datacatalogencryptionsettings.html)
+ */
 @CdkDslMarker
 public class CfnDataCatalogEncryptionSettingsDsl(
   scope: Construct,

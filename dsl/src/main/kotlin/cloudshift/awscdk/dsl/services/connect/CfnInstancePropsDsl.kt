@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstance
 import software.amazon.awscdk.services.connect.CfnInstanceProps
 
+/**
+ * Properties for defining a `CfnInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnInstanceProps cfnInstanceProps = CfnInstanceProps.builder()
+ * .attributes(AttributesProperty.builder()
+ * .inboundCalls(false)
+ * .outboundCalls(false)
+ * // the properties below are optional
+ * .autoResolveBestVoices(false)
+ * .contactflowLogs(false)
+ * .contactLens(false)
+ * .earlyMedia(false)
+ * .useCustomTtsVoices(false)
+ * .build())
+ * .identityManagementType("identityManagementType")
+ * // the properties below are optional
+ * .directoryId("directoryId")
+ * .instanceAlias("instanceAlias")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstancePropsDsl {
   private val cdkBuilder: CfnInstanceProps.Builder = CfnInstanceProps.builder()

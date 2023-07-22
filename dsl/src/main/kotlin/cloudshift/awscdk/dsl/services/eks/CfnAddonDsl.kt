@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnAddon
 import software.constructs.Construct
 
+/**
+ * Creates an Amazon EKS add-on.
+ *
+ * Amazon EKS add-ons help to automate the provisioning and lifecycle management of common
+ * operational software for Amazon EKS clusters. For more information, see [Amazon EKS
+ * add-ons](https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html) in the *Amazon EKS User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnAddon cfnAddon = CfnAddon.Builder.create(this, "MyCfnAddon")
+ * .addonName("addonName")
+ * .clusterName("clusterName")
+ * // the properties below are optional
+ * .addonVersion("addonVersion")
+ * .configurationValues("configurationValues")
+ * .preserveOnDelete(false)
+ * .resolveConflicts("resolveConflicts")
+ * .serviceAccountRoleArn("serviceAccountRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-addon.html)
+ */
 @CdkDslMarker
 public class CfnAddonDsl(
   scope: Construct,

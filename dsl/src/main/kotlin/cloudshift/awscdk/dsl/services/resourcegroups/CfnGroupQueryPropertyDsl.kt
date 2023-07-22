@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 
+/**
+ * Specifies details within a `ResourceQuery` structure that determines the membership of the
+ * resource group.
+ *
+ * The contents required in the `Query` structure are determined by the `Type` property of the
+ * containing `ResourceQuery` structure.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * QueryProperty queryProperty = QueryProperty.builder()
+ * .resourceTypeFilters(List.of("resourceTypeFilters"))
+ * .stackIdentifier("stackIdentifier")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-query.html)
+ */
 @CdkDslMarker
 public class CfnGroupQueryPropertyDsl {
   private val cdkBuilder: CfnGroup.QueryProperty.Builder = CfnGroup.QueryProperty.builder()

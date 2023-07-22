@@ -6,6 +6,47 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mwaa.CfnEnvironment
 
+/**
+ * The type of Apache Airflow logs to send to CloudWatch Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mwaa.*;
+ * LoggingConfigurationProperty loggingConfigurationProperty =
+ * LoggingConfigurationProperty.builder()
+ * .dagProcessingLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .schedulerLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .taskLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .webserverLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .workerLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.LoggingConfigurationProperty.Builder =

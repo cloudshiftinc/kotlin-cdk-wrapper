@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnApp
 
+/**
+ * Describes an app's SSL configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * SslConfigurationProperty sslConfigurationProperty = SslConfigurationProperty.builder()
+ * .certificate("certificate")
+ * .chain("chain")
+ * .privateKey("privateKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-sslconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAppSslConfigurationPropertyDsl {
   private val cdkBuilder: CfnApp.SslConfigurationProperty.Builder =

@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.aps.CfnWorkspace
 import software.constructs.Construct
 
+/**
+ * The `AWS::APS::Workspace` type specifies an Amazon Managed Service for Prometheus ( Amazon
+ * Managed Service for Prometheus ) workspace.
+ *
+ * A *workspace* is a logical and isolated Prometheus server dedicated to Prometheus resources such
+ * as metrics. You can have one or more workspaces in each Region in your account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.aps.*;
+ * CfnWorkspace cfnWorkspace = CfnWorkspace.Builder.create(this, "MyCfnWorkspace")
+ * .alertManagerDefinition("alertManagerDefinition")
+ * .alias("alias")
+ * .loggingConfiguration(LoggingConfigurationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceDsl(
   scope: Construct,

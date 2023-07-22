@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using an MSK stream as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceManagedStreamingKafkaParametersProperty
+ * pipeSourceManagedStreamingKafkaParametersProperty =
+ * PipeSourceManagedStreamingKafkaParametersProperty.builder()
+ * .topicName("topicName")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .consumerGroupId("consumerGroupId")
+ * .credentials(MSKAccessCredentialsProperty.builder()
+ * .clientCertificateTlsAuth("clientCertificateTlsAuth")
+ * .saslScram512Auth("saslScram512Auth")
+ * .build())
+ * .maximumBatchingWindowInSeconds(123)
+ * .startingPosition("startingPosition")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcemanagedstreamingkafkaparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceManagedStreamingKafkaParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceManagedStreamingKafkaParametersProperty.Builder =

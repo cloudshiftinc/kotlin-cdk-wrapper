@@ -12,6 +12,44 @@ import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.lambda.Version
 import software.constructs.Construct
 
+/**
+ * Tag the current state of a Function with a Version number.
+ *
+ * Avoid using this resource directly. If you need a Version object, use
+ * `function.currentVersion` instead. That will add a Version object to your
+ * template, and make sure the Version is invalidated whenever the Function
+ * object changes. If you use the `Version` resource directly, you are
+ * responsible for making sure it is invalidated (by changing its
+ * logical ID) whenever necessary.
+ *
+ * Version resources can then be used in `Alias` resources to refer to a
+ * particular deployment of a Lambda.
+ *
+ * If you want to ensure that you're associating the right version with
+ * the right deployment, specify the `codeSha256` property while
+ * creating the `Version.
+ *
+ * Example:
+ *
+ * ```
+ * CfnParametersCode lambdaCode = Code.fromCfnParameters();
+ * Function func = Function.Builder.create(this, "Lambda")
+ * .code(lambdaCode)
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .build();
+ * // used to make sure each CDK synthesis produces a different Version
+ * Version version = func.getCurrentVersion();
+ * Alias alias = Alias.Builder.create(this, "LambdaAlias")
+ * .aliasName("Prod")
+ * .version(version)
+ * .build();
+ * LambdaDeploymentGroup.Builder.create(this, "DeploymentGroup")
+ * .alias(alias)
+ * .deploymentConfig(LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VersionDsl(
   scope: Construct,

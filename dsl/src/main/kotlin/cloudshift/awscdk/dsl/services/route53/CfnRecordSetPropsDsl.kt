@@ -12,6 +12,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnRecordSet
 import software.amazon.awscdk.services.route53.CfnRecordSetProps
 
+/**
+ * Properties for defining a `CfnRecordSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnRecordSetProps cfnRecordSetProps = CfnRecordSetProps.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .aliasTarget(AliasTargetProperty.builder()
+ * .dnsName("dnsName")
+ * .hostedZoneId("hostedZoneId")
+ * // the properties below are optional
+ * .evaluateTargetHealth(false)
+ * .build())
+ * .cidrRoutingConfig(CidrRoutingConfigProperty.builder()
+ * .collectionId("collectionId")
+ * .locationName("locationName")
+ * .build())
+ * .comment("comment")
+ * .failover("failover")
+ * .geoLocation(GeoLocationProperty.builder()
+ * .continentCode("continentCode")
+ * .countryCode("countryCode")
+ * .subdivisionCode("subdivisionCode")
+ * .build())
+ * .healthCheckId("healthCheckId")
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .multiValueAnswer(false)
+ * .region("region")
+ * .resourceRecords(List.of("resourceRecords"))
+ * .setIdentifier("setIdentifier")
+ * .ttl("ttl")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetPropsDsl {
   private val cdkBuilder: CfnRecordSetProps.Builder = CfnRecordSetProps.builder()

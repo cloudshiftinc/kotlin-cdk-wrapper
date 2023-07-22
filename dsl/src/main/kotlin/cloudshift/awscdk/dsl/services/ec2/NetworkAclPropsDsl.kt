@@ -9,6 +9,33 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.NetworkAclProps
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Properties to create NetworkAcl.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * NetworkAclProps networkAclProps = NetworkAclProps.builder()
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .networkAclName("networkAclName")
+ * .subnetSelection(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkAclPropsDsl {
   private val cdkBuilder: NetworkAclProps.Builder = NetworkAclProps.builder()

@@ -12,6 +12,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mwaa.CfnEnvironment
 import software.amazon.awscdk.services.mwaa.CfnEnvironmentProps
 
+/**
+ * Properties for defining a `CfnEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mwaa.*;
+ * Object airflowConfigurationOptions;
+ * Object tags;
+ * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .airflowConfigurationOptions(airflowConfigurationOptions)
+ * .airflowVersion("airflowVersion")
+ * .dagS3Path("dagS3Path")
+ * .environmentClass("environmentClass")
+ * .executionRoleArn("executionRoleArn")
+ * .kmsKey("kmsKey")
+ * .loggingConfiguration(LoggingConfigurationProperty.builder()
+ * .dagProcessingLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .schedulerLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .taskLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .webserverLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .workerLogs(ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build())
+ * .build())
+ * .maxWorkers(123)
+ * .minWorkers(123)
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .pluginsS3ObjectVersion("pluginsS3ObjectVersion")
+ * .pluginsS3Path("pluginsS3Path")
+ * .requirementsS3ObjectVersion("requirementsS3ObjectVersion")
+ * .requirementsS3Path("requirementsS3Path")
+ * .schedulers(123)
+ * .sourceBucketArn("sourceBucketArn")
+ * .startupScriptS3ObjectVersion("startupScriptS3ObjectVersion")
+ * .startupScriptS3Path("startupScriptS3Path")
+ * .tags(tags)
+ * .webserverAccessMode("webserverAccessMode")
+ * .weeklyMaintenanceWindowStart("weeklyMaintenanceWindowStart")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()

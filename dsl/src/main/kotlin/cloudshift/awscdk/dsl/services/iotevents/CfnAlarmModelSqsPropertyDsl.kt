@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Sends information about the detector model instance and the event that triggered the action to an
+ * Amazon SQS queue.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * SqsProperty sqsProperty = SqsProperty.builder()
+ * .queueUrl("queueUrl")
+ * // the properties below are optional
+ * .payload(PayloadProperty.builder()
+ * .contentExpression("contentExpression")
+ * .type("type")
+ * .build())
+ * .useBase64(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-sqs.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelSqsPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.SqsProperty.Builder = CfnAlarmModel.SqsProperty.builder()

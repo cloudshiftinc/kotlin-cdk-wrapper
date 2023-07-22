@@ -8,6 +8,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnResourceDataSync
 import software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps
 
+/**
+ * Properties for defining a `CfnResourceDataSync`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnResourceDataSyncProps cfnResourceDataSyncProps = CfnResourceDataSyncProps.builder()
+ * .syncName("syncName")
+ * // the properties below are optional
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .bucketRegion("bucketRegion")
+ * .kmsKeyArn("kmsKeyArn")
+ * .s3Destination(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketRegion("bucketRegion")
+ * .syncFormat("syncFormat")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .syncFormat("syncFormat")
+ * .syncSource(SyncSourceProperty.builder()
+ * .sourceRegions(List.of("sourceRegions"))
+ * .sourceType("sourceType")
+ * // the properties below are optional
+ * .awsOrganizationsSource(AwsOrganizationsSourceProperty.builder()
+ * .organizationSourceType("organizationSourceType")
+ * // the properties below are optional
+ * .organizationalUnits(List.of("organizationalUnits"))
+ * .build())
+ * .includeFutureRegions(false)
+ * .build())
+ * .syncType("syncType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html)
+ */
 @CdkDslMarker
 public class CfnResourceDataSyncPropsDsl {
   private val cdkBuilder: CfnResourceDataSyncProps.Builder = CfnResourceDataSyncProps.builder()

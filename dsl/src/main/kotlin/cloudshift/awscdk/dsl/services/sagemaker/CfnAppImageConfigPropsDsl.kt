@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
 import software.amazon.awscdk.services.sagemaker.CfnAppImageConfigProps
 
+/**
+ * Properties for defining a `CfnAppImageConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnAppImageConfigProps cfnAppImageConfigProps = CfnAppImageConfigProps.builder()
+ * .appImageConfigName("appImageConfigName")
+ * // the properties below are optional
+ * .kernelGatewayImageConfig(KernelGatewayImageConfigProperty.builder()
+ * .kernelSpecs(List.of(KernelSpecProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build()))
+ * // the properties below are optional
+ * .fileSystemConfig(FileSystemConfigProperty.builder()
+ * .defaultGid(123)
+ * .defaultUid(123)
+ * .mountPath("mountPath")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html)
+ */
 @CdkDslMarker
 public class CfnAppImageConfigPropsDsl {
   private val cdkBuilder: CfnAppImageConfigProps.Builder = CfnAppImageConfigProps.builder()

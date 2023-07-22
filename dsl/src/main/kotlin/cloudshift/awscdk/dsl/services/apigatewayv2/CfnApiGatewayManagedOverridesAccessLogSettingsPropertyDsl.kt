@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 
+/**
+ * The `AccessLogSettings` property overrides the access log settings for an API Gateway-managed
+ * stage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * AccessLogSettingsProperty accessLogSettingsProperty = AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-accesslogsettings.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesAccessLogSettingsPropertyDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverrides.AccessLogSettingsProperty.Builder =

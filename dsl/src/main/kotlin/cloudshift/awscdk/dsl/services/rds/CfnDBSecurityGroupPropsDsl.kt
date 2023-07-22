@@ -13,6 +13,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBSecurityGroupProps
 
+/**
+ * Properties for defining a `CfnDBSecurityGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBSecurityGroupProps cfnDBSecurityGroupProps = CfnDBSecurityGroupProps.builder()
+ * .dbSecurityGroupIngress(List.of(IngressProperty.builder()
+ * .cidrip("cidrip")
+ * .ec2SecurityGroupId("ec2SecurityGroupId")
+ * .ec2SecurityGroupName("ec2SecurityGroupName")
+ * .ec2SecurityGroupOwnerId("ec2SecurityGroupOwnerId")
+ * .build()))
+ * .groupDescription("groupDescription")
+ * // the properties below are optional
+ * .ec2VpcId("ec2VpcId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbsecuritygroup.html)
+ */
 @CdkDslMarker
 public class CfnDBSecurityGroupPropsDsl {
   private val cdkBuilder: CfnDBSecurityGroupProps.Builder = CfnDBSecurityGroupProps.builder()

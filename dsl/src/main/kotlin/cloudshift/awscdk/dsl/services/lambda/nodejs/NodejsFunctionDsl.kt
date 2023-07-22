@@ -45,6 +45,23 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 
+/**
+ * A Node.js Lambda function bundled using esbuild.
+ *
+ * Example:
+ *
+ * ```
+ * NodejsFunction.Builder.create(this, "my-handler")
+ * .bundling(BundlingOptions.builder()
+ * .network("host")
+ * .securityOpt("no-new-privileges")
+ * .user("user:group")
+ * .volumesFrom(List.of("777f7dc92da7"))
+ * .volumes(List.of(DockerVolume.builder().hostPath("/host-path").containerPath("/container-path").build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NodejsFunctionDsl(
   scope: Construct,

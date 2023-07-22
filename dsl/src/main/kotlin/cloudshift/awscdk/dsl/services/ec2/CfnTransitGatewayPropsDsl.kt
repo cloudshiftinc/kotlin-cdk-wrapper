@@ -12,6 +12,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayProps
 
+/**
+ * Properties for defining a `CfnTransitGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayProps cfnTransitGatewayProps = CfnTransitGatewayProps.builder()
+ * .amazonSideAsn(123)
+ * .associationDefaultRouteTableId("associationDefaultRouteTableId")
+ * .autoAcceptSharedAttachments("autoAcceptSharedAttachments")
+ * .defaultRouteTableAssociation("defaultRouteTableAssociation")
+ * .defaultRouteTablePropagation("defaultRouteTablePropagation")
+ * .description("description")
+ * .dnsSupport("dnsSupport")
+ * .multicastSupport("multicastSupport")
+ * .propagationDefaultRouteTableId("propagationDefaultRouteTableId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitGatewayCidrBlocks(List.of("transitGatewayCidrBlocks"))
+ * .vpnEcmpSupport("vpnEcmpSupport")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayPropsDsl {
   private val cdkBuilder: CfnTransitGatewayProps.Builder = CfnTransitGatewayProps.builder()

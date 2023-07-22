@@ -12,6 +12,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 
+/**
+ * Parameters for a packaging configuration that uses Dynamic Adaptive Streaming over HTTP (DASH)
+ * packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * DashPackageProperty dashPackageProperty = DashPackageProperty.builder()
+ * .dashManifests(List.of(DashManifestProperty.builder()
+ * .manifestLayout("manifestLayout")
+ * .manifestName("manifestName")
+ * .minBufferTimeSeconds(123)
+ * .profile("profile")
+ * .scteMarkersSource("scteMarkersSource")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(DashEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .includeEncoderConfigurationInSegments(false)
+ * .includeIframeOnlyStream(false)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .segmentDurationSeconds(123)
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-dashpackage.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationDashPackagePropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.DashPackageProperty.Builder =

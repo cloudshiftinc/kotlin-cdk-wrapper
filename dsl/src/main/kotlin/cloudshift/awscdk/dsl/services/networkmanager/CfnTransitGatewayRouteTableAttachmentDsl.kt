@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment
 import software.constructs.Construct
 
+/**
+ * Creates a transit gateway route table attachment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnTransitGatewayRouteTableAttachment cfnTransitGatewayRouteTableAttachment =
+ * CfnTransitGatewayRouteTableAttachment.Builder.create(this,
+ * "MyCfnTransitGatewayRouteTableAttachment")
+ * .peeringId("peeringId")
+ * .transitGatewayRouteTableArn("transitGatewayRouteTableArn")
+ * // the properties below are optional
+ * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayroutetableattachment.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayRouteTableAttachmentDsl(
   scope: Construct,

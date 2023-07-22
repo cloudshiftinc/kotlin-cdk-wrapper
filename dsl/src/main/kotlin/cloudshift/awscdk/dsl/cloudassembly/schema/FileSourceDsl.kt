@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.FileAssetPackaging
 import software.amazon.awscdk.cloudassembly.schema.FileSource
 
+/**
+ * Describe the source of a file asset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * FileSource fileSource = FileSource.builder()
+ * .executable(List.of("executable"))
+ * .packaging(FileAssetPackaging.FILE)
+ * .path("path")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileSourceDsl {
   private val cdkBuilder: FileSource.Builder = FileSource.builder()

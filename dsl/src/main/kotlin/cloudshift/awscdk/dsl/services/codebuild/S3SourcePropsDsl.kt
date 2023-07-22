@@ -7,6 +7,21 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.S3SourceProps
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for `S3Source`.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * Project.Builder.create(this, "MyProject")
+ * .source(Source.s3(S3SourceProps.builder()
+ * .bucket(bucket)
+ * .path("path/to/file.zip")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3SourcePropsDsl {
   private val cdkBuilder: S3SourceProps.Builder = S3SourceProps.builder()

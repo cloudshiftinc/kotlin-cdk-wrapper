@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.ResourceServerScope
 import software.amazon.awscdk.services.cognito.UserPoolResourceServerProps
 
+/**
+ * Properties for the UserPoolResourceServer construct.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * ResourceServerScope resourceServerScope;
+ * UserPool userPool;
+ * UserPoolResourceServerProps userPoolResourceServerProps = UserPoolResourceServerProps.builder()
+ * .identifier("identifier")
+ * .userPool(userPool)
+ * // the properties below are optional
+ * .scopes(List.of(resourceServerScope))
+ * .userPoolResourceServerName("userPoolResourceServerName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolResourceServerPropsDsl {
   private val cdkBuilder: UserPoolResourceServerProps.Builder =

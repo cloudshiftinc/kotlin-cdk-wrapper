@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * A `RetryPolicy` object that includes information about the retry policy settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-retrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnRuleRetryPolicyPropertyDsl {
   private val cdkBuilder: CfnRule.RetryPolicyProperty.Builder =

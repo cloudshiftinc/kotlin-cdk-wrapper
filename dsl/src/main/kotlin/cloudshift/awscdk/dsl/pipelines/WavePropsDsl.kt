@@ -8,6 +8,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.pipelines.Step
 import software.amazon.awscdk.pipelines.WaveProps
 
+/**
+ * Construction properties for a `Wave`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.pipelines.*;
+ * Step step;
+ * WaveProps waveProps = WaveProps.builder()
+ * .post(List.of(step))
+ * .pre(List.of(step))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WavePropsDsl {
   private val cdkBuilder: WaveProps.Builder = WaveProps.builder()

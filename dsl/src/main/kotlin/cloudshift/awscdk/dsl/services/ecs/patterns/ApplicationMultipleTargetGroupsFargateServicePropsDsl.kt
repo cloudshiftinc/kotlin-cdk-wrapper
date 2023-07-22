@@ -24,6 +24,71 @@ import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateServiceProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps
 
+/**
+ * The properties for the ApplicationMultipleTargetGroupsFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.certificatemanager.Certificate;
+ * import software.amazon.awscdk.services.ec2.InstanceType;
+ * import software.amazon.awscdk.services.ecs.Cluster;
+ * import software.amazon.awscdk.services.ecs.ContainerImage;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy;
+ * import software.amazon.awscdk.services.route53.PublicHostedZone;
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+ * ApplicationMultipleTargetGroupsFargateService loadBalancedFargateService =
+ * ApplicationMultipleTargetGroupsFargateService.Builder.create(this, "myService")
+ * .cluster(Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build())
+ * .memoryLimitMiB(256)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageProps.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .enableExecuteCommand(true)
+ * .loadBalancers(List.of(ApplicationLoadBalancerProps.builder()
+ * .name("lb")
+ * .idleTimeout(Duration.seconds(400))
+ * .domainName("api.example.com")
+ * .domainZone(PublicHostedZone.Builder.create(this, "HostedZone").zoneName("example.com").build())
+ * .listeners(List.of(ApplicationListenerProps.builder()
+ * .name("listener")
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .certificate(Certificate.fromCertificateArn(this, "Cert", "helloworld"))
+ * .sslPolicy(SslPolicy.TLS12_EXT)
+ * .build()))
+ * .build(), ApplicationLoadBalancerProps.builder()
+ * .name("lb2")
+ * .idleTimeout(Duration.seconds(120))
+ * .domainName("frontend.com")
+ * .domainZone(PublicHostedZone.Builder.create(this, "HostedZone").zoneName("frontend.com").build())
+ * .listeners(List.of(ApplicationListenerProps.builder()
+ * .name("listener2")
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .certificate(Certificate.fromCertificateArn(this, "Cert2", "helloworld"))
+ * .sslPolicy(SslPolicy.TLS12_EXT)
+ * .build()))
+ * .build()))
+ * .targetGroups(List.of(ApplicationTargetProps.builder()
+ * .containerPort(80)
+ * .listener("listener")
+ * .build(), ApplicationTargetProps.builder()
+ * .containerPort(90)
+ * .pathPattern("a/b/c")
+ * .priority(10)
+ * .listener("listener")
+ * .build(), ApplicationTargetProps.builder()
+ * .containerPort(443)
+ * .listener("listener2")
+ * .build(), ApplicationTargetProps.builder()
+ * .containerPort(80)
+ * .pathPattern("a/b/c")
+ * .priority(10)
+ * .listener("listener2")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationMultipleTargetGroupsFargateServicePropsDsl {
   private val cdkBuilder: ApplicationMultipleTargetGroupsFargateServiceProps.Builder =

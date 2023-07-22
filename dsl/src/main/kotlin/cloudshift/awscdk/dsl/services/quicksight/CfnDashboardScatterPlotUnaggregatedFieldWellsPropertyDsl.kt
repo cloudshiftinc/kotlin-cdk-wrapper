@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The unaggregated field wells of a scatter plot.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-scatterplotunaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardScatterPlotUnaggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.ScatterPlotUnaggregatedFieldWellsProperty.Builder =

@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociation
 import software.constructs.Construct
 
+/**
+ * Associates the specified subnets and transit gateway attachments with the specified transit
+ * gateway multicast domain.
+ *
+ * The transit gateway attachment must be in the available state before you can add a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayMulticastDomainAssociation cfnTransitGatewayMulticastDomainAssociation =
+ * CfnTransitGatewayMulticastDomainAssociation.Builder.create(this,
+ * "MyCfnTransitGatewayMulticastDomainAssociation")
+ * .subnetId("subnetId")
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .transitGatewayMulticastDomainId("transitGatewayMulticastDomainId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainAssociationDsl(
   scope: Construct,

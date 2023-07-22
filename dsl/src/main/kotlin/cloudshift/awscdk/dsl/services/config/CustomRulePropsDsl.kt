@@ -14,6 +14,26 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Construction properties for a CustomRule.
+ *
+ * Example:
+ *
+ * ```
+ * // Lambda function containing logic that evaluates compliance with the rule.
+ * Function evalComplianceFn = Function.Builder.create(this, "CustomFunction")
+ * .code(AssetCode.fromInline("exports.handler = (event) =&gt; console.log(event);"))
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .build();
+ * // A custom rule that runs on configuration changes of EC2 instances
+ * CustomRule customRule = CustomRule.Builder.create(this, "Custom")
+ * .configurationChanges(true)
+ * .lambdaFunction(evalComplianceFn)
+ * .ruleScope(RuleScope.fromResource(ResourceType.EC2_INSTANCE))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomRulePropsDsl {
   private val cdkBuilder: CustomRuleProps.Builder = CustomRuleProps.builder()

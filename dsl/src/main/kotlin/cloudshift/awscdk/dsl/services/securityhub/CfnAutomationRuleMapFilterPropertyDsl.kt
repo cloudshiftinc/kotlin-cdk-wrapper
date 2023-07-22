@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * A map filter for querying findings.
+ *
+ * Each map filter provides the field to check, the value to look for, and the comparison operator.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * MapFilterProperty mapFilterProperty = MapFilterProperty.builder()
+ * .comparison("comparison")
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-mapfilter.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleMapFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.MapFilterProperty.Builder =

@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * The Amazon EC2 unit limits for a managed scaling policy.
+ *
+ * The managed scaling activity of a cluster can not be above or below these limits. The limit only
+ * applies to the core and task nodes. The master node cannot be scaled after initial configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ComputeLimitsProperty computeLimitsProperty = ComputeLimitsProperty.builder()
+ * .maximumCapacityUnits(123)
+ * .minimumCapacityUnits(123)
+ * .unitType("unitType")
+ * // the properties below are optional
+ * .maximumCoreCapacityUnits(123)
+ * .maximumOnDemandCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-computelimits.html)
+ */
 @CdkDslMarker
 public class CfnClusterComputeLimitsPropertyDsl {
   private val cdkBuilder: CfnCluster.ComputeLimitsProperty.Builder =

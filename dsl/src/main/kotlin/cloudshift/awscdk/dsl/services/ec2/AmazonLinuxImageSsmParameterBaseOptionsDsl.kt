@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBaseOptions
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Base options for amazon linux ssm parameters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * AmazonLinuxImageSsmParameterBaseOptions amazonLinuxImageSsmParameterBaseOptions =
+ * AmazonLinuxImageSsmParameterBaseOptions.builder()
+ * .cachedInContext(false)
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinuxImageSsmParameterBaseOptionsDsl {
   private val cdkBuilder: AmazonLinuxImageSsmParameterBaseOptions.Builder =

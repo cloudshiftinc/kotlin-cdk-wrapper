@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.DkimIdentityConfig
 import software.amazon.awscdk.services.ses.EasyDkimSigningKeyLength
 
+/**
+ * Configuration for DKIM identity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DkimIdentityConfig dkimIdentityConfig = DkimIdentityConfig.builder()
+ * .domainSigningPrivateKey("domainSigningPrivateKey")
+ * .domainSigningSelector("domainSigningSelector")
+ * .nextSigningKeyLength(EasyDkimSigningKeyLength.RSA_1024_BIT)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DkimIdentityConfigDsl {
   private val cdkBuilder: DkimIdentityConfig.Builder = DkimIdentityConfig.builder()

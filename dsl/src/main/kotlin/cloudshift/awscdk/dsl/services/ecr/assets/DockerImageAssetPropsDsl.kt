@@ -16,6 +16,23 @@ import software.amazon.awscdk.services.ecr.assets.DockerImageAssetProps
 import software.amazon.awscdk.services.ecr.assets.NetworkMode
 import software.amazon.awscdk.services.ecr.assets.Platform
 
+/**
+ * Props for DockerImageAssets.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.assets.DockerImageAsset;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .buildArgs(Map.of(
+ * "HTTP_PROXY", "http://10.20.30.2:1234"))
+ * .invalidation(DockerImageAssetInvalidationOptions.builder()
+ * .buildArgs(false)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageAssetPropsDsl {
   private val cdkBuilder: DockerImageAssetProps.Builder = DockerImageAssetProps.builder()

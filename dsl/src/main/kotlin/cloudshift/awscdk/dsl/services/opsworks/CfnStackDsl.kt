@@ -17,6 +17,78 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnStack
 import software.constructs.Construct
 
+/**
+ * Creates a new stack. For more information, see [Create a New
+ * Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-edit.html) .
+ *
+ * *Required Permissions* : To use this action, an IAM user must have an attached policy that
+ * explicitly grants permissions. For more information about user permissions, see [Managing User
+ * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * Object customJson;
+ * CfnStack cfnStack = CfnStack.Builder.create(this, "MyCfnStack")
+ * .defaultInstanceProfileArn("defaultInstanceProfileArn")
+ * .name("name")
+ * .serviceRoleArn("serviceRoleArn")
+ * // the properties below are optional
+ * .agentVersion("agentVersion")
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .chefConfiguration(ChefConfigurationProperty.builder()
+ * .berkshelfVersion("berkshelfVersion")
+ * .manageBerkshelf(false)
+ * .build())
+ * .cloneAppIds(List.of("cloneAppIds"))
+ * .clonePermissions(false)
+ * .configurationManager(StackConfigurationManagerProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .customCookbooksSource(SourceProperty.builder()
+ * .password("password")
+ * .revision("revision")
+ * .sshKey("sshKey")
+ * .type("type")
+ * .url("url")
+ * .username("username")
+ * .build())
+ * .customJson(customJson)
+ * .defaultAvailabilityZone("defaultAvailabilityZone")
+ * .defaultOs("defaultOs")
+ * .defaultRootDeviceType("defaultRootDeviceType")
+ * .defaultSshKeyName("defaultSshKeyName")
+ * .defaultSubnetId("defaultSubnetId")
+ * .ecsClusterArn("ecsClusterArn")
+ * .elasticIps(List.of(ElasticIpProperty.builder()
+ * .ip("ip")
+ * // the properties below are optional
+ * .name("name")
+ * .build()))
+ * .hostnameTheme("hostnameTheme")
+ * .rdsDbInstances(List.of(RdsDbInstanceProperty.builder()
+ * .dbPassword("dbPassword")
+ * .dbUser("dbUser")
+ * .rdsDbInstanceArn("rdsDbInstanceArn")
+ * .build()))
+ * .sourceStackId("sourceStackId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useCustomCookbooks(false)
+ * .useOpsworksSecurityGroups(false)
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-stack.html)
+ */
 @CdkDslMarker
 public class CfnStackDsl(
   scope: Construct,

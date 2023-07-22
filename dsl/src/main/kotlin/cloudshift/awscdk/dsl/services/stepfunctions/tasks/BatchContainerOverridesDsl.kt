@@ -12,6 +12,30 @@ import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides
 
+/**
+ * The overrides that should be sent to a container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * InstanceType instanceType;
+ * Size size;
+ * BatchContainerOverrides batchContainerOverrides = BatchContainerOverrides.builder()
+ * .command(List.of("command"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .gpuCount(123)
+ * .instanceType(instanceType)
+ * .memory(size)
+ * .vcpus(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BatchContainerOverridesDsl {
   private val cdkBuilder: BatchContainerOverrides.Builder = BatchContainerOverrides.builder()

@@ -12,6 +12,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnTheme
 import software.constructs.Construct
 
+/**
+ * The AWS::AmplifyUIBuilder::Theme resource specifies a theme within an Amplify app.
+ *
+ * A theme is a collection of style settings that apply globally to the components associated with
+ * the app.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * ThemeValuesProperty themeValuesProperty_;
+ * CfnTheme cfnTheme = CfnTheme.Builder.create(this, "MyCfnTheme")
+ * .name("name")
+ * .values(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(ThemeValueProperty.builder()
+ * .children(List.of(themeValuesProperty_))
+ * .value("value")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .appId("appId")
+ * .environmentName("environmentName")
+ * .overrides(List.of(ThemeValuesProperty.builder()
+ * .key("key")
+ * .value(ThemeValueProperty.builder()
+ * .children(List.of(themeValuesProperty_))
+ * .value("value")
+ * .build())
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-theme.html)
+ */
 @CdkDslMarker
 public class CfnThemeDsl(
   scope: Construct,

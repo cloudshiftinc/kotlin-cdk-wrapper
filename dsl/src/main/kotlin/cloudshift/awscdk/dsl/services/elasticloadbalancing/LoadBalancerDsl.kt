@@ -18,6 +18,29 @@ import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener
 import software.constructs.Construct
 
+/**
+ * A load balancer with a single listener.
+ *
+ * Routes to a fleet of of instances in a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc;
+ * AutoScalingGroup myAutoScalingGroup;
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .healthCheck(HealthCheck.builder()
+ * .port(80)
+ * .build())
+ * .build();
+ * lb.addTarget(myAutoScalingGroup);
+ * lb.addListener(LoadBalancerListener.builder()
+ * .externalPort(80)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerDsl(
   scope: Construct,

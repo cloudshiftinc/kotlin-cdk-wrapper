@@ -8,6 +8,27 @@ import kotlin.collections.List
 import kotlin.collections.Map
 import software.amazon.awscdk.services.servicecatalog.TagOptionsProps
 
+/**
+ * Properties for TagOptions.
+ *
+ * Example:
+ *
+ * ```
+ * Portfolio portfolio;
+ * CloudFormationProduct product;
+ * TagOptions tagOptionsForPortfolio = TagOptions.Builder.create(this, "OrgTagOptions")
+ * .allowedValuesForTags(Map.of(
+ * "Group", List.of("finance", "engineering", "marketing", "research"),
+ * "CostCenter", List.of("01", "02", "03")))
+ * .build();
+ * portfolio.associateTagOptions(tagOptionsForPortfolio);
+ * TagOptions tagOptionsForProduct = TagOptions.Builder.create(this, "ProductTagOptions")
+ * .allowedValuesForTags(Map.of(
+ * "Environment", List.of("dev", "alpha", "prod")))
+ * .build();
+ * product.associateTagOptions(tagOptionsForProduct);
+ * ```
+ */
 @CdkDslMarker
 public class TagOptionsPropsDsl {
   private val cdkBuilder: TagOptionsProps.Builder = TagOptionsProps.builder()

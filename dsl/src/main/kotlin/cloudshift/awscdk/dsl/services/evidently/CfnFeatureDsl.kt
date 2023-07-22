@@ -14,6 +14,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnFeature
 import software.constructs.Construct
 
+/**
+ * Creates or updates an Evidently *feature* that you want to launch or test.
+ *
+ * You can define up to five variations of a feature, and use these variations in your launches and
+ * experiments. A feature must be created in a project. For information about creating a project, see
+ * [CreateProject](https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateProject.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnFeature cfnFeature = CfnFeature.Builder.create(this, "MyCfnFeature")
+ * .name("name")
+ * .project("project")
+ * .variations(List.of(VariationObjectProperty.builder()
+ * .variationName("variationName")
+ * // the properties below are optional
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .longValue(123)
+ * .stringValue("stringValue")
+ * .build()))
+ * // the properties below are optional
+ * .defaultVariation("defaultVariation")
+ * .description("description")
+ * .entityOverrides(List.of(EntityOverrideProperty.builder()
+ * .entityId("entityId")
+ * .variation("variation")
+ * .build()))
+ * .evaluationStrategy("evaluationStrategy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-feature.html)
+ */
 @CdkDslMarker
 public class CfnFeatureDsl(
   scope: Construct,

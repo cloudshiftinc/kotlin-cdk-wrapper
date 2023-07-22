@@ -15,6 +15,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudtrail.CfnTrail
 import software.constructs.Construct
 
+/**
+ * Creates a trail that specifies the settings for delivery of log data to an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * CfnTrail cfnTrail = CfnTrail.Builder.create(this, "MyCfnTrail")
+ * .isLogging(false)
+ * .s3BucketName("s3BucketName")
+ * // the properties below are optional
+ * .advancedEventSelectors(List.of(AdvancedEventSelectorProperty.builder()
+ * .fieldSelectors(List.of(AdvancedFieldSelectorProperty.builder()
+ * .field("field")
+ * // the properties below are optional
+ * .endsWith(List.of("endsWith"))
+ * .equalTo(List.of("equalTo"))
+ * .notEndsWith(List.of("notEndsWith"))
+ * .notEquals(List.of("notEquals"))
+ * .notStartsWith(List.of("notStartsWith"))
+ * .startsWith(List.of("startsWith"))
+ * .build()))
+ * // the properties below are optional
+ * .name("name")
+ * .build()))
+ * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+ * .cloudWatchLogsRoleArn("cloudWatchLogsRoleArn")
+ * .enableLogFileValidation(false)
+ * .eventSelectors(List.of(EventSelectorProperty.builder()
+ * .dataResources(List.of(DataResourceProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .values(List.of("values"))
+ * .build()))
+ * .excludeManagementEventSources(List.of("excludeManagementEventSources"))
+ * .includeManagementEvents(false)
+ * .readWriteType("readWriteType")
+ * .build()))
+ * .includeGlobalServiceEvents(false)
+ * .insightSelectors(List.of(InsightSelectorProperty.builder()
+ * .insightType("insightType")
+ * .build()))
+ * .isMultiRegionTrail(false)
+ * .isOrganizationTrail(false)
+ * .kmsKeyId("kmsKeyId")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .snsTopicName("snsTopicName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trailName("trailName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html)
+ */
 @CdkDslMarker
 public class CfnTrailDsl(
   scope: Construct,

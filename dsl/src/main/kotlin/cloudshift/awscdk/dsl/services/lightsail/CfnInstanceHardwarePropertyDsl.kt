@@ -10,6 +10,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
+/**
+ * `Hardware` is a property of the
+ * [AWS::Lightsail::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-instance.html)
+ * resource. It describes the hardware properties for the instance, such as the vCPU count, attached
+ * disks, and amount of RAM.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * HardwareProperty hardwareProperty = HardwareProperty.builder()
+ * .cpuCount(123)
+ * .disks(List.of(DiskProperty.builder()
+ * .diskName("diskName")
+ * .path("path")
+ * // the properties below are optional
+ * .attachedTo("attachedTo")
+ * .attachmentState("attachmentState")
+ * .iops(123)
+ * .isSystemDisk(false)
+ * .sizeInGb("sizeInGb")
+ * .build()))
+ * .ramSizeInGb(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-hardware.html)
+ */
 @CdkDslMarker
 public class CfnInstanceHardwarePropertyDsl {
   private val cdkBuilder: CfnInstance.HardwareProperty.Builder =

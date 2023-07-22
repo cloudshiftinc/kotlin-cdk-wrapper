@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.healthlake.CfnFHIRDatastore
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.healthlake.*;
+ * IdentityProviderConfigurationProperty identityProviderConfigurationProperty =
+ * IdentityProviderConfigurationProperty.builder()
+ * .authorizationStrategy("authorizationStrategy")
+ * // the properties below are optional
+ * .fineGrainedAuthorizationEnabled(false)
+ * .idpLambdaArn("idpLambdaArn")
+ * .metadata("metadata")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-healthlake-fhirdatastore-identityproviderconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFHIRDatastoreIdentityProviderConfigurationPropertyDsl {
   private val cdkBuilder: CfnFHIRDatastore.IdentityProviderConfigurationProperty.Builder =

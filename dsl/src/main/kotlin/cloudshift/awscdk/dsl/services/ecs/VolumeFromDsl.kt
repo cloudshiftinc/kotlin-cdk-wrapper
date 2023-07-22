@@ -7,6 +7,21 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ecs.VolumeFrom
 
+/**
+ * The details on a data volume from another container in the same task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * VolumeFrom volumeFrom = VolumeFrom.builder()
+ * .readOnly(false)
+ * .sourceContainer("sourceContainer")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VolumeFromDsl {
   private val cdkBuilder: VolumeFrom.Builder = VolumeFrom.builder()

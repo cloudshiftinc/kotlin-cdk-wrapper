@@ -9,6 +9,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * LegacyCustomOriginProperty legacyCustomOriginProperty = LegacyCustomOriginProperty.builder()
+ * .dnsName("dnsName")
+ * .originProtocolPolicy("originProtocolPolicy")
+ * .originSslProtocols(List.of("originSslProtocols"))
+ * // the properties below are optional
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-legacycustomorigin.html)
+ */
 @CdkDslMarker
 public class CfnDistributionLegacyCustomOriginPropertyDsl {
   private val cdkBuilder: CfnDistribution.LegacyCustomOriginProperty.Builder =

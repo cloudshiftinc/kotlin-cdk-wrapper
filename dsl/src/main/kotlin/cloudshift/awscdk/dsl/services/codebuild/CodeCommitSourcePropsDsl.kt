@@ -9,6 +9,29 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.CodeCommitSourceProps
 import software.amazon.awscdk.services.codecommit.IRepository
 
+/**
+ * Construction properties for `CodeCommitSource`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.codecommit.*;
+ * Repository repo;
+ * Bucket bucket;
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .secondarySources(List.of(Source.codeCommit(CodeCommitSourceProps.builder()
+ * .identifier("source2")
+ * .repository(repo)
+ * .build())))
+ * .secondaryArtifacts(List.of(Artifacts.s3(S3ArtifactsProps.builder()
+ * .identifier("artifact2")
+ * .bucket(bucket)
+ * .path("some/path")
+ * .name("file.zip")
+ * .build())))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeCommitSourcePropsDsl {
   private val cdkBuilder: CodeCommitSourceProps.Builder = CodeCommitSourceProps.builder()

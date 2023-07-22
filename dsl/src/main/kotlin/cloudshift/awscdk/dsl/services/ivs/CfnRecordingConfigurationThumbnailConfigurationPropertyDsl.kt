@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
 
+/**
+ * The ThumbnailConfiguration property type describes a configuration of thumbnails for recorded
+ * video.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * ThumbnailConfigurationProperty thumbnailConfigurationProperty =
+ * ThumbnailConfigurationProperty.builder()
+ * .recordingMode("recordingMode")
+ * // the properties below are optional
+ * .targetIntervalSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-thumbnailconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRecordingConfigurationThumbnailConfigurationPropertyDsl {
   private val cdkBuilder: CfnRecordingConfiguration.ThumbnailConfigurationProperty.Builder =

@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.amazonmq.CfnConfiguration
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationProps
 
+/**
+ * Properties for defining a `CfnConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * CfnConfigurationProps cfnConfigurationProps = CfnConfigurationProps.builder()
+ * .data("data")
+ * .engineType("engineType")
+ * .engineVersion("engineVersion")
+ * .name("name")
+ * // the properties below are optional
+ * .authenticationStrategy("authenticationStrategy")
+ * .description("description")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationPropsDsl {
   private val cdkBuilder: CfnConfigurationProps.Builder = CfnConfigurationProps.builder()

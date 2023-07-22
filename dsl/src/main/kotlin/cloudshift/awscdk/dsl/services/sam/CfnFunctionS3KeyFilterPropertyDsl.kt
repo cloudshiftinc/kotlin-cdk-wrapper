@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * S3KeyFilterProperty s3KeyFilterProperty = S3KeyFilterProperty.builder()
+ * .rules(List.of(S3KeyFilterRuleProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-s3keyfilter.html)
+ */
 @CdkDslMarker
 public class CfnFunctionS3KeyFilterPropertyDsl {
   private val cdkBuilder: CfnFunction.S3KeyFilterProperty.Builder =

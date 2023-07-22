@@ -6,6 +6,46 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration for a `CategoryFilter` .
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CategoryFilterConfigurationProperty categoryFilterConfigurationProperty =
+ * CategoryFilterConfigurationProperty.builder()
+ * .customFilterConfiguration(CustomFilterConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .categoryValue("categoryValue")
+ * .parameterName("parameterName")
+ * .selectAllOptions("selectAllOptions")
+ * .build())
+ * .customFilterListConfiguration(CustomFilterListConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .categoryValues(List.of("categoryValues"))
+ * .selectAllOptions("selectAllOptions")
+ * .build())
+ * .filterListConfiguration(FilterListConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * // the properties below are optional
+ * .categoryValues(List.of("categoryValues"))
+ * .selectAllOptions("selectAllOptions")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-categoryfilterconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisCategoryFilterConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.CategoryFilterConfigurationProperty.Builder =

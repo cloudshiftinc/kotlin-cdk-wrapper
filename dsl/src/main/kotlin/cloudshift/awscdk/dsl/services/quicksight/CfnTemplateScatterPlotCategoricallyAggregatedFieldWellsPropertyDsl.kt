@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The aggregated field well of a scatter plot.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-scatterplotcategoricallyaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateScatterPlotCategoricallyAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.ScatterPlotCategoricallyAggregatedFieldWellsProperty.Builder =

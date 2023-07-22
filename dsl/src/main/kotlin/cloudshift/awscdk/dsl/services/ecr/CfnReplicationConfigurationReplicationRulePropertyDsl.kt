@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecr.CfnReplicationConfiguration
 
+/**
+ * An array of objects representing the replication destinations and repository filters for a
+ * replication configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * ReplicationRuleProperty replicationRuleProperty = ReplicationRuleProperty.builder()
+ * .destinations(List.of(ReplicationDestinationProperty.builder()
+ * .region("region")
+ * .registryId("registryId")
+ * .build()))
+ * // the properties below are optional
+ * .repositoryFilters(List.of(RepositoryFilterProperty.builder()
+ * .filter("filter")
+ * .filterType("filterType")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-replicationconfiguration-replicationrule.html)
+ */
 @CdkDslMarker
 public class CfnReplicationConfigurationReplicationRulePropertyDsl {
   private val cdkBuilder: CfnReplicationConfiguration.ReplicationRuleProperty.Builder =

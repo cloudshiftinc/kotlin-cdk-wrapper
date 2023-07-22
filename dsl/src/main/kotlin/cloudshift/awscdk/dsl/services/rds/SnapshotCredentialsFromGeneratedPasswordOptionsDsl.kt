@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions
 import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 
+/**
+ * Options used in the `SnapshotCredentials.fromGeneratedPassword` method.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstanceFromSnapshot.Builder.create(this, "InstanceFromSnapshotWithCustomizedSecret")
+ * .engine(engine)
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .credentials(SnapshotCredentials.fromGeneratedSecret("username",
+ * SnapshotCredentialsFromGeneratedPasswordOptions.builder()
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SnapshotCredentialsFromGeneratedPasswordOptionsDsl {
   private val cdkBuilder: SnapshotCredentialsFromGeneratedPasswordOptions.Builder =

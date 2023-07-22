@@ -8,6 +8,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnWebACL
 
+/**
+ * A combination of `ByteMatchSet` , `IPSet` , and/or `SqlInjectionMatchSet` objects that identify
+ * the web requests that you want to allow, block, or count.
+ *
+ * For example, you might create a `Rule` that includes the following predicates:
+ *
+ * * An `IPSet` that causes AWS WAF to search for web requests that originate from the IP address
+ * `192.0.2.44`
+ * * A `ByteMatchSet` that causes AWS WAF to search for web requests for which the value of the
+ * `User-Agent` header is `BadBot` .
+ *
+ * To match the settings in this `Rule` , a request must originate from `192.0.2.44` AND include a
+ * `User-Agent` header for which the value is `BadBot` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * RuleProperty ruleProperty = RuleProperty.builder()
+ * .action(ActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .priority(123)
+ * .ruleId("ruleId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRulePropertyDsl {
   private val cdkBuilder: CfnWebACL.RuleProperty.Builder = CfnWebACL.RuleProperty.builder()

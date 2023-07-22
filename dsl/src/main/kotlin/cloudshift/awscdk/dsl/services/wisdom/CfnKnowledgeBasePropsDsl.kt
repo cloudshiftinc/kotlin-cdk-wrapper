@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps
 
+/**
+ * Properties for defining a `CfnKnowledgeBase`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * CfnKnowledgeBaseProps cfnKnowledgeBaseProps = CfnKnowledgeBaseProps.builder()
+ * .knowledgeBaseType("knowledgeBaseType")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .renderingConfiguration(RenderingConfigurationProperty.builder()
+ * .templateUri("templateUri")
+ * .build())
+ * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .sourceConfiguration(SourceConfigurationProperty.builder()
+ * .appIntegrations(AppIntegrationsConfigurationProperty.builder()
+ * .appIntegrationArn("appIntegrationArn")
+ * // the properties below are optional
+ * .objectFields(List.of("objectFields"))
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html)
+ */
 @CdkDslMarker
 public class CfnKnowledgeBasePropsDsl {
   private val cdkBuilder: CfnKnowledgeBaseProps.Builder = CfnKnowledgeBaseProps.builder()

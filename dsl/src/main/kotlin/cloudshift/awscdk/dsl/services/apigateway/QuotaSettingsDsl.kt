@@ -7,6 +7,23 @@ import kotlin.Number
 import software.amazon.awscdk.services.apigateway.Period
 import software.amazon.awscdk.services.apigateway.QuotaSettings
 
+/**
+ * Specifies the maximum number of requests that clients can make to API Gateway APIs.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
+ * .customerId("hello-customer")
+ * .stages(List.of(api.getDeploymentStage()))
+ * .quota(QuotaSettings.builder()
+ * .limit(10000)
+ * .period(Period.MONTH)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QuotaSettingsDsl {
   private val cdkBuilder: QuotaSettings.Builder = QuotaSettings.builder()

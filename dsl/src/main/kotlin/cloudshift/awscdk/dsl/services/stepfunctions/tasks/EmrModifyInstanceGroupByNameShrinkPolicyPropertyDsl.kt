@@ -7,6 +7,30 @@ import kotlin.Unit
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName
 
+/**
+ * Policy for customizing shrink operations.
+ *
+ * Allows configuration of decommissioning timeout and targeted instance shrinking.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ShrinkPolicyProperty shrinkPolicyProperty = ShrinkPolicyProperty.builder()
+ * .decommissionTimeout(Duration.minutes(30))
+ * .instanceResizePolicy(InstanceResizePolicyProperty.builder()
+ * .instancesToProtect(List.of("instancesToProtect"))
+ * .instancesToTerminate(List.of("instancesToTerminate"))
+ * .instanceTerminationTimeout(Duration.minutes(30))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ShrinkPolicy.html)
+ */
 @CdkDslMarker
 public class EmrModifyInstanceGroupByNameShrinkPolicyPropertyDsl {
   private val cdkBuilder: EmrModifyInstanceGroupByName.ShrinkPolicyProperty.Builder =

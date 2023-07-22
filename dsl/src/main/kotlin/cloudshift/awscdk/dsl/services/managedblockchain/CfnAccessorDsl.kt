@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.managedblockchain.CfnAccessor
 import software.constructs.Construct
 
+/**
+ * Creates a new accessor for use with Managed Blockchain Ethereum nodes.
+ *
+ * An accessor contains information required for token based access to your Ethereum nodes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnAccessor cfnAccessor = CfnAccessor.Builder.create(this, "MyCfnAccessor")
+ * .accessorType("accessorType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-accessor.html)
+ */
 @CdkDslMarker
 public class CfnAccessorDsl(
   scope: Construct,

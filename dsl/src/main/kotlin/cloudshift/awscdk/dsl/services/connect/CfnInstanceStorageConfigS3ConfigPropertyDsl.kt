@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
 
+/**
+ * Information about the Amazon Simple Storage Service (Amazon S3) storage type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * S3ConfigProperty s3ConfigProperty = S3ConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * // the properties below are optional
+ * .encryptionConfig(EncryptionConfigProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-s3config.html)
+ */
 @CdkDslMarker
 public class CfnInstanceStorageConfigS3ConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.S3ConfigProperty.Builder =

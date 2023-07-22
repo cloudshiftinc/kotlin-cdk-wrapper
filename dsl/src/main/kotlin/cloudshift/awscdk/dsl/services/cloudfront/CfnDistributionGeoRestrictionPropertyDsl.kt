@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that controls the countries in which your content is distributed.
+ *
+ * CloudFront determines the location of your users using `MaxMind` GeoIP databases. To disable geo
+ * restriction, remove the
+ * [Restrictions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-restrictions)
+ * property from your stack template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * GeoRestrictionProperty geoRestrictionProperty = GeoRestrictionProperty.builder()
+ * .restrictionType("restrictionType")
+ * // the properties below are optional
+ * .locations(List.of("locations"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html)
+ */
 @CdkDslMarker
 public class CfnDistributionGeoRestrictionPropertyDsl {
   private val cdkBuilder: CfnDistribution.GeoRestrictionProperty.Builder =

@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 
+/**
+ * This structure defines which groups defined in the SAML assertion attribute are to be mapped to
+ * the Grafana `Admin` and `Editor` roles in the workspace.
+ *
+ * SAML authenticated users not part of `Admin` or `Editor` role groups have `Viewer` permission
+ * over the workspace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * RoleValuesProperty roleValuesProperty = RoleValuesProperty.builder()
+ * .admin(List.of("admin"))
+ * .editor(List.of("editor"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-rolevalues.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceRoleValuesPropertyDsl {
   private val cdkBuilder: CfnWorkspace.RoleValuesProperty.Builder =

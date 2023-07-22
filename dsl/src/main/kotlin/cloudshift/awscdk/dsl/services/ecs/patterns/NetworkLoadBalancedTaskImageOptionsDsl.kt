@@ -13,6 +13,25 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImageOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * NetworkLoadBalancedEc2Service loadBalancedEcsService =
+ * NetworkLoadBalancedEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("test"))
+ * .environment(Map.of(
+ * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
+ * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
+ * .build())
+ * .desiredCount(2)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancedTaskImageOptionsDsl {
   private val cdkBuilder: NetworkLoadBalancedTaskImageOptions.Builder =

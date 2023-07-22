@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnReportGroup
 
+/**
+ * Information about the S3 bucket where the raw data of a report are exported.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * S3ReportExportConfigProperty s3ReportExportConfigProperty =
+ * S3ReportExportConfigProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .encryptionDisabled(false)
+ * .encryptionKey("encryptionKey")
+ * .packaging("packaging")
+ * .path("path")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-s3reportexportconfig.html)
+ */
 @CdkDslMarker
 public class CfnReportGroupS3ReportExportConfigPropertyDsl {
   private val cdkBuilder: CfnReportGroup.S3ReportExportConfigProperty.Builder =

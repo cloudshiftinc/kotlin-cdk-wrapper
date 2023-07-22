@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.dms.CfnReplicationSubnetGroupProps
 
+/**
+ * Properties for defining a `CfnReplicationSubnetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnReplicationSubnetGroupProps cfnReplicationSubnetGroupProps =
+ * CfnReplicationSubnetGroupProps.builder()
+ * .replicationSubnetGroupDescription("replicationSubnetGroupDescription")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .replicationSubnetGroupIdentifier("replicationSubnetGroupIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnReplicationSubnetGroupPropsDsl {
   private val cdkBuilder: CfnReplicationSubnetGroupProps.Builder =

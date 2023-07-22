@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A waterfall chart.
+ *
+ * For more information, see [Using waterfall
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/waterfall-chart.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-waterfallvisual.html)
+ */
 @CdkDslMarker
 public class CfnTemplateWaterfallVisualPropertyDsl {
   private val cdkBuilder: CfnTemplate.WaterfallVisualProperty.Builder =

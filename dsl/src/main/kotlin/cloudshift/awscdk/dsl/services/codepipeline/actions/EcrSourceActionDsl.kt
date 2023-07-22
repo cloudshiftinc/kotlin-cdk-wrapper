@@ -10,6 +10,32 @@ import software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction
 import software.amazon.awscdk.services.ecr.IRepository
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * The ECR Repository source CodePipeline Action.
+ *
+ * Will trigger the pipeline as soon as the target tag in the repository
+ * changes, but only if there is a CloudTrail Trail in the account that
+ * captures the ECR event.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.*;
+ * Repository ecrRepository;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact sourceOutput = new Artifact();
+ * EcrSourceAction sourceAction = EcrSourceAction.Builder.create()
+ * .actionName("ECR")
+ * .repository(ecrRepository)
+ * .imageTag("some-tag") // optional, default: 'latest'
+ * .output(sourceOutput)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EcrSourceActionDsl {
   private val cdkBuilder: EcrSourceAction.Builder = EcrSourceAction.Builder.create()

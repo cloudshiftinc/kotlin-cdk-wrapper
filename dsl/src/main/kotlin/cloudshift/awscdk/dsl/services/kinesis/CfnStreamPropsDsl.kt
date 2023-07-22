@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesis.CfnStream
 import software.amazon.awscdk.services.kinesis.CfnStreamProps
 
+/**
+ * Properties for defining a `CfnStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesis.*;
+ * CfnStreamProps cfnStreamProps = CfnStreamProps.builder()
+ * .name("name")
+ * .retentionPeriodHours(123)
+ * .shardCount(123)
+ * .streamEncryption(StreamEncryptionProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .streamModeDetails(StreamModeDetailsProperty.builder()
+ * .streamMode("streamMode")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamPropsDsl {
   private val cdkBuilder: CfnStreamProps.Builder = CfnStreamProps.builder()

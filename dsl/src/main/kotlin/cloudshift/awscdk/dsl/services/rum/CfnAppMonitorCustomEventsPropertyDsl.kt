@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rum.CfnAppMonitor
 
+/**
+ * This structure specifies whether this app monitor allows the web client to define and send custom
+ * events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rum.*;
+ * CustomEventsProperty customEventsProperty = CustomEventsProperty.builder()
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rum-appmonitor-customevents.html)
+ */
 @CdkDslMarker
 public class CfnAppMonitorCustomEventsPropertyDsl {
   private val cdkBuilder: CfnAppMonitor.CustomEventsProperty.Builder =

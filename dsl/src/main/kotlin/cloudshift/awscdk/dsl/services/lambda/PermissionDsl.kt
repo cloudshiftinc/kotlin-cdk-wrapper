@@ -9,6 +9,23 @@ import software.amazon.awscdk.services.lambda.FunctionUrlAuthType
 import software.amazon.awscdk.services.lambda.Permission
 import software.constructs.Construct
 
+/**
+ * Represents a permission statement that can be added to a Lambda function's resource policy via
+ * the `addPermission()` method.
+ *
+ * Example:
+ *
+ * ```
+ * // Grant permissions to a service
+ * Function fn;
+ * ServicePrincipal principal = new ServicePrincipal("my-service");
+ * fn.grantInvoke(principal);
+ * // Equivalent to:
+ * fn.addPermission("my-service Invocation", Permission.builder()
+ * .principal(principal)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PermissionDsl {
   private val cdkBuilder: Permission.Builder = Permission.builder()

@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The visual display options for the visual palette.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * VisualPaletteProperty visualPaletteProperty = VisualPaletteProperty.builder()
+ * .chartColor("chartColor")
+ * .colorMap(List.of(DataPathColorProperty.builder()
+ * .color("color")
+ * .element(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build())
+ * // the properties below are optional
+ * .timeGranularity("timeGranularity")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-visualpalette.html)
+ */
 @CdkDslMarker
 public class CfnTemplateVisualPalettePropertyDsl {
   private val cdkBuilder: CfnTemplate.VisualPaletteProperty.Builder =

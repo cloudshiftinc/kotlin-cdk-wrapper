@@ -13,6 +13,27 @@ import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 import software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps
 
+/**
+ * Options for creating a provisioned instance.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .build()))
+ * .serverlessV2MinCapacity(6.5)
+ * .serverlessV2MaxCapacity(64)
+ * .readers(List.of(ClusterInstance.serverlessV2("reader1",
+ * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProvisionedClusterInstancePropsDsl {
   private val cdkBuilder: ProvisionedClusterInstanceProps.Builder =

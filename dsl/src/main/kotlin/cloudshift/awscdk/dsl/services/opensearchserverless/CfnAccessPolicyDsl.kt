@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicy
 import software.constructs.Construct
 
+/**
+ * Creates a data access policy for OpenSearch Serverless.
+ *
+ * Access policies limit access to collections and the resources within them, and allow a user to
+ * access that data irrespective of the access mechanism or network source. For more information, see
+ * [Data access control for Amazon OpenSearch
+ * Serverless](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-data-access.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnAccessPolicy cfnAccessPolicy = CfnAccessPolicy.Builder.create(this, "MyCfnAccessPolicy")
+ * .name("name")
+ * .policy("policy")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-accesspolicy.html)
+ */
 @CdkDslMarker
 public class CfnAccessPolicyDsl(
   scope: Construct,

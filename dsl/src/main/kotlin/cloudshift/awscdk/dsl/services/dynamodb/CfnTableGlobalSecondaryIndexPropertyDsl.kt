@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * Represents the properties of a global secondary index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * GlobalSecondaryIndexProperty globalSecondaryIndexProperty =
+ * GlobalSecondaryIndexProperty.builder()
+ * .indexName("indexName")
+ * .keySchema(List.of(KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build()))
+ * .projection(ProjectionProperty.builder()
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType("projectionType")
+ * .build())
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html)
+ */
 @CdkDslMarker
 public class CfnTableGlobalSecondaryIndexPropertyDsl {
   private val cdkBuilder: CfnTable.GlobalSecondaryIndexProperty.Builder =

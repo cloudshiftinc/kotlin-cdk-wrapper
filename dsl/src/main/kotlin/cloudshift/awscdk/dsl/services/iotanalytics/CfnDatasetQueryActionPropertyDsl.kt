@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * An "SqlQueryDatasetAction" object that uses an SQL query to automatically create data set
+ * contents.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * QueryActionProperty queryActionProperty = QueryActionProperty.builder()
+ * .sqlQuery("sqlQuery")
+ * // the properties below are optional
+ * .filters(List.of(FilterProperty.builder()
+ * .deltaTime(DeltaTimeProperty.builder()
+ * .offsetSeconds(123)
+ * .timeExpression("timeExpression")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-queryaction.html)
+ */
 @CdkDslMarker
 public class CfnDatasetQueryActionPropertyDsl {
   private val cdkBuilder: CfnDataset.QueryActionProperty.Builder =

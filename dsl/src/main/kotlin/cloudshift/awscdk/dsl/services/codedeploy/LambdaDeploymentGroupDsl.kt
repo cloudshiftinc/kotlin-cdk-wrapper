@@ -18,6 +18,26 @@ import software.amazon.awscdk.services.lambda.Alias
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * LambdaApplication application;
+ * Alias alias;
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .build();
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .application(application)
+ * .alias(alias)
+ * .deploymentConfig(config)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDeploymentGroupDsl(
   scope: Construct,

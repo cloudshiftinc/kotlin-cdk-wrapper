@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a word cloud visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-wordcloudchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateWordCloudChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.WordCloudChartConfigurationProperty.Builder =

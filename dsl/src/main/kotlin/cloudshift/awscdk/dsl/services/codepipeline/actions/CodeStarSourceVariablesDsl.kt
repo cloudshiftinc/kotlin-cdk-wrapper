@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.CodeStarSourceVariables
 
+/**
+ * The CodePipeline variables emitted by CodeStar source Action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * CodeStarSourceVariables codeStarSourceVariables = CodeStarSourceVariables.builder()
+ * .authorDate("authorDate")
+ * .branchName("branchName")
+ * .commitId("commitId")
+ * .commitMessage("commitMessage")
+ * .connectionArn("connectionArn")
+ * .fullRepositoryName("fullRepositoryName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeStarSourceVariablesDsl {
   private val cdkBuilder: CodeStarSourceVariables.Builder = CodeStarSourceVariables.builder()

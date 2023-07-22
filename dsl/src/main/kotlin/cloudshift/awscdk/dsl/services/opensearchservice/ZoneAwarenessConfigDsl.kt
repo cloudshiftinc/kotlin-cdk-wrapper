@@ -7,6 +7,30 @@ import kotlin.Boolean
 import kotlin.Number
 import software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig
 
+/**
+ * Specifies zone awareness configuration options.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_3)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(10)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3)
+ * .build())
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .enabled(true)
+ * .availabilityZoneCount(3)
+ * .build())
+ * .capacity(CapacityConfig.builder()
+ * .multiAzWithStandbyEnabled(true)
+ * .masterNodes(3)
+ * .dataNodes(3)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ZoneAwarenessConfigDsl {
   private val cdkBuilder: ZoneAwarenessConfig.Builder = ZoneAwarenessConfig.builder()

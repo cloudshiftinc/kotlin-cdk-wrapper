@@ -13,6 +13,145 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The `ContainerDefinition` property specifies a container definition.
+ *
+ * Container definitions are used in task definitions to describe the different containers that are
+ * launched as part of a task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ContainerDefinitionProperty containerDefinitionProperty = ContainerDefinitionProperty.builder()
+ * .image("image")
+ * .name("name")
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .dependsOn(List.of(ContainerDependencyProperty.builder()
+ * .condition("condition")
+ * .containerName("containerName")
+ * .build()))
+ * .disableNetworking(false)
+ * .dnsSearchDomains(List.of("dnsSearchDomains"))
+ * .dnsServers(List.of("dnsServers"))
+ * .dockerLabels(Map.of(
+ * "dockerLabelsKey", "dockerLabels"))
+ * .dockerSecurityOptions(List.of("dockerSecurityOptions"))
+ * .entryPoint(List.of("entryPoint"))
+ * .environment(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .environmentFiles(List.of(EnvironmentFileProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .essential(false)
+ * .extraHosts(List.of(HostEntryProperty.builder()
+ * .hostname("hostname")
+ * .ipAddress("ipAddress")
+ * .build()))
+ * .firelensConfiguration(FirelensConfigurationProperty.builder()
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .type("type")
+ * .build())
+ * .healthCheck(HealthCheckProperty.builder()
+ * .command(List.of("command"))
+ * .interval(123)
+ * .retries(123)
+ * .startPeriod(123)
+ * .timeout(123)
+ * .build())
+ * .hostname("hostname")
+ * .interactive(false)
+ * .links(List.of("links"))
+ * .linuxParameters(LinuxParametersProperty.builder()
+ * .capabilities(KernelCapabilitiesProperty.builder()
+ * .add(List.of("add"))
+ * .drop(List.of("drop"))
+ * .build())
+ * .devices(List.of(DeviceProperty.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * .permissions(List.of("permissions"))
+ * .build()))
+ * .initProcessEnabled(false)
+ * .maxSwap(123)
+ * .sharedMemorySize(123)
+ * .swappiness(123)
+ * .tmpfs(List.of(TmpfsProperty.builder()
+ * .size(123)
+ * // the properties below are optional
+ * .containerPath("containerPath")
+ * .mountOptions(List.of("mountOptions"))
+ * .build()))
+ * .build())
+ * .logConfiguration(LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * // the properties below are optional
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build())
+ * .memory(123)
+ * .memoryReservation(123)
+ * .mountPoints(List.of(MountPointProperty.builder()
+ * .containerPath("containerPath")
+ * .readOnly(false)
+ * .sourceVolume("sourceVolume")
+ * .build()))
+ * .portMappings(List.of(PortMappingProperty.builder()
+ * .appProtocol("appProtocol")
+ * .containerPort(123)
+ * .containerPortRange("containerPortRange")
+ * .hostPort(123)
+ * .name("name")
+ * .protocol("protocol")
+ * .build()))
+ * .privileged(false)
+ * .pseudoTerminal(false)
+ * .readonlyRootFilesystem(false)
+ * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+ * .credentialsParameter("credentialsParameter")
+ * .build())
+ * .resourceRequirements(List.of(ResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .secrets(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .startTimeout(123)
+ * .stopTimeout(123)
+ * .systemControls(List.of(SystemControlProperty.builder()
+ * .namespace("namespace")
+ * .value("value")
+ * .build()))
+ * .ulimits(List.of(UlimitProperty.builder()
+ * .hardLimit(123)
+ * .name("name")
+ * .softLimit(123)
+ * .build()))
+ * .user("user")
+ * .volumesFrom(List.of(VolumeFromProperty.builder()
+ * .readOnly(false)
+ * .sourceContainer("sourceContainer")
+ * .build()))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinition.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionContainerDefinitionPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.ContainerDefinitionProperty.Builder =

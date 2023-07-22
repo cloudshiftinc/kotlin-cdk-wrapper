@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devopsguru.CfnResourceCollection
 
+/**
+ * Information about a filter used to specify which AWS resources are analyzed for anomalous
+ * behavior by DevOps Guru.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devopsguru.*;
+ * ResourceCollectionFilterProperty resourceCollectionFilterProperty =
+ * ResourceCollectionFilterProperty.builder()
+ * .cloudFormation(CloudFormationCollectionFilterProperty.builder()
+ * .stackNames(List.of("stackNames"))
+ * .build())
+ * .tags(List.of(TagCollectionProperty.builder()
+ * .appBoundaryKey("appBoundaryKey")
+ * .tagValues(List.of("tagValues"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-resourcecollection-resourcecollectionfilter.html)
+ */
 @CdkDslMarker
 public class CfnResourceCollectionResourceCollectionFilterPropertyDsl {
   private val cdkBuilder: CfnResourceCollection.ResourceCollectionFilterProperty.Builder =

@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.workspaces.CfnConnectionAlias
 import software.constructs.Construct
 
+/**
+ * The `AWS::WorkSpaces::ConnectionAlias` resource specifies a connection alias.
+ *
+ * Connection aliases are used for cross-Region redirection. For more information, see [Cross-Region
+ * Redirection for Amazon
+ * WorkSpaces](https://docs.aws.amazon.com/workspaces/latest/adminguide/cross-region-redirection.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * CfnConnectionAlias cfnConnectionAlias = CfnConnectionAlias.Builder.create(this,
+ * "MyCfnConnectionAlias")
+ * .connectionString("connectionString")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-connectionalias.html)
+ */
 @CdkDslMarker
 public class CfnConnectionAliasDsl(
   scope: Construct,

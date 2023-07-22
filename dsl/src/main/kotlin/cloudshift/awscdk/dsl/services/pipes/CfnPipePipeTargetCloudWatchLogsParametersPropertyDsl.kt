@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using an CloudWatch Logs log stream as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetCloudWatchLogsParametersProperty pipeTargetCloudWatchLogsParametersProperty =
+ * PipeTargetCloudWatchLogsParametersProperty.builder()
+ * .logStreamName("logStreamName")
+ * .timestamp("timestamp")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetcloudwatchlogsparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetCloudWatchLogsParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetCloudWatchLogsParametersProperty.Builder =

@@ -7,6 +7,30 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition
 
+/**
+ * The conditions including range, object count, and threshold for the calculated attribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * ConditionsProperty conditionsProperty = ConditionsProperty.builder()
+ * .objectCount(123)
+ * .range(RangeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .threshold(ThresholdProperty.builder()
+ * .operator("operator")
+ * .value("value")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-calculatedattributedefinition-conditions.html)
+ */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionConditionsPropertyDsl {
   private val cdkBuilder: CfnCalculatedAttributeDefinition.ConditionsProperty.Builder =

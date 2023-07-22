@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * Information about notification triggers for the deployment group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * TriggerConfigProperty triggerConfigProperty = TriggerConfigProperty.builder()
+ * .triggerEvents(List.of("triggerEvents"))
+ * .triggerName("triggerName")
+ * .triggerTargetArn("triggerTargetArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupTriggerConfigPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.TriggerConfigProperty.Builder =

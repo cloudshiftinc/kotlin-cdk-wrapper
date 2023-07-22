@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.RotationSchedule
 import software.constructs.Construct
 
+/**
+ * A rotation schedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Function function_;
+ * HostedRotation hostedRotation;
+ * Secret secret;
+ * RotationSchedule rotationSchedule = RotationSchedule.Builder.create(this, "MyRotationSchedule")
+ * .secret(secret)
+ * // the properties below are optional
+ * .automaticallyAfter(Duration.minutes(30))
+ * .hostedRotation(hostedRotation)
+ * .rotateImmediatelyOnUpdate(false)
+ * .rotationLambda(function_)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RotationScheduleDsl(
   scope: Construct,

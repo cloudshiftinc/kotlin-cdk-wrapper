@@ -14,6 +14,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnFlowLogProps
 
+/**
+ * Properties for defining a `CfnFlowLog`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object destinationOptions;
+ * CfnFlowLogProps cfnFlowLogProps = CfnFlowLogProps.builder()
+ * .resourceId("resourceId")
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .deliverLogsPermissionArn("deliverLogsPermissionArn")
+ * .destinationOptions(destinationOptions)
+ * .logDestination("logDestination")
+ * .logDestinationType("logDestinationType")
+ * .logFormat("logFormat")
+ * .logGroupName("logGroupName")
+ * .maxAggregationInterval(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trafficType("trafficType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html)
+ */
 @CdkDslMarker
 public class CfnFlowLogPropsDsl {
   private val cdkBuilder: CfnFlowLogProps.Builder = CfnFlowLogProps.builder()

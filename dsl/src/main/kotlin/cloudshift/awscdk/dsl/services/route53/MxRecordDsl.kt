@@ -14,6 +14,31 @@ import software.amazon.awscdk.services.route53.MxRecord
 import software.amazon.awscdk.services.route53.MxRecordValue
 import software.constructs.Construct
 
+/**
+ * A DNS MX record.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * MxRecord mxRecord = MxRecord.Builder.create(this, "MyMxRecord")
+ * .values(List.of(MxRecordValue.builder()
+ * .hostName("hostName")
+ * .priority(123)
+ * .build()))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MxRecordDsl(
   scope: Construct,

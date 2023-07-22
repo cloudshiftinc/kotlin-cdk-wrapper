@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kendraranking.CfnExecutionPlan
 
+/**
+ * Sets additional capacity units configured for your rescore execution plan.
+ *
+ * A rescore execution plan is an Amazon Kendra Intelligent Ranking resource used for provisioning
+ * the `Rescore` API. You can add and remove capacity units to fit your usage requirements.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendraranking.*;
+ * CapacityUnitsConfigurationProperty capacityUnitsConfigurationProperty =
+ * CapacityUnitsConfigurationProperty.builder()
+ * .rescoreCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendraranking-executionplan-capacityunitsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnExecutionPlanCapacityUnitsConfigurationPropertyDsl {
   private val cdkBuilder: CfnExecutionPlan.CapacityUnitsConfigurationProperty.Builder =

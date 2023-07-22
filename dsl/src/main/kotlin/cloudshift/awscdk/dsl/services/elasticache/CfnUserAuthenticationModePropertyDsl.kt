@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticache.CfnUser
 
+/**
+ * Specifies the authentication mode to use.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * AuthenticationModeProperty authenticationModeProperty = AuthenticationModeProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .passwords(List.of("passwords"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html)
+ */
 @CdkDslMarker
 public class CfnUserAuthenticationModePropertyDsl {
   private val cdkBuilder: CfnUser.AuthenticationModeProperty.Builder =

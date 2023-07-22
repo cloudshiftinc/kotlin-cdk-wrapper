@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnGlobalClusterProps
 
+/**
+ * Properties for defining a `CfnGlobalCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnGlobalClusterProps cfnGlobalClusterProps = CfnGlobalClusterProps.builder()
+ * .deletionProtection(false)
+ * .engine("engine")
+ * .engineVersion("engineVersion")
+ * .globalClusterIdentifier("globalClusterIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .storageEncrypted(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html)
+ */
 @CdkDslMarker
 public class CfnGlobalClusterPropsDsl {
   private val cdkBuilder: CfnGlobalClusterProps.Builder = CfnGlobalClusterProps.builder()

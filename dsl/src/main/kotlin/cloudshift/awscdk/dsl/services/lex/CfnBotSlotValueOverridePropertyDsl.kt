@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * The slot values that Amazon Lex uses when it sets slot values in a dialog step.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotValueOverrideProperty slotValueOverrideProperty_;
+ * SlotValueOverrideProperty slotValueOverrideProperty = SlotValueOverrideProperty.builder()
+ * .shape("shape")
+ * .value(SlotValueProperty.builder()
+ * .interpretedValue("interpretedValue")
+ * .build())
+ * .values(List.of(slotValueOverrideProperty_))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotvalueoverride.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotValueOverridePropertyDsl {
   private val cdkBuilder: CfnBot.SlotValueOverrideProperty.Builder =

@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.cxapi.SecurityGroupContextResponse
 
+/**
+ * Properties of a discovered SecurityGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * SecurityGroupContextResponse securityGroupContextResponse =
+ * SecurityGroupContextResponse.builder()
+ * .allowAllOutbound(false)
+ * .securityGroupId("securityGroupId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecurityGroupContextResponseDsl {
   private val cdkBuilder: SecurityGroupContextResponse.Builder =

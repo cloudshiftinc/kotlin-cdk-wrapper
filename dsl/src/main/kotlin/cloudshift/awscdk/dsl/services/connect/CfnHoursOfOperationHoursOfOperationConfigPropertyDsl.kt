@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnHoursOfOperation
 
+/**
+ * Contains information about the hours of operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * HoursOfOperationConfigProperty hoursOfOperationConfigProperty =
+ * HoursOfOperationConfigProperty.builder()
+ * .day("day")
+ * .endTime(HoursOfOperationTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .startTime(HoursOfOperationTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationconfig.html)
+ */
 @CdkDslMarker
 public class CfnHoursOfOperationHoursOfOperationConfigPropertyDsl {
   private val cdkBuilder: CfnHoursOfOperation.HoursOfOperationConfigProperty.Builder =

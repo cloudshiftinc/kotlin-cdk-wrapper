@@ -13,6 +13,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnApp
 import software.constructs.Construct
 
+/**
+ * Creates an app for a specified stack. For more information, see [Creating
+ * Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html) .
+ *
+ * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
+ * the stack, or an attached policy that explicitly grants permissions. For more information on user
+ * permissions, see [Managing User
+ * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnApp cfnApp = CfnApp.Builder.create(this, "MyCfnApp")
+ * .name("name")
+ * .stackId("stackId")
+ * .type("type")
+ * // the properties below are optional
+ * .appSource(SourceProperty.builder()
+ * .password("password")
+ * .revision("revision")
+ * .sshKey("sshKey")
+ * .type("type")
+ * .url("url")
+ * .username("username")
+ * .build())
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .dataSources(List.of(DataSourceProperty.builder()
+ * .arn("arn")
+ * .databaseName("databaseName")
+ * .type("type")
+ * .build()))
+ * .description("description")
+ * .domains(List.of("domains"))
+ * .enableSsl(false)
+ * .environment(List.of(EnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .secure(false)
+ * .build()))
+ * .shortname("shortname")
+ * .sslConfiguration(SslConfigurationProperty.builder()
+ * .certificate("certificate")
+ * .chain("chain")
+ * .privateKey("privateKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html)
+ */
 @CdkDslMarker
 public class CfnAppDsl(
   scope: Construct,

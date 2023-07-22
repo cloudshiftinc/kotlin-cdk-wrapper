@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps
 
+/**
+ * Shared properties of both Application and Network Load Balancers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * BaseLoadBalancerProps baseLoadBalancerProps = BaseLoadBalancerProps.builder()
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .deletionProtection(false)
+ * .internetFacing(false)
+ * .loadBalancerName("loadBalancerName")
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseLoadBalancerPropsDsl {
   private val cdkBuilder: BaseLoadBalancerProps.Builder = BaseLoadBalancerProps.builder()

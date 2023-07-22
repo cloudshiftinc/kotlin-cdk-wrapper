@@ -10,6 +10,25 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.s3.BucketMetrics
 
+/**
+ * Specifies a metrics configuration for the CloudWatch request metrics from an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object tagFilters;
+ * BucketMetrics bucketMetrics = BucketMetrics.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .tagFilters(Map.of(
+ * "tagFiltersKey", tagFilters))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BucketMetricsDsl {
   private val cdkBuilder: BucketMetrics.Builder = BucketMetrics.builder()

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet
 
+/**
+ * The part of a web request that you want AWS WAF to inspect, such as a specific header or a query
+ * string.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * FieldToMatchProperty fieldToMatchProperty = FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sqlinjectionmatchset-fieldtomatch.html)
+ */
 @CdkDslMarker
 public class CfnSqlInjectionMatchSetFieldToMatchPropertyDsl {
   private val cdkBuilder: CfnSqlInjectionMatchSet.FieldToMatchProperty.Builder =

@@ -11,6 +11,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The Microsoft Windows configuration for the file system that's being created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * WindowsConfigurationProperty windowsConfigurationProperty =
+ * WindowsConfigurationProperty.builder()
+ * .throughputCapacity(123)
+ * // the properties below are optional
+ * .activeDirectoryId("activeDirectoryId")
+ * .aliases(List.of("aliases"))
+ * .auditLogConfiguration(AuditLogConfigurationProperty.builder()
+ * .fileAccessAuditLogLevel("fileAccessAuditLogLevel")
+ * .fileShareAccessAuditLogLevel("fileShareAccessAuditLogLevel")
+ * // the properties below are optional
+ * .auditLogDestination("auditLogDestination")
+ * .build())
+ * .automaticBackupRetentionDays(123)
+ * .copyTagsToBackups(false)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .deploymentType("deploymentType")
+ * .preferredSubnetId("preferredSubnetId")
+ * .selfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationProperty.builder()
+ * .dnsIps(List.of("dnsIps"))
+ * .domainName("domainName")
+ * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .password("password")
+ * .userName("userName")
+ * .build())
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-windowsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemWindowsConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.WindowsConfigurationProperty.Builder =

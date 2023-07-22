@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options that determine the presentation of histogram bins.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * HistogramBinOptionsProperty histogramBinOptionsProperty = HistogramBinOptionsProperty.builder()
+ * .binCount(BinCountOptionsProperty.builder()
+ * .value(123)
+ * .build())
+ * .binWidth(BinWidthOptionsProperty.builder()
+ * .binCountLimit(123)
+ * .value(123)
+ * .build())
+ * .selectedBinType("selectedBinType")
+ * .startValue(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-histogrambinoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardHistogramBinOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.HistogramBinOptionsProperty.Builder =

@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The target of a pivot table field collapse state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTableFieldCollapseStateTargetProperty pivotTableFieldCollapseStateTargetProperty =
+ * PivotTableFieldCollapseStateTargetProperty.builder()
+ * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * .fieldId("fieldId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-pivottablefieldcollapsestatetarget.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPivotTableFieldCollapseStateTargetPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotTableFieldCollapseStateTargetProperty.Builder =

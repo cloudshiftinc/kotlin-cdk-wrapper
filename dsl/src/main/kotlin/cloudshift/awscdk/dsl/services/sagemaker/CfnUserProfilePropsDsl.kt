@@ -13,6 +13,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 import software.amazon.awscdk.services.sagemaker.CfnUserProfileProps
 
+/**
+ * Properties for defining a `CfnUserProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnUserProfileProps cfnUserProfileProps = CfnUserProfileProps.builder()
+ * .domainId("domainId")
+ * .userProfileName("userProfileName")
+ * // the properties below are optional
+ * .singleSignOnUserIdentifier("singleSignOnUserIdentifier")
+ * .singleSignOnUserValue("singleSignOnUserValue")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userSettings(UserSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
+ * .accessStatus("accessStatus")
+ * .userGroup("userGroup")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .sharingSettings(SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html)
+ */
 @CdkDslMarker
 public class CfnUserProfilePropsDsl {
   private val cdkBuilder: CfnUserProfileProps.Builder = CfnUserProfileProps.builder()

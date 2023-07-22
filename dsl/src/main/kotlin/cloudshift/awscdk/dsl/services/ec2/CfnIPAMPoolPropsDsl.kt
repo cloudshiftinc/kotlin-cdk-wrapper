@@ -15,6 +15,45 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAMPoolProps
 
+/**
+ * Properties for defining a `CfnIPAMPool`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMPoolProps cfnIPAMPoolProps = CfnIPAMPoolProps.builder()
+ * .addressFamily("addressFamily")
+ * .ipamScopeId("ipamScopeId")
+ * // the properties below are optional
+ * .allocationDefaultNetmaskLength(123)
+ * .allocationMaxNetmaskLength(123)
+ * .allocationMinNetmaskLength(123)
+ * .allocationResourceTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .autoImport(false)
+ * .awsService("awsService")
+ * .description("description")
+ * .locale("locale")
+ * .provisionedCidrs(List.of(ProvisionedCidrProperty.builder()
+ * .cidr("cidr")
+ * .build()))
+ * .publicIpSource("publicIpSource")
+ * .publiclyAdvertisable(false)
+ * .sourceIpamPoolId("sourceIpamPoolId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampool.html)
+ */
 @CdkDslMarker
 public class CfnIPAMPoolPropsDsl {
   private val cdkBuilder: CfnIPAMPoolProps.Builder = CfnIPAMPoolProps.builder()

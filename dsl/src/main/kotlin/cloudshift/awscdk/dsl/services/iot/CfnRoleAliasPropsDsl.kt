@@ -12,6 +12,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnRoleAliasProps
 
+/**
+ * Properties for defining a `CfnRoleAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnRoleAliasProps cfnRoleAliasProps = CfnRoleAliasProps.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .credentialDurationSeconds(123)
+ * .roleAlias("roleAlias")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-rolealias.html)
+ */
 @CdkDslMarker
 public class CfnRoleAliasPropsDsl {
   private val cdkBuilder: CfnRoleAliasProps.Builder = CfnRoleAliasProps.builder()

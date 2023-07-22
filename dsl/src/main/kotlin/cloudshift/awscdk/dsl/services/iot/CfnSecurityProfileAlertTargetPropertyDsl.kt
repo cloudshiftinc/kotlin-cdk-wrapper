@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * A structure containing the alert target ARN and the role ARN.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AlertTargetProperty alertTargetProperty = AlertTargetProperty.builder()
+ * .alertTargetArn("alertTargetArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-alerttarget.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileAlertTargetPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.AlertTargetProperty.Builder =

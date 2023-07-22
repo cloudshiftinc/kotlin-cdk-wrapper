@@ -11,6 +11,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resiliencehub.CfnAppProps
 
+/**
+ * Properties for defining a `CfnApp`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * CfnAppProps cfnAppProps = CfnAppProps.builder()
+ * .appTemplateBody("appTemplateBody")
+ * .name("name")
+ * .resourceMappings(List.of(ResourceMappingProperty.builder()
+ * .mappingType("mappingType")
+ * .physicalResourceId(PhysicalResourceIdProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * // the properties below are optional
+ * .awsAccountId("awsAccountId")
+ * .awsRegion("awsRegion")
+ * .build())
+ * // the properties below are optional
+ * .eksSourceName("eksSourceName")
+ * .logicalStackName("logicalStackName")
+ * .resourceName("resourceName")
+ * .terraformSourceName("terraformSourceName")
+ * .build()))
+ * // the properties below are optional
+ * .appAssessmentSchedule("appAssessmentSchedule")
+ * .description("description")
+ * .resiliencyPolicyArn("resiliencyPolicyArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html)
+ */
 @CdkDslMarker
 public class CfnAppPropsDsl {
   private val cdkBuilder: CfnAppProps.Builder = CfnAppProps.builder()

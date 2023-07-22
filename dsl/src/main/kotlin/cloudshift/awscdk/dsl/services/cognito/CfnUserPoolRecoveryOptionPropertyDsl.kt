@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * A map containing a priority as a key, and recovery method name as a value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * RecoveryOptionProperty recoveryOptionProperty = RecoveryOptionProperty.builder()
+ * .name("name")
+ * .priority(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-recoveryoption.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolRecoveryOptionPropertyDsl {
   private val cdkBuilder: CfnUserPool.RecoveryOptionProperty.Builder =

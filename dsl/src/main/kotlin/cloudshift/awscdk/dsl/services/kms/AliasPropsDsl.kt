@@ -8,6 +8,31 @@ import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.kms.AliasProps
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Construction properties for a KMS Key Alias object.
+ *
+ * Example:
+ *
+ * ```
+ * // Passing an encrypted replication bucket created in a different stack.
+ * App app = new App();
+ * Stack replicationStack = Stack.Builder.create(app, "ReplicationStack")
+ * .env(Environment.builder()
+ * .region("us-west-1")
+ * .build())
+ * .build();
+ * Key key = new Key(replicationStack, "ReplicationKey");
+ * Alias alias = Alias.Builder.create(replicationStack, "ReplicationAlias")
+ * // aliasName is required
+ * .aliasName(PhysicalName.GENERATE_IF_NEEDED)
+ * .targetKey(key)
+ * .build();
+ * Bucket replicationBucket = Bucket.Builder.create(replicationStack, "ReplicationBucket")
+ * .bucketName(PhysicalName.GENERATE_IF_NEEDED)
+ * .encryptionKey(alias)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasPropsDsl {
   private val cdkBuilder: AliasProps.Builder = AliasProps.builder()

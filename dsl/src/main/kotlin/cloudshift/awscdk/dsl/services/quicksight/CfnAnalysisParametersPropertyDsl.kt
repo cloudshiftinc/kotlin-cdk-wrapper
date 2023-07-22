@@ -9,6 +9,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A list of Amazon QuickSight parameters and the list's override values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ParametersProperty parametersProperty = ParametersProperty.builder()
+ * .dateTimeParameters(List.of(DateTimeParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .decimalParameters(List.of(DecimalParameterProperty.builder()
+ * .name("name")
+ * .values(List.of(123))
+ * .build()))
+ * .integerParameters(List.of(IntegerParameterProperty.builder()
+ * .name("name")
+ * .values(List.of(123))
+ * .build()))
+ * .stringParameters(List.of(StringParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-parameters.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisParametersPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ParametersProperty.Builder =

@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A FieldFolder element is a folder that contains fields and nested subfolders.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FieldFolderProperty fieldFolderProperty = FieldFolderProperty.builder()
+ * .columns(List.of("columns"))
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-fieldfolder.html)
+ */
 @CdkDslMarker
 public class CfnDataSetFieldFolderPropertyDsl {
   private val cdkBuilder: CfnDataSet.FieldFolderProperty.Builder =

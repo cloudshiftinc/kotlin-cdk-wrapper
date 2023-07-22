@@ -10,6 +10,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * A structure that contains input information for a canary run.
+ *
+ * This structure is required.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * RunConfigProperty runConfigProperty = RunConfigProperty.builder()
+ * .activeTracing(false)
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
+ * .memoryInMb(123)
+ * .timeoutInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-runconfig.html)
+ */
 @CdkDslMarker
 public class CfnCanaryRunConfigPropertyDsl {
   private val cdkBuilder: CfnCanary.RunConfigProperty.Builder =

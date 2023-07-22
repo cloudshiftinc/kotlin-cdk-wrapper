@@ -12,6 +12,42 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnAgent
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::Agent` resource activates an AWS DataSync agent that you've deployed for
+ * storage discovery or data transfers.
+ *
+ * The activation process associates the agent with your AWS account .
+ *
+ * For more information, see the following topics in the *AWS DataSync User Guide* :
+ *
+ * * [DataSync agent
+ * requirements](https://docs.aws.amazon.com/datasync/latest/userguide/agent-requirements.html)
+ * * [DataSync network
+ * requirements](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-network.html)
+ * * [Create a DataSync
+ * agent](https://docs.aws.amazon.com/datasync/latest/userguide/configure-agent.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnAgent cfnAgent = CfnAgent.Builder.create(this, "MyCfnAgent")
+ * .activationKey("activationKey")
+ * .agentName("agentName")
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .subnetArns(List.of("subnetArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcEndpointId("vpcEndpointId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-agent.html)
+ */
 @CdkDslMarker
 public class CfnAgentDsl(
   scope: Construct,

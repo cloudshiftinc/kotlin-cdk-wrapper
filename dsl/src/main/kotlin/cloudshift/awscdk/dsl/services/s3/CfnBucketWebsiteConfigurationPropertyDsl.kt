@@ -10,6 +10,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies website configuration parameters for an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * WebsiteConfigurationProperty websiteConfigurationProperty =
+ * WebsiteConfigurationProperty.builder()
+ * .errorDocument("errorDocument")
+ * .indexDocument("indexDocument")
+ * .redirectAllRequestsTo(RedirectAllRequestsToProperty.builder()
+ * .hostName("hostName")
+ * // the properties below are optional
+ * .protocol("protocol")
+ * .build())
+ * .routingRules(List.of(RoutingRuleProperty.builder()
+ * .redirectRule(RedirectRuleProperty.builder()
+ * .hostName("hostName")
+ * .httpRedirectCode("httpRedirectCode")
+ * .protocol("protocol")
+ * .replaceKeyPrefixWith("replaceKeyPrefixWith")
+ * .replaceKeyWith("replaceKeyWith")
+ * .build())
+ * // the properties below are optional
+ * .routingRuleCondition(RoutingRuleConditionProperty.builder()
+ * .httpErrorCodeReturnedEquals("httpErrorCodeReturnedEquals")
+ * .keyPrefixEquals("keyPrefixEquals")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-websiteconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketWebsiteConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.WebsiteConfigurationProperty.Builder =

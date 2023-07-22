@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.connect.CfnIntegrationAssociation
 import software.constructs.Construct
 
+/**
+ * Specifies the association of an AWS resource such as Lex bot (both v1 and v2) and Lambda function
+ * with an Amazon Connect instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnIntegrationAssociation cfnIntegrationAssociation =
+ * CfnIntegrationAssociation.Builder.create(this, "MyCfnIntegrationAssociation")
+ * .instanceId("instanceId")
+ * .integrationArn("integrationArn")
+ * .integrationType("integrationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationAssociationDsl(
   scope: Construct,

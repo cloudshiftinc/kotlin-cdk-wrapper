@@ -15,6 +15,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 import software.amazon.awscdk.services.lex.CfnBotProps
 
+/**
+ * Properties for defining a `CfnBot`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-bot.html)
+ */
 @CdkDslMarker
 public class CfnBotPropsDsl {
   private val cdkBuilder: CfnBotProps.Builder = CfnBotProps.builder()

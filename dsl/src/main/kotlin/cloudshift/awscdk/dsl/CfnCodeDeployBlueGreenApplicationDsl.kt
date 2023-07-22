@@ -8,6 +8,41 @@ import software.amazon.awscdk.CfnCodeDeployBlueGreenApplication
 import software.amazon.awscdk.CfnCodeDeployBlueGreenApplicationTarget
 import software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes
 
+/**
+ * The application actually being deployed.
+ *
+ * Type of the `CfnCodeDeployBlueGreenHookProps.applications` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCodeDeployBlueGreenApplication cfnCodeDeployBlueGreenApplication =
+ * CfnCodeDeployBlueGreenApplication.builder()
+ * .ecsAttributes(CfnCodeDeployBlueGreenEcsAttributes.builder()
+ * .taskDefinitions(List.of("taskDefinitions"))
+ * .taskSets(List.of("taskSets"))
+ * .trafficRouting(CfnTrafficRouting.builder()
+ * .prodTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .targetGroups(List.of("targetGroups"))
+ * .testTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build())
+ * .build())
+ * .target(CfnCodeDeployBlueGreenApplicationTarget.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenApplicationDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenApplication.Builder =

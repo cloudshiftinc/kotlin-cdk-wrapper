@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnFeature
 
+/**
+ * This structure contains the name and variation value of one variation of a feature.
+ *
+ * It can contain only one of the following parameters: `BooleanValue` , `DoubleValue` , `LongValue`
+ * or `StringValue` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * VariationObjectProperty variationObjectProperty = VariationObjectProperty.builder()
+ * .variationName("variationName")
+ * // the properties below are optional
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .longValue(123)
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-feature-variationobject.html)
+ */
 @CdkDslMarker
 public class CfnFeatureVariationObjectPropertyDsl {
   private val cdkBuilder: CfnFeature.VariationObjectProperty.Builder =

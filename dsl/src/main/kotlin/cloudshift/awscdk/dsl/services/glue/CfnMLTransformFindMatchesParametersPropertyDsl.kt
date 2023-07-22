@@ -9,6 +9,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnMLTransform
 
+/**
+ * The parameters to configure the find matches transform.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * FindMatchesParametersProperty findMatchesParametersProperty =
+ * FindMatchesParametersProperty.builder()
+ * .primaryKeyColumnName("primaryKeyColumnName")
+ * // the properties below are optional
+ * .accuracyCostTradeoff(123)
+ * .enforceProvidedLabels(false)
+ * .precisionRecallTradeoff(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-findmatchesparameters.html)
+ */
 @CdkDslMarker
 public class CfnMLTransformFindMatchesParametersPropertyDsl {
   private val cdkBuilder: CfnMLTransform.FindMatchesParametersProperty.Builder =

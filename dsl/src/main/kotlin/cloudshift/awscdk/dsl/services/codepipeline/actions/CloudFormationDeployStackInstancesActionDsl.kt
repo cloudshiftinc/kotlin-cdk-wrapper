@@ -10,6 +10,50 @@ import software.amazon.awscdk.services.codepipeline.actions.StackInstances
 import software.amazon.awscdk.services.codepipeline.actions.StackSetParameters
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to create/update Stack Instances of a StackSet.
+ *
+ * After the initial creation of a stack set, you can add new stack instances by
+ * using CloudFormationStackInstances. Template parameter values can be
+ * overridden at the stack instance level during create or update stack set
+ * instance operations.
+ *
+ * Each stack set has one template and set of template parameters. When you
+ * update the template or template parameters, you update them for the entire
+ * set. Then all instance statuses are set to OUTDATED until the changes are
+ * deployed to that instance.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline pipeline;
+ * Artifact sourceOutput;
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("DeployStackSets")
+ * .actions(List.of(
+ * // First, update the StackSet itself with the newest template
+ * CloudFormationDeployStackSetAction.Builder.create()
+ * .actionName("UpdateStackSet")
+ * .runOrder(1)
+ * .stackSetName("MyStackSet")
+ * .template(StackSetTemplate.fromArtifactPath(sourceOutput.atPath("template.yaml")))
+ * // Change this to 'StackSetDeploymentModel.organizations()' if you want to deploy to OUs
+ * .deploymentModel(StackSetDeploymentModel.selfManaged())
+ * // This deploys to a set of accounts
+ * .stackInstances(StackInstances.inAccounts(List.of("111111111111"), List.of("us-east-1",
+ * "eu-west-1")))
+ * .build(),
+ * // Afterwards, update/create additional instances in other accounts
+ * CloudFormationDeployStackInstancesAction.Builder.create()
+ * .actionName("AddMoreInstances")
+ * .runOrder(2)
+ * .stackSetName("MyStackSet")
+ * .stackInstances(StackInstances.inAccounts(List.of("222222222222", "333333333333"),
+ * List.of("us-east-1", "eu-west-1")))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationDeployStackInstancesActionDsl {
   private val cdkBuilder: CloudFormationDeployStackInstancesAction.Builder =

@@ -14,6 +14,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnPrefixListProps
 
+/**
+ * Properties for defining a `CfnPrefixList`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnPrefixListProps cfnPrefixListProps = CfnPrefixListProps.builder()
+ * .addressFamily("addressFamily")
+ * .maxEntries(123)
+ * .prefixListName("prefixListName")
+ * // the properties below are optional
+ * .entries(List.of(EntryProperty.builder()
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html)
+ */
 @CdkDslMarker
 public class CfnPrefixListPropsDsl {
   private val cdkBuilder: CfnPrefixListProps.Builder = CfnPrefixListProps.builder()

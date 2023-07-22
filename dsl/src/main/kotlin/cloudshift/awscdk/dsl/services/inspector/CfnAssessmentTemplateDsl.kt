@@ -12,6 +12,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspector.CfnAssessmentTemplate
 import software.constructs.Construct
 
+/**
+ * The `AWS::Inspector::AssessmentTemplate` resource creates an Amazon Inspector assessment
+ * template, which specifies the Inspector assessment targets that will be evaluated by an assessment
+ * run and its related configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspector.*;
+ * CfnAssessmentTemplate cfnAssessmentTemplate = CfnAssessmentTemplate.Builder.create(this,
+ * "MyCfnAssessmentTemplate")
+ * .assessmentTargetArn("assessmentTargetArn")
+ * .durationInSeconds(123)
+ * .rulesPackageArns(List.of("rulesPackageArns"))
+ * // the properties below are optional
+ * .assessmentTemplateName("assessmentTemplateName")
+ * .userAttributesForFindings(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentTemplateDsl(
   scope: Construct,

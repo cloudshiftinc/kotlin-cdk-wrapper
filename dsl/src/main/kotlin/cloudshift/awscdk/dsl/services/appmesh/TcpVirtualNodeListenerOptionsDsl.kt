@@ -12,6 +12,49 @@ import software.amazon.awscdk.services.appmesh.TcpConnectionPool
 import software.amazon.awscdk.services.appmesh.TcpTimeout
 import software.amazon.awscdk.services.appmesh.TcpVirtualNodeListenerOptions
 
+/**
+ * Represent the TCP Node Listener property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HealthCheck healthCheck;
+ * MutualTlsValidationTrust mutualTlsValidationTrust;
+ * SubjectAlternativeNames subjectAlternativeNames;
+ * TlsCertificate tlsCertificate;
+ * TcpVirtualNodeListenerOptions tcpVirtualNodeListenerOptions =
+ * TcpVirtualNodeListenerOptions.builder()
+ * .connectionPool(TcpConnectionPool.builder()
+ * .maxConnections(123)
+ * .build())
+ * .healthCheck(healthCheck)
+ * .outlierDetection(OutlierDetection.builder()
+ * .baseEjectionDuration(Duration.minutes(30))
+ * .interval(Duration.minutes(30))
+ * .maxEjectionPercent(123)
+ * .maxServerErrors(123)
+ * .build())
+ * .port(123)
+ * .timeout(TcpTimeout.builder()
+ * .idle(Duration.minutes(30))
+ * .build())
+ * .tls(ListenerTlsOptions.builder()
+ * .certificate(tlsCertificate)
+ * .mode(TlsMode.STRICT)
+ * // the properties below are optional
+ * .mutualTlsValidation(MutualTlsValidation.builder()
+ * .trust(mutualTlsValidationTrust)
+ * // the properties below are optional
+ * .subjectAlternativeNames(subjectAlternativeNames)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TcpVirtualNodeListenerOptionsDsl {
   private val cdkBuilder: TcpVirtualNodeListenerOptions.Builder =

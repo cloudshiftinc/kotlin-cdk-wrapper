@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptFilter
 
+/**
+ * A receipt IP address filter enables you to specify whether to accept or reject mail originating
+ * from an IP address or range of IP addresses.
+ *
+ * For information about setting up IP address filters, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-ip-filtering-console-walkthrough.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * IpFilterProperty ipFilterProperty = IpFilterProperty.builder()
+ * .cidr("cidr")
+ * .policy("policy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-ipfilter.html)
+ */
 @CdkDslMarker
 public class CfnReceiptFilterIpFilterPropertyDsl {
   private val cdkBuilder: CfnReceiptFilter.IpFilterProperty.Builder =

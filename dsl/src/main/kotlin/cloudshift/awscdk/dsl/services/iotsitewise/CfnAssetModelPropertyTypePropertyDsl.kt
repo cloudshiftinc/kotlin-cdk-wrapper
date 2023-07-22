@@ -7,6 +7,56 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains a property type, which can be one of `Attribute` , `Measurement` , `Metric` , or
+ * `Transform` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * PropertyTypeProperty propertyTypeProperty = PropertyTypeProperty.builder()
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .attribute(AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build())
+ * .metric(MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build())
+ * .transform(TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-propertytype.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelPropertyTypePropertyDsl {
   private val cdkBuilder: CfnAssetModel.PropertyTypeProperty.Builder =

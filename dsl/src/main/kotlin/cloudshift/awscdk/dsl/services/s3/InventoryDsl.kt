@@ -14,6 +14,36 @@ import software.amazon.awscdk.services.s3.InventoryFormat
 import software.amazon.awscdk.services.s3.InventoryFrequency
 import software.amazon.awscdk.services.s3.InventoryObjectVersion
 
+/**
+ * Specifies the inventory configuration of an S3 Bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * Inventory inventory = Inventory.builder()
+ * .destination(InventoryDestination.builder()
+ * .bucket(bucket)
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .enabled(false)
+ * .format(InventoryFormat.CSV)
+ * .frequency(InventoryFrequency.DAILY)
+ * .includeObjectVersions(InventoryObjectVersion.ALL)
+ * .inventoryId("inventoryId")
+ * .objectsPrefix("objectsPrefix")
+ * .optionalFields(List.of("optionalFields"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-inventory.html)
+ */
 @CdkDslMarker
 public class InventoryDsl {
   private val cdkBuilder: Inventory.Builder = Inventory.builder()

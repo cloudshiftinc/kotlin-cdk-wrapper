@@ -13,6 +13,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnServer
 import software.amazon.awscdk.services.transfer.CfnServerProps
 
+/**
+ * Properties for defining a `CfnServer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnServerProps cfnServerProps = CfnServerProps.builder()
+ * .certificate("certificate")
+ * .domain("domain")
+ * .endpointDetails(EndpointDetailsProperty.builder()
+ * .addressAllocationIds(List.of("addressAllocationIds"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build())
+ * .endpointType("endpointType")
+ * .identityProviderDetails(IdentityProviderDetailsProperty.builder()
+ * .directoryId("directoryId")
+ * .function("function")
+ * .invocationRole("invocationRole")
+ * .sftpAuthenticationMethods("sftpAuthenticationMethods")
+ * .url("url")
+ * .build())
+ * .identityProviderType("identityProviderType")
+ * .loggingRole("loggingRole")
+ * .postAuthenticationLoginBanner("postAuthenticationLoginBanner")
+ * .preAuthenticationLoginBanner("preAuthenticationLoginBanner")
+ * .protocolDetails(ProtocolDetailsProperty.builder()
+ * .as2Transports(List.of("as2Transports"))
+ * .passiveIp("passiveIp")
+ * .setStatOption("setStatOption")
+ * .tlsSessionResumptionMode("tlsSessionResumptionMode")
+ * .build())
+ * .protocols(List.of("protocols"))
+ * .securityPolicyName("securityPolicyName")
+ * .structuredLogDestinations(List.of("structuredLogDestinations"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workflowDetails(WorkflowDetailsProperty.builder()
+ * .onPartialUpload(List.of(WorkflowDetailProperty.builder()
+ * .executionRole("executionRole")
+ * .workflowId("workflowId")
+ * .build()))
+ * .onUpload(List.of(WorkflowDetailProperty.builder()
+ * .executionRole("executionRole")
+ * .workflowId("workflowId")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html)
+ */
 @CdkDslMarker
 public class CfnServerPropsDsl {
   private val cdkBuilder: CfnServerProps.Builder = CfnServerProps.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Represents the overall status of a model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelPackageStatusItemProperty modelPackageStatusItemProperty =
+ * ModelPackageStatusItemProperty.builder()
+ * .name("name")
+ * .status("status")
+ * // the properties below are optional
+ * .failureReason("failureReason")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-modelpackagestatusitem.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageModelPackageStatusItemPropertyDsl {
   private val cdkBuilder: CfnModelPackage.ModelPackageStatusItemProperty.Builder =

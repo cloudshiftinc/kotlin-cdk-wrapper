@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnRuleset
 
+/**
+ * The threshold used with a non-aggregate check expression.
+ *
+ * The non-aggregate check expression will be applied to each row in a specific column. Then the
+ * threshold will be used to determine whether the validation succeeds.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ThresholdProperty thresholdProperty = ThresholdProperty.builder()
+ * .value(123)
+ * // the properties below are optional
+ * .type("type")
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-threshold.html)
+ */
 @CdkDslMarker
 public class CfnRulesetThresholdPropertyDsl {
   private val cdkBuilder: CfnRuleset.ThresholdProperty.Builder =

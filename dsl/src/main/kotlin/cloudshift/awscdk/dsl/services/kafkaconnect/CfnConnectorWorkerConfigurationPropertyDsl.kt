@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * The configuration of the workers, which are the processes that run the connector logic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
+ * .revision(123)
+ * .workerConfigurationArn("workerConfigurationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-workerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnConnectorWorkerConfigurationPropertyDsl {
   private val cdkBuilder: CfnConnector.WorkerConfigurationProperty.Builder =

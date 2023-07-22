@@ -8,6 +8,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration of a `RadarChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-radarchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardRadarChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.RadarChartConfigurationProperty.Builder =

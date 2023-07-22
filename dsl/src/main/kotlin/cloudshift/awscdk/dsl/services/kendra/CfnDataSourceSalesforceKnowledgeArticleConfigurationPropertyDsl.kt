@@ -10,6 +10,51 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for the knowledge article types that Amazon Kendra
+ * indexes.
+ *
+ * Amazon Kendra indexes standard knowledge articles and the standard fields of knowledge articles,
+ * or the custom fields of custom knowledge articles, but not both
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SalesforceKnowledgeArticleConfigurationProperty salesforceKnowledgeArticleConfigurationProperty =
+ * SalesforceKnowledgeArticleConfigurationProperty.builder()
+ * .includedStates(List.of("includedStates"))
+ * // the properties below are optional
+ * .customKnowledgeArticleTypeConfigurations(List.of(SalesforceCustomKnowledgeArticleTypeConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * .name("name")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build()))
+ * .standardKnowledgeArticleTypeConfiguration(SalesforceStandardKnowledgeArticleTypeConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceknowledgearticleconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSalesforceKnowledgeArticleConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SalesforceKnowledgeArticleConfigurationProperty.Builder =

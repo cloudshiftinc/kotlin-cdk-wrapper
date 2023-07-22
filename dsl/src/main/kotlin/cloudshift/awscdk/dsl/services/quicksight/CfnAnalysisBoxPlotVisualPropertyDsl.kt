@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A box plot.
+ *
+ * For more information, see [Using box
+ * plots](https://docs.aws.amazon.com/quicksight/latest/user/box-plots.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-boxplotvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisBoxPlotVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.BoxPlotVisualProperty.Builder =

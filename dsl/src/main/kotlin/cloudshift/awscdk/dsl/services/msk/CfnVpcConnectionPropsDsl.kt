@@ -9,6 +9,29 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.msk.CfnVpcConnectionProps
 
+/**
+ * Properties for defining a `CfnVpcConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnVpcConnectionProps cfnVpcConnectionProps = CfnVpcConnectionProps.builder()
+ * .authentication("authentication")
+ * .clientSubnets(List.of("clientSubnets"))
+ * .securityGroups(List.of("securityGroups"))
+ * .targetClusterArn("targetClusterArn")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-vpcconnection.html)
+ */
 @CdkDslMarker
 public class CfnVpcConnectionPropsDsl {
   private val cdkBuilder: CfnVpcConnectionProps.Builder = CfnVpcConnectionProps.builder()

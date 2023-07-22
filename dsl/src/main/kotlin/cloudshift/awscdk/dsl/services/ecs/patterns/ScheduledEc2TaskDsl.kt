@@ -23,6 +23,27 @@ import software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions
 import software.amazon.awscdk.services.events.targets.Tag
 import software.constructs.Construct
 
+/**
+ * A scheduled EC2 task that will be initiated off of CloudWatch Events.
+ *
+ * Example:
+ *
+ * ```
+ * // Instantiate an Amazon EC2 Task to run at a scheduled interval
+ * Cluster cluster;
+ * ScheduledEc2Task ecsScheduledTask = ScheduledEc2Task.Builder.create(this, "ScheduledTask")
+ * .cluster(cluster)
+ * .scheduledEc2TaskImageOptions(ScheduledEc2TaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(256)
+ * .environment(Map.of("name", "TRIGGER", "value", "CloudWatch Events"))
+ * .build())
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .enabled(true)
+ * .ruleName("sample-scheduled-task-rule")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledEc2TaskDsl(
   scope: Construct,

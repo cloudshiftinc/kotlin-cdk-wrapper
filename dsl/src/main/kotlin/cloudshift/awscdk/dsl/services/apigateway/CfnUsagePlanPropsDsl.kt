@@ -14,6 +14,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnUsagePlan
 import software.amazon.awscdk.services.apigateway.CfnUsagePlanProps
 
+/**
+ * Properties for defining a `CfnUsagePlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnUsagePlanProps cfnUsagePlanProps = CfnUsagePlanProps.builder()
+ * .apiStages(List.of(ApiStageProperty.builder()
+ * .apiId("apiId")
+ * .stage("stage")
+ * .throttle(Map.of(
+ * "throttleKey", ThrottleSettingsProperty.builder()
+ * .burstLimit(123)
+ * .rateLimit(123)
+ * .build()))
+ * .build()))
+ * .description("description")
+ * .quota(QuotaSettingsProperty.builder()
+ * .limit(123)
+ * .offset(123)
+ * .period("period")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .throttle(ThrottleSettingsProperty.builder()
+ * .burstLimit(123)
+ * .rateLimit(123)
+ * .build())
+ * .usagePlanName("usagePlanName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanPropsDsl {
   private val cdkBuilder: CfnUsagePlanProps.Builder = CfnUsagePlanProps.builder()

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.customerprofiles.CfnObjectType
 
+/**
+ * An object that defines the Key element of a ProfileObject.
+ *
+ * A Key is a special element that can be used to search for a customer profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * ObjectTypeKeyProperty objectTypeKeyProperty = ObjectTypeKeyProperty.builder()
+ * .fieldNames(List.of("fieldNames"))
+ * .standardIdentifiers(List.of("standardIdentifiers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-objecttypekey.html)
+ */
 @CdkDslMarker
 public class CfnObjectTypeObjectTypeKeyPropertyDsl {
   private val cdkBuilder: CfnObjectType.ObjectTypeKeyProperty.Builder =

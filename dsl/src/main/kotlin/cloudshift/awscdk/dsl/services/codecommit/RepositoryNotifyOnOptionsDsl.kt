@@ -11,6 +11,25 @@ import software.amazon.awscdk.services.codecommit.RepositoryNotificationEvents
 import software.amazon.awscdk.services.codecommit.RepositoryNotifyOnOptions
 import software.amazon.awscdk.services.codestarnotifications.DetailType
 
+/**
+ * Additional options to pass to the notification rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * RepositoryNotifyOnOptions repositoryNotifyOnOptions = RepositoryNotifyOnOptions.builder()
+ * .events(List.of(RepositoryNotificationEvents.COMMIT_COMMENT))
+ * // the properties below are optional
+ * .detailType(DetailType.BASIC)
+ * .enabled(false)
+ * .notificationRuleName("notificationRuleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryNotifyOnOptionsDsl {
   private val cdkBuilder: RepositoryNotifyOnOptions.Builder = RepositoryNotifyOnOptions.builder()

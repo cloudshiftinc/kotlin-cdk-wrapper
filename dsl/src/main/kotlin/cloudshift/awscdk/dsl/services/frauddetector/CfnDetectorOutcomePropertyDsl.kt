@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.frauddetector.CfnDetector
 
+/**
+ * The outcome.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * OutcomeProperty outcomeProperty = OutcomeProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .description("description")
+ * .inline(false)
+ * .lastUpdatedTime("lastUpdatedTime")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-detector-outcome.html)
+ */
 @CdkDslMarker
 public class CfnDetectorOutcomePropertyDsl {
   private val cdkBuilder: CfnDetector.OutcomeProperty.Builder =

@@ -12,6 +12,38 @@ import software.amazon.awscdk.services.stepfunctions.tasks.InputMode
 import software.amazon.awscdk.services.stepfunctions.tasks.RecordWrapperType
 import software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
 
+/**
+ * Describes the training, validation or test dataset and the Amazon S3 location where it is stored.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * S3Location s3Location;
+ * Channel channel = Channel.builder()
+ * .channelName("channelName")
+ * .dataSource(DataSource.builder()
+ * .s3DataSource(S3DataSource.builder()
+ * .s3Location(s3Location)
+ * // the properties below are optional
+ * .attributeNames(List.of("attributeNames"))
+ * .s3DataDistributionType(S3DataDistributionType.FULLY_REPLICATED)
+ * .s3DataType(S3DataType.MANIFEST_FILE)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .compressionType(CompressionType.NONE)
+ * .contentType("contentType")
+ * .inputMode(InputMode.PIPE)
+ * .recordWrapperType(RecordWrapperType.NONE)
+ * .shuffleConfig(ShuffleConfig.builder()
+ * .seed(123)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ChannelDsl {
   private val cdkBuilder: Channel.Builder = Channel.builder()

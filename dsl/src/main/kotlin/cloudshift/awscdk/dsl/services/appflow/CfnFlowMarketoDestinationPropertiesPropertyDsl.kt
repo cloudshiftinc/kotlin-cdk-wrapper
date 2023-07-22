@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that Amazon AppFlow applies when you use Marketo as a flow destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * MarketoDestinationPropertiesProperty marketoDestinationPropertiesProperty =
+ * MarketoDestinationPropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .failOnFirstError(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-marketodestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowMarketoDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.MarketoDestinationPropertiesProperty.Builder =

@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnNetworkPerformanceMetricSubscription
 import software.constructs.Construct
 
+/**
+ * Describes Infrastructure Performance subscriptions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkPerformanceMetricSubscription cfnNetworkPerformanceMetricSubscription =
+ * CfnNetworkPerformanceMetricSubscription.Builder.create(this,
+ * "MyCfnNetworkPerformanceMetricSubscription")
+ * .destination("destination")
+ * .metric("metric")
+ * .source("source")
+ * .statistic("statistic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkperformancemetricsubscription.html)
+ */
 @CdkDslMarker
 public class CfnNetworkPerformanceMetricSubscriptionDsl(
   scope: Construct,

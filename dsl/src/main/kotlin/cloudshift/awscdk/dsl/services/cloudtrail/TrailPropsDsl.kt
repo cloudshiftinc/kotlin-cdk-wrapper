@@ -16,6 +16,18 @@ import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Properties for an AWS CloudTrail trail.
+ *
+ * Example:
+ *
+ * ```
+ * Trail trail = Trail.Builder.create(this, "CloudTrail")
+ * // ...
+ * .managementEvents(ReadWriteType.READ_ONLY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TrailPropsDsl {
   private val cdkBuilder: TrailProps.Builder = TrailProps.builder()

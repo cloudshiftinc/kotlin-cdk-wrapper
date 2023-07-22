@@ -11,6 +11,25 @@ import software.amazon.awscdk.services.codepipeline.PipelineNotificationEvents
 import software.amazon.awscdk.services.codepipeline.PipelineNotifyOnOptions
 import software.amazon.awscdk.services.codestarnotifications.DetailType
 
+/**
+ * Additional options to pass to the notification rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * PipelineNotifyOnOptions pipelineNotifyOnOptions = PipelineNotifyOnOptions.builder()
+ * .events(List.of(PipelineNotificationEvents.PIPELINE_EXECUTION_FAILED))
+ * // the properties below are optional
+ * .detailType(DetailType.BASIC)
+ * .enabled(false)
+ * .notificationRuleName("notificationRuleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PipelineNotifyOnOptionsDsl {
   private val cdkBuilder: PipelineNotifyOnOptions.Builder = PipelineNotifyOnOptions.builder()

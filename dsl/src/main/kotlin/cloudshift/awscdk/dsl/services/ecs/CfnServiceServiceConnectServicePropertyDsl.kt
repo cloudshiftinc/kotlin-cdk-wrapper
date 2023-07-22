@@ -11,6 +11,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The Service Connect service object configuration.
+ *
+ * For more information, see [Service
+ * Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceConnectServiceProperty serviceConnectServiceProperty =
+ * ServiceConnectServiceProperty.builder()
+ * .portName("portName")
+ * // the properties below are optional
+ * .clientAliases(List.of(ServiceConnectClientAliasProperty.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .dnsName("dnsName")
+ * .build()))
+ * .discoveryName("discoveryName")
+ * .ingressPortOverride(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectservice.html)
+ */
 @CdkDslMarker
 public class CfnServiceServiceConnectServicePropertyDsl {
   private val cdkBuilder: CfnService.ServiceConnectServiceProperty.Builder =

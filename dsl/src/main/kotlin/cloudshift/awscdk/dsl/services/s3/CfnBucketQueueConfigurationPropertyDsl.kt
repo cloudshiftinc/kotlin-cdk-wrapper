@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the configuration for publishing messages to an Amazon Simple Queue Service (Amazon
+ * SQS) queue when Amazon S3 detects specified events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * QueueConfigurationProperty queueConfigurationProperty = QueueConfigurationProperty.builder()
+ * .event("event")
+ * .queue("queue")
+ * // the properties below are optional
+ * .filter(NotificationFilterProperty.builder()
+ * .s3Key(S3KeyFilterProperty.builder()
+ * .rules(List.of(FilterRuleProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-queueconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketQueueConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.QueueConfigurationProperty.Builder =

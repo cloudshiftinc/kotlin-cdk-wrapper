@@ -7,6 +7,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 
+/**
+ * A structure that contains value information. For more information, see
+ * [AssetPropertyValue](https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_AssetPropertyValue.html)
+ * in the *AWS IoT SiteWise API Reference* .
+ *
+ * You must use expressions for all parameters in `AssetPropertyValue` . The expressions accept
+ * literals, operators, functions, references, and substitution templates.
+ *
+ * **Examples** - For literal values, the expressions must contain single quotes. For example, the
+ * value for the `quality` parameter can be `'GOOD'` .
+ *
+ * * For references, you must specify either variables or input values. For example, the value for
+ * the `quality` parameter can be `$input.TemperatureInput.sensorData.quality` .
+ *
+ * For more information, see
+ * [Expressions](https://docs.aws.amazon.com/iotevents/latest/developerguide/iotevents-expressions.html)
+ * in the *AWS IoT Events Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * AssetPropertyValueProperty assetPropertyValueProperty = AssetPropertyValueProperty.builder()
+ * .value(AssetPropertyVariantProperty.builder()
+ * .booleanValue("booleanValue")
+ * .doubleValue("doubleValue")
+ * .integerValue("integerValue")
+ * .stringValue("stringValue")
+ * .build())
+ * // the properties below are optional
+ * .quality("quality")
+ * .timestamp(AssetPropertyTimestampProperty.builder()
+ * .timeInSeconds("timeInSeconds")
+ * // the properties below are optional
+ * .offsetInNanos("offsetInNanos")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-assetpropertyvalue.html)
+ */
 @CdkDslMarker
 public class CfnDetectorModelAssetPropertyValuePropertyDsl {
   private val cdkBuilder: CfnDetectorModel.AssetPropertyValueProperty.Builder =

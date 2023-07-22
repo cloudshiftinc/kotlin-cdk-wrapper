@@ -14,6 +14,48 @@ import software.amazon.awscdk.services.appmesh.VirtualGateway
 import software.amazon.awscdk.services.appmesh.VirtualGatewayListener
 import software.constructs.Construct
 
+/**
+ * VirtualGateway represents a newly defined App Mesh Virtual Gateway.
+ *
+ * A virtual gateway allows resources that are outside of your mesh to communicate to resources that
+ * are inside of your mesh.
+ *
+ * Example:
+ *
+ * ```
+ * // A Virtual Node with a gRPC listener with a connection pool set
+ * Mesh mesh;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * // DNS service discovery can optionally specify the DNS response type as either LOAD_BALANCER or
+ * ENDPOINTS.
+ * // LOAD_BALANCER means that the DNS resolver returns a loadbalanced set of endpoints,
+ * // whereas ENDPOINTS means that the DNS resolver is returning all the endpoints.
+ * // By default, the response type is assumed to be LOAD_BALANCER
+ * .serviceDiscovery(ServiceDiscovery.dns("node", DnsResponseType.ENDPOINTS))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(80)
+ * .connectionPool(HttpConnectionPool.builder()
+ * .maxConnections(100)
+ * .maxPendingRequests(10)
+ * .build())
+ * .build())))
+ * .build();
+ * // A Virtual Gateway with a gRPC listener with a connection pool set
+ * VirtualGateway gateway = VirtualGateway.Builder.create(this, "gateway")
+ * .mesh(mesh)
+ * .listeners(List.of(VirtualGatewayListener.grpc(GrpcGatewayListenerOptions.builder()
+ * .port(8080)
+ * .connectionPool(GrpcConnectionPool.builder()
+ * .maxRequests(10)
+ * .build())
+ * .build())))
+ * .virtualGatewayName("gateway")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_gateways.html)
+ */
 @CdkDslMarker
 public class VirtualGatewayDsl(
   scope: Construct,

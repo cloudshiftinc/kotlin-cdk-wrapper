@@ -10,6 +10,33 @@ import software.amazon.awscdk.services.lambda.FunctionUrlProps
 import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.lambda.InvokeMode
 
+/**
+ * Properties for a FunctionUrl.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function function_;
+ * FunctionUrlProps functionUrlProps = FunctionUrlProps.builder()
+ * .function(function_)
+ * // the properties below are optional
+ * .authType(FunctionUrlAuthType.AWS_IAM)
+ * .cors(FunctionUrlCorsOptions.builder()
+ * .allowCredentials(false)
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .allowedMethods(List.of(HttpMethod.GET))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * .exposedHeaders(List.of("exposedHeaders"))
+ * .maxAge(Duration.minutes(30))
+ * .build())
+ * .invokeMode(InvokeMode.BUFFERED)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionUrlPropsDsl {
   private val cdkBuilder: FunctionUrlProps.Builder = FunctionUrlProps.builder()

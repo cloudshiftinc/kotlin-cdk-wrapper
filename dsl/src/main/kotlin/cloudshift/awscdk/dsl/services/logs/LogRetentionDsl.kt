@@ -12,6 +12,37 @@ import software.amazon.awscdk.services.logs.LogRetentionRetryOptions
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
+/**
+ * Creates a custom resource to control the retention policy of a CloudWatch Logs log group.
+ *
+ * The log group is created if it doesn't already exist. The policy
+ * is removed when `retentionDays` is `undefined` or equal to `Infinity`.
+ * Log group can be created in the region that is different from stack region by
+ * specifying `logGroupRegion`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * Role role;
+ * LogRetention logRetention = LogRetention.Builder.create(this, "MyLogRetention")
+ * .logGroupName("logGroupName")
+ * .retention(RetentionDays.ONE_DAY)
+ * // the properties below are optional
+ * .logGroupRegion("logGroupRegion")
+ * .logRetentionRetryOptions(LogRetentionRetryOptions.builder()
+ * .base(Duration.minutes(30))
+ * .maxRetries(123)
+ * .build())
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogRetentionDsl(
   scope: Construct,

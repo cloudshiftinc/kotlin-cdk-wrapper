@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.TagManagerOptions
 
+/**
+ * Options to configure TagManager behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * TagManagerOptions tagManagerOptions = TagManagerOptions.builder()
+ * .tagPropertyName("tagPropertyName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TagManagerOptionsDsl {
   private val cdkBuilder: TagManagerOptions.Builder = TagManagerOptions.builder()

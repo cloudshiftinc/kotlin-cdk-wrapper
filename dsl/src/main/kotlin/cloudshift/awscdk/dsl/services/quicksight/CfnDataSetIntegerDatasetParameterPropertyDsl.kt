@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A parameter created in the dataset of integer data type.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * IntegerDatasetParameterProperty integerDatasetParameterProperty =
+ * IntegerDatasetParameterProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .valueType("valueType")
+ * // the properties below are optional
+ * .defaultValues(IntegerDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of(123))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-integerdatasetparameter.html)
+ */
 @CdkDslMarker
 public class CfnDataSetIntegerDatasetParameterPropertyDsl {
   private val cdkBuilder: CfnDataSet.IntegerDatasetParameterProperty.Builder =

@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 
+/**
+ * Options for enabling a customizable text banner that will be displayed on AWS provided clients
+ * when a VPN session is established.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientLoginBannerOptionsProperty clientLoginBannerOptionsProperty =
+ * ClientLoginBannerOptionsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bannerText("bannerText")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientloginbanneroptions.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnEndpointClientLoginBannerOptionsPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty.Builder =

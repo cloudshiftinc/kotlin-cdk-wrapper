@@ -12,6 +12,34 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnWorkflowProps
 
+/**
+ * Properties for defining a `CfnWorkflow`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * CfnWorkflowProps cfnWorkflowProps = CfnWorkflowProps.builder()
+ * .definitionUri("definitionUri")
+ * .description("description")
+ * .engine("engine")
+ * .main("main")
+ * .name("name")
+ * .parameterTemplate(Map.of(
+ * "parameterTemplateKey", WorkflowParameterProperty.builder()
+ * .description("description")
+ * .optional(false)
+ * .build()))
+ * .storageCapacity(123)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowPropsDsl {
   private val cdkBuilder: CfnWorkflowProps.Builder = CfnWorkflowProps.builder()

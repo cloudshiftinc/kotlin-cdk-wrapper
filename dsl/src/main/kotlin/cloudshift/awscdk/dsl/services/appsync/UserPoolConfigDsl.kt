@@ -8,6 +8,25 @@ import software.amazon.awscdk.services.appsync.UserPoolConfig
 import software.amazon.awscdk.services.appsync.UserPoolDefaultAction
 import software.amazon.awscdk.services.cognito.IUserPool
 
+/**
+ * Configuration for Cognito user-pools in AppSync.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.cognito.*;
+ * UserPool userPool;
+ * UserPoolConfig userPoolConfig = UserPoolConfig.builder()
+ * .userPool(userPool)
+ * // the properties below are optional
+ * .appIdClientRegex("appIdClientRegex")
+ * .defaultAction(UserPoolDefaultAction.ALLOW)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolConfigDsl {
   private val cdkBuilder: UserPoolConfig.Builder = UserPoolConfig.builder()

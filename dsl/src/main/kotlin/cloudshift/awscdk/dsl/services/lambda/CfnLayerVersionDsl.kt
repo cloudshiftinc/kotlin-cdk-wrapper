@@ -10,6 +10,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnLayerVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::LayerVersion` resource creates a [Lambda
+ * layer](https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html) from a ZIP archive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnLayerVersion cfnLayerVersion = CfnLayerVersion.Builder.create(this, "MyCfnLayerVersion")
+ * .content(ContentProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * // the properties below are optional
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .build())
+ * // the properties below are optional
+ * .compatibleArchitectures(List.of("compatibleArchitectures"))
+ * .compatibleRuntimes(List.of("compatibleRuntimes"))
+ * .description("description")
+ * .layerName("layerName")
+ * .licenseInfo("licenseInfo")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversion.html)
+ */
 @CdkDslMarker
 public class CfnLayerVersionDsl(
   scope: Construct,

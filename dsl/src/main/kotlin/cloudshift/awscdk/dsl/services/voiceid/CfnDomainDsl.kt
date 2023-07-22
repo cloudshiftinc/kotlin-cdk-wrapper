@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.voiceid.CfnDomain
 import software.constructs.Construct
 
+/**
+ * Creates a domain that contains all Amazon Connect Voice ID data, such as speakers, fraudsters,
+ * customer audio, and voiceprints.
+ *
+ * Every domain is created with a default watchlist that fraudsters can be a part of.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.voiceid.*;
+ * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+ * .name("name")
+ * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-voiceid-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainDsl(
   scope: Construct,

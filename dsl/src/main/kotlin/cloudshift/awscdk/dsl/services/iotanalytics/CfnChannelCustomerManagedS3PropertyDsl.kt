@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnChannel
 
+/**
+ * Used to store channel data in an S3 bucket that you manage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * CustomerManagedS3Property customerManagedS3Property = CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-customermanageds3.html)
+ */
 @CdkDslMarker
 public class CfnChannelCustomerManagedS3PropertyDsl {
   private val cdkBuilder: CfnChannel.CustomerManagedS3Property.Builder =

@@ -11,6 +11,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A version of a template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TemplateVersionProperty templateVersionProperty = TemplateVersionProperty.builder()
+ * .createdTime("createdTime")
+ * .dataSetConfigurations(List.of(DataSetConfigurationProperty.builder()
+ * .columnGroupSchemaList(List.of(ColumnGroupSchemaProperty.builder()
+ * .columnGroupColumnSchemaList(List.of(ColumnGroupColumnSchemaProperty.builder()
+ * .name("name")
+ * .build()))
+ * .name("name")
+ * .build()))
+ * .dataSetSchema(DataSetSchemaProperty.builder()
+ * .columnSchemaList(List.of(ColumnSchemaProperty.builder()
+ * .dataType("dataType")
+ * .geographicRole("geographicRole")
+ * .name("name")
+ * .build()))
+ * .build())
+ * .placeholder("placeholder")
+ * .build()))
+ * .description("description")
+ * .errors(List.of(TemplateErrorProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .violatedEntities(List.of(EntityProperty.builder()
+ * .path("path")
+ * .build()))
+ * .build()))
+ * .sheets(List.of(SheetProperty.builder()
+ * .name("name")
+ * .sheetId("sheetId")
+ * .build()))
+ * .sourceEntityArn("sourceEntityArn")
+ * .status("status")
+ * .themeArn("themeArn")
+ * .versionNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-templateversion.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTemplateVersionPropertyDsl {
   private val cdkBuilder: CfnTemplate.TemplateVersionProperty.Builder =

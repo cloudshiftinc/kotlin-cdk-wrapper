@@ -10,6 +10,25 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * Token based lambda authorizer that recognizes the caller's identity as a bearer token, such as a
+ * JSON Web Token (JWT) or an OAuth token.
+ *
+ * Based on the token, authorization is performed by a lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * TokenAuthorizer auth = TokenAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TokenAuthorizerDsl(
   scope: Construct,

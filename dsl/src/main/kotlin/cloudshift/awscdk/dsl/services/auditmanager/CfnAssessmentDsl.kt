@@ -14,6 +14,68 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.auditmanager.CfnAssessment
 import software.constructs.Construct
 
+/**
+ * The `AWS::AuditManager::Assessment` resource is an Audit Manager resource type that defines the
+ * scope of audit evidence collected by Audit Manager .
+ *
+ * An Audit Manager assessment is an implementation of an Audit Manager framework.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.auditmanager.*;
+ * CfnAssessment cfnAssessment = CfnAssessment.Builder.create(this, "MyCfnAssessment")
+ * .assessmentReportsDestination(AssessmentReportsDestinationProperty.builder()
+ * .destination("destination")
+ * .destinationType("destinationType")
+ * .build())
+ * .awsAccount(AWSAccountProperty.builder()
+ * .emailAddress("emailAddress")
+ * .id("id")
+ * .name("name")
+ * .build())
+ * .delegations(List.of(DelegationProperty.builder()
+ * .assessmentId("assessmentId")
+ * .assessmentName("assessmentName")
+ * .comment("comment")
+ * .controlSetId("controlSetId")
+ * .createdBy("createdBy")
+ * .creationTime(123)
+ * .id("id")
+ * .lastUpdated(123)
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .status("status")
+ * .build()))
+ * .description("description")
+ * .frameworkId("frameworkId")
+ * .name("name")
+ * .roles(List.of(RoleProperty.builder()
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .build()))
+ * .scope(ScopeProperty.builder()
+ * .awsAccounts(List.of(AWSAccountProperty.builder()
+ * .emailAddress("emailAddress")
+ * .id("id")
+ * .name("name")
+ * .build()))
+ * .awsServices(List.of(AWSServiceProperty.builder()
+ * .serviceName("serviceName")
+ * .build()))
+ * .build())
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentDsl(
   scope: Construct,

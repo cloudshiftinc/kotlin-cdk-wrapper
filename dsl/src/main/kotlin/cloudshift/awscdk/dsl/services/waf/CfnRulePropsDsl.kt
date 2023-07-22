@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.CfnRuleProps
 
+/**
+ * Properties for defining a `CfnRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.*;
+ * CfnRuleProps cfnRuleProps = CfnRuleProps.builder()
+ * .metricName("metricName")
+ * .name("name")
+ * // the properties below are optional
+ * .predicates(List.of(PredicateProperty.builder()
+ * .dataId("dataId")
+ * .negated(false)
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-rule.html)
+ */
 @CdkDslMarker
 public class CfnRulePropsDsl {
   private val cdkBuilder: CfnRuleProps.Builder = CfnRuleProps.builder()

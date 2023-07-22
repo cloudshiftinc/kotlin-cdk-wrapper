@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * Analysis error.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AnalysisErrorProperty analysisErrorProperty = AnalysisErrorProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .violatedEntities(List.of(EntityProperty.builder()
+ * .path("path")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-analysiserror.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisAnalysisErrorPropertyDsl {
   private val cdkBuilder: CfnAnalysis.AnalysisErrorProperty.Builder =

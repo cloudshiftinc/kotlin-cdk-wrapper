@@ -20,6 +20,25 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvocationType
 import software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvokeProps
 
+/**
+ * Properties for invoking a Lambda function with LambdaInvoke.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * LambdaInvoke.Builder.create(this, "Invoke with empty object as payload")
+ * .lambdaFunction(fn)
+ * .payload(TaskInput.fromObject(Map.of()))
+ * .build();
+ * // use the output of fn as input
+ * // use the output of fn as input
+ * LambdaInvoke.Builder.create(this, "Invoke with payload field in the state input")
+ * .lambdaFunction(fn)
+ * .payload(TaskInput.fromJsonPathAt("$.Payload"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaInvokePropsDsl {
   private val cdkBuilder: LambdaInvokeProps.Builder = LambdaInvokeProps.builder()

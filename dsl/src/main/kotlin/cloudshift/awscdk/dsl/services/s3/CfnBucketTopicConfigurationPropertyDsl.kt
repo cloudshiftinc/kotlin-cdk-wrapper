@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A container for specifying the configuration for publication of messages to an Amazon Simple
+ * Notification Service (Amazon SNS) topic when Amazon S3 detects specified events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * TopicConfigurationProperty topicConfigurationProperty = TopicConfigurationProperty.builder()
+ * .event("event")
+ * .topic("topic")
+ * // the properties below are optional
+ * .filter(NotificationFilterProperty.builder()
+ * .s3Key(S3KeyFilterProperty.builder()
+ * .rules(List.of(FilterRuleProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-topicconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketTopicConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.TopicConfigurationProperty.Builder =

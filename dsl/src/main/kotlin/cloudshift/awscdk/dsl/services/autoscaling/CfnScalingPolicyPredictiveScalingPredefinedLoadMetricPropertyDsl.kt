@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * Contains load metric information for the `PredefinedLoadMetricSpecification` property of the
+ * [AWS::AutoScaling::ScalingPolicy
+ * PredictiveScalingMetricSpecification](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingmetricspecification.html)
+ * property type.
+ *
+ *
+ * Does not apply to policies that use a *metric pair* for the metric specification.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * PredictiveScalingPredefinedLoadMetricProperty predictiveScalingPredefinedLoadMetricProperty =
+ * PredictiveScalingPredefinedLoadMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingpredefinedloadmetric.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPredictiveScalingPredefinedLoadMetricPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.PredictiveScalingPredefinedLoadMetricProperty.Builder =

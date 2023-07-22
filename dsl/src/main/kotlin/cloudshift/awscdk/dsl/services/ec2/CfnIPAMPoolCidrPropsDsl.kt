@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps
 
+/**
+ * Properties for defining a `CfnIPAMPoolCidr`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMPoolCidrProps cfnIPAMPoolCidrProps = CfnIPAMPoolCidrProps.builder()
+ * .ipamPoolId("ipamPoolId")
+ * // the properties below are optional
+ * .cidr("cidr")
+ * .netmaskLength(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipampoolcidr.html)
+ */
 @CdkDslMarker
 public class CfnIPAMPoolCidrPropsDsl {
   private val cdkBuilder: CfnIPAMPoolCidrProps.Builder = CfnIPAMPoolCidrProps.builder()

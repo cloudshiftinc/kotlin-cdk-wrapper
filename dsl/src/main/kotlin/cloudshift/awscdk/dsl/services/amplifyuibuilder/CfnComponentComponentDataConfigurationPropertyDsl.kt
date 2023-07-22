@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
 
+/**
+ * The `ComponentDataConfiguration` property specifies the configuration for binding a component's
+ * properties to data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * PredicateProperty predicateProperty_;
+ * ComponentDataConfigurationProperty componentDataConfigurationProperty =
+ * ComponentDataConfigurationProperty.builder()
+ * .model("model")
+ * // the properties below are optional
+ * .identifiers(List.of("identifiers"))
+ * .predicate(PredicateProperty.builder()
+ * .and(List.of(predicateProperty_))
+ * .field("field")
+ * .operand("operand")
+ * .operator("operator")
+ * .or(List.of(predicateProperty_))
+ * .build())
+ * .sort(List.of(SortPropertyProperty.builder()
+ * .direction("direction")
+ * .field("field")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentdataconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnComponentComponentDataConfigurationPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentDataConfigurationProperty.Builder =

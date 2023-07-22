@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssmincidents.CfnResponsePlan
 
+/**
+ * The AWS Chatbot chat channel used for collaboration during an incident.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * ChatChannelProperty chatChannelProperty = ChatChannelProperty.builder()
+ * .chatbotSns(List.of("chatbotSns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmincidents-responseplan-chatchannel.html)
+ */
 @CdkDslMarker
 public class CfnResponsePlanChatChannelPropertyDsl {
   private val cdkBuilder: CfnResponsePlan.ChatChannelProperty.Builder =

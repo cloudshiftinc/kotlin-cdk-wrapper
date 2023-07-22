@@ -12,6 +12,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eventschemas.CfnDiscoverer
 import software.amazon.awscdk.services.eventschemas.CfnDiscovererProps
 
+/**
+ * Properties for defining a `CfnDiscoverer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnDiscovererProps cfnDiscovererProps = CfnDiscovererProps.builder()
+ * .sourceArn("sourceArn")
+ * // the properties below are optional
+ * .crossAccount(false)
+ * .description("description")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html)
+ */
 @CdkDslMarker
 public class CfnDiscovererPropsDsl {
   private val cdkBuilder: CfnDiscovererProps.Builder = CfnDiscovererProps.builder()

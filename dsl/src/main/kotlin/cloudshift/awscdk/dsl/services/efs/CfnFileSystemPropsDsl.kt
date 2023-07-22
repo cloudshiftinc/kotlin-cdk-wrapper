@@ -15,6 +15,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.efs.CfnFileSystem
 import software.amazon.awscdk.services.efs.CfnFileSystemProps
 
+/**
+ * Properties for defining a `CfnFileSystem`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * Object fileSystemPolicy;
+ * CfnFileSystemProps cfnFileSystemProps = CfnFileSystemProps.builder()
+ * .availabilityZoneName("availabilityZoneName")
+ * .backupPolicy(BackupPolicyProperty.builder()
+ * .status("status")
+ * .build())
+ * .bypassPolicyLockoutSafetyCheck(false)
+ * .encrypted(false)
+ * .fileSystemPolicy(fileSystemPolicy)
+ * .fileSystemTags(List.of(ElasticFileSystemTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .kmsKeyId("kmsKeyId")
+ * .lifecyclePolicies(List.of(LifecyclePolicyProperty.builder()
+ * .transitionToIa("transitionToIa")
+ * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
+ * .build()))
+ * .performanceMode("performanceMode")
+ * .provisionedThroughputInMibps(123)
+ * .throughputMode("throughputMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemPropsDsl {
   private val cdkBuilder: CfnFileSystemProps.Builder = CfnFileSystemProps.builder()

@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.directoryservice.CfnSimpleAD
 
+/**
+ * Contains VPC information for the
+ * [CreateDirectory](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateDirectory.html)
+ * or
+ * [CreateMicrosoftAD](https://docs.aws.amazon.com/directoryservice/latest/devguide/API_CreateMicrosoftAD.html)
+ * operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.directoryservice.*;
+ * VpcSettingsProperty vpcSettingsProperty = VpcSettingsProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-simplead-vpcsettings.html)
+ */
 @CdkDslMarker
 public class CfnSimpleADVpcSettingsPropertyDsl {
   private val cdkBuilder: CfnSimpleAD.VpcSettingsProperty.Builder =

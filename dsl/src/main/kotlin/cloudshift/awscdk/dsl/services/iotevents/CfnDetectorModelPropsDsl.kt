@@ -13,6 +13,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 import software.amazon.awscdk.services.iotevents.CfnDetectorModelProps
 
+/**
+ * Properties for defining a `CfnDetectorModel`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotevents-detectormodel.html)
+ */
 @CdkDslMarker
 public class CfnDetectorModelPropsDsl {
   private val cdkBuilder: CfnDetectorModelProps.Builder = CfnDetectorModelProps.builder()

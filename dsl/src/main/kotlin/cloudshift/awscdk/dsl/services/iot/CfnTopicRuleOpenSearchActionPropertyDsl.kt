@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action that writes data to an Amazon OpenSearch Service domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * OpenSearchActionProperty openSearchActionProperty = OpenSearchActionProperty.builder()
+ * .endpoint("endpoint")
+ * .id("id")
+ * .index("index")
+ * .roleArn("roleArn")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-opensearchaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleOpenSearchActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.OpenSearchActionProperty.Builder =

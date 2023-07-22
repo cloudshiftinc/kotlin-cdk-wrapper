@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.PolicyViolatingResourceBeta1
 
+/**
+ * Resource violating a specific rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * PolicyViolatingResourceBeta1 policyViolatingResourceBeta1 =
+ * PolicyViolatingResourceBeta1.builder()
+ * .locations(List.of("locations"))
+ * .resourceLogicalId("resourceLogicalId")
+ * .templatePath("templatePath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PolicyViolatingResourceBeta1Dsl {
   private val cdkBuilder: PolicyViolatingResourceBeta1.Builder =

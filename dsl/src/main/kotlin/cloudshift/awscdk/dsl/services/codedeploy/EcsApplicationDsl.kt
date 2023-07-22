@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.codedeploy.EcsApplication
 import software.constructs.Construct
 
+/**
+ * A CodeDeploy Application that deploys to an Amazon ECS service.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication application = EcsApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsApplicationDsl(
   scope: Construct,

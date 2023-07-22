@@ -16,6 +16,20 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerUpdateEndpointProps
 
+/**
+ * Properties for updating Amazon SageMaker endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerUpdateEndpoint.Builder.create(this, "SagemakerEndpoint")
+ * .endpointName(JsonPath.stringAt("$.Endpoint.Name"))
+ * .endpointConfigName(JsonPath.stringAt("$.Endpoint.EndpointConfig"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerUpdateEndpointPropsDsl {
   private val cdkBuilder: SageMakerUpdateEndpointProps.Builder =

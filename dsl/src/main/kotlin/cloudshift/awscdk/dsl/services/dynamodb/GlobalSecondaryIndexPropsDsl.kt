@@ -12,6 +12,33 @@ import software.amazon.awscdk.services.dynamodb.Attribute
 import software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.ProjectionType
 
+/**
+ * Properties for a global secondary index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * GlobalSecondaryIndexProps globalSecondaryIndexProps = GlobalSecondaryIndexProps.builder()
+ * .indexName("indexName")
+ * .partitionKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * // the properties below are optional
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType(ProjectionType.KEYS_ONLY)
+ * .readCapacity(123)
+ * .sortKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * .writeCapacity(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GlobalSecondaryIndexPropsDsl {
   private val cdkBuilder: GlobalSecondaryIndexProps.Builder = GlobalSecondaryIndexProps.builder()

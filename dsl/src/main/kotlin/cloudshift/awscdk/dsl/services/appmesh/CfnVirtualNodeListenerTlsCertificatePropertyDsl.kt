@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents a listener's Transport Layer Security (TLS) certificate.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ListenerTlsCertificateProperty listenerTlsCertificateProperty =
+ * ListenerTlsCertificateProperty.builder()
+ * .acm(ListenerTlsAcmCertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .file(ListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(ListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-listenertlscertificate.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeListenerTlsCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ListenerTlsCertificateProperty.Builder =

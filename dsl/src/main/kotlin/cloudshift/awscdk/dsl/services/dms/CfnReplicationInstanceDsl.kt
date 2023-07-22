@@ -15,6 +15,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnReplicationInstance
 import software.constructs.Construct
 
+/**
+ * The `AWS::DMS::ReplicationInstance` resource creates an AWS DMS replication instance.
+ *
+ * To create a ReplicationInstance, you need permissions to create instances. You'll need similar
+ * permissions to terminate instances when you delete stacks with instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnReplicationInstance cfnReplicationInstance = CfnReplicationInstance.Builder.create(this,
+ * "MyCfnReplicationInstance")
+ * .replicationInstanceClass("replicationInstanceClass")
+ * // the properties below are optional
+ * .allocatedStorage(123)
+ * .allowMajorVersionUpgrade(false)
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .engineVersion("engineVersion")
+ * .kmsKeyId("kmsKeyId")
+ * .multiAz(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .replicationInstanceIdentifier("replicationInstanceIdentifier")
+ * .replicationSubnetGroupIdentifier("replicationSubnetGroupIdentifier")
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html)
+ */
 @CdkDslMarker
 public class CfnReplicationInstanceDsl(
   scope: Construct,

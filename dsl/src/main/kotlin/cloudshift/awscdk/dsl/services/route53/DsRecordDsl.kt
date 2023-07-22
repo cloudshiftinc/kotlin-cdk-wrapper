@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.route53.DsRecord
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * A DNS DS record.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone myZone;
+ * DsRecord.Builder.create(this, "DSRecord")
+ * .zone(myZone)
+ * .recordName("foo")
+ * .values(List.of("12345 3 1 123456789abcdef67890123456789abcdef67890"))
+ * .ttl(Duration.minutes(90))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DsRecordDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnStudio
 
+/**
+ * Configuration of the encryption method that is used for the studio.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * StudioEncryptionConfigurationProperty studioEncryptionConfigurationProperty =
+ * StudioEncryptionConfigurationProperty.builder()
+ * .keyType("keyType")
+ * // the properties below are optional
+ * .keyArn("keyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studio-studioencryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStudioStudioEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudio.StudioEncryptionConfigurationProperty.Builder =

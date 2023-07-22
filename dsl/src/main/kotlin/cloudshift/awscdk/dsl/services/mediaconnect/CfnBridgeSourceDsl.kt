@@ -8,6 +8,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 import software.constructs.Construct
 
+/**
+ * Adds sources to an existing bridge.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnBridgeSource cfnBridgeSource = CfnBridgeSource.Builder.create(this, "MyCfnBridgeSource")
+ * .bridgeArn("bridgeArn")
+ * .name("name")
+ * // the properties below are optional
+ * .flowSource(BridgeFlowSourceProperty.builder()
+ * .flowArn("flowArn")
+ * // the properties below are optional
+ * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .networkSource(BridgeNetworkSourceProperty.builder()
+ * .multicastIp("multicastIp")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html)
+ */
 @CdkDslMarker
 public class CfnBridgeSourceDsl(
   scope: Construct,

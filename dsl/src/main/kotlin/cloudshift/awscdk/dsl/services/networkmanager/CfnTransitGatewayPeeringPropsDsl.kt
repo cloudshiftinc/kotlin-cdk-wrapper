@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayPeering`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnTransitGatewayPeeringProps cfnTransitGatewayPeeringProps =
+ * CfnTransitGatewayPeeringProps.builder()
+ * .coreNetworkId("coreNetworkId")
+ * .transitGatewayArn("transitGatewayArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayPeeringPropsDsl {
   private val cdkBuilder: CfnTransitGatewayPeeringProps.Builder =

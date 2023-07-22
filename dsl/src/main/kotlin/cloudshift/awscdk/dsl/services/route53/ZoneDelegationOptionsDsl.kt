@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.ZoneDelegationOptions
 
+/**
+ * Options available when creating a delegation relationship from one PublicHostedZone to another.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * ZoneDelegationOptions zoneDelegationOptions = ZoneDelegationOptions.builder()
+ * .comment("comment")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ZoneDelegationOptionsDsl {
   private val cdkBuilder: ZoneDelegationOptions.Builder = ZoneDelegationOptions.builder()

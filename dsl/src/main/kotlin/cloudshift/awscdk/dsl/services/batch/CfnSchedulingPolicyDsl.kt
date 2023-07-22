@@ -9,6 +9,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 import software.constructs.Construct
 
+/**
+ * The `AWS::Batch::SchedulingPolicy` resource specifies the parameters for an AWS Batch scheduling
+ * policy.
+ *
+ * For more information, see [Scheduling
+ * Policies](https://docs.aws.amazon.com/batch/latest/userguide/scheduling_policies.html) in the ** .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnSchedulingPolicy cfnSchedulingPolicy = CfnSchedulingPolicy.Builder.create(this,
+ * "MyCfnSchedulingPolicy")
+ * .fairsharePolicy(FairsharePolicyProperty.builder()
+ * .computeReservation(123)
+ * .shareDecaySeconds(123)
+ * .shareDistribution(List.of(ShareAttributesProperty.builder()
+ * .shareIdentifier("shareIdentifier")
+ * .weightFactor(123)
+ * .build()))
+ * .build())
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnSchedulingPolicyDsl(
   scope: Construct,

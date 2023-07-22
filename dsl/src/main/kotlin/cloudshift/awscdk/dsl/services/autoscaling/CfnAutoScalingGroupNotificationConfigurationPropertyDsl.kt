@@ -8,6 +8,36 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * A structure that specifies an Amazon SNS notification configuration for the
+ * `NotificationConfigurations` property of the
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * resource.
+ *
+ * For an example template snippet, see [Auto scaling template
+ * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * .
+ *
+ * For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+ * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+ * *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * NotificationConfigurationProperty notificationConfigurationProperty =
+ * NotificationConfigurationProperty.builder()
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .notificationTypes(List.of("notificationTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-notificationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupNotificationConfigurationPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.NotificationConfigurationProperty.Builder =

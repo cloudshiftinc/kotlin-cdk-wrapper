@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.ecs.NetworkMode
 import software.amazon.awscdk.services.ecs.Protocol
 import software.amazon.awscdk.services.ecs.ServiceConnect
 
+/**
+ * ServiceConnect ValueObjectClass having by ContainerDefinition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * AppProtocol appProtocol;
+ * ServiceConnect serviceConnect = ServiceConnect.Builder.create(NetworkMode.NONE)
+ * .containerPort(123)
+ * // the properties below are optional
+ * .appProtocol(appProtocol)
+ * .hostPort(123)
+ * .name("name")
+ * .protocol(Protocol.TCP)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceConnectDsl(
   networkmode: NetworkMode,

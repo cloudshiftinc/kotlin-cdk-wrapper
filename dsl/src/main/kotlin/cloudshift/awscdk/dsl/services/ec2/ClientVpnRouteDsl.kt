@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.ec2.ClientVpnRouteTarget
 import software.amazon.awscdk.services.ec2.IClientVpnEndpoint
 import software.constructs.Construct
 
+/**
+ * A client VPN route.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientVpnEndpoint clientVpnEndpoint;
+ * ClientVpnRouteTarget clientVpnRouteTarget;
+ * ClientVpnRoute clientVpnRoute = ClientVpnRoute.Builder.create(this, "MyClientVpnRoute")
+ * .cidr("cidr")
+ * .target(clientVpnRouteTarget)
+ * // the properties below are optional
+ * .clientVpnEndpoint(clientVpnEndpoint)
+ * .description("description")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnRouteDsl(
   scope: Construct,

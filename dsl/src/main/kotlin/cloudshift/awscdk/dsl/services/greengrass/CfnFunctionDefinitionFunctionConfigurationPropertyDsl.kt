@@ -9,6 +9,54 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
 
+/**
+ * The group-specific configuration settings for a Lambda function.
+ *
+ * These settings configure the function's behavior in the Greengrass group. For more information,
+ * see [Controlling Execution of Greengrass Lambda Functions by Using Group-Specific
+ * Configuration](https://docs.aws.amazon.com/greengrass/latest/developerguide/lambda-group-config.html)
+ * in the *Developer Guide* .
+ *
+ * In an AWS CloudFormation template, `FunctionConfiguration` is a property of the
+ * [`Function`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-function.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object variables;
+ * FunctionConfigurationProperty functionConfigurationProperty =
+ * FunctionConfigurationProperty.builder()
+ * .encodingType("encodingType")
+ * .environment(EnvironmentProperty.builder()
+ * .accessSysfs(false)
+ * .execution(ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build())
+ * .resourceAccessPolicies(List.of(ResourceAccessPolicyProperty.builder()
+ * .resourceId("resourceId")
+ * // the properties below are optional
+ * .permission("permission")
+ * .build()))
+ * .variables(variables)
+ * .build())
+ * .execArgs("execArgs")
+ * .executable("executable")
+ * .memorySize(123)
+ * .pinned(false)
+ * .timeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-functionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionFunctionConfigurationPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinition.FunctionConfigurationProperty.Builder =

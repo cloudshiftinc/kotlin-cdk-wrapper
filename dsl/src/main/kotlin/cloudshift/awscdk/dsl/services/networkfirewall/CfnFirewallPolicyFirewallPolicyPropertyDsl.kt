@@ -10,6 +10,57 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
+/**
+ * The traffic filtering behavior of a firewall policy, defined in a collection of stateless and
+ * stateful rule groups and other settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * FirewallPolicyProperty firewallPolicyProperty = FirewallPolicyProperty.builder()
+ * .statelessDefaultActions(List.of("statelessDefaultActions"))
+ * .statelessFragmentDefaultActions(List.of("statelessFragmentDefaultActions"))
+ * // the properties below are optional
+ * .policyVariables(PolicyVariablesProperty.builder()
+ * .ruleVariables(Map.of(
+ * "ruleVariablesKey", Map.of(
+ * "definition", List.of("definition"))))
+ * .build())
+ * .statefulDefaultActions(List.of("statefulDefaultActions"))
+ * .statefulEngineOptions(StatefulEngineOptionsProperty.builder()
+ * .ruleOrder("ruleOrder")
+ * .streamExceptionPolicy("streamExceptionPolicy")
+ * .build())
+ * .statefulRuleGroupReferences(List.of(StatefulRuleGroupReferenceProperty.builder()
+ * .resourceArn("resourceArn")
+ * // the properties below are optional
+ * .override(StatefulRuleGroupOverrideProperty.builder()
+ * .action("action")
+ * .build())
+ * .priority(123)
+ * .build()))
+ * .statelessCustomActions(List.of(CustomActionProperty.builder()
+ * .actionDefinition(ActionDefinitionProperty.builder()
+ * .publishMetricAction(PublishMetricActionProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
+ * .actionName("actionName")
+ * .build()))
+ * .statelessRuleGroupReferences(List.of(StatelessRuleGroupReferenceProperty.builder()
+ * .priority(123)
+ * .resourceArn("resourceArn")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-firewallpolicy.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyFirewallPolicyPropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.FirewallPolicyProperty.Builder =

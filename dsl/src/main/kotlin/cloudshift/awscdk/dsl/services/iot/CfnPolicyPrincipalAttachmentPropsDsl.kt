@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps
 
+/**
+ * Properties for defining a `CfnPolicyPrincipalAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnPolicyPrincipalAttachmentProps cfnPolicyPrincipalAttachmentProps =
+ * CfnPolicyPrincipalAttachmentProps.builder()
+ * .policyName("policyName")
+ * .principal("principal")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policyprincipalattachment.html)
+ */
 @CdkDslMarker
 public class CfnPolicyPrincipalAttachmentPropsDsl {
   private val cdkBuilder: CfnPolicyPrincipalAttachmentProps.Builder =

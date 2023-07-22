@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.route53.CaaAmazonRecord
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * A DNS Amazon CAA record.
+ *
+ * A CAA record to restrict certificate authorities allowed
+ * to issue certificates for a domain to Amazon only.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * CaaAmazonRecord caaAmazonRecord = CaaAmazonRecord.Builder.create(this, "MyCaaAmazonRecord")
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CaaAmazonRecordDsl(
   scope: Construct,

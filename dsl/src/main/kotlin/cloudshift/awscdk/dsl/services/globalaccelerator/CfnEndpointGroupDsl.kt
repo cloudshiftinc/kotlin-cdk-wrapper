@@ -12,6 +12,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::GlobalAccelerator::EndpointGroup` resource is a Global Accelerator resource type that
+ * contains information about how you create an endpoint group for the specified listener.
+ *
+ * An endpoint group is a collection of endpoints in one AWS Region .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnEndpointGroup cfnEndpointGroup = CfnEndpointGroup.Builder.create(this, "MyCfnEndpointGroup")
+ * .endpointGroupRegion("endpointGroupRegion")
+ * .listenerArn("listenerArn")
+ * // the properties below are optional
+ * .endpointConfigurations(List.of(EndpointConfigurationProperty.builder()
+ * .endpointId("endpointId")
+ * // the properties below are optional
+ * .clientIpPreservationEnabled(false)
+ * .weight(123)
+ * .build()))
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckPath("healthCheckPath")
+ * .healthCheckPort(123)
+ * .healthCheckProtocol("healthCheckProtocol")
+ * .portOverrides(List.of(PortOverrideProperty.builder()
+ * .endpointPort(123)
+ * .listenerPort(123)
+ * .build()))
+ * .thresholdCount(123)
+ * .trafficDialPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)
+ */
 @CdkDslMarker
 public class CfnEndpointGroupDsl(
   scope: Construct,

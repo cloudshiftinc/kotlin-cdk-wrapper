@@ -8,6 +8,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 import software.amazon.awscdk.services.ses.CfnConfigurationSetProps
 
+/**
+ * Properties for defining a `CfnConfigurationSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnConfigurationSetProps cfnConfigurationSetProps = CfnConfigurationSetProps.builder()
+ * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .tlsPolicy("tlsPolicy")
+ * .build())
+ * .name("name")
+ * .reputationOptions(ReputationOptionsProperty.builder()
+ * .reputationMetricsEnabled(false)
+ * .build())
+ * .sendingOptions(SendingOptionsProperty.builder()
+ * .sendingEnabled(false)
+ * .build())
+ * .suppressionOptions(SuppressionOptionsProperty.builder()
+ * .suppressedReasons(List.of("suppressedReasons"))
+ * .build())
+ * .trackingOptions(TrackingOptionsProperty.builder()
+ * .customRedirectDomain("customRedirectDomain")
+ * .build())
+ * .vdmOptions(VdmOptionsProperty.builder()
+ * .dashboardOptions(DashboardOptionsProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianOptions(GuardianOptionsProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetPropsDsl {
   private val cdkBuilder: CfnConfigurationSetProps.Builder = CfnConfigurationSetProps.builder()

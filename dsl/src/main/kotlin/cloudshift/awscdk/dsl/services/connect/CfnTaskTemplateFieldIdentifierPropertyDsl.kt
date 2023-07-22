@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 
+/**
+ * The identifier of the task template field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * FieldIdentifierProperty fieldIdentifierProperty = FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-fieldidentifier.html)
+ */
 @CdkDslMarker
 public class CfnTaskTemplateFieldIdentifierPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.FieldIdentifierProperty.Builder =

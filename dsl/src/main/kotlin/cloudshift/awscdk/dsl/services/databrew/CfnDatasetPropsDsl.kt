@@ -13,6 +13,110 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 import software.amazon.awscdk.services.databrew.CfnDatasetProps
 
+/**
+ * Properties for defining a `CfnDataset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnDatasetProps cfnDatasetProps = CfnDatasetProps.builder()
+ * .input(InputProperty.builder()
+ * .databaseInputDefinition(DatabaseInputDefinitionProperty.builder()
+ * .glueConnectionName("glueConnectionName")
+ * // the properties below are optional
+ * .databaseTableName("databaseTableName")
+ * .queryString("queryString")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .metadata(MetadataProperty.builder()
+ * .sourceArn("sourceArn")
+ * .build())
+ * .s3InputDefinition(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .format("format")
+ * .formatOptions(FormatOptionsProperty.builder()
+ * .csv(CsvOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .headerRow(false)
+ * .build())
+ * .excel(ExcelOptionsProperty.builder()
+ * .headerRow(false)
+ * .sheetIndexes(List.of(123))
+ * .sheetNames(List.of("sheetNames"))
+ * .build())
+ * .json(JsonOptionsProperty.builder()
+ * .multiLine(false)
+ * .build())
+ * .build())
+ * .pathOptions(PathOptionsProperty.builder()
+ * .filesLimit(FilesLimitProperty.builder()
+ * .maxFiles(123)
+ * // the properties below are optional
+ * .order("order")
+ * .orderedBy("orderedBy")
+ * .build())
+ * .lastModifiedDateCondition(FilterExpressionProperty.builder()
+ * .expression("expression")
+ * .valuesMap(List.of(FilterValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .build())
+ * .parameters(List.of(PathParameterProperty.builder()
+ * .datasetParameter(DatasetParameterProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .createColumn(false)
+ * .datetimeOptions(DatetimeOptionsProperty.builder()
+ * .format("format")
+ * // the properties below are optional
+ * .localeCode("localeCode")
+ * .timezoneOffset("timezoneOffset")
+ * .build())
+ * .filter(FilterExpressionProperty.builder()
+ * .expression("expression")
+ * .valuesMap(List.of(FilterValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .build())
+ * .build())
+ * .pathParameterName("pathParameterName")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetPropsDsl {
   private val cdkBuilder: CfnDatasetProps.Builder = CfnDatasetProps.builder()

@@ -15,6 +15,26 @@ import software.amazon.awscdk.services.cloudfront.OriginSslPolicy
 import software.amazon.awscdk.services.cloudfront.origins.LoadBalancerV2Origin
 import software.amazon.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2
 
+/**
+ * An Origin for a v2 load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Vpc vpc;
+ * // Create an application load balancer in a VPC. 'internetFacing' must be 'true'
+ * // for CloudFront to access the load balancer and use it as an origin.
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .build();
+ * Distribution.Builder.create(this, "myDist")
+ * .defaultBehavior(BehaviorOptions.builder().origin(new LoadBalancerV2Origin(lb)).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerV2OriginDsl(
   loadBalancer: ILoadBalancerV2,

@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 
+/**
+ * The configuration for pre-roll ad insertion.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediatailor.*;
+ * LivePreRollConfigurationProperty livePreRollConfigurationProperty =
+ * LivePreRollConfigurationProperty.builder()
+ * .adDecisionServerUrl("adDecisionServerUrl")
+ * .maxDurationSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-liveprerollconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackConfigurationLivePreRollConfigurationPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Builder =

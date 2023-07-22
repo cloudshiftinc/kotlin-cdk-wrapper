@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 
+/**
+ * Create a bridge with the ingress bridge type.
+ *
+ * An ingress bridge is a ground-to-cloud bridge. The content originates at your premises and is
+ * delivered to the cloud.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * IngressGatewayBridgeProperty ingressGatewayBridgeProperty =
+ * IngressGatewayBridgeProperty.builder()
+ * .maxBitrate(123)
+ * .maxOutputs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-ingressgatewaybridge.html)
+ */
 @CdkDslMarker
 public class CfnBridgeIngressGatewayBridgePropertyDsl {
   private val cdkBuilder: CfnBridge.IngressGatewayBridgeProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * Configuration for AWS Lambda function authorization.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * LambdaAuthorizerConfigProperty lambdaAuthorizerConfigProperty =
+ * LambdaAuthorizerConfigProperty.builder()
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .identityValidationExpression("identityValidationExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-lambdaauthorizerconfig.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiLambdaAuthorizerConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.LambdaAuthorizerConfigProperty.Builder =

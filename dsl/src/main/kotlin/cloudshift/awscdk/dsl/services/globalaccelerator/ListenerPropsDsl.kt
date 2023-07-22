@@ -13,6 +13,30 @@ import software.amazon.awscdk.services.globalaccelerator.IAccelerator
 import software.amazon.awscdk.services.globalaccelerator.ListenerProps
 import software.amazon.awscdk.services.globalaccelerator.PortRange
 
+/**
+ * Construct properties for Listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * Accelerator accelerator;
+ * ListenerProps listenerProps = ListenerProps.builder()
+ * .accelerator(accelerator)
+ * .portRanges(List.of(PortRange.builder()
+ * .fromPort(123)
+ * // the properties below are optional
+ * .toPort(123)
+ * .build()))
+ * // the properties below are optional
+ * .clientAffinity(ClientAffinity.NONE)
+ * .listenerName("listenerName")
+ * .protocol(ConnectionProtocol.TCP)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ListenerPropsDsl {
   private val cdkBuilder: ListenerProps.Builder = ListenerProps.builder()

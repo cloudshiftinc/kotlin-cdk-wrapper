@@ -8,6 +8,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The top ranked and bottom ranked computation configuration.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-topbottomrankedcomputation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTopBottomRankedComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.TopBottomRankedComputationProperty.Builder =

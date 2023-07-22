@@ -11,6 +11,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 import software.amazon.awscdk.services.licensemanager.CfnLicenseProps
 
+/**
+ * Properties for defining a `CfnLicense`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * CfnLicenseProps cfnLicenseProps = CfnLicenseProps.builder()
+ * .consumptionConfiguration(ConsumptionConfigurationProperty.builder()
+ * .borrowConfiguration(BorrowConfigurationProperty.builder()
+ * .allowEarlyCheckIn(false)
+ * .maxTimeToLiveInMinutes(123)
+ * .build())
+ * .provisionalConfiguration(ProvisionalConfigurationProperty.builder()
+ * .maxTimeToLiveInMinutes(123)
+ * .build())
+ * .renewType("renewType")
+ * .build())
+ * .entitlements(List.of(EntitlementProperty.builder()
+ * .name("name")
+ * .unit("unit")
+ * // the properties below are optional
+ * .allowCheckIn(false)
+ * .maxCount(123)
+ * .overage(false)
+ * .value("value")
+ * .build()))
+ * .homeRegion("homeRegion")
+ * .issuer(IssuerDataProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .signKey("signKey")
+ * .build())
+ * .licenseName("licenseName")
+ * .productName("productName")
+ * .validity(ValidityDateFormatProperty.builder()
+ * .begin("begin")
+ * .end("end")
+ * .build())
+ * // the properties below are optional
+ * .beneficiary("beneficiary")
+ * .licenseMetadata(List.of(MetadataProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .productSku("productSku")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-licensemanager-license.html)
+ */
 @CdkDslMarker
 public class CfnLicensePropsDsl {
   private val cdkBuilder: CfnLicenseProps.Builder = CfnLicenseProps.builder()

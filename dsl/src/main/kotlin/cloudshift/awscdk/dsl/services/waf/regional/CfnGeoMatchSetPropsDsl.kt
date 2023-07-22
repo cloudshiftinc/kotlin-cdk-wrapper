@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnGeoMatchSetProps
 
+/**
+ * Properties for defining a `CfnGeoMatchSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnGeoMatchSetProps cfnGeoMatchSetProps = CfnGeoMatchSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .geoMatchConstraints(List.of(GeoMatchConstraintProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-geomatchset.html)
+ */
 @CdkDslMarker
 public class CfnGeoMatchSetPropsDsl {
   private val cdkBuilder: CfnGeoMatchSetProps.Builder = CfnGeoMatchSetProps.builder()

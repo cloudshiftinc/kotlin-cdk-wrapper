@@ -11,6 +11,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::DeviceDefinitionVersion` resource represents a device definition version
+ * for AWS IoT Greengrass .
+ *
+ * A device definition version contains a list of devices.
+ *
+ *
+ * To create a device definition version, you must specify the ID of the device definition that you
+ * want to associate with the version. For information about creating a device definition, see
+ * [`AWS::Greengrass::DeviceDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
+ * .
+ *
+ * After you create a device definition version that contains the devices you want to deploy, you
+ * must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnDeviceDefinitionVersion cfnDeviceDefinitionVersion =
+ * CfnDeviceDefinitionVersion.Builder.create(this, "MyCfnDeviceDefinitionVersion")
+ * .deviceDefinitionId("deviceDefinitionId")
+ * .devices(List.of(DeviceProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDefinitionVersionDsl(
   scope: Construct,

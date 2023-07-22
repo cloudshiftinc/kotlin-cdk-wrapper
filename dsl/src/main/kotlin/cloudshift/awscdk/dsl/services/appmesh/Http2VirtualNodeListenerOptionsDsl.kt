@@ -12,6 +12,50 @@ import software.amazon.awscdk.services.appmesh.HttpTimeout
 import software.amazon.awscdk.services.appmesh.ListenerTlsOptions
 import software.amazon.awscdk.services.appmesh.OutlierDetection
 
+/**
+ * Represent the HTTP2 Node Listener property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HealthCheck healthCheck;
+ * MutualTlsValidationTrust mutualTlsValidationTrust;
+ * SubjectAlternativeNames subjectAlternativeNames;
+ * TlsCertificate tlsCertificate;
+ * Http2VirtualNodeListenerOptions http2VirtualNodeListenerOptions =
+ * Http2VirtualNodeListenerOptions.builder()
+ * .connectionPool(Http2ConnectionPool.builder()
+ * .maxRequests(123)
+ * .build())
+ * .healthCheck(healthCheck)
+ * .outlierDetection(OutlierDetection.builder()
+ * .baseEjectionDuration(Duration.minutes(30))
+ * .interval(Duration.minutes(30))
+ * .maxEjectionPercent(123)
+ * .maxServerErrors(123)
+ * .build())
+ * .port(123)
+ * .timeout(HttpTimeout.builder()
+ * .idle(Duration.minutes(30))
+ * .perRequest(Duration.minutes(30))
+ * .build())
+ * .tls(ListenerTlsOptions.builder()
+ * .certificate(tlsCertificate)
+ * .mode(TlsMode.STRICT)
+ * // the properties below are optional
+ * .mutualTlsValidation(MutualTlsValidation.builder()
+ * .trust(mutualTlsValidationTrust)
+ * // the properties below are optional
+ * .subjectAlternativeNames(subjectAlternativeNames)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class Http2VirtualNodeListenerOptionsDsl {
   private val cdkBuilder: Http2VirtualNodeListenerOptions.Builder =

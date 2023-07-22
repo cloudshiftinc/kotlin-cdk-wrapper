@@ -11,6 +11,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnAnnotationStore
 
+/**
+ * The store's parsing options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * Object schema;
+ * TsvStoreOptionsProperty tsvStoreOptionsProperty = TsvStoreOptionsProperty.builder()
+ * .annotationType("annotationType")
+ * .formatToHeader(Map.of(
+ * "formatToHeaderKey", "formatToHeader"))
+ * .schema(schema)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-annotationstore-tsvstoreoptions.html)
+ */
 @CdkDslMarker
 public class CfnAnnotationStoreTsvStoreOptionsPropertyDsl {
   private val cdkBuilder: CfnAnnotationStore.TsvStoreOptionsProperty.Builder =

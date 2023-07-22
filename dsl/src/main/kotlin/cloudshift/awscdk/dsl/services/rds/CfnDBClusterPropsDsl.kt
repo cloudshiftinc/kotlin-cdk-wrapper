@@ -16,6 +16,94 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBCluster
 import software.amazon.awscdk.services.rds.CfnDBClusterProps
 
+/**
+ * Properties for defining a `CfnDBCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBClusterProps cfnDBClusterProps = CfnDBClusterProps.builder()
+ * .allocatedStorage(123)
+ * .associatedRoles(List.of(DBClusterRoleProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .featureName("featureName")
+ * .build()))
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZones(List.of("availabilityZones"))
+ * .backtrackWindow(123)
+ * .backupRetentionPeriod(123)
+ * .copyTagsToSnapshot(false)
+ * .databaseName("databaseName")
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbClusterInstanceClass("dbClusterInstanceClass")
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .dbSystemId("dbSystemId")
+ * .deletionProtection(false)
+ * .domain("domain")
+ * .domainIamRoleName("domainIamRoleName")
+ * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .enableHttpEndpoint(false)
+ * .enableIamDatabaseAuthentication(false)
+ * .engine("engine")
+ * .engineMode("engineMode")
+ * .engineVersion("engineVersion")
+ * .globalClusterIdentifier("globalClusterIdentifier")
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .manageMasterUserPassword(false)
+ * .masterUsername("masterUsername")
+ * .masterUserPassword("masterUserPassword")
+ * .masterUserSecret(MasterUserSecretProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .secretArn("secretArn")
+ * .build())
+ * .monitoringInterval(123)
+ * .monitoringRoleArn("monitoringRoleArn")
+ * .networkType("networkType")
+ * .performanceInsightsEnabled(false)
+ * .performanceInsightsKmsKeyId("performanceInsightsKmsKeyId")
+ * .performanceInsightsRetentionPeriod(123)
+ * .port(123)
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .replicationSourceIdentifier("replicationSourceIdentifier")
+ * .restoreToTime("restoreToTime")
+ * .restoreType("restoreType")
+ * .scalingConfiguration(ScalingConfigurationProperty.builder()
+ * .autoPause(false)
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .secondsBeforeTimeout(123)
+ * .secondsUntilAutoPause(123)
+ * .timeoutAction("timeoutAction")
+ * .build())
+ * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .sourceRegion("sourceRegion")
+ * .storageEncrypted(false)
+ * .storageType("storageType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useLatestRestorableTime(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterPropsDsl {
   private val cdkBuilder: CfnDBClusterProps.Builder = CfnDBClusterProps.builder()

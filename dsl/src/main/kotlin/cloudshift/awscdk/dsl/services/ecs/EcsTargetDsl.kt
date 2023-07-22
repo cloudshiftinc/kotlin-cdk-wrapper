@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.ecs.EcsTarget
 import software.amazon.awscdk.services.ecs.ListenerConfig
 import software.amazon.awscdk.services.ecs.Protocol
 
+/**
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * FargateService service = FargateService.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
+ * "LB").vpc(vpc).internetFacing(true).build();
+ * ApplicationListener listener = lb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * service.registerLoadBalancerTargets(EcsTarget.builder()
+ * .containerName("web")
+ * .containerPort(80)
+ * .newTargetGroupId("ECS")
+ * .listener(ListenerConfig.applicationListener(listener, AddApplicationTargetsProps.builder()
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EcsTargetDsl {
   private val cdkBuilder: EcsTarget.Builder = EcsTarget.builder()

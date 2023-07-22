@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnUrl
 
+/**
+ * The [Cross-Origin Resource Sharing
+ * (CORS)](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) settings
+ * for your function URL. Use CORS to grant access to your function URL from any origin. You can also
+ * use CORS to control access for specific HTTP headers and methods in requests to your function URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CorsProperty corsProperty = CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-url-cors.html)
+ */
 @CdkDslMarker
 public class CfnUrlCorsPropertyDsl {
   private val cdkBuilder: CfnUrl.CorsProperty.Builder = CfnUrl.CorsProperty.builder()

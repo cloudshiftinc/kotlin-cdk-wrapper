@@ -12,6 +12,27 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnNetworkAcl
 import software.constructs.Construct
 
+/**
+ * Specifies a network ACL for your VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkAcl cfnNetworkAcl = CfnNetworkAcl.Builder.create(this, "MyCfnNetworkAcl")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html)
+ */
 @CdkDslMarker
 public class CfnNetworkAclDsl(
   scope: Construct,

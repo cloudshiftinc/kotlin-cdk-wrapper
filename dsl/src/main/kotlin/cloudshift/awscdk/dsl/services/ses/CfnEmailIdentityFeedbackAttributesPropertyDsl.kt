@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnEmailIdentity
 
+/**
+ * Used to enable or disable feedback forwarding for an identity.
+ *
+ * This setting determines what happens when an identity is used to send an email that results in a
+ * bounce or complaint event.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * FeedbackAttributesProperty feedbackAttributesProperty = FeedbackAttributesProperty.builder()
+ * .emailForwardingEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-emailidentity-feedbackattributes.html)
+ */
 @CdkDslMarker
 public class CfnEmailIdentityFeedbackAttributesPropertyDsl {
   private val cdkBuilder: CfnEmailIdentity.FeedbackAttributesProperty.Builder =

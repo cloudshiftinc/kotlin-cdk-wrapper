@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * The theme colors that apply to UI and to charts, excluding data colors.
+ *
+ * The colors description is a hexadecimal color code that consists of six alphanumerical
+ * characters, prefixed with `#` , for example #37BFF5. For more information, see [Using Themes in
+ * Amazon QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/themes-in-quicksight.html) in
+ * the *Amazon QuickSight User Guide.*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * UIColorPaletteProperty uIColorPaletteProperty = UIColorPaletteProperty.builder()
+ * .accent("accent")
+ * .accentForeground("accentForeground")
+ * .danger("danger")
+ * .dangerForeground("dangerForeground")
+ * .dimension("dimension")
+ * .dimensionForeground("dimensionForeground")
+ * .measure("measure")
+ * .measureForeground("measureForeground")
+ * .primaryBackground("primaryBackground")
+ * .primaryForeground("primaryForeground")
+ * .secondaryBackground("secondaryBackground")
+ * .secondaryForeground("secondaryForeground")
+ * .success("success")
+ * .successForeground("successForeground")
+ * .warning("warning")
+ * .warningForeground("warningForeground")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-uicolorpalette.html)
+ */
 @CdkDslMarker
 public class CfnThemeUIColorPalettePropertyDsl {
   private val cdkBuilder: CfnTheme.UIColorPaletteProperty.Builder =

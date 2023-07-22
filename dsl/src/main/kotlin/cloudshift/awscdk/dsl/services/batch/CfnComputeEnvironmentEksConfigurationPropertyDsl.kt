@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 
+/**
+ * Configuration for the Amazon EKS cluster that supports the AWS Batch compute environment.
+ *
+ * The cluster must exist before the compute environment can be created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EksConfigurationProperty eksConfigurationProperty = EksConfigurationProperty.builder()
+ * .eksClusterArn("eksClusterArn")
+ * .kubernetesNamespace("kubernetesNamespace")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-eksconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentEksConfigurationPropertyDsl {
   private val cdkBuilder: CfnComputeEnvironment.EksConfigurationProperty.Builder =

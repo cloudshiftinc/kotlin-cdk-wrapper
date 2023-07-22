@@ -11,6 +11,23 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.GelfCompressionType
 import software.amazon.awscdk.services.ecs.GelfLogDriverProps
 
+/**
+ * Specifies the journald log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/gelf/)
+ *
+ * Example:
+ *
+ * ```
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.gelf(GelfLogDriverProps.builder().address("my-gelf-address").build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GelfLogDriverPropsDsl {
   private val cdkBuilder: GelfLogDriverProps.Builder = GelfLogDriverProps.builder()

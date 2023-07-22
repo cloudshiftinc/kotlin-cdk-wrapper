@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * Specifies an AWS Glue Data Catalog target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CatalogTargetProperty catalogTargetProperty = CatalogTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .databaseName("databaseName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .tables(List.of("tables"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-catalogtarget.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerCatalogTargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.CatalogTargetProperty.Builder =

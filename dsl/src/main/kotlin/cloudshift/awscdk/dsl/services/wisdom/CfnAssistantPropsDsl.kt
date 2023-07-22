@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wisdom.CfnAssistant
 import software.amazon.awscdk.services.wisdom.CfnAssistantProps
 
+/**
+ * Properties for defining a `CfnAssistant`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * CfnAssistantProps cfnAssistantProps = CfnAssistantProps.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-assistant.html)
+ */
 @CdkDslMarker
 public class CfnAssistantPropsDsl {
   private val cdkBuilder: CfnAssistantProps.Builder = CfnAssistantProps.builder()

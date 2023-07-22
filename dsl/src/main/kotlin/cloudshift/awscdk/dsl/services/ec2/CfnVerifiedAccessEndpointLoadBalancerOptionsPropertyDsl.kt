@@ -9,6 +9,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
 
+/**
+ * Describes the load balancer options when creating an AWS Verified Access endpoint using the
+ * `load-balancer` type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * LoadBalancerOptionsProperty loadBalancerOptionsProperty = LoadBalancerOptionsProperty.builder()
+ * .loadBalancerArn("loadBalancerArn")
+ * .port(123)
+ * .protocol("protocol")
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessendpoint-loadbalanceroptions.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessEndpointLoadBalancerOptionsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.Builder =

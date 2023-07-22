@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that contains a Lambda&#64;Edge function association.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * LambdaFunctionAssociationProperty lambdaFunctionAssociationProperty =
+ * LambdaFunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .includeBody(false)
+ * .lambdaFunctionArn("lambdaFunctionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-lambdafunctionassociation.html)
+ */
 @CdkDslMarker
 public class CfnDistributionLambdaFunctionAssociationPropertyDsl {
   private val cdkBuilder: CfnDistribution.LambdaFunctionAssociationProperty.Builder =

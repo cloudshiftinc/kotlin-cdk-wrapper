@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnScheduledAction
 
+/**
+ * Describes a pause cluster operation.
+ *
+ * For example, a scheduled action to run the `PauseCluster` API operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * PauseClusterMessageProperty pauseClusterMessageProperty = PauseClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-pauseclustermessage.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionPauseClusterMessagePropertyDsl {
   private val cdkBuilder: CfnScheduledAction.PauseClusterMessageProperty.Builder =

@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Describes the resources, including ML instance types and ML instance count, to use for transform
+ * job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TransformResourcesProperty transformResourcesProperty = TransformResourcesProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transformresources.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageTransformResourcesPropertyDsl {
   private val cdkBuilder: CfnModelPackage.TransformResourcesProperty.Builder =

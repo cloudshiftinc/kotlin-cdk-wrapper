@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnPhoneNumberProps
 
+/**
+ * Properties for defining a `CfnPhoneNumber`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnPhoneNumberProps cfnPhoneNumberProps = CfnPhoneNumberProps.builder()
+ * .countryCode("countryCode")
+ * .targetArn("targetArn")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .prefix("prefix")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html)
+ */
 @CdkDslMarker
 public class CfnPhoneNumberPropsDsl {
   private val cdkBuilder: CfnPhoneNumberProps.Builder = CfnPhoneNumberProps.builder()

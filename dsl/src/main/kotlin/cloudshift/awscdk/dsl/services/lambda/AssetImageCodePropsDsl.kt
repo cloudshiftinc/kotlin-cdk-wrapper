@@ -18,6 +18,63 @@ import software.amazon.awscdk.services.ecr.assets.NetworkMode
 import software.amazon.awscdk.services.ecr.assets.Platform
 import software.amazon.awscdk.services.lambda.AssetImageCodeProps
 
+/**
+ * Properties to initialize a new AssetImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecr.assets.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * NetworkMode networkMode;
+ * Platform platform;
+ * AssetImageCodeProps assetImageCodeProps = AssetImageCodeProps.builder()
+ * .assetName("assetName")
+ * .buildArgs(Map.of(
+ * "buildArgsKey", "buildArgs"))
+ * .buildSecrets(Map.of(
+ * "buildSecretsKey", "buildSecrets"))
+ * .cacheFrom(List.of(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build()))
+ * .cacheTo(DockerCacheOption.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .params(Map.of(
+ * "paramsKey", "params"))
+ * .build())
+ * .cmd(List.of("cmd"))
+ * .entrypoint(List.of("entrypoint"))
+ * .exclude(List.of("exclude"))
+ * .extraHash("extraHash")
+ * .file("file")
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .invalidation(DockerImageAssetInvalidationOptions.builder()
+ * .buildArgs(false)
+ * .buildSecrets(false)
+ * .extraHash(false)
+ * .file(false)
+ * .networkMode(false)
+ * .outputs(false)
+ * .platform(false)
+ * .repositoryName(false)
+ * .target(false)
+ * .build())
+ * .networkMode(networkMode)
+ * .outputs(List.of("outputs"))
+ * .platform(platform)
+ * .target("target")
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetImageCodePropsDsl {
   private val cdkBuilder: AssetImageCodeProps.Builder = AssetImageCodeProps.builder()

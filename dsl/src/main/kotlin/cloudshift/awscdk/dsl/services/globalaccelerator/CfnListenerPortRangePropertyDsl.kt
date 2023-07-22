@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.CfnListener
 
+/**
+ * A complex type for a range of ports for a listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-listener-portrange.html)
+ */
 @CdkDslMarker
 public class CfnListenerPortRangePropertyDsl {
   private val cdkBuilder: CfnListener.PortRangeProperty.Builder =

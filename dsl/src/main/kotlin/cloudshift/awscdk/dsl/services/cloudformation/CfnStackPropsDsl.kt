@@ -14,6 +14,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnStackProps
 
+/**
+ * Properties for defining a `CfnStack`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnStackProps cfnStackProps = CfnStackProps.builder()
+ * .templateUrl("templateUrl")
+ * // the properties below are optional
+ * .notificationArns(List.of("notificationArns"))
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeoutInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stack.html)
+ */
 @CdkDslMarker
 public class CfnStackPropsDsl {
   private val cdkBuilder: CfnStackProps.Builder = CfnStackProps.builder()

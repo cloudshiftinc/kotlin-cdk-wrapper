@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.FileAssetLocation
 
+/**
+ * The location of the published file asset.
+ *
+ * This is where the asset
+ * can be consumed at runtime.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * FileAssetLocation fileAssetLocation = FileAssetLocation.builder()
+ * .bucketName("bucketName")
+ * .httpUrl("httpUrl")
+ * .objectKey("objectKey")
+ * .s3ObjectUrl("s3ObjectUrl")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .s3ObjectUrlWithPlaceholders("s3ObjectUrlWithPlaceholders")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileAssetLocationDsl {
   private val cdkBuilder: FileAssetLocation.Builder = FileAssetLocation.builder()

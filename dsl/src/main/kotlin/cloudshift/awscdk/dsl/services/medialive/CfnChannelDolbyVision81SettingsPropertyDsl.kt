@@ -5,6 +5,19 @@ package cloudshift.awscdk.dsl.services.medialive
 import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * DolbyVision81SettingsProperty dolbyVision81SettingsProperty =
+ * DolbyVision81SettingsProperty.builder().build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-dolbyvision81settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelDolbyVision81SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.DolbyVision81SettingsProperty.Builder =

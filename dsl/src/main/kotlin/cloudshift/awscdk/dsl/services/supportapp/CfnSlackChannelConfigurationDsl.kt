@@ -9,6 +9,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.supportapp.CfnSlackChannelConfiguration
 import software.constructs.Construct
 
+/**
+ * You can use the `AWS::SupportApp::SlackChannelConfiguration` resource to specify your AWS account
+ * when you configure the AWS Support App .
+ *
+ * This resource includes the following information:
+ *
+ * * The Slack channel name and ID
+ * * The team ID in Slack
+ * * The Amazon Resource Name (ARN) of the AWS Identity and Access Management ( IAM ) role
+ * * Whether you want the AWS Support App to notify you when your support cases are created,
+ * updated, resolved, or reopened
+ * * The case severity that you want to get notified for
+ *
+ * For more information, see the following topics in the *AWS Support User Guide* :
+ *
+ * * [AWS Support App in
+ * Slack](https://docs.aws.amazon.com/awssupport/latest/user/aws-support-app-for-slack.html)
+ * * [Creating AWS Support App in Slack resources with AWS
+ * CloudFormation](https://docs.aws.amazon.com/awssupport/latest/user/creating-resources-with-cloudformation.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.supportapp.*;
+ * CfnSlackChannelConfiguration cfnSlackChannelConfiguration =
+ * CfnSlackChannelConfiguration.Builder.create(this, "MyCfnSlackChannelConfiguration")
+ * .channelId("channelId")
+ * .channelRoleArn("channelRoleArn")
+ * .notifyOnCaseSeverity("notifyOnCaseSeverity")
+ * .teamId("teamId")
+ * // the properties below are optional
+ * .channelName("channelName")
+ * .notifyOnAddCorrespondenceToCase(false)
+ * .notifyOnCreateOrReopenCase(false)
+ * .notifyOnResolveCase(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-slackchannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSlackChannelConfigurationDsl(
   scope: Construct,

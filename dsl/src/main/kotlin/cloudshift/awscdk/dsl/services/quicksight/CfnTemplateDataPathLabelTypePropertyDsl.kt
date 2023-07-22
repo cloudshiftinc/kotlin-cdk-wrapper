@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The option that specifies individual data values for labels.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataPathLabelTypeProperty dataPathLabelTypeProperty = DataPathLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datapathlabeltype.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDataPathLabelTypePropertyDsl {
   private val cdkBuilder: CfnTemplate.DataPathLabelTypeProperty.Builder =

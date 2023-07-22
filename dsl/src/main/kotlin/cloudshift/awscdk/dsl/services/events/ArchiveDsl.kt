@@ -11,6 +11,39 @@ import software.amazon.awscdk.services.events.EventPattern
 import software.amazon.awscdk.services.events.IEventBus
 import software.constructs.Construct
 
+/**
+ * Define an EventBridge Archive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.*;
+ * Object detail;
+ * EventBus eventBus;
+ * Archive archive = Archive.Builder.create(this, "MyArchive")
+ * .eventPattern(EventPattern.builder()
+ * .account(List.of("account"))
+ * .detail(Map.of(
+ * "detailKey", detail))
+ * .detailType(List.of("detailType"))
+ * .id(List.of("id"))
+ * .region(List.of("region"))
+ * .resources(List.of("resources"))
+ * .source(List.of("source"))
+ * .time(List.of("time"))
+ * .version(List.of("version"))
+ * .build())
+ * .sourceEventBus(eventBus)
+ * // the properties below are optional
+ * .archiveName("archiveName")
+ * .description("description")
+ * .retention(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ArchiveDsl(
   scope: Construct,

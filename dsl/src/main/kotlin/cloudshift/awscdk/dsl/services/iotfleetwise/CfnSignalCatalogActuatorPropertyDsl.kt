@@ -9,6 +9,37 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * A signal that represents a vehicle device such as the engine, heater, and door locks.
+ *
+ * Data from an actuator reports the state of a certain vehicle device.
+ *
+ *
+ * Updating actuator data can change the state of a device. For example, you can turn on or off the
+ * heater by updating its actuator data.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * ActuatorProperty actuatorProperty = ActuatorProperty.builder()
+ * .dataType("dataType")
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .allowedValues(List.of("allowedValues"))
+ * .assignedValue("assignedValue")
+ * .description("description")
+ * .max(123)
+ * .min(123)
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogActuatorPropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.ActuatorProperty.Builder =

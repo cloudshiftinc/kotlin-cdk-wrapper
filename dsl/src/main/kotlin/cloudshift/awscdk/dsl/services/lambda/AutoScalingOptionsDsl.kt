@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.lambda.AutoScalingOptions
 
+/**
+ * Properties for enabling Lambda autoscaling.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * Function fn;
+ * Alias alias = fn.addAlias("prod");
+ * // Create AutoScaling target
+ * IScalableFunctionAttribute as =
+ * alias.addAutoScaling(AutoScalingOptions.builder().maxCapacity(50).build());
+ * // Configure Target Tracking
+ * as.scaleOnUtilization(UtilizationScalingOptions.builder()
+ * .utilizationTarget(0.5)
+ * .build());
+ * // Configure Scheduled Scaling
+ * as.scaleOnSchedule("ScaleUpInTheMorning", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AutoScalingOptionsDsl {
   private val cdkBuilder: AutoScalingOptions.Builder = AutoScalingOptions.builder()

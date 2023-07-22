@@ -12,6 +12,23 @@ import software.amazon.awscdk.services.events.targets.LogGroupTargetInput
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an AWS CloudWatch LogGroup as an event rule target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * Rule rule;
+ * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
+ * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .message(JSON.stringify(Map.of(
+ * "CustomField", "CustomValue")))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CloudWatchLogGroupDsl(
   logGroup: ILogGroup,

@@ -6,6 +6,84 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Represents the drift check baselines that can be used when the model monitor is set using the
+ * model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DriftCheckBaselinesProperty driftCheckBaselinesProperty = DriftCheckBaselinesProperty.builder()
+ * .bias(DriftCheckBiasProperty.builder()
+ * .configFile(FileSourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .contentType("contentType")
+ * .build())
+ * .postTrainingConstraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .preTrainingConstraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build())
+ * .explainability(DriftCheckExplainabilityProperty.builder()
+ * .configFile(FileSourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .contentType("contentType")
+ * .build())
+ * .constraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build())
+ * .modelDataQuality(DriftCheckModelDataQualityProperty.builder()
+ * .constraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .statistics(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build())
+ * .modelQuality(DriftCheckModelQualityProperty.builder()
+ * .constraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .statistics(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckbaselines.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageDriftCheckBaselinesPropertyDsl {
   private val cdkBuilder: CfnModelPackage.DriftCheckBaselinesProperty.Builder =

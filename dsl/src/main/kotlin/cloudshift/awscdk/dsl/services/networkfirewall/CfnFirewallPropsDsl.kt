@@ -14,6 +14,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallProps
 
+/**
+ * Properties for defining a `CfnFirewall`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * CfnFirewallProps cfnFirewallProps = CfnFirewallProps.builder()
+ * .firewallName("firewallName")
+ * .firewallPolicyArn("firewallPolicyArn")
+ * .subnetMappings(List.of(SubnetMappingProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ipAddressType("ipAddressType")
+ * .build()))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .deleteProtection(false)
+ * .description("description")
+ * .firewallPolicyChangeProtection(false)
+ * .subnetChangeProtection(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-firewall.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPropsDsl {
   private val cdkBuilder: CfnFirewallProps.Builder = CfnFirewallProps.builder()

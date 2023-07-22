@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of a MediaStore container as the destination for an HLS output.
+ *
+ * The parent of this entity is HlsCdnSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsMediaStoreSettingsProperty hlsMediaStoreSettingsProperty =
+ * HlsMediaStoreSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .mediaStoreStorageClass("mediaStoreStorageClass")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsmediastoresettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsMediaStoreSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsMediaStoreSettingsProperty.Builder =

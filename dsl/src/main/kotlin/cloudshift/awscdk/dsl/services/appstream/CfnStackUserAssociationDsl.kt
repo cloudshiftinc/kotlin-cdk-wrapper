@@ -9,6 +9,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnStackUserAssociation
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::StackUserAssociation` resource associates the specified users with the
+ * specified stacks for Amazon AppStream 2.0. Users in an AppStream 2.0 user pool cannot be assigned to
+ * stacks with fleets that are joined to an Active Directory domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnStackUserAssociation cfnStackUserAssociation = CfnStackUserAssociation.Builder.create(this,
+ * "MyCfnStackUserAssociation")
+ * .authenticationType("authenticationType")
+ * .stackName("stackName")
+ * .userName("userName")
+ * // the properties below are optional
+ * .sendEmailNotification(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackuserassociation.html)
+ */
 @CdkDslMarker
 public class CfnStackUserAssociationDsl(
   scope: Construct,

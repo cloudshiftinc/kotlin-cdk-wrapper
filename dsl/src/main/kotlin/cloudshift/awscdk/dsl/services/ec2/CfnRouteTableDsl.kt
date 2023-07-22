@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnRouteTable
 import software.constructs.Construct
 
+/**
+ * Specifies a route table for the specified VPC.
+ *
+ * After you create a route table, you can add routes and associate the table with a subnet.
+ *
+ * For more information, see [Route
+ * Tables](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html) in the *Amazon
+ * VPC User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnRouteTable cfnRouteTable = CfnRouteTable.Builder.create(this, "MyCfnRouteTable")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html)
+ */
 @CdkDslMarker
 public class CfnRouteTableDsl(
   scope: Construct,

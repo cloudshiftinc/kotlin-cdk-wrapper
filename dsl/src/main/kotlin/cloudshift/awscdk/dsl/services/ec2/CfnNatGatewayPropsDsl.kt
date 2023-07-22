@@ -12,6 +12,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnNatGatewayProps
 
+/**
+ * Properties for defining a `CfnNatGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNatGatewayProps cfnNatGatewayProps = CfnNatGatewayProps.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .allocationId("allocationId")
+ * .connectivityType("connectivityType")
+ * .maxDrainDurationSeconds(123)
+ * .privateIpAddress("privateIpAddress")
+ * .secondaryAllocationIds(List.of("secondaryAllocationIds"))
+ * .secondaryPrivateIpAddressCount(123)
+ * .secondaryPrivateIpAddresses(List.of("secondaryPrivateIpAddresses"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html)
+ */
 @CdkDslMarker
 public class CfnNatGatewayPropsDsl {
   private val cdkBuilder: CfnNatGatewayProps.Builder = CfnNatGatewayProps.builder()

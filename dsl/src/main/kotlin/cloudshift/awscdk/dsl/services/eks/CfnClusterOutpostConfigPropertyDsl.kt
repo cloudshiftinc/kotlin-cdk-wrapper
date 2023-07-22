@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * The configuration of your local Amazon EKS cluster on an AWS Outpost.
+ *
+ * Before creating a cluster on an Outpost, review [Creating a local cluster on an
+ * Outpost](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-local-cluster-create.html) in
+ * the *Amazon EKS User Guide* . This API isn't available for Amazon EKS clusters on the AWS cloud.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * OutpostConfigProperty outpostConfigProperty = OutpostConfigProperty.builder()
+ * .controlPlaneInstanceType("controlPlaneInstanceType")
+ * .outpostArns(List.of("outpostArns"))
+ * // the properties below are optional
+ * .controlPlanePlacement(ControlPlanePlacementProperty.builder()
+ * .groupName("groupName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-outpostconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterOutpostConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.OutpostConfigProperty.Builder =

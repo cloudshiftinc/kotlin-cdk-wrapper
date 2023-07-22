@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * A group of signals that are defined in a hierarchical structure.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * BranchProperty branchProperty = BranchProperty.builder()
+ * .fullyQualifiedName("fullyQualifiedName")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogBranchPropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.BranchProperty.Builder =

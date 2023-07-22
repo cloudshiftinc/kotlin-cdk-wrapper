@@ -7,6 +7,100 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * Use this structure to let Amazon EC2 Auto Scaling do the following when the Auto Scaling group
+ * has a mixed instances policy:  - Override the instance type that is specified in the launch
+ * template.
+ *
+ * * Use multiple instance types.
+ *
+ * Specify the instance types that you want, or define your instance requirements instead and let
+ * Amazon EC2 Auto Scaling provision the available instance types that meet your requirements. This can
+ * provide Amazon EC2 Auto Scaling with a larger selection of instance types to choose from when
+ * fulfilling Spot and On-Demand capacities. You can view which instance types are matched before you
+ * apply the instance requirements to your Auto Scaling group.
+ *
+ * After you define your instance requirements, you don't have to keep updating these settings to
+ * get new EC2 instance types automatically. Amazon EC2 Auto Scaling uses the instance requirements of
+ * the Auto Scaling group to determine whether a new EC2 instance type can be used.
+ *
+ * `LaunchTemplateOverrides` is a property of the [AWS::AutoScaling::AutoScalingGroup
+ * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * LaunchTemplateOverridesProperty launchTemplateOverridesProperty =
+ * LaunchTemplateOverridesProperty.builder()
+ * .instanceRequirements(InstanceRequirementsProperty.builder()
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build())
+ * .instanceType("instanceType")
+ * .launchTemplateSpecification(LaunchTemplateSpecificationProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build())
+ * .weightedCapacity("weightedCapacity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupLaunchTemplateOverridesPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.LaunchTemplateOverridesProperty.Builder =

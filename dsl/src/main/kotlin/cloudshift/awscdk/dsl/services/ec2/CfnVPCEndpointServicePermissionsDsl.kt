@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions
 import software.constructs.Construct
 
+/**
+ * Grant or revoke permissions for service consumers (users, IAM roles, and AWS accounts) to connect
+ * to a VPC endpoint service.
+ *
+ * If you grant permissions to all principals, the service is public. Any users who know the name of
+ * a public service can send a request to attach an endpoint. If the service does not require manual
+ * approval, attachments are automatically approved.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointServicePermissions cfnVPCEndpointServicePermissions =
+ * CfnVPCEndpointServicePermissions.Builder.create(this, "MyCfnVPCEndpointServicePermissions")
+ * .serviceId("serviceId")
+ * // the properties below are optional
+ * .allowedPrincipals(List.of("allowedPrincipals"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointServicePermissionsDsl(
   scope: Construct,

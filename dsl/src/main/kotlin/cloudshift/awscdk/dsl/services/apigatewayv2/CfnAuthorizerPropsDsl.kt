@@ -12,6 +12,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer
 import software.amazon.awscdk.services.apigatewayv2.CfnAuthorizerProps
 
+/**
+ * Properties for defining a `CfnAuthorizer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CfnAuthorizerProps cfnAuthorizerProps = CfnAuthorizerProps.builder()
+ * .apiId("apiId")
+ * .authorizerType("authorizerType")
+ * .name("name")
+ * // the properties below are optional
+ * .authorizerCredentialsArn("authorizerCredentialsArn")
+ * .authorizerPayloadFormatVersion("authorizerPayloadFormatVersion")
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .enableSimpleResponses(false)
+ * .identitySource(List.of("identitySource"))
+ * .identityValidationExpression("identityValidationExpression")
+ * .jwtConfiguration(JWTConfigurationProperty.builder()
+ * .audience(List.of("audience"))
+ * .issuer("issuer")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerPropsDsl {
   private val cdkBuilder: CfnAuthorizerProps.Builder = CfnAuthorizerProps.builder()

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Used to extract video by the program ID.
+ *
+ * The parent of this entity is VideoSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VideoSelectorProgramIdProperty videoSelectorProgramIdProperty =
+ * VideoSelectorProgramIdProperty.builder()
+ * .programId(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselectorprogramid.html)
+ */
 @CdkDslMarker
 public class CfnChannelVideoSelectorProgramIdPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorProgramIdProperty.Builder =

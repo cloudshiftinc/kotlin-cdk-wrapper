@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.StandardAttributesMask
 
+/**
+ * This interface contains standard attributes recognized by Cognito from
+ * https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html
+ * including built-in attributes `email_verified` and `phone_number_verified`.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * ClientAttributes clientWriteAttributes = (new
+ * ClientAttributes()).withStandardAttributes(StandardAttributesMask.builder().fullname(true).email(true).build()).withCustomAttributes("favouritePizza",
+ * "favouriteBeverage");
+ * ClientAttributes clientReadAttributes =
+ * clientWriteAttributes.withStandardAttributes(StandardAttributesMask.builder().emailVerified(true).build()).withCustomAttributes("pointsEarned");
+ * pool.addClient("app-client", UserPoolClientOptions.builder()
+ * // ...
+ * .readAttributes(clientReadAttributes)
+ * .writeAttributes(clientWriteAttributes)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StandardAttributesMaskDsl {
   private val cdkBuilder: StandardAttributesMask.Builder = StandardAttributesMask.builder()

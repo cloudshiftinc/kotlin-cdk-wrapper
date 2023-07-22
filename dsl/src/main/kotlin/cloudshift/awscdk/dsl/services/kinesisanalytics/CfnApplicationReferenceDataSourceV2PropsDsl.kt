@@ -8,6 +8,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSourceV2Props
 
+/**
+ * Properties for defining a `CfnApplicationReferenceDataSource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplicationReferenceDataSourceV2Props cfnApplicationReferenceDataSourceV2Props =
+ * CfnApplicationReferenceDataSourceV2Props.builder()
+ * .applicationName("applicationName")
+ * .referenceDataSource(ReferenceDataSourceProperty.builder()
+ * .referenceSchema(ReferenceSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build())
+ * // the properties below are optional
+ * .s3ReferenceDataSource(S3ReferenceDataSourceProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * .build())
+ * .tableName("tableName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html)
+ */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceV2PropsDsl {
   private val cdkBuilder: CfnApplicationReferenceDataSourceV2Props.Builder =

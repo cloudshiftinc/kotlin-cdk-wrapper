@@ -14,6 +14,81 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Defines settings specific to a single replica of a global table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * ReplicaSpecificationProperty replicaSpecificationProperty =
+ * ReplicaSpecificationProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deletionProtectionEnabled(false)
+ * .globalSecondaryIndexes(List.of(ReplicaGlobalSecondaryIndexSpecificationProperty.builder()
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .build()))
+ * .kinesisStreamSpecification(KinesisStreamSpecificationProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
+ * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * .build())
+ * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
+ * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .targetTrackingScalingPolicyConfiguration(TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build())
+ * // the properties below are optional
+ * .seedCapacity(123)
+ * .build())
+ * .readCapacityUnits(123)
+ * .build())
+ * .sseSpecification(ReplicaSSESpecificationProperty.builder()
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .build())
+ * .tableClass("tableClass")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableReplicaSpecificationPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.ReplicaSpecificationProperty.Builder =

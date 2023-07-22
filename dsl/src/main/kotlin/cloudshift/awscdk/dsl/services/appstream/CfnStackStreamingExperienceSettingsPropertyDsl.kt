@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnStack
 
+/**
+ * The streaming protocol that you want your stack to prefer.
+ *
+ * This can be UDP or TCP. Currently, UDP is only supported in the Windows native client.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * StreamingExperienceSettingsProperty streamingExperienceSettingsProperty =
+ * StreamingExperienceSettingsProperty.builder()
+ * .preferredProtocol("preferredProtocol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-streamingexperiencesettings.html)
+ */
 @CdkDslMarker
 public class CfnStackStreamingExperienceSettingsPropertyDsl {
   private val cdkBuilder: CfnStack.StreamingExperienceSettingsProperty.Builder =

@@ -9,6 +9,27 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.elasticloadbalancing.HealthCheck
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancingProtocol
 
+/**
+ * Describe the health check to a load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc;
+ * AutoScalingGroup myAutoScalingGroup;
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .healthCheck(HealthCheck.builder()
+ * .port(80)
+ * .build())
+ * .build();
+ * lb.addTarget(myAutoScalingGroup);
+ * lb.addListener(LoadBalancerListener.builder()
+ * .externalPort(80)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HealthCheckDsl {
   private val cdkBuilder: HealthCheck.Builder = HealthCheck.builder()

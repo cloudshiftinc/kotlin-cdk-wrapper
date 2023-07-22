@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.applicationinsights.CfnApplication
 
+/**
+ * The `AWS::ApplicationInsights::Application Log` property type specifies a log to monitor for the
+ * component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationinsights.*;
+ * LogProperty logProperty = LogProperty.builder()
+ * .logType("logType")
+ * // the properties below are optional
+ * .encoding("encoding")
+ * .logGroupName("logGroupName")
+ * .logPath("logPath")
+ * .patternSet("patternSet")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-log.html)
+ */
 @CdkDslMarker
 public class CfnApplicationLogPropertyDsl {
   private val cdkBuilder: CfnApplication.LogProperty.Builder = CfnApplication.LogProperty.builder()

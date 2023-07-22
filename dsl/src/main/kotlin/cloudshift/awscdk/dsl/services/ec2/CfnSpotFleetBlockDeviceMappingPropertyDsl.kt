@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Specifies a block device mapping.
+ *
+ * You can specify `Ebs` or `VirtualName` , but not both.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .ebs(EbsBlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-blockdevicemapping.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetBlockDeviceMappingPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.BlockDeviceMappingProperty.Builder =

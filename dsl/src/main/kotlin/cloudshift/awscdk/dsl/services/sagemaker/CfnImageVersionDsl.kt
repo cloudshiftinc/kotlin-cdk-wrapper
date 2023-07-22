@@ -7,6 +7,41 @@ import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnImageVersion
 import software.constructs.Construct
 
+/**
+ * Creates a version of the SageMaker image specified by `ImageName` .
+ *
+ * The version represents the Amazon Container Registry (ECR) container image specified by
+ * `BaseImage` .
+ *
+ *
+ * You can use the `DependsOn` attribute to specify that the creation of a specific resource follows
+ * another. You can use it for the following use cases. For more information, see [`DependsOn`
+ * attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * .
+ *
+ *
+ * * `DependsOn` can be used to establish a parent/child relationship between `ImageVersion` and
+ * `Image` where the `ImageVersion` `DependsOn` the `Image` .
+ * * `DependsOn` can be used to establish order among `ImageVersion` s within the same `Image`
+ * namespace. For example, if ImageVersionB `DependsOn` ImageVersionA and both share the same parent
+ * `Image` , then ImageVersionA is version N and ImageVersionB is N+1.
+ *
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnImageVersion cfnImageVersion = CfnImageVersion.Builder.create(this, "MyCfnImageVersion")
+ * .baseImage("baseImage")
+ * .imageName("imageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-imageversion.html)
+ */
 @CdkDslMarker
 public class CfnImageVersionDsl(
   scope: Construct,

@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile properties when using Amazon Redshift.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * RedshiftConnectorProfilePropertiesProperty redshiftConnectorProfilePropertiesProperty =
+ * RedshiftConnectorProfilePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .clusterIdentifier("clusterIdentifier")
+ * .dataApiRoleArn("dataApiRoleArn")
+ * .databaseName("databaseName")
+ * .databaseUrl("databaseUrl")
+ * .isRedshiftServerless(false)
+ * .workgroupName("workgroupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-redshiftconnectorprofileproperties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileRedshiftConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.RedshiftConnectorProfilePropertiesProperty.Builder =

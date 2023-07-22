@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps
 
+/**
+ * Properties for defining a `CfnCustomerGatewayAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnCustomerGatewayAssociationProps cfnCustomerGatewayAssociationProps =
+ * CfnCustomerGatewayAssociationProps.builder()
+ * .customerGatewayArn("customerGatewayArn")
+ * .deviceId("deviceId")
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .linkId("linkId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html)
+ */
 @CdkDslMarker
 public class CfnCustomerGatewayAssociationPropsDsl {
   private val cdkBuilder: CfnCustomerGatewayAssociationProps.Builder =

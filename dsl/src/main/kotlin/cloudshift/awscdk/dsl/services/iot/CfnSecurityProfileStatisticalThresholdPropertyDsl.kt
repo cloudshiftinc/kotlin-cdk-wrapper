@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * A statistical ranking (percentile) that indicates a threshold value by which a behavior is
+ * determined to be in compliance or in violation of the behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * StatisticalThresholdProperty statisticalThresholdProperty =
+ * StatisticalThresholdProperty.builder()
+ * .statistic("statistic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-statisticalthreshold.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileStatisticalThresholdPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.StatisticalThresholdProperty.Builder =

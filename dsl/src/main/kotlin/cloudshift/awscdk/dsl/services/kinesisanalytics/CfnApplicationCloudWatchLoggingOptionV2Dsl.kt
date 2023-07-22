@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2
 import software.constructs.Construct
 
+/**
+ * Adds an Amazon CloudWatch log stream to monitor application configuration errors.
+ *
+ *
+ * Only one *ApplicationCloudWatchLoggingOption* resource can be attached per application.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplicationCloudWatchLoggingOptionV2 cfnApplicationCloudWatchLoggingOptionV2 =
+ * CfnApplicationCloudWatchLoggingOptionV2.Builder.create(this,
+ * "MyCfnApplicationCloudWatchLoggingOptionV2")
+ * .applicationName("applicationName")
+ * .cloudWatchLoggingOption(CloudWatchLoggingOptionProperty.builder()
+ * .logStreamArn("logStreamArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationcloudwatchloggingoption.html)
+ */
 @CdkDslMarker
 public class CfnApplicationCloudWatchLoggingOptionV2Dsl(
   scope: Construct,

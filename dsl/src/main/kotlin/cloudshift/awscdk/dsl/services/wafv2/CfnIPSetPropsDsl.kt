@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.wafv2.CfnIPSetProps
 
+/**
+ * Properties for defining a `CfnIPSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CfnIPSetProps cfnIPSetProps = CfnIPSetProps.builder()
+ * .addresses(List.of("addresses"))
+ * .ipAddressVersion("ipAddressVersion")
+ * .scope("scope")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-ipset.html)
+ */
 @CdkDslMarker
 public class CfnIPSetPropsDsl {
   private val cdkBuilder: CfnIPSetProps.Builder = CfnIPSetProps.builder()

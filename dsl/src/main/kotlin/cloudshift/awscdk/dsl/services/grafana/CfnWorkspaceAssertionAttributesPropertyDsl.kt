@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 
+/**
+ * A structure that defines which attributes in the IdP assertion are to be used to define
+ * information about the users authenticated by the IdP to use the workspace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * AssertionAttributesProperty assertionAttributesProperty = AssertionAttributesProperty.builder()
+ * .email("email")
+ * .groups("groups")
+ * .login("login")
+ * .name("name")
+ * .org("org")
+ * .role("role")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-assertionattributes.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceAssertionAttributesPropertyDsl {
   private val cdkBuilder: CfnWorkspace.AssertionAttributesProperty.Builder =

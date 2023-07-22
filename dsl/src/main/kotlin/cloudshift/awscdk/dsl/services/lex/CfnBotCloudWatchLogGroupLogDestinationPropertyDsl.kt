@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * The Amazon CloudWatch Logs log group where the text and metadata logs are delivered.
+ *
+ * The log group must exist before you enable logging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * CloudWatchLogGroupLogDestinationProperty cloudWatchLogGroupLogDestinationProperty =
+ * CloudWatchLogGroupLogDestinationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .logPrefix("logPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-cloudwatchloggrouplogdestination.html)
+ */
 @CdkDslMarker
 public class CfnBotCloudWatchLogGroupLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBot.CloudWatchLogGroupLogDestinationProperty.Builder =

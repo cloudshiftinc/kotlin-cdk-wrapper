@@ -15,6 +15,37 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps
 import software.amazon.awscdk.services.stepfunctions.Timeout
 
+/**
+ * Props that are common to all tasks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object resultSelector;
+ * TaskRole taskRole;
+ * Timeout timeout;
+ * TaskStateBaseProps taskStateBaseProps = TaskStateBaseProps.builder()
+ * .comment("comment")
+ * .credentials(Credentials.builder()
+ * .role(taskRole)
+ * .build())
+ * .heartbeat(Duration.minutes(30))
+ * .heartbeatTimeout(timeout)
+ * .inputPath("inputPath")
+ * .integrationPattern(IntegrationPattern.REQUEST_RESPONSE)
+ * .outputPath("outputPath")
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .taskTimeout(timeout)
+ * .timeout(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TaskStateBasePropsDsl {
   private val cdkBuilder: TaskStateBaseProps.Builder = TaskStateBaseProps.builder()

@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A tree map.
+ *
+ * For more information, see [Using tree
+ * maps](https://docs.aws.amazon.com/quicksight/latest/user/tree-map.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-treemapvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTreeMapVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.TreeMapVisualProperty.Builder =

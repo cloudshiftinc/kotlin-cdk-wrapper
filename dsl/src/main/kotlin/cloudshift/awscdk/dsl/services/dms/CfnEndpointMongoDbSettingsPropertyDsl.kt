@@ -7,6 +7,40 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a MongoDB endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about other available settings,
+ * see [Endpoint configuration settings when using MongoDB as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html#CHAP_Source.MongoDB.Configuration)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * MongoDbSettingsProperty mongoDbSettingsProperty = MongoDbSettingsProperty.builder()
+ * .authMechanism("authMechanism")
+ * .authSource("authSource")
+ * .authType("authType")
+ * .databaseName("databaseName")
+ * .docsToInvestigate("docsToInvestigate")
+ * .extractDocId("extractDocId")
+ * .nestingLevel("nestingLevel")
+ * .password("password")
+ * .port(123)
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverName("serverName")
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mongodbsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointMongoDbSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.MongoDbSettingsProperty.Builder =

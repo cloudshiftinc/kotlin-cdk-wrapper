@@ -11,6 +11,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplateProps
 
+/**
+ * Properties for defining a `CfnLaunchTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * String userData = "MIME-Version: 1.0\nContent-Type: multipart/mixed;
+ * boundary=\"==MYBOUNDARY==\"\n\n--==MYBOUNDARY==\nContent-Type: text/x-shellscript;
+ * charset=\"us-ascii\"\n\n#!/bin/bash\necho \"Running custom user data
+ * script\"\n\n--==MYBOUNDARY==--\\\n";
+ * CfnLaunchTemplate lt = CfnLaunchTemplate.Builder.create(this, "LaunchTemplate")
+ * .launchTemplateData(LaunchTemplateDataProperty.builder()
+ * .instanceType("t3.small")
+ * .userData(Fn.base64(userData))
+ * .build())
+ * .build();
+ * cluster.addNodegroupCapacity("extra-ng", NodegroupOptions.builder()
+ * .launchTemplateSpec(LaunchTemplateSpec.builder()
+ * .id(lt.getRef())
+ * .version(lt.getAttrLatestVersionNumber())
+ * .build())
+ * .build());
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplatePropsDsl {
   private val cdkBuilder: CfnLaunchTemplateProps.Builder = CfnLaunchTemplateProps.builder()

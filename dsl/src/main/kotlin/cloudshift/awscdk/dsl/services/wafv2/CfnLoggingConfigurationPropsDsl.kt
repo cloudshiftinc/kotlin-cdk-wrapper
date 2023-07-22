@@ -12,6 +12,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfigurationProps
 
+/**
+ * Properties for defining a `CfnLoggingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object jsonBody;
+ * Object loggingFilter;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object uriPath;
+ * CfnLoggingConfigurationProps cfnLoggingConfigurationProps =
+ * CfnLoggingConfigurationProps.builder()
+ * .logDestinationConfigs(List.of("logDestinationConfigs"))
+ * .resourceArn("resourceArn")
+ * // the properties below are optional
+ * .loggingFilter(loggingFilter)
+ * .redactedFields(List.of(FieldToMatchProperty.builder()
+ * .jsonBody(jsonBody)
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .uriPath(uriPath)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationPropsDsl {
   private val cdkBuilder: CfnLoggingConfigurationProps.Builder =

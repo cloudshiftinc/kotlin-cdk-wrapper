@@ -16,6 +16,23 @@ import software.amazon.awscdk.SymlinkFollowMode
 import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.s3.assets.AssetOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * Function.Builder.create(this, "Function")
+ * .code(Code.fromAsset(join(__dirname, "my-python-handler"), AssetOptions.builder()
+ * .bundling(BundlingOptions.builder()
+ * .image(Runtime.PYTHON_3_9.getBundlingImage())
+ * .command(List.of("bash", "-c", "pip install -r requirements.txt -t /asset-output &amp;&amp;
+ * cp -au . /asset-output"))
+ * .build())
+ * .build()))
+ * .runtime(Runtime.PYTHON_3_9)
+ * .handler("index.handler")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetOptionsDsl {
   private val cdkBuilder: AssetOptions.Builder = AssetOptions.builder()

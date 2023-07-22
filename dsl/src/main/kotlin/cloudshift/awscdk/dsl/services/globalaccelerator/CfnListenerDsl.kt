@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnListener
 import software.constructs.Construct
 
+/**
+ * The `AWS::GlobalAccelerator::Listener` resource is a Global Accelerator resource type that
+ * contains information about how you create a listener to process inbound connections from clients to
+ * an accelerator.
+ *
+ * Connections arrive to assigned static IP addresses on a port, port range, or list of port ranges
+ * that you specify.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnListener cfnListener = CfnListener.Builder.create(this, "MyCfnListener")
+ * .acceleratorArn("acceleratorArn")
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .clientAffinity("clientAffinity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)
+ */
 @CdkDslMarker
 public class CfnListenerDsl(
   scope: Construct,

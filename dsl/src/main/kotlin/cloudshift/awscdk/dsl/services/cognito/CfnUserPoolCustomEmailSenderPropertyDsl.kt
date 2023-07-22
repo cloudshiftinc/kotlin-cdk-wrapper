@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * A custom email sender AWS Lambda trigger.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CustomEmailSenderProperty customEmailSenderProperty = CustomEmailSenderProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-customemailsender.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolCustomEmailSenderPropertyDsl {
   private val cdkBuilder: CfnUserPool.CustomEmailSenderProperty.Builder =

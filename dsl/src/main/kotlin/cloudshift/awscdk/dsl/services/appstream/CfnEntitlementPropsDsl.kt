@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnEntitlementProps
 
+/**
+ * Properties for defining a `CfnEntitlement`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnEntitlementProps cfnEntitlementProps = CfnEntitlementProps.builder()
+ * .appVisibility("appVisibility")
+ * .attributes(List.of(AttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .stackName("stackName")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-entitlement.html)
+ */
 @CdkDslMarker
 public class CfnEntitlementPropsDsl {
   private val cdkBuilder: CfnEntitlementProps.Builder = CfnEntitlementProps.builder()

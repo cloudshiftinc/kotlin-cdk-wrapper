@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfigProps
 
+/**
+ * Properties for defining a `CfnSecurityConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnSecurityConfigProps cfnSecurityConfigProps = CfnSecurityConfigProps.builder()
+ * .description("description")
+ * .name("name")
+ * .samlOptions(SamlConfigOptionsProperty.builder()
+ * .metadata("metadata")
+ * // the properties below are optional
+ * .groupAttribute("groupAttribute")
+ * .sessionTimeout(123)
+ * .userAttribute("userAttribute")
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigPropsDsl {
   private val cdkBuilder: CfnSecurityConfigProps.Builder = CfnSecurityConfigProps.builder()

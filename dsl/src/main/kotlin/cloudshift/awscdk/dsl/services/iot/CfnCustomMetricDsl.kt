@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnCustomMetric
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::CustomMetric` resource to define a custom metric published by your devices to
+ * Device Defender.
+ *
+ * For API reference, see
+ * [CreateCustomMetric](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCustomMetric.html)
+ * and for general information, see [Custom
+ * metrics](https://docs.aws.amazon.com/iot/latest/developerguide/dd-detect-custom-metrics.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCustomMetric cfnCustomMetric = CfnCustomMetric.Builder.create(this, "MyCfnCustomMetric")
+ * .metricType("metricType")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .metricName("metricName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-custommetric.html)
+ */
 @CdkDslMarker
 public class CfnCustomMetricDsl(
   scope: Construct,

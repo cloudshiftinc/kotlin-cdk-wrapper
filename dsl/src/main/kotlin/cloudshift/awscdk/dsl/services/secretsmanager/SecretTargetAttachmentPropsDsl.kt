@@ -7,6 +7,23 @@ import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget
 import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachmentProps
 
+/**
+ * Construction properties for an AttachedSecret.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * ISecretAttachmentTarget secretAttachmentTarget;
+ * SecretTargetAttachmentProps secretTargetAttachmentProps = SecretTargetAttachmentProps.builder()
+ * .secret(secret)
+ * .target(secretAttachmentTarget)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretTargetAttachmentPropsDsl {
   private val cdkBuilder: SecretTargetAttachmentProps.Builder =

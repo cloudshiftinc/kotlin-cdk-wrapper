@@ -8,6 +8,18 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.TextWidget
 import software.amazon.awscdk.services.cloudwatch.TextWidgetBackground
 
+/**
+ * A dashboard widget that displays MarkDown.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(TextWidget.Builder.create()
+ * .markdown("# Key Performance Indicators")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TextWidgetDsl {
   private val cdkBuilder: TextWidget.Builder = TextWidget.Builder.create()

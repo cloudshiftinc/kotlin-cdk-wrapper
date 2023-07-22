@@ -10,6 +10,30 @@ import kotlin.Unit
 import software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Attaches a resource-based permission policy to a CloudTrail channel that is used for an
+ * integration with an event source outside of AWS .
+ *
+ * For more information about resource-based policies, see [CloudTrail resource-based policy
+ * examples](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html)
+ * in the *CloudTrail User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * Object resourcePolicy;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .resourceArn("resourceArn")
+ * .resourcePolicy(resourcePolicy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

@@ -9,6 +9,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConnect::FlowSource resource is used to add additional sources to an existing flow.
+ *
+ * Adding an additional source requires Failover to be enabled. When you enable Failover, the
+ * additional source must use the same protocol as the existing source. A source is the external video
+ * content that includes configuration information (encryption and source type) and a network address.
+ * Each flow has at least one source. A standard source comes from a source other than another AWS
+ * Elemental MediaConnect flow, such as an on-premises encoder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowSource cfnFlowSource = CfnFlowSource.Builder.create(this, "MyCfnFlowSource")
+ * .description("description")
+ * .name("name")
+ * // the properties below are optional
+ * .decryption(EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .constantInitializationVector("constantInitializationVector")
+ * .deviceId("deviceId")
+ * .keyType("keyType")
+ * .region("region")
+ * .resourceId("resourceId")
+ * .secretArn("secretArn")
+ * .url("url")
+ * .build())
+ * .entitlementArn("entitlementArn")
+ * .flowArn("flowArn")
+ * .gatewayBridgeSource(GatewayBridgeSourceProperty.builder()
+ * .bridgeArn("bridgeArn")
+ * // the properties below are optional
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .ingestPort(123)
+ * .maxBitrate(123)
+ * .maxLatency(123)
+ * .minLatency(123)
+ * .protocol("protocol")
+ * .senderControlPort(123)
+ * .senderIpAddress("senderIpAddress")
+ * .sourceListenerAddress("sourceListenerAddress")
+ * .sourceListenerPort(123)
+ * .streamId("streamId")
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .whitelistCidr("whitelistCidr")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html)
+ */
 @CdkDslMarker
 public class CfnFlowSourceDsl(
   scope: Construct,

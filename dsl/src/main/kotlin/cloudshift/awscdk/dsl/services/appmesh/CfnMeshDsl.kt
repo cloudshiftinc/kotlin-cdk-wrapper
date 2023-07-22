@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnMesh
 import software.constructs.Construct
 
+/**
+ * Creates a service mesh.
+ *
+ * A service mesh is a logical boundary for network traffic between services that are represented by
+ * resources within the mesh. After you create your service mesh, you can create virtual services,
+ * virtual nodes, virtual routers, and routes to distribute traffic between the applications in your
+ * mesh.
+ *
+ * For more information about service meshes, see [Service
+ * meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/meshes.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * CfnMesh cfnMesh = CfnMesh.Builder.create(this, "MyCfnMesh")
+ * .meshName("meshName")
+ * .spec(MeshSpecProperty.builder()
+ * .egressFilter(EgressFilterProperty.builder()
+ * .type("type")
+ * .build())
+ * .serviceDiscovery(MeshServiceDiscoveryProperty.builder()
+ * .ipPreference("ipPreference")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-mesh.html)
+ */
 @CdkDslMarker
 public class CfnMeshDsl(
   scope: Construct,

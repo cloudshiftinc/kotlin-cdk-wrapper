@@ -17,6 +17,36 @@ import software.amazon.awscdk.services.codedeploy.IEcsDeploymentConfig
 import software.amazon.awscdk.services.ecs.IBaseService
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties for `EcsDeploymentGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication myApplication;
+ * Cluster cluster;
+ * FargateTaskDefinition taskDefinition;
+ * ITargetGroup blueTargetGroup;
+ * ITargetGroup greenTargetGroup;
+ * IApplicationListener listener;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.CODE_DEPLOY)
+ * .build())
+ * .build();
+ * EcsDeploymentGroup.Builder.create(this, "BlueGreenDG")
+ * .service(service)
+ * .blueGreenDeploymentConfig(EcsBlueGreenDeploymentConfig.builder()
+ * .blueTargetGroup(blueTargetGroup)
+ * .greenTargetGroup(greenTargetGroup)
+ * .listener(listener)
+ * .build())
+ * .deploymentConfig(EcsDeploymentConfig.CANARY_10PERCENT_5MINUTES)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsDeploymentGroupPropsDsl {
   private val cdkBuilder: EcsDeploymentGroupProps.Builder = EcsDeploymentGroupProps.builder()

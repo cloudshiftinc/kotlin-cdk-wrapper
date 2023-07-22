@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The field well configuration of a KPI visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-kpifieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateKPIFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.KPIFieldWellsProperty.Builder =

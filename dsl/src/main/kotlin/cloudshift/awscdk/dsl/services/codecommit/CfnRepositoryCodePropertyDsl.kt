@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codecommit.CfnRepository
 
+/**
+ * Information about code to be committed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * CodeProperty codeProperty = CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * // the properties below are optional
+ * .branchName("branchName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-code.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryCodePropertyDsl {
   private val cdkBuilder: CfnRepository.CodeProperty.Builder = CfnRepository.CodeProperty.builder()

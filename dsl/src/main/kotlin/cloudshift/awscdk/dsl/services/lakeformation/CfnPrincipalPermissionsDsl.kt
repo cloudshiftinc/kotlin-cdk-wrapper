@@ -10,6 +10,84 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 import software.constructs.Construct
 
+/**
+ * The `AWS::LakeFormation::PrincipalPermissions` resource represents the permissions that a
+ * principal has on a Data Catalog resource (such as AWS Glue databases or AWS Glue tables).
+ *
+ * When you create a `PrincipalPermissions` resource, the permissions are granted via the AWS Lake
+ * Formation `GrantPermissions` API operation. When you delete a `PrincipalPermissions` resource, the
+ * permissions on principal-resource pair are revoked via the AWS Lake Formation `RevokePermissions`
+ * API operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object catalog;
+ * Object tableWildcard;
+ * CfnPrincipalPermissions cfnPrincipalPermissions = CfnPrincipalPermissions.Builder.create(this,
+ * "MyCfnPrincipalPermissions")
+ * .permissions(List.of("permissions"))
+ * .permissionsWithGrantOption(List.of("permissionsWithGrantOption"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .resource(ResourceProperty.builder()
+ * .catalog(catalog)
+ * .database(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataCellsFilter(DataCellsFilterResourceProperty.builder()
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableCatalogId("tableCatalogId")
+ * .tableName("tableName")
+ * .build())
+ * .dataLocation(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .resourceArn("resourceArn")
+ * .build())
+ * .lfTag(LFTagKeyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build())
+ * .lfTagPolicy(LFTagPolicyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .expression(List.of(LFTagProperty.builder()
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build()))
+ * .resourceType("resourceType")
+ * .build())
+ * .table(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .name("name")
+ * .tableWildcard(tableWildcard)
+ * .build())
+ * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .catalog("catalog")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-principalpermissions.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsDsl(
   scope: Construct,

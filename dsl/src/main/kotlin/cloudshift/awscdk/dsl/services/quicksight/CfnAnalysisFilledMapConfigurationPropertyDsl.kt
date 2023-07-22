@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration for a `FilledMapVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-filledmapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFilledMapConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FilledMapConfigurationProperty.Builder =

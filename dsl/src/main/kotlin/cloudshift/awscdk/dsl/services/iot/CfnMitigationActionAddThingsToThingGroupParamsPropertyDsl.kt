@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 
+/**
+ * Parameters used when defining a mitigation action that move a set of things to a thing group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AddThingsToThingGroupParamsProperty addThingsToThingGroupParamsProperty =
+ * AddThingsToThingGroupParamsProperty.builder()
+ * .thingGroupNames(List.of("thingGroupNames"))
+ * // the properties below are optional
+ * .overrideDynamicGroups(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-addthingstothinggroupparams.html)
+ */
 @CdkDslMarker
 public class CfnMitigationActionAddThingsToThingGroupParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.AddThingsToThingGroupParamsProperty.Builder =

@@ -8,6 +8,55 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A `TimeRangeFilter` filters values that are between two specified values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TimeRangeFilterProperty timeRangeFilterProperty = TimeRangeFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .filterId("filterId")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .excludePeriodConfiguration(ExcludePeriodConfigurationProperty.builder()
+ * .amount(123)
+ * .granularity("granularity")
+ * // the properties below are optional
+ * .status("status")
+ * .build())
+ * .includeMaximum(false)
+ * .includeMinimum(false)
+ * .rangeMaximumValue(TimeRangeFilterValueProperty.builder()
+ * .parameter("parameter")
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .staticValue("staticValue")
+ * .build())
+ * .rangeMinimumValue(TimeRangeFilterValueProperty.builder()
+ * .parameter("parameter")
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .staticValue("staticValue")
+ * .build())
+ * .timeGranularity("timeGranularity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-timerangefilter.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTimeRangeFilterPropertyDsl {
   private val cdkBuilder: CfnTemplate.TimeRangeFilterProperty.Builder =

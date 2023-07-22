@@ -14,6 +14,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.auditmanager.CfnAssessment
 import software.amazon.awscdk.services.auditmanager.CfnAssessmentProps
 
+/**
+ * Properties for defining a `CfnAssessment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.auditmanager.*;
+ * CfnAssessmentProps cfnAssessmentProps = CfnAssessmentProps.builder()
+ * .assessmentReportsDestination(AssessmentReportsDestinationProperty.builder()
+ * .destination("destination")
+ * .destinationType("destinationType")
+ * .build())
+ * .awsAccount(AWSAccountProperty.builder()
+ * .emailAddress("emailAddress")
+ * .id("id")
+ * .name("name")
+ * .build())
+ * .delegations(List.of(DelegationProperty.builder()
+ * .assessmentId("assessmentId")
+ * .assessmentName("assessmentName")
+ * .comment("comment")
+ * .controlSetId("controlSetId")
+ * .createdBy("createdBy")
+ * .creationTime(123)
+ * .id("id")
+ * .lastUpdated(123)
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .status("status")
+ * .build()))
+ * .description("description")
+ * .frameworkId("frameworkId")
+ * .name("name")
+ * .roles(List.of(RoleProperty.builder()
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .build()))
+ * .scope(ScopeProperty.builder()
+ * .awsAccounts(List.of(AWSAccountProperty.builder()
+ * .emailAddress("emailAddress")
+ * .id("id")
+ * .name("name")
+ * .build()))
+ * .awsServices(List.of(AWSServiceProperty.builder()
+ * .serviceName("serviceName")
+ * .build()))
+ * .build())
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentPropsDsl {
   private val cdkBuilder: CfnAssessmentProps.Builder = CfnAssessmentProps.builder()

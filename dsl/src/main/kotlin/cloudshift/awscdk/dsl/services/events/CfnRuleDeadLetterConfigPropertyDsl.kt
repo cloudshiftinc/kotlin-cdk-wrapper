@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * A `DeadLetterConfig` object that contains information about a dead-letter queue configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-deadletterconfig.html)
+ */
 @CdkDslMarker
 public class CfnRuleDeadLetterConfigPropertyDsl {
   private val cdkBuilder: CfnRule.DeadLetterConfigProperty.Builder =

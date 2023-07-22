@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Allows data paths to be sorted by a specific data value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataPathSortProperty dataPathSortProperty = DataPathSortProperty.builder()
+ * .direction("direction")
+ * .sortPaths(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datapathsort.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDataPathSortPropertyDsl {
   private val cdkBuilder: CfnTemplate.DataPathSortProperty.Builder =

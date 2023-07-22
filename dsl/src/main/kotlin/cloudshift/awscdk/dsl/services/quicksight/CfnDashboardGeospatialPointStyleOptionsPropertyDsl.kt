@@ -7,6 +7,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The point style of the geospatial map.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GeospatialPointStyleOptionsProperty geospatialPointStyleOptionsProperty =
+ * GeospatialPointStyleOptionsProperty.builder()
+ * .clusterMarkerConfiguration(ClusterMarkerConfigurationProperty.builder()
+ * .clusterMarker(ClusterMarkerProperty.builder()
+ * .simpleClusterMarker(SimpleClusterMarkerProperty.builder()
+ * .color("color")
+ * .build())
+ * .build())
+ * .build())
+ * .heatmapConfiguration(GeospatialHeatmapConfigurationProperty.builder()
+ * .heatmapColor(GeospatialHeatmapColorScaleProperty.builder()
+ * .colors(List.of(GeospatialHeatmapDataColorProperty.builder()
+ * .color("color")
+ * .build()))
+ * .build())
+ * .build())
+ * .selectedPointStyle("selectedPointStyle")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-geospatialpointstyleoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardGeospatialPointStyleOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.GeospatialPointStyleOptionsProperty.Builder =

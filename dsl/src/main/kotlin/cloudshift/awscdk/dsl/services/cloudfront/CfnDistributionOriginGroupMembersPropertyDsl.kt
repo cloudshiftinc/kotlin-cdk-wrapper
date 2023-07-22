@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex data type for the origins included in an origin group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginGroupMembersProperty originGroupMembersProperty = OriginGroupMembersProperty.builder()
+ * .items(List.of(OriginGroupMemberProperty.builder()
+ * .originId("originId")
+ * .build()))
+ * .quantity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origingroupmembers.html)
+ */
 @CdkDslMarker
 public class CfnDistributionOriginGroupMembersPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginGroupMembersProperty.Builder =

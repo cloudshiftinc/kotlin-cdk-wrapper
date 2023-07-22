@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * The minimum and maximum baseline bandwidth to Amazon EBS, in Mbps.
+ *
+ * For more information, see [Amazon EBS–optimized
+ * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
+ * EC2 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * BaselineEbsBandwidthMbpsProperty baselineEbsBandwidthMbpsProperty =
+ * BaselineEbsBandwidthMbpsProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineebsbandwidthmbps.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateBaselineEbsBandwidthMbpsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.BaselineEbsBandwidthMbpsProperty.Builder =

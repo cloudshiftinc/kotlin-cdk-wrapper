@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile credentials required when using Salesforce.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SalesforceConnectorProfileCredentialsProperty salesforceConnectorProfileCredentialsProperty =
+ * SalesforceConnectorProfileCredentialsProperty.builder()
+ * .accessToken("accessToken")
+ * .clientCredentialsArn("clientCredentialsArn")
+ * .connectorOAuthRequest(ConnectorOAuthRequestProperty.builder()
+ * .authCode("authCode")
+ * .redirectUri("redirectUri")
+ * .build())
+ * .jwtToken("jwtToken")
+ * .oAuth2GrantType("oAuth2GrantType")
+ * .refreshToken("refreshToken")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileSalesforceConnectorProfileCredentialsPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.SalesforceConnectorProfileCredentialsProperty.Builder

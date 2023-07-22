@@ -11,6 +11,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.backup.CfnFramework
 
+/**
+ * A framework consists of one or more controls.
+ *
+ * Each control has its own control scope. The control scope can include one or more resource types,
+ * a combination of a tag key and value, or a combination of one resource type and one resource ID. If
+ * no scope is specified, evaluations for the rule are triggered when any resource in your recording
+ * group changes in configuration.
+ *
+ *
+ * To set a control scope that includes all of a particular resource, leave the `ControlScope` empty
+ * or do not pass it when calling `CreateFramework` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * ControlScopeProperty controlScopeProperty = ControlScopeProperty.builder()
+ * .complianceResourceIds(List.of("complianceResourceIds"))
+ * .complianceResourceTypes(List.of("complianceResourceTypes"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html)
+ */
 @CdkDslMarker
 public class CfnFrameworkControlScopePropertyDsl {
   private val cdkBuilder: CfnFramework.ControlScopeProperty.Builder =

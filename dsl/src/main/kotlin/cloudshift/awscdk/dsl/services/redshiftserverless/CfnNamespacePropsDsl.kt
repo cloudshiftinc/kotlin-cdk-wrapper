@@ -12,6 +12,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.redshiftserverless.CfnNamespaceProps
 
+/**
+ * Properties for defining a `CfnNamespace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * CfnNamespaceProps cfnNamespaceProps = CfnNamespaceProps.builder()
+ * .namespaceName("namespaceName")
+ * // the properties below are optional
+ * .adminUsername("adminUsername")
+ * .adminUserPassword("adminUserPassword")
+ * .dbName("dbName")
+ * .defaultIamRoleArn("defaultIamRoleArn")
+ * .finalSnapshotName("finalSnapshotName")
+ * .finalSnapshotRetentionPeriod(123)
+ * .iamRoles(List.of("iamRoles"))
+ * .kmsKeyId("kmsKeyId")
+ * .logExports(List.of("logExports"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html)
+ */
 @CdkDslMarker
 public class CfnNamespacePropsDsl {
   private val cdkBuilder: CfnNamespaceProps.Builder = CfnNamespaceProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnService
 
+/**
+ * Describes the DNS information of a service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * DnsEntryProperty dnsEntryProperty = DnsEntryProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneId("hostedZoneId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-service-dnsentry.html)
+ */
 @CdkDslMarker
 public class CfnServiceDnsEntryPropertyDsl {
   private val cdkBuilder: CfnService.DnsEntryProperty.Builder =

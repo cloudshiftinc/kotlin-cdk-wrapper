@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnDimensionProps
 
+/**
+ * Properties for defining a `CfnDimension`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnDimensionProps cfnDimensionProps = CfnDimensionProps.builder()
+ * .stringValues(List.of("stringValues"))
+ * .type("type")
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html)
+ */
 @CdkDslMarker
 public class CfnDimensionPropsDsl {
   private val cdkBuilder: CfnDimensionProps.Builder = CfnDimensionProps.builder()

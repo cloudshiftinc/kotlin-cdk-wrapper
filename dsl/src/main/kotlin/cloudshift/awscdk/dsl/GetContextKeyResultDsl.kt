@@ -10,6 +10,21 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.GetContextKeyResult
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * Object props;
+ * GetContextKeyResult getContextKeyResult = GetContextKeyResult.builder()
+ * .key("key")
+ * .props(Map.of(
+ * "propsKey", props))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GetContextKeyResultDsl {
   private val cdkBuilder: GetContextKeyResult.Builder = GetContextKeyResult.builder()

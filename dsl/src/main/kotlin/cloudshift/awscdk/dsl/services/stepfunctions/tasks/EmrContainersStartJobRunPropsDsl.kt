@@ -24,6 +24,30 @@ import software.amazon.awscdk.services.stepfunctions.tasks.Monitoring
 import software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel
 import software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput
 
+/**
+ * The props for a EMR Containers StartJobRun Task.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersStartJobRun.Builder.create(this, "EMR Containers Start Job Run")
+ * .virtualCluster(VirtualClusterInput.fromVirtualClusterId("de92jdei2910fwedz"))
+ * .releaseLabel(ReleaseLabel.EMR_6_2_0)
+ * .jobName("EMR-Containers-Job")
+ * .jobDriver(JobDriver.builder()
+ * .sparkSubmitJobDriver(SparkSubmitJobDriver.builder()
+ * .entryPoint(TaskInput.fromText("local:///usr/lib/spark/examples/src/main/python/pi.py"))
+ * .build())
+ * .build())
+ * .applicationConfig(List.of(ApplicationConfiguration.builder()
+ * .classification(Classification.SPARK_DEFAULTS)
+ * .properties(Map.of(
+ * "spark.executor.instances", "1",
+ * "spark.executor.memory", "512M"))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrContainersStartJobRunPropsDsl {
   private val cdkBuilder: EmrContainersStartJobRunProps.Builder =

@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
 
+/**
+ * Specifies a VPC that your training jobs and hosted models have access to.
+ *
+ * Control access to and from your training and model containers by configuring the VPC. For more
+ * information, see [Protect Endpoints by Using an Amazon Virtual Private
+ * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/host-vpc.html) and [Protect Training Jobs by
+ * Using an Amazon Virtual Private
+ * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelBiasJobDefinitionVpcConfigPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.VpcConfigProperty.Builder =

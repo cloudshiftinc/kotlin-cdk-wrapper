@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using an EventBridge event bus as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetEventBridgeEventBusParametersProperty pipeTargetEventBridgeEventBusParametersProperty =
+ * PipeTargetEventBridgeEventBusParametersProperty.builder()
+ * .detailType("detailType")
+ * .endpointId("endpointId")
+ * .resources(List.of("resources"))
+ * .source("source")
+ * .time("time")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargeteventbridgeeventbusparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetEventBridgeEventBusParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetEventBridgeEventBusParametersProperty.Builder =

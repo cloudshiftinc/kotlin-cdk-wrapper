@@ -15,6 +15,70 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnStackSet
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudFormation::StackSet` enables you to provision stacks into AWS accounts and across
+ * Regions by using a single CloudFormation template.
+ *
+ * In the stack set, you specify the template to use, in addition to any parameters and capabilities
+ * that the template requires.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * Object managedExecution;
+ * CfnStackSet cfnStackSet = CfnStackSet.Builder.create(this, "MyCfnStackSet")
+ * .permissionModel("permissionModel")
+ * .stackSetName("stackSetName")
+ * // the properties below are optional
+ * .administrationRoleArn("administrationRoleArn")
+ * .autoDeployment(AutoDeploymentProperty.builder()
+ * .enabled(false)
+ * .retainStacksOnAccountRemoval(false)
+ * .build())
+ * .callAs("callAs")
+ * .capabilities(List.of("capabilities"))
+ * .description("description")
+ * .executionRoleName("executionRoleName")
+ * .managedExecution(managedExecution)
+ * .operationPreferences(OperationPreferencesProperty.builder()
+ * .failureToleranceCount(123)
+ * .failureTolerancePercentage(123)
+ * .maxConcurrentCount(123)
+ * .maxConcurrentPercentage(123)
+ * .regionConcurrencyType("regionConcurrencyType")
+ * .regionOrder(List.of("regionOrder"))
+ * .build())
+ * .parameters(List.of(ParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .stackInstancesGroup(List.of(StackInstancesProperty.builder()
+ * .deploymentTargets(DeploymentTargetsProperty.builder()
+ * .accountFilterType("accountFilterType")
+ * .accounts(List.of("accounts"))
+ * .organizationalUnitIds(List.of("organizationalUnitIds"))
+ * .build())
+ * .regions(List.of("regions"))
+ * // the properties below are optional
+ * .parameterOverrides(List.of(ParameterProperty.builder()
+ * .parameterKey("parameterKey")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateBody("templateBody")
+ * .templateUrl("templateUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html)
+ */
 @CdkDslMarker
 public class CfnStackSetDsl(
   scope: Construct,

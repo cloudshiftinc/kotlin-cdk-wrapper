@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnDevice
 import software.constructs.Construct
 
+/**
+ * Specifies a device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnDevice cfnDevice = CfnDevice.Builder.create(this, "MyCfnDevice")
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .awsLocation(AWSLocationProperty.builder()
+ * .subnetArn("subnetArn")
+ * .zone("zone")
+ * .build())
+ * .description("description")
+ * .location(LocationProperty.builder()
+ * .address("address")
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .build())
+ * .model("model")
+ * .serialNumber("serialNumber")
+ * .siteId("siteId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .vendor("vendor")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-device.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDsl(
   scope: Construct,

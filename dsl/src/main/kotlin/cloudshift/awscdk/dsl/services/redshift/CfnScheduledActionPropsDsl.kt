@@ -9,6 +9,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnScheduledAction
 import software.amazon.awscdk.services.redshift.CfnScheduledActionProps
 
+/**
+ * Properties for defining a `CfnScheduledAction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnScheduledActionProps cfnScheduledActionProps = CfnScheduledActionProps.builder()
+ * .scheduledActionName("scheduledActionName")
+ * // the properties below are optional
+ * .enable(false)
+ * .endTime("endTime")
+ * .iamRole("iamRole")
+ * .schedule("schedule")
+ * .scheduledActionDescription("scheduledActionDescription")
+ * .startTime("startTime")
+ * .targetAction(ScheduledActionTypeProperty.builder()
+ * .pauseCluster(PauseClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .resizeCluster(ResizeClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .classic(false)
+ * .clusterType("clusterType")
+ * .nodeType("nodeType")
+ * .numberOfNodes(123)
+ * .build())
+ * .resumeCluster(ResumeClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-scheduledaction.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionPropsDsl {
   private val cdkBuilder: CfnScheduledActionProps.Builder = CfnScheduledActionProps.builder()

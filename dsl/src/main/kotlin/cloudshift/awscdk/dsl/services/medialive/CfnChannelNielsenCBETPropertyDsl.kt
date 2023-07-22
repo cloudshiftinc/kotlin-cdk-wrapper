@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Complete these fields only if you want to insert watermarks of type Nielsen CBET.
+ *
+ * The parent of this entity is NielsenWatermarksSettings
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * NielsenCBETProperty nielsenCBETProperty = NielsenCBETProperty.builder()
+ * .cbetCheckDigitString("cbetCheckDigitString")
+ * .cbetStepaside("cbetStepaside")
+ * .csid("csid")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsencbet.html)
+ */
 @CdkDslMarker
 public class CfnChannelNielsenCBETPropertyDsl {
   private val cdkBuilder: CfnChannel.NielsenCBETProperty.Builder =

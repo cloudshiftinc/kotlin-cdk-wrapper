@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Contains information about provisioned throughput for EBS storage volumes attached to kafka
+ * broker nodes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * ProvisionedThroughputProperty provisionedThroughputProperty =
+ * ProvisionedThroughputProperty.builder()
+ * .enabled(false)
+ * .volumeThroughput(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-provisionedthroughput.html)
+ */
 @CdkDslMarker
 public class CfnClusterProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnCluster.ProvisionedThroughputProperty.Builder =

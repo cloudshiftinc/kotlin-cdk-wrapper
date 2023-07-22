@@ -10,6 +10,25 @@ import software.amazon.awscdk.services.rds.IDatabaseCluster
 import software.amazon.awscdk.services.rds.IDatabaseInstance
 import software.amazon.awscdk.services.rds.ProxyTargetConfig
 
+/**
+ * The result of binding a `ProxyTarget` to a `DatabaseProxy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * DatabaseCluster databaseCluster;
+ * DatabaseInstance databaseInstance;
+ * ProxyTargetConfig proxyTargetConfig = ProxyTargetConfig.builder()
+ * .engineFamily("engineFamily")
+ * // the properties below are optional
+ * .dbClusters(List.of(databaseCluster))
+ * .dbInstances(List.of(databaseInstance))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProxyTargetConfigDsl {
   private val cdkBuilder: ProxyTargetConfig.Builder = ProxyTargetConfig.builder()

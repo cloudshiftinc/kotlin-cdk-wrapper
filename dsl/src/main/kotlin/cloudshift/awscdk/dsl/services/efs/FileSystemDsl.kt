@@ -22,6 +22,27 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * The Elastic File System implementation of IFileSystem.
+ *
+ * It creates a new, empty file system in Amazon Elastic File System (Amazon EFS).
+ * It also creates mount target (AWS::EFS::MountTarget) implicitly to mount the
+ * EFS file system on an Amazon Elastic Compute Cloud (Amazon EC2) instance or another resource.
+ *
+ * Example:
+ *
+ * ```
+ * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
+ * .vpc(new Vpc(this, "VPC"))
+ * .lifecyclePolicy(LifecyclePolicy.AFTER_14_DAYS) // files are not transitioned to infrequent
+ * access (IA) storage by default
+ * .performanceMode(PerformanceMode.GENERAL_PURPOSE) // default
+ * .outOfInfrequentAccessPolicy(OutOfInfrequentAccessPolicy.AFTER_1_ACCESS)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
+ */
 @CdkDslMarker
 public class FileSystemDsl(
   scope: Construct,

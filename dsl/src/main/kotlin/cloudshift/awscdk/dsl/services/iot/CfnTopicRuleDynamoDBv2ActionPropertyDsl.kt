@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to write to a DynamoDB table.
+ *
+ * This DynamoDB action writes each attribute in the message payload into it's own column in the
+ * DynamoDB table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * DynamoDBv2ActionProperty dynamoDBv2ActionProperty = DynamoDBv2ActionProperty.builder()
+ * .putItem(PutItemInputProperty.builder()
+ * .tableName("tableName")
+ * .build())
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbv2action.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleDynamoDBv2ActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.DynamoDBv2ActionProperty.Builder =

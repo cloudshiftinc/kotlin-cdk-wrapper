@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Starts execution of a Step Functions state machine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * StepFunctionsActionProperty stepFunctionsActionProperty = StepFunctionsActionProperty.builder()
+ * .roleArn("roleArn")
+ * .stateMachineName("stateMachineName")
+ * // the properties below are optional
+ * .executionNamePrefix("executionNamePrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-stepfunctionsaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleStepFunctionsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.StepFunctionsActionProperty.Builder =

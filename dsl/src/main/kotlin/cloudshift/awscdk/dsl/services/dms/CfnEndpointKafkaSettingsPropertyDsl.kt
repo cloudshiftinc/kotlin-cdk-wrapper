@@ -9,6 +9,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that describes an Apache Kafka endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about other available settings,
+ * see [Using object mapping to migrate data to a Kafka
+ * topic](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kafka.html#CHAP_Target.Kafka.ObjectMapping)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * KafkaSettingsProperty kafkaSettingsProperty = KafkaSettingsProperty.builder()
+ * .broker("broker")
+ * .includeControlDetails(false)
+ * .includeNullAndEmpty(false)
+ * .includePartitionValue(false)
+ * .includeTableAlterOperations(false)
+ * .includeTransactionDetails(false)
+ * .messageFormat("messageFormat")
+ * .messageMaxBytes(123)
+ * .noHexPrefix(false)
+ * .partitionIncludeSchemaTable(false)
+ * .saslPassword("saslPassword")
+ * .saslUserName("saslUserName")
+ * .securityProtocol("securityProtocol")
+ * .sslCaCertificateArn("sslCaCertificateArn")
+ * .sslClientCertificateArn("sslClientCertificateArn")
+ * .sslClientKeyArn("sslClientKeyArn")
+ * .sslClientKeyPassword("sslClientKeyPassword")
+ * .topic("topic")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kafkasettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointKafkaSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.KafkaSettingsProperty.Builder =

@@ -12,6 +12,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes a network interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InstanceNetworkInterfaceSpecificationProperty instanceNetworkInterfaceSpecificationProperty =
+ * InstanceNetworkInterfaceSpecificationProperty.builder()
+ * .associatePublicIpAddress(false)
+ * .deleteOnTermination(false)
+ * .description("description")
+ * .deviceIndex(123)
+ * .groups(List.of("groups"))
+ * .ipv6AddressCount(123)
+ * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
+ * .ipv6Address("ipv6Address")
+ * .build()))
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
+ * .privateIpAddress("privateIpAddress")
+ * // the properties below are optional
+ * .primary(false)
+ * .build()))
+ * .secondaryPrivateIpAddressCount(123)
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetInstanceNetworkInterfaceSpecificationPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.InstanceNetworkInterfaceSpecificationProperty.Builder =

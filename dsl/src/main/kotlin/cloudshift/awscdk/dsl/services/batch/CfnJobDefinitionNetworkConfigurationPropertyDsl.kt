@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The network configuration for jobs that are running on Fargate resources.
+ *
+ * Jobs that are running on EC2 resources must not specify this parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * NetworkConfigurationProperty networkConfigurationProperty =
+ * NetworkConfigurationProperty.builder()
+ * .assignPublicIp("assignPublicIp")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-networkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.NetworkConfigurationProperty.Builder =

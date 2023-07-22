@@ -9,6 +9,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigateway.CfnAuthorizerProps
 
+/**
+ * Properties for defining a `CfnAuthorizer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnAuthorizerProps cfnAuthorizerProps = CfnAuthorizerProps.builder()
+ * .name("name")
+ * .restApiId("restApiId")
+ * .type("type")
+ * // the properties below are optional
+ * .authorizerCredentials("authorizerCredentials")
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .authType("authType")
+ * .identitySource("identitySource")
+ * .identityValidationExpression("identityValidationExpression")
+ * .providerArns(List.of("providerArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-authorizer.html)
+ */
 @CdkDslMarker
 public class CfnAuthorizerPropsDsl {
   private val cdkBuilder: CfnAuthorizerProps.Builder = CfnAuthorizerProps.builder()

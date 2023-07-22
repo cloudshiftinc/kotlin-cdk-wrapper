@@ -8,6 +8,24 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 import software.amazon.awscdk.services.ecs.ContainerImageConfig
 
+/**
+ * The configuration for creating a container image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ContainerImageConfig containerImageConfig = ContainerImageConfig.builder()
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .repositoryCredentials(RepositoryCredentialsProperty.builder()
+ * .credentialsParameter("credentialsParameter")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerImageConfigDsl {
   private val cdkBuilder: ContainerImageConfig.Builder = ContainerImageConfig.builder()

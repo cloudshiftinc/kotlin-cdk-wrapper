@@ -15,6 +15,96 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 import software.constructs.Construct
 
+/**
+ * The AWS::Athena::WorkGroup resource specifies an Amazon Athena workgroup, which contains a name,
+ * description, creation time, state, and other configuration, listed under `WorkGroupConfiguration` .
+ *
+ * Each workgroup enables you to isolate queries for you or your group from other queries in the
+ * same account. For more information, see
+ * [CreateWorkGroup](https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateWorkGroup.html)
+ * in the *Amazon Athena API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnWorkGroup cfnWorkGroup = CfnWorkGroup.Builder.create(this, "MyCfnWorkGroup")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .recursiveDeleteOption(false)
+ * .state("state")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workGroupConfiguration(WorkGroupConfigurationProperty.builder()
+ * .additionalConfiguration("additionalConfiguration")
+ * .bytesScannedCutoffPerQuery(123)
+ * .customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .enforceWorkGroupConfiguration(false)
+ * .engineVersion(EngineVersionProperty.builder()
+ * .effectiveEngineVersion("effectiveEngineVersion")
+ * .selectedEngineVersion("selectedEngineVersion")
+ * .build())
+ * .executionRole("executionRole")
+ * .publishCloudWatchMetricsEnabled(false)
+ * .requesterPaysEnabled(false)
+ * .resultConfiguration(ResultConfigurationProperty.builder()
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .expectedBucketOwner("expectedBucketOwner")
+ * .outputLocation("outputLocation")
+ * .build())
+ * .build())
+ * .workGroupConfigurationUpdates(WorkGroupConfigurationUpdatesProperty.builder()
+ * .additionalConfiguration("additionalConfiguration")
+ * .bytesScannedCutoffPerQuery(123)
+ * .customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .enforceWorkGroupConfiguration(false)
+ * .engineVersion(EngineVersionProperty.builder()
+ * .effectiveEngineVersion("effectiveEngineVersion")
+ * .selectedEngineVersion("selectedEngineVersion")
+ * .build())
+ * .executionRole("executionRole")
+ * .publishCloudWatchMetricsEnabled(false)
+ * .removeBytesScannedCutoffPerQuery(false)
+ * .removeCustomerContentEncryptionConfiguration(false)
+ * .requesterPaysEnabled(false)
+ * .resultConfigurationUpdates(ResultConfigurationUpdatesProperty.builder()
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .expectedBucketOwner("expectedBucketOwner")
+ * .outputLocation("outputLocation")
+ * .removeAclConfiguration(false)
+ * .removeEncryptionConfiguration(false)
+ * .removeExpectedBucketOwner(false)
+ * .removeOutputLocation(false)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-workgroup.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupDsl(
   scope: Construct,

@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
 
+/**
+ * Describes a Sync configuration for a resolver.
+ *
+ * Specifies which Conflict Detection strategy and Resolution strategy to use when the resolver is
+ * invoked.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * SyncConfigProperty syncConfigProperty = SyncConfigProperty.builder()
+ * .conflictDetection("conflictDetection")
+ * // the properties below are optional
+ * .conflictHandler("conflictHandler")
+ * .lambdaConflictHandlerConfig(LambdaConflictHandlerConfigProperty.builder()
+ * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-functionconfiguration-syncconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionConfigurationSyncConfigPropertyDsl {
   private val cdkBuilder: CfnFunctionConfiguration.SyncConfigProperty.Builder =

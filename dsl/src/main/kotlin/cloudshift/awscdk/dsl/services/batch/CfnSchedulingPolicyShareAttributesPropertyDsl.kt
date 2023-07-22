@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 
+/**
+ * Specifies the weights for the fair share identifiers for the fair share policy.
+ *
+ * Fair share identifiers that aren't included have a default weight of `1.0` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * ShareAttributesProperty shareAttributesProperty = ShareAttributesProperty.builder()
+ * .shareIdentifier("shareIdentifier")
+ * .weightFactor(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-schedulingpolicy-shareattributes.html)
+ */
 @CdkDslMarker
 public class CfnSchedulingPolicyShareAttributesPropertyDsl {
   private val cdkBuilder: CfnSchedulingPolicy.ShareAttributesProperty.Builder =

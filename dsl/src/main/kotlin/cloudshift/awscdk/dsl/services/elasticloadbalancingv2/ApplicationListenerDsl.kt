@@ -17,6 +17,26 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.constructs.Construct
 
+/**
+ * Define an ApplicationListener.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpAlbIntegration;
+ * ApplicationLoadBalancer lb;
+ * ApplicationListener listener = lb.addListener("listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddApplicationTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(HttpAlbIntegration.Builder.create("DefaultIntegration", listener)
+ * .parameterMapping(new ParameterMapping().custom("myKey", "myValue"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerDsl(
   scope: Construct,

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnRefreshSchedule
 
+/**
+ * The day that you want yout dataset to refresh.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RefreshOnDayProperty refreshOnDayProperty = RefreshOnDayProperty.builder()
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-refreshschedule-refreshonday.html)
+ */
 @CdkDslMarker
 public class CfnRefreshScheduleRefreshOnDayPropertyDsl {
   private val cdkBuilder: CfnRefreshSchedule.RefreshOnDayProperty.Builder =

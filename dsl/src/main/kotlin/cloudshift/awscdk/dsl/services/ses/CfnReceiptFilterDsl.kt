@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnReceiptFilter
 import software.constructs.Construct
 
+/**
+ * Specify a new IP address filter.
+ *
+ * You use IP address filters when you receive email with Amazon SES.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnReceiptFilter cfnReceiptFilter = CfnReceiptFilter.Builder.create(this, "MyCfnReceiptFilter")
+ * .filter(FilterProperty.builder()
+ * .ipFilter(IpFilterProperty.builder()
+ * .cidr("cidr")
+ * .policy("policy")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html)
+ */
 @CdkDslMarker
 public class CfnReceiptFilterDsl(
   scope: Construct,

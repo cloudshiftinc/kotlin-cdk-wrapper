@@ -18,6 +18,23 @@ import software.amazon.awscdk.services.codedeploy.LoadBalancer
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties for `ServerDeploymentGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * LoadBalancer lb;
+ * lb.addListener(LoadBalancerListener.builder()
+ * .externalPort(80)
+ * .build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancer(LoadBalancer.classic(lb))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerDeploymentGroupPropsDsl {
   private val cdkBuilder: ServerDeploymentGroupProps.Builder = ServerDeploymentGroupProps.builder()

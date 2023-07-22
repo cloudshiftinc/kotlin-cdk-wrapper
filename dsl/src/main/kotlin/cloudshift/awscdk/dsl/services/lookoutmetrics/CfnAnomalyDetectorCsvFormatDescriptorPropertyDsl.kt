@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
 
+/**
+ * Contains information about how a source CSV data file should be analyzed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * CsvFormatDescriptorProperty csvFormatDescriptorProperty = CsvFormatDescriptorProperty.builder()
+ * .charset("charset")
+ * .containsHeader(false)
+ * .delimiter("delimiter")
+ * .fileCompression("fileCompression")
+ * .headerList(List.of("headerList"))
+ * .quoteSymbol("quoteSymbol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-csvformatdescriptor.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorCsvFormatDescriptorPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.CsvFormatDescriptorProperty.Builder =

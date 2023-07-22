@@ -10,6 +10,21 @@ import software.amazon.awscdk.services.acmpca.ICertificateAuthority
 import software.amazon.awscdk.services.certificatemanager.PrivateCertificate
 import software.constructs.Construct
 
+/**
+ * A private certificate managed by AWS Certificate Manager.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.acmpca.*;
+ * PrivateCertificate.Builder.create(this, "PrivateCertificate")
+ * .domainName("test.example.com")
+ * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net")) // optional
+ * .certificateAuthority(CertificateAuthority.fromCertificateAuthorityArn(this, "CA",
+ * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/023077d8-2bfa-4eb0-8f22-05c96deade77"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrivateCertificateDsl(
   scope: Construct,

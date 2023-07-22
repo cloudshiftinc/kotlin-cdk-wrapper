@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
+/**
+ * Container image configuration object for the monitoring job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MonitoringAppSpecificationProperty monitoringAppSpecificationProperty =
+ * MonitoringAppSpecificationProperty.builder()
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .postAnalyticsProcessorSourceUri("postAnalyticsProcessorSourceUri")
+ * .recordPreprocessorSourceUri("recordPreprocessorSourceUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-monitoringappspecification.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringScheduleMonitoringAppSpecificationPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.MonitoringAppSpecificationProperty.Builder =

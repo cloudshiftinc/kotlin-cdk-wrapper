@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The visual publish options of a visual in a dashboard.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DashboardVisualPublishOptionsProperty dashboardVisualPublishOptionsProperty =
+ * DashboardVisualPublishOptionsProperty.builder()
+ * .exportHiddenFieldsOption(ExportHiddenFieldsOptionProperty.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardvisualpublishoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDashboardVisualPublishOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardVisualPublishOptionsProperty.Builder =

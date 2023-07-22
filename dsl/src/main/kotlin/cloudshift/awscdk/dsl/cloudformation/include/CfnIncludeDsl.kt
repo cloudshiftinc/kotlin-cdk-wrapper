@@ -13,6 +13,21 @@ import software.amazon.awscdk.cloudformation.include.CfnInclude
 import software.amazon.awscdk.cloudformation.include.CfnIncludeProps
 import software.constructs.Construct
 
+/**
+ * Construct to import an existing CloudFormation template file into a CDK application.
+ *
+ * All resources defined in the template file can be retrieved by calling the `getResource` method.
+ * Any modifications made on the returned resource objects will be reflected in the resulting CDK
+ * template.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate = CfnInclude.Builder.create(this, "Template")
+ * .templateFile("my-template.json")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnIncludeDsl(
   scope: Construct,

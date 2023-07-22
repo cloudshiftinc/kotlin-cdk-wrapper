@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * The policy that specifies update and delete behaviors for the crawler.
+ *
+ * The policy tells the crawler what to do in the event that it detects a change in a table that
+ * already exists in the customer's database at the time of the crawl. The `SchemaChangePolicy` does
+ * not affect whether or how new tables and partitions are added. New tables and partitions are always
+ * created regardless of the `SchemaChangePolicy` on a crawler.
+ *
+ * The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteBehavior` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * SchemaChangePolicyProperty schemaChangePolicyProperty = SchemaChangePolicyProperty.builder()
+ * .deleteBehavior("deleteBehavior")
+ * .updateBehavior("updateBehavior")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-schemachangepolicy.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerSchemaChangePolicyPropertyDsl {
   private val cdkBuilder: CfnCrawler.SchemaChangePolicyProperty.Builder =

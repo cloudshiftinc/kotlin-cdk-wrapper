@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The overrides that are sent to a container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * BatchContainerOverridesProperty batchContainerOverridesProperty =
+ * BatchContainerOverridesProperty.builder()
+ * .command(List.of("command"))
+ * .environment(List.of(BatchEnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .instanceType("instanceType")
+ * .resourceRequirements(List.of(BatchResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-batchcontaineroverrides.html)
+ */
 @CdkDslMarker
 public class CfnPipeBatchContainerOverridesPropertyDsl {
   private val cdkBuilder: CfnPipe.BatchContainerOverridesProperty.Builder =

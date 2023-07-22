@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * This resource contains the details of the Amazon S3 Storage Lens selection criteria.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * SelectionCriteriaProperty selectionCriteriaProperty = SelectionCriteriaProperty.builder()
+ * .delimiter("delimiter")
+ * .maxDepth(123)
+ * .minStorageBytesPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-selectioncriteria.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensSelectionCriteriaPropertyDsl {
   private val cdkBuilder: CfnStorageLens.SelectionCriteriaProperty.Builder =

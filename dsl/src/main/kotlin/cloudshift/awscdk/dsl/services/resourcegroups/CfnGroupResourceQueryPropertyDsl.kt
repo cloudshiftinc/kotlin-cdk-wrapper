@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 
+/**
+ * The query used to dynamically define the members of a group.
+ *
+ * For more information about how to construct a query, see [Build queries and groups in AWS
+ * Resource Groups](https://docs.aws.amazon.com//ARG/latest/userguide/gettingstarted-query.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * ResourceQueryProperty resourceQueryProperty = ResourceQueryProperty.builder()
+ * .query(QueryProperty.builder()
+ * .resourceTypeFilters(List.of("resourceTypeFilters"))
+ * .stackIdentifier("stackIdentifier")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-resourcequery.html)
+ */
 @CdkDslMarker
 public class CfnGroupResourceQueryPropertyDsl {
   private val cdkBuilder: CfnGroup.ResourceQueryProperty.Builder =

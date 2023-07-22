@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
 
+/**
+ * Information about the encryption of the flow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * EncryptionProperty encryptionProperty = EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * .secretArn("secretArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .keyType("keyType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowoutput-encryption.html)
+ */
 @CdkDslMarker
 public class CfnFlowOutputEncryptionPropertyDsl {
   private val cdkBuilder: CfnFlowOutput.EncryptionProperty.Builder =

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ssm.CfnDocument
 
+/**
+ * An SSM document required by the current document.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * DocumentRequiresProperty documentRequiresProperty = DocumentRequiresProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-document-documentrequires.html)
+ */
 @CdkDslMarker
 public class CfnDocumentDocumentRequiresPropertyDsl {
   private val cdkBuilder: CfnDocument.DocumentRequiresProperty.Builder =

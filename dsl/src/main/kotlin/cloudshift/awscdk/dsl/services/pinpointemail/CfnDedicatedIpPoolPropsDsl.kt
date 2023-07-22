@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool
 import software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPoolProps
 
+/**
+ * Properties for defining a `CfnDedicatedIpPool`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnDedicatedIpPoolProps cfnDedicatedIpPoolProps = CfnDedicatedIpPoolProps.builder()
+ * .poolName("poolName")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-dedicatedippool.html)
+ */
 @CdkDslMarker
 public class CfnDedicatedIpPoolPropsDsl {
   private val cdkBuilder: CfnDedicatedIpPoolProps.Builder = CfnDedicatedIpPoolProps.builder()

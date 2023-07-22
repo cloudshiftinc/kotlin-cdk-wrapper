@@ -11,6 +11,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.DockerRunOptions
 import software.amazon.awscdk.DockerVolume
 
+/**
+ * Docker run options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerRunOptions dockerRunOptions = DockerRunOptions.builder()
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .network("network")
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerRunOptionsDsl {
   private val cdkBuilder: DockerRunOptions.Builder = DockerRunOptions.builder()

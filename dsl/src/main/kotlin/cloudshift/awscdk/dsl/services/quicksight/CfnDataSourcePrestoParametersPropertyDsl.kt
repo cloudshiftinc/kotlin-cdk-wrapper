@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters for Presto.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PrestoParametersProperty prestoParametersProperty = PrestoParametersProperty.builder()
+ * .catalog("catalog")
+ * .host("host")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-prestoparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourcePrestoParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.PrestoParametersProperty.Builder =

@@ -13,6 +13,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnRoleAlias
 import software.constructs.Construct
 
+/**
+ * Specifies a role alias.
+ *
+ * Requires permission to access the
+ * [CreateRoleAlias](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
+ * action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnRoleAlias cfnRoleAlias = CfnRoleAlias.Builder.create(this, "MyCfnRoleAlias")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .credentialDurationSeconds(123)
+ * .roleAlias("roleAlias")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-rolealias.html)
+ */
 @CdkDslMarker
 public class CfnRoleAliasDsl(
   scope: Construct,

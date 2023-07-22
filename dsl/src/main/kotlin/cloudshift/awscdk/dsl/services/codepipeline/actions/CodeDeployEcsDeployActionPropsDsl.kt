@@ -15,6 +15,43 @@ import software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContain
 import software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties of the `CodeDeployEcsDeployAction CodeDeploy ECS deploy CodePipeline
+ * Action`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Artifact artifact;
+ * ArtifactPath artifactPath;
+ * EcsDeploymentGroup ecsDeploymentGroup;
+ * Role role;
+ * CodeDeployEcsDeployActionProps codeDeployEcsDeployActionProps =
+ * CodeDeployEcsDeployActionProps.builder()
+ * .actionName("actionName")
+ * .deploymentGroup(ecsDeploymentGroup)
+ * // the properties below are optional
+ * .appSpecTemplateFile(artifactPath)
+ * .appSpecTemplateInput(artifact)
+ * .containerImageInputs(List.of(CodeDeployEcsContainerImageInput.builder()
+ * .input(artifact)
+ * // the properties below are optional
+ * .taskDefinitionPlaceholder("taskDefinitionPlaceholder")
+ * .build()))
+ * .role(role)
+ * .runOrder(123)
+ * .taskDefinitionTemplateFile(artifactPath)
+ * .taskDefinitionTemplateInput(artifact)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeDeployEcsDeployActionPropsDsl {
   private val cdkBuilder: CodeDeployEcsDeployActionProps.Builder =

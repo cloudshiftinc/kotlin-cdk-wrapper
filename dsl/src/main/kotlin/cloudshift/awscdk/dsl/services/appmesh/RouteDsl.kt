@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.appmesh.Route
 import software.amazon.awscdk.services.appmesh.RouteSpec
 import software.constructs.Construct
 
+/**
+ * Route represents a new or existing route attached to a VirtualRouter and Mesh.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * Mesh mesh;
+ * RouteSpec routeSpec;
+ * VirtualRouter virtualRouter;
+ * Route route = Route.Builder.create(this, "MyRoute")
+ * .mesh(mesh)
+ * .routeSpec(routeSpec)
+ * .virtualRouter(virtualRouter)
+ * // the properties below are optional
+ * .routeName("routeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)
+ */
 @CdkDslMarker
 public class RouteDsl(
   scope: Construct,

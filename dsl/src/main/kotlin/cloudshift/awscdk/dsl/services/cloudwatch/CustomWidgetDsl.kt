@@ -11,6 +11,22 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.cloudwatch.CustomWidget
 
+/**
+ * A CustomWidget shows the result of a AWS lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * // Import or create a lambda function
+ * IFunction fn = Function.fromFunctionArn(dashboard, "Function",
+ * "arn:aws:lambda:us-east-1:123456789012:function:MyFn");
+ * dashboard.addWidgets(CustomWidget.Builder.create()
+ * .functionArn(fn.getFunctionArn())
+ * .title("My lambda baked widget")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CustomWidgetDsl {
   private val cdkBuilder: CustomWidget.Builder = CustomWidget.Builder.create()

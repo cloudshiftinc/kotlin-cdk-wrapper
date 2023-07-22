@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
 
+/**
+ * Configuration information for Amazon AppIntegrations to automatically ingest content.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * AppIntegrationsConfigurationProperty appIntegrationsConfigurationProperty =
+ * AppIntegrationsConfigurationProperty.builder()
+ * .appIntegrationArn("appIntegrationArn")
+ * // the properties below are optional
+ * .objectFields(List.of("objectFields"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-appintegrationsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnKnowledgeBaseAppIntegrationsConfigurationPropertyDsl {
   private val cdkBuilder: CfnKnowledgeBase.AppIntegrationsConfigurationProperty.Builder =

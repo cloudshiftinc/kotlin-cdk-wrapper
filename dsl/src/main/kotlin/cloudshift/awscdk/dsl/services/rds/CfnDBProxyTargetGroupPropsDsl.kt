@@ -10,6 +10,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup
 import software.amazon.awscdk.services.rds.CfnDBProxyTargetGroupProps
 
+/**
+ * Properties for defining a `CfnDBProxyTargetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBProxyTargetGroupProps cfnDBProxyTargetGroupProps = CfnDBProxyTargetGroupProps.builder()
+ * .dbProxyName("dbProxyName")
+ * .targetGroupName("targetGroupName")
+ * // the properties below are optional
+ * .connectionPoolConfigurationInfo(ConnectionPoolConfigurationInfoFormatProperty.builder()
+ * .connectionBorrowTimeout(123)
+ * .initQuery("initQuery")
+ * .maxConnectionsPercent(123)
+ * .maxIdleConnectionsPercent(123)
+ * .sessionPinningFilters(List.of("sessionPinningFilters"))
+ * .build())
+ * .dbClusterIdentifiers(List.of("dbClusterIdentifiers"))
+ * .dbInstanceIdentifiers(List.of("dbInstanceIdentifiers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbproxytargetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyTargetGroupPropsDsl {
   private val cdkBuilder: CfnDBProxyTargetGroupProps.Builder = CfnDBProxyTargetGroupProps.builder()

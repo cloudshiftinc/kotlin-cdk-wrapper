@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for an AC3 audio encode in the output.
+ *
+ * The parent of this entity is AudioCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Ac3SettingsProperty ac3SettingsProperty = Ac3SettingsProperty.builder()
+ * .bitrate(123)
+ * .bitstreamMode("bitstreamMode")
+ * .codingMode("codingMode")
+ * .dialnorm(123)
+ * .drcProfile("drcProfile")
+ * .lfeFilter("lfeFilter")
+ * .metadataControl("metadataControl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ac3settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAc3SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Ac3SettingsProperty.Builder =

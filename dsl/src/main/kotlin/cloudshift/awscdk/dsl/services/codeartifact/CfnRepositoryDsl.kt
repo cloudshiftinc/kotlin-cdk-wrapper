@@ -14,6 +14,41 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codeartifact.CfnRepository
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeArtifact::Repository` resource creates an AWS CodeArtifact repository.
+ *
+ * CodeArtifact *repositories* contain a set of package versions. For more information about
+ * repositories, see the [Repository concepts
+ * information](https://docs.aws.amazon.com/codeartifact/latest/ug/codeartifact-concepts.html#welcome-concepts-repository)
+ * in the *CodeArtifact User Guide* . For more information about the `CreateRepository` API, see
+ * [CreateRepository](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_CreateRepository.html)
+ * in the *CodeArtifact API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codeartifact.*;
+ * Object permissionsPolicyDocument;
+ * CfnRepository cfnRepository = CfnRepository.Builder.create(this, "MyCfnRepository")
+ * .domainName("domainName")
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .description("description")
+ * .domainOwner("domainOwner")
+ * .externalConnections(List.of("externalConnections"))
+ * .permissionsPolicyDocument(permissionsPolicyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .upstreams(List.of("upstreams"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryDsl(
   scope: Construct,

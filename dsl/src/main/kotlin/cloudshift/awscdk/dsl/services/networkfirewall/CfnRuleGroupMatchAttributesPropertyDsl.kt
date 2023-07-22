@@ -10,6 +10,45 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * Criteria for Network Firewall to use to inspect an individual packet in stateless rule
+ * inspection.
+ *
+ * Each match attributes set can include one or more items such as IP address, CIDR range, port
+ * number, protocol, and TCP flags.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * MatchAttributesProperty matchAttributesProperty = MatchAttributesProperty.builder()
+ * .destinationPorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .destinations(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .protocols(List.of(123))
+ * .sourcePorts(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .sources(List.of(AddressProperty.builder()
+ * .addressDefinition("addressDefinition")
+ * .build()))
+ * .tcpFlags(List.of(TCPFlagFieldProperty.builder()
+ * .flags(List.of("flags"))
+ * // the properties below are optional
+ * .masks(List.of("masks"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-matchattributes.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupMatchAttributesPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.MatchAttributesProperty.Builder =

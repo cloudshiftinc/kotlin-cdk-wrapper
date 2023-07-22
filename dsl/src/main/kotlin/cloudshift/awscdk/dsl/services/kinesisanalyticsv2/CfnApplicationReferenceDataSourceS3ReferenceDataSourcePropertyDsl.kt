@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationReferenceDataSource
 
+/**
+ * For an SQL-based Amazon Kinesis Data Analytics application, identifies the Amazon S3 bucket and
+ * object that contains the reference data.
+ *
+ * A Kinesis Data Analytics application loads reference data only once. If the data changes, you
+ * call the
+ * [UpdateApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_UpdateApplication.html)
+ * operation to trigger reloading of data into your application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * S3ReferenceDataSourceProperty s3ReferenceDataSourceProperty =
+ * S3ReferenceDataSourceProperty.builder()
+ * .bucketArn("bucketArn")
+ * .fileKey("fileKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-applicationreferencedatasource-s3referencedatasource.html)
+ */
 @CdkDslMarker
 public class CfnApplicationReferenceDataSourceS3ReferenceDataSourcePropertyDsl {
   private val cdkBuilder: CfnApplicationReferenceDataSource.S3ReferenceDataSourceProperty.Builder =

@@ -13,6 +13,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.SynthesizeStackArtifactOptions
 import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 
+/**
+ * Stack artifact options.
+ *
+ * A subset of `cxschema.AwsCloudFormationStackProperties` of optional settings that need to be
+ * configurable by synthesizers, plus `additionalDependencies`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * SynthesizeStackArtifactOptions synthesizeStackArtifactOptions =
+ * SynthesizeStackArtifactOptions.builder()
+ * .additionalDependencies(List.of("additionalDependencies"))
+ * .assumeRoleArn("assumeRoleArn")
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .cloudFormationExecutionRoleArn("cloudFormationExecutionRoleArn")
+ * .lookupRole(BootstrapRole.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .requiresBootstrapStackVersion(123)
+ * .build())
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .requiresBootstrapStackVersion(123)
+ * .stackTemplateAssetObjectUrl("stackTemplateAssetObjectUrl")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SynthesizeStackArtifactOptionsDsl {
   private val cdkBuilder: SynthesizeStackArtifactOptions.Builder =

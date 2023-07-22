@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnCluster
 
+/**
+ * The settings to use when creating a cluster.
+ *
+ * This parameter is used to turn on CloudWatch Container Insights for a cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ClusterSettingsProperty clusterSettingsProperty = ClusterSettingsProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-clustersettings.html)
+ */
 @CdkDslMarker
 public class CfnClusterClusterSettingsPropertyDsl {
   private val cdkBuilder: CfnCluster.ClusterSettingsProperty.Builder =

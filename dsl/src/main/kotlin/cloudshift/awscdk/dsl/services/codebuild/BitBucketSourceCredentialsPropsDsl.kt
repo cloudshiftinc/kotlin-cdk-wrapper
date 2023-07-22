@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps
 
+/**
+ * Construction properties of `BitBucketSourceCredentials`.
+ *
+ * Example:
+ *
+ * ```
+ * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
+ * .username(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("username").build()))
+ * .password(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("password").build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BitBucketSourceCredentialsPropsDsl {
   private val cdkBuilder: BitBucketSourceCredentialsProps.Builder =

@@ -10,6 +10,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnApiCache
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::ApiCache` resource represents the input of a `CreateApiCache` operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnApiCache cfnApiCache = CfnApiCache.Builder.create(this, "MyCfnApiCache")
+ * .apiCachingBehavior("apiCachingBehavior")
+ * .apiId("apiId")
+ * .ttl(123)
+ * .type("type")
+ * // the properties below are optional
+ * .atRestEncryptionEnabled(false)
+ * .transitEncryptionEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apicache.html)
+ */
 @CdkDslMarker
 public class CfnApiCacheDsl(
   scope: Construct,

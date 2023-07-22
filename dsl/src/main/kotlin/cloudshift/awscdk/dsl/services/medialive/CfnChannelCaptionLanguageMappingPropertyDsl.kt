@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Maps a captions channel to an ISO 693-2 language code (http://www.loc.gov/standards/iso639-2),
+ * with an optional description.
+ *
+ * The parent of this entity is HlsGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * CaptionLanguageMappingProperty captionLanguageMappingProperty =
+ * CaptionLanguageMappingProperty.builder()
+ * .captionChannel(123)
+ * .languageCode("languageCode")
+ * .languageDescription("languageDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionlanguagemapping.html)
+ */
 @CdkDslMarker
 public class CfnChannelCaptionLanguageMappingPropertyDsl {
   private val cdkBuilder: CfnChannel.CaptionLanguageMappingProperty.Builder =

@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iam.CfnSAMLProviderProps
 
+/**
+ * Properties for defining a `CfnSAMLProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnSAMLProviderProps cfnSAMLProviderProps = CfnSAMLProviderProps.builder()
+ * .samlMetadataDocument("samlMetadataDocument")
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-samlprovider.html)
+ */
 @CdkDslMarker
 public class CfnSAMLProviderPropsDsl {
   private val cdkBuilder: CfnSAMLProviderProps.Builder = CfnSAMLProviderProps.builder()

@@ -11,6 +11,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnGroup
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::XRay::Group` resource to specify a group with a name and a filter expression.
+ *
+ * Groups enable the collection of traces that match the filter expression, can be used to filter
+ * service graphs and traces, and to supply Amazon CloudWatch metrics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * Object tags;
+ * CfnGroup cfnGroup = CfnGroup.Builder.create(this, "MyCfnGroup")
+ * .groupName("groupName")
+ * // the properties below are optional
+ * .filterExpression("filterExpression")
+ * .insightsConfiguration(InsightsConfigurationProperty.builder()
+ * .insightsEnabled(false)
+ * .notificationsEnabled(false)
+ * .build())
+ * .tags(List.of(tags))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupDsl(
   scope: Construct,

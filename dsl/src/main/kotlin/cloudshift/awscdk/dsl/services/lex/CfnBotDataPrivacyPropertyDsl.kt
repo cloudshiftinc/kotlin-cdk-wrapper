@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * By default, data stored by Amazon Lex is encrypted.
+ *
+ * The `DataPrivacy` structure provides settings that determine how Amazon Lex handles special cases
+ * of securing the data for your bot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * DataPrivacyProperty dataPrivacyProperty = DataPrivacyProperty.builder()
+ * .childDirected(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-dataprivacy.html)
+ */
 @CdkDslMarker
 public class CfnBotDataPrivacyPropertyDsl {
   private val cdkBuilder: CfnBot.DataPrivacyProperty.Builder = CfnBot.DataPrivacyProperty.builder()

@@ -9,6 +9,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Specifies the allocation strategy of On-Demand Instances in an EC2 Fleet.
+ *
+ * `OnDemandOptionsRequest` is a property of the
+ * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * OnDemandOptionsRequestProperty onDemandOptionsRequestProperty =
+ * OnDemandOptionsRequestProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .capacityReservationOptions(CapacityReservationOptionsRequestProperty.builder()
+ * .usageStrategy("usageStrategy")
+ * .build())
+ * .maxTotalPrice("maxTotalPrice")
+ * .minTargetCapacity(123)
+ * .singleAvailabilityZone(false)
+ * .singleInstanceType(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-ondemandoptionsrequest.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetOnDemandOptionsRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.OnDemandOptionsRequestProperty.Builder =

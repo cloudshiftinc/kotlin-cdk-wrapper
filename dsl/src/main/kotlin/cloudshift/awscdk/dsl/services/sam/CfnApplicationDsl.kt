@@ -12,6 +12,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnApplication
 import software.constructs.Construct
 
+/**
+ * Definition of AWS::Serverless::Application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .location("location")
+ * // the properties below are optional
+ * .notificationArns(List.of("notificationArns"))
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .timeoutInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

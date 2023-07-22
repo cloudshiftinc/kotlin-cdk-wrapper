@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.CfnDBProxyEndpoint
 
+/**
+ * Metadata assigned to a DB proxy endpoint consisting of a key-value pair.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * TagFormatProperty tagFormatProperty = TagFormatProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxyendpoint-tagformat.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyEndpointTagFormatPropertyDsl {
   private val cdkBuilder: CfnDBProxyEndpoint.TagFormatProperty.Builder =

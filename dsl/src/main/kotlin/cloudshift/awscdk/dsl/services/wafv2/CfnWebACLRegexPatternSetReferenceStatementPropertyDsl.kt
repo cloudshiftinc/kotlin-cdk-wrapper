@@ -10,6 +10,81 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement used to search web request components for matches with regular expressions.
+ *
+ * To use this, create a `RegexPatternSet` that specifies the expressions that you want to detect,
+ * then use that set in this statement. A web request matches the pattern set rule statement if the
+ * request component matches any of the patterns in the set.
+ *
+ * Each regex pattern set rule statement references a regex pattern set. You create and maintain the
+ * set independent of your rules. This allows you to use the single set in multiple rules. When you
+ * update the referenced set, AWS WAF automatically updates all rules that reference it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * Object allQueryArguments;
+ * Object method;
+ * Object queryString;
+ * Object singleHeader;
+ * Object singleQueryArgument;
+ * Object uriPath;
+ * RegexPatternSetReferenceStatementProperty regexPatternSetReferenceStatementProperty =
+ * RegexPatternSetReferenceStatementProperty.builder()
+ * .arn("arn")
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .allQueryArguments(allQueryArguments)
+ * .body(BodyProperty.builder()
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .cookies(CookiesProperty.builder()
+ * .matchPattern(CookieMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedCookies(List.of("excludedCookies"))
+ * .includedCookies(List.of("includedCookies"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .headers(HeadersProperty.builder()
+ * .matchPattern(HeaderMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedHeaders(List.of("excludedHeaders"))
+ * .includedHeaders(List.of("includedHeaders"))
+ * .build())
+ * .matchScope("matchScope")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .jsonBody(JsonBodyProperty.builder()
+ * .matchPattern(JsonMatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build())
+ * .matchScope("matchScope")
+ * // the properties below are optional
+ * .invalidFallbackBehavior("invalidFallbackBehavior")
+ * .oversizeHandling("oversizeHandling")
+ * .build())
+ * .method(method)
+ * .queryString(queryString)
+ * .singleHeader(singleHeader)
+ * .singleQueryArgument(singleQueryArgument)
+ * .uriPath(uriPath)
+ * .build())
+ * .textTransformations(List.of(TextTransformationProperty.builder()
+ * .priority(123)
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-regexpatternsetreferencestatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLRegexPatternSetReferenceStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.RegexPatternSetReferenceStatementProperty.Builder =

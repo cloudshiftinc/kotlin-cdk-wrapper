@@ -12,6 +12,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnCell
 import software.constructs.Construct
 
+/**
+ * Creates a cell in recovery group in Amazon Route 53 Application Recovery Controller.
+ *
+ * A cell in Route 53 ARC represents replicas or independent units of failover in your application.
+ * It groups within it all the AWS resources that are necessary for your application to run
+ * independently. Typically, you would have define one set of resources in a primary cell and another
+ * set in a standby cell in your recovery group.
+ *
+ * After you set up the cells for your application, you can create readiness checks in Route 53 ARC
+ * to continually audit readiness for AWS resource quotas, capacity, network routing policies, and
+ * other predefined rules.
+ *
+ * You can set up notifications about changes that would affect your ability to fail over to a
+ * replica and recover. However, you should make decisions about whether to fail away from or to a
+ * replica based on your monitoring and health check systems. You should consider readiness checks as a
+ * complementary service to those systems.
+ *
+ * Route 53 ARC Readiness supports us-east-1 and us-west-2 AWS Regions only.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnCell cfnCell = CfnCell.Builder.create(this, "MyCfnCell")
+ * .cellName("cellName")
+ * .cells(List.of("cells"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-cell.html)
+ */
 @CdkDslMarker
 public class CfnCellDsl(
   scope: Construct,

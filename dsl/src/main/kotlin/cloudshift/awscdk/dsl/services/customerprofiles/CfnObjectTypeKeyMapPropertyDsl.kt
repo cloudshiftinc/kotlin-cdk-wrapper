@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnObjectType
 
+/**
+ * A unique key map that can be used to map data to the profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * KeyMapProperty keyMapProperty = KeyMapProperty.builder()
+ * .name("name")
+ * .objectTypeKeyList(List.of(ObjectTypeKeyProperty.builder()
+ * .fieldNames(List.of("fieldNames"))
+ * .standardIdentifiers(List.of("standardIdentifiers"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-objecttype-keymap.html)
+ */
 @CdkDslMarker
 public class CfnObjectTypeKeyMapPropertyDsl {
   private val cdkBuilder: CfnObjectType.KeyMapProperty.Builder =

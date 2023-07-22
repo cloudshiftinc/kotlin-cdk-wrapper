@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * An asset property value entry containing the following information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AssetPropertyValueProperty assetPropertyValueProperty = AssetPropertyValueProperty.builder()
+ * .timestamp(AssetPropertyTimestampProperty.builder()
+ * .timeInSeconds("timeInSeconds")
+ * // the properties below are optional
+ * .offsetInNanos("offsetInNanos")
+ * .build())
+ * .value(AssetPropertyVariantProperty.builder()
+ * .booleanValue("booleanValue")
+ * .doubleValue("doubleValue")
+ * .integerValue("integerValue")
+ * .stringValue("stringValue")
+ * .build())
+ * // the properties below are optional
+ * .quality("quality")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvalue.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleAssetPropertyValuePropertyDsl {
   private val cdkBuilder: CfnTopicRule.AssetPropertyValueProperty.Builder =

@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.securityhub.CfnStandardProps
 
+/**
+ * Properties for defining a `CfnStandard`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * CfnStandardProps cfnStandardProps = CfnStandardProps.builder()
+ * .standardsArn("standardsArn")
+ * // the properties below are optional
+ * .disabledStandardsControls(List.of(StandardsControlProperty.builder()
+ * .standardsControlArn("standardsControlArn")
+ * // the properties below are optional
+ * .reason("reason")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-standard.html)
+ */
 @CdkDslMarker
 public class CfnStandardPropsDsl {
   private val cdkBuilder: CfnStandardProps.Builder = CfnStandardProps.builder()

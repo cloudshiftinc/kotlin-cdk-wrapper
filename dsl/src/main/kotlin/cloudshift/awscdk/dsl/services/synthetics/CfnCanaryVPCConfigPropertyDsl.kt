@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * If this canary is to test an endpoint in a VPC, this structure contains information about the
+ * subnet and security groups of the VPC endpoint.
+ *
+ * For more information, see [Running a Canary in a
+ * VPC](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_VPC.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * VPCConfigProperty vPCConfigProperty = VPCConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnCanaryVPCConfigPropertyDsl {
   private val cdkBuilder: CfnCanary.VPCConfigProperty.Builder =

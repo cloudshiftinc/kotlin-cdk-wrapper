@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociationsProps
 
+/**
+ * Properties for defining a `CfnClusterCapacityProviderAssociations`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnClusterCapacityProviderAssociationsProps cfnClusterCapacityProviderAssociationsProps =
+ * CfnClusterCapacityProviderAssociationsProps.builder()
+ * .capacityProviders(List.of("capacityProviders"))
+ * .cluster("cluster")
+ * .defaultCapacityProviderStrategy(List.of(CapacityProviderStrategyProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-clustercapacityproviderassociations.html)
+ */
 @CdkDslMarker
 public class CfnClusterCapacityProviderAssociationsPropsDsl {
   private val cdkBuilder: CfnClusterCapacityProviderAssociationsProps.Builder =

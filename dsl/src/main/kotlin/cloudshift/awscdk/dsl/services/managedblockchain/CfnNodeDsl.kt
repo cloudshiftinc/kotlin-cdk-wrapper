@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnNode
 import software.constructs.Construct
 
+/**
+ * Creates a node on the specified blockchain network.
+ *
+ * Applies to Hyperledger Fabric and Ethereum.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnNode cfnNode = CfnNode.Builder.create(this, "MyCfnNode")
+ * .networkId("networkId")
+ * .nodeConfiguration(NodeConfigurationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .instanceType("instanceType")
+ * .build())
+ * // the properties below are optional
+ * .memberId("memberId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html)
+ */
 @CdkDslMarker
 public class CfnNodeDsl(
   scope: Construct,

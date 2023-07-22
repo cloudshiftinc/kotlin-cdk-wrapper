@@ -9,6 +9,29 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.CommonMetricOptions
 import software.amazon.awscdk.services.cloudwatch.Unit
 
+/**
+ * Options shared by most methods accepting metric options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CommonMetricOptions commonMetricOptions = CommonMetricOptions.builder()
+ * .account("account")
+ * .color("color")
+ * .dimensionsMap(Map.of(
+ * "dimensionsMapKey", "dimensionsMap"))
+ * .label("label")
+ * .period(Duration.minutes(30))
+ * .region("region")
+ * .statistic("statistic")
+ * .unit(Unit.SECONDS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonMetricOptionsDsl {
   private val cdkBuilder: CommonMetricOptions.Builder = CommonMetricOptions.builder()

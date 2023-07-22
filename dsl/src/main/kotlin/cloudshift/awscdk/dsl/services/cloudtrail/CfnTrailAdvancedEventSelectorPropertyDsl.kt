@@ -10,6 +10,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudtrail.CfnTrail
 
+/**
+ * Advanced event selectors let you create fine-grained selectors for the following AWS CloudTrail
+ * event record ﬁelds.
+ *
+ * They help you control costs by logging only those events that are important to you. For more
+ * information about advanced event selectors, see [Logging data
+ * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+ * in the *AWS CloudTrail User Guide* .
+ *
+ * * `readOnly`
+ * * `eventSource`
+ * * `eventName`
+ * * `eventCategory`
+ * * `resources.type`
+ * * `resources.ARN`
+ *
+ * You cannot apply both event selectors and advanced event selectors to a trail.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * AdvancedEventSelectorProperty advancedEventSelectorProperty =
+ * AdvancedEventSelectorProperty.builder()
+ * .fieldSelectors(List.of(AdvancedFieldSelectorProperty.builder()
+ * .field("field")
+ * // the properties below are optional
+ * .endsWith(List.of("endsWith"))
+ * .equalTo(List.of("equalTo"))
+ * .notEndsWith(List.of("notEndsWith"))
+ * .notEquals(List.of("notEquals"))
+ * .notStartsWith(List.of("notStartsWith"))
+ * .startsWith(List.of("startsWith"))
+ * .build()))
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-advancedeventselector.html)
+ */
 @CdkDslMarker
 public class CfnTrailAdvancedEventSelectorPropertyDsl {
   private val cdkBuilder: CfnTrail.AdvancedEventSelectorProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action that updates a CloudWatch alarm.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CloudwatchAlarmActionProperty cloudwatchAlarmActionProperty =
+ * CloudwatchAlarmActionProperty.builder()
+ * .alarmName("alarmName")
+ * .roleArn("roleArn")
+ * .stateReason("stateReason")
+ * .stateValue("stateValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-cloudwatchalarmaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleCloudwatchAlarmActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.CloudwatchAlarmActionProperty.Builder =

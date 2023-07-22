@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents the match method.
+ *
+ * Specify one of the match values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * GrpcRouteMetadataMatchMethodProperty grpcRouteMetadataMatchMethodProperty =
+ * GrpcRouteMetadataMatchMethodProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(MatchRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-grpcroutemetadatamatchmethod.html)
+ */
 @CdkDslMarker
 public class CfnRouteGrpcRouteMetadataMatchMethodPropertyDsl {
   private val cdkBuilder: CfnRoute.GrpcRouteMetadataMatchMethodProperty.Builder =

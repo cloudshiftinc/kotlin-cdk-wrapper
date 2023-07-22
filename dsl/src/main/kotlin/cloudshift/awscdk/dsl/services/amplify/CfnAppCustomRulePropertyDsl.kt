@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.amplify.CfnApp
 
+/**
+ * The CustomRule property type allows you to specify redirects, rewrites, and reverse proxies.
+ *
+ * Redirects enable a web app to reroute navigation from one URL to another.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * CustomRuleProperty customRuleProperty = CustomRuleProperty.builder()
+ * .source("source")
+ * .target("target")
+ * // the properties below are optional
+ * .condition("condition")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-customrule.html)
+ */
 @CdkDslMarker
 public class CfnAppCustomRulePropertyDsl {
   private val cdkBuilder: CfnApp.CustomRuleProperty.Builder = CfnApp.CustomRuleProperty.builder()

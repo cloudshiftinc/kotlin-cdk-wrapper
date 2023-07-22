@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.msk.CfnConfigurationProps
 
+/**
+ * Properties for defining a `CfnConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnConfigurationProps cfnConfigurationProps = CfnConfigurationProps.builder()
+ * .name("name")
+ * .serverProperties("serverProperties")
+ * // the properties below are optional
+ * .description("description")
+ * .kafkaVersionsList(List.of("kafkaVersionsList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-configuration.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationPropsDsl {
   private val cdkBuilder: CfnConfigurationProps.Builder = CfnConfigurationProps.builder()

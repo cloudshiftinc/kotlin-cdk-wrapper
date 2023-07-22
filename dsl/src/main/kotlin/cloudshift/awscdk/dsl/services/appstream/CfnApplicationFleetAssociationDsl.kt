@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnApplicationFleetAssociation
 import software.constructs.Construct
 
+/**
+ * This resource associates the specified application with the specified fleet.
+ *
+ * This is only supported for Elastic fleets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnApplicationFleetAssociation cfnApplicationFleetAssociation =
+ * CfnApplicationFleetAssociation.Builder.create(this, "MyCfnApplicationFleetAssociation")
+ * .applicationArn("applicationArn")
+ * .fleetName("fleetName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationfleetassociation.html)
+ */
 @CdkDslMarker
 public class CfnApplicationFleetAssociationDsl(
   scope: Construct,

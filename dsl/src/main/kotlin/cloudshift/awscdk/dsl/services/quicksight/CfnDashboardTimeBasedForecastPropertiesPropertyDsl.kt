@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The forecast properties setup of a forecast in the line chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TimeBasedForecastPropertiesProperty timeBasedForecastPropertiesProperty =
+ * TimeBasedForecastPropertiesProperty.builder()
+ * .lowerBoundary(123)
+ * .periodsBackward(123)
+ * .periodsForward(123)
+ * .predictionInterval(123)
+ * .seasonality(123)
+ * .upperBoundary(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-timebasedforecastproperties.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTimeBasedForecastPropertiesPropertyDsl {
   private val cdkBuilder: CfnDashboard.TimeBasedForecastPropertiesProperty.Builder =

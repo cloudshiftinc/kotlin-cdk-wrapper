@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.timestream.CfnTable
 
+/**
+ * The configuration that specifies an S3 location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * S3ConfigurationProperty s3ConfigurationProperty = S3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-timestream-table-s3configuration.html)
+ */
 @CdkDslMarker
 public class CfnTableS3ConfigurationPropertyDsl {
   private val cdkBuilder: CfnTable.S3ConfigurationProperty.Builder =

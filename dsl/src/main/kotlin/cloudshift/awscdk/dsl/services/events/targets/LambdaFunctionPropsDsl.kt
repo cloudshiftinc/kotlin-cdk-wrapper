@@ -9,6 +9,31 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.LambdaFunctionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the Lambda Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function fn = Function.Builder.create(this, "MyFunc")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromInline("exports.handler = handler.toString()"))
+ * .build();
+ * Rule rule = Rule.Builder.create(this, "rule")
+ * .eventPattern(EventPattern.builder()
+ * .source(List.of("aws.ec2"))
+ * .build())
+ * .build();
+ * Queue queue = new Queue(this, "Queue");
+ * rule.addTarget(LambdaFunction.Builder.create(fn)
+ * .deadLetterQueue(queue) // Optional: add a dead letter queue
+ * .maxEventAge(Duration.hours(2)) // Optional: set the maxEventAge retry policy
+ * .retryAttempts(2)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LambdaFunctionPropsDsl {
   private val cdkBuilder: LambdaFunctionProps.Builder = LambdaFunctionProps.builder()

@@ -7,6 +7,24 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.events.RuleTargetInputProperties
 
+/**
+ * The input properties for an event target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * RuleTargetInputProperties ruleTargetInputProperties = RuleTargetInputProperties.builder()
+ * .input("input")
+ * .inputPath("inputPath")
+ * .inputPathsMap(Map.of(
+ * "inputPathsMapKey", "inputPathsMap"))
+ * .inputTemplate("inputTemplate")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RuleTargetInputPropertiesDsl {
   private val cdkBuilder: RuleTargetInputProperties.Builder = RuleTargetInputProperties.builder()

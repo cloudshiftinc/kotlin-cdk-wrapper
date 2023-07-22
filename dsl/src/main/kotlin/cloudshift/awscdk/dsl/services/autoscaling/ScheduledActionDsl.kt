@@ -11,6 +11,30 @@ import software.amazon.awscdk.services.autoscaling.Schedule
 import software.amazon.awscdk.services.autoscaling.ScheduledAction
 import software.constructs.Construct
 
+/**
+ * Define a scheduled scaling action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Schedule schedule;
+ * ScheduledAction scheduledAction = ScheduledAction.Builder.create(this, "MyScheduledAction")
+ * .autoScalingGroup(autoScalingGroup)
+ * .schedule(schedule)
+ * // the properties below are optional
+ * .desiredCapacity(123)
+ * .endTime(new Date())
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .startTime(new Date())
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledActionDsl(
   scope: Construct,

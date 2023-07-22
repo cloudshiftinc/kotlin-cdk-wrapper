@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.ExportValueOptions
 
+/**
+ * Options for the `stack.exportValue()` method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ExportValueOptions exportValueOptions = ExportValueOptions.builder()
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExportValueOptionsDsl {
   private val cdkBuilder: ExportValueOptions.Builder = ExportValueOptions.builder()

@@ -8,6 +8,23 @@ import software.amazon.awscdk.CfnCondition
 import software.amazon.awscdk.ICfnConditionExpression
 import software.constructs.Construct
 
+/**
+ * Represents a CloudFormation condition, for resources which must be conditionally created and the
+ * determination must be made at deploy time.
+ *
+ * Example:
+ *
+ * ```
+ * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
+ * // -or-
+ * CfnBucket rawBucketAlt = (CfnBucket)myBucket.getNode().getDefaultChild();
+ * // then
+ * rawBucket.getCfnOptions().getCondition() = CfnCondition.Builder.create(this,
+ * "EnableBucket").build();
+ * rawBucket.getCfnOptions().getMetadata() = Map.of(
+ * "metadataKey", "MetadataValue");
+ * ```
+ */
 @CdkDslMarker
 public class CfnConditionDsl(
   scope: Construct,

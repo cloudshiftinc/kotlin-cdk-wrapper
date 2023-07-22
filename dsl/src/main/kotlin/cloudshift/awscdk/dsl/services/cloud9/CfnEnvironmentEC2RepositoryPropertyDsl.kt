@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2
 
+/**
+ * The `Repository` property type specifies an AWS CodeCommit source code repository to be cloned
+ * into an AWS Cloud9 development environment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloud9.*;
+ * RepositoryProperty repositoryProperty = RepositoryProperty.builder()
+ * .pathComponent("pathComponent")
+ * .repositoryUrl("repositoryUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentEC2RepositoryPropertyDsl {
   private val cdkBuilder: CfnEnvironmentEC2.RepositoryProperty.Builder =

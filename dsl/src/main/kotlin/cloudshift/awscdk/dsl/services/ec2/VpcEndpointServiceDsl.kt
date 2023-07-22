@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.ec2.VpcEndpointService
 import software.amazon.awscdk.services.iam.ArnPrincipal
 import software.constructs.Construct
 
+/**
+ * A VPC endpoint service.
+ *
+ * Example:
+ *
+ * ```
+ * NetworkLoadBalancer networkLoadBalancer1;
+ * NetworkLoadBalancer networkLoadBalancer2;
+ * VpcEndpointService.Builder.create(this, "EndpointService")
+ * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
+ * .acceptanceRequired(true)
+ * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcEndpointServiceDsl(
   scope: Construct,

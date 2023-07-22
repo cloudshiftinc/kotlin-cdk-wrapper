@@ -11,6 +11,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * A serializer to use for converting data to the ORC format before storing it in Amazon S3.
+ *
+ * For more information, see [Apache ORC](https://docs.aws.amazon.com/https://orc.apache.org/docs/)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * OrcSerDeProperty orcSerDeProperty = OrcSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .bloomFilterColumns(List.of("bloomFilterColumns"))
+ * .bloomFilterFalsePositiveProbability(123)
+ * .compression("compression")
+ * .dictionaryKeyThreshold(123)
+ * .enablePadding(false)
+ * .formatVersion("formatVersion")
+ * .paddingTolerance(123)
+ * .rowIndexStride(123)
+ * .stripeSizeBytes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-orcserde.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamOrcSerDePropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.OrcSerDeProperty.Builder =

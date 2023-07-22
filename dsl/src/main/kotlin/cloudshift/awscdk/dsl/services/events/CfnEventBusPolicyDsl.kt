@@ -11,6 +11,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnEventBusPolicy
 import software.constructs.Construct
 
+/**
+ * Running `PutPermission` permits the specified AWS account or AWS organization to put events to
+ * the specified *event bus* .
+ *
+ * Amazon EventBridge (CloudWatch Events) rules in your account are triggered by these events
+ * arriving to an event bus in your account.
+ *
+ * For another account to send events to your account, that external account must have an
+ * EventBridge rule with your account's event bus as a target.
+ *
+ * To enable multiple AWS accounts to put events to your event bus, run `PutPermission` once for
+ * each of these accounts. Or, if all the accounts are members of the same AWS organization, you can
+ * run `PutPermission` once specifying `Principal` as "*" and specifying the AWS organization ID in
+ * `Condition` , to grant permissions to all accounts in that organization.
+ *
+ * If you grant permissions using an organization, then accounts in that organization must specify a
+ * `RoleArn` with proper permissions when they use `PutTarget` to add your account's event bus as a
+ * target. For more information, see [Sending and Receiving Events Between AWS
+ * Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html)
+ * in the *Amazon EventBridge User Guide* .
+ *
+ * The permission policy on the event bus cannot exceed 10 KB in size.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * Object statement;
+ * CfnEventBusPolicy cfnEventBusPolicy = CfnEventBusPolicy.Builder.create(this,
+ * "MyCfnEventBusPolicy")
+ * .statementId("statementId")
+ * // the properties below are optional
+ * .action("action")
+ * .condition(ConditionProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build())
+ * .eventBusName("eventBusName")
+ * .principal("principal")
+ * .statement(statement)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)
+ */
 @CdkDslMarker
 public class CfnEventBusPolicyDsl(
   scope: Construct,

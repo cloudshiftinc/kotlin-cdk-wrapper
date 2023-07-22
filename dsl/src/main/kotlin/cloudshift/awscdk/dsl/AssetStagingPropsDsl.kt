@@ -13,6 +13,52 @@ import software.amazon.awscdk.BundlingOptions
 import software.amazon.awscdk.IgnoreMode
 import software.amazon.awscdk.SymlinkFollowMode
 
+/**
+ * Initialization properties for `AssetStaging`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerImage dockerImage;
+ * ILocalBundling localBundling;
+ * AssetStagingProps assetStagingProps = AssetStagingProps.builder()
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .exclude(List.of("exclude"))
+ * .extraHash("extraHash")
+ * .follow(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetStagingPropsDsl {
   private val cdkBuilder: AssetStagingProps.Builder = AssetStagingProps.builder()

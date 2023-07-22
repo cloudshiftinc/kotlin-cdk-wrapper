@@ -11,6 +11,26 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate
 import software.constructs.Construct
 
+/**
+ * Specifies an SSL server certificate to add to the certificate list for an HTTPS or TLS listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnListenerCertificate cfnListenerCertificate = CfnListenerCertificate.Builder.create(this,
+ * "MyCfnListenerCertificate")
+ * .certificates(List.of(CertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build()))
+ * .listenerArn("listenerArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
+ */
 @CdkDslMarker
 public class CfnListenerCertificateDsl(
   scope: Construct,

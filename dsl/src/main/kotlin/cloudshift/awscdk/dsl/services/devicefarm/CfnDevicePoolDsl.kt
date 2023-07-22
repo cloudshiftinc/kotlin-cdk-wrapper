@@ -15,6 +15,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devicefarm.CfnDevicePool
 import software.constructs.Construct
 
+/**
+ * Represents a request to the create device pool operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnDevicePool cfnDevicePool = CfnDevicePool.Builder.create(this, "MyCfnDevicePool")
+ * .name("name")
+ * .projectArn("projectArn")
+ * .rules(List.of(RuleProperty.builder()
+ * .attribute("attribute")
+ * .operator("operator")
+ * .value("value")
+ * .build()))
+ * // the properties below are optional
+ * .description("description")
+ * .maxDevices(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-devicepool.html)
+ */
 @CdkDslMarker
 public class CfnDevicePoolDsl(
   scope: Construct,

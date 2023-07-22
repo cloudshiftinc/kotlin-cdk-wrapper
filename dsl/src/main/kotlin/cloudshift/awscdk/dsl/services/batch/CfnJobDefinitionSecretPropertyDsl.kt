@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * An object that represents the secret to expose to your container.
+ *
+ * Secrets can be exposed to a container in the following ways:
+ *
+ * * To inject sensitive data into your containers as environment variables, use the `secrets`
+ * container definition parameter.
+ * * To reference sensitive information in the log configuration of a container, use the
+ * `secretOptions` container definition parameter.
+ *
+ * For more information, see [Specifying sensitive
+ * data](https://docs.aws.amazon.com/batch/latest/userguide/specifying-sensitive-data.html) in the *AWS
+ * Batch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * SecretProperty secretProperty = SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-secret.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionSecretPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.SecretProperty.Builder =

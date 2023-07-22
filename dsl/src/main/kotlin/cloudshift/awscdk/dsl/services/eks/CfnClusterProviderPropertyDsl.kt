@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * Identifies the AWS Key Management Service ( AWS KMS ) key used to encrypt the secrets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * ProviderProperty providerProperty = ProviderProperty.builder()
+ * .keyArn("keyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-provider.html)
+ */
 @CdkDslMarker
 public class CfnClusterProviderPropertyDsl {
   private val cdkBuilder: CfnCluster.ProviderProperty.Builder =

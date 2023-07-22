@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnAlarmProps
 
+/**
+ * Properties for defining a `CfnAlarm`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnAlarmProps cfnAlarmProps = CfnAlarmProps.builder()
+ * .alarmName("alarmName")
+ * .comparisonOperator("comparisonOperator")
+ * .evaluationPeriods(123)
+ * .metricName("metricName")
+ * .monitoredResourceName("monitoredResourceName")
+ * .threshold(123)
+ * // the properties below are optional
+ * .contactProtocols(List.of("contactProtocols"))
+ * .datapointsToAlarm(123)
+ * .notificationEnabled(false)
+ * .notificationTriggers(List.of("notificationTriggers"))
+ * .treatMissingData("treatMissingData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-alarm.html)
+ */
 @CdkDslMarker
 public class CfnAlarmPropsDsl {
   private val cdkBuilder: CfnAlarmProps.Builder = CfnAlarmProps.builder()

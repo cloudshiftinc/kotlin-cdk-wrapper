@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.ResponseType
 import software.constructs.Construct
 
+/**
+ * Configure the response received by clients, produced from the API Gateway backend.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * ResponseType responseType;
+ * RestApi restApi;
+ * GatewayResponse gatewayResponse = GatewayResponse.Builder.create(this, "MyGatewayResponse")
+ * .restApi(restApi)
+ * .type(responseType)
+ * // the properties below are optional
+ * .responseHeaders(Map.of(
+ * "responseHeadersKey", "responseHeaders"))
+ * .statusCode("statusCode")
+ * .templates(Map.of(
+ * "templatesKey", "templates"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GatewayResponseDsl(
   scope: Construct,

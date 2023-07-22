@@ -18,6 +18,30 @@ import software.amazon.awscdk.services.stepfunctions.StateMachine
 import software.amazon.awscdk.services.stepfunctions.StateMachineType
 import software.constructs.Construct
 
+/**
+ * Define a StepFunctions State Machine.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact inputArtifact = new Artifact();
+ * Pass startState = new Pass(this, "StartState");
+ * StateMachine simpleStateMachine = StateMachine.Builder.create(this, "SimpleStateMachine")
+ * .definition(startState)
+ * .build();
+ * StepFunctionInvokeAction stepFunctionAction = StepFunctionInvokeAction.Builder.create()
+ * .actionName("Invoke")
+ * .stateMachine(simpleStateMachine)
+ * .stateMachineInput(StateMachineInput.filePath(inputArtifact.atPath("assets/input.json")))
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("StepFunctions")
+ * .actions(List.of(stepFunctionAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StateMachineDsl(
   scope: Construct,

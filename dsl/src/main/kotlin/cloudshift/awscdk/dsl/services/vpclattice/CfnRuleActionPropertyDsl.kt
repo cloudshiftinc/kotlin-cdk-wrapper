@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * Describes the action for a rule.
+ *
+ * Each rule must include exactly one of the following types of actions: `forward` or
+ * `fixed-response` , and it must be the last action to be performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .fixedResponse(FixedResponseProperty.builder()
+ * .statusCode(123)
+ * .build())
+ * .forward(ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-action.html)
+ */
 @CdkDslMarker
 public class CfnRuleActionPropertyDsl {
   private val cdkBuilder: CfnRule.ActionProperty.Builder = CfnRule.ActionProperty.builder()

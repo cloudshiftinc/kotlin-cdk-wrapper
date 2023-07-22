@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * Information about blue/green deployment options for a deployment group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * BlueGreenDeploymentConfigurationProperty blueGreenDeploymentConfigurationProperty =
+ * BlueGreenDeploymentConfigurationProperty.builder()
+ * .deploymentReadyOption(DeploymentReadyOptionProperty.builder()
+ * .actionOnTimeout("actionOnTimeout")
+ * .waitTimeInMinutes(123)
+ * .build())
+ * .greenFleetProvisioningOption(GreenFleetProvisioningOptionProperty.builder()
+ * .action("action")
+ * .build())
+ * .terminateBlueInstancesOnDeploymentSuccess(BlueInstanceTerminationOptionProperty.builder()
+ * .action("action")
+ * .terminationWaitTimeInMinutes(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-bluegreendeploymentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupBlueGreenDeploymentConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.Builder =

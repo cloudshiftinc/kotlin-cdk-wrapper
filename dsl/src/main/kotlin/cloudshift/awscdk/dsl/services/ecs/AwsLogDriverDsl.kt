@@ -9,6 +9,39 @@ import software.amazon.awscdk.services.ecs.AwsLogDriverMode
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * A log driver that sends log information to CloudWatch Logs.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromAsset(resolve(__dirname, "..", "eventhandler-image")))
+ * .memoryLimitMiB(256)
+ * .logging(AwsLogDriver.Builder.create().streamPrefix("EventDemo").mode(AwsLogDriverMode.NON_BLOCKING).build())
+ * .build());
+ * // An Rule that describes the event trigger (in this case a scheduled run)
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.expression("rate(1 min)"))
+ * .build();
+ * // Pass an environment variable to the container 'TheContainer' in the task
+ * rule.addTarget(EcsTask.Builder.create()
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .taskCount(1)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerName("TheContainer")
+ * .environment(List.of(TaskEnvironmentVariable.builder()
+ * .name("I_WAS_TRIGGERED")
+ * .value("From CloudWatch Events")
+ * .build()))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AwsLogDriverDsl {
   private val cdkBuilder: AwsLogDriver.Builder = AwsLogDriver.Builder.create()

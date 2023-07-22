@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicediscovery.BaseNamespaceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * BaseNamespaceProps baseNamespaceProps = BaseNamespaceProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseNamespacePropsDsl {
   private val cdkBuilder: BaseNamespaceProps.Builder = BaseNamespaceProps.builder()

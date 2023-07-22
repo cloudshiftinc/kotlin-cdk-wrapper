@@ -7,6 +7,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.ecr.assets.DockerCacheOption
 
+/**
+ * Options for configuring the Docker cache backend.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.assets.DockerImageAsset;
+ * import software.amazon.awscdk.services.ecr.assets.Platform;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .cacheFrom(List.of(DockerCacheOption.builder().type("registry").params(Map.of("ref",
+ * "ghcr.io/myorg/myimage:cache")).build()))
+ * .cacheTo(DockerCacheOption.builder().type("registry").params(Map.of("ref",
+ * "ghcr.io/myorg/myimage:cache", "mode", "max", "compression", "zstd")).build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerCacheOptionDsl {
   private val cdkBuilder: DockerCacheOption.Builder = DockerCacheOption.builder()

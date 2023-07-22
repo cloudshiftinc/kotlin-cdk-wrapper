@@ -74,7 +74,7 @@ abstract class GenerateDslTask
             val cdkClasses =
                 AsmClassLoader.loadClasses(
                     classpath.get(),
-                    cdkSourceModel.builderMap
+                    cdkSourceModel.classMap
                 )
             val cdkModel = CdkModelFactory.createModel(cdkClasses)
 

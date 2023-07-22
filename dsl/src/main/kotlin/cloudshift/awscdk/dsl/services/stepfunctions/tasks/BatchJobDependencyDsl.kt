@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency
 
+/**
+ * An object representing an AWS Batch job dependency.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * BatchJobDependency batchJobDependency = BatchJobDependency.builder()
+ * .jobId("jobId")
+ * .type("type")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BatchJobDependencyDsl {
   private val cdkBuilder: BatchJobDependency.Builder = BatchJobDependency.builder()

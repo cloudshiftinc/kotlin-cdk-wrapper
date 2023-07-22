@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * `ScriptBootstrapActionConfig` is a subproperty of the `BootstrapActionConfig` property type.
+ *
+ * `ScriptBootstrapActionConfig` specifies the arguments and location of the bootstrap script for
+ * EMR to run on all cluster nodes before it installs open-source big data applications on them.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ScriptBootstrapActionConfigProperty scriptBootstrapActionConfigProperty =
+ * ScriptBootstrapActionConfigProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-scriptbootstrapactionconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterScriptBootstrapActionConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.ScriptBootstrapActionConfigProperty.Builder =

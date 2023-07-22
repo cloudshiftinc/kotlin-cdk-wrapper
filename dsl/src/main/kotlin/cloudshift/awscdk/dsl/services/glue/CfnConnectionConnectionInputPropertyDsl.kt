@@ -12,6 +12,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnConnection
 
+/**
+ * A structure that is used to specify a connection to create or update.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object connectionProperties;
+ * ConnectionInputProperty connectionInputProperty = ConnectionInputProperty.builder()
+ * .connectionType("connectionType")
+ * // the properties below are optional
+ * .connectionProperties(connectionProperties)
+ * .description("description")
+ * .matchCriteria(List.of("matchCriteria"))
+ * .name("name")
+ * .physicalConnectionRequirements(PhysicalConnectionRequirementsProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .securityGroupIdList(List.of("securityGroupIdList"))
+ * .subnetId("subnetId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-connection-connectioninput.html)
+ */
 @CdkDslMarker
 public class CfnConnectionConnectionInputPropertyDsl {
   private val cdkBuilder: CfnConnection.ConnectionInputProperty.Builder =

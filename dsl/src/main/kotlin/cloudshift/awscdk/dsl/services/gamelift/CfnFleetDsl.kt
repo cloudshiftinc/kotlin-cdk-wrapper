@@ -13,6 +13,79 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnFleet
 import software.constructs.Construct
 
+/**
+ * The `AWS::GameLift::Fleet` resource creates an Amazon GameLift (GameLift) fleet to host custom
+ * game server or Realtime Servers.
+ *
+ * A fleet is a set of EC2 instances, configured with instructions to run game servers on each
+ * instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnFleet cfnFleet = CfnFleet.Builder.create(this, "MyCfnFleet")
+ * .name("name")
+ * // the properties below are optional
+ * .anywhereConfiguration(AnywhereConfigurationProperty.builder()
+ * .cost("cost")
+ * .build())
+ * .buildId("buildId")
+ * .certificateConfiguration(CertificateConfigurationProperty.builder()
+ * .certificateType("certificateType")
+ * .build())
+ * .computeType("computeType")
+ * .description("description")
+ * .desiredEc2Instances(123)
+ * .ec2InboundPermissions(List.of(IpPermissionProperty.builder()
+ * .fromPort(123)
+ * .ipRange("ipRange")
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build()))
+ * .ec2InstanceType("ec2InstanceType")
+ * .fleetType("fleetType")
+ * .instanceRoleArn("instanceRoleArn")
+ * .locations(List.of(LocationConfigurationProperty.builder()
+ * .location("location")
+ * // the properties below are optional
+ * .locationCapacity(LocationCapacityProperty.builder()
+ * .desiredEc2Instances(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build())
+ * .build()))
+ * .logPaths(List.of("logPaths"))
+ * .maxSize(123)
+ * .metricGroups(List.of("metricGroups"))
+ * .minSize(123)
+ * .newGameSessionProtectionPolicy("newGameSessionProtectionPolicy")
+ * .peerVpcAwsAccountId("peerVpcAwsAccountId")
+ * .peerVpcId("peerVpcId")
+ * .resourceCreationLimitPolicy(ResourceCreationLimitPolicyProperty.builder()
+ * .newGameSessionsPerCreator(123)
+ * .policyPeriodInMinutes(123)
+ * .build())
+ * .runtimeConfiguration(RuntimeConfigurationProperty.builder()
+ * .gameSessionActivationTimeoutSeconds(123)
+ * .maxConcurrentGameSessionActivations(123)
+ * .serverProcesses(List.of(ServerProcessProperty.builder()
+ * .concurrentExecutions(123)
+ * .launchPath("launchPath")
+ * // the properties below are optional
+ * .parameters("parameters")
+ * .build()))
+ * .build())
+ * .scriptId("scriptId")
+ * .serverLaunchParameters("serverLaunchParameters")
+ * .serverLaunchPath("serverLaunchPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetDsl(
   scope: Construct,

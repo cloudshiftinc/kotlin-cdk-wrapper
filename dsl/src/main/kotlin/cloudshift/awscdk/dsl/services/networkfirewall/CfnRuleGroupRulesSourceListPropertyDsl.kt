@@ -8,6 +8,35 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * Stateful inspection criteria for a domain list rule group.
+ *
+ * For HTTPS traffic, domain filtering is SNI-based. It uses the server name indicator extension of
+ * the TLS handshake.
+ *
+ * By default, Network Firewall domain list inspection only includes traffic coming from the VPC
+ * where you deploy the firewall. To inspect traffic from IP addresses outside of the deployment VPC,
+ * you set the `HOME_NET` rule variable to include the CIDR range of the deployment VPC plus the other
+ * CIDR ranges. For more information, see `RuleGroup.RuleVariables` in this guide and [Stateful domain
+ * list rule groups in AWS Network
+ * Firewall](https://docs.aws.amazon.com/network-firewall/latest/developerguide/stateful-rule-groups-domain-names.html)
+ * in the *Network Firewall Developer Guide*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * RulesSourceListProperty rulesSourceListProperty = RulesSourceListProperty.builder()
+ * .generatedRulesType("generatedRulesType")
+ * .targets(List.of("targets"))
+ * .targetTypes(List.of("targetTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulessourcelist.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupRulesSourceListPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RulesSourceListProperty.Builder =

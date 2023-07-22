@@ -18,6 +18,29 @@ import software.amazon.awscdk.services.ecs.RuntimePlatform
 import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskImageOptions
 
+/**
+ * The properties for the ScheduledFargateTask using an image.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").maxAzs(1).build();
+ * Cluster cluster = Cluster.Builder.create(this, "EcsCluster").vpc(vpc).build();
+ * ScheduledFargateTask scheduledFargateTask = ScheduledFargateTask.Builder.create(this,
+ * "ScheduledFargateTask")
+ * .cluster(cluster)
+ * .scheduledFargateTaskImageOptions(ScheduledFargateTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(512)
+ * .build())
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .tags(List.of(Tag.builder()
+ * .key("my-tag")
+ * .value("my-tag-value")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledFargateTaskImageOptionsDsl {
   private val cdkBuilder: ScheduledFargateTaskImageOptions.Builder =

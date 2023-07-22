@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnStream
 import software.amazon.awscdk.services.qldb.CfnStreamProps
 
+/**
+ * Properties for defining a `CfnStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.qldb.*;
+ * CfnStreamProps cfnStreamProps = CfnStreamProps.builder()
+ * .inclusiveStartTime("inclusiveStartTime")
+ * .kinesisConfiguration(KinesisConfigurationProperty.builder()
+ * .aggregationEnabled(false)
+ * .streamArn("streamArn")
+ * .build())
+ * .ledgerName("ledgerName")
+ * .roleArn("roleArn")
+ * .streamName("streamName")
+ * // the properties below are optional
+ * .exclusiveEndTime("exclusiveEndTime")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamPropsDsl {
   private val cdkBuilder: CfnStreamProps.Builder = CfnStreamProps.builder()

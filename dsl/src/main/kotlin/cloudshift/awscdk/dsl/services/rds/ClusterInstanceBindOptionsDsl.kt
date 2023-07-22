@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.rds.ClusterInstanceBindOptions
 import software.amazon.awscdk.services.rds.ISubnetGroup
 
+/**
+ * Options for binding the instance to the cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * Role role;
+ * SubnetGroup subnetGroup;
+ * ClusterInstanceBindOptions clusterInstanceBindOptions = ClusterInstanceBindOptions.builder()
+ * .monitoringInterval(Duration.minutes(30))
+ * .monitoringRole(role)
+ * .promotionTier(123)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .subnetGroup(subnetGroup)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterInstanceBindOptionsDsl {
   private val cdkBuilder: ClusterInstanceBindOptions.Builder = ClusterInstanceBindOptions.builder()

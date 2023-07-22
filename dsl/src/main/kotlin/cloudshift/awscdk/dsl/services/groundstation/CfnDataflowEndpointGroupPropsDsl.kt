@@ -13,6 +13,66 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps
 
+/**
+ * Properties for defining a `CfnDataflowEndpointGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * CfnDataflowEndpointGroupProps cfnDataflowEndpointGroupProps =
+ * CfnDataflowEndpointGroupProps.builder()
+ * .endpointDetails(List.of(EndpointDetailsProperty.builder()
+ * .awsGroundStationAgentEndpoint(AwsGroundStationAgentEndpointProperty.builder()
+ * .agentStatus("agentStatus")
+ * .auditResults("auditResults")
+ * .egressAddress(ConnectionDetailsProperty.builder()
+ * .mtu(123)
+ * .socketAddress(SocketAddressProperty.builder()
+ * .name("name")
+ * .port(123)
+ * .build())
+ * .build())
+ * .ingressAddress(RangedConnectionDetailsProperty.builder()
+ * .mtu(123)
+ * .socketAddress(RangedSocketAddressProperty.builder()
+ * .name("name")
+ * .portRange(IntegerRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build())
+ * .build())
+ * .build())
+ * .name("name")
+ * .build())
+ * .endpoint(DataflowEndpointProperty.builder()
+ * .address(SocketAddressProperty.builder()
+ * .name("name")
+ * .port(123)
+ * .build())
+ * .mtu(123)
+ * .name("name")
+ * .build())
+ * .securityDetails(SecurityDetailsProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .contactPostPassDurationSeconds(123)
+ * .contactPrePassDurationSeconds(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-dataflowendpointgroup.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupPropsDsl {
   private val cdkBuilder: CfnDataflowEndpointGroupProps.Builder =

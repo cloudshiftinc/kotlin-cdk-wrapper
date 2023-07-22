@@ -12,6 +12,22 @@ import software.amazon.awscdk.services.s3.Bucket
 import software.amazon.awscdk.services.s3.EventType
 import software.amazon.awscdk.services.s3.NotificationKeyFilter
 
+/**
+ * Use S3 bucket notifications as an event source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.eventsources.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Function fn;
+ * Bucket bucket = new Bucket(this, "Bucket");
+ * fn.addEventSource(S3EventSource.Builder.create(bucket)
+ * .events(List.of(EventType.OBJECT_CREATED, EventType.OBJECT_REMOVED))
+ * .filters(List.of(NotificationKeyFilter.builder().prefix("subdir/").build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class S3EventSourceDsl(
   bucket: Bucket,

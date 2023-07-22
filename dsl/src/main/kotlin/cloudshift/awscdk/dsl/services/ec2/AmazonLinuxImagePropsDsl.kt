@@ -13,6 +13,26 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxStorage
 import software.amazon.awscdk.services.ec2.AmazonLinuxVirt
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Amazon Linux image properties.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc;
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .build();
+ * // instance to add as the target for load balancer.
+ * Instance instance = Instance.Builder.create(this, "targetInstance")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(AmazonLinuxImage.Builder.create().generation(AmazonLinuxGeneration.AMAZON_LINUX_2).build())
+ * .build();
+ * lb.addTarget(new InstanceTarget(instance));
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinuxImagePropsDsl {
   private val cdkBuilder: AmazonLinuxImageProps.Builder = AmazonLinuxImageProps.builder()

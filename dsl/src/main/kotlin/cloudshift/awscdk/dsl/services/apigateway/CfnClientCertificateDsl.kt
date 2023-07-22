@@ -12,6 +12,28 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apigateway.CfnClientCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::ClientCertificate` resource creates a client certificate that API Gateway
+ * uses to configure client-side SSL authentication for sending requests to the integration endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnClientCertificate cfnClientCertificate = CfnClientCertificate.Builder.create(this,
+ * "MyCfnClientCertificate")
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-clientcertificate.html)
+ */
 @CdkDslMarker
 public class CfnClientCertificateDsl(
   scope: Construct,

@@ -11,6 +11,26 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnResourcePolicyProps
 
+/**
+ * Properties for defining a `CfnResourcePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Object resourcePolicy;
+ * CfnResourcePolicyProps cfnResourcePolicyProps = CfnResourcePolicyProps.builder()
+ * .resourcePolicy(resourcePolicy)
+ * .secretId("secretId")
+ * // the properties below are optional
+ * .blockPublicPolicy(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()

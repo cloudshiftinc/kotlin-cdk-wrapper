@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnTypeActivation
 
+/**
+ * Contains logging configuration information for an extension.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-typeactivation-loggingconfig.html)
+ */
 @CdkDslMarker
 public class CfnTypeActivationLoggingConfigPropertyDsl {
   private val cdkBuilder: CfnTypeActivation.LoggingConfigProperty.Builder =

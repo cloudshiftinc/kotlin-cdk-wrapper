@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.PrivateSubnet
 import software.constructs.Construct
 
+/**
+ * Represents a private VPC subnet resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateSubnet privateSubnet = PrivateSubnet.Builder.create(this, "MyPrivateSubnet")
+ * .availabilityZone("availabilityZone")
+ * .cidrBlock("cidrBlock")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .mapPublicIpOnLaunch(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrivateSubnetDsl(
   scope: Construct,

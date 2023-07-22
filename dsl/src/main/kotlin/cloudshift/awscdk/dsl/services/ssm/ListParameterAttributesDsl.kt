@@ -9,6 +9,26 @@ import kotlin.String
 import software.amazon.awscdk.services.ssm.ListParameterAttributes
 import software.amazon.awscdk.services.ssm.ParameterValueType
 
+/**
+ * Attributes for parameters of string list type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * ListParameterAttributes listParameterAttributes = ListParameterAttributes.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .elementType(ParameterValueType.STRING)
+ * .simpleName(false)
+ * .version(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](ParameterType)
+ */
 @CdkDslMarker
 public class ListParameterAttributesDsl {
   private val cdkBuilder: ListParameterAttributes.Builder = ListParameterAttributes.builder()

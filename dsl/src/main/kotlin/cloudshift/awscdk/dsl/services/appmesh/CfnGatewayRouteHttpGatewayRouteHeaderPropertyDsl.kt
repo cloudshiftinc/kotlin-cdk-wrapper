@@ -8,6 +8,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object that represents the HTTP header in the gateway route.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpGatewayRouteHeaderProperty httpGatewayRouteHeaderProperty =
+ * HttpGatewayRouteHeaderProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .invert(false)
+ * .match(HttpGatewayRouteHeaderMatchProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(GatewayRouteRangeMatchProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteheader.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRouteHeaderPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteHeaderProperty.Builder =

@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps
 
+/**
+ * Properties for defining a `CfnModelManifest`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnModelManifestProps cfnModelManifestProps = CfnModelManifestProps.builder()
+ * .name("name")
+ * .signalCatalogArn("signalCatalogArn")
+ * // the properties below are optional
+ * .description("description")
+ * .nodes(List.of("nodes"))
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html)
+ */
 @CdkDslMarker
 public class CfnModelManifestPropsDsl {
   private val cdkBuilder: CfnModelManifestProps.Builder = CfnModelManifestProps.builder()

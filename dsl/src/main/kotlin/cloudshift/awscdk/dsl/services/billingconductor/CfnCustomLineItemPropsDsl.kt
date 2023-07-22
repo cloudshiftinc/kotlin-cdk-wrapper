@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps
 
+/**
+ * Properties for defining a `CfnCustomLineItem`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnCustomLineItemProps cfnCustomLineItemProps = CfnCustomLineItemProps.builder()
+ * .billingGroupArn("billingGroupArn")
+ * .name("name")
+ * // the properties below are optional
+ * .billingPeriodRange(BillingPeriodRangeProperty.builder()
+ * .exclusiveEndBillingPeriod("exclusiveEndBillingPeriod")
+ * .inclusiveStartBillingPeriod("inclusiveStartBillingPeriod")
+ * .build())
+ * .customLineItemChargeDetails(CustomLineItemChargeDetailsProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .flat(CustomLineItemFlatChargeDetailsProperty.builder()
+ * .chargeValue(123)
+ * .build())
+ * .percentage(CustomLineItemPercentageChargeDetailsProperty.builder()
+ * .percentageValue(123)
+ * // the properties below are optional
+ * .childAssociatedResources(List.of("childAssociatedResources"))
+ * .build())
+ * .build())
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-customlineitem.html)
+ */
 @CdkDslMarker
 public class CfnCustomLineItemPropsDsl {
   private val cdkBuilder: CfnCustomLineItemProps.Builder = CfnCustomLineItemProps.builder()

@@ -14,6 +14,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnDocumentProps
 
+/**
+ * Properties for defining a `CfnDocument`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object content;
+ * CfnDocumentProps cfnDocumentProps = CfnDocumentProps.builder()
+ * .content(content)
+ * // the properties below are optional
+ * .attachments(List.of(AttachmentsSourceProperty.builder()
+ * .key("key")
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .documentFormat("documentFormat")
+ * .documentType("documentType")
+ * .name("name")
+ * .requires(List.of(DocumentRequiresProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetType("targetType")
+ * .updateMethod("updateMethod")
+ * .versionName("versionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html)
+ */
 @CdkDslMarker
 public class CfnDocumentPropsDsl {
   private val cdkBuilder: CfnDocumentProps.Builder = CfnDocumentProps.builder()

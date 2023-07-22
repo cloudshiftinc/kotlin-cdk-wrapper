@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.systemsmanagersap.CfnApplication
 
+/**
+ * The credentials of your SAP application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.systemsmanagersap.*;
+ * CredentialProperty credentialProperty = CredentialProperty.builder()
+ * .credentialType("credentialType")
+ * .databaseName("databaseName")
+ * .secretId("secretId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-systemsmanagersap-application-credential.html)
+ */
 @CdkDslMarker
 public class CfnApplicationCredentialPropertyDsl {
   private val cdkBuilder: CfnApplication.CredentialProperty.Builder =

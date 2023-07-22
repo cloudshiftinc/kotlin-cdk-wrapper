@@ -13,6 +13,31 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.MxRecordProps
 import software.amazon.awscdk.services.route53.MxRecordValue
 
+/**
+ * Construction properties for a MxRecord.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * MxRecordProps mxRecordProps = MxRecordProps.builder()
+ * .values(List.of(MxRecordValue.builder()
+ * .hostName("hostName")
+ * .priority(123)
+ * .build()))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MxRecordPropsDsl {
   private val cdkBuilder: MxRecordProps.Builder = MxRecordProps.builder()

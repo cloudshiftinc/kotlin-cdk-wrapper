@@ -14,6 +14,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dax.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Creates a DAX cluster.
+ *
+ * All nodes in the cluster run the same DAX caching software.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dax.*;
+ * Object tags;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .iamRoleArn("iamRoleArn")
+ * .nodeType("nodeType")
+ * .replicationFactor(123)
+ * // the properties below are optional
+ * .availabilityZones(List.of("availabilityZones"))
+ * .clusterEndpointEncryptionType("clusterEndpointEncryptionType")
+ * .clusterName("clusterName")
+ * .description("description")
+ * .notificationTopicArn("notificationTopicArn")
+ * .parameterGroupName("parameterGroupName")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .sseSpecification(SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * .build())
+ * .subnetGroupName("subnetGroupName")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

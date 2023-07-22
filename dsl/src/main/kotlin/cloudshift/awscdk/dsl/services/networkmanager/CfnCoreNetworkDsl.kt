@@ -14,6 +14,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.networkmanager.CfnCoreNetwork
 import software.constructs.Construct
 
+/**
+ * Describes a core network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * Object policyDocument;
+ * CfnCoreNetwork cfnCoreNetwork = CfnCoreNetwork.Builder.create(this, "MyCfnCoreNetwork")
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .description("description")
+ * .policyDocument(policyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-corenetwork.html)
+ */
 @CdkDslMarker
 public class CfnCoreNetworkDsl(
   scope: Construct,

@@ -11,6 +11,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnScene
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoTTwinMaker::Scene` resource to declare a scene.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * CfnScene cfnScene = CfnScene.Builder.create(this, "MyCfnScene")
+ * .contentLocation("contentLocation")
+ * .sceneId("sceneId")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .capabilities(List.of("capabilities"))
+ * .description("description")
+ * .sceneMetadata(Map.of(
+ * "sceneMetadataKey", "sceneMetadata"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html)
+ */
 @CdkDslMarker
 public class CfnSceneDsl(
   scope: Construct,

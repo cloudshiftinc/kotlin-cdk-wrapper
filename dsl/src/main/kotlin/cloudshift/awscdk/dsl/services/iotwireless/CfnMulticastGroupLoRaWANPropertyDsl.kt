@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
 
+/**
+ * The LoRaWAN information that is to be used with the multicast group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * LoRaWANProperty loRaWANProperty = LoRaWANProperty.builder()
+ * .dlClass("dlClass")
+ * .rfRegion("rfRegion")
+ * // the properties below are optional
+ * .numberOfDevicesInGroup(123)
+ * .numberOfDevicesRequested(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-multicastgroup-lorawan.html)
+ */
 @CdkDslMarker
 public class CfnMulticastGroupLoRaWANPropertyDsl {
   private val cdkBuilder: CfnMulticastGroup.LoRaWANProperty.Builder =

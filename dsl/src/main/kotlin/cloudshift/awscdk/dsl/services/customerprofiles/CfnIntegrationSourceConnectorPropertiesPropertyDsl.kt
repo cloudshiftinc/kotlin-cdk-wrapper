@@ -6,6 +6,44 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * Specifies the information that is required to query a particular Amazon AppFlow connector.
+ *
+ * Customer Profiles supports Salesforce, Zendesk, Marketo, ServiceNow and Amazon S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * SourceConnectorPropertiesProperty sourceConnectorPropertiesProperty =
+ * SourceConnectorPropertiesProperty.builder()
+ * .marketo(MarketoSourcePropertiesProperty.builder()
+ * .object("object")
+ * .build())
+ * .s3(S3SourcePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .build())
+ * .salesforce(SalesforceSourcePropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .enableDynamicFieldUpdate(false)
+ * .includeDeletedRecords(false)
+ * .build())
+ * .serviceNow(ServiceNowSourcePropertiesProperty.builder()
+ * .object("object")
+ * .build())
+ * .zendesk(ZendeskSourcePropertiesProperty.builder()
+ * .object("object")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-sourceconnectorproperties.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationSourceConnectorPropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.SourceConnectorPropertiesProperty.Builder =

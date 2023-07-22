@@ -12,6 +12,95 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 
+/**
+ * `ScalingInstruction` is a property of
+ * [ScalingPlan](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html)
+ * that specifies the scaling instruction for a scalable resource in a scaling plan. Each scaling
+ * instruction applies to one resource.
+ *
+ * AWS Auto Scaling creates target tracking scaling policies based on the scaling instructions.
+ * Target tracking scaling policies adjust the capacity of your scalable resource as required to
+ * maintain resource utilization at the target value that you specified.
+ *
+ * AWS Auto Scaling also configures predictive scaling for your Amazon EC2 Auto Scaling groups using
+ * a subset of properties, including the load metric, the scaling metric, the target value for the
+ * scaling metric, the predictive scaling mode (forecast and scale or forecast only), and the desired
+ * behavior when the forecast capacity exceeds the maximum capacity of the resource. With predictive
+ * scaling, AWS Auto Scaling generates forecasts with traffic predictions for the two days ahead and
+ * schedules scaling actions that proactively add and remove resource capacity to match the forecast.
+ *
+ *
+ * We recommend waiting a minimum of 24 hours after creating an Auto Scaling group to configure
+ * predictive scaling. At minimum, there must be 24 hours of historical data to generate a forecast.
+ * For more information, see [Best Practices for AWS Auto
+ * Scaling](https://docs.aws.amazon.com/autoscaling/plans/userguide/gs-best-practices.html) in the *AWS
+ * Auto Scaling User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscalingplans.*;
+ * ScalingInstructionProperty scalingInstructionProperty = ScalingInstructionProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .resourceId("resourceId")
+ * .scalableDimension("scalableDimension")
+ * .serviceNamespace("serviceNamespace")
+ * .targetTrackingConfigurations(List.of(TargetTrackingConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedScalingMetricSpecification(CustomizedScalingMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableScaleIn(false)
+ * .estimatedInstanceWarmup(123)
+ * .predefinedScalingMetricSpecification(PredefinedScalingMetricSpecificationProperty.builder()
+ * .predefinedScalingMetricType("predefinedScalingMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build()))
+ * // the properties below are optional
+ * .customizedLoadMetricSpecification(CustomizedLoadMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableDynamicScaling(false)
+ * .predefinedLoadMetricSpecification(PredefinedLoadMetricSpecificationProperty.builder()
+ * .predefinedLoadMetricType("predefinedLoadMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predictiveScalingMaxCapacityBehavior("predictiveScalingMaxCapacityBehavior")
+ * .predictiveScalingMaxCapacityBuffer(123)
+ * .predictiveScalingMode("predictiveScalingMode")
+ * .scalingPolicyUpdateBehavior("scalingPolicyUpdateBehavior")
+ * .scheduledActionBufferTime(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html)
+ */
 @CdkDslMarker
 public class CfnScalingPlanScalingInstructionPropertyDsl {
   private val cdkBuilder: CfnScalingPlan.ScalingInstructionProperty.Builder =

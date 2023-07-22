@@ -11,6 +11,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnUsagePlan
 
+/**
+ * API stage name of the associated API stage in a usage plan.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * ApiStageProperty apiStageProperty = ApiStageProperty.builder()
+ * .apiId("apiId")
+ * .stage("stage")
+ * .throttle(Map.of(
+ * "throttleKey", ThrottleSettingsProperty.builder()
+ * .burstLimit(123)
+ * .rateLimit(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanApiStagePropertyDsl {
   private val cdkBuilder: CfnUsagePlan.ApiStageProperty.Builder =

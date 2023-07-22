@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps
 
+/**
+ * Properties for defining a `CfnSqlInjectionMatchSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnSqlInjectionMatchSetProps cfnSqlInjectionMatchSetProps =
+ * CfnSqlInjectionMatchSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .sqlInjectionMatchTuples(List.of(SqlInjectionMatchTupleProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .textTransformation("textTransformation")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html)
+ */
 @CdkDslMarker
 public class CfnSqlInjectionMatchSetPropsDsl {
   private val cdkBuilder: CfnSqlInjectionMatchSetProps.Builder =

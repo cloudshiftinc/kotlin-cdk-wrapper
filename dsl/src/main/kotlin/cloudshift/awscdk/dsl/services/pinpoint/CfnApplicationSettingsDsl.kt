@@ -9,6 +9,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 import software.constructs.Construct
 
+/**
+ * Specifies the settings for an Amazon Pinpoint application.
+ *
+ * In Amazon Pinpoint, an *application* (also referred to as an *app* or *project* ) is a collection
+ * of related settings, customer information, segments, and campaigns, and other types of Amazon
+ * Pinpoint resources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnApplicationSettings cfnApplicationSettings = CfnApplicationSettings.Builder.create(this,
+ * "MyCfnApplicationSettings")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .campaignHook(CampaignHookProperty.builder()
+ * .lambdaFunctionName("lambdaFunctionName")
+ * .mode("mode")
+ * .webUrl("webUrl")
+ * .build())
+ * .cloudWatchMetricsEnabled(false)
+ * .limits(LimitsProperty.builder()
+ * .daily(123)
+ * .maximumDuration(123)
+ * .messagesPerSecond(123)
+ * .total(123)
+ * .build())
+ * .quietTime(QuietTimeProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html)
+ */
 @CdkDslMarker
 public class CfnApplicationSettingsDsl(
   scope: Construct,

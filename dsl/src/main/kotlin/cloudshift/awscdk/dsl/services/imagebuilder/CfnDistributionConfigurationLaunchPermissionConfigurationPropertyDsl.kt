@@ -8,6 +8,34 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * Describes the configuration for a launch permission.
+ *
+ * The launch permission modification request is sent to the [Amazon EC2
+ * ModifyImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyImageAttribute.html)
+ * API on behalf of the user for each Region they have selected to distribute the AMI. To make an AMI
+ * public, set the launch permission authorized accounts to `all` . See the examples for making an AMI
+ * public at [Amazon EC2
+ * ModifyImageAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyImageAttribute.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * LaunchPermissionConfigurationProperty launchPermissionConfigurationProperty =
+ * LaunchPermissionConfigurationProperty.builder()
+ * .organizationalUnitArns(List.of("organizationalUnitArns"))
+ * .organizationArns(List.of("organizationArns"))
+ * .userGroups(List.of("userGroups"))
+ * .userIds(List.of("userIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-launchpermissionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationLaunchPermissionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDistributionConfiguration.LaunchPermissionConfigurationProperty.Builder

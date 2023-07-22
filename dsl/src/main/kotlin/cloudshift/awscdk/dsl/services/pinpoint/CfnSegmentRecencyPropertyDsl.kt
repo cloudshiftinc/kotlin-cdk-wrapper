@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
+/**
+ * Specifies how recently segment members were active.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * RecencyProperty recencyProperty = RecencyProperty.builder()
+ * .duration("duration")
+ * .recencyType("recencyType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-recency.html)
+ */
 @CdkDslMarker
 public class CfnSegmentRecencyPropertyDsl {
   private val cdkBuilder: CfnSegment.RecencyProperty.Builder = CfnSegment.RecencyProperty.builder()

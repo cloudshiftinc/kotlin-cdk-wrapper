@@ -15,6 +15,105 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 import software.amazon.awscdk.services.sam.CfnFunctionProps
 
+/**
+ * Properties for defining a `CfnFunction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object assumeRolePolicyDocument;
+ * CfnFunctionProps cfnFunctionProps = CfnFunctionProps.builder()
+ * .architectures(List.of("architectures"))
+ * .assumeRolePolicyDocument(assumeRolePolicyDocument)
+ * .autoPublishAlias("autoPublishAlias")
+ * .autoPublishCodeSha256("autoPublishCodeSha256")
+ * .codeSigningConfigArn("codeSigningConfigArn")
+ * .codeUri("codeUri")
+ * .deadLetterQueue(DeadLetterQueueProperty.builder()
+ * .targetArn("targetArn")
+ * .type("type")
+ * .build())
+ * .deploymentPreference(DeploymentPreferenceProperty.builder()
+ * .alarms(List.of("alarms"))
+ * .enabled(false)
+ * .hooks(HooksProperty.builder()
+ * .postTraffic("postTraffic")
+ * .preTraffic("preTraffic")
+ * .build())
+ * .role("role")
+ * .type("type")
+ * .build())
+ * .description("description")
+ * .environment(FunctionEnvironmentProperty.builder()
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .eventInvokeConfig(EventInvokeConfigProperty.builder()
+ * .destinationConfig(EventInvokeDestinationConfigProperty.builder()
+ * .onFailure(DestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .type("type")
+ * .build())
+ * .onSuccess(DestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .type("type")
+ * .build())
+ * .build())
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .events(Map.of(
+ * "eventsKey", EventSourceProperty.builder()
+ * .properties(AlexaSkillEventProperty.builder()
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .type("type")
+ * .build()))
+ * .fileSystemConfigs(List.of(FileSystemConfigProperty.builder()
+ * .arn("arn")
+ * .localMountPath("localMountPath")
+ * .build()))
+ * .functionName("functionName")
+ * .handler("handler")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entryPoint"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .imageUri("imageUri")
+ * .inlineCode("inlineCode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .layers(List.of("layers"))
+ * .memorySize(123)
+ * .packageType("packageType")
+ * .permissionsBoundary("permissionsBoundary")
+ * .policies("policies")
+ * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigProperty.builder()
+ * .provisionedConcurrentExecutions("provisionedConcurrentExecutions")
+ * .build())
+ * .reservedConcurrentExecutions(123)
+ * .role("role")
+ * .runtime("runtime")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .timeout(123)
+ * .tracing("tracing")
+ * .versionDescription("versionDescription")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-function.html)
+ */
 @CdkDslMarker
 public class CfnFunctionPropsDsl {
   private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()

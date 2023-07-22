@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies the configuration for asynchronous inference invocation outputs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * AsyncInferenceOutputConfigProperty asyncInferenceOutputConfigProperty =
+ * AsyncInferenceOutputConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .notificationConfig(AsyncInferenceNotificationConfigProperty.builder()
+ * .errorTopic("errorTopic")
+ * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
+ * .successTopic("successTopic")
+ * .build())
+ * .s3FailurePath("s3FailurePath")
+ * .s3OutputPath("s3OutputPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-asyncinferenceoutputconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigAsyncInferenceOutputConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.AsyncInferenceOutputConfigProperty.Builder =

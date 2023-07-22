@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
 
+/**
+ * An object representing an AWS Glue table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * DataQualityTargetTableProperty dataQualityTargetTableProperty =
+ * DataQualityTargetTableProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-dataqualityruleset-dataqualitytargettable.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityRulesetDataQualityTargetTablePropertyDsl {
   private val cdkBuilder: CfnDataQualityRuleset.DataQualityTargetTableProperty.Builder =

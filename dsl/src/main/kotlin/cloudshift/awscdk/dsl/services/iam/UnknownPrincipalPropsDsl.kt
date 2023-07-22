@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.iam.UnknownPrincipalProps
 import software.constructs.IConstruct
 
+/**
+ * Properties for an UnknownPrincipal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * UnknownPrincipalProps unknownPrincipalProps = UnknownPrincipalProps.builder()
+ * .resource(construct)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UnknownPrincipalPropsDsl {
   private val cdkBuilder: UnknownPrincipalProps.Builder = UnknownPrincipalProps.builder()

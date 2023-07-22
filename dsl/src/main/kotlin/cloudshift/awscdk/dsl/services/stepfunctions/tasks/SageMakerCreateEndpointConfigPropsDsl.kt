@@ -21,6 +21,25 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfigProps
 
+/**
+ * Properties for creating an Amazon SageMaker endpoint configuration.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateEndpointConfig.Builder.create(this, "SagemakerEndpointConfig")
+ * .endpointConfigName("MyEndpointConfig")
+ * .productionVariants(List.of(ProductionVariant.builder()
+ * .initialInstanceCount(2)
+ * .instanceType(InstanceType.of(InstanceClass.M5, InstanceSize.XLARGE))
+ * .modelName("MyModel")
+ * .variantName("awesome-variant")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerCreateEndpointConfigPropsDsl {
   private val cdkBuilder: SageMakerCreateEndpointConfigProps.Builder =

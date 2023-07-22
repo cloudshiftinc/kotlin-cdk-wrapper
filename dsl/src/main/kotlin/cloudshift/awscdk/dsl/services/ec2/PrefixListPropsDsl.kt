@@ -12,6 +12,17 @@ import software.amazon.awscdk.services.ec2.AddressFamily
 import software.amazon.awscdk.services.ec2.CfnPrefixList
 import software.amazon.awscdk.services.ec2.PrefixListProps
 
+/**
+ * Properties for creating a prefix list.
+ *
+ * Example:
+ *
+ * ```
+ * PrefixList.Builder.create(this, "EmptyPrefixList")
+ * .maxEntries(100)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrefixListPropsDsl {
   private val cdkBuilder: PrefixListProps.Builder = PrefixListProps.builder()

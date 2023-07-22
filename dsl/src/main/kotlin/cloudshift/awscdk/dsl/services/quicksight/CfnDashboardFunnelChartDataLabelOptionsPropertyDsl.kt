@@ -7,6 +7,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options that determine the presentation of the data labels.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FunnelChartDataLabelOptionsProperty funnelChartDataLabelOptionsProperty =
+ * FunnelChartDataLabelOptionsProperty.builder()
+ * .categoryLabelVisibility("categoryLabelVisibility")
+ * .labelColor("labelColor")
+ * .labelFontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .measureDataLabelStyle("measureDataLabelStyle")
+ * .measureLabelVisibility("measureLabelVisibility")
+ * .position("position")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-funnelchartdatalabeloptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardFunnelChartDataLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.FunnelChartDataLabelOptionsProperty.Builder =

@@ -10,6 +10,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnDirectoryConfig
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::DirectoryConfig` resource specifies the configuration information required
+ * to join Amazon AppStream 2.0 fleets and image builders to Microsoft Active Directory domains.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnDirectoryConfig cfnDirectoryConfig = CfnDirectoryConfig.Builder.create(this,
+ * "MyCfnDirectoryConfig")
+ * .directoryName("directoryName")
+ * .organizationalUnitDistinguishedNames(List.of("organizationalUnitDistinguishedNames"))
+ * .serviceAccountCredentials(ServiceAccountCredentialsProperty.builder()
+ * .accountName("accountName")
+ * .accountPassword("accountPassword")
+ * .build())
+ * // the properties below are optional
+ * .certificateBasedAuthProperties(CertificateBasedAuthPropertiesProperty.builder()
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .status("status")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html)
+ */
 @CdkDslMarker
 public class CfnDirectoryConfigDsl(
   scope: Construct,

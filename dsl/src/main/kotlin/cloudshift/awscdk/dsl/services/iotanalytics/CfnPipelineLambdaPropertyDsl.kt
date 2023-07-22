@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that runs a Lambda function to modify the message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * LambdaProperty lambdaProperty = LambdaProperty.builder()
+ * .batchSize(123)
+ * .lambdaName("lambdaName")
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-lambda.html)
+ */
 @CdkDslMarker
 public class CfnPipelineLambdaPropertyDsl {
   private val cdkBuilder: CfnPipeline.LambdaProperty.Builder = CfnPipeline.LambdaProperty.builder()

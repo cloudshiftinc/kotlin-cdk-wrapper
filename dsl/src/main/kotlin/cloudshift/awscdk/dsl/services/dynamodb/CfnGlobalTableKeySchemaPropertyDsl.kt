@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Represents *a single element* of a key schema.
+ *
+ * A key schema specifies the attributes that make up the primary key of a table, or the key
+ * attributes of an index.
+ *
+ * A `KeySchemaElement` represents exactly one attribute of the primary key. For example, a simple
+ * primary key would be represented by one `KeySchemaElement` (for the partition key). A composite
+ * primary key would require one `KeySchemaElement` for the partition key, and another
+ * `KeySchemaElement` for the sort key.
+ *
+ * A `KeySchemaElement` must be a scalar, top-level attribute (not a nested attribute). The data
+ * type must be one of String, Number, or Binary. The attribute cannot be nested within a List or a
+ * Map.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * KeySchemaProperty keySchemaProperty = KeySchemaProperty.builder()
+ * .attributeName("attributeName")
+ * .keyType("keyType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-keyschema.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableKeySchemaPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.KeySchemaProperty.Builder =

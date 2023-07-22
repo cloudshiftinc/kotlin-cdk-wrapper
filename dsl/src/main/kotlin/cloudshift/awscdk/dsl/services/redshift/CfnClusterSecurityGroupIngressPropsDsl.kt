@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupIngressProps
 
+/**
+ * Properties for defining a `CfnClusterSecurityGroupIngress`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnClusterSecurityGroupIngressProps cfnClusterSecurityGroupIngressProps =
+ * CfnClusterSecurityGroupIngressProps.builder()
+ * .clusterSecurityGroupName("clusterSecurityGroupName")
+ * // the properties below are optional
+ * .cidrip("cidrip")
+ * .ec2SecurityGroupName("ec2SecurityGroupName")
+ * .ec2SecurityGroupOwnerId("ec2SecurityGroupOwnerId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroupingress.html)
+ */
 @CdkDslMarker
 public class CfnClusterSecurityGroupIngressPropsDsl {
   private val cdkBuilder: CfnClusterSecurityGroupIngressProps.Builder =

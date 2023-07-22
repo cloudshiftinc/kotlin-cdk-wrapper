@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The message template to be used for the welcome message to new users.
+ *
+ * See also [Customizing User Invitation
+ * Messages](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-message-customizations.html#cognito-user-pool-settings-user-invitation-message-customization)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * InviteMessageTemplateProperty inviteMessageTemplateProperty =
+ * InviteMessageTemplateProperty.builder()
+ * .emailMessage("emailMessage")
+ * .emailSubject("emailSubject")
+ * .smsMessage("smsMessage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolInviteMessageTemplatePropertyDsl {
   private val cdkBuilder: CfnUserPool.InviteMessageTemplateProperty.Builder =

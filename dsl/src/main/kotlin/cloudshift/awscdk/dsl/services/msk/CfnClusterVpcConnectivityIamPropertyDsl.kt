@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Details for SASL/IAM client authentication for VpcConnectivity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * VpcConnectivityIamProperty vpcConnectivityIamProperty = VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-vpcconnectivityiam.html)
+ */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityIamPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityIamProperty.Builder =

@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.CfnServiceLinkedRole
 import software.constructs.Construct
 
+/**
+ * Creates an IAM role that is linked to a specific AWS service.
+ *
+ * The service controls the attached policies and when the role can be deleted. This helps ensure
+ * that the service is not broken by an unexpectedly changed or deleted role, which could put your AWS
+ * resources into an unknown state. Allowing the service to control the role helps improve service
+ * stability and proper cleanup when a service and its role are no longer needed. For more information,
+ * see [Using service-linked
+ * roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html) in the *IAM
+ * User Guide* .
+ *
+ * To attach a policy to this service-linked role, you must make the request using the AWS service
+ * that depends on this role.
+ *
+ * Example:
+ *
+ * ```
+ * CfnServiceLinkedRole slr = CfnServiceLinkedRole.Builder.create(this, "ElasticSLR")
+ * .awsServiceName("es.amazonaws.com")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html)
+ */
 @CdkDslMarker
 public class CfnServiceLinkedRoleDsl(
   scope: Construct,

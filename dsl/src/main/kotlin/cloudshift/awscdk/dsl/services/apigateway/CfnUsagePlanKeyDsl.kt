@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnUsagePlanKey
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::UsagePlanKey` resource associates an API key with a usage plan.
+ *
+ * This association determines which users the usage plan is applied to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnUsagePlanKey cfnUsagePlanKey = CfnUsagePlanKey.Builder.create(this, "MyCfnUsagePlanKey")
+ * .keyId("keyId")
+ * .keyType("keyType")
+ * .usagePlanId("usagePlanId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html)
+ */
 @CdkDslMarker
 public class CfnUsagePlanKeyDsl(
   scope: Construct,

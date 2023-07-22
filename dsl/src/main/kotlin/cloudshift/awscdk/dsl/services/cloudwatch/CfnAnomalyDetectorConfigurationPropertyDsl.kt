@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 
+/**
+ * Specifies details about how the anomaly detection model is to be trained, including time ranges
+ * to exclude when training and updating the model.
+ *
+ * The configuration can also include the time zone to use for the metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * ConfigurationProperty configurationProperty = ConfigurationProperty.builder()
+ * .excludedTimeRanges(List.of(RangeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build()))
+ * .metricTimeZone("metricTimeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-configuration.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.ConfigurationProperty.Builder =

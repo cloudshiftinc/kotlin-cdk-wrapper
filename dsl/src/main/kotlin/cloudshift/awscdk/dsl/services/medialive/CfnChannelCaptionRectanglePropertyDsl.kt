@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings to configure the caption rectangle for an output captions that will be created using
+ * this Teletext source captions.
+ *
+ * The parent of this entity is TeletextSourceSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * CaptionRectangleProperty captionRectangleProperty = CaptionRectangleProperty.builder()
+ * .height(123)
+ * .leftOffset(123)
+ * .topOffset(123)
+ * .width(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captionrectangle.html)
+ */
 @CdkDslMarker
 public class CfnChannelCaptionRectanglePropertyDsl {
   private val cdkBuilder: CfnChannel.CaptionRectangleProperty.Builder =

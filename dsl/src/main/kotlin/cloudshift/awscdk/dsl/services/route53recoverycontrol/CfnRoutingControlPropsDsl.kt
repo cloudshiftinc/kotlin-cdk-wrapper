@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControlProps
 
+/**
+ * Properties for defining a `CfnRoutingControl`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnRoutingControlProps cfnRoutingControlProps = CfnRoutingControlProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .clusterArn("clusterArn")
+ * .controlPanelArn("controlPanelArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-routingcontrol.html)
+ */
 @CdkDslMarker
 public class CfnRoutingControlPropsDsl {
   private val cdkBuilder: CfnRoutingControlProps.Builder = CfnRoutingControlProps.builder()

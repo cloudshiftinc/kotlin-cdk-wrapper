@@ -13,6 +13,33 @@ import software.amazon.awscdk.cloudassembly.schema.LoadBalancerListenerProtocol
 import software.amazon.awscdk.cloudassembly.schema.LoadBalancerType
 import software.amazon.awscdk.cloudassembly.schema.Tag
 
+/**
+ * Query input for looking up a load balancer listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * LoadBalancerListenerContextQuery loadBalancerListenerContextQuery =
+ * LoadBalancerListenerContextQuery.builder()
+ * .account("account")
+ * .loadBalancerType(LoadBalancerType.NETWORK)
+ * .region("region")
+ * // the properties below are optional
+ * .listenerArn("listenerArn")
+ * .listenerPort(123)
+ * .listenerProtocol(LoadBalancerListenerProtocol.HTTP)
+ * .loadBalancerArn("loadBalancerArn")
+ * .loadBalancerTags(List.of(Tag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .lookupRoleArn("lookupRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerListenerContextQueryDsl {
   private val cdkBuilder: LoadBalancerListenerContextQuery.Builder =

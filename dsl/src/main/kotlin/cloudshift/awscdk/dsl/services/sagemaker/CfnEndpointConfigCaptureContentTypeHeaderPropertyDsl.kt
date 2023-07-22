@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies the JSON and CSV content types of the data that the endpoint captures.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CaptureContentTypeHeaderProperty captureContentTypeHeaderProperty =
+ * CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-capturecontenttypeheader.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigCaptureContentTypeHeaderPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.CaptureContentTypeHeaderProperty.Builder =

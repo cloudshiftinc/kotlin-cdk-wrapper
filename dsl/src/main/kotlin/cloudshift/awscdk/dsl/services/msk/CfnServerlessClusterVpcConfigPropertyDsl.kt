@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-serverlesscluster-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnServerlessClusterVpcConfigPropertyDsl {
   private val cdkBuilder: CfnServerlessCluster.VpcConfigProperty.Builder =

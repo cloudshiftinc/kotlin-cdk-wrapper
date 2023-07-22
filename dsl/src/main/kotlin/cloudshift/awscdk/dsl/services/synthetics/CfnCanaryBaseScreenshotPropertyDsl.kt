@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * A structure representing a screenshot that is used as a baseline during visual monitoring
+ * comparisons made by the canary.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * BaseScreenshotProperty baseScreenshotProperty = BaseScreenshotProperty.builder()
+ * .screenshotName("screenshotName")
+ * // the properties below are optional
+ * .ignoreCoordinates(List.of("ignoreCoordinates"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-basescreenshot.html)
+ */
 @CdkDslMarker
 public class CfnCanaryBaseScreenshotPropertyDsl {
   private val cdkBuilder: CfnCanary.BaseScreenshotProperty.Builder =

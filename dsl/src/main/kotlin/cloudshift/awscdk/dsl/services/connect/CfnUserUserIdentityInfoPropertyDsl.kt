@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnUser
 
+/**
+ * Contains information about the identity of a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * UserIdentityInfoProperty userIdentityInfoProperty = UserIdentityInfoProperty.builder()
+ * .email("email")
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .mobile("mobile")
+ * .secondaryEmail("secondaryEmail")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-user-useridentityinfo.html)
+ */
 @CdkDslMarker
 public class CfnUserUserIdentityInfoPropertyDsl {
   private val cdkBuilder: CfnUser.UserIdentityInfoProperty.Builder =

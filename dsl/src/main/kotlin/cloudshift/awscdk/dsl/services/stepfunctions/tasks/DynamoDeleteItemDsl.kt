@@ -22,6 +22,20 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionM
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 import software.constructs.Construct
 
+/**
+ * A StepFunctions task to call DynamoDeleteItem.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoDeleteItem.Builder.create(this, "DeleteItem")
+ * .key(Map.of("MessageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .resultPath(JsonPath.DISCARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoDeleteItemDsl(
   scope: Construct,

@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The configuration of `ShadowMode` inference experiment type, which specifies a production variant
+ * to take all the inference requests, and a shadow variant to which Amazon SageMaker replicates a
+ * percentage of the inference requests.
+ *
+ * For the shadow variant it also specifies the percentage of requests that Amazon SageMaker
+ * replicates.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ShadowModeConfigProperty shadowModeConfigProperty = ShadowModeConfigProperty.builder()
+ * .shadowModelVariants(List.of(ShadowModelVariantConfigProperty.builder()
+ * .samplingPercentage(123)
+ * .shadowModelVariantName("shadowModelVariantName")
+ * .build()))
+ * .sourceModelVariantName("sourceModelVariantName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-shadowmodeconfig.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentShadowModeConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ShadowModeConfigProperty.Builder =

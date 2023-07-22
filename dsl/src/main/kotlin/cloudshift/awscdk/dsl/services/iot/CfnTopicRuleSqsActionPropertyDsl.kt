@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to publish data to an Amazon SQS queue.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * SqsActionProperty sqsActionProperty = SqsActionProperty.builder()
+ * .queueUrl("queueUrl")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .useBase64(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-sqsaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleSqsActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.SqsActionProperty.Builder =

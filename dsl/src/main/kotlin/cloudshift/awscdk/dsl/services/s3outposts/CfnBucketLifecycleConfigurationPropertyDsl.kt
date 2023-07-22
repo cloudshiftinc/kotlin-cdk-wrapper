@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnBucket
 
+/**
+ * The container for the lifecycle configuration for the objects stored in an S3 on Outposts bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * Object filter;
+ * LifecycleConfigurationProperty lifecycleConfigurationProperty =
+ * LifecycleConfigurationProperty.builder()
+ * .rules(List.of(RuleProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .abortIncompleteMultipartUpload(AbortIncompleteMultipartUploadProperty.builder()
+ * .daysAfterInitiation(123)
+ * .build())
+ * .expirationDate("expirationDate")
+ * .expirationInDays(123)
+ * .filter(filter)
+ * .id("id")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-lifecycleconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketLifecycleConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.LifecycleConfigurationProperty.Builder =

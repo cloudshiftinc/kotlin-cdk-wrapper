@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.services.location.CfnTracker
 import software.constructs.Construct
 
+/**
+ * Specifies a tracker resource in your AWS account , which lets you receive current and historical
+ * location of devices.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnTracker cfnTracker = CfnTracker.Builder.create(this, "MyCfnTracker")
+ * .trackerName("trackerName")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .positionFiltering("positionFiltering")
+ * .pricingPlan("pricingPlan")
+ * .pricingPlanDataSource("pricingPlanDataSource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-tracker.html)
+ */
 @CdkDslMarker
 public class CfnTrackerDsl(
   scope: Construct,

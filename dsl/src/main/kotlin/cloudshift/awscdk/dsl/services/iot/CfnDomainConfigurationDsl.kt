@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnDomainConfiguration
 import software.constructs.Construct
 
+/**
+ * Specifies a domain configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnDomainConfiguration cfnDomainConfiguration = CfnDomainConfiguration.Builder.create(this,
+ * "MyCfnDomainConfiguration")
+ * .authorizerConfig(AuthorizerConfigProperty.builder()
+ * .allowAuthorizerOverride(false)
+ * .defaultAuthorizerName("defaultAuthorizerName")
+ * .build())
+ * .domainConfigurationName("domainConfigurationName")
+ * .domainConfigurationStatus("domainConfigurationStatus")
+ * .domainName("domainName")
+ * .serverCertificateArns(List.of("serverCertificateArns"))
+ * .serviceType("serviceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tlsConfig(TlsConfigProperty.builder()
+ * .securityPolicy("securityPolicy")
+ * .build())
+ * .validationCertificateArn("validationCertificateArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDomainConfigurationDsl(
   scope: Construct,

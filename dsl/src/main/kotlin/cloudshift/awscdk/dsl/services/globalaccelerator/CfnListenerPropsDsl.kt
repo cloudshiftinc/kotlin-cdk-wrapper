@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnListenerProps
 
+/**
+ * Properties for defining a `CfnListener`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnListenerProps cfnListenerProps = CfnListenerProps.builder()
+ * .acceleratorArn("acceleratorArn")
+ * .portRanges(List.of(PortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build()))
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .clientAffinity("clientAffinity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-listener.html)
+ */
 @CdkDslMarker
 public class CfnListenerPropsDsl {
   private val cdkBuilder: CfnListenerProps.Builder = CfnListenerProps.builder()

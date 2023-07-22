@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 
+/**
+ * Specifies whether messages that use the configuration set are required to use Transport Layer
+ * Security (TLS).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * DeliveryOptionsProperty deliveryOptionsProperty = DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .tlsPolicy("tlsPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-deliveryoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetDeliveryOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.DeliveryOptionsProperty.Builder =

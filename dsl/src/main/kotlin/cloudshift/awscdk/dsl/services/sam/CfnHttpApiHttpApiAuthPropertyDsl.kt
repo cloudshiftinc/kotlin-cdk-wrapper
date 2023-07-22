@@ -9,6 +9,22 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sam.CfnHttpApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object authorizers;
+ * HttpApiAuthProperty httpApiAuthProperty = HttpApiAuthProperty.builder()
+ * .authorizers(authorizers)
+ * .defaultAuthorizer("defaultAuthorizer")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-httpapiauth.html)
+ */
 @CdkDslMarker
 public class CfnHttpApiHttpApiAuthPropertyDsl {
   private val cdkBuilder: CfnHttpApi.HttpApiAuthProperty.Builder =

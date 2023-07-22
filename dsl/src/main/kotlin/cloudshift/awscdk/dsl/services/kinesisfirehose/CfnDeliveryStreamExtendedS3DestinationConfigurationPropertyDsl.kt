@@ -7,6 +7,133 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `ExtendedS3DestinationConfiguration` property type configures an Amazon S3 destination for an
+ * Amazon Kinesis Data Firehose delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * ExtendedS3DestinationConfigurationProperty extendedS3DestinationConfigurationProperty =
+ * ExtendedS3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .dataFormatConversionConfiguration(DataFormatConversionConfigurationProperty.builder()
+ * .enabled(false)
+ * .inputFormatConfiguration(InputFormatConfigurationProperty.builder()
+ * .deserializer(DeserializerProperty.builder()
+ * .hiveJsonSerDe(HiveJsonSerDeProperty.builder()
+ * .timestampFormats(List.of("timestampFormats"))
+ * .build())
+ * .openXJsonSerDe(OpenXJsonSerDeProperty.builder()
+ * .caseInsensitive(false)
+ * .columnToJsonKeyMappings(Map.of(
+ * "columnToJsonKeyMappingsKey", "columnToJsonKeyMappings"))
+ * .convertDotsInJsonKeysToUnderscores(false)
+ * .build())
+ * .build())
+ * .build())
+ * .outputFormatConfiguration(OutputFormatConfigurationProperty.builder()
+ * .serializer(SerializerProperty.builder()
+ * .orcSerDe(OrcSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .bloomFilterColumns(List.of("bloomFilterColumns"))
+ * .bloomFilterFalsePositiveProbability(123)
+ * .compression("compression")
+ * .dictionaryKeyThreshold(123)
+ * .enablePadding(false)
+ * .formatVersion("formatVersion")
+ * .paddingTolerance(123)
+ * .rowIndexStride(123)
+ * .stripeSizeBytes(123)
+ * .build())
+ * .parquetSerDe(ParquetSerDeProperty.builder()
+ * .blockSizeBytes(123)
+ * .compression("compression")
+ * .enableDictionaryCompression(false)
+ * .maxPaddingBytes(123)
+ * .pageSizeBytes(123)
+ * .writerVersion("writerVersion")
+ * .build())
+ * .build())
+ * .build())
+ * .schemaConfiguration(SchemaConfigurationProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .region("region")
+ * .roleArn("roleArn")
+ * .tableName("tableName")
+ * .versionId("versionId")
+ * .build())
+ * .build())
+ * .dynamicPartitioningConfiguration(DynamicPartitioningConfigurationProperty.builder()
+ * .enabled(false)
+ * .retryOptions(RetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build())
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .processingConfiguration(ProcessingConfigurationProperty.builder()
+ * .enabled(false)
+ * .processors(List.of(ProcessorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .parameters(List.of(ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .build())
+ * .s3BackupConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * .s3BackupMode("s3BackupMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamExtendedS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.Builder =

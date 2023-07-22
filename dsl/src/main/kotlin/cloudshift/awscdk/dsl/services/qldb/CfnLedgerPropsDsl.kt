@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnLedgerProps
 
+/**
+ * Properties for defining a `CfnLedger`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.qldb.*;
+ * CfnLedgerProps cfnLedgerProps = CfnLedgerProps.builder()
+ * .permissionsMode("permissionsMode")
+ * // the properties below are optional
+ * .deletionProtection(false)
+ * .kmsKey("kmsKey")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html)
+ */
 @CdkDslMarker
 public class CfnLedgerPropsDsl {
   private val cdkBuilder: CfnLedgerProps.Builder = CfnLedgerProps.builder()

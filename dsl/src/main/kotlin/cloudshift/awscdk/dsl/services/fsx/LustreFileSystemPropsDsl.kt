@@ -14,6 +14,28 @@ import software.amazon.awscdk.services.fsx.LustreConfiguration
 import software.amazon.awscdk.services.fsx.LustreFileSystemProps
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties specific to the Lustre version of the FSx file system.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.*;
+ * Vpc vpc;
+ * Bucket bucket;
+ * Map&lt;String, Object&gt; lustreConfiguration = Map.of(
+ * "deploymentType", LustreDeploymentType.SCRATCH_2,
+ * "exportPath", bucket.s3UrlForObject(),
+ * "importPath", bucket.s3UrlForObject(),
+ * "autoImportPolicy", LustreAutoImportPolicy.NEW_CHANGED_DELETED);
+ * LustreFileSystem fs = LustreFileSystem.Builder.create(this, "FsxLustreFileSystem")
+ * .vpc(vpc)
+ * .vpcSubnet(vpc.getPrivateSubnets()[0])
+ * .storageCapacityGiB(1200)
+ * .lustreConfiguration(lustreConfiguration)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LustreFileSystemPropsDsl {
   private val cdkBuilder: LustreFileSystemProps.Builder = LustreFileSystemProps.builder()

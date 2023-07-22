@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps
 
+/**
+ * Properties for a network load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * NetworkLoadBalancer nlb = NetworkLoadBalancer.Builder.create(this, "NLB")
+ * .vpc(vpc)
+ * .build();
+ * VpcLink link = VpcLink.Builder.create(this, "link")
+ * .targets(List.of(nlb))
+ * .build();
+ * Integration integration = Integration.Builder.create()
+ * .type(IntegrationType.HTTP_PROXY)
+ * .options(IntegrationOptions.builder()
+ * .connectionType(ConnectionType.VPC_LINK)
+ * .vpcLink(link)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancerPropsDsl {
   private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()

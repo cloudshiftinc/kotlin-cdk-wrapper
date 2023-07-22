@@ -14,6 +14,40 @@ import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 import software.constructs.IDependable
 
+/**
+ * Subscription configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * IDependable dependable;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * TopicSubscriptionConfig topicSubscriptionConfig = TopicSubscriptionConfig.builder()
+ * .endpoint("endpoint")
+ * .protocol(SubscriptionProtocol.HTTP)
+ * .subscriberId("subscriberId")
+ * // the properties below are optional
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .rawMessageDelivery(false)
+ * .region("region")
+ * .subscriberScope(construct)
+ * .subscriptionDependency(dependable)
+ * .subscriptionRoleArn("subscriptionRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TopicSubscriptionConfigDsl {
   private val cdkBuilder: TopicSubscriptionConfig.Builder = TopicSubscriptionConfig.builder()

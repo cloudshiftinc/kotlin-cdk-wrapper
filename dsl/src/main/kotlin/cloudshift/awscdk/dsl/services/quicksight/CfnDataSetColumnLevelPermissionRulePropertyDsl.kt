@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A rule defined to grant access on one or more restricted columns.
+ *
+ * Each dataset can have multiple rules. To create a restricted column, you add it to one or more
+ * rules. Each rule must contain at least one column and at least one user or group. To be able to see
+ * a restricted column, a user or group needs to be added to a rule for that column.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ColumnLevelPermissionRuleProperty columnLevelPermissionRuleProperty =
+ * ColumnLevelPermissionRuleProperty.builder()
+ * .columnNames(List.of("columnNames"))
+ * .principals(List.of("principals"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-columnlevelpermissionrule.html)
+ */
 @CdkDslMarker
 public class CfnDataSetColumnLevelPermissionRulePropertyDsl {
   private val cdkBuilder: CfnDataSet.ColumnLevelPermissionRuleProperty.Builder =

@@ -12,6 +12,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 import software.constructs.Construct
 
+/**
+ * Enables the attribute-based access control (ABAC) feature for the specified IAM Identity Center
+ * instance.
+ *
+ * You can also specify new attributes to add to your ABAC configuration during the enabling
+ * process. For more information about ABAC, see [Attribute-Based Access
+ * Control](https://docs.aws.amazon.com//singlesignon/latest/userguide/abac.html) in the *IAM Identity
+ * Center User Guide* .
+ *
+ *
+ * The `InstanceAccessControlAttributeConfiguration` property has been deprecated but is still
+ * supported for backwards compatibility purposes. We recommend that you use the
+ * `AccessControlAttributes` property instead.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * CfnInstanceAccessControlAttributeConfiguration cfnInstanceAccessControlAttributeConfiguration =
+ * CfnInstanceAccessControlAttributeConfiguration.Builder.create(this,
+ * "MyCfnInstanceAccessControlAttributeConfiguration")
+ * .instanceArn("instanceArn")
+ * // the properties below are optional
+ * .accessControlAttributes(List.of(AccessControlAttributeProperty.builder()
+ * .key("key")
+ * .value(AccessControlAttributeValueProperty.builder()
+ * .source(List.of("source"))
+ * .build())
+ * .build()))
+ * .instanceAccessControlAttributeConfiguration(InstanceAccessControlAttributeConfigurationProperty.builder()
+ * .accessControlAttributes(List.of(AccessControlAttributeProperty.builder()
+ * .key("key")
+ * .value(AccessControlAttributeValueProperty.builder()
+ * .source(List.of("source"))
+ * .build())
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-instanceaccesscontrolattributeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAccessControlAttributeConfigurationDsl(
   scope: Construct,

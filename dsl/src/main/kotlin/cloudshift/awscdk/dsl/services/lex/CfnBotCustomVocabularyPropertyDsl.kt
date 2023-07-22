@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies a custom vocabulary.
+ *
+ * A custom vocabulary is a list of words that you expect to be used during a conversation with your
+ * bot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * CustomVocabularyProperty customVocabularyProperty = CustomVocabularyProperty.builder()
+ * .customVocabularyItems(List.of(CustomVocabularyItemProperty.builder()
+ * .phrase("phrase")
+ * // the properties below are optional
+ * .displayAs("displayAs")
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-customvocabulary.html)
+ */
 @CdkDslMarker
 public class CfnBotCustomVocabularyPropertyDsl {
   private val cdkBuilder: CfnBot.CustomVocabularyProperty.Builder =

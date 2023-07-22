@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.directoryservice.CfnSimpleAD
 import software.amazon.awscdk.services.directoryservice.CfnSimpleADProps
 
+/**
+ * Properties for defining a `CfnSimpleAD`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.directoryservice.*;
+ * CfnSimpleADProps cfnSimpleADProps = CfnSimpleADProps.builder()
+ * .name("name")
+ * .size("size")
+ * .vpcSettings(VpcSettingsProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * // the properties below are optional
+ * .createAlias(false)
+ * .description("description")
+ * .enableSso(false)
+ * .password("password")
+ * .shortName("shortName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-simplead.html)
+ */
 @CdkDslMarker
 public class CfnSimpleADPropsDsl {
   private val cdkBuilder: CfnSimpleADProps.Builder = CfnSimpleADProps.builder()

@@ -12,6 +12,48 @@ import software.amazon.awscdk.services.cloudwatch.MetricConfig
 import software.amazon.awscdk.services.cloudwatch.MetricExpressionConfig
 import software.amazon.awscdk.services.cloudwatch.MetricStatConfig
 
+/**
+ * Properties of a rendered metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric;
+ * Object renderingProperties;
+ * Object value;
+ * MetricConfig metricConfig = MetricConfig.builder()
+ * .mathExpression(MetricExpressionConfig.builder()
+ * .expression("expression")
+ * .period(123)
+ * .usingMetrics(Map.of(
+ * "usingMetricsKey", metric))
+ * // the properties below are optional
+ * .searchAccount("searchAccount")
+ * .searchRegion("searchRegion")
+ * .build())
+ * .metricStat(MetricStatConfig.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .period(Duration.minutes(30))
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .account("account")
+ * .dimensions(List.of(Dimension.builder()
+ * .name("name")
+ * .value(value)
+ * .build()))
+ * .region("region")
+ * .unitFilter(Unit.SECONDS)
+ * .build())
+ * .renderingProperties(Map.of(
+ * "renderingPropertiesKey", renderingProperties))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricConfigDsl {
   private val cdkBuilder: MetricConfig.Builder = MetricConfig.builder()

@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.waf.regional.CfnIPSet
 
+/**
+ * This is *AWS WAF Classic* documentation.
+ *
+ * For more information, see [AWS WAF
+ * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
+ * developer guide.
+ *
+ *
+ * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
+ * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
+ * version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ *
+ * Specifies the IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR format) that
+ * web requests originate from.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * IPSetDescriptorProperty iPSetDescriptorProperty = Map.of(
+ * "type", "type",
+ * "value", "value");
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-ipset-ipsetdescriptor.html)
+ */
 @CdkDslMarker
 public class CfnIPSetIPSetDescriptorPropertyDsl {
   private val cdkBuilder: CfnIPSet.IPSetDescriptorProperty.Builder =

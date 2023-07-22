@@ -8,6 +8,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.grafana.CfnWorkspace
 
+/**
+ * The configuration settings for an Amazon VPC that contains data sources for your Grafana
+ * workspace to connect to.
+ *
+ *
+ * Provided `securityGroupIds` and `subnetIds` must be part of the same VPC.
+ *
+ * Connecting to a private VPC is not yet available in the Asia Pacific (Seoul) Region
+ * (ap-northeast-2).
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.grafana.*;
+ * VpcConfigurationProperty vpcConfigurationProperty = VpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-grafana-workspace-vpcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceVpcConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkspace.VpcConfigurationProperty.Builder =

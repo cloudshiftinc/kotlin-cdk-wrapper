@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the configuration and content of the header or title text of the in-app message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * InAppMessageHeaderConfigProperty inAppMessageHeaderConfigProperty =
+ * InAppMessageHeaderConfigProperty.builder()
+ * .alignment("alignment")
+ * .header("header")
+ * .textColor("textColor")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-inappmessageheaderconfig.html)
+ */
 @CdkDslMarker
 public class CfnCampaignInAppMessageHeaderConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.InAppMessageHeaderConfigProperty.Builder =

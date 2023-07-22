@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.EngineVersion
 
+/**
+ * A version of an engine - for either a cluster, or instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * EngineVersion engineVersion = EngineVersion.builder()
+ * .majorVersion("majorVersion")
+ * // the properties below are optional
+ * .fullVersion("fullVersion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EngineVersionDsl {
   private val cdkBuilder: EngineVersion.Builder = EngineVersion.builder()

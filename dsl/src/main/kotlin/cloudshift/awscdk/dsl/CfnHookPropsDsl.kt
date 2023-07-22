@@ -10,6 +10,24 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.CfnHookProps
 
+/**
+ * Construction properties of `CfnHook`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * Object properties;
+ * CfnHookProps cfnHookProps = CfnHookProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .properties(Map.of(
+ * "propertiesKey", properties))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnHookPropsDsl {
   private val cdkBuilder: CfnHookProps.Builder = CfnHookProps.builder()

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appstream.CfnStack
 
+/**
+ * A connector that enables persistent storage for users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * StorageConnectorProperty storageConnectorProperty = StorageConnectorProperty.builder()
+ * .connectorType("connectorType")
+ * // the properties below are optional
+ * .domains(List.of("domains"))
+ * .resourceIdentifier("resourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-stack-storageconnector.html)
+ */
 @CdkDslMarker
 public class CfnStackStorageConnectorPropertyDsl {
   private val cdkBuilder: CfnStack.StorageConnectorProperty.Builder =

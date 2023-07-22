@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field well configuration of a waterfall visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-waterfallchartfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardWaterfallChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.WaterfallChartFieldWellsProperty.Builder =

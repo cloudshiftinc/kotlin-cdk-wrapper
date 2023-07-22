@@ -12,6 +12,26 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * Request-based lambda authorizer that recognizes the caller's identity via request parameters,
+ * such as headers, paths, query strings, stage variables, or context variables.
+ *
+ * Based on the request, authorization is performed by a lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * RequestAuthorizer auth = RequestAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization")))
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RequestAuthorizerDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of spacing (often a margin or padding).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SpacingProperty spacingProperty = SpacingProperty.builder()
+ * .bottom("bottom")
+ * .left("left")
+ * .right("right")
+ * .top("top")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-spacing.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisSpacingPropertyDsl {
   private val cdkBuilder: CfnAnalysis.SpacingProperty.Builder =

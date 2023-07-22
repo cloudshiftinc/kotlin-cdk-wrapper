@@ -39,6 +39,29 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * A Fargate service running on an ECS cluster fronted by an application load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .taskSubnets(SubnetSelection.builder()
+ * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
+ * .build())
+ * .loadBalancerName("application-lb-name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancedFargateServiceDsl(
   scope: Construct,

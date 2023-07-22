@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnDashboardProps
 
+/**
+ * Properties for defining a `CfnDashboard`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnDashboardProps cfnDashboardProps = CfnDashboardProps.builder()
+ * .dashboardDefinition("dashboardDefinition")
+ * .dashboardDescription("dashboardDescription")
+ * .dashboardName("dashboardName")
+ * // the properties below are optional
+ * .projectId("projectId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPropsDsl {
   private val cdkBuilder: CfnDashboardProps.Builder = CfnDashboardProps.builder()

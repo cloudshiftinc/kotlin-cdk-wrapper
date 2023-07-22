@@ -12,6 +12,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayPeeringAttachment
 import software.constructs.Construct
 
+/**
+ * Requests a transit gateway peering attachment between the specified transit gateway (requester)
+ * and a peer transit gateway (accepter).
+ *
+ * The peer transit gateway can be in your account or a different AWS account .
+ *
+ * After you create the peering attachment, the owner of the accepter transit gateway must accept
+ * the attachment request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayPeeringAttachment cfnTransitGatewayPeeringAttachment =
+ * CfnTransitGatewayPeeringAttachment.Builder.create(this, "MyCfnTransitGatewayPeeringAttachment")
+ * .peerAccountId("peerAccountId")
+ * .peerRegion("peerRegion")
+ * .peerTransitGatewayId("peerTransitGatewayId")
+ * .transitGatewayId("transitGatewayId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaypeeringattachment.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayPeeringAttachmentDsl(
   scope: Construct,

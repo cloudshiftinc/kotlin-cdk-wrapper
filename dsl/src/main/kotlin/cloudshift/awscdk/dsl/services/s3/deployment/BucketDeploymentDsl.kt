@@ -27,6 +27,23 @@ import software.amazon.awscdk.services.s3.deployment.ServerSideEncryption
 import software.amazon.awscdk.services.s3.deployment.StorageClass
 import software.constructs.Construct
 
+/**
+ * `BucketDeployment` populates an S3 bucket with the contents of .zip files from other S3 buckets
+ * or from local disk.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket websiteBucket;
+ * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployWebsite")
+ * .sources(List.of(Source.asset(join(__dirname, "my-website"))))
+ * .destinationBucket(websiteBucket)
+ * .build();
+ * new ConstructThatReadsFromTheBucket(this, "Consumer", Map.of(
+ * // Use 'deployment.deployedBucket' instead of 'websiteBucket' here
+ * "bucket", deployment.getDeployedBucket()));
+ * ```
+ */
 @CdkDslMarker
 public class BucketDeploymentDsl(
   scope: Construct,

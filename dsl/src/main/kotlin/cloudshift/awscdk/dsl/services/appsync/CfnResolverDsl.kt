@@ -9,6 +9,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnResolver
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::Resolver` resource defines the logical GraphQL resolver that you attach to
+ * fields in a schema.
+ *
+ * Request and response templates for resolvers are written in Apache Velocity Template Language
+ * (VTL) format. For more information about resolvers, see [Resolver Mapping Template
+ * Reference](https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference.html)
+ * .
+ *
+ *
+ * When you submit an update, AWS CloudFormation updates resources based on differences between what
+ * you submit and the stack's current template. To cause this resource to be updated you must change a
+ * property value for this resource in the CloudFormation template. Changing the Amazon S3 file content
+ * without changing a property value will not result in an update operation.
+ *
+ * See [Update Behaviors of Stack
+ * Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html)
+ * in the *AWS CloudFormation User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnResolver cfnResolver = CfnResolver.Builder.create(this, "MyCfnResolver")
+ * .apiId("apiId")
+ * .fieldName("fieldName")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .cachingConfig(CachingConfigProperty.builder()
+ * .ttl(123)
+ * // the properties below are optional
+ * .cachingKeys(List.of("cachingKeys"))
+ * .build())
+ * .code("code")
+ * .codeS3Location("codeS3Location")
+ * .dataSourceName("dataSourceName")
+ * .kind("kind")
+ * .maxBatchSize(123)
+ * .pipelineConfig(PipelineConfigProperty.builder()
+ * .functions(List.of("functions"))
+ * .build())
+ * .requestMappingTemplate("requestMappingTemplate")
+ * .requestMappingTemplateS3Location("requestMappingTemplateS3Location")
+ * .responseMappingTemplate("responseMappingTemplate")
+ * .responseMappingTemplateS3Location("responseMappingTemplateS3Location")
+ * .runtime(AppSyncRuntimeProperty.builder()
+ * .name("name")
+ * .runtimeVersion("runtimeVersion")
+ * .build())
+ * .syncConfig(SyncConfigProperty.builder()
+ * .conflictDetection("conflictDetection")
+ * // the properties below are optional
+ * .conflictHandler("conflictHandler")
+ * .lambdaConflictHandlerConfig(LambdaConflictHandlerConfigProperty.builder()
+ * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-resolver.html)
+ */
 @CdkDslMarker
 public class CfnResolverDsl(
   scope: Construct,

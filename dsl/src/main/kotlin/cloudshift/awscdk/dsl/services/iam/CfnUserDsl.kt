@@ -14,6 +14,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iam.CfnUser
 import software.constructs.Construct
 
+/**
+ * Creates a new IAM user for your AWS account .
+ *
+ * For information about quotas for the number of IAM users you can create, see [IAM and AWS STS
+ * quotas](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_iam-quotas.html) in the *IAM User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .groups(List.of("groups"))
+ * .loginProfile(LoginProfileProperty.builder()
+ * .password("password")
+ * // the properties below are optional
+ * .passwordResetRequired(false)
+ * .build())
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .path("path")
+ * .permissionsBoundary("permissionsBoundary")
+ * .policies(List.of(PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userName("userName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

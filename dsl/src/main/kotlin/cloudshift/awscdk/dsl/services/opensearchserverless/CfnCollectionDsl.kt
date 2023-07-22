@@ -12,6 +12,45 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.opensearchserverless.CfnCollection
 import software.constructs.Construct
 
+/**
+ * Specifies an OpenSearch Serverless collection.
+ *
+ * For more information, see [Creating and managing Amazon OpenSearch Serverless
+ * collections](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-manage.html)
+ * in the *Amazon OpenSearch Service Developer Guide* .
+ *
+ *
+ * You must create a matching [encryption
+ * policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-encryption.html)
+ * in order for a collection to be created successfully. You can specify the policy resource within the
+ * same CloudFormation template as the collection resource if you use the
+ * [DependsOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * attribute. See
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-collection.html#aws-resource-opensearchserverless-collection--examples)
+ * for a sample template. Otherwise the encryption policy must already exist before you create the
+ * collection.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnCollection cfnCollection = CfnCollection.Builder.create(this, "MyCfnCollection")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-collection.html)
+ */
 @CdkDslMarker
 public class CfnCollectionDsl(
   scope: Construct,

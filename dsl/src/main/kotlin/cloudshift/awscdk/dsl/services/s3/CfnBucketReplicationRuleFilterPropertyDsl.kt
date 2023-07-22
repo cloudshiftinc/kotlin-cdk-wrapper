@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * A filter that identifies the subset of objects to which the replication rule applies.
+ *
+ * A `Filter` must specify exactly one `Prefix` , `TagFilter` , or an `And` child element.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ReplicationRuleFilterProperty replicationRuleFilterProperty =
+ * ReplicationRuleFilterProperty.builder()
+ * .and(ReplicationRuleAndOperatorProperty.builder()
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .prefix("prefix")
+ * .tagFilter(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationrulefilter.html)
+ */
 @CdkDslMarker
 public class CfnBucketReplicationRuleFilterPropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationRuleFilterProperty.Builder =

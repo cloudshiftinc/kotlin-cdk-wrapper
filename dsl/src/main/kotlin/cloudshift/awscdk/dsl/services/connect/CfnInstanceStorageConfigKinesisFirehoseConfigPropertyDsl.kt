@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
 
+/**
+ * Configuration information of a Kinesis Data Firehose delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * KinesisFirehoseConfigProperty kinesisFirehoseConfigProperty =
+ * KinesisFirehoseConfigProperty.builder()
+ * .firehoseArn("firehoseArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisfirehoseconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceStorageConfigKinesisFirehoseConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.KinesisFirehoseConfigProperty.Builder =

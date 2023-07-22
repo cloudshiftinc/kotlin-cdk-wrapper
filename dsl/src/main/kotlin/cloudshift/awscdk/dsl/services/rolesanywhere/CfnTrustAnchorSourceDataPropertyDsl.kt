@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
 
+/**
+ * The data field of the trust anchor depending on its type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * SourceDataProperty sourceDataProperty = SourceDataProperty.builder()
+ * .acmPcaArn("acmPcaArn")
+ * .x509CertificateData("x509CertificateData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-sourcedata.html)
+ */
 @CdkDslMarker
 public class CfnTrustAnchorSourceDataPropertyDsl {
   private val cdkBuilder: CfnTrustAnchor.SourceDataProperty.Builder =

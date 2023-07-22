@@ -6,6 +6,103 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnectorProfile
 
+/**
+ * The connector-specific profile properties required by each connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * ConnectorProfilePropertiesProperty connectorProfilePropertiesProperty =
+ * ConnectorProfilePropertiesProperty.builder()
+ * .customConnector(CustomConnectorProfilePropertiesProperty.builder()
+ * .oAuth2Properties(OAuth2PropertiesProperty.builder()
+ * .oAuth2GrantType("oAuth2GrantType")
+ * .tokenUrl("tokenUrl")
+ * .tokenUrlCustomProperties(Map.of(
+ * "tokenUrlCustomPropertiesKey", "tokenUrlCustomProperties"))
+ * .build())
+ * .profileProperties(Map.of(
+ * "profilePropertiesKey", "profileProperties"))
+ * .build())
+ * .datadog(DatadogConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .dynatrace(DynatraceConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .inforNexus(InforNexusConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .marketo(MarketoConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .pardot(PardotConnectorProfilePropertiesProperty.builder()
+ * .businessUnitId("businessUnitId")
+ * // the properties below are optional
+ * .instanceUrl("instanceUrl")
+ * .isSandboxEnvironment(false)
+ * .build())
+ * .redshift(RedshiftConnectorProfilePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .clusterIdentifier("clusterIdentifier")
+ * .dataApiRoleArn("dataApiRoleArn")
+ * .databaseName("databaseName")
+ * .databaseUrl("databaseUrl")
+ * .isRedshiftServerless(false)
+ * .workgroupName("workgroupName")
+ * .build())
+ * .salesforce(SalesforceConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .isSandboxEnvironment(false)
+ * .usePrivateLinkForMetadataAndAuthorization(false)
+ * .build())
+ * .sapoData(SAPODataConnectorProfilePropertiesProperty.builder()
+ * .applicationHostUrl("applicationHostUrl")
+ * .applicationServicePath("applicationServicePath")
+ * .clientNumber("clientNumber")
+ * .disableSso(false)
+ * .logonLanguage("logonLanguage")
+ * .oAuthProperties(OAuthPropertiesProperty.builder()
+ * .authCodeUrl("authCodeUrl")
+ * .oAuthScopes(List.of("oAuthScopes"))
+ * .tokenUrl("tokenUrl")
+ * .build())
+ * .portNumber(123)
+ * .privateLinkServiceName("privateLinkServiceName")
+ * .build())
+ * .serviceNow(ServiceNowConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .slack(SlackConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .snowflake(SnowflakeConnectorProfilePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * .stage("stage")
+ * .warehouse("warehouse")
+ * // the properties below are optional
+ * .accountName("accountName")
+ * .bucketPrefix("bucketPrefix")
+ * .privateLinkServiceName("privateLinkServiceName")
+ * .region("region")
+ * .build())
+ * .veeva(VeevaConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .zendesk(ZendeskConnectorProfilePropertiesProperty.builder()
+ * .instanceUrl("instanceUrl")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-connectorprofileproperties.html)
+ */
 @CdkDslMarker
 public class CfnConnectorProfileConnectorProfilePropertiesPropertyDsl {
   private val cdkBuilder: CfnConnectorProfile.ConnectorProfilePropertiesProperty.Builder =

@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eks.CfnNodegroup
 
+/**
+ * An object representing the remote access configuration for the managed node group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * RemoteAccessProperty remoteAccessProperty = RemoteAccessProperty.builder()
+ * .ec2SshKey("ec2SshKey")
+ * // the properties below are optional
+ * .sourceSecurityGroups(List.of("sourceSecurityGroups"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-remoteaccess.html)
+ */
 @CdkDslMarker
 public class CfnNodegroupRemoteAccessPropertyDsl {
   private val cdkBuilder: CfnNodegroup.RemoteAccessProperty.Builder =

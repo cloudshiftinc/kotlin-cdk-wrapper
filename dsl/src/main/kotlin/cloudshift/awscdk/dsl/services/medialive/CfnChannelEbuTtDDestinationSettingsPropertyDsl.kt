@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings for EBU-TT captions in the output.
+ *
+ * The parent of this entity is CaptionDestinationSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * EbuTtDDestinationSettingsProperty ebuTtDDestinationSettingsProperty =
+ * EbuTtDDestinationSettingsProperty.builder()
+ * .copyrightHolder("copyrightHolder")
+ * .fillLineGap("fillLineGap")
+ * .fontFamily("fontFamily")
+ * .styleControl("styleControl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ebuttddestinationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelEbuTtDDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.EbuTtDDestinationSettingsProperty.Builder =

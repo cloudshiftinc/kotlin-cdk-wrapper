@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.appmesh.CommonGatewayRouteSpecOptions
 
+/**
+ * Base options for all gateway route specs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * CommonGatewayRouteSpecOptions commonGatewayRouteSpecOptions =
+ * CommonGatewayRouteSpecOptions.builder()
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonGatewayRouteSpecOptionsDsl {
   private val cdkBuilder: CommonGatewayRouteSpecOptions.Builder =

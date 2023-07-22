@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * The name of the pipeline in which you want to disable the flow of artifacts from one stage to
+ * another.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * StageTransitionProperty stageTransitionProperty = StageTransitionProperty.builder()
+ * .reason("reason")
+ * .stageName("stageName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagetransition.html)
+ */
 @CdkDslMarker
 public class CfnPipelineStageTransitionPropertyDsl {
   private val cdkBuilder: CfnPipeline.StageTransitionProperty.Builder =

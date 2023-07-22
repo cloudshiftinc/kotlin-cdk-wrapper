@@ -10,6 +10,26 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.AmiContextQuery
 
+/**
+ * Query to AMI context provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * AmiContextQuery amiContextQuery = AmiContextQuery.builder()
+ * .account("account")
+ * .filters(Map.of(
+ * "filtersKey", List.of("filters")))
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .owners(List.of("owners"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmiContextQueryDsl {
   private val cdkBuilder: AmiContextQuery.Builder = AmiContextQuery.builder()

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.JournaldLogDriverProps
 
+/**
+ * Specifies the journald log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/journald/)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * JournaldLogDriverProps journaldLogDriverProps = JournaldLogDriverProps.builder()
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JournaldLogDriverPropsDsl {
   private val cdkBuilder: JournaldLogDriverProps.Builder = JournaldLogDriverProps.builder()

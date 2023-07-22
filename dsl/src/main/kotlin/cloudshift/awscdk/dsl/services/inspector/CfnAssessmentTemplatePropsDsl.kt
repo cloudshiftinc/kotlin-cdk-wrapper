@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspector.CfnAssessmentTemplateProps
 
+/**
+ * Properties for defining a `CfnAssessmentTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspector.*;
+ * CfnAssessmentTemplateProps cfnAssessmentTemplateProps = CfnAssessmentTemplateProps.builder()
+ * .assessmentTargetArn("assessmentTargetArn")
+ * .durationInSeconds(123)
+ * .rulesPackageArns(List.of("rulesPackageArns"))
+ * // the properties below are optional
+ * .assessmentTemplateName("assessmentTemplateName")
+ * .userAttributesForFindings(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-assessmenttemplate.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentTemplatePropsDsl {
   private val cdkBuilder: CfnAssessmentTemplateProps.Builder = CfnAssessmentTemplateProps.builder()

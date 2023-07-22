@@ -11,6 +11,25 @@ import software.amazon.awscdk.services.codebuild.ProjectNotificationEvents
 import software.amazon.awscdk.services.codebuild.ProjectNotifyOnOptions
 import software.amazon.awscdk.services.codestarnotifications.DetailType
 
+/**
+ * Additional options to pass to the notification rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * ProjectNotifyOnOptions projectNotifyOnOptions = ProjectNotifyOnOptions.builder()
+ * .events(List.of(ProjectNotificationEvents.BUILD_FAILED))
+ * // the properties below are optional
+ * .detailType(DetailType.BASIC)
+ * .enabled(false)
+ * .notificationRuleName("notificationRuleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProjectNotifyOnOptionsDsl {
   private val cdkBuilder: ProjectNotifyOnOptions.Builder = ProjectNotifyOnOptions.builder()

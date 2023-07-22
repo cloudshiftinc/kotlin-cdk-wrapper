@@ -15,6 +15,37 @@ import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.StreamEventSourceProps
 
+/**
+ * The set of properties for streaming event sources shared by Dynamo and Kinesis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.*;
+ * IEventSourceDlq eventSourceDlq;
+ * Object filters;
+ * StreamEventSourceProps streamEventSourceProps = StreamEventSourceProps.builder()
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * // the properties below are optional
+ * .batchSize(123)
+ * .bisectBatchOnError(false)
+ * .enabled(false)
+ * .filters(List.of(Map.of(
+ * "filtersKey", filters)))
+ * .maxBatchingWindow(Duration.minutes(30))
+ * .maxRecordAge(Duration.minutes(30))
+ * .onFailure(eventSourceDlq)
+ * .parallelizationFactor(123)
+ * .reportBatchItemFailures(false)
+ * .retryAttempts(123)
+ * .tumblingWindow(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StreamEventSourcePropsDsl {
   private val cdkBuilder: StreamEventSourceProps.Builder = StreamEventSourceProps.builder()

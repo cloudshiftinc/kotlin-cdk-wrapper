@@ -12,6 +12,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudWatch::CompositeAlarm` type creates or updates a composite alarm.
+ *
+ * When you create a composite alarm, you specify a rule expression for the alarm that takes into
+ * account the alarm states of other alarms that you have created. The composite alarm goes into ALARM
+ * state only if all conditions of the rule are met.
+ *
+ * The alarms specified in a composite alarm's rule expression can include metric alarms and other
+ * composite alarms.
+ *
+ * Using composite alarms can reduce alarm noise. You can create multiple metric alarms, and also
+ * create a composite alarm and set up alerts only for the composite alarm. For example, you could
+ * create a composite alarm that goes into ALARM state only when more than one of the underlying metric
+ * alarms are in ALARM state.
+ *
+ * Currently, the only alarm actions that can be taken by composite alarms are notifying SNS topics.
+ *
+ * When this operation creates an alarm, the alarm state is immediately set to INSUFFICIENT_DATA.
+ * The alarm is then evaluated and its state is set appropriately. Any actions associated with the new
+ * state are then executed. For a composite alarm, this initial time after creation is the only time
+ * that the alarm can be in INSUFFICIENT_DATA state.
+ *
+ * When you update an existing alarm, its state is left unchanged, but the update completely
+ * overwrites the previous configuration of the alarm.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnCompositeAlarm cfnCompositeAlarm = CfnCompositeAlarm.Builder.create(this,
+ * "MyCfnCompositeAlarm")
+ * .alarmRule("alarmRule")
+ * // the properties below are optional
+ * .actionsEnabled(false)
+ * .actionsSuppressor("actionsSuppressor")
+ * .actionsSuppressorExtensionPeriod(123)
+ * .actionsSuppressorWaitPeriod(123)
+ * .alarmActions(List.of("alarmActions"))
+ * .alarmDescription("alarmDescription")
+ * .alarmName("alarmName")
+ * .insufficientDataActions(List.of("insufficientDataActions"))
+ * .okActions(List.of("okActions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html)
+ */
 @CdkDslMarker
 public class CfnCompositeAlarmDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * Describes a path match type.
+ *
+ * Each rule can include only one of the following types of paths.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * PathMatchTypeProperty pathMatchTypeProperty = PathMatchTypeProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-pathmatchtype.html)
+ */
 @CdkDslMarker
 public class CfnRulePathMatchTypePropertyDsl {
   private val cdkBuilder: CfnRule.PathMatchTypeProperty.Builder =

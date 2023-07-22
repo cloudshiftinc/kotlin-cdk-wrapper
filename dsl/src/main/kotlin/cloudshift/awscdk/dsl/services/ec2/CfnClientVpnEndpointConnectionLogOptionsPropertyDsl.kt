@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 
+/**
+ * Describes the client connection logging options for the Client VPN endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ConnectionLogOptionsProperty connectionLogOptionsProperty =
+ * ConnectionLogOptionsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .cloudwatchLogGroup("cloudwatchLogGroup")
+ * .cloudwatchLogStream("cloudwatchLogStream")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-connectionlogoptions.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnEndpointConnectionLogOptionsPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.ConnectionLogOptionsProperty.Builder =

@@ -12,6 +12,23 @@ import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.lambda.InvokeMode
 import software.constructs.Construct
 
+/**
+ * Defines a Lambda function url.
+ *
+ * Example:
+ *
+ * ```
+ * // Can be a Function or an Alias
+ * Function fn;
+ * Role myRole;
+ * FunctionUrl fnUrl = fn.addFunctionUrl();
+ * fnUrl.grantInvokeUrl(myRole);
+ * CfnOutput.Builder.create(this, "TheUrl")
+ * // The .url attributes will return the unique Function URL
+ * .value(fnUrl.getUrl())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionUrlDsl(
   scope: Construct,

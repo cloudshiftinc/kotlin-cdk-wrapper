@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 
+/**
+ * The details of a capacity provider strategy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+ * CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-capacityproviderstrategyitem.html)
+ */
 @CdkDslMarker
 public class CfnScheduleCapacityProviderStrategyItemPropertyDsl {
   private val cdkBuilder: CfnSchedule.CapacityProviderStrategyItemProperty.Builder =

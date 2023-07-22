@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.connect.CfnSecurityKey
 import software.constructs.Construct
 
+/**
+ * The security key for the instance.
+ *
+ *
+ * Only two security keys are allowed per Amazon Connect instance.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnSecurityKey cfnSecurityKey = CfnSecurityKey.Builder.create(this, "MyCfnSecurityKey")
+ * .instanceId("instanceId")
+ * .key("key")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securitykey.html)
+ */
 @CdkDslMarker
 public class CfnSecurityKeyDsl(
   scope: Construct,

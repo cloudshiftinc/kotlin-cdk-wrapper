@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * ImageConfigProperty imageConfigProperty = ImageConfigProperty.builder()
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entryPoint"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-imageconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionImageConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.ImageConfigProperty.Builder =

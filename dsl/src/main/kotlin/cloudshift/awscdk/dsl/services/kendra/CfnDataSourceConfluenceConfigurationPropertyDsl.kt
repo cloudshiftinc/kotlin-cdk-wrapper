@@ -9,6 +9,69 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to Confluence as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConfluenceConfigurationProperty confluenceConfigurationProperty =
+ * ConfluenceConfigurationProperty.builder()
+ * .secretArn("secretArn")
+ * .serverUrl("serverUrl")
+ * .version("version")
+ * // the properties below are optional
+ * .attachmentConfiguration(ConfluenceAttachmentConfigurationProperty.builder()
+ * .attachmentFieldMappings(List.of(ConfluenceAttachmentToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .crawlAttachments(false)
+ * .build())
+ * .blogConfiguration(ConfluenceBlogConfigurationProperty.builder()
+ * .blogFieldMappings(List.of(ConfluenceBlogToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .pageConfiguration(ConfluencePageConfigurationProperty.builder()
+ * .pageFieldMappings(List.of(ConfluencePageToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .spaceConfiguration(ConfluenceSpaceConfigurationProperty.builder()
+ * .crawlArchivedSpaces(false)
+ * .crawlPersonalSpaces(false)
+ * .excludeSpaces(List.of("excludeSpaces"))
+ * .includeSpaces(List.of("includeSpaces"))
+ * .spaceFieldMappings(List.of(ConfluenceSpaceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .vpcConfiguration(DataSourceVpcConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-confluenceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConfluenceConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConfluenceConfigurationProperty.Builder =

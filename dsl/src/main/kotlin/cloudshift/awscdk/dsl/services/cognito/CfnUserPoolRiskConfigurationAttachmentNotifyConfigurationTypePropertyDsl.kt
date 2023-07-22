@@ -7,6 +7,44 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
 
+/**
+ * The notify configuration type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * NotifyConfigurationTypeProperty notifyConfigurationTypeProperty =
+ * NotifyConfigurationTypeProperty.builder()
+ * .sourceArn("sourceArn")
+ * // the properties below are optional
+ * .blockEmail(NotifyEmailTypeProperty.builder()
+ * .subject("subject")
+ * // the properties below are optional
+ * .htmlBody("htmlBody")
+ * .textBody("textBody")
+ * .build())
+ * .from("from")
+ * .mfaEmail(NotifyEmailTypeProperty.builder()
+ * .subject("subject")
+ * // the properties below are optional
+ * .htmlBody("htmlBody")
+ * .textBody("textBody")
+ * .build())
+ * .noActionEmail(NotifyEmailTypeProperty.builder()
+ * .subject("subject")
+ * // the properties below are optional
+ * .htmlBody("htmlBody")
+ * .textBody("textBody")
+ * .build())
+ * .replyTo("replyTo")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-notifyconfigurationtype.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentNotifyConfigurationTypePropertyDsl {
   private val cdkBuilder:

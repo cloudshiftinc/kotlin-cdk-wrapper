@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudtrail.S3EventSelector
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Selecting an S3 bucket and an optional prefix to be logged for data events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * S3EventSelector s3EventSelector = S3EventSelector.builder()
+ * .bucket(bucket)
+ * // the properties below are optional
+ * .objectPrefix("objectPrefix")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3EventSelectorDsl {
   private val cdkBuilder: S3EventSelector.Builder = S3EventSelector.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CfnHookVersion
 
+/**
+ * The `LoggingConfig` property type specifies logging configuration information for an extension.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * LoggingConfigProperty loggingConfigProperty = LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-hookversion-loggingconfig.html)
+ */
 @CdkDslMarker
 public class CfnHookVersionLoggingConfigPropertyDsl {
   private val cdkBuilder: CfnHookVersion.LoggingConfigProperty.Builder =

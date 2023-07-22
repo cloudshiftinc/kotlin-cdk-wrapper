@@ -10,6 +10,22 @@ import software.amazon.awscdk.services.certificatemanager.ICertificate
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps
 
+/**
+ * Properties to configure an HTTPS Redirect.
+ *
+ * Example:
+ *
+ * ```
+ * HttpsRedirect.Builder.create(this, "Redirect")
+ * .recordNames(List.of("foo.example.com"))
+ * .targetDomain("bar.example.com")
+ * .zone(HostedZone.fromHostedZoneAttributes(this, "HostedZone", HostedZoneAttributes.builder()
+ * .hostedZoneId("ID")
+ * .zoneName("example.com")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpsRedirectPropsDsl {
   private val cdkBuilder: HttpsRedirectProps.Builder = HttpsRedirectProps.builder()

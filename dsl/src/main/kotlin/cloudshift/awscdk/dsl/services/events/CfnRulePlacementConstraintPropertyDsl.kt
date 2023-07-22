@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * An object representing a constraint on task placement.
+ *
+ * To learn more, see [Task Placement
+ * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html)
+ * in the Amazon Elastic Container Service Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * PlacementConstraintProperty placementConstraintProperty = PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementconstraint.html)
+ */
 @CdkDslMarker
 public class CfnRulePlacementConstraintPropertyDsl {
   private val cdkBuilder: CfnRule.PlacementConstraintProperty.Builder =

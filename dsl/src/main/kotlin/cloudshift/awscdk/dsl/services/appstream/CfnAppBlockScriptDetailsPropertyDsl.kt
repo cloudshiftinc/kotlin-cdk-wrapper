@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnAppBlock
 
+/**
+ * The details of the script.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * ScriptDetailsProperty scriptDetailsProperty = ScriptDetailsProperty.builder()
+ * .executablePath("executablePath")
+ * .scriptS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * .timeoutInSeconds(123)
+ * // the properties below are optional
+ * .executableParameters("executableParameters")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-appblock-scriptdetails.html)
+ */
 @CdkDslMarker
 public class CfnAppBlockScriptDetailsPropertyDsl {
   private val cdkBuilder: CfnAppBlock.ScriptDetailsProperty.Builder =

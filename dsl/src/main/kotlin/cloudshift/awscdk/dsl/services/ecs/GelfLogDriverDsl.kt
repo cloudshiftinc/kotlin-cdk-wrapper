@@ -11,6 +11,30 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.GelfCompressionType
 import software.amazon.awscdk.services.ecs.GelfLogDriver
 
+/**
+ * A log driver that sends log information to journald Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * GelfLogDriver gelfLogDriver = GelfLogDriver.Builder.create()
+ * .address("address")
+ * // the properties below are optional
+ * .compressionLevel(123)
+ * .compressionType(GelfCompressionType.GZIP)
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .tcpMaxReconnect(123)
+ * .tcpReconnectDelay(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GelfLogDriverDsl {
   private val cdkBuilder: GelfLogDriver.Builder = GelfLogDriver.Builder.create()

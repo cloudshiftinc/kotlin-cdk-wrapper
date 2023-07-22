@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kendra.CfnIndex
 
+/**
+ * Specifies additional capacity units configured for your Enterprise Edition index.
+ *
+ * You can add and remove capacity units to fit your usage requirements.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * CapacityUnitsConfigurationProperty capacityUnitsConfigurationProperty =
+ * CapacityUnitsConfigurationProperty.builder()
+ * .queryCapacityUnits(123)
+ * .storageCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-capacityunitsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnIndexCapacityUnitsConfigurationPropertyDsl {
   private val cdkBuilder: CfnIndex.CapacityUnitsConfigurationProperty.Builder =

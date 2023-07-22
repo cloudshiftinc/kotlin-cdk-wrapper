@@ -10,6 +10,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * An object representing the VPC configuration to use for an Amazon EKS cluster.
+ *
+ *
+ * When updating a resource, you must include these properties if the previous CloudFormation
+ * template of the resource had them:
+ *
+ * * `EndpointPublicAccess`
+ * * `EndpointPrivateAccess`
+ * * `PublicAccessCidrs`
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * ResourcesVpcConfigProperty resourcesVpcConfigProperty = ResourcesVpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .endpointPrivateAccess(false)
+ * .endpointPublicAccess(false)
+ * .publicAccessCidrs(List.of("publicAccessCidrs"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterResourcesVpcConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.ResourcesVpcConfigProperty.Builder =

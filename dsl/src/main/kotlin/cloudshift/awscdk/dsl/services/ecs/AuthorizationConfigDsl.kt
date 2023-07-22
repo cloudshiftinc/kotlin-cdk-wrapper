@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.AuthorizationConfig
 
+/**
+ * The authorization configuration details for the Amazon EFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * AuthorizationConfig authorizationConfig = AuthorizationConfig.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AuthorizationConfigDsl {
   private val cdkBuilder: AuthorizationConfig.Builder = AuthorizationConfig.builder()

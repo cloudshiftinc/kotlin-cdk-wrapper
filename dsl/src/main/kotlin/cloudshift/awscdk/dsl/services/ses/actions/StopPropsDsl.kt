@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.ses.actions.StopProps
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Construction properties for a stop action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * Topic topic;
+ * StopProps stopProps = StopProps.builder()
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StopPropsDsl {
   private val cdkBuilder: StopProps.Builder = StopProps.builder()

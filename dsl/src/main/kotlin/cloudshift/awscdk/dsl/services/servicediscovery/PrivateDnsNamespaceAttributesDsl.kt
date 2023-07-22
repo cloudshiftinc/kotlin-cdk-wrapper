@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * PrivateDnsNamespaceAttributes privateDnsNamespaceAttributes =
+ * PrivateDnsNamespaceAttributes.builder()
+ * .namespaceArn("namespaceArn")
+ * .namespaceId("namespaceId")
+ * .namespaceName("namespaceName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrivateDnsNamespaceAttributesDsl {
   private val cdkBuilder: PrivateDnsNamespaceAttributes.Builder =

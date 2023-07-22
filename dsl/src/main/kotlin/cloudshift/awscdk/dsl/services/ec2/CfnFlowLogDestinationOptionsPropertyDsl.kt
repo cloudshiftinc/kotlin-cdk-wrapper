@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnFlowLog
 
+/**
+ * Describes the destination options for a flow log.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * DestinationOptionsProperty destinationOptionsProperty = DestinationOptionsProperty.builder()
+ * .fileFormat("fileFormat")
+ * .hiveCompatiblePartitions(false)
+ * .perHourPartition(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-flowlog-destinationoptions.html)
+ */
 @CdkDslMarker
 public class CfnFlowLogDestinationOptionsPropertyDsl {
   private val cdkBuilder: CfnFlowLog.DestinationOptionsProperty.Builder =

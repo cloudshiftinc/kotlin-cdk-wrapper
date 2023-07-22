@@ -14,6 +14,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 import software.amazon.awscdk.services.internetmonitor.CfnMonitorProps
 
+/**
+ * Properties for defining a `CfnMonitor`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.internetmonitor.*;
+ * CfnMonitorProps cfnMonitorProps = CfnMonitorProps.builder()
+ * .monitorName("monitorName")
+ * // the properties below are optional
+ * .healthEventsConfig(HealthEventsConfigProperty.builder()
+ * .availabilityScoreThreshold(123)
+ * .performanceScoreThreshold(123)
+ * .build())
+ * .internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty.builder()
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .logDeliveryStatus("logDeliveryStatus")
+ * .build())
+ * .build())
+ * .maxCityNetworksToMonitor(123)
+ * .resources(List.of("resources"))
+ * .resourcesToAdd(List.of("resourcesToAdd"))
+ * .resourcesToRemove(List.of("resourcesToRemove"))
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trafficPercentageToMonitor(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)
+ */
 @CdkDslMarker
 public class CfnMonitorPropsDsl {
   private val cdkBuilder: CfnMonitorProps.Builder = CfnMonitorProps.builder()

@@ -13,6 +13,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53resolver.CfnResolverEndpointProps
 
+/**
+ * Properties for defining a `CfnResolverEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverEndpointProps cfnResolverEndpointProps = CfnResolverEndpointProps.builder()
+ * .direction("direction")
+ * .ipAddresses(List.of(IpAddressRequestProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .ip("ip")
+ * .ipv6("ipv6")
+ * .build()))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * // the properties below are optional
+ * .name("name")
+ * .outpostArn("outpostArn")
+ * .preferredInstanceType("preferredInstanceType")
+ * .resolverEndpointType("resolverEndpointType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverendpoint.html)
+ */
 @CdkDslMarker
 public class CfnResolverEndpointPropsDsl {
   private val cdkBuilder: CfnResolverEndpointProps.Builder = CfnResolverEndpointProps.builder()

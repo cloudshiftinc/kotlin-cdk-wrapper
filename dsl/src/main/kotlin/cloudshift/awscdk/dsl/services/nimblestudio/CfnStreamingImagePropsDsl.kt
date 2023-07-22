@@ -7,6 +7,28 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps
 
+/**
+ * Properties for defining a `CfnStreamingImage`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * CfnStreamingImageProps cfnStreamingImageProps = CfnStreamingImageProps.builder()
+ * .ec2ImageId("ec2ImageId")
+ * .name("name")
+ * .studioId("studioId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-streamingimage.html)
+ */
 @CdkDslMarker
 public class CfnStreamingImagePropsDsl {
   private val cdkBuilder: CfnStreamingImageProps.Builder = CfnStreamingImageProps.builder()

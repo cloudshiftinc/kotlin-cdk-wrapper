@@ -14,6 +14,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.internetmonitor.CfnMonitor
 import software.constructs.Construct
 
+/**
+ * The `AWS::InternetMonitor::Monitor` resource is an Internet Monitor resource type that contains
+ * information about how you create a monitor in Amazon CloudWatch Internet Monitor.
+ *
+ * A monitor in Internet Monitor provides visibility into performance and availability between your
+ * applications hosted on AWS and your end users, using a traffic profile that it creates based on the
+ * application resources that you add: Virtual Private Clouds (VPCs), Amazon CloudFront distributions,
+ * or WorkSpaces directories.
+ *
+ * Internet Monitor also alerts you to internet issues that impact your application in the
+ * city-networks (geographies and networks) where your end users use it. With Internet Monitor, you can
+ * quickly pinpoint the locations and providers that are affected, so that you can address the issue.
+ *
+ * For more information, see [Using Amazon CloudWatch Internet
+ * Monitor](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-InternetMonitor.html)
+ * in the *Amazon CloudWatch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.internetmonitor.*;
+ * CfnMonitor cfnMonitor = CfnMonitor.Builder.create(this, "MyCfnMonitor")
+ * .monitorName("monitorName")
+ * // the properties below are optional
+ * .healthEventsConfig(HealthEventsConfigProperty.builder()
+ * .availabilityScoreThreshold(123)
+ * .performanceScoreThreshold(123)
+ * .build())
+ * .internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty.builder()
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .logDeliveryStatus("logDeliveryStatus")
+ * .build())
+ * .build())
+ * .maxCityNetworksToMonitor(123)
+ * .resources(List.of("resources"))
+ * .resourcesToAdd(List.of("resourcesToAdd"))
+ * .resourcesToRemove(List.of("resourcesToRemove"))
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trafficPercentageToMonitor(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html)
+ */
 @CdkDslMarker
 public class CfnMonitorDsl(
   scope: Construct,

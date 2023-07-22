@@ -8,6 +8,71 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `SplunkDestinationConfiguration` property type specifies the configuration of a destination
+ * in Splunk for a Kinesis Data Firehose delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * SplunkDestinationConfigurationProperty splunkDestinationConfigurationProperty =
+ * SplunkDestinationConfigurationProperty.builder()
+ * .hecEndpoint("hecEndpoint")
+ * .hecEndpointType("hecEndpointType")
+ * .hecToken("hecToken")
+ * .s3Configuration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .hecAcknowledgmentTimeoutInSeconds(123)
+ * .processingConfiguration(ProcessingConfigurationProperty.builder()
+ * .enabled(false)
+ * .processors(List.of(ProcessorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .parameters(List.of(ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .build())
+ * .retryOptions(SplunkRetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build())
+ * .s3BackupMode("s3BackupMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamSplunkDestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.SplunkDestinationConfigurationProperty.Builder =

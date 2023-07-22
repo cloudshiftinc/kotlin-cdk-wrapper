@@ -14,6 +14,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnTaskDefinition
 import software.constructs.Construct
 
+/**
+ * Creates a gateway task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnTaskDefinition cfnTaskDefinition = CfnTaskDefinition.Builder.create(this,
+ * "MyCfnTaskDefinition")
+ * .autoCreateTasks(false)
+ * // the properties below are optional
+ * .loRaWanUpdateGatewayTaskEntry(LoRaWANUpdateGatewayTaskEntryProperty.builder()
+ * .currentVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .updateVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskDefinitionType("taskDefinitionType")
+ * .update(UpdateWirelessGatewayTaskCreateProperty.builder()
+ * .loRaWan(LoRaWANUpdateGatewayTaskCreateProperty.builder()
+ * .currentVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .sigKeyCrc(123)
+ * .updateSignature("updateSignature")
+ * .updateVersion(LoRaWANGatewayVersionProperty.builder()
+ * .model("model")
+ * .packageVersion("packageVersion")
+ * .station("station")
+ * .build())
+ * .build())
+ * .updateDataRole("updateDataRole")
+ * .updateDataSource("updateDataSource")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-taskdefinition.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionDsl(
   scope: Construct,

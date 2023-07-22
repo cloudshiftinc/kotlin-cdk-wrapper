@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The collapse state options for the pivot table field options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTableFieldCollapseStateOptionProperty pivotTableFieldCollapseStateOptionProperty =
+ * PivotTableFieldCollapseStateOptionProperty.builder()
+ * .target(PivotTableFieldCollapseStateTargetProperty.builder()
+ * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * .fieldId("fieldId")
+ * .build())
+ * // the properties below are optional
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-pivottablefieldcollapsestateoption.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisPivotTableFieldCollapseStateOptionPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTableFieldCollapseStateOptionProperty.Builder =

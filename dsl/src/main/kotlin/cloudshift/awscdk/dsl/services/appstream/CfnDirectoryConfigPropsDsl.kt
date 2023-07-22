@@ -10,6 +10,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnDirectoryConfig
 import software.amazon.awscdk.services.appstream.CfnDirectoryConfigProps
 
+/**
+ * Properties for defining a `CfnDirectoryConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnDirectoryConfigProps cfnDirectoryConfigProps = CfnDirectoryConfigProps.builder()
+ * .directoryName("directoryName")
+ * .organizationalUnitDistinguishedNames(List.of("organizationalUnitDistinguishedNames"))
+ * .serviceAccountCredentials(ServiceAccountCredentialsProperty.builder()
+ * .accountName("accountName")
+ * .accountPassword("accountPassword")
+ * .build())
+ * // the properties below are optional
+ * .certificateBasedAuthProperties(CertificateBasedAuthPropertiesProperty.builder()
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .status("status")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-directoryconfig.html)
+ */
 @CdkDslMarker
 public class CfnDirectoryConfigPropsDsl {
   private val cdkBuilder: CfnDirectoryConfigProps.Builder = CfnDirectoryConfigProps.builder()

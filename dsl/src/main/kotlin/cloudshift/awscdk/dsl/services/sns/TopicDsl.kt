@@ -9,6 +9,24 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.sns.Topic
 import software.constructs.Construct
 
+/**
+ * A new SNS topic.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.sns.*;
+ * Topic topic = new Topic(this, "MyTopic");
+ * TopicRule topicRule = TopicRule.Builder.create(this, "TopicRule")
+ * .sql(IotSql.fromStringAsVer20160323("SELECT topic(2) as device_id, year, month, day FROM
+ * 'device/+/data'"))
+ * .actions(List.of(
+ * SnsTopicAction.Builder.create(topic)
+ * .messageFormat(SnsActionMessageFormat.JSON)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TopicDsl(
   scope: Construct,

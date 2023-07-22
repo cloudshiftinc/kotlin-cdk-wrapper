@@ -7,6 +7,46 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes a source code repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CodeRepositoryProperty codeRepositoryProperty = CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .sourceCodeVersion(SourceCodeVersionProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build())
+ * // the properties below are optional
+ * .codeConfiguration(CodeConfigurationProperty.builder()
+ * .configurationSource("configurationSource")
+ * // the properties below are optional
+ * .codeConfigurationValues(CodeConfigurationValuesProperty.builder()
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .buildCommand("buildCommand")
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-coderepository.html)
+ */
 @CdkDslMarker
 public class CfnServiceCodeRepositoryPropertyDsl {
   private val cdkBuilder: CfnService.CodeRepositoryProperty.Builder =

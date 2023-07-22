@@ -28,6 +28,24 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.ILayerVersion
 
+/**
+ * Common configuration props for EKS clusters.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
+ * .version(KubernetesVersion.V1_27)
+ * .defaultCapacity(0)
+ * .build();
+ * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
+ * .instanceTypes(List.of(new InstanceType("m5.large")))
+ * .minSize(4)
+ * .diskSize(100)
+ * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ClusterPropsDsl {
   private val cdkBuilder: ClusterProps.Builder = ClusterProps.builder()

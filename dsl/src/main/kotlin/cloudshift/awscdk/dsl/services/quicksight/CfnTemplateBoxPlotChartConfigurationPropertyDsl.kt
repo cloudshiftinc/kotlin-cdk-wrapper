@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a `BoxPlotVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-boxplotchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateBoxPlotChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.BoxPlotChartConfigurationProperty.Builder =

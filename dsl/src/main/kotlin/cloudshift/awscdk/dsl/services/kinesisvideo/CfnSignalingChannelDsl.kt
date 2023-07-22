@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel
 import software.constructs.Construct
 
+/**
+ * Specifies a signaling channel.
+ *
+ * `CreateSignalingChannel` is an asynchronous operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisvideo.*;
+ * CfnSignalingChannel cfnSignalingChannel = CfnSignalingChannel.Builder.create(this,
+ * "MyCfnSignalingChannel")
+ * .messageTtlSeconds(123)
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html)
+ */
 @CdkDslMarker
 public class CfnSignalingChannelDsl(
   scope: Construct,

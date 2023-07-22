@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * Specifies who can mount an OpenZFS file system and the options available while mounting the file
+ * system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * ClientConfigurationsProperty clientConfigurationsProperty =
+ * ClientConfigurationsProperty.builder()
+ * .clients("clients")
+ * .options(List.of("options"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-clientconfigurations.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemClientConfigurationsPropertyDsl {
   private val cdkBuilder: CfnFileSystem.ClientConfigurationsProperty.Builder =

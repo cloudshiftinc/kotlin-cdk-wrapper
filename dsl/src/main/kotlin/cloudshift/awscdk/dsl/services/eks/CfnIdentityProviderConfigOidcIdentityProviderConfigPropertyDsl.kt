@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
 
+/**
+ * An object representing the configuration for an OpenID Connect (OIDC) identity provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * OidcIdentityProviderConfigProperty oidcIdentityProviderConfigProperty =
+ * OidcIdentityProviderConfigProperty.builder()
+ * .clientId("clientId")
+ * .issuerUrl("issuerUrl")
+ * // the properties below are optional
+ * .groupsClaim("groupsClaim")
+ * .groupsPrefix("groupsPrefix")
+ * .requiredClaims(List.of(RequiredClaimProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .usernameClaim("usernameClaim")
+ * .usernamePrefix("usernamePrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-identityproviderconfig-oidcidentityproviderconfig.html)
+ */
 @CdkDslMarker
 public class CfnIdentityProviderConfigOidcIdentityProviderConfigPropertyDsl {
   private val cdkBuilder: CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty.Builder =

@@ -11,6 +11,42 @@ import software.amazon.awscdk.services.events.EventPattern
 import software.amazon.awscdk.services.events.IRuleTarget
 import software.constructs.Construct
 
+/**
+ * Options for the onCloudTrailImagePushed method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * import software.amazon.awscdk.services.events.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * Object detail;
+ * IRuleTarget ruleTarget;
+ * OnCloudTrailImagePushedOptions onCloudTrailImagePushedOptions =
+ * OnCloudTrailImagePushedOptions.builder()
+ * .crossStackScope(construct)
+ * .description("description")
+ * .eventPattern(EventPattern.builder()
+ * .account(List.of("account"))
+ * .detail(Map.of(
+ * "detailKey", detail))
+ * .detailType(List.of("detailType"))
+ * .id(List.of("id"))
+ * .region(List.of("region"))
+ * .resources(List.of("resources"))
+ * .source(List.of("source"))
+ * .time(List.of("time"))
+ * .version(List.of("version"))
+ * .build())
+ * .imageTag("imageTag")
+ * .ruleName("ruleName")
+ * .target(ruleTarget)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OnCloudTrailImagePushedOptionsDsl {
   private val cdkBuilder: OnCloudTrailImagePushedOptions.Builder =

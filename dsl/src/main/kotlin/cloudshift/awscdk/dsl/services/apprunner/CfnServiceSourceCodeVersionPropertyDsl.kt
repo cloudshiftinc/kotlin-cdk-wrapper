@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Identifies a version of code that AWS App Runner refers to within a source code repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * SourceCodeVersionProperty sourceCodeVersionProperty = SourceCodeVersionProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourcecodeversion.html)
+ */
 @CdkDslMarker
 public class CfnServiceSourceCodeVersionPropertyDsl {
   private val cdkBuilder: CfnService.SourceCodeVersionProperty.Builder =

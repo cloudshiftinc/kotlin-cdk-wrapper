@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * Configuration information for delivery of dataset contents to AWS IoT Events .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * IotEventsDestinationConfigurationProperty iotEventsDestinationConfigurationProperty =
+ * IotEventsDestinationConfigurationProperty.builder()
+ * .inputName("inputName")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-ioteventsdestinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDatasetIotEventsDestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataset.IotEventsDestinationConfigurationProperty.Builder =

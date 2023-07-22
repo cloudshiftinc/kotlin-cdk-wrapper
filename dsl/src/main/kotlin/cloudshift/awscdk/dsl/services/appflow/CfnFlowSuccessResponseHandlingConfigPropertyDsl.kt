@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * Determines how Amazon AppFlow handles the success response that it gets from the connector after
+ * placing data.
+ *
+ * For example, this setting would determine where to write the response from the destination
+ * connector upon a successful insert operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SuccessResponseHandlingConfigProperty successResponseHandlingConfigProperty =
+ * SuccessResponseHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-successresponsehandlingconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlowSuccessResponseHandlingConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.SuccessResponseHandlingConfigProperty.Builder =

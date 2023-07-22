@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions
 
+/**
+ * EC2 Heath check options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * Ec2HealthCheckOptions ec2HealthCheckOptions = Ec2HealthCheckOptions.builder()
+ * .grace(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class Ec2HealthCheckOptionsDsl {
   private val cdkBuilder: Ec2HealthCheckOptions.Builder = Ec2HealthCheckOptions.builder()

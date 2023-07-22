@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The aggregated field wells of a bar chart.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-barchartaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateBarChartAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.BarChartAggregatedFieldWellsProperty.Builder =

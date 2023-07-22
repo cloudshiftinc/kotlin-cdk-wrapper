@@ -23,6 +23,51 @@ import software.amazon.awscdk.services.rds.ServerlessCluster
 import software.amazon.awscdk.services.rds.ServerlessScalingOptions
 import software.constructs.Construct
 
+/**
+ * Create an Aurora Serverless Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // Build a data source for AppSync to access the database.
+ * GraphqlApi api;
+ * // Create username and password secret for DB Cluster
+ * DatabaseSecret secret = DatabaseSecret.Builder.create(this, "AuroraSecret")
+ * .username("clusteradmin")
+ * .build();
+ * // The VPC to place the cluster in
+ * Vpc vpc = new Vpc(this, "AuroraVpc");
+ * // Create the serverless cluster, provide all values needed to customise the database.
+ * ServerlessCluster cluster = ServerlessCluster.Builder.create(this, "AuroraCluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc)
+ * .credentials(Map.of("username", "clusteradmin"))
+ * .clusterIdentifier("db-endpoint-test")
+ * .defaultDatabaseName("demos")
+ * .build();
+ * RdsDataSource rdsDS = api.addRdsDataSource("rds", cluster, secret, "demos");
+ * // Set up a resolver for an RDS query.
+ * rdsDS.createResolver("QueryGetDemosRdsResolver", BaseResolverProps.builder()
+ * .typeName("Query")
+ * .fieldName("getDemosRds")
+ * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
+ * \"statements\": [\n      \"SELECT * FROM demos\"\n    ]\n  }\n  "))
+ * .responseMappingTemplate(MappingTemplate.fromString("\n   
+ * $utils.toJson($utils.rds.toJsonObject($ctx.result)[0])\n  "))
+ * .build());
+ * // Set up a resolver for an RDS mutation.
+ * rdsDS.createResolver("MutationAddDemoRdsResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("addDemoRds")
+ * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
+ * \"statements\": [\n      \"INSERT INTO demos VALUES (:id, :version)\",\n      \"SELECT * WHERE id =
+ * :id\"\n    ],\n    \"variableMap\": {\n      \":id\": $util.toJson($util.autoId()),\n     
+ * \":version\": $util.toJson($ctx.args.version)\n    }\n  }\n  "))
+ * .responseMappingTemplate(MappingTemplate.fromString("\n   
+ * $utils.toJson($utils.rds.toJsonObject($ctx.result)[1][0])\n  "))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ServerlessClusterDsl(
   scope: Construct,

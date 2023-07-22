@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.connect.CfnUserHierarchyGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a new user hierarchy group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnUserHierarchyGroup cfnUserHierarchyGroup = CfnUserHierarchyGroup.Builder.create(this,
+ * "MyCfnUserHierarchyGroup")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .parentGroupArn("parentGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-userhierarchygroup.html)
+ */
 @CdkDslMarker
 public class CfnUserHierarchyGroupDsl(
   scope: Construct,

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * Configuration of the script to run during a bootstrap action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ScriptBootstrapActionConfigProperty scriptBootstrapActionConfigProperty =
+ * ScriptBootstrapActionConfigProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ScriptBootstrapActionConfig.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterScriptBootstrapActionConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.ScriptBootstrapActionConfigProperty.Builder =

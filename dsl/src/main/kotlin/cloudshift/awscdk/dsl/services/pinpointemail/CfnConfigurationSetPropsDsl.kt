@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetProps
 
+/**
+ * Properties for defining a `CfnConfigurationSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * CfnConfigurationSetProps cfnConfigurationSetProps = CfnConfigurationSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .build())
+ * .reputationOptions(ReputationOptionsProperty.builder()
+ * .reputationMetricsEnabled(false)
+ * .build())
+ * .sendingOptions(SendingOptionsProperty.builder()
+ * .sendingEnabled(false)
+ * .build())
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trackingOptions(TrackingOptionsProperty.builder()
+ * .customRedirectDomain("customRedirectDomain")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpointemail-configurationset.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetPropsDsl {
   private val cdkBuilder: CfnConfigurationSetProps.Builder = CfnConfigurationSetProps.builder()

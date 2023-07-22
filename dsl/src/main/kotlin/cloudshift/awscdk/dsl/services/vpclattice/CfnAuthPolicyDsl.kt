@@ -10,6 +10,26 @@ import kotlin.Unit
 import software.amazon.awscdk.services.vpclattice.CfnAuthPolicy
 import software.constructs.Construct
 
+/**
+ * Creates or updates the auth policy.
+ *
+ * The policy string in JSON must not contain newlines or blank lines.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * Object policy;
+ * CfnAuthPolicy cfnAuthPolicy = CfnAuthPolicy.Builder.create(this, "MyCfnAuthPolicy")
+ * .policy(policy)
+ * .resourceIdentifier("resourceIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html)
+ */
 @CdkDslMarker
 public class CfnAuthPolicyDsl(
   scope: Construct,

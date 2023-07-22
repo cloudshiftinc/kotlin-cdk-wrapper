@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS
 
+/**
+ * Represents the mount options that are available for DataSync to access a Network File System
+ * (NFS) location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * MountOptionsProperty mountOptionsProperty = MountOptionsProperty.builder()
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxopenzfs-mountoptions.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxOpenZFSMountOptionsPropertyDsl {
   private val cdkBuilder: CfnLocationFSxOpenZFS.MountOptionsProperty.Builder =

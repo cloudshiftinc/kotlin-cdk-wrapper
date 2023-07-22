@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * Specifies a retention rule for cross-Region snapshot copies created by snapshot or event-based
+ * policies, or cross-Region AMI copies created by AMI policies.
+ *
+ * After the retention period expires, the cross-Region copy is deleted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * CrossRegionCopyRetainRuleProperty crossRegionCopyRetainRuleProperty =
+ * CrossRegionCopyRetainRuleProperty.builder()
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-crossregioncopyretainrule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyCrossRegionCopyRetainRulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.CrossRegionCopyRetainRuleProperty.Builder =

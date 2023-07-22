@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps
 
+/**
+ * Properties for defining a `CfnCollection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnCollectionProps cfnCollectionProps = CfnCollectionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-collection.html)
+ */
 @CdkDslMarker
 public class CfnCollectionPropsDsl {
   private val cdkBuilder: CfnCollectionProps.Builder = CfnCollectionProps.builder()

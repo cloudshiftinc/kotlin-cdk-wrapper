@@ -12,6 +12,19 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidget
 
+/**
+ * A dashboard widget that displays the most recent value for every metric.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(SingleValueWidget.Builder.create()
+ * .metrics(List.of())
+ * .period(Duration.minutes(15))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SingleValueWidgetDsl {
   private val cdkBuilder: SingleValueWidget.Builder = SingleValueWidget.Builder.create()

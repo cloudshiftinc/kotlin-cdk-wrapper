@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.CommonCloudFormationStackSetOptions
 
+/**
+ * Options in common between both StackSet actions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * CommonCloudFormationStackSetOptions commonCloudFormationStackSetOptions =
+ * CommonCloudFormationStackSetOptions.builder()
+ * .failureTolerancePercentage(123)
+ * .maxAccountConcurrencyPercentage(123)
+ * .stackSetRegion("stackSetRegion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonCloudFormationStackSetOptionsDsl {
   private val cdkBuilder: CommonCloudFormationStackSetOptions.Builder =

@@ -14,6 +14,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivschat.CfnRoom
 import software.amazon.awscdk.services.ivschat.CfnRoomProps
 
+/**
+ * Properties for defining a `CfnRoom`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * CfnRoomProps cfnRoomProps = CfnRoomProps.builder()
+ * .loggingConfigurationIdentifiers(List.of("loggingConfigurationIdentifiers"))
+ * .maximumMessageLength(123)
+ * .maximumMessageRatePerSecond(123)
+ * .messageReviewHandler(MessageReviewHandlerProperty.builder()
+ * .fallbackResult("fallbackResult")
+ * .uri("uri")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-room.html)
+ */
 @CdkDslMarker
 public class CfnRoomPropsDsl {
   private val cdkBuilder: CfnRoomProps.Builder = CfnRoomProps.builder()

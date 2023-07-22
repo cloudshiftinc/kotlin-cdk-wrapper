@@ -12,6 +12,28 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnInternetGateway
 import software.constructs.Construct
 
+/**
+ * Allocates an internet gateway for use with a VPC.
+ *
+ * After creating the Internet gateway, you then attach it to a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnInternetGateway cfnInternetGateway = CfnInternetGateway.Builder.create(this,
+ * "MyCfnInternetGateway")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html)
+ */
 @CdkDslMarker
 public class CfnInternetGatewayDsl(
   scope: Construct,

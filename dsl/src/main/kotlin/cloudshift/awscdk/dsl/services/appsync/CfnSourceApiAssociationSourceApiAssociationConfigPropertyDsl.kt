@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnSourceApiAssociation
 
+/**
+ * Describes properties used to specify configurations related to a source API.
+ *
+ * This is a property of the `AWS:AppSync:SourceApiAssociation` type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * SourceApiAssociationConfigProperty sourceApiAssociationConfigProperty =
+ * SourceApiAssociationConfigProperty.builder()
+ * .mergeType("mergeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-sourceapiassociation-sourceapiassociationconfig.html)
+ */
 @CdkDslMarker
 public class CfnSourceApiAssociationSourceApiAssociationConfigPropertyDsl {
   private val cdkBuilder: CfnSourceApiAssociation.SourceApiAssociationConfigProperty.Builder =

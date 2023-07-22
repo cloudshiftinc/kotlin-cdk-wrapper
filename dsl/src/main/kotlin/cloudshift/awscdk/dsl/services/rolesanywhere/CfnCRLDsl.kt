@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnCRL
 import software.constructs.Construct
 
+/**
+ * Imports the certificate revocation list (CRL).
+ *
+ * A CRL is a list of certificates that have been revoked by the issuing certificate Authority (CA).
+ * IAM Roles Anywhere validates against the CRL before issuing credentials.
+ *
+ * *Required permissions:* `rolesanywhere:ImportCrl` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * CfnCRL cfnCRL = CfnCRL.Builder.create(this, "MyCfnCRL")
+ * .crlData("crlData")
+ * .name("name")
+ * // the properties below are optional
+ * .enabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .trustAnchorArn("trustAnchorArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-crl.html)
+ */
 @CdkDslMarker
 public class CfnCRLDsl(
   scope: Construct,

@@ -7,6 +7,31 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 
+/**
+ * Configuration of requested EBS block device associated with the instance group with count of
+ * volumes that are associated to every instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * EbsBlockDeviceConfigProperty ebsBlockDeviceConfigProperty =
+ * EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancegroupconfig-ebsblockdeviceconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceGroupConfigEbsBlockDeviceConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.Builder =

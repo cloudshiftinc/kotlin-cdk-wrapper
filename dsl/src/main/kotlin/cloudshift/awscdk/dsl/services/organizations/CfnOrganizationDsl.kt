@@ -7,6 +7,53 @@ import kotlin.String
 import software.amazon.awscdk.services.organizations.CfnOrganization
 import software.constructs.Construct
 
+/**
+ * Creates an AWS organization.
+ *
+ * The account whose user is calling the
+ * [`CreateOrganization`](https://docs.aws.amazon.com/organizations/latest/APIReference/API_CreateOrganization.html)
+ * operation automatically becomes the [management
+ * account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#account)
+ * of the new organization.
+ *
+ * This operation must be called using credentials from the account that is to become the new
+ * organization's management account. The principal must also have the [relevant IAM
+ * permissions](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_create.html)
+ * .
+ *
+ *
+ * * If you delete an organization, you can't recover it. If you created any policies inside of the
+ * organization, they're also deleted and you can't recover them.
+ * * You can delete an organization only after you remove all member accounts from the organization.
+ * If you created some of your member accounts using AWS Organizations , you might be blocked from
+ * removing those accounts. You can remove a member account only if it has all the information that's
+ * required to operate as a standalone AWS account. For more information about how to provide that
+ * information and then remove the account, see [Leaving an organization as a member
+ * account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#orgs_manage_accounts_leave-as-member)
+ * in the *AWS Organizations User Guide* .
+ * * If you closed a member account before you remove it from the organization, it enters a
+ * 'suspended' state for a period of time and you can't remove the account from the organization until
+ * it is finally closed. This can take up to 90 days and can prevent you from deleting the organization
+ * until all member accounts are completely closed.
+ *
+ * For more information, see [Deleting the organization by removing the management
+ * account](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_delete.html) in
+ * the *AWS Organizations User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * CfnOrganization cfnOrganization = CfnOrganization.Builder.create(this, "MyCfnOrganization")
+ * .featureSet("featureSet")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organization.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationDsl(
   scope: Construct,

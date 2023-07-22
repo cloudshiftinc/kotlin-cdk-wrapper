@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.emr.CfnStudioSessionMapping
 import software.constructs.Construct
 
+/**
+ * The `AWS::EMR::StudioSessionMapping` resource is an Amazon EMR resource type that maps a user or
+ * group to the Amazon EMR Studio specified by `StudioId` , and applies a session policy that defines
+ * Studio permissions for that user or group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStudioSessionMapping cfnStudioSessionMapping = CfnStudioSessionMapping.Builder.create(this,
+ * "MyCfnStudioSessionMapping")
+ * .identityName("identityName")
+ * .identityType("identityType")
+ * .sessionPolicyArn("sessionPolicyArn")
+ * .studioId("studioId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studiosessionmapping.html)
+ */
 @CdkDslMarker
 public class CfnStudioSessionMappingDsl(
   scope: Construct,

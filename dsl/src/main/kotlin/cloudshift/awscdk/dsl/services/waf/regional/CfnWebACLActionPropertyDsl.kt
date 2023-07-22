@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.waf.regional.CfnWebACL
 
+/**
+ * Specifies the action AWS WAF takes when a web request matches or doesn't match all rule
+ * conditions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-action.html)
+ */
 @CdkDslMarker
 public class CfnWebACLActionPropertyDsl {
   private val cdkBuilder: CfnWebACL.ActionProperty.Builder = CfnWebACL.ActionProperty.builder()

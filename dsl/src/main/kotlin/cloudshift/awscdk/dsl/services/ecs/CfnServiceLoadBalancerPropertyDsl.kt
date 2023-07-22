@@ -7,6 +7,38 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `LoadBalancer` property specifies details on a load balancer that is used with a service.
+ *
+ * If the service is using the `CODE_DEPLOY` deployment controller, the service is required to use
+ * either an Application Load Balancer or Network Load Balancer. When you are creating an AWS
+ * CodeDeploy deployment group, you specify two target groups (referred to as a `targetGroupPair` ).
+ * Each target group binds to a separate task set in the deployment. The load balancer can also have up
+ * to two listeners, a required listener for production traffic and an optional listener that allows
+ * you to test new revisions of the service before routing production traffic to it.
+ *
+ * Services with tasks that use the `awsvpc` network mode (for example, those with the Fargate
+ * launch type) only support Application Load Balancers and Network Load Balancers. Classic Load
+ * Balancers are not supported. Also, when you create any target groups for these services, you must
+ * choose `ip` as the target type, not `instance` . Tasks that use the `awsvpc` network mode are
+ * associated with an elastic network interface, not an Amazon EC2 instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LoadBalancerProperty loadBalancerProperty = LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnServiceLoadBalancerPropertyDsl {
   private val cdkBuilder: CfnService.LoadBalancerProperty.Builder =

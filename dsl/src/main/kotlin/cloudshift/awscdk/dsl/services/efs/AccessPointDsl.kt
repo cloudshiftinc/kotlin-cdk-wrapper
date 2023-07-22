@@ -11,6 +11,21 @@ import software.amazon.awscdk.services.efs.IFileSystem
 import software.amazon.awscdk.services.efs.PosixUser
 import software.constructs.Construct
 
+/**
+ * Represents the AccessPoint.
+ *
+ * Example:
+ *
+ * ```
+ * AccessPoint.fromAccessPointAttributes(this, "ap", AccessPointAttributes.builder()
+ * .accessPointId("fsap-1293c4d9832fo0912")
+ * .fileSystem(FileSystem.fromFileSystemAttributes(this, "efs", FileSystemAttributes.builder()
+ * .fileSystemId("fs-099d3e2f")
+ * .securityGroup(SecurityGroup.fromSecurityGroupId(this, "sg", "sg-51530134"))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AccessPointDsl(
   scope: Construct,

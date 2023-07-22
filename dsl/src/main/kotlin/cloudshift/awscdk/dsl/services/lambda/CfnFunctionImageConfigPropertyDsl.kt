@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.CfnFunction
 
+/**
+ * Configuration values that override the container image Dockerfile settings.
+ *
+ * For more information, see [Container image
+ * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * ImageConfigProperty imageConfigProperty = ImageConfigProperty.builder()
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entryPoint"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionImageConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.ImageConfigProperty.Builder =

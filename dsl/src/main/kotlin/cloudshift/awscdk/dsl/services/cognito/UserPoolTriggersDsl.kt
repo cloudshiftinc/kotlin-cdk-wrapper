@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.cognito.UserPoolTriggers
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Triggers for a user pool.
+ *
+ * Example:
+ *
+ * ```
+ * Function authChallengeFn = Function.Builder.create(this, "authChallengeFn")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
+ * .build();
+ * UserPool userpool = UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .lambdaTriggers(UserPoolTriggers.builder()
+ * .createAuthChallenge(authChallengeFn)
+ * .build())
+ * .build();
+ * userpool.addTrigger(UserPoolOperation.USER_MIGRATION, Function.Builder.create(this,
+ * "userMigrationFn")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-identity-pools-working-with-aws-lambda-triggers.html)
+ */
 @CdkDslMarker
 public class UserPoolTriggersDsl {
   private val cdkBuilder: UserPoolTriggers.Builder = UserPoolTriggers.builder()

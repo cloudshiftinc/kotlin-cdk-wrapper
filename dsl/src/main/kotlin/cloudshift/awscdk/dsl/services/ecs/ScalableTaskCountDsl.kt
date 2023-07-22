@@ -10,6 +10,36 @@ import software.amazon.awscdk.services.ecs.ScalableTaskCount
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * The scalable attribute representing task count.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .build();
+ * ScalableTaskCount scalableTarget =
+ * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
+ * .minCapacity(1)
+ * .maxCapacity(20)
+ * .build());
+ * scalableTarget.scaleOnCpuUtilization("CpuScaling", CpuUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * scalableTarget.scaleOnMemoryUtilization("MemoryScaling", MemoryUtilizationScalingProps.builder()
+ * .targetUtilizationPercent(50)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ScalableTaskCountDsl(
   scope: Construct,

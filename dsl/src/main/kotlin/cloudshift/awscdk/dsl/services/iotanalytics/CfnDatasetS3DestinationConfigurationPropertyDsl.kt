@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * Configuration information for delivery of dataset contents to Amazon Simple Storage Service
+ * (Amazon S3).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
+ * S3DestinationConfigurationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .glueConfiguration(GlueConfigurationProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-s3destinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDatasetS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataset.S3DestinationConfigurationProperty.Builder =

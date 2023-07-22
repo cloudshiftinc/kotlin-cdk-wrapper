@@ -11,6 +11,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codestarnotifications.CfnNotificationRuleProps
 
+/**
+ * Properties for defining a `CfnNotificationRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * CfnNotificationRuleProps cfnNotificationRuleProps = CfnNotificationRuleProps.builder()
+ * .detailType("detailType")
+ * .eventTypeIds(List.of("eventTypeIds"))
+ * .name("name")
+ * .resource("resource")
+ * .targets(List.of(TargetProperty.builder()
+ * .targetAddress("targetAddress")
+ * .targetType("targetType")
+ * .build()))
+ * // the properties below are optional
+ * .createdBy("createdBy")
+ * .eventTypeId("eventTypeId")
+ * .status("status")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .targetAddress("targetAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html)
+ */
 @CdkDslMarker
 public class CfnNotificationRulePropsDsl {
   private val cdkBuilder: CfnNotificationRuleProps.Builder = CfnNotificationRuleProps.builder()

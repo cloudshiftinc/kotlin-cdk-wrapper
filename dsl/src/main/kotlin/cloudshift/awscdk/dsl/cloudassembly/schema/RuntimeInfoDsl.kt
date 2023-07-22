@@ -7,6 +7,21 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
 
+/**
+ * Information about the application's runtime components.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * RuntimeInfo runtimeInfo = RuntimeInfo.builder()
+ * .libraries(Map.of(
+ * "librariesKey", "libraries"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RuntimeInfoDsl {
   private val cdkBuilder: RuntimeInfo.Builder = RuntimeInfo.builder()

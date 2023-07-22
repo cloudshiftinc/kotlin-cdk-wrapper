@@ -16,6 +16,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kms.CfnKeyProps
 
+/**
+ * Properties for defining a `CfnKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * Object keyPolicy;
+ * CfnKeyProps cfnKeyProps = CfnKeyProps.builder()
+ * .keyPolicy(keyPolicy)
+ * // the properties below are optional
+ * .description("description")
+ * .enabled(false)
+ * .enableKeyRotation(false)
+ * .keySpec("keySpec")
+ * .keyUsage("keyUsage")
+ * .multiRegion(false)
+ * .pendingWindowInDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html)
+ */
 @CdkDslMarker
 public class CfnKeyPropsDsl {
   private val cdkBuilder: CfnKeyProps.Builder = CfnKeyProps.builder()

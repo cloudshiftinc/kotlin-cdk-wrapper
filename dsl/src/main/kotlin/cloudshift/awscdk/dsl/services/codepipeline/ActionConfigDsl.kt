@@ -8,6 +8,19 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.codepipeline.ActionConfig
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * Object configuration;
+ * ActionConfig actionConfig = ActionConfig.builder()
+ * .configuration(configuration)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ActionConfigDsl {
   private val cdkBuilder: ActionConfig.Builder = ActionConfig.builder()

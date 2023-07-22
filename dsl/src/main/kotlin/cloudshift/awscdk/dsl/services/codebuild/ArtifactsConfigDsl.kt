@@ -7,6 +7,31 @@ import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.ArtifactsConfig
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * The type returned from `IArtifacts#bind`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ArtifactsConfig artifactsConfig = ArtifactsConfig.builder()
+ * .artifactsProperty(ArtifactsProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .artifactIdentifier("artifactIdentifier")
+ * .encryptionDisabled(false)
+ * .location("location")
+ * .name("name")
+ * .namespaceType("namespaceType")
+ * .overrideArtifactName(false)
+ * .packaging("packaging")
+ * .path("path")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ArtifactsConfigDsl {
   private val cdkBuilder: ArtifactsConfig.Builder = ArtifactsConfig.builder()

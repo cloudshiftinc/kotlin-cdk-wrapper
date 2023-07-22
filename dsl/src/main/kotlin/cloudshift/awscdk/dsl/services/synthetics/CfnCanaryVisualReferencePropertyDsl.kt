@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.synthetics.CfnCanary
 
+/**
+ * Defines the screenshots to use as the baseline for comparisons during visual monitoring
+ * comparisons during future runs of this canary.
+ *
+ * If you omit this parameter, no changes are made to any baseline screenshots that the canary might
+ * be using already.
+ *
+ * Visual monitoring is supported only on canaries running the *syn-puppeteer-node-3.2* runtime or
+ * later. For more information, see [Visual
+ * monitoring](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Library_SyntheticsLogger_VisualTesting.html)
+ * and [Visual monitoring
+ * blueprint](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Blueprints_VisualTesting.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * VisualReferenceProperty visualReferenceProperty = VisualReferenceProperty.builder()
+ * .baseCanaryRunId("baseCanaryRunId")
+ * // the properties below are optional
+ * .baseScreenshots(List.of(BaseScreenshotProperty.builder()
+ * .screenshotName("screenshotName")
+ * // the properties below are optional
+ * .ignoreCoordinates(List.of("ignoreCoordinates"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-synthetics-canary-visualreference.html)
+ */
 @CdkDslMarker
 public class CfnCanaryVisualReferencePropertyDsl {
   private val cdkBuilder: CfnCanary.VisualReferenceProperty.Builder =

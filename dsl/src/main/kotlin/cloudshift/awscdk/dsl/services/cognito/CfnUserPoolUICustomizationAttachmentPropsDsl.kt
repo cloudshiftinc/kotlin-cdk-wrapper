@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps
 
+/**
+ * Properties for defining a `CfnUserPoolUICustomizationAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolUICustomizationAttachmentProps cfnUserPoolUICustomizationAttachmentProps =
+ * CfnUserPoolUICustomizationAttachmentProps.builder()
+ * .clientId("clientId")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .css("css")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUICustomizationAttachmentPropsDsl {
   private val cdkBuilder: CfnUserPoolUICustomizationAttachmentProps.Builder =

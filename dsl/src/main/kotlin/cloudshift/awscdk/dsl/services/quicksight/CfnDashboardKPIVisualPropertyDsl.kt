@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A key performance indicator (KPI).
+ *
+ * For more information, see [Using
+ * KPIs](https://docs.aws.amazon.com/quicksight/latest/user/kpi.html) in the *Amazon QuickSight User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-kpivisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardKPIVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.KPIVisualProperty.Builder =

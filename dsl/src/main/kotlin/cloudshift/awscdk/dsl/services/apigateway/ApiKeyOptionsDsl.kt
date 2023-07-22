@@ -10,6 +10,19 @@ import software.amazon.awscdk.services.apigateway.CorsOptions
 import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.MethodOptions
 
+/**
+ * The options for creating an API Key.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * IApiKey key = api.addApiKey("ApiKey", ApiKeyOptions.builder()
+ * .apiKeyName("myApiKey1")
+ * .value("MyApiKeyThatIsAtLeast20Characters")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApiKeyOptionsDsl {
   private val cdkBuilder: ApiKeyOptions.Builder = ApiKeyOptions.builder()

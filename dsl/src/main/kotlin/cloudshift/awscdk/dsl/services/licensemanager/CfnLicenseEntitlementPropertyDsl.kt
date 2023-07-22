@@ -9,6 +9,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.licensemanager.CfnLicense
 
+/**
+ * Describes a resource entitled for use with a license.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.licensemanager.*;
+ * EntitlementProperty entitlementProperty = EntitlementProperty.builder()
+ * .name("name")
+ * .unit("unit")
+ * // the properties below are optional
+ * .allowCheckIn(false)
+ * .maxCount(123)
+ * .overage(false)
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-licensemanager-license-entitlement.html)
+ */
 @CdkDslMarker
 public class CfnLicenseEntitlementPropertyDsl {
   private val cdkBuilder: CfnLicense.EntitlementProperty.Builder =

@@ -7,6 +7,25 @@ import software.amazon.awscdk.services.ecs.ContainerDefinition
 import software.amazon.awscdk.services.ecs.ContainerDependency
 import software.amazon.awscdk.services.ecs.ContainerDependencyCondition
 
+/**
+ * The details of a dependency on another container in the task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ContainerDefinition containerDefinition;
+ * ContainerDependency containerDependency = ContainerDependency.builder()
+ * .container(containerDefinition)
+ * // the properties below are optional
+ * .condition(ContainerDependencyCondition.START)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDependency.html)
+ */
 @CdkDslMarker
 public class ContainerDependencyDsl {
   private val cdkBuilder: ContainerDependency.Builder = ContainerDependency.builder()

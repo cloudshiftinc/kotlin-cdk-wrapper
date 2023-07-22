@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnSchemaProps
 
+/**
+ * Properties for defining a `CfnSchema`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * CfnSchemaProps cfnSchemaProps = CfnSchemaProps.builder()
+ * .name("name")
+ * .schema("schema")
+ * // the properties below are optional
+ * .domain("domain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-schema.html)
+ */
 @CdkDslMarker
 public class CfnSchemaPropsDsl {
   private val cdkBuilder: CfnSchemaProps.Builder = CfnSchemaProps.builder()

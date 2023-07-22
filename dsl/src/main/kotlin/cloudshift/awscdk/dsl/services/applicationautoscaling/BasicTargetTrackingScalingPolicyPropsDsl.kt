@@ -11,6 +11,34 @@ import software.amazon.awscdk.services.applicationautoscaling.BasicTargetTrackin
 import software.amazon.awscdk.services.applicationautoscaling.PredefinedMetric
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Properties for a Target Tracking policy that include the metric but exclude the target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Code code;
+ * Function handler = Function.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.PYTHON_3_7)
+ * .handler("index.handler")
+ * .code(code)
+ * .reservedConcurrentExecutions(2)
+ * .build();
+ * Version fnVer = handler.getCurrentVersion();
+ * ScalableTarget target = ScalableTarget.Builder.create(this, "ScalableTarget")
+ * .serviceNamespace(ServiceNamespace.LAMBDA)
+ * .maxCapacity(100)
+ * .minCapacity(10)
+ * .resourceId(String.format("function:%s:%s", handler.getFunctionName(), fnVer.getVersion()))
+ * .scalableDimension("lambda:function:ProvisionedConcurrency")
+ * .build();
+ * target.scaleToTrackMetric("PceTracking", BasicTargetTrackingScalingPolicyProps.builder()
+ * .targetValue(0.9)
+ * .predefinedMetric(PredefinedMetric.LAMBDA_PROVISIONED_CONCURRENCY_UTILIZATION)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BasicTargetTrackingScalingPolicyPropsDsl {
   private val cdkBuilder: BasicTargetTrackingScalingPolicyProps.Builder =

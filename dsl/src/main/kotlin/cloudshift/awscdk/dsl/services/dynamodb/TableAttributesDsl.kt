@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dynamodb.TableAttributes
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Reference to a dynamodb table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * TableAttributes tableAttributes = TableAttributes.builder()
+ * .encryptionKey(key)
+ * .globalIndexes(List.of("globalIndexes"))
+ * .grantIndexPermissions(false)
+ * .localIndexes(List.of("localIndexes"))
+ * .tableArn("tableArn")
+ * .tableName("tableName")
+ * .tableStreamArn("tableStreamArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TableAttributesDsl {
   private val cdkBuilder: TableAttributes.Builder = TableAttributes.builder()

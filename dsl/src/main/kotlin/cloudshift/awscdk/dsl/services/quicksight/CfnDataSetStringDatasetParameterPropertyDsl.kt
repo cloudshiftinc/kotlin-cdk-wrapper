@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A parameter created in the dataset of string data type.</p>.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * StringDatasetParameterProperty stringDatasetParameterProperty =
+ * StringDatasetParameterProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .valueType("valueType")
+ * // the properties below are optional
+ * .defaultValues(StringDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of("staticValues"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-stringdatasetparameter.html)
+ */
 @CdkDslMarker
 public class CfnDataSetStringDatasetParameterPropertyDsl {
   private val cdkBuilder: CfnDataSet.StringDatasetParameterProperty.Builder =

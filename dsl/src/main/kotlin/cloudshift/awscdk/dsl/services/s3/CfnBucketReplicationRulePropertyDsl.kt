@@ -8,6 +8,76 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies which Amazon S3 objects to replicate and where to store the replicas.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ReplicationRuleProperty replicationRuleProperty = ReplicationRuleProperty.builder()
+ * .destination(ReplicationDestinationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .accessControlTranslation(AccessControlTranslationProperty.builder()
+ * .owner("owner")
+ * .build())
+ * .account("account")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .replicaKmsKeyId("replicaKmsKeyId")
+ * .build())
+ * .metrics(MetricsProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .eventThreshold(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .replicationTime(ReplicationTimeProperty.builder()
+ * .status("status")
+ * .time(ReplicationTimeValueProperty.builder()
+ * .minutes(123)
+ * .build())
+ * .build())
+ * .storageClass("storageClass")
+ * .build())
+ * .status("status")
+ * // the properties below are optional
+ * .deleteMarkerReplication(DeleteMarkerReplicationProperty.builder()
+ * .status("status")
+ * .build())
+ * .filter(ReplicationRuleFilterProperty.builder()
+ * .and(ReplicationRuleAndOperatorProperty.builder()
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .prefix("prefix")
+ * .tagFilter(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build())
+ * .build())
+ * .id("id")
+ * .prefix("prefix")
+ * .priority(123)
+ * .sourceSelectionCriteria(SourceSelectionCriteriaProperty.builder()
+ * .replicaModifications(ReplicaModificationsProperty.builder()
+ * .status("status")
+ * .build())
+ * .sseKmsEncryptedObjects(SseKmsEncryptedObjectsProperty.builder()
+ * .status("status")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationrule.html)
+ */
 @CdkDslMarker
 public class CfnBucketReplicationRulePropertyDsl {
   private val cdkBuilder: CfnBucket.ReplicationRuleProperty.Builder =

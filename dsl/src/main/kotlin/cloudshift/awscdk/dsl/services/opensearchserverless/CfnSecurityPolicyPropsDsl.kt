@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicyProps
 
+/**
+ * Properties for defining a `CfnSecurityPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnSecurityPolicyProps cfnSecurityPolicyProps = CfnSecurityPolicyProps.builder()
+ * .name("name")
+ * .policy("policy")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securitypolicy.html)
+ */
 @CdkDslMarker
 public class CfnSecurityPolicyPropsDsl {
   private val cdkBuilder: CfnSecurityPolicyProps.Builder = CfnSecurityPolicyProps.builder()

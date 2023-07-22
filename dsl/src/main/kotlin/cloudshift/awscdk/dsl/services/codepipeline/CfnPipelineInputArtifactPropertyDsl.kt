@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Represents information about an artifact to be worked on, such as a test or build artifact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * InputArtifactProperty inputArtifactProperty = InputArtifactProperty.builder()
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-inputartifact.html)
+ */
 @CdkDslMarker
 public class CfnPipelineInputArtifactPropertyDsl {
   private val cdkBuilder: CfnPipeline.InputArtifactProperty.Builder =

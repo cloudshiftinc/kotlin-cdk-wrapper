@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `PlacementStrategy` property specifies the task placement strategy for a task or service.
+ *
+ * For more information, see [Task Placement
+ * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .field("field")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-placementstrategy.html)
+ */
 @CdkDslMarker
 public class CfnServicePlacementStrategyPropertyDsl {
   private val cdkBuilder: CfnService.PlacementStrategyProperty.Builder =

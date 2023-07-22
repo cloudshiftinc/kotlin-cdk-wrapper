@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnSourceCredential
 import software.constructs.Construct
 
+/**
+ * Information about the credentials for a GitHub, GitHub Enterprise, or Bitbucket repository.
+ *
+ * We strongly recommend that you use AWS Secrets Manager to store your credentials. If you use
+ * Secrets Manager , you must have secrets in your secrets manager. For more information, see [Using
+ * Dynamic References to Specify Template
+ * Values](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html#dynamic-references-secretsmanager)
+ * .
+ *
+ *
+ * For security purposes, do not use plain text in your AWS CloudFormation template to store your
+ * credentials.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * CfnSourceCredential cfnSourceCredential = CfnSourceCredential.Builder.create(this,
+ * "MyCfnSourceCredential")
+ * .authType("authType")
+ * .serverType("serverType")
+ * .token("token")
+ * // the properties below are optional
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html)
+ */
 @CdkDslMarker
 public class CfnSourceCredentialDsl(
   scope: Construct,

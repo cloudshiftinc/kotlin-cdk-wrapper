@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnTrigger
 
+/**
+ * Defines a condition under which a trigger fires.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * ConditionProperty conditionProperty = ConditionProperty.builder()
+ * .crawlerName("crawlerName")
+ * .crawlState("crawlState")
+ * .jobName("jobName")
+ * .logicalOperator("logicalOperator")
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html)
+ */
 @CdkDslMarker
 public class CfnTriggerConditionPropertyDsl {
   private val cdkBuilder: CfnTrigger.ConditionProperty.Builder =

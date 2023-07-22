@@ -8,6 +8,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * The configuration of an `OfflineStore` .
+ *
+ * Provide an `OfflineStoreConfig` in a request to `CreateFeatureGroup` to create an `OfflineStore`
+ * .
+ *
+ * To encrypt an `OfflineStore` using at rest data encryption, specify AWS Key Management Service
+ * (KMS) key ID, or `KMSKeyId` , in `S3StorageConfig` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * OfflineStoreConfigProperty offlineStoreConfigProperty = OfflineStoreConfigProperty.builder()
+ * .s3StorageConfig(S3StorageConfigProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * // the properties below are optional
+ * .dataCatalogConfig(DataCatalogConfigProperty.builder()
+ * .catalog("catalog")
+ * .database("database")
+ * .tableName("tableName")
+ * .build())
+ * .disableGlueTableCreation(false)
+ * .tableFormat("tableFormat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-offlinestoreconfig.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupOfflineStoreConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.OfflineStoreConfigProperty.Builder =

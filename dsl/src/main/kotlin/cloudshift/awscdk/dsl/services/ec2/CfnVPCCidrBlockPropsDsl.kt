@@ -9,6 +9,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCCidrBlockProps
 
+/**
+ * Properties for defining a `CfnVPCCidrBlock`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * public void associateSubnetWithV6Cidr(Vpc vpc, Number count, ISubnet subnet) {
+ * CfnSubnet cfnSubnet = (CfnSubnet)subnet.getNode().getDefaultChild();
+ * cfnSubnet.getIpv6CidrBlock() = Fn.select(count, Fn.cidr(Fn.select(0, vpc.getVpcIpv6CidrBlocks()),
+ * 256, (128 - 64).toString()));
+ * cfnSubnet.getAssignIpv6AddressOnCreation() = true;
+ * }
+ * // make an ipv6 cidr
+ * CfnVPCCidrBlock ipv6cidr = CfnVPCCidrBlock.Builder.create(this, "CIDR6")
+ * .vpcId(vpc.getVpcId())
+ * .amazonProvidedIpv6CidrBlock(true)
+ * .build();
+ * // connect the ipv6 cidr to all vpc subnets
+ * Number subnetcount = 0;
+ * ISubnet[] subnets = vpc.publicSubnets.concat(vpc.getPrivateSubnets());
+ * for (Object subnet : subnets) {
+ * // Wait for the ipv6 cidr to complete
+ * subnet.node.addDependency(ipv6cidr);
+ * associateSubnetWithV6Cidr(vpc, subnetcount, subnet);
+ * subnetcount = subnetcount + 1;
+ * }
+ * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
+ * .version(KubernetesVersion.V1_27)
+ * .vpc(vpc)
+ * .ipFamily(IpFamily.IP_V6)
+ * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpccidrblock.html)
+ */
 @CdkDslMarker
 public class CfnVPCCidrBlockPropsDsl {
   private val cdkBuilder: CfnVPCCidrBlockProps.Builder = CfnVPCCidrBlockProps.builder()

@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegration
 
+/**
+ * Specifies a list of response parameters for an HTTP API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * ResponseParameterListProperty responseParameterListProperty =
+ * ResponseParameterListProperty.builder()
+ * .responseParameters(List.of(ResponseParameterProperty.builder()
+ * .destination("destination")
+ * .source("source")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameterlist.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationResponseParameterListPropertyDsl {
   private val cdkBuilder: CfnIntegration.ResponseParameterListProperty.Builder =

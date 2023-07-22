@@ -8,6 +8,42 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 
+/**
+ * Provides configuration parameters to override the default actions for extracting text from PDF
+ * documents and image files.
+ *
+ * By default, Amazon Comprehend performs the following actions to extract text from files, based on
+ * the input file type:
+ *
+ * * *Word files* - Amazon Comprehend parser extracts the text.
+ * * *Digital PDF files* - Amazon Comprehend parser extracts the text.
+ * * *Image files and scanned PDF files* - Amazon Comprehend uses the Amazon Textract
+ * `DetectDocumentText` API to extract the text.
+ *
+ * `DocumentReaderConfig` does not apply to plain text files or Word files.
+ *
+ * For image files and PDF documents, you can override these default actions using the fields listed
+ * below. For more information, see [Setting text extraction
+ * options](https://docs.aws.amazon.com/comprehend/latest/dg/idp-set-textract-options.html) in the
+ * Comprehend Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DocumentReaderConfigProperty documentReaderConfigProperty =
+ * DocumentReaderConfigProperty.builder()
+ * .documentReadAction("documentReadAction")
+ * // the properties below are optional
+ * .documentReadMode("documentReadMode")
+ * .featureTypes(List.of("featureTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentreaderconfig.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierDocumentReaderConfigPropertyDsl {
   private val cdkBuilder: CfnDocumentClassifier.DocumentReaderConfigProperty.Builder =

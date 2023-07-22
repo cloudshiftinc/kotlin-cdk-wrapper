@@ -6,6 +6,45 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies a launch template to use when launching an Amazon EC2 instance.
+ *
+ * You must specify the following:
+ *
+ * * The ID or the name of the launch template, but not both.
+ * * The version of the launch template.
+ *
+ * `LaunchTemplateSpecification` is a property of the
+ * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+ * resource.
+ *
+ * For information about creating a launch template, see
+ * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ * and [Create a launch
+ * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
+ * in the *Amazon EC2 User Guide* .
+ *
+ * For examples of launch templates, see
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * LaunchTemplateSpecificationProperty launchTemplateSpecificationProperty =
+ * LaunchTemplateSpecificationProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html)
+ */
 @CdkDslMarker
 public class CfnInstanceLaunchTemplateSpecificationPropertyDsl {
   private val cdkBuilder: CfnInstance.LaunchTemplateSpecificationProperty.Builder =

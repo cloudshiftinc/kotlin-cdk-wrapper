@@ -41,6 +41,17 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 
+/**
+ * Create a lambda function where the handler is a docker image.
+ *
+ * Example:
+ *
+ * ```
+ * DockerImageFunction.Builder.create(this, "AssetFunction")
+ * .code(DockerImageCode.fromImageAsset(join(__dirname, "docker-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageFunctionDsl(
   scope: Construct,

@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps
 import software.amazon.awscdk.services.fsx.Weekday
 
+/**
+ * Properties required for setting up a weekly maintenance time.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * LustreMaintenanceTimeProps lustreMaintenanceTimeProps = LustreMaintenanceTimeProps.builder()
+ * .day(Weekday.MONDAY)
+ * .hour(123)
+ * .minute(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LustreMaintenanceTimePropsDsl {
   private val cdkBuilder: LustreMaintenanceTimeProps.Builder = LustreMaintenanceTimeProps.builder()

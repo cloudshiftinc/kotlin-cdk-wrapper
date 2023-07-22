@@ -9,6 +9,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The container path, mount options, and size of the tmpfs mount.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * TmpfsProperty tmpfsProperty = TmpfsProperty.builder()
+ * .size(123)
+ * // the properties below are optional
+ * .containerPath("containerPath")
+ * .mountOptions(List.of("mountOptions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-tmpfs.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionTmpfsPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.TmpfsProperty.Builder =

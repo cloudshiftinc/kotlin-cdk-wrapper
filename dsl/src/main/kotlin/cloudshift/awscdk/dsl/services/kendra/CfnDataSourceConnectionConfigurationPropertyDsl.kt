@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information that's required to connect to a database.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConnectionConfigurationProperty connectionConfigurationProperty =
+ * ConnectionConfigurationProperty.builder()
+ * .databaseHost("databaseHost")
+ * .databaseName("databaseName")
+ * .databasePort(123)
+ * .secretArn("secretArn")
+ * .tableName("tableName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-connectionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConnectionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConnectionConfigurationProperty.Builder =

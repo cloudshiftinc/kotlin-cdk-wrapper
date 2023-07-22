@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnEventStream
 import software.constructs.Construct
 
+/**
+ * Creates a new event stream for an application or updates the settings of an existing event stream
+ * for an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnEventStream cfnEventStream = CfnEventStream.Builder.create(this, "MyCfnEventStream")
+ * .applicationId("applicationId")
+ * .destinationStreamArn("destinationStreamArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-eventstream.html)
+ */
 @CdkDslMarker
 public class CfnEventStreamDsl(
   scope: Construct,

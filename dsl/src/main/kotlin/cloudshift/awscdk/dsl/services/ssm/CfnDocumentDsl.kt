@@ -15,6 +15,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnDocument
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSM::Document` resource creates a Systems Manager (SSM) document in AWS Systems Manager
+ * .
+ *
+ * This document defines the actions that Systems Manager performs on your AWS resources.
+ *
+ *
+ * This resource does not support CloudFormation drift detection.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object content;
+ * CfnDocument cfnDocument = CfnDocument.Builder.create(this, "MyCfnDocument")
+ * .content(content)
+ * // the properties below are optional
+ * .attachments(List.of(AttachmentsSourceProperty.builder()
+ * .key("key")
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .documentFormat("documentFormat")
+ * .documentType("documentType")
+ * .name("name")
+ * .requires(List.of(DocumentRequiresProperty.builder()
+ * .name("name")
+ * .version("version")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targetType("targetType")
+ * .updateMethod("updateMethod")
+ * .versionName("versionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html)
+ */
 @CdkDslMarker
 public class CfnDocumentDsl(
   scope: Construct,

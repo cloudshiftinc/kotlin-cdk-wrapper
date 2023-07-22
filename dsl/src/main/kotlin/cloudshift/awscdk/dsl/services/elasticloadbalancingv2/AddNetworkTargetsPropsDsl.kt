@@ -15,6 +15,25 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck
 import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget
 import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 
+/**
+ * Properties for adding new network targets to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
+ * NetworkListener listener = lb.addListener("listener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddNetworkTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddNetworkTargetsPropsDsl {
   private val cdkBuilder: AddNetworkTargetsProps.Builder = AddNetworkTargetsProps.builder()

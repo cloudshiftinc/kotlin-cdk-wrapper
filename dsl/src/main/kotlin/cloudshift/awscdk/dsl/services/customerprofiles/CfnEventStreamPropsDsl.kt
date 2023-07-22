@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.customerprofiles.CfnEventStreamProps
 
+/**
+ * Properties for defining a `CfnEventStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * CfnEventStreamProps cfnEventStreamProps = CfnEventStreamProps.builder()
+ * .domainName("domainName")
+ * .eventStreamName("eventStreamName")
+ * .uri("uri")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-eventstream.html)
+ */
 @CdkDslMarker
 public class CfnEventStreamPropsDsl {
   private val cdkBuilder: CfnEventStreamProps.Builder = CfnEventStreamProps.builder()

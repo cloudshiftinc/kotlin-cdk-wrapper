@@ -11,6 +11,58 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.Parallel
 import software.constructs.Construct
 
+/**
+ * Define a Parallel state in the state machine.
+ *
+ * A Parallel state can be used to run one or more state machines at the same
+ * time.
+ *
+ * The Result of a Parallel state is an array of the results of its substatemachines.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.Stack;
+ * import software.constructs.Construct;
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * public class MyJobProps {
+ * private String jobFlavor;
+ * public String getJobFlavor() {
+ * return this.jobFlavor;
+ * }
+ * public MyJobProps jobFlavor(String jobFlavor) {
+ * this.jobFlavor = jobFlavor;
+ * return this;
+ * }
+ * }
+ * public class MyJob extends StateMachineFragment {
+ * public final State startState;
+ * public final INextable[] endStates;
+ * public MyJob(Construct parent, String id, MyJobProps props) {
+ * super(parent, id);
+ * Choice choice = new Choice(this, "Choice").when(Condition.stringEquals("$.branch", "left"), new
+ * Pass(this, "Left Branch")).when(Condition.stringEquals("$.branch", "right"), new Pass(this, "Right
+ * Branch"));
+ * // ...
+ * this.startState = choice;
+ * this.endStates = choice.afterwards().getEndStates();
+ * }
+ * }
+ * public class MyStack extends Stack {
+ * public MyStack(Construct scope, String id) {
+ * super(scope, id);
+ * // Do 3 different variants of MyJob in parallel
+ * Parallel parallel = new Parallel(this, "All jobs").branch(new MyJob(this, "Quick", new
+ * MyJobProps().jobFlavor("quick")).prefixStates()).branch(new MyJob(this, "Medium", new
+ * MyJobProps().jobFlavor("medium")).prefixStates()).branch(new MyJob(this, "Slow", new
+ * MyJobProps().jobFlavor("slow")).prefixStates());
+ * StateMachine.Builder.create(this, "MyStateMachine")
+ * .definition(parallel)
+ * .build();
+ * }
+ * }
+ * ```
+ */
 @CdkDslMarker
 public class ParallelDsl(
   scope: Construct,

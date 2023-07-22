@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.evidently.CfnSegmentProps
 
+/**
+ * Properties for defining a `CfnSegment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnSegmentProps cfnSegmentProps = CfnSegmentProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .pattern("pattern")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-segment.html)
+ */
 @CdkDslMarker
 public class CfnSegmentPropsDsl {
   private val cdkBuilder: CfnSegmentProps.Builder = CfnSegmentProps.builder()

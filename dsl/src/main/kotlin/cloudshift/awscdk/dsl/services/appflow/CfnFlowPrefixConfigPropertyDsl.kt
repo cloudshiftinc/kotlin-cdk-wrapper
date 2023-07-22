@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * Specifies elements that Amazon AppFlow includes in the file and folder names in the flow
+ * destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * PrefixConfigProperty prefixConfigProperty = PrefixConfigProperty.builder()
+ * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+ * .prefixFormat("prefixFormat")
+ * .prefixType("prefixType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-prefixconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlowPrefixConfigPropertyDsl {
   private val cdkBuilder: CfnFlow.PrefixConfigProperty.Builder =

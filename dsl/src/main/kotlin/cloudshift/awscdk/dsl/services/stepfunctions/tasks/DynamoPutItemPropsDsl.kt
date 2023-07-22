@@ -21,6 +21,22 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionM
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 
+/**
+ * Properties for DynamoPutItem Task.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoPutItem.Builder.create(this, "PutItem")
+ * .item(Map.of(
+ * "MessageId", DynamoAttributeValue.fromString("message-007"),
+ * "Text", DynamoAttributeValue.fromString(JsonPath.stringAt("$.bar")),
+ * "TotalCount", DynamoAttributeValue.fromNumber(10)))
+ * .table(myTable)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoPutItemPropsDsl {
   private val cdkBuilder: DynamoPutItemProps.Builder = DynamoPutItemProps.builder()

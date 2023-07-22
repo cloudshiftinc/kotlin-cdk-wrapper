@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cxapi.Environment
 
+/**
+ * Models an AWS execution environment, for use within the CDK toolkit.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * Environment environment = Environment.builder()
+ * .account("account")
+ * .name("name")
+ * .region("region")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnvironmentDsl {
   private val cdkBuilder: Environment.Builder = Environment.builder()

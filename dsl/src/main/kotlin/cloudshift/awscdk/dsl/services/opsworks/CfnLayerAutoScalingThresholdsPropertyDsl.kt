@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
+/**
+ * Describes a load-based auto scaling upscaling or downscaling threshold configuration, which
+ * specifies when AWS OpsWorks Stacks starts or stops load-based instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * AutoScalingThresholdsProperty autoScalingThresholdsProperty =
+ * AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-autoscalingthresholds.html)
+ */
 @CdkDslMarker
 public class CfnLayerAutoScalingThresholdsPropertyDsl {
   private val cdkBuilder: CfnLayer.AutoScalingThresholdsProperty.Builder =

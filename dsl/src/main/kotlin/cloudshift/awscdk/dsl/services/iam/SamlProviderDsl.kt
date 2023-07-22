@@ -8,6 +8,20 @@ import software.amazon.awscdk.services.iam.SamlMetadataDocument
 import software.amazon.awscdk.services.iam.SamlProvider
 import software.constructs.Construct
 
+/**
+ * A SAML provider.
+ *
+ * Example:
+ *
+ * ```
+ * SamlProvider provider = SamlProvider.Builder.create(this, "Provider")
+ * .metadataDocument(SamlMetadataDocument.fromFile("/path/to/saml-metadata-document.xml"))
+ * .build();
+ * Role.Builder.create(this, "Role")
+ * .assumedBy(new SamlConsolePrincipal(provider))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SamlProviderDsl(
   scope: Construct,

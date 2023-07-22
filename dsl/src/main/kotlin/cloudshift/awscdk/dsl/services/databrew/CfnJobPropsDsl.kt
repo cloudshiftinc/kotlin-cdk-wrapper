@@ -15,6 +15,152 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 import software.amazon.awscdk.services.databrew.CfnJobProps
 
+/**
+ * Properties for defining a `CfnJob`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnJobProps cfnJobProps = CfnJobProps.builder()
+ * .name("name")
+ * .roleArn("roleArn")
+ * .type("type")
+ * // the properties below are optional
+ * .databaseOutputs(List.of(DatabaseOutputProperty.builder()
+ * .databaseOptions(DatabaseTableOutputOptionsProperty.builder()
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * .build())
+ * .glueConnectionName("glueConnectionName")
+ * // the properties below are optional
+ * .databaseOutputMode("databaseOutputMode")
+ * .build()))
+ * .dataCatalogOutputs(List.of(DataCatalogOutputProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .catalogId("catalogId")
+ * .databaseOptions(DatabaseTableOutputOptionsProperty.builder()
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * .build())
+ * .overwrite(false)
+ * .s3Options(S3TableOutputOptionsProperty.builder()
+ * .location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * .build())
+ * .build()))
+ * .datasetName("datasetName")
+ * .encryptionKeyArn("encryptionKeyArn")
+ * .encryptionMode("encryptionMode")
+ * .jobSample(JobSampleProperty.builder()
+ * .mode("mode")
+ * .size(123)
+ * .build())
+ * .logSubscription("logSubscription")
+ * .maxCapacity(123)
+ * .maxRetries(123)
+ * .outputLocation(OutputLocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * .outputs(List.of(OutputProperty.builder()
+ * .location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .compressionFormat("compressionFormat")
+ * .format("format")
+ * .formatOptions(OutputFormatOptionsProperty.builder()
+ * .csv(CsvOutputOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .build())
+ * .build())
+ * .maxOutputFiles(123)
+ * .overwrite(false)
+ * .partitionColumns(List.of("partitionColumns"))
+ * .build()))
+ * .profileConfiguration(ProfileConfigurationProperty.builder()
+ * .columnStatisticsConfigurations(List.of(ColumnStatisticsConfigurationProperty.builder()
+ * .statistics(StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .selectors(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .build()))
+ * .datasetStatisticsConfiguration(StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build())
+ * .entityDetectorConfiguration(EntityDetectorConfigurationProperty.builder()
+ * .entityTypes(List.of("entityTypes"))
+ * // the properties below are optional
+ * .allowedStatistics(AllowedStatisticsProperty.builder()
+ * .statistics(List.of("statistics"))
+ * .build())
+ * .build())
+ * .profileColumns(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .build())
+ * .projectName("projectName")
+ * .recipe(RecipeProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeout(123)
+ * .validationConfigurations(List.of(ValidationConfigurationProperty.builder()
+ * .rulesetArn("rulesetArn")
+ * // the properties below are optional
+ * .validationMode("validationMode")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-job.html)
+ */
 @CdkDslMarker
 public class CfnJobPropsDsl {
   private val cdkBuilder: CfnJobProps.Builder = CfnJobProps.builder()

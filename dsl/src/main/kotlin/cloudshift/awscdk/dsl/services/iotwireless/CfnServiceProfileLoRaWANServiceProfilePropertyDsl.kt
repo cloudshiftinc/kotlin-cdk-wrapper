@@ -9,6 +9,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnServiceProfile
 
+/**
+ * LoRaWANServiceProfile object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * LoRaWANServiceProfileProperty loRaWANServiceProfileProperty =
+ * LoRaWANServiceProfileProperty.builder()
+ * .addGwMetadata(false)
+ * .channelMask("channelMask")
+ * .devStatusReqFreq(123)
+ * .dlBucketSize(123)
+ * .dlRate(123)
+ * .dlRatePolicy("dlRatePolicy")
+ * .drMax(123)
+ * .drMin(123)
+ * .hrAllowed(false)
+ * .minGwDiversity(123)
+ * .nwkGeoLoc(false)
+ * .prAllowed(false)
+ * .raAllowed(false)
+ * .reportDevStatusBattery(false)
+ * .reportDevStatusMargin(false)
+ * .targetPer(123)
+ * .ulBucketSize(123)
+ * .ulRate(123)
+ * .ulRatePolicy("ulRatePolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-serviceprofile-lorawanserviceprofile.html)
+ */
 @CdkDslMarker
 public class CfnServiceProfileLoRaWANServiceProfilePropertyDsl {
   private val cdkBuilder: CfnServiceProfile.LoRaWANServiceProfileProperty.Builder =

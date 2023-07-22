@@ -16,6 +16,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworkscm.CfnServer
 import software.constructs.Construct
 
+/**
+ * The `AWS::OpsWorksCM::Server` resource creates an AWS OpsWorks for Chef Automate or OpsWorks for
+ * Puppet Enterprise configuration management server.
+ *
+ * For more information, see [Create a Chef Automate Server in AWS
+ * CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opscm-create-server-cfn.html)
+ * or [Create a Puppet Enterprise Master in AWS
+ * CloudFormation](https://docs.aws.amazon.com/opsworks/latest/userguide/opspup-create-server-cfn.html)
+ * in the *AWS OpsWorks User Guide* , and
+ * [CreateServer](https://docs.aws.amazon.com/opsworks-cm/latest/APIReference/API_CreateServer.html) in
+ * the *AWS OpsWorks CM API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworkscm.*;
+ * CfnServer cfnServer = CfnServer.Builder.create(this, "MyCfnServer")
+ * .instanceProfileArn("instanceProfileArn")
+ * .instanceType("instanceType")
+ * .serviceRoleArn("serviceRoleArn")
+ * // the properties below are optional
+ * .associatePublicIpAddress(false)
+ * .backupId("backupId")
+ * .backupRetentionCount(123)
+ * .customCertificate("customCertificate")
+ * .customDomain("customDomain")
+ * .customPrivateKey("customPrivateKey")
+ * .disableAutomatedBackup(false)
+ * .engine("engine")
+ * .engineAttributes(List.of(EngineAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .engineModel("engineModel")
+ * .engineVersion("engineVersion")
+ * .keyPair("keyPair")
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .serverName("serverName")
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworkscm-server.html)
+ */
 @CdkDslMarker
 public class CfnServerDsl(
   scope: Construct,

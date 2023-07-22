@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps
 
+/**
+ * Properties of CloudFront OriginAccessIdentity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginAccessIdentityProps originAccessIdentityProps = OriginAccessIdentityProps.builder()
+ * .comment("comment")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginAccessIdentityPropsDsl {
   private val cdkBuilder: OriginAccessIdentityProps.Builder = OriginAccessIdentityProps.builder()

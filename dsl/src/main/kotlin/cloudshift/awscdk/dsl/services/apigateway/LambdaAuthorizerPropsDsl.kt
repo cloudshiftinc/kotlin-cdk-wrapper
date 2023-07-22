@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.apigateway.LambdaAuthorizerProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Base properties for all lambda authorizers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function function_;
+ * Role role;
+ * LambdaAuthorizerProps lambdaAuthorizerProps = LambdaAuthorizerProps.builder()
+ * .handler(function_)
+ * // the properties below are optional
+ * .assumeRole(role)
+ * .authorizerName("authorizerName")
+ * .resultsCacheTtl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaAuthorizerPropsDsl {
   private val cdkBuilder: LambdaAuthorizerProps.Builder = LambdaAuthorizerProps.builder()

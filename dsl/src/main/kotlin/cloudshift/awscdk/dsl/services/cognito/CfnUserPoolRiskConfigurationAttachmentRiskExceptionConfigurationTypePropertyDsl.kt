@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
 
+/**
+ * The type of the configuration to override the risk decision.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * RiskExceptionConfigurationTypeProperty riskExceptionConfigurationTypeProperty =
+ * RiskExceptionConfigurationTypeProperty.builder()
+ * .blockedIpRangeList(List.of("blockedIpRangeList"))
+ * .skippedIpRangeList(List.of("skippedIpRangeList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-riskexceptionconfigurationtype.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentRiskExceptionConfigurationTypePropertyDsl {
   private val cdkBuilder:

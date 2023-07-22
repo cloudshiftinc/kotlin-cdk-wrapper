@@ -9,6 +9,64 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
 import software.constructs.Construct
 
+/**
+ * Sets the rotation schedule and Lambda rotation function for a secret. For more information, see
+ * [How rotation
+ * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
+ *
+ * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+ * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+ * .
+ *
+ * For the rotation function, you have two options:
+ *
+ * * You can create a new rotation function based on one of the [Secrets Manager rotation function
+ * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
+ * by using `HostedRotationLambda` .
+ * * You can choose an existing rotation function by using `RotationLambdaARN` .
+ *
+ * For database secrets, if you define both the secret and the database or service in the AWS
+ * CloudFormation template, then you need to define the
+ * [AWS::SecretsManager::SecretTargetAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html)
+ * resource to populate the secret with the connection details of the database or service before you
+ * attempt to configure rotation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * CfnRotationSchedule cfnRotationSchedule = CfnRotationSchedule.Builder.create(this,
+ * "MyCfnRotationSchedule")
+ * .secretId("secretId")
+ * // the properties below are optional
+ * .hostedRotationLambda(HostedRotationLambdaProperty.builder()
+ * .rotationType("rotationType")
+ * // the properties below are optional
+ * .excludeCharacters("excludeCharacters")
+ * .kmsKeyArn("kmsKeyArn")
+ * .masterSecretArn("masterSecretArn")
+ * .masterSecretKmsKeyArn("masterSecretKmsKeyArn")
+ * .rotationLambdaName("rotationLambdaName")
+ * .runtime("runtime")
+ * .superuserSecretArn("superuserSecretArn")
+ * .superuserSecretKmsKeyArn("superuserSecretKmsKeyArn")
+ * .vpcSecurityGroupIds("vpcSecurityGroupIds")
+ * .vpcSubnetIds("vpcSubnetIds")
+ * .build())
+ * .rotateImmediatelyOnUpdate(false)
+ * .rotationLambdaArn("rotationLambdaArn")
+ * .rotationRules(RotationRulesProperty.builder()
+ * .automaticallyAfterDays(123)
+ * .duration("duration")
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
+ */
 @CdkDslMarker
 public class CfnRotationScheduleDsl(
   scope: Construct,

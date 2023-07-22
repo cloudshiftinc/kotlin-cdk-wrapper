@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 
+/**
+ * An object that defines the tags (keys and values) that you want to associate with the
+ * configuration set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * TagsProperty tagsProperty = TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-tags.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetTagsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.TagsProperty.Builder =

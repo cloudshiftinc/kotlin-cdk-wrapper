@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.appsync.BackedDataSourceProps
 import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * properties for an AppSync datasource backed by a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * BackedDataSourceProps backedDataSourceProps = BackedDataSourceProps.builder()
+ * .api(graphqlApi)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackedDataSourcePropsDsl {
   private val cdkBuilder: BackedDataSourceProps.Builder = BackedDataSourceProps.builder()

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.UserPoolSESOptions
 
+/**
+ * Configuration for Cognito sending emails via Amazon SES.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * .email(UserPoolEmail.withSES(UserPoolSESOptions.builder()
+ * .fromEmail("noreply&#64;myawesomeapp.com")
+ * .fromName("Awesome App")
+ * .replyTo("support&#64;myawesomeapp.com")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolSESOptionsDsl {
   private val cdkBuilder: UserPoolSESOptions.Builder = UserPoolSESOptions.builder()

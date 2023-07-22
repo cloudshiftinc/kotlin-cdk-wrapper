@@ -11,6 +11,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDataQualityRuleset
 import software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps
 
+/**
+ * Properties for defining a `CfnDataQualityRuleset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object tags;
+ * CfnDataQualityRulesetProps cfnDataQualityRulesetProps = CfnDataQualityRulesetProps.builder()
+ * .clientToken("clientToken")
+ * .description("description")
+ * .name("name")
+ * .ruleset("ruleset")
+ * .tags(tags)
+ * .targetTable(DataQualityTargetTableProperty.builder()
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-dataqualityruleset.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityRulesetPropsDsl {
   private val cdkBuilder: CfnDataQualityRulesetProps.Builder = CfnDataQualityRulesetProps.builder()

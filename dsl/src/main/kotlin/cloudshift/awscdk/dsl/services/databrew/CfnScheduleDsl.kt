@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.databrew.CfnSchedule
 import software.constructs.Construct
 
+/**
+ * Specifies a new schedule for one or more AWS Glue DataBrew jobs.
+ *
+ * Jobs can be run at a specific date and time, or at regular intervals.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnSchedule cfnSchedule = CfnSchedule.Builder.create(this, "MyCfnSchedule")
+ * .cronExpression("cronExpression")
+ * .name("name")
+ * // the properties below are optional
+ * .jobNames(List.of("jobNames"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-schedule.html)
+ */
 @CdkDslMarker
 public class CfnScheduleDsl(
   scope: Construct,

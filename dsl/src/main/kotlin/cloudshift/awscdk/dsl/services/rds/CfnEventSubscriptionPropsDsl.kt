@@ -13,6 +13,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnEventSubscriptionProps
 
+/**
+ * Properties for defining a `CfnEventSubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnEventSubscriptionProps cfnEventSubscriptionProps = CfnEventSubscriptionProps.builder()
+ * .snsTopicArn("snsTopicArn")
+ * // the properties below are optional
+ * .enabled(false)
+ * .eventCategories(List.of("eventCategories"))
+ * .sourceIds(List.of("sourceIds"))
+ * .sourceType("sourceType")
+ * .subscriptionName("subscriptionName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html)
+ */
 @CdkDslMarker
 public class CfnEventSubscriptionPropsDsl {
   private val cdkBuilder: CfnEventSubscriptionProps.Builder = CfnEventSubscriptionProps.builder()

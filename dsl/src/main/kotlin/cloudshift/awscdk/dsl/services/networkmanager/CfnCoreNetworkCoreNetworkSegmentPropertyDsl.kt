@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.networkmanager.CfnCoreNetwork
 
+/**
+ * Describes a core network segment, which are dedicated routes.
+ *
+ * Only attachments within this segment can communicate with each other.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CoreNetworkSegmentProperty coreNetworkSegmentProperty = CoreNetworkSegmentProperty.builder()
+ * .edgeLocations(List.of("edgeLocations"))
+ * .name("name")
+ * .sharedSegments(List.of("sharedSegments"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-corenetwork-corenetworksegment.html)
+ */
 @CdkDslMarker
 public class CfnCoreNetworkCoreNetworkSegmentPropertyDsl {
   private val cdkBuilder: CfnCoreNetwork.CoreNetworkSegmentProperty.Builder =

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dax.CfnSubnetGroupProps
 
+/**
+ * Properties for defining a `CfnSubnetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dax.*;
+ * CfnSubnetGroupProps cfnSubnetGroupProps = CfnSubnetGroupProps.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .description("description")
+ * .subnetGroupName("subnetGroupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnSubnetGroupPropsDsl {
   private val cdkBuilder: CfnSubnetGroupProps.Builder = CfnSubnetGroupProps.builder()

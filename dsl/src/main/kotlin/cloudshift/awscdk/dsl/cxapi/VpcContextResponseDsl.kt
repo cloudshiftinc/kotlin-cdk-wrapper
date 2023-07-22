@@ -10,6 +10,46 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.cxapi.VpcContextResponse
 import software.amazon.awscdk.cxapi.VpcSubnetGroup
 
+/**
+ * Properties of a discovered VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * VpcContextResponse vpcContextResponse = VpcContextResponse.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .isolatedSubnetIds(List.of("isolatedSubnetIds"))
+ * .isolatedSubnetNames(List.of("isolatedSubnetNames"))
+ * .isolatedSubnetRouteTableIds(List.of("isolatedSubnetRouteTableIds"))
+ * .ownerAccountId("ownerAccountId")
+ * .privateSubnetIds(List.of("privateSubnetIds"))
+ * .privateSubnetNames(List.of("privateSubnetNames"))
+ * .privateSubnetRouteTableIds(List.of("privateSubnetRouteTableIds"))
+ * .publicSubnetIds(List.of("publicSubnetIds"))
+ * .publicSubnetNames(List.of("publicSubnetNames"))
+ * .publicSubnetRouteTableIds(List.of("publicSubnetRouteTableIds"))
+ * .region("region")
+ * .subnetGroups(List.of(VpcSubnetGroup.builder()
+ * .name("name")
+ * .subnets(List.of(VpcSubnet.builder()
+ * .availabilityZone("availabilityZone")
+ * .routeTableId("routeTableId")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .cidr("cidr")
+ * .build()))
+ * .type(VpcSubnetGroupType.PUBLIC)
+ * .build()))
+ * .vpcCidrBlock("vpcCidrBlock")
+ * .vpnGatewayId("vpnGatewayId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcContextResponseDsl {
   private val cdkBuilder: VpcContextResponse.Builder = VpcContextResponse.builder()

@@ -14,6 +14,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnRoute
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::Route` resource creates a route for an API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object requestModels;
+ * Object requestParameters;
+ * CfnRoute cfnRoute = CfnRoute.Builder.create(this, "MyCfnRoute")
+ * .apiId("apiId")
+ * .routeKey("routeKey")
+ * // the properties below are optional
+ * .apiKeyRequired(false)
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .modelSelectionExpression("modelSelectionExpression")
+ * .operationName("operationName")
+ * .requestModels(requestModels)
+ * .requestParameters(requestParameters)
+ * .routeResponseSelectionExpression("routeResponseSelectionExpression")
+ * .target("target")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-route.html)
+ */
 @CdkDslMarker
 public class CfnRouteDsl(
   scope: Construct,

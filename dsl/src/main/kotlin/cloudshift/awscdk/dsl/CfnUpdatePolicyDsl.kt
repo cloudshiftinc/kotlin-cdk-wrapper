@@ -11,6 +11,47 @@ import software.amazon.awscdk.CfnAutoScalingScheduledAction
 import software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate
 import software.amazon.awscdk.CfnUpdatePolicy
 
+/**
+ * Use the UpdatePolicy attribute to specify how AWS CloudFormation handles updates to the
+ * AWS::AutoScaling::AutoScalingGroup resource.
+ *
+ * AWS CloudFormation invokes one of three update policies depending on the type of change you make
+ * or whether a
+ * scheduled action is associated with the Auto Scaling group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnUpdatePolicy cfnUpdatePolicy = CfnUpdatePolicy.builder()
+ * .autoScalingReplacingUpdate(CfnAutoScalingReplacingUpdate.builder()
+ * .willReplace(false)
+ * .build())
+ * .autoScalingRollingUpdate(CfnAutoScalingRollingUpdate.builder()
+ * .maxBatchSize(123)
+ * .minInstancesInService(123)
+ * .minSuccessfulInstancesPercent(123)
+ * .pauseTime("pauseTime")
+ * .suspendProcesses(List.of("suspendProcesses"))
+ * .waitOnResourceSignals(false)
+ * .build())
+ * .autoScalingScheduledAction(CfnAutoScalingScheduledAction.builder()
+ * .ignoreUnmodifiedGroupSizeProperties(false)
+ * .build())
+ * .codeDeployLambdaAliasUpdate(CfnCodeDeployLambdaAliasUpdate.builder()
+ * .applicationName("applicationName")
+ * .deploymentGroupName("deploymentGroupName")
+ * // the properties below are optional
+ * .afterAllowTrafficHook("afterAllowTrafficHook")
+ * .beforeAllowTrafficHook("beforeAllowTrafficHook")
+ * .build())
+ * .enableVersionUpgrade(false)
+ * .useOnlineResharding(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnUpdatePolicyDsl {
   private val cdkBuilder: CfnUpdatePolicy.Builder = CfnUpdatePolicy.builder()

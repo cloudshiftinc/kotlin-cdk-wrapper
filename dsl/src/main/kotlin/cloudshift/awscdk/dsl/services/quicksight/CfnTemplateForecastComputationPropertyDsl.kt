@@ -8,6 +8,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The forecast computation configuration.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-forecastcomputation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateForecastComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ForecastComputationProperty.Builder =

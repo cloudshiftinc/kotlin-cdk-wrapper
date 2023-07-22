@@ -11,6 +11,56 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
 
+/**
+ * `InstanceType` config is a subproperty of `InstanceFleetConfig` .
+ *
+ * An instance type configuration specifies each instance type in an instance fleet. The
+ * configuration determines the EC2 instances Amazon EMR attempts to provision to fulfill On-Demand and
+ * Spot target capacities.
+ *
+ *
+ * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+ * excluding 5.0.x versions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ConfigurationProperty configurationProperty_;
+ * InstanceTypeConfigProperty instanceTypeConfigProperty = InstanceTypeConfigProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .bidPrice("bidPrice")
+ * .bidPriceAsPercentageOfOnDemandPrice(123)
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurationProperties(Map.of(
+ * "configurationPropertiesKey", "configurationProperties"))
+ * .configurations(List.of(configurationProperty_))
+ * .build()))
+ * .customAmiId("customAmiId")
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .weightedCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancefleetconfig-instancetypeconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceFleetConfigInstanceTypeConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceFleetConfig.InstanceTypeConfigProperty.Builder =

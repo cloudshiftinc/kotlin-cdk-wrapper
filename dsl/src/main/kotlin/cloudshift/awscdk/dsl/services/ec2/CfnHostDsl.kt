@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnHost
 import software.constructs.Construct
 
+/**
+ * Allocates a fully dedicated physical server for launching EC2 instances.
+ *
+ * Because the host is fully dedicated for your use, it can help you address compliance requirements
+ * and reduce costs by allowing you to use your existing server-bound software licenses. For more
+ * information, see [Dedicated
+ * Hosts](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/dedicated-hosts-overview.html) in the
+ * *Amazon EC2 User Guide for Linux Instances* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnHost cfnHost = CfnHost.Builder.create(this, "MyCfnHost")
+ * .availabilityZone("availabilityZone")
+ * // the properties below are optional
+ * .autoPlacement("autoPlacement")
+ * .hostMaintenance("hostMaintenance")
+ * .hostRecovery("hostRecovery")
+ * .instanceFamily("instanceFamily")
+ * .instanceType("instanceType")
+ * .outpostArn("outpostArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-host.html)
+ */
 @CdkDslMarker
 public class CfnHostDsl(
   scope: Construct,

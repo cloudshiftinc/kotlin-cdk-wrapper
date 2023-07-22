@@ -10,6 +10,34 @@ import software.amazon.awscdk.services.efs.Acl
 import software.amazon.awscdk.services.efs.IFileSystem
 import software.amazon.awscdk.services.efs.PosixUser
 
+/**
+ * Properties for the AccessPoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * FileSystem fileSystem;
+ * AccessPointProps accessPointProps = AccessPointProps.builder()
+ * .fileSystem(fileSystem)
+ * // the properties below are optional
+ * .createAcl(Acl.builder()
+ * .ownerGid("ownerGid")
+ * .ownerUid("ownerUid")
+ * .permissions("permissions")
+ * .build())
+ * .path("path")
+ * .posixUser(PosixUser.builder()
+ * .gid("gid")
+ * .uid("uid")
+ * // the properties below are optional
+ * .secondaryGids(List.of("secondaryGids"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AccessPointPropsDsl {
   private val cdkBuilder: AccessPointProps.Builder = AccessPointProps.builder()

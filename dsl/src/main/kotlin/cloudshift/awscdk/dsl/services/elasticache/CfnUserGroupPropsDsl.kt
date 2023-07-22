@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.elasticache.CfnUserGroupProps
 
+/**
+ * Properties for defining a `CfnUserGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnUserGroupProps cfnUserGroupProps = CfnUserGroupProps.builder()
+ * .engine("engine")
+ * .userGroupId("userGroupId")
+ * .userIds(List.of("userIds"))
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)
+ */
 @CdkDslMarker
 public class CfnUserGroupPropsDsl {
   private val cdkBuilder: CfnUserGroupProps.Builder = CfnUserGroupProps.builder()

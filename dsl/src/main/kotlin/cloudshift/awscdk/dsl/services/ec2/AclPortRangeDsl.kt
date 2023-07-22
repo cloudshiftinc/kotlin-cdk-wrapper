@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.AclPortRange
 
+/**
+ * Properties to create PortRange.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclPortRange aclPortRange = AclPortRange.builder()
+ * .from(123)
+ * .to(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AclPortRangeDsl {
   private val cdkBuilder: AclPortRange.Builder = AclPortRange.builder()

@@ -11,6 +11,73 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplication
 import software.constructs.Construct
 
+/**
+ * The `AWS::KinesisAnalytics::Application` resource creates an Amazon Kinesis Data Analytics
+ * application.
+ *
+ * For more information, see the [Amazon Kinesis Data Analytics Developer
+ * Guide](https://docs.aws.amazon.com//kinesisanalytics/latest/dev/what-is.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .inputs(List.of(InputProperty.builder()
+ * .inputSchema(InputSchemaProperty.builder()
+ * .recordColumns(List.of(RecordColumnProperty.builder()
+ * .name("name")
+ * .sqlType("sqlType")
+ * // the properties below are optional
+ * .mapping("mapping")
+ * .build()))
+ * .recordFormat(RecordFormatProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * // the properties below are optional
+ * .mappingParameters(MappingParametersProperty.builder()
+ * .csvMappingParameters(CSVMappingParametersProperty.builder()
+ * .recordColumnDelimiter("recordColumnDelimiter")
+ * .recordRowDelimiter("recordRowDelimiter")
+ * .build())
+ * .jsonMappingParameters(JSONMappingParametersProperty.builder()
+ * .recordRowPath("recordRowPath")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .recordEncoding("recordEncoding")
+ * .build())
+ * .namePrefix("namePrefix")
+ * // the properties below are optional
+ * .inputParallelism(InputParallelismProperty.builder()
+ * .count(123)
+ * .build())
+ * .inputProcessingConfiguration(InputProcessingConfigurationProperty.builder()
+ * .inputLambdaProcessor(InputLambdaProcessorProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .build())
+ * .kinesisFirehoseInput(KinesisFirehoseInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .kinesisStreamsInput(KinesisStreamsInputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .applicationCode("applicationCode")
+ * .applicationDescription("applicationDescription")
+ * .applicationName("applicationName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

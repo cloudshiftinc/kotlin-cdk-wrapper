@@ -7,6 +7,30 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.route53.HostedZoneProviderProps
 
+/**
+ * Zone properties for looking up the Hosted Zone.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.*;
+ * String recordName = "www";
+ * String domainName = "example.com";
+ * Bucket bucketWebsite = Bucket.Builder.create(this, "BucketWebsite")
+ * .bucketName(List.of(recordName, domainName).join(".")) // www.example.com
+ * .publicReadAccess(true)
+ * .websiteIndexDocument("index.html")
+ * .build();
+ * IHostedZone zone = HostedZone.fromLookup(this, "Zone",
+ * HostedZoneProviderProps.builder().domainName(domainName).build()); // example.com
+ * // example.com
+ * ARecord.Builder.create(this, "AliasRecord")
+ * .zone(zone)
+ * .recordName(recordName) // www
+ * .target(RecordTarget.fromAlias(new BucketWebsiteTarget(bucketWebsite)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HostedZoneProviderPropsDsl {
   private val cdkBuilder: HostedZoneProviderProps.Builder = HostedZoneProviderProps.builder()

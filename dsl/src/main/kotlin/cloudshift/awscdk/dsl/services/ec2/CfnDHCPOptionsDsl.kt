@@ -13,6 +13,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnDHCPOptions
 import software.constructs.Construct
 
+/**
+ * Specifies a set of DHCP options for your VPC.
+ *
+ * You must specify at least one of the following properties: `DomainNameServers` ,
+ * `NetbiosNameServers` , `NtpServers` . If you specify `NetbiosNameServers` , you must specify
+ * `NetbiosNodeType` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnDHCPOptions cfnDHCPOptions = CfnDHCPOptions.Builder.create(this, "MyCfnDHCPOptions")
+ * .domainName("domainName")
+ * .domainNameServers(List.of("domainNameServers"))
+ * .netbiosNameServers(List.of("netbiosNameServers"))
+ * .netbiosNodeType(123)
+ * .ntpServers(List.of("ntpServers"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html)
+ */
 @CdkDslMarker
 public class CfnDHCPOptionsDsl(
   scope: Construct,

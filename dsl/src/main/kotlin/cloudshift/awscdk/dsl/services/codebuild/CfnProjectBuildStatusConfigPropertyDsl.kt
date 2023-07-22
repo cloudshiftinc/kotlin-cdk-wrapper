@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * Contains information that defines how the AWS CodeBuild build project reports the build status to
+ * the source provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * BuildStatusConfigProperty buildStatusConfigProperty = BuildStatusConfigProperty.builder()
+ * .context("context")
+ * .targetUrl("targetUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-buildstatusconfig.html)
+ */
 @CdkDslMarker
 public class CfnProjectBuildStatusConfigPropertyDsl {
   private val cdkBuilder: CfnProject.BuildStatusConfigProperty.Builder =

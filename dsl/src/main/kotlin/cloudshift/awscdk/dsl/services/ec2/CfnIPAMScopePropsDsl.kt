@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnIPAMScopeProps
 
+/**
+ * Properties for defining a `CfnIPAMScope`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMScopeProps cfnIPAMScopeProps = CfnIPAMScopeProps.builder()
+ * .ipamId("ipamId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html)
+ */
 @CdkDslMarker
 public class CfnIPAMScopePropsDsl {
   private val cdkBuilder: CfnIPAMScopeProps.Builder = CfnIPAMScopeProps.builder()

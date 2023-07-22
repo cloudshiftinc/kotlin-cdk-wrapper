@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The field well configuration of a sankey diagram.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sankeydiagramfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateSankeyDiagramFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.SankeyDiagramFieldWellsProperty.Builder =

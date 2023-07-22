@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroupProps
 
+/**
+ * Properties for defining a `CfnEndpointGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnEndpointGroupProps cfnEndpointGroupProps = CfnEndpointGroupProps.builder()
+ * .endpointGroupRegion("endpointGroupRegion")
+ * .listenerArn("listenerArn")
+ * // the properties below are optional
+ * .endpointConfigurations(List.of(EndpointConfigurationProperty.builder()
+ * .endpointId("endpointId")
+ * // the properties below are optional
+ * .clientIpPreservationEnabled(false)
+ * .weight(123)
+ * .build()))
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckPath("healthCheckPath")
+ * .healthCheckPort(123)
+ * .healthCheckProtocol("healthCheckProtocol")
+ * .portOverrides(List.of(PortOverrideProperty.builder()
+ * .endpointPort(123)
+ * .listenerPort(123)
+ * .build()))
+ * .thresholdCount(123)
+ * .trafficDialPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-endpointgroup.html)
+ */
 @CdkDslMarker
 public class CfnEndpointGroupPropsDsl {
   private val cdkBuilder: CfnEndpointGroupProps.Builder = CfnEndpointGroupProps.builder()

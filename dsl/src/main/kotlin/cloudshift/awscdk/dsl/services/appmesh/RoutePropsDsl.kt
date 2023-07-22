@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.appmesh.IVirtualRouter
 import software.amazon.awscdk.services.appmesh.RouteProps
 import software.amazon.awscdk.services.appmesh.RouteSpec
 
+/**
+ * Properties to define new Routes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * Mesh mesh;
+ * RouteSpec routeSpec;
+ * VirtualRouter virtualRouter;
+ * RouteProps routeProps = RouteProps.builder()
+ * .mesh(mesh)
+ * .routeSpec(routeSpec)
+ * .virtualRouter(virtualRouter)
+ * // the properties below are optional
+ * .routeName("routeName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RoutePropsDsl {
   private val cdkBuilder: RouteProps.Builder = RouteProps.builder()

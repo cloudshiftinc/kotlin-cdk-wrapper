@@ -15,6 +15,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnFleet
 import software.amazon.awscdk.services.appstream.CfnFleetProps
 
+/**
+ * Properties for defining a `CfnFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * CfnFleet fleet = CfnFleet.Builder.create(this, "Fleet")
+ * .instanceType("stream.standard.small")
+ * .name("Fleet")
+ * .computeCapacity(ComputeCapacityProperty.builder()
+ * .desiredInstances(1)
+ * .build())
+ * .imageName("AppStream-AmazonLinux2-09-21-2022")
+ * .build();
+ * fleet.getCfnOptions().getCreationPolicy() = CfnCreationPolicy.builder()
+ * .startFleet(true)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
   private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()

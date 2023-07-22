@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.backup.CfnBackupVault
 
+/**
+ * Specifies an object containing SNS event notification properties for the target backup vault.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * NotificationObjectTypeProperty notificationObjectTypeProperty =
+ * NotificationObjectTypeProperty.builder()
+ * .backupVaultEvents(List.of("backupVaultEvents"))
+ * .snsTopicArn("snsTopicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupvault-notificationobjecttype.html)
+ */
 @CdkDslMarker
 public class CfnBackupVaultNotificationObjectTypePropertyDsl {
   private val cdkBuilder: CfnBackupVault.NotificationObjectTypeProperty.Builder =

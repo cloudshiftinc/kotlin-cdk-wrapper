@@ -34,6 +34,24 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalanc
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * A Fargate service running on an ECS cluster fronted by a network load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * NetworkLoadBalancedFargateService loadBalancedFargateService =
+ * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .cpu(512)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancedFargateServiceDsl(
   scope: Construct,

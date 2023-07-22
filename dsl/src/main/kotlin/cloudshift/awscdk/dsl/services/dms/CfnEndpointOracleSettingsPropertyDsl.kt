@@ -11,6 +11,64 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines an Oracle endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Extra connection attributes when using Oracle as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.Oracle.html#CHAP_Source.Oracle.ConnectionAttrib)
+ * and [Extra connection attributes when using Oracle as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Oracle.html#CHAP_Target.Oracle.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * OracleSettingsProperty oracleSettingsProperty = OracleSettingsProperty.builder()
+ * .accessAlternateDirectly(false)
+ * .additionalArchivedLogDestId(123)
+ * .addSupplementalLogging(false)
+ * .allowSelectNestedTables(false)
+ * .archivedLogDestId(123)
+ * .archivedLogsOnly(false)
+ * .asmPassword("asmPassword")
+ * .asmServer("asmServer")
+ * .asmUser("asmUser")
+ * .charLengthSemantics("charLengthSemantics")
+ * .directPathNoLog(false)
+ * .directPathParallelLoad(false)
+ * .enableHomogenousTablespace(false)
+ * .extraArchivedLogDestIds(List.of(123))
+ * .failTasksOnLobTruncation(false)
+ * .numberDatatypeScale(123)
+ * .oraclePathPrefix("oraclePathPrefix")
+ * .parallelAsmReadThreads(123)
+ * .readAheadBlocks(123)
+ * .readTableSpaceName(false)
+ * .replacePathPrefix(false)
+ * .retryInterval(123)
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerOracleAsmAccessRoleArn("secretsManagerOracleAsmAccessRoleArn")
+ * .secretsManagerOracleAsmSecretId("secretsManagerOracleAsmSecretId")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .securityDbEncryption("securityDbEncryption")
+ * .securityDbEncryptionName("securityDbEncryptionName")
+ * .spatialDataOptionToGeoJsonFunctionName("spatialDataOptionToGeoJsonFunctionName")
+ * .standbyDelayTime(123)
+ * .useAlternateFolderForOnline(false)
+ * .useBFile(false)
+ * .useDirectPathFullLoad(false)
+ * .useLogminerReader(false)
+ * .usePathPrefix("usePathPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-oraclesettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointOracleSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.OracleSettingsProperty.Builder =

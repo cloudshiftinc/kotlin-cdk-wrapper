@@ -7,6 +7,21 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.iam.FromRoleArnOptions
 
+/**
+ * Options allowing customizing the behavior of `Role.fromRoleArn`.
+ *
+ * Example:
+ *
+ * ```
+ * IRole role = Role.fromRoleArn(this, "Role", "arn:aws:iam::123456789012:role/MyExistingRole",
+ * FromRoleArnOptions.builder()
+ * // Set 'mutable' to 'false' to use the role as-is and prevent adding new
+ * // policies to it. The default is 'true', which means the role may be
+ * // modified as part of the deployment.
+ * .mutable(false)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FromRoleArnOptionsDsl {
   private val cdkBuilder: FromRoleArnOptions.Builder = FromRoleArnOptions.builder()

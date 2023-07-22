@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `FormButton` property specifies the configuration for a button UI element that is a part of a
+ * form.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FormButtonProperty formButtonProperty = FormButtonProperty.builder()
+ * .children("children")
+ * .excluded(false)
+ * .position(FieldPositionProperty.builder()
+ * .below("below")
+ * .fixed("fixed")
+ * .rightOf("rightOf")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formbutton.html)
+ */
 @CdkDslMarker
 public class CfnFormFormButtonPropertyDsl {
   private val cdkBuilder: CfnForm.FormButtonProperty.Builder = CfnForm.FormButtonProperty.builder()

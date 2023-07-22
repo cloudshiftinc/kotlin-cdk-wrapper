@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the Teletext captions to extract from the input.
+ *
+ * The parent of this entity is CaptionSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * TeletextSourceSettingsProperty teletextSourceSettingsProperty =
+ * TeletextSourceSettingsProperty.builder()
+ * .outputRectangle(CaptionRectangleProperty.builder()
+ * .height(123)
+ * .leftOffset(123)
+ * .topOffset(123)
+ * .width(123)
+ * .build())
+ * .pageNumber("pageNumber")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-teletextsourcesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelTeletextSourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.TeletextSourceSettingsProperty.Builder =

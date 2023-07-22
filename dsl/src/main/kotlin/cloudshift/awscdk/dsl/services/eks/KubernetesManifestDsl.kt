@@ -14,6 +14,30 @@ import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.KubernetesManifest
 import software.constructs.Construct
 
+/**
+ * Represents a manifest within the Kubernetes system.
+ *
+ * Alternatively, you can use `cluster.addManifest(resource[, resource, ...])`
+ * to define resources on this cluster.
+ *
+ * Applies/deletes the manifest using `kubectl`.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * KubernetesManifest namespace = cluster.addManifest("my-namespace", Map.of(
+ * "apiVersion", "v1",
+ * "kind", "Namespace",
+ * "metadata", Map.of("name", "my-app")));
+ * KubernetesManifest service = cluster.addManifest("my-service", Map.of(
+ * "metadata", Map.of(
+ * "name", "myservice",
+ * "namespace", "my-app"),
+ * "spec", Map.of()));
+ * service.node.addDependency(namespace);
+ * ```
+ */
 @CdkDslMarker
 public class KubernetesManifestDsl(
   scope: Construct,

@@ -8,6 +8,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
+/**
+ * Describes the options for Verified Access logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * VerifiedAccessLogsProperty verifiedAccessLogsProperty = VerifiedAccessLogsProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * .logGroup("logGroup")
+ * .build())
+ * .includeTrustContext(false)
+ * .kinesisDataFirehose(KinesisDataFirehoseProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .enabled(false)
+ * .build())
+ * .logVersion("logVersion")
+ * .s3(S3Property.builder()
+ * .bucketName("bucketName")
+ * .bucketOwner("bucketOwner")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-verifiedaccesslogs.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceVerifiedAccessLogsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.VerifiedAccessLogsProperty.Builder =

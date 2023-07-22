@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The filter that is applied to the options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SheetVisualScopingConfigurationProperty sheetVisualScopingConfigurationProperty =
+ * SheetVisualScopingConfigurationProperty.builder()
+ * .scope("scope")
+ * .sheetId("sheetId")
+ * // the properties below are optional
+ * .visualIds(List.of("visualIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sheetvisualscopingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateSheetVisualScopingConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.SheetVisualScopingConfigurationProperty.Builder =

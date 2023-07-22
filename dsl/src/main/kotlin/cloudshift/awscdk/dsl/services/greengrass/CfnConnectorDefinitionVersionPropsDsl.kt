@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnConnectorDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object parameters;
+ * CfnConnectorDefinitionVersionProps cfnConnectorDefinitionVersionProps =
+ * CfnConnectorDefinitionVersionProps.builder()
+ * .connectorDefinitionId("connectorDefinitionId")
+ * .connectors(List.of(ConnectorProperty.builder()
+ * .connectorArn("connectorArn")
+ * .id("id")
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnConnectorDefinitionVersionProps.Builder =

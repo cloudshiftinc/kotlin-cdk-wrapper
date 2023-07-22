@@ -8,6 +8,21 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
 import software.amazon.awscdk.services.logs.ILogGroup
 
+/**
+ * Information about logs built to a CloudWatch Log Group for a build project.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .logging(LoggingOptions.builder()
+ * .cloudWatch(CloudWatchLoggingOptions.builder()
+ * .logGroup(new LogGroup(this, "MyLogGroup"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudWatchLoggingOptionsDsl {
   private val cdkBuilder: CloudWatchLoggingOptions.Builder = CloudWatchLoggingOptions.builder()

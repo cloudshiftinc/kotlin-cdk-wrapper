@@ -11,6 +11,24 @@ import software.amazon.awscdk.services.ecs.ContainerDefinition
 import software.amazon.awscdk.services.servicediscovery.DnsRecordType
 import software.amazon.awscdk.services.servicediscovery.INamespace
 
+/**
+ * The options to enabling AWS Cloud Map for an Amazon ECS service.
+ *
+ * Example:
+ *
+ * ```
+ * TaskDefinition taskDefinition;
+ * Cluster cluster;
+ * Ec2Service service = Ec2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .cloudMapOptions(CloudMapOptions.builder()
+ * // Create A records - useful for AWSVPC network mode.
+ * .dnsRecordType(DnsRecordType.A)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudMapOptionsDsl {
   private val cdkBuilder: CloudMapOptions.Builder = CloudMapOptions.builder()

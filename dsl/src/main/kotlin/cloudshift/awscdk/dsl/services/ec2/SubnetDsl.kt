@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.Subnet
 import software.constructs.Construct
 
+/**
+ * Represents a new VPC subnet resource.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .taskSubnets(SubnetSelection.builder()
+ * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetDsl(
   scope: Construct,

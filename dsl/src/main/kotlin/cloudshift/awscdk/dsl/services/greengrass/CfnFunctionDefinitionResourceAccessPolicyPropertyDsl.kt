@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinition
 
+/**
+ * A list of the
+ * [resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-resourcedefinitionversion-resourceinstance.html)
+ * in the group that the function can access, with the corresponding read-only or read-write
+ * permissions. The maximum is 10 resources.
+ *
+ *
+ * This property applies only to Lambda functions that run in a Greengrass container.
+ *
+ *
+ * In an AWS CloudFormation template, `ResourceAccessPolicy` is a property of the
+ * [`Environment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-environment.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * ResourceAccessPolicyProperty resourceAccessPolicyProperty =
+ * ResourceAccessPolicyProperty.builder()
+ * .resourceId("resourceId")
+ * // the properties below are optional
+ * .permission("permission")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinition-resourceaccesspolicy.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionResourceAccessPolicyPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinition.ResourceAccessPolicyProperty.Builder =

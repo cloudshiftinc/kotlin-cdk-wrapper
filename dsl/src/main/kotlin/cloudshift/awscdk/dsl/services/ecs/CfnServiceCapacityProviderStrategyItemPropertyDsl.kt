@@ -7,6 +7,40 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The details of a capacity provider strategy.
+ *
+ * A capacity provider strategy can be set when using the `RunTask` or `CreateService` APIs or as
+ * the default capacity provider strategy for a cluster with the `CreateCluster` API.
+ *
+ * Only capacity providers that are already associated with a cluster and have an `ACTIVE` or
+ * `UPDATING` status can be used in a capacity provider strategy. The `PutClusterCapacityProviders` API
+ * is used to associate a capacity provider with a cluster.
+ *
+ * If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must
+ * already be created. New Auto Scaling group capacity providers can be created with the
+ * `CreateCapacityProvider` API operation.
+ *
+ * To use an AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity
+ * providers. The AWS Fargate capacity providers are available to all accounts and only need to be
+ * associated with a cluster to be used in a capacity provider strategy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+ * CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-capacityproviderstrategyitem.html)
+ */
 @CdkDslMarker
 public class CfnServiceCapacityProviderStrategyItemPropertyDsl {
   private val cdkBuilder: CfnService.CapacityProviderStrategyItemProperty.Builder =

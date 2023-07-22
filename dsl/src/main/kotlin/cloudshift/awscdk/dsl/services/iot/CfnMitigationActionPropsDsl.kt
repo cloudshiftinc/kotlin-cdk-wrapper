@@ -13,6 +13,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 import software.amazon.awscdk.services.iot.CfnMitigationActionProps
 
+/**
+ * Properties for defining a `CfnMitigationAction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnMitigationActionProps cfnMitigationActionProps = CfnMitigationActionProps.builder()
+ * .actionParams(ActionParamsProperty.builder()
+ * .addThingsToThingGroupParams(AddThingsToThingGroupParamsProperty.builder()
+ * .thingGroupNames(List.of("thingGroupNames"))
+ * // the properties below are optional
+ * .overrideDynamicGroups(false)
+ * .build())
+ * .enableIoTLoggingParams(EnableIoTLoggingParamsProperty.builder()
+ * .logLevel("logLevel")
+ * .roleArnForLogging("roleArnForLogging")
+ * .build())
+ * .publishFindingToSnsParams(PublishFindingToSnsParamsProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .replaceDefaultPolicyVersionParams(ReplaceDefaultPolicyVersionParamsProperty.builder()
+ * .templateName("templateName")
+ * .build())
+ * .updateCaCertificateParams(UpdateCACertificateParamsProperty.builder()
+ * .action("action")
+ * .build())
+ * .updateDeviceCertificateParams(UpdateDeviceCertificateParamsProperty.builder()
+ * .action("action")
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .actionName("actionName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-mitigationaction.html)
+ */
 @CdkDslMarker
 public class CfnMitigationActionPropsDsl {
   private val cdkBuilder: CfnMitigationActionProps.Builder = CfnMitigationActionProps.builder()

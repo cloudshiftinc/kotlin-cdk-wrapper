@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * The minimum and maximum amount of total local storage, in GB.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TotalLocalStorageGBRequestProperty totalLocalStorageGBRequestProperty =
+ * TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-totallocalstoragegbrequest.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetTotalLocalStorageGBRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.TotalLocalStorageGBRequestProperty.Builder =

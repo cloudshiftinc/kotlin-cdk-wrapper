@@ -12,6 +12,26 @@ import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazon
 import software.constructs.Construct
 
+/**
+ * Represents a identity provider that integrates with 'Login with Amazon'.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * UserPoolIdentityProviderAmazon provider = UserPoolIdentityProviderAmazon.Builder.create(this,
+ * "Amazon")
+ * .userPool(pool)
+ * .clientId("amzn-client-id")
+ * .clientSecret("amzn-client-secret")
+ * .build();
+ * UserPoolClient client = pool.addClient("app-client", UserPoolClientOptions.builder()
+ * // ...
+ * .supportedIdentityProviders(List.of(UserPoolClientIdentityProvider.AMAZON))
+ * .build());
+ * client.node.addDependency(provider);
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderAmazonDsl(
   scope: Construct,

@@ -7,6 +7,36 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * HttpNamespace namespace = HttpNamespace.Builder.create(stack, "MyNamespace")
+ * .name("MyHTTPNamespace")
+ * .build();
+ * Service service1 = namespace.createService("NonIpService", BaseServiceProps.builder()
+ * .description("service registering non-ip instances")
+ * .build());
+ * service1.registerNonIpInstance("NonIpInstance", NonIpInstanceBaseProps.builder()
+ * .customAttributes(Map.of("arn", "arn:aws:s3:::mybucket"))
+ * .build());
+ * Service service2 = namespace.createService("IpService", BaseServiceProps.builder()
+ * .description("service registering ip instances")
+ * .healthCheck(HealthCheckConfig.builder()
+ * .type(HealthCheckType.HTTP)
+ * .resourcePath("/check")
+ * .build())
+ * .build());
+ * service2.registerIpInstance("IpInstance", IpInstanceBaseProps.builder()
+ * .ipv4("54.239.25.192")
+ * .build());
+ * app.synth();
+ * ```
+ */
 @CdkDslMarker
 public class NonIpInstanceBasePropsDsl {
   private val cdkBuilder: NonIpInstanceBaseProps.Builder = NonIpInstanceBaseProps.builder()

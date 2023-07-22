@@ -11,6 +11,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.deployment.SourceConfig
 
+/**
+ * Source information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * import software.amazon.awscdk.services.s3.deployment.*;
+ * Bucket bucket;
+ * Object markers;
+ * SourceConfig sourceConfig = SourceConfig.builder()
+ * .bucket(bucket)
+ * .zipObjectKey("zipObjectKey")
+ * // the properties below are optional
+ * .markers(Map.of(
+ * "markersKey", markers))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SourceConfigDsl {
   private val cdkBuilder: SourceConfig.Builder = SourceConfig.builder()

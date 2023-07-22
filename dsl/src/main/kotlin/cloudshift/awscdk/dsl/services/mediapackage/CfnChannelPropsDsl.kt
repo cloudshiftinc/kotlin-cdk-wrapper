@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnChannel
 import software.amazon.awscdk.services.mediapackage.CfnChannelProps
 
+/**
+ * Properties for defining a `CfnChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnChannelProps cfnChannelProps = CfnChannelProps.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .description("description")
+ * .egressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .hlsIngest(HlsIngestProperty.builder()
+ * .ingestEndpoints(List.of(IngestEndpointProperty.builder()
+ * .id("id")
+ * .password("password")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .build())
+ * .ingressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelPropsDsl {
   private val cdkBuilder: CfnChannelProps.Builder = CfnChannelProps.builder()

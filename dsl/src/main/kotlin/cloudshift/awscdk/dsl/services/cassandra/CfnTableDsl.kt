@@ -16,6 +16,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cassandra.CfnTable
 import software.constructs.Construct
 
+/**
+ * You can use the `AWS::Cassandra::Table` resource to create a new table in Amazon Keyspaces (for
+ * Apache Cassandra).
+ *
+ * For more information, see [Create a keyspace and a
+ * table](https://docs.aws.amazon.com/keyspaces/latest/devguide/getting-started.ddl.html) in the
+ * *Amazon Keyspaces Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * CfnTable cfnTable = CfnTable.Builder.create(this, "MyCfnTable")
+ * .keyspaceName("keyspaceName")
+ * .partitionKeyColumns(List.of(ColumnProperty.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build()))
+ * // the properties below are optional
+ * .billingMode(BillingModeProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build())
+ * .build())
+ * .clientSideTimestampsEnabled(false)
+ * .clusteringKeyColumns(List.of(ClusteringKeyColumnProperty.builder()
+ * .column(ColumnProperty.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build())
+ * // the properties below are optional
+ * .orderBy("orderBy")
+ * .build()))
+ * .defaultTimeToLive(123)
+ * .encryptionSpecification(EncryptionSpecificationProperty.builder()
+ * .encryptionType("encryptionType")
+ * // the properties below are optional
+ * .kmsKeyIdentifier("kmsKeyIdentifier")
+ * .build())
+ * .pointInTimeRecoveryEnabled(false)
+ * .regularColumns(List.of(ColumnProperty.builder()
+ * .columnName("columnName")
+ * .columnType("columnType")
+ * .build()))
+ * .tableName("tableName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cassandra-table.html)
+ */
 @CdkDslMarker
 public class CfnTableDsl(
   scope: Construct,

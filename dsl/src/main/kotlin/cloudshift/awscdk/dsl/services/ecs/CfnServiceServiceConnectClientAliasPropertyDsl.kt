@@ -7,6 +7,35 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * Each alias ("endpoint") is a fully-qualified name and port number that other tasks ("clients")
+ * can use to connect to this service.
+ *
+ * Each name and port mapping must be unique within the namespace.
+ *
+ * Tasks that run in a namespace can use short names to connect to services in the namespace. Tasks
+ * can connect to services across all of the clusters in the namespace. Tasks connect through a managed
+ * proxy container that collects logs and metrics for increased visibility. Only the tasks that Amazon
+ * ECS services create are supported with Service Connect. For more information, see [Service
+ * Connect](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ServiceConnectClientAliasProperty serviceConnectClientAliasProperty =
+ * ServiceConnectClientAliasProperty.builder()
+ * .port(123)
+ * // the properties below are optional
+ * .dnsName("dnsName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-serviceconnectclientalias.html)
+ */
 @CdkDslMarker
 public class CfnServiceServiceConnectClientAliasPropertyDsl {
   private val cdkBuilder: CfnService.ServiceConnectClientAliasProperty.Builder =

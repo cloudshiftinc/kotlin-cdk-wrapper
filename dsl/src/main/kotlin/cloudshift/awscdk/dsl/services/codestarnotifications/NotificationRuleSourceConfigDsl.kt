@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig
 
+/**
+ * Information about the Codebuild or CodePipeline associated with a notification source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * NotificationRuleSourceConfig notificationRuleSourceConfig =
+ * NotificationRuleSourceConfig.builder()
+ * .sourceArn("sourceArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NotificationRuleSourceConfigDsl {
   private val cdkBuilder: NotificationRuleSourceConfig.Builder =

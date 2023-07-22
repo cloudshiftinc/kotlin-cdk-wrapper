@@ -8,6 +8,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnDataset
 import software.constructs.Construct
 
+/**
+ * Creates an empty dataset and adds it to the specified dataset group.
+ *
+ * Use
+ * [CreateDatasetImportJob](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetImportJob.html)
+ * to import your training data to a dataset.
+ *
+ * There are three types of datasets:
+ *
+ * * Interactions
+ * * Items
+ * * Users
+ *
+ * Each dataset type has an associated schema with required field types. Only the `Interactions`
+ * dataset is required in order to train a model (also referred to as creating a solution).
+ *
+ * A dataset can be in one of the following states:
+ *
+ * * CREATE PENDING &gt; CREATE IN_PROGRESS &gt; ACTIVE -or- CREATE FAILED
+ * * DELETE PENDING &gt; DELETE IN_PROGRESS
+ *
+ * To get the status of the dataset, call
+ * [DescribeDataset](https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataset.html) .
+ *
+ * **Related APIs** -
+ * [CreateDatasetGroup](https://docs.aws.amazon.com/personalize/latest/dg/API_CreateDatasetGroup.html)
+ *
+ * * [ListDatasets](https://docs.aws.amazon.com/personalize/latest/dg/API_ListDatasets.html)
+ * * [DescribeDataset](https://docs.aws.amazon.com/personalize/latest/dg/API_DescribeDataset.html)
+ * * [DeleteDataset](https://docs.aws.amazon.com/personalize/latest/dg/API_DeleteDataset.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object dataSource;
+ * CfnDataset cfnDataset = CfnDataset.Builder.create(this, "MyCfnDataset")
+ * .datasetGroupArn("datasetGroupArn")
+ * .datasetType("datasetType")
+ * .name("name")
+ * .schemaArn("schemaArn")
+ * // the properties below are optional
+ * .datasetImportJob(DatasetImportJobProperty.builder()
+ * .datasetArn("datasetArn")
+ * .datasetImportJobArn("datasetImportJobArn")
+ * .dataSource(dataSource)
+ * .jobName("jobName")
+ * .roleArn("roleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetDsl(
   scope: Construct,

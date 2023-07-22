@@ -9,6 +9,22 @@ import software.amazon.awscdk.services.lambda.IFunction
 import software.amazon.awscdk.services.secretsmanager.HostedRotation
 import software.amazon.awscdk.services.secretsmanager.RotationScheduleOptions
 
+/**
+ * Options to add a rotation schedule to a secret.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function fn;
+ * Secret secret = new Secret(this, "Secret");
+ * secret.addRotationSchedule("RotationSchedule", RotationScheduleOptions.builder()
+ * .rotationLambda(fn)
+ * .automaticallyAfter(Duration.days(15))
+ * .rotateImmediatelyOnUpdate(false)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RotationScheduleOptionsDsl {
   private val cdkBuilder: RotationScheduleOptions.Builder = RotationScheduleOptions.builder()

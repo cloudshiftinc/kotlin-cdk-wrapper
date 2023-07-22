@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.logs.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Creates or updates a resource policy that allows other AWS services to put log events to this
+ * account.
+ *
+ * An account can have up to 10 resource policies per AWS Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policyDocument("policyDocument")
+ * .policyName("policyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

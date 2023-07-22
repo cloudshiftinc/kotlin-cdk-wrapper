@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
 import software.amazon.awscdk.services.codebuild.LoggingOptions
 import software.amazon.awscdk.services.codebuild.S3LoggingOptions
 
+/**
+ * Information about logs for the build project.
+ *
+ * A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .logging(LoggingOptions.builder()
+ * .cloudWatch(CloudWatchLoggingOptions.builder()
+ * .logGroup(new LogGroup(this, "MyLogGroup"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoggingOptionsDsl {
   private val cdkBuilder: LoggingOptions.Builder = LoggingOptions.builder()

@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigatewayv2.CfnDomainName
 
+/**
+ * The `DomainNameConfiguration` property type specifies the configuration for a an API's domain
+ * name.
+ *
+ * `DomainNameConfiguration` is a property of the
+ * [AWS::ApiGatewayV2::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * DomainNameConfigurationProperty domainNameConfigurationProperty =
+ * DomainNameConfigurationProperty.builder()
+ * .certificateArn("certificateArn")
+ * .certificateName("certificateName")
+ * .endpointType("endpointType")
+ * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+ * .securityPolicy("securityPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDomainNameDomainNameConfigurationPropertyDsl {
   private val cdkBuilder: CfnDomainName.DomainNameConfigurationProperty.Builder =

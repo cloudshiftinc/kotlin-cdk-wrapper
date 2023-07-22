@@ -15,6 +15,24 @@ import software.amazon.awscdk.services.config.RuleScope
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * Checks whether your CloudFormation stacks' actual configuration differs, or has drifted, from its
+ * expected configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // Topic to which compliance notification events will be published
+ * Topic complianceTopic = new Topic(this, "ComplianceTopic");
+ * CloudFormationStackDriftDetectionCheck rule = new CloudFormationStackDriftDetectionCheck(this,
+ * "Drift");
+ * rule.onComplianceChange("TopicEvent", OnEventOptions.builder()
+ * .target(new SnsTopic(complianceTopic))
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/cloudformation-stack-drift-detection-check.html)
+ */
 @CdkDslMarker
 public class CloudFormationStackDriftDetectionCheckDsl(
   scope: Construct,

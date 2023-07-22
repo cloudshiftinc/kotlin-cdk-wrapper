@@ -18,6 +18,30 @@ import software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery
 import software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery
 import software.amazon.awscdk.cloudassembly.schema.VpcContextQuery
 
+/**
+ * Represents a missing piece of context.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * MissingContext missingContext = MissingContext.builder()
+ * .key("key")
+ * .props(AmiContextQuery.builder()
+ * .account("account")
+ * .filters(Map.of(
+ * "filtersKey", List.of("filters")))
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .owners(List.of("owners"))
+ * .build())
+ * .provider(ContextProvider.AMI_PROVIDER)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MissingContextDsl {
   private val cdkBuilder: MissingContext.Builder = MissingContext.builder()

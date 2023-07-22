@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 
+/**
+ * Parameters for a Microsoft Smooth manifest.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * MssManifestProperty mssManifestProperty = MssManifestProperty.builder()
+ * .manifestName("manifestName")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-mssmanifest.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationMssManifestPropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.MssManifestProperty.Builder =

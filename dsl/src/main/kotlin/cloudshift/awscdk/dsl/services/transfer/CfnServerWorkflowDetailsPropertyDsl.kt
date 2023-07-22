@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnServer
 
+/**
+ * Container for the `WorkflowDetail` data type.
+ *
+ * It is used by actions that trigger a workflow to begin execution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * WorkflowDetailsProperty workflowDetailsProperty = WorkflowDetailsProperty.builder()
+ * .onPartialUpload(List.of(WorkflowDetailProperty.builder()
+ * .executionRole("executionRole")
+ * .workflowId("workflowId")
+ * .build()))
+ * .onUpload(List.of(WorkflowDetailProperty.builder()
+ * .executionRole("executionRole")
+ * .workflowId("workflowId")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-workflowdetails.html)
+ */
 @CdkDslMarker
 public class CfnServerWorkflowDetailsPropertyDsl {
   private val cdkBuilder: CfnServer.WorkflowDetailsProperty.Builder =

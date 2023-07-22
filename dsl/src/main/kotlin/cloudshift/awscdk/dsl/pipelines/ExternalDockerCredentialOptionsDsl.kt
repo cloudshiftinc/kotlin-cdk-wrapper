@@ -10,6 +10,18 @@ import software.amazon.awscdk.pipelines.DockerCredentialUsage
 import software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for defining credentials for a Docker Credential.
+ *
+ * Example:
+ *
+ * ```
+ * ISecret dockerHubSecret = Secret.fromSecretCompleteArn(this, "DHSecret", "arn:aws:...");
+ * // Only the image asset publishing actions will be granted read access to the secret.
+ * DockerCredential creds = DockerCredential.dockerHub(dockerHubSecret,
+ * ExternalDockerCredentialOptions.builder().usages(List.of(DockerCredentialUsage.ASSET_PUBLISHING)).build());
+ * ```
+ */
 @CdkDslMarker
 public class ExternalDockerCredentialOptionsDsl {
   private val cdkBuilder: ExternalDockerCredentialOptions.Builder =

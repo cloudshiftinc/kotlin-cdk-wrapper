@@ -8,6 +8,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnDataset
 import software.amazon.awscdk.services.personalize.CfnDatasetProps
 
+/**
+ * Properties for defining a `CfnDataset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * Object dataSource;
+ * CfnDatasetProps cfnDatasetProps = CfnDatasetProps.builder()
+ * .datasetGroupArn("datasetGroupArn")
+ * .datasetType("datasetType")
+ * .name("name")
+ * .schemaArn("schemaArn")
+ * // the properties below are optional
+ * .datasetImportJob(DatasetImportJobProperty.builder()
+ * .datasetArn("datasetArn")
+ * .datasetImportJobArn("datasetImportJobArn")
+ * .dataSource(dataSource)
+ * .jobName("jobName")
+ * .roleArn("roleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetPropsDsl {
   private val cdkBuilder: CfnDatasetProps.Builder = CfnDatasetProps.builder()

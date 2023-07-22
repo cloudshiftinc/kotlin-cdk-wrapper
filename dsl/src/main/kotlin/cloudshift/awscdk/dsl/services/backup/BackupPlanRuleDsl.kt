@@ -15,6 +15,19 @@ import software.amazon.awscdk.services.backup.BackupPlanRule
 import software.amazon.awscdk.services.backup.IBackupVault
 import software.amazon.awscdk.services.events.Schedule
 
+/**
+ * A backup plan rule.
+ *
+ * Example:
+ *
+ * ```
+ * BackupPlan plan;
+ * plan.addRule(BackupPlanRule.Builder.create()
+ * .enableContinuousBackup(true)
+ * .deleteAfter(Duration.days(14))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BackupPlanRuleDsl {
   private val cdkBuilder: BackupPlanRule.Builder = BackupPlanRule.Builder.create()

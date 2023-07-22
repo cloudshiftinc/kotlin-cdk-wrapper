@@ -10,6 +10,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Represents information about a stage and its definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * Object configuration;
+ * StageDeclarationProperty stageDeclarationProperty = StageDeclarationProperty.builder()
+ * .actions(List.of(ActionDeclarationProperty.builder()
+ * .actionTypeId(ActionTypeIdProperty.builder()
+ * .category("category")
+ * .owner("owner")
+ * .provider("provider")
+ * .version("version")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .configuration(configuration)
+ * .inputArtifacts(List.of(InputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .namespace("namespace")
+ * .outputArtifacts(List.of(OutputArtifactProperty.builder()
+ * .name("name")
+ * .build()))
+ * .region("region")
+ * .roleArn("roleArn")
+ * .runOrder(123)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .blockers(List.of(BlockerDeclarationProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stagedeclaration.html)
+ */
 @CdkDslMarker
 public class CfnPipelineStageDeclarationPropertyDsl {
   private val cdkBuilder: CfnPipeline.StageDeclarationProperty.Builder =

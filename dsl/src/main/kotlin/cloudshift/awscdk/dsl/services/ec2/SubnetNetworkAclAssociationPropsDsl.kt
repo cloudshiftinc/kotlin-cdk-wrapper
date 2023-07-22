@@ -8,6 +8,26 @@ import software.amazon.awscdk.services.ec2.INetworkAcl
 import software.amazon.awscdk.services.ec2.ISubnet
 import software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociationProps
 
+/**
+ * Properties to create a SubnetNetworkAclAssociation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NetworkAcl networkAcl;
+ * Subnet subnet;
+ * SubnetNetworkAclAssociationProps subnetNetworkAclAssociationProps =
+ * SubnetNetworkAclAssociationProps.builder()
+ * .networkAcl(networkAcl)
+ * .subnet(subnet)
+ * // the properties below are optional
+ * .subnetNetworkAclAssociationName("subnetNetworkAclAssociationName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetNetworkAclAssociationPropsDsl {
   private val cdkBuilder: SubnetNetworkAclAssociationProps.Builder =

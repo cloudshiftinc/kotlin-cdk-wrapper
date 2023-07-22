@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.ParameterTier
 import software.amazon.awscdk.services.ssm.StringListParameterProps
 
+/**
+ * Properties needed to create a StringList SSM Parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // Grant read access to some Role
+ * IRole role;
+ * // Create a new SSM Parameter holding a String
+ * StringParameter param = StringParameter.Builder.create(this, "StringParameter")
+ * // description: 'Some user-friendly description',
+ * // name: 'ParameterName',
+ * .stringValue("Initial parameter value")
+ * .build();
+ * param.grantRead(role);
+ * // Create a new SSM Parameter holding a StringList
+ * StringListParameter listParameter = StringListParameter.Builder.create(this,
+ * "StringListParameter")
+ * // description: 'Some user-friendly description',
+ * // name: 'ParameterName',
+ * .stringListValue(List.of("Initial parameter value A", "Initial parameter value B"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StringListParameterPropsDsl {
   private val cdkBuilder: StringListParameterProps.Builder = StringListParameterProps.builder()

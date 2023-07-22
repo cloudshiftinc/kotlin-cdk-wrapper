@@ -12,6 +12,63 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies configuration settings for the alias used to test the bot.
+ *
+ * If the `TestBotAliasSettings` property is not specified, the settings are configured with default
+ * values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * Object sentimentAnalysisSettings;
+ * TestBotAliasSettingsProperty testBotAliasSettingsProperty =
+ * TestBotAliasSettingsProperty.builder()
+ * .botAliasLocaleSettings(List.of(BotAliasLocaleSettingsItemProperty.builder()
+ * .botAliasLocaleSetting(BotAliasLocaleSettingsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .codeHookSpecification(CodeHookSpecificationProperty.builder()
+ * .lambdaCodeHook(LambdaCodeHookProperty.builder()
+ * .codeHookInterfaceVersion("codeHookInterfaceVersion")
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build())
+ * .build())
+ * .localeId("localeId")
+ * .build()))
+ * .conversationLogSettings(ConversationLogSettingsProperty.builder()
+ * .audioLogSettings(List.of(AudioLogSettingProperty.builder()
+ * .destination(AudioLogDestinationProperty.builder()
+ * .s3Bucket(S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .textLogSettings(List.of(TextLogSettingProperty.builder()
+ * .destination(TextLogDestinationProperty.builder()
+ * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .logPrefix("logPrefix")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .build())
+ * .description("description")
+ * .sentimentAnalysisSettings(sentimentAnalysisSettings)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-testbotaliassettings.html)
+ */
 @CdkDslMarker
 public class CfnBotTestBotAliasSettingsPropertyDsl {
   private val cdkBuilder: CfnBot.TestBotAliasSettingsProperty.Builder =

@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * A property for the bucket-level storage metrics for Amazon S3 Storage Lens.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * BucketLevelProperty bucketLevelProperty = BucketLevelProperty.builder()
+ * .activityMetrics(ActivityMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedCostOptimizationMetrics(AdvancedCostOptimizationMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .advancedDataProtectionMetrics(AdvancedDataProtectionMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .detailedStatusCodesMetrics(DetailedStatusCodesMetricsProperty.builder()
+ * .isEnabled(false)
+ * .build())
+ * .prefixLevel(PrefixLevelProperty.builder()
+ * .storageMetrics(PrefixLevelStorageMetricsProperty.builder()
+ * .isEnabled(false)
+ * .selectionCriteria(SelectionCriteriaProperty.builder()
+ * .delimiter("delimiter")
+ * .maxDepth(123)
+ * .minStorageBytesPercentage(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-bucketlevel.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensBucketLevelPropertyDsl {
   private val cdkBuilder: CfnStorageLens.BucketLevelProperty.Builder =

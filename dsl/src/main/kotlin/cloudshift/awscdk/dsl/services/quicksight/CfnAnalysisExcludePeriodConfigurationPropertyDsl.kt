@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The exclude period of `TimeRangeFilter` or `RelativeDatesFilter` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ExcludePeriodConfigurationProperty excludePeriodConfigurationProperty =
+ * ExcludePeriodConfigurationProperty.builder()
+ * .amount(123)
+ * .granularity("granularity")
+ * // the properties below are optional
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-excludeperiodconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisExcludePeriodConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ExcludePeriodConfigurationProperty.Builder =

@@ -17,6 +17,22 @@ import software.amazon.awscdk.services.iam.IOpenIdConnectProvider
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.ILayerVersion
 
+/**
+ * Attributes for EKS clusters.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * AutoScalingGroup asg;
+ * ICluster importedCluster = Cluster.fromClusterAttributes(this, "ImportedCluster",
+ * ClusterAttributes.builder()
+ * .clusterName(cluster.getClusterName())
+ * .clusterSecurityGroupId(cluster.getClusterSecurityGroupId())
+ * .build());
+ * importedCluster.connectAutoScalingGroupCapacity(asg, AutoScalingGroupOptions.builder().build());
+ * ```
+ */
 @CdkDslMarker
 public class ClusterAttributesDsl {
   private val cdkBuilder: ClusterAttributes.Builder = ClusterAttributes.builder()

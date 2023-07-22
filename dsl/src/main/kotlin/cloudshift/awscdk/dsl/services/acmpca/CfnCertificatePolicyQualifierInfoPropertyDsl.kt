@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 
+/**
+ * Modifies the `CertPolicyId` of a `PolicyInformation` object with a qualifier.
+ *
+ * AWS Private CA supports the certification practice statement (CPS) qualifier.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * PolicyQualifierInfoProperty policyQualifierInfoProperty = PolicyQualifierInfoProperty.builder()
+ * .policyQualifierId("policyQualifierId")
+ * .qualifier(QualifierProperty.builder()
+ * .cpsUri("cpsUri")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyqualifierinfo.html)
+ */
 @CdkDslMarker
 public class CfnCertificatePolicyQualifierInfoPropertyDsl {
   private val cdkBuilder: CfnCertificate.PolicyQualifierInfoProperty.Builder =

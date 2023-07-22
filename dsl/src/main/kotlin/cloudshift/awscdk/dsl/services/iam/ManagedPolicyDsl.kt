@@ -15,6 +15,32 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.PolicyStatement
 import software.constructs.Construct
 
+/**
+ * Managed policy.
+ *
+ * Example:
+ *
+ * ```
+ * Build build;
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new CompositePrincipal(new ServicePrincipal("gamelift.amazonaws.com")))
+ * .build();
+ * role.addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName("CloudWatchAgentServerPolicy"));
+ * BuildFleet fleet = BuildFleet.Builder.create(this, "Game server fleet")
+ * .fleetName("test-fleet")
+ * .content(build)
+ * .instanceType(InstanceType.of(InstanceClass.C5, InstanceSize.LARGE))
+ * .runtimeConfiguration(RuntimeConfiguration.builder()
+ * .serverProcesses(List.of(ServerProcess.builder()
+ * .launchPath("/local/game/GameLiftExampleServer.x86_64")
+ * .build()))
+ * .build())
+ * .role(role)
+ * .build();
+ * // Actions can also be grantted through dedicated method
+ * fleet.grant(role, "gamelift:ListFleets");
+ * ```
+ */
 @CdkDslMarker
 public class ManagedPolicyDsl(
   scope: Construct,

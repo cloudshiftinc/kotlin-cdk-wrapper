@@ -7,6 +7,45 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnRoute
 import software.constructs.Construct
 
+/**
+ * Specifies a route in a route table.
+ *
+ * You must specify either `DestinationCidrBlock` or `DestinationIpv6CidrBlock` , plus the ID of one
+ * of the target resources.
+ *
+ * If you create a route that references a transit gateway in the same template where you create the
+ * transit gateway, you must declare a dependency on the transit gateway attachment. The route table
+ * cannot use the transit gateway until it has successfully attached to the VPC. Add a [DependsOn
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * in the `AWS::EC2::Route` resource to explicitly declare a dependency on the
+ * `AWS::EC2::TransitGatewayAttachment` resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnRoute cfnRoute = CfnRoute.Builder.create(this, "MyCfnRoute")
+ * .routeTableId("routeTableId")
+ * // the properties below are optional
+ * .carrierGatewayId("carrierGatewayId")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .destinationIpv6CidrBlock("destinationIpv6CidrBlock")
+ * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
+ * .gatewayId("gatewayId")
+ * .instanceId("instanceId")
+ * .localGatewayId("localGatewayId")
+ * .natGatewayId("natGatewayId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .transitGatewayId("transitGatewayId")
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcPeeringConnectionId("vpcPeeringConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
+ */
 @CdkDslMarker
 public class CfnRouteDsl(
   scope: Construct,

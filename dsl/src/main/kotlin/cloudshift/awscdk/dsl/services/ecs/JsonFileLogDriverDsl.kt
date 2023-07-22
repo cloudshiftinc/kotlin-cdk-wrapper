@@ -10,6 +10,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.JsonFileLogDriver
 
+/**
+ * A log driver that sends log information to json-file Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * JsonFileLogDriver jsonFileLogDriver = JsonFileLogDriver.Builder.create()
+ * .compress(false)
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .maxFile(123)
+ * .maxSize("maxSize")
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JsonFileLogDriverDsl {
   private val cdkBuilder: JsonFileLogDriver.Builder = JsonFileLogDriver.Builder.create()

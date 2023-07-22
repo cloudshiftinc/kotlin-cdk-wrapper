@@ -10,6 +10,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 import software.constructs.Construct
 
+/**
+ * The `AWS::LakeFormation::Permissions` resource represents the permissions that a principal has on
+ * an AWS Glue Data Catalog resource (such as AWS Glue database or AWS Glue tables).
+ *
+ * When you upload a permissions stack, the permissions are granted to the principal and when you
+ * remove the stack, the permissions are revoked from the principal. If you remove a stack, and the
+ * principal does not have the permissions referenced in the stack then AWS Lake Formation will throw
+ * an error because you can’t call revoke on non-existing permissions. To successfully remove the
+ * stack, you’ll need to regrant those permissions and then remove the stack.
+ *
+ *
+ * New versions of AWS Lake Formation permission resources are now available. For more information,
+ * see:
+ * [AWS:LakeFormation::PrincipalPermissions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-principalpermissions.html)
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * CfnPermissions cfnPermissions = CfnPermissions.Builder.create(this, "MyCfnPermissions")
+ * .dataLakePrincipal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .resource(ResourceProperty.builder()
+ * .databaseResource(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataLocationResource(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .s3Resource("s3Resource")
+ * .build())
+ * .tableResource(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableWildcard(TableWildcardProperty.builder().build())
+ * .build())
+ * .tableWithColumnsResource(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .permissions(List.of("permissions"))
+ * .permissionsWithGrantOption(List.of("permissionsWithGrantOption"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html)
+ */
 @CdkDslMarker
 public class CfnPermissionsDsl(
   scope: Construct,

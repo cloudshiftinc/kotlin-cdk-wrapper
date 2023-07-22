@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAlert
 
+/**
+ * A configuration that specifies the action to perform when anomalies are detected.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .lambdaConfiguration(LambdaConfigurationProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .roleArn("roleArn")
+ * .build())
+ * .snsConfiguration(SNSConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * .snsTopicArn("snsTopicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-action.html)
+ */
 @CdkDslMarker
 public class CfnAlertActionPropertyDsl {
   private val cdkBuilder: CfnAlert.ActionProperty.Builder = CfnAlert.ActionProperty.builder()

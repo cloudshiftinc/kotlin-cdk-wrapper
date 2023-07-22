@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSetProps
 
+/**
+ * Properties for defining a `CfnSizeConstraintSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * CfnSizeConstraintSetProps cfnSizeConstraintSetProps = CfnSizeConstraintSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .sizeConstraints(List.of(SizeConstraintProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .size(123)
+ * .textTransformation("textTransformation")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sizeconstraintset.html)
+ */
 @CdkDslMarker
 public class CfnSizeConstraintSetPropsDsl {
   private val cdkBuilder: CfnSizeConstraintSetProps.Builder = CfnSizeConstraintSetProps.builder()

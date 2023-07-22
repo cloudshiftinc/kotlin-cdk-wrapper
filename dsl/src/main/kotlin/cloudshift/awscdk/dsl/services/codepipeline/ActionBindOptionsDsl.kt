@@ -7,6 +7,23 @@ import software.amazon.awscdk.services.codepipeline.ActionBindOptions
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * Role role;
+ * ActionBindOptions actionBindOptions = ActionBindOptions.builder()
+ * .bucket(bucket)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ActionBindOptionsDsl {
   private val cdkBuilder: ActionBindOptions.Builder = ActionBindOptions.builder()

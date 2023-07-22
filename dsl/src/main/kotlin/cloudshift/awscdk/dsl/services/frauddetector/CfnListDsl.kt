@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.frauddetector.CfnList
 import software.constructs.Construct
 
+/**
+ * Creates a list.
+ *
+ * List is a set of input data for a variable in your event dataset. You use the input data in a
+ * rule that's associated with your detector. For more information, see
+ * [Lists](https://docs.aws.amazon.com//frauddetector/latest/ug/lists.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * CfnList cfnList = CfnList.Builder.create(this, "MyCfnList")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .elements(List.of("elements"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableType("variableType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-list.html)
+ */
 @CdkDslMarker
 public class CfnListDsl(
   scope: Construct,

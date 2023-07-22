@@ -9,6 +9,31 @@ import software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary
 import software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear
 import software.amazon.awscdk.CfnTrafficRoutingType
 
+/**
+ * Traffic routing configuration settings.
+ *
+ * The type of the `CfnCodeDeployBlueGreenHookProps.trafficRoutingConfig` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnTrafficRoutingConfig cfnTrafficRoutingConfig = CfnTrafficRoutingConfig.builder()
+ * .type(CfnTrafficRoutingType.ALL_AT_ONCE)
+ * // the properties below are optional
+ * .timeBasedCanary(CfnTrafficRoutingTimeBasedCanary.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build())
+ * .timeBasedLinear(CfnTrafficRoutingTimeBasedLinear.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnTrafficRoutingConfigDsl {
   private val cdkBuilder: CfnTrafficRoutingConfig.Builder = CfnTrafficRoutingConfig.builder()

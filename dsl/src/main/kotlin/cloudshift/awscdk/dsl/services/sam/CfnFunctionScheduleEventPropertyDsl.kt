@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * ScheduleEventProperty scheduleEventProperty = ScheduleEventProperty.builder()
+ * .schedule("schedule")
+ * // the properties below are optional
+ * .description("description")
+ * .enabled(false)
+ * .input("input")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-scheduleevent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionScheduleEventPropertyDsl {
   private val cdkBuilder: CfnFunction.ScheduleEventProperty.Builder =

@@ -13,6 +13,25 @@ import software.amazon.awscdk.triggers.InvocationType
 import software.amazon.awscdk.triggers.Trigger
 import software.constructs.Construct
 
+/**
+ * Triggers an AWS Lambda function during deployment.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.triggers.*;
+ * Function func = Function.Builder.create(this, "MyFunction")
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .code(Code.fromInline("foo"))
+ * .build();
+ * Trigger.Builder.create(this, "MyTrigger")
+ * .handler(func)
+ * .timeout(Duration.minutes(10))
+ * .invocationType(InvocationType.EVENT)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TriggerDsl(
   scope: Construct,

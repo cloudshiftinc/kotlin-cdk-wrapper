@@ -12,6 +12,27 @@ import software.constructs.Construct
 import kotlin.collections.Map as CollectionsMap
 import software.amazon.awscdk.services.stepfunctions.Map as StepfunctionsMap
 
+/**
+ * Define a Map state in the state machine.
+ *
+ * A `Map` state can be used to run a set of steps for each element of an input array.
+ * A Map state will execute the same steps for multiple entries of an array in the state input.
+ *
+ * While the Parallel state executes multiple branches of steps using the same input, a Map state
+ * will execute the same steps for multiple entries of an array in the state input.
+ *
+ * Example:
+ *
+ * ```
+ * Map map = Map.Builder.create(this, "Map State")
+ * .maxConcurrency(1)
+ * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * .build();
+ * map.iterator(new Pass(this, "Pass State"));
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html)
+ */
 @CdkDslMarker
 public class MapDsl(
   scope: Construct,

@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.AllocateCidrRequest
 import software.amazon.awscdk.services.ec2.RequestedSubnet
 
+/**
+ * Request for subnets Cidr to be allocated for a Vpc.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AllocateCidrRequest allocateCidrRequest = AllocateCidrRequest.builder()
+ * .requestedSubnets(List.of(RequestedSubnet.builder()
+ * .availabilityZone("availabilityZone")
+ * .configuration(SubnetConfiguration.builder()
+ * .name("name")
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * // the properties below are optional
+ * .cidrMask(123)
+ * .mapPublicIpOnLaunch(false)
+ * .reserved(false)
+ * .build())
+ * .subnetConstructId("subnetConstructId")
+ * .build()))
+ * .vpcCidr("vpcCidr")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AllocateCidrRequestDsl {
   private val cdkBuilder: AllocateCidrRequest.Builder = AllocateCidrRequest.builder()

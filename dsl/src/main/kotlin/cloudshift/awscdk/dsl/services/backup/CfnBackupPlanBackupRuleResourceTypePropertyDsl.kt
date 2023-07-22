@@ -13,6 +13,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 
+/**
+ * Specifies an object containing properties used to schedule a task to back up a selection of
+ * resources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * BackupRuleResourceTypeProperty backupRuleResourceTypeProperty =
+ * BackupRuleResourceTypeProperty.builder()
+ * .ruleName("ruleName")
+ * .targetBackupVault("targetBackupVault")
+ * // the properties below are optional
+ * .completionWindowMinutes(123)
+ * .copyActions(List.of(CopyActionResourceTypeProperty.builder()
+ * .destinationBackupVaultArn("destinationBackupVaultArn")
+ * // the properties below are optional
+ * .lifecycle(LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build())
+ * .build()))
+ * .enableContinuousBackup(false)
+ * .lifecycle(LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build())
+ * .recoveryPointTags(Map.of(
+ * "recoveryPointTagsKey", "recoveryPointTags"))
+ * .scheduleExpression("scheduleExpression")
+ * .startWindowMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html)
+ */
 @CdkDslMarker
 public class CfnBackupPlanBackupRuleResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupPlan.BackupRuleResourceTypeProperty.Builder =

@@ -11,6 +11,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 import software.constructs.Construct
 
+/**
+ * The `AWS::NimbleStudio::LaunchProfile` resource represents access permissions for a set of studio
+ * components, including types of workstations, render farms, and shared file systems.
+ *
+ * Launch profiles are shared with studio users to give them access to the set of studio components.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * CfnLaunchProfile cfnLaunchProfile = CfnLaunchProfile.Builder.create(this, "MyCfnLaunchProfile")
+ * .ec2SubnetIds(List.of("ec2SubnetIds"))
+ * .launchProfileProtocolVersions(List.of("launchProfileProtocolVersions"))
+ * .name("name")
+ * .streamConfiguration(StreamConfigurationProperty.builder()
+ * .clipboardMode("clipboardMode")
+ * .ec2InstanceTypes(List.of("ec2InstanceTypes"))
+ * .streamingImageIds(List.of("streamingImageIds"))
+ * // the properties below are optional
+ * .automaticTerminationMode("automaticTerminationMode")
+ * .maxSessionLengthInMinutes(123)
+ * .maxStoppedSessionLengthInMinutes(123)
+ * .sessionBackup(StreamConfigurationSessionBackupProperty.builder()
+ * .maxBackupsToRetain(123)
+ * .mode("mode")
+ * .build())
+ * .sessionPersistenceMode("sessionPersistenceMode")
+ * .sessionStorage(StreamConfigurationSessionStorageProperty.builder()
+ * .mode(List.of("mode"))
+ * // the properties below are optional
+ * .root(StreamingSessionStorageRootProperty.builder()
+ * .linux("linux")
+ * .windows("windows")
+ * .build())
+ * .build())
+ * .volumeConfiguration(VolumeConfigurationProperty.builder()
+ * .iops(123)
+ * .size(123)
+ * .throughput(123)
+ * .build())
+ * .build())
+ * .studioComponentIds(List.of("studioComponentIds"))
+ * .studioId("studioId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-launchprofile.html)
+ */
 @CdkDslMarker
 public class CfnLaunchProfileDsl(
   scope: Construct,

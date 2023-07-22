@@ -9,6 +9,25 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object pattern;
+ * CloudWatchEventEventProperty cloudWatchEventEventProperty =
+ * CloudWatchEventEventProperty.builder()
+ * .pattern(pattern)
+ * // the properties below are optional
+ * .input("input")
+ * .inputPath("inputPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-cloudwatcheventevent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionCloudWatchEventEventPropertyDsl {
   private val cdkBuilder: CfnFunction.CloudWatchEventEventProperty.Builder =

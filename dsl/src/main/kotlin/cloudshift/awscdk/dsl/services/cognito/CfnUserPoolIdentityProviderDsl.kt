@@ -12,6 +12,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cognito.CfnUserPoolIdentityProvider
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::UserPoolIdentityProvider` resource creates an identity provider for a user
+ * pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * Object attributeMapping;
+ * Object providerDetails;
+ * CfnUserPoolIdentityProvider cfnUserPoolIdentityProvider =
+ * CfnUserPoolIdentityProvider.Builder.create(this, "MyCfnUserPoolIdentityProvider")
+ * .providerName("providerName")
+ * .providerType("providerType")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .attributeMapping(attributeMapping)
+ * .idpIdentifiers(List.of("idpIdentifiers"))
+ * .providerDetails(providerDetails)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolIdentityProviderDsl(
   scope: Construct,

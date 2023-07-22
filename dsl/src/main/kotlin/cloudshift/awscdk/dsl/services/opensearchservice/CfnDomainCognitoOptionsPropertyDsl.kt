@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * CognitoOptionsProperty cognitoOptionsProperty = CognitoOptionsProperty.builder()
+ * .enabled(false)
+ * .identityPoolId("identityPoolId")
+ * .roleArn("roleArn")
+ * .userPoolId("userPoolId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-cognitooptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainCognitoOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.CognitoOptionsProperty.Builder =

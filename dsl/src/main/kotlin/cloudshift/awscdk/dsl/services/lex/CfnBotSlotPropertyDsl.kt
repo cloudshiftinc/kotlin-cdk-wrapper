@@ -7,6 +7,18 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the definition of a slot.
+ *
+ * Amazon Lex elicits slot values from uses to fulfill the user's intent.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slot.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotPropertyDsl {
   private val cdkBuilder: CfnBot.SlotProperty.Builder = CfnBot.SlotProperty.builder()

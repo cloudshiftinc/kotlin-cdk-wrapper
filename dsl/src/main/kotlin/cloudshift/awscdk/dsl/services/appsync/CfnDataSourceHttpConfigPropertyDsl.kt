@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnDataSource
 
+/**
+ * Use the `HttpConfig` property type to specify `HttpConfig` for an AWS AppSync data source.
+ *
+ * `HttpConfig` is a property of the
+ * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * HttpConfigProperty httpConfigProperty = HttpConfigProperty.builder()
+ * .endpoint("endpoint")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .authorizationType("authorizationType")
+ * // the properties below are optional
+ * .awsIamConfig(AwsIamConfigProperty.builder()
+ * .signingRegion("signingRegion")
+ * .signingServiceName("signingServiceName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceHttpConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.HttpConfigProperty.Builder =

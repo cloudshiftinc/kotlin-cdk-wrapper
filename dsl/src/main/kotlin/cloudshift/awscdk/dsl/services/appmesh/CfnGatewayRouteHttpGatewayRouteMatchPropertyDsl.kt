@@ -11,6 +11,55 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object that represents the criteria for determining a request match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpGatewayRouteMatchProperty httpGatewayRouteMatchProperty =
+ * HttpGatewayRouteMatchProperty.builder()
+ * .headers(List.of(HttpGatewayRouteHeaderProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .invert(false)
+ * .match(HttpGatewayRouteHeaderMatchProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(GatewayRouteRangeMatchProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build())
+ * .build()))
+ * .hostname(GatewayRouteHostnameMatchProperty.builder()
+ * .exact("exact")
+ * .suffix("suffix")
+ * .build())
+ * .method("method")
+ * .path(HttpPathMatchProperty.builder()
+ * .exact("exact")
+ * .regex("regex")
+ * .build())
+ * .port(123)
+ * .prefix("prefix")
+ * .queryParameters(List.of(QueryParameterProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .match(HttpQueryParameterMatchProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayroutematch.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRouteMatchPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteMatchProperty.Builder =

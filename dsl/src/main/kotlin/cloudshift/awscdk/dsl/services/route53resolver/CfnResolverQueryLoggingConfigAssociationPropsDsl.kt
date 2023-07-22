@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps
 
+/**
+ * Properties for defining a `CfnResolverQueryLoggingConfigAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverQueryLoggingConfigAssociationProps cfnResolverQueryLoggingConfigAssociationProps =
+ * CfnResolverQueryLoggingConfigAssociationProps.builder()
+ * .resolverQueryLogConfigId("resolverQueryLogConfigId")
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverqueryloggingconfigassociation.html)
+ */
 @CdkDslMarker
 public class CfnResolverQueryLoggingConfigAssociationPropsDsl {
   private val cdkBuilder: CfnResolverQueryLoggingConfigAssociationProps.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet
 
+/**
+ * The part of a web request that you want AWS WAF to inspect, such as a specific header or a query
+ * string.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * FieldToMatchProperty fieldToMatchProperty = FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-fieldtomatch.html)
+ */
 @CdkDslMarker
 public class CfnSizeConstraintSetFieldToMatchPropertyDsl {
   private val cdkBuilder: CfnSizeConstraintSet.FieldToMatchProperty.Builder =

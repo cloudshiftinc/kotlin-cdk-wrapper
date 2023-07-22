@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecr.RepositoryAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * RepositoryAttributes repositoryAttributes = RepositoryAttributes.builder()
+ * .repositoryArn("repositoryArn")
+ * .repositoryName("repositoryName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryAttributesDsl {
   private val cdkBuilder: RepositoryAttributes.Builder = RepositoryAttributes.builder()

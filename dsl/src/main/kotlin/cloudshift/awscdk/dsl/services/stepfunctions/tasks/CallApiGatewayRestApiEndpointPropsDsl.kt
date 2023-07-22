@@ -20,6 +20,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.AuthType
 import software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayRestApiEndpointProps
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethod
 
+/**
+ * Properties for calling an REST API Endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi api;
+ * CallApiGatewayRestApiEndpoint.Builder.create(this, "Endpoint")
+ * .api(api)
+ * .stageName("Stage")
+ * .method(HttpMethod.PUT)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .headers(TaskInput.fromObject(Map.of(
+ * "TaskToken", JsonPath.array(JsonPath.getTaskToken()))))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CallApiGatewayRestApiEndpointPropsDsl {
   private val cdkBuilder: CallApiGatewayRestApiEndpointProps.Builder =

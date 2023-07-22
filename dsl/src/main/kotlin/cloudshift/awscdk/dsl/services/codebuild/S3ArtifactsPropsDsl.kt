@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.S3ArtifactsProps
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for `S3Artifacts`.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket;
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * .artifacts(Artifacts.s3(S3ArtifactsProps.builder()
+ * .bucket(bucket)
+ * .includeBuildId(false)
+ * .packageZip(true)
+ * .path("another/path")
+ * .identifier("AddArtifact1")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3ArtifactsPropsDsl {
   private val cdkBuilder: S3ArtifactsProps.Builder = S3ArtifactsProps.builder()

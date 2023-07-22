@@ -15,6 +15,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecr.CfnRepository
 import software.constructs.Construct
 
+/**
+ * The `AWS::ECR::Repository` resource specifies an Amazon Elastic Container Registry (Amazon ECR)
+ * repository, where users can push and pull Docker images, Open Container Initiative (OCI) images, and
+ * OCI compatible artifacts.
+ *
+ * For more information, see [Amazon ECR private
+ * repositories](https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html) in the
+ * *Amazon ECR User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object repositoryPolicyText;
+ * CfnRepository cfnRepository = CfnRepository.Builder.create(this, "MyCfnRepository")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionType("encryptionType")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
+ * .scanOnPush(false)
+ * .build())
+ * .imageTagMutability("imageTagMutability")
+ * .lifecyclePolicy(LifecyclePolicyProperty.builder()
+ * .lifecyclePolicyText("lifecyclePolicyText")
+ * .registryId("registryId")
+ * .build())
+ * .repositoryName("repositoryName")
+ * .repositoryPolicyText(repositoryPolicyText)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryDsl(
   scope: Construct,

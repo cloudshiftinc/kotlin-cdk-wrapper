@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnReceiptFilter
 
+/**
+ * Specifies an IP address filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * FilterProperty filterProperty = FilterProperty.builder()
+ * .ipFilter(IpFilterProperty.builder()
+ * .cidr("cidr")
+ * .policy("policy")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-filter.html)
+ */
 @CdkDslMarker
 public class CfnReceiptFilterFilterPropertyDsl {
   private val cdkBuilder: CfnReceiptFilter.FilterProperty.Builder =

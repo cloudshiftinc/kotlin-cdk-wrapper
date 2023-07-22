@@ -9,6 +9,21 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.MathExpressionProps
 
+/**
+ * Properties for a MathExpression.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * MathExpression allProblems = MathExpression.Builder.create()
+ * .expression("errors + throttles")
+ * .usingMetrics(Map.of(
+ * "errors", fn.metricErrors(),
+ * "throttles", fn.metricThrottles()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MathExpressionPropsDsl {
   private val cdkBuilder: MathExpressionProps.Builder = MathExpressionProps.builder()

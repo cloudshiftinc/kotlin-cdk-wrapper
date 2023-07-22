@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a network access control (ACL) rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisAclRuleProperty analysisAclRuleProperty = AnalysisAclRuleProperty.builder()
+ * .cidr("cidr")
+ * .egress(false)
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .protocol("protocol")
+ * .ruleAction("ruleAction")
+ * .ruleNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisaclrule.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisAclRulePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisAclRuleProperty.Builder =

@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apigateway.CfnVpcLink
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::VpcLink` resource creates an API Gateway VPC link for a REST API to access
+ * resources in an Amazon Virtual Private Cloud (VPC).
+ *
+ * For more information, see
+ * [vpclink:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateVpcLink.html) in the
+ * `Amazon API Gateway REST API Reference` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnVpcLink cfnVpcLink = CfnVpcLink.Builder.create(this, "MyCfnVpcLink")
+ * .name("name")
+ * .targetArns(List.of("targetArns"))
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-vpclink.html)
+ */
 @CdkDslMarker
 public class CfnVpcLinkDsl(
   scope: Construct,

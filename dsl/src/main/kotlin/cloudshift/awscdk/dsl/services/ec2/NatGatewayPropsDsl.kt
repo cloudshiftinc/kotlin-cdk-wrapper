@@ -8,6 +8,20 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.NatGatewayProps
 
+/**
+ * Properties for a NAT gateway.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NatGatewayProps natGatewayProps = NatGatewayProps.builder()
+ * .eipAllocationIds(List.of("eipAllocationIds"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NatGatewayPropsDsl {
   private val cdkBuilder: NatGatewayProps.Builder = NatGatewayProps.builder()

@@ -9,6 +9,40 @@ import kotlin.Number
 import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 import software.amazon.awscdk.services.elasticsearch.EbsOptions
 
+/**
+ * (deprecated) The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are
+ * attached to data nodes in the Amazon ES domain.
+ *
+ * For more information, see
+ * [Configuring EBS-based Storage]
+ * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+ * in the Amazon Elasticsearch Service Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * Domain prodDomain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_1)
+ * .capacity(CapacityConfig.builder()
+ * .masterNodes(5)
+ * .dataNodes(20)
+ * .build())
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(20)
+ * .build())
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .availabilityZoneCount(3)
+ * .build())
+ * .logging(LoggingOptions.builder()
+ * .slowSearchLogEnabled(true)
+ * .appLogEnabled(true)
+ * .slowIndexLogEnabled(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class EbsOptionsDsl {

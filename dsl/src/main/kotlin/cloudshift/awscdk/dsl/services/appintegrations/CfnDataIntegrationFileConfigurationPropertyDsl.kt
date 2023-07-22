@@ -11,6 +11,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 
+/**
+ * The configuration for what files should be pulled from the source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appintegrations.*;
+ * Object filters;
+ * FileConfigurationProperty fileConfigurationProperty = FileConfigurationProperty.builder()
+ * .folders(List.of("folders"))
+ * // the properties below are optional
+ * .filters(filters)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-fileconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataIntegrationFileConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataIntegration.FileConfigurationProperty.Builder =

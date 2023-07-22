@@ -9,6 +9,38 @@ import software.amazon.awscdk.services.kms.Alias
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * Defines a display name for a customer master key (CMK) in AWS Key Management Service (AWS KMS).
+ *
+ * Using an alias to refer to a key can help you simplify key
+ * management. For example, when rotating keys, you can just update the alias
+ * mapping instead of tracking and changing key IDs. For more information, see
+ * Working with Aliases in the AWS Key Management Service Developer Guide.
+ *
+ * You can also add an alias for a key by calling `key.addAlias(alias)`.
+ *
+ * Example:
+ *
+ * ```
+ * // Passing an encrypted replication bucket created in a different stack.
+ * App app = new App();
+ * Stack replicationStack = Stack.Builder.create(app, "ReplicationStack")
+ * .env(Environment.builder()
+ * .region("us-west-1")
+ * .build())
+ * .build();
+ * Key key = new Key(replicationStack, "ReplicationKey");
+ * Alias alias = Alias.Builder.create(replicationStack, "ReplicationAlias")
+ * // aliasName is required
+ * .aliasName(PhysicalName.GENERATE_IF_NEEDED)
+ * .targetKey(key)
+ * .build();
+ * Bucket replicationBucket = Bucket.Builder.create(replicationStack, "ReplicationBucket")
+ * .bucketName(PhysicalName.GENERATE_IF_NEEDED)
+ * .encryptionKey(alias)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasDsl(
   scope: Construct,

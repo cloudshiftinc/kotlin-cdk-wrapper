@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnAcceleratorProps
 
+/**
+ * Properties for defining a `CfnAccelerator`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnAcceleratorProps cfnAcceleratorProps = CfnAcceleratorProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .enabled(false)
+ * .ipAddresses(List.of("ipAddresses"))
+ * .ipAddressType("ipAddressType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)
+ */
 @CdkDslMarker
 public class CfnAcceleratorPropsDsl {
   private val cdkBuilder: CfnAcceleratorProps.Builder = CfnAcceleratorProps.builder()

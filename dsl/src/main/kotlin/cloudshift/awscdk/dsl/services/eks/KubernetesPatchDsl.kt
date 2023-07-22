@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.eks.KubernetesPatch
 import software.amazon.awscdk.services.eks.PatchType
 import software.constructs.Construct
 
+/**
+ * A CloudFormation resource which applies/restores a JSON patch into a Kubernetes resource.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * KubernetesPatch.Builder.create(this, "hello-kub-deployment-label")
+ * .cluster(cluster)
+ * .resourceName("deployment/hello-kubernetes")
+ * .applyPatch(Map.of("spec", Map.of("replicas", 5)))
+ * .restorePatch(Map.of("spec", Map.of("replicas", 3)))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://kubernetes.io/docs/tasks/run-application/update-api-object-kubectl-patch/)
+ */
 @CdkDslMarker
 public class KubernetesPatchDsl(
   scope: Construct,

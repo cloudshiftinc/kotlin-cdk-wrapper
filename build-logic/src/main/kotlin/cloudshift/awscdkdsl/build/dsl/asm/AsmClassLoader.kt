@@ -16,14 +16,11 @@ import java.util.jar.JarFile
 import kotlin.streams.asSequence
 
 internal object AsmClassLoader : CdkClassLoader {
-    override fun loadClasses(classpath: Set<File>, builderSourceClasses: Map<ClassName, CdkSourceClass>): List<CdkClass> = loadCdkClasses(classpath).map {
+    override fun loadClasses(classpath: Set<File>, sourceClasses: Map<ClassName, CdkSourceClass>): List<CdkClass> = loadCdkClasses(classpath).map {
         val className = ClassName.fromAsmClassName(it.name)
-        val builderSourceClass = builderSourceClasses[className]
-        builderSourceClass ?: if (className.toString().endsWith(".Builder")) {
-            println("Missing: $className")
-        } else {
-        }
-        AsmClassAdapter(className, it, builderSourceClass)
+        val sourceClass = sourceClasses[className]
+
+        AsmClassAdapter(className, it, sourceClass)
     }
 
     private fun loadCdkClasses(classpath: Set<File>): List<ClassNode> {

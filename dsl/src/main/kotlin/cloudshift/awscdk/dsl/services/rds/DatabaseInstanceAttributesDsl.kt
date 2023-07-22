@@ -11,6 +11,29 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.rds.DatabaseInstanceAttributes
 import software.amazon.awscdk.services.rds.IInstanceEngine
 
+/**
+ * Properties that describe an existing instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * IInstanceEngine instanceEngine;
+ * SecurityGroup securityGroup;
+ * DatabaseInstanceAttributes databaseInstanceAttributes = DatabaseInstanceAttributes.builder()
+ * .instanceEndpointAddress("instanceEndpointAddress")
+ * .instanceIdentifier("instanceIdentifier")
+ * .port(123)
+ * .securityGroups(List.of(securityGroup))
+ * // the properties below are optional
+ * .engine(instanceEngine)
+ * .instanceResourceId("instanceResourceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstanceAttributesDsl {
   private val cdkBuilder: DatabaseInstanceAttributes.Builder = DatabaseInstanceAttributes.builder()

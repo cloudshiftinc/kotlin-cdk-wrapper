@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnResource
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::Resource` resource creates a resource in an API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnResource cfnResource = CfnResource.Builder.create(this, "MyCfnResource")
+ * .parentId("parentId")
+ * .pathPart("pathPart")
+ * .restApiId("restApiId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-resource.html)
+ */
 @CdkDslMarker
 public class CfnResourceDsl(
   scope: Construct,

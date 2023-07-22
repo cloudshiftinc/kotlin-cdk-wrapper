@@ -11,6 +11,73 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a calculated field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicCalculatedFieldProperty topicCalculatedFieldProperty =
+ * TopicCalculatedFieldProperty.builder()
+ * .calculatedFieldName("calculatedFieldName")
+ * .expression("expression")
+ * // the properties below are optional
+ * .aggregation("aggregation")
+ * .allowedAggregations(List.of("allowedAggregations"))
+ * .calculatedFieldDescription("calculatedFieldDescription")
+ * .calculatedFieldSynonyms(List.of("calculatedFieldSynonyms"))
+ * .cellValueSynonyms(List.of(CellValueSynonymProperty.builder()
+ * .cellValue("cellValue")
+ * .synonyms(List.of("synonyms"))
+ * .build()))
+ * .columnDataRole("columnDataRole")
+ * .comparativeOrder(ComparativeOrderProperty.builder()
+ * .specifedOrder(List.of("specifedOrder"))
+ * .treatUndefinedSpecifiedValues("treatUndefinedSpecifiedValues")
+ * .useOrdering("useOrdering")
+ * .build())
+ * .defaultFormatting(DefaultFormattingProperty.builder()
+ * .displayFormat("displayFormat")
+ * .displayFormatOptions(DisplayFormatOptionsProperty.builder()
+ * .blankCellFormat("blankCellFormat")
+ * .currencySymbol("currencySymbol")
+ * .dateFormat("dateFormat")
+ * .decimalSeparator("decimalSeparator")
+ * .fractionDigits(123)
+ * .groupingSeparator("groupingSeparator")
+ * .negativeFormat(NegativeFormatProperty.builder()
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .build())
+ * .prefix("prefix")
+ * .suffix("suffix")
+ * .unitScaler("unitScaler")
+ * .useBlankCellFormat(false)
+ * .useGrouping(false)
+ * .build())
+ * .build())
+ * .isIncludedInTopic(false)
+ * .neverAggregateInFilter(false)
+ * .notAllowedAggregations(List.of("notAllowedAggregations"))
+ * .semanticType(SemanticTypeProperty.builder()
+ * .falseyCellValue("falseyCellValue")
+ * .falseyCellValueSynonyms(List.of("falseyCellValueSynonyms"))
+ * .subTypeName("subTypeName")
+ * .truthyCellValue("truthyCellValue")
+ * .truthyCellValueSynonyms(List.of("truthyCellValueSynonyms"))
+ * .typeName("typeName")
+ * .typeParameters(Map.of(
+ * "typeParametersKey", "typeParameters"))
+ * .build())
+ * .timeGranularity("timeGranularity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicCalculatedFieldPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicCalculatedFieldProperty.Builder =

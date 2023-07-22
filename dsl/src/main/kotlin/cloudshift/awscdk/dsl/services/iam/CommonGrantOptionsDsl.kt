@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.CommonGrantOptions
 import software.amazon.awscdk.services.iam.IGrantable
 
+/**
+ * Basic options for a grant operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object conditions;
+ * IGrantable grantable;
+ * CommonGrantOptions commonGrantOptions = CommonGrantOptions.builder()
+ * .actions(List.of("actions"))
+ * .grantee(grantable)
+ * .resourceArns(List.of("resourceArns"))
+ * // the properties below are optional
+ * .conditions(Map.of(
+ * "conditionsKey", Map.of(
+ * "conditionsKey", conditions)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonGrantOptionsDsl {
   private val cdkBuilder: CommonGrantOptions.Builder = CommonGrantOptions.builder()

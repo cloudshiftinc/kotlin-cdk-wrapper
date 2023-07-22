@@ -13,6 +13,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnAppBlock
 import software.amazon.awscdk.services.appstream.CfnAppBlockProps
 
+/**
+ * Properties for defining a `CfnAppBlock`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnAppBlockProps cfnAppBlockProps = CfnAppBlockProps.builder()
+ * .name("name")
+ * .sourceS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .displayName("displayName")
+ * .packagingType("packagingType")
+ * .postSetupScriptDetails(ScriptDetailsProperty.builder()
+ * .executablePath("executablePath")
+ * .scriptS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * .timeoutInSeconds(123)
+ * // the properties below are optional
+ * .executableParameters("executableParameters")
+ * .build())
+ * .setupScriptDetails(ScriptDetailsProperty.builder()
+ * .executablePath("executablePath")
+ * .scriptS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * .timeoutInSeconds(123)
+ * // the properties below are optional
+ * .executableParameters("executableParameters")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)
+ */
 @CdkDslMarker
 public class CfnAppBlockPropsDsl {
   private val cdkBuilder: CfnAppBlockProps.Builder = CfnAppBlockProps.builder()

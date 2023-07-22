@@ -10,6 +10,60 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options that determine the presentation of the data labels.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataLabelOptionsProperty dataLabelOptionsProperty = DataLabelOptionsProperty.builder()
+ * .categoryLabelVisibility("categoryLabelVisibility")
+ * .dataLabelTypes(List.of(DataLabelTypeProperty.builder()
+ * .dataPathLabelType(DataPathLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .visibility("visibility")
+ * .build())
+ * .fieldLabelType(FieldLabelTypeProperty.builder()
+ * .fieldId("fieldId")
+ * .visibility("visibility")
+ * .build())
+ * .maximumLabelType(MaximumLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .minimumLabelType(MinimumLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .rangeEndsLabelType(RangeEndsLabelTypeProperty.builder()
+ * .visibility("visibility")
+ * .build())
+ * .build()))
+ * .labelColor("labelColor")
+ * .labelContent("labelContent")
+ * .labelFontConfiguration(FontConfigurationProperty.builder()
+ * .fontColor("fontColor")
+ * .fontDecoration("fontDecoration")
+ * .fontSize(FontSizeProperty.builder()
+ * .relative("relative")
+ * .build())
+ * .fontStyle("fontStyle")
+ * .fontWeight(FontWeightProperty.builder()
+ * .name("name")
+ * .build())
+ * .build())
+ * .measureLabelVisibility("measureLabelVisibility")
+ * .overlap("overlap")
+ * .position("position")
+ * .totalsVisibility("totalsVisibility")
+ * .visibility("visibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-datalabeloptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDataLabelOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.DataLabelOptionsProperty.Builder =

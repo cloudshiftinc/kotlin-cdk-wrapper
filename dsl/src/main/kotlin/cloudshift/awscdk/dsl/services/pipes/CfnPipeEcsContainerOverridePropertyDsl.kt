@@ -11,6 +11,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The overrides that are sent to a container.
+ *
+ * An empty container override can be passed in. An example of an empty container override is
+ * `{"containerOverrides": [ ] }` . If a non-empty container override is specified, the `name`
+ * parameter must be included.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * EcsContainerOverrideProperty ecsContainerOverrideProperty =
+ * EcsContainerOverrideProperty.builder()
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .environment(List.of(EcsEnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .environmentFiles(List.of(EcsEnvironmentFileProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .memory(123)
+ * .memoryReservation(123)
+ * .name("name")
+ * .resourceRequirements(List.of(EcsResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-ecscontaineroverride.html)
+ */
 @CdkDslMarker
 public class CfnPipeEcsContainerOverridePropertyDsl {
   private val cdkBuilder: CfnPipe.EcsContainerOverrideProperty.Builder =

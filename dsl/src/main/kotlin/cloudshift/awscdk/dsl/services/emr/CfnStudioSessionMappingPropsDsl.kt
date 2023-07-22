@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps
 
+/**
+ * Properties for defining a `CfnStudioSessionMapping`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStudioSessionMappingProps cfnStudioSessionMappingProps =
+ * CfnStudioSessionMappingProps.builder()
+ * .identityName("identityName")
+ * .identityType("identityType")
+ * .sessionPolicyArn("sessionPolicyArn")
+ * .studioId("studioId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studiosessionmapping.html)
+ */
 @CdkDslMarker
 public class CfnStudioSessionMappingPropsDsl {
   private val cdkBuilder: CfnStudioSessionMappingProps.Builder =

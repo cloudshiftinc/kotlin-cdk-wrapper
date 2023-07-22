@@ -9,6 +9,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * An object that contains the filters for an event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * FilterCriteriaProperty filterCriteriaProperty = FilterCriteriaProperty.builder()
+ * .filters(List.of(FilterProperty.builder()
+ * .pattern("pattern")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filtercriteria.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingFilterCriteriaPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.FilterCriteriaProperty.Builder =

@@ -12,6 +12,37 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.rds.SubnetGroup
 import software.constructs.Construct
 
+/**
+ * Class for creating a RDS DB subnet group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * SubnetGroup subnetGroup = SubnetGroup.Builder.create(this, "MySubnetGroup")
+ * .description("description")
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .subnetGroupName("subnetGroupName")
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetGroupDsl(
   scope: Construct,

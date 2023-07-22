@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
 import software.amazon.awscdk.services.ivschat.CfnLoggingConfigurationProps
 
+/**
+ * Properties for defining a `CfnLoggingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * CfnLoggingConfigurationProps cfnLoggingConfigurationProps =
+ * CfnLoggingConfigurationProps.builder()
+ * .destinationConfiguration(DestinationConfigurationProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsDestinationConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .firehose(FirehoseDestinationConfigurationProperty.builder()
+ * .deliveryStreamName("deliveryStreamName")
+ * .build())
+ * .s3(S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationPropsDsl {
   private val cdkBuilder: CfnLoggingConfigurationProps.Builder =

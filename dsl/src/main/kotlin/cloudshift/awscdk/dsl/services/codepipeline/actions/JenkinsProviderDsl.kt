@@ -8,6 +8,21 @@ import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider
 import software.constructs.Construct
 
+/**
+ * A class representing Jenkins providers.
+ *
+ * Example:
+ *
+ * ```
+ * JenkinsProvider jenkinsProvider = JenkinsProvider.Builder.create(this, "JenkinsProvider")
+ * .providerName("MyJenkinsProvider")
+ * .serverUrl("http://my-jenkins.com:8080")
+ * .version("2")
+ * .build();
+ * ```
+ *
+ * [Documentation]( #import)
+ */
 @CdkDslMarker
 public class JenkinsProviderDsl(
   scope: Construct,

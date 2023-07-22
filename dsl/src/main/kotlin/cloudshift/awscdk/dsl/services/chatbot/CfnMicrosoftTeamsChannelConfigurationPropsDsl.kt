@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfigurationProps
 
+/**
+ * Properties for defining a `CfnMicrosoftTeamsChannelConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.chatbot.*;
+ * CfnMicrosoftTeamsChannelConfigurationProps cfnMicrosoftTeamsChannelConfigurationProps =
+ * CfnMicrosoftTeamsChannelConfigurationProps.builder()
+ * .configurationName("configurationName")
+ * .iamRoleArn("iamRoleArn")
+ * .teamId("teamId")
+ * .teamsChannelId("teamsChannelId")
+ * .teamsTenantId("teamsTenantId")
+ * // the properties below are optional
+ * .guardrailPolicies(List.of("guardrailPolicies"))
+ * .loggingLevel("loggingLevel")
+ * .snsTopicArns(List.of("snsTopicArns"))
+ * .userRoleRequired(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMicrosoftTeamsChannelConfigurationPropsDsl {
   private val cdkBuilder: CfnMicrosoftTeamsChannelConfigurationProps.Builder =

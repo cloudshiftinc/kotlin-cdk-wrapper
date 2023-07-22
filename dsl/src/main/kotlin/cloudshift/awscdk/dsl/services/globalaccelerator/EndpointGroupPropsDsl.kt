@@ -15,6 +15,37 @@ import software.amazon.awscdk.services.globalaccelerator.IEndpoint
 import software.amazon.awscdk.services.globalaccelerator.IListener
 import software.amazon.awscdk.services.globalaccelerator.PortOverride
 
+/**
+ * Property of the EndpointGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * IEndpoint endpoint;
+ * Listener listener;
+ * EndpointGroupProps endpointGroupProps = EndpointGroupProps.builder()
+ * .listener(listener)
+ * // the properties below are optional
+ * .endpointGroupName("endpointGroupName")
+ * .endpoints(List.of(endpoint))
+ * .healthCheckInterval(Duration.minutes(30))
+ * .healthCheckPath("healthCheckPath")
+ * .healthCheckPort(123)
+ * .healthCheckProtocol(HealthCheckProtocol.TCP)
+ * .healthCheckThreshold(123)
+ * .portOverrides(List.of(PortOverride.builder()
+ * .endpointPort(123)
+ * .listenerPort(123)
+ * .build()))
+ * .region("region")
+ * .trafficDialPercentage(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EndpointGroupPropsDsl {
   private val cdkBuilder: EndpointGroupProps.Builder = EndpointGroupProps.builder()

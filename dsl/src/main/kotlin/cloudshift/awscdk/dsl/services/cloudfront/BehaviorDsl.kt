@@ -19,6 +19,56 @@ import software.amazon.awscdk.services.cloudfront.IKeyGroup
 import software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 
+/**
+ * A CloudFront behavior wrapper.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function function_;
+ * KeyGroup keyGroup;
+ * Version version;
+ * Behavior behavior = Behavior.builder()
+ * .allowedMethods(CloudFrontAllowedMethods.GET_HEAD)
+ * .cachedMethods(CloudFrontAllowedCachedMethods.GET_HEAD)
+ * .compress(false)
+ * .defaultTtl(Duration.minutes(30))
+ * .forwardedValues(ForwardedValuesProperty.builder()
+ * .queryString(false)
+ * // the properties below are optional
+ * .cookies(CookiesProperty.builder()
+ * .forward("forward")
+ * // the properties below are optional
+ * .whitelistedNames(List.of("whitelistedNames"))
+ * .build())
+ * .headers(List.of("headers"))
+ * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
+ * .build())
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .function(function_)
+ * .build()))
+ * .isDefaultBehavior(false)
+ * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociation.builder()
+ * .eventType(LambdaEdgeEventType.ORIGIN_REQUEST)
+ * .lambdaFunction(version)
+ * // the properties below are optional
+ * .includeBody(false)
+ * .build()))
+ * .maxTtl(Duration.minutes(30))
+ * .minTtl(Duration.minutes(30))
+ * .pathPattern("pathPattern")
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .trustedSigners(List.of("trustedSigners"))
+ * .viewerProtocolPolicy(ViewerProtocolPolicy.HTTPS_ONLY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BehaviorDsl {
   private val cdkBuilder: Behavior.Builder = Behavior.builder()

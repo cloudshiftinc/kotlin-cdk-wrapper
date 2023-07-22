@@ -9,6 +9,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * S3DataSourceConfigurationProperty s3DataSourceConfigurationProperty =
+ * S3DataSourceConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .accessControlListConfiguration(AccessControlListConfigurationProperty.builder()
+ * .keyPath("keyPath")
+ * .build())
+ * .documentsMetadataConfiguration(DocumentsMetadataConfigurationProperty.builder()
+ * .s3Prefix("s3Prefix")
+ * .build())
+ * .exclusionPatterns(List.of("exclusionPatterns"))
+ * .inclusionPatterns(List.of("inclusionPatterns"))
+ * .inclusionPrefixes(List.of("inclusionPrefixes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-s3datasourceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceS3DataSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.S3DataSourceConfigurationProperty.Builder =

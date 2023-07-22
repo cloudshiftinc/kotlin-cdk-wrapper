@@ -7,6 +7,26 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Contains information about the EBS storage volumes attached to the broker nodes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * EBSStorageInfoProperty eBSStorageInfoProperty = EBSStorageInfoProperty.builder()
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .enabled(false)
+ * .volumeThroughput(123)
+ * .build())
+ * .volumeSize(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-ebsstorageinfo.html)
+ */
 @CdkDslMarker
 public class CfnClusterEBSStorageInfoPropertyDsl {
   private val cdkBuilder: CfnCluster.EBSStorageInfoProperty.Builder =

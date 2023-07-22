@@ -9,6 +9,23 @@ import kotlin.String
 import software.amazon.awscdk.services.autoscaling.BasicScheduledActionProps
 import software.amazon.awscdk.services.autoscaling.Schedule
 
+/**
+ * Properties for a scheduled scaling action.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnSchedule("PrescaleInTheMorning", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .build());
+ * autoScalingGroup.scaleOnSchedule("AllowDownscalingAtNight", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(1)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BasicScheduledActionPropsDsl {
   private val cdkBuilder: BasicScheduledActionProps.Builder = BasicScheduledActionProps.builder()

@@ -7,6 +7,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Details for a step that decrypts an encrypted file.
+ *
+ * Consists of the following values:
+ *
+ * * A descriptive name
+ * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
+ * decrypt.
+ * * An S3 or Amazon EFS location for the destination of the file decryption.
+ * * A flag that indicates whether to overwrite an existing file of the same name. The default is
+ * `FALSE` .
+ * * The type of encryption that's used. Currently, only PGP encryption is supported.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * DecryptStepDetailsProperty decryptStepDetailsProperty = DecryptStepDetailsProperty.builder()
+ * .destinationFileLocation(InputFileLocationProperty.builder()
+ * .efsFileLocation(EfsInputFileLocationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .path("path")
+ * .build())
+ * .s3FileLocation(S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * .overwriteExisting("overwriteExisting")
+ * .sourceFileLocation("sourceFileLocation")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowDecryptStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.DecryptStepDetailsProperty.Builder =

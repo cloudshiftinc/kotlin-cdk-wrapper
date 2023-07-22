@@ -11,6 +11,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 import software.constructs.Construct
 
+/**
+ * The `AWS::CloudWatch::AnomalyDetector` type specifies an anomaly detection band for a certain
+ * metric and statistic.
+ *
+ * The band represents the expected "normal" range for the metric values. Anomaly detection bands
+ * can be used for visualization of a metric's expected values, and for alarms.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnAnomalyDetector cfnAnomalyDetector = CfnAnomalyDetector.Builder.create(this,
+ * "MyCfnAnomalyDetector")
+ * .configuration(ConfigurationProperty.builder()
+ * .excludedTimeRanges(List.of(RangeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build()))
+ * .metricTimeZone("metricTimeZone")
+ * .build())
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricMathAnomalyDetector(MetricMathAnomalyDetectorProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .singleMetricAnomalyDetector(SingleMetricAnomalyDetectorProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .stat("stat")
+ * .build())
+ * .stat("stat")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorDsl(
   scope: Construct,

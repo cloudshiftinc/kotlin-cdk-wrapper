@@ -32,9 +32,8 @@ internal object SourceParser {
             SourceRoot.Callback.Result.DONT_SAVE
         }
 
-        val builderMap = sourceClasses.filter { it.className.simpleName == "Builder" }
-            .associateBy { it.className }
-        return CdkSourceModel(classes = sourceClasses, builderMap = builderMap)
+        val classMap = sourceClasses.associateBy { it.className }
+        return CdkSourceModel(classes = sourceClasses, classMap = classMap)
     }
 
     private fun processCompilationUnit(cu: CompilationUnit): List<CdkSourceClass> {
@@ -75,7 +74,10 @@ internal object SourceParser {
             else -> emptyList()
         }
 
-        return CdkSourceClass(className = type.className, methods = methods)
+        val comment = type.comment.getOrNull()
+            ?.let { convertJavadocComment(it.content) }
+
+        return CdkSourceClass(className = type.className, methods = methods, comment = comment)
     }
 
     private fun gatherParentNames(list: MutableList<String>, type: TypeDeclaration<*>) {
@@ -130,6 +132,8 @@ internal object SourceParser {
         "</pre>" to "```",
         "<ul>" to "",
         "</ul>" to "",
+        "<ol>" to "",
+        "</ol>" to "",
         "<li>" to "* ",
         "</li>" to "",
         "<p>" to "",

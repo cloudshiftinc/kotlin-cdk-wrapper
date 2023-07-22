@@ -14,6 +14,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnLoadBalancerProps
 
+/**
+ * Properties for defining a `CfnLoadBalancer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnLoadBalancerProps cfnLoadBalancerProps = CfnLoadBalancerProps.builder()
+ * .instancePort(123)
+ * .loadBalancerName("loadBalancerName")
+ * // the properties below are optional
+ * .attachedInstances(List.of("attachedInstances"))
+ * .healthCheckPath("healthCheckPath")
+ * .ipAddressType("ipAddressType")
+ * .sessionStickinessEnabled(false)
+ * .sessionStickinessLbCookieDurationSeconds("sessionStickinessLbCookieDurationSeconds")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tlsPolicyName("tlsPolicyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerPropsDsl {
   private val cdkBuilder: CfnLoadBalancerProps.Builder = CfnLoadBalancerProps.builder()

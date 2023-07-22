@@ -15,6 +15,22 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Construction properties for a CloudFormationStackNotificationCheck.
+ *
+ * Example:
+ *
+ * ```
+ * // topics to which CloudFormation stacks may send event notifications
+ * Topic topic1 = new Topic(this, "AllowedTopic1");
+ * Topic topic2 = new Topic(this, "AllowedTopic2");
+ * // non-compliant if CloudFormation stack does not send notifications to 'topic1' or 'topic2'
+ * // non-compliant if CloudFormation stack does not send notifications to 'topic1' or 'topic2'
+ * CloudFormationStackNotificationCheck.Builder.create(this, "NotificationCheck")
+ * .topics(List.of(topic1, topic2))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationStackNotificationCheckPropsDsl {
   private val cdkBuilder: CloudFormationStackNotificationCheckProps.Builder =

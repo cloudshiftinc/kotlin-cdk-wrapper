@@ -14,6 +14,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.timestream.CfnTable
 import software.constructs.Construct
 
+/**
+ * The CreateTable operation adds a new table to an existing database in your account.
+ *
+ * In an AWS account, table names must be at least unique within each Region if they are in the same
+ * database. You may have identical table names in the same Region if the tables are in separate
+ * databases. While creating the table, you must specify the table name, database name, and the
+ * retention properties. [Service quotas
+ * apply](https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html) . See [code
+ * sample](https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html)
+ * for details.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * Object magneticStoreWriteProperties;
+ * Object retentionProperties;
+ * CfnTable cfnTable = CfnTable.Builder.create(this, "MyCfnTable")
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .magneticStoreWriteProperties(magneticStoreWriteProperties)
+ * .retentionProperties(retentionProperties)
+ * .tableName("tableName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-table.html)
+ */
 @CdkDslMarker
 public class CfnTableDsl(
   scope: Construct,

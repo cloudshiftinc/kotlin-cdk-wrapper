@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * The configuration for a render farm that is associated with a studio resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * ComputeFarmConfigurationProperty computeFarmConfigurationProperty =
+ * ComputeFarmConfigurationProperty.builder()
+ * .activeDirectoryUser("activeDirectoryUser")
+ * .endpoint("endpoint")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-computefarmconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentComputeFarmConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudioComponent.ComputeFarmConfigurationProperty.Builder =

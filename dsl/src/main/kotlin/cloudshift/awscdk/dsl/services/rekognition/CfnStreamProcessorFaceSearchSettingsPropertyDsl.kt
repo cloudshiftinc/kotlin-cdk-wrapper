@@ -7,6 +7,31 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.rekognition.CfnStreamProcessor
 
+/**
+ * The input parameters used to recognize faces in a streaming video analyzed by a Amazon
+ * Rekognition stream processor.
+ *
+ * `FaceSearchSettings` is a request parameter for
+ * [CreateStreamProcessor](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_CreateStreamProcessor)
+ * . For more information, see
+ * [FaceSearchSettings](https://docs.aws.amazon.com/rekognition/latest/APIReference/API_FaceSearchSettings)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * FaceSearchSettingsProperty faceSearchSettingsProperty = FaceSearchSettingsProperty.builder()
+ * .collectionId("collectionId")
+ * // the properties below are optional
+ * .faceMatchThreshold(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rekognition-streamprocessor-facesearchsettings.html)
+ */
 @CdkDslMarker
 public class CfnStreamProcessorFaceSearchSettingsPropertyDsl {
   private val cdkBuilder: CfnStreamProcessor.FaceSearchSettingsProperty.Builder =

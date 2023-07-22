@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBotAlias
 
+/**
+ * Specifies an Amazon S3 bucket for logging audio conversations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * S3BucketLogDestinationProperty s3BucketLogDestinationProperty =
+ * S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-s3bucketlogdestination.html)
+ */
 @CdkDslMarker
 public class CfnBotAliasS3BucketLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBotAlias.S3BucketLogDestinationProperty.Builder =

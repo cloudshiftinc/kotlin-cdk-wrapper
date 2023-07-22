@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Represents the settings used to enable point in time recovery.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * PointInTimeRecoverySpecificationProperty pointInTimeRecoverySpecificationProperty =
+ * PointInTimeRecoverySpecificationProperty.builder()
+ * .pointInTimeRecoveryEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-pointintimerecoveryspecification.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTablePointInTimeRecoverySpecificationPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.PointInTimeRecoverySpecificationProperty.Builder =

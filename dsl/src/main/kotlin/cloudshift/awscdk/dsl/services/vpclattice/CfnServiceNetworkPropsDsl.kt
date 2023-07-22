@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.vpclattice.CfnServiceNetworkProps
 
+/**
+ * Properties for defining a `CfnServiceNetwork`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnServiceNetworkProps cfnServiceNetworkProps = CfnServiceNetworkProps.builder()
+ * .authType("authType")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html)
+ */
 @CdkDslMarker
 public class CfnServiceNetworkPropsDsl {
   private val cdkBuilder: CfnServiceNetworkProps.Builder = CfnServiceNetworkProps.builder()

@@ -23,6 +23,19 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoConsumedCapacit
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItemProps
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression
 
+/**
+ * Properties for DynamoGetItem Task.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoGetItem.Builder.create(this, "Get Item")
+ * .key(Map.of("messageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoGetItemPropsDsl {
   private val cdkBuilder: DynamoGetItemProps.Builder = DynamoGetItemProps.builder()

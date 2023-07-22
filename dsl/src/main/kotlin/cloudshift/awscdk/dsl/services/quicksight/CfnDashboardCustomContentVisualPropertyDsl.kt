@@ -10,6 +10,105 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A visual that contains custom content.
+ *
+ * For more information, see [Using custom visual
+ * content](https://docs.aws.amazon.com/quicksight/latest/user/custom-visual-content.html) in the
+ * *Amazon QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomContentVisualProperty customContentVisualProperty = CustomContentVisualProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .visualId("visualId")
+ * // the properties below are optional
+ * .actions(List.of(VisualCustomActionProperty.builder()
+ * .actionOperations(List.of(VisualCustomActionOperationProperty.builder()
+ * .filterOperation(CustomActionFilterOperationProperty.builder()
+ * .selectedFieldsConfiguration(FilterOperationSelectedFieldsConfigurationProperty.builder()
+ * .selectedColumns(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .selectedFieldOptions("selectedFieldOptions")
+ * .selectedFields(List.of("selectedFields"))
+ * .build())
+ * .targetVisualsConfiguration(FilterOperationTargetVisualsConfigurationProperty.builder()
+ * .sameSheetTargetVisualConfiguration(SameSheetTargetVisualConfigurationProperty.builder()
+ * .targetVisualOptions("targetVisualOptions")
+ * .targetVisuals(List.of("targetVisuals"))
+ * .build())
+ * .build())
+ * .build())
+ * .navigationOperation(CustomActionNavigationOperationProperty.builder()
+ * .localNavigationConfiguration(LocalNavigationConfigurationProperty.builder()
+ * .targetSheetId("targetSheetId")
+ * .build())
+ * .build())
+ * .setParametersOperation(CustomActionSetParametersOperationProperty.builder()
+ * .parameterValueConfigurations(List.of(SetParameterValueConfigurationProperty.builder()
+ * .destinationParameterName("destinationParameterName")
+ * .value(DestinationParameterValueConfigurationProperty.builder()
+ * .customValuesConfiguration(CustomValuesConfigurationProperty.builder()
+ * .customValues(CustomParameterValuesProperty.builder()
+ * .dateTimeValues(List.of("dateTimeValues"))
+ * .decimalValues(List.of(123))
+ * .integerValues(List.of(123))
+ * .stringValues(List.of("stringValues"))
+ * .build())
+ * // the properties below are optional
+ * .includeNullValue(false)
+ * .build())
+ * .selectAllValueOptions("selectAllValueOptions")
+ * .sourceColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceField("sourceField")
+ * .sourceParameterName("sourceParameterName")
+ * .build())
+ * .build()))
+ * .build())
+ * .urlOperation(CustomActionURLOperationProperty.builder()
+ * .urlTarget("urlTarget")
+ * .urlTemplate("urlTemplate")
+ * .build())
+ * .build()))
+ * .customActionId("customActionId")
+ * .name("name")
+ * .trigger("trigger")
+ * // the properties below are optional
+ * .status("status")
+ * .build()))
+ * .chartConfiguration(CustomContentConfigurationProperty.builder()
+ * .contentType("contentType")
+ * .contentUrl("contentUrl")
+ * .imageScaling("imageScaling")
+ * .build())
+ * .subtitle(VisualSubtitleLabelOptionsProperty.builder()
+ * .formatText(LongFormatTextProperty.builder()
+ * .plainText("plainText")
+ * .richText("richText")
+ * .build())
+ * .visibility("visibility")
+ * .build())
+ * .title(VisualTitleLabelOptionsProperty.builder()
+ * .formatText(ShortFormatTextProperty.builder()
+ * .plainText("plainText")
+ * .richText("richText")
+ * .build())
+ * .visibility("visibility")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-customcontentvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardCustomContentVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.CustomContentVisualProperty.Builder =

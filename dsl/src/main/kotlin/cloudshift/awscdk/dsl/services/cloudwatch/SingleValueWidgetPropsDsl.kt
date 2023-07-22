@@ -12,6 +12,19 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.SingleValueWidgetProps
 
+/**
+ * Properties for a SingleValueWidget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(SingleValueWidget.Builder.create()
+ * .metrics(List.of())
+ * .period(Duration.minutes(15))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SingleValueWidgetPropsDsl {
   private val cdkBuilder: SingleValueWidgetProps.Builder = SingleValueWidgetProps.builder()

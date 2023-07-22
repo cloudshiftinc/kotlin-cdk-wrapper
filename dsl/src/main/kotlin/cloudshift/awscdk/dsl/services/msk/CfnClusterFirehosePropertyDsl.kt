@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Firehose details for BrokerLogs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * FirehoseProperty firehoseProperty = FirehoseProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-firehose.html)
+ */
 @CdkDslMarker
 public class CfnClusterFirehosePropertyDsl {
   private val cdkBuilder: CfnCluster.FirehoseProperty.Builder =

@@ -10,6 +10,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
 import software.constructs.Construct
 
+/**
+ * Specifies an entry, known as a rule, in a network ACL with a rule number you specify.
+ *
+ * Each network ACL has a set of numbered ingress rules and a separate set of numbered egress rules.
+ *
+ * For information about the protocol value, see [Protocol
+ * Numbers](https://docs.aws.amazon.com/https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml)
+ * on the Internet Assigned Numbers Authority (IANA) website.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkAclEntry cfnNetworkAclEntry = CfnNetworkAclEntry.Builder.create(this,
+ * "MyCfnNetworkAclEntry")
+ * .networkAclId("networkAclId")
+ * .protocol(123)
+ * .ruleAction("ruleAction")
+ * .ruleNumber(123)
+ * // the properties below are optional
+ * .cidrBlock("cidrBlock")
+ * .egress(false)
+ * .icmp(IcmpProperty.builder()
+ * .code(123)
+ * .type(123)
+ * .build())
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html)
+ */
 @CdkDslMarker
 public class CfnNetworkAclEntryDsl(
   scope: Construct,

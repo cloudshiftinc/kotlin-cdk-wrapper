@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnCachePolicy
 
+/**
+ * An object that determines whether any HTTP headers (and if so, which headers) are included in the
+ * cache key and in requests that CloudFront sends to the origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * HeadersConfigProperty headersConfigProperty = HeadersConfigProperty.builder()
+ * .headerBehavior("headerBehavior")
+ * // the properties below are optional
+ * .headers(List.of("headers"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-headersconfig.html)
+ */
 @CdkDslMarker
 public class CfnCachePolicyHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnCachePolicy.HeadersConfigProperty.Builder =

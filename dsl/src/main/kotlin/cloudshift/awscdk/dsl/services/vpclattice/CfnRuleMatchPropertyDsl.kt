@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * Describes a rule match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * MatchProperty matchProperty = MatchProperty.builder()
+ * .httpMatch(HttpMatchProperty.builder()
+ * .headerMatches(List.of(HeaderMatchProperty.builder()
+ * .match(HeaderMatchTypeProperty.builder()
+ * .contains("contains")
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .caseSensitive(false)
+ * .build()))
+ * .method("method")
+ * .pathMatch(PathMatchProperty.builder()
+ * .match(PathMatchTypeProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .caseSensitive(false)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-match.html)
+ */
 @CdkDslMarker
 public class CfnRuleMatchPropertyDsl {
   private val cdkBuilder: CfnRule.MatchProperty.Builder = CfnRule.MatchProperty.builder()

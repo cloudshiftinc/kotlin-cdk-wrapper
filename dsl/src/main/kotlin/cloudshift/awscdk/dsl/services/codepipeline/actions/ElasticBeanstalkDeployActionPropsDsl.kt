@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties of the `ElasticBeanstalkDeployAction Elastic Beanstalk deploy
+ * CodePipeline Action`.
+ *
+ * Example:
+ *
+ * ```
+ * Artifact sourceOutput = new Artifact();
+ * Bucket targetBucket = new Bucket(this, "MyBucket");
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * ElasticBeanstalkDeployAction deployAction = ElasticBeanstalkDeployAction.Builder.create()
+ * .actionName("ElasticBeanstalkDeploy")
+ * .input(sourceOutput)
+ * .environmentName("envName")
+ * .applicationName("appName")
+ * .build();
+ * IStage deployStage = pipeline.addStage(StageOptions.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(deployAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ElasticBeanstalkDeployActionPropsDsl {
   private val cdkBuilder: ElasticBeanstalkDeployActionProps.Builder =

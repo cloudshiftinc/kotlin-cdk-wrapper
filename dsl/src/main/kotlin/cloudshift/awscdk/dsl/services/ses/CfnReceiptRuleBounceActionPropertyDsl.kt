@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action rejects the received email by returning a bounce
+ * response to the sender and, optionally, publishes a notification to Amazon Simple Notification
+ * Service (Amazon SNS).
+ *
+ * For information about sending a bounce message in response to a received email, see the [Amazon
+ * SES Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-bounce.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * BounceActionProperty bounceActionProperty = BounceActionProperty.builder()
+ * .message("message")
+ * .sender("sender")
+ * .smtpReplyCode("smtpReplyCode")
+ * // the properties below are optional
+ * .statusCode("statusCode")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-bounceaction.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleBounceActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.BounceActionProperty.Builder =

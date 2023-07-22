@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
+/**
+ * A structure for a table with columns object. This object is only used when granting a SELECT
+ * permission.
+ *
+ * This object must take a value for at least one of `ColumnsNames` , `ColumnsIndexes` , or
+ * `ColumnsWildcard` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * TableWithColumnsResourceProperty tableWithColumnsResourceProperty =
+ * TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-tablewithcolumnsresource.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsTableWithColumnsResourcePropertyDsl {
   private val cdkBuilder: CfnPrincipalPermissions.TableWithColumnsResourceProperty.Builder =

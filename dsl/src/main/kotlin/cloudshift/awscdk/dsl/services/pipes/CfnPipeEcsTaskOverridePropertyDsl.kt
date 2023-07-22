@@ -10,6 +10,51 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The overrides that are associated with a task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * EcsTaskOverrideProperty ecsTaskOverrideProperty = EcsTaskOverrideProperty.builder()
+ * .containerOverrides(List.of(EcsContainerOverrideProperty.builder()
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .environment(List.of(EcsEnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .environmentFiles(List.of(EcsEnvironmentFileProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .memory(123)
+ * .memoryReservation(123)
+ * .name("name")
+ * .resourceRequirements(List.of(EcsResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .cpu("cpu")
+ * .ephemeralStorage(EcsEphemeralStorageProperty.builder()
+ * .sizeInGiB(123)
+ * .build())
+ * .executionRoleArn("executionRoleArn")
+ * .inferenceAcceleratorOverrides(List.of(EcsInferenceAcceleratorOverrideProperty.builder()
+ * .deviceName("deviceName")
+ * .deviceType("deviceType")
+ * .build()))
+ * .memory("memory")
+ * .taskRoleArn("taskRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-ecstaskoverride.html)
+ */
 @CdkDslMarker
 public class CfnPipeEcsTaskOverridePropertyDsl {
   private val cdkBuilder: CfnPipe.EcsTaskOverrideProperty.Builder =

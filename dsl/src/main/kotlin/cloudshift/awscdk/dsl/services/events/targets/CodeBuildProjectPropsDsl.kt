@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.events.targets.CodeBuildProjectProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the CodeBuild Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.codebuild.*;
+ * import software.amazon.awscdk.services.codecommit.*;
+ * Repository repo = Repository.Builder.create(this, "MyRepo")
+ * .repositoryName("aws-cdk-codebuild-events")
+ * .build();
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .source(Source.codeCommit(CodeCommitSourceProps.builder().repository(repo).build()))
+ * .build();
+ * Queue deadLetterQueue = new Queue(this, "DeadLetterQueue");
+ * // trigger a build when a commit is pushed to the repo
+ * Rule onCommitRule = repo.onCommit("OnCommit", OnCommitOptions.builder()
+ * .target(CodeBuildProject.Builder.create(project)
+ * .deadLetterQueue(deadLetterQueue)
+ * .build())
+ * .branches(List.of("master"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CodeBuildProjectPropsDsl {
   private val cdkBuilder: CodeBuildProjectProps.Builder = CodeBuildProjectProps.builder()

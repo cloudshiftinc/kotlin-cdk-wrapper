@@ -14,6 +14,82 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTaskProps
 
+/**
+ * Properties for defining a `CfnMaintenanceWindowTask`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object parameters;
+ * Object taskParameters;
+ * CfnMaintenanceWindowTaskProps cfnMaintenanceWindowTaskProps =
+ * CfnMaintenanceWindowTaskProps.builder()
+ * .priority(123)
+ * .taskArn("taskArn")
+ * .taskType("taskType")
+ * .windowId("windowId")
+ * // the properties below are optional
+ * .cutoffBehavior("cutoffBehavior")
+ * .description("description")
+ * .loggingInfo(LoggingInfoProperty.builder()
+ * .region("region")
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Prefix("s3Prefix")
+ * .build())
+ * .maxConcurrency("maxConcurrency")
+ * .maxErrors("maxErrors")
+ * .name("name")
+ * .serviceRoleArn("serviceRoleArn")
+ * .targets(List.of(TargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .taskInvocationParameters(TaskInvocationParametersProperty.builder()
+ * .maintenanceWindowAutomationParameters(MaintenanceWindowAutomationParametersProperty.builder()
+ * .documentVersion("documentVersion")
+ * .parameters(parameters)
+ * .build())
+ * .maintenanceWindowLambdaParameters(MaintenanceWindowLambdaParametersProperty.builder()
+ * .clientContext("clientContext")
+ * .payload("payload")
+ * .qualifier("qualifier")
+ * .build())
+ * .maintenanceWindowRunCommandParameters(MaintenanceWindowRunCommandParametersProperty.builder()
+ * .cloudWatchOutputConfig(CloudWatchOutputConfigProperty.builder()
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .cloudWatchOutputEnabled(false)
+ * .build())
+ * .comment("comment")
+ * .documentHash("documentHash")
+ * .documentHashType("documentHashType")
+ * .documentVersion("documentVersion")
+ * .notificationConfig(NotificationConfigProperty.builder()
+ * .notificationArn("notificationArn")
+ * // the properties below are optional
+ * .notificationEvents(List.of("notificationEvents"))
+ * .notificationType("notificationType")
+ * .build())
+ * .outputS3BucketName("outputS3BucketName")
+ * .outputS3KeyPrefix("outputS3KeyPrefix")
+ * .parameters(parameters)
+ * .serviceRoleArn("serviceRoleArn")
+ * .timeoutSeconds(123)
+ * .build())
+ * .maintenanceWindowStepFunctionsParameters(MaintenanceWindowStepFunctionsParametersProperty.builder()
+ * .input("input")
+ * .name("name")
+ * .build())
+ * .build())
+ * .taskParameters(taskParameters)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskPropsDsl {
   private val cdkBuilder: CfnMaintenanceWindowTaskProps.Builder =

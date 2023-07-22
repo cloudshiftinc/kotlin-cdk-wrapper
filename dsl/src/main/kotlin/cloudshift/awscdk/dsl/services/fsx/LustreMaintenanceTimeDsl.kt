@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.fsx.LustreMaintenanceTime
 import software.amazon.awscdk.services.fsx.Weekday
 
+/**
+ * Class for scheduling a weekly manitenance time.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * LustreMaintenanceTime lustreMaintenanceTime = LustreMaintenanceTime.Builder.create()
+ * .day(Weekday.MONDAY)
+ * .hour(123)
+ * .minute(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LustreMaintenanceTimeDsl {
   private val cdkBuilder: LustreMaintenanceTime.Builder = LustreMaintenanceTime.Builder.create()

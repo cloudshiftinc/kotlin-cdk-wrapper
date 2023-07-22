@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.sns.SubscriptionProps
 import software.amazon.awscdk.services.sns.SubscriptionProtocol
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties for creating a new subscription.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
+ * DeliveryStream stream;
+ * Topic topic = new Topic(this, "Topic");
+ * Subscription.Builder.create(this, "Subscription")
+ * .topic(topic)
+ * .endpoint(stream.getDeliveryStreamArn())
+ * .protocol(SubscriptionProtocol.FIREHOSE)
+ * .subscriptionRoleArn("SAMPLE_ARN")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubscriptionPropsDsl {
   private val cdkBuilder: SubscriptionProps.Builder = SubscriptionProps.builder()

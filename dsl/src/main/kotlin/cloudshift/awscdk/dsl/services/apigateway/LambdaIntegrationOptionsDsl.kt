@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions
 import software.amazon.awscdk.services.apigateway.PassthroughBehavior
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * Function backend;
+ * LambdaRestApi api = LambdaRestApi.Builder.create(this, "myapi")
+ * .handler(backend)
+ * .integrationOptions(LambdaIntegrationOptions.builder()
+ * .allowTestInvoke(false)
+ * .timeout(Duration.seconds(1))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaIntegrationOptionsDsl {
   private val cdkBuilder: LambdaIntegrationOptions.Builder = LambdaIntegrationOptions.builder()

@@ -12,6 +12,45 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnCapacityReservationFleetProps
 
+/**
+ * Properties for defining a `CfnCapacityReservationFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnCapacityReservationFleetProps cfnCapacityReservationFleetProps =
+ * CfnCapacityReservationFleetProps.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .endDate("endDate")
+ * .instanceMatchCriteria("instanceMatchCriteria")
+ * .instanceTypeSpecifications(List.of(InstanceTypeSpecificationProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
+ * .ebsOptimized(false)
+ * .instancePlatform("instancePlatform")
+ * .instanceType("instanceType")
+ * .priority(123)
+ * .weight(123)
+ * .build()))
+ * .noRemoveEndDate(false)
+ * .removeEndDate(false)
+ * .tagSpecifications(List.of(TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .tenancy("tenancy")
+ * .totalTargetCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservationfleet.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationFleetPropsDsl {
   private val cdkBuilder: CfnCapacityReservationFleetProps.Builder =

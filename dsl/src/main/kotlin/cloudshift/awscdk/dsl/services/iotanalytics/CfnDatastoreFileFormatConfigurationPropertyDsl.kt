@@ -9,6 +9,37 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Contains the configuration information of file formats. AWS IoT Analytics data stores support
+ * JSON and [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) .
+ *
+ * The default file format is JSON. You can specify only one format.
+ *
+ * You can't change the file format after you create the data store.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object jsonConfiguration;
+ * FileFormatConfigurationProperty fileFormatConfigurationProperty =
+ * FileFormatConfigurationProperty.builder()
+ * .jsonConfiguration(jsonConfiguration)
+ * .parquetConfiguration(ParquetConfigurationProperty.builder()
+ * .schemaDefinition(SchemaDefinitionProperty.builder()
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-fileformatconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreFileFormatConfigurationPropertyDsl {
   private val cdkBuilder: CfnDatastore.FileFormatConfigurationProperty.Builder =

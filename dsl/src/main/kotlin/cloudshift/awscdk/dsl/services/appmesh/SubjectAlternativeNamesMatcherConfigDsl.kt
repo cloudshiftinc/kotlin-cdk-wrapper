@@ -7,6 +7,23 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 import software.amazon.awscdk.services.appmesh.SubjectAlternativeNamesMatcherConfig
 
+/**
+ * All Properties for Subject Alternative Names Matcher for both Client Policy and Listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * SubjectAlternativeNamesMatcherConfig subjectAlternativeNamesMatcherConfig =
+ * SubjectAlternativeNamesMatcherConfig.builder()
+ * .subjectAlternativeNamesMatch(SubjectAlternativeNameMatchersProperty.builder()
+ * .exact(List.of("exact"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubjectAlternativeNamesMatcherConfigDsl {
   private val cdkBuilder: SubjectAlternativeNamesMatcherConfig.Builder =

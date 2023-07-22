@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.certificatemanager.CfnAccount
 
+/**
+ * Object containing expiration events options associated with an AWS account .
+ *
+ * For more information, see
+ * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+ * in the API reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * ExpiryEventsConfigurationProperty expiryEventsConfigurationProperty =
+ * ExpiryEventsConfigurationProperty.builder()
+ * .daysBeforeExpiry(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-account-expiryeventsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAccountExpiryEventsConfigurationPropertyDsl {
   private val cdkBuilder: CfnAccount.ExpiryEventsConfigurationProperty.Builder =

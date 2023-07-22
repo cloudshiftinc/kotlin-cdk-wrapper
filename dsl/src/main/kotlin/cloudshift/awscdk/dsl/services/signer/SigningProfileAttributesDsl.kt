@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.signer.SigningProfileAttributes
 
+/**
+ * A reference to a Signing Profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * SigningProfileAttributes signingProfileAttributes = SigningProfileAttributes.builder()
+ * .signingProfileName("signingProfileName")
+ * .signingProfileVersion("signingProfileVersion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SigningProfileAttributesDsl {
   private val cdkBuilder: SigningProfileAttributes.Builder = SigningProfileAttributes.builder()

@@ -9,6 +9,20 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.SnsTopicProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the SNS Topic Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * Rule onCommitRule;
+ * Topic topic;
+ * onCommitRule.addTarget(SnsTopic.Builder.create(topic)
+ * .message(RuleTargetInput.fromText(String.format("A commit was pushed to the repository %s on
+ * branch %s", ReferenceEvent.getRepositoryName(), ReferenceEvent.getReferenceName())))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SnsTopicPropsDsl {
   private val cdkBuilder: SnsTopicProps.Builder = SnsTopicProps.builder()

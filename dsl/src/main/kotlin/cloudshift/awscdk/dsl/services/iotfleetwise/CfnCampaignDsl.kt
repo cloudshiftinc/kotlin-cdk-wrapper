@@ -15,6 +15,78 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 import software.constructs.Construct
 
+/**
+ * Creates an orchestration of data collection rules.
+ *
+ * The AWS IoT FleetWise Edge Agent software running in vehicles uses campaigns to decide how to
+ * collect and transfer data to the cloud. You create campaigns in the cloud. After you or your team
+ * approve campaigns, AWS IoT FleetWise automatically deploys them to vehicles.
+ *
+ * For more information, see [Collect and transfer data with
+ * campaigns](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/campaigns.html) in the
+ * *AWS IoT FleetWise Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnCampaign cfnCampaign = CfnCampaign.Builder.create(this, "MyCfnCampaign")
+ * .action("action")
+ * .collectionScheme(CollectionSchemeProperty.builder()
+ * .conditionBasedCollectionScheme(ConditionBasedCollectionSchemeProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .minimumTriggerIntervalMs(123)
+ * .triggerMode("triggerMode")
+ * .build())
+ * .timeBasedCollectionScheme(TimeBasedCollectionSchemeProperty.builder()
+ * .periodMs(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .signalCatalogArn("signalCatalogArn")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .compression("compression")
+ * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketArn("bucketArn")
+ * // the properties below are optional
+ * .dataFormat("dataFormat")
+ * .prefix("prefix")
+ * .storageCompressionFormat("storageCompressionFormat")
+ * .build())
+ * .timestreamConfig(TimestreamConfigProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .timestreamTableArn("timestreamTableArn")
+ * .build())
+ * .build()))
+ * .dataExtraDimensions(List.of("dataExtraDimensions"))
+ * .description("description")
+ * .diagnosticsMode("diagnosticsMode")
+ * .expiryTime("expiryTime")
+ * .postTriggerCollectionDuration(123)
+ * .priority(123)
+ * .signalsToCollect(List.of(SignalInformationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .maxSampleCount(123)
+ * .minimumSamplingIntervalMs(123)
+ * .build()))
+ * .spoolingMode("spoolingMode")
+ * .startTime("startTime")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html)
+ */
 @CdkDslMarker
 public class CfnCampaignDsl(
   scope: Construct,

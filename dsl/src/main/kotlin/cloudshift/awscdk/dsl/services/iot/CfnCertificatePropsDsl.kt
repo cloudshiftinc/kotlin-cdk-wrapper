@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnCertificateProps
 
+/**
+ * Properties for defining a `CfnCertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCertificateProps cfnCertificateProps = CfnCertificateProps.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .caCertificatePem("caCertificatePem")
+ * .certificateMode("certificateMode")
+ * .certificatePem("certificatePem")
+ * .certificateSigningRequest("certificateSigningRequest")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificatePropsDsl {
   private val cdkBuilder: CfnCertificateProps.Builder = CfnCertificateProps.builder()

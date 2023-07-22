@@ -16,6 +16,17 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps
 
+/**
+ * Properties for starting a job run with StartJobRun.
+ *
+ * Example:
+ *
+ * ```
+ * GlueDataBrewStartJobRun.Builder.create(this, "Task")
+ * .name("databrew-job")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GlueDataBrewStartJobRunPropsDsl {
   private val cdkBuilder: GlueDataBrewStartJobRunProps.Builder =

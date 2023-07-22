@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents a set of options that define the structure of either comma-separated value (CSV),
+ * Excel, or JSON input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * FormatOptionsProperty formatOptionsProperty = FormatOptionsProperty.builder()
+ * .csv(CsvOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .headerRow(false)
+ * .build())
+ * .excel(ExcelOptionsProperty.builder()
+ * .headerRow(false)
+ * .sheetIndexes(List.of(123))
+ * .sheetNames(List.of("sheetNames"))
+ * .build())
+ * .json(JsonOptionsProperty.builder()
+ * .multiLine(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-formatoptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.FormatOptionsProperty.Builder =

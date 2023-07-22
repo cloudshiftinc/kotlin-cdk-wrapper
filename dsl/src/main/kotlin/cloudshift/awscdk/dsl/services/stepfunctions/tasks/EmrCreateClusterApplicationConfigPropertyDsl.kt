@@ -9,6 +9,33 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * Properties for the EMR Cluster Applications.
+ *
+ * Applies to Amazon EMR releases 4.0 and later. A case-insensitive list of applications for Amazon
+ * EMR to install and configure when launching
+ * the cluster.
+ *
+ * See the RunJobFlow API for complete documentation on input parameters
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ApplicationConfigProperty applicationConfigProperty = ApplicationConfigProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .additionalInfo(Map.of(
+ * "additionalInfoKey", "additionalInfo"))
+ * .args(List.of("args"))
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_Application.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterApplicationConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.ApplicationConfigProperty.Builder =

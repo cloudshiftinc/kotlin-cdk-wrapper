@@ -16,6 +16,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnContainer
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Container` resource specifies a container service.
+ *
+ * A Lightsail container service is a compute resource to which you can deploy containers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnContainer cfnContainer = CfnContainer.Builder.create(this, "MyCfnContainer")
+ * .power("power")
+ * .scale(123)
+ * .serviceName("serviceName")
+ * // the properties below are optional
+ * .containerServiceDeployment(ContainerServiceDeploymentProperty.builder()
+ * .containers(List.of(ContainerProperty.builder()
+ * .command(List.of("command"))
+ * .containerName("containerName")
+ * .environment(List.of(EnvironmentVariableProperty.builder()
+ * .value("value")
+ * .variable("variable")
+ * .build()))
+ * .image("image")
+ * .ports(List.of(PortInfoProperty.builder()
+ * .port("port")
+ * .protocol("protocol")
+ * .build()))
+ * .build()))
+ * .publicEndpoint(PublicEndpointProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .healthCheckConfig(HealthCheckConfigProperty.builder()
+ * .healthyThreshold(123)
+ * .intervalSeconds(123)
+ * .path("path")
+ * .successCodes("successCodes")
+ * .timeoutSeconds(123)
+ * .unhealthyThreshold(123)
+ * .build())
+ * .build())
+ * .build())
+ * .isDisabled(false)
+ * .publicDomainNames(List.of(PublicDomainNameProperty.builder()
+ * .certificateName("certificateName")
+ * .domainNames(List.of("domainNames"))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html)
+ */
 @CdkDslMarker
 public class CfnContainerDsl(
   scope: Construct,

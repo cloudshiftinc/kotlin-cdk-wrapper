@@ -8,6 +8,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutputV2Props
 
+/**
+ * Properties for defining a `CfnApplicationOutput`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * CfnApplicationOutputV2Props cfnApplicationOutputV2Props = CfnApplicationOutputV2Props.builder()
+ * .applicationName("applicationName")
+ * .output(OutputProperty.builder()
+ * .destinationSchema(DestinationSchemaProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * .build())
+ * // the properties below are optional
+ * .kinesisFirehoseOutput(KinesisFirehoseOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .kinesisStreamsOutput(KinesisStreamsOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .lambdaOutput(LambdaOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationOutputV2PropsDsl {
   private val cdkBuilder: CfnApplicationOutputV2Props.Builder =

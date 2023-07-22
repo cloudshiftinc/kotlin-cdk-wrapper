@@ -10,6 +10,31 @@ import kotlin.Unit
 import software.amazon.awscdk.services.mediaconvert.CfnQueue
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConvert::Queue resource is an AWS Elemental MediaConvert resource type that you can
+ * use to manage the resources that are available to your account for parallel processing of jobs.
+ *
+ * For more information about queues, see [Working with AWS Elemental MediaConvert
+ * Queues](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-queues.html) in the ** .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object tags;
+ * CfnQueue cfnQueue = CfnQueue.Builder.create(this, "MyCfnQueue")
+ * .description("description")
+ * .name("name")
+ * .pricingPlan("pricingPlan")
+ * .status("status")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html)
+ */
 @CdkDslMarker
 public class CfnQueueDsl(
   scope: Construct,

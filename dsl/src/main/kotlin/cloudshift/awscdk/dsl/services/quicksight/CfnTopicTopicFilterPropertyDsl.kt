@@ -9,6 +9,76 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a filter used to select items for a topic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicFilterProperty topicFilterProperty = TopicFilterProperty.builder()
+ * .filterName("filterName")
+ * .operandFieldName("operandFieldName")
+ * // the properties below are optional
+ * .categoryFilter(TopicCategoryFilterProperty.builder()
+ * .categoryFilterFunction("categoryFilterFunction")
+ * .categoryFilterType("categoryFilterType")
+ * .constant(TopicCategoryFilterConstantProperty.builder()
+ * .collectiveConstant(CollectiveConstantProperty.builder()
+ * .valueList(List.of("valueList"))
+ * .build())
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .inverse(false)
+ * .build())
+ * .dateRangeFilter(TopicDateRangeFilterProperty.builder()
+ * .constant(TopicRangeFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .rangeConstant(RangeConstantProperty.builder()
+ * .maximum("maximum")
+ * .minimum("minimum")
+ * .build())
+ * .build())
+ * .inclusive(false)
+ * .build())
+ * .filterClass("filterClass")
+ * .filterDescription("filterDescription")
+ * .filterSynonyms(List.of("filterSynonyms"))
+ * .filterType("filterType")
+ * .numericEqualityFilter(TopicNumericEqualityFilterProperty.builder()
+ * .aggregation("aggregation")
+ * .constant(TopicSingularFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .build())
+ * .numericRangeFilter(TopicNumericRangeFilterProperty.builder()
+ * .aggregation("aggregation")
+ * .constant(TopicRangeFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .rangeConstant(RangeConstantProperty.builder()
+ * .maximum("maximum")
+ * .minimum("minimum")
+ * .build())
+ * .build())
+ * .inclusive(false)
+ * .build())
+ * .relativeDateFilter(TopicRelativeDateFilterProperty.builder()
+ * .constant(TopicSingularFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .relativeDateFilterFunction("relativeDateFilterFunction")
+ * .timeGranularity("timeGranularity")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicfilter.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicFilterPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicFilterProperty.Builder =

@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 
+/**
+ * `BlockDevice` is a property of the `EBS` property of the [AWS::AutoScaling::LaunchConfiguration
+ * BlockDeviceMapping](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html)
+ * property type that describes an Amazon EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * BlockDeviceProperty blockDeviceProperty = BlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevice.html)
+ */
 @CdkDslMarker
 public class CfnLaunchConfigurationBlockDevicePropertyDsl {
   private val cdkBuilder: CfnLaunchConfiguration.BlockDeviceProperty.Builder =

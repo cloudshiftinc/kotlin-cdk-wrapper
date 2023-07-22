@@ -9,6 +9,26 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnUserProfile
 import software.constructs.Construct
 
+/**
+ * Describes a user's SSH information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnUserProfile cfnUserProfile = CfnUserProfile.Builder.create(this, "MyCfnUserProfile")
+ * .iamUserArn("iamUserArn")
+ * // the properties below are optional
+ * .allowSelfManagement(false)
+ * .sshPublicKey("sshPublicKey")
+ * .sshUsername("sshUsername")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileDsl(
   scope: Construct,

@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * The value to be compared with the `metric` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * MetricValueProperty metricValueProperty = MetricValueProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .count("count")
+ * .number(123)
+ * .numbers(List.of(123))
+ * .ports(List.of(123))
+ * .strings(List.of("strings"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-metricvalue.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileMetricValuePropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.MetricValueProperty.Builder =

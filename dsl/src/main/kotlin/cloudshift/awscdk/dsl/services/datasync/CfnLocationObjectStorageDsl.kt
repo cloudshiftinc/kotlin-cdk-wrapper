@@ -13,6 +13,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationObjectStorage
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationObjectStorage` resource specifies an endpoint for a self-managed
+ * object storage bucket.
+ *
+ * For more information about self-managed object storage locations, see [Creating a Location for
+ * Object Storage](https://docs.aws.amazon.com/datasync/latest/userguide/create-object-location.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationObjectStorage cfnLocationObjectStorage = CfnLocationObjectStorage.Builder.create(this,
+ * "MyCfnLocationObjectStorage")
+ * .agentArns(List.of("agentArns"))
+ * // the properties below are optional
+ * .accessKey("accessKey")
+ * .bucketName("bucketName")
+ * .secretKey("secretKey")
+ * .serverCertificate("serverCertificate")
+ * .serverHostname("serverHostname")
+ * .serverPort(123)
+ * .serverProtocol("serverProtocol")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationobjectstorage.html)
+ */
 @CdkDslMarker
 public class CfnLocationObjectStorageDsl(
   scope: Construct,

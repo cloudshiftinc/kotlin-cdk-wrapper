@@ -9,6 +9,30 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the dimensions for an event filter that determines when a campaign is sent or a journey
+ * activity is performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object attributes;
+ * Object metrics;
+ * EventDimensionsProperty eventDimensionsProperty = EventDimensionsProperty.builder()
+ * .attributes(attributes)
+ * .eventType(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .metrics(metrics)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-eventdimensions.html)
+ */
 @CdkDslMarker
 public class CfnCampaignEventDimensionsPropertyDsl {
   private val cdkBuilder: CfnCampaign.EventDimensionsProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 
+/**
+ * Specifies the amount of time each device has to finish its execution of the job.
+ *
+ * A timer is started when the job execution status is set to `IN_PROGRESS` . If the job execution
+ * status is not set to another terminal state before the timer expires, it will be automatically set
+ * to `TIMED_OUT` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * TimeoutConfigProperty timeoutConfigProperty = TimeoutConfigProperty.builder()
+ * .inProgressTimeoutInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-timeoutconfig.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateTimeoutConfigPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.TimeoutConfigProperty.Builder =

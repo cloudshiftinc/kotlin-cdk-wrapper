@@ -13,6 +13,104 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 import software.constructs.Construct
 
+/**
+ * A *broker* is a message broker environment running on Amazon MQ .
+ *
+ * It is the basic building block of Amazon MQ .
+ *
+ * The `AWS::AmazonMQ::Broker` resource lets you create Amazon MQ for ActiveMQ and Amazon MQ for
+ * RabbitMQ brokers, add configuration changes or modify users for a speified ActiveMQ broker, return
+ * information about the specified broker, and delete the broker. For more information, see [How Amazon
+ * MQ works](https://docs.aws.amazon.com//amazon-mq/latest/developer-guide/amazon-mq-how-it-works.html)
+ * in the *Amazon MQ Developer Guide* .
+ *
+ * * `ec2:CreateNetworkInterface`
+ *
+ * This permission is required to allow Amazon MQ to create an elastic network interface (ENI) on
+ * behalf of your account.
+ *
+ * * `ec2:CreateNetworkInterfacePermission`
+ *
+ * This permission is required to attach the ENI to the broker instance.
+ *
+ * * `ec2:DeleteNetworkInterface`
+ * * `ec2:DeleteNetworkInterfacePermission`
+ * * `ec2:DetachNetworkInterface`
+ * * `ec2:DescribeInternetGateways`
+ * * `ec2:DescribeNetworkInterfaces`
+ * * `ec2:DescribeNetworkInterfacePermissions`
+ * * `ec2:DescribeRouteTables`
+ * * `ec2:DescribeSecurityGroups`
+ * * `ec2:DescribeSubnets`
+ * * `ec2:DescribeVpcs`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * CfnBroker cfnBroker = CfnBroker.Builder.create(this, "MyCfnBroker")
+ * .autoMinorVersionUpgrade(false)
+ * .brokerName("brokerName")
+ * .deploymentMode("deploymentMode")
+ * .engineType("engineType")
+ * .engineVersion("engineVersion")
+ * .hostInstanceType("hostInstanceType")
+ * .publiclyAccessible(false)
+ * .users(List.of(UserProperty.builder()
+ * .password("password")
+ * .username("username")
+ * // the properties below are optional
+ * .consoleAccess(false)
+ * .groups(List.of("groups"))
+ * .build()))
+ * // the properties below are optional
+ * .authenticationStrategy("authenticationStrategy")
+ * .configuration(ConfigurationIdProperty.builder()
+ * .id("id")
+ * .revision(123)
+ * .build())
+ * .encryptionOptions(EncryptionOptionsProperty.builder()
+ * .useAwsOwnedKey(false)
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .ldapServerMetadata(LdapServerMetadataProperty.builder()
+ * .hosts(List.of("hosts"))
+ * .roleBase("roleBase")
+ * .roleSearchMatching("roleSearchMatching")
+ * .serviceAccountPassword("serviceAccountPassword")
+ * .serviceAccountUsername("serviceAccountUsername")
+ * .userBase("userBase")
+ * .userSearchMatching("userSearchMatching")
+ * // the properties below are optional
+ * .roleName("roleName")
+ * .roleSearchSubtree(false)
+ * .userRoleName("userRoleName")
+ * .userSearchSubtree(false)
+ * .build())
+ * .logs(LogListProperty.builder()
+ * .audit(false)
+ * .general(false)
+ * .build())
+ * .maintenanceWindowStartTime(MaintenanceWindowProperty.builder()
+ * .dayOfWeek("dayOfWeek")
+ * .timeOfDay("timeOfDay")
+ * .timeZone("timeZone")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .storageType("storageType")
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html)
+ */
 @CdkDslMarker
 public class CfnBrokerDsl(
   scope: Construct,

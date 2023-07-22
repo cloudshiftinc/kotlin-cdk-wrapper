@@ -11,6 +11,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * Settings that are available for use in the rules in the `RuleGroup` where this is defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * RuleVariablesProperty ruleVariablesProperty = RuleVariablesProperty.builder()
+ * .ipSets(Map.of(
+ * "ipSetsKey", Map.of(
+ * "definition", List.of("definition"))))
+ * .portSets(Map.of(
+ * "portSetsKey", PortSetProperty.builder()
+ * .definition(List.of("definition"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-rulevariables.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupRuleVariablesPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.RuleVariablesProperty.Builder =

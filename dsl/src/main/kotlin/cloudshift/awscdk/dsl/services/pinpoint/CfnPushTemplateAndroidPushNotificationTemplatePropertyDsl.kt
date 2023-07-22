@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 
+/**
+ * Specifies channel-specific content and settings for a message template that can be used in push
+ * notifications that are sent through the ADM (Amazon Device Messaging), Baidu (Baidu Cloud Push), or
+ * GCM (Firebase Cloud Messaging, formerly Google Cloud Messaging) channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * AndroidPushNotificationTemplateProperty androidPushNotificationTemplateProperty =
+ * AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-pushtemplate-androidpushnotificationtemplate.html)
+ */
 @CdkDslMarker
 public class CfnPushTemplateAndroidPushNotificationTemplatePropertyDsl {
   private val cdkBuilder: CfnPushTemplate.AndroidPushNotificationTemplateProperty.Builder =

@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a scatter plot.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-scatterplotconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateScatterPlotConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ScatterPlotConfigurationProperty.Builder =

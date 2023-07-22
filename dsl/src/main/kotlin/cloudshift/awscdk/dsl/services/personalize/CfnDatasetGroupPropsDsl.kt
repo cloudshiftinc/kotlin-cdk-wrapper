@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnDatasetGroupProps
 
+/**
+ * Properties for defining a `CfnDatasetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * CfnDatasetGroupProps cfnDatasetGroupProps = CfnDatasetGroupProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .domain("domain")
+ * .kmsKeyArn("kmsKeyArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-datasetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDatasetGroupPropsDsl {
   private val cdkBuilder: CfnDatasetGroupProps.Builder = CfnDatasetGroupProps.builder()

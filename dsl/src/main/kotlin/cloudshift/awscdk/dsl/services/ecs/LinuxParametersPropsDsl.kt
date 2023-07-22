@@ -8,6 +8,25 @@ import kotlin.Number
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.ecs.LinuxParametersProps
 
+/**
+ * The properties for defining Linux-specific options that are applied to the container.
+ *
+ * Example:
+ *
+ * ```
+ * TaskDefinition taskDefinition;
+ * taskDefinition.addContainer("container", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(1024)
+ * .linuxParameters(LinuxParameters.Builder.create(this, "LinuxParameters")
+ * .initProcessEnabled(true)
+ * .sharedMemorySize(1024)
+ * .maxSwap(Size.mebibytes(5000))
+ * .swappiness(90)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LinuxParametersPropsDsl {
   private val cdkBuilder: LinuxParametersProps.Builder = LinuxParametersProps.builder()

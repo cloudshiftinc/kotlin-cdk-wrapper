@@ -11,6 +11,24 @@ import software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer
 import software.amazon.awscdk.services.cognito.IUserPool
 import software.constructs.Construct
 
+/**
+ * Cognito user pools based custom authorizer.
+ *
+ * Example:
+ *
+ * ```
+ * Resource books;
+ * UserPool userPool = new UserPool(this, "UserPool");
+ * CognitoUserPoolsAuthorizer auth = CognitoUserPoolsAuthorizer.Builder.create(this,
+ * "booksAuthorizer")
+ * .cognitoUserPools(List.of(userPool))
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .authorizationType(AuthorizationType.COGNITO)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CognitoUserPoolsAuthorizerDsl(
   scope: Construct,

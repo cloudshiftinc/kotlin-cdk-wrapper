@@ -14,6 +14,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTrigger
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Trigger` resource specifies triggers that run AWS Glue jobs.
+ *
+ * For more information, see [Triggering Jobs in AWS
+ * Glue](https://docs.aws.amazon.com/glue/latest/dg/trigger-job.html) and [Trigger
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-trigger.html#aws-glue-api-jobs-trigger-Trigger)
+ * in the *AWS Glue Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object arguments_;
+ * Object tags;
+ * CfnTrigger cfnTrigger = CfnTrigger.Builder.create(this, "MyCfnTrigger")
+ * .actions(List.of(ActionProperty.builder()
+ * .arguments(arguments_)
+ * .crawlerName("crawlerName")
+ * .jobName("jobName")
+ * .notificationProperty(NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build())
+ * .securityConfiguration("securityConfiguration")
+ * .timeout(123)
+ * .build()))
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .eventBatchingCondition(EventBatchingConditionProperty.builder()
+ * .batchSize(123)
+ * // the properties below are optional
+ * .batchWindow(123)
+ * .build())
+ * .name("name")
+ * .predicate(PredicateProperty.builder()
+ * .conditions(List.of(ConditionProperty.builder()
+ * .crawlerName("crawlerName")
+ * .crawlState("crawlState")
+ * .jobName("jobName")
+ * .logicalOperator("logicalOperator")
+ * .state("state")
+ * .build()))
+ * .logical("logical")
+ * .build())
+ * .schedule("schedule")
+ * .startOnCreation(false)
+ * .tags(tags)
+ * .workflowName("workflowName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-trigger.html)
+ */
 @CdkDslMarker
 public class CfnTriggerDsl(
   scope: Construct,

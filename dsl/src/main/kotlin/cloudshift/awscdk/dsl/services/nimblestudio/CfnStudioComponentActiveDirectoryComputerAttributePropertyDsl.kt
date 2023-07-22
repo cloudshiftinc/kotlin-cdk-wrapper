@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * An LDAP attribute of an Active Directory computer account, in the form of a name:value pair.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * ActiveDirectoryComputerAttributeProperty activeDirectoryComputerAttributeProperty =
+ * ActiveDirectoryComputerAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectorycomputerattribute.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentActiveDirectoryComputerAttributePropertyDsl {
   private val cdkBuilder: CfnStudioComponent.ActiveDirectoryComputerAttributeProperty.Builder =

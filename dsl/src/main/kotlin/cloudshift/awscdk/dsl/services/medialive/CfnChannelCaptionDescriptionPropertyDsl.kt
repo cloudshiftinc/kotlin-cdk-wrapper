@@ -7,6 +7,96 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The encoding information for output captions.
+ *
+ * The parent of this entity is EncoderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * CaptionDescriptionProperty captionDescriptionProperty = CaptionDescriptionProperty.builder()
+ * .accessibility("accessibility")
+ * .captionSelectorName("captionSelectorName")
+ * .destinationSettings(CaptionDestinationSettingsProperty.builder()
+ * .aribDestinationSettings(AribDestinationSettingsProperty.builder().build())
+ * .burnInDestinationSettings(BurnInDestinationSettingsProperty.builder()
+ * .alignment("alignment")
+ * .backgroundColor("backgroundColor")
+ * .backgroundOpacity(123)
+ * .font(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .fontColor("fontColor")
+ * .fontOpacity(123)
+ * .fontResolution(123)
+ * .fontSize("fontSize")
+ * .outlineColor("outlineColor")
+ * .outlineSize(123)
+ * .shadowColor("shadowColor")
+ * .shadowOpacity(123)
+ * .shadowXOffset(123)
+ * .shadowYOffset(123)
+ * .teletextGridControl("teletextGridControl")
+ * .xPosition(123)
+ * .yPosition(123)
+ * .build())
+ * .dvbSubDestinationSettings(DvbSubDestinationSettingsProperty.builder()
+ * .alignment("alignment")
+ * .backgroundColor("backgroundColor")
+ * .backgroundOpacity(123)
+ * .font(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .fontColor("fontColor")
+ * .fontOpacity(123)
+ * .fontResolution(123)
+ * .fontSize("fontSize")
+ * .outlineColor("outlineColor")
+ * .outlineSize(123)
+ * .shadowColor("shadowColor")
+ * .shadowOpacity(123)
+ * .shadowXOffset(123)
+ * .shadowYOffset(123)
+ * .teletextGridControl("teletextGridControl")
+ * .xPosition(123)
+ * .yPosition(123)
+ * .build())
+ * .ebuTtDDestinationSettings(EbuTtDDestinationSettingsProperty.builder()
+ * .copyrightHolder("copyrightHolder")
+ * .fillLineGap("fillLineGap")
+ * .fontFamily("fontFamily")
+ * .styleControl("styleControl")
+ * .build())
+ * .embeddedDestinationSettings(EmbeddedDestinationSettingsProperty.builder().build())
+ * .embeddedPlusScte20DestinationSettings(EmbeddedPlusScte20DestinationSettingsProperty.builder().build())
+ * .rtmpCaptionInfoDestinationSettings(RtmpCaptionInfoDestinationSettingsProperty.builder().build())
+ * .scte20PlusEmbeddedDestinationSettings(Scte20PlusEmbeddedDestinationSettingsProperty.builder().build())
+ * .scte27DestinationSettings(Scte27DestinationSettingsProperty.builder().build())
+ * .smpteTtDestinationSettings(SmpteTtDestinationSettingsProperty.builder().build())
+ * .teletextDestinationSettings(TeletextDestinationSettingsProperty.builder().build())
+ * .ttmlDestinationSettings(TtmlDestinationSettingsProperty.builder()
+ * .styleControl("styleControl")
+ * .build())
+ * .webvttDestinationSettings(WebvttDestinationSettingsProperty.builder()
+ * .styleControl("styleControl")
+ * .build())
+ * .build())
+ * .languageCode("languageCode")
+ * .languageDescription("languageDescription")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html)
+ */
 @CdkDslMarker
 public class CfnChannelCaptionDescriptionPropertyDsl {
   private val cdkBuilder: CfnChannel.CaptionDescriptionProperty.Builder =

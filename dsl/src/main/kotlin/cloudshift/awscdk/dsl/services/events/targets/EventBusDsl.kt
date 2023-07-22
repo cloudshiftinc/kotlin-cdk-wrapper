@@ -8,6 +8,19 @@ import software.amazon.awscdk.services.events.targets.EventBus
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Notify an existing Event Bus of an event.
+ *
+ * Example:
+ *
+ * ```
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .build();
+ * rule.addTarget(new EventBus(EventBus.fromEventBusArn(this, "External",
+ * "arn:aws:events:eu-west-1:999999999999:event-bus/test-bus")));
+ * ```
+ */
 @CdkDslMarker
 public class EventBusDsl(
   eventBus: IEventBus,

@@ -17,6 +17,32 @@ import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.MethodResponse
 import software.amazon.awscdk.services.apigateway.RequestValidatorOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * Function userLambda;
+ * Model userModel = api.addModel("UserModel", ModelOptions.builder()
+ * .schema(JsonSchema.builder()
+ * .type(JsonSchemaType.OBJECT)
+ * .properties(Map.of(
+ * "userId", JsonSchema.builder()
+ * .type(JsonSchemaType.STRING)
+ * .build(),
+ * "name", JsonSchema.builder()
+ * .type(JsonSchemaType.STRING)
+ * .build()))
+ * .required(List.of("userId"))
+ * .build())
+ * .build());
+ * api.root.addResource("user").addMethod("POST",
+ * new LambdaIntegration(userLambda), MethodOptions.builder()
+ * .requestModels(Map.of(
+ * "application/json", userModel))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class MethodOptionsDsl {
   private val cdkBuilder: MethodOptions.Builder = MethodOptions.builder()

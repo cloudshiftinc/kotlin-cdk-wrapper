@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.GraphqlApiAttributes
 
+/**
+ * Attributes for GraphQL imports.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api;
+ * Table table;
+ * IGraphqlApi importedApi = GraphqlApi.fromGraphqlApiAttributes(this, "IApi",
+ * GraphqlApiAttributes.builder()
+ * .graphqlApiId(api.getApiId())
+ * .graphqlApiArn(api.getArn())
+ * .build());
+ * importedApi.addDynamoDbDataSource("TableDataSource", table);
+ * ```
+ */
 @CdkDslMarker
 public class GraphqlApiAttributesDsl {
   private val cdkBuilder: GraphqlApiAttributes.Builder = GraphqlApiAttributes.builder()

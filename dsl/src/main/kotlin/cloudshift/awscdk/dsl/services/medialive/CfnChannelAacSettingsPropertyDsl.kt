@@ -7,6 +7,32 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for an AAC audio encode in the output.
+ *
+ * The parent of this entity is AudioCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AacSettingsProperty aacSettingsProperty = AacSettingsProperty.builder()
+ * .bitrate(123)
+ * .codingMode("codingMode")
+ * .inputType("inputType")
+ * .profile("profile")
+ * .rateControlMode("rateControlMode")
+ * .rawFormat("rawFormat")
+ * .sampleRate(123)
+ * .spec("spec")
+ * .vbrQuality("vbrQuality")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-aacsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAacSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AacSettingsProperty.Builder =

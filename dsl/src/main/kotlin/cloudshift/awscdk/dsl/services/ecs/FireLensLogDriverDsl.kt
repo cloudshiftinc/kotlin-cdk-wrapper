@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.FireLensLogDriver
 import software.amazon.awscdk.services.ecs.Secret
 
+/**
+ * FireLens enables you to use task definition parameters to route logs to an AWS service  or AWS
+ * Partner Network (APN) destination for log storage and analytics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Secret secret;
+ * FireLensLogDriver fireLensLogDriver = FireLensLogDriver.Builder.create()
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(Map.of(
+ * "secretOptionsKey", secret))
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FireLensLogDriverDsl {
   private val cdkBuilder: FireLensLogDriver.Builder = FireLensLogDriver.Builder.create()

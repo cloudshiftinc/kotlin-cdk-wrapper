@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnGCMChannelProps
 
+/**
+ * Properties for defining a `CfnGCMChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnGCMChannelProps cfnGCMChannelProps = CfnGCMChannelProps.builder()
+ * .apiKey("apiKey")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-gcmchannel.html)
+ */
 @CdkDslMarker
 public class CfnGCMChannelPropsDsl {
   private val cdkBuilder: CfnGCMChannelProps.Builder = CfnGCMChannelProps.builder()

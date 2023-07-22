@@ -30,6 +30,27 @@ import software.amazon.awscdk.services.elasticsearch.TLSSecurityPolicy
 import software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * (deprecated) Properties for an AWS Elasticsearch Domain.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_4)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(100)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
+ * .build())
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class DomainPropsDsl {

@@ -15,6 +15,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnProfile
 import software.constructs.Construct
 
+/**
+ * Creates a *profile* , a list of the roles that Roles Anywhere service is trusted to assume.
+ *
+ * You use profiles to intersect permissions with IAM managed policies.
+ *
+ * *Required permissions:* `rolesanywhere:CreateProfile` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * CfnProfile cfnProfile = CfnProfile.Builder.create(this, "MyCfnProfile")
+ * .name("name")
+ * .roleArns(List.of("roleArns"))
+ * // the properties below are optional
+ * .durationSeconds(123)
+ * .enabled(false)
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .requireInstanceProperties(false)
+ * .sessionPolicy("sessionPolicy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rolesanywhere-profile.html)
+ */
 @CdkDslMarker
 public class CfnProfileDsl(
   scope: Construct,

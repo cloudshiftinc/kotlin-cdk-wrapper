@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnTable
 
+/**
+ * A structure that describes a target table for resource linking.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * TableIdentifierProperty tableIdentifierProperty = TableIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html)
+ */
 @CdkDslMarker
 public class CfnTableTableIdentifierPropertyDsl {
   private val cdkBuilder: CfnTable.TableIdentifierProperty.Builder =

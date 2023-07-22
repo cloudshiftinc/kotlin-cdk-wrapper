@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for FEC.
+ *
+ * The parent of this entity is UdpOutputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * FecOutputSettingsProperty fecOutputSettingsProperty = FecOutputSettingsProperty.builder()
+ * .columnDepth(123)
+ * .includeFec("includeFec")
+ * .rowLength(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fecoutputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelFecOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.FecOutputSettingsProperty.Builder =

@@ -7,6 +7,27 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.iottwinmaker.CfnSyncJobProps
 
+/**
+ * Properties for defining a `CfnSyncJob`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * CfnSyncJobProps cfnSyncJobProps = CfnSyncJobProps.builder()
+ * .syncRole("syncRole")
+ * .syncSource("syncSource")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-syncjob.html)
+ */
 @CdkDslMarker
 public class CfnSyncJobPropsDsl {
   private val cdkBuilder: CfnSyncJobProps.Builder = CfnSyncJobProps.builder()

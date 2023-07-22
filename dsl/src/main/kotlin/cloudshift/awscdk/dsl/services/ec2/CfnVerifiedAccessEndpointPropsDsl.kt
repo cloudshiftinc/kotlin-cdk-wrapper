@@ -14,6 +14,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpointProps
 
+/**
+ * Properties for defining a `CfnVerifiedAccessEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVerifiedAccessEndpointProps cfnVerifiedAccessEndpointProps =
+ * CfnVerifiedAccessEndpointProps.builder()
+ * .applicationDomain("applicationDomain")
+ * .attachmentType("attachmentType")
+ * .domainCertificateArn("domainCertificateArn")
+ * .endpointDomainPrefix("endpointDomainPrefix")
+ * .endpointType("endpointType")
+ * .verifiedAccessGroupId("verifiedAccessGroupId")
+ * // the properties below are optional
+ * .description("description")
+ * .loadBalancerOptions(LoadBalancerOptionsProperty.builder()
+ * .loadBalancerArn("loadBalancerArn")
+ * .port(123)
+ * .protocol("protocol")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .networkInterfaceOptions(NetworkInterfaceOptionsProperty.builder()
+ * .networkInterfaceId("networkInterfaceId")
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .policyDocument("policyDocument")
+ * .policyEnabled(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessEndpointPropsDsl {
   private val cdkBuilder: CfnVerifiedAccessEndpointProps.Builder =

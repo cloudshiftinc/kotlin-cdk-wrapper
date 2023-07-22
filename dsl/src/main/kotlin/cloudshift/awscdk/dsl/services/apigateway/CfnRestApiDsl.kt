@@ -18,6 +18,60 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnRestApi
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::RestApi` resource creates a REST API.
+ *
+ * For more information, see
+ * [restapi:create](https://docs.aws.amazon.com/apigateway/latest/api/API_CreateRestApi.html) in the
+ * *Amazon API Gateway REST API Reference* .
+ *
+ *
+ * On January 1, 2016, the Swagger Specification was donated to the [OpenAPI
+ * initiative](https://docs.aws.amazon.com/https://www.openapis.org/) , becoming the foundation of the
+ * OpenAPI Specification.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Object body;
+ * Object policy;
+ * CfnRestApi cfnRestApi = CfnRestApi.Builder.create(this, "MyCfnRestApi")
+ * .apiKeySourceType("apiKeySourceType")
+ * .binaryMediaTypes(List.of("binaryMediaTypes"))
+ * .body(body)
+ * .bodyS3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .eTag("eTag")
+ * .key("key")
+ * .version("version")
+ * .build())
+ * .cloneFrom("cloneFrom")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .vpcEndpointIds(List.of("vpcEndpointIds"))
+ * .build())
+ * .failOnWarnings(false)
+ * .minimumCompressionSize(123)
+ * .mode("mode")
+ * .name("name")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .policy(policy)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
+ */
 @CdkDslMarker
 public class CfnRestApiDsl(
   scope: Construct,

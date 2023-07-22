@@ -15,6 +15,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 import software.amazon.awscdk.services.appsync.CfnGraphQLApiProps
 
+/**
+ * Properties for defining a `CfnGraphQLApi`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnGraphQLApiProps cfnGraphQLApiProps = CfnGraphQLApiProps.builder()
+ * .authenticationType("authenticationType")
+ * .name("name")
+ * // the properties below are optional
+ * .additionalAuthenticationProviders(List.of(AdditionalAuthenticationProviderProperty.builder()
+ * .authenticationType("authenticationType")
+ * // the properties below are optional
+ * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .identityValidationExpression("identityValidationExpression")
+ * .build())
+ * .openIdConnectConfig(OpenIDConnectConfigProperty.builder()
+ * .authTtl(123)
+ * .clientId("clientId")
+ * .iatTtl(123)
+ * .issuer("issuer")
+ * .build())
+ * .userPoolConfig(CognitoUserPoolConfigProperty.builder()
+ * .appIdClientRegex("appIdClientRegex")
+ * .awsRegion("awsRegion")
+ * .userPoolId("userPoolId")
+ * .build())
+ * .build()))
+ * .apiType("apiType")
+ * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
+ * .authorizerResultTtlInSeconds(123)
+ * .authorizerUri("authorizerUri")
+ * .identityValidationExpression("identityValidationExpression")
+ * .build())
+ * .logConfig(LogConfigProperty.builder()
+ * .cloudWatchLogsRoleArn("cloudWatchLogsRoleArn")
+ * .excludeVerboseContent(false)
+ * .fieldLogLevel("fieldLogLevel")
+ * .build())
+ * .mergedApiExecutionRoleArn("mergedApiExecutionRoleArn")
+ * .openIdConnectConfig(OpenIDConnectConfigProperty.builder()
+ * .authTtl(123)
+ * .clientId("clientId")
+ * .iatTtl(123)
+ * .issuer("issuer")
+ * .build())
+ * .ownerContact("ownerContact")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userPoolConfig(UserPoolConfigProperty.builder()
+ * .appIdClientRegex("appIdClientRegex")
+ * .awsRegion("awsRegion")
+ * .defaultAction("defaultAction")
+ * .userPoolId("userPoolId")
+ * .build())
+ * .visibility("visibility")
+ * .xrayEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiPropsDsl {
   private val cdkBuilder: CfnGraphQLApiProps.Builder = CfnGraphQLApiProps.builder()

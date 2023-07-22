@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for remixing audio.
+ *
+ * The parent of this entity is RemixSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioChannelMappingProperty audioChannelMappingProperty = AudioChannelMappingProperty.builder()
+ * .inputChannelLevels(List.of(InputChannelLevelProperty.builder()
+ * .gain(123)
+ * .inputChannel(123)
+ * .build()))
+ * .outputChannel(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiochannelmapping.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioChannelMappingPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioChannelMappingProperty.Builder =

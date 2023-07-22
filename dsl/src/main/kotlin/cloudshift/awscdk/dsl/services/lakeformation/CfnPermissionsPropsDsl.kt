@@ -10,6 +10,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 import software.amazon.awscdk.services.lakeformation.CfnPermissionsProps
 
+/**
+ * Properties for defining a `CfnPermissions`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * CfnPermissionsProps cfnPermissionsProps = CfnPermissionsProps.builder()
+ * .dataLakePrincipal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .resource(ResourceProperty.builder()
+ * .databaseResource(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataLocationResource(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .s3Resource("s3Resource")
+ * .build())
+ * .tableResource(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableWildcard(TableWildcardProperty.builder().build())
+ * .build())
+ * .tableWithColumnsResource(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .permissions(List.of("permissions"))
+ * .permissionsWithGrantOption(List.of("permissionsWithGrantOption"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-permissions.html)
+ */
 @CdkDslMarker
 public class CfnPermissionsPropsDsl {
   private val cdkBuilder: CfnPermissionsProps.Builder = CfnPermissionsProps.builder()

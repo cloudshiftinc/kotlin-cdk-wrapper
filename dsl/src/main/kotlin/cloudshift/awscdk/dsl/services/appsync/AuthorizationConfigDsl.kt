@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appsync.AuthorizationConfig
 import software.amazon.awscdk.services.appsync.AuthorizationMode
 
+/**
+ * Configuration of the API authorization modes.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function authFunction;
+ * GraphqlApi.Builder.create(this, "api")
+ * .name("api")
+ * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.test.graphql")))
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .defaultAuthorization(AuthorizationMode.builder()
+ * .authorizationType(AuthorizationType.LAMBDA)
+ * .lambdaAuthorizerConfig(LambdaAuthorizerConfig.builder()
+ * .handler(authFunction)
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AuthorizationConfigDsl {
   private val cdkBuilder: AuthorizationConfig.Builder = AuthorizationConfig.builder()

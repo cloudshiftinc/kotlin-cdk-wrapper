@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lambda::Version` resource creates a
+ * [version](https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html) from the current
+ * code and configuration of a function. Use versions to create a snapshot of your function code and
+ * configuration that doesn't change.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnVersion cfnVersion = CfnVersion.Builder.create(this, "MyCfnVersion")
+ * .functionName("functionName")
+ * // the properties below are optional
+ * .codeSha256("codeSha256")
+ * .description("description")
+ * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
+ * .provisionedConcurrentExecutions(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-version.html)
+ */
 @CdkDslMarker
 public class CfnVersionDsl(
   scope: Construct,

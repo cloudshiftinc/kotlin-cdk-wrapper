@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * Data security configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DataSecurityConfigProperty dataSecurityConfigProperty = DataSecurityConfigProperty.builder()
+ * .dataLakeKmsKeyId("dataLakeKmsKeyId")
+ * .modelKmsKeyId("modelKmsKeyId")
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-datasecurityconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelDataSecurityConfigPropertyDsl {
   private val cdkBuilder: CfnFlywheel.DataSecurityConfigProperty.Builder =

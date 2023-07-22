@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * `GitHubLocation` is a property of the [CodeDeploy DeploymentGroup
+ * Revision](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html)
+ * property that specifies the location of an application revision that is stored in GitHub.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * GitHubLocationProperty gitHubLocationProperty = GitHubLocationProperty.builder()
+ * .commitId("commitId")
+ * .repository("repository")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-githublocation.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupGitHubLocationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.GitHubLocationProperty.Builder =

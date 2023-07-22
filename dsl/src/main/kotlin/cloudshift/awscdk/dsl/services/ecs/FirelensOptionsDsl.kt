@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.services.ecs.FirelensConfigFileType
 import software.amazon.awscdk.services.ecs.FirelensOptions
 
+/**
+ * The options for firelens log router
+ * https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_firelens.html#firelens-taskdef-customconfig.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * FirelensOptions firelensOptions = FirelensOptions.builder()
+ * .configFileType(FirelensConfigFileType.S3)
+ * .configFileValue("configFileValue")
+ * .enableECSLogMetadata(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FirelensOptionsDsl {
   private val cdkBuilder: FirelensOptions.Builder = FirelensOptions.builder()

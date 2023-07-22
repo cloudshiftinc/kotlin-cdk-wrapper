@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
 
+/**
+ * A list of `PreferredAvailabilityZones` objects that specifies the configuration of a node group
+ * in the resharded cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * ReshardingConfigurationProperty reshardingConfigurationProperty =
+ * ReshardingConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-globalreplicationgroup-reshardingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnGlobalReplicationGroupReshardingConfigurationPropertyDsl {
   private val cdkBuilder: CfnGlobalReplicationGroup.ReshardingConfigurationProperty.Builder =

@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Represents an action that the user wants to perform.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-intent.html)
+ */
 @CdkDslMarker
 public class CfnBotIntentPropertyDsl {
   private val cdkBuilder: CfnBot.IntentProperty.Builder = CfnBot.IntentProperty.builder()

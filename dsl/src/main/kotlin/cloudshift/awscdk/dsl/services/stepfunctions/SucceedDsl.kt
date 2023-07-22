@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.Succeed
 import software.constructs.Construct
 
+/**
+ * Define a Succeed state in the state machine.
+ *
+ * Reaching a Succeed state terminates the state execution in success.
+ *
+ * Example:
+ *
+ * ```
+ * Succeed success = new Succeed(this, "We did it!");
+ * ```
+ */
 @CdkDslMarker
 public class SucceedDsl(
   scope: Construct,

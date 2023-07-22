@@ -13,6 +13,110 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 import software.amazon.awscdk.services.apprunner.CfnServiceProps
 
+/**
+ * Properties for defining a `CfnService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
+ * .sourceConfiguration(SourceConfigurationProperty.builder()
+ * .authenticationConfiguration(AuthenticationConfigurationProperty.builder()
+ * .accessRoleArn("accessRoleArn")
+ * .connectionArn("connectionArn")
+ * .build())
+ * .autoDeploymentsEnabled(false)
+ * .codeRepository(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .sourceCodeVersion(SourceCodeVersionProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build())
+ * // the properties below are optional
+ * .codeConfiguration(CodeConfigurationProperty.builder()
+ * .configurationSource("configurationSource")
+ * // the properties below are optional
+ * .codeConfigurationValues(CodeConfigurationValuesProperty.builder()
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .buildCommand("buildCommand")
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build())
+ * .build())
+ * .imageRepository(ImageRepositoryProperty.builder()
+ * .imageIdentifier("imageIdentifier")
+ * .imageRepositoryType("imageRepositoryType")
+ * // the properties below are optional
+ * .imageConfiguration(ImageConfigurationProperty.builder()
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .autoScalingConfigurationArn("autoScalingConfigurationArn")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .healthCheckConfiguration(HealthCheckConfigurationProperty.builder()
+ * .healthyThreshold(123)
+ * .interval(123)
+ * .path("path")
+ * .protocol("protocol")
+ * .timeout(123)
+ * .unhealthyThreshold(123)
+ * .build())
+ * .instanceConfiguration(InstanceConfigurationProperty.builder()
+ * .cpu("cpu")
+ * .instanceRoleArn("instanceRoleArn")
+ * .memory("memory")
+ * .build())
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .egressConfiguration(EgressConfigurationProperty.builder()
+ * .egressType("egressType")
+ * // the properties below are optional
+ * .vpcConnectorArn("vpcConnectorArn")
+ * .build())
+ * .ingressConfiguration(IngressConfigurationProperty.builder()
+ * .isPubliclyAccessible(false)
+ * .build())
+ * .build())
+ * .observabilityConfiguration(ServiceObservabilityConfigurationProperty.builder()
+ * .observabilityEnabled(false)
+ * // the properties below are optional
+ * .observabilityConfigurationArn("observabilityConfigurationArn")
+ * .build())
+ * .serviceName("serviceName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-service.html)
+ */
 @CdkDslMarker
 public class CfnServicePropsDsl {
   private val cdkBuilder: CfnServiceProps.Builder = CfnServiceProps.builder()

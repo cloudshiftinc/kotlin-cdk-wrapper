@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents a local file certificate.
+ *
+ * The certificate must meet specific requirements and you must have proxy authorization enabled.
+ * For more information, see [Transport Layer Security
+ * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html#virtual-node-tls-prerequisites)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayListenerTlsFileCertificateProperty virtualGatewayListenerTlsFileCertificateProperty
+ * = VirtualGatewayListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertlsfilecertificate.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayListenerTlsFileCertificatePropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty.Builder

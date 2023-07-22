@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.VpnGatewayProps
 
+/**
+ * The VpnGateway Properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * VpnGatewayProps vpnGatewayProps = VpnGatewayProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .amazonSideAsn(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpnGatewayPropsDsl {
   private val cdkBuilder: VpnGatewayProps.Builder = VpnGatewayProps.builder()

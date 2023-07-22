@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.s3.BucketAttributes
 
+/**
+ * A reference to a bucket outside this stack.
+ *
+ * Example:
+ *
+ * ```
+ * Function myLambda;
+ * IBucket bucket = Bucket.fromBucketAttributes(this, "ImportedBucket", BucketAttributes.builder()
+ * .bucketArn("arn:aws:s3:::my-bucket")
+ * .build());
+ * // now you can just call methods on the bucket
+ * bucket.addEventNotification(EventType.OBJECT_CREATED, new LambdaDestination(myLambda),
+ * NotificationKeyFilter.builder()
+ * .prefix("home/myusername/ *")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BucketAttributesDsl {
   private val cdkBuilder: BucketAttributes.Builder = BucketAttributes.builder()

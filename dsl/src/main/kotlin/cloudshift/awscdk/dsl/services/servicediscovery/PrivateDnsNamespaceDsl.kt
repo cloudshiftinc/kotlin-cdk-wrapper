@@ -8,6 +8,33 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace
 import software.constructs.Construct
 
+/**
+ * Define a Service Discovery HTTP Namespace.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * // Cloud Map service discovery is currently required for host ejection by outlier detection
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .outlierDetection(OutlierDetection.builder()
+ * .baseEjectionDuration(Duration.seconds(10))
+ * .interval(Duration.seconds(30))
+ * .maxEjectionPercent(50)
+ * .maxServerErrors(5)
+ * .build())
+ * .build())))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PrivateDnsNamespaceDsl(
   scope: Construct,

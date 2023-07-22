@@ -8,6 +8,34 @@ import kotlin.Deprecated
 import kotlin.Number
 import software.amazon.awscdk.services.elasticsearch.ZoneAwarenessConfig
 
+/**
+ * (deprecated) Specifies zone awareness configuration options.
+ *
+ * Example:
+ *
+ * ```
+ * Domain prodDomain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_1)
+ * .capacity(CapacityConfig.builder()
+ * .masterNodes(5)
+ * .dataNodes(20)
+ * .build())
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(20)
+ * .build())
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .availabilityZoneCount(3)
+ * .build())
+ * .logging(LoggingOptions.builder()
+ * .slowSearchLogEnabled(true)
+ * .appLogEnabled(true)
+ * .slowIndexLogEnabled(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * @deprecated use opensearchservice module instead
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class ZoneAwarenessConfigDsl {

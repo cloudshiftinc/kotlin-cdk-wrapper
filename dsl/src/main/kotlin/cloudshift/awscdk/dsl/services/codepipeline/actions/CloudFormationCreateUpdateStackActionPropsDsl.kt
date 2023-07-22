@@ -18,6 +18,31 @@ import software.amazon.awscdk.services.codepipeline.ArtifactPath
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for the CloudFormationCreateUpdateStackAction.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.PhysicalName;
+ * // in stack for account 123456789012...
+ * Stack otherAccountStack;
+ * Role actionRole = Role.Builder.create(otherAccountStack, "ActionRole")
+ * .assumedBy(new AccountPrincipal("123456789012"))
+ * // the role has to have a physical name set
+ * .roleName(PhysicalName.GENERATE_IF_NEEDED)
+ * .build();
+ * // in the pipeline stack...
+ * Artifact sourceOutput = new Artifact();
+ * CloudFormationCreateUpdateStackAction.Builder.create()
+ * .actionName("CloudFormationCreateUpdate")
+ * .stackName("MyStackName")
+ * .adminPermissions(true)
+ * .templatePath(sourceOutput.atPath("template.yaml"))
+ * .role(actionRole)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationCreateUpdateStackActionPropsDsl {
   private val cdkBuilder: CloudFormationCreateUpdateStackActionProps.Builder =

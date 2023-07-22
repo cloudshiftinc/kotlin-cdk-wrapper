@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.rds.SqlServerEngineVersion
 import software.amazon.awscdk.services.rds.SqlServerWebInstanceEngineProps
 
+/**
+ * Properties for SQL Server Web Edition instance engines.
+ *
+ * Used in `DatabaseInstanceEngine.sqlServerWeb`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * SqlServerEngineVersion sqlServerEngineVersion;
+ * SqlServerWebInstanceEngineProps sqlServerWebInstanceEngineProps =
+ * SqlServerWebInstanceEngineProps.builder()
+ * .version(sqlServerEngineVersion)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SqlServerWebInstanceEnginePropsDsl {
   private val cdkBuilder: SqlServerWebInstanceEngineProps.Builder =

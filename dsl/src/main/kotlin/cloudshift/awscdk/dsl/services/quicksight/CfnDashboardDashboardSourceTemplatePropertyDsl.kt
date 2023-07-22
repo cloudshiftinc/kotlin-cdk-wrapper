@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Dashboard source template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DashboardSourceTemplateProperty dashboardSourceTemplateProperty =
+ * DashboardSourceTemplateProperty.builder()
+ * .arn("arn")
+ * .dataSetReferences(List.of(DataSetReferenceProperty.builder()
+ * .dataSetArn("dataSetArn")
+ * .dataSetPlaceholder("dataSetPlaceholder")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboardsourcetemplate.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDashboardSourceTemplatePropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardSourceTemplateProperty.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of Web VTT captions in the output.
+ *
+ * The parent of this entity is CaptionDestinationSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * WebvttDestinationSettingsProperty webvttDestinationSettingsProperty =
+ * WebvttDestinationSettingsProperty.builder()
+ * .styleControl("styleControl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-webvttdestinationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelWebvttDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.WebvttDestinationSettingsProperty.Builder =

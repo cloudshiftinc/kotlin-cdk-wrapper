@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * The type of hostnames to assign to instances in the subnet at launch.
+ *
+ * For IPv4 only subnets, an instance DNS name must be based on the instance IPv4 address. For IPv6
+ * only subnets, an instance DNS name must be based on the instance ID. For dual-stack subnets, you can
+ * specify whether DNS names use the instance IPv4 address or the instance ID. For more information,
+ * see [Amazon EC2 instance hostname
+ * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-naming.html) in the *Amazon
+ * Elastic Compute Cloud User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateDnsNameOptionsProperty privateDnsNameOptionsProperty =
+ * PrivateDnsNameOptionsProperty.builder()
+ * .enableResourceNameDnsAaaaRecord(false)
+ * .enableResourceNameDnsARecord(false)
+ * .hostnameType("hostnameType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-privatednsnameoptions.html)
+ */
 @CdkDslMarker
 public class CfnInstancePrivateDnsNameOptionsPropertyDsl {
   private val cdkBuilder: CfnInstance.PrivateDnsNameOptionsProperty.Builder =

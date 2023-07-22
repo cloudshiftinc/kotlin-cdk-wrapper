@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.CfnActivity
 import software.amazon.awscdk.services.stepfunctions.CfnActivityProps
 
+/**
+ * Properties for defining a `CfnActivity`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CfnActivityProps cfnActivityProps = CfnActivityProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-activity.html)
+ */
 @CdkDslMarker
 public class CfnActivityPropsDsl {
   private val cdkBuilder: CfnActivityProps.Builder = CfnActivityProps.builder()

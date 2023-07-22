@@ -9,6 +9,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.autoscaling.ApplyCloudFormationInitOptions
 
+/**
+ * Options for applying CloudFormation init to an instance or instance group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * ApplyCloudFormationInitOptions applyCloudFormationInitOptions =
+ * ApplyCloudFormationInitOptions.builder()
+ * .configSets(List.of("configSets"))
+ * .embedFingerprint(false)
+ * .ignoreFailures(false)
+ * .includeRole(false)
+ * .includeUrl(false)
+ * .printLog(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplyCloudFormationInitOptionsDsl {
   private val cdkBuilder: ApplyCloudFormationInitOptions.Builder =

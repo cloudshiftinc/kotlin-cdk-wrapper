@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ce.CfnAnomalyMonitorProps
 
+/**
+ * Properties for defining a `CfnAnomalyMonitor`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnAnomalyMonitorProps cfnAnomalyMonitorProps = CfnAnomalyMonitorProps.builder()
+ * .monitorName("monitorName")
+ * .monitorType("monitorType")
+ * // the properties below are optional
+ * .monitorDimension("monitorDimension")
+ * .monitorSpecification("monitorSpecification")
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyMonitorPropsDsl {
   private val cdkBuilder: CfnAnomalyMonitorProps.Builder = CfnAnomalyMonitorProps.builder()

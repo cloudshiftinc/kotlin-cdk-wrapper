@@ -19,6 +19,31 @@ import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.constructs.Construct
 
+/**
+ * This creates a linux bastion host you can use to connect to other instances or services in your
+ * VPC.
+ *
+ * The recommended way to connect to the bastion host is by using AWS Systems Manager Session
+ * Manager.
+ *
+ * The operating system is Amazon Linux 2 with the latest SSM agent installed
+ *
+ * You can also configure this bastion host to allow connections via SSH
+ *
+ * Example:
+ *
+ * ```
+ * BastionHostLinux host = BastionHostLinux.Builder.create(this, "BastionHost")
+ * .vpc(vpc)
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("EBSBastionHost")
+ * .volume(BlockDeviceVolume.ebs(10, EbsDeviceOptions.builder()
+ * .encrypted(true)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BastionHostLinuxDsl(
   scope: Construct,

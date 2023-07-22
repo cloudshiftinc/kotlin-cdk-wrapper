@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies the tags to apply to the launch template during creation.
+ *
+ * `LaunchTemplateTagSpecification` is a property of
+ * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * LaunchTemplateTagSpecificationProperty launchTemplateTagSpecificationProperty =
+ * LaunchTemplateTagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatetagspecification.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateLaunchTemplateTagSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty.Builder =

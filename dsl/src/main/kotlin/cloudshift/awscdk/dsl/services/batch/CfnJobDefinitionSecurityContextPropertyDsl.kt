@@ -8,6 +8,24 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * SecurityContextProperty securityContextProperty = SecurityContextProperty.builder()
+ * .privileged(false)
+ * .readOnlyRootFilesystem(false)
+ * .runAsGroup(123)
+ * .runAsNonRoot(false)
+ * .runAsUser(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionSecurityContextPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.SecurityContextProperty.Builder =

@@ -10,6 +10,28 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.SingleStateOptions
 
+/**
+ * Options for creating a single state.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object resultSelector;
+ * SingleStateOptions singleStateOptions = SingleStateOptions.builder()
+ * .comment("comment")
+ * .inputPath("inputPath")
+ * .outputPath("outputPath")
+ * .prefixStates("prefixStates")
+ * .resultPath("resultPath")
+ * .resultSelector(Map.of(
+ * "resultSelectorKey", resultSelector))
+ * .stateId("stateId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SingleStateOptionsDsl {
   private val cdkBuilder: SingleStateOptions.Builder = SingleStateOptions.builder()

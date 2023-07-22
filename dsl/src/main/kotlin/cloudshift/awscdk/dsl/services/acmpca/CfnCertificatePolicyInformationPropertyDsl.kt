@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 
+/**
+ * Defines the X.509 `CertificatePolicies` extension.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * PolicyInformationProperty policyInformationProperty = PolicyInformationProperty.builder()
+ * .certPolicyId("certPolicyId")
+ * // the properties below are optional
+ * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
+ * .policyQualifierId("policyQualifierId")
+ * .qualifier(QualifierProperty.builder()
+ * .cpsUri("cpsUri")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-policyinformation.html)
+ */
 @CdkDslMarker
 public class CfnCertificatePolicyInformationPropertyDsl {
   private val cdkBuilder: CfnCertificate.PolicyInformationProperty.Builder =

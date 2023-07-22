@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.athena.CfnNamedQuery
 import software.constructs.Construct
 
+/**
+ * The `AWS::Athena::NamedQuery` resource specifies an Amazon Athena saved query, where
+ * `QueryString` contains the SQL query statements that make up the query.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnNamedQuery cfnNamedQuery = CfnNamedQuery.Builder.create(this, "MyCfnNamedQuery")
+ * .database("database")
+ * .queryString("queryString")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .workGroup("workGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html)
+ */
 @CdkDslMarker
 public class CfnNamedQueryDsl(
   scope: Construct,

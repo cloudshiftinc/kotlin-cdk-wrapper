@@ -16,6 +16,158 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnDBCluster
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBCluster` resource creates an Amazon Aurora DB cluster or Multi-AZ DB cluster.
+ *
+ * For more information about creating an Aurora DB cluster, see [Creating an Amazon Aurora DB
+ * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.CreateInstance.html) in
+ * the *Amazon Aurora User Guide* .
+ *
+ * For more information about creating a Multi-AZ DB cluster, see [Creating a Multi-AZ DB
+ * cluster](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/create-multi-az-db-cluster.html) in
+ * the *Amazon RDS User Guide* .
+ *
+ *
+ * You can only create this resource in AWS Regions where Amazon Aurora or Multi-AZ DB clusters are
+ * supported.
+ *
+ *
+ * *Updating DB clusters*
+ *
+ * When properties labeled " *Update requires:*
+ * [Replacement](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html#update-replacement)
+ * " are updated, AWS CloudFormation first creates a replacement DB cluster, then changes references
+ * from other dependent resources to point to the replacement DB cluster, and finally deletes the old
+ * DB cluster.
+ *
+ *
+ * We highly recommend that you take a snapshot of the database before updating the stack. If you
+ * don't, you lose the data when AWS CloudFormation replaces your DB cluster. To preserve your data,
+ * perform the following procedure:
+ *
+ * * Deactivate any applications that are using the DB cluster so that there's no activity on the DB
+ * instance.
+ * * Create a snapshot of the DB cluster. For more information, see [Creating a DB Cluster
+ * Snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_CreateSnapshotCluster.html)
+ * .
+ * * If you want to restore your DB cluster using a DB cluster snapshot, modify the updated template
+ * with your DB cluster changes and add the `SnapshotIdentifier` property with the ID of the DB cluster
+ * snapshot that you want to use.
+ *
+ * After you restore a DB cluster with a `SnapshotIdentifier` property, you must specify the same
+ * `SnapshotIdentifier` property for any future updates to the DB cluster. When you specify this
+ * property for an update, the DB cluster is not restored from the DB cluster snapshot again, and the
+ * data in the database is not changed. However, if you don't specify the `SnapshotIdentifier`
+ * property, an empty DB cluster is created, and the original DB cluster is deleted. If you specify a
+ * property that is different from the previous snapshot restore property, a new DB cluster is restored
+ * from the specified `SnapshotIdentifier` property, and the original DB cluster is deleted.
+ *
+ * * Update the stack.
+ *
+ *
+ * Currently, when you are updating the stack for an Aurora Serverless DB cluster, you can't include
+ * changes to any other properties when you specify one of the following properties:
+ * `PreferredBackupWindow` , `PreferredMaintenanceWindow` , and `Port` . This limitation doesn't apply
+ * to provisioned DB clusters.
+ *
+ * For more information about updating other properties of this resource, see
+ * `[ModifyDBCluster](https://docs.aws.amazon.com//AmazonRDS/latest/APIReference/API_ModifyDBCluster.html)`
+ * . For more information about updating stacks, see [AWS CloudFormation Stacks
+ * Updates](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks.html)
+ * .
+ *
+ * *Deleting DB clusters*
+ *
+ * The default `DeletionPolicy` for `AWS::RDS::DBCluster` resources is `Snapshot` . For more
+ * information about how AWS CloudFormation deletes resources, see [DeletionPolicy
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnDBCluster cfnDBCluster = CfnDBCluster.Builder.create(this, "MyCfnDBCluster")
+ * .allocatedStorage(123)
+ * .associatedRoles(List.of(DBClusterRoleProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .featureName("featureName")
+ * .build()))
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZones(List.of("availabilityZones"))
+ * .backtrackWindow(123)
+ * .backupRetentionPeriod(123)
+ * .copyTagsToSnapshot(false)
+ * .databaseName("databaseName")
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbClusterInstanceClass("dbClusterInstanceClass")
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .dbSystemId("dbSystemId")
+ * .deletionProtection(false)
+ * .domain("domain")
+ * .domainIamRoleName("domainIamRoleName")
+ * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .enableHttpEndpoint(false)
+ * .enableIamDatabaseAuthentication(false)
+ * .engine("engine")
+ * .engineMode("engineMode")
+ * .engineVersion("engineVersion")
+ * .globalClusterIdentifier("globalClusterIdentifier")
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .manageMasterUserPassword(false)
+ * .masterUsername("masterUsername")
+ * .masterUserPassword("masterUserPassword")
+ * .masterUserSecret(MasterUserSecretProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .secretArn("secretArn")
+ * .build())
+ * .monitoringInterval(123)
+ * .monitoringRoleArn("monitoringRoleArn")
+ * .networkType("networkType")
+ * .performanceInsightsEnabled(false)
+ * .performanceInsightsKmsKeyId("performanceInsightsKmsKeyId")
+ * .performanceInsightsRetentionPeriod(123)
+ * .port(123)
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .replicationSourceIdentifier("replicationSourceIdentifier")
+ * .restoreToTime("restoreToTime")
+ * .restoreType("restoreType")
+ * .scalingConfiguration(ScalingConfigurationProperty.builder()
+ * .autoPause(false)
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .secondsBeforeTimeout(123)
+ * .secondsUntilAutoPause(123)
+ * .timeoutAction("timeoutAction")
+ * .build())
+ * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .sourceRegion("sourceRegion")
+ * .storageEncrypted(false)
+ * .storageType("storageType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useLatestRestorableTime(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterDsl(
   scope: Construct,

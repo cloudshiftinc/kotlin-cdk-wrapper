@@ -8,6 +8,68 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnConfigurationSet
 import software.constructs.Construct
 
+/**
+ * Configuration sets let you create groups of rules that you can apply to the emails you send using
+ * Amazon SES.
+ *
+ * For more information about using configuration sets, see [Using Amazon SES Configuration
+ * Sets](https://docs.aws.amazon.com/ses/latest/dg/using-configuration-sets.html) in the [Amazon SES
+ * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/) .
+ *
+ *
+ * *Required permissions:*
+ *
+ * To apply any of the resource options, you will need to have the corresponding AWS Identity and
+ * Access Management (IAM) SES API v2 permissions:
+ *
+ * * `ses:GetConfigurationSet`
+ * * (This permission is replacing the v1 *ses:DescribeConfigurationSet* permission which will not
+ * work with these v2 resource options.)
+ * * `ses:PutConfigurationSetDeliveryOptions`
+ * * `ses:PutConfigurationSetReputationOptions`
+ * * `ses:PutConfigurationSetSendingOptions`
+ * * `ses:PutConfigurationSetSuppressionOptions`
+ * * `ses:PutConfigurationSetTrackingOptions`
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnConfigurationSet cfnConfigurationSet = CfnConfigurationSet.Builder.create(this,
+ * "MyCfnConfigurationSet")
+ * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .sendingPoolName("sendingPoolName")
+ * .tlsPolicy("tlsPolicy")
+ * .build())
+ * .name("name")
+ * .reputationOptions(ReputationOptionsProperty.builder()
+ * .reputationMetricsEnabled(false)
+ * .build())
+ * .sendingOptions(SendingOptionsProperty.builder()
+ * .sendingEnabled(false)
+ * .build())
+ * .suppressionOptions(SuppressionOptionsProperty.builder()
+ * .suppressedReasons(List.of("suppressedReasons"))
+ * .build())
+ * .trackingOptions(TrackingOptionsProperty.builder()
+ * .customRedirectDomain("customRedirectDomain")
+ * .build())
+ * .vdmOptions(VdmOptionsProperty.builder()
+ * .dashboardOptions(DashboardOptionsProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianOptions(GuardianOptionsProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationset.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetDsl(
   scope: Construct,

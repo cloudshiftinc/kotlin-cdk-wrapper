@@ -9,6 +9,21 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerLookupOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 
+/**
+ * Options for looking up a network listener.
+ *
+ * Example:
+ *
+ * ```
+ * INetworkListener listener = NetworkListener.fromLookup(this, "ALBListener",
+ * NetworkListenerLookupOptions.builder()
+ * .loadBalancerTags(Map.of(
+ * "Cluster", "MyClusterName"))
+ * .listenerProtocol(Protocol.TCP)
+ * .listenerPort(12345)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class NetworkListenerLookupOptionsDsl {
   private val cdkBuilder: NetworkListenerLookupOptions.Builder =

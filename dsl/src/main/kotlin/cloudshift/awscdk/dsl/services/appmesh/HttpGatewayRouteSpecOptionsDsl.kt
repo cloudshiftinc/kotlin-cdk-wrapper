@@ -9,6 +9,25 @@ import software.amazon.awscdk.services.appmesh.HttpGatewayRouteMatch
 import software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions
 import software.amazon.awscdk.services.appmesh.IVirtualService
 
+/**
+ * Properties specific for HTTP Based GatewayRoutes.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-http-2", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.http(HttpGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(HttpGatewayRouteMatch.builder()
+ * // This rewrites the path from '/test' to '/rewrittenPath'.
+ * .path(HttpGatewayRoutePathMatch.exactly("/test", "/rewrittenPath"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpGatewayRouteSpecOptionsDsl {
   private val cdkBuilder: HttpGatewayRouteSpecOptions.Builder =

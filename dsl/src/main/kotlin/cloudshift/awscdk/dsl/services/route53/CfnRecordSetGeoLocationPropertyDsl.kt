@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnRecordSet
 
+/**
+ * A complex type that contains information about a geographic location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * GeoLocationProperty geoLocationProperty = GeoLocationProperty.builder()
+ * .continentCode("continentCode")
+ * .countryCode("countryCode")
+ * .subdivisionCode("subdivisionCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetGeoLocationPropertyDsl {
   private val cdkBuilder: CfnRecordSet.GeoLocationProperty.Builder =

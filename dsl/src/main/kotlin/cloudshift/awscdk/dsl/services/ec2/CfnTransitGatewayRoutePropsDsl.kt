@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayRoute`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayRouteProps cfnTransitGatewayRouteProps = CfnTransitGatewayRouteProps.builder()
+ * .transitGatewayRouteTableId("transitGatewayRouteTableId")
+ * // the properties below are optional
+ * .blackhole(false)
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayRoutePropsDsl {
   private val cdkBuilder: CfnTransitGatewayRouteProps.Builder =

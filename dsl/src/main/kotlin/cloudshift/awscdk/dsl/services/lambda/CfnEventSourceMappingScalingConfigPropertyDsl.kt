@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * (Amazon SQS only) The scaling configuration for the event source.
+ *
+ * To remove the configuration, pass an empty value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * ScalingConfigProperty scalingConfigProperty = ScalingConfigProperty.builder()
+ * .maximumConcurrency(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-scalingconfig.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingScalingConfigPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.ScalingConfigProperty.Builder =

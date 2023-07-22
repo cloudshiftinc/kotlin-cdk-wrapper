@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.waf.regional.CfnByteMatchSet
 
+/**
+ * This is *AWS WAF Classic* documentation.
+ *
+ * For more information, see [AWS WAF
+ * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
+ * developer guide.
+ *
+ *
+ * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
+ * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
+ * version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ *
+ * Specifies where in a web request to look for `TargetString` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * FieldToMatchProperty fieldToMatchProperty = FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-bytematchset-fieldtomatch.html)
+ */
 @CdkDslMarker
 public class CfnByteMatchSetFieldToMatchPropertyDsl {
   private val cdkBuilder: CfnByteMatchSet.FieldToMatchProperty.Builder =

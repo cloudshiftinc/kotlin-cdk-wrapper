@@ -8,6 +8,35 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.appmesh.HttpHealthCheckOptions
 
+/**
+ * Properties used to define HTTP Based healthchecks.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8081)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5)) // minimum
+ * .path("/health-check-path")
+ * .timeout(Duration.seconds(2)) // minimum
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .build())))
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpHealthCheckOptionsDsl {
   private val cdkBuilder: HttpHealthCheckOptions.Builder = HttpHealthCheckOptions.builder()

@@ -9,6 +9,33 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
+/**
+ * `Port` is a property of the
+ * [Networking](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-networking.html)
+ * property. It describes information about ports for an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * PortProperty portProperty = PortProperty.builder()
+ * .accessDirection("accessDirection")
+ * .accessFrom("accessFrom")
+ * .accessType("accessType")
+ * .cidrListAliases(List.of("cidrListAliases"))
+ * .cidrs(List.of("cidrs"))
+ * .commonName("commonName")
+ * .fromPort(123)
+ * .ipv6Cidrs(List.of("ipv6Cidrs"))
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-port.html)
+ */
 @CdkDslMarker
 public class CfnInstancePortPropertyDsl {
   private val cdkBuilder: CfnInstance.PortProperty.Builder = CfnInstance.PortProperty.builder()

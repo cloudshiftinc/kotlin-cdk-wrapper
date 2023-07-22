@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.GroupProps
 import software.amazon.awscdk.services.iam.IManagedPolicy
 
+/**
+ * Properties for defining an IAM group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * ManagedPolicy managedPolicy;
+ * GroupProps groupProps = GroupProps.builder()
+ * .groupName("groupName")
+ * .managedPolicies(List.of(managedPolicy))
+ * .path("path")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GroupPropsDsl {
   private val cdkBuilder: GroupProps.Builder = GroupProps.builder()

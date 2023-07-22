@@ -6,6 +6,67 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * An action that Amazon SES can take when it receives an email on behalf of one or more email
+ * addresses or domains that you own.
+ *
+ * An instance of this data type can represent only one action.
+ *
+ * For information about setting up receipt rules, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-receipt-rules-console-walkthrough.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ActionProperty actionProperty = ActionProperty.builder()
+ * .addHeaderAction(AddHeaderActionProperty.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build())
+ * .bounceAction(BounceActionProperty.builder()
+ * .message("message")
+ * .sender("sender")
+ * .smtpReplyCode("smtpReplyCode")
+ * // the properties below are optional
+ * .statusCode("statusCode")
+ * .topicArn("topicArn")
+ * .build())
+ * .lambdaAction(LambdaActionProperty.builder()
+ * .functionArn("functionArn")
+ * // the properties below are optional
+ * .invocationType("invocationType")
+ * .topicArn("topicArn")
+ * .build())
+ * .s3Action(S3ActionProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .topicArn("topicArn")
+ * .build())
+ * .snsAction(SNSActionProperty.builder()
+ * .encoding("encoding")
+ * .topicArn("topicArn")
+ * .build())
+ * .stopAction(StopActionProperty.builder()
+ * .scope("scope")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build())
+ * .workmailAction(WorkmailActionProperty.builder()
+ * .organizationArn("organizationArn")
+ * // the properties below are optional
+ * .topicArn("topicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.ActionProperty.Builder =

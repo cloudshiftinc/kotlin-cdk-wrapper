@@ -9,6 +9,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Configuration for column evaluations for a profile job.
+ *
+ * ColumnStatisticsConfiguration can be used to select evaluations and override parameters of
+ * evaluations for particular columns.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ColumnStatisticsConfigurationProperty columnStatisticsConfigurationProperty =
+ * ColumnStatisticsConfigurationProperty.builder()
+ * .statistics(StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .selectors(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-columnstatisticsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobColumnStatisticsConfigurationPropertyDsl {
   private val cdkBuilder: CfnJob.ColumnStatisticsConfigurationProperty.Builder =

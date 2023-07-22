@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fms.CfnPolicy
 
+/**
+ * Details about the security service that is being used to protect the resources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * SecurityServicePolicyDataProperty securityServicePolicyDataProperty =
+ * SecurityServicePolicyDataProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .managedServiceData("managedServiceData")
+ * .policyOption(PolicyOptionProperty.builder()
+ * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .thirdPartyFirewallPolicy(ThirdPartyFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-securityservicepolicydata.html)
+ */
 @CdkDslMarker
 public class CfnPolicySecurityServicePolicyDataPropertyDsl {
   private val cdkBuilder: CfnPolicy.SecurityServicePolicyDataProperty.Builder =

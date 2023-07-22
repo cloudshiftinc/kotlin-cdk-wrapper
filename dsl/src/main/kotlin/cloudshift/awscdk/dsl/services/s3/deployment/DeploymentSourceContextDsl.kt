@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext
 
+/**
+ * Bind context for ISources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.s3.deployment.*;
+ * Role role;
+ * DeploymentSourceContext deploymentSourceContext = DeploymentSourceContext.builder()
+ * .handlerRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeploymentSourceContextDsl {
   private val cdkBuilder: DeploymentSourceContext.Builder = DeploymentSourceContext.builder()

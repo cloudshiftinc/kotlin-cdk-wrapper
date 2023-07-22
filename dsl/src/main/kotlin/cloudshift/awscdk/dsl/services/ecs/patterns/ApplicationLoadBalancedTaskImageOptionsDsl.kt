@@ -15,6 +15,27 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .taskSubnets(SubnetSelection.builder()
+ * .subnets(List.of(Subnet.fromSubnetId(this, "subnet", "VpcISOLATEDSubnet1Subnet80F07FA0")))
+ * .build())
+ * .loadBalancerName("application-lb-name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancedTaskImageOptionsDsl {
   private val cdkBuilder: ApplicationLoadBalancedTaskImageOptions.Builder =

@@ -12,6 +12,22 @@ import software.amazon.awscdk.services.cloudfront.CachePolicy
 import software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior
 import software.constructs.Construct
 
+/**
+ * A Cache Policy configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // Using an existing cache policy for a Distribution
+ * S3Origin bucketOrigin;
+ * Distribution.Builder.create(this, "myDistManagedPolicy")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(bucketOrigin)
+ * .cachePolicy(CachePolicy.CACHING_OPTIMIZED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CachePolicyDsl(
   scope: Construct,

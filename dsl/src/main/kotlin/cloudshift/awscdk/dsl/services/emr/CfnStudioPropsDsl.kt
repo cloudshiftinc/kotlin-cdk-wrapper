@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.emr.CfnStudioProps
 
+/**
+ * Properties for defining a `CfnStudio`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStudioProps cfnStudioProps = CfnStudioProps.builder()
+ * .authMode("authMode")
+ * .defaultS3Location("defaultS3Location")
+ * .engineSecurityGroupId("engineSecurityGroupId")
+ * .name("name")
+ * .serviceRole("serviceRole")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .workspaceSecurityGroupId("workspaceSecurityGroupId")
+ * // the properties below are optional
+ * .description("description")
+ * .idpAuthUrl("idpAuthUrl")
+ * .idpRelayStateParameterName("idpRelayStateParameterName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userRole("userRole")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html)
+ */
 @CdkDslMarker
 public class CfnStudioPropsDsl {
   private val cdkBuilder: CfnStudioProps.Builder = CfnStudioProps.builder()

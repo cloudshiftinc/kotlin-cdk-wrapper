@@ -14,6 +14,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 import software.amazon.awscdk.services.fis.CfnExperimentTemplateProps
 
+/**
+ * Properties for defining a `CfnExperimentTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fis.*;
+ * Object cloudWatchLogsConfiguration;
+ * Object s3Configuration;
+ * CfnExperimentTemplateProps cfnExperimentTemplateProps = CfnExperimentTemplateProps.builder()
+ * .description("description")
+ * .roleArn("roleArn")
+ * .stopConditions(List.of(ExperimentTemplateStopConditionProperty.builder()
+ * .source("source")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .targets(Map.of(
+ * "targetsKey", ExperimentTemplateTargetProperty.builder()
+ * .resourceType("resourceType")
+ * .selectionMode("selectionMode")
+ * // the properties below are optional
+ * .filters(List.of(ExperimentTemplateTargetFilterProperty.builder()
+ * .path("path")
+ * .values(List.of("values"))
+ * .build()))
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .resourceArns(List.of("resourceArns"))
+ * .resourceTags(Map.of(
+ * "resourceTagsKey", "resourceTags"))
+ * .build()))
+ * // the properties below are optional
+ * .actions(Map.of(
+ * "actionsKey", ExperimentTemplateActionProperty.builder()
+ * .actionId("actionId")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .startAfter(List.of("startAfter"))
+ * .targets(Map.of(
+ * "targetsKey", "targets"))
+ * .build()))
+ * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
+ * .logSchemaVersion(123)
+ * // the properties below are optional
+ * .cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
+ * .s3Configuration(s3Configuration)
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTemplatePropsDsl {
   private val cdkBuilder: CfnExperimentTemplateProps.Builder = CfnExperimentTemplateProps.builder()

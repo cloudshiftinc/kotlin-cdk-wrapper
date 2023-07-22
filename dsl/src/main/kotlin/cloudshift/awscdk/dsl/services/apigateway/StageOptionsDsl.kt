@@ -14,6 +14,19 @@ import software.amazon.awscdk.services.apigateway.MethodDeploymentOptions
 import software.amazon.awscdk.services.apigateway.MethodLoggingLevel
 import software.amazon.awscdk.services.apigateway.StageOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * LogGroup logGroup = new LogGroup(this, "ApiGatewayAccessLogs");
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(new LogGroupLogDestination(logGroup))
+ * .accessLogFormat(AccessLogFormat.clf())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StageOptionsDsl {
   private val cdkBuilder: StageOptions.Builder = StageOptions.builder()

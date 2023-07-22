@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.eks.NodegroupRemoteAccess
 
+/**
+ * The remote access (SSH) configuration to use with your node group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.eks.*;
+ * SecurityGroup securityGroup;
+ * NodegroupRemoteAccess nodegroupRemoteAccess = NodegroupRemoteAccess.builder()
+ * .sshKeyName("sshKeyName")
+ * // the properties below are optional
+ * .sourceSecurityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-remoteaccess.html)
+ */
 @CdkDslMarker
 public class NodegroupRemoteAccessDsl {
   private val cdkBuilder: NodegroupRemoteAccess.Builder = NodegroupRemoteAccess.builder()

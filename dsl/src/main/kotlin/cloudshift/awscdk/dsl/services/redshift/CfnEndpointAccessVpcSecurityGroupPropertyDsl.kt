@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.redshift.CfnEndpointAccess
 
+/**
+ * The security groups associated with the endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * VpcSecurityGroupProperty vpcSecurityGroupProperty = VpcSecurityGroupProperty.builder()
+ * .status("status")
+ * .vpcSecurityGroupId("vpcSecurityGroupId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-endpointaccess-vpcsecuritygroup.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAccessVpcSecurityGroupPropertyDsl {
   private val cdkBuilder: CfnEndpointAccess.VpcSecurityGroupProperty.Builder =

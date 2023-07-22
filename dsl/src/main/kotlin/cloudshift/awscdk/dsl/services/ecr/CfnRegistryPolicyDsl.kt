@@ -10,6 +10,30 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ecr.CfnRegistryPolicy
 import software.constructs.Construct
 
+/**
+ * The `AWS::ECR::RegistryPolicy` resource creates or updates the permissions policy for a private
+ * registry.
+ *
+ * A private registry policy is used to specify permissions for another AWS account and is used when
+ * configuring cross-account replication. For more information, see [Registry
+ * permissions](https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in
+ * the *Amazon Elastic Container Registry User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object policyText;
+ * CfnRegistryPolicy cfnRegistryPolicy = CfnRegistryPolicy.Builder.create(this,
+ * "MyCfnRegistryPolicy")
+ * .policyText(policyText)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-registrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnRegistryPolicyDsl(
   scope: Construct,

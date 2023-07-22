@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * *[Event-based policies only]* Specifies an event that activates an event-based policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * EventParametersProperty eventParametersProperty = EventParametersProperty.builder()
+ * .eventType("eventType")
+ * .snapshotOwner(List.of("snapshotOwner"))
+ * // the properties below are optional
+ * .descriptionRegex("descriptionRegex")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-eventparameters.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicyEventParametersPropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.EventParametersProperty.Builder =

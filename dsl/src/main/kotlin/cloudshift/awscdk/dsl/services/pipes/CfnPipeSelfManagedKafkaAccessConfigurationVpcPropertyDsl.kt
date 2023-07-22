@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * This structure specifies the VPC subnets and security groups for the stream, and whether a public
+ * IP address is to be used.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * SelfManagedKafkaAccessConfigurationVpcProperty selfManagedKafkaAccessConfigurationVpcProperty =
+ * SelfManagedKafkaAccessConfigurationVpcProperty.builder()
+ * .securityGroup(List.of("securityGroup"))
+ * .subnets(List.of("subnets"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-selfmanagedkafkaaccessconfigurationvpc.html)
+ */
 @CdkDslMarker
 public class CfnPipeSelfManagedKafkaAccessConfigurationVpcPropertyDsl {
   private val cdkBuilder: CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty.Builder =

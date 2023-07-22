@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
+/**
+ * Configuration for monitoring constraints and monitoring statistics.
+ *
+ * These baseline resources are compared against the results of the current job from the series of
+ * jobs scheduled to collect data periodically.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DataQualityBaselineConfigProperty dataQualityBaselineConfigProperty =
+ * DataQualityBaselineConfigProperty.builder()
+ * .baseliningJobName("baseliningJobName")
+ * .constraintsResource(ConstraintsResourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * .build())
+ * .statisticsResource(StatisticsResourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-dataqualityjobdefinition-dataqualitybaselineconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionDataQualityBaselineConfigPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.DataQualityBaselineConfigProperty.Builder =

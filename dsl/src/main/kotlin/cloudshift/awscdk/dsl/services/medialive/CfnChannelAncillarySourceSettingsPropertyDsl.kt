@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the ancillary captions to extract from the input.
+ *
+ * The parent of this entity is CaptionSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AncillarySourceSettingsProperty ancillarySourceSettingsProperty =
+ * AncillarySourceSettingsProperty.builder()
+ * .sourceAncillaryChannelNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-ancillarysourcesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAncillarySourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AncillarySourceSettingsProperty.Builder =

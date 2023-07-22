@@ -12,6 +12,155 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 import software.constructs.Construct
 
+/**
+ * Specifies the configuration information to launch a fleet--or group--of instances.
+ *
+ * An EC2 Fleet can launch multiple instance types across multiple Availability Zones, using the
+ * On-Demand Instance, Reserved Instance, and Spot Instance purchasing models together. Using EC2
+ * Fleet, you can define separate On-Demand and Spot capacity targets, specify the instance types that
+ * work best for your applications, and specify how Amazon EC2 should distribute your fleet capacity
+ * within each purchasing model. For more information, see [Launching an EC2
+ * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet.html) in the *Amazon EC2 User
+ * Guide for Linux Instances* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnEC2Fleet cfnEC2Fleet = CfnEC2Fleet.Builder.create(this, "MyCfnEC2Fleet")
+ * .launchTemplateConfigs(List.of(FleetLaunchTemplateConfigRequestProperty.builder()
+ * .launchTemplateSpecification(FleetLaunchTemplateSpecificationRequestProperty.builder()
+ * .version("version")
+ * // the properties below are optional
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .build())
+ * .overrides(List.of(FleetLaunchTemplateOverridesRequestProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .instanceRequirements(InstanceRequirementsRequestProperty.builder()
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRangeRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build())
+ * .instanceType("instanceType")
+ * .maxPrice("maxPrice")
+ * .placement(PlacementProperty.builder()
+ * .affinity("affinity")
+ * .availabilityZone("availabilityZone")
+ * .groupName("groupName")
+ * .hostId("hostId")
+ * .hostResourceGroupArn("hostResourceGroupArn")
+ * .partitionNumber(123)
+ * .spreadDomain("spreadDomain")
+ * .tenancy("tenancy")
+ * .build())
+ * .priority(123)
+ * .subnetId("subnetId")
+ * .weightedCapacity(123)
+ * .build()))
+ * .build()))
+ * .targetCapacitySpecification(TargetCapacitySpecificationRequestProperty.builder()
+ * .totalTargetCapacity(123)
+ * // the properties below are optional
+ * .defaultTargetCapacityType("defaultTargetCapacityType")
+ * .onDemandTargetCapacity(123)
+ * .spotTargetCapacity(123)
+ * .targetCapacityUnitType("targetCapacityUnitType")
+ * .build())
+ * // the properties below are optional
+ * .context("context")
+ * .excessCapacityTerminationPolicy("excessCapacityTerminationPolicy")
+ * .onDemandOptions(OnDemandOptionsRequestProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .capacityReservationOptions(CapacityReservationOptionsRequestProperty.builder()
+ * .usageStrategy("usageStrategy")
+ * .build())
+ * .maxTotalPrice("maxTotalPrice")
+ * .minTargetCapacity(123)
+ * .singleAvailabilityZone(false)
+ * .singleInstanceType(false)
+ * .build())
+ * .replaceUnhealthyInstances(false)
+ * .spotOptions(SpotOptionsRequestProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+ * .instancePoolsToUseCount(123)
+ * .maintenanceStrategies(MaintenanceStrategiesProperty.builder()
+ * .capacityRebalance(CapacityRebalanceProperty.builder()
+ * .replacementStrategy("replacementStrategy")
+ * .terminationDelay(123)
+ * .build())
+ * .build())
+ * .maxTotalPrice("maxTotalPrice")
+ * .minTargetCapacity(123)
+ * .singleAvailabilityZone(false)
+ * .singleInstanceType(false)
+ * .build())
+ * .tagSpecifications(List.of(TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .terminateInstancesWithExpiration(false)
+ * .type("type")
+ * .validFrom("validFrom")
+ * .validUntil("validUntil")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetDsl(
   scope: Construct,

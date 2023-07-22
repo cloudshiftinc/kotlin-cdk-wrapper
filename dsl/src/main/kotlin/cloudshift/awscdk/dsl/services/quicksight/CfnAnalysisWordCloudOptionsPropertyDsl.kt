@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The word cloud options for a word cloud visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * WordCloudOptionsProperty wordCloudOptionsProperty = WordCloudOptionsProperty.builder()
+ * .cloudLayout("cloudLayout")
+ * .maximumStringLength(123)
+ * .wordCasing("wordCasing")
+ * .wordOrientation("wordOrientation")
+ * .wordPadding("wordPadding")
+ * .wordScaling("wordScaling")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-wordcloudoptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisWordCloudOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.WordCloudOptionsProperty.Builder =

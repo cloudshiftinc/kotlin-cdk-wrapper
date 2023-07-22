@@ -15,6 +15,120 @@ import software.amazon.awscdk.services.cloudfront.FailoverStatusCode
 import software.amazon.awscdk.services.cloudfront.S3OriginConfig
 import software.amazon.awscdk.services.cloudfront.SourceConfiguration
 
+/**
+ * A source configuration is a wrapper for CloudFront origins and behaviors.
+ *
+ * An origin is what CloudFront will "be in front of" - that is, CloudFront will pull it's assets
+ * from an origin.
+ *
+ * If you're using s3 as a source - pass the `s3Origin` property, otherwise, pass the
+ * `customOriginSource` property.
+ *
+ * One or the other must be passed, and it is invalid to pass both in the same SourceConfiguration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * Function function_;
+ * KeyGroup keyGroup;
+ * OriginAccessIdentity originAccessIdentity;
+ * Version version;
+ * SourceConfiguration sourceConfiguration = SourceConfiguration.builder()
+ * .behaviors(List.of(Behavior.builder()
+ * .allowedMethods(CloudFrontAllowedMethods.GET_HEAD)
+ * .cachedMethods(CloudFrontAllowedCachedMethods.GET_HEAD)
+ * .compress(false)
+ * .defaultTtl(Duration.minutes(30))
+ * .forwardedValues(ForwardedValuesProperty.builder()
+ * .queryString(false)
+ * // the properties below are optional
+ * .cookies(CookiesProperty.builder()
+ * .forward("forward")
+ * // the properties below are optional
+ * .whitelistedNames(List.of("whitelistedNames"))
+ * .build())
+ * .headers(List.of("headers"))
+ * .queryStringCacheKeys(List.of("queryStringCacheKeys"))
+ * .build())
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .function(function_)
+ * .build()))
+ * .isDefaultBehavior(false)
+ * .lambdaFunctionAssociations(List.of(LambdaFunctionAssociation.builder()
+ * .eventType(LambdaEdgeEventType.ORIGIN_REQUEST)
+ * .lambdaFunction(version)
+ * // the properties below are optional
+ * .includeBody(false)
+ * .build()))
+ * .maxTtl(Duration.minutes(30))
+ * .minTtl(Duration.minutes(30))
+ * .pathPattern("pathPattern")
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .trustedSigners(List.of("trustedSigners"))
+ * .viewerProtocolPolicy(ViewerProtocolPolicy.HTTPS_ONLY)
+ * .build()))
+ * // the properties below are optional
+ * .connectionAttempts(123)
+ * .connectionTimeout(Duration.minutes(30))
+ * .customOriginSource(CustomOriginConfig.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .allowedOriginSSLVersions(List.of(OriginSslPolicy.SSL_V3))
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .originHeaders(Map.of(
+ * "originHeadersKey", "originHeaders"))
+ * .originKeepaliveTimeout(Duration.minutes(30))
+ * .originPath("originPath")
+ * .originProtocolPolicy(OriginProtocolPolicy.HTTP_ONLY)
+ * .originReadTimeout(Duration.minutes(30))
+ * .originShieldRegion("originShieldRegion")
+ * .build())
+ * .failoverCriteriaStatusCodes(List.of(FailoverStatusCode.FORBIDDEN))
+ * .failoverCustomOriginSource(CustomOriginConfig.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .allowedOriginSSLVersions(List.of(OriginSslPolicy.SSL_V3))
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .originHeaders(Map.of(
+ * "originHeadersKey", "originHeaders"))
+ * .originKeepaliveTimeout(Duration.minutes(30))
+ * .originPath("originPath")
+ * .originProtocolPolicy(OriginProtocolPolicy.HTTP_ONLY)
+ * .originReadTimeout(Duration.minutes(30))
+ * .originShieldRegion("originShieldRegion")
+ * .build())
+ * .failoverS3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(bucket)
+ * // the properties below are optional
+ * .originAccessIdentity(originAccessIdentity)
+ * .originHeaders(Map.of(
+ * "originHeadersKey", "originHeaders"))
+ * .originPath("originPath")
+ * .originShieldRegion("originShieldRegion")
+ * .build())
+ * .originShieldRegion("originShieldRegion")
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(bucket)
+ * // the properties below are optional
+ * .originAccessIdentity(originAccessIdentity)
+ * .originHeaders(Map.of(
+ * "originHeadersKey", "originHeaders"))
+ * .originPath("originPath")
+ * .originShieldRegion("originShieldRegion")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SourceConfigurationDsl {
   private val cdkBuilder: SourceConfiguration.Builder = SourceConfiguration.builder()

@@ -8,6 +8,19 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.route53.PrivateHostedZoneProps
 
+/**
+ * Properties to create a Route 53 private hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * PrivateHostedZone zone = PrivateHostedZone.Builder.create(this, "HostedZone")
+ * .zoneName("fully.qualified.domain.com")
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrivateHostedZonePropsDsl {
   private val cdkBuilder: PrivateHostedZoneProps.Builder = PrivateHostedZoneProps.builder()

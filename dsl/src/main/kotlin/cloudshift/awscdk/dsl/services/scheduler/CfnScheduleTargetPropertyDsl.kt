@@ -7,6 +7,88 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 
+/**
+ * The schedule's target.
+ *
+ * EventBridge Scheduler supports templated target that invoke common API operations, as well as
+ * universal targets that you can customize to invoke over 6,000 API operations across more than 270
+ * services. You can only specify one templated or universal target for a schedule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * Object tags;
+ * TargetProperty targetProperty = TargetProperty.builder()
+ * .arn("arn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsvpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategy(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tags(tags)
+ * .taskCount(123)
+ * .build())
+ * .eventBridgeParameters(EventBridgeParametersProperty.builder()
+ * .detailType("detailType")
+ * .source("source")
+ * .build())
+ * .input("input")
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKey("partitionKey")
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .sageMakerPipelineParameters(SageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-target.html)
+ */
 @CdkDslMarker
 public class CfnScheduleTargetPropertyDsl {
   private val cdkBuilder: CfnSchedule.TargetProperty.Builder = CfnSchedule.TargetProperty.builder()

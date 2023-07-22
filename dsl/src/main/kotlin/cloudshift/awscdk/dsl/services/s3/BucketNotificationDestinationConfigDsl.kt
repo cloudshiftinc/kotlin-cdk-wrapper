@@ -10,6 +10,26 @@ import software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig
 import software.amazon.awscdk.services.s3.BucketNotificationDestinationType
 import software.constructs.IDependable
 
+/**
+ * Represents the properties of a notification destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * import software.constructs.*;
+ * IDependable dependable;
+ * BucketNotificationDestinationConfig bucketNotificationDestinationConfig =
+ * BucketNotificationDestinationConfig.builder()
+ * .arn("arn")
+ * .type(BucketNotificationDestinationType.LAMBDA)
+ * // the properties below are optional
+ * .dependencies(List.of(dependable))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BucketNotificationDestinationConfigDsl {
   private val cdkBuilder: BucketNotificationDestinationConfig.Builder =

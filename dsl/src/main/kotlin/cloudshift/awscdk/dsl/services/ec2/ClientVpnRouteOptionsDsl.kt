@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.ClientVpnRouteOptions
 import software.amazon.awscdk.services.ec2.ClientVpnRouteTarget
 
+/**
+ * Options for a ClientVpnRoute.
+ *
+ * Example:
+ *
+ * ```
+ * ClientVpnEndpoint endpoint = vpc.addClientVpnEndpoint("Endpoint",
+ * ClientVpnEndpointOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .serverCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/server-certificate-id")
+ * .userBasedAuthentication(ClientVpnUserBasedAuthentication.federated(samlProvider))
+ * .build());
+ * // Client-to-client access
+ * endpoint.addRoute("Route", ClientVpnRouteOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .target(ClientVpnRouteTarget.local())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnRouteOptionsDsl {
   private val cdkBuilder: ClientVpnRouteOptions.Builder = ClientVpnRouteOptions.builder()

@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * The details of the Apache Kafka cluster to which the connector is connected.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * ApacheKafkaClusterProperty apacheKafkaClusterProperty = ApacheKafkaClusterProperty.builder()
+ * .bootstrapServers("bootstrapServers")
+ * .vpc(VpcProperty.builder()
+ * .securityGroups(List.of("securityGroups"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-apachekafkacluster.html)
+ */
 @CdkDslMarker
 public class CfnConnectorApacheKafkaClusterPropertyDsl {
   private val cdkBuilder: CfnConnector.ApacheKafkaClusterProperty.Builder =

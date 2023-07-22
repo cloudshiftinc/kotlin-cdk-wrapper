@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
 
+/**
+ * Contains outbound call configuration for an outbound campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connectcampaigns.*;
+ * OutboundCallConfigProperty outboundCallConfigProperty = OutboundCallConfigProperty.builder()
+ * .connectContactFlowArn("connectContactFlowArn")
+ * .connectQueueArn("connectQueueArn")
+ * // the properties below are optional
+ * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
+ * .enableAnswerMachineDetection(false)
+ * .build())
+ * .connectSourcePhoneNumber("connectSourcePhoneNumber")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-outboundcallconfig.html)
+ */
 @CdkDslMarker
 public class CfnCampaignOutboundCallConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.OutboundCallConfigProperty.Builder =

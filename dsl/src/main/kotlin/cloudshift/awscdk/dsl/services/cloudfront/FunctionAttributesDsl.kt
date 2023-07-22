@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.FunctionAttributes
 
+/**
+ * Attributes of an existing CloudFront Function to import it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * FunctionAttributes functionAttributes = FunctionAttributes.builder()
+ * .functionArn("functionArn")
+ * .functionName("functionName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionAttributesDsl {
   private val cdkBuilder: FunctionAttributes.Builder = FunctionAttributes.builder()

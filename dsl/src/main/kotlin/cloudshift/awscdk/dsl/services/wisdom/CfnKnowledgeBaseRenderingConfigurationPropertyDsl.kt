@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wisdom.CfnKnowledgeBase
 
+/**
+ * Information about how to render the content.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wisdom.*;
+ * RenderingConfigurationProperty renderingConfigurationProperty =
+ * RenderingConfigurationProperty.builder()
+ * .templateUri("templateUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wisdom-knowledgebase-renderingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnKnowledgeBaseRenderingConfigurationPropertyDsl {
   private val cdkBuilder: CfnKnowledgeBase.RenderingConfigurationProperty.Builder =

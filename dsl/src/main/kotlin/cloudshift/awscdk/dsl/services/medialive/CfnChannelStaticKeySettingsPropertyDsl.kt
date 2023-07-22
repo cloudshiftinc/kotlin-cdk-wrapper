@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The static key settings.
+ *
+ * The parent of this entity is KeyProviderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * StaticKeySettingsProperty staticKeySettingsProperty = StaticKeySettingsProperty.builder()
+ * .keyProviderServer(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .staticKeyValue("staticKeyValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-statickeysettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelStaticKeySettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.StaticKeySettingsProperty.Builder =

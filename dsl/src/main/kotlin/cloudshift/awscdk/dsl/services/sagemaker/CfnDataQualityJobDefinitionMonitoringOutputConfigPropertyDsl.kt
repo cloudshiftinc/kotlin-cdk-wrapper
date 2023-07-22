@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition
 
+/**
+ * The output configuration for monitoring jobs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MonitoringOutputConfigProperty monitoringOutputConfigProperty =
+ * MonitoringOutputConfigProperty.builder()
+ * .monitoringOutputs(List.of(MonitoringOutputProperty.builder()
+ * .s3Output(S3OutputProperty.builder()
+ * .localPath("localPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .s3UploadMode("s3UploadMode")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-dataqualityjobdefinition-monitoringoutputconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataQualityJobDefinitionMonitoringOutputConfigPropertyDsl {
   private val cdkBuilder: CfnDataQualityJobDefinition.MonitoringOutputConfigProperty.Builder =

@@ -21,6 +21,28 @@ import software.amazon.awscdk.services.cloudfront.SecurityPolicyProtocol
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * A CloudFront distribution with associated origin(s) and caching behavior(s).
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DistributionDsl(
   scope: Construct,

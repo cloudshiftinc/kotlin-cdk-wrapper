@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnApplicationInstance
 import software.constructs.Construct
 
+/**
+ * Creates an application instance and deploys it to a device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnApplicationInstance cfnApplicationInstance = CfnApplicationInstance.Builder.create(this,
+ * "MyCfnApplicationInstance")
+ * .defaultRuntimeContextDevice("defaultRuntimeContextDevice")
+ * .manifestPayload(ManifestPayloadProperty.builder()
+ * .payloadData("payloadData")
+ * .build())
+ * // the properties below are optional
+ * .applicationInstanceIdToReplace("applicationInstanceIdToReplace")
+ * .description("description")
+ * .manifestOverridesPayload(ManifestOverridesPayloadProperty.builder()
+ * .payloadData("payloadData")
+ * .build())
+ * .name("name")
+ * .runtimeRoleArn("runtimeRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-applicationinstance.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInstanceDsl(
   scope: Construct,

@@ -8,6 +8,45 @@ import software.amazon.awscdk.services.appmesh.AccessLogConfig
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * All Properties for Envoy Access logs for mesh endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * AccessLogConfig accessLogConfig = AccessLogConfig.builder()
+ * .virtualGatewayAccessLog(VirtualGatewayAccessLogProperty.builder()
+ * .file(VirtualGatewayFileAccessLogProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .format(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build())
+ * .build())
+ * .virtualNodeAccessLog(AccessLogProperty.builder()
+ * .file(FileAccessLogProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .format(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AccessLogConfigDsl {
   private val cdkBuilder: AccessLogConfig.Builder = AccessLogConfig.builder()

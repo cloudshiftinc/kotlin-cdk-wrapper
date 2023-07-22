@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `EnvironmentVariable` is a property of the [AWS CodeBuild Project
+ * Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environment.html)
+ * property type that specifies the name and value of an environment variable for an AWS CodeBuild
+ * project environment. When you use the environment to run a build, these variables are available for
+ * your builds to use. `EnvironmentVariable` contains a list of `EnvironmentVariable` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * // the properties below are optional
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-environmentvariable.html)
+ */
 @CdkDslMarker
 public class CfnProjectEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnProject.EnvironmentVariableProperty.Builder =

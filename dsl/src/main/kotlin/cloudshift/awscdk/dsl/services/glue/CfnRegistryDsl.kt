@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.glue.CfnRegistry
 import software.constructs.Construct
 
+/**
+ * The AWS::Glue::Registry is an AWS Glue resource type that manages registries of schemas in the
+ * AWS Glue Schema Registry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnRegistry cfnRegistry = CfnRegistry.Builder.create(this, "MyCfnRegistry")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)
+ */
 @CdkDslMarker
 public class CfnRegistryDsl(
   scope: Construct,

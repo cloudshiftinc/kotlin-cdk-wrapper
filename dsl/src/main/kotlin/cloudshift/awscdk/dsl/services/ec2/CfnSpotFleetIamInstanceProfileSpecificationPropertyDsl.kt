@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes an IAM instance profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * IamInstanceProfileSpecificationProperty iamInstanceProfileSpecificationProperty =
+ * IamInstanceProfileSpecificationProperty.builder()
+ * .arn("arn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-iaminstanceprofilespecification.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetIamInstanceProfileSpecificationPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.IamInstanceProfileSpecificationProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnComponentType
 
+/**
+ * The data connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataConnectorProperty dataConnectorProperty = DataConnectorProperty.builder()
+ * .isNative(false)
+ * .lambda(LambdaFunctionProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-componenttype-dataconnector.html)
+ */
 @CdkDslMarker
 public class CfnComponentTypeDataConnectorPropertyDsl {
   private val cdkBuilder: CfnComponentType.DataConnectorProperty.Builder =

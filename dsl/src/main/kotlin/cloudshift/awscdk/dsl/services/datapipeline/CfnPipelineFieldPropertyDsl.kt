@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datapipeline.CfnPipeline
 
+/**
+ * A key-value pair that describes a property of a `PipelineObject` .
+ *
+ * The value is specified as either a string value ( `StringValue` ) or a reference to another
+ * object ( `RefValue` ) but not as both. To view fields for a data pipeline object, see [Pipeline
+ * Object
+ * Reference](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-pipeline-objects.html)
+ * in the *AWS Data Pipeline Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datapipeline.*;
+ * FieldProperty fieldProperty = FieldProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .refValue("refValue")
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-field.html)
+ */
 @CdkDslMarker
 public class CfnPipelineFieldPropertyDsl {
   private val cdkBuilder: CfnPipeline.FieldProperty.Builder = CfnPipeline.FieldProperty.builder()

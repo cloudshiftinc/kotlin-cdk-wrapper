@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnEventStream
 
+/**
+ * Details regarding the Kinesis stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * DestinationDetailsProperty destinationDetailsProperty = DestinationDetailsProperty.builder()
+ * .status("status")
+ * .uri("uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-eventstream-destinationdetails.html)
+ */
 @CdkDslMarker
 public class CfnEventStreamDestinationDetailsPropertyDsl {
   private val cdkBuilder: CfnEventStream.DestinationDetailsProperty.Builder =

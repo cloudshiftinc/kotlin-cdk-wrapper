@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.SecretsManagerSecretOptions
 
+/**
+ * Options for referencing a secret value from Secrets Manager.
+ *
+ * Example:
+ *
+ * ```
+ * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
+ * .username(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("username").build()))
+ * .password(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("password").build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretsManagerSecretOptionsDsl {
   private val cdkBuilder: SecretsManagerSecretOptions.Builder =

@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dynamodb.CfnGlobalTable
 
+/**
+ * Represents the settings used to enable server-side encryption.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * SSESpecificationProperty sSESpecificationProperty = SSESpecificationProperty.builder()
+ * .sseEnabled(false)
+ * // the properties below are optional
+ * .sseType("sseType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-ssespecification.html)
+ */
 @CdkDslMarker
 public class CfnGlobalTableSSESpecificationPropertyDsl {
   private val cdkBuilder: CfnGlobalTable.SSESpecificationProperty.Builder =

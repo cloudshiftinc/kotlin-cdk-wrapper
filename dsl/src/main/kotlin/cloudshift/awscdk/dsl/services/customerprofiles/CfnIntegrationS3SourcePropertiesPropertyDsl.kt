@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * The properties that are applied when Amazon S3 is being used as the flow source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * S3SourcePropertiesProperty s3SourcePropertiesProperty = S3SourcePropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-s3sourceproperties.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationS3SourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.S3SourcePropertiesProperty.Builder =

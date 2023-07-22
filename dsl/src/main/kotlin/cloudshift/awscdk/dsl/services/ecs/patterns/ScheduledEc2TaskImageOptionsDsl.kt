@@ -13,6 +13,27 @@ import software.amazon.awscdk.services.ecs.LogDriver
 import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskImageOptions
 
+/**
+ * The properties for the ScheduledEc2Task using an image.
+ *
+ * Example:
+ *
+ * ```
+ * // Instantiate an Amazon EC2 Task to run at a scheduled interval
+ * Cluster cluster;
+ * ScheduledEc2Task ecsScheduledTask = ScheduledEc2Task.Builder.create(this, "ScheduledTask")
+ * .cluster(cluster)
+ * .scheduledEc2TaskImageOptions(ScheduledEc2TaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryLimitMiB(256)
+ * .environment(Map.of("name", "TRIGGER", "value", "CloudWatch Events"))
+ * .build())
+ * .schedule(Schedule.expression("rate(1 minute)"))
+ * .enabled(true)
+ * .ruleName("sample-scheduled-task-rule")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledEc2TaskImageOptionsDsl {
   private val cdkBuilder: ScheduledEc2TaskImageOptions.Builder =

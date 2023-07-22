@@ -12,6 +12,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.robomaker.CfnRobotApplication
 import software.amazon.awscdk.services.robomaker.CfnRobotApplicationProps
 
+/**
+ * Properties for defining a `CfnRobotApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.robomaker.*;
+ * CfnRobotApplicationProps cfnRobotApplicationProps = CfnRobotApplicationProps.builder()
+ * .robotSoftwareSuite(RobotSoftwareSuiteProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * // the properties below are optional
+ * .currentRevisionId("currentRevisionId")
+ * .environment("environment")
+ * .name("name")
+ * .sources(List.of(SourceConfigProperty.builder()
+ * .architecture("architecture")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-robotapplication.html)
+ */
 @CdkDslMarker
 public class CfnRobotApplicationPropsDsl {
   private val cdkBuilder: CfnRobotApplicationProps.Builder = CfnRobotApplicationProps.builder()

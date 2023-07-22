@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * The `OpenIDConnectConfig` property type specifies the optional authorization configuration for
+ * using an OpenID Connect compliant service with your GraphQL endpoint for an AWS AppSync GraphQL API.
+ *
+ * `OpenIDConnectConfig` is a property of the
+ * [AWS::AppSync::GraphQLApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * OpenIDConnectConfigProperty openIDConnectConfigProperty = OpenIDConnectConfigProperty.builder()
+ * .authTtl(123)
+ * .clientId("clientId")
+ * .iatTtl(123)
+ * .issuer("issuer")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiOpenIDConnectConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.OpenIDConnectConfigProperty.Builder =

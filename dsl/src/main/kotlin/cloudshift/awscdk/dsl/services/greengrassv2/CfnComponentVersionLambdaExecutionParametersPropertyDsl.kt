@@ -13,6 +13,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains parameters for a Lambda function that runs on AWS IoT Greengrass .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * LambdaExecutionParametersProperty lambdaExecutionParametersProperty =
+ * LambdaExecutionParametersProperty.builder()
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
+ * .eventSources(List.of(LambdaEventSourceProperty.builder()
+ * .topic("topic")
+ * .type("type")
+ * .build()))
+ * .execArgs(List.of("execArgs"))
+ * .inputPayloadEncodingType("inputPayloadEncodingType")
+ * .linuxProcessParams(LambdaLinuxProcessParamsProperty.builder()
+ * .containerParams(LambdaContainerParamsProperty.builder()
+ * .devices(List.of(LambdaDeviceMountProperty.builder()
+ * .addGroupOwner(false)
+ * .path("path")
+ * .permission("permission")
+ * .build()))
+ * .memorySizeInKb(123)
+ * .mountRoSysfs(false)
+ * .volumes(List.of(LambdaVolumeMountProperty.builder()
+ * .addGroupOwner(false)
+ * .destinationPath("destinationPath")
+ * .permission("permission")
+ * .sourcePath("sourcePath")
+ * .build()))
+ * .build())
+ * .isolationMode("isolationMode")
+ * .build())
+ * .maxIdleTimeInSeconds(123)
+ * .maxInstancesCount(123)
+ * .maxQueueSize(123)
+ * .pinned(false)
+ * .statusTimeoutInSeconds(123)
+ * .timeoutInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaexecutionparameters.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionLambdaExecutionParametersPropertyDsl {
   private val cdkBuilder: CfnComponentVersion.LambdaExecutionParametersProperty.Builder =

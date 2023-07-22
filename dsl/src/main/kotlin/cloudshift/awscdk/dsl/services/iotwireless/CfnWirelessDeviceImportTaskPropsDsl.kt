@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTaskProps
 
+/**
+ * Properties for defining a `CfnWirelessDeviceImportTask`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnWirelessDeviceImportTaskProps cfnWirelessDeviceImportTaskProps =
+ * CfnWirelessDeviceImportTaskProps.builder()
+ * .destinationName("destinationName")
+ * .sidewalk(SidewalkProperty.builder()
+ * .deviceCreationFile("deviceCreationFile")
+ * .deviceCreationFileList(List.of("deviceCreationFileList"))
+ * .role("role")
+ * .sidewalkManufacturingSn("sidewalkManufacturingSn")
+ * .build())
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceImportTaskPropsDsl {
   private val cdkBuilder: CfnWirelessDeviceImportTaskProps.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnInput
 
+/**
+ * Settings that apply only if the input is a pull type of input.
+ *
+ * The parent of this entity is Input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * InputSourceRequestProperty inputSourceRequestProperty = InputSourceRequestProperty.builder()
+ * .passwordParam("passwordParam")
+ * .url("url")
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputsourcerequest.html)
+ */
 @CdkDslMarker
 public class CfnInputInputSourceRequestPropertyDsl {
   private val cdkBuilder: CfnInput.InputSourceRequestProperty.Builder =

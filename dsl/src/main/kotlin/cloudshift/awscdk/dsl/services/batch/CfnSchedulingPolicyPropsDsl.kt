@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicy
 import software.amazon.awscdk.services.batch.CfnSchedulingPolicyProps
 
+/**
+ * Properties for defining a `CfnSchedulingPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnSchedulingPolicyProps cfnSchedulingPolicyProps = CfnSchedulingPolicyProps.builder()
+ * .fairsharePolicy(FairsharePolicyProperty.builder()
+ * .computeReservation(123)
+ * .shareDecaySeconds(123)
+ * .shareDistribution(List.of(ShareAttributesProperty.builder()
+ * .shareIdentifier("shareIdentifier")
+ * .weightFactor(123)
+ * .build()))
+ * .build())
+ * .name("name")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-schedulingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnSchedulingPolicyPropsDsl {
   private val cdkBuilder: CfnSchedulingPolicyProps.Builder = CfnSchedulingPolicyProps.builder()

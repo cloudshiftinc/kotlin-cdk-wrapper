@@ -8,6 +8,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnPlaceIndex
 import software.constructs.Construct
 
+/**
+ * Specifies a place index resource in your AWS account.
+ *
+ * Use a place index resource to geocode addresses and other text queries by using the
+ * `SearchPlaceIndexForText` operation, and reverse geocode coordinates by using the
+ * `SearchPlaceIndexForPosition` operation, and enable autosuggestions by using the
+ * `SearchPlaceIndexForSuggestions` operation.
+ *
+ *
+ * If your application is tracking or routing assets you use in your business, such as delivery
+ * vehicles or employees, you must not use Esri as your geolocation provider. See section 82 of the
+ * [AWS service terms](https://docs.aws.amazon.com/service-terms) for more details.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnPlaceIndex cfnPlaceIndex = CfnPlaceIndex.Builder.create(this, "MyCfnPlaceIndex")
+ * .dataSource("dataSource")
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .dataSourceConfiguration(DataSourceConfigurationProperty.builder()
+ * .intendedUse("intendedUse")
+ * .build())
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-placeindex.html)
+ */
 @CdkDslMarker
 public class CfnPlaceIndexDsl(
   scope: Construct,

@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * The properties that are applied when Salesforce is being used as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * SalesforceSourcePropertiesProperty salesforceSourcePropertiesProperty =
+ * SalesforceSourcePropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .enableDynamicFieldUpdate(false)
+ * .includeDeletedRecords(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-salesforcesourceproperties.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationSalesforceSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnIntegration.SalesforceSourcePropertiesProperty.Builder =

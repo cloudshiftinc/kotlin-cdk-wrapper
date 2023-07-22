@@ -10,6 +10,28 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupProps
 
+/**
+ * Properties for defining a `CfnAttributeGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalogappregistry.*;
+ * Object attributes;
+ * CfnAttributeGroupProps cfnAttributeGroupProps = CfnAttributeGroupProps.builder()
+ * .attributes(attributes)
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroup.html)
+ */
 @CdkDslMarker
 public class CfnAttributeGroupPropsDsl {
   private val cdkBuilder: CfnAttributeGroupProps.Builder = CfnAttributeGroupProps.builder()

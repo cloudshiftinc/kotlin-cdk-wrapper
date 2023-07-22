@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCluster
 
+/**
+ * The log configuration for the results of the execute command actions.
+ *
+ * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ExecuteCommandLogConfigurationProperty executeCommandLogConfigurationProperty =
+ * ExecuteCommandLogConfigurationProperty.builder()
+ * .cloudWatchEncryptionEnabled(false)
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .s3BucketName("s3BucketName")
+ * .s3EncryptionEnabled(false)
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-cluster-executecommandlogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnClusterExecuteCommandLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnCluster.ExecuteCommandLogConfigurationProperty.Builder =

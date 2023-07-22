@@ -9,6 +9,34 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.MetricProps
 import software.amazon.awscdk.services.cloudwatch.Unit
 
+/**
+ * Properties for a metric.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric = Metric.Builder.create()
+ * .namespace("MyNamespace")
+ * .metricName("MyMetric")
+ * .dimensions(Map.of("MyDimension", "MyDimensionValue"))
+ * .build();
+ * Alarm alarm = Alarm.Builder.create(this, "MyAlarm")
+ * .metric(metric)
+ * .threshold(100)
+ * .evaluationPeriods(3)
+ * .datapointsToAlarm(2)
+ * .build();
+ * TopicRule topicRule = TopicRule.Builder.create(this, "TopicRule")
+ * .sql(IotSql.fromStringAsVer20160323("SELECT topic(2) as device_id FROM 'device/+/data'"))
+ * .actions(List.of(
+ * CloudWatchSetAlarmStateAction.Builder.create(alarm)
+ * .reason("AWS Iot Rule action is triggered")
+ * .alarmStateToSet(AlarmState.ALARM)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricPropsDsl {
   private val cdkBuilder: MetricProps.Builder = MetricProps.builder()

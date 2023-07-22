@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * The current status of the service software for an Amazon OpenSearch Service domain.
+ *
+ * For more information, see [Service software updates in Amazon OpenSearch
+ * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/service-software.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * ServiceSoftwareOptionsProperty serviceSoftwareOptionsProperty =
+ * ServiceSoftwareOptionsProperty.builder()
+ * .automatedUpdateDate("automatedUpdateDate")
+ * .cancellable(false)
+ * .currentVersion("currentVersion")
+ * .description("description")
+ * .newVersion("newVersion")
+ * .optionalDeployment(false)
+ * .updateAvailable(false)
+ * .updateStatus("updateStatus")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-servicesoftwareoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainServiceSoftwareOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.ServiceSoftwareOptionsProperty.Builder =

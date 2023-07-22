@@ -12,6 +12,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnIPAMScope
 import software.constructs.Construct
 
+/**
+ * In IPAM, a scope is the highest-level container within IPAM.
+ *
+ * An IPAM contains two default scopes. Each scope represents the IP space for a single network. The
+ * private scope is intended for all private IP address space. The public scope is intended for all
+ * public IP address space. Scopes enable you to reuse IP addresses across multiple unconnected
+ * networks without causing IP address overlap or conflict.
+ *
+ * For more information, see [How IPAM
+ * works](https://docs.aws.amazon.com//vpc/latest/ipam/how-it-works-ipam.html) in the *Amazon VPC IPAM
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMScope cfnIPAMScope = CfnIPAMScope.Builder.create(this, "MyCfnIPAMScope")
+ * .ipamId("ipamId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamscope.html)
+ */
 @CdkDslMarker
 public class CfnIPAMScopeDsl(
   scope: Construct,

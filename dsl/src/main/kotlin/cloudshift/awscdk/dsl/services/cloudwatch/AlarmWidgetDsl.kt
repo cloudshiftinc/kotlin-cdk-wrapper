@@ -10,6 +10,20 @@ import software.amazon.awscdk.services.cloudwatch.AlarmWidget
 import software.amazon.awscdk.services.cloudwatch.IAlarm
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * Display the metric associated with an alarm, including the alarm line.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * dashboard.addWidgets(AlarmWidget.Builder.create()
+ * .title("Errors")
+ * .alarm(errorAlarm)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AlarmWidgetDsl {
   private val cdkBuilder: AlarmWidget.Builder = AlarmWidget.Builder.create()

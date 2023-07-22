@@ -8,6 +8,27 @@ import software.amazon.awscdk.services.ses.actions.Lambda
 import software.amazon.awscdk.services.ses.actions.LambdaInvocationType
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Calls an AWS Lambda function, and optionally, publishes a notification to Amazon SNS.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * Function function_;
+ * Topic topic;
+ * Lambda lambda = Lambda.Builder.create()
+ * .function(function_)
+ * // the properties below are optional
+ * .invocationType(LambdaInvocationType.EVENT)
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDsl {
   private val cdkBuilder: Lambda.Builder = Lambda.Builder.create()

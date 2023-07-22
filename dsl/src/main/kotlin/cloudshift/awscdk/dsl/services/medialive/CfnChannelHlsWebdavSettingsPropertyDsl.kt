@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of a WebDav server as the downstream system for an HLS output.
+ *
+ * The parent of this entity is HlsCdnSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsWebdavSettingsProperty hlsWebdavSettingsProperty = HlsWebdavSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .httpTransferMode("httpTransferMode")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlswebdavsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsWebdavSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsWebdavSettingsProperty.Builder =

@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.ec2.CfnEIP
 import software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint
 
+/**
+ * Use an EC2 Instance as a Global Accelerator Endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * CfnEIP eip;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * CfnEipEndpoint.Builder.create(eip)
+ * .weight(128)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CfnEipEndpointDsl(
   eip: CfnEIP,

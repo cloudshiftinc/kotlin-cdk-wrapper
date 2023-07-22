@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 
+/**
+ * Settings for Image Builder to configure the ECR repository and output container images that are
+ * scanned.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * EcrConfigurationProperty ecrConfigurationProperty = EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-image-ecrconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnImageEcrConfigurationPropertyDsl {
   private val cdkBuilder: CfnImage.EcrConfigurationProperty.Builder =

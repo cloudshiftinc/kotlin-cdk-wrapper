@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.IPublicKey
 import software.amazon.awscdk.services.cloudfront.KeyGroupProps
 
+/**
+ * Properties for creating a Public Key.
+ *
+ * Example:
+ *
+ * ```
+ * // Validating signed URLs or signed cookies with Trusted Key Groups
+ * // public key in PEM format
+ * String publicKey;
+ * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
+ * .encodedKey(publicKey)
+ * .build();
+ * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
+ * .items(List.of(pubKey))
+ * .build();
+ * Distribution.Builder.create(this, "Dist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("www.example.com"))
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KeyGroupPropsDsl {
   private val cdkBuilder: KeyGroupProps.Builder = KeyGroupProps.builder()

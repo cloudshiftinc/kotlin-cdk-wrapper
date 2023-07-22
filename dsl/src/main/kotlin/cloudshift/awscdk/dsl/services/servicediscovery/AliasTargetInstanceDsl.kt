@@ -9,6 +9,30 @@ import software.amazon.awscdk.services.servicediscovery.AliasTargetInstance
 import software.amazon.awscdk.services.servicediscovery.IService
 import software.constructs.Construct
 
+/**
+ * Instance that uses Route 53 Alias record type.
+ *
+ * Currently, the only resource types supported are Elastic Load
+ * Balancers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * AliasTargetInstance aliasTargetInstance = AliasTargetInstance.Builder.create(this,
+ * "MyAliasTargetInstance")
+ * .dnsName("dnsName")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasTargetInstanceDsl(
   scope: Construct,

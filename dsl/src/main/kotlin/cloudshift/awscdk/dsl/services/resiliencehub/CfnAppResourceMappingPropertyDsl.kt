@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resiliencehub.CfnApp
 
+/**
+ * Defines a resource mapping.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * ResourceMappingProperty resourceMappingProperty = ResourceMappingProperty.builder()
+ * .mappingType("mappingType")
+ * .physicalResourceId(PhysicalResourceIdProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * // the properties below are optional
+ * .awsAccountId("awsAccountId")
+ * .awsRegion("awsRegion")
+ * .build())
+ * // the properties below are optional
+ * .eksSourceName("eksSourceName")
+ * .logicalStackName("logicalStackName")
+ * .resourceName("resourceName")
+ * .terraformSourceName("terraformSourceName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-resourcemapping.html)
+ */
 @CdkDslMarker
 public class CfnAppResourceMappingPropertyDsl {
   private val cdkBuilder: CfnApp.ResourceMappingProperty.Builder =

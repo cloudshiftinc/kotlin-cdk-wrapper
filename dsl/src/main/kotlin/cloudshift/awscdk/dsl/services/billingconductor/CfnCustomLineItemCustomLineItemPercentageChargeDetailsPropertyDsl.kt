@@ -9,6 +9,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
 
+/**
+ * A representation of the charge details associated with a percentage custom line item.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CustomLineItemPercentageChargeDetailsProperty customLineItemPercentageChargeDetailsProperty =
+ * CustomLineItemPercentageChargeDetailsProperty.builder()
+ * .percentageValue(123)
+ * // the properties below are optional
+ * .childAssociatedResources(List.of("childAssociatedResources"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitempercentagechargedetails.html)
+ */
 @CdkDslMarker
 public class CfnCustomLineItemCustomLineItemPercentageChargeDetailsPropertyDsl {
   private val cdkBuilder: CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty.Builder =

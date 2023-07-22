@@ -14,6 +14,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.certificatemanager.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::CertificateManager::Certificate` resource requests an AWS Certificate Manager ( ACM )
+ * certificate that you can use to enable secure connections.
+ *
+ * For example, you can deploy an ACM certificate to an Elastic Load Balancer to enable HTTPS
+ * support. For more information, see
+ * [RequestCertificate](https://docs.aws.amazon.com/acm/latest/APIReference/API_RequestCertificate.html)
+ * in the AWS Certificate Manager API Reference.
+ *
+ *
+ * When you use the `AWS::CertificateManager::Certificate` resource in a CloudFormation stack,
+ * domain validation is handled automatically if all three of the following are true: The certificate
+ * domain is hosted in Amazon Route 53, the domain resides in your AWS account , and you are using DNS
+ * validation.
+ *
+ * However, if the certificate uses email validation, or if the domain is not hosted in Route 53,
+ * then the stack will remain in the `CREATE_IN_PROGRESS` state. Further stack operations are delayed
+ * until you validate the certificate request, either by acting upon the instructions in the validation
+ * email, or by adding a CNAME record to your DNS configuration. For more information, see [Option 1:
+ * DNS Validation](https://docs.aws.amazon.com/acm/latest/userguide/dns-validation.html) and [Option 2:
+ * Email Validation](https://docs.aws.amazon.com/acm/latest/userguide/email-validation.html) .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .certificateTransparencyLoggingPreference("certificateTransparencyLoggingPreference")
+ * .domainValidationOptions(List.of(DomainValidationOptionProperty.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .hostedZoneId("hostedZoneId")
+ * .validationDomain("validationDomain")
+ * .build()))
+ * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .validationMethod("validationMethod")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

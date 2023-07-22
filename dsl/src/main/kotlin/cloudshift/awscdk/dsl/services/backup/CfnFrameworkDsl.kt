@@ -11,6 +11,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnFramework
 import software.constructs.Construct
 
+/**
+ * Creates a framework with one or more controls.
+ *
+ * A framework is a collection of controls that you can use to evaluate your backup practices. By
+ * using pre-built customizable controls to define your policies, you can evaluate whether your backup
+ * practices comply with your policies and which resources are not yet in compliance.
+ *
+ * For a sample AWS CloudFormation template, see the [AWS Backup Developer
+ * Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/bam-cfn-integration.html#bam-cfn-frameworks-template)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object controlScope;
+ * CfnFramework cfnFramework = CfnFramework.Builder.create(this, "MyCfnFramework")
+ * .frameworkControls(List.of(FrameworkControlProperty.builder()
+ * .controlName("controlName")
+ * // the properties below are optional
+ * .controlInputParameters(List.of(ControlInputParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .controlScope(controlScope)
+ * .build()))
+ * // the properties below are optional
+ * .frameworkDescription("frameworkDescription")
+ * .frameworkName("frameworkName")
+ * .frameworkTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html)
+ */
 @CdkDslMarker
 public class CfnFrameworkDsl(
   scope: Construct,

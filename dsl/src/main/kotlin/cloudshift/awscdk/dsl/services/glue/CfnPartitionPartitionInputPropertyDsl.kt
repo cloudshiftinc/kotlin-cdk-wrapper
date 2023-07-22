@@ -12,6 +12,66 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnPartition
 
+/**
+ * The structure used to create and update a partition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * Object skewedColumnValueLocationMaps;
+ * PartitionInputProperty partitionInputProperty = PartitionInputProperty.builder()
+ * .values(List.of("values"))
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .storageDescriptor(StorageDescriptorProperty.builder()
+ * .bucketColumns(List.of("bucketColumns"))
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .compressed(false)
+ * .inputFormat("inputFormat")
+ * .location("location")
+ * .numberOfBuckets(123)
+ * .outputFormat("outputFormat")
+ * .parameters(parameters)
+ * .schemaReference(SchemaReferenceProperty.builder()
+ * .schemaId(SchemaIdProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build())
+ * .schemaVersionId("schemaVersionId")
+ * .schemaVersionNumber(123)
+ * .build())
+ * .serdeInfo(SerdeInfoProperty.builder()
+ * .name("name")
+ * .parameters(parameters)
+ * .serializationLibrary("serializationLibrary")
+ * .build())
+ * .skewedInfo(SkewedInfoProperty.builder()
+ * .skewedColumnNames(List.of("skewedColumnNames"))
+ * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+ * .skewedColumnValues(List.of("skewedColumnValues"))
+ * .build())
+ * .sortColumns(List.of(OrderProperty.builder()
+ * .column("column")
+ * // the properties below are optional
+ * .sortOrder(123)
+ * .build()))
+ * .storedAsSubDirectories(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-partitioninput.html)
+ */
 @CdkDslMarker
 public class CfnPartitionPartitionInputPropertyDsl {
   private val cdkBuilder: CfnPartition.PartitionInputProperty.Builder =

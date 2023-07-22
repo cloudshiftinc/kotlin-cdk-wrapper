@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a Amazon SQS stream as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceSqsQueueParametersProperty pipeSourceSqsQueueParametersProperty =
+ * PipeSourceSqsQueueParametersProperty.builder()
+ * .batchSize(123)
+ * .maximumBatchingWindowInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcesqsqueueparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceSqsQueueParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceSqsQueueParametersProperty.Builder =

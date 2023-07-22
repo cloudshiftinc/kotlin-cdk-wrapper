@@ -15,6 +15,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModel
 import software.amazon.awscdk.services.sagemaker.CfnModelProps
 
+/**
+ * Properties for defining a `CfnModel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object environment;
+ * CfnModelProps cfnModelProps = CfnModelProps.builder()
+ * .executionRoleArn("executionRoleArn")
+ * // the properties below are optional
+ * .containers(List.of(ContainerDefinitionProperty.builder()
+ * .containerHostname("containerHostname")
+ * .environment(environment)
+ * .image("image")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .repositoryAccessMode("repositoryAccessMode")
+ * // the properties below are optional
+ * .repositoryAuthConfig(RepositoryAuthConfigProperty.builder()
+ * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+ * .build())
+ * .build())
+ * .inferenceSpecificationName("inferenceSpecificationName")
+ * .mode("mode")
+ * .modelDataUrl("modelDataUrl")
+ * .modelPackageName("modelPackageName")
+ * .multiModelConfig(MultiModelConfigProperty.builder()
+ * .modelCacheSetting("modelCacheSetting")
+ * .build())
+ * .build()))
+ * .enableNetworkIsolation(false)
+ * .inferenceExecutionConfig(InferenceExecutionConfigProperty.builder()
+ * .mode("mode")
+ * .build())
+ * .modelName("modelName")
+ * .primaryContainer(ContainerDefinitionProperty.builder()
+ * .containerHostname("containerHostname")
+ * .environment(environment)
+ * .image("image")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .repositoryAccessMode("repositoryAccessMode")
+ * // the properties below are optional
+ * .repositoryAuthConfig(RepositoryAuthConfigProperty.builder()
+ * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+ * .build())
+ * .build())
+ * .inferenceSpecificationName("inferenceSpecificationName")
+ * .mode("mode")
+ * .modelDataUrl("modelDataUrl")
+ * .modelPackageName("modelPackageName")
+ * .multiModelConfig(MultiModelConfigProperty.builder()
+ * .modelCacheSetting("modelCacheSetting")
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html)
+ */
 @CdkDslMarker
 public class CfnModelPropsDsl {
   private val cdkBuilder: CfnModelProps.Builder = CfnModelProps.builder()

@@ -12,6 +12,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnAlarm
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Alarm` resource specifies an alarm that can be used to monitor a single
+ * metric for one of your Lightsail resources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnAlarm cfnAlarm = CfnAlarm.Builder.create(this, "MyCfnAlarm")
+ * .alarmName("alarmName")
+ * .comparisonOperator("comparisonOperator")
+ * .evaluationPeriods(123)
+ * .metricName("metricName")
+ * .monitoredResourceName("monitoredResourceName")
+ * .threshold(123)
+ * // the properties below are optional
+ * .contactProtocols(List.of("contactProtocols"))
+ * .datapointsToAlarm(123)
+ * .notificationEnabled(false)
+ * .notificationTriggers(List.of("notificationTriggers"))
+ * .treatMissingData("treatMissingData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-alarm.html)
+ */
 @CdkDslMarker
 public class CfnAlarmDsl(
   scope: Construct,

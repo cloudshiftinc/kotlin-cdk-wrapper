@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 
+/**
+ * Specifies the HTTP codes that healthy targets must use when responding to an HTTP health check.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * MatcherProperty matcherProperty = MatcherProperty.builder()
+ * .grpcCode("grpcCode")
+ * .httpCode("httpCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-matcher.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupMatcherPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.MatcherProperty.Builder =

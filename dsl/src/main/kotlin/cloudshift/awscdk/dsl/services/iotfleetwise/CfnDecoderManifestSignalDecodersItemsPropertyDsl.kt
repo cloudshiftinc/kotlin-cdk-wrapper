@@ -7,6 +7,48 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * Information about a signal decoder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * SignalDecodersItemsProperty signalDecodersItemsProperty = SignalDecodersItemsProperty.builder()
+ * .fullyQualifiedName("fullyQualifiedName")
+ * .interfaceId("interfaceId")
+ * .type("type")
+ * // the properties below are optional
+ * .canSignal(CanSignalProperty.builder()
+ * .factor("factor")
+ * .isBigEndian("isBigEndian")
+ * .isSigned("isSigned")
+ * .length("length")
+ * .messageId("messageId")
+ * .offset("offset")
+ * .startBit("startBit")
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .obdSignal(ObdSignalProperty.builder()
+ * .byteLength("byteLength")
+ * .offset("offset")
+ * .pid("pid")
+ * .pidResponseLength("pidResponseLength")
+ * .scaling("scaling")
+ * .serviceMode("serviceMode")
+ * .startByte("startByte")
+ * // the properties below are optional
+ * .bitMaskLength("bitMaskLength")
+ * .bitRightShift("bitRightShift")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-signaldecodersitems.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestSignalDecodersItemsPropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.SignalDecodersItemsProperty.Builder =

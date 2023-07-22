@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.AlarmActionConfig
 
+/**
+ * Properties for an alarm action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * AlarmActionConfig alarmActionConfig = AlarmActionConfig.builder()
+ * .alarmActionArn("alarmActionArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AlarmActionConfigDsl {
   private val cdkBuilder: AlarmActionConfig.Builder = AlarmActionConfig.builder()

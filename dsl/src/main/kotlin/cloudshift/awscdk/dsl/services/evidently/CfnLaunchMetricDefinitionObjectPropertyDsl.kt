@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * This structure defines a metric that you want to use to evaluate the variations during a launch
+ * or experiment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * MetricDefinitionObjectProperty metricDefinitionObjectProperty =
+ * MetricDefinitionObjectProperty.builder()
+ * .entityIdKey("entityIdKey")
+ * .metricName("metricName")
+ * .valueKey("valueKey")
+ * // the properties below are optional
+ * .eventPattern("eventPattern")
+ * .unitLabel("unitLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-metricdefinitionobject.html)
+ */
 @CdkDslMarker
 public class CfnLaunchMetricDefinitionObjectPropertyDsl {
   private val cdkBuilder: CfnLaunch.MetricDefinitionObjectProperty.Builder =

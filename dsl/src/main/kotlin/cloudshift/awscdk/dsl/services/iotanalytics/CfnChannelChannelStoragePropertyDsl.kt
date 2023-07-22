@@ -9,6 +9,32 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnChannel
 
+/**
+ * Where channel data is stored.
+ *
+ * You may choose one of `serviceManagedS3` , `customerManagedS3` storage. If not specified, the
+ * default is `serviceManagedS3` . This can't be changed after creation of the channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object serviceManagedS3;
+ * ChannelStorageProperty channelStorageProperty = ChannelStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-channel-channelstorage.html)
+ */
 @CdkDslMarker
 public class CfnChannelChannelStoragePropertyDsl {
   private val cdkBuilder: CfnChannel.ChannelStorageProperty.Builder =

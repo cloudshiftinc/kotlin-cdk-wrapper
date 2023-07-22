@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.cloudassembly.schema.LoadManifestOptions
 
+/**
+ * Options for the loadManifest operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * LoadManifestOptions loadManifestOptions = LoadManifestOptions.builder()
+ * .skipEnumCheck(false)
+ * .skipVersionCheck(false)
+ * .topoSort(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoadManifestOptionsDsl {
   private val cdkBuilder: LoadManifestOptions.Builder = LoadManifestOptions.builder()

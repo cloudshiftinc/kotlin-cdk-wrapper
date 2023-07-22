@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnBridge
 
+/**
+ * The source of the bridge.
+ *
+ * A network source originates at your premises.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * BridgeNetworkSourceProperty bridgeNetworkSourceProperty = BridgeNetworkSourceProperty.builder()
+ * .multicastIp("multicastIp")
+ * .name("name")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-bridge-bridgenetworksource.html)
+ */
 @CdkDslMarker
 public class CfnBridgeBridgeNetworkSourcePropertyDsl {
   private val cdkBuilder: CfnBridge.BridgeNetworkSourceProperty.Builder =

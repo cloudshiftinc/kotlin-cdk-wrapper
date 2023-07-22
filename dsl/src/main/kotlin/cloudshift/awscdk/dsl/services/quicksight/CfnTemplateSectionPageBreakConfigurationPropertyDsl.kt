@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration of a page break for a section.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SectionPageBreakConfigurationProperty sectionPageBreakConfigurationProperty =
+ * SectionPageBreakConfigurationProperty.builder()
+ * .after(SectionAfterPageBreakProperty.builder()
+ * .status("status")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-sectionpagebreakconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateSectionPageBreakConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.SectionPageBreakConfigurationProperty.Builder =

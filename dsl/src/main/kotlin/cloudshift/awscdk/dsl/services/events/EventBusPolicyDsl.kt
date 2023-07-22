@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.events.IEventBus
 import software.amazon.awscdk.services.iam.PolicyStatement
 import software.constructs.Construct
 
+/**
+ * The policy for an Event Bus.
+ *
+ * Policies define the operations that are allowed on this resource.
+ *
+ * You almost never need to define this construct directly.
+ *
+ * All AWS resources that support resource policies have a method called
+ * `addToResourcePolicy()`, which will automatically create a new resource
+ * policy if one doesn't exist yet, otherwise it will add to the existing
+ * policy.
+ *
+ * Prefer to use `addToResourcePolicy()` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * EventBus eventBus;
+ * PolicyStatement policyStatement;
+ * EventBusPolicy eventBusPolicy = EventBusPolicy.Builder.create(this, "MyEventBusPolicy")
+ * .eventBus(eventBus)
+ * .statement(policyStatement)
+ * .statementId("statementId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBusPolicyDsl(
   scope: Construct,

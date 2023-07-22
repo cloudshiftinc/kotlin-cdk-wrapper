@@ -12,6 +12,36 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.InterfaceVpcEndpointOptions
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Options to add an interface endpoint to a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // Add gateway endpoints when creating the VPC
+ * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
+ * .gatewayEndpoints(Map.of(
+ * "S3", GatewayVpcEndpointOptions.builder()
+ * .service(GatewayVpcEndpointAwsService.S3)
+ * .build()))
+ * .build();
+ * // Alternatively gateway endpoints can be added on the VPC
+ * GatewayVpcEndpoint dynamoDbEndpoint = vpc.addGatewayEndpoint("DynamoDbEndpoint",
+ * GatewayVpcEndpointOptions.builder()
+ * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+ * .build());
+ * // This allows to customize the endpoint policy
+ * dynamoDbEndpoint.addToPolicy(
+ * PolicyStatement.Builder.create() // Restrict to listing and describing tables
+ * .principals(List.of(new AnyPrincipal()))
+ * .actions(List.of("dynamodb:DescribeTable", "dynamodb:ListTables"))
+ * .resources(List.of("*")).build());
+ * // Add an interface endpoint
+ * vpc.addInterfaceEndpoint("EcrDockerEndpoint", InterfaceVpcEndpointOptions.builder()
+ * .service(InterfaceVpcEndpointAwsService.ECR_DOCKER)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class InterfaceVpcEndpointOptionsDsl {
   private val cdkBuilder: InterfaceVpcEndpointOptions.Builder =

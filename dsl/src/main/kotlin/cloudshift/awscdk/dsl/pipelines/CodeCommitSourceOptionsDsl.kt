@@ -9,6 +9,26 @@ import software.amazon.awscdk.pipelines.CodeCommitSourceOptions
 import software.amazon.awscdk.services.codepipeline.actions.CodeCommitTrigger
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Configuration options for a CodeCommit source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.pipelines.*;
+ * Role role;
+ * CodeCommitSourceOptions codeCommitSourceOptions = CodeCommitSourceOptions.builder()
+ * .actionName("actionName")
+ * .codeBuildCloneOutput(false)
+ * .eventRole(role)
+ * .trigger(CodeCommitTrigger.NONE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeCommitSourceOptionsDsl {
   private val cdkBuilder: CodeCommitSourceOptions.Builder = CodeCommitSourceOptions.builder()

@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * The configuration for a AWS Directory Service for Microsoft Active Directory studio resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * ActiveDirectoryConfigurationProperty activeDirectoryConfigurationProperty =
+ * ActiveDirectoryConfigurationProperty.builder()
+ * .computerAttributes(List.of(ActiveDirectoryComputerAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .directoryId("directoryId")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-activedirectoryconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentActiveDirectoryConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudioComponent.ActiveDirectoryConfigurationProperty.Builder =

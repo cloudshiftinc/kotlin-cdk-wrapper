@@ -15,6 +15,65 @@ import software.amazon.awscdk.services.codepipeline.actions.StackSetParameters
 import software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to deploy a stackset.
+ *
+ * CodePipeline offers the ability to perform AWS CloudFormation StackSets
+ * operations as part of your CI/CD process. You use a stack set to create
+ * stacks in AWS accounts across AWS Regions by using a single AWS
+ * CloudFormation template. All the resources included in each stack are defined
+ * by the stack set’s AWS CloudFormation template. When you create the stack
+ * set, you specify the template to use, as well as any parameters and
+ * capabilities that the template requires.
+ *
+ * For more information about concepts for AWS CloudFormation StackSets, see
+ * <a
+ * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html">StackSets
+ * concepts</a>
+ * in the AWS CloudFormation User Guide.
+ *
+ * If you use this action to make an update that includes adding stack
+ * instances, the new instances are deployed first and the update is completed
+ * last. The new instances first receive the old version, and then the update is
+ * applied to all instances.
+ *
+ * As a best practice, you should construct your pipeline so that the stack set
+ * is created and initially deploys to a subset or a single instance. After you
+ * test your deployment and view the generated stack set, then add the
+ * CloudFormationStackInstances action so that the remaining instances are
+ * created and updated.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline pipeline;
+ * Artifact sourceOutput;
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("DeployStackSets")
+ * .actions(List.of(
+ * // First, update the StackSet itself with the newest template
+ * CloudFormationDeployStackSetAction.Builder.create()
+ * .actionName("UpdateStackSet")
+ * .runOrder(1)
+ * .stackSetName("MyStackSet")
+ * .template(StackSetTemplate.fromArtifactPath(sourceOutput.atPath("template.yaml")))
+ * // Change this to 'StackSetDeploymentModel.organizations()' if you want to deploy to OUs
+ * .deploymentModel(StackSetDeploymentModel.selfManaged())
+ * // This deploys to a set of accounts
+ * .stackInstances(StackInstances.inAccounts(List.of("111111111111"), List.of("us-east-1",
+ * "eu-west-1")))
+ * .build(),
+ * // Afterwards, update/create additional instances in other accounts
+ * CloudFormationDeployStackInstancesAction.Builder.create()
+ * .actionName("AddMoreInstances")
+ * .runOrder(2)
+ * .stackSetName("MyStackSet")
+ * .stackInstances(StackInstances.inAccounts(List.of("222222222222", "333333333333"),
+ * List.of("us-east-1", "eu-west-1")))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationDeployStackSetActionDsl {
   private val cdkBuilder: CloudFormationDeployStackSetAction.Builder =

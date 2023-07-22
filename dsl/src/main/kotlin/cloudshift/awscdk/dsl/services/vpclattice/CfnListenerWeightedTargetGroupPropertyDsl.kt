@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.vpclattice.CfnListener
 
+/**
+ * Describes the weight of a target group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * WeightedTargetGroupProperty weightedTargetGroupProperty = WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-weightedtargetgroup.html)
+ */
 @CdkDslMarker
 public class CfnListenerWeightedTargetGroupPropertyDsl {
   private val cdkBuilder: CfnListener.WeightedTargetGroupProperty.Builder =

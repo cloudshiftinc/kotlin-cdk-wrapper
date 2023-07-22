@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * Contains information about the schema attribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * SchemaAttributeProperty schemaAttributeProperty = SchemaAttributeProperty.builder()
+ * .attributeDataType("attributeDataType")
+ * .developerOnlyAttribute(false)
+ * .mutable(false)
+ * .name("name")
+ * .numberAttributeConstraints(NumberAttributeConstraintsProperty.builder()
+ * .maxValue("maxValue")
+ * .minValue("minValue")
+ * .build())
+ * .required(false)
+ * .stringAttributeConstraints(StringAttributeConstraintsProperty.builder()
+ * .maxLength("maxLength")
+ * .minLength("minLength")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolSchemaAttributePropertyDsl {
   private val cdkBuilder: CfnUserPool.SchemaAttributeProperty.Builder =

@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.eks.OpenIdConnectProviderProps
 
+/**
+ * Initialization properties for `OpenIdConnectProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // or create a new one using an existing issuer url
+ * String issuerUrl;
+ * // you can import an existing provider
+ * IOpenIdConnectProvider provider = OpenIdConnectProvider.fromOpenIdConnectProviderArn(this,
+ * "Provider", "arn:aws:iam::123456:oidc-provider/oidc.eks.eu-west-1.amazonaws.com/id/AB123456ABC");
+ * OpenIdConnectProvider provider2 = OpenIdConnectProvider.Builder.create(this, "Provider")
+ * .url(issuerUrl)
+ * .build();
+ * ICluster cluster = Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
+ * .clusterName("Cluster")
+ * .openIdConnectProvider(provider)
+ * .kubectlRoleArn("arn:aws:iam::123456:role/service-role/k8sservicerole")
+ * .build());
+ * ServiceAccount serviceAccount = cluster.addServiceAccount("MyServiceAccount");
+ * Bucket bucket = new Bucket(this, "Bucket");
+ * bucket.grantReadWrite(serviceAccount);
+ * ```
+ */
 @CdkDslMarker
 public class OpenIdConnectProviderPropsDsl {
   private val cdkBuilder: OpenIdConnectProviderProps.Builder = OpenIdConnectProviderProps.builder()

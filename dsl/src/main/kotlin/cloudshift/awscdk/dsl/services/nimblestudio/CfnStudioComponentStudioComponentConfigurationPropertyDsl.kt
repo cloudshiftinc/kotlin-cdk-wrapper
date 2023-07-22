@@ -6,6 +6,44 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.nimblestudio.CfnStudioComponent
 
+/**
+ * The configuration of the studio component, based on component type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * StudioComponentConfigurationProperty studioComponentConfigurationProperty =
+ * StudioComponentConfigurationProperty.builder()
+ * .activeDirectoryConfiguration(ActiveDirectoryConfigurationProperty.builder()
+ * .computerAttributes(List.of(ActiveDirectoryComputerAttributeProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .directoryId("directoryId")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build())
+ * .computeFarmConfiguration(ComputeFarmConfigurationProperty.builder()
+ * .activeDirectoryUser("activeDirectoryUser")
+ * .endpoint("endpoint")
+ * .build())
+ * .licenseServiceConfiguration(LicenseServiceConfigurationProperty.builder()
+ * .endpoint("endpoint")
+ * .build())
+ * .sharedFileSystemConfiguration(SharedFileSystemConfigurationProperty.builder()
+ * .endpoint("endpoint")
+ * .fileSystemId("fileSystemId")
+ * .linuxMountPoint("linuxMountPoint")
+ * .shareName("shareName")
+ * .windowsMountDrive("windowsMountDrive")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-studiocomponent-studiocomponentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStudioComponentStudioComponentConfigurationPropertyDsl {
   private val cdkBuilder: CfnStudioComponent.StudioComponentConfigurationProperty.Builder =

@@ -22,6 +22,24 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoUpdateItem
 import software.constructs.Construct
 
+/**
+ * A StepFunctions task to call DynamoUpdateItem.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoUpdateItem.Builder.create(this, "UpdateItem")
+ * .key(Map.of(
+ * "MessageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .expressionAttributeValues(Map.of(
+ * ":val", DynamoAttributeValue.numberFromString(JsonPath.stringAt("$.Item.TotalCount.N")),
+ * ":rand", DynamoAttributeValue.fromNumber(20)))
+ * .updateExpression("SET TotalCount = :val + :rand")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoUpdateItemDsl(
   scope: Construct,

@@ -13,6 +13,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProviderProps
 
+/**
+ * Properties for defining a `CfnVerifiedAccessTrustProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVerifiedAccessTrustProviderProps cfnVerifiedAccessTrustProviderProps =
+ * CfnVerifiedAccessTrustProviderProps.builder()
+ * .policyReferenceName("policyReferenceName")
+ * .trustProviderType("trustProviderType")
+ * // the properties below are optional
+ * .description("description")
+ * .deviceOptions(DeviceOptionsProperty.builder()
+ * .tenantId("tenantId")
+ * .build())
+ * .deviceTrustProviderType("deviceTrustProviderType")
+ * .oidcOptions(OidcOptionsProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .issuer("issuer")
+ * .scope("scope")
+ * .tokenEndpoint("tokenEndpoint")
+ * .userInfoEndpoint("userInfoEndpoint")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userTrustProviderType("userTrustProviderType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccesstrustprovider.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessTrustProviderPropsDsl {
   private val cdkBuilder: CfnVerifiedAccessTrustProviderProps.Builder =

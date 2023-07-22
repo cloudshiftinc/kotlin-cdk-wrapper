@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.emr.CfnSecurityConfigurationProps
 
+/**
+ * Properties for defining a `CfnSecurityConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * Object securityConfiguration;
+ * CfnSecurityConfigurationProps cfnSecurityConfigurationProps =
+ * CfnSecurityConfigurationProps.builder()
+ * .securityConfiguration(securityConfiguration)
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationPropsDsl {
   private val cdkBuilder: CfnSecurityConfigurationProps.Builder =

@@ -11,6 +11,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnEventBusPolicy
 import software.amazon.awscdk.services.events.CfnEventBusPolicyProps
 
+/**
+ * Properties for defining a `CfnEventBusPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * Object statement;
+ * CfnEventBusPolicyProps cfnEventBusPolicyProps = CfnEventBusPolicyProps.builder()
+ * .statementId("statementId")
+ * // the properties below are optional
+ * .action("action")
+ * .condition(ConditionProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build())
+ * .eventBusName("eventBusName")
+ * .principal("principal")
+ * .statement(statement)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbuspolicy.html)
+ */
 @CdkDslMarker
 public class CfnEventBusPolicyPropsDsl {
   private val cdkBuilder: CfnEventBusPolicyProps.Builder = CfnEventBusPolicyProps.builder()

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * The value of the variable as a structure that specifies an output file URI.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * OutputFileUriValueProperty outputFileUriValueProperty = OutputFileUriValueProperty.builder()
+ * .fileName("fileName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-outputfileurivalue.html)
+ */
 @CdkDslMarker
 public class CfnDatasetOutputFileUriValuePropertyDsl {
   private val cdkBuilder: CfnDataset.OutputFileUriValueProperty.Builder =

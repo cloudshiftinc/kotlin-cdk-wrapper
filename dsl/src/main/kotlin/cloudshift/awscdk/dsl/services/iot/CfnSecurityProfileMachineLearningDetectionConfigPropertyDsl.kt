@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * The `MachineLearningDetectionConfig` property type controls confidence of the machine learning
+ * model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * MachineLearningDetectionConfigProperty machineLearningDetectionConfigProperty =
+ * MachineLearningDetectionConfigProperty.builder()
+ * .confidenceLevel("confidenceLevel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-machinelearningdetectionconfig.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileMachineLearningDetectionConfigPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.MachineLearningDetectionConfigProperty.Builder =

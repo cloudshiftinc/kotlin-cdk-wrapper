@@ -10,6 +10,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 import software.constructs.Construct
 
+/**
+ * An image pipeline is the automation configuration for building secure OS images on AWS .
+ *
+ * The Image Builder image pipeline is associated with an image recipe that defines the build,
+ * validation, and test phases for an image build lifecycle. An image pipeline can be associated with
+ * an infrastructure configuration that defines where your image is built. You can define attributes,
+ * such as instance type, subnets, security groups, logging, and other infrastructure-related
+ * configurations. You can also associate your image pipeline with a distribution configuration to
+ * define how you would like to deploy your image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnImagePipeline cfnImagePipeline = CfnImagePipeline.Builder.create(this, "MyCfnImagePipeline")
+ * .infrastructureConfigurationArn("infrastructureConfigurationArn")
+ * .name("name")
+ * // the properties below are optional
+ * .containerRecipeArn("containerRecipeArn")
+ * .description("description")
+ * .distributionConfigurationArn("distributionConfigurationArn")
+ * .enhancedImageMetadataEnabled(false)
+ * .imageRecipeArn("imageRecipeArn")
+ * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
+ * .ecrConfiguration(EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build())
+ * .imageScanningEnabled(false)
+ * .build())
+ * .imageTestsConfiguration(ImageTestsConfigurationProperty.builder()
+ * .imageTestsEnabled(false)
+ * .timeoutMinutes(123)
+ * .build())
+ * .schedule(ScheduleProperty.builder()
+ * .pipelineExecutionStartCondition("pipelineExecutionStartCondition")
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .status("status")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagepipeline.html)
+ */
 @CdkDslMarker
 public class CfnImagePipelineDsl(
   scope: Construct,

@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the dimension type and values for a segment dimension.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * SetDimensionProperty setDimensionProperty = SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-setdimension.html)
+ */
 @CdkDslMarker
 public class CfnCampaignSetDimensionPropertyDsl {
   private val cdkBuilder: CfnCampaign.SetDimensionProperty.Builder =

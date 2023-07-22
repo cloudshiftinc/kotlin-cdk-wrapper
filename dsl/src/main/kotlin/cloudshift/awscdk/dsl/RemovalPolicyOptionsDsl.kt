@@ -7,6 +7,19 @@ import kotlin.Boolean
 import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.RemovalPolicyOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * RemovalPolicyOptions removalPolicyOptions = RemovalPolicyOptions.builder()
+ * .applyToUpdateReplacePolicy(false)
+ * .default(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RemovalPolicyOptionsDsl {
   private val cdkBuilder: RemovalPolicyOptions.Builder = RemovalPolicyOptions.builder()

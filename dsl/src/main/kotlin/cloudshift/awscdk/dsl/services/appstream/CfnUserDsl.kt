@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnUser
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::User` resource creates a new user in the AppStream 2.0 user pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .authenticationType("authenticationType")
+ * .userName("userName")
+ * // the properties below are optional
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .messageAction("messageAction")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

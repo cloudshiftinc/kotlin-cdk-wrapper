@@ -9,6 +9,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps
 
+/**
+ * Properties for defining a `CfnFlowSource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowSourceProps cfnFlowSourceProps = CfnFlowSourceProps.builder()
+ * .description("description")
+ * .name("name")
+ * // the properties below are optional
+ * .decryption(EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .constantInitializationVector("constantInitializationVector")
+ * .deviceId("deviceId")
+ * .keyType("keyType")
+ * .region("region")
+ * .resourceId("resourceId")
+ * .secretArn("secretArn")
+ * .url("url")
+ * .build())
+ * .entitlementArn("entitlementArn")
+ * .flowArn("flowArn")
+ * .gatewayBridgeSource(GatewayBridgeSourceProperty.builder()
+ * .bridgeArn("bridgeArn")
+ * // the properties below are optional
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .ingestPort(123)
+ * .maxBitrate(123)
+ * .maxLatency(123)
+ * .minLatency(123)
+ * .protocol("protocol")
+ * .senderControlPort(123)
+ * .senderIpAddress("senderIpAddress")
+ * .sourceListenerAddress("sourceListenerAddress")
+ * .sourceListenerPort(123)
+ * .streamId("streamId")
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .whitelistCidr("whitelistCidr")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html)
+ */
 @CdkDslMarker
 public class CfnFlowSourcePropsDsl {
   private val cdkBuilder: CfnFlowSourceProps.Builder = CfnFlowSourceProps.builder()

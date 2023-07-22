@@ -19,6 +19,59 @@ import software.amazon.awscdk.services.lambda.SourceAccessConfiguration
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.constructs.Construct
 
+/**
+ * Defines a Lambda EventSourceMapping resource.
+ *
+ * Usually, you won't need to define the mapping yourself. This will usually be done by
+ * event sources. For example, to add an SQS event source to a function:
+ *
+ * import { SqsEventSource } from '&#64;aws-cdk/aws-lambda-event-sources';
+ * lambda.addEventSource(new SqsEventSource(sqs));
+ *
+ * The `SqsEventSource` class will automatically create the mapping, and will also
+ * modify the Lambda's execution role so it can consume messages from the queue.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * IEventSourceDlq eventSourceDlq;
+ * Object filters;
+ * Function function_;
+ * SourceAccessConfigurationType sourceAccessConfigurationType;
+ * EventSourceMapping eventSourceMapping = EventSourceMapping.Builder.create(this,
+ * "MyEventSourceMapping")
+ * .target(function_)
+ * // the properties below are optional
+ * .batchSize(123)
+ * .bisectBatchOnError(false)
+ * .enabled(false)
+ * .eventSourceArn("eventSourceArn")
+ * .filters(List.of(Map.of(
+ * "filtersKey", filters)))
+ * .kafkaBootstrapServers(List.of("kafkaBootstrapServers"))
+ * .kafkaConsumerGroupId("kafkaConsumerGroupId")
+ * .kafkaTopic("kafkaTopic")
+ * .maxBatchingWindow(Duration.minutes(30))
+ * .maxConcurrency(123)
+ * .maxRecordAge(Duration.minutes(30))
+ * .onFailure(eventSourceDlq)
+ * .parallelizationFactor(123)
+ * .reportBatchItemFailures(false)
+ * .retryAttempts(123)
+ * .sourceAccessConfigurations(List.of(SourceAccessConfiguration.builder()
+ * .type(sourceAccessConfigurationType)
+ * .uri("uri")
+ * .build()))
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .startingPositionTimestamp(123)
+ * .tumblingWindow(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventSourceMappingDsl(
   scope: Construct,

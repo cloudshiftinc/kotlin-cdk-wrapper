@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationHDFS
 
+/**
+ * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and data
+ * transfer privacy settings configured on the Hadoop Distributed File System (HDFS) cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * QopConfigurationProperty qopConfigurationProperty = QopConfigurationProperty.builder()
+ * .dataTransferProtection("dataTransferProtection")
+ * .rpcProtection("rpcProtection")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-qopconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLocationHDFSQopConfigurationPropertyDsl {
   private val cdkBuilder: CfnLocationHDFS.QopConfigurationProperty.Builder =

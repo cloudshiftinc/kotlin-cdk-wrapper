@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 
+/**
+ * Specifies policies for your Classic Load Balancer.
+ *
+ * To associate policies with a listener, use the
+ * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+ * property for the listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * Object attributes;
+ * PoliciesProperty policiesProperty = PoliciesProperty.builder()
+ * .attributes(List.of(attributes))
+ * .policyName("policyName")
+ * .policyType("policyType")
+ * // the properties below are optional
+ * .instancePorts(List.of("instancePorts"))
+ * .loadBalancerPorts(List.of("loadBalancerPorts"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-policies.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerPoliciesPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.PoliciesProperty.Builder =

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig
 
+/**
+ * Represents the configuration specific to canary traffic shifting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CanaryTrafficRoutingConfig canaryTrafficRoutingConfig = CanaryTrafficRoutingConfig.builder()
+ * .canaryInterval(123)
+ * .canaryPercentage(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CanaryTrafficRoutingConfigDsl {
   private val cdkBuilder: CanaryTrafficRoutingConfig.Builder = CanaryTrafficRoutingConfig.builder()

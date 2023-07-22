@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The contribution analysis visual display for a line, pie, or bar chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ContributionAnalysisDefaultProperty contributionAnalysisDefaultProperty =
+ * ContributionAnalysisDefaultProperty.builder()
+ * .contributorDimensions(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .measureFieldId("measureFieldId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-contributionanalysisdefault.html)
+ */
 @CdkDslMarker
 public class CfnTemplateContributionAnalysisDefaultPropertyDsl {
   private val cdkBuilder: CfnTemplate.ContributionAnalysisDefaultProperty.Builder =

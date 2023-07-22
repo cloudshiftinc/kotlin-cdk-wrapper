@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.S3ActionConfig
 
+/**
+ * S3Action configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * S3ActionConfig s3ActionConfig = S3ActionConfig.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3ActionConfigDsl {
   private val cdkBuilder: S3ActionConfig.Builder = S3ActionConfig.builder()

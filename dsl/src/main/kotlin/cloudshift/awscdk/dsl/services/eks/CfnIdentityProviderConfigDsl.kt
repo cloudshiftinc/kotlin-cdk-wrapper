@@ -13,6 +13,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
 import software.constructs.Construct
 
+/**
+ * Associate an identity provider configuration to a cluster.
+ *
+ * If you want to authenticate identities using an identity provider, you can create an identity
+ * provider configuration and associate it to your cluster. After configuring authentication to your
+ * cluster you can create Kubernetes `roles` and `clusterroles` to assign permissions to the roles, and
+ * then bind the roles to the identities using Kubernetes `rolebindings` and `clusterrolebindings` .
+ * For more information see [Using RBAC
+ * Authorization](https://docs.aws.amazon.com/https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+ * in the Kubernetes documentation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnIdentityProviderConfig cfnIdentityProviderConfig =
+ * CfnIdentityProviderConfig.Builder.create(this, "MyCfnIdentityProviderConfig")
+ * .clusterName("clusterName")
+ * .type("type")
+ * // the properties below are optional
+ * .identityProviderConfigName("identityProviderConfigName")
+ * .oidc(OidcIdentityProviderConfigProperty.builder()
+ * .clientId("clientId")
+ * .issuerUrl("issuerUrl")
+ * // the properties below are optional
+ * .groupsClaim("groupsClaim")
+ * .groupsPrefix("groupsPrefix")
+ * .requiredClaims(List.of(RequiredClaimProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .usernameClaim("usernameClaim")
+ * .usernamePrefix("usernamePrefix")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)
+ */
 @CdkDslMarker
 public class CfnIdentityProviderConfigDsl(
   scope: Construct,

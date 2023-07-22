@@ -10,6 +10,24 @@ import software.amazon.awscdk.RemovalPolicy
 import software.amazon.awscdk.services.lambda.IDestination
 import software.amazon.awscdk.services.lambda.VersionOptions
 
+/**
+ * Options for `lambda.Version`.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn = Function.Builder.create(this, "MyFunction")
+ * .currentVersionOptions(VersionOptions.builder()
+ * .removalPolicy(RemovalPolicy.RETAIN) // retain old versions
+ * .retryAttempts(1)
+ * .build())
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * fn.addAlias("live");
+ * ```
+ */
 @CdkDslMarker
 public class VersionOptionsDsl {
   private val cdkBuilder: VersionOptions.Builder = VersionOptions.builder()

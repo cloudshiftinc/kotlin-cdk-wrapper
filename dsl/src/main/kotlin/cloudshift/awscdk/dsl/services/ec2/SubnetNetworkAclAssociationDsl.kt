@@ -9,6 +9,24 @@ import software.amazon.awscdk.services.ec2.ISubnet
 import software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * NetworkAcl networkAcl;
+ * Subnet subnet;
+ * SubnetNetworkAclAssociation subnetNetworkAclAssociation =
+ * SubnetNetworkAclAssociation.Builder.create(this, "MySubnetNetworkAclAssociation")
+ * .networkAcl(networkAcl)
+ * .subnet(subnet)
+ * // the properties below are optional
+ * .subnetNetworkAclAssociationName("subnetNetworkAclAssociationName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetNetworkAclAssociationDsl(
   scope: Construct,

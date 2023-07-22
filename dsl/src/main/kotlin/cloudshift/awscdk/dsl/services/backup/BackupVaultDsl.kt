@@ -18,6 +18,18 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.sns.ITopic
 import software.constructs.Construct
 
+/**
+ * A backup vault.
+ *
+ * Example:
+ *
+ * ```
+ * IBackupVault importedVault = BackupVault.fromBackupVaultName(this, "Vault", "myVaultName");
+ * Role role = Role.Builder.create(this, "Access Role").assumedBy(new
+ * ServicePrincipal("lambda.amazonaws.com")).build();
+ * importedVault.grant(role, "backup:StartBackupJob");
+ * ```
+ */
 @CdkDslMarker
 public class BackupVaultDsl(
   scope: Construct,

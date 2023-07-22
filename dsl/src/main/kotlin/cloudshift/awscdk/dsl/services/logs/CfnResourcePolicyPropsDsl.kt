@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.logs.CfnResourcePolicyProps
 
+/**
+ * Properties for defining a `CfnResourcePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnResourcePolicyProps cfnResourcePolicyProps = CfnResourcePolicyProps.builder()
+ * .policyDocument("policyDocument")
+ * .policyName("policyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()

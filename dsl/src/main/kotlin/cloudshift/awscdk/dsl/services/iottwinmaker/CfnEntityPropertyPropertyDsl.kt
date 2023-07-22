@@ -9,6 +9,37 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 
+/**
+ * An object that sets information about a property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataValueProperty dataValueProperty_;
+ * Object definition;
+ * Object relationshipValue;
+ * PropertyProperty propertyProperty = PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iottwinmaker-entity-property.html)
+ */
 @CdkDslMarker
 public class CfnEntityPropertyPropertyDsl {
   private val cdkBuilder: CfnEntity.PropertyProperty.Builder = CfnEntity.PropertyProperty.builder()

@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field well configuration of a heat map.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-heatmapfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardHeatMapFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.HeatMapFieldWellsProperty.Builder =

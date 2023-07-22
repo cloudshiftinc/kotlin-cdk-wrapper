@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Specifies an Amazon EKS volume for a job definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EksVolumeProperty eksVolumeProperty = EksVolumeProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .emptyDir(EmptyDirProperty.builder()
+ * .medium("medium")
+ * .sizeLimit("sizeLimit")
+ * .build())
+ * .hostPath(HostPathProperty.builder()
+ * .path("path")
+ * .build())
+ * .secret(EksSecretProperty.builder()
+ * .secretName("secretName")
+ * // the properties below are optional
+ * .optional(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-eksvolume.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEksVolumePropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EksVolumeProperty.Builder =

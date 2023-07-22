@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnectionProps
 
+/**
+ * Properties for defining a `CfnVpcIngressConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnVpcIngressConnectionProps cfnVpcIngressConnectionProps =
+ * CfnVpcIngressConnectionProps.builder()
+ * .ingressVpcConfiguration(IngressVpcConfigurationProperty.builder()
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build())
+ * .serviceArn("serviceArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcIngressConnectionName("vpcIngressConnectionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcingressconnection.html)
+ */
 @CdkDslMarker
 public class CfnVpcIngressConnectionPropsDsl {
   private val cdkBuilder: CfnVpcIngressConnectionProps.Builder =

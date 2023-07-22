@@ -7,6 +7,24 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The `UsernameConfiguration` property type specifies case sensitivity on the username input for
+ * the selected sign-in option.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * UsernameConfigurationProperty usernameConfigurationProperty =
+ * UsernameConfigurationProperty.builder()
+ * .caseSensitive(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-usernameconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolUsernameConfigurationPropertyDsl {
   private val cdkBuilder: CfnUserPool.UsernameConfigurationProperty.Builder =

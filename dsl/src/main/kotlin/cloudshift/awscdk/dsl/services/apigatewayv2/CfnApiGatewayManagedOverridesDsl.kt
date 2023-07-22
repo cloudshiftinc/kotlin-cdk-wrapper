@@ -8,6 +8,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::ApiGatewayManagedOverrides` resource overrides the default properties of
+ * API Gateway-managed resources that are implicitly configured for you when you use quick create.
+ *
+ * When you create an API by using quick create, an `AWS::ApiGatewayV2::Route` ,
+ * `AWS::ApiGatewayV2::Integration` , and `AWS::ApiGatewayV2::Stage` are created for you and associated
+ * with your `AWS::ApiGatewayV2::Api` . The `AWS::ApiGatewayV2::ApiGatewayManagedOverrides` resource
+ * enables you to set, or override the properties of these implicit resources. Supported only for HTTP
+ * APIs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object routeSettings;
+ * Object stageVariables;
+ * CfnApiGatewayManagedOverrides cfnApiGatewayManagedOverrides =
+ * CfnApiGatewayManagedOverrides.Builder.create(this, "MyCfnApiGatewayManagedOverrides")
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .integration(IntegrationOverridesProperty.builder()
+ * .description("description")
+ * .integrationMethod("integrationMethod")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .timeoutInMillis(123)
+ * .build())
+ * .route(RouteOverridesProperty.builder()
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizationType("authorizationType")
+ * .authorizerId("authorizerId")
+ * .operationName("operationName")
+ * .target("target")
+ * .build())
+ * .stage(StageOverridesProperty.builder()
+ * .accessLogSettings(AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .autoDeploy(false)
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .description("description")
+ * .routeSettings(routeSettings)
+ * .stageVariables(stageVariables)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-apigatewaymanagedoverrides.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesDsl(
   scope: Construct,

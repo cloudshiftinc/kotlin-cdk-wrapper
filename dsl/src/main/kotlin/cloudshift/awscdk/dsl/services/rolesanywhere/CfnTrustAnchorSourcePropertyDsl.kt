@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor
 
+/**
+ * The trust anchor type and its related certificate data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rolesanywhere.*;
+ * SourceProperty sourceProperty = SourceProperty.builder()
+ * .sourceData(SourceDataProperty.builder()
+ * .acmPcaArn("acmPcaArn")
+ * .x509CertificateData("x509CertificateData")
+ * .build())
+ * .sourceType("sourceType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rolesanywhere-trustanchor-source.html)
+ */
 @CdkDslMarker
 public class CfnTrustAnchorSourcePropertyDsl {
   private val cdkBuilder: CfnTrustAnchor.SourceProperty.Builder =

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.iam.WithoutPolicyUpdatesOptions
 
+/**
+ * Options for the `withoutPolicyUpdates()` modifier of a Role.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * WithoutPolicyUpdatesOptions withoutPolicyUpdatesOptions = WithoutPolicyUpdatesOptions.builder()
+ * .addGrantsToResources(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WithoutPolicyUpdatesOptionsDsl {
   private val cdkBuilder: WithoutPolicyUpdatesOptions.Builder =

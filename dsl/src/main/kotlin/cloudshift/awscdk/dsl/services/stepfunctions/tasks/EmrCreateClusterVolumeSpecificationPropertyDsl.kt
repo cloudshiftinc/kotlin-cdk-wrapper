@@ -7,6 +7,28 @@ import kotlin.Number
 import software.amazon.awscdk.Size
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * EBS volume specifications such as volume type, IOPS, and size (GiB) that will be requested for
+ * the EBS volume attached to an EC2 instance in the cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Size size;
+ * VolumeSpecificationProperty volumeSpecificationProperty = VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_VolumeSpecification.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterVolumeSpecificationPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.VolumeSpecificationProperty.Builder =

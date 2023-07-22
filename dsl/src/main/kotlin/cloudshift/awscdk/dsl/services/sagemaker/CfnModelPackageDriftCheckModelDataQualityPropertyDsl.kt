@@ -6,6 +6,35 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Represents the drift check data quality baselines that can be used when the model monitor is set
+ * using the model package.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DriftCheckModelDataQualityProperty driftCheckModelDataQualityProperty =
+ * DriftCheckModelDataQualityProperty.builder()
+ * .constraints(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .statistics(MetricsSourceProperty.builder()
+ * .contentType("contentType")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .contentDigest("contentDigest")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-driftcheckmodeldataquality.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageDriftCheckModelDataQualityPropertyDsl {
   private val cdkBuilder: CfnModelPackage.DriftCheckModelDataQualityProperty.Builder =

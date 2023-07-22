@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint
 import software.constructs.Construct
 
+/**
+ * Specifies a `RESOURCE_UPDATE` constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnResourceUpdateConstraint cfnResourceUpdateConstraint =
+ * CfnResourceUpdateConstraint.Builder.create(this, "MyCfnResourceUpdateConstraint")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .tagUpdateOnProvisionedProduct("tagUpdateOnProvisionedProduct")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-resourceupdateconstraint.html)
+ */
 @CdkDslMarker
 public class CfnResourceUpdateConstraintDsl(
   scope: Construct,

@@ -7,6 +7,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Details for a step that performs a file copy.
+ *
+ * Consists of the following values:
+ *
+ * * A description
+ * * An Amazon S3 location for the destination of the file copy.
+ * * A flag that indicates whether to overwrite an existing file of the same name. The default is
+ * `FALSE` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CopyStepDetailsProperty copyStepDetailsProperty = CopyStepDetailsProperty.builder()
+ * .destinationFileLocation(S3FileLocationProperty.builder()
+ * .s3FileLocation(S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * .overwriteExisting("overwriteExisting")
+ * .sourceFileLocation("sourceFileLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowCopyStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.CopyStepDetailsProperty.Builder =

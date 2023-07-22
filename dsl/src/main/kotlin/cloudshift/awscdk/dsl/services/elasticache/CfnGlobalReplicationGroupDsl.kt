@@ -13,6 +13,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup
 import software.constructs.Construct
 
+/**
+ * Consists of a primary cluster that accepts writes and an associated secondary cluster that
+ * resides in a different Amazon region.
+ *
+ * The secondary cluster accepts only reads. The primary cluster automatically replicates updates to
+ * the secondary cluster.
+ *
+ * * The *GlobalReplicationGroupIdSuffix* represents the name of the Global datastore, which is what
+ * you use to associate a secondary cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnGlobalReplicationGroup cfnGlobalReplicationGroup =
+ * CfnGlobalReplicationGroup.Builder.create(this, "MyCfnGlobalReplicationGroup")
+ * .members(List.of(GlobalReplicationGroupMemberProperty.builder()
+ * .replicationGroupId("replicationGroupId")
+ * .replicationGroupRegion("replicationGroupRegion")
+ * .role("role")
+ * .build()))
+ * // the properties below are optional
+ * .automaticFailoverEnabled(false)
+ * .cacheNodeType("cacheNodeType")
+ * .cacheParameterGroupName("cacheParameterGroupName")
+ * .engineVersion("engineVersion")
+ * .globalNodeGroupCount(123)
+ * .globalReplicationGroupDescription("globalReplicationGroupDescription")
+ * .globalReplicationGroupIdSuffix("globalReplicationGroupIdSuffix")
+ * .regionalConfigurations(List.of(RegionalConfigurationProperty.builder()
+ * .replicationGroupId("replicationGroupId")
+ * .replicationGroupRegion("replicationGroupRegion")
+ * .reshardingConfigurations(List.of(ReshardingConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)
+ */
 @CdkDslMarker
 public class CfnGlobalReplicationGroupDsl(
   scope: Construct,

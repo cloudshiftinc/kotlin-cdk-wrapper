@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnService
 import software.constructs.Construct
 
+/**
+ * Creates a service.
+ *
+ * A service is any software application that can run on instances containers, or serverless
+ * functions within an account or virtual private cloud (VPC).
+ *
+ * For more information, see
+ * [Services](https://docs.aws.amazon.com/vpc-lattice/latest/ug/services.html) in the *Amazon VPC
+ * Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
+ * .authType("authType")
+ * .certificateArn("certificateArn")
+ * .customDomainName("customDomainName")
+ * .dnsEntry(DnsEntryProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneId("hostedZoneId")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-service.html)
+ */
 @CdkDslMarker
 public class CfnServiceDsl(
   scope: Construct,

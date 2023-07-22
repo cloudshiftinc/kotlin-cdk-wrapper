@@ -15,6 +15,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sso.CfnPermissionSet
 import software.constructs.Construct
 
+/**
+ * Specifies a permission set within a specified IAM Identity Center instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * Object inlinePolicy;
+ * CfnPermissionSet cfnPermissionSet = CfnPermissionSet.Builder.create(this, "MyCfnPermissionSet")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .customerManagedPolicyReferences(List.of(CustomerManagedPolicyReferenceProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .path("path")
+ * .build()))
+ * .description("description")
+ * .inlinePolicy(inlinePolicy)
+ * .managedPolicies(List.of("managedPolicies"))
+ * .permissionsBoundary(PermissionsBoundaryProperty.builder()
+ * .customerManagedPolicyReference(CustomerManagedPolicyReferenceProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .path("path")
+ * .build())
+ * .managedPolicyArn("managedPolicyArn")
+ * .build())
+ * .relayStateType("relayStateType")
+ * .sessionDuration("sessionDuration")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-permissionset.html)
+ */
 @CdkDslMarker
 public class CfnPermissionSetDsl(
   scope: Construct,

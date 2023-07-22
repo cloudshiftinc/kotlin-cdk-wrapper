@@ -10,6 +10,37 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGatewayV2::IntegrationResponse` resource updates an integration response for an
+ * WebSocket API.
+ *
+ * For more information, see [Set up WebSocket API Integration Responses in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-integration-responses.html)
+ * in the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object responseParameters;
+ * Object responseTemplates;
+ * CfnIntegrationResponse cfnIntegrationResponse = CfnIntegrationResponse.Builder.create(this,
+ * "MyCfnIntegrationResponse")
+ * .apiId("apiId")
+ * .integrationId("integrationId")
+ * .integrationResponseKey("integrationResponseKey")
+ * // the properties below are optional
+ * .contentHandlingStrategy("contentHandlingStrategy")
+ * .responseParameters(responseParameters)
+ * .responseTemplates(responseTemplates)
+ * .templateSelectionExpression("templateSelectionExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integrationresponse.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationResponseDsl(
   scope: Construct,

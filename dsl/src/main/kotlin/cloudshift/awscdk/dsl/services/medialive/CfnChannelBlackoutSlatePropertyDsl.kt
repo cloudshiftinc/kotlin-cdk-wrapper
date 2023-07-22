@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for a blackout slate.
+ *
+ * The parent of this entity is EncoderSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * BlackoutSlateProperty blackoutSlateProperty = BlackoutSlateProperty.builder()
+ * .blackoutSlateImage(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .networkEndBlackout("networkEndBlackout")
+ * .networkEndBlackoutImage(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .networkId("networkId")
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-blackoutslate.html)
+ */
 @CdkDslMarker
 public class CfnChannelBlackoutSlatePropertyDsl {
   private val cdkBuilder: CfnChannel.BlackoutSlateProperty.Builder =

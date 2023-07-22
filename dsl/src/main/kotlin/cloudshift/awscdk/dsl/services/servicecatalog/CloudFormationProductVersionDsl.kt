@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
 import software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate
 
+/**
+ * Properties of product version (also known as a provisioning artifact).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CloudFormationTemplate cloudFormationTemplate;
+ * CloudFormationProductVersion cloudFormationProductVersion =
+ * CloudFormationProductVersion.builder()
+ * .cloudFormationTemplate(cloudFormationTemplate)
+ * // the properties below are optional
+ * .description("description")
+ * .productVersionName("productVersionName")
+ * .validateTemplate(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationProductVersionDsl {
   private val cdkBuilder: CloudFormationProductVersion.Builder =

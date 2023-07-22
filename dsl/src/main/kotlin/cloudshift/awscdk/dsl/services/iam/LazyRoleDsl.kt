@@ -14,6 +14,40 @@ import software.amazon.awscdk.services.iam.LazyRole
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.constructs.Construct
 
+/**
+ * An IAM role that only gets attached to the construct tree once it gets used, not before.
+ *
+ * This construct can be used to simplify logic in other constructs
+ * which need to create a role but only if certain configurations occur
+ * (such as when AutoScaling is configured). The role can be configured in one
+ * place, but if it never gets used it doesn't get instantiated and will
+ * not be synthesized or deployed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * ManagedPolicy managedPolicy;
+ * PolicyDocument policyDocument;
+ * IPrincipal principal;
+ * LazyRole lazyRole = LazyRole.Builder.create(this, "MyLazyRole")
+ * .assumedBy(principal)
+ * // the properties below are optional
+ * .description("description")
+ * .externalIds(List.of("externalIds"))
+ * .inlinePolicies(Map.of(
+ * "inlinePoliciesKey", policyDocument))
+ * .managedPolicies(List.of(managedPolicy))
+ * .maxSessionDuration(Duration.minutes(30))
+ * .path("path")
+ * .permissionsBoundary(managedPolicy)
+ * .roleName("roleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LazyRoleDsl(
   scope: Construct,

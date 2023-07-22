@@ -11,6 +11,31 @@ import software.amazon.awscdk.services.autoscaling.BasicTargetTrackingScalingPol
 import software.amazon.awscdk.services.autoscaling.PredefinedMetric
 import software.amazon.awscdk.services.cloudwatch.IMetric
 
+/**
+ * Properties for a Target Tracking policy that include the metric but exclude the target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Metric metric;
+ * BasicTargetTrackingScalingPolicyProps basicTargetTrackingScalingPolicyProps =
+ * BasicTargetTrackingScalingPolicyProps.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .cooldown(Duration.minutes(30))
+ * .customMetric(metric)
+ * .disableScaleIn(false)
+ * .estimatedInstanceWarmup(Duration.minutes(30))
+ * .predefinedMetric(PredefinedMetric.ASG_AVERAGE_CPU_UTILIZATION)
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BasicTargetTrackingScalingPolicyPropsDsl {
   private val cdkBuilder: BasicTargetTrackingScalingPolicyProps.Builder =

@@ -12,6 +12,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnIndex
 
+/**
+ * Provides information for tuning the relevance of a field in a search.
+ *
+ * When a query includes terms that match the field, the results are given a boost in the response
+ * based on these tuning parameters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * RelevanceProperty relevanceProperty = RelevanceProperty.builder()
+ * .duration("duration")
+ * .freshness(false)
+ * .importance(123)
+ * .rankOrder("rankOrder")
+ * .valueImportanceItems(List.of(ValueImportanceItemProperty.builder()
+ * .key("key")
+ * .value(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html)
+ */
 @CdkDslMarker
 public class CfnIndexRelevancePropertyDsl {
   private val cdkBuilder: CfnIndex.RelevanceProperty.Builder = CfnIndex.RelevanceProperty.builder()

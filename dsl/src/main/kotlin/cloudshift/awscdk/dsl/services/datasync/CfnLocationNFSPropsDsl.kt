@@ -13,6 +13,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
 import software.amazon.awscdk.services.datasync.CfnLocationNFSProps
 
+/**
+ * Properties for defining a `CfnLocationNFS`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationNFSProps cfnLocationNFSProps = CfnLocationNFSProps.builder()
+ * .onPremConfig(OnPremConfigProperty.builder()
+ * .agentArns(List.of("agentArns"))
+ * .build())
+ * // the properties below are optional
+ * .mountOptions(MountOptionsProperty.builder()
+ * .version("version")
+ * .build())
+ * .serverHostname("serverHostname")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationnfs.html)
+ */
 @CdkDslMarker
 public class CfnLocationNFSPropsDsl {
   private val cdkBuilder: CfnLocationNFSProps.Builder = CfnLocationNFSProps.builder()

@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.fms.CfnResourceSet
 import software.constructs.Construct
 
+/**
+ * A set of resources to include in a policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * CfnResourceSet cfnResourceSet = CfnResourceSet.Builder.create(this, "MyCfnResourceSet")
+ * .name("name")
+ * .resourceTypeList(List.of("resourceTypeList"))
+ * // the properties below are optional
+ * .description("description")
+ * .resources(List.of("resources"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-resourceset.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetDsl(
   scope: Construct,

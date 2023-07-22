@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to deploy an AWS ElasticBeanstalk Application.
+ *
+ * Example:
+ *
+ * ```
+ * Artifact sourceOutput = new Artifact();
+ * Bucket targetBucket = new Bucket(this, "MyBucket");
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * ElasticBeanstalkDeployAction deployAction = ElasticBeanstalkDeployAction.Builder.create()
+ * .actionName("ElasticBeanstalkDeploy")
+ * .input(sourceOutput)
+ * .environmentName("envName")
+ * .applicationName("appName")
+ * .build();
+ * IStage deployStage = pipeline.addStage(StageOptions.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(deployAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ElasticBeanstalkDeployActionDsl {
   private val cdkBuilder: ElasticBeanstalkDeployAction.Builder =

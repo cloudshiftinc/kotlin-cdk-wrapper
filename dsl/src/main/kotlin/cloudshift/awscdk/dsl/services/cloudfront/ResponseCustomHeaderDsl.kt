@@ -7,6 +7,25 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.ResponseCustomHeader
 
+/**
+ * An HTTP response header name and its value.
+ *
+ * CloudFront includes this header in HTTP responses that it sends for requests that match a cache
+ * behavior that’s associated with this response headers policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * ResponseCustomHeader responseCustomHeader = ResponseCustomHeader.builder()
+ * .header("header")
+ * .override(false)
+ * .value("value")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResponseCustomHeaderDsl {
   private val cdkBuilder: ResponseCustomHeader.Builder = ResponseCustomHeader.builder()

@@ -16,6 +16,22 @@ import software.amazon.awscdk.services.lambda.IEventSourceDlq
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource
 
+/**
+ * Use an Amazon Kinesis stream as an event source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kinesis.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource;
+ * Function myFunction;
+ * Stream stream = new Stream(this, "MyStream");
+ * myFunction.addEventSource(KinesisEventSource.Builder.create(stream)
+ * .batchSize(100) // default
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class KinesisEventSourceDsl(
   stream: IStream,

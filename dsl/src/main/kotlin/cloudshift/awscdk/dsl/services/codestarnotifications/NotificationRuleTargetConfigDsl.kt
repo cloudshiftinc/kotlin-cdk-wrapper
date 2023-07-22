@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig
 
+/**
+ * Information about the SNS topic or AWS Chatbot client associated with a notification target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * NotificationRuleTargetConfig notificationRuleTargetConfig =
+ * NotificationRuleTargetConfig.builder()
+ * .targetAddress("targetAddress")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NotificationRuleTargetConfigDsl {
   private val cdkBuilder: NotificationRuleTargetConfig.Builder =

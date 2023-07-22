@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes
 import software.amazon.awscdk.CfnTrafficRouting
 
+/**
+ * The attributes of the ECS Service being deployed.
+ *
+ * Type of the `CfnCodeDeployBlueGreenApplication.ecsAttributes` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCodeDeployBlueGreenEcsAttributes cfnCodeDeployBlueGreenEcsAttributes =
+ * CfnCodeDeployBlueGreenEcsAttributes.builder()
+ * .taskDefinitions(List.of("taskDefinitions"))
+ * .taskSets(List.of("taskSets"))
+ * .trafficRouting(CfnTrafficRouting.builder()
+ * .prodTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .targetGroups(List.of("targetGroups"))
+ * .testTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenEcsAttributesDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenEcsAttributes.Builder =

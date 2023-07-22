@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a new Amazon Redshift security group. You use security groups to control access to
+ * non-VPC clusters.
+ *
+ * For information about managing security groups, go to [Amazon Redshift Cluster Security
+ * Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the
+ * *Amazon Redshift Cluster Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnClusterSecurityGroup cfnClusterSecurityGroup = CfnClusterSecurityGroup.Builder.create(this,
+ * "MyCfnClusterSecurityGroup")
+ * .description("description")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html)
+ */
 @CdkDslMarker
 public class CfnClusterSecurityGroupDsl(
   scope: Construct,

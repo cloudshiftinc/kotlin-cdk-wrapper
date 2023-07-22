@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * Configuration about the model associated with a flywheel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * TaskConfigProperty taskConfigProperty = TaskConfigProperty.builder()
+ * .languageCode("languageCode")
+ * // the properties below are optional
+ * .documentClassificationConfig(DocumentClassificationConfigProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .labels(List.of("labels"))
+ * .build())
+ * .entityRecognitionConfig(EntityRecognitionConfigProperty.builder()
+ * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-taskconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelTaskConfigPropertyDsl {
   private val cdkBuilder: CfnFlywheel.TaskConfigProperty.Builder =

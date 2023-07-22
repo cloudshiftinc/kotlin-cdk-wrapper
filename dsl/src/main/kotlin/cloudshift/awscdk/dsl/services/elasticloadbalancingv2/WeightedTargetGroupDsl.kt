@@ -7,6 +7,23 @@ import kotlin.Number
 import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.WeightedTargetGroup
 
+/**
+ * A Target Group and weight combination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationTargetGroup applicationTargetGroup;
+ * WeightedTargetGroup weightedTargetGroup = WeightedTargetGroup.builder()
+ * .targetGroup(applicationTargetGroup)
+ * // the properties below are optional
+ * .weight(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class WeightedTargetGroupDsl {
   private val cdkBuilder: WeightedTargetGroup.Builder = WeightedTargetGroup.builder()

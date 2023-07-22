@@ -14,6 +14,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachine
 import software.constructs.Construct
 
+/**
+ * Provisions a state machine.
+ *
+ * A state machine consists of a collection of states that can do work ( `Task` states), determine
+ * to which states to transition next ( `Choice` states), stop an execution with an error ( `Fail`
+ * states), and so on. State machines are specified using a JSON-based, structured language.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Object definition;
+ * CfnStateMachine cfnStateMachine = CfnStateMachine.Builder.create(this, "MyCfnStateMachine")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .definition(definition)
+ * .definitionS3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .definitionString("definitionString")
+ * .definitionSubstitutions(Map.of(
+ * "definitionSubstitutionsKey", "definitionSubstitutions"))
+ * .loggingConfiguration(LoggingConfigurationProperty.builder()
+ * .destinations(List.of(LogDestinationProperty.builder()
+ * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .build()))
+ * .includeExecutionData(false)
+ * .level("level")
+ * .build())
+ * .stateMachineName("stateMachineName")
+ * .stateMachineType("stateMachineType")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tracingConfiguration(TracingConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineDsl(
   scope: Construct,

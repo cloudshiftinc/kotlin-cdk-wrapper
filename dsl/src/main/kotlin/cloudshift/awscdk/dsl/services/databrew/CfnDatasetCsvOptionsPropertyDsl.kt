@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents a set of options that define how DataBrew will read a comma-separated value (CSV) file
+ * when creating a dataset from that file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CsvOptionsProperty csvOptionsProperty = CsvOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .headerRow(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-csvoptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetCsvOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.CsvOptionsProperty.Builder =

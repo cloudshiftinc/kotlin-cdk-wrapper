@@ -17,6 +17,19 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRun
 import software.constructs.Construct
 
+/**
+ * Start a Job run as a Task.
+ *
+ * Example:
+ *
+ * ```
+ * GlueDataBrewStartJobRun.Builder.create(this, "Task")
+ * .name("databrew-job")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-databrew.html)
+ */
 @CdkDslMarker
 public class GlueDataBrewStartJobRunDsl(
   scope: Construct,

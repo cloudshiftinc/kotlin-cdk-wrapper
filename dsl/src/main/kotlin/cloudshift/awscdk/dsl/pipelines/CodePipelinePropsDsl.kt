@@ -16,6 +16,23 @@ import software.amazon.awscdk.services.codepipeline.Pipeline
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Properties for a `CodePipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline codePipeline;
+ * Artifact sourceArtifact = new Artifact("MySourceArtifact");
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .codePipeline(codePipeline)
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineFileSet.fromArtifact(sourceArtifact))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodePipelinePropsDsl {
   private val cdkBuilder: CodePipelineProps.Builder = CodePipelineProps.builder()

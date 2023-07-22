@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The URL operation that opens a link to another webpage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomActionURLOperationProperty customActionURLOperationProperty =
+ * CustomActionURLOperationProperty.builder()
+ * .urlTarget("urlTarget")
+ * .urlTemplate("urlTemplate")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-customactionurloperation.html)
+ */
 @CdkDslMarker
 public class CfnDashboardCustomActionURLOperationPropertyDsl {
   private val cdkBuilder: CfnDashboard.CustomActionURLOperationProperty.Builder =

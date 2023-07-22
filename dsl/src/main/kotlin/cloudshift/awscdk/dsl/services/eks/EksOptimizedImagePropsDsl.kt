@@ -8,6 +8,22 @@ import software.amazon.awscdk.services.eks.CpuArch
 import software.amazon.awscdk.services.eks.EksOptimizedImageProps
 import software.amazon.awscdk.services.eks.NodeType
 
+/**
+ * Properties for EksOptimizedImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * EksOptimizedImageProps eksOptimizedImageProps = EksOptimizedImageProps.builder()
+ * .cpuArch(CpuArch.ARM_64)
+ * .kubernetesVersion("kubernetesVersion")
+ * .nodeType(NodeType.STANDARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EksOptimizedImagePropsDsl {
   private val cdkBuilder: EksOptimizedImageProps.Builder = EksOptimizedImageProps.builder()

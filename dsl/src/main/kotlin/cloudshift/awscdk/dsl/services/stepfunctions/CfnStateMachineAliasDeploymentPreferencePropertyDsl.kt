@@ -9,6 +9,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
 
+/**
+ * Enables gradual state machine deployments.
+ *
+ * CloudFormation automatically shifts traffic from the version the alias currently points to, to a
+ * new state machine version that you specify.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * DeploymentPreferenceProperty deploymentPreferenceProperty =
+ * DeploymentPreferenceProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .type("type")
+ * // the properties below are optional
+ * .alarms(List.of("alarms"))
+ * .interval(123)
+ * .percentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachinealias-deploymentpreference.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineAliasDeploymentPreferencePropertyDsl {
   private val cdkBuilder: CfnStateMachineAlias.DeploymentPreferenceProperty.Builder =

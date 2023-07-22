@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.eks.CfnNodegroup
 
+/**
+ * The update configuration for the node group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * UpdateConfigProperty updateConfigProperty = UpdateConfigProperty.builder()
+ * .maxUnavailable(123)
+ * .maxUnavailablePercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-updateconfig.html)
+ */
 @CdkDslMarker
 public class CfnNodegroupUpdateConfigPropertyDsl {
   private val cdkBuilder: CfnNodegroup.UpdateConfigProperty.Builder =

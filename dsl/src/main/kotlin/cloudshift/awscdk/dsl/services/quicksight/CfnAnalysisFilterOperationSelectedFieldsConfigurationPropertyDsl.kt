@@ -10,6 +10,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of selected fields in the `CustomActionFilterOperation` .
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * FilterOperationSelectedFieldsConfigurationProperty
+ * filterOperationSelectedFieldsConfigurationProperty =
+ * FilterOperationSelectedFieldsConfigurationProperty.builder()
+ * .selectedColumns(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .selectedFieldOptions("selectedFieldOptions")
+ * .selectedFields(List.of("selectedFields"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-filteroperationselectedfieldsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFilterOperationSelectedFieldsConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FilterOperationSelectedFieldsConfigurationProperty.Builder =

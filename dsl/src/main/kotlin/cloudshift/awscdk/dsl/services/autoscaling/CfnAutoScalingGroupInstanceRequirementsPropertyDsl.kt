@@ -11,6 +11,109 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * The attributes for the instance types for a mixed instances policy.
+ *
+ * Amazon EC2 Auto Scaling uses your specified requirements to identify instance types. Then, it
+ * uses your On-Demand and Spot allocation strategies to launch instances from these instance types.
+ *
+ * When you specify multiple attributes, you get instance types that satisfy all of the specified
+ * attributes. If you specify multiple values for an attribute, you get instance types that satisfy any
+ * of the specified values.
+ *
+ * To limit the list of instance types from which Amazon EC2 Auto Scaling can identify matching
+ * instance types, you can use one of the following parameters, but not both in the same request:
+ *
+ * * `AllowedInstanceTypes` - The instance types to include in the list. All other instance types
+ * are ignored, even if they match your specified attributes.
+ * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match your
+ * specified attributes.
+ *
+ *
+ * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any unspecified
+ * optional attribute is set to its default.
+ *
+ *
+ * For an example template, see [Auto scaling template
+ * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html)
+ * .
+ *
+ * For more information, see [Creating an Auto Scaling group using attribute-based instance type
+ * selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* . For help determining which instance types match your
+ * attributes before you apply them to your Auto Scaling group, see [Preview instance types with
+ * specified
+ * attributes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-get-instance-types-from-instance-requirements)
+ * in the *Amazon EC2 User Guide for Linux Instances* .
+ *
+ * `InstanceRequirements` is a property of the `LaunchTemplateOverrides` property of the
+ * [AWS::AutoScaling::AutoScalingGroup
+ * LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplate.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * InstanceRequirementsProperty instanceRequirementsProperty =
+ * InstanceRequirementsProperty.builder()
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupInstanceRequirementsPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.InstanceRequirementsProperty.Builder =

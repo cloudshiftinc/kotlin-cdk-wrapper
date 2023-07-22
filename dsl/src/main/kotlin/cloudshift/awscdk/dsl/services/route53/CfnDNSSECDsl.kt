@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.route53.CfnDNSSEC
 import software.constructs.Construct
 
+/**
+ * The `AWS::Route53::DNSSEC` resource is used to enable DNSSEC signing in a hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnDNSSEC cfnDNSSEC = CfnDNSSEC.Builder.create(this, "MyCfnDNSSEC")
+ * .hostedZoneId("hostedZoneId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)
+ */
 @CdkDslMarker
 public class CfnDNSSECDsl(
   scope: Construct,

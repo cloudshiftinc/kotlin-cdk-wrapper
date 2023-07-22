@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * Configuration required for a document classification model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DocumentClassificationConfigProperty documentClassificationConfigProperty =
+ * DocumentClassificationConfigProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .labels(List.of("labels"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-documentclassificationconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelDocumentClassificationConfigPropertyDsl {
   private val cdkBuilder: CfnFlywheel.DocumentClassificationConfigProperty.Builder =

@@ -14,6 +14,25 @@ import software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch
 import software.amazon.awscdk.services.appmesh.HttpRouteMethod
 import software.amazon.awscdk.services.appmesh.QueryParameterMatch
 
+/**
+ * The criterion for determining a request match for this GatewayRoute.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-http-2", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.http(HttpGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(HttpGatewayRouteMatch.builder()
+ * // This rewrites the path from '/test' to '/rewrittenPath'.
+ * .path(HttpGatewayRoutePathMatch.exactly("/test", "/rewrittenPath"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpGatewayRouteMatchDsl {
   private val cdkBuilder: HttpGatewayRouteMatch.Builder = HttpGatewayRouteMatch.builder()

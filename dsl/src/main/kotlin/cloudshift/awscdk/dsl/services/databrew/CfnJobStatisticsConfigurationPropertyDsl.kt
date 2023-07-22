@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Configuration of evaluations for a profile job.
+ *
+ * This configuration can be used to select evaluations and override the parameters of selected
+ * evaluations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * StatisticsConfigurationProperty statisticsConfigurationProperty =
+ * StatisticsConfigurationProperty.builder()
+ * .includedStatistics(List.of("includedStatistics"))
+ * .overrides(List.of(StatisticOverrideProperty.builder()
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .statistic("statistic")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-statisticsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobStatisticsConfigurationPropertyDsl {
   private val cdkBuilder: CfnJob.StatisticsConfigurationProperty.Builder =

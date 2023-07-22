@@ -10,6 +10,84 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for altering document metadata and content during the
+ * document ingestion process.
+ *
+ * For more information, see [Customizing document metadata during the ingestion
+ * process](https://docs.aws.amazon.com/kendra/latest/dg/custom-document-enrichment.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * CustomDocumentEnrichmentConfigurationProperty customDocumentEnrichmentConfigurationProperty =
+ * CustomDocumentEnrichmentConfigurationProperty.builder()
+ * .inlineConfigurations(List.of(InlineCustomDocumentEnrichmentConfigurationProperty.builder()
+ * .condition(DocumentAttributeConditionProperty.builder()
+ * .conditionDocumentAttributeKey("conditionDocumentAttributeKey")
+ * .operator("operator")
+ * // the properties below are optional
+ * .conditionOnValue(DocumentAttributeValueProperty.builder()
+ * .dateValue("dateValue")
+ * .longValue(123)
+ * .stringListValue(List.of("stringListValue"))
+ * .stringValue("stringValue")
+ * .build())
+ * .build())
+ * .documentContentDeletion(false)
+ * .target(DocumentAttributeTargetProperty.builder()
+ * .targetDocumentAttributeKey("targetDocumentAttributeKey")
+ * // the properties below are optional
+ * .targetDocumentAttributeValue(DocumentAttributeValueProperty.builder()
+ * .dateValue("dateValue")
+ * .longValue(123)
+ * .stringListValue(List.of("stringListValue"))
+ * .stringValue("stringValue")
+ * .build())
+ * .targetDocumentAttributeValueDeletion(false)
+ * .build())
+ * .build()))
+ * .postExtractionHookConfiguration(HookConfigurationProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .invocationCondition(DocumentAttributeConditionProperty.builder()
+ * .conditionDocumentAttributeKey("conditionDocumentAttributeKey")
+ * .operator("operator")
+ * // the properties below are optional
+ * .conditionOnValue(DocumentAttributeValueProperty.builder()
+ * .dateValue("dateValue")
+ * .longValue(123)
+ * .stringListValue(List.of("stringListValue"))
+ * .stringValue("stringValue")
+ * .build())
+ * .build())
+ * .build())
+ * .preExtractionHookConfiguration(HookConfigurationProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .invocationCondition(DocumentAttributeConditionProperty.builder()
+ * .conditionDocumentAttributeKey("conditionDocumentAttributeKey")
+ * .operator("operator")
+ * // the properties below are optional
+ * .conditionOnValue(DocumentAttributeValueProperty.builder()
+ * .dateValue("dateValue")
+ * .longValue(123)
+ * .stringListValue(List.of("stringListValue"))
+ * .stringValue("stringValue")
+ * .build())
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceCustomDocumentEnrichmentConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.CustomDocumentEnrichmentConfigurationProperty.Builder =

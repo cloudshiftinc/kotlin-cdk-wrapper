@@ -9,6 +9,25 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.HorizontalAnnotation
 import software.amazon.awscdk.services.cloudwatch.Shading
 
+/**
+ * Horizontal annotation to be added to a graph.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * HorizontalAnnotation horizontalAnnotation = HorizontalAnnotation.builder()
+ * .value(123)
+ * // the properties below are optional
+ * .color("color")
+ * .fill(Shading.NONE)
+ * .label("label")
+ * .visible(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HorizontalAnnotationDsl {
   private val cdkBuilder: HorizontalAnnotation.Builder = HorizontalAnnotation.builder()

@@ -11,6 +11,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * KinesisEventProperty kinesisEventProperty = KinesisEventProperty.builder()
+ * .startingPosition("startingPosition")
+ * .stream("stream")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .enabled(false)
+ * .functionResponseTypes(List.of("functionResponseTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-kinesisevent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionKinesisEventPropertyDsl {
   private val cdkBuilder: CfnFunction.KinesisEventProperty.Builder =

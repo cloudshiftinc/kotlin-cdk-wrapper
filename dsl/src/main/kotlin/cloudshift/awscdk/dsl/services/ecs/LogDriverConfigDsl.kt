@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 import software.amazon.awscdk.services.ecs.LogDriverConfig
 
+/**
+ * The configuration to use when creating a log driver.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LogDriverConfig logDriverConfig = LogDriverConfig.builder()
+ * .logDriver("logDriver")
+ * // the properties below are optional
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogDriverConfigDsl {
   private val cdkBuilder: LogDriverConfig.Builder = LogDriverConfig.builder()

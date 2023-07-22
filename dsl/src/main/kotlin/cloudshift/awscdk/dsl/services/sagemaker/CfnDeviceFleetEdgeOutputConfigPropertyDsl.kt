@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnDeviceFleet
 
+/**
+ * The output configuration for storing sample data collected by the fleet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * EdgeOutputConfigProperty edgeOutputConfigProperty = EdgeOutputConfigProperty.builder()
+ * .s3OutputLocation("s3OutputLocation")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-devicefleet-edgeoutputconfig.html)
+ */
 @CdkDslMarker
 public class CfnDeviceFleetEdgeOutputConfigPropertyDsl {
   private val cdkBuilder: CfnDeviceFleet.EdgeOutputConfigProperty.Builder =

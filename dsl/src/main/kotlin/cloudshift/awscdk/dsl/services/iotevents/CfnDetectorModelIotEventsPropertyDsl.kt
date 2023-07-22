@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 
+/**
+ * Sends an AWS IoT Events input, passing in information about the detector model instance and the
+ * event that triggered the action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * IotEventsProperty iotEventsProperty = IotEventsProperty.builder()
+ * .inputName("inputName")
+ * // the properties below are optional
+ * .payload(PayloadProperty.builder()
+ * .contentExpression("contentExpression")
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-iotevents.html)
+ */
 @CdkDslMarker
 public class CfnDetectorModelIotEventsPropertyDsl {
   private val cdkBuilder: CfnDetectorModel.IotEventsProperty.Builder =

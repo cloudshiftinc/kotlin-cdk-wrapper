@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscriptionProps
 
+/**
+ * Properties for defining a `CfnAccessLogSubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnAccessLogSubscriptionProps cfnAccessLogSubscriptionProps =
+ * CfnAccessLogSubscriptionProps.builder()
+ * .destinationArn("destinationArn")
+ * // the properties below are optional
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html)
+ */
 @CdkDslMarker
 public class CfnAccessLogSubscriptionPropsDsl {
   private val cdkBuilder: CfnAccessLogSubscriptionProps.Builder =

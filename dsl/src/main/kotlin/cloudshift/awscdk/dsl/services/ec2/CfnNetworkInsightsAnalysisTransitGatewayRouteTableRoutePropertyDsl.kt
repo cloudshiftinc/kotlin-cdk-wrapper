@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a route in a transit gateway route table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TransitGatewayRouteTableRouteProperty transitGatewayRouteTableRouteProperty =
+ * TransitGatewayRouteTableRouteProperty.builder()
+ * .attachmentId("attachmentId")
+ * .destinationCidr("destinationCidr")
+ * .prefixListId("prefixListId")
+ * .resourceId("resourceId")
+ * .resourceType("resourceType")
+ * .routeOrigin("routeOrigin")
+ * .state("state")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-transitgatewayroutetableroute.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisTransitGatewayRouteTableRoutePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.TransitGatewayRouteTableRouteProperty.Builder =

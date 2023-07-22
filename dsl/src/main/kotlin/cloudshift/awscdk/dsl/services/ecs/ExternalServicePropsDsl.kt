@@ -22,6 +22,21 @@ import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.TaskDefinition
 
+/**
+ * The properties for defining a service using the External launch type.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * ExternalService service = ExternalService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .desiredCount(5)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExternalServicePropsDsl {
   private val cdkBuilder: ExternalServiceProps.Builder = ExternalServiceProps.builder()

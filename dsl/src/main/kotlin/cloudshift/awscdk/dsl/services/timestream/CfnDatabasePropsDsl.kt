@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.timestream.CfnDatabaseProps
 
+/**
+ * Properties for defining a `CfnDatabase`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.timestream.*;
+ * CfnDatabaseProps cfnDatabaseProps = CfnDatabaseProps.builder()
+ * .databaseName("databaseName")
+ * .kmsKeyId("kmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-database.html)
+ */
 @CdkDslMarker
 public class CfnDatabasePropsDsl {
   private val cdkBuilder: CfnDatabaseProps.Builder = CfnDatabaseProps.builder()

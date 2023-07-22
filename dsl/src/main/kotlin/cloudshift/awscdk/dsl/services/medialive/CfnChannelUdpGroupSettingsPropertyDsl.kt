@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of a UDP output group.
+ *
+ * The parent of this entity is OutputGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * UdpGroupSettingsProperty udpGroupSettingsProperty = UdpGroupSettingsProperty.builder()
+ * .inputLossAction("inputLossAction")
+ * .timedMetadataId3Frame("timedMetadataId3Frame")
+ * .timedMetadataId3Period(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-udpgroupsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelUdpGroupSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.UdpGroupSettingsProperty.Builder =

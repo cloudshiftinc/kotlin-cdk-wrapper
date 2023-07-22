@@ -8,6 +8,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot1click.CfnProject
 import software.constructs.Construct
 
+/**
+ * The `AWS::IoT1Click::Project` resource creates an empty project with a placement template.
+ *
+ * A project contains zero or more placements that adhere to the placement template defined in the
+ * project. For more information, see
+ * [CreateProject](https://docs.aws.amazon.com/iot-1-click/latest/projects-apireference/API_CreateProject.html)
+ * in the *AWS IoT 1-Click Projects API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot1click.*;
+ * Object callbackOverrides;
+ * Object defaultAttributes;
+ * CfnProject cfnProject = CfnProject.Builder.create(this, "MyCfnProject")
+ * .placementTemplate(PlacementTemplateProperty.builder()
+ * .defaultAttributes(defaultAttributes)
+ * .deviceTemplates(Map.of(
+ * "deviceTemplatesKey", DeviceTemplateProperty.builder()
+ * .callbackOverrides(callbackOverrides)
+ * .deviceType("deviceType")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .projectName("projectName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot1click-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectDsl(
   scope: Construct,

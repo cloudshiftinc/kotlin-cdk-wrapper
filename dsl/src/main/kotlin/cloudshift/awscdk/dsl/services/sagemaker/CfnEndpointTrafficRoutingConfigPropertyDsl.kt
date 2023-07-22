@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpoint
 
+/**
+ * Defines the traffic routing strategy during an endpoint deployment to shift traffic from the old
+ * fleet to the new fleet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TrafficRoutingConfigProperty trafficRoutingConfigProperty =
+ * TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .canarySize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .linearStepSize(CapacitySizeProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .waitIntervalInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpoint-trafficroutingconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointTrafficRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.TrafficRoutingConfigProperty.Builder =

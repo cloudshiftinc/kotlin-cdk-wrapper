@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnScheduledAction
 
+/**
+ * Describes a resize cluster operation.
+ *
+ * For example, a scheduled action to run the `ResizeCluster` API operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * ResizeClusterMessageProperty resizeClusterMessageProperty =
+ * ResizeClusterMessageProperty.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .classic(false)
+ * .clusterType("clusterType")
+ * .nodeType("nodeType")
+ * .numberOfNodes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-scheduledaction-resizeclustermessage.html)
+ */
 @CdkDslMarker
 public class CfnScheduledActionResizeClusterMessagePropertyDsl {
   private val cdkBuilder: CfnScheduledAction.ResizeClusterMessageProperty.Builder =

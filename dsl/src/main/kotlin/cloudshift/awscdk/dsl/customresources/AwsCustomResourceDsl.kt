@@ -18,6 +18,35 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.constructs.Construct
 
+/**
+ * Defines a custom resource that is materialized using specific AWS API calls.
+ *
+ * These calls are created using
+ * a singleton Lambda function.
+ *
+ * Use this to bridge any gap that might exist in the CloudFormation Coverage.
+ * You can specify exactly which calls are invoked for the 'CREATE', 'UPDATE' and 'DELETE' life
+ * cycle events.
+ *
+ * Example:
+ *
+ * ```
+ * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
+ * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+ * .service("SSM")
+ * .action("getParameter")
+ * .parameters(Map.of(
+ * "Name", "my-parameter",
+ * "WithDecryption", true))
+ * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+ * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
+ * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * .build()))
+ * .build();
+ * // Use the value in another construct with
+ * getParameter.getResponseField("Parameter.Value");
+ * ```
+ */
 @CdkDslMarker
 public class AwsCustomResourceDsl(
   scope: Construct,

@@ -7,6 +7,35 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 import software.amazon.awscdk.services.appmesh.ServiceDiscoveryConfig
 
+/**
+ * Properties for VirtualNode Service Discovery.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ServiceDiscoveryConfig serviceDiscoveryConfig = ServiceDiscoveryConfig.builder()
+ * .cloudmap(AwsCloudMapServiceDiscoveryProperty.builder()
+ * .namespaceName("namespaceName")
+ * .serviceName("serviceName")
+ * // the properties below are optional
+ * .attributes(List.of(AwsCloudMapInstanceAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .ipPreference("ipPreference")
+ * .build())
+ * .dns(DnsServiceDiscoveryProperty.builder()
+ * .hostname("hostname")
+ * // the properties below are optional
+ * .ipPreference("ipPreference")
+ * .responseType("responseType")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceDiscoveryConfigDsl {
   private val cdkBuilder: ServiceDiscoveryConfig.Builder = ServiceDiscoveryConfig.builder()

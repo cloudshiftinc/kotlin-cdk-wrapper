@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation
 import software.constructs.Construct
 
+/**
+ * Specifies an association between a customer gateway, a device, and optionally, a link.
+ *
+ * If you specify a link, it must be associated with the specified device. The customer gateway must
+ * be connected to a VPN attachment on a transit gateway that's registered in your global network.
+ *
+ * You cannot associate a customer gateway with more than one device and link.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnCustomerGatewayAssociation cfnCustomerGatewayAssociation =
+ * CfnCustomerGatewayAssociation.Builder.create(this, "MyCfnCustomerGatewayAssociation")
+ * .customerGatewayArn("customerGatewayArn")
+ * .deviceId("deviceId")
+ * .globalNetworkId("globalNetworkId")
+ * // the properties below are optional
+ * .linkId("linkId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-customergatewayassociation.html)
+ */
 @CdkDslMarker
 public class CfnCustomerGatewayAssociationDsl(
   scope: Construct,

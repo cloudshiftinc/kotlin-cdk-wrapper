@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 
+/**
+ * Information needed to access an IAM role created as part of the bootstrap process.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * BootstrapRole bootstrapRole = BootstrapRole.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .requiresBootstrapStackVersion(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BootstrapRoleDsl {
   private val cdkBuilder: BootstrapRole.Builder = BootstrapRole.builder()

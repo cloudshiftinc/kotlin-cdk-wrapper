@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.events.targets.ContainerOverride
 import software.amazon.awscdk.services.events.targets.TaskEnvironmentVariable
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * ContainerOverride containerOverride = ContainerOverride.builder()
+ * .containerName("containerName")
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .cpu(123)
+ * .environment(List.of(TaskEnvironmentVariable.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .memoryLimit(123)
+ * .memoryReservation(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerOverrideDsl {
   private val cdkBuilder: ContainerOverride.Builder = ContainerOverride.builder()

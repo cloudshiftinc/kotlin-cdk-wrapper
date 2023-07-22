@@ -25,6 +25,24 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.IContainerDefinition
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModelProps
 
+/**
+ * Properties for creating an Amazon SageMaker model.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateModel.Builder.create(this, "Sagemaker")
+ * .modelName("MyModel")
+ * .primaryContainer(ContainerDefinition.Builder.create()
+ * .image(DockerImage.fromJsonExpression(JsonPath.stringAt("$.Model.imageName")))
+ * .mode(Mode.SINGLE_MODEL)
+ * .modelS3Location(S3Location.fromJsonExpression("$.TrainingJob.ModelArtifacts.S3ModelArtifacts"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerCreateModelPropsDsl {
   private val cdkBuilder: SageMakerCreateModelProps.Builder = SageMakerCreateModelProps.builder()

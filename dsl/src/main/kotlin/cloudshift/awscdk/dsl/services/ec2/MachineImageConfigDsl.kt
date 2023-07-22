@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.ec2.MachineImageConfig
 import software.amazon.awscdk.services.ec2.OperatingSystemType
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Configuration for a machine image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * MachineImageConfig machineImageConfig = MachineImageConfig.builder()
+ * .imageId("imageId")
+ * .osType(OperatingSystemType.LINUX)
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MachineImageConfigDsl {
   private val cdkBuilder: MachineImageConfig.Builder = MachineImageConfig.builder()

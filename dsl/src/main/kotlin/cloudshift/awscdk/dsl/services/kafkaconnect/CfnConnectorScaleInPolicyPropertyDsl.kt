@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kafkaconnect.CfnConnector
 
+/**
+ * The scale-in policy for the connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kafkaconnect.*;
+ * ScaleInPolicyProperty scaleInPolicyProperty = ScaleInPolicyProperty.builder()
+ * .cpuUtilizationPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kafkaconnect-connector-scaleinpolicy.html)
+ */
 @CdkDslMarker
 public class CfnConnectorScaleInPolicyPropertyDsl {
   private val cdkBuilder: CfnConnector.ScaleInPolicyProperty.Builder =

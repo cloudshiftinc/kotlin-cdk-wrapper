@@ -9,6 +9,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute
 import software.constructs.Construct
 
+/**
+ * Specifies a static route for a transit gateway route table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayRoute cfnTransitGatewayRoute = CfnTransitGatewayRoute.Builder.create(this,
+ * "MyCfnTransitGatewayRoute")
+ * .transitGatewayRouteTableId("transitGatewayRouteTableId")
+ * // the properties below are optional
+ * .blackhole(false)
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayRouteDsl(
   scope: Construct,

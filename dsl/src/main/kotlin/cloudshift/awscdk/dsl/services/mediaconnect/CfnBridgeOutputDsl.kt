@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput
 import software.constructs.Construct
 
+/**
+ * Adds outputs to an existing bridge.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnBridgeOutput cfnBridgeOutput = CfnBridgeOutput.Builder.create(this, "MyCfnBridgeOutput")
+ * .bridgeArn("bridgeArn")
+ * .name("name")
+ * .networkOutput(BridgeNetworkOutputProperty.builder()
+ * .ipAddress("ipAddress")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .ttl(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgeoutput.html)
+ */
 @CdkDslMarker
 public class CfnBridgeOutputDsl(
   scope: Construct,

@@ -12,6 +12,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplify.CfnDomain
 import software.constructs.Construct
 
+/**
+ * The AWS::Amplify::Domain resource allows you to connect a custom domain to your app.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+ * .appId("appId")
+ * .domainName("domainName")
+ * .subDomainSettings(List.of(SubDomainSettingProperty.builder()
+ * .branchName("branchName")
+ * .prefix("prefix")
+ * .build()))
+ * // the properties below are optional
+ * .autoSubDomainCreationPatterns(List.of("autoSubDomainCreationPatterns"))
+ * .autoSubDomainIamRole("autoSubDomainIamRole")
+ * .enableAutoSubDomain(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainDsl(
   scope: Construct,

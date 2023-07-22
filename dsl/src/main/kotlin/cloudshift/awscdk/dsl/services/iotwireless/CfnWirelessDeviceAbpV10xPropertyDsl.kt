@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDevice
 
+/**
+ * ABP device object for LoRaWAN specification v1.0.x.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * AbpV10xProperty abpV10xProperty = AbpV10xProperty.builder()
+ * .devAddr("devAddr")
+ * .sessionKeys(SessionKeysAbpV10xProperty.builder()
+ * .appSKey("appSKey")
+ * .nwkSKey("nwkSKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-abpv10x.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceAbpV10xPropertyDsl {
   private val cdkBuilder: CfnWirelessDevice.AbpV10xProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the Amazon S3 object key name to filter on and whether to filter on the suffix or
+ * prefix of the key name.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * FilterRuleProperty filterRuleProperty = FilterRuleProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-filterrule.html)
+ */
 @CdkDslMarker
 public class CfnBucketFilterRulePropertyDsl {
   private val cdkBuilder: CfnBucket.FilterRuleProperty.Builder =

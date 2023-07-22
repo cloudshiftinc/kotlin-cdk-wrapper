@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CfnHookTypeConfigProps
 
+/**
+ * Properties for defining a `CfnHookTypeConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnHookTypeConfigProps cfnHookTypeConfigProps = CfnHookTypeConfigProps.builder()
+ * .configuration("configuration")
+ * // the properties below are optional
+ * .configurationAlias("configurationAlias")
+ * .typeArn("typeArn")
+ * .typeName("typeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)
+ */
 @CdkDslMarker
 public class CfnHookTypeConfigPropsDsl {
   private val cdkBuilder: CfnHookTypeConfigProps.Builder = CfnHookTypeConfigProps.builder()

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.SNSActionConfig
 
+/**
+ * SNSAction configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * SNSActionConfig sNSActionConfig = SNSActionConfig.builder()
+ * .encoding("encoding")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SNSActionConfigDsl {
   private val cdkBuilder: SNSActionConfig.Builder = SNSActionConfig.builder()

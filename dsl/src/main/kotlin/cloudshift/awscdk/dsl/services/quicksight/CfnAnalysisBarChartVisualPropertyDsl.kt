@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A bar chart.
+ *
+ * The `BarChartVisual` structure describes a visual that is a member of the bar chart family. The
+ * following charts can be described using this structure:
+ *
+ * * Horizontal bar chart
+ * * Vertical bar chart
+ * * Horizontal stacked bar chart
+ * * Vertical stacked bar chart
+ * * Horizontal stacked 100% bar chart
+ * * Vertical stacked 100% bar chart
+ *
+ * For more information, see [Using bar
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/bar-charts.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-barchartvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisBarChartVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.BarChartVisualProperty.Builder =

@@ -27,6 +27,21 @@ import software.amazon.awscdk.services.eks.AutoScalingGroupCapacityOptions
 import software.amazon.awscdk.services.eks.BootstrapOptions
 import software.amazon.awscdk.services.eks.MachineImageType
 
+/**
+ * Options for adding worker nodes.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.addAutoScalingGroupCapacity("BottlerocketNodes",
+ * AutoScalingGroupCapacityOptions.builder()
+ * .instanceType(new InstanceType("t3.small"))
+ * .minCapacity(2)
+ * .machineImageType(MachineImageType.BOTTLEROCKET)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AutoScalingGroupCapacityOptionsDsl {
   private val cdkBuilder: AutoScalingGroupCapacityOptions.Builder =

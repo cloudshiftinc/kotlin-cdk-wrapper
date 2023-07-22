@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint
 import software.constructs.Construct
 
+/**
+ * The `AWS::S3::MultiRegionAccessPoint` resource creates an Amazon S3 Multi-Region Access Point.
+ *
+ * To learn more about Multi-Region Access Points, see [Multi-Region Access Points in Amazon
+ * S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/MultiRegionAccessPoints.html) in the in
+ * the *Amazon S3 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * CfnMultiRegionAccessPoint cfnMultiRegionAccessPoint =
+ * CfnMultiRegionAccessPoint.Builder.create(this, "MyCfnMultiRegionAccessPoint")
+ * .regions(List.of(RegionProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .build()))
+ * // the properties below are optional
+ * .name("name")
+ * .publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty.builder()
+ * .blockPublicAcls(false)
+ * .blockPublicPolicy(false)
+ * .ignorePublicAcls(false)
+ * .restrictPublicBuckets(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspoint.html)
+ */
 @CdkDslMarker
 public class CfnMultiRegionAccessPointDsl(
   scope: Construct,

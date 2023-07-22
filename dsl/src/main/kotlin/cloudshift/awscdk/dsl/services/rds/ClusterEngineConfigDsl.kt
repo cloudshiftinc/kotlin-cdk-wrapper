@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.rds.ClusterEngineConfig
 import software.amazon.awscdk.services.rds.ClusterEngineFeatures
 import software.amazon.awscdk.services.rds.IParameterGroup
 
+/**
+ * The type returned from the `IClusterEngine.bindToCluster` method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ParameterGroup parameterGroup;
+ * ClusterEngineConfig clusterEngineConfig = ClusterEngineConfig.builder()
+ * .features(ClusterEngineFeatures.builder()
+ * .s3Export("s3Export")
+ * .s3Import("s3Import")
+ * .build())
+ * .parameterGroup(parameterGroup)
+ * .port(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterEngineConfigDsl {
   private val cdkBuilder: ClusterEngineConfig.Builder = ClusterEngineConfig.builder()

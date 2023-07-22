@@ -9,6 +9,45 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Specifies a condition for a listener rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * RuleConditionProperty ruleConditionProperty = RuleConditionProperty.builder()
+ * .field("field")
+ * .hostHeaderConfig(HostHeaderConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build())
+ * .httpHeaderConfig(HttpHeaderConfigProperty.builder()
+ * .httpHeaderName("httpHeaderName")
+ * .values(List.of("values"))
+ * .build())
+ * .httpRequestMethodConfig(HttpRequestMethodConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build())
+ * .pathPatternConfig(PathPatternConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build())
+ * .queryStringConfig(QueryStringConfigProperty.builder()
+ * .values(List.of(QueryStringKeyValueProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sourceIpConfig(SourceIpConfigProperty.builder()
+ * .values(List.of("values"))
+ * .build())
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-rulecondition.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleRuleConditionPropertyDsl {
   private val cdkBuilder: CfnListenerRule.RuleConditionProperty.Builder =

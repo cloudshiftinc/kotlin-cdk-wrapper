@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.appmesh.Http2ConnectionPool
 
+/**
+ * Connection pool properties for HTTP2 listeners.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * Http2ConnectionPool http2ConnectionPool = Http2ConnectionPool.builder()
+ * .maxRequests(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class Http2ConnectionPoolDsl {
   private val cdkBuilder: Http2ConnectionPool.Builder = Http2ConnectionPool.builder()

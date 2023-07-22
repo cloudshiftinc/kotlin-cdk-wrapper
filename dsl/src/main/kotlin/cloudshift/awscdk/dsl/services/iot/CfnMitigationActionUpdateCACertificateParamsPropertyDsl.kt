@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 
+/**
+ * Parameters to define a mitigation action that changes the state of the CA certificate to
+ * inactive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * UpdateCACertificateParamsProperty updateCACertificateParamsProperty =
+ * UpdateCACertificateParamsProperty.builder()
+ * .action("action")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-updatecacertificateparams.html)
+ */
 @CdkDslMarker
 public class CfnMitigationActionUpdateCACertificateParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.UpdateCACertificateParamsProperty.Builder =

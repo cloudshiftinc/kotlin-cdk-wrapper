@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.eks.KubectlProviderAttributes
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Kubectl Provider Attributes.
+ *
+ * Example:
+ *
+ * ```
+ * IRole handlerRole = Role.fromRoleArn(this, "HandlerRole",
+ * "arn:aws:iam::123456789012:role/lambda-role");
+ * // get the serivceToken from the custom resource provider
+ * String functionArn = Function.fromFunctionName(this, "ProviderOnEventFunc",
+ * "ProviderframeworkonEvent-XXX").getFunctionArn();
+ * IKubectlProvider kubectlProvider = KubectlProvider.fromKubectlProviderAttributes(this,
+ * "KubectlProvider", KubectlProviderAttributes.builder()
+ * .functionArn(functionArn)
+ * .kubectlRoleArn("arn:aws:iam::123456789012:role/kubectl-role")
+ * .handlerRole(handlerRole)
+ * .build());
+ * ICluster cluster = Cluster.fromClusterAttributes(this, "Cluster", ClusterAttributes.builder()
+ * .clusterName("cluster")
+ * .kubectlProvider(kubectlProvider)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class KubectlProviderAttributesDsl {
   private val cdkBuilder: KubectlProviderAttributes.Builder = KubectlProviderAttributes.builder()

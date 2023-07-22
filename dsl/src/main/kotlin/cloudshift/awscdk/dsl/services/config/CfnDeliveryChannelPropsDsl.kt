@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnDeliveryChannel
 import software.amazon.awscdk.services.config.CfnDeliveryChannelProps
 
+/**
+ * Properties for defining a `CfnDeliveryChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnDeliveryChannelProps cfnDeliveryChannelProps = CfnDeliveryChannelProps.builder()
+ * .s3BucketName("s3BucketName")
+ * // the properties below are optional
+ * .configSnapshotDeliveryProperties(ConfigSnapshotDeliveryPropertiesProperty.builder()
+ * .deliveryFrequency("deliveryFrequency")
+ * .build())
+ * .name("name")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .s3KmsKeyArn("s3KmsKeyArn")
+ * .snsTopicArn("snsTopicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryChannelPropsDsl {
   private val cdkBuilder: CfnDeliveryChannelProps.Builder = CfnDeliveryChannelProps.builder()

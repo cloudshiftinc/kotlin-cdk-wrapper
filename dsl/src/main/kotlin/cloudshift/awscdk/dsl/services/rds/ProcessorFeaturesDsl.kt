@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.rds.ProcessorFeatures
 
+/**
+ * The processor features.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ProcessorFeatures processorFeatures = ProcessorFeatures.builder()
+ * .coreCount(123)
+ * .threadsPerCore(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProcessorFeaturesDsl {
   private val cdkBuilder: ProcessorFeatures.Builder = ProcessorFeatures.builder()

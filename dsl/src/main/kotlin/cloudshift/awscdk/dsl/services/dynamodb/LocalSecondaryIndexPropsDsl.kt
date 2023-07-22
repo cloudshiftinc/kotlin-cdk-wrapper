@@ -11,6 +11,27 @@ import software.amazon.awscdk.services.dynamodb.Attribute
 import software.amazon.awscdk.services.dynamodb.LocalSecondaryIndexProps
 import software.amazon.awscdk.services.dynamodb.ProjectionType
 
+/**
+ * Properties for a local secondary index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * LocalSecondaryIndexProps localSecondaryIndexProps = LocalSecondaryIndexProps.builder()
+ * .indexName("indexName")
+ * .sortKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * // the properties below are optional
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType(ProjectionType.KEYS_ONLY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LocalSecondaryIndexPropsDsl {
   private val cdkBuilder: LocalSecondaryIndexProps.Builder = LocalSecondaryIndexProps.builder()

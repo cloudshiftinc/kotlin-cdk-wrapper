@@ -10,6 +10,45 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to send data from an MQTT message that triggered the rule to AWS IoT SiteWise
+ * asset properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * IotSiteWiseActionProperty iotSiteWiseActionProperty = IotSiteWiseActionProperty.builder()
+ * .putAssetPropertyValueEntries(List.of(PutAssetPropertyValueEntryProperty.builder()
+ * .propertyValues(List.of(AssetPropertyValueProperty.builder()
+ * .timestamp(AssetPropertyTimestampProperty.builder()
+ * .timeInSeconds("timeInSeconds")
+ * // the properties below are optional
+ * .offsetInNanos("offsetInNanos")
+ * .build())
+ * .value(AssetPropertyVariantProperty.builder()
+ * .booleanValue("booleanValue")
+ * .doubleValue("doubleValue")
+ * .integerValue("integerValue")
+ * .stringValue("stringValue")
+ * .build())
+ * // the properties below are optional
+ * .quality("quality")
+ * .build()))
+ * // the properties below are optional
+ * .assetId("assetId")
+ * .entryId("entryId")
+ * .propertyAlias("propertyAlias")
+ * .propertyId("propertyId")
+ * .build()))
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-iotsitewiseaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleIotSiteWiseActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.IotSiteWiseActionProperty.Builder =

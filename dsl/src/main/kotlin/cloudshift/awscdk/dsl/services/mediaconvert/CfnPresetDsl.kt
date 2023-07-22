@@ -10,6 +10,39 @@ import kotlin.Unit
 import software.amazon.awscdk.services.mediaconvert.CfnPreset
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConvert::Preset resource is an AWS Elemental MediaConvert resource type that you
+ * can use to specify encoding settings for a single output in a transcoding job.
+ *
+ * When you declare this entity in your AWS CloudFormation template, you pass in your transcoding
+ * job settings in JSON or YAML format. This settings specification must be formed in a particular way
+ * that conforms to AWS Elemental MediaConvert job validation. For more information about creating an
+ * output preset model for the `SettingsJson` property, see the Remarks section later in this topic.
+ *
+ * For more information about output MediaConvert presets, see [Working with AWS Elemental
+ * MediaConvert Output
+ * Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the ** .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object settingsJson;
+ * Object tags;
+ * CfnPreset cfnPreset = CfnPreset.Builder.create(this, "MyCfnPreset")
+ * .settingsJson(settingsJson)
+ * // the properties below are optional
+ * .category("category")
+ * .description("description")
+ * .name("name")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html)
+ */
 @CdkDslMarker
 public class CfnPresetDsl(
   scope: Construct,

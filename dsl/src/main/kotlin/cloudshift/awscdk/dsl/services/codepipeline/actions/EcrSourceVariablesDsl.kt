@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.EcrSourceVariables
 
+/**
+ * The CodePipeline variables emitted by the ECR source Action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * EcrSourceVariables ecrSourceVariables = EcrSourceVariables.builder()
+ * .imageDigest("imageDigest")
+ * .imageTag("imageTag")
+ * .imageUri("imageUri")
+ * .registryId("registryId")
+ * .repositoryName("repositoryName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcrSourceVariablesDsl {
   private val cdkBuilder: EcrSourceVariables.Builder = EcrSourceVariables.builder()

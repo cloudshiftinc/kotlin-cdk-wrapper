@@ -6,6 +6,52 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The side border options for a table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TableSideBorderOptionsProperty tableSideBorderOptionsProperty =
+ * TableSideBorderOptionsProperty.builder()
+ * .bottom(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .innerHorizontal(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .innerVertical(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .left(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .right(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .top(TableBorderOptionsProperty.builder()
+ * .color("color")
+ * .style("style")
+ * .thickness(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-tablesideborderoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTableSideBorderOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.TableSideBorderOptionsProperty.Builder =

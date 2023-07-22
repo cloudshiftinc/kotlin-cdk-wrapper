@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of a `GeospatialMapVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-geospatialmapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisGeospatialMapConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialMapConfigurationProperty.Builder =

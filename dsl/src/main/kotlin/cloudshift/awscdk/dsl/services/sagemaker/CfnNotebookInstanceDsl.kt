@@ -14,6 +14,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstance
 import software.constructs.Construct
 
+/**
+ * The `AWS::SageMaker::NotebookInstance` resource creates an Amazon SageMaker notebook instance.
+ *
+ * A notebook instance is a machine learning (ML) compute instance running on a Jupyter notebook.
+ * For more information, see [Use Notebook
+ * Instances](https://docs.aws.amazon.com/sagemaker/latest/dg/nbi.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnNotebookInstance cfnNotebookInstance = CfnNotebookInstance.Builder.create(this,
+ * "MyCfnNotebookInstance")
+ * .instanceType("instanceType")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .additionalCodeRepositories(List.of("additionalCodeRepositories"))
+ * .defaultCodeRepository("defaultCodeRepository")
+ * .directInternetAccess("directInternetAccess")
+ * .instanceMetadataServiceConfiguration(InstanceMetadataServiceConfigurationProperty.builder()
+ * .minimumInstanceMetadataServiceVersion("minimumInstanceMetadataServiceVersion")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .lifecycleConfigName("lifecycleConfigName")
+ * .notebookInstanceName("notebookInstanceName")
+ * .platformIdentifier("platformIdentifier")
+ * .rootAccess("rootAccess")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetId("subnetId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .volumeSizeInGb(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstance.html)
+ */
 @CdkDslMarker
 public class CfnNotebookInstanceDsl(
   scope: Construct,

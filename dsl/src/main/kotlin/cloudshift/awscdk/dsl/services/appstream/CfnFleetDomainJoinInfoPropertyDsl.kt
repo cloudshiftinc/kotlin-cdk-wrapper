@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnFleet
 
+/**
+ * The name of the directory and organizational unit (OU) to use to join a fleet to a Microsoft
+ * Active Directory domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * DomainJoinInfoProperty domainJoinInfoProperty = DomainJoinInfoProperty.builder()
+ * .directoryName("directoryName")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-fleet-domainjoininfo.html)
+ */
 @CdkDslMarker
 public class CfnFleetDomainJoinInfoPropertyDsl {
   private val cdkBuilder: CfnFleet.DomainJoinInfoProperty.Builder =

@@ -9,6 +9,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * The `EC2TagSet` property type specifies information about groups of tags applied to Amazon EC2
+ * instances.
+ *
+ * The deployment group includes only Amazon EC2 instances identified by all the tag groups.
+ * `EC2TagSet` cannot be used in the same template as `EC2TagFilter` .
+ *
+ * For information about using tags and tag groups to help manage your Amazon EC2 instances and
+ * on-premises instances, see [Tagging Instances for Deployment Groups in AWS
+ * CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/instances-tagging.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * EC2TagSetProperty eC2TagSetProperty = EC2TagSetProperty.builder()
+ * .ec2TagSetList(List.of(EC2TagSetListObjectProperty.builder()
+ * .ec2TagGroup(List.of(EC2TagFilterProperty.builder()
+ * .key("key")
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupEC2TagSetPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.EC2TagSetProperty.Builder =

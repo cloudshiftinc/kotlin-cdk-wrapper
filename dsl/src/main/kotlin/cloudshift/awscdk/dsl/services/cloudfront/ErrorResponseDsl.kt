@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudfront.ErrorResponse
 
+/**
+ * Options for configuring custom error responses.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * ErrorResponse errorResponse = ErrorResponse.builder()
+ * .httpStatus(123)
+ * // the properties below are optional
+ * .responseHttpStatus(123)
+ * .responsePagePath("responsePagePath")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ErrorResponseDsl {
   private val cdkBuilder: ErrorResponse.Builder = ErrorResponse.builder()

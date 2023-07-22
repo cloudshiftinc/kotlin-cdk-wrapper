@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 
+/**
+ * Contains information about the quick connect configuration settings for a user.
+ *
+ * The contact flow must be of type Transfer to Agent.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * UserQuickConnectConfigProperty userQuickConnectConfigProperty =
+ * UserQuickConnectConfigProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .userArn("userArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-quickconnect-userquickconnectconfig.html)
+ */
 @CdkDslMarker
 public class CfnQuickConnectUserQuickConnectConfigPropertyDsl {
   private val cdkBuilder: CfnQuickConnect.UserQuickConnectConfigProperty.Builder =

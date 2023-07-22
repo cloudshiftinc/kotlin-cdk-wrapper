@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.ProxyResource
 import software.constructs.Construct
 
+/**
+ * Defines a {proxy+} greedy resource and an ANY method on a route.
+ *
+ * Example:
+ *
+ * ```
+ * Resource resource;
+ * Function handler;
+ * ProxyResource proxy = resource.addProxy(ProxyResourceOptions.builder()
+ * .defaultIntegration(new LambdaIntegration(handler))
+ * // "false" will require explicitly adding methods on the `proxy` resource
+ * .anyMethod(true)
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-set-up-simple-proxy.html)
+ */
 @CdkDslMarker
 public class ProxyResourceDsl(
   scope: Construct,

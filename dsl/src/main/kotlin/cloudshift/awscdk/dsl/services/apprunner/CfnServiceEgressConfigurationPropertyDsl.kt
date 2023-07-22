@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes configuration settings related to outbound network traffic of an AWS App Runner
+ * service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * EgressConfigurationProperty egressConfigurationProperty = EgressConfigurationProperty.builder()
+ * .egressType("egressType")
+ * // the properties below are optional
+ * .vpcConnectorArn("vpcConnectorArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-egressconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceEgressConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.EgressConfigurationProperty.Builder =

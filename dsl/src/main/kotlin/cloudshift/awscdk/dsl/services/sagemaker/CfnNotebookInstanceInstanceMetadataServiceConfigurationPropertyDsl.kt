@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstance
 
+/**
+ * Information on the IMDS configuration of the notebook instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * InstanceMetadataServiceConfigurationProperty instanceMetadataServiceConfigurationProperty =
+ * InstanceMetadataServiceConfigurationProperty.builder()
+ * .minimumInstanceMetadataServiceVersion("minimumInstanceMetadataServiceVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstance-instancemetadataserviceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnNotebookInstanceInstanceMetadataServiceConfigurationPropertyDsl {
   private val cdkBuilder: CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty.Builder =

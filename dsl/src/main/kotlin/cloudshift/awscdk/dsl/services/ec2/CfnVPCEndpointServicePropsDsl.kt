@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointServiceProps
 
+/**
+ * Properties for defining a `CfnVPCEndpointService`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointServiceProps cfnVPCEndpointServiceProps = CfnVPCEndpointServiceProps.builder()
+ * .acceptanceRequired(false)
+ * .contributorInsightsEnabled(false)
+ * .gatewayLoadBalancerArns(List.of("gatewayLoadBalancerArns"))
+ * .networkLoadBalancerArns(List.of("networkLoadBalancerArns"))
+ * .payerResponsibility("payerResponsibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointServicePropsDsl {
   private val cdkBuilder: CfnVPCEndpointServiceProps.Builder = CfnVPCEndpointServiceProps.builder()

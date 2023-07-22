@@ -12,6 +12,19 @@ import software.amazon.awscdk.services.ses.Identity
 import software.amazon.awscdk.services.ses.MailFromBehaviorOnMxFailure
 import software.constructs.Construct
 
+/**
+ * An email identity.
+ *
+ * Example:
+ *
+ * ```
+ * IPublicHostedZone myHostedZone;
+ * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
+ * .identity(Identity.publicHostedZone(myHostedZone))
+ * .mailFromDomain("mail.cdk.dev")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmailIdentityDsl(
   scope: Construct,

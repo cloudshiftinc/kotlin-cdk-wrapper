@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * The launch template that the fast-launch enabled Windows AMI uses when it launches Windows
+ * instances to create pre-provisioned snapshots.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * FastLaunchLaunchTemplateSpecificationProperty fastLaunchLaunchTemplateSpecificationProperty =
+ * FastLaunchLaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .launchTemplateVersion("launchTemplateVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-fastlaunchlaunchtemplatespecification.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationFastLaunchLaunchTemplateSpecificationPropertyDsl {
   private val cdkBuilder:

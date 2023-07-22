@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * Determines whether CloudFront includes the `X-XSS-Protection` HTTP response header and the
+ * header's value.
+ *
+ * For more information about the `X-XSS-Protection` HTTP response header, see
+ * [X-XSS-Protection](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+ * in the MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * XSSProtectionProperty xSSProtectionProperty = XSSProtectionProperty.builder()
+ * .override(false)
+ * .protection(false)
+ * // the properties below are optional
+ * .modeBlock(false)
+ * .reportUri("reportUri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-xssprotection.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyXSSProtectionPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.XSSProtectionProperty.Builder =

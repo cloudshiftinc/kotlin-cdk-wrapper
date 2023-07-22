@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnUserProps
 
+/**
+ * Properties for defining a `CfnUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * Object authenticationMode;
+ * CfnUserProps cfnUserProps = CfnUserProps.builder()
+ * .userName("userName")
+ * // the properties below are optional
+ * .accessString("accessString")
+ * .authenticationMode(authenticationMode)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html)
+ */
 @CdkDslMarker
 public class CfnUserPropsDsl {
   private val cdkBuilder: CfnUserProps.Builder = CfnUserProps.builder()

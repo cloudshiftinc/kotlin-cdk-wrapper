@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * The authorization method used to send messages.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * HttpAuthorizationProperty httpAuthorizationProperty = HttpAuthorizationProperty.builder()
+ * .sigv4(SigV4AuthorizationProperty.builder()
+ * .roleArn("roleArn")
+ * .serviceName("serviceName")
+ * .signingRegion("signingRegion")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpauthorization.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleHttpAuthorizationPropertyDsl {
   private val cdkBuilder: CfnTopicRule.HttpAuthorizationProperty.Builder =

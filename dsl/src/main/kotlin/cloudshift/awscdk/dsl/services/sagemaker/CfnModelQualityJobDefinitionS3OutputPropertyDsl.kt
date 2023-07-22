@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
 
+/**
+ * The Amazon S3 storage location where the results of a monitoring job are saved.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * S3OutputProperty s3OutputProperty = S3OutputProperty.builder()
+ * .localPath("localPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .s3UploadMode("s3UploadMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-s3output.html)
+ */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionS3OutputPropertyDsl {
   private val cdkBuilder: CfnModelQualityJobDefinition.S3OutputProperty.Builder =

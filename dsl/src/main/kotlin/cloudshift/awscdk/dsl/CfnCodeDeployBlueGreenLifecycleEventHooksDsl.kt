@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks
 
+/**
+ * Lifecycle events for blue-green deployments.
+ *
+ * The type of the `CfnCodeDeployBlueGreenHookProps.lifecycleEventHooks` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnCodeDeployBlueGreenLifecycleEventHooks cfnCodeDeployBlueGreenLifecycleEventHooks =
+ * CfnCodeDeployBlueGreenLifecycleEventHooks.builder()
+ * .afterAllowTestTraffic("afterAllowTestTraffic")
+ * .afterAllowTraffic("afterAllowTraffic")
+ * .afterInstall("afterInstall")
+ * .beforeAllowTraffic("beforeAllowTraffic")
+ * .beforeInstall("beforeInstall")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenLifecycleEventHooksDsl {
   private val cdkBuilder: CfnCodeDeployBlueGreenLifecycleEventHooks.Builder =

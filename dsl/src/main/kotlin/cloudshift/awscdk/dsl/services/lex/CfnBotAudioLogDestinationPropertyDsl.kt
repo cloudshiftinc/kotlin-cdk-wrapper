@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * The location of audio log files collected when conversation logging is enabled for a bot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * AudioLogDestinationProperty audioLogDestinationProperty = AudioLogDestinationProperty.builder()
+ * .s3Bucket(S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-audiologdestination.html)
+ */
 @CdkDslMarker
 public class CfnBotAudioLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBot.AudioLogDestinationProperty.Builder =

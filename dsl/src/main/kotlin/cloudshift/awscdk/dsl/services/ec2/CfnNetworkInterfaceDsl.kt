@@ -16,6 +16,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInterface
 import software.constructs.Construct
 
+/**
+ * Describes a network interface in an Amazon EC2 instance for AWS CloudFormation .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInterface cfnNetworkInterface = CfnNetworkInterface.Builder.create(this,
+ * "MyCfnNetworkInterface")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .description("description")
+ * .enablePrimaryIpv6(false)
+ * .groupSet(List.of("groupSet"))
+ * .interfaceType("interfaceType")
+ * .ipv6AddressCount(123)
+ * .ipv6Addresses(List.of(InstanceIpv6AddressProperty.builder()
+ * .ipv6Address("ipv6Address")
+ * .build()))
+ * .privateIpAddress("privateIpAddress")
+ * .privateIpAddresses(List.of(PrivateIpAddressSpecificationProperty.builder()
+ * .primary(false)
+ * .privateIpAddress("privateIpAddress")
+ * .build()))
+ * .secondaryPrivateIpAddressCount(123)
+ * .sourceDestCheck(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInterfaceDsl(
   scope: Construct,

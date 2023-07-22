@@ -7,6 +7,53 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * A scale-in or scale-out rule that defines scaling activity, including the CloudWatch metric alarm
+ * that triggers activity, how EC2 instances are added or removed, and the periodicity of adjustments.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ScalingRuleProperty scalingRuleProperty = ScalingRuleProperty.builder()
+ * .action(ScalingActionProperty.builder()
+ * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType(EmrCreateCluster.getScalingAdjustmentType().CHANGE_IN_CAPACITY)
+ * .coolDown(123)
+ * .build())
+ * // the properties below are optional
+ * .market(EmrCreateCluster.getInstanceMarket().ON_DEMAND)
+ * .build())
+ * .name("name")
+ * .trigger(ScalingTriggerProperty.builder()
+ * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+ * .comparisonOperator(EmrCreateCluster.getCloudWatchAlarmComparisonOperator().GREATER_THAN_OR_EQUAL)
+ * .metricName("metricName")
+ * .period(Duration.minutes(30))
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .evaluationPeriods(123)
+ * .namespace("namespace")
+ * .statistic(EmrCreateCluster.getCloudWatchAlarmStatistic().SAMPLE_COUNT)
+ * .threshold(123)
+ * .unit(EmrCreateCluster.getCloudWatchAlarmUnit().NONE)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_ScalingRule.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterScalingRulePropertyDsl {
   private val cdkBuilder: EmrCreateCluster.ScalingRuleProperty.Builder =

@@ -14,6 +14,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnParameterGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a new MemoryDB parameter group.
+ *
+ * A parameter group is a collection of parameters and their values that are applied to all of the
+ * nodes in any cluster . For more information, see [Configuring engine parameters using parameter
+ * groups](https://docs.aws.amazon.com/memorydb/latest/devguide/parametergroups.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * Object parameters;
+ * CfnParameterGroup cfnParameterGroup = CfnParameterGroup.Builder.create(this,
+ * "MyCfnParameterGroup")
+ * .family("family")
+ * .parameterGroupName("parameterGroupName")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(parameters)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-parametergroup.html)
+ */
 @CdkDslMarker
 public class CfnParameterGroupDsl(
   scope: Construct,

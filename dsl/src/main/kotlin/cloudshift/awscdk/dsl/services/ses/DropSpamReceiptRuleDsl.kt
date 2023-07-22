@@ -14,6 +14,34 @@ import software.amazon.awscdk.services.ses.IReceiptRuleSet
 import software.amazon.awscdk.services.ses.TlsPolicy
 import software.constructs.Construct
 
+/**
+ * A rule added at the top of the rule set to drop spam/virus.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ReceiptRule receiptRule;
+ * IReceiptRuleAction receiptRuleAction;
+ * ReceiptRuleSet receiptRuleSet;
+ * DropSpamReceiptRule dropSpamReceiptRule = DropSpamReceiptRule.Builder.create(this,
+ * "MyDropSpamReceiptRule")
+ * .ruleSet(receiptRuleSet)
+ * // the properties below are optional
+ * .actions(List.of(receiptRuleAction))
+ * .after(receiptRule)
+ * .enabled(false)
+ * .receiptRuleName("receiptRuleName")
+ * .recipients(List.of("recipients"))
+ * .scanEnabled(false)
+ * .tlsPolicy(TlsPolicy.OPTIONAL)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/receiving-email-action-lambda-example-functions.html)
+ */
 @CdkDslMarker
 public class DropSpamReceiptRuleDsl(
   scope: Construct,

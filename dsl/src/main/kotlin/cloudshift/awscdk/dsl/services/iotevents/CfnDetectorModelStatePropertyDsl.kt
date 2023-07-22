@@ -7,6 +7,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnDetectorModel
 
+/**
+ * Information that defines a state of a detector.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-detectormodel-state.html)
+ */
 @CdkDslMarker
 public class CfnDetectorModelStatePropertyDsl {
   private val cdkBuilder: CfnDetectorModel.StateProperty.Builder =

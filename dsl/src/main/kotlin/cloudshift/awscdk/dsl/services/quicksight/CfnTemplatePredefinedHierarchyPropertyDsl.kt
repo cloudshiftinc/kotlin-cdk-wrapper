@@ -10,6 +10,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The option that determines the hierarchy of the fields that are defined during data preparation.
+ *
+ * These fields are available to use in any analysis that uses the data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PredefinedHierarchyProperty predefinedHierarchyProperty = PredefinedHierarchyProperty.builder()
+ * .columns(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .hierarchyId("hierarchyId")
+ * // the properties below are optional
+ * .drillDownFilters(List.of(DrillDownFilterProperty.builder()
+ * .categoryFilter(CategoryDrillDownFilterProperty.builder()
+ * .categoryValues(List.of("categoryValues"))
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .numericEqualityFilter(NumericEqualityDrillDownFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .value(123)
+ * .build())
+ * .timeRangeFilter(TimeRangeDrillDownFilterProperty.builder()
+ * .column(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .rangeMaximum("rangeMaximum")
+ * .rangeMinimum("rangeMinimum")
+ * .timeGranularity("timeGranularity")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-predefinedhierarchy.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePredefinedHierarchyPropertyDsl {
   private val cdkBuilder: CfnTemplate.PredefinedHierarchyProperty.Builder =

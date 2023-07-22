@@ -9,6 +9,46 @@ import software.amazon.awscdk.AssetHashType
 import software.amazon.awscdk.AssetOptions
 import software.amazon.awscdk.BundlingOptions
 
+/**
+ * Asset hash options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerImage dockerImage;
+ * ILocalBundling localBundling;
+ * AssetOptions assetOptions = AssetOptions.builder()
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetOptionsDsl {
   private val cdkBuilder: AssetOptions.Builder = AssetOptions.builder()

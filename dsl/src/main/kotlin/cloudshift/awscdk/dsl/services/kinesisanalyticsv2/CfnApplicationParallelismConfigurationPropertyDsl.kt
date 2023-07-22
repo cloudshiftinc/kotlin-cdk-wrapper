@@ -9,6 +9,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Describes parameters for how a Flink-based Kinesis Data Analytics application executes multiple
+ * tasks simultaneously.
+ *
+ * For more information about parallelism, see [Parallel
+ * Execution](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/dev/parallel.html)
+ * in the [Apache Flink
+ * Documentation](https://docs.aws.amazon.com/https://ci.apache.org/projects/flink/flink-docs-release-1.8/)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * ParallelismConfigurationProperty parallelismConfigurationProperty =
+ * ParallelismConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .autoScalingEnabled(false)
+ * .parallelism(123)
+ * .parallelismPerKpu(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-parallelismconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationParallelismConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.ParallelismConfigurationProperty.Builder =

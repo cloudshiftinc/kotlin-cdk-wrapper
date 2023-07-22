@@ -7,6 +7,34 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the audio and DTMF input specification.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * AudioAndDTMFInputSpecificationProperty audioAndDTMFInputSpecificationProperty =
+ * AudioAndDTMFInputSpecificationProperty.builder()
+ * .startTimeoutMs(123)
+ * // the properties below are optional
+ * .audioSpecification(AudioSpecificationProperty.builder()
+ * .endTimeoutMs(123)
+ * .maxLengthMs(123)
+ * .build())
+ * .dtmfSpecification(DTMFSpecificationProperty.builder()
+ * .deletionCharacter("deletionCharacter")
+ * .endCharacter("endCharacter")
+ * .endTimeoutMs(123)
+ * .maxLength(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-audioanddtmfinputspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotAudioAndDTMFInputSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.AudioAndDTMFInputSpecificationProperty.Builder =

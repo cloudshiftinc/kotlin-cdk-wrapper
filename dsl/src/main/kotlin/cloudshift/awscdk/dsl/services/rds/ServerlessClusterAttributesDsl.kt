@@ -11,6 +11,30 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.rds.ServerlessClusterAttributes
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Properties that describe an existing cluster instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * SecurityGroup securityGroup;
+ * ServerlessClusterAttributes serverlessClusterAttributes = ServerlessClusterAttributes.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * // the properties below are optional
+ * .clusterEndpointAddress("clusterEndpointAddress")
+ * .port(123)
+ * .readerEndpointAddress("readerEndpointAddress")
+ * .secret(secret)
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerlessClusterAttributesDsl {
   private val cdkBuilder: ServerlessClusterAttributes.Builder =

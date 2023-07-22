@@ -11,6 +11,35 @@ import software.amazon.awscdk.services.lambda.IDestination
 import software.amazon.awscdk.services.lambda.IFunction
 import software.constructs.Construct
 
+/**
+ * Configure options for asynchronous invocation on a version or an alias.
+ *
+ * By default, Lambda retries an asynchronous invocation twice if the function
+ * returns an error. It retains events in a queue for up to six hours. When an
+ * event fails all processing attempts or stays in the asynchronous invocation
+ * queue for too long, Lambda discards it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * IDestination destination;
+ * Function function_;
+ * EventInvokeConfig eventInvokeConfig = EventInvokeConfig.Builder.create(this,
+ * "MyEventInvokeConfig")
+ * .function(function_)
+ * // the properties below are optional
+ * .maxEventAge(Duration.minutes(30))
+ * .onFailure(destination)
+ * .onSuccess(destination)
+ * .qualifier("qualifier")
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventInvokeConfigDsl(
   scope: Construct,

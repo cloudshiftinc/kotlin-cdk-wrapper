@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnCodeSigningConfig
 import software.constructs.Construct
 
+/**
+ * Details about a [Code signing
+ * configuration](https://docs.aws.amazon.com/lambda/latest/dg/configuration-codesigning.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnCodeSigningConfig cfnCodeSigningConfig = CfnCodeSigningConfig.Builder.create(this,
+ * "MyCfnCodeSigningConfig")
+ * .allowedPublishers(AllowedPublishersProperty.builder()
+ * .signingProfileVersionArns(List.of("signingProfileVersionArns"))
+ * .build())
+ * // the properties below are optional
+ * .codeSigningPolicies(CodeSigningPoliciesProperty.builder()
+ * .untrustedArtifactOnDeployment("untrustedArtifactOnDeployment")
+ * .build())
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html)
+ */
 @CdkDslMarker
 public class CfnCodeSigningConfigDsl(
   scope: Construct,

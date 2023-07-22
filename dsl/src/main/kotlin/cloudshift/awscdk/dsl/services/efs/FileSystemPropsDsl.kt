@@ -21,6 +21,29 @@ import software.amazon.awscdk.services.efs.ThroughputMode
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties of EFS FileSystem.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.iam.*;
+ * PolicyDocument myFileSystemPolicy = PolicyDocument.Builder.create()
+ * .statements(List.of(PolicyStatement.Builder.create()
+ * .actions(List.of("elasticfilesystem:ClientWrite", "elasticfilesystem:ClientMount"))
+ * .principals(List.of(new AccountRootPrincipal()))
+ * .resources(List.of("*"))
+ * .conditions(Map.of(
+ * "Bool", Map.of(
+ * "elasticfilesystem:AccessedViaMountTarget", "true")))
+ * .build()))
+ * .build();
+ * FileSystem fileSystem = FileSystem.Builder.create(this, "MyEfsFileSystem")
+ * .vpc(new Vpc(this, "VPC"))
+ * .fileSystemPolicy(myFileSystemPolicy)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FileSystemPropsDsl {
   private val cdkBuilder: FileSystemProps.Builder = FileSystemProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.applicationautoscaling.AdjustmentTier
 
+/**
+ * An adjustment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * AdjustmentTier adjustmentTier = AdjustmentTier.builder()
+ * .adjustment(123)
+ * // the properties below are optional
+ * .lowerBound(123)
+ * .upperBound(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AdjustmentTierDsl {
   private val cdkBuilder: AdjustmentTier.Builder = AdjustmentTier.builder()

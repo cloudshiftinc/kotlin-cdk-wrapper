@@ -9,6 +9,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ClarifyInferenceConfigProperty clarifyInferenceConfigProperty =
+ * ClarifyInferenceConfigProperty.builder()
+ * .contentTemplate("contentTemplate")
+ * .featureHeaders(List.of("featureHeaders"))
+ * .featuresAttribute("featuresAttribute")
+ * .featureTypes(List.of("featureTypes"))
+ * .labelAttribute("labelAttribute")
+ * .labelHeaders(List.of("labelHeaders"))
+ * .labelIndex(123)
+ * .maxPayloadInMb(123)
+ * .maxRecordCount(123)
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityIndex(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyinferenceconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigClarifyInferenceConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyInferenceConfigProperty.Builder =

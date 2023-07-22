@@ -13,6 +13,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnApp
 import software.amazon.awscdk.services.opsworks.CfnAppProps
 
+/**
+ * Properties for defining a `CfnApp`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * CfnAppProps cfnAppProps = CfnAppProps.builder()
+ * .name("name")
+ * .stackId("stackId")
+ * .type("type")
+ * // the properties below are optional
+ * .appSource(SourceProperty.builder()
+ * .password("password")
+ * .revision("revision")
+ * .sshKey("sshKey")
+ * .type("type")
+ * .url("url")
+ * .username("username")
+ * .build())
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .dataSources(List.of(DataSourceProperty.builder()
+ * .arn("arn")
+ * .databaseName("databaseName")
+ * .type("type")
+ * .build()))
+ * .description("description")
+ * .domains(List.of("domains"))
+ * .enableSsl(false)
+ * .environment(List.of(EnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .secure(false)
+ * .build()))
+ * .shortname("shortname")
+ * .sslConfiguration(SslConfigurationProperty.builder()
+ * .certificate("certificate")
+ * .chain("chain")
+ * .privateKey("privateKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-app.html)
+ */
 @CdkDslMarker
 public class CfnAppPropsDsl {
   private val cdkBuilder: CfnAppProps.Builder = CfnAppProps.builder()

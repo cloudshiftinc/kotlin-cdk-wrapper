@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnLifecycleHookProps
 
+/**
+ * Properties for defining a `CfnLifecycleHook`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnLifecycleHookProps cfnLifecycleHookProps = CfnLifecycleHookProps.builder()
+ * .autoScalingGroupName("autoScalingGroupName")
+ * .lifecycleTransition("lifecycleTransition")
+ * // the properties below are optional
+ * .defaultResult("defaultResult")
+ * .heartbeatTimeout(123)
+ * .lifecycleHookName("lifecycleHookName")
+ * .notificationMetadata("notificationMetadata")
+ * .notificationTargetArn("notificationTargetArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-lifecyclehook.html)
+ */
 @CdkDslMarker
 public class CfnLifecycleHookPropsDsl {
   private val cdkBuilder: CfnLifecycleHookProps.Builder = CfnLifecycleHookProps.builder()

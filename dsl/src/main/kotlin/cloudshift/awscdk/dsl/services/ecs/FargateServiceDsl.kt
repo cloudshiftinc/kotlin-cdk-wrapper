@@ -26,6 +26,37 @@ import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.TaskDefinition
 import software.constructs.Construct
 
+/**
+ * This creates a service using the Fargate launch type on an ECS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Alarm elbAlarm;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .deploymentAlarms(DeploymentAlarmConfig.builder()
+ * .alarmNames(List.of(elbAlarm.getAlarmName()))
+ * .behavior(AlarmBehavior.ROLLBACK_ON_ALARM)
+ * .build())
+ * .build();
+ * // Defining a deployment alarm after the service has been created
+ * String cpuAlarmName = "MyCpuMetricAlarm";
+ * Alarm.Builder.create(this, "CPUAlarm")
+ * .alarmName(cpuAlarmName)
+ * .metric(service.metricCpuUtilization())
+ * .evaluationPeriods(2)
+ * .threshold(80)
+ * .build();
+ * service.enableDeploymentAlarms(List.of(cpuAlarmName), DeploymentAlarmOptions.builder()
+ * .behavior(AlarmBehavior.FAIL_ON_ALARM)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FargateServiceDsl(
   scope: Construct,

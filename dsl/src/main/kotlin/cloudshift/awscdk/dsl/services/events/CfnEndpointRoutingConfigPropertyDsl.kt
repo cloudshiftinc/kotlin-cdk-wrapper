@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnEndpoint
 
+/**
+ * The routing configuration of the endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * RoutingConfigProperty routingConfigProperty = RoutingConfigProperty.builder()
+ * .failoverConfig(FailoverConfigProperty.builder()
+ * .primary(PrimaryProperty.builder()
+ * .healthCheck("healthCheck")
+ * .build())
+ * .secondary(SecondaryProperty.builder()
+ * .route("route")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-endpoint-routingconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnEndpoint.RoutingConfigProperty.Builder =

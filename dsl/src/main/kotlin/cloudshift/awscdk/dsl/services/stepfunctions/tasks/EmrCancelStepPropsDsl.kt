@@ -16,6 +16,18 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCancelStepProps
 
+/**
+ * Properties for EmrCancelStep.
+ *
+ * Example:
+ *
+ * ```
+ * EmrCancelStep.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .stepId("StepId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrCancelStepPropsDsl {
   private val cdkBuilder: EmrCancelStepProps.Builder = EmrCancelStepProps.builder()

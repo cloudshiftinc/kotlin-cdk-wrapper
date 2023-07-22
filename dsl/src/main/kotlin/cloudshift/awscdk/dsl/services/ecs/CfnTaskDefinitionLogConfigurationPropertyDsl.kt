@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The `LogConfiguration` property specifies log configuration options to send to a custom log
+ * driver for the container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+ * .logDriver("logDriver")
+ * // the properties below are optional
+ * .options(Map.of(
+ * "optionsKey", "options"))
+ * .secretOptions(List.of(SecretProperty.builder()
+ * .name("name")
+ * .valueFrom("valueFrom")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-logconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.LogConfigurationProperty.Builder =

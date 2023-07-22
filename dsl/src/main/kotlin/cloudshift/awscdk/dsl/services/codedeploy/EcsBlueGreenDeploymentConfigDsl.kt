@@ -8,6 +8,39 @@ import software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig
 import software.amazon.awscdk.services.elasticloadbalancingv2.IListener
 import software.amazon.awscdk.services.elasticloadbalancingv2.ITargetGroup
 
+/**
+ * Specify how the deployment behaves and how traffic is routed to the ECS service during a
+ * blue-green ECS deployment.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication myApplication;
+ * Cluster cluster;
+ * FargateTaskDefinition taskDefinition;
+ * ITargetGroup blueTargetGroup;
+ * ITargetGroup greenTargetGroup;
+ * IApplicationListener listener;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.CODE_DEPLOY)
+ * .build())
+ * .build();
+ * EcsDeploymentGroup.Builder.create(this, "BlueGreenDG")
+ * .service(service)
+ * .blueGreenDeploymentConfig(EcsBlueGreenDeploymentConfig.builder()
+ * .blueTargetGroup(blueTargetGroup)
+ * .greenTargetGroup(greenTargetGroup)
+ * .listener(listener)
+ * .build())
+ * .deploymentConfig(EcsDeploymentConfig.CANARY_10PERCENT_5MINUTES)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codedeploy/latest/userguide/reference-appspec-file-structure-hooks.html#appspec-hooks-ecs)
+ */
 @CdkDslMarker
 public class EcsBlueGreenDeploymentConfigDsl {
   private val cdkBuilder: EcsBlueGreenDeploymentConfig.Builder =

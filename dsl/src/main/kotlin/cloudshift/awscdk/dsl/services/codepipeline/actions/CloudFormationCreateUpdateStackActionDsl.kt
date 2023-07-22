@@ -18,6 +18,42 @@ import software.amazon.awscdk.services.codepipeline.ArtifactPath
 import software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to deploy a stack.
+ *
+ * Creates the stack if the specified stack doesn't exist. If the stack exists,
+ * AWS CloudFormation updates the stack. Use this action to update existing
+ * stacks.
+ *
+ * AWS CodePipeline won't replace the stack, and will fail deployment if the
+ * stack is in a failed state. Use `ReplaceOnFailure` for an action that
+ * will delete and recreate the stack to try and recover from failed states.
+ *
+ * Use this action to automatically replace failed stacks without recovering or
+ * troubleshooting them. You would typically choose this mode for testing.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.PhysicalName;
+ * // in stack for account 123456789012...
+ * Stack otherAccountStack;
+ * Role actionRole = Role.Builder.create(otherAccountStack, "ActionRole")
+ * .assumedBy(new AccountPrincipal("123456789012"))
+ * // the role has to have a physical name set
+ * .roleName(PhysicalName.GENERATE_IF_NEEDED)
+ * .build();
+ * // in the pipeline stack...
+ * Artifact sourceOutput = new Artifact();
+ * CloudFormationCreateUpdateStackAction.Builder.create()
+ * .actionName("CloudFormationCreateUpdate")
+ * .stackName("MyStackName")
+ * .adminPermissions(true)
+ * .templatePath(sourceOutput.atPath("template.yaml"))
+ * .role(actionRole)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationCreateUpdateStackActionDsl {
   private val cdkBuilder: CloudFormationCreateUpdateStackAction.Builder =

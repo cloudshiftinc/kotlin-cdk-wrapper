@@ -11,6 +11,33 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicyProps
 
+/**
+ * Properties for defining a `CfnResiliencyPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * CfnResiliencyPolicyProps cfnResiliencyPolicyProps = CfnResiliencyPolicyProps.builder()
+ * .policy(Map.of(
+ * "policyKey", FailurePolicyProperty.builder()
+ * .rpoInSecs(123)
+ * .rtoInSecs(123)
+ * .build()))
+ * .policyName("policyName")
+ * .tier("tier")
+ * // the properties below are optional
+ * .dataLocationConstraint("dataLocationConstraint")
+ * .policyDescription("policyDescription")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html)
+ */
 @CdkDslMarker
 public class CfnResiliencyPolicyPropsDsl {
   private val cdkBuilder: CfnResiliencyPolicyProps.Builder = CfnResiliencyPolicyProps.builder()

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.refactorspaces.CfnService
 
+/**
+ * The input for the AWS Lambda endpoint type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * LambdaEndpointInputProperty lambdaEndpointInputProperty = LambdaEndpointInputProperty.builder()
+ * .arn("arn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-refactorspaces-service-lambdaendpointinput.html)
+ */
 @CdkDslMarker
 public class CfnServiceLambdaEndpointInputPropertyDsl {
   private val cdkBuilder: CfnService.LambdaEndpointInputProperty.Builder =

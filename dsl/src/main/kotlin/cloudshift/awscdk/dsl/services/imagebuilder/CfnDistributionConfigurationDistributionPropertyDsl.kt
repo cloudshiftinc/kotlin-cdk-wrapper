@@ -12,6 +12,53 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration
 
+/**
+ * The distribution configuration distribution defines the settings for a specific Region in the
+ * Distribution Configuration.
+ *
+ * You must specify whether the distribution is for an AMI or a container image. To do so, include
+ * exactly one of the following data types for your distribution:
+ *
+ * * amiDistributionConfiguration
+ * * containerDistributionConfiguration
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * Object amiDistributionConfiguration;
+ * Object containerDistributionConfiguration;
+ * DistributionProperty distributionProperty = DistributionProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .amiDistributionConfiguration(amiDistributionConfiguration)
+ * .containerDistributionConfiguration(containerDistributionConfiguration)
+ * .fastLaunchConfigurations(List.of(FastLaunchConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .enabled(false)
+ * .launchTemplate(FastLaunchLaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .launchTemplateVersion("launchTemplateVersion")
+ * .build())
+ * .maxParallelLaunches(123)
+ * .snapshotConfiguration(FastLaunchSnapshotConfigurationProperty.builder()
+ * .targetResourceCount(123)
+ * .build())
+ * .build()))
+ * .launchTemplateConfigurations(List.of(LaunchTemplateConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .launchTemplateId("launchTemplateId")
+ * .setDefaultVersion(false)
+ * .build()))
+ * .licenseConfigurationArns(List.of("licenseConfigurationArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-distribution.html)
+ */
 @CdkDslMarker
 public class CfnDistributionConfigurationDistributionPropertyDsl {
   private val cdkBuilder: CfnDistributionConfiguration.DistributionProperty.Builder =

@@ -12,6 +12,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnEnvironment
 import software.amazon.awscdk.services.appconfig.CfnEnvironmentProps
 
+/**
+ * Properties for defining a `CfnEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .applicationId("applicationId")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .monitors(List.of(MonitorsProperty.builder()
+ * .alarmArn("alarmArn")
+ * .alarmRoleArn("alarmRoleArn")
+ * .build()))
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentPropsDsl {
   private val cdkBuilder: CfnEnvironmentProps.Builder = CfnEnvironmentProps.builder()

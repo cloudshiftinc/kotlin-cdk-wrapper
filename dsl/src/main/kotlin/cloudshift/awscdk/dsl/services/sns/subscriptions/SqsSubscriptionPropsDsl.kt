@@ -11,6 +11,30 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Properties for an SQS subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sns.subscriptions.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * SqsSubscriptionProps sqsSubscriptionProps = SqsSubscriptionProps.builder()
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .rawMessageDelivery(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SqsSubscriptionPropsDsl {
   private val cdkBuilder: SqsSubscriptionProps.Builder = SqsSubscriptionProps.builder()

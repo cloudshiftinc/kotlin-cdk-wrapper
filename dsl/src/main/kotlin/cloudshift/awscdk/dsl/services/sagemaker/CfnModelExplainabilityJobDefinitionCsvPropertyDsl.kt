@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * The CSV format.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CsvProperty csvProperty = CsvProperty.builder()
+ * .header(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-csv.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionCsvPropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.CsvProperty.Builder =

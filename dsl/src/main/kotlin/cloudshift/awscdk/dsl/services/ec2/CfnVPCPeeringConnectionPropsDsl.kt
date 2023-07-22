@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnVPCPeeringConnectionProps
 
+/**
+ * Properties for defining a `CfnVPCPeeringConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCPeeringConnectionProps cfnVPCPeeringConnectionProps =
+ * CfnVPCPeeringConnectionProps.builder()
+ * .peerVpcId("peerVpcId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .peerOwnerId("peerOwnerId")
+ * .peerRegion("peerRegion")
+ * .peerRoleArn("peerRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcpeeringconnection.html)
+ */
 @CdkDslMarker
 public class CfnVPCPeeringConnectionPropsDsl {
   private val cdkBuilder: CfnVPCPeeringConnectionProps.Builder =

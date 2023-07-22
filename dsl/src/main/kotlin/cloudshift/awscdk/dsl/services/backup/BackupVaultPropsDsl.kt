@@ -17,6 +17,20 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Properties for a BackupVault.
+ *
+ * Example:
+ *
+ * ```
+ * IKey myKey = Key.fromKeyArn(this, "MyKey", "aaa");
+ * ITopic myTopic = Topic.fromTopicArn(this, "MyTopic", "bbb");
+ * BackupVault vault = BackupVault.Builder.create(this, "Vault")
+ * .encryptionKey(myKey) // Custom encryption key
+ * .notificationTopic(myTopic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackupVaultPropsDsl {
   private val cdkBuilder: BackupVaultProps.Builder = BackupVaultProps.builder()

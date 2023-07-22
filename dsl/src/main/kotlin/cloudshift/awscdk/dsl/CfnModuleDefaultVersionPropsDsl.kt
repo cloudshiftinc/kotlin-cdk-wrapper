@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.CfnModuleDefaultVersionProps
 
+/**
+ * Properties for defining a `CfnModuleDefaultVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnModuleDefaultVersionProps cfnModuleDefaultVersionProps =
+ * CfnModuleDefaultVersionProps.builder()
+ * .arn("arn")
+ * .moduleName("moduleName")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)
+ */
 @CdkDslMarker
 public class CfnModuleDefaultVersionPropsDsl {
   private val cdkBuilder: CfnModuleDefaultVersionProps.Builder =

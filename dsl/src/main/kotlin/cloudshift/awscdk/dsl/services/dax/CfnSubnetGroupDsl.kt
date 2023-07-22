@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.dax.CfnSubnetGroup
 import software.constructs.Construct
 
+/**
+ * Creates a new subnet group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dax.*;
+ * CfnSubnetGroup cfnSubnetGroup = CfnSubnetGroup.Builder.create(this, "MyCfnSubnetGroup")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .description("description")
+ * .subnetGroupName("subnetGroupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dax-subnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnSubnetGroupDsl(
   scope: Construct,

@@ -19,6 +19,71 @@ import software.amazon.awscdk.services.apigateway.RequestContext
 import software.amazon.awscdk.services.apigateway.StepFunctionsExecutionIntegrationOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options when configuring Step Functions synchronous integration with Rest API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.apigateway.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * VpcLink vpcLink;
+ * StepFunctionsExecutionIntegrationOptions stepFunctionsExecutionIntegrationOptions =
+ * StepFunctionsExecutionIntegrationOptions.builder()
+ * .authorizer(false)
+ * .cacheKeyParameters(List.of("cacheKeyParameters"))
+ * .cacheNamespace("cacheNamespace")
+ * .connectionType(ConnectionType.INTERNET)
+ * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
+ * .credentialsPassthrough(false)
+ * .credentialsRole(role)
+ * .headers(false)
+ * .integrationResponses(List.of(IntegrationResponse.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .selectionPattern("selectionPattern")
+ * .build()))
+ * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
+ * .path(false)
+ * .querystring(false)
+ * .requestContext(RequestContext.builder()
+ * .accountId(false)
+ * .apiId(false)
+ * .apiKey(false)
+ * .authorizerPrincipalId(false)
+ * .caller(false)
+ * .cognitoAuthenticationProvider(false)
+ * .cognitoAuthenticationType(false)
+ * .cognitoIdentityId(false)
+ * .cognitoIdentityPoolId(false)
+ * .httpMethod(false)
+ * .requestId(false)
+ * .resourceId(false)
+ * .resourcePath(false)
+ * .sourceIp(false)
+ * .stage(false)
+ * .user(false)
+ * .userAgent(false)
+ * .userArn(false)
+ * .build())
+ * .requestParameters(Map.of(
+ * "requestParametersKey", "requestParameters"))
+ * .requestTemplates(Map.of(
+ * "requestTemplatesKey", "requestTemplates"))
+ * .timeout(Duration.minutes(30))
+ * .vpcLink(vpcLink)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsExecutionIntegrationOptionsDsl {
   private val cdkBuilder: StepFunctionsExecutionIntegrationOptions.Builder =

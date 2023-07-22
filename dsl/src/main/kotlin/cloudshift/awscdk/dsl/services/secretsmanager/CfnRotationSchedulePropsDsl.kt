@@ -9,6 +9,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
 import software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps
 
+/**
+ * Properties for defining a `CfnRotationSchedule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * CfnRotationScheduleProps cfnRotationScheduleProps = CfnRotationScheduleProps.builder()
+ * .secretId("secretId")
+ * // the properties below are optional
+ * .hostedRotationLambda(HostedRotationLambdaProperty.builder()
+ * .rotationType("rotationType")
+ * // the properties below are optional
+ * .excludeCharacters("excludeCharacters")
+ * .kmsKeyArn("kmsKeyArn")
+ * .masterSecretArn("masterSecretArn")
+ * .masterSecretKmsKeyArn("masterSecretKmsKeyArn")
+ * .rotationLambdaName("rotationLambdaName")
+ * .runtime("runtime")
+ * .superuserSecretArn("superuserSecretArn")
+ * .superuserSecretKmsKeyArn("superuserSecretKmsKeyArn")
+ * .vpcSecurityGroupIds("vpcSecurityGroupIds")
+ * .vpcSubnetIds("vpcSubnetIds")
+ * .build())
+ * .rotateImmediatelyOnUpdate(false)
+ * .rotationLambdaArn("rotationLambdaArn")
+ * .rotationRules(RotationRulesProperty.builder()
+ * .automaticallyAfterDays(123)
+ * .duration("duration")
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html)
+ */
 @CdkDslMarker
 public class CfnRotationSchedulePropsDsl {
   private val cdkBuilder: CfnRotationScheduleProps.Builder = CfnRotationScheduleProps.builder()

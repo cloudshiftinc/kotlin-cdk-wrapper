@@ -26,6 +26,17 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.ILayerVersion
 
+/**
+ * Configuration props for EKS Fargate.
+ *
+ * Example:
+ *
+ * ```
+ * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
+ * .version(KubernetesVersion.V1_27)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FargateClusterPropsDsl {
   private val cdkBuilder: FargateClusterProps.Builder = FargateClusterProps.builder()

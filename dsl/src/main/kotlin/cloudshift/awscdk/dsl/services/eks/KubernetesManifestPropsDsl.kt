@@ -13,6 +13,46 @@ import software.amazon.awscdk.services.eks.AlbScheme
 import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.KubernetesManifestProps
 
+/**
+ * Properties for KubernetesManifest.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * Map&lt;String, String&gt; appLabel = Map.of("app", "hello-kubernetes");
+ * Map&lt;String, Object&gt; deployment = Map.of(
+ * "apiVersion", "apps/v1",
+ * "kind", "Deployment",
+ * "metadata", Map.of("name", "hello-kubernetes"),
+ * "spec", Map.of(
+ * "replicas", 3,
+ * "selector", Map.of("matchLabels", appLabel),
+ * "template", Map.of(
+ * "metadata", Map.of("labels", appLabel),
+ * "spec", Map.of(
+ * "containers", List.of(Map.of(
+ * "name", "hello-kubernetes",
+ * "image", "paulbouwer/hello-kubernetes:1.5",
+ * "ports", List.of(Map.of("containerPort", 8080))))))));
+ * Map&lt;String, Object&gt; service = Map.of(
+ * "apiVersion", "v1",
+ * "kind", "Service",
+ * "metadata", Map.of("name", "hello-kubernetes"),
+ * "spec", Map.of(
+ * "type", "LoadBalancer",
+ * "ports", List.of(Map.of("port", 80, "targetPort", 8080)),
+ * "selector", appLabel));
+ * // option 1: use a construct
+ * // option 1: use a construct
+ * KubernetesManifest.Builder.create(this, "hello-kub")
+ * .cluster(cluster)
+ * .manifest(List.of(deployment, service))
+ * .build();
+ * // or, option2: use `addManifest`
+ * cluster.addManifest("hello-kub", service, deployment);
+ * ```
+ */
 @CdkDslMarker
 public class KubernetesManifestPropsDsl {
   private val cdkBuilder: KubernetesManifestProps.Builder = KubernetesManifestProps.builder()

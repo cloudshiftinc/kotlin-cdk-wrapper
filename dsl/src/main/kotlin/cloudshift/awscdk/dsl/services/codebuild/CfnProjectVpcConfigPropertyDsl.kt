@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * `VpcConfig` is a property of the
+ * [AWS::CodeBuild::Project](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html)
+ * resource that enable AWS CodeBuild to access resources in an Amazon VPC. For more information, see
+ * [Use AWS CodeBuild with Amazon Virtual Private
+ * Cloud](https://docs.aws.amazon.com/codebuild/latest/userguide/vpc-support.html) in the *AWS
+ * CodeBuild User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnProjectVpcConfigPropertyDsl {
   private val cdkBuilder: CfnProject.VpcConfigProperty.Builder =

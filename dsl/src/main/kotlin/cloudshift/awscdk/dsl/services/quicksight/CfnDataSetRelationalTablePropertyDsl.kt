@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A physical table type for relational data sources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RelationalTableProperty relationalTableProperty = RelationalTableProperty.builder()
+ * .dataSourceArn("dataSourceArn")
+ * .inputColumns(List.of(InputColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .catalog("catalog")
+ * .schema("schema")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-relationaltable.html)
+ */
 @CdkDslMarker
 public class CfnDataSetRelationalTablePropertyDsl {
   private val cdkBuilder: CfnDataSet.RelationalTableProperty.Builder =

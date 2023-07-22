@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * `RevisionLocation` is a property that defines the location of the CodeDeploy application revision
+ * to deploy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * RevisionLocationProperty revisionLocationProperty = RevisionLocationProperty.builder()
+ * .gitHubLocation(GitHubLocationProperty.builder()
+ * .commitId("commitId")
+ * .repository("repository")
+ * .build())
+ * .revisionType("revisionType")
+ * .s3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .bundleType("bundleType")
+ * .eTag("eTag")
+ * .version("version")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-revisionlocation.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupRevisionLocationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.RevisionLocationProperty.Builder =

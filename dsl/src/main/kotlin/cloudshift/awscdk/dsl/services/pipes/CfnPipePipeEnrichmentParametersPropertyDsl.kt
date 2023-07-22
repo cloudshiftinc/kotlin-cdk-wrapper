@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters required to set up enrichment on your pipe.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeEnrichmentParametersProperty pipeEnrichmentParametersProperty =
+ * PipeEnrichmentParametersProperty.builder()
+ * .httpParameters(PipeEnrichmentHttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build())
+ * .inputTemplate("inputTemplate")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipeenrichmentparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeEnrichmentParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeEnrichmentParametersProperty.Builder =

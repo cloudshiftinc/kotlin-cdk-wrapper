@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.ProductStack
 import software.amazon.awscdk.services.servicecatalog.ProductStackHistoryProps
 
+/**
+ * Properties for a ProductStackHistory.
+ *
+ * Example:
+ *
+ * ```
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProductV2");
+ * }
+ * }
+ * ProductStackHistory productStackHistory = ProductStackHistory.Builder.create(this,
+ * "ProductStackHistory")
+ * .productStack(new S3BucketProduct(this, "S3BucketProduct"))
+ * .currentVersionName("v2")
+ * .currentVersionLocked(true)
+ * .build();
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "MyFirstProduct")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(productStackHistory.currentVersion()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ProductStackHistoryPropsDsl {
   private val cdkBuilder: ProductStackHistoryProps.Builder = ProductStackHistoryProps.builder()

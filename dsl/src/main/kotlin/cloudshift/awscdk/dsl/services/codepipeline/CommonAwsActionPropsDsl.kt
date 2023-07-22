@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CommonAwsActionProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Common properties shared by all Actions whose `ActionProperties.owner` field is 'AWS' (or unset,
+ * as 'AWS' is the default).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Role role;
+ * CommonAwsActionProps commonAwsActionProps = CommonAwsActionProps.builder()
+ * .actionName("actionName")
+ * // the properties below are optional
+ * .role(role)
+ * .runOrder(123)
+ * .variablesNamespace("variablesNamespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonAwsActionPropsDsl {
   private val cdkBuilder: CommonAwsActionProps.Builder = CommonAwsActionProps.builder()

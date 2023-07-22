@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains an asset transform property.
+ *
+ * A transform is a one-to-one mapping of a property's data points from one form to another. For
+ * example, you can use a transform to convert a Celsius data stream to Fahrenheit by applying the
+ * transformation expression to each data point of the Celsius stream. Transforms can only input
+ * properties that are `INTEGER` , `DOUBLE` , or `BOOLEAN` type. Booleans convert to `0` ( `FALSE` )
+ * and `1` ( `TRUE` )..
+ *
+ * For more information, see [Defining data
+ * properties](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/asset-properties.html#transforms)
+ * in the *AWS IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * TransformProperty transformProperty = TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-transform.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelTransformPropertyDsl {
   private val cdkBuilder: CfnAssetModel.TransformProperty.Builder =

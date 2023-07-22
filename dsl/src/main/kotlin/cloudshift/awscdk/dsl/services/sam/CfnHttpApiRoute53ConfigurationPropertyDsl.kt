@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnHttpApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Route53ConfigurationProperty route53ConfigurationProperty =
+ * Route53ConfigurationProperty.builder()
+ * .distributedDomainName("distributedDomainName")
+ * .evaluateTargetHealth(false)
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .ipV6(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-route53configuration.html)
+ */
 @CdkDslMarker
 public class CfnHttpApiRoute53ConfigurationPropertyDsl {
   private val cdkBuilder: CfnHttpApi.Route53ConfigurationProperty.Builder =

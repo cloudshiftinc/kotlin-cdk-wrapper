@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthorityProps
 
+/**
+ * Properties for defining a `CfnCertificateAuthority`.
+ *
+ * Example:
+ *
+ * ```
+ * CfnCertificateAuthority cfnCertificateAuthority = CfnCertificateAuthority.Builder.create(this,
+ * "CA")
+ * .type("ROOT")
+ * .keyAlgorithm("RSA_2048")
+ * .signingAlgorithm("SHA256WITHRSA")
+ * .subject(SubjectProperty.builder()
+ * .country("US")
+ * .organization("string")
+ * .organizationalUnit("string")
+ * .distinguishedNameQualifier("string")
+ * .state("string")
+ * .commonName("123")
+ * .serialNumber("string")
+ * .locality("string")
+ * .title("string")
+ * .surname("string")
+ * .givenName("string")
+ * .initials("DG")
+ * .pseudonym("string")
+ * .generationQualifier("DBG")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityPropsDsl {
   private val cdkBuilder: CfnCertificateAuthorityProps.Builder =

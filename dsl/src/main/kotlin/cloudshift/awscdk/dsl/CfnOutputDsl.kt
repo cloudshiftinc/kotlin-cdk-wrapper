@@ -8,6 +8,33 @@ import software.amazon.awscdk.CfnCondition
 import software.amazon.awscdk.CfnOutput
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // add service account
+ * ServiceAccount serviceAccount = cluster.addServiceAccount("MyServiceAccount");
+ * Bucket bucket = new Bucket(this, "Bucket");
+ * bucket.grantReadWrite(serviceAccount);
+ * KubernetesManifest mypod = cluster.addManifest("mypod", Map.of(
+ * "apiVersion", "v1",
+ * "kind", "Pod",
+ * "metadata", Map.of("name", "mypod"),
+ * "spec", Map.of(
+ * "serviceAccountName", serviceAccount.getServiceAccountName(),
+ * "containers", List.of(Map.of(
+ * "name", "hello",
+ * "image", "paulbouwer/hello-kubernetes:1.5",
+ * "ports", List.of(Map.of("containerPort", 8080)))))));
+ * // create the resource after the service account.
+ * mypod.node.addDependency(serviceAccount);
+ * // print the IAM role arn for this service account
+ * // print the IAM role arn for this service account
+ * CfnOutput.Builder.create(this,
+ * "ServiceAccountIamRole").value(serviceAccount.getRole().getRoleArn()).build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnOutputDsl(
   scope: Construct,

@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPoolGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a new group in the identified user pool.
+ *
+ * Calling this action requires developer credentials.
+ *
+ *
+ * If you don't specify a value for a parameter, Amazon Cognito sets it to a default value.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolGroup cfnUserPoolGroup = CfnUserPoolGroup.Builder.create(this, "MyCfnUserPoolGroup")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .description("description")
+ * .groupName("groupName")
+ * .precedence(123)
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolGroupDsl(
   scope: Construct,

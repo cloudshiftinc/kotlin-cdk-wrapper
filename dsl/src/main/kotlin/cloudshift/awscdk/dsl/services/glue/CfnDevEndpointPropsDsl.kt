@@ -12,6 +12,39 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnDevEndpointProps
 
+/**
+ * Properties for defining a `CfnDevEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object arguments_;
+ * Object tags;
+ * CfnDevEndpointProps cfnDevEndpointProps = CfnDevEndpointProps.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .arguments(arguments_)
+ * .endpointName("endpointName")
+ * .extraJarsS3Path("extraJarsS3Path")
+ * .extraPythonLibsS3Path("extraPythonLibsS3Path")
+ * .glueVersion("glueVersion")
+ * .numberOfNodes(123)
+ * .numberOfWorkers(123)
+ * .publicKey("publicKey")
+ * .publicKeys(List.of("publicKeys"))
+ * .securityConfiguration("securityConfiguration")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetId("subnetId")
+ * .tags(tags)
+ * .workerType("workerType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDevEndpointPropsDsl {
   private val cdkBuilder: CfnDevEndpointProps.Builder = CfnDevEndpointProps.builder()

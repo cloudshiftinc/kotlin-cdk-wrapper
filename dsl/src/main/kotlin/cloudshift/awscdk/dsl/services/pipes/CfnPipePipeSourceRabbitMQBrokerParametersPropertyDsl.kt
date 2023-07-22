@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a Rabbit MQ broker as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceRabbitMQBrokerParametersProperty pipeSourceRabbitMQBrokerParametersProperty =
+ * PipeSourceRabbitMQBrokerParametersProperty.builder()
+ * .credentials(MQBrokerAccessCredentialsProperty.builder()
+ * .basicAuth("basicAuth")
+ * .build())
+ * .queueName("queueName")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .maximumBatchingWindowInSeconds(123)
+ * .virtualHost("virtualHost")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourcerabbitmqbrokerparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceRabbitMQBrokerParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceRabbitMQBrokerParametersProperty.Builder =

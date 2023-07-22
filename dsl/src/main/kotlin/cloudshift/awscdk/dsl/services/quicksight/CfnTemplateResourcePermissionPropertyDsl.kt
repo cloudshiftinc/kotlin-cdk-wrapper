@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Permission for the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ResourcePermissionProperty resourcePermissionProperty = ResourcePermissionProperty.builder()
+ * .actions(List.of("actions"))
+ * .principal("principal")
+ * // the properties below are optional
+ * .resource("resource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-resourcepermission.html)
+ */
 @CdkDslMarker
 public class CfnTemplateResourcePermissionPropertyDsl {
   private val cdkBuilder: CfnTemplate.ResourcePermissionProperty.Builder =

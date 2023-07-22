@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.VpcAttributes
 
+/**
+ * Properties that reference an external Vpc.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc = Vpc.fromVpcAttributes(this, "VPC", VpcAttributes.builder()
+ * .vpcId("vpc-1234")
+ * .availabilityZones(List.of("us-east-1a", "us-east-1b"))
+ * // Either pass literals for all IDs
+ * .publicSubnetIds(List.of("s-12345", "s-67890"))
+ * // OR: import a list of known length
+ * .privateSubnetIds(Fn.importListValue("PrivateSubnetIds", 2))
+ * // OR: split an imported string to a list of known length
+ * .isolatedSubnetIds(Fn.split(",", StringParameter.valueForStringParameter(this, "MyParameter"),
+ * 2))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class VpcAttributesDsl {
   private val cdkBuilder: VpcAttributes.Builder = VpcAttributes.builder()

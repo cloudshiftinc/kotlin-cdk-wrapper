@@ -14,6 +14,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachment
 import software.constructs.Construct
 
+/**
+ * Attaches a VPC to a transit gateway.
+ *
+ * If you attach a VPC with a CIDR range that overlaps the CIDR range of a VPC that is already
+ * attached, the new VPC CIDR range is not propagated to the default propagation route table.
+ *
+ * To send VPC traffic to an attached transit gateway, add a route to the VPC route table using
+ * [AWS::EC2::Route](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-route.html)
+ * .
+ *
+ * To update tags for a VPC attachment after creation without replacing the attachment, use
+ * [AWS::EC2::TransitGatewayVpcAttachment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayvpcattachment.html)
+ * instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object options;
+ * CfnTransitGatewayAttachment cfnTransitGatewayAttachment =
+ * CfnTransitGatewayAttachment.Builder.create(this, "MyCfnTransitGatewayAttachment")
+ * .subnetIds(List.of("subnetIds"))
+ * .transitGatewayId("transitGatewayId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .options(options)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayattachment.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayAttachmentDsl(
   scope: Construct,

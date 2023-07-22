@@ -8,6 +8,26 @@ import software.amazon.awscdk.services.ec2.ClientVpnRouteProps
 import software.amazon.awscdk.services.ec2.ClientVpnRouteTarget
 import software.amazon.awscdk.services.ec2.IClientVpnEndpoint
 
+/**
+ * Properties for a ClientVpnRoute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientVpnEndpoint clientVpnEndpoint;
+ * ClientVpnRouteTarget clientVpnRouteTarget;
+ * ClientVpnRouteProps clientVpnRouteProps = ClientVpnRouteProps.builder()
+ * .cidr("cidr")
+ * .target(clientVpnRouteTarget)
+ * // the properties below are optional
+ * .clientVpnEndpoint(clientVpnEndpoint)
+ * .description("description")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClientVpnRoutePropsDsl {
   private val cdkBuilder: ClientVpnRouteProps.Builder = ClientVpnRouteProps.builder()

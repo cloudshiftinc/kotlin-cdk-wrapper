@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSet
 
+/**
+ * Used to enable or disable email sending for messages that use this configuration set in the
+ * current AWS Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * SendingOptionsProperty sendingOptionsProperty = SendingOptionsProperty.builder()
+ * .sendingEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationset-sendingoptions.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetSendingOptionsPropertyDsl {
   private val cdkBuilder: CfnConfigurationSet.SendingOptionsProperty.Builder =

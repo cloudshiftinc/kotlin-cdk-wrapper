@@ -12,6 +12,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroupProps
 
+/**
+ * Properties for defining a `CfnGlobalReplicationGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnGlobalReplicationGroupProps cfnGlobalReplicationGroupProps =
+ * CfnGlobalReplicationGroupProps.builder()
+ * .members(List.of(GlobalReplicationGroupMemberProperty.builder()
+ * .replicationGroupId("replicationGroupId")
+ * .replicationGroupRegion("replicationGroupRegion")
+ * .role("role")
+ * .build()))
+ * // the properties below are optional
+ * .automaticFailoverEnabled(false)
+ * .cacheNodeType("cacheNodeType")
+ * .cacheParameterGroupName("cacheParameterGroupName")
+ * .engineVersion("engineVersion")
+ * .globalNodeGroupCount(123)
+ * .globalReplicationGroupDescription("globalReplicationGroupDescription")
+ * .globalReplicationGroupIdSuffix("globalReplicationGroupIdSuffix")
+ * .regionalConfigurations(List.of(RegionalConfigurationProperty.builder()
+ * .replicationGroupId("replicationGroupId")
+ * .replicationGroupRegion("replicationGroupRegion")
+ * .reshardingConfigurations(List.of(ReshardingConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html)
+ */
 @CdkDslMarker
 public class CfnGlobalReplicationGroupPropsDsl {
   private val cdkBuilder: CfnGlobalReplicationGroupProps.Builder =

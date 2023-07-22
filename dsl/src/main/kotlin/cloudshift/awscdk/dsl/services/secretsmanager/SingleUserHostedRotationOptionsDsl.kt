@@ -13,6 +13,22 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.secretsmanager.SingleUserHostedRotationOptions
 
+/**
+ * Single user hosted rotation options.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc myVpc;
+ * Connections dbConnections;
+ * Secret secret;
+ * HostedRotation myHostedRotation =
+ * HostedRotation.mysqlSingleUser(SingleUserHostedRotationOptions.builder().vpc(myVpc).build());
+ * secret.addRotationSchedule("RotationSchedule",
+ * RotationScheduleOptions.builder().hostedRotation(myHostedRotation).build());
+ * dbConnections.allowDefaultPortFrom(myHostedRotation);
+ * ```
+ */
 @CdkDslMarker
 public class SingleUserHostedRotationOptionsDsl {
   private val cdkBuilder: SingleUserHostedRotationOptions.Builder =

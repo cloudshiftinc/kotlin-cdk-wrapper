@@ -10,6 +10,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.RemoveTag
 
+/**
+ * The RemoveTag Aspect will handle removing tags from this node and children.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * RemoveTag removeTag = RemoveTag.Builder.create("key")
+ * .applyToLaunchedInstances(false)
+ * .excludeResourceTypes(List.of("excludeResourceTypes"))
+ * .includeResourceTypes(List.of("includeResourceTypes"))
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RemoveTagDsl(
   key: String,

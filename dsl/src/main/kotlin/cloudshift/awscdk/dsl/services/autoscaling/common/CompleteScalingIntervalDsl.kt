@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.common.*;
+ * CompleteScalingInterval completeScalingInterval = CompleteScalingInterval.builder()
+ * .lower(123)
+ * .upper(123)
+ * // the properties below are optional
+ * .change(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CompleteScalingIntervalDsl {
   private val cdkBuilder: CompleteScalingInterval.Builder = CompleteScalingInterval.builder()

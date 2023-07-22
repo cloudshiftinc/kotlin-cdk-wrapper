@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnMLTransform
 
+/**
+ * The encryption-at-rest settings of the transform that apply to accessing user data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * MLUserDataEncryptionProperty mLUserDataEncryptionProperty =
+ * MLUserDataEncryptionProperty.builder()
+ * .mlUserDataEncryptionMode("mlUserDataEncryptionMode")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-mluserdataencryption.html)
+ */
 @CdkDslMarker
 public class CfnMLTransformMLUserDataEncryptionPropertyDsl {
   private val cdkBuilder: CfnMLTransform.MLUserDataEncryptionProperty.Builder =

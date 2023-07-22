@@ -14,6 +14,53 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBParameterGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBParameterGroup` resource creates a custom parameter group for an RDS database
+ * family.
+ *
+ * This type can be declared in a template and referenced in the `DBParameterGroupName` property of
+ * an
+ * `[AWS::RDS::DBInstance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html)`
+ * resource.
+ *
+ * For information about configuring parameters for Amazon RDS DB instances, see [Working with
+ * parameter
+ * groups](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithParamGroups.html) in
+ * the *Amazon RDS User Guide* .
+ *
+ * For information about configuring parameters for Amazon Aurora DB instances, see [Working with
+ * parameter
+ * groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
+ * in the *Amazon Aurora User Guide* .
+ *
+ *
+ * Applying a parameter group to a DB instance may require the DB instance to reboot, resulting in a
+ * database outage for the duration of the reboot.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * Object parameters;
+ * CfnDBParameterGroup cfnDBParameterGroup = CfnDBParameterGroup.Builder.create(this,
+ * "MyCfnDBParameterGroup")
+ * .description("description")
+ * .family("family")
+ * // the properties below are optional
+ * .dbParameterGroupName("dbParameterGroupName")
+ * .parameters(parameters)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBParameterGroupDsl(
   scope: Construct,

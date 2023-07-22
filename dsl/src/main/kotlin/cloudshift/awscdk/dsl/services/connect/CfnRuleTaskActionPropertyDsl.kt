@@ -11,6 +11,33 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnRule
 
+/**
+ * Information about the task action.
+ *
+ * This field is required if `TriggerEventSource` is one of the following values:
+ * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * TaskActionProperty taskActionProperty = TaskActionProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .references(Map.of(
+ * "referencesKey", ReferenceProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-taskaction.html)
+ */
 @CdkDslMarker
 public class CfnRuleTaskActionPropertyDsl {
   private val cdkBuilder: CfnRule.TaskActionProperty.Builder = CfnRule.TaskActionProperty.builder()

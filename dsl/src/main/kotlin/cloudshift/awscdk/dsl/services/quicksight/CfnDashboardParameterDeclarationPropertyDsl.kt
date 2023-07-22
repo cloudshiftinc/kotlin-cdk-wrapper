@@ -6,6 +6,158 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The declaration definition of a parameter.
+ *
+ * For more information, see [Parameters in Amazon
+ * QuickSight](https://docs.aws.amazon.com/quicksight/latest/user/parameters-in-quicksight.html) in the
+ * *Amazon QuickSight User Guide* .
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ParameterDeclarationProperty parameterDeclarationProperty =
+ * ParameterDeclarationProperty.builder()
+ * .dateTimeParameterDeclaration(DateTimeParameterDeclarationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .defaultValues(DateTimeDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .rollingDate(RollingDateConfigurationProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .staticValues(List.of("staticValues"))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .timeGranularity("timeGranularity")
+ * .valueWhenUnset(DateTimeValueWhenUnsetConfigurationProperty.builder()
+ * .customValue("customValue")
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build())
+ * .decimalParameterDeclaration(DecimalParameterDeclarationProperty.builder()
+ * .name("name")
+ * .parameterValueType("parameterValueType")
+ * // the properties below are optional
+ * .defaultValues(DecimalDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .staticValues(List.of(123))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .valueWhenUnset(DecimalValueWhenUnsetConfigurationProperty.builder()
+ * .customValue(123)
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build())
+ * .integerParameterDeclaration(IntegerParameterDeclarationProperty.builder()
+ * .name("name")
+ * .parameterValueType("parameterValueType")
+ * // the properties below are optional
+ * .defaultValues(IntegerDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .staticValues(List.of(123))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .valueWhenUnset(IntegerValueWhenUnsetConfigurationProperty.builder()
+ * .customValue(123)
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build())
+ * .stringParameterDeclaration(StringParameterDeclarationProperty.builder()
+ * .name("name")
+ * .parameterValueType("parameterValueType")
+ * // the properties below are optional
+ * .defaultValues(StringDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .staticValues(List.of("staticValues"))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .valueWhenUnset(StringValueWhenUnsetConfigurationProperty.builder()
+ * .customValue("customValue")
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-parameterdeclaration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardParameterDeclarationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ParameterDeclarationProperty.Builder =

@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivs.CfnRecordingConfiguration
 
+/**
+ * The DestinationConfiguration property type describes the location where recorded videos will be
+ * stored.
+ *
+ * Each member represents a type of destination configuration. For recording, you define one and
+ * only one type of destination configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * DestinationConfigurationProperty destinationConfigurationProperty =
+ * DestinationConfigurationProperty.builder()
+ * .s3(S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-destinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRecordingConfigurationDestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnRecordingConfiguration.DestinationConfigurationProperty.Builder =

@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.servicediscovery.IService
 import software.amazon.awscdk.services.servicediscovery.NonIpInstance
 import software.constructs.Construct
 
+/**
+ * Instance accessible using values other than an IP address or a domain name (CNAME).
+ *
+ * Specify the other values in Custom attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * NonIpInstance nonIpInstance = NonIpInstance.Builder.create(this, "MyNonIpInstance")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NonIpInstanceDsl(
   scope: Construct,

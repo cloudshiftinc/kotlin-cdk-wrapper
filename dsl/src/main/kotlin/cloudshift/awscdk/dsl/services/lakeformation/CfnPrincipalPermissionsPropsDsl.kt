@@ -10,6 +10,78 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissionsProps
 
+/**
+ * Properties for defining a `CfnPrincipalPermissions`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object catalog;
+ * Object tableWildcard;
+ * CfnPrincipalPermissionsProps cfnPrincipalPermissionsProps =
+ * CfnPrincipalPermissionsProps.builder()
+ * .permissions(List.of("permissions"))
+ * .permissionsWithGrantOption(List.of("permissionsWithGrantOption"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .resource(ResourceProperty.builder()
+ * .catalog(catalog)
+ * .database(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataCellsFilter(DataCellsFilterResourceProperty.builder()
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableCatalogId("tableCatalogId")
+ * .tableName("tableName")
+ * .build())
+ * .dataLocation(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .resourceArn("resourceArn")
+ * .build())
+ * .lfTag(LFTagKeyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build())
+ * .lfTagPolicy(LFTagPolicyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .expression(List.of(LFTagProperty.builder()
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build()))
+ * .resourceType("resourceType")
+ * .build())
+ * .table(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .name("name")
+ * .tableWildcard(tableWildcard)
+ * .build())
+ * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .catalog("catalog")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-principalpermissions.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsPropsDsl {
   private val cdkBuilder: CfnPrincipalPermissionsProps.Builder =

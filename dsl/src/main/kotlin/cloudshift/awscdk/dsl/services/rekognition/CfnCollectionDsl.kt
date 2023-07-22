@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rekognition.CfnCollection
 import software.constructs.Construct
 
+/**
+ * The `AWS::Rekognition::Collection` type creates a server-side container called a collection.
+ *
+ * You can use a collection to store information about detected faces and search for known faces in
+ * images, stored videos, and streaming videos.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rekognition.*;
+ * CfnCollection cfnCollection = CfnCollection.Builder.create(this, "MyCfnCollection")
+ * .collectionId("collectionId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rekognition-collection.html)
+ */
 @CdkDslMarker
 public class CfnCollectionDsl(
   scope: Construct,

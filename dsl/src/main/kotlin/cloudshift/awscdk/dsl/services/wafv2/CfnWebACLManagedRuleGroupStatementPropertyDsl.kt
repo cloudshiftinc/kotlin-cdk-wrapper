@@ -10,6 +10,21 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement used to run the rules that are defined in a managed rule group.
+ *
+ * To use this, provide the vendor name and the name of the rule group in this statement.
+ *
+ * You cannot nest a `ManagedRuleGroupStatement` , for example for use inside a `NotStatement` or
+ * `OrStatement` . It can only be referenced as a top-level statement within a rule.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-managedrulegroupstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLManagedRuleGroupStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.ManagedRuleGroupStatementProperty.Builder =

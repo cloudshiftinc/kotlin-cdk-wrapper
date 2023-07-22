@@ -21,6 +21,20 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoItemCollectionMetrics
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoReturnValues
 
+/**
+ * Properties for DynamoDeleteItem Task.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoDeleteItem.Builder.create(this, "DeleteItem")
+ * .key(Map.of("MessageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .resultPath(JsonPath.DISCARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoDeleteItemPropsDsl {
   private val cdkBuilder: DynamoDeleteItemProps.Builder = DynamoDeleteItemProps.builder()

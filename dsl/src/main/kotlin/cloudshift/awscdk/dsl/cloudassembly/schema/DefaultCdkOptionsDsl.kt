@@ -10,6 +10,43 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.cloudassembly.schema.DefaultCdkOptions
 
+/**
+ * Default CDK CLI options that apply to all commands.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * DefaultCdkOptions defaultCdkOptions = DefaultCdkOptions.builder()
+ * .all(false)
+ * .app("app")
+ * .assetMetadata(false)
+ * .caBundlePath("caBundlePath")
+ * .color(false)
+ * .context(Map.of(
+ * "contextKey", "context"))
+ * .debug(false)
+ * .ec2Creds(false)
+ * .ignoreErrors(false)
+ * .json(false)
+ * .lookups(false)
+ * .notices(false)
+ * .output("output")
+ * .pathMetadata(false)
+ * .profile("profile")
+ * .proxy("proxy")
+ * .roleArn("roleArn")
+ * .stacks(List.of("stacks"))
+ * .staging(false)
+ * .strict(false)
+ * .trace(false)
+ * .verbose(false)
+ * .versionReporting(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DefaultCdkOptionsDsl {
   private val cdkBuilder: DefaultCdkOptions.Builder = DefaultCdkOptions.builder()

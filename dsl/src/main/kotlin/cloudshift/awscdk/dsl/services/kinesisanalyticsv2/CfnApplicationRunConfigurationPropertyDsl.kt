@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Describes the starting parameters for an Kinesis Data Analytics application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * RunConfigurationProperty runConfigurationProperty = RunConfigurationProperty.builder()
+ * .applicationRestoreConfiguration(ApplicationRestoreConfigurationProperty.builder()
+ * .applicationRestoreType("applicationRestoreType")
+ * // the properties below are optional
+ * .snapshotName("snapshotName")
+ * .build())
+ * .flinkRunConfiguration(FlinkRunConfigurationProperty.builder()
+ * .allowNonRestoredState(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-runconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationRunConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.RunConfigurationProperty.Builder =

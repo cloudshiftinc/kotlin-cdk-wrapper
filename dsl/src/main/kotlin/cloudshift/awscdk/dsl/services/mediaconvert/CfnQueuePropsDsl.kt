@@ -9,6 +9,27 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.mediaconvert.CfnQueueProps
 
+/**
+ * Properties for defining a `CfnQueue`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object tags;
+ * CfnQueueProps cfnQueueProps = CfnQueueProps.builder()
+ * .description("description")
+ * .name("name")
+ * .pricingPlan("pricingPlan")
+ * .status("status")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-queue.html)
+ */
 @CdkDslMarker
 public class CfnQueuePropsDsl {
   private val cdkBuilder: CfnQueueProps.Builder = CfnQueueProps.builder()

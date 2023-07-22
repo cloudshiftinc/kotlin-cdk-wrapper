@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Details for client authentication using TLS for vpcConnectivity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * VpcConnectivityTlsProperty vpcConnectivityTlsProperty = VpcConnectivityTlsProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-vpcconnectivitytls.html)
+ */
 @CdkDslMarker
 public class CfnClusterVpcConnectivityTlsPropertyDsl {
   private val cdkBuilder: CfnCluster.VpcConnectivityTlsProperty.Builder =

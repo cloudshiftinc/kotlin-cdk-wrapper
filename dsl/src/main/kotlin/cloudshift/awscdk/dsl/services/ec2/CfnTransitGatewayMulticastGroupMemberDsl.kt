@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupMember
 import software.constructs.Construct
 
+/**
+ * Registers members (network interfaces) with the transit gateway multicast group.
+ *
+ * A member is a network interface associated with a supported EC2 instance that receives multicast
+ * traffic. For information about supported instances, see [Multicast
+ * Consideration](https://docs.aws.amazon.com/vpc/latest/tgw/transit-gateway-limits.html#multicast-limits)
+ * in *Amazon VPC Transit Gateways* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayMulticastGroupMember cfnTransitGatewayMulticastGroupMember =
+ * CfnTransitGatewayMulticastGroupMember.Builder.create(this,
+ * "MyCfnTransitGatewayMulticastGroupMember")
+ * .groupIpAddress("groupIpAddress")
+ * .networkInterfaceId("networkInterfaceId")
+ * .transitGatewayMulticastDomainId("transitGatewayMulticastDomainId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastgroupmember.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastGroupMemberDsl(
   scope: Construct,

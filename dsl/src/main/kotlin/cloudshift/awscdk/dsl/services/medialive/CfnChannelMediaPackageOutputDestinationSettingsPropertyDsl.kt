@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Destination settings for a MediaPackage output.
+ *
+ * The parent of this entity is OutputDestination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * MediaPackageOutputDestinationSettingsProperty mediaPackageOutputDestinationSettingsProperty =
+ * MediaPackageOutputDestinationSettingsProperty.builder()
+ * .channelId("channelId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-mediapackageoutputdestinationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMediaPackageOutputDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MediaPackageOutputDestinationSettingsProperty.Builder =

@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The arc configuration of a `GaugeChartVisual` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ArcConfigurationProperty arcConfigurationProperty = ArcConfigurationProperty.builder()
+ * .arcAngle(123)
+ * .arcThickness("arcThickness")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-arcconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardArcConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ArcConfigurationProperty.Builder =

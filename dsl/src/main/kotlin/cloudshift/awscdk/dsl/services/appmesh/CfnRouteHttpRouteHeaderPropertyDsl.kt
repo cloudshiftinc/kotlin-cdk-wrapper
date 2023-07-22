@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnRoute
 
+/**
+ * An object that represents the HTTP header in the request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpRouteHeaderProperty httpRouteHeaderProperty = HttpRouteHeaderProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .invert(false)
+ * .match(HeaderMatchMethodProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .range(MatchRangeProperty.builder()
+ * .end(123)
+ * .start(123)
+ * .build())
+ * .regex("regex")
+ * .suffix("suffix")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-route-httprouteheader.html)
+ */
 @CdkDslMarker
 public class CfnRouteHttpRouteHeaderPropertyDsl {
   private val cdkBuilder: CfnRoute.HttpRouteHeaderProperty.Builder =

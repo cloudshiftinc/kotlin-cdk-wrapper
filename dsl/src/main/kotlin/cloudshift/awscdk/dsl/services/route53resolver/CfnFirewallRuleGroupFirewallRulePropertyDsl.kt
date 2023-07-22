@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup
 
+/**
+ * A single firewall rule in a rule group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * FirewallRuleProperty firewallRuleProperty = FirewallRuleProperty.builder()
+ * .action("action")
+ * .firewallDomainListId("firewallDomainListId")
+ * .priority(123)
+ * // the properties below are optional
+ * .blockOverrideDnsType("blockOverrideDnsType")
+ * .blockOverrideDomain("blockOverrideDomain")
+ * .blockOverrideTtl(123)
+ * .blockResponse("blockResponse")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html)
+ */
 @CdkDslMarker
 public class CfnFirewallRuleGroupFirewallRulePropertyDsl {
   private val cdkBuilder: CfnFirewallRuleGroup.FirewallRuleProperty.Builder =

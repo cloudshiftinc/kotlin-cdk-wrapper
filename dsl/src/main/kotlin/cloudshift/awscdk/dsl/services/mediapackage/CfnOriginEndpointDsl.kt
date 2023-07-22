@@ -14,6 +14,182 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint
 import software.constructs.Construct
 
+/**
+ * Create an endpoint on an AWS Elemental MediaPackage channel.
+ *
+ * An endpoint represents a single delivery point of a channel, and defines content output handling
+ * through various components, such as packaging protocols, DRM and encryption integration, and more.
+ *
+ * After it's created, an endpoint provides a fixed public URL. This URL remains the same throughout
+ * the lifetime of the endpoint, regardless of any failures or upgrades that might occur. Integrate the
+ * URL with a downstream CDN (such as Amazon CloudFront) or playback device.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnOriginEndpoint cfnOriginEndpoint = CfnOriginEndpoint.Builder.create(this,
+ * "MyCfnOriginEndpoint")
+ * .channelId("channelId")
+ * .id("id")
+ * // the properties below are optional
+ * .authorization(AuthorizationProperty.builder()
+ * .cdnIdentifierSecret("cdnIdentifierSecret")
+ * .secretsRoleArn("secretsRoleArn")
+ * .build())
+ * .cmafPackage(CmafPackageProperty.builder()
+ * .encryption(CmafEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .encryptionMethod("encryptionMethod")
+ * .keyRotationIntervalSeconds(123)
+ * .build())
+ * .hlsManifests(List.of(HlsManifestProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .adMarkers("adMarkers")
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .playlistType("playlistType")
+ * .playlistWindowSeconds(123)
+ * .programDateTimeIntervalSeconds(123)
+ * .url("url")
+ * .build()))
+ * .segmentDurationSeconds(123)
+ * .segmentPrefix("segmentPrefix")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build())
+ * .dashPackage(DashPackageProperty.builder()
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .encryption(DashEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .keyRotationIntervalSeconds(123)
+ * .build())
+ * .includeIframeOnlyStream(false)
+ * .manifestLayout("manifestLayout")
+ * .manifestWindowSeconds(123)
+ * .minBufferTimeSeconds(123)
+ * .minUpdatePeriodSeconds(123)
+ * .periodTriggers(List.of("periodTriggers"))
+ * .profile("profile")
+ * .segmentDurationSeconds(123)
+ * .segmentTemplateFormat("segmentTemplateFormat")
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .suggestedPresentationDelaySeconds(123)
+ * .utcTiming("utcTiming")
+ * .utcTimingUri("utcTimingUri")
+ * .build())
+ * .description("description")
+ * .hlsPackage(HlsPackageProperty.builder()
+ * .adMarkers("adMarkers")
+ * .adsOnDeliveryRestrictions("adsOnDeliveryRestrictions")
+ * .adTriggers(List.of("adTriggers"))
+ * .encryption(HlsEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .encryptionMethod("encryptionMethod")
+ * .keyRotationIntervalSeconds(123)
+ * .repeatExtXKey(false)
+ * .build())
+ * .includeDvbSubtitles(false)
+ * .includeIframeOnlyStream(false)
+ * .playlistType("playlistType")
+ * .playlistWindowSeconds(123)
+ * .programDateTimeIntervalSeconds(123)
+ * .segmentDurationSeconds(123)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .useAudioRenditionGroup(false)
+ * .build())
+ * .manifestName("manifestName")
+ * .mssPackage(MssPackageProperty.builder()
+ * .encryption(MssEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .resourceId("resourceId")
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .certificateArn("certificateArn")
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .manifestWindowSeconds(123)
+ * .segmentDurationSeconds(123)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build())
+ * .origination("origination")
+ * .startoverWindowSeconds(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeDelaySeconds(123)
+ * .whitelist(List.of("whitelist"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-originendpoint.html)
+ */
 @CdkDslMarker
 public class CfnOriginEndpointDsl(
   scope: Construct,

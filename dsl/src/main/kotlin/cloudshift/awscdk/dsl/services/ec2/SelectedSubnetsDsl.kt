@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.ec2.ISubnet
 import software.amazon.awscdk.services.ec2.SelectedSubnets
 import software.constructs.IDependable
 
+/**
+ * Result of selecting a subset of subnets from a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc = Vpc.Builder.create(this, "TheVPC")
+ * .ipAddresses(IpAddresses.cidr("10.0.0.0/16"))
+ * .build();
+ * // Iterate the private subnets
+ * SelectedSubnets selection = vpc.selectSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build());
+ * for (Object subnet : selection.getSubnets()) {
+ * }
+ * ```
+ */
 @CdkDslMarker
 public class SelectedSubnetsDsl {
   private val cdkBuilder: SelectedSubnets.Builder = SelectedSubnets.builder()

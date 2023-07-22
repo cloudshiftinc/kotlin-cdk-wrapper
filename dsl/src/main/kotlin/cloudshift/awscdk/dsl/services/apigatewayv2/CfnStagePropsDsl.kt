@@ -12,6 +12,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnStage
 import software.amazon.awscdk.services.apigatewayv2.CfnStageProps
 
+/**
+ * Properties for defining a `CfnStage`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object routeSettings;
+ * Object stageVariables;
+ * Object tags;
+ * CfnStageProps cfnStageProps = CfnStageProps.builder()
+ * .apiId("apiId")
+ * .stageName("stageName")
+ * // the properties below are optional
+ * .accessLogSettings(AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .accessPolicyId("accessPolicyId")
+ * .autoDeploy(false)
+ * .clientCertificateId("clientCertificateId")
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .deploymentId("deploymentId")
+ * .description("description")
+ * .routeSettings(routeSettings)
+ * .stageVariables(stageVariables)
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-stage.html)
+ */
 @CdkDslMarker
 public class CfnStagePropsDsl {
   private val cdkBuilder: CfnStageProps.Builder = CfnStageProps.builder()

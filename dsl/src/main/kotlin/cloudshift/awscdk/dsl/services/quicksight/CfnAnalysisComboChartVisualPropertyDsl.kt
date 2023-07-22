@@ -10,6 +10,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A combo chart.
+ *
+ * The `ComboChartVisual` includes stacked bar combo charts and clustered bar combo charts
+ *
+ * For more information, see [Using combo
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/combo-charts.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-combochartvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisComboChartVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ComboChartVisualProperty.Builder =

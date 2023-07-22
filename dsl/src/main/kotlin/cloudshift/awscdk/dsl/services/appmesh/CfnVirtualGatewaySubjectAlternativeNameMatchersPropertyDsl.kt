@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents the methods by which a subject alternative name on a peer Transport
+ * Layer Security (TLS) certificate can be matched.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * SubjectAlternativeNameMatchersProperty subjectAlternativeNameMatchersProperty =
+ * SubjectAlternativeNameMatchersProperty.builder()
+ * .exact(List.of("exact"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-subjectalternativenamematchers.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewaySubjectAlternativeNameMatchersPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.SubjectAlternativeNameMatchersProperty.Builder =

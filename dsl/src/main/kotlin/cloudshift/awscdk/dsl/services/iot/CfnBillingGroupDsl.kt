@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnBillingGroup
 import software.constructs.Construct
 
+/**
+ * Creates a new billing group.
+ *
+ * Requires permission to access the
+ * [CreateBillingGroup](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
+ * action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnBillingGroup cfnBillingGroup = CfnBillingGroup.Builder.create(this, "MyCfnBillingGroup")
+ * .billingGroupName("billingGroupName")
+ * .billingGroupProperties(BillingGroupPropertiesProperty.builder()
+ * .billingGroupDescription("billingGroupDescription")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html)
+ */
 @CdkDslMarker
 public class CfnBillingGroupDsl(
   scope: Construct,

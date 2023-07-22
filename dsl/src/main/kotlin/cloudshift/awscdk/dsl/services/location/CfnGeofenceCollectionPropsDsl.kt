@@ -7,6 +7,27 @@ import kotlin.Deprecated
 import kotlin.String
 import software.amazon.awscdk.services.location.CfnGeofenceCollectionProps
 
+/**
+ * Properties for defining a `CfnGeofenceCollection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnGeofenceCollectionProps cfnGeofenceCollectionProps = CfnGeofenceCollectionProps.builder()
+ * .collectionName("collectionName")
+ * // the properties below are optional
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .pricingPlan("pricingPlan")
+ * .pricingPlanDataSource("pricingPlanDataSource")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html)
+ */
 @CdkDslMarker
 public class CfnGeofenceCollectionPropsDsl {
   private val cdkBuilder: CfnGeofenceCollectionProps.Builder = CfnGeofenceCollectionProps.builder()

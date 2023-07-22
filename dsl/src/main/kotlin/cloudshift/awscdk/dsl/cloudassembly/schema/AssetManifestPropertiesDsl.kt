@@ -7,6 +7,23 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.AssetManifestProperties
 
+/**
+ * Artifact properties for the Asset Manifest.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * AssetManifestProperties assetManifestProperties = AssetManifestProperties.builder()
+ * .file("file")
+ * // the properties below are optional
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .requiresBootstrapStackVersion(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetManifestPropertiesDsl {
   private val cdkBuilder: AssetManifestProperties.Builder = AssetManifestProperties.builder()

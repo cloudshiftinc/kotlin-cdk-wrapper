@@ -13,6 +13,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.frauddetector.CfnEventType
 
+/**
+ * The variables associated with this event type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.frauddetector.*;
+ * EventVariableProperty eventVariableProperty = EventVariableProperty.builder()
+ * .arn("arn")
+ * .createdTime("createdTime")
+ * .dataSource("dataSource")
+ * .dataType("dataType")
+ * .defaultValue("defaultValue")
+ * .description("description")
+ * .inline(false)
+ * .lastUpdatedTime("lastUpdatedTime")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableType("variableType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-frauddetector-eventtype-eventvariable.html)
+ */
 @CdkDslMarker
 public class CfnEventTypeEventVariablePropertyDsl {
   private val cdkBuilder: CfnEventType.EventVariableProperty.Builder =

@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 
+/**
+ * Specifies the X.509 extension information for a certificate.
+ *
+ * Extensions present in `CustomExtensions` follow the `ApiPassthrough` [template
+ * rules](https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-order-of-operations)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * CustomExtensionProperty customExtensionProperty = CustomExtensionProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * // the properties below are optional
+ * .critical(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-customextension.html)
+ */
 @CdkDslMarker
 public class CfnCertificateCustomExtensionPropertyDsl {
   private val cdkBuilder: CfnCertificate.CustomExtensionProperty.Builder =

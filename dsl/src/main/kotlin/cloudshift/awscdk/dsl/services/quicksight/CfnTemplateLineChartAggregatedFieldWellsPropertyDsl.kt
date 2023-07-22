@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The field well configuration of a line chart.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-linechartaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateLineChartAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.LineChartAggregatedFieldWellsProperty.Builder =

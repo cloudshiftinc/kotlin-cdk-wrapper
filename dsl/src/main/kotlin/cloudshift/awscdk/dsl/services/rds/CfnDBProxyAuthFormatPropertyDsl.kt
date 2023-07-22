@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.CfnDBProxy
 
+/**
+ * Specifies the details of authentication used by a proxy to log in as a specific database user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * AuthFormatProperty authFormatProperty = AuthFormatProperty.builder()
+ * .authScheme("authScheme")
+ * .clientPasswordAuthType("clientPasswordAuthType")
+ * .description("description")
+ * .iamAuth("iamAuth")
+ * .secretArn("secretArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbproxy-authformat.html)
+ */
 @CdkDslMarker
 public class CfnDBProxyAuthFormatPropertyDsl {
   private val cdkBuilder: CfnDBProxy.AuthFormatProperty.Builder =

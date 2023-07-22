@@ -12,6 +12,58 @@ import software.amazon.awscdk.services.ecs.ProxyConfiguration
 import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * The common properties for all task definitions.
+ *
+ * For more information, see
+ * [Task Definition
+ * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * ProxyConfiguration proxyConfiguration;
+ * Role role;
+ * CommonTaskDefinitionProps commonTaskDefinitionProps = CommonTaskDefinitionProps.builder()
+ * .executionRole(role)
+ * .family("family")
+ * .proxyConfiguration(proxyConfiguration)
+ * .taskRole(role)
+ * .volumes(List.of(Volume.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dockerVolumeConfiguration(DockerVolumeConfiguration.builder()
+ * .driver("driver")
+ * .scope(Scope.TASK)
+ * // the properties below are optional
+ * .autoprovision(false)
+ * .driverOpts(Map.of(
+ * "driverOptsKey", "driverOpts"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .build())
+ * .efsVolumeConfiguration(EfsVolumeConfiguration.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build())
+ * .host(Host.builder()
+ * .sourcePath("sourcePath")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonTaskDefinitionPropsDsl {
   private val cdkBuilder: CommonTaskDefinitionProps.Builder = CommonTaskDefinitionProps.builder()

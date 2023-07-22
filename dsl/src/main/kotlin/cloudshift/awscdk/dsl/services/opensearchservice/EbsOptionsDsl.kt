@@ -8,6 +8,36 @@ import kotlin.Number
 import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 import software.amazon.awscdk.services.opensearchservice.EbsOptions
 
+/**
+ * The configurations of Amazon Elastic Block Store (Amazon EBS) volumes that are attached to data
+ * nodes in the Amazon OpenSearch Service domain.
+ *
+ * For more information, see
+ * [Amazon EBS]
+ * (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html)
+ * in the Amazon Elastic Compute Cloud Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_3)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(10)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3)
+ * .build())
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .enabled(true)
+ * .availabilityZoneCount(3)
+ * .build())
+ * .capacity(CapacityConfig.builder()
+ * .multiAzWithStandbyEnabled(true)
+ * .masterNodes(3)
+ * .dataNodes(3)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsOptionsDsl {
   private val cdkBuilder: EbsOptions.Builder = EbsOptions.builder()

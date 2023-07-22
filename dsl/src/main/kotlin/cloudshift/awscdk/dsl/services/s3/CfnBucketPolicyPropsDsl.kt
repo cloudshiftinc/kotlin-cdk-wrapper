@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.s3.CfnBucketPolicyProps
 
+/**
+ * Properties for defining a `CfnBucketPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object policyDocument;
+ * CfnBucketPolicyProps cfnBucketPolicyProps = CfnBucketPolicyProps.builder()
+ * .bucket("bucket")
+ * .policyDocument(policyDocument)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucketpolicy.html)
+ */
 @CdkDslMarker
 public class CfnBucketPolicyPropsDsl {
   private val cdkBuilder: CfnBucketPolicyProps.Builder = CfnBucketPolicyProps.builder()

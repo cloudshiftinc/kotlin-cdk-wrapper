@@ -9,6 +9,57 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * The configuration information that will be updated for this workgroup, which includes the
+ * location in Amazon S3 where query results are stored, the encryption option, if any, used for query
+ * results, whether the Amazon CloudWatch Metrics are enabled for the workgroup, whether the workgroup
+ * settings override the client-side settings, and the data usage limit for the amount of bytes scanned
+ * per query, if it is specified.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * WorkGroupConfigurationUpdatesProperty workGroupConfigurationUpdatesProperty =
+ * WorkGroupConfigurationUpdatesProperty.builder()
+ * .additionalConfiguration("additionalConfiguration")
+ * .bytesScannedCutoffPerQuery(123)
+ * .customerContentEncryptionConfiguration(CustomerContentEncryptionConfigurationProperty.builder()
+ * .kmsKey("kmsKey")
+ * .build())
+ * .enforceWorkGroupConfiguration(false)
+ * .engineVersion(EngineVersionProperty.builder()
+ * .effectiveEngineVersion("effectiveEngineVersion")
+ * .selectedEngineVersion("selectedEngineVersion")
+ * .build())
+ * .executionRole("executionRole")
+ * .publishCloudWatchMetricsEnabled(false)
+ * .removeBytesScannedCutoffPerQuery(false)
+ * .removeCustomerContentEncryptionConfiguration(false)
+ * .requesterPaysEnabled(false)
+ * .resultConfigurationUpdates(ResultConfigurationUpdatesProperty.builder()
+ * .aclConfiguration(AclConfigurationProperty.builder()
+ * .s3AclOption("s3AclOption")
+ * .build())
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build())
+ * .expectedBucketOwner("expectedBucketOwner")
+ * .outputLocation("outputLocation")
+ * .removeAclConfiguration(false)
+ * .removeEncryptionConfiguration(false)
+ * .removeExpectedBucketOwner(false)
+ * .removeOutputLocation(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-workgroupconfigurationupdates.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupWorkGroupConfigurationUpdatesPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.WorkGroupConfigurationUpdatesProperty.Builder =

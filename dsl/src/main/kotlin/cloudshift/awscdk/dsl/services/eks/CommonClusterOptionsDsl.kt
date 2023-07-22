@@ -16,6 +16,43 @@ import software.amazon.awscdk.services.eks.CommonClusterOptions
 import software.amazon.awscdk.services.eks.KubernetesVersion
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for configuring an EKS cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.eks.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * KubernetesVersion kubernetesVersion;
+ * Role role;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * CommonClusterOptions commonClusterOptions = CommonClusterOptions.builder()
+ * .version(kubernetesVersion)
+ * // the properties below are optional
+ * .clusterName("clusterName")
+ * .outputClusterName(false)
+ * .outputConfigCommand(false)
+ * .role(role)
+ * .securityGroup(securityGroup)
+ * .vpc(vpc)
+ * .vpcSubnets(List.of(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonClusterOptionsDsl {
   private val cdkBuilder: CommonClusterOptions.Builder = CommonClusterOptions.builder()

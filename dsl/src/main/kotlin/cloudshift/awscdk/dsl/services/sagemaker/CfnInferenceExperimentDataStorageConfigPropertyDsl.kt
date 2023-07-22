@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The Amazon S3 location and configuration for storing inference request and response data.
+ *
+ * This is an optional parameter that you can use for data capture. For more information, see
+ * [Capture data](https://docs.aws.amazon.com/sagemaker/latest/dg/model-monitor-data-capture.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DataStorageConfigProperty dataStorageConfigProperty = DataStorageConfigProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .contentType(CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build())
+ * .kmsKey("kmsKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-datastorageconfig.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentDataStorageConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.DataStorageConfigProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The paginated report options for a pivot table visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTablePaginatedReportOptionsProperty pivotTablePaginatedReportOptionsProperty =
+ * PivotTablePaginatedReportOptionsProperty.builder()
+ * .overflowColumnHeaderVisibility("overflowColumnHeaderVisibility")
+ * .verticalOverflowVisibility("verticalOverflowVisibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-pivottablepaginatedreportoptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisPivotTablePaginatedReportOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTablePaginatedReportOptionsProperty.Builder =

@@ -9,6 +9,47 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field options for a pivot table visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTableFieldOptionsProperty pivotTableFieldOptionsProperty =
+ * PivotTableFieldOptionsProperty.builder()
+ * .collapseStateOptions(List.of(PivotTableFieldCollapseStateOptionProperty.builder()
+ * .target(PivotTableFieldCollapseStateTargetProperty.builder()
+ * .fieldDataPathValues(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * .fieldId("fieldId")
+ * .build())
+ * // the properties below are optional
+ * .state("state")
+ * .build()))
+ * .dataPathOptions(List.of(PivotTableDataPathOptionProperty.builder()
+ * .dataPathList(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * // the properties below are optional
+ * .width("width")
+ * .build()))
+ * .selectedFieldOptions(List.of(PivotTableFieldOptionProperty.builder()
+ * .fieldId("fieldId")
+ * // the properties below are optional
+ * .customLabel("customLabel")
+ * .visibility("visibility")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-pivottablefieldoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPivotTableFieldOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.PivotTableFieldOptionsProperty.Builder =

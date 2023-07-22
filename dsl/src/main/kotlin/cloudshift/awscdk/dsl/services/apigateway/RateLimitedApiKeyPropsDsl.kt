@@ -19,6 +19,23 @@ import software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps
 import software.amazon.awscdk.services.apigateway.ThrottleSettings
 import software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage
 
+/**
+ * RateLimitedApiKey properties.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * RateLimitedApiKey key = RateLimitedApiKey.Builder.create(this, "rate-limited-api-key")
+ * .customerId("hello-customer")
+ * .stages(List.of(api.getDeploymentStage()))
+ * .quota(QuotaSettings.builder()
+ * .limit(10000)
+ * .period(Period.MONTH)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RateLimitedApiKeyPropsDsl {
   private val cdkBuilder: RateLimitedApiKeyProps.Builder = RateLimitedApiKeyProps.builder()

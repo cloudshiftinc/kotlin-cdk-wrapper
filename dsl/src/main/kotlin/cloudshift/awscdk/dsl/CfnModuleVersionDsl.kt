@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.CfnModuleVersion
 import software.constructs.Construct
 
+/**
+ * Registers the specified version of the module with the CloudFormation service.
+ *
+ * Registering a module makes it available for use in CloudFormation templates in your AWS account
+ * and Region.
+ *
+ * To specify a module version as the default version, use the
+ * `[AWS::CloudFormation::ModuleDefaultVersion](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html)`
+ * resource.
+ *
+ * For more information using modules, see [Using modules to encapsulate and reuse resource
+ * configurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/modules.html) and
+ * [Registering
+ * extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry.html#registry-register)
+ * in the *CloudFormation User Guide* . For information on developing modules, see [Developing
+ * modules](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/modules.html) in the
+ * *CloudFormation CLI User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnModuleVersion cfnModuleVersion = CfnModuleVersion.Builder.create(this, "MyCfnModuleVersion")
+ * .moduleName("moduleName")
+ * .modulePackage("modulePackage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduleversion.html)
+ */
 @CdkDslMarker
 public class CfnModuleVersionDsl(
   scope: Construct,

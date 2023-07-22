@@ -14,6 +14,68 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rum.CfnAppMonitor
 import software.constructs.Construct
 
+/**
+ * Creates a CloudWatch RUM app monitor, which you can use to collect telemetry data from your
+ * application and send it to CloudWatch RUM.
+ *
+ * The data includes performance and reliability information such as page load time, client-side
+ * errors, and user behavior.
+ *
+ * After you create an app monitor, sign in to the CloudWatch RUM console to get the JavaScript code
+ * snippet to add to your web application. For more information, see [How do I find a code snippet that
+ * I've already
+ * generated?](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-RUM-find-code-snippet.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rum.*;
+ * CfnAppMonitor cfnAppMonitor = CfnAppMonitor.Builder.create(this, "MyCfnAppMonitor")
+ * .domain("domain")
+ * .name("name")
+ * // the properties below are optional
+ * .appMonitorConfiguration(AppMonitorConfigurationProperty.builder()
+ * .allowCookies(false)
+ * .enableXRay(false)
+ * .excludedPages(List.of("excludedPages"))
+ * .favoritePages(List.of("favoritePages"))
+ * .guestRoleArn("guestRoleArn")
+ * .identityPoolId("identityPoolId")
+ * .includedPages(List.of("includedPages"))
+ * .metricDestinations(List.of(MetricDestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .destinationArn("destinationArn")
+ * .iamRoleArn("iamRoleArn")
+ * .metricDefinitions(List.of(MetricDefinitionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dimensionKeys(Map.of(
+ * "dimensionKeysKey", "dimensionKeys"))
+ * .eventPattern("eventPattern")
+ * .namespace("namespace")
+ * .unitLabel("unitLabel")
+ * .valueKey("valueKey")
+ * .build()))
+ * .build()))
+ * .sessionSampleRate(123)
+ * .telemetries(List.of("telemetries"))
+ * .build())
+ * .customEvents(CustomEventsProperty.builder()
+ * .status("status")
+ * .build())
+ * .cwLogEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rum-appmonitor.html)
+ */
 @CdkDslMarker
 public class CfnAppMonitorDsl(
   scope: Construct,

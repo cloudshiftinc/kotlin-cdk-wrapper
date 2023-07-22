@@ -13,6 +13,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 import software.amazon.awscdk.services.medialive.CfnChannelProps
 
+/**
+ * Properties for defining a `CfnChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelPropsDsl {
   private val cdkBuilder: CfnChannelProps.Builder = CfnChannelProps.builder()

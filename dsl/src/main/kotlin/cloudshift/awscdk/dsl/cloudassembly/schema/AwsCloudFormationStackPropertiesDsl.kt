@@ -11,6 +11,42 @@ import kotlin.collections.Map
 import software.amazon.awscdk.cloudassembly.schema.AwsCloudFormationStackProperties
 import software.amazon.awscdk.cloudassembly.schema.BootstrapRole
 
+/**
+ * Artifact properties for CloudFormation stacks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * AwsCloudFormationStackProperties awsCloudFormationStackProperties =
+ * AwsCloudFormationStackProperties.builder()
+ * .templateFile("templateFile")
+ * // the properties below are optional
+ * .assumeRoleArn("assumeRoleArn")
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .cloudFormationExecutionRoleArn("cloudFormationExecutionRoleArn")
+ * .lookupRole(BootstrapRole.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .bootstrapStackVersionSsmParameter("bootstrapStackVersionSsmParameter")
+ * .requiresBootstrapStackVersion(123)
+ * .build())
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .requiresBootstrapStackVersion(123)
+ * .stackName("stackName")
+ * .stackTemplateAssetObjectUrl("stackTemplateAssetObjectUrl")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .terminationProtection(false)
+ * .validateOnSynth(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsCloudFormationStackPropertiesDsl {
   private val cdkBuilder: AwsCloudFormationStackProperties.Builder =

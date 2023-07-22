@@ -9,6 +9,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for the encoding of outputs.
+ *
+ * This entity is at the top level in the channel.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-encodersettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelEncoderSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.EncoderSettingsProperty.Builder =

@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings
 
+/**
+ * Permissions granted to a principal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * PrincipalPermissionsProperty principalPermissionsProperty =
+ * PrincipalPermissionsProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-datalakesettings-principalpermissions.html)
+ */
 @CdkDslMarker
 public class CfnDataLakeSettingsPrincipalPermissionsPropertyDsl {
   private val cdkBuilder: CfnDataLakeSettings.PrincipalPermissionsProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnStackFleetAssociation
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::StackFleetAssociation` resource associates the specified fleet with the
+ * specified stack for Amazon AppStream 2.0.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnStackFleetAssociation cfnStackFleetAssociation = CfnStackFleetAssociation.Builder.create(this,
+ * "MyCfnStackFleetAssociation")
+ * .fleetName("fleetName")
+ * .stackName("stackName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stackfleetassociation.html)
+ */
 @CdkDslMarker
 public class CfnStackFleetAssociationDsl(
   scope: Construct,

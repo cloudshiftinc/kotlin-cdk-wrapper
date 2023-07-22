@@ -8,6 +8,32 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ClarifyShapConfigProperty clarifyShapConfigProperty = ClarifyShapConfigProperty.builder()
+ * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
+ * .mimeType("mimeType")
+ * .shapBaseline("shapBaseline")
+ * .shapBaselineUri("shapBaselineUri")
+ * .build())
+ * // the properties below are optional
+ * .numberOfSamples(123)
+ * .seed(123)
+ * .textConfig(ClarifyTextConfigProperty.builder()
+ * .granularity("granularity")
+ * .language("language")
+ * .build())
+ * .useLogit(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-clarifyshapconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigClarifyShapConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.ClarifyShapConfigProperty.Builder =

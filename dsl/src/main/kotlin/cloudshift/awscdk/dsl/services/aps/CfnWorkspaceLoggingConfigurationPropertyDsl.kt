@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.aps.CfnWorkspace
 
+/**
+ * The LoggingConfiguration attribute sets the logging configuration for the workspace.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.aps.*;
+ * LoggingConfigurationProperty loggingConfigurationProperty =
+ * LoggingConfigurationProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-aps-workspace-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkspaceLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkspace.LoggingConfigurationProperty.Builder =

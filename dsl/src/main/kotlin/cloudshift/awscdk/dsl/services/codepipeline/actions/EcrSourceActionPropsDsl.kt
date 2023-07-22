@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps
 import software.amazon.awscdk.services.ecr.IRepository
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Construction properties of `EcrSourceAction`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.*;
+ * Repository ecrRepository;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact sourceOutput = new Artifact();
+ * EcrSourceAction sourceAction = EcrSourceAction.Builder.create()
+ * .actionName("ECR")
+ * .repository(ecrRepository)
+ * .imageTag("some-tag") // optional, default: 'latest'
+ * .output(sourceOutput)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EcrSourceActionPropsDsl {
   private val cdkBuilder: EcrSourceActionProps.Builder = EcrSourceActionProps.builder()

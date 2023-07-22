@@ -12,6 +12,32 @@ import software.amazon.awscdk.services.cloudwatch.Unit
 import software.amazon.awscdk.services.dynamodb.Operation
 import software.amazon.awscdk.services.dynamodb.SystemErrorsForOperationsMetricOptions
 
+/**
+ * Options for configuring a system errors metric that considers multiple operations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * SystemErrorsForOperationsMetricOptions systemErrorsForOperationsMetricOptions =
+ * SystemErrorsForOperationsMetricOptions.builder()
+ * .account("account")
+ * .color("color")
+ * .dimensionsMap(Map.of(
+ * "dimensionsMapKey", "dimensionsMap"))
+ * .label("label")
+ * .operations(List.of(Operation.GET_ITEM))
+ * .period(Duration.minutes(30))
+ * .region("region")
+ * .statistic("statistic")
+ * .unit(Unit.SECONDS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SystemErrorsForOperationsMetricOptionsDsl {
   private val cdkBuilder: SystemErrorsForOperationsMetricOptions.Builder =

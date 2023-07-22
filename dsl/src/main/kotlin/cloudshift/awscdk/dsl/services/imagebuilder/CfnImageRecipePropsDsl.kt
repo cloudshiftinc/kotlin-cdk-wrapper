@@ -12,6 +12,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipeProps
 
+/**
+ * Properties for defining a `CfnImageRecipe`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnImageRecipeProps cfnImageRecipeProps = CfnImageRecipeProps.builder()
+ * .components(List.of(ComponentConfigurationProperty.builder()
+ * .componentArn("componentArn")
+ * .parameters(List.of(ComponentParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build()))
+ * .build()))
+ * .name("name")
+ * .parentImage("parentImage")
+ * .version("version")
+ * // the properties below are optional
+ * .additionalInstanceConfiguration(AdditionalInstanceConfigurationProperty.builder()
+ * .systemsManagerAgent(SystemsManagerAgentProperty.builder()
+ * .uninstallAfterBuild(false)
+ * .build())
+ * .userDataOverride("userDataOverride")
+ * .build())
+ * .blockDeviceMappings(List.of(InstanceBlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * .ebs(EbsInstanceBlockDeviceSpecificationProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice("noDevice")
+ * .virtualName("virtualName")
+ * .build()))
+ * .description("description")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-imagerecipe.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipePropsDsl {
   private val cdkBuilder: CfnImageRecipeProps.Builder = CfnImageRecipeProps.builder()

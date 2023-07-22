@@ -11,6 +11,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A custom response to send to the client.
+ *
+ * You can define a custom response for rule actions and default web ACL actions that are set to the
+ * block action.
+ *
+ * For information about customizing web requests and responses, see [Customizing web requests and
+ * responses in AWS
+ * WAF](https://docs.aws.amazon.com/waf/latest/developerguide/waf-custom-request-response.html) in the
+ * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CustomResponseProperty customResponseProperty = CustomResponseProperty.builder()
+ * .responseCode(123)
+ * // the properties below are optional
+ * .customResponseBodyKey("customResponseBodyKey")
+ * .responseHeaders(List.of(CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-customresponse.html)
+ */
 @CdkDslMarker
 public class CfnWebACLCustomResponsePropertyDsl {
   private val cdkBuilder: CfnWebACL.CustomResponseProperty.Builder =

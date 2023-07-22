@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
 import software.constructs.Construct
 
+/**
+ * Creates a private namespace based on DNS, which is visible only inside a specified Amazon VPC.
+ *
+ * The namespace defines your service naming scheme. For example, if you name your namespace
+ * `example.com` and name your service `backend` , the resulting DNS name for the service is
+ * `backend.example.com` . Service instances that are registered using a private DNS namespace can be
+ * discovered using either a `DiscoverInstances` request or using DNS. For the current quota on the
+ * number of namespaces that you can create using the same AWS account , see [AWS Cloud Map
+ * quotas](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map
+ * Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * CfnPrivateDnsNamespace cfnPrivateDnsNamespace = CfnPrivateDnsNamespace.Builder.create(this,
+ * "MyCfnPrivateDnsNamespace")
+ * .name("name")
+ * .vpc("vpc")
+ * // the properties below are optional
+ * .description("description")
+ * .properties(PropertiesProperty.builder()
+ * .dnsProperties(PrivateDnsPropertiesMutableProperty.builder()
+ * .soa(SOAProperty.builder()
+ * .ttl(123)
+ * .build())
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnPrivateDnsNamespaceDsl(
   scope: Construct,

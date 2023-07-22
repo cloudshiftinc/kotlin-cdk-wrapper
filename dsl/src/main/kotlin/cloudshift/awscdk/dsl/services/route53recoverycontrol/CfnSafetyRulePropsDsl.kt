@@ -13,6 +13,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRuleProps
 
+/**
+ * Properties for defining a `CfnSafetyRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnSafetyRuleProps cfnSafetyRuleProps = CfnSafetyRuleProps.builder()
+ * .controlPanelArn("controlPanelArn")
+ * .name("name")
+ * .ruleConfig(RuleConfigProperty.builder()
+ * .inverted(false)
+ * .threshold(123)
+ * .type("type")
+ * .build())
+ * // the properties below are optional
+ * .assertionRule(AssertionRuleProperty.builder()
+ * .assertedControls(List.of("assertedControls"))
+ * .waitPeriodMs(123)
+ * .build())
+ * .gatingRule(GatingRuleProperty.builder()
+ * .gatingControls(List.of("gatingControls"))
+ * .targetControls(List.of("targetControls"))
+ * .waitPeriodMs(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)
+ */
 @CdkDslMarker
 public class CfnSafetyRulePropsDsl {
   private val cdkBuilder: CfnSafetyRuleProps.Builder = CfnSafetyRuleProps.builder()

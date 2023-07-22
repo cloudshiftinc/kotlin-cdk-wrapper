@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.CfnResourceSignal
 
+/**
+ * When AWS CloudFormation creates the associated resource, configures the number of required
+ * success signals and the length of time that AWS CloudFormation waits for those signals.
+ *
+ * Example:
+ *
+ * ```
+ * CfnResource resource;
+ * resource.getCfnOptions().getCreationPolicy() = CfnCreationPolicy.builder()
+ * .resourceSignal(CfnResourceSignal.builder()
+ * .count(3)
+ * .timeout("PR15M")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnResourceSignalDsl {
   private val cdkBuilder: CfnResourceSignal.Builder = CfnResourceSignal.builder()

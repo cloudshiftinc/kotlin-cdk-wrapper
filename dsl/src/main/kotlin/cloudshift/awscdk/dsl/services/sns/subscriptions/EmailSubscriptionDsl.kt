@@ -11,6 +11,19 @@ import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sns.subscriptions.EmailSubscription
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an email address as a subscription target.
+ *
+ * Email subscriptions require confirmation.
+ *
+ * Example:
+ *
+ * ```
+ * Topic myTopic = new Topic(this, "Topic");
+ * CfnParameter emailAddress = new CfnParameter(this, "email-param");
+ * myTopic.addSubscription(new EmailSubscription(emailAddress.getValueAsString()));
+ * ```
+ */
 @CdkDslMarker
 public class EmailSubscriptionDsl(
   emailAddress: String,

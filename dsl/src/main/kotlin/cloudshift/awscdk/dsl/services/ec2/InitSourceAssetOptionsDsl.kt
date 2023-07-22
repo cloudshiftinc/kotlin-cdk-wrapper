@@ -17,6 +17,56 @@ import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 import software.amazon.awscdk.services.ec2.InitSourceAssetOptions
 import software.amazon.awscdk.services.iam.IGrantable
 
+/**
+ * Additional options for an InitSource that builds an asset from local files.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * DockerImage dockerImage;
+ * IGrantable grantable;
+ * InitServiceRestartHandle initServiceRestartHandle;
+ * ILocalBundling localBundling;
+ * InitSourceAssetOptions initSourceAssetOptions = InitSourceAssetOptions.builder()
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .deployTime(false)
+ * .exclude(List.of("exclude"))
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .readers(List.of(grantable))
+ * .serviceRestartHandles(List.of(initServiceRestartHandle))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InitSourceAssetOptionsDsl {
   private val cdkBuilder: InitSourceAssetOptions.Builder = InitSourceAssetOptions.builder()

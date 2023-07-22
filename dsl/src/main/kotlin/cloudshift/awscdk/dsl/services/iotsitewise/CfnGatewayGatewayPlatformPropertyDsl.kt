@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnGateway
 
+/**
+ * Contains a gateway's platform information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * GatewayPlatformProperty gatewayPlatformProperty = GatewayPlatformProperty.builder()
+ * .greengrass(GreengrassProperty.builder()
+ * .groupArn("groupArn")
+ * .build())
+ * .greengrassV2(GreengrassV2Property.builder()
+ * .coreDeviceThingName("coreDeviceThingName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-gateway-gatewayplatform.html)
+ */
 @CdkDslMarker
 public class CfnGatewayGatewayPlatformPropertyDsl {
   private val cdkBuilder: CfnGateway.GatewayPlatformProperty.Builder =

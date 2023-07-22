@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigateway.CfnDomainName
 
+/**
+ * The `EndpointConfiguration` property type specifies the endpoint types of an Amazon API Gateway
+ * domain name.
+ *
+ * `EndpointConfiguration` is a property of the
+ * [AWS::ApiGateway::DomainName](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * EndpointConfigurationProperty endpointConfigurationProperty =
+ * EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-endpointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDomainNameEndpointConfigurationPropertyDsl {
   private val cdkBuilder: CfnDomainName.EndpointConfigurationProperty.Builder =

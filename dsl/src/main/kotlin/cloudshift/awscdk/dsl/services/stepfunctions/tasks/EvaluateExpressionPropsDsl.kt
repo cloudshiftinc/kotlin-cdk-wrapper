@@ -17,6 +17,36 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EvaluateExpressionProps
 
+/**
+ * Properties for EvaluateExpression.
+ *
+ * Example:
+ *
+ * ```
+ * EvaluateExpression convertToSeconds = EvaluateExpression.Builder.create(this, "Convert to
+ * seconds")
+ * .expression("$.waitMilliseconds / 1000")
+ * .resultPath("$.waitSeconds")
+ * .build();
+ * EvaluateExpression createMessage = EvaluateExpression.Builder.create(this, "Create message")
+ * // Note: this is a string inside a string.
+ * .expression("`Now waiting ${$.waitSeconds} seconds...`")
+ * .runtime(Runtime.NODEJS_16_X)
+ * .resultPath("$.message")
+ * .build();
+ * SnsPublish publishMessage = SnsPublish.Builder.create(this, "Publish message")
+ * .topic(new Topic(this, "cool-topic"))
+ * .message(TaskInput.fromJsonPathAt("$.message"))
+ * .resultPath("$.sns")
+ * .build();
+ * Wait wait = Wait.Builder.create(this, "Wait")
+ * .time(WaitTime.secondsPath("$.waitSeconds"))
+ * .build();
+ * StateMachine.Builder.create(this, "StateMachine")
+ * .definition(convertToSeconds.next(createMessage).next(publishMessage).next(wait))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EvaluateExpressionPropsDsl {
   private val cdkBuilder: EvaluateExpressionProps.Builder = EvaluateExpressionProps.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables
 
+/**
+ * The CodePipeline variables emitted by GitHub source Action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * GitHubSourceVariables gitHubSourceVariables = GitHubSourceVariables.builder()
+ * .authorDate("authorDate")
+ * .branchName("branchName")
+ * .commitId("commitId")
+ * .commitMessage("commitMessage")
+ * .committerDate("committerDate")
+ * .commitUrl("commitUrl")
+ * .repositoryName("repositoryName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourceVariablesDsl {
   private val cdkBuilder: GitHubSourceVariables.Builder = GitHubSourceVariables.builder()

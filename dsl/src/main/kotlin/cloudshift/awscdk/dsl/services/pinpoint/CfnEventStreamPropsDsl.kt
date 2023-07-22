@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnEventStreamProps
 
+/**
+ * Properties for defining a `CfnEventStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnEventStreamProps cfnEventStreamProps = CfnEventStreamProps.builder()
+ * .applicationId("applicationId")
+ * .destinationStreamArn("destinationStreamArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-eventstream.html)
+ */
 @CdkDslMarker
 public class CfnEventStreamPropsDsl {
   private val cdkBuilder: CfnEventStreamProps.Builder = CfnEventStreamProps.builder()

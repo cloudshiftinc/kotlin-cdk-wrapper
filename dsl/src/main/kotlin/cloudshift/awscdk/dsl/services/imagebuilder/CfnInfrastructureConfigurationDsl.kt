@@ -12,6 +12,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
 import software.constructs.Construct
 
+/**
+ * The infrastructure configuration allows you to specify the infrastructure within which to build
+ * and test your image.
+ *
+ * In the infrastructure configuration, you can specify instance types, subnets, and security groups
+ * to associate with your instance. You can also associate an Amazon EC2 key pair with the instance
+ * used to build your image. This allows you to log on to your instance to troubleshoot if your build
+ * fails and you set terminateInstanceOnFailure to false.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnInfrastructureConfiguration cfnInfrastructureConfiguration =
+ * CfnInfrastructureConfiguration.Builder.create(this, "MyCfnInfrastructureConfiguration")
+ * .instanceProfileName("instanceProfileName")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .instanceMetadataOptions(InstanceMetadataOptionsProperty.builder()
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build())
+ * .instanceTypes(List.of("instanceTypes"))
+ * .keyPair("keyPair")
+ * .logging(LoggingProperty.builder()
+ * .s3Logs(S3LogsProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .build())
+ * .resourceTags(Map.of(
+ * "resourceTagsKey", "resourceTags"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .snsTopicArn("snsTopicArn")
+ * .subnetId("subnetId")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .terminateInstanceOnFailure(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInfrastructureConfigurationDsl(
   scope: Construct,

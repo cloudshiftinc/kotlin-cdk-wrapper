@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * Inspect the body of the web request. The body immediately follows the request headers.
+ *
+ * This is used to indicate the web request component to inspect, in the `FieldToMatch`
+ * specification.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * BodyProperty bodyProperty = BodyProperty.builder()
+ * .oversizeHandling("oversizeHandling")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-body.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupBodyPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.BodyProperty.Builder = CfnRuleGroup.BodyProperty.builder()

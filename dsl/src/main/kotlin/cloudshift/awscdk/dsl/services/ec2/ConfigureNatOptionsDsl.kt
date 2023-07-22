@@ -10,6 +10,25 @@ import software.amazon.awscdk.services.ec2.PrivateSubnet
 import software.amazon.awscdk.services.ec2.PublicSubnet
 import software.amazon.awscdk.services.ec2.Vpc
 
+/**
+ * Options passed by the VPC when NAT needs to be configured.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PrivateSubnet privateSubnet;
+ * PublicSubnet publicSubnet;
+ * Vpc vpc;
+ * ConfigureNatOptions configureNatOptions = ConfigureNatOptions.builder()
+ * .natSubnets(List.of(publicSubnet))
+ * .privateSubnets(List.of(privateSubnet))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConfigureNatOptionsDsl {
   private val cdkBuilder: ConfigureNatOptions.Builder = ConfigureNatOptions.builder()

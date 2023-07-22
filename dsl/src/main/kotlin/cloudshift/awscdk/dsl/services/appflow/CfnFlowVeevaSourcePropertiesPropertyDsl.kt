@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when using Veeva as a flow source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * VeevaSourcePropertiesProperty veevaSourcePropertiesProperty =
+ * VeevaSourcePropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .documentType("documentType")
+ * .includeAllVersions(false)
+ * .includeRenditions(false)
+ * .includeSourceFiles(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-veevasourceproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowVeevaSourcePropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.VeevaSourcePropertiesProperty.Builder =

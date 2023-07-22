@@ -17,6 +17,24 @@ import software.amazon.awscdk.services.sqs.Queue
 import software.amazon.awscdk.services.sqs.QueueEncryption
 import software.constructs.Construct
 
+/**
+ * A new Amazon SQS queue.
+ *
+ * Example:
+ *
+ * ```
+ * // An sqs queue for unsuccessful invocations of a lambda function
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue deadLetterQueue = new Queue(this, "DeadLetterQueue");
+ * Function myFn = Function.Builder.create(this, "Fn")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromInline("// your code"))
+ * // sqs queue for unsuccessful invocations
+ * .onFailure(new SqsDestination(deadLetterQueue))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueDsl(
   scope: Construct,

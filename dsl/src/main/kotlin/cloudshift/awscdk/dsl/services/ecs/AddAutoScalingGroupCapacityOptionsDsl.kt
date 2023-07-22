@@ -8,6 +8,26 @@ import software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions
 import software.amazon.awscdk.services.ecs.MachineImageType
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * The properties for adding an AutoScalingGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * AddAutoScalingGroupCapacityOptions addAutoScalingGroupCapacityOptions =
+ * AddAutoScalingGroupCapacityOptions.builder()
+ * .canContainersAccessInstanceRole(false)
+ * .machineImageType(MachineImageType.AMAZON_LINUX_2)
+ * .spotInstanceDraining(false)
+ * .topicEncryptionKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddAutoScalingGroupCapacityOptionsDsl {
   private val cdkBuilder: AddAutoScalingGroupCapacityOptions.Builder =

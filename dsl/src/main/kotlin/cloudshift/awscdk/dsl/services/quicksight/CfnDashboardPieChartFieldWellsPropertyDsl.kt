@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field well configuration of a pie chart.
+ *
+ * This is a union type structure. For this structure to be valid, only one of the attributes can be
+ * defined.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-piechartfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPieChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.PieChartFieldWellsProperty.Builder =

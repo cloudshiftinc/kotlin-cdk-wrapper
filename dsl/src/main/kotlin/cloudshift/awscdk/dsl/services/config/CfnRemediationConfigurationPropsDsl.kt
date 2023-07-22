@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 import software.amazon.awscdk.services.config.CfnRemediationConfigurationProps
 
+/**
+ * Properties for defining a `CfnRemediationConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object parameters;
+ * CfnRemediationConfigurationProps cfnRemediationConfigurationProps =
+ * CfnRemediationConfigurationProps.builder()
+ * .configRuleName("configRuleName")
+ * .targetId("targetId")
+ * .targetType("targetType")
+ * // the properties below are optional
+ * .automatic(false)
+ * .executionControls(ExecutionControlsProperty.builder()
+ * .ssmControls(SsmControlsProperty.builder()
+ * .concurrentExecutionRatePercentage(123)
+ * .errorPercentage(123)
+ * .build())
+ * .build())
+ * .maximumAutomaticAttempts(123)
+ * .parameters(parameters)
+ * .resourceType("resourceType")
+ * .retryAttemptSeconds(123)
+ * .targetVersion("targetVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-remediationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationPropsDsl {
   private val cdkBuilder: CfnRemediationConfigurationProps.Builder =

@@ -11,6 +11,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * Linux-specific modifications that are applied to the container, such as details for device
+ * mappings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * LinuxParametersProperty linuxParametersProperty = LinuxParametersProperty.builder()
+ * .devices(List.of(DeviceProperty.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * .permissions(List.of("permissions"))
+ * .build()))
+ * .initProcessEnabled(false)
+ * .maxSwap(123)
+ * .sharedMemorySize(123)
+ * .swappiness(123)
+ * .tmpfs(List.of(TmpfsProperty.builder()
+ * .containerPath("containerPath")
+ * .size(123)
+ * // the properties below are optional
+ * .mountOptions(List.of("mountOptions"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-linuxparameters.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionLinuxParametersPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.LinuxParametersProperty.Builder =

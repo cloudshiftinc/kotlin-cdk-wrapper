@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 
+/**
+ * The source configuration for cloud flows receiving a stream from a bridge.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * GatewayBridgeSourceProperty gatewayBridgeSourceProperty = GatewayBridgeSourceProperty.builder()
+ * .bridgeArn("bridgeArn")
+ * // the properties below are optional
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-gatewaybridgesource.html)
+ */
 @CdkDslMarker
 public class CfnFlowSourceGatewayBridgeSourcePropertyDsl {
   private val cdkBuilder: CfnFlowSource.GatewayBridgeSourceProperty.Builder =

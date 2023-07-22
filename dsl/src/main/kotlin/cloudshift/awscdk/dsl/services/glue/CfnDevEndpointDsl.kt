@@ -13,6 +13,44 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnDevEndpoint
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::DevEndpoint` resource specifies a development endpoint where a developer can
+ * remotely debug ETL scripts for AWS Glue .
+ *
+ * For more information, see [DevEndpoint
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-dev-endpoint.html#aws-glue-api-jobs-dev-endpoint-DevEndpoint)
+ * in the AWS Glue Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object arguments_;
+ * Object tags;
+ * CfnDevEndpoint cfnDevEndpoint = CfnDevEndpoint.Builder.create(this, "MyCfnDevEndpoint")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .arguments(arguments_)
+ * .endpointName("endpointName")
+ * .extraJarsS3Path("extraJarsS3Path")
+ * .extraPythonLibsS3Path("extraPythonLibsS3Path")
+ * .glueVersion("glueVersion")
+ * .numberOfNodes(123)
+ * .numberOfWorkers(123)
+ * .publicKey("publicKey")
+ * .publicKeys(List.of("publicKeys"))
+ * .securityConfiguration("securityConfiguration")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetId("subnetId")
+ * .tags(tags)
+ * .workerType("workerType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-devendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDevEndpointDsl(
   scope: Construct,

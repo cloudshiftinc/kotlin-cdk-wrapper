@@ -12,6 +12,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.CustomResourceProps
 import software.amazon.awscdk.RemovalPolicy
 
+/**
+ * Properties to provide a Lambda-backed custom resource.
+ *
+ * Example:
+ *
+ * ```
+ * String serviceToken = CustomResourceProvider.getOrCreate(this, "Custom::MyCustomResourceType",
+ * CustomResourceProviderProps.builder()
+ * .codeDirectory(String.format("%s/my-handler", __dirname))
+ * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+ * .description("Lambda function created by the custom resource provider")
+ * .build());
+ * CustomResource.Builder.create(this, "MyResource")
+ * .resourceType("Custom::MyCustomResourceType")
+ * .serviceToken(serviceToken)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomResourcePropsDsl {
   private val cdkBuilder: CustomResourceProps.Builder = CustomResourceProps.builder()

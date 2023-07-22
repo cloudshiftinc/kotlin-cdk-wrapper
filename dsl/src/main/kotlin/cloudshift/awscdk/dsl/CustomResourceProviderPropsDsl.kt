@@ -14,6 +14,23 @@ import software.amazon.awscdk.CustomResourceProviderRuntime
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.Size
 
+/**
+ * Initialization properties for `CustomResourceProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * CustomResourceProvider provider = CustomResourceProvider.getOrCreateProvider(this,
+ * "Custom::MyCustomResourceType", CustomResourceProviderProps.builder()
+ * .codeDirectory(String.format("%s/my-handler", __dirname))
+ * .runtime(CustomResourceProviderRuntime.NODEJS_14_X)
+ * .build());
+ * provider.addToRolePolicy(Map.of(
+ * "Effect", "Allow",
+ * "Action", "s3:GetObject",
+ * "Resource", "*"));
+ * ```
+ */
 @CdkDslMarker
 public class CustomResourceProviderPropsDsl {
   private val cdkBuilder: CustomResourceProviderProps.Builder =

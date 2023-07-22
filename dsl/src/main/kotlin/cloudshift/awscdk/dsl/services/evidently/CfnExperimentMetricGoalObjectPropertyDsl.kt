@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnExperiment
 
+/**
+ * Use this structure to tell Evidently whether higher or lower values are desired for a metric that
+ * is used in an experiment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * MetricGoalObjectProperty metricGoalObjectProperty = MetricGoalObjectProperty.builder()
+ * .desiredChange("desiredChange")
+ * .entityIdKey("entityIdKey")
+ * .metricName("metricName")
+ * .valueKey("valueKey")
+ * // the properties below are optional
+ * .eventPattern("eventPattern")
+ * .unitLabel("unitLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-metricgoalobject.html)
+ */
 @CdkDslMarker
 public class CfnExperimentMetricGoalObjectPropertyDsl {
   private val cdkBuilder: CfnExperiment.MetricGoalObjectProperty.Builder =

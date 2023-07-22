@@ -11,6 +11,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration
 
+/**
+ * Parameters for a packaging configuration that uses Common Media Application Format (CMAF)
+ * packaging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CmafPackageProperty cmafPackageProperty = CmafPackageProperty.builder()
+ * .hlsManifests(List.of(HlsManifestProperty.builder()
+ * .adMarkers("adMarkers")
+ * .includeIframeOnlyStream(false)
+ * .manifestName("manifestName")
+ * .programDateTimeIntervalSeconds(123)
+ * .repeatExtXKey(false)
+ * .streamSelection(StreamSelectionProperty.builder()
+ * .maxVideoBitsPerSecond(123)
+ * .minVideoBitsPerSecond(123)
+ * .streamOrder("streamOrder")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .encryption(CmafEncryptionProperty.builder()
+ * .spekeKeyProvider(SpekeKeyProviderProperty.builder()
+ * .roleArn("roleArn")
+ * .systemIds(List.of("systemIds"))
+ * .url("url")
+ * // the properties below are optional
+ * .encryptionContractConfiguration(EncryptionContractConfigurationProperty.builder()
+ * .presetSpeke20Audio("presetSpeke20Audio")
+ * .presetSpeke20Video("presetSpeke20Video")
+ * .build())
+ * .build())
+ * .build())
+ * .includeEncoderConfigurationInSegments(false)
+ * .segmentDurationSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-packagingconfiguration-cmafpackage.html)
+ */
 @CdkDslMarker
 public class CfnPackagingConfigurationCmafPackagePropertyDsl {
   private val cdkBuilder: CfnPackagingConfiguration.CmafPackageProperty.Builder =

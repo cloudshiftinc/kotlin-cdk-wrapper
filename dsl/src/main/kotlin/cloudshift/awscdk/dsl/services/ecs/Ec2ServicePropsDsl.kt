@@ -26,6 +26,25 @@ import software.amazon.awscdk.services.ecs.PropagatedTagSource
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.TaskDefinition
 
+/**
+ * The properties for defining a service using the EC2 launch type.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * Ec2Service service = Ec2Service.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
+ * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
+ * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
+ * .containerName("MyContainer")
+ * .containerPort(80)
+ * .build()));
+ * ```
+ */
 @CdkDslMarker
 public class Ec2ServicePropsDsl {
   private val cdkBuilder: Ec2ServiceProps.Builder = Ec2ServiceProps.builder()

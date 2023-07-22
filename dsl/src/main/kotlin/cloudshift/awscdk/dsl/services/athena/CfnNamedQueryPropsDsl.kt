@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.athena.CfnNamedQueryProps
 
+/**
+ * Properties for defining a `CfnNamedQuery`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnNamedQueryProps cfnNamedQueryProps = CfnNamedQueryProps.builder()
+ * .database("database")
+ * .queryString("queryString")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .workGroup("workGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-namedquery.html)
+ */
 @CdkDslMarker
 public class CfnNamedQueryPropsDsl {
   private val cdkBuilder: CfnNamedQueryProps.Builder = CfnNamedQueryProps.builder()

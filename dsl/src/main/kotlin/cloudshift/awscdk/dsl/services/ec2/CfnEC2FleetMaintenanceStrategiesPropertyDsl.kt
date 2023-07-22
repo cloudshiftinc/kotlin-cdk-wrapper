@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * The strategies for managing your Spot Instances that are at an elevated risk of being
+ * interrupted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * MaintenanceStrategiesProperty maintenanceStrategiesProperty =
+ * MaintenanceStrategiesProperty.builder()
+ * .capacityRebalance(CapacityRebalanceProperty.builder()
+ * .replacementStrategy("replacementStrategy")
+ * .terminationDelay(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-maintenancestrategies.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetMaintenanceStrategiesPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.MaintenanceStrategiesProperty.Builder =

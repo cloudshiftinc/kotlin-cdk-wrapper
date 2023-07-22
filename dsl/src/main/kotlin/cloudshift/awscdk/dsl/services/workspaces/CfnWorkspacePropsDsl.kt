@@ -14,6 +14,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.workspaces.CfnWorkspace
 import software.amazon.awscdk.services.workspaces.CfnWorkspaceProps
 
+/**
+ * Properties for defining a `CfnWorkspace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * CfnWorkspaceProps cfnWorkspaceProps = CfnWorkspaceProps.builder()
+ * .bundleId("bundleId")
+ * .directoryId("directoryId")
+ * .userName("userName")
+ * // the properties below are optional
+ * .rootVolumeEncryptionEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userVolumeEncryptionEnabled(false)
+ * .volumeEncryptionKey("volumeEncryptionKey")
+ * .workspaceProperties(WorkspacePropertiesProperty.builder()
+ * .computeTypeName("computeTypeName")
+ * .rootVolumeSizeGib(123)
+ * .runningMode("runningMode")
+ * .runningModeAutoStopTimeoutInMinutes(123)
+ * .userVolumeSizeGib(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspaces-workspace.html)
+ */
 @CdkDslMarker
 public class CfnWorkspacePropsDsl {
   private val cdkBuilder: CfnWorkspaceProps.Builder = CfnWorkspaceProps.builder()

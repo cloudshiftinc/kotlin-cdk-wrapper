@@ -12,6 +12,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resiliencehub.CfnApp
 import software.constructs.Construct
 
+/**
+ * Creates an AWS Resilience Hub application.
+ *
+ * An AWS Resilience Hub application is a collection of AWS resources structured to prevent and
+ * recover AWS application disruptions. To describe a AWS Resilience Hub application, you provide an
+ * application name, resources from one or more AWS CloudFormation stacks, AWS Resource Groups ,
+ * Terraform state files, AppRegistry applications, and an appropriate resiliency policy. In addition,
+ * you can also add resources that are located on Amazon Elastic Kubernetes Service ( Amazon EKS )
+ * clusters as optional resources. For more information about the number of resources supported per
+ * application, see [Service
+ * quotas](https://docs.aws.amazon.com/general/latest/gr/resiliencehub.html#limits_resiliencehub) .
+ *
+ * After you create an AWS Resilience Hub application, you publish it so that you can run a
+ * resiliency assessment on it. You can then use recommendations from the assessment to improve
+ * resiliency by running another assessment, comparing results, and then iterating the process until
+ * you achieve your goals for recovery time objective (RTO) and recovery point objective (RPO).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * CfnApp cfnApp = CfnApp.Builder.create(this, "MyCfnApp")
+ * .appTemplateBody("appTemplateBody")
+ * .name("name")
+ * .resourceMappings(List.of(ResourceMappingProperty.builder()
+ * .mappingType("mappingType")
+ * .physicalResourceId(PhysicalResourceIdProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * // the properties below are optional
+ * .awsAccountId("awsAccountId")
+ * .awsRegion("awsRegion")
+ * .build())
+ * // the properties below are optional
+ * .eksSourceName("eksSourceName")
+ * .logicalStackName("logicalStackName")
+ * .resourceName("resourceName")
+ * .terraformSourceName("terraformSourceName")
+ * .build()))
+ * // the properties below are optional
+ * .appAssessmentSchedule("appAssessmentSchedule")
+ * .description("description")
+ * .resiliencyPolicyArn("resiliencyPolicyArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-app.html)
+ */
 @CdkDslMarker
 public class CfnAppDsl(
   scope: Construct,

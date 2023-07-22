@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * HttpNamespaceAttributes httpNamespaceAttributes = HttpNamespaceAttributes.builder()
+ * .namespaceArn("namespaceArn")
+ * .namespaceId("namespaceId")
+ * .namespaceName("namespaceName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpNamespaceAttributesDsl {
   private val cdkBuilder: HttpNamespaceAttributes.Builder = HttpNamespaceAttributes.builder()

@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.certificatemanager.CfnCertificate
 
+/**
+ * `DomainValidationOption` is a property of the
+ * [AWS::CertificateManager::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html)
+ * resource that specifies the AWS Certificate Manager ( ACM ) certificate domain to validate.
+ * Depending on the chosen validation method, ACM checks the domain's DNS record for a validation
+ * CNAME, or it attempts to send a validation email message to the domain owner.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * DomainValidationOptionProperty domainValidationOptionProperty =
+ * DomainValidationOptionProperty.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .hostedZoneId("hostedZoneId")
+ * .validationDomain("validationDomain")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-certificatemanager-certificate-domainvalidationoption.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDomainValidationOptionPropertyDsl {
   private val cdkBuilder: CfnCertificate.DomainValidationOptionProperty.Builder =

@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Dashboard error.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DashboardErrorProperty dashboardErrorProperty = DashboardErrorProperty.builder()
+ * .message("message")
+ * .type("type")
+ * .violatedEntities(List.of(EntityProperty.builder()
+ * .path("path")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-dashboarderror.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDashboardErrorPropertyDsl {
   private val cdkBuilder: CfnDashboard.DashboardErrorProperty.Builder =

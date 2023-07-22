@@ -10,6 +10,27 @@ import kotlin.Unit
 import software.amazon.awscdk.services.servicediscovery.CfnInstance
 import software.constructs.Construct
 
+/**
+ * A complex type that contains information about an instance that AWS Cloud Map creates when you
+ * submit a `RegisterInstance` request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Object instanceAttributes;
+ * CfnInstance cfnInstance = CfnInstance.Builder.create(this, "MyCfnInstance")
+ * .instanceAttributes(instanceAttributes)
+ * .serviceId("serviceId")
+ * // the properties below are optional
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-instance.html)
+ */
 @CdkDslMarker
 public class CfnInstanceDsl(
   scope: Construct,

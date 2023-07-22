@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 
+/**
+ * Contains a time interval window used for data aggregate computations (for example, average, sum,
+ * count, and so on).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * MetricWindowProperty metricWindowProperty = MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-metricwindow.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelMetricWindowPropertyDsl {
   private val cdkBuilder: CfnAssetModel.MetricWindowProperty.Builder =

@@ -8,6 +8,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestination
 import software.amazon.awscdk.services.iot.CfnTopicRuleDestinationProps
 
+/**
+ * Properties for defining a `CfnTopicRuleDestination`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnTopicRuleDestinationProps cfnTopicRuleDestinationProps =
+ * CfnTopicRuleDestinationProps.builder()
+ * .httpUrlProperties(HttpUrlDestinationSummaryProperty.builder()
+ * .confirmationUrl("confirmationUrl")
+ * .build())
+ * .status("status")
+ * .vpcProperties(VpcDestinationPropertiesProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicruledestination.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleDestinationPropsDsl {
   private val cdkBuilder: CfnTopicRuleDestinationProps.Builder =

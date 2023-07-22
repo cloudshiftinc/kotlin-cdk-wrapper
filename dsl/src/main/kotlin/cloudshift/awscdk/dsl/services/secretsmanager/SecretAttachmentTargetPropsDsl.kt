@@ -7,6 +7,21 @@ import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.AttachmentTargetType
 import software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps
 
+/**
+ * Attachment target specifications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * SecretAttachmentTargetProps secretAttachmentTargetProps = SecretAttachmentTargetProps.builder()
+ * .targetId("targetId")
+ * .targetType(AttachmentTargetType.RDS_DB_INSTANCE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretAttachmentTargetPropsDsl {
   private val cdkBuilder: SecretAttachmentTargetProps.Builder =

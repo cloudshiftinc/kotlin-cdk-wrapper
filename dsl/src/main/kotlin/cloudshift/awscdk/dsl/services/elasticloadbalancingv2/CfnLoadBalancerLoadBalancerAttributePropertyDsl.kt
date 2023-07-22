@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer
 
+/**
+ * Specifies an attribute for an Application Load Balancer, a Network Load Balancer, or a Gateway
+ * Load Balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * LoadBalancerAttributeProperty loadBalancerAttributeProperty =
+ * LoadBalancerAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerLoadBalancerAttributePropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.LoadBalancerAttributeProperty.Builder =

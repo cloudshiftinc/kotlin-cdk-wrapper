@@ -11,6 +11,24 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.TxtRecordProps
 
+/**
+ * Construction properties for a TxtRecord.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone myZone;
+ * TxtRecord.Builder.create(this, "TXTRecord")
+ * .zone(myZone)
+ * .recordName("_foo") // If the name ends with a ".", it will be used as-is;
+ * // if it ends with a "." followed by the zone name, a trailing "." will be added automatically;
+ * // otherwise, a ".", the zone name, and a trailing "." will be added automatically.
+ * // Defaults to zone root if not specified.
+ * .values(List.of("Bar!", "Baz?"))
+ * .ttl(Duration.minutes(90))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TxtRecordPropsDsl {
   private val cdkBuilder: TxtRecordProps.Builder = TxtRecordProps.builder()

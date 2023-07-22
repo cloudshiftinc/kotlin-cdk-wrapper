@@ -14,6 +14,59 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
 
+/**
+ * The `ComponentProperty` property specifies the configuration for all of a component's properties.
+ *
+ * Use `ComponentProperty` to specify the values to render or bind by default.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * ComponentPropertyProperty componentPropertyProperty_;
+ * ComponentPropertyProperty componentPropertyProperty = ComponentPropertyProperty.builder()
+ * .bindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .bindings(Map.of(
+ * "bindingsKey", FormBindingElementProperty.builder()
+ * .element("element")
+ * .property("property")
+ * .build()))
+ * .collectionBindingProperties(ComponentPropertyBindingPropertiesProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .field("field")
+ * .build())
+ * .componentName("componentName")
+ * .concat(List.of(componentPropertyProperty_))
+ * .condition(ComponentConditionPropertyProperty.builder()
+ * .else(componentPropertyProperty_)
+ * .field("field")
+ * .operand("operand")
+ * .operandType("operandType")
+ * .operator("operator")
+ * .property("property")
+ * .then(componentPropertyProperty_)
+ * .build())
+ * .configured(false)
+ * .defaultValue("defaultValue")
+ * .event("event")
+ * .importedValue("importedValue")
+ * .model("model")
+ * .property("property")
+ * .type("type")
+ * .userAttribute("userAttribute")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentproperty.html)
+ */
 @CdkDslMarker
 public class CfnComponentComponentPropertyPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentPropertyProperty.Builder =

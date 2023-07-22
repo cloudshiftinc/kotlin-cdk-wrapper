@@ -15,6 +15,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.efs.CfnFileSystem
 import software.constructs.Construct
 
+/**
+ * The `AWS::EFS::FileSystem` resource creates a new, empty file system in Amazon Elastic File
+ * System ( Amazon EFS ).
+ *
+ * You must create a mount target (
+ * [AWS::EFS::MountTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-mounttarget.html)
+ * ) to mount your EFS file system on an Amazon EC2 or other AWS cloud compute resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.efs.*;
+ * Object fileSystemPolicy;
+ * CfnFileSystem cfnFileSystem = CfnFileSystem.Builder.create(this, "MyCfnFileSystem")
+ * .availabilityZoneName("availabilityZoneName")
+ * .backupPolicy(BackupPolicyProperty.builder()
+ * .status("status")
+ * .build())
+ * .bypassPolicyLockoutSafetyCheck(false)
+ * .encrypted(false)
+ * .fileSystemPolicy(fileSystemPolicy)
+ * .fileSystemTags(List.of(ElasticFileSystemTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .kmsKeyId("kmsKeyId")
+ * .lifecyclePolicies(List.of(LifecyclePolicyProperty.builder()
+ * .transitionToIa("transitionToIa")
+ * .transitionToPrimaryStorageClass("transitionToPrimaryStorageClass")
+ * .build()))
+ * .performanceMode("performanceMode")
+ * .provisionedThroughputInMibps(123)
+ * .throughputMode("throughputMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemDsl(
   scope: Construct,

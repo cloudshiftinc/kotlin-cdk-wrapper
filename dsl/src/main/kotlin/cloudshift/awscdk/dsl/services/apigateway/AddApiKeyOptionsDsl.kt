@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.AddApiKeyOptions
 
+/**
+ * Options to the UsagePlan.addApiKey() method.
+ *
+ * Example:
+ *
+ * ```
+ * UsagePlan usageplan;
+ * ApiKey apiKey;
+ * usageplan.addApiKey(apiKey, AddApiKeyOptions.builder()
+ * .overrideLogicalId("...")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddApiKeyOptionsDsl {
   private val cdkBuilder: AddApiKeyOptions.Builder = AddApiKeyOptions.builder()

@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.fsx.CfnSnapshotProps
 
+/**
+ * Properties for defining a `CfnSnapshot`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * CfnSnapshotProps cfnSnapshotProps = CfnSnapshotProps.builder()
+ * .name("name")
+ * .volumeId("volumeId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-snapshot.html)
+ */
 @CdkDslMarker
 public class CfnSnapshotPropsDsl {
   private val cdkBuilder: CfnSnapshotProps.Builder = CfnSnapshotProps.builder()

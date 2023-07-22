@@ -11,6 +11,75 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The properties for the pod.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * Object labels;
+ * Object limits;
+ * Object requests;
+ * PodPropertiesProperty podPropertiesProperty = PodPropertiesProperty.builder()
+ * .containers(List.of(EksContainerProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .args(List.of("args"))
+ * .command(List.of("command"))
+ * .env(List.of(EksContainerEnvironmentVariableProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .imagePullPolicy("imagePullPolicy")
+ * .name("name")
+ * .resources(ResourcesProperty.builder()
+ * .limits(limits)
+ * .requests(requests)
+ * .build())
+ * .securityContext(SecurityContextProperty.builder()
+ * .privileged(false)
+ * .readOnlyRootFilesystem(false)
+ * .runAsGroup(123)
+ * .runAsNonRoot(false)
+ * .runAsUser(123)
+ * .build())
+ * .volumeMounts(List.of(EksContainerVolumeMountProperty.builder()
+ * .mountPath("mountPath")
+ * .name("name")
+ * .readOnly(false)
+ * .build()))
+ * .build()))
+ * .dnsPolicy("dnsPolicy")
+ * .hostNetwork(false)
+ * .metadata(MetadataProperty.builder()
+ * .labels(labels)
+ * .build())
+ * .serviceAccountName("serviceAccountName")
+ * .volumes(List.of(EksVolumeProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .emptyDir(EmptyDirProperty.builder()
+ * .medium("medium")
+ * .sizeLimit("sizeLimit")
+ * .build())
+ * .hostPath(HostPathProperty.builder()
+ * .path("path")
+ * .build())
+ * .secret(EksSecretProperty.builder()
+ * .secretName("secretName")
+ * // the properties below are optional
+ * .optional(false)
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionPodPropertiesPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.PodPropertiesProperty.Builder =

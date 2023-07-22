@@ -12,6 +12,36 @@ import software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificat
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Properties to create a DNS validated certificate managed by AWS Certificate Manager.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * CertificateValidation certificateValidation;
+ * HostedZone hostedZone;
+ * Role role;
+ * DnsValidatedCertificateProps dnsValidatedCertificateProps =
+ * DnsValidatedCertificateProps.builder()
+ * .domainName("domainName")
+ * .hostedZone(hostedZone)
+ * // the properties below are optional
+ * .certificateName("certificateName")
+ * .cleanupRoute53Records(false)
+ * .customResourceRole(role)
+ * .region("region")
+ * .route53Endpoint("route53Endpoint")
+ * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
+ * .transparencyLoggingEnabled(false)
+ * .validation(certificateValidation)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DnsValidatedCertificatePropsDsl {
   private val cdkBuilder: DnsValidatedCertificateProps.Builder =

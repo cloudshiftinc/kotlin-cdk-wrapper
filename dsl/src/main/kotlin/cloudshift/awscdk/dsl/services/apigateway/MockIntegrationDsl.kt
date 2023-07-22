@@ -18,6 +18,77 @@ import software.amazon.awscdk.services.apigateway.MockIntegration
 import software.amazon.awscdk.services.apigateway.PassthroughBehavior
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * This type of integration lets API Gateway return a response without sending the request further
+ * to the backend.
+ *
+ * This is useful for API testing because it
+ * can be used to test the integration set up without incurring charges for
+ * using the backend and to enable collaborative development of an API. In
+ * collaborative development, a team can isolate their development effort by
+ * setting up simulations of API components owned by other teams by using the
+ * MOCK integrations. It is also used to return CORS-related headers to ensure
+ * that the API method permits CORS access. In fact, the API Gateway console
+ * integrates the OPTIONS method to support CORS with a mock integration.
+ * Gateway responses are other examples of mock integrations.
+ *
+ * Example:
+ *
+ * ```
+ * import path.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.App;
+ * import software.amazon.awscdk.Stack;
+ * import software.amazon.awscdk.services.apigateway.MockIntegration;
+ * import software.amazon.awscdk.services.apigateway.PassthroughBehavior;
+ * import software.amazon.awscdk.services.apigateway.RestApi;
+ * import software.amazon.awscdk.services.apigateway.RequestAuthorizer;
+ * import software.amazon.awscdk.services.apigateway.IdentitySource;
+ * // Against the RestApi endpoint from the stack output, run
+ * // `curl -s -o /dev/null -w "%{http_code}" &lt;url&gt;` should return 401
+ * // `curl -s -o /dev/null -w "%{http_code}" -H 'Authorization: deny' &lt;url&gt;?allow=yes` should
+ * return 403
+ * // `curl -s -o /dev/null -w "%{http_code}" -H 'Authorization: allow' &lt;url&gt;?allow=yes`
+ * should return 200
+ * App app = new App();
+ * Stack stack = new Stack(app, "RequestAuthorizerInteg");
+ * Function authorizerFn = Function.Builder.create(stack, "MyAuthorizerFunction")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(AssetCode.fromAsset(join(__dirname, "integ.request-authorizer.handler")))
+ * .build();
+ * RestApi restapi = RestApi.Builder.create(stack, "MyRestApi").cloudWatchRole(true).build();
+ * RequestAuthorizer authorizer = RequestAuthorizer.Builder.create(stack, "MyAuthorizer")
+ * .handler(authorizerFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization"),
+ * IdentitySource.queryString("allow")))
+ * .build();
+ * RequestAuthorizer secondAuthorizer = RequestAuthorizer.Builder.create(stack,
+ * "MySecondAuthorizer")
+ * .handler(authorizerFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization"),
+ * IdentitySource.queryString("allow")))
+ * .build();
+ * restapi.root.addMethod("ANY", MockIntegration.Builder.create()
+ * .integrationResponses(List.of(IntegrationResponse.builder().statusCode("200").build()))
+ * .passthroughBehavior(PassthroughBehavior.NEVER)
+ * .requestTemplates(Map.of(
+ * "application/json", "{ \"statusCode\": 200 }"))
+ * .build(), MethodOptions.builder()
+ * .methodResponses(List.of(MethodResponse.builder().statusCode("200").build()))
+ * .authorizer(authorizer)
+ * .build());
+ * restapi.root.resourceForPath("auth").addMethod("ANY", MockIntegration.Builder.create()
+ * .integrationResponses(List.of(IntegrationResponse.builder().statusCode("200").build()))
+ * .passthroughBehavior(PassthroughBehavior.NEVER)
+ * .requestTemplates(Map.of(
+ * "application/json", "{ \"statusCode\": 200 }"))
+ * .build(), MethodOptions.builder()
+ * .methodResponses(List.of(MethodResponse.builder().statusCode("200").build()))
+ * .authorizer(secondAuthorizer)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class MockIntegrationDsl {
   private val cdkBuilder: MockIntegration.Builder = MockIntegration.Builder.create()

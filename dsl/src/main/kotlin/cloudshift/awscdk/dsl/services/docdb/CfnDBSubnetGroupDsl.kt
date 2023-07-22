@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.docdb.CfnDBSubnetGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::DocDB::DBSubnetGroup` Amazon DocumentDB (with MongoDB compatibility) resource describes
+ * a DBSubnetGroup.
+ *
+ * subnet groups must contain at least one subnet in at least two Availability Zones in the AWS
+ * Region . For more information, see
+ * [DBSubnetGroup](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_DBSubnetGroup.html)
+ * in the *Amazon DocumentDB Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * CfnDBSubnetGroup cfnDBSubnetGroup = CfnDBSubnetGroup.Builder.create(this, "MyCfnDBSubnetGroup")
+ * .dbSubnetGroupDescription("dbSubnetGroupDescription")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbsubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDBSubnetGroupDsl(
   scope: Construct,

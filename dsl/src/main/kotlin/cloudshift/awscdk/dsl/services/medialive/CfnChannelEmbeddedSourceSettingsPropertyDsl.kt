@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the embedded captions to extract from the input.
+ *
+ * The parent of this entity is CaptionSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * EmbeddedSourceSettingsProperty embeddedSourceSettingsProperty =
+ * EmbeddedSourceSettingsProperty.builder()
+ * .convert608To708("convert608To708")
+ * .scte20Detection("scte20Detection")
+ * .source608ChannelNumber(123)
+ * .source608TrackNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-embeddedsourcesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelEmbeddedSourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.EmbeddedSourceSettingsProperty.Builder =

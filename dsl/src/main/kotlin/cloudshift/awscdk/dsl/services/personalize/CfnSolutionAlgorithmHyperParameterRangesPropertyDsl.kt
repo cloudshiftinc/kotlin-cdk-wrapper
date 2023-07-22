@@ -9,6 +9,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * The hyperparameters and their allowable ranges.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * AlgorithmHyperParameterRangesProperty algorithmHyperParameterRangesProperty =
+ * AlgorithmHyperParameterRangesProperty.builder()
+ * .categoricalHyperParameterRanges(List.of(CategoricalHyperParameterRangeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .continuousHyperParameterRanges(List.of(ContinuousHyperParameterRangeProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .build()))
+ * .integerHyperParameterRanges(List.of(IntegerHyperParameterRangeProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-algorithmhyperparameterranges.html)
+ */
 @CdkDslMarker
 public class CfnSolutionAlgorithmHyperParameterRangesPropertyDsl {
   private val cdkBuilder: CfnSolution.AlgorithmHyperParameterRangesProperty.Builder =

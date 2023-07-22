@@ -9,6 +9,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * DomainConfigurationProperty domainConfigurationProperty = DomainConfigurationProperty.builder()
+ * .certificateArn("certificateArn")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .basePath(List.of("basePath"))
+ * .endpointConfiguration("endpointConfiguration")
+ * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion("truststoreVersion")
+ * .build())
+ * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+ * .route53(Route53ConfigurationProperty.builder()
+ * .distributedDomainName("distributedDomainName")
+ * .evaluateTargetHealth(false)
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .ipV6(false)
+ * .build())
+ * .securityPolicy("securityPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-domainconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApiDomainConfigurationPropertyDsl {
   private val cdkBuilder: CfnApi.DomainConfigurationProperty.Builder =

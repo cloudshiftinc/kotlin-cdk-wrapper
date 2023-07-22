@@ -9,6 +9,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `SectionalElement` property specifies the configuration information for a visual helper
+ * element for a form.
+ *
+ * A sectional element can be a header, a text block, or a divider. These elements are static and
+ * not associated with any data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * SectionalElementProperty sectionalElementProperty = SectionalElementProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .excluded(false)
+ * .level(123)
+ * .orientation("orientation")
+ * .position(FieldPositionProperty.builder()
+ * .below("below")
+ * .fixed("fixed")
+ * .rightOf("rightOf")
+ * .build())
+ * .text("text")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-sectionalelement.html)
+ */
 @CdkDslMarker
 public class CfnFormSectionalElementPropertyDsl {
   private val cdkBuilder: CfnForm.SectionalElementProperty.Builder =

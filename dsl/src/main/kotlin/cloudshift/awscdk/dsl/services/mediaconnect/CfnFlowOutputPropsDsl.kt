@@ -11,6 +11,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutputProps
 
+/**
+ * Properties for defining a `CfnFlowOutput`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowOutputProps cfnFlowOutputProps = CfnFlowOutputProps.builder()
+ * .flowArn("flowArn")
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .cidrAllowList(List.of("cidrAllowList"))
+ * .description("description")
+ * .destination("destination")
+ * .encryption(EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * .secretArn("secretArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .keyType("keyType")
+ * .build())
+ * .maxLatency(123)
+ * .minLatency(123)
+ * .name("name")
+ * .port(123)
+ * .remoteId("remoteId")
+ * .smoothingLatency(123)
+ * .streamId("streamId")
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html)
+ */
 @CdkDslMarker
 public class CfnFlowOutputPropsDsl {
   private val cdkBuilder: CfnFlowOutputProps.Builder = CfnFlowOutputProps.builder()

@@ -13,6 +13,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps
 
+/**
+ * Properties for defining a `CfnDeliveryStream`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamPropsDsl {
   private val cdkBuilder: CfnDeliveryStreamProps.Builder = CfnDeliveryStreamProps.builder()

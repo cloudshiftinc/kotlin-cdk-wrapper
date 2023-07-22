@@ -12,6 +12,47 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.gamelift.CfnMatchmakingRuleSet
 import software.constructs.Construct
 
+/**
+ * Creates a new rule set for FlexMatch matchmaking.
+ *
+ * A rule set describes the type of match to create, such as the number and size of teams. It also
+ * sets the parameters for acceptable player matches, such as minimum skill level or character type.
+ *
+ * To create a matchmaking rule set, provide unique rule set name and the rule set body in JSON
+ * format. Rule sets must be defined in the same Region as the matchmaking configuration they are used
+ * with.
+ *
+ * Since matchmaking rule sets cannot be edited, it is a good idea to check the rule set syntax.
+ *
+ * *Learn more*
+ *
+ * * [Build a rule
+ * set](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html)
+ * * [Design a
+ * matchmaker](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-configuration.html)
+ * * [Matchmaking with
+ * FlexMatch](https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-intro.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnMatchmakingRuleSet cfnMatchmakingRuleSet = CfnMatchmakingRuleSet.Builder.create(this,
+ * "MyCfnMatchmakingRuleSet")
+ * .name("name")
+ * .ruleSetBody("ruleSetBody")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-matchmakingruleset.html)
+ */
 @CdkDslMarker
 public class CfnMatchmakingRuleSetDsl(
   scope: Construct,

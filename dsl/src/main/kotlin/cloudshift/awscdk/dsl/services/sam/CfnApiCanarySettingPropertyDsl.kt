@@ -10,6 +10,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * CanarySettingProperty canarySettingProperty = CanarySettingProperty.builder()
+ * .deploymentId("deploymentId")
+ * .percentTraffic(123)
+ * .stageVariableOverrides(Map.of(
+ * "stageVariableOverridesKey", "stageVariableOverrides"))
+ * .useStageCache(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-canarysetting.html)
+ */
 @CdkDslMarker
 public class CfnApiCanarySettingPropertyDsl {
   private val cdkBuilder: CfnApi.CanarySettingProperty.Builder =

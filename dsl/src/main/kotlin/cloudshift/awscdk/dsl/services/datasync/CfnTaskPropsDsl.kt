@@ -14,6 +14,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnTask
 import software.amazon.awscdk.services.datasync.CfnTaskProps
 
+/**
+ * Properties for defining a `CfnTask`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnTaskProps cfnTaskProps = CfnTaskProps.builder()
+ * .destinationLocationArn("destinationLocationArn")
+ * .sourceLocationArn("sourceLocationArn")
+ * // the properties below are optional
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .excludes(List.of(FilterRuleProperty.builder()
+ * .filterType("filterType")
+ * .value("value")
+ * .build()))
+ * .includes(List.of(FilterRuleProperty.builder()
+ * .filterType("filterType")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .options(OptionsProperty.builder()
+ * .atime("atime")
+ * .bytesPerSecond(123)
+ * .gid("gid")
+ * .logLevel("logLevel")
+ * .mtime("mtime")
+ * .objectTags("objectTags")
+ * .overwriteMode("overwriteMode")
+ * .posixPermissions("posixPermissions")
+ * .preserveDeletedFiles("preserveDeletedFiles")
+ * .preserveDevices("preserveDevices")
+ * .securityDescriptorCopyFlags("securityDescriptorCopyFlags")
+ * .taskQueueing("taskQueueing")
+ * .transferMode("transferMode")
+ * .uid("uid")
+ * .verifyMode("verifyMode")
+ * .build())
+ * .schedule(TaskScheduleProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)
+ */
 @CdkDslMarker
 public class CfnTaskPropsDsl {
   private val cdkBuilder: CfnTaskProps.Builder = CfnTaskProps.builder()

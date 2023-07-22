@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.autoscaling.IAutoScalingGroup
 import software.amazon.awscdk.services.autoscaling.Schedule
 import software.amazon.awscdk.services.autoscaling.ScheduledActionProps
 
+/**
+ * Properties for a scheduled action on an AutoScalingGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * AutoScalingGroup autoScalingGroup;
+ * Schedule schedule;
+ * ScheduledActionProps scheduledActionProps = ScheduledActionProps.builder()
+ * .autoScalingGroup(autoScalingGroup)
+ * .schedule(schedule)
+ * // the properties below are optional
+ * .desiredCapacity(123)
+ * .endTime(new Date())
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .startTime(new Date())
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledActionPropsDsl {
   private val cdkBuilder: ScheduledActionProps.Builder = ScheduledActionProps.builder()

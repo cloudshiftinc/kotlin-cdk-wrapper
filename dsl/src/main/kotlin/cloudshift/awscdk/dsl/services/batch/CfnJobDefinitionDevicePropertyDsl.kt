@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * An object that represents a container instance host device.
+ *
+ *
+ * This object isn't applicable to jobs that are running on Fargate resources and shouldn't be
+ * provided.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * DeviceProperty deviceProperty = DeviceProperty.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * .permissions(List.of("permissions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-device.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionDevicePropertyDsl {
   private val cdkBuilder: CfnJobDefinition.DeviceProperty.Builder =

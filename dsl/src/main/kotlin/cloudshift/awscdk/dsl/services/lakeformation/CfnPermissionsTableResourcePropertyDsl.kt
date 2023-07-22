@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPermissions
 
+/**
+ * A structure for the table object.
+ *
+ * A table is a metadata definition that represents your data. You can Grant and Revoke table
+ * privileges to a principal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * TableResourceProperty tableResourceProperty = TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableWildcard(TableWildcardProperty.builder().build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-permissions-tableresource.html)
+ */
 @CdkDslMarker
 public class CfnPermissionsTableResourcePropertyDsl {
   private val cdkBuilder: CfnPermissions.TableResourceProperty.Builder =

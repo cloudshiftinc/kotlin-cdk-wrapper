@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation
 import software.constructs.Construct
 
+/**
+ * Associates an attribute group with an application to augment the application's metadata with the
+ * group's attributes.
+ *
+ * This feature enables applications to be described with user-defined details that are
+ * machine-readable, such as third-party integrations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalogappregistry.*;
+ * CfnAttributeGroupAssociation cfnAttributeGroupAssociation =
+ * CfnAttributeGroupAssociation.Builder.create(this, "MyCfnAttributeGroupAssociation")
+ * .application("application")
+ * .attributeGroup("attributeGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-attributegroupassociation.html)
+ */
 @CdkDslMarker
 public class CfnAttributeGroupAssociationDsl(
   scope: Construct,

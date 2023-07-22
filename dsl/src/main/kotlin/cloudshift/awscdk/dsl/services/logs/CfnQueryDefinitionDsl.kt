@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.logs.CfnQueryDefinition
 import software.constructs.Construct
 
+/**
+ * Creates a query definition for CloudWatch Logs Insights.
+ *
+ * For more information, see [Analyzing Log Data with CloudWatch Logs
+ * Insights](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/AnalyzingLogData.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnQueryDefinition cfnQueryDefinition = CfnQueryDefinition.Builder.create(this,
+ * "MyCfnQueryDefinition")
+ * .name("name")
+ * .queryString("queryString")
+ * // the properties below are optional
+ * .logGroupNames(List.of("logGroupNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html)
+ */
 @CdkDslMarker
 public class CfnQueryDefinitionDsl(
   scope: Construct,

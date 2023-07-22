@@ -12,6 +12,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnMethod
 
+/**
+ * `Integration` is a property of the
+ * [AWS::ApiGateway::Method](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-method.html)
+ * resource that specifies information about the target backend that a method calls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * IntegrationProperty integrationProperty = IntegrationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .cacheKeyParameters(List.of("cacheKeyParameters"))
+ * .cacheNamespace("cacheNamespace")
+ * .connectionId("connectionId")
+ * .connectionType("connectionType")
+ * .contentHandling("contentHandling")
+ * .credentials("credentials")
+ * .integrationHttpMethod("integrationHttpMethod")
+ * .integrationResponses(List.of(IntegrationResponseProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentHandling("contentHandling")
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .selectionPattern("selectionPattern")
+ * .build()))
+ * .passthroughBehavior("passthroughBehavior")
+ * .requestParameters(Map.of(
+ * "requestParametersKey", "requestParameters"))
+ * .requestTemplates(Map.of(
+ * "requestTemplatesKey", "requestTemplates"))
+ * .timeoutInMillis(123)
+ * .uri("uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integration.html)
+ */
 @CdkDslMarker
 public class CfnMethodIntegrationPropertyDsl {
   private val cdkBuilder: CfnMethod.IntegrationProperty.Builder =

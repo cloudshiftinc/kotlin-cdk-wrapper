@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.servicediscovery.IService
 import software.amazon.awscdk.services.servicediscovery.IpInstance
 import software.constructs.Construct
 
+/**
+ * Instance that is accessible using an IP address.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * IpInstance ipInstance = IpInstance.Builder.create(this, "MyIpInstance")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .ipv4("ipv4")
+ * .ipv6("ipv6")
+ * .port(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IpInstanceDsl(
   scope: Construct,

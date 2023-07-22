@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The field wells of a radar chart visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-radarchartfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnDashboardRadarChartFieldWellsPropertyDsl {
   private val cdkBuilder: CfnDashboard.RadarChartFieldWellsProperty.Builder =

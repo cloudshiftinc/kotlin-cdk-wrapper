@@ -10,6 +10,27 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.oam.CfnSinkProps
 
+/**
+ * Properties for defining a `CfnSink`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.oam.*;
+ * Object policy;
+ * CfnSinkProps cfnSinkProps = CfnSinkProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .policy(policy)
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-sink.html)
+ */
 @CdkDslMarker
 public class CfnSinkPropsDsl {
   private val cdkBuilder: CfnSinkProps.Builder = CfnSinkProps.builder()

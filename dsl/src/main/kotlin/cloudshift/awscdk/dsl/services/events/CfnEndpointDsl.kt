@@ -11,6 +11,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnEndpoint
 import software.constructs.Construct
 
+/**
+ * A global endpoint used to improve your application's availability by making it regional-fault
+ * tolerant.
+ *
+ * For more information about global endpoints, see [Making applications Regional-fault tolerant
+ * with global endpoints and event
+ * replication](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-global-endpoints.html) in
+ * the *Amazon EventBridge User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnEndpoint cfnEndpoint = CfnEndpoint.Builder.create(this, "MyCfnEndpoint")
+ * .eventBuses(List.of(EndpointEventBusProperty.builder()
+ * .eventBusArn("eventBusArn")
+ * .build()))
+ * .routingConfig(RoutingConfigProperty.builder()
+ * .failoverConfig(FailoverConfigProperty.builder()
+ * .primary(PrimaryProperty.builder()
+ * .healthCheck("healthCheck")
+ * .build())
+ * .secondary(SecondaryProperty.builder()
+ * .route("route")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .replicationConfig(ReplicationConfigProperty.builder()
+ * .state("state")
+ * .build())
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointDsl(
   scope: Construct,

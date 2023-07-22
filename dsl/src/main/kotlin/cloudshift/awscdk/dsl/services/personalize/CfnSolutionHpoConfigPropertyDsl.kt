@@ -6,6 +6,46 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * Describes the properties for hyperparameter optimization (HPO).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * HpoConfigProperty hpoConfigProperty = HpoConfigProperty.builder()
+ * .algorithmHyperParameterRanges(AlgorithmHyperParameterRangesProperty.builder()
+ * .categoricalHyperParameterRanges(List.of(CategoricalHyperParameterRangeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .continuousHyperParameterRanges(List.of(ContinuousHyperParameterRangeProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .build()))
+ * .integerHyperParameterRanges(List.of(IntegerHyperParameterRangeProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .build()))
+ * .build())
+ * .hpoObjective(HpoObjectiveProperty.builder()
+ * .metricName("metricName")
+ * .metricRegex("metricRegex")
+ * .type("type")
+ * .build())
+ * .hpoResourceConfig(HpoResourceConfigProperty.builder()
+ * .maxNumberOfTrainingJobs("maxNumberOfTrainingJobs")
+ * .maxParallelTrainingJobs("maxParallelTrainingJobs")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-hpoconfig.html)
+ */
 @CdkDslMarker
 public class CfnSolutionHpoConfigPropertyDsl {
   private val cdkBuilder: CfnSolution.HpoConfigProperty.Builder =

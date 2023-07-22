@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Describes the input source of a transform job and the way the transform job consumes it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TransformInputProperty transformInputProperty = TransformInputProperty.builder()
+ * .dataSource(DataSourceProperty.builder()
+ * .s3DataSource(S3DataSourceProperty.builder()
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .compressionType("compressionType")
+ * .contentType("contentType")
+ * .splitType("splitType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-transforminput.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageTransformInputPropertyDsl {
   private val cdkBuilder: CfnModelPackage.TransformInputProperty.Builder =

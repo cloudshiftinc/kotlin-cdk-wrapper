@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnRecipe
 
+/**
+ * Represents secondary inputs in a UNION transform.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * SecondaryInputProperty secondaryInputProperty = SecondaryInputProperty.builder()
+ * .dataCatalogInputDefinition(DataCatalogInputDefinitionProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .tableName("tableName")
+ * .tempDirectory(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build())
+ * .s3InputDefinition(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-secondaryinput.html)
+ */
 @CdkDslMarker
 public class CfnRecipeSecondaryInputPropertyDsl {
   private val cdkBuilder: CfnRecipe.SecondaryInputProperty.Builder =

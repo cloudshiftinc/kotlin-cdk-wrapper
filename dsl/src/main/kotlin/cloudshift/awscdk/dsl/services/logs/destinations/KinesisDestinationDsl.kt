@@ -7,6 +7,24 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.logs.destinations.KinesisDestination
 
+/**
+ * Use a Kinesis stream as the destination for a log subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.kinesis.*;
+ * import software.amazon.awscdk.services.logs.destinations.*;
+ * Role role;
+ * Stream stream;
+ * KinesisDestination kinesisDestination = KinesisDestination.Builder.create(stream)
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KinesisDestinationDsl(
   stream: IStream,

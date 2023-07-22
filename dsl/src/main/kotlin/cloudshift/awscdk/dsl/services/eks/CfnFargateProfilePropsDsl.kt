@@ -13,6 +13,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnFargateProfileProps
 
+/**
+ * Properties for defining a `CfnFargateProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnFargateProfileProps cfnFargateProfileProps = CfnFargateProfileProps.builder()
+ * .clusterName("clusterName")
+ * .podExecutionRoleArn("podExecutionRoleArn")
+ * .selectors(List.of(SelectorProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .labels(List.of(LabelProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .fargateProfileName("fargateProfileName")
+ * .subnets(List.of("subnets"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-fargateprofile.html)
+ */
 @CdkDslMarker
 public class CfnFargateProfilePropsDsl {
   private val cdkBuilder: CfnFargateProfileProps.Builder = CfnFargateProfileProps.builder()

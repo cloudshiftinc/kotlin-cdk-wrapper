@@ -10,6 +10,77 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * A custom action defined on a visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * VisualCustomActionProperty visualCustomActionProperty = VisualCustomActionProperty.builder()
+ * .actionOperations(List.of(VisualCustomActionOperationProperty.builder()
+ * .filterOperation(CustomActionFilterOperationProperty.builder()
+ * .selectedFieldsConfiguration(FilterOperationSelectedFieldsConfigurationProperty.builder()
+ * .selectedColumns(List.of(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build()))
+ * .selectedFieldOptions("selectedFieldOptions")
+ * .selectedFields(List.of("selectedFields"))
+ * .build())
+ * .targetVisualsConfiguration(FilterOperationTargetVisualsConfigurationProperty.builder()
+ * .sameSheetTargetVisualConfiguration(SameSheetTargetVisualConfigurationProperty.builder()
+ * .targetVisualOptions("targetVisualOptions")
+ * .targetVisuals(List.of("targetVisuals"))
+ * .build())
+ * .build())
+ * .build())
+ * .navigationOperation(CustomActionNavigationOperationProperty.builder()
+ * .localNavigationConfiguration(LocalNavigationConfigurationProperty.builder()
+ * .targetSheetId("targetSheetId")
+ * .build())
+ * .build())
+ * .setParametersOperation(CustomActionSetParametersOperationProperty.builder()
+ * .parameterValueConfigurations(List.of(SetParameterValueConfigurationProperty.builder()
+ * .destinationParameterName("destinationParameterName")
+ * .value(DestinationParameterValueConfigurationProperty.builder()
+ * .customValuesConfiguration(CustomValuesConfigurationProperty.builder()
+ * .customValues(CustomParameterValuesProperty.builder()
+ * .dateTimeValues(List.of("dateTimeValues"))
+ * .decimalValues(List.of(123))
+ * .integerValues(List.of(123))
+ * .stringValues(List.of("stringValues"))
+ * .build())
+ * // the properties below are optional
+ * .includeNullValue(false)
+ * .build())
+ * .selectAllValueOptions("selectAllValueOptions")
+ * .sourceColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceField("sourceField")
+ * .sourceParameterName("sourceParameterName")
+ * .build())
+ * .build()))
+ * .build())
+ * .urlOperation(CustomActionURLOperationProperty.builder()
+ * .urlTarget("urlTarget")
+ * .urlTemplate("urlTemplate")
+ * .build())
+ * .build()))
+ * .customActionId("customActionId")
+ * .name("name")
+ * .trigger("trigger")
+ * // the properties below are optional
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-visualcustomaction.html)
+ */
 @CdkDslMarker
 public class CfnTemplateVisualCustomActionPropertyDsl {
   private val cdkBuilder: CfnTemplate.VisualCustomActionProperty.Builder =

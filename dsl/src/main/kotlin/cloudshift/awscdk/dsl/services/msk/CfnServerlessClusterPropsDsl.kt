@@ -12,6 +12,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 import software.amazon.awscdk.services.msk.CfnServerlessClusterProps
 
+/**
+ * Properties for defining a `CfnServerlessCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnServerlessClusterProps cfnServerlessClusterProps = CfnServerlessClusterProps.builder()
+ * .clientAuthentication(ClientAuthenticationProperty.builder()
+ * .sasl(SaslProperty.builder()
+ * .iam(IamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build())
+ * .clusterName("clusterName")
+ * .vpcConfigs(List.of(VpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .build()))
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html)
+ */
 @CdkDslMarker
 public class CfnServerlessClusterPropsDsl {
   private val cdkBuilder: CfnServerlessClusterProps.Builder = CfnServerlessClusterProps.builder()

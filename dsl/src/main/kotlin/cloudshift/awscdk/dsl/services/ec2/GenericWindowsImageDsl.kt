@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.ec2.GenericWindowsImage
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Construct a Windows machine image from an AMI map.
+ *
+ * Allows you to create a generic Windows EC2 , manually specify an AMI map.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * UserData userData;
+ * GenericWindowsImage genericWindowsImage = GenericWindowsImage.Builder.create(Map.of(
+ * "amiMapKey", "amiMap"))
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GenericWindowsImageDsl(
   amiMap: Map<String, String>,

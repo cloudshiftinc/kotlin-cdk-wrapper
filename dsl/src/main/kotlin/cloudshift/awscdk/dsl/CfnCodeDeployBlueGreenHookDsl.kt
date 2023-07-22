@@ -14,6 +14,22 @@ import software.amazon.awscdk.CfnCodeDeployBlueGreenLifecycleEventHooks
 import software.amazon.awscdk.CfnTrafficRoutingConfig
 import software.constructs.Construct
 
+/**
+ * A CloudFormation Hook for CodeDeploy blue-green ECS deployments.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * // mutating the hook
+ * Role myRole;
+ * CfnHook hook = cfnTemplate.getHook("MyOutput");
+ * CfnCodeDeployBlueGreenHook codeDeployHook = (CfnCodeDeployBlueGreenHook)hook;
+ * codeDeployHook.getServiceRole() = myRole.getRoleArn();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/blue-green.html#blue-green-template-reference)
+ */
 @CdkDslMarker
 public class CfnCodeDeployBlueGreenHookDsl(
   scope: Construct,

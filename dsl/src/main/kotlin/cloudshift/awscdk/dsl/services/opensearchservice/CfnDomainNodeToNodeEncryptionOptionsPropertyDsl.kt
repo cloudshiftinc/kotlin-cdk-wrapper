@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Specifies options for node-to-node encryption.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * NodeToNodeEncryptionOptionsProperty nodeToNodeEncryptionOptionsProperty =
+ * NodeToNodeEncryptionOptionsProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainNodeToNodeEncryptionOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.NodeToNodeEncryptionOptionsProperty.Builder =

@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 
+/**
+ * `TagFilter` is a subproperty of
+ * [ApplicationSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-applicationsource.html)
+ * that specifies a tag for an application source to use with AWS Auto Scaling ( Auto Scaling Plans ).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscalingplans.*;
+ * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-tagfilter.html)
+ */
 @CdkDslMarker
 public class CfnScalingPlanTagFilterPropertyDsl {
   private val cdkBuilder: CfnScalingPlan.TagFilterProperty.Builder =

@@ -15,6 +15,42 @@ import software.amazon.awscdk.services.codepipeline.ActionProperties
 import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Artifact artifact;
+ * Resource resource;
+ * Role role;
+ * ActionProperties actionProperties = ActionProperties.builder()
+ * .actionName("actionName")
+ * .artifactBounds(ActionArtifactBounds.builder()
+ * .maxInputs(123)
+ * .maxOutputs(123)
+ * .minInputs(123)
+ * .minOutputs(123)
+ * .build())
+ * .category(ActionCategory.SOURCE)
+ * .provider("provider")
+ * // the properties below are optional
+ * .account("account")
+ * .inputs(List.of(artifact))
+ * .outputs(List.of(artifact))
+ * .owner("owner")
+ * .region("region")
+ * .resource(resource)
+ * .role(role)
+ * .runOrder(123)
+ * .variablesNamespace("variablesNamespace")
+ * .version("version")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ActionPropertiesDsl {
   private val cdkBuilder: ActionProperties.Builder = ActionProperties.builder()

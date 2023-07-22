@@ -8,6 +8,22 @@ import kotlin.String
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.ec2.VpnTunnelOption
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * SecretValue secretValue;
+ * VpnTunnelOption vpnTunnelOption = VpnTunnelOption.builder()
+ * .preSharedKey("preSharedKey")
+ * .preSharedKeySecret(secretValue)
+ * .tunnelInsideCidr("tunnelInsideCidr")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpnTunnelOptionDsl {
   private val cdkBuilder: VpnTunnelOption.Builder = VpnTunnelOption.builder()

@@ -9,6 +9,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.EcrImageCodeProps
 
+/**
+ * Properties to initialize a new EcrImageCode.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * EcrImageCodeProps ecrImageCodeProps = EcrImageCodeProps.builder()
+ * .cmd(List.of("cmd"))
+ * .entrypoint(List.of("entrypoint"))
+ * .tag("tag")
+ * .tagOrDigest("tagOrDigest")
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcrImageCodePropsDsl {
   private val cdkBuilder: EcrImageCodeProps.Builder = EcrImageCodeProps.builder()

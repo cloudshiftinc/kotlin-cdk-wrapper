@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
 import software.amazon.awscdk.services.connectcampaigns.CfnCampaignProps
 
+/**
+ * Properties for defining a `CfnCampaign`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connectcampaigns.*;
+ * CfnCampaignProps cfnCampaignProps = CfnCampaignProps.builder()
+ * .connectInstanceArn("connectInstanceArn")
+ * .dialerConfig(DialerConfigProperty.builder()
+ * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
+ * .bandwidthAllocation(123)
+ * .build())
+ * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
+ * .bandwidthAllocation(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .outboundCallConfig(OutboundCallConfigProperty.builder()
+ * .connectContactFlowArn("connectContactFlowArn")
+ * .connectQueueArn("connectQueueArn")
+ * // the properties below are optional
+ * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
+ * .enableAnswerMachineDetection(false)
+ * .build())
+ * .connectSourcePhoneNumber("connectSourcePhoneNumber")
+ * .build())
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connectcampaigns-campaign.html)
+ */
 @CdkDslMarker
 public class CfnCampaignPropsDsl {
   private val cdkBuilder: CfnCampaignProps.Builder = CfnCampaignProps.builder()

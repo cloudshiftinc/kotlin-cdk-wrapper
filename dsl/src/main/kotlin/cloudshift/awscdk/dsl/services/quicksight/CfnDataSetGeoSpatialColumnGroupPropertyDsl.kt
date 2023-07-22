@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Geospatial column group that denotes a hierarchy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GeoSpatialColumnGroupProperty geoSpatialColumnGroupProperty =
+ * GeoSpatialColumnGroupProperty.builder()
+ * .columns(List.of("columns"))
+ * .name("name")
+ * // the properties below are optional
+ * .countryCode("countryCode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-geospatialcolumngroup.html)
+ */
 @CdkDslMarker
 public class CfnDataSetGeoSpatialColumnGroupPropertyDsl {
   private val cdkBuilder: CfnDataSet.GeoSpatialColumnGroupProperty.Builder =

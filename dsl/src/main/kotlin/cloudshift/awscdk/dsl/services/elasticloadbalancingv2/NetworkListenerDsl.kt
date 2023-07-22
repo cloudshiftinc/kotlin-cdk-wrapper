@@ -17,6 +17,25 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.Protocol
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.constructs.Construct
 
+/**
+ * Define a Network Listener.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpNlbIntegration;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
+ * NetworkListener listener = lb.addListener("listener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddNetworkTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkListenerDsl(
   scope: Construct,

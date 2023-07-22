@@ -11,6 +11,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnContact
 
+/**
+ * The `Stage` property type specifies a set amount of time that an escalation plan or engagement
+ * plan engages the specified contacts or contact methods.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * StageProperty stageProperty = StageProperty.builder()
+ * .durationInMinutes(123)
+ * .rotationIds(List.of("rotationIds"))
+ * .targets(List.of(TargetsProperty.builder()
+ * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+ * .channelId("channelId")
+ * .retryIntervalInMinutes(123)
+ * .build())
+ * .contactTargetInfo(ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-contact-stage.html)
+ */
 @CdkDslMarker
 public class CfnContactStagePropertyDsl {
   private val cdkBuilder: CfnContact.StageProperty.Builder = CfnContact.StageProperty.builder()

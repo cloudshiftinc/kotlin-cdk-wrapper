@@ -12,6 +12,46 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.evidently.CfnSegment
 import software.constructs.Construct
 
+/**
+ * Creates or updates a *segment* of your audience.
+ *
+ * A segment is a portion of your audience that share one or more characteristics. Examples could be
+ * Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other
+ * criteria that your application collects, such as age.
+ *
+ * Using a segment in an experiment limits that experiment to evaluate only the users who match the
+ * segment criteria. Using one or more segments in a launch allow you to define different traffic
+ * splits for the different audience segments.
+ *
+ * For more information about segment pattern syntax, see [Segment rule pattern
+ * syntax](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments-syntax.html)
+ * .
+ *
+ * The pattern that you define for a segment is matched against the value of `evaluationContext` ,
+ * which is passed into Evidently in the
+ * [EvaluateFeature](https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_EvaluateFeature.html)
+ * operation, when Evidently assigns a feature variation to a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnSegment cfnSegment = CfnSegment.Builder.create(this, "MyCfnSegment")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .pattern("pattern")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-segment.html)
+ */
 @CdkDslMarker
 public class CfnSegmentDsl(
   scope: Construct,

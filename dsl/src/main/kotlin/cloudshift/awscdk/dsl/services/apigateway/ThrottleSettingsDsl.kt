@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.apigateway.ThrottleSettings
 
+/**
+ * Container for defining throttling parameters to API stages or methods.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaIntegration integration;
+ * RestApi api = new RestApi(this, "hello-api");
+ * Resource v1 = api.root.addResource("v1");
+ * Resource echo = v1.addResource("echo");
+ * Method echoMethod = echo.addMethod("GET", integration,
+ * MethodOptions.builder().apiKeyRequired(true).build());
+ * UsagePlan plan = api.addUsagePlan("UsagePlan", UsagePlanProps.builder()
+ * .name("Easy")
+ * .throttle(ThrottleSettings.builder()
+ * .rateLimit(10)
+ * .burstLimit(2)
+ * .build())
+ * .build());
+ * IApiKey key = api.addApiKey("ApiKey");
+ * plan.addApiKey(key);
+ * ```
+ */
 @CdkDslMarker
 public class ThrottleSettingsDsl {
   private val cdkBuilder: ThrottleSettings.Builder = ThrottleSettings.builder()

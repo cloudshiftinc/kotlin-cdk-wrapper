@@ -8,6 +8,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that adds other attributes based on existing attributes in the message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * AddAttributesProperty addAttributesProperty = AddAttributesProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .name("name")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-addattributes.html)
+ */
 @CdkDslMarker
 public class CfnPipelineAddAttributesPropertyDsl {
   private val cdkBuilder: CfnPipeline.AddAttributesProperty.Builder =

@@ -13,6 +13,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution
 import software.constructs.Construct
 
+/**
+ * This resource is deprecated.
+ *
+ * Amazon CloudFront is deprecating real-time messaging protocol (RTMP) distributions on December
+ * 31, 2020. For more information, [read the
+ * announcement](https://docs.aws.amazon.com/ann.jspa?annID=7356) on the Amazon CloudFront discussion
+ * forum.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnStreamingDistribution cfnStreamingDistribution = CfnStreamingDistribution.Builder.create(this,
+ * "MyCfnStreamingDistribution")
+ * .streamingDistributionConfig(StreamingDistributionConfigProperty.builder()
+ * .comment("comment")
+ * .enabled(false)
+ * .s3Origin(S3OriginProperty.builder()
+ * .domainName("domainName")
+ * .originAccessIdentity("originAccessIdentity")
+ * .build())
+ * .trustedSigners(TrustedSignersProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .awsAccountNumbers(List.of("awsAccountNumbers"))
+ * .build())
+ * // the properties below are optional
+ * .aliases(List.of("aliases"))
+ * .logging(LoggingProperty.builder()
+ * .bucket("bucket")
+ * .enabled(false)
+ * .prefix("prefix")
+ * .build())
+ * .priceClass("priceClass")
+ * .build())
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html)
+ */
 @CdkDslMarker
 public class CfnStreamingDistributionDsl(
   scope: Construct,

@@ -14,6 +14,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnTask
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::Task` resource specifies a task.
+ *
+ * A task is a set of two locations (source and destination) and a set of `Options` that you use to
+ * control the behavior of a task. If you don't specify `Options` when you create a task, AWS DataSync
+ * populates them with service defaults.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnTask cfnTask = CfnTask.Builder.create(this, "MyCfnTask")
+ * .destinationLocationArn("destinationLocationArn")
+ * .sourceLocationArn("sourceLocationArn")
+ * // the properties below are optional
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .excludes(List.of(FilterRuleProperty.builder()
+ * .filterType("filterType")
+ * .value("value")
+ * .build()))
+ * .includes(List.of(FilterRuleProperty.builder()
+ * .filterType("filterType")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .options(OptionsProperty.builder()
+ * .atime("atime")
+ * .bytesPerSecond(123)
+ * .gid("gid")
+ * .logLevel("logLevel")
+ * .mtime("mtime")
+ * .objectTags("objectTags")
+ * .overwriteMode("overwriteMode")
+ * .posixPermissions("posixPermissions")
+ * .preserveDeletedFiles("preserveDeletedFiles")
+ * .preserveDevices("preserveDevices")
+ * .securityDescriptorCopyFlags("securityDescriptorCopyFlags")
+ * .taskQueueing("taskQueueing")
+ * .transferMode("transferMode")
+ * .uid("uid")
+ * .verifyMode("verifyMode")
+ * .build())
+ * .schedule(TaskScheduleProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html)
+ */
 @CdkDslMarker
 public class CfnTaskDsl(
   scope: Construct,

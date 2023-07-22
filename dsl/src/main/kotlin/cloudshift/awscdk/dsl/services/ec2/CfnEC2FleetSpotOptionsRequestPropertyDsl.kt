@@ -9,6 +9,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnEC2Fleet
 
+/**
+ * Specifies the configuration of Spot Instances for an EC2 Fleet.
+ *
+ * `SpotOptionsRequest` is a property of the
+ * [AWS::EC2::EC2Fleet](https://docs.aws.amazon.com//AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ec2fleet.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SpotOptionsRequestProperty spotOptionsRequestProperty = SpotOptionsRequestProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+ * .instancePoolsToUseCount(123)
+ * .maintenanceStrategies(MaintenanceStrategiesProperty.builder()
+ * .capacityRebalance(CapacityRebalanceProperty.builder()
+ * .replacementStrategy("replacementStrategy")
+ * .terminationDelay(123)
+ * .build())
+ * .build())
+ * .maxTotalPrice("maxTotalPrice")
+ * .minTargetCapacity(123)
+ * .singleAvailabilityZone(false)
+ * .singleInstanceType(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ec2fleet-spotoptionsrequest.html)
+ */
 @CdkDslMarker
 public class CfnEC2FleetSpotOptionsRequestPropertyDsl {
   private val cdkBuilder: CfnEC2Fleet.SpotOptionsRequestProperty.Builder =

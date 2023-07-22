@@ -10,6 +10,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImage
 import software.constructs.Construct
 
+/**
+ * An image build version.
+ *
+ * An image is a customized, secure, and up-to-date “golden” server image that is pre-installed and
+ * pre-configured with software and settings to meet specific IT standards.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnImage cfnImage = CfnImage.Builder.create(this, "MyCfnImage")
+ * .infrastructureConfigurationArn("infrastructureConfigurationArn")
+ * // the properties below are optional
+ * .containerRecipeArn("containerRecipeArn")
+ * .distributionConfigurationArn("distributionConfigurationArn")
+ * .enhancedImageMetadataEnabled(false)
+ * .imageRecipeArn("imageRecipeArn")
+ * .imageScanningConfiguration(ImageScanningConfigurationProperty.builder()
+ * .ecrConfiguration(EcrConfigurationProperty.builder()
+ * .containerTags(List.of("containerTags"))
+ * .repositoryName("repositoryName")
+ * .build())
+ * .imageScanningEnabled(false)
+ * .build())
+ * .imageTestsConfiguration(ImageTestsConfigurationProperty.builder()
+ * .imageTestsEnabled(false)
+ * .timeoutMinutes(123)
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-image.html)
+ */
 @CdkDslMarker
 public class CfnImageDsl(
   scope: Construct,

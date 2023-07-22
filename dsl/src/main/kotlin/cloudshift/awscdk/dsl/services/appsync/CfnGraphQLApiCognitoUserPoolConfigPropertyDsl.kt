@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * Describes an Amazon Cognito user pool configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CognitoUserPoolConfigProperty cognitoUserPoolConfigProperty =
+ * CognitoUserPoolConfigProperty.builder()
+ * .appIdClientRegex("appIdClientRegex")
+ * .awsRegion("awsRegion")
+ * .userPoolId("userPoolId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-cognitouserpoolconfig.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiCognitoUserPoolConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.CognitoUserPoolConfigProperty.Builder =

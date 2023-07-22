@@ -7,6 +7,18 @@ import kotlin.Unit
 import software.amazon.awscdk.services.dynamodb.Attribute
 import software.amazon.awscdk.services.dynamodb.SchemaOptions
 
+/**
+ * Represents the table schema attributes.
+ *
+ * Example:
+ *
+ * ```
+ * Table table;
+ * SchemaOptions schema = table.schema();
+ * Attribute partitionKey = schema.getPartitionKey();
+ * Attribute sortKey = schema.getSortKey();
+ * ```
+ */
 @CdkDslMarker
 public class SchemaOptionsDsl {
   private val cdkBuilder: SchemaOptions.Builder = SchemaOptions.builder()

@@ -13,6 +13,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.redshiftserverless.CfnNamespace
 import software.constructs.Construct
 
+/**
+ * A collection of database objects and users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshiftserverless.*;
+ * CfnNamespace cfnNamespace = CfnNamespace.Builder.create(this, "MyCfnNamespace")
+ * .namespaceName("namespaceName")
+ * // the properties below are optional
+ * .adminUsername("adminUsername")
+ * .adminUserPassword("adminUserPassword")
+ * .dbName("dbName")
+ * .defaultIamRoleArn("defaultIamRoleArn")
+ * .finalSnapshotName("finalSnapshotName")
+ * .finalSnapshotRetentionPeriod(123)
+ * .iamRoles(List.of("iamRoles"))
+ * .kmsKeyId("kmsKeyId")
+ * .logExports(List.of("logExports"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshiftserverless-namespace.html)
+ */
 @CdkDslMarker
 public class CfnNamespaceDsl(
   scope: Construct,

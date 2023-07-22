@@ -22,6 +22,47 @@ import software.amazon.awscdk.services.ec2.Vpc
 import software.amazon.awscdk.services.ec2.VpnConnectionOptions
 import software.constructs.Construct
 
+/**
+ * Define an AWS Virtual Private Cloud.
+ *
+ * See the package-level documentation of this package for an overview
+ * of the various dimensions in which you can configure your VPC.
+ *
+ * For example:
+ *
+ * ```
+ * Vpc vpc = Vpc.Builder.create(this, "TheVPC")
+ * .ipAddresses(IpAddresses.cidr("10.0.0.0/16"))
+ * .build();
+ * // Iterate the private subnets
+ * SelectedSubnets selection = vpc.selectSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build());
+ * for (Object subnet : selection.getSubnets()) {
+ * }
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ec2.*;
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc")
+ * .ipAddresses(IpAddresses.cidr("10.0.0.0/16"))
+ * .build();
+ * VpcConnector vpcConnector = VpcConnector.Builder.create(this, "VpcConnector")
+ * .vpc(vpc)
+ * .vpcSubnets(vpc.selectSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build()))
+ * .vpcConnectorName("MyVpcConnector")
+ * .build();
+ * Service.Builder.create(this, "Service")
+ * .source(Source.fromEcrPublic(EcrPublicProps.builder()
+ * .imageConfiguration(ImageConfiguration.builder().port(8000).build())
+ * .imageIdentifier("public.ecr.aws/aws-containers/hello-app-runner:latest")
+ * .build()))
+ * .vpcConnector(vpcConnector)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcDsl(
   scope: Construct,

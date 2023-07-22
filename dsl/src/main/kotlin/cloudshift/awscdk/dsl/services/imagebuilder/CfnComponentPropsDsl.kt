@@ -9,6 +9,33 @@ import kotlin.collections.Map
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnComponentProps
 
+/**
+ * Properties for defining a `CfnComponent`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * CfnComponentProps cfnComponentProps = CfnComponentProps.builder()
+ * .name("name")
+ * .platform("platform")
+ * .version("version")
+ * // the properties below are optional
+ * .changeDescription("changeDescription")
+ * .data("data")
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .supportedOsVersions(List.of("supportedOsVersions"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .uri("uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-component.html)
+ */
 @CdkDslMarker
 public class CfnComponentPropsDsl {
   private val cdkBuilder: CfnComponentProps.Builder = CfnComponentProps.builder()

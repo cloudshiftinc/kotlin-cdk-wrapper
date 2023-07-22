@@ -14,6 +14,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.guardduty.CfnIPSet
 import software.constructs.Construct
 
+/**
+ * The `AWS::GuardDuty::IPSet` resource specifies a new `IPSet` .
+ *
+ * An `IPSet` is a list of trusted IP addresses from which secure communication is allowed with AWS
+ * infrastructure and applications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnIPSet cfnIPSet = CfnIPSet.Builder.create(this, "MyCfnIPSet")
+ * .activate(false)
+ * .detectorId("detectorId")
+ * .format("format")
+ * .location("location")
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-ipset.html)
+ */
 @CdkDslMarker
 public class CfnIPSetDsl(
   scope: Construct,

@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies when noncurrent object versions expire.
+ *
+ * Upon expiration, Amazon S3 permanently deletes the noncurrent object versions. You set this
+ * lifecycle configuration action on a bucket that has versioning enabled (or suspended) to request
+ * that Amazon S3 delete noncurrent object versions at a specific period in the object's lifetime. For
+ * more information about setting a lifecycle rule configuration, see [AWS::S3::Bucket
+ * Rule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * NoncurrentVersionExpirationProperty noncurrentVersionExpirationProperty =
+ * NoncurrentVersionExpirationProperty.builder()
+ * .noncurrentDays(123)
+ * // the properties below are optional
+ * .newerNoncurrentVersions(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-noncurrentversionexpiration.html)
+ */
 @CdkDslMarker
 public class CfnBucketNoncurrentVersionExpirationPropertyDsl {
   private val cdkBuilder: CfnBucket.NoncurrentVersionExpirationProperty.Builder =

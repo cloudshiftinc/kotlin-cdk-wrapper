@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.customerprofiles.CfnIntegration
 
+/**
+ * The operation to be performed on the provided source fields.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * ConnectorOperatorProperty connectorOperatorProperty = ConnectorOperatorProperty.builder()
+ * .marketo("marketo")
+ * .s3("s3")
+ * .salesforce("salesforce")
+ * .serviceNow("serviceNow")
+ * .zendesk("zendesk")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-integration-connectoroperator.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationConnectorOperatorPropertyDsl {
   private val cdkBuilder: CfnIntegration.ConnectorOperatorProperty.Builder =

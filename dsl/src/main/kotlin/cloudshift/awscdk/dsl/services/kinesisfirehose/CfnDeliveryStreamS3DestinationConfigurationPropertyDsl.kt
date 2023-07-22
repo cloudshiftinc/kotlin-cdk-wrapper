@@ -7,6 +7,44 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `S3DestinationConfiguration` property type specifies an Amazon Simple Storage Service (Amazon
+ * S3) destination to which Amazon Kinesis Data Firehose (Kinesis Data Firehose) delivers data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
+ * S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.S3DestinationConfigurationProperty.Builder =

@@ -13,6 +13,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.sagemaker.CfnPipelineProps
 
+/**
+ * Properties for defining a `CfnPipeline`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object parallelismConfiguration;
+ * Object pipelineDefinition;
+ * CfnPipelineProps cfnPipelineProps = CfnPipelineProps.builder()
+ * .pipelineDefinition(pipelineDefinition)
+ * .pipelineName("pipelineName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .parallelismConfiguration(parallelismConfiguration)
+ * .pipelineDescription("pipelineDescription")
+ * .pipelineDisplayName("pipelineDisplayName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html)
+ */
 @CdkDslMarker
 public class CfnPipelinePropsDsl {
   private val cdkBuilder: CfnPipelineProps.Builder = CfnPipelineProps.builder()

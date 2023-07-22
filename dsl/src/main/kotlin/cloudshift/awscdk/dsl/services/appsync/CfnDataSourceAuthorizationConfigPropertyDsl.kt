@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnDataSource
 
+/**
+ * The `AuthorizationConfig` property type specifies the authorization type and configuration for an
+ * AWS AppSync http data source.
+ *
+ * `AuthorizationConfig` is a property of the [AWS AppSync DataSource
+ * HttpConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * AuthorizationConfigProperty authorizationConfigProperty = AuthorizationConfigProperty.builder()
+ * .authorizationType("authorizationType")
+ * // the properties below are optional
+ * .awsIamConfig(AwsIamConfigProperty.builder()
+ * .signingRegion("signingRegion")
+ * .signingServiceName("signingServiceName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-authorizationconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceAuthorizationConfigPropertyDsl {
   private val cdkBuilder: CfnDataSource.AuthorizationConfigProperty.Builder =

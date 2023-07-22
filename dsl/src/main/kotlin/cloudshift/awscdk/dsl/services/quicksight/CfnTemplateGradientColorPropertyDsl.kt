@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Determines the gradient color settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GradientColorProperty gradientColorProperty = GradientColorProperty.builder()
+ * .stops(List.of(GradientStopProperty.builder()
+ * .gradientOffset(123)
+ * // the properties below are optional
+ * .color("color")
+ * .dataValue(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-gradientcolor.html)
+ */
 @CdkDslMarker
 public class CfnTemplateGradientColorPropertyDsl {
   private val cdkBuilder: CfnTemplate.GradientColorProperty.Builder =

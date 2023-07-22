@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides an expression that evaluates to true or false.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * ConditionProperty conditionProperty = ConditionProperty.builder()
+ * .expressionString("expressionString")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-condition.html)
+ */
 @CdkDslMarker
 public class CfnBotConditionPropertyDsl {
   private val cdkBuilder: CfnBot.ConditionProperty.Builder = CfnBot.ConditionProperty.builder()

@@ -7,6 +7,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnClassifier
 import software.amazon.awscdk.services.glue.CfnClassifierProps
 
+/**
+ * Properties for defining a `CfnClassifier`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnClassifierProps cfnClassifierProps = CfnClassifierProps.builder()
+ * .csvClassifier(CsvClassifierProperty.builder()
+ * .allowSingleColumn(false)
+ * .containsHeader("containsHeader")
+ * .delimiter("delimiter")
+ * .disableValueTrimming(false)
+ * .header(List.of("header"))
+ * .name("name")
+ * .quoteSymbol("quoteSymbol")
+ * .build())
+ * .grokClassifier(GrokClassifierProperty.builder()
+ * .classification("classification")
+ * .grokPattern("grokPattern")
+ * // the properties below are optional
+ * .customPatterns("customPatterns")
+ * .name("name")
+ * .build())
+ * .jsonClassifier(JsonClassifierProperty.builder()
+ * .jsonPath("jsonPath")
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .xmlClassifier(XMLClassifierProperty.builder()
+ * .classification("classification")
+ * .rowTag("rowTag")
+ * // the properties below are optional
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html)
+ */
 @CdkDslMarker
 public class CfnClassifierPropsDsl {
   private val cdkBuilder: CfnClassifierProps.Builder = CfnClassifierProps.builder()

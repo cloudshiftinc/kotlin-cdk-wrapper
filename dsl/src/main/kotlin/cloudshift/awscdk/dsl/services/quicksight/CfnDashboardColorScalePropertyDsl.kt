@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Determines the color scale that is applied to the visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ColorScaleProperty colorScaleProperty = ColorScaleProperty.builder()
+ * .colorFillType("colorFillType")
+ * .colors(List.of(DataColorProperty.builder()
+ * .color("color")
+ * .dataValue(123)
+ * .build()))
+ * // the properties below are optional
+ * .nullValueColor(DataColorProperty.builder()
+ * .color("color")
+ * .dataValue(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-colorscale.html)
+ */
 @CdkDslMarker
 public class CfnDashboardColorScalePropertyDsl {
   private val cdkBuilder: CfnDashboard.ColorScaleProperty.Builder =

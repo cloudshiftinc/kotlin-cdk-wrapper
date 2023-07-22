@@ -11,6 +11,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 import software.constructs.Construct
 
+/**
+ * Create a task set in the specified cluster and service.
+ *
+ * This is used when a service uses the `EXTERNAL` deployment controller type. For more information,
+ * see [Amazon ECS deployment
+ * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnTaskSet cfnTaskSet = CfnTaskSet.Builder.create(this, "MyCfnTaskSet")
+ * .cluster("cluster")
+ * .service("service")
+ * .taskDefinition("taskDefinition")
+ * // the properties below are optional
+ * .externalId("externalId")
+ * .launchType("launchType")
+ * .loadBalancers(List.of(LoadBalancerProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .loadBalancerName("loadBalancerName")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .platformVersion("platformVersion")
+ * .scale(ScaleProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .serviceRegistries(List.of(ServiceRegistryProperty.builder()
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .port(123)
+ * .registryArn("registryArn")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)
+ */
 @CdkDslMarker
 public class CfnTaskSetDsl(
   scope: Construct,

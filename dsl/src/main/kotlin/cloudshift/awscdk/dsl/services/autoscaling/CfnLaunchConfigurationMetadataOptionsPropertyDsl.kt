@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 
+/**
+ * `MetadataOptions` is a property of
+ * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+ * that describes metadata options for the instances.
+ *
+ * For more information, see [Configure the instance metadata
+ * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * MetadataOptionsProperty metadataOptionsProperty = MetadataOptionsProperty.builder()
+ * .httpEndpoint("httpEndpoint")
+ * .httpPutResponseHopLimit(123)
+ * .httpTokens("httpTokens")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-metadataoptions.html)
+ */
 @CdkDslMarker
 public class CfnLaunchConfigurationMetadataOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchConfiguration.MetadataOptionsProperty.Builder =

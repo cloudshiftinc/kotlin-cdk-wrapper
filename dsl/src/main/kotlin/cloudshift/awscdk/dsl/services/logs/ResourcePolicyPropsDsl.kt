@@ -11,6 +11,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iam.PolicyStatement
 import software.amazon.awscdk.services.logs.ResourcePolicyProps
 
+/**
+ * Properties to define Cloudwatch log group resource policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * PolicyStatement policyStatement;
+ * ResourcePolicyProps resourcePolicyProps = ResourcePolicyProps.builder()
+ * .policyStatements(List.of(policyStatement))
+ * .resourcePolicyName("resourcePolicyName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResourcePolicyPropsDsl {
   private val cdkBuilder: ResourcePolicyProps.Builder = ResourcePolicyProps.builder()

@@ -30,6 +30,27 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedTaskImage
 import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * The properties for the NetworkLoadBalancedEc2Service service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * NetworkLoadBalancedEc2Service loadBalancedEcsService =
+ * NetworkLoadBalancedEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("test"))
+ * .environment(Map.of(
+ * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
+ * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
+ * .build())
+ * .desiredCount(2)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancedEc2ServicePropsDsl {
   private val cdkBuilder: NetworkLoadBalancedEc2ServiceProps.Builder =

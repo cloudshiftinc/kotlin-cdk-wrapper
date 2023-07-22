@@ -16,6 +16,26 @@ import software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * CodePipeline invoke Action that is provided by an AWS Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * LambdaInvokeAction lambdaAction = LambdaInvokeAction.Builder.create()
+ * .actionName("Lambda")
+ * .lambda(fn)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Lambda")
+ * .actions(List.of(lambdaAction))
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-invoke-lambda-function.html)
+ */
 @CdkDslMarker
 public class LambdaInvokeActionDsl {
   private val cdkBuilder: LambdaInvokeAction.Builder = LambdaInvokeAction.Builder.create()

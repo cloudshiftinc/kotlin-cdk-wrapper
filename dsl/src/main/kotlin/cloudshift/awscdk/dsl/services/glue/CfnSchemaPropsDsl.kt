@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnSchema
 import software.amazon.awscdk.services.glue.CfnSchemaProps
 
+/**
+ * Properties for defining a `CfnSchema`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnSchemaProps cfnSchemaProps = CfnSchemaProps.builder()
+ * .compatibility("compatibility")
+ * .dataFormat("dataFormat")
+ * .name("name")
+ * .schemaDefinition("schemaDefinition")
+ * // the properties below are optional
+ * .checkpointVersion(SchemaVersionProperty.builder()
+ * .isLatest(false)
+ * .versionNumber(123)
+ * .build())
+ * .description("description")
+ * .registry(RegistryProperty.builder()
+ * .arn("arn")
+ * .name("name")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html)
+ */
 @CdkDslMarker
 public class CfnSchemaPropsDsl {
   private val cdkBuilder: CfnSchemaProps.Builder = CfnSchemaProps.builder()

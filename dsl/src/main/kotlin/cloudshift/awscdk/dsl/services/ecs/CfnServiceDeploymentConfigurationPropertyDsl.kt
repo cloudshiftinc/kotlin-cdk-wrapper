@@ -7,6 +7,34 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The `DeploymentConfiguration` property specifies optional deployment parameters that control how
+ * many tasks run during the deployment and the ordering of stopping and starting tasks.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * DeploymentConfigurationProperty deploymentConfigurationProperty =
+ * DeploymentConfigurationProperty.builder()
+ * .alarms(DeploymentAlarmsProperty.builder()
+ * .alarmNames(List.of("alarmNames"))
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .deploymentCircuitBreaker(DeploymentCircuitBreakerProperty.builder()
+ * .enable(false)
+ * .rollback(false)
+ * .build())
+ * .maximumPercent(123)
+ * .minimumHealthyPercent(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceDeploymentConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.DeploymentConfigurationProperty.Builder =

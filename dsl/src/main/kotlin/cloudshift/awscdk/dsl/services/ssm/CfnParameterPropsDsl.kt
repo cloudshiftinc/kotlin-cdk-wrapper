@@ -9,6 +9,32 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.ssm.CfnParameterProps
 
+/**
+ * Properties for defining a `CfnParameter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object tags;
+ * CfnParameterProps cfnParameterProps = CfnParameterProps.builder()
+ * .type("type")
+ * .value("value")
+ * // the properties below are optional
+ * .allowedPattern("allowedPattern")
+ * .dataType("dataType")
+ * .description("description")
+ * .name("name")
+ * .policies("policies")
+ * .tags(tags)
+ * .tier("tier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html)
+ */
 @CdkDslMarker
 public class CfnParameterPropsDsl {
   private val cdkBuilder: CfnParameterProps.Builder = CfnParameterProps.builder()

@@ -8,6 +8,32 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnApplication
 
+/**
+ * Use the `MaxAgeRule` property type to specify a max age rule to restrict the length of time that
+ * application versions are retained for an AWS Elastic Beanstalk application when defining an
+ * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
+ *
+ * A lifecycle rule that deletes application versions after the specified number of days.
+ *
+ * `MaxAgeRule` is a property of the
+ * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * MaxAgeRuleProperty maxAgeRuleProperty = MaxAgeRuleProperty.builder()
+ * .deleteSourceFromS3(false)
+ * .enabled(false)
+ * .maxAgeInDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html)
+ */
 @CdkDslMarker
 public class CfnApplicationMaxAgeRulePropertyDsl {
   private val cdkBuilder: CfnApplication.MaxAgeRuleProperty.Builder =

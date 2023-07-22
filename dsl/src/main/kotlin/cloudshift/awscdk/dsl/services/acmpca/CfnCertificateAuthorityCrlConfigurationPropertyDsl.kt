@@ -9,6 +9,74 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+/**
+ * Contains configuration information for a certificate revocation list (CRL).
+ *
+ * Your private certificate authority (CA) creates base CRLs. Delta CRLs are not supported. You can
+ * enable CRLs for your new or an existing private CA by setting the *Enabled* parameter to `true` .
+ * Your private CA writes CRLs to an S3 bucket that you specify in the *S3BucketName* parameter. You
+ * can hide the name of your bucket by specifying a value for the *CustomCname* parameter. Your private
+ * CA copies the CNAME or the S3 bucket name to the *CRL Distribution Points* extension of each
+ * certificate it issues. Your S3 bucket policy must give write permission to AWS Private CA.
+ *
+ * AWS Private CA assets that are stored in Amazon S3 can be protected with encryption. For more
+ * information, see [Encrypting Your
+ * CRLs](https://docs.aws.amazon.com/privateca/latest/userguide/PcaCreateCa.html#crl-encryption) .
+ *
+ * Your private CA uses the value in the *ExpirationInDays* parameter to calculate the *nextUpdate*
+ * field in the CRL. The CRL is refreshed prior to a certificate's expiration date or when a
+ * certificate is revoked. When a certificate is revoked, it appears in the CRL until the certificate
+ * expires, and then in one additional CRL after expiration, and it always appears in the audit report.
+ *
+ * A CRL is typically updated approximately 30 minutes after a certificate is revoked. If for any
+ * reason a CRL update fails, AWS Private CA makes further attempts every 15 minutes.
+ *
+ * CRLs contain the following fields:
+ *
+ * * *Version* : The current version number defined in RFC 5280 is V2. The integer value is 0x1.
+ * * *Signature Algorithm* : The name of the algorithm used to sign the CRL.
+ * * *Issuer* : The X.500 distinguished name of your private CA that issued the CRL.
+ * * *Last Update* : The issue date and time of this CRL.
+ * * *Next Update* : The day and time by which the next CRL will be issued.
+ * * *Revoked Certificates* : List of revoked certificates. Each list item contains the following
+ * information.
+ * * *Serial Number* : The serial number, in hexadecimal format, of the revoked certificate.
+ * * *Revocation Date* : Date and time the certificate was revoked.
+ * * *CRL Entry Extensions* : Optional extensions for the CRL entry.
+ * * *X509v3 CRL Reason Code* : Reason the certificate was revoked.
+ * * *CRL Extensions* : Optional extensions for the CRL.
+ * * *X509v3 Authority Key Identifier* : Identifies the public key associated with the private key
+ * used to sign the certificate.
+ * * *X509v3 CRL Number:* : Decimal sequence number for the CRL.
+ * * *Signature Algorithm* : Algorithm used by your private CA to sign the CRL.
+ * * *Signature Value* : Signature computed over the CRL.
+ *
+ * Certificate revocation lists created by AWS Private CA are DER-encoded. You can use the following
+ * OpenSSL command to list a CRL.
+ *
+ * `openssl crl -inform DER -text -in *crl_path* -noout`
+ *
+ * For more information, see [Planning a certificate revocation list
+ * (CRL)](https://docs.aws.amazon.com/privateca/latest/userguide/crl-planning.html) in the *AWS Private
+ * Certificate Authority User Guide*
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
+ * .customCname("customCname")
+ * .enabled(false)
+ * .expirationInDays(123)
+ * .s3BucketName("s3BucketName")
+ * .s3ObjectAcl("s3ObjectAcl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityCrlConfigurationPropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.CrlConfigurationProperty.Builder =

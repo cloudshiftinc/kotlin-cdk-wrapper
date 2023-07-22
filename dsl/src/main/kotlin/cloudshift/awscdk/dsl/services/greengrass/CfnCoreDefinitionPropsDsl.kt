@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnCoreDefinition
 import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionProps
 
+/**
+ * Properties for defining a `CfnCoreDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnCoreDefinitionProps cfnCoreDefinitionProps = CfnCoreDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(CoreDefinitionVersionProperty.builder()
+ * .cores(List.of(CoreProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
+ */
 @CdkDslMarker
 public class CfnCoreDefinitionPropsDsl {
   private val cdkBuilder: CfnCoreDefinitionProps.Builder = CfnCoreDefinitionProps.builder()

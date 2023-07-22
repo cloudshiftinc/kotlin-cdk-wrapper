@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnPrefixList
 
+/**
+ * An entry for a prefix list.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EntryProperty entryProperty = EntryProperty.builder()
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-prefixlist-entry.html)
+ */
 @CdkDslMarker
 public class CfnPrefixListEntryPropertyDsl {
   private val cdkBuilder: CfnPrefixList.EntryProperty.Builder =

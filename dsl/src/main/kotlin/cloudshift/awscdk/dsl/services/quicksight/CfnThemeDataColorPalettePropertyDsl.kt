@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * The theme colors that are used for data colors in charts.
+ *
+ * The colors description is a hexadecimal color code that consists of six alphanumerical
+ * characters, prefixed with `#` , for example #37BFF5.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataColorPaletteProperty dataColorPaletteProperty = DataColorPaletteProperty.builder()
+ * .colors(List.of("colors"))
+ * .emptyFillColor("emptyFillColor")
+ * .minMaxGradient(List.of("minMaxGradient"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-datacolorpalette.html)
+ */
 @CdkDslMarker
 public class CfnThemeDataColorPalettePropertyDsl {
   private val cdkBuilder: CfnTheme.DataColorPaletteProperty.Builder =

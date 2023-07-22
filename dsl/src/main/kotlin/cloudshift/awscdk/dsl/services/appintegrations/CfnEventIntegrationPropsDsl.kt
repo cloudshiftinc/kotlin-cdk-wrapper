@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegration
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegrationProps
 
+/**
+ * Properties for defining a `CfnEventIntegration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appintegrations.*;
+ * CfnEventIntegrationProps cfnEventIntegrationProps = CfnEventIntegrationProps.builder()
+ * .eventBridgeBus("eventBridgeBus")
+ * .eventFilter(EventFilterProperty.builder()
+ * .source("source")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-eventintegration.html)
+ */
 @CdkDslMarker
 public class CfnEventIntegrationPropsDsl {
   private val cdkBuilder: CfnEventIntegrationProps.Builder = CfnEventIntegrationProps.builder()

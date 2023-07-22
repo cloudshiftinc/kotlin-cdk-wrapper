@@ -7,6 +7,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.BaseInstanceProps
 
+/**
+ * Used when the resource that's associated with the service instance is accessible using values
+ * other than an IP address or a domain name (CNAME), i.e. for non-ip-instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * BaseInstanceProps baseInstanceProps = BaseInstanceProps.builder()
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseInstancePropsDsl {
   private val cdkBuilder: BaseInstanceProps.Builder = BaseInstanceProps.builder()

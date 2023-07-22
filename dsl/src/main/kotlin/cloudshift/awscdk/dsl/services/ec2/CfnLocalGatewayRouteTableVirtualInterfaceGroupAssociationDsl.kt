@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation
 import software.constructs.Construct
 
+/**
+ * Describes an association between a local gateway route table and a virtual interface group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation
+ * cfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation =
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation.Builder.create(this,
+ * "MyCfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation")
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * .localGatewayVirtualInterfaceGroupId("localGatewayVirtualInterfaceGroupId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationDsl(
   scope: Construct,

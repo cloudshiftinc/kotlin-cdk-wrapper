@@ -11,6 +11,26 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.autoscaling.RollingUpdateOptions
 import software.amazon.awscdk.services.autoscaling.ScalingProcess
 
+/**
+ * Options for customizing the rolling update.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * RollingUpdateOptions rollingUpdateOptions = RollingUpdateOptions.builder()
+ * .maxBatchSize(123)
+ * .minInstancesInService(123)
+ * .minSuccessPercentage(123)
+ * .pauseTime(Duration.minutes(30))
+ * .suspendProcesses(List.of(ScalingProcess.LAUNCH))
+ * .waitOnResourceSignals(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RollingUpdateOptionsDsl {
   private val cdkBuilder: RollingUpdateOptions.Builder = RollingUpdateOptions.builder()

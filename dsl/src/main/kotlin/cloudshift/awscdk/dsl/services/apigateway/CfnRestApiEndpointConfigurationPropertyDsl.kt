@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.apigateway.CfnRestApi
 
+/**
+ * The `EndpointConfiguration` property type specifies the endpoint types of a REST API.
+ *
+ * `EndpointConfiguration` is a property of the
+ * [AWS::ApiGateway::RestApi](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * EndpointConfigurationProperty endpointConfigurationProperty =
+ * EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .vpcEndpointIds(List.of("vpcEndpointIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-endpointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnRestApiEndpointConfigurationPropertyDsl {
   private val cdkBuilder: CfnRestApi.EndpointConfigurationProperty.Builder =

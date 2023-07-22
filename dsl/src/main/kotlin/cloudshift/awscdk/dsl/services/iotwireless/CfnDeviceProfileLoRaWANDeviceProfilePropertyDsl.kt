@@ -11,6 +11,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnDeviceProfile
 
+/**
+ * LoRaWAN device profile object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * LoRaWANDeviceProfileProperty loRaWANDeviceProfileProperty =
+ * LoRaWANDeviceProfileProperty.builder()
+ * .classBTimeout(123)
+ * .classCTimeout(123)
+ * .factoryPresetFreqsList(List.of(123))
+ * .macVersion("macVersion")
+ * .maxDutyCycle(123)
+ * .maxEirp(123)
+ * .pingSlotDr(123)
+ * .pingSlotFreq(123)
+ * .pingSlotPeriod(123)
+ * .regParamsRevision("regParamsRevision")
+ * .rfRegion("rfRegion")
+ * .rxDataRate2(123)
+ * .rxDelay1(123)
+ * .rxDrOffset1(123)
+ * .rxFreq2(123)
+ * .supports32BitFCnt(false)
+ * .supportsClassB(false)
+ * .supportsClassC(false)
+ * .supportsJoin(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-deviceprofile-lorawandeviceprofile.html)
+ */
 @CdkDslMarker
 public class CfnDeviceProfileLoRaWANDeviceProfilePropertyDsl {
   private val cdkBuilder: CfnDeviceProfile.LoRaWANDeviceProfileProperty.Builder =

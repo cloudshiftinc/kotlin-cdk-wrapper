@@ -13,6 +13,17 @@ import software.amazon.awscdk.services.ec2.CfnPrefixList
 import software.amazon.awscdk.services.ec2.PrefixList
 import software.constructs.Construct
 
+/**
+ * A managed prefix list.
+ *
+ * Example:
+ *
+ * ```
+ * PrefixList.Builder.create(this, "EmptyPrefixList")
+ * .maxEntries(100)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PrefixListDsl(
   scope: Construct,

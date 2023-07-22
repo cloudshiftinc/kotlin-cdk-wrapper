@@ -14,6 +14,27 @@ import software.amazon.awscdk.services.appsync.LogConfig
 import software.amazon.awscdk.services.appsync.Visibility
 import software.constructs.Construct
 
+/**
+ * An AppSync GraphQL API.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.events.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
+ * .name("EventBridgeApi")
+ * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+ * .build();
+ * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
+ * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
+ * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("emitEvent")
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GraphqlApiDsl(
   scope: Construct,

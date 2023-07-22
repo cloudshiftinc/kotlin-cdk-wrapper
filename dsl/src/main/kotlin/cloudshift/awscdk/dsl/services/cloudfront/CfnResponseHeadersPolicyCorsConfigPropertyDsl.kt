@@ -8,6 +8,45 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A configuration for a set of HTTP response headers that are used for cross-origin resource
+ * sharing (CORS).
+ *
+ * CloudFront adds these headers to HTTP responses that it sends for CORS requests that match a
+ * cache behavior associated with this response headers policy.
+ *
+ * For more information about CORS, see [Cross-Origin Resource Sharing
+ * (CORS)](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) in the
+ * MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CorsConfigProperty corsConfigProperty = CorsConfigProperty.builder()
+ * .accessControlAllowCredentials(false)
+ * .accessControlAllowHeaders(AccessControlAllowHeadersProperty.builder()
+ * .items(List.of("items"))
+ * .build())
+ * .accessControlAllowMethods(AccessControlAllowMethodsProperty.builder()
+ * .items(List.of("items"))
+ * .build())
+ * .accessControlAllowOrigins(AccessControlAllowOriginsProperty.builder()
+ * .items(List.of("items"))
+ * .build())
+ * .originOverride(false)
+ * // the properties below are optional
+ * .accessControlExposeHeaders(AccessControlExposeHeadersProperty.builder()
+ * .items(List.of("items"))
+ * .build())
+ * .accessControlMaxAgeSec(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-corsconfig.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyCorsConfigPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.CorsConfigProperty.Builder =

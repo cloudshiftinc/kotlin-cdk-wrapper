@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler
 
+/**
+ * Specifies configuration information for the input data for the inference scheduler, including
+ * delimiter, format, and dataset location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutequipment.*;
+ * DataInputConfigurationProperty dataInputConfigurationProperty =
+ * DataInputConfigurationProperty.builder()
+ * .s3InputConfiguration(S3InputConfigurationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .inferenceInputNameConfiguration(InputNameConfigurationProperty.builder()
+ * .componentTimestampDelimiter("componentTimestampDelimiter")
+ * .timestampFormat("timestampFormat")
+ * .build())
+ * .inputTimeZoneOffset("inputTimeZoneOffset")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutequipment-inferencescheduler-datainputconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnInferenceSchedulerDataInputConfigurationPropertyDsl {
   private val cdkBuilder: CfnInferenceScheduler.DataInputConfigurationProperty.Builder =

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.RenderSignalsOptions
 
+/**
+ * Input for Signals.renderCreationPolicy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * RenderSignalsOptions renderSignalsOptions = RenderSignalsOptions.builder()
+ * .desiredCapacity(123)
+ * .minCapacity(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RenderSignalsOptionsDsl {
   private val cdkBuilder: RenderSignalsOptions.Builder = RenderSignalsOptions.builder()

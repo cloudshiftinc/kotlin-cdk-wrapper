@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnContactFlowModuleProps
 
+/**
+ * Properties for defining a `CfnContactFlowModule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnContactFlowModuleProps cfnContactFlowModuleProps = CfnContactFlowModuleProps.builder()
+ * .content("content")
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .state("state")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-contactflowmodule.html)
+ */
 @CdkDslMarker
 public class CfnContactFlowModulePropsDsl {
   private val cdkBuilder: CfnContactFlowModuleProps.Builder = CfnContactFlowModuleProps.builder()

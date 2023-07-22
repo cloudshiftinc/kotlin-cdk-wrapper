@@ -11,6 +11,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnCoreDefinition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::CoreDefinition` resource represents a core definition for AWS IoT
+ * Greengrass .
+ *
+ * Core definitions are used to organize your core definition versions.
+ *
+ * Core definitions can reference multiple core definition versions. All core definition versions
+ * must be associated with a core definition. Each core definition version can contain one Greengrass
+ * core.
+ *
+ *
+ * When you create a core definition, you can optionally include an initial core definition version.
+ * To associate a core definition version later, create an
+ * [`AWS::Greengrass::CoreDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html)
+ * resource and specify the ID of this core definition.
+ *
+ * After you create the core definition version that contains the core you want to deploy, you must
+ * add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnCoreDefinition cfnCoreDefinition = CfnCoreDefinition.Builder.create(this,
+ * "MyCfnCoreDefinition")
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(CoreDefinitionVersionProperty.builder()
+ * .cores(List.of(CoreProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
+ */
 @CdkDslMarker
 public class CfnCoreDefinitionDsl(
   scope: Construct,

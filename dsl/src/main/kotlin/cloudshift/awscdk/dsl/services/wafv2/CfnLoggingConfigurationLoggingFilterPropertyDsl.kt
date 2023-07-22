@@ -10,6 +10,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 
+/**
+ * Filtering that specifies which web requests are kept in the logs and which are dropped, defined
+ * for a web ACL's `LoggingConfiguration` .
+ *
+ * You can filter on the rule action and on the web request labels that were applied by matching
+ * rules during web ACL evaluation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * LoggingFilterProperty loggingFilterProperty = LoggingFilterProperty.builder()
+ * .defaultBehavior("defaultBehavior")
+ * .filters(List.of(FilterProperty.builder()
+ * .behavior("behavior")
+ * .conditions(List.of(ConditionProperty.builder()
+ * .actionCondition(ActionConditionProperty.builder()
+ * .action("action")
+ * .build())
+ * .labelNameCondition(LabelNameConditionProperty.builder()
+ * .labelName("labelName")
+ * .build())
+ * .build()))
+ * .requirement("requirement")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-loggingfilter.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationLoggingFilterPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.LoggingFilterProperty.Builder =

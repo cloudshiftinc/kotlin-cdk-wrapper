@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecr.IRepository
 import software.amazon.awscdk.services.lambda.EcrImageCode
 
+/**
+ * Represents a Docker image in ECR that can be bound as Lambda Code.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Repository repository;
+ * EcrImageCode ecrImageCode = EcrImageCode.Builder.create(repository)
+ * .cmd(List.of("cmd"))
+ * .entrypoint(List.of("entrypoint"))
+ * .tag("tag")
+ * .tagOrDigest("tagOrDigest")
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcrImageCodeDsl(
   repository: IRepository,

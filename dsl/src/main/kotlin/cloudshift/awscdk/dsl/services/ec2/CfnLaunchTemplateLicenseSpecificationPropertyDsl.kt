@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies a license configuration for an instance.
+ *
+ * `LicenseSpecification` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * LicenseSpecificationProperty licenseSpecificationProperty =
+ * LicenseSpecificationProperty.builder()
+ * .licenseConfigurationArn("licenseConfigurationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-licensespecification.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateLicenseSpecificationPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.LicenseSpecificationProperty.Builder =

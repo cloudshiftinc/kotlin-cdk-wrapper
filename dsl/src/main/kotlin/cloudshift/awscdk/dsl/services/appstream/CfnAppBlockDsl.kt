@@ -13,6 +13,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnAppBlock
 import software.constructs.Construct
 
+/**
+ * This resource creates an app block.
+ *
+ * App blocks store details about the virtual hard disk that contains the files for the application
+ * in an S3 bucket. It also stores the setup script with details about how to mount the virtual hard
+ * disk. App blocks are only supported for Elastic fleets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnAppBlock cfnAppBlock = CfnAppBlock.Builder.create(this, "MyCfnAppBlock")
+ * .name("name")
+ * .sourceS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .displayName("displayName")
+ * .packagingType("packagingType")
+ * .postSetupScriptDetails(ScriptDetailsProperty.builder()
+ * .executablePath("executablePath")
+ * .scriptS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * .timeoutInSeconds(123)
+ * // the properties below are optional
+ * .executableParameters("executableParameters")
+ * .build())
+ * .setupScriptDetails(ScriptDetailsProperty.builder()
+ * .executablePath("executablePath")
+ * .scriptS3Location(S3LocationProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * // the properties below are optional
+ * .s3Key("s3Key")
+ * .build())
+ * .timeoutInSeconds(123)
+ * // the properties below are optional
+ * .executableParameters("executableParameters")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html)
+ */
 @CdkDslMarker
 public class CfnAppBlockDsl(
   scope: Construct,

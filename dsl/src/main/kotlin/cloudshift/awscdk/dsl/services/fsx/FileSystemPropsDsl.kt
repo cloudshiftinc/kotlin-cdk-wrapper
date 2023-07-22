@@ -11,6 +11,34 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.fsx.FileSystemProps
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties for the FSx file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.fsx.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * SecurityGroup securityGroup;
+ * Vpc vpc;
+ * FileSystemProps fileSystemProps = FileSystemProps.builder()
+ * .storageCapacityGiB(123)
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .backupId("backupId")
+ * .kmsKey(key)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .securityGroup(securityGroup)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html)
+ */
 @CdkDslMarker
 public class FileSystemPropsDsl {
   private val cdkBuilder: FileSystemProps.Builder = FileSystemProps.builder()

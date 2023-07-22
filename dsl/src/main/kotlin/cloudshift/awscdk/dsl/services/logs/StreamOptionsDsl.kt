@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.logs.StreamOptions
 
+/**
+ * Properties for a new LogStream created from a LogGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * StreamOptions streamOptions = StreamOptions.builder()
+ * .logStreamName("logStreamName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StreamOptionsDsl {
   private val cdkBuilder: StreamOptions.Builder = StreamOptions.builder()

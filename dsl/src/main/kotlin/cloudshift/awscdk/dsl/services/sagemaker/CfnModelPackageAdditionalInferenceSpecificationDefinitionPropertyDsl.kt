@@ -10,6 +10,47 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * A structure of additional Inference Specification.
+ *
+ * Additional Inference Specification specifies details about inference jobs that can be run with
+ * models based on this model package
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object modelInput;
+ * AdditionalInferenceSpecificationDefinitionProperty
+ * additionalInferenceSpecificationDefinitionProperty =
+ * AdditionalInferenceSpecificationDefinitionProperty.builder()
+ * .containers(List.of(ModelPackageContainerDefinitionProperty.builder()
+ * .image("image")
+ * // the properties below are optional
+ * .containerHostname("containerHostname")
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .imageDigest("imageDigest")
+ * .modelDataUrl("modelDataUrl")
+ * .modelInput(modelInput)
+ * .nearestModelName("nearestModelName")
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .supportedContentTypes(List.of("supportedContentTypes"))
+ * .supportedRealtimeInferenceInstanceTypes(List.of("supportedRealtimeInferenceInstanceTypes"))
+ * .supportedResponseMimeTypes(List.of("supportedResponseMimeTypes"))
+ * .supportedTransformInstanceTypes(List.of("supportedTransformInstanceTypes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-additionalinferencespecificationdefinition.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageAdditionalInferenceSpecificationDefinitionPropertyDsl {
   private val cdkBuilder: CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty.Builder

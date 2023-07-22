@@ -8,6 +8,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * HttpApiEventProperty httpApiEventProperty = HttpApiEventProperty.builder()
+ * .apiId("apiId")
+ * .auth(HttpApiFunctionAuthProperty.builder()
+ * .authorizationScopes(List.of("authorizationScopes"))
+ * .authorizer("authorizer")
+ * .build())
+ * .method("method")
+ * .path("path")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .routeSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .timeoutInMillis(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-httpapievent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionHttpApiEventPropertyDsl {
   private val cdkBuilder: CfnFunction.HttpApiEventProperty.Builder =

@@ -11,6 +11,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowOutput
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConnect::FlowOutput resource defines the destination address, protocol, and port
+ * that AWS Elemental MediaConnect sends the ingested video to.
+ *
+ * Each flow can have up to 50 outputs. An output can have the same protocol or a different protocol
+ * from the source. The following protocols are supported: RIST, RTP, RTP-FEC, SRT-listener,
+ * SRT-caller, Zixi pull, Zixi push, and Fujitsu-QoS. CDI and ST 2110 JPEG XS protocols are not
+ * currently supported by AWS CloudFormation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowOutput cfnFlowOutput = CfnFlowOutput.Builder.create(this, "MyCfnFlowOutput")
+ * .flowArn("flowArn")
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .cidrAllowList(List.of("cidrAllowList"))
+ * .description("description")
+ * .destination("destination")
+ * .encryption(EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * .secretArn("secretArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .keyType("keyType")
+ * .build())
+ * .maxLatency(123)
+ * .minLatency(123)
+ * .name("name")
+ * .port(123)
+ * .remoteId("remoteId")
+ * .smoothingLatency(123)
+ * .streamId("streamId")
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html)
+ */
 @CdkDslMarker
 public class CfnFlowOutputDsl(
   scope: Construct,

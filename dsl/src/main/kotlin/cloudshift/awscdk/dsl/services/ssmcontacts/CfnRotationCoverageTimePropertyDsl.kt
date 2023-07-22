@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ssmcontacts.CfnRotation
 
+/**
+ * Information about when an on-call shift begins and ends.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CoverageTimeProperty coverageTimeProperty = CoverageTimeProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssmcontacts-rotation-coveragetime.html)
+ */
 @CdkDslMarker
 public class CfnRotationCoverageTimePropertyDsl {
   private val cdkBuilder: CfnRotation.CoverageTimeProperty.Builder =

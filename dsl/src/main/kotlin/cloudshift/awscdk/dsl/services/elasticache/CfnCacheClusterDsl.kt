@@ -16,6 +16,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnCacheCluster
 import software.constructs.Construct
 
+/**
+ * The AWS::ElastiCache::CacheCluster type creates an Amazon ElastiCache cache cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnCacheCluster cfnCacheCluster = CfnCacheCluster.Builder.create(this, "MyCfnCacheCluster")
+ * .cacheNodeType("cacheNodeType")
+ * .engine("engine")
+ * .numCacheNodes(123)
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .azMode("azMode")
+ * .cacheParameterGroupName("cacheParameterGroupName")
+ * .cacheSecurityGroupNames(List.of("cacheSecurityGroupNames"))
+ * .cacheSubnetGroupName("cacheSubnetGroupName")
+ * .clusterName("clusterName")
+ * .engineVersion("engineVersion")
+ * .ipDiscovery("ipDiscovery")
+ * .logDeliveryConfigurations(List.of(LogDeliveryConfigurationRequestProperty.builder()
+ * .destinationDetails(DestinationDetailsProperty.builder()
+ * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+ * .logGroup("logGroup")
+ * .build())
+ * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .build())
+ * .destinationType("destinationType")
+ * .logFormat("logFormat")
+ * .logType("logType")
+ * .build()))
+ * .networkType("networkType")
+ * .notificationTopicArn("notificationTopicArn")
+ * .port(123)
+ * .preferredAvailabilityZone("preferredAvailabilityZone")
+ * .preferredAvailabilityZones(List.of("preferredAvailabilityZones"))
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .snapshotArns(List.of("snapshotArns"))
+ * .snapshotName("snapshotName")
+ * .snapshotRetentionLimit(123)
+ * .snapshotWindow("snapshotWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .transitEncryptionEnabled(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html)
+ */
 @CdkDslMarker
 public class CfnCacheClusterDsl(
   scope: Construct,

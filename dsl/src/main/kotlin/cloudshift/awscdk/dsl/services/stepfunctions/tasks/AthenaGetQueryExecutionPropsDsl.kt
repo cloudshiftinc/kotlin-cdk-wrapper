@@ -16,6 +16,18 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.AthenaGetQueryExecutionProps
 
+/**
+ * Properties for getting a Query Execution.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaGetQueryExecution getQueryExecutionJob = AthenaGetQueryExecution.Builder.create(this, "Get
+ * Query Execution")
+ * .queryExecutionId(JsonPath.stringAt("$.QueryExecutionId"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AthenaGetQueryExecutionPropsDsl {
   private val cdkBuilder: AthenaGetQueryExecutionProps.Builder =

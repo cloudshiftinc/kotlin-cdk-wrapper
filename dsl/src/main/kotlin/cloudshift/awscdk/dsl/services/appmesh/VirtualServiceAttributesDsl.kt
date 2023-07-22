@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.appmesh.IMesh
 import software.amazon.awscdk.services.appmesh.VirtualServiceAttributes
 
+/**
+ * Interface with properties ncecessary to import a reusable VirtualService.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * Mesh mesh;
+ * VirtualServiceAttributes virtualServiceAttributes = VirtualServiceAttributes.builder()
+ * .mesh(mesh)
+ * .virtualServiceName("virtualServiceName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VirtualServiceAttributesDsl {
   private val cdkBuilder: VirtualServiceAttributes.Builder = VirtualServiceAttributes.builder()

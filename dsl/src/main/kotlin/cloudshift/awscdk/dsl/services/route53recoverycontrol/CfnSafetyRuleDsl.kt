@@ -13,6 +13,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule
 import software.constructs.Construct
 
+/**
+ * Creates a safety rule in a control panel in Amazon Route 53 Application Recovery Controller.
+ *
+ * Safety rules in Amazon Route 53 Application Recovery Controller let you add safeguards around
+ * changing routing control states, and enabling and disabling routing controls, to help prevent
+ * unwanted outcomes. Note that the name of a safety rule must be unique within a control panel.
+ *
+ * There are two types of safety rules in Route 53 ARC: assertion rules and gating rules.
+ *
+ * Assertion rule: An assertion rule enforces that, when you change a routing control state, certain
+ * criteria are met. For example, the criteria might be that at least one routing control state is `On`
+ * after the transaction completes so that traffic continues to be directed to at least one cell for
+ * the application. This prevents a fail-open scenario.
+ *
+ * Gating rule: A gating rule lets you configure a gating routing control as an overall on-off
+ * switch for a group of routing controls. Or, you can configure more complex gating scenarios, for
+ * example, by configuring multiple gating routing controls.
+ *
+ * For more information, see [Safety
+ * rules](https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.safety-rules.html) in the
+ * Amazon Route 53 Application Recovery Controller Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoverycontrol.*;
+ * CfnSafetyRule cfnSafetyRule = CfnSafetyRule.Builder.create(this, "MyCfnSafetyRule")
+ * .controlPanelArn("controlPanelArn")
+ * .name("name")
+ * .ruleConfig(RuleConfigProperty.builder()
+ * .inverted(false)
+ * .threshold(123)
+ * .type("type")
+ * .build())
+ * // the properties below are optional
+ * .assertionRule(AssertionRuleProperty.builder()
+ * .assertedControls(List.of("assertedControls"))
+ * .waitPeriodMs(123)
+ * .build())
+ * .gatingRule(GatingRuleProperty.builder()
+ * .gatingControls(List.of("gatingControls"))
+ * .targetControls(List.of("targetControls"))
+ * .waitPeriodMs(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-safetyrule.html)
+ */
 @CdkDslMarker
 public class CfnSafetyRuleDsl(
   scope: Construct,

@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Information about an HTTP header condition.
+ *
+ * There is a set of standard HTTP header fields. You can also define custom HTTP header fields.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * HttpHeaderConfigProperty httpHeaderConfigProperty = HttpHeaderConfigProperty.builder()
+ * .httpHeaderName("httpHeaderName")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-httpheaderconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleHttpHeaderConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.HttpHeaderConfigProperty.Builder =

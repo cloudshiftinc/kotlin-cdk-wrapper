@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.guardduty.CfnMaster
 import software.constructs.Construct
 
+/**
+ * You can use the `AWS::GuardDuty::Master` resource in a GuardDuty member account to accept an
+ * invitation from a GuardDuty administrator account.
+ *
+ * The invitation to the member account must be sent prior to using the `AWS::GuardDuty::Master`
+ * resource to accept the administrator account's invitation. You can invite a member account by using
+ * the `InviteMembers` operation of the GuardDuty API, or by creating an `AWS::GuardDuty::Member`
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnMaster cfnMaster = CfnMaster.Builder.create(this, "MyCfnMaster")
+ * .detectorId("detectorId")
+ * .masterId("masterId")
+ * // the properties below are optional
+ * .invitationId("invitationId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html)
+ */
 @CdkDslMarker
 public class CfnMasterDsl(
   scope: Construct,

@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 
+/**
+ * One of the items in the service configuration assigned to a resource group.
+ *
+ * A service configuration can consist of one or more items. For details service configurations and
+ * how to construct them, see [Service configurations for resource
+ * groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the *AWS Resource
+ * Groups User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * ConfigurationItemProperty configurationItemProperty = ConfigurationItemProperty.builder()
+ * .parameters(List.of(ConfigurationParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html)
+ */
 @CdkDslMarker
 public class CfnGroupConfigurationItemPropertyDsl {
   private val cdkBuilder: CfnGroup.ConfigurationItemProperty.Builder =

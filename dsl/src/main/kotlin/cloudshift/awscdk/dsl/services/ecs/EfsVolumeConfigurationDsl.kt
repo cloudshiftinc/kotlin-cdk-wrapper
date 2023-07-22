@@ -9,6 +9,28 @@ import kotlin.Unit
 import software.amazon.awscdk.services.ecs.AuthorizationConfig
 import software.amazon.awscdk.services.ecs.EfsVolumeConfiguration
 
+/**
+ * The configuration for an Elastic FileSystem volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * EfsVolumeConfiguration efsVolumeConfiguration = EfsVolumeConfiguration.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EfsVolumeConfigurationDsl {
   private val cdkBuilder: EfsVolumeConfiguration.Builder = EfsVolumeConfiguration.builder()

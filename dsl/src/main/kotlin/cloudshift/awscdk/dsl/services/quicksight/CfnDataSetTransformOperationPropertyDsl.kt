@@ -6,6 +6,67 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A data transformation on a logical table.
+ *
+ * This is a variant type structure. For this structure to be valid, only one of the attributes can
+ * be non-null.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TransformOperationProperty transformOperationProperty = TransformOperationProperty.builder()
+ * .castColumnTypeOperation(CastColumnTypeOperationProperty.builder()
+ * .columnName("columnName")
+ * .newColumnType("newColumnType")
+ * // the properties below are optional
+ * .format("format")
+ * .build())
+ * .createColumnsOperation(CreateColumnsOperationProperty.builder()
+ * .columns(List.of(CalculatedColumnProperty.builder()
+ * .columnId("columnId")
+ * .columnName("columnName")
+ * .expression("expression")
+ * .build()))
+ * .build())
+ * .filterOperation(FilterOperationProperty.builder()
+ * .conditionExpression("conditionExpression")
+ * .build())
+ * .overrideDatasetParameterOperation(OverrideDatasetParameterOperationProperty.builder()
+ * .parameterName("parameterName")
+ * // the properties below are optional
+ * .newDefaultValues(NewDefaultValuesProperty.builder()
+ * .dateTimeStaticValues(List.of("dateTimeStaticValues"))
+ * .decimalStaticValues(List.of(123))
+ * .integerStaticValues(List.of(123))
+ * .stringStaticValues(List.of("stringStaticValues"))
+ * .build())
+ * .newParameterName("newParameterName")
+ * .build())
+ * .projectOperation(ProjectOperationProperty.builder()
+ * .projectedColumns(List.of("projectedColumns"))
+ * .build())
+ * .renameColumnOperation(RenameColumnOperationProperty.builder()
+ * .columnName("columnName")
+ * .newColumnName("newColumnName")
+ * .build())
+ * .tagColumnOperation(TagColumnOperationProperty.builder()
+ * .columnName("columnName")
+ * .tags(List.of(ColumnTagProperty.builder()
+ * .columnDescription(ColumnDescriptionProperty.builder()
+ * .text("text")
+ * .build())
+ * .columnGeographicRole("columnGeographicRole")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-transformoperation.html)
+ */
 @CdkDslMarker
 public class CfnDataSetTransformOperationPropertyDsl {
   private val cdkBuilder: CfnDataSet.TransformOperationProperty.Builder =

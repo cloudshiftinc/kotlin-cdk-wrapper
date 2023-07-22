@@ -6,6 +6,37 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnDocumentationPart
 
+/**
+ * The `Location` property specifies the location of the Amazon API Gateway API entity that the
+ * documentation applies to.
+ *
+ * `Location` is a property of the
+ * [AWS::ApiGateway::DocumentationPart](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationpart.html)
+ * resource.
+ *
+ *
+ * For more information about each property, including constraints and valid values, see
+ * [DocumentationPart](https://docs.aws.amazon.com/apigateway/latest/api/API_DocumentationPartLocation.html)
+ * in the *Amazon API Gateway REST API Reference* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * LocationProperty locationProperty = LocationProperty.builder()
+ * .method("method")
+ * .name("name")
+ * .path("path")
+ * .statusCode("statusCode")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-documentationpart-location.html)
+ */
 @CdkDslMarker
 public class CfnDocumentationPartLocationPropertyDsl {
   private val cdkBuilder: CfnDocumentationPart.LocationProperty.Builder =

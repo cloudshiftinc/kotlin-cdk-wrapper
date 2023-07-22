@@ -11,6 +11,26 @@ import software.amazon.awscdk.services.cognito.AttributeMapping
 import software.amazon.awscdk.services.cognito.IUserPool
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderAmazonProps
 
+/**
+ * Properties to initialize UserPoolAmazonIdentityProvider.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * UserPoolIdentityProviderAmazon provider = UserPoolIdentityProviderAmazon.Builder.create(this,
+ * "Amazon")
+ * .userPool(pool)
+ * .clientId("amzn-client-id")
+ * .clientSecret("amzn-client-secret")
+ * .build();
+ * UserPoolClient client = pool.addClient("app-client", UserPoolClientOptions.builder()
+ * // ...
+ * .supportedIdentityProviders(List.of(UserPoolClientIdentityProvider.AMAZON))
+ * .build());
+ * client.node.addDependency(provider);
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderAmazonPropsDsl {
   private val cdkBuilder: UserPoolIdentityProviderAmazonProps.Builder =

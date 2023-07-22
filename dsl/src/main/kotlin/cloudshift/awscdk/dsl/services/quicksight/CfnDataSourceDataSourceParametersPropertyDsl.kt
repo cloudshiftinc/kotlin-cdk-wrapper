@@ -6,6 +6,113 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSource
 
+/**
+ * The parameters that Amazon QuickSight uses to connect to your underlying data source.
+ *
+ * This is a variant type structure. For this structure to be valid, only one of the attributes can
+ * be non-null.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataSourceParametersProperty dataSourceParametersProperty =
+ * DataSourceParametersProperty.builder()
+ * .amazonElasticsearchParameters(AmazonElasticsearchParametersProperty.builder()
+ * .domain("domain")
+ * .build())
+ * .amazonOpenSearchParameters(AmazonOpenSearchParametersProperty.builder()
+ * .domain("domain")
+ * .build())
+ * .athenaParameters(AthenaParametersProperty.builder()
+ * .roleArn("roleArn")
+ * .workGroup("workGroup")
+ * .build())
+ * .auroraParameters(AuroraParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .auroraPostgreSqlParameters(AuroraPostgreSqlParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .databricksParameters(DatabricksParametersProperty.builder()
+ * .host("host")
+ * .port(123)
+ * .sqlEndpointPath("sqlEndpointPath")
+ * .build())
+ * .mariaDbParameters(MariaDbParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .mySqlParameters(MySqlParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .oracleParameters(OracleParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .postgreSqlParameters(PostgreSqlParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .prestoParameters(PrestoParametersProperty.builder()
+ * .catalog("catalog")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .rdsParameters(RdsParametersProperty.builder()
+ * .database("database")
+ * .instanceId("instanceId")
+ * .build())
+ * .redshiftParameters(RedshiftParametersProperty.builder()
+ * .database("database")
+ * // the properties below are optional
+ * .clusterId("clusterId")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .s3Parameters(S3ParametersProperty.builder()
+ * .manifestFileLocation(ManifestFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .roleArn("roleArn")
+ * .build())
+ * .snowflakeParameters(SnowflakeParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .warehouse("warehouse")
+ * .build())
+ * .sparkParameters(SparkParametersProperty.builder()
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .sqlServerParameters(SqlServerParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .teradataParameters(TeradataParametersProperty.builder()
+ * .database("database")
+ * .host("host")
+ * .port(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-datasourceparameters.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceDataSourceParametersPropertyDsl {
   private val cdkBuilder: CfnDataSource.DataSourceParametersProperty.Builder =

@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * DeploymentPreferenceProperty deploymentPreferenceProperty =
+ * DeploymentPreferenceProperty.builder()
+ * .alarms(List.of("alarms"))
+ * .enabled(false)
+ * .hooks(HooksProperty.builder()
+ * .postTraffic("postTraffic")
+ * .preTraffic("preTraffic")
+ * .build())
+ * .role("role")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-deploymentpreference.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDeploymentPreferencePropertyDsl {
   private val cdkBuilder: CfnFunction.DeploymentPreferenceProperty.Builder =

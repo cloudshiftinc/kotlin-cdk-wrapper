@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The `EncryptionConfiguration` property type specifies the encryption settings that Amazon Kinesis
+ * Data Firehose (Kinesis Data Firehose) uses when delivering data to Amazon Simple Storage Service
+ * (Amazon S3).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * EncryptionConfigurationProperty encryptionConfigurationProperty =
+ * EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.EncryptionConfigurationProperty.Builder =

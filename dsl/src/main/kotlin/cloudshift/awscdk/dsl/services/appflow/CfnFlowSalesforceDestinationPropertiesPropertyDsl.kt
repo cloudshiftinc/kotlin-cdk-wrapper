@@ -9,6 +9,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when Salesforce is being used as a destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * SalesforceDestinationPropertiesProperty salesforceDestinationPropertiesProperty =
+ * SalesforceDestinationPropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .dataTransferApi("dataTransferApi")
+ * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .failOnFirstError(false)
+ * .build())
+ * .idFieldNames(List.of("idFieldNames"))
+ * .writeOperationType("writeOperationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-salesforcedestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowSalesforceDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.SalesforceDestinationPropertiesProperty.Builder =

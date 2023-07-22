@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Destination settings for a Multiplex output.
+ *
+ * The parent of this entity is OutputDestination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * MultiplexProgramChannelDestinationSettingsProperty
+ * multiplexProgramChannelDestinationSettingsProperty =
+ * MultiplexProgramChannelDestinationSettingsProperty.builder()
+ * .multiplexId("multiplexId")
+ * .programName("programName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexprogramchanneldestinationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMultiplexProgramChannelDestinationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MultiplexProgramChannelDestinationSettingsProperty.Builder =

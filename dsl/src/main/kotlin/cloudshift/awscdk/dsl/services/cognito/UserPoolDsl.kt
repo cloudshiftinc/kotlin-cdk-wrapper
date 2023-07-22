@@ -28,6 +28,25 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * Define a Cognito User Pool.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * pool.addClient("app-client", UserPoolClientOptions.builder()
+ * .oAuth(OAuthSettings.builder()
+ * .flows(OAuthFlows.builder()
+ * .authorizationCodeGrant(true)
+ * .build())
+ * .scopes(List.of(OAuthScope.OPENID))
+ * .callbackUrls(List.of("https://my-app-domain.com/welcome"))
+ * .logoutUrls(List.of("https://my-app-domain.com/signin"))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolDsl(
   scope: Construct,

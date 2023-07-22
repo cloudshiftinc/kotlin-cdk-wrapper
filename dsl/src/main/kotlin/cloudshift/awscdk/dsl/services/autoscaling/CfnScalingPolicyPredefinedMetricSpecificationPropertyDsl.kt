@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * Contains predefined metric specification information for a target tracking scaling policy for
+ * Amazon EC2 Auto Scaling.
+ *
+ * `PredefinedMetricSpecification` is a property of the [AWS::AutoScaling::ScalingPolicy
+ * TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingconfiguration.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * PredefinedMetricSpecificationProperty predefinedMetricSpecificationProperty =
+ * PredefinedMetricSpecificationProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predefinedmetricspecification.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPredefinedMetricSpecificationPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.PredefinedMetricSpecificationProperty.Builder =

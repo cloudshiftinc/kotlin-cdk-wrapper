@@ -8,6 +8,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration
 import software.amazon.awscdk.services.networkfirewall.CfnLoggingConfigurationProps
 
+/**
+ * Properties for defining a `CfnLoggingConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * CfnLoggingConfigurationProps cfnLoggingConfigurationProps =
+ * CfnLoggingConfigurationProps.builder()
+ * .firewallArn("firewallArn")
+ * .loggingConfiguration(LoggingConfigurationProperty.builder()
+ * .logDestinationConfigs(List.of(LogDestinationConfigProperty.builder()
+ * .logDestination(Map.of(
+ * "logDestinationKey", "logDestination"))
+ * .logDestinationType("logDestinationType")
+ * .logType("logType")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .firewallName("firewallName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkfirewall-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationPropsDsl {
   private val cdkBuilder: CfnLoggingConfigurationProps.Builder =

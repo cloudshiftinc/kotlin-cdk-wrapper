@@ -7,6 +7,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnStorageLens
 
+/**
+ * This resource contains the details of the bucket where the Amazon S3 Storage Lens metrics export
+ * will be placed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object sses3;
+ * S3BucketDestinationProperty s3BucketDestinationProperty = S3BucketDestinationProperty.builder()
+ * .accountId("accountId")
+ * .arn("arn")
+ * .format("format")
+ * .outputSchemaVersion("outputSchemaVersion")
+ * // the properties below are optional
+ * .encryption(EncryptionProperty.builder()
+ * .ssekms(SSEKMSProperty.builder()
+ * .keyId("keyId")
+ * .build())
+ * .sses3(sses3)
+ * .build())
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-s3bucketdestination.html)
+ */
 @CdkDslMarker
 public class CfnStorageLensS3BucketDestinationPropertyDsl {
   private val cdkBuilder: CfnStorageLens.S3BucketDestinationProperty.Builder =

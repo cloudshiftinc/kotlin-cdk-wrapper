@@ -34,6 +34,27 @@ import software.amazon.awscdk.services.rds.NetworkType
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * Create a clustered database with a given number of instances.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .build()))
+ * .serverlessV2MinCapacity(6.5)
+ * .serverlessV2MaxCapacity(64)
+ * .readers(List.of(ClusterInstance.serverlessV2("reader1",
+ * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseClusterDsl(
   scope: Construct,

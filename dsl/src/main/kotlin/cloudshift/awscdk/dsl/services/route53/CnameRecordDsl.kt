@@ -10,6 +10,44 @@ import software.amazon.awscdk.services.route53.CnameRecord
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.constructs.Construct
 
+/**
+ * A DNS CNAME record.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * // hosted zone and route53 features
+ * String hostedZoneId;
+ * String zoneName = "example.com";
+ * String myDomainName = "api.example.com";
+ * Certificate certificate = Certificate.Builder.create(this,
+ * "cert").domainName(myDomainName).build();
+ * SchemaFile schema = SchemaFile.Builder.create().filePath("mySchemaFile").build();
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("myApi")
+ * .schema(schema)
+ * .domainName(DomainOptions.builder()
+ * .certificate(certificate)
+ * .domainName(myDomainName)
+ * .build())
+ * .build();
+ * // hosted zone for adding appsync domain
+ * IHostedZone zone = HostedZone.fromHostedZoneAttributes(this, "HostedZone",
+ * HostedZoneAttributes.builder()
+ * .hostedZoneId(hostedZoneId)
+ * .zoneName(zoneName)
+ * .build());
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * // create a cname to the appsync domain. will map to something like xxxx.cloudfront.net
+ * CnameRecord.Builder.create(this, "CnameApiRecord")
+ * .recordName("api")
+ * .zone(zone)
+ * .domainName(api.getAppSyncDomainName())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CnameRecordDsl(
   scope: Construct,

@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTarget
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition
 
+/**
+ * Properties for defining a listener rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * ApplicationListener applicationListener;
+ * ApplicationTargetGroup applicationTargetGroup;
+ * ListenerAction listenerAction;
+ * ListenerCondition listenerCondition;
+ * ApplicationListenerRuleProps applicationListenerRuleProps =
+ * ApplicationListenerRuleProps.builder()
+ * .listener(applicationListener)
+ * .priority(123)
+ * // the properties below are optional
+ * .action(listenerAction)
+ * .conditions(List.of(listenerCondition))
+ * .targetGroups(List.of(applicationTargetGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerRulePropsDsl {
   private val cdkBuilder: ApplicationListenerRuleProps.Builder =

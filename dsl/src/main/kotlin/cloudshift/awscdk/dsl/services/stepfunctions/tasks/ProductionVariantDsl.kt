@@ -9,6 +9,31 @@ import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType
 import software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant
 
+/**
+ * Identifies a model that you want to host and the resources to deploy for hosting it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * AcceleratorType acceleratorType;
+ * InstanceType instanceType;
+ * ProductionVariant productionVariant = ProductionVariant.builder()
+ * .instanceType(instanceType)
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * // the properties below are optional
+ * .acceleratorType(acceleratorType)
+ * .initialInstanceCount(123)
+ * .initialVariantWeight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ProductionVariant.html)
+ */
 @CdkDslMarker
 public class ProductionVariantDsl {
   private val cdkBuilder: ProductionVariant.Builder = ProductionVariant.builder()

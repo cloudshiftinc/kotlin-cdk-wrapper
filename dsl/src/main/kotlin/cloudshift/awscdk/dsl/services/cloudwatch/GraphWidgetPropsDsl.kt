@@ -17,6 +17,19 @@ import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.cloudwatch.LegendPosition
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * Properties for a GraphWidget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(GraphWidget.Builder.create()
+ * // ...
+ * .legendPosition(LegendPosition.RIGHT)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GraphWidgetPropsDsl {
   private val cdkBuilder: GraphWidgetProps.Builder = GraphWidgetProps.builder()

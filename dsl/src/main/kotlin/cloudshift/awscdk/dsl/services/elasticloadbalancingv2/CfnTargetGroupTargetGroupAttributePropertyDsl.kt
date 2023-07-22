@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup
 
+/**
+ * Specifies a target group attribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * TargetGroupAttributeProperty targetGroupAttributeProperty =
+ * TargetGroupAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupTargetGroupAttributePropertyDsl {
   private val cdkBuilder: CfnTargetGroup.TargetGroupAttributeProperty.Builder =

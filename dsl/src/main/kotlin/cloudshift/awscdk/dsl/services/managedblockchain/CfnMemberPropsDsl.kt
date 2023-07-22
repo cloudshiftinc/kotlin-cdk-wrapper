@@ -8,6 +8,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 import software.amazon.awscdk.services.managedblockchain.CfnMemberProps
 
+/**
+ * Properties for defining a `CfnMember`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * CfnMemberProps cfnMemberProps = CfnMemberProps.builder()
+ * .memberConfiguration(MemberConfigurationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .memberFrameworkConfiguration(MemberFrameworkConfigurationProperty.builder()
+ * .memberFabricConfiguration(MemberFabricConfigurationProperty.builder()
+ * .adminPassword("adminPassword")
+ * .adminUsername("adminUsername")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .invitationId("invitationId")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .framework("framework")
+ * .frameworkVersion("frameworkVersion")
+ * .name("name")
+ * .votingPolicy(VotingPolicyProperty.builder()
+ * .approvalThresholdPolicy(ApprovalThresholdPolicyProperty.builder()
+ * .proposalDurationInHours(123)
+ * .thresholdComparator("thresholdComparator")
+ * .thresholdPercentage(123)
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .networkFrameworkConfiguration(NetworkFrameworkConfigurationProperty.builder()
+ * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
+ * .edition("edition")
+ * .build())
+ * .build())
+ * .build())
+ * .networkId("networkId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-member.html)
+ */
 @CdkDslMarker
 public class CfnMemberPropsDsl {
   private val cdkBuilder: CfnMemberProps.Builder = CfnMemberProps.builder()

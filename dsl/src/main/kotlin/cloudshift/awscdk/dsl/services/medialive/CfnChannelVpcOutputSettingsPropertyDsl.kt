@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings to enable VPC mode in the channel, so that the endpoints for all outputs are in your
+ * VPC.
+ *
+ * This entity is at the top level in the channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VpcOutputSettingsProperty vpcOutputSettingsProperty = VpcOutputSettingsProperty.builder()
+ * .publicAddressAllocationIds(List.of("publicAddressAllocationIds"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-vpcoutputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelVpcOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.VpcOutputSettingsProperty.Builder =

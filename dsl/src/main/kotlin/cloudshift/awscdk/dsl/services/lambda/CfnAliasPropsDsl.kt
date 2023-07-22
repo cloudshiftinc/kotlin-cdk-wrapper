@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnAlias
 import software.amazon.awscdk.services.lambda.CfnAliasProps
 
+/**
+ * Properties for defining a `CfnAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnAliasProps cfnAliasProps = CfnAliasProps.builder()
+ * .functionName("functionName")
+ * .functionVersion("functionVersion")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .provisionedConcurrencyConfig(ProvisionedConcurrencyConfigurationProperty.builder()
+ * .provisionedConcurrentExecutions(123)
+ * .build())
+ * .routingConfig(AliasRoutingConfigurationProperty.builder()
+ * .additionalVersionWeights(List.of(VersionWeightProperty.builder()
+ * .functionVersion("functionVersion")
+ * .functionWeight(123)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-alias.html)
+ */
 @CdkDslMarker
 public class CfnAliasPropsDsl {
   private val cdkBuilder: CfnAliasProps.Builder = CfnAliasProps.builder()

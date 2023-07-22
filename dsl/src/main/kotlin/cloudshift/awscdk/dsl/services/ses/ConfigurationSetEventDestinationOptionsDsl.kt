@@ -11,6 +11,19 @@ import software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptio
 import software.amazon.awscdk.services.ses.EmailSendingEvent
 import software.amazon.awscdk.services.ses.EventDestination
 
+/**
+ * Options for a configuration set event destination.
+ *
+ * Example:
+ *
+ * ```
+ * ConfigurationSet myConfigurationSet;
+ * Topic myTopic;
+ * myConfigurationSet.addEventDestination("ToSns", ConfigurationSetEventDestinationOptions.builder()
+ * .destination(EventDestination.snsTopic(myTopic))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ConfigurationSetEventDestinationOptionsDsl {
   private val cdkBuilder: ConfigurationSetEventDestinationOptions.Builder =

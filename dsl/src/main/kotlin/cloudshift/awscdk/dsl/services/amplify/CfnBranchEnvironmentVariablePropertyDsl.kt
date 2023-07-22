@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.amplify.CfnBranch
 
+/**
+ * The EnvironmentVariable property type sets environment variables for a specific branch.
+ *
+ * Environment variables are key-value pairs that are available at build time.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-environmentvariable.html)
+ */
 @CdkDslMarker
 public class CfnBranchEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnBranch.EnvironmentVariableProperty.Builder =

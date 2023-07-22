@@ -16,6 +16,16 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 import software.amazon.awscdk.services.wafv2.CfnWebACLProps
 
+/**
+ * Properties for defining a `CfnWebACL`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html)
+ */
 @CdkDslMarker
 public class CfnWebACLPropsDsl {
   private val cdkBuilder: CfnWebACLProps.Builder = CfnWebACLProps.builder()

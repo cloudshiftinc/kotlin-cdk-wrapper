@@ -13,6 +13,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnInput
 import software.amazon.awscdk.services.medialive.CfnInputProps
 
+/**
+ * Properties for defining a `CfnInput`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Object tags;
+ * CfnInputProps cfnInputProps = CfnInputProps.builder()
+ * .destinations(List.of(InputDestinationRequestProperty.builder()
+ * .streamName("streamName")
+ * .build()))
+ * .inputDevices(List.of(InputDeviceSettingsProperty.builder()
+ * .id("id")
+ * .build()))
+ * .inputSecurityGroups(List.of("inputSecurityGroups"))
+ * .mediaConnectFlows(List.of(MediaConnectFlowRequestProperty.builder()
+ * .flowArn("flowArn")
+ * .build()))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .sources(List.of(InputSourceRequestProperty.builder()
+ * .passwordParam("passwordParam")
+ * .url("url")
+ * .username("username")
+ * .build()))
+ * .tags(tags)
+ * .type("type")
+ * .vpc(InputVpcRequestProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html)
+ */
 @CdkDslMarker
 public class CfnInputPropsDsl {
   private val cdkBuilder: CfnInputProps.Builder = CfnInputProps.builder()

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule
 
+/**
+ * Information about the AWS Chatbot topics or AWS Chatbot clients associated with a notification
+ * rule.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * TargetProperty targetProperty = TargetProperty.builder()
+ * .targetAddress("targetAddress")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codestarnotifications-notificationrule-target.html)
+ */
 @CdkDslMarker
 public class CfnNotificationRuleTargetPropertyDsl {
   private val cdkBuilder: CfnNotificationRule.TargetProperty.Builder =

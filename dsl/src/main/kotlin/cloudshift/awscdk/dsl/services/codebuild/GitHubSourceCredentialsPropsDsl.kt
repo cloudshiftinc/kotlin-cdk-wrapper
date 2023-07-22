@@ -6,6 +6,17 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps
 
+/**
+ * Creation properties for `GitHubSourceCredentials`.
+ *
+ * Example:
+ *
+ * ```
+ * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
+ * .accessToken(SecretValue.secretsManager("my-token"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourceCredentialsPropsDsl {
   private val cdkBuilder: GitHubSourceCredentialsProps.Builder =

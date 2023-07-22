@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * List of default values defined for a given string dataset parameter type.
+ *
+ * Currently only static values are supported.</p>
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * StringDatasetParameterDefaultValuesProperty stringDatasetParameterDefaultValuesProperty =
+ * StringDatasetParameterDefaultValuesProperty.builder()
+ * .staticValues(List.of("staticValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-stringdatasetparameterdefaultvalues.html)
+ */
 @CdkDslMarker
 public class CfnDataSetStringDatasetParameterDefaultValuesPropertyDsl {
   private val cdkBuilder: CfnDataSet.StringDatasetParameterDefaultValuesProperty.Builder =

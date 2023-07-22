@@ -7,6 +7,18 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting
 
+/**
+ * Define a traffic routing config of type 'TimeBasedLinear'.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * TrafficRouting timeBasedLinearTrafficRouting = TimeBasedLinearTrafficRouting.allAtOnce();
+ * ```
+ */
 @CdkDslMarker
 public class TimeBasedLinearTrafficRoutingDsl {
   private val cdkBuilder: TimeBasedLinearTrafficRouting.Builder =

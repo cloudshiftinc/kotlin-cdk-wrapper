@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iam.CfnAccessKeyProps
 
+/**
+ * Properties for defining a `CfnAccessKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnAccessKeyProps cfnAccessKeyProps = CfnAccessKeyProps.builder()
+ * .userName("userName")
+ * // the properties below are optional
+ * .serial(123)
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-accesskey.html)
+ */
 @CdkDslMarker
 public class CfnAccessKeyPropsDsl {
   private val cdkBuilder: CfnAccessKeyProps.Builder = CfnAccessKeyProps.builder()

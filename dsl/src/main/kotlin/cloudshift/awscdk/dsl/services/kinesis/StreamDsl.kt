@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.kinesis.StreamMode
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * A Kinesis stream.
+ *
+ * Can be encrypted with a KMS key.
+ *
+ * Example:
+ *
+ * ```
+ * Key key = new Key(this, "MyKey");
+ * Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .encryptionKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StreamDsl(
   scope: Construct,

@@ -6,6 +6,18 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A logical rule statement used to negate the results of another rule statement.
+ *
+ * You provide one `Statement` within the `NotStatement` .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-notstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLNotStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.NotStatementProperty.Builder =

@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationFSxWindows
 import software.constructs.Construct
 
+/**
+ * The `AWS::DataSync::LocationFSxWindows` resource specifies an endpoint for an Amazon FSx for
+ * Windows Server file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxWindows cfnLocationFSxWindows = CfnLocationFSxWindows.Builder.create(this,
+ * "MyCfnLocationFSxWindows")
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .fsxFilesystemArn("fsxFilesystemArn")
+ * .password("password")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxWindowsDsl(
   scope: Construct,

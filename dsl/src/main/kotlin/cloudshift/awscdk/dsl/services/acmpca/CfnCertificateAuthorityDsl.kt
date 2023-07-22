@@ -13,6 +13,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::ACMPCA::CertificateAuthority` resource to create a private CA.
+ *
+ * Once the CA exists, you can use the `AWS::ACMPCA::Certificate` resource to issue a new CA
+ * certificate. Alternatively, you can issue a CA certificate using an on-premises CA, and then use the
+ * `AWS::ACMPCA::CertificateAuthorityActivation` resource to import the new CA certificate and activate
+ * the CA.
+ *
+ *
+ * Before removing a `AWS::ACMPCA::CertificateAuthority` resource from the CloudFormation stack,
+ * disable the affected CA. Otherwise, the action will fail. You can disable the CA by removing its
+ * associated `AWS::ACMPCA::CertificateAuthorityActivation` resource from CloudFormation.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * CfnCertificateAuthority cfnCertificateAuthority = CfnCertificateAuthority.Builder.create(this,
+ * "CA")
+ * .type("ROOT")
+ * .keyAlgorithm("RSA_2048")
+ * .signingAlgorithm("SHA256WITHRSA")
+ * .subject(SubjectProperty.builder()
+ * .country("US")
+ * .organization("string")
+ * .organizationalUnit("string")
+ * .distinguishedNameQualifier("string")
+ * .state("string")
+ * .commonName("123")
+ * .serialNumber("string")
+ * .locality("string")
+ * .title("string")
+ * .surname("string")
+ * .givenName("string")
+ * .initials("DG")
+ * .pseudonym("string")
+ * .generationQualifier("DBG")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificateauthority.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityDsl(
   scope: Construct,

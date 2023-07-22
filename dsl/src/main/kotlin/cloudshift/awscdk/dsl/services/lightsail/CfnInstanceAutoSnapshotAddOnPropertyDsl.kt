@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnInstance
 
+/**
+ * `AutoSnapshotAddOn` is a property of the
+ * [AddOn](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-addon.html)
+ * property. It describes the automatic snapshot add-on for an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * AutoSnapshotAddOnProperty autoSnapshotAddOnProperty = AutoSnapshotAddOnProperty.builder()
+ * .snapshotTimeOfDay("snapshotTimeOfDay")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-instance-autosnapshotaddon.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAutoSnapshotAddOnPropertyDsl {
   private val cdkBuilder: CfnInstance.AutoSnapshotAddOnProperty.Builder =

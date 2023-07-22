@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnVPCConnection
 
+/**
+ * The structure that contains information about a network interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NetworkInterfaceProperty networkInterfaceProperty = NetworkInterfaceProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .errorMessage("errorMessage")
+ * .networkInterfaceId("networkInterfaceId")
+ * .status("status")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-vpcconnection-networkinterface.html)
+ */
 @CdkDslMarker
 public class CfnVPCConnectionNetworkInterfacePropertyDsl {
   private val cdkBuilder: CfnVPCConnection.NetworkInterfaceProperty.Builder =

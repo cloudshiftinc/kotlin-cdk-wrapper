@@ -9,6 +9,67 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector
 
+/**
+ * This structure is used in both `GetMetricData` and `PutMetricAlarm` .
+ *
+ * The supported use of this structure is different for those two operations.
+ *
+ * When used in `GetMetricData` , it indicates the metric data to return, and whether this call is
+ * just retrieving a batch set of data for one metric, or is performing a Metrics Insights query or a
+ * math expression. A single `GetMetricData` call can include up to 500 `MetricDataQuery` structures.
+ *
+ * When used in `PutMetricAlarm` , it enables you to create an alarm based on a metric math
+ * expression. Each `MetricDataQuery` in the array specifies either a metric to retrieve, or a math
+ * expression to be performed on retrieved metrics. A single `PutMetricAlarm` call can include up to 20
+ * `MetricDataQuery` structures in the array. The 20 structures can include as many as 10 structures
+ * that contain a `MetricStat` parameter to retrieve a metric, and as many as 10 structures that
+ * contain the `Expression` parameter to perform a math expression. Of those `Expression` structures,
+ * one must have `true` as the value for `ReturnData` . The result of this expression is the value the
+ * alarm watches.
+ *
+ * Any expression used in a `PutMetricAlarm` operation must return a single time series. For more
+ * information, see [Metric Math Syntax and
+ * Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax)
+ * in the *Amazon CloudWatch User Guide* .
+ *
+ * Some of the parameters of this structure also have different uses whether you are using this
+ * structure in a `GetMetricData` operation or a `PutMetricAlarm` operation. These differences are
+ * explained in the following parameter list.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricDataQueryProperty metricDataQueryProperty = MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-anomalydetector-metricdataquery.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorMetricDataQueryPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.MetricDataQueryProperty.Builder =

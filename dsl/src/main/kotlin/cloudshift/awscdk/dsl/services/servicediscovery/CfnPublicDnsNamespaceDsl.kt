@@ -13,6 +13,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnPublicDnsNamespace
 import software.constructs.Construct
 
+/**
+ * Creates a public namespace based on DNS, which is visible on the internet.
+ *
+ * The namespace defines your service naming scheme. For example, if you name your namespace
+ * `example.com` and name your service `backend` , the resulting DNS name for the service is
+ * `backend.example.com` . You can discover instances that were registered with a public DNS namespace
+ * by using either a `DiscoverInstances` request or using DNS. For the current quota on the number of
+ * namespaces that you can create using the same AWS account , see [AWS Cloud Map
+ * quotas](https://docs.aws.amazon.com/cloud-map/latest/dg/cloud-map-limits.html) in the *AWS Cloud Map
+ * Developer Guide* .
+ *
+ *
+ * The `CreatePublicDnsNamespace` API operation is not supported in the AWS GovCloud (US) Regions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * CfnPublicDnsNamespace cfnPublicDnsNamespace = CfnPublicDnsNamespace.Builder.create(this,
+ * "MyCfnPublicDnsNamespace")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .properties(PropertiesProperty.builder()
+ * .dnsProperties(PublicDnsPropertiesMutableProperty.builder()
+ * .soa(SOAProperty.builder()
+ * .ttl(123)
+ * .build())
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-publicdnsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnPublicDnsNamespaceDsl(
   scope: Construct,

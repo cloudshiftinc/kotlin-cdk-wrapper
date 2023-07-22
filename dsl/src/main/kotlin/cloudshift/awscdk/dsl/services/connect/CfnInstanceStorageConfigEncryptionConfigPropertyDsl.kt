@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
 
+/**
+ * The encryption configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EncryptionConfigProperty encryptionConfigProperty = EncryptionConfigProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-encryptionconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceStorageConfigEncryptionConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.EncryptionConfigProperty.Builder =

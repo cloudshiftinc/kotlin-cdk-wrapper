@@ -6,6 +6,50 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The sort by field for the field sort options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * PivotTableSortByProperty pivotTableSortByProperty = PivotTableSortByProperty.builder()
+ * .column(ColumnSortProperty.builder()
+ * .direction("direction")
+ * .sortBy(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .aggregationFunction(AggregationFunctionProperty.builder()
+ * .categoricalAggregationFunction("categoricalAggregationFunction")
+ * .dateAggregationFunction("dateAggregationFunction")
+ * .numericalAggregationFunction(NumericalAggregationFunctionProperty.builder()
+ * .percentileAggregation(PercentileAggregationProperty.builder()
+ * .percentileValue(123)
+ * .build())
+ * .simpleNumericalAggregation("simpleNumericalAggregation")
+ * .build())
+ * .build())
+ * .build())
+ * .dataPath(DataPathSortProperty.builder()
+ * .direction("direction")
+ * .sortPaths(List.of(DataPathValueProperty.builder()
+ * .fieldId("fieldId")
+ * .fieldValue("fieldValue")
+ * .build()))
+ * .build())
+ * .field(FieldSortProperty.builder()
+ * .direction("direction")
+ * .fieldId("fieldId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-pivottablesortby.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisPivotTableSortByPropertyDsl {
   private val cdkBuilder: CfnAnalysis.PivotTableSortByProperty.Builder =

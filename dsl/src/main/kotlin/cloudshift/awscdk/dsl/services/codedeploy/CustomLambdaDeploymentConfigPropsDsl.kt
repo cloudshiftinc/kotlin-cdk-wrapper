@@ -10,6 +10,28 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfigProps
 import software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfigType
 
+/**
+ * (deprecated) Properties of a reference to a CodeDeploy Lambda Deployment Configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * CustomLambdaDeploymentConfigProps customLambdaDeploymentConfigProps =
+ * CustomLambdaDeploymentConfigProps.builder()
+ * .interval(Duration.minutes(30))
+ * .percentage(123)
+ * .type(CustomLambdaDeploymentConfigType.CANARY)
+ * // the properties below are optional
+ * .deploymentConfigName("deploymentConfigName")
+ * .build();
+ * ```
+ *
+ * @deprecated Use `LambdaDeploymentConfig`
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class CustomLambdaDeploymentConfigPropsDsl {

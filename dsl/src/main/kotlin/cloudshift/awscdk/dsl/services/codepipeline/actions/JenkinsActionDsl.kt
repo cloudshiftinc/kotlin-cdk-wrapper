@@ -12,6 +12,23 @@ import software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsAction
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsActionType
 
+/**
+ * Jenkins build CodePipeline Action.
+ *
+ * Example:
+ *
+ * ```
+ * JenkinsProvider jenkinsProvider;
+ * JenkinsAction buildAction = JenkinsAction.Builder.create()
+ * .actionName("JenkinsBuild")
+ * .jenkinsProvider(jenkinsProvider)
+ * .projectName("MyProject")
+ * .type(JenkinsActionType.BUILD)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-four-stage-pipeline.html)
+ */
 @CdkDslMarker
 public class JenkinsActionDsl {
   private val cdkBuilder: JenkinsAction.Builder = JenkinsAction.Builder.create()

@@ -15,6 +15,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 import software.amazon.awscdk.services.lightsail.CfnDistributionProps
 
+/**
+ * Properties for defining a `CfnDistribution`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnDistributionProps cfnDistributionProps = CfnDistributionProps.builder()
+ * .bundleId("bundleId")
+ * .defaultCacheBehavior(CacheBehaviorProperty.builder()
+ * .behavior("behavior")
+ * .build())
+ * .distributionName("distributionName")
+ * .origin(InputOriginProperty.builder()
+ * .name("name")
+ * .protocolPolicy("protocolPolicy")
+ * .regionName("regionName")
+ * .build())
+ * // the properties below are optional
+ * .cacheBehaviors(List.of(CacheBehaviorPerPathProperty.builder()
+ * .behavior("behavior")
+ * .path("path")
+ * .build()))
+ * .cacheBehaviorSettings(CacheSettingsProperty.builder()
+ * .allowedHttpMethods("allowedHttpMethods")
+ * .cachedHttpMethods("cachedHttpMethods")
+ * .defaultTtl(123)
+ * .forwardedCookies(CookieObjectProperty.builder()
+ * .cookiesAllowList(List.of("cookiesAllowList"))
+ * .option("option")
+ * .build())
+ * .forwardedHeaders(HeaderObjectProperty.builder()
+ * .headersAllowList(List.of("headersAllowList"))
+ * .option("option")
+ * .build())
+ * .forwardedQueryStrings(QueryStringObjectProperty.builder()
+ * .option(false)
+ * .queryStringsAllowList(List.of("queryStringsAllowList"))
+ * .build())
+ * .maximumTtl(123)
+ * .minimumTtl(123)
+ * .build())
+ * .certificateName("certificateName")
+ * .ipAddressType("ipAddressType")
+ * .isEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
+ */
 @CdkDslMarker
 public class CfnDistributionPropsDsl {
   private val cdkBuilder: CfnDistributionProps.Builder = CfnDistributionProps.builder()

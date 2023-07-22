@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for one RTMP output.
+ *
+ * The parent of this entity is OutputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * RtmpOutputSettingsProperty rtmpOutputSettingsProperty = RtmpOutputSettingsProperty.builder()
+ * .certificateMode("certificateMode")
+ * .connectionRetryInterval(123)
+ * .destination(OutputLocationRefProperty.builder()
+ * .destinationRefId("destinationRefId")
+ * .build())
+ * .numRetries(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-rtmpoutputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelRtmpOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.RtmpOutputSettingsProperty.Builder =

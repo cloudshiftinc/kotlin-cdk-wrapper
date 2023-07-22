@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCapacityProvider
 
+/**
+ * The details of the Auto Scaling group for the capacity provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * AutoScalingGroupProviderProperty autoScalingGroupProviderProperty =
+ * AutoScalingGroupProviderProperty.builder()
+ * .autoScalingGroupArn("autoScalingGroupArn")
+ * // the properties below are optional
+ * .managedScaling(ManagedScalingProperty.builder()
+ * .instanceWarmupPeriod(123)
+ * .maximumScalingStepSize(123)
+ * .minimumScalingStepSize(123)
+ * .status("status")
+ * .targetCapacity(123)
+ * .build())
+ * .managedTerminationProtection("managedTerminationProtection")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-capacityprovider-autoscalinggroupprovider.html)
+ */
 @CdkDslMarker
 public class CfnCapacityProviderAutoScalingGroupProviderPropertyDsl {
   private val cdkBuilder: CfnCapacityProvider.AutoScalingGroupProviderProperty.Builder =

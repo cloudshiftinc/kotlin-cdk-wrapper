@@ -13,6 +13,45 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession
 import software.constructs.Construct
 
+/**
+ * Creates a Traffic Mirror session.
+ *
+ * A Traffic Mirror session actively copies packets from a Traffic Mirror source to a Traffic Mirror
+ * target. Create a filter, and then assign it to the session to define a subset of the traffic to
+ * mirror, for example all TCP traffic.
+ *
+ * The Traffic Mirror source and the Traffic Mirror target (monitoring appliances) can be in the
+ * same VPC, or in a different VPC connected via VPC peering or a transit gateway.
+ *
+ * By default, no traffic is mirrored. Use
+ * [AWS::EC2::TrafficMirrorFilterRule](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorfilterrule.html)
+ * to specify filter rules that specify the traffic to mirror.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTrafficMirrorSession cfnTrafficMirrorSession = CfnTrafficMirrorSession.Builder.create(this,
+ * "MyCfnTrafficMirrorSession")
+ * .networkInterfaceId("networkInterfaceId")
+ * .sessionNumber(123)
+ * .trafficMirrorFilterId("trafficMirrorFilterId")
+ * .trafficMirrorTargetId("trafficMirrorTargetId")
+ * // the properties below are optional
+ * .description("description")
+ * .packetLength(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .virtualNetworkId(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)
+ */
 @CdkDslMarker
 public class CfnTrafficMirrorSessionDsl(
   scope: Construct,

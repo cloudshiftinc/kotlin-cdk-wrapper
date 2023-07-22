@@ -11,6 +11,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::CoreDefinitionVersion` resource represents a core definition version for
+ * AWS IoT Greengrass .
+ *
+ * A core definition version contains a Greengrass core.
+ *
+ *
+ * To create a core definition version, you must specify the ID of the core definition that you want
+ * to associate with the version. For information about creating a core definition, see
+ * [`AWS::Greengrass::CoreDefinition`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinition.html)
+ * .
+ *
+ * After you create a core definition version that contains the core you want to deploy, you must
+ * add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnCoreDefinitionVersion cfnCoreDefinitionVersion = CfnCoreDefinitionVersion.Builder.create(this,
+ * "MyCfnCoreDefinitionVersion")
+ * .coreDefinitionId("coreDefinitionId")
+ * .cores(List.of(CoreProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-coredefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnCoreDefinitionVersionDsl(
   scope: Construct,

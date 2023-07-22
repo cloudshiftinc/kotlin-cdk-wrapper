@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.EmailSettings
 
+/**
+ * Email settings for the user pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * EmailSettings emailSettings = EmailSettings.builder()
+ * .from("from")
+ * .replyTo("replyTo")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmailSettingsDsl {
   private val cdkBuilder: EmailSettings.Builder = EmailSettings.builder()

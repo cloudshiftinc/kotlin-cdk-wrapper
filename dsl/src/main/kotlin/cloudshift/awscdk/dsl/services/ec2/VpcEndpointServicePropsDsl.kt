@@ -10,6 +10,21 @@ import software.amazon.awscdk.services.ec2.IVpcEndpointServiceLoadBalancer
 import software.amazon.awscdk.services.ec2.VpcEndpointServiceProps
 import software.amazon.awscdk.services.iam.ArnPrincipal
 
+/**
+ * Construction properties for a VpcEndpointService.
+ *
+ * Example:
+ *
+ * ```
+ * NetworkLoadBalancer networkLoadBalancer1;
+ * NetworkLoadBalancer networkLoadBalancer2;
+ * VpcEndpointService.Builder.create(this, "EndpointService")
+ * .vpcEndpointServiceLoadBalancers(List.of(networkLoadBalancer1, networkLoadBalancer2))
+ * .acceptanceRequired(true)
+ * .allowedPrincipals(List.of(new ArnPrincipal("arn:aws:iam::123456789012:root")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcEndpointServicePropsDsl {
   private val cdkBuilder: VpcEndpointServiceProps.Builder = VpcEndpointServiceProps.builder()

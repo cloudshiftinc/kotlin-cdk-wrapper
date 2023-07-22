@@ -8,6 +8,51 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Specifies options for fine-grained access control.
+ *
+ * If you specify advanced security options, you must also enable node-to-node encryption (
+ * [NodeToNodeEncryptionOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-nodetonodeencryptionoptions.html)
+ * ) and encryption at rest (
+ * [EncryptionAtRestOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-encryptionatrestoptions.html)
+ * ). You must also enable `EnforceHTTPS` within
+ * [DomainEndpointOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-domainendpointoptions.html)
+ * , which requires HTTPS for all traffic to the domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * AdvancedSecurityOptionsInputProperty advancedSecurityOptionsInputProperty =
+ * AdvancedSecurityOptionsInputProperty.builder()
+ * .anonymousAuthDisableDate("anonymousAuthDisableDate")
+ * .anonymousAuthEnabled(false)
+ * .enabled(false)
+ * .internalUserDatabaseEnabled(false)
+ * .masterUserOptions(MasterUserOptionsProperty.builder()
+ * .masterUserArn("masterUserArn")
+ * .masterUserName("masterUserName")
+ * .masterUserPassword("masterUserPassword")
+ * .build())
+ * .samlOptions(SAMLOptionsProperty.builder()
+ * .enabled(false)
+ * .idp(IdpProperty.builder()
+ * .entityId("entityId")
+ * .metadataContent("metadataContent")
+ * .build())
+ * .masterBackendRole("masterBackendRole")
+ * .masterUserName("masterUserName")
+ * .rolesKey("rolesKey")
+ * .sessionTimeoutMinutes(123)
+ * .subjectKey("subjectKey")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-advancedsecurityoptionsinput.html)
+ */
 @CdkDslMarker
 public class CfnDomainAdvancedSecurityOptionsInputPropertyDsl {
   private val cdkBuilder: CfnDomain.AdvancedSecurityOptionsInputProperty.Builder =

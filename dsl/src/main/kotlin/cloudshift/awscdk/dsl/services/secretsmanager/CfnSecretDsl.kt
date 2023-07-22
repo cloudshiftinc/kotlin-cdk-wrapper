@@ -14,6 +14,72 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnSecret
 import software.constructs.Construct
 
+/**
+ * Creates a new secret.
+ *
+ * A *secret* can be a password, a set of credentials such as a user name and password, an OAuth
+ * token, or other secret information that you store in an encrypted form in Secrets Manager.
+ *
+ * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
+ * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
+ * .
+ *
+ * To retrieve a secret in a CloudFormation template, use a *dynamic reference* . For more
+ * information, see [Retrieve a secret in an AWS CloudFormation
+ * resource](https://docs.aws.amazon.com/secretsmanager/latest/userguide/cfn-example_reference-secret.html)
+ * .
+ *
+ * A common scenario is to first create a secret with `GenerateSecretString` , which generates a
+ * password, and then use a dynamic reference to retrieve the username and password from the secret to
+ * use as credentials for a new database. See the example *Creating a Redshift cluster and a secret for
+ * the admin credentials* .
+ *
+ * For information about creating a secret in the console, see [Create a
+ * secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_create-basic-secret.html)
+ * . For information about creating a secret using the CLI or SDK, see
+ * [CreateSecret](https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html)
+ * .
+ *
+ * For information about retrieving a secret in code, see [Retrieve secrets from Secrets
+ * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * CfnSecret cfnSecret = CfnSecret.Builder.create(this, "MyCfnSecret")
+ * .description("description")
+ * .generateSecretString(GenerateSecretStringProperty.builder()
+ * .excludeCharacters("excludeCharacters")
+ * .excludeLowercase(false)
+ * .excludeNumbers(false)
+ * .excludePunctuation(false)
+ * .excludeUppercase(false)
+ * .generateStringKey("generateStringKey")
+ * .includeSpace(false)
+ * .passwordLength(123)
+ * .requireEachIncludedType(false)
+ * .secretStringTemplate("secretStringTemplate")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .name("name")
+ * .replicaRegions(List.of(ReplicaRegionProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build()))
+ * .secretString("secretString")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
+ */
 @CdkDslMarker
 public class CfnSecretDsl(
   scope: Construct,

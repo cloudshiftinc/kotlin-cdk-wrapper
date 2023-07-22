@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.StageSynthesisOptions
 
+/**
+ * Options for assembly synthesis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * StageSynthesisOptions stageSynthesisOptions = StageSynthesisOptions.builder()
+ * .force(false)
+ * .skipValidation(false)
+ * .validateOnSynthesis(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StageSynthesisOptionsDsl {
   private val cdkBuilder: StageSynthesisOptions.Builder = StageSynthesisOptions.builder()

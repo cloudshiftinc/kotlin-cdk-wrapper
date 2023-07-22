@@ -13,6 +13,41 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnPlacementGroup
 import software.constructs.Construct
 
+/**
+ * Specifies a placement group in which to launch instances.
+ *
+ * The strategy of the placement group determines how the instances are organized within the group.
+ *
+ * A `cluster` placement group is a logical grouping of instances within a single Availability Zone
+ * that benefit from low network latency, high network throughput. A `spread` placement group places
+ * instances on distinct hardware. A `partition` placement group places groups of instances in
+ * different partitions, where instances in one partition do not share the same hardware with instances
+ * in another partition.
+ *
+ * For more information, see [Placement
+ * Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html) in the *Amazon
+ * EC2 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnPlacementGroup cfnPlacementGroup = CfnPlacementGroup.Builder.create(this,
+ * "MyCfnPlacementGroup")
+ * .partitionCount(123)
+ * .spreadLevel("spreadLevel")
+ * .strategy("strategy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html)
+ */
 @CdkDslMarker
 public class CfnPlacementGroupDsl(
   scope: Construct,

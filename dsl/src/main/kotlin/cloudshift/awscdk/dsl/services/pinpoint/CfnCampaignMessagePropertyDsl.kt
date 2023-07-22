@@ -9,6 +9,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the content and settings for a push notification that's sent to recipients of a
+ * campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * MessageProperty messageProperty = MessageProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageSmallIconUrl("imageSmallIconUrl")
+ * .imageUrl("imageUrl")
+ * .jsonBody("jsonBody")
+ * .mediaUrl("mediaUrl")
+ * .rawContent("rawContent")
+ * .silentPush(false)
+ * .timeToLive(123)
+ * .title("title")
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-message.html)
+ */
 @CdkDslMarker
 public class CfnCampaignMessagePropertyDsl {
   private val cdkBuilder: CfnCampaign.MessageProperty.Builder =

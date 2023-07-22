@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * Details for a step that invokes an AWS Lambda function.
+ *
+ * Consists of the Lambda function's name, target, and timeout (in seconds).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CustomStepDetailsProperty customStepDetailsProperty = CustomStepDetailsProperty.builder()
+ * .name("name")
+ * .sourceFileLocation("sourceFileLocation")
+ * .target("target")
+ * .timeoutSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowCustomStepDetailsPropertyDsl {
   private val cdkBuilder: CfnWorkflow.CustomStepDetailsProperty.Builder =

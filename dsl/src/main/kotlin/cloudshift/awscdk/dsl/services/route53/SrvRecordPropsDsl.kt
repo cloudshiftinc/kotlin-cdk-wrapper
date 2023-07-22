@@ -13,6 +13,33 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.SrvRecordProps
 import software.amazon.awscdk.services.route53.SrvRecordValue
 
+/**
+ * Construction properties for a SrvRecord.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * SrvRecordProps srvRecordProps = SrvRecordProps.builder()
+ * .values(List.of(SrvRecordValue.builder()
+ * .hostName("hostName")
+ * .port(123)
+ * .priority(123)
+ * .weight(123)
+ * .build()))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SrvRecordPropsDsl {
   private val cdkBuilder: SrvRecordProps.Builder = SrvRecordProps.builder()

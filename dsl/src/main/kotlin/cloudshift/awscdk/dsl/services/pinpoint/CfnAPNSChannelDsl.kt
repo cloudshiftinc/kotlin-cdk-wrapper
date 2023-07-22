@@ -9,6 +9,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnAPNSChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * You can use the APNs channel to send push notification messages to the Apple Push Notification
+ * service (APNs). Before you can use Amazon Pinpoint to send notifications to APNs, you have to enable
+ * the APNs channel for an Amazon Pinpoint application.
+ *
+ * The APNSChannel resource represents the status and authentication settings for the APNs channel
+ * for an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnAPNSChannel cfnAPNSChannel = CfnAPNSChannel.Builder.create(this, "MyCfnAPNSChannel")
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .bundleId("bundleId")
+ * .certificate("certificate")
+ * .defaultAuthenticationMethod("defaultAuthenticationMethod")
+ * .enabled(false)
+ * .privateKey("privateKey")
+ * .teamId("teamId")
+ * .tokenKey("tokenKey")
+ * .tokenKeyId("tokenKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnschannel.html)
+ */
 @CdkDslMarker
 public class CfnAPNSChannelDsl(
   scope: Construct,

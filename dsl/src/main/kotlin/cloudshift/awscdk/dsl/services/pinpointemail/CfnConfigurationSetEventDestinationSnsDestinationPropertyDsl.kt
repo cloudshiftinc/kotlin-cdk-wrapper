@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination
 
+/**
+ * An object that defines an Amazon SNS destination for email events.
+ *
+ * You can use Amazon SNS to send notification when certain email events occur.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpointemail.*;
+ * SnsDestinationProperty snsDestinationProperty = SnsDestinationProperty.builder()
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpointemail-configurationseteventdestination-snsdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationSnsDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.SnsDestinationProperty.Builder =

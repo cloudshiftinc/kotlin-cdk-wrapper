@@ -10,6 +10,22 @@ import software.amazon.awscdk.CopyOptions
 import software.amazon.awscdk.IgnoreMode
 import software.amazon.awscdk.SymlinkFollowMode
 
+/**
+ * Options applied when copying directories.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CopyOptions copyOptions = CopyOptions.builder()
+ * .exclude(List.of("exclude"))
+ * .follow(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CopyOptionsDsl {
   private val cdkBuilder: CopyOptions.Builder = CopyOptions.builder()

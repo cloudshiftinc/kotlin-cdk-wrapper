@@ -8,6 +8,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnMap
 import software.constructs.Construct
 
+/**
+ * The `AWS::Location::Map` resource specifies a map resource in your AWS account, which provides
+ * map tiles of different styles sourced from global location data providers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnMap cfnMap = CfnMap.Builder.create(this, "MyCfnMap")
+ * .configuration(MapConfigurationProperty.builder()
+ * .style("style")
+ * .build())
+ * .mapName("mapName")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html)
+ */
 @CdkDslMarker
 public class CfnMapDsl(
   scope: Construct,

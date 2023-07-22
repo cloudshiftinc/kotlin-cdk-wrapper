@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * CloudFront Origin Shield.
+ *
+ * Using Origin Shield can help reduce the load on your origin. For more information, see [Using
+ * Origin
+ * Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in
+ * the *Amazon CloudFront Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginShieldProperty originShieldProperty = OriginShieldProperty.builder()
+ * .enabled(false)
+ * .originShieldRegion("originShieldRegion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-originshield.html)
+ */
 @CdkDslMarker
 public class CfnDistributionOriginShieldPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginShieldProperty.Builder =

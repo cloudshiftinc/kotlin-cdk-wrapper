@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnRecipe
 
+/**
+ * Represents an Amazon S3 location (bucket name, bucket owner, and object key) where DataBrew can
+ * read input data, or write output from a job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .key("key")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-s3location.html)
+ */
 @CdkDslMarker
 public class CfnRecipeS3LocationPropertyDsl {
   private val cdkBuilder: CfnRecipe.S3LocationProperty.Builder =

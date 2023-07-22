@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * Determines the custom condition for an icon set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ConditionalFormattingCustomIconConditionProperty conditionalFormattingCustomIconConditionProperty
+ * = ConditionalFormattingCustomIconConditionProperty.builder()
+ * .expression("expression")
+ * .iconOptions(ConditionalFormattingCustomIconOptionsProperty.builder()
+ * .icon("icon")
+ * .unicodeIcon("unicodeIcon")
+ * .build())
+ * // the properties below are optional
+ * .color("color")
+ * .displayConfiguration(ConditionalFormattingIconDisplayConfigurationProperty.builder()
+ * .iconDisplayOption("iconDisplayOption")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-conditionalformattingcustomiconcondition.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisConditionalFormattingCustomIconConditionPropertyDsl {
   private val cdkBuilder: CfnAnalysis.ConditionalFormattingCustomIconConditionProperty.Builder =

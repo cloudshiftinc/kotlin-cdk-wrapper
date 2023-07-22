@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.rds.IParameterGroup
 import software.amazon.awscdk.services.rds.PerformanceInsightRetention
 import software.amazon.awscdk.services.rds.ServerlessV2ClusterInstanceProps
 
+/**
+ * Options for creating a serverless v2 instance.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .writer(ClusterInstance.serverlessV2("writer"))
+ * .readers(List.of(ClusterInstance.serverlessV2("reader1",
+ * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerlessV2ClusterInstancePropsDsl {
   private val cdkBuilder: ServerlessV2ClusterInstanceProps.Builder =

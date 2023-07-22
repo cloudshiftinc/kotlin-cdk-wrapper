@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.msk.CfnBatchScramSecretProps
 
+/**
+ * Properties for defining a `CfnBatchScramSecret`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnBatchScramSecretProps cfnBatchScramSecretProps = CfnBatchScramSecretProps.builder()
+ * .clusterArn("clusterArn")
+ * // the properties below are optional
+ * .secretArnList(List.of("secretArnList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-batchscramsecret.html)
+ */
 @CdkDslMarker
 public class CfnBatchScramSecretPropsDsl {
   private val cdkBuilder: CfnBatchScramSecretProps.Builder = CfnBatchScramSecretProps.builder()

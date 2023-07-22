@@ -9,6 +9,63 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnFunctionConfiguration
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppSync::FunctionConfiguration` resource defines the functions in GraphQL APIs to
+ * perform certain operations.
+ *
+ * You can use pipeline resolvers to attach functions. For more information, see [Pipeline
+ * Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/pipeline-resolvers.html) in the *AWS
+ * AppSync Developer Guide* .
+ *
+ *
+ * When you submit an update, AWS CloudFormation updates resources based on differences between what
+ * you submit and the stack's current template. To cause this resource to be updated you must change a
+ * property value for this resource in the AWS CloudFormation template. Changing the Amazon S3 file
+ * content without changing a property value will not result in an update operation.
+ *
+ * See [Update Behaviors of Stack
+ * Resources](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-update-behaviors.html)
+ * in the *AWS CloudFormation User Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnFunctionConfiguration cfnFunctionConfiguration = CfnFunctionConfiguration.Builder.create(this,
+ * "MyCfnFunctionConfiguration")
+ * .apiId("apiId")
+ * .dataSourceName("dataSourceName")
+ * .name("name")
+ * // the properties below are optional
+ * .code("code")
+ * .codeS3Location("codeS3Location")
+ * .description("description")
+ * .functionVersion("functionVersion")
+ * .maxBatchSize(123)
+ * .requestMappingTemplate("requestMappingTemplate")
+ * .requestMappingTemplateS3Location("requestMappingTemplateS3Location")
+ * .responseMappingTemplate("responseMappingTemplate")
+ * .responseMappingTemplateS3Location("responseMappingTemplateS3Location")
+ * .runtime(AppSyncRuntimeProperty.builder()
+ * .name("name")
+ * .runtimeVersion("runtimeVersion")
+ * .build())
+ * .syncConfig(SyncConfigProperty.builder()
+ * .conflictDetection("conflictDetection")
+ * // the properties below are optional
+ * .conflictHandler("conflictHandler")
+ * .lambdaConflictHandlerConfig(LambdaConflictHandlerConfigProperty.builder()
+ * .lambdaConflictHandlerArn("lambdaConflictHandlerArn")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-functionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFunctionConfigurationDsl(
   scope: Construct,

@@ -14,6 +14,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnRuleset
 import software.constructs.Construct
 
+/**
+ * Specifies a new ruleset that can be used in a profile job to validate the data quality of a
+ * dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * CfnRuleset cfnRuleset = CfnRuleset.Builder.create(this, "MyCfnRuleset")
+ * .name("name")
+ * .rules(List.of(RuleProperty.builder()
+ * .checkExpression("checkExpression")
+ * .name("name")
+ * // the properties below are optional
+ * .columnSelectors(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .disabled(false)
+ * .substitutionMap(List.of(SubstitutionValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .threshold(ThresholdProperty.builder()
+ * .value(123)
+ * // the properties below are optional
+ * .type("type")
+ * .unit("unit")
+ * .build())
+ * .build()))
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-databrew-ruleset.html)
+ */
 @CdkDslMarker
 public class CfnRulesetDsl(
   scope: Construct,

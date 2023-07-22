@@ -7,6 +7,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint
 
+/**
+ * Describes the authentication method to be used by a Client VPN endpoint.
+ *
+ * For more information, see
+ * [Authentication](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/authentication-authrization.html#client-authentication)
+ * in the *AWS Client VPN Administrator Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ClientAuthenticationRequestProperty clientAuthenticationRequestProperty =
+ * ClientAuthenticationRequestProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .activeDirectory(DirectoryServiceAuthenticationRequestProperty.builder()
+ * .directoryId("directoryId")
+ * .build())
+ * .federatedAuthentication(FederatedAuthenticationRequestProperty.builder()
+ * .samlProviderArn("samlProviderArn")
+ * // the properties below are optional
+ * .selfServiceSamlProviderArn("selfServiceSamlProviderArn")
+ * .build())
+ * .mutualAuthentication(CertificateAuthenticationRequestProperty.builder()
+ * .clientRootCertificateChainArn("clientRootCertificateChainArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-clientvpnendpoint-clientauthenticationrequest.html)
+ */
 @CdkDslMarker
 public class CfnClientVpnEndpointClientAuthenticationRequestPropertyDsl {
   private val cdkBuilder: CfnClientVpnEndpoint.ClientAuthenticationRequestProperty.Builder =

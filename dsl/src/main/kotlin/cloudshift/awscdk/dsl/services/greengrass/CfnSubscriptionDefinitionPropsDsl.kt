@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionProps
 
+/**
+ * Properties for defining a `CfnSubscriptionDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnSubscriptionDefinitionProps cfnSubscriptionDefinitionProps =
+ * CfnSubscriptionDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(SubscriptionDefinitionVersionProperty.builder()
+ * .subscriptions(List.of(SubscriptionProperty.builder()
+ * .id("id")
+ * .source("source")
+ * .subject("subject")
+ * .target("target")
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionDefinitionPropsDsl {
   private val cdkBuilder: CfnSubscriptionDefinitionProps.Builder =

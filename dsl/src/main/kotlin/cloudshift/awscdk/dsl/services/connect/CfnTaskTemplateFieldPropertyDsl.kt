@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnTaskTemplate
 
+/**
+ * Describes a single task template field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * FieldProperty fieldProperty = FieldProperty.builder()
+ * .id(FieldIdentifierProperty.builder()
+ * .name("name")
+ * .build())
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .singleSelectOptions(List.of("singleSelectOptions"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-tasktemplate-field.html)
+ */
 @CdkDslMarker
 public class CfnTaskTemplateFieldPropertyDsl {
   private val cdkBuilder: CfnTaskTemplate.FieldProperty.Builder =

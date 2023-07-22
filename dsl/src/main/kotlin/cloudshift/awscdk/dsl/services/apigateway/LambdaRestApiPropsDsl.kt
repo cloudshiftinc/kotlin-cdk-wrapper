@@ -27,6 +27,25 @@ import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * Function backend;
+ * LambdaRestApi api = LambdaRestApi.Builder.create(this, "myapi")
+ * .handler(backend)
+ * .proxy(false)
+ * .build();
+ * Resource items = api.root.addResource("items");
+ * items.addMethod("GET"); // GET /items
+ * items.addMethod("POST"); // POST /items
+ * Resource item = items.addResource("{item}");
+ * item.addMethod("GET"); // GET /items/{item}
+ * // the default integration for methods is "handler", but one can
+ * // customize this behavior per method or even a sub path.
+ * item.addMethod("DELETE", new HttpIntegration("http://amazon.com"));
+ * ```
+ */
 @CdkDslMarker
 public class LambdaRestApiPropsDsl {
   private val cdkBuilder: LambdaRestApiProps.Builder = LambdaRestApiProps.builder()

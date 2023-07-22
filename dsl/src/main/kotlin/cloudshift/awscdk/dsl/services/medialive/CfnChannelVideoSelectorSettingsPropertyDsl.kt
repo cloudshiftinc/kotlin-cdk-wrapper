@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the video to extract from the input.
+ *
+ * The parent of this entity is VideoSelector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VideoSelectorSettingsProperty videoSelectorSettingsProperty =
+ * VideoSelectorSettingsProperty.builder()
+ * .videoSelectorPid(VideoSelectorPidProperty.builder()
+ * .pid(123)
+ * .build())
+ * .videoSelectorProgramId(VideoSelectorProgramIdProperty.builder()
+ * .programId(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselectorsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelVideoSelectorSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorSettingsProperty.Builder =

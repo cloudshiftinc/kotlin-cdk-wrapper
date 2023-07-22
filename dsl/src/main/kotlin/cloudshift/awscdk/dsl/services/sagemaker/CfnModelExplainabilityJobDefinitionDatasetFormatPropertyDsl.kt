@@ -7,6 +7,28 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * The dataset format of the data to monitor.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DatasetFormatProperty datasetFormatProperty = DatasetFormatProperty.builder()
+ * .csv(CsvProperty.builder()
+ * .header(false)
+ * .build())
+ * .json(JsonProperty.builder()
+ * .line(false)
+ * .build())
+ * .parquet(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-datasetformat.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionDatasetFormatPropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.DatasetFormatProperty.Builder =

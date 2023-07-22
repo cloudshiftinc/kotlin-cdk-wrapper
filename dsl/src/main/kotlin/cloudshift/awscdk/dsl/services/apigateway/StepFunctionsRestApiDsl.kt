@@ -29,6 +29,23 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.stepfunctions.IStateMachine
 import software.constructs.Construct
 
+/**
+ * Defines an API Gateway REST API with a Synchrounous Express State Machine as a proxy integration.
+ *
+ * Example:
+ *
+ * ```
+ * Pass stateMachineDefinition = new Pass(this, "PassState");
+ * IStateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+ * .definition(stateMachineDefinition)
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .build();
+ * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
+ * .deploy(true)
+ * .stateMachine(stateMachine)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsRestApiDsl(
   scope: Construct,

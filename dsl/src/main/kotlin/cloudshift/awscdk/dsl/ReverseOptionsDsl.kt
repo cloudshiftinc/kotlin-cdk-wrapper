@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.ReverseOptions
 
+/**
+ * Options for the 'reverse()' operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ReverseOptions reverseOptions = ReverseOptions.builder()
+ * .failConcat(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReverseOptionsDsl {
   private val cdkBuilder: ReverseOptions.Builder = ReverseOptions.builder()

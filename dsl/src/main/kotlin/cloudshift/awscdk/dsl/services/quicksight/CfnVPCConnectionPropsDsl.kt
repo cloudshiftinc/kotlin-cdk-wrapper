@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.quicksight.CfnVPCConnectionProps
 
+/**
+ * Properties for defining a `CfnVPCConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CfnVPCConnectionProps cfnVPCConnectionProps = CfnVPCConnectionProps.builder()
+ * .availabilityStatus("availabilityStatus")
+ * .awsAccountId("awsAccountId")
+ * .dnsResolvers(List.of("dnsResolvers"))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConnectionId("vpcConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html)
+ */
 @CdkDslMarker
 public class CfnVPCConnectionPropsDsl {
   private val cdkBuilder: CfnVPCConnectionProps.Builder = CfnVPCConnectionProps.builder()

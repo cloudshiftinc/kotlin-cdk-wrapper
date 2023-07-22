@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediapackage.CfnChannel
 
+/**
+ * The access log configuration parameters for your channel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * LogConfigurationProperty logConfigurationProperty = LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackage-channel-logconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnChannelLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnChannel.LogConfigurationProperty.Builder =

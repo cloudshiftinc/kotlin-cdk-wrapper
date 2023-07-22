@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A heat map.
+ *
+ * For more information, see [Using heat
+ * maps](https://docs.aws.amazon.com/quicksight/latest/user/heat-map.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-heatmapvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisHeatMapVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.HeatMapVisualProperty.Builder =

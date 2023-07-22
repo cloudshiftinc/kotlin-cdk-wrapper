@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.FilterGroup
 import software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceProps
 
+/**
+ * Construction properties for `GitHubEnterpriseSource`.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .source(Source.gitHubEnterprise(GitHubEnterpriseSourceProps.builder()
+ * .httpsCloneUrl("https://my-github-enterprise.com/owner/repo")
+ * .build()))
+ * // Enable Docker AND custom caching
+ * .cache(Cache.local(LocalCacheMode.DOCKER_LAYER, LocalCacheMode.CUSTOM))
+ * // BuildSpec with a 'cache' section necessary for 'CUSTOM' caching. This can
+ * // also come from 'buildspec.yml' in your source.
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("..."))),
+ * "cache", Map.of(
+ * "paths", List.of("/root/cachedir/ **&#47;*")))))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubEnterpriseSourcePropsDsl {
   private val cdkBuilder: GitHubEnterpriseSourceProps.Builder =

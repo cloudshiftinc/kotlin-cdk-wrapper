@@ -11,6 +11,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet
 
+/**
+ * The tags to apply to a resource when the resource is being created.
+ *
+ * When you specify a tag, you must specify the resource type to tag, otherwise the request will
+ * fail.
+ *
+ *
+ * The `Valid Values` lists all the resource types that can be tagged. However, the action you're
+ * using might not support tagging all of these resource types. If you try to tag a resource type that
+ * is unsupported for the action you're using, you'll get an error.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * TagSpecificationProperty tagSpecificationProperty = TagSpecificationProperty.builder()
+ * .resourceType("resourceType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-capacityreservationfleet-tagspecification.html)
+ */
 @CdkDslMarker
 public class CfnCapacityReservationFleetTagSpecificationPropertyDsl {
   private val cdkBuilder: CfnCapacityReservationFleet.TagSpecificationProperty.Builder =

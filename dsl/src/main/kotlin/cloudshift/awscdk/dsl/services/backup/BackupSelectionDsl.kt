@@ -13,6 +13,29 @@ import software.amazon.awscdk.services.backup.IBackupPlan
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * A backup selection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * BackupPlan backupPlan;
+ * BackupResource backupResource;
+ * Role role;
+ * BackupSelection backupSelection = BackupSelection.Builder.create(this, "MyBackupSelection")
+ * .backupPlan(backupPlan)
+ * .resources(List.of(backupResource))
+ * // the properties below are optional
+ * .allowRestores(false)
+ * .backupSelectionName("backupSelectionName")
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackupSelectionDsl(
   scope: Construct,

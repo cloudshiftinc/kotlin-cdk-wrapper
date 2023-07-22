@@ -14,6 +14,130 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfigProps
 
+/**
+ * Properties for defining a `CfnEndpointConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnEndpointConfigProps cfnEndpointConfigProps = CfnEndpointConfigProps.builder()
+ * .productionVariants(List.of(ProductionVariantProperty.builder()
+ * .initialVariantWeight(123)
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * // the properties below are optional
+ * .acceleratorType("acceleratorType")
+ * .containerStartupHealthCheckTimeoutInSeconds(123)
+ * .enableSsmAccess(false)
+ * .initialInstanceCount(123)
+ * .instanceType("instanceType")
+ * .modelDataDownloadTimeoutInSeconds(123)
+ * .serverlessConfig(ServerlessConfigProperty.builder()
+ * .maxConcurrency(123)
+ * .memorySizeInMb(123)
+ * // the properties below are optional
+ * .provisionedConcurrency(123)
+ * .build())
+ * .volumeSizeInGb(123)
+ * .build()))
+ * // the properties below are optional
+ * .asyncInferenceConfig(AsyncInferenceConfigProperty.builder()
+ * .outputConfig(AsyncInferenceOutputConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .notificationConfig(AsyncInferenceNotificationConfigProperty.builder()
+ * .errorTopic("errorTopic")
+ * .includeInferenceResponseIn(List.of("includeInferenceResponseIn"))
+ * .successTopic("successTopic")
+ * .build())
+ * .s3FailurePath("s3FailurePath")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * // the properties below are optional
+ * .clientConfig(AsyncInferenceClientConfigProperty.builder()
+ * .maxConcurrentInvocationsPerInstance(123)
+ * .build())
+ * .build())
+ * .dataCaptureConfig(DataCaptureConfigProperty.builder()
+ * .captureOptions(List.of(CaptureOptionProperty.builder()
+ * .captureMode("captureMode")
+ * .build()))
+ * .destinationS3Uri("destinationS3Uri")
+ * .initialSamplingPercentage(123)
+ * // the properties below are optional
+ * .captureContentTypeHeader(CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build())
+ * .enableCapture(false)
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .endpointConfigName("endpointConfigName")
+ * .explainerConfig(ExplainerConfigProperty.builder()
+ * .clarifyExplainerConfig(ClarifyExplainerConfigProperty.builder()
+ * .shapConfig(ClarifyShapConfigProperty.builder()
+ * .shapBaselineConfig(ClarifyShapBaselineConfigProperty.builder()
+ * .mimeType("mimeType")
+ * .shapBaseline("shapBaseline")
+ * .shapBaselineUri("shapBaselineUri")
+ * .build())
+ * // the properties below are optional
+ * .numberOfSamples(123)
+ * .seed(123)
+ * .textConfig(ClarifyTextConfigProperty.builder()
+ * .granularity("granularity")
+ * .language("language")
+ * .build())
+ * .useLogit(false)
+ * .build())
+ * // the properties below are optional
+ * .enableExplanations("enableExplanations")
+ * .inferenceConfig(ClarifyInferenceConfigProperty.builder()
+ * .contentTemplate("contentTemplate")
+ * .featureHeaders(List.of("featureHeaders"))
+ * .featuresAttribute("featuresAttribute")
+ * .featureTypes(List.of("featureTypes"))
+ * .labelAttribute("labelAttribute")
+ * .labelHeaders(List.of("labelHeaders"))
+ * .labelIndex(123)
+ * .maxPayloadInMb(123)
+ * .maxRecordCount(123)
+ * .probabilityAttribute("probabilityAttribute")
+ * .probabilityIndex(123)
+ * .build())
+ * .build())
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .shadowProductionVariants(List.of(ProductionVariantProperty.builder()
+ * .initialVariantWeight(123)
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * // the properties below are optional
+ * .acceleratorType("acceleratorType")
+ * .containerStartupHealthCheckTimeoutInSeconds(123)
+ * .enableSsmAccess(false)
+ * .initialInstanceCount(123)
+ * .instanceType("instanceType")
+ * .modelDataDownloadTimeoutInSeconds(123)
+ * .serverlessConfig(ServerlessConfigProperty.builder()
+ * .maxConcurrency(123)
+ * .memorySizeInMb(123)
+ * // the properties below are optional
+ * .provisionedConcurrency(123)
+ * .build())
+ * .volumeSizeInGb(123)
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpointconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigPropsDsl {
   private val cdkBuilder: CfnEndpointConfigProps.Builder = CfnEndpointConfigProps.builder()

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Provides information about how AWS Ground Station should save downlink data to S3.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * S3RecordingConfigProperty s3RecordingConfigProperty = S3RecordingConfigProperty.builder()
+ * .bucketArn("bucketArn")
+ * .prefix("prefix")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html)
+ */
 @CdkDslMarker
 public class CfnConfigS3RecordingConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.S3RecordingConfigProperty.Builder =

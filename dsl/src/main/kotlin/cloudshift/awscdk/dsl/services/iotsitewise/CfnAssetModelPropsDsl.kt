@@ -13,6 +13,127 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModelProps
 
+/**
+ * Properties for defining a `CfnAssetModel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnAssetModelProps cfnAssetModelProps = CfnAssetModelProps.builder()
+ * .assetModelName("assetModelName")
+ * // the properties below are optional
+ * .assetModelCompositeModels(List.of(AssetModelCompositeModelProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .compositeModelProperties(List.of(AssetModelPropertyProperty.builder()
+ * .dataType("dataType")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .type(PropertyTypeProperty.builder()
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .attribute(AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build())
+ * .metric(MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build())
+ * .transform(TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .dataTypeSpec("dataTypeSpec")
+ * .unit("unit")
+ * .build()))
+ * .description("description")
+ * .build()))
+ * .assetModelDescription("assetModelDescription")
+ * .assetModelHierarchies(List.of(AssetModelHierarchyProperty.builder()
+ * .childAssetModelId("childAssetModelId")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .build()))
+ * .assetModelProperties(List.of(AssetModelPropertyProperty.builder()
+ * .dataType("dataType")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .type(PropertyTypeProperty.builder()
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .attribute(AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build())
+ * .metric(MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build())
+ * .transform(TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .dataTypeSpec("dataTypeSpec")
+ * .unit("unit")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelPropsDsl {
   private val cdkBuilder: CfnAssetModelProps.Builder = CfnAssetModelProps.builder()

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex type that identifies ways in which you want to restrict distribution of your content.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * RestrictionsProperty restrictionsProperty = RestrictionsProperty.builder()
+ * .geoRestriction(GeoRestrictionProperty.builder()
+ * .restrictionType("restrictionType")
+ * // the properties below are optional
+ * .locations(List.of("locations"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-restrictions.html)
+ */
 @CdkDslMarker
 public class CfnDistributionRestrictionsPropertyDsl {
   private val cdkBuilder: CfnDistribution.RestrictionsProperty.Builder =

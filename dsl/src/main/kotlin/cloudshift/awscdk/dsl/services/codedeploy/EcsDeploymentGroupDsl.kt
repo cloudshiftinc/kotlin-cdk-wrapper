@@ -18,6 +18,36 @@ import software.amazon.awscdk.services.ecs.IBaseService
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * A CodeDeploy deployment group that orchestrates ECS blue-green deployments.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication myApplication;
+ * Cluster cluster;
+ * FargateTaskDefinition taskDefinition;
+ * ITargetGroup blueTargetGroup;
+ * ITargetGroup greenTargetGroup;
+ * IApplicationListener listener;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.CODE_DEPLOY)
+ * .build())
+ * .build();
+ * EcsDeploymentGroup.Builder.create(this, "BlueGreenDG")
+ * .service(service)
+ * .blueGreenDeploymentConfig(EcsBlueGreenDeploymentConfig.builder()
+ * .blueTargetGroup(blueTargetGroup)
+ * .greenTargetGroup(greenTargetGroup)
+ * .listener(listener)
+ * .build())
+ * .deploymentConfig(EcsDeploymentConfig.CANARY_10PERCENT_5MINUTES)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcsDeploymentGroupDsl(
   scope: Construct,

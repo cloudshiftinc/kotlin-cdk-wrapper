@@ -11,6 +11,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnAccessPoint
 import software.amazon.awscdk.services.s3.CfnAccessPointProps
 
+/**
+ * Properties for defining a `CfnAccessPoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object policy;
+ * CfnAccessPointProps cfnAccessPointProps = CfnAccessPointProps.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .name("name")
+ * .policy(policy)
+ * .publicAccessBlockConfiguration(PublicAccessBlockConfigurationProperty.builder()
+ * .blockPublicAcls(false)
+ * .blockPublicPolicy(false)
+ * .ignorePublicAcls(false)
+ * .restrictPublicBuckets(false)
+ * .build())
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointPropsDsl {
   private val cdkBuilder: CfnAccessPointProps.Builder = CfnAccessPointProps.builder()

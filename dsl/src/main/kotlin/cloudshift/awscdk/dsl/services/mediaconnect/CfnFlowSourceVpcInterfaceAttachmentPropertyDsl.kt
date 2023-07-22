@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediaconnect.CfnFlowSource
 
+/**
+ * The settings for attaching a VPC interface to an resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * VpcInterfaceAttachmentProperty vpcInterfaceAttachmentProperty =
+ * VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flowsource-vpcinterfaceattachment.html)
+ */
 @CdkDslMarker
 public class CfnFlowSourceVpcInterfaceAttachmentPropertyDsl {
   private val cdkBuilder: CfnFlowSource.VpcInterfaceAttachmentProperty.Builder =

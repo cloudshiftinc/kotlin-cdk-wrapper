@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.appsync.AwsIamConfig
 import software.amazon.awscdk.services.appsync.HttpDataSourceProps
 import software.amazon.awscdk.services.appsync.IGraphqlApi
 
+/**
+ * Properties for an AppSync http datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * GraphqlApi graphqlApi;
+ * HttpDataSourceProps httpDataSourceProps = HttpDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .endpoint("endpoint")
+ * // the properties below are optional
+ * .authorizationConfig(AwsIamConfig.builder()
+ * .signingRegion("signingRegion")
+ * .signingServiceName("signingServiceName")
+ * .build())
+ * .description("description")
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpDataSourcePropsDsl {
   private val cdkBuilder: HttpDataSourceProps.Builder = HttpDataSourceProps.builder()

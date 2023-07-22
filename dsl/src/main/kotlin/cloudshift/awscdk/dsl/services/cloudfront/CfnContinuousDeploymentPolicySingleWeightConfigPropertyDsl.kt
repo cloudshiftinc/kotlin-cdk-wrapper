@@ -7,6 +7,28 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy
 
+/**
+ * This configuration determines the percentage of HTTP requests that are sent to the staging
+ * distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * SingleWeightConfigProperty singleWeightConfigProperty = SingleWeightConfigProperty.builder()
+ * .weight(123)
+ * // the properties below are optional
+ * .sessionStickinessConfig(SessionStickinessConfigProperty.builder()
+ * .idleTtl(123)
+ * .maximumTtl(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-continuousdeploymentpolicy-singleweightconfig.html)
+ */
 @CdkDslMarker
 public class CfnContinuousDeploymentPolicySingleWeightConfigPropertyDsl {
   private val cdkBuilder: CfnContinuousDeploymentPolicy.SingleWeightConfigProperty.Builder =

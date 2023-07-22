@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * A source identifier and its corresponding version.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ProjectSourceVersionProperty projectSourceVersionProperty =
+ * ProjectSourceVersionProperty.builder()
+ * .sourceIdentifier("sourceIdentifier")
+ * // the properties below are optional
+ * .sourceVersion("sourceVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectsourceversion.html)
+ */
 @CdkDslMarker
 public class CfnProjectProjectSourceVersionPropertyDsl {
   private val cdkBuilder: CfnProject.ProjectSourceVersionProperty.Builder =

@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devicefarm.CfnTestGridProject
 import software.amazon.awscdk.services.devicefarm.CfnTestGridProjectProps
 
+/**
+ * Properties for defining a `CfnTestGridProject`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnTestGridProjectProps cfnTestGridProjectProps = CfnTestGridProjectProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-testgridproject.html)
+ */
 @CdkDslMarker
 public class CfnTestGridProjectPropsDsl {
   private val cdkBuilder: CfnTestGridProjectProps.Builder = CfnTestGridProjectProps.builder()

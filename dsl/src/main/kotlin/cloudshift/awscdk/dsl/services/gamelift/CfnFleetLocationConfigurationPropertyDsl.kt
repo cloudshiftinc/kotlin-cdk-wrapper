@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnFleet
 
+/**
+ * A remote location where a multi-location fleet can deploy game servers for game hosting.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * LocationConfigurationProperty locationConfigurationProperty =
+ * LocationConfigurationProperty.builder()
+ * .location("location")
+ * // the properties below are optional
+ * .locationCapacity(LocationCapacityProperty.builder()
+ * .desiredEc2Instances(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-fleet-locationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFleetLocationConfigurationPropertyDsl {
   private val cdkBuilder: CfnFleet.LocationConfigurationProperty.Builder =

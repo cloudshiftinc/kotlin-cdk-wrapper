@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.quicksight.CfnVPCConnection
 import software.constructs.Construct
 
+/**
+ * Creates a new VPC connection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CfnVPCConnection cfnVPCConnection = CfnVPCConnection.Builder.create(this, "MyCfnVPCConnection")
+ * .availabilityStatus("availabilityStatus")
+ * .awsAccountId("awsAccountId")
+ * .dnsResolvers(List.of("dnsResolvers"))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConnectionId("vpcConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-vpcconnection.html)
+ */
 @CdkDslMarker
 public class CfnVPCConnectionDsl(
   scope: Construct,

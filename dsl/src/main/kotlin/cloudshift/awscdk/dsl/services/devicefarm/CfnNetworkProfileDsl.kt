@@ -13,6 +13,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.devicefarm.CfnNetworkProfile
 import software.constructs.Construct
 
+/**
+ * Creates a network profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnNetworkProfile cfnNetworkProfile = CfnNetworkProfile.Builder.create(this,
+ * "MyCfnNetworkProfile")
+ * .name("name")
+ * .projectArn("projectArn")
+ * // the properties below are optional
+ * .description("description")
+ * .downlinkBandwidthBits(123)
+ * .downlinkDelayMs(123)
+ * .downlinkJitterMs(123)
+ * .downlinkLossPercent(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .uplinkBandwidthBits(123)
+ * .uplinkDelayMs(123)
+ * .uplinkJitterMs(123)
+ * .uplinkLossPercent(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-networkprofile.html)
+ */
 @CdkDslMarker
 public class CfnNetworkProfileDsl(
   scope: Construct,

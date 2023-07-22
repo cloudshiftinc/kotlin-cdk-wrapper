@@ -12,6 +12,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupSelection
 
+/**
+ * Specifies an object containing properties used to assign a set of resources to a backup plan.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object conditions;
+ * BackupSelectionResourceTypeProperty backupSelectionResourceTypeProperty =
+ * BackupSelectionResourceTypeProperty.builder()
+ * .iamRoleArn("iamRoleArn")
+ * .selectionName("selectionName")
+ * // the properties below are optional
+ * .conditions(conditions)
+ * .listOfTags(List.of(ConditionResourceTypeProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionType("conditionType")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .notResources(List.of("notResources"))
+ * .resources(List.of("resources"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-backupselectionresourcetype.html)
+ */
 @CdkDslMarker
 public class CfnBackupSelectionBackupSelectionResourceTypePropertyDsl {
   private val cdkBuilder: CfnBackupSelection.BackupSelectionResourceTypeProperty.Builder =

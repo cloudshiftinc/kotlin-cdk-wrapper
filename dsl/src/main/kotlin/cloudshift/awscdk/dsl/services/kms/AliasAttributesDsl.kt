@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.kms.AliasAttributes
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties of a reference to an existing KMS Alias.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * AliasAttributes aliasAttributes = AliasAttributes.builder()
+ * .aliasName("aliasName")
+ * .aliasTargetKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasAttributesDsl {
   private val cdkBuilder: AliasAttributes.Builder = AliasAttributes.builder()

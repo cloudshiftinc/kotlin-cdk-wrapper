@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnIPAM
 import software.constructs.Construct
 
+/**
+ * IPAM is a VPC feature that you can use to automate your IP address management workflows including
+ * assigning, tracking, troubleshooting, and auditing IP addresses across AWS Regions and accounts
+ * throughout your AWS Organization.
+ *
+ * For more information, see [What is
+ * IPAM?](https://docs.aws.amazon.com//vpc/latest/ipam/what-is-it-ipam.html) in the *Amazon VPC IPAM
+ * User Guide* .
+ *
+ * There are AWS Identity and Access Management (IAM) permissions required to fully manage an IPAM
+ * in CloudFormation. For more information, see [Example
+ * policy](https://docs.aws.amazon.com//vpc/latest/ipam/iam-ipam-policy-examples.html) in the *Amazon
+ * VPC IPAM User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAM cfnIPAM = CfnIPAM.Builder.create(this, "MyCfnIPAM")
+ * .defaultResourceDiscoveryAssociationId("defaultResourceDiscoveryAssociationId")
+ * .defaultResourceDiscoveryId("defaultResourceDiscoveryId")
+ * .description("description")
+ * .operatingRegions(List.of(IpamOperatingRegionProperty.builder()
+ * .regionName("regionName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipam.html)
+ */
 @CdkDslMarker
 public class CfnIPAMDsl(
   scope: Construct,

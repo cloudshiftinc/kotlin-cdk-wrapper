@@ -8,6 +8,44 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet
 
+/**
+ * This is *AWS WAF Classic* documentation.
+ *
+ * For more information, see [AWS WAF
+ * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
+ * developer guide.
+ *
+ *
+ * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
+ * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
+ * version, AWS WAF has a single set of endpoints for regional and global use.
+ *
+ *
+ * Specifies a constraint on the size of a part of the web request. AWS WAF uses the `Size` ,
+ * `ComparisonOperator` , and `FieldToMatch` to build an expression in the form of " `Size`
+ * `ComparisonOperator` size in bytes of `FieldToMatch` ". If that expression is true, the
+ * `SizeConstraint` is considered to match.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * SizeConstraintProperty sizeConstraintProperty = SizeConstraintProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .size(123)
+ * .textTransformation("textTransformation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-sizeconstraintset-sizeconstraint.html)
+ */
 @CdkDslMarker
 public class CfnSizeConstraintSetSizeConstraintPropertyDsl {
   private val cdkBuilder: CfnSizeConstraintSet.SizeConstraintProperty.Builder =

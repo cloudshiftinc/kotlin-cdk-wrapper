@@ -13,6 +13,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.neptune.CfnDBInstanceProps
 
+/**
+ * Properties for defining a `CfnDBInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * CfnDBInstanceProps cfnDBInstanceProps = CfnDBInstanceProps.builder()
+ * .dbInstanceClass("dbInstanceClass")
+ * // the properties below are optional
+ * .allowMajorVersionUpgrade(false)
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbInstanceIdentifier("dbInstanceIdentifier")
+ * .dbParameterGroupName("dbParameterGroupName")
+ * .dbSnapshotIdentifier("dbSnapshotIdentifier")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbinstance.html)
+ */
 @CdkDslMarker
 public class CfnDBInstancePropsDsl {
   private val cdkBuilder: CfnDBInstanceProps.Builder = CfnDBInstanceProps.builder()

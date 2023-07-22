@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.inspectorv2.CfnFilter
 
+/**
+ * An object that describes the details of a number filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspectorv2.*;
+ * NumberFilterProperty numberFilterProperty = NumberFilterProperty.builder()
+ * .lowerInclusive(123)
+ * .upperInclusive(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-filter-numberfilter.html)
+ */
 @CdkDslMarker
 public class CfnFilterNumberFilterPropertyDsl {
   private val cdkBuilder: CfnFilter.NumberFilterProperty.Builder =

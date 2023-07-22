@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * These are custom parameter to be used when the target is an API Gateway APIs or EventBridge
+ * ApiDestinations.
+ *
+ * In the latter case, these are merged with any InvocationParameters specified on the Connection,
+ * with any values from the Connection taking precedence.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * HttpParametersProperty httpParametersProperty = HttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-httpparameters.html)
+ */
 @CdkDslMarker
 public class CfnRuleHttpParametersPropertyDsl {
   private val cdkBuilder: CfnRule.HttpParametersProperty.Builder =

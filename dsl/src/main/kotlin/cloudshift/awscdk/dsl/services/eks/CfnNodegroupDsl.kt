@@ -14,6 +14,73 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnNodegroup
 import software.constructs.Construct
 
+/**
+ * Creates a managed node group for an Amazon EKS cluster.
+ *
+ * You can only create a node group for your cluster that is equal to the current Kubernetes version
+ * for the cluster.
+ *
+ * An Amazon EKS managed node group is an Amazon EC2 Auto Scaling group and associated Amazon EC2
+ * instances that are managed by AWS for an Amazon EKS cluster. For more information, see [Managed node
+ * groups](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html) in the *Amazon
+ * EKS User Guide* .
+ *
+ *
+ * Windows AMI types are only supported for commercial Regions that support Windows Amazon EKS.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnNodegroup cfnNodegroup = CfnNodegroup.Builder.create(this, "MyCfnNodegroup")
+ * .clusterName("clusterName")
+ * .nodeRole("nodeRole")
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .amiType("amiType")
+ * .capacityType("capacityType")
+ * .diskSize(123)
+ * .forceUpdateEnabled(false)
+ * .instanceTypes(List.of("instanceTypes"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .nodegroupName("nodegroupName")
+ * .releaseVersion("releaseVersion")
+ * .remoteAccess(RemoteAccessProperty.builder()
+ * .ec2SshKey("ec2SshKey")
+ * // the properties below are optional
+ * .sourceSecurityGroups(List.of("sourceSecurityGroups"))
+ * .build())
+ * .scalingConfig(ScalingConfigProperty.builder()
+ * .desiredSize(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .taints(List.of(TaintProperty.builder()
+ * .effect("effect")
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .updateConfig(UpdateConfigProperty.builder()
+ * .maxUnavailable(123)
+ * .maxUnavailablePercentage(123)
+ * .build())
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)
+ */
 @CdkDslMarker
 public class CfnNodegroupDsl(
   scope: Construct,

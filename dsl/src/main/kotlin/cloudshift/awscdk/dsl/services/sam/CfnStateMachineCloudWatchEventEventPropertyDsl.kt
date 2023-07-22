@@ -9,6 +9,26 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.sam.CfnStateMachine
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * Object pattern;
+ * CloudWatchEventEventProperty cloudWatchEventEventProperty =
+ * CloudWatchEventEventProperty.builder()
+ * .pattern(pattern)
+ * // the properties below are optional
+ * .eventBusName("eventBusName")
+ * .input("input")
+ * .inputPath("inputPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-cloudwatcheventevent.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineCloudWatchEventEventPropertyDsl {
   private val cdkBuilder: CfnStateMachine.CloudWatchEventEventProperty.Builder =

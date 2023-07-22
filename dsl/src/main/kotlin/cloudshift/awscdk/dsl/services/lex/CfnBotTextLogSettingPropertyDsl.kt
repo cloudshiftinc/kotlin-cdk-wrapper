@@ -7,6 +7,28 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Defines settings to enable text conversation logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * TextLogSettingProperty textLogSettingProperty = TextLogSettingProperty.builder()
+ * .destination(TextLogDestinationProperty.builder()
+ * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .logPrefix("logPrefix")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-textlogsetting.html)
+ */
 @CdkDslMarker
 public class CfnBotTextLogSettingPropertyDsl {
   private val cdkBuilder: CfnBot.TextLogSettingProperty.Builder =

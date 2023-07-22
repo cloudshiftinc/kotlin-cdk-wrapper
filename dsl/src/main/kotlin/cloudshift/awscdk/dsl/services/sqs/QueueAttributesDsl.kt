@@ -7,6 +7,25 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.sqs.QueueAttributes
 
+/**
+ * Reference to a queue.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * QueueAttributes queueAttributes = QueueAttributes.builder()
+ * .queueArn("queueArn")
+ * // the properties below are optional
+ * .fifo(false)
+ * .keyArn("keyArn")
+ * .queueName("queueName")
+ * .queueUrl("queueUrl")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueAttributesDsl {
   private val cdkBuilder: QueueAttributes.Builder = QueueAttributes.builder()

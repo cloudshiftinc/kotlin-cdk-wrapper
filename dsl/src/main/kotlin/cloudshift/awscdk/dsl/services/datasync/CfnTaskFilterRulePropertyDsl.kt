@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnTask
 
+/**
+ * Specifies which files, folders, and objects to include or exclude when transferring files from
+ * source to destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * FilterRuleProperty filterRuleProperty = FilterRuleProperty.builder()
+ * .filterType("filterType")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-filterrule.html)
+ */
 @CdkDslMarker
 public class CfnTaskFilterRulePropertyDsl {
   private val cdkBuilder: CfnTask.FilterRuleProperty.Builder = CfnTask.FilterRuleProperty.builder()

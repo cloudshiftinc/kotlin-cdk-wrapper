@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains information about a volume that Linux processes in a container can access.
+ *
+ * When you define a volume, the AWS IoT Greengrass Core software mounts the source files to the
+ * destination inside the container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * LambdaVolumeMountProperty lambdaVolumeMountProperty = LambdaVolumeMountProperty.builder()
+ * .addGroupOwner(false)
+ * .destinationPath("destinationPath")
+ * .permission("permission")
+ * .sourcePath("sourcePath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdavolumemount.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionLambdaVolumeMountPropertyDsl {
   private val cdkBuilder: CfnComponentVersion.LambdaVolumeMountProperty.Builder =

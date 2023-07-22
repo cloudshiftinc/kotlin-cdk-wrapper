@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnEventSourceMapping
 
+/**
+ * A structure within a `FilterCriteria` object that defines an event filtering pattern.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * FilterProperty filterProperty = FilterProperty.builder()
+ * .pattern("pattern")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-eventsourcemapping-filter.html)
+ */
 @CdkDslMarker
 public class CfnEventSourceMappingFilterPropertyDsl {
   private val cdkBuilder: CfnEventSourceMapping.FilterProperty.Builder =

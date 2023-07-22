@@ -15,6 +15,80 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lambda.CfnFunction
 import software.amazon.awscdk.services.lambda.CfnFunctionProps
 
+/**
+ * Properties for defining a `CfnFunction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnFunctionProps cfnFunctionProps = CfnFunctionProps.builder()
+ * .code(CodeProperty.builder()
+ * .imageUri("imageUri")
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .zipFile("zipFile")
+ * .build())
+ * .role("role")
+ * // the properties below are optional
+ * .architectures(List.of("architectures"))
+ * .codeSigningConfigArn("codeSigningConfigArn")
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .targetArn("targetArn")
+ * .build())
+ * .description("description")
+ * .environment(EnvironmentProperty.builder()
+ * .variables(Map.of(
+ * "variablesKey", "variables"))
+ * .build())
+ * .ephemeralStorage(EphemeralStorageProperty.builder()
+ * .size(123)
+ * .build())
+ * .fileSystemConfigs(List.of(FileSystemConfigProperty.builder()
+ * .arn("arn")
+ * .localMountPath("localMountPath")
+ * .build()))
+ * .functionName("functionName")
+ * .handler("handler")
+ * .imageConfig(ImageConfigProperty.builder()
+ * .command(List.of("command"))
+ * .entryPoint(List.of("entryPoint"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .kmsKeyArn("kmsKeyArn")
+ * .layers(List.of("layers"))
+ * .memorySize(123)
+ * .packageType("packageType")
+ * .reservedConcurrentExecutions(123)
+ * .runtime("runtime")
+ * .runtimeManagementConfig(RuntimeManagementConfigProperty.builder()
+ * .updateRuntimeOn("updateRuntimeOn")
+ * // the properties below are optional
+ * .runtimeVersionArn("runtimeVersionArn")
+ * .build())
+ * .snapStart(SnapStartProperty.builder()
+ * .applyOn("applyOn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeout(123)
+ * .tracingConfig(TracingConfigProperty.builder()
+ * .mode("mode")
+ * .build())
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html)
+ */
 @CdkDslMarker
 public class CfnFunctionPropsDsl {
   private val cdkBuilder: CfnFunctionProps.Builder = CfnFunctionProps.builder()

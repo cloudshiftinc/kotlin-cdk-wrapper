@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnTable
 
+/**
+ * A structure that contains schema identity fields.
+ *
+ * Either this or the `SchemaVersionId` has to be
+ * provided.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * SchemaIdProperty schemaIdProperty = SchemaIdProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html)
+ */
 @CdkDslMarker
 public class CfnTableSchemaIdPropertyDsl {
   private val cdkBuilder: CfnTable.SchemaIdProperty.Builder = CfnTable.SchemaIdProperty.builder()

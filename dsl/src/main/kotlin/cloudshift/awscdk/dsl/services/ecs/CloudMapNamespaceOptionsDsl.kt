@@ -9,6 +9,36 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions
 import software.amazon.awscdk.services.servicediscovery.NamespaceType
 
+/**
+ * The options for creating an AWS Cloud Map namespace.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * ContainerDefinitionOptions containerOptions;
+ * ContainerDefinition container = taskDefinition.addContainer("MyContainer", containerOptions);
+ * container.addPortMappings(PortMapping.builder()
+ * .name("api")
+ * .containerPort(8080)
+ * .build());
+ * cluster.addDefaultCloudMapNamespace(CloudMapNamespaceOptions.builder()
+ * .name("local")
+ * .build());
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .serviceConnectConfiguration(ServiceConnectProps.builder()
+ * .services(List.of(ServiceConnectService.builder()
+ * .portMappingName("api")
+ * .dnsName("http-api")
+ * .port(80)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudMapNamespaceOptionsDsl {
   private val cdkBuilder: CloudMapNamespaceOptions.Builder = CloudMapNamespaceOptions.builder()

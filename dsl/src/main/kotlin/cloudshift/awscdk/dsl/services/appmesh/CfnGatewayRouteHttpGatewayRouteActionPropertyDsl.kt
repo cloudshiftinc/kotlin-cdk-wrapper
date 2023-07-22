@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 
+/**
+ * An object that represents the action to take if a match is determined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpGatewayRouteActionProperty httpGatewayRouteActionProperty =
+ * HttpGatewayRouteActionProperty.builder()
+ * .target(GatewayRouteTargetProperty.builder()
+ * .virtualService(GatewayRouteVirtualServiceProperty.builder()
+ * .virtualServiceName("virtualServiceName")
+ * .build())
+ * // the properties below are optional
+ * .port(123)
+ * .build())
+ * // the properties below are optional
+ * .rewrite(HttpGatewayRouteRewriteProperty.builder()
+ * .hostname(GatewayRouteHostnameRewriteProperty.builder()
+ * .defaultTargetHostname("defaultTargetHostname")
+ * .build())
+ * .path(HttpGatewayRoutePathRewriteProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .prefix(HttpGatewayRoutePrefixRewriteProperty.builder()
+ * .defaultPrefix("defaultPrefix")
+ * .value("value")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-gatewayroute-httpgatewayrouteaction.html)
+ */
 @CdkDslMarker
 public class CfnGatewayRouteHttpGatewayRouteActionPropertyDsl {
   private val cdkBuilder: CfnGatewayRoute.HttpGatewayRouteActionProperty.Builder =

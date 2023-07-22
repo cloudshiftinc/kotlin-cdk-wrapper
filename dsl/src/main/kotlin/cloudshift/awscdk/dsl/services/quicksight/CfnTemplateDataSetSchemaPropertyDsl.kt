@@ -9,6 +9,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Dataset schema.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DataSetSchemaProperty dataSetSchemaProperty = DataSetSchemaProperty.builder()
+ * .columnSchemaList(List.of(ColumnSchemaProperty.builder()
+ * .dataType("dataType")
+ * .geographicRole("geographicRole")
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-datasetschema.html)
+ */
 @CdkDslMarker
 public class CfnTemplateDataSetSchemaPropertyDsl {
   private val cdkBuilder: CfnTemplate.DataSetSchemaProperty.Builder =

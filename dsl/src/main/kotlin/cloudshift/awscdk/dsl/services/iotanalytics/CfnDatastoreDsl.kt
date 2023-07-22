@@ -13,6 +13,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 import software.constructs.Construct
 
+/**
+ * AWS::IoTAnalytics::Datastore resource is a repository for messages.
+ *
+ * For more information, see [How to Use AWS IoT
+ * Analytics](https://docs.aws.amazon.com/iotanalytics/latest/userguide/welcome.html#aws-iot-analytics-how)
+ * in the *AWS IoT Analytics User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * Object jsonConfiguration;
+ * Object serviceManagedS3;
+ * CfnDatastore cfnDatastore = CfnDatastore.Builder.create(this, "MyCfnDatastore")
+ * .datastoreName("datastoreName")
+ * .datastorePartitions(DatastorePartitionsProperty.builder()
+ * .partitions(List.of(DatastorePartitionProperty.builder()
+ * .partition(PartitionProperty.builder()
+ * .attributeName("attributeName")
+ * .build())
+ * .timestampPartition(TimestampPartitionProperty.builder()
+ * .attributeName("attributeName")
+ * // the properties below are optional
+ * .timestampFormat("timestampFormat")
+ * .build())
+ * .build()))
+ * .build())
+ * .datastoreStorage(DatastoreStorageProperty.builder()
+ * .customerManagedS3(CustomerManagedS3Property.builder()
+ * .bucket("bucket")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .iotSiteWiseMultiLayerStorage(IotSiteWiseMultiLayerStorageProperty.builder()
+ * .customerManagedS3Storage(CustomerManagedS3StorageProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build())
+ * .build())
+ * .serviceManagedS3(serviceManagedS3)
+ * .build())
+ * .fileFormatConfiguration(FileFormatConfigurationProperty.builder()
+ * .jsonConfiguration(jsonConfiguration)
+ * .parquetConfiguration(ParquetConfigurationProperty.builder()
+ * .schemaDefinition(SchemaDefinitionProperty.builder()
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * .retentionPeriod(RetentionPeriodProperty.builder()
+ * .numberOfDays(123)
+ * .unlimited(false)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotanalytics-datastore.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreDsl(
   scope: Construct,

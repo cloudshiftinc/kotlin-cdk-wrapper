@@ -8,6 +8,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotanalytics.CfnDataset
 
+/**
+ * An instance of a variable to be passed to the `containerAction` execution.
+ *
+ * Each variable must have a name and a value given by one of `stringValue` ,
+ * `datasetContentVersionValue` , or `outputFileUriValue` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * VariableProperty variableProperty = VariableProperty.builder()
+ * .variableName("variableName")
+ * // the properties below are optional
+ * .datasetContentVersionValue(DatasetContentVersionValueProperty.builder()
+ * .datasetName("datasetName")
+ * .build())
+ * .doubleValue(123)
+ * .outputFileUriValue(OutputFileUriValueProperty.builder()
+ * .fileName("fileName")
+ * .build())
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-dataset-variable.html)
+ */
 @CdkDslMarker
 public class CfnDatasetVariablePropertyDsl {
   private val cdkBuilder: CfnDataset.VariableProperty.Builder =

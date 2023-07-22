@@ -10,6 +10,21 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudwatch.LogQueryVisualizationType
 import software.amazon.awscdk.services.cloudwatch.LogQueryWidgetProps
 
+/**
+ * Properties for a Query widget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(LogQueryWidget.Builder.create()
+ * .logGroupNames(List.of("my-log-group"))
+ * .view(LogQueryVisualizationType.TABLE)
+ * // The lines will be automatically combined using '\n|'.
+ * .queryLines(List.of("fields &#64;message", "filter &#64;message like /Error/"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LogQueryWidgetPropsDsl {
   private val cdkBuilder: LogQueryWidgetProps.Builder = LogQueryWidgetProps.builder()

@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration
 
+/**
+ * These are IAM Identity Center identity store attributes that you can configure for use in
+ * attributes-based access control (ABAC).
+ *
+ * You can create permissions policies that determine who can access your AWS resources based upon
+ * the configured attribute values. When you enable ABAC and specify `AccessControlAttributes` , IAM
+ * Identity Center passes the attribute values of the authenticated user into IAM for use in policy
+ * evaluation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * AccessControlAttributeProperty accessControlAttributeProperty =
+ * AccessControlAttributeProperty.builder()
+ * .key("key")
+ * .value(AccessControlAttributeValueProperty.builder()
+ * .source(List.of("source"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sso-instanceaccesscontrolattributeconfiguration-accesscontrolattribute.html)
+ */
 @CdkDslMarker
 public class CfnInstanceAccessControlAttributeConfigurationAccessControlAttributePropertyDsl {
   private val cdkBuilder:

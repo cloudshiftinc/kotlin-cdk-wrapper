@@ -14,6 +14,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.athena.CfnDataCatalog
 import software.constructs.Construct
 
+/**
+ * The AWS::Athena::DataCatalog resource specifies an Amazon Athena data catalog, which contains a
+ * name, description, type, parameters, and tags.
+ *
+ * For more information, see
+ * [DataCatalog](https://docs.aws.amazon.com/athena/latest/APIReference/API_DataCatalog.html) in the
+ * *Amazon Athena API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * CfnDataCatalog cfnDataCatalog = CfnDataCatalog.Builder.create(this, "MyCfnDataCatalog")
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-athena-datacatalog.html)
+ */
 @CdkDslMarker
 public class CfnDataCatalogDsl(
   scope: Construct,

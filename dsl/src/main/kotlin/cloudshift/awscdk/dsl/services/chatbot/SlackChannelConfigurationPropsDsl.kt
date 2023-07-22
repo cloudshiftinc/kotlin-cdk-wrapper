@@ -16,6 +16,23 @@ import software.amazon.awscdk.services.logs.LogRetentionRetryOptions
 import software.amazon.awscdk.services.logs.RetentionDays
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Properties for a new Slack channel configuration.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.chatbot.*;
+ * Project project;
+ * SlackChannelConfiguration target = SlackChannelConfiguration.Builder.create(this,
+ * "MySlackChannel")
+ * .slackChannelConfigurationName("YOUR_CHANNEL_NAME")
+ * .slackWorkspaceId("YOUR_SLACK_WORKSPACE_ID")
+ * .slackChannelId("YOUR_SLACK_CHANNEL_ID")
+ * .build();
+ * INotificationRule rule = project.notifyOnBuildSucceeded("NotifyOnBuildSucceeded", target);
+ * ```
+ */
 @CdkDslMarker
 public class SlackChannelConfigurationPropsDsl {
   private val cdkBuilder: SlackChannelConfigurationProps.Builder =

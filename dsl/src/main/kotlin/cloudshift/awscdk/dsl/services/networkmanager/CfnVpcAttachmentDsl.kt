@@ -13,6 +13,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnVpcAttachment
 import software.constructs.Construct
 
+/**
+ * Creates a VPC attachment on an edge location of a core network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnVpcAttachment cfnVpcAttachment = CfnVpcAttachment.Builder.create(this, "MyCfnVpcAttachment")
+ * .coreNetworkId("coreNetworkId")
+ * .subnetArns(List.of("subnetArns"))
+ * .vpcArn("vpcArn")
+ * // the properties below are optional
+ * .options(VpcOptionsProperty.builder()
+ * .applianceModeSupport(false)
+ * .ipv6Support(false)
+ * .build())
+ * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-vpcattachment.html)
+ */
 @CdkDslMarker
 public class CfnVpcAttachmentDsl(
   scope: Construct,

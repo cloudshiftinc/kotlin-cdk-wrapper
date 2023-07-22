@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A custom filter that filters based on a single value.
+ *
+ * This filter can be partially matched.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CustomFilterConfigurationProperty customFilterConfigurationProperty =
+ * CustomFilterConfigurationProperty.builder()
+ * .matchOperator("matchOperator")
+ * .nullOption("nullOption")
+ * // the properties below are optional
+ * .categoryValue("categoryValue")
+ * .parameterName("parameterName")
+ * .selectAllOptions("selectAllOptions")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-customfilterconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardCustomFilterConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.CustomFilterConfigurationProperty.Builder =

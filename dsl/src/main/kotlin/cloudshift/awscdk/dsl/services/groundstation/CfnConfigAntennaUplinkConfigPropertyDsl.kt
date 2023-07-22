@@ -7,6 +7,34 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Provides information about how AWS Ground Station should configure an antenna for uplink during a
+ * contact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * AntennaUplinkConfigProperty antennaUplinkConfigProperty = AntennaUplinkConfigProperty.builder()
+ * .spectrumConfig(UplinkSpectrumConfigProperty.builder()
+ * .centerFrequency(FrequencyProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .polarization("polarization")
+ * .build())
+ * .targetEirp(EirpProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .transmitDisabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html)
+ */
 @CdkDslMarker
 public class CfnConfigAntennaUplinkConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.AntennaUplinkConfigProperty.Builder =

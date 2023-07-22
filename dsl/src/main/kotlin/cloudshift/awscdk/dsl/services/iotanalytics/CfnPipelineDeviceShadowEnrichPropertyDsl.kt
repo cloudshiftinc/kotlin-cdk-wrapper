@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that adds information from the AWS IoT Device Shadows service to a message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DeviceShadowEnrichProperty deviceShadowEnrichProperty = DeviceShadowEnrichProperty.builder()
+ * .attribute("attribute")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .thingName("thingName")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceshadowenrich.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDeviceShadowEnrichPropertyDsl {
   private val cdkBuilder: CfnPipeline.DeviceShadowEnrichProperty.Builder =

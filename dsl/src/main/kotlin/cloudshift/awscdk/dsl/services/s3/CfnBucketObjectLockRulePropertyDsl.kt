@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the Object Lock rule for the specified object.
+ *
+ * Enable the this rule when you apply `ObjectLockConfiguration` to a bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * ObjectLockRuleProperty objectLockRuleProperty = ObjectLockRuleProperty.builder()
+ * .defaultRetention(DefaultRetentionProperty.builder()
+ * .days(123)
+ * .mode("mode")
+ * .years(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-objectlockrule.html)
+ */
 @CdkDslMarker
 public class CfnBucketObjectLockRulePropertyDsl {
   private val cdkBuilder: CfnBucket.ObjectLockRuleProperty.Builder =

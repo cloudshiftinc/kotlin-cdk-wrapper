@@ -11,6 +11,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApi
 
+/**
+ * The `Cors` property specifies a CORS configuration for an API.
+ *
+ * Supported only for HTTP APIs. See [Configuring
+ * CORS](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html) for more
+ * information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * CorsProperty corsProperty = CorsProperty.builder()
+ * .allowCredentials(false)
+ * .allowHeaders(List.of("allowHeaders"))
+ * .allowMethods(List.of("allowMethods"))
+ * .allowOrigins(List.of("allowOrigins"))
+ * .exposeHeaders(List.of("exposeHeaders"))
+ * .maxAge(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-api-cors.html)
+ */
 @CdkDslMarker
 public class CfnApiCorsPropertyDsl {
   private val cdkBuilder: CfnApi.CorsProperty.Builder = CfnApi.CorsProperty.builder()

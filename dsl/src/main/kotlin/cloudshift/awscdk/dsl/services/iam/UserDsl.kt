@@ -13,6 +13,21 @@ import software.amazon.awscdk.services.iam.IManagedPolicy
 import software.amazon.awscdk.services.iam.User
 import software.constructs.Construct
 
+/**
+ * Define a new IAM user.
+ *
+ * Example:
+ *
+ * ```
+ * IChainable definition;
+ * User user = new User(this, "MyUser");
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+ * .definition(definition)
+ * .build();
+ * //give user permission to send task success to the state machine
+ * stateMachine.grant(user, "states:SendTaskSuccess");
+ * ```
+ */
 @CdkDslMarker
 public class UserDsl(
   scope: Construct,

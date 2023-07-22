@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSubnetCidrBlock
 import software.constructs.Construct
 
+/**
+ * Associates a CIDR block with your subnet.
+ *
+ * You can associate a single IPv6 CIDR block with your subnet. An IPv6 CIDR block must have a
+ * prefix length of /64.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSubnetCidrBlock cfnSubnetCidrBlock = CfnSubnetCidrBlock.Builder.create(this,
+ * "MyCfnSubnetCidrBlock")
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetcidrblock.html)
+ */
 @CdkDslMarker
 public class CfnSubnetCidrBlockDsl(
   scope: Construct,

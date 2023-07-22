@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.groundstation.CfnMissionProfile
 
+/**
+ * A dataflow edge defines from where and to where data will flow during a contact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * DataflowEdgeProperty dataflowEdgeProperty = DataflowEdgeProperty.builder()
+ * .destination("destination")
+ * .source("source")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-missionprofile-dataflowedge.html)
+ */
 @CdkDslMarker
 public class CfnMissionProfileDataflowEdgePropertyDsl {
   private val cdkBuilder: CfnMissionProfile.DataflowEdgeProperty.Builder =

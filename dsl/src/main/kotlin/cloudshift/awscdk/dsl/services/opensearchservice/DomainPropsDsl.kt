@@ -29,6 +29,25 @@ import software.amazon.awscdk.services.opensearchservice.LoggingOptions
 import software.amazon.awscdk.services.opensearchservice.TLSSecurityPolicy
 import software.amazon.awscdk.services.opensearchservice.ZoneAwarenessConfig
 
+/**
+ * Properties for an Amazon OpenSearch Service domain.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(100)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
+ * .build())
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DomainPropsDsl {
   private val cdkBuilder: DomainProps.Builder = DomainProps.builder()

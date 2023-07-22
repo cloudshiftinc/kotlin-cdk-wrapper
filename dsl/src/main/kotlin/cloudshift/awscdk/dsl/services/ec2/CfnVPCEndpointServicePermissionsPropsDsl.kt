@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissionsProps
 
+/**
+ * Properties for defining a `CfnVPCEndpointServicePermissions`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointServicePermissionsProps cfnVPCEndpointServicePermissionsProps =
+ * CfnVPCEndpointServicePermissionsProps.builder()
+ * .serviceId("serviceId")
+ * // the properties below are optional
+ * .allowedPrincipals(List.of("allowedPrincipals"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservicepermissions.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointServicePermissionsPropsDsl {
   private val cdkBuilder: CfnVPCEndpointServicePermissionsProps.Builder =

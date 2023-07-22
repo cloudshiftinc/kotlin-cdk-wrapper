@@ -12,6 +12,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ce.CfnAnomalySubscription
 import software.constructs.Construct
 
+/**
+ * The `AWS::CE::AnomalySubscription` resource (also referred to as an alert subscription) is a Cost
+ * Explorer resource type that sends notifications about specific anomalies that meet an alerting
+ * criteria defined by you.
+ *
+ * You can specify the frequency of the alerts and the subscribers to notify.
+ *
+ * Anomaly subscriptions can be associated with one or more
+ * [`AWS::CE::AnomalyMonitor`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalymonitor.html)
+ * resources, and they only send notifications about anomalies detected by those associated monitors.
+ * You can also configure a threshold to further control which anomalies are included in the
+ * notifications.
+ *
+ * Anomalies that don’t exceed the chosen threshold and therefore don’t trigger notifications from
+ * an anomaly subscription will still be available on the console and from the
+ * [`GetAnomalies`](https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_GetAnomalies.html)
+ * API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ce.*;
+ * CfnAnomalySubscription cfnAnomalySubscription = CfnAnomalySubscription.Builder.create(this,
+ * "MyCfnAnomalySubscription")
+ * .frequency("frequency")
+ * .monitorArnList(List.of("monitorArnList"))
+ * .subscribers(List.of(SubscriberProperty.builder()
+ * .address("address")
+ * .type("type")
+ * // the properties below are optional
+ * .status("status")
+ * .build()))
+ * .subscriptionName("subscriptionName")
+ * // the properties below are optional
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .threshold(123)
+ * .thresholdExpression("thresholdExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ce-anomalysubscription.html)
+ */
 @CdkDslMarker
 public class CfnAnomalySubscriptionDsl(
   scope: Construct,

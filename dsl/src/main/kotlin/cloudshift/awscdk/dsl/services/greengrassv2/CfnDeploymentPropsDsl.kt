@@ -12,6 +12,75 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 import software.amazon.awscdk.services.greengrassv2.CfnDeploymentProps
 
+/**
+ * Properties for defining a `CfnDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * Object rateIncreaseCriteria;
+ * CfnDeploymentProps cfnDeploymentProps = CfnDeploymentProps.builder()
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .components(Map.of(
+ * "componentsKey", ComponentDeploymentSpecificationProperty.builder()
+ * .componentVersion("componentVersion")
+ * .configurationUpdate(ComponentConfigurationUpdateProperty.builder()
+ * .merge("merge")
+ * .reset(List.of("reset"))
+ * .build())
+ * .runWith(ComponentRunWithProperty.builder()
+ * .posixUser("posixUser")
+ * .systemResourceLimits(SystemResourceLimitsProperty.builder()
+ * .cpus(123)
+ * .memory(123)
+ * .build())
+ * .windowsUser("windowsUser")
+ * .build())
+ * .build()))
+ * .deploymentName("deploymentName")
+ * .deploymentPolicies(DeploymentPoliciesProperty.builder()
+ * .componentUpdatePolicy(DeploymentComponentUpdatePolicyProperty.builder()
+ * .action("action")
+ * .timeoutInSeconds(123)
+ * .build())
+ * .configurationValidationPolicy(DeploymentConfigurationValidationPolicyProperty.builder()
+ * .timeoutInSeconds(123)
+ * .build())
+ * .failureHandlingPolicy("failureHandlingPolicy")
+ * .build())
+ * .iotJobConfiguration(DeploymentIoTJobConfigurationProperty.builder()
+ * .abortConfig(IoTJobAbortConfigProperty.builder()
+ * .criteriaList(List.of(IoTJobAbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build()))
+ * .build())
+ * .jobExecutionsRolloutConfig(IoTJobExecutionsRolloutConfigProperty.builder()
+ * .exponentialRate(IoTJobExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(rateIncreaseCriteria)
+ * .build())
+ * .maximumPerMinute(123)
+ * .build())
+ * .timeoutConfig(IoTJobTimeoutConfigProperty.builder()
+ * .inProgressTimeoutInMinutes(123)
+ * .build())
+ * .build())
+ * .parentTargetArn("parentTargetArn")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrassv2-deployment.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentPropsDsl {
   private val cdkBuilder: CfnDeploymentProps.Builder = CfnDeploymentProps.builder()

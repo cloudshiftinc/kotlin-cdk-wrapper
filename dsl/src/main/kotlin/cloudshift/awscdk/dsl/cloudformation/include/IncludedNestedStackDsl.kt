@@ -7,6 +7,19 @@ import software.amazon.awscdk.NestedStack
 import software.amazon.awscdk.cloudformation.include.CfnInclude
 import software.amazon.awscdk.cloudformation.include.IncludedNestedStack
 
+/**
+ * The type returned from `CfnInclude.getNestedStack`. Contains both the NestedStack object and
+ * CfnInclude representations of the child stack.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude parentTemplate;
+ * IncludedNestedStack includedChildStack = parentTemplate.getNestedStack("ChildStack");
+ * NestedStack childStack = includedChildStack.getStack();
+ * CfnInclude childTemplate = includedChildStack.getIncludedTemplate();
+ * ```
+ */
 @CdkDslMarker
 public class IncludedNestedStackDsl {
   private val cdkBuilder: IncludedNestedStack.Builder = IncludedNestedStack.builder()

@@ -26,6 +26,27 @@ import software.amazon.awscdk.services.s3.ObjectOwnership
 import software.amazon.awscdk.services.s3.RedirectTarget
 import software.amazon.awscdk.services.s3.RoutingRule
 
+/**
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket = Bucket.Builder.create(this, "MyBucket")
+ * .versioned(true)
+ * .build();
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact sourceOutput = new Artifact();
+ * S3SourceAction sourceAction = S3SourceAction.Builder.create()
+ * .actionName("S3Source")
+ * .bucket(sourceBucket)
+ * .bucketKey("path/to/file.zip")
+ * .output(sourceOutput)
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BucketPropsDsl {
   private val cdkBuilder: BucketProps.Builder = BucketProps.builder()

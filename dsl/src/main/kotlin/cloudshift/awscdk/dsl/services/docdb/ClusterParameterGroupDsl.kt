@@ -8,6 +8,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.docdb.ClusterParameterGroup
 import software.constructs.Construct
 
+/**
+ * A cluster parameter group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * ClusterParameterGroup clusterParameterGroup = ClusterParameterGroup.Builder.create(this,
+ * "MyClusterParameterGroup")
+ * .family("family")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * // the properties below are optional
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .description("description")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterParameterGroupDsl(
   scope: Construct,

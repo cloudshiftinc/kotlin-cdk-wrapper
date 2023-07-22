@@ -17,6 +17,60 @@ import software.amazon.awscdk.services.ec2.InitFileAssetOptions
 import software.amazon.awscdk.services.ec2.InitServiceRestartHandle
 import software.amazon.awscdk.services.iam.IGrantable
 
+/**
+ * Additional options for creating an InitFile from an asset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * DockerImage dockerImage;
+ * IGrantable grantable;
+ * InitServiceRestartHandle initServiceRestartHandle;
+ * ILocalBundling localBundling;
+ * InitFileAssetOptions initFileAssetOptions = InitFileAssetOptions.builder()
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .base64Encoded(false)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .deployTime(false)
+ * .exclude(List.of("exclude"))
+ * .followSymlinks(SymlinkFollowMode.NEVER)
+ * .group("group")
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .mode("mode")
+ * .owner("owner")
+ * .readers(List.of(grantable))
+ * .serviceRestartHandles(List.of(initServiceRestartHandle))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InitFileAssetOptionsDsl {
   private val cdkBuilder: InitFileAssetOptions.Builder = InitFileAssetOptions.builder()

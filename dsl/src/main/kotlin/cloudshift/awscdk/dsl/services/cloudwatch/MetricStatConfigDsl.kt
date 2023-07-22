@@ -12,6 +12,37 @@ import software.amazon.awscdk.services.cloudwatch.MetricStatConfig
 import kotlin.Unit as KotlinUnit
 import software.amazon.awscdk.services.cloudwatch.Unit as CloudwatchUnit
 
+/**
+ * Properties for a concrete metric.
+ *
+ * NOTE: `unit` is no longer on this object since it is only used for `Alarms`, and doesn't mean
+ * what one
+ * would expect it to mean there anyway. It is most likely to be misused.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Object value;
+ * MetricStatConfig metricStatConfig = MetricStatConfig.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .period(Duration.minutes(30))
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .account("account")
+ * .dimensions(List.of(Dimension.builder()
+ * .name("name")
+ * .value(value)
+ * .build()))
+ * .region("region")
+ * .unitFilter(Unit.SECONDS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricStatConfigDsl {
   private val cdkBuilder: MetricStatConfig.Builder = MetricStatConfig.builder()

@@ -17,6 +17,69 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sqs.CfnQueue
 import software.constructs.Construct
 
+/**
+ * The `AWS::SQS::Queue` resource creates an Amazon SQS standard or FIFO queue.
+ *
+ * Keep the following caveats in mind:
+ *
+ * * If you don't specify the `FifoQueue` property, Amazon SQS creates a standard queue.
+ *
+ *
+ * You can't change the queue type after you create it and you can't convert an existing standard
+ * queue into a FIFO queue. You must either create a new FIFO queue for your application or delete your
+ * existing standard queue and recreate it as a FIFO queue. For more information, see [Moving from a
+ * standard queue to a FIFO
+ * queue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues-moving.html)
+ * in the *Amazon SQS Developer Guide* .
+ *
+ *
+ * * If you don't provide a value for a property, the queue is created with the default value for
+ * the property.
+ * * If you delete a queue, you must wait at least 60 seconds before creating a queue with the same
+ * name.
+ * * To successfully create a new queue, you must provide a queue name that adheres to the [limits
+ * related to
+ * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/limits-queues.html)
+ * and is unique within the scope of your queues.
+ *
+ * For more information about creating FIFO (first-in-first-out) queues, see [Creating an Amazon SQS
+ * queue ( AWS CloudFormation
+ * )](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/screate-queue-cloudformation.html)
+ * in the *Amazon SQS Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Object redriveAllowPolicy;
+ * Object redrivePolicy;
+ * CfnQueue cfnQueue = CfnQueue.Builder.create(this, "MyCfnQueue")
+ * .contentBasedDeduplication(false)
+ * .deduplicationScope("deduplicationScope")
+ * .delaySeconds(123)
+ * .fifoQueue(false)
+ * .fifoThroughputLimit("fifoThroughputLimit")
+ * .kmsDataKeyReusePeriodSeconds(123)
+ * .kmsMasterKeyId("kmsMasterKeyId")
+ * .maximumMessageSize(123)
+ * .messageRetentionPeriod(123)
+ * .queueName("queueName")
+ * .receiveMessageWaitTimeSeconds(123)
+ * .redriveAllowPolicy(redriveAllowPolicy)
+ * .redrivePolicy(redrivePolicy)
+ * .sqsManagedSseEnabled(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .visibilityTimeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html)
+ */
 @CdkDslMarker
 public class CfnQueueDsl(
   scope: Construct,

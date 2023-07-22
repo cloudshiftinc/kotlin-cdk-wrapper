@@ -25,6 +25,77 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.lambda.ILayerVersion
 
+/**
+ * Options for EKS clusters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.eks.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * AlbControllerVersion albControllerVersion;
+ * EndpointAccess endpointAccess;
+ * Key key;
+ * KubernetesVersion kubernetesVersion;
+ * LayerVersion layerVersion;
+ * Object policy;
+ * Role role;
+ * SecurityGroup securityGroup;
+ * Size size;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * ClusterOptions clusterOptions = ClusterOptions.builder()
+ * .version(kubernetesVersion)
+ * // the properties below are optional
+ * .albController(AlbControllerOptions.builder()
+ * .version(albControllerVersion)
+ * // the properties below are optional
+ * .policy(policy)
+ * .repository("repository")
+ * .build())
+ * .awscliLayer(layerVersion)
+ * .clusterHandlerEnvironment(Map.of(
+ * "clusterHandlerEnvironmentKey", "clusterHandlerEnvironment"))
+ * .clusterHandlerSecurityGroup(securityGroup)
+ * .clusterLogging(List.of(ClusterLoggingTypes.API))
+ * .clusterName("clusterName")
+ * .coreDnsComputeType(CoreDnsComputeType.EC2)
+ * .endpointAccess(endpointAccess)
+ * .ipFamily(IpFamily.IP_V4)
+ * .kubectlEnvironment(Map.of(
+ * "kubectlEnvironmentKey", "kubectlEnvironment"))
+ * .kubectlLayer(layerVersion)
+ * .kubectlMemory(size)
+ * .mastersRole(role)
+ * .onEventLayer(layerVersion)
+ * .outputClusterName(false)
+ * .outputConfigCommand(false)
+ * .outputMastersRoleArn(false)
+ * .placeClusterHandlerInVpc(false)
+ * .prune(false)
+ * .role(role)
+ * .secretsEncryptionKey(key)
+ * .securityGroup(securityGroup)
+ * .serviceIpv4Cidr("serviceIpv4Cidr")
+ * .vpc(vpc)
+ * .vpcSubnets(List.of(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterOptionsDsl {
   private val cdkBuilder: ClusterOptions.Builder = ClusterOptions.builder()

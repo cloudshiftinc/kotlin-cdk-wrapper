@@ -11,6 +11,19 @@ import software.amazon.awscdk.services.ses.IConfigurationSet
 import software.amazon.awscdk.services.ses.Identity
 import software.amazon.awscdk.services.ses.MailFromBehaviorOnMxFailure
 
+/**
+ * Properties for an email identity.
+ *
+ * Example:
+ *
+ * ```
+ * IPublicHostedZone myHostedZone;
+ * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
+ * .identity(Identity.publicHostedZone(myHostedZone))
+ * .mailFromDomain("mail.cdk.dev")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmailIdentityPropsDsl {
   private val cdkBuilder: EmailIdentityProps.Builder = EmailIdentityProps.builder()

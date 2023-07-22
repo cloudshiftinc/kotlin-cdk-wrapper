@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies information about where to publish analysis or configuration results for an Amazon S3
+ * bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * DestinationProperty destinationProperty = DestinationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .format("format")
+ * // the properties below are optional
+ * .bucketAccountId("bucketAccountId")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-destination.html)
+ */
 @CdkDslMarker
 public class CfnBucketDestinationPropertyDsl {
   private val cdkBuilder: CfnBucket.DestinationProperty.Builder =

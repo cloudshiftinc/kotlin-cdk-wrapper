@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.AuthFlow
 
+/**
+ * Types of authentication flow.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "pool");
+ * pool.addClient("app-client", UserPoolClientOptions.builder()
+ * .authFlows(AuthFlow.builder()
+ * .userPassword(true)
+ * .userSrp(true)
+ * .build())
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html)
+ */
 @CdkDslMarker
 public class AuthFlowDsl {
   private val cdkBuilder: AuthFlow.Builder = AuthFlow.builder()

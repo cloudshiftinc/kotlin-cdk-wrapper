@@ -14,6 +14,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codecommit.CfnRepository
 import software.amazon.awscdk.services.codecommit.CfnRepositoryProps
 
+/**
+ * Properties for defining a `CfnRepository`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * CfnRepositoryProps cfnRepositoryProps = CfnRepositoryProps.builder()
+ * .repositoryName("repositoryName")
+ * // the properties below are optional
+ * .code(CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * // the properties below are optional
+ * .branchName("branchName")
+ * .build())
+ * .repositoryDescription("repositoryDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .triggers(List.of(RepositoryTriggerProperty.builder()
+ * .destinationArn("destinationArn")
+ * .events(List.of("events"))
+ * .name("name")
+ * // the properties below are optional
+ * .branches(List.of("branches"))
+ * .customData("customData")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html)
+ */
 @CdkDslMarker
 public class CfnRepositoryPropsDsl {
   private val cdkBuilder: CfnRepositoryProps.Builder = CfnRepositoryProps.builder()

@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.events.RuleTargetInput
 import software.amazon.awscdk.services.events.targets.SqsQueueProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Customize the SQS Queue Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * Queue queue;
+ * RuleTargetInput ruleTargetInput;
+ * SqsQueueProps sqsQueueProps = SqsQueueProps.builder()
+ * .deadLetterQueue(queue)
+ * .maxEventAge(Duration.minutes(30))
+ * .message(ruleTargetInput)
+ * .messageGroupId("messageGroupId")
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SqsQueuePropsDsl {
   private val cdkBuilder: SqsQueueProps.Builder = SqsQueueProps.builder()

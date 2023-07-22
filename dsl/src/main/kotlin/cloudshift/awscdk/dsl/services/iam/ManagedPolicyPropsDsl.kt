@@ -14,6 +14,39 @@ import software.amazon.awscdk.services.iam.ManagedPolicyProps
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Properties for defining an IAM managed policy.
+ *
+ * Example:
+ *
+ * ```
+ * Map&lt;String, Object&gt; policyDocument = Map.of(
+ * "Version", "2012-10-17",
+ * "Statement", List.of(Map.of(
+ * "Sid", "FirstStatement",
+ * "Effect", "Allow",
+ * "Action", List.of("iam:ChangePassword"),
+ * "Resource", List.of("*")), Map.of(
+ * "Sid", "SecondStatement",
+ * "Effect", "Allow",
+ * "Action", List.of("s3:ListAllMyBuckets"),
+ * "Resource", List.of("*")), Map.of(
+ * "Sid", "ThirdStatement",
+ * "Effect", "Allow",
+ * "Action", List.of("s3:List*", "s3:Get*"),
+ * "Resource", List.of("arn:aws:s3:::confidential-data", "arn:aws:s3:::confidential-data/ *"),
+ * "Condition", Map.of("Bool", Map.of("aws:MultiFactorAuthPresent", "true")))));
+ * PolicyDocument customPolicyDocument = PolicyDocument.fromJson(policyDocument);
+ * // You can pass this document as an initial document to a ManagedPolicy
+ * // or inline Policy.
+ * ManagedPolicy newManagedPolicy = ManagedPolicy.Builder.create(this, "MyNewManagedPolicy")
+ * .document(customPolicyDocument)
+ * .build();
+ * Policy newPolicy = Policy.Builder.create(this, "MyNewPolicy")
+ * .document(customPolicyDocument)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ManagedPolicyPropsDsl {
   private val cdkBuilder: ManagedPolicyProps.Builder = ManagedPolicyProps.builder()

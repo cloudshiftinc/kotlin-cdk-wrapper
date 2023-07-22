@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.signer.Platform
 import software.amazon.awscdk.services.signer.SigningProfile
 import software.constructs.Construct
 
+/**
+ * Defines a Signing Profile.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SigningProfileDsl(
   scope: Construct,

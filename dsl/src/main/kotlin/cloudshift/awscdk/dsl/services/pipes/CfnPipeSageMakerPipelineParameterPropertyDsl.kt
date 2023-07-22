@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * Name/Value pair of a parameter to start execution of a SageMaker Model Building Pipeline.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * SageMakerPipelineParameterProperty sageMakerPipelineParameterProperty =
+ * SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-sagemakerpipelineparameter.html)
+ */
 @CdkDslMarker
 public class CfnPipeSageMakerPipelineParameterPropertyDsl {
   private val cdkBuilder: CfnPipe.SageMakerPipelineParameterProperty.Builder =

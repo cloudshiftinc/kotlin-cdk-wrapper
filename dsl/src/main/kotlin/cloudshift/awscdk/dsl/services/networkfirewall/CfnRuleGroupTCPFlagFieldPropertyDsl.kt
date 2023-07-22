@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * TCP flags and masks to inspect packets for. This is used in the `RuleGroup.MatchAttributes`
+ * specification.
+ *
+ * For example:
+ *
+ * `"TCPFlags": [ { "Flags": [ "ECE", "SYN" ], "Masks": [ "SYN", "ECE" ] } ]`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * TCPFlagFieldProperty tCPFlagFieldProperty = TCPFlagFieldProperty.builder()
+ * .flags(List.of("flags"))
+ * // the properties below are optional
+ * .masks(List.of("masks"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-tcpflagfield.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupTCPFlagFieldPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.TCPFlagFieldProperty.Builder =

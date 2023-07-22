@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SecurityGroupProps
 
+/**
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup sg1 = SecurityGroup.Builder.create(this, "sg1")
+ * .vpc(vpc)
+ * .build();
+ * SecurityGroup sg2 = SecurityGroup.Builder.create(this, "sg2")
+ * .vpc(vpc)
+ * .build();
+ * LaunchTemplate launchTemplate = LaunchTemplate.Builder.create(this, "LaunchTemplate")
+ * .machineImage(MachineImage.latestAmazonLinux2022())
+ * .securityGroup(sg1)
+ * .build();
+ * launchTemplate.addSecurityGroup(sg2);
+ * ```
+ */
 @CdkDslMarker
 public class SecurityGroupPropsDsl {
   private val cdkBuilder: SecurityGroupProps.Builder = SecurityGroupProps.builder()

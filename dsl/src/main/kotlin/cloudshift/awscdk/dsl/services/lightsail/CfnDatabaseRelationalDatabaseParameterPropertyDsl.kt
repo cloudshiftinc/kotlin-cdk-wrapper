@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDatabase
 
+/**
+ * `RelationalDatabaseParameter` is a property of the
+ * [AWS::Lightsail::Database](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-database.html)
+ * resource. It describes parameters for the database.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * RelationalDatabaseParameterProperty relationalDatabaseParameterProperty =
+ * RelationalDatabaseParameterProperty.builder()
+ * .allowedValues("allowedValues")
+ * .applyMethod("applyMethod")
+ * .applyType("applyType")
+ * .dataType("dataType")
+ * .description("description")
+ * .isModifiable(false)
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-database-relationaldatabaseparameter.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseRelationalDatabaseParameterPropertyDsl {
   private val cdkBuilder: CfnDatabase.RelationalDatabaseParameterProperty.Builder =

@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.devicefarm.CfnVPCEConfigurationProps
 
+/**
+ * Properties for defining a `CfnVPCEConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devicefarm.*;
+ * CfnVPCEConfigurationProps cfnVPCEConfigurationProps = CfnVPCEConfigurationProps.builder()
+ * .serviceDnsName("serviceDnsName")
+ * .vpceConfigurationName("vpceConfigurationName")
+ * .vpceServiceName("vpceServiceName")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpceConfigurationDescription("vpceConfigurationDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devicefarm-vpceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnVPCEConfigurationPropsDsl {
   private val cdkBuilder: CfnVPCEConfigurationProps.Builder = CfnVPCEConfigurationProps.builder()

@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies when an object transitions to a specified storage class.
+ *
+ * For more information about Amazon S3 lifecycle configuration rules, see [Transitioning Objects
+ * Using Amazon S3
+ * Lifecycle](https://docs.aws.amazon.com/AmazonS3/latest/dev/lifecycle-transition-general-considerations.html)
+ * in the *Amazon S3 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * TransitionProperty transitionProperty = TransitionProperty.builder()
+ * .storageClass("storageClass")
+ * // the properties below are optional
+ * .transitionDate(new Date())
+ * .transitionInDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-transition.html)
+ */
 @CdkDslMarker
 public class CfnBucketTransitionPropertyDsl {
   private val cdkBuilder: CfnBucket.TransitionProperty.Builder =

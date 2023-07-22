@@ -15,6 +15,27 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.s3.IBucket
 import software.constructs.Construct
 
+/**
+ * An AWS CodePipeline pipeline with its associated IAM role and S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // create a pipeline
+ * import software.amazon.awscdk.services.codecommit.*;
+ * // add a source action to the stage
+ * Repository repo;
+ * Artifact sourceArtifact;
+ * Pipeline pipeline = new Pipeline(this, "Pipeline");
+ * // add a stage
+ * IStage sourceStage = pipeline.addStage(StageOptions.builder().stageName("Source").build());
+ * sourceStage.addAction(CodeCommitSourceAction.Builder.create()
+ * .actionName("Source")
+ * .output(sourceArtifact)
+ * .repository(repo)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class PipelineDsl(
   scope: Construct,

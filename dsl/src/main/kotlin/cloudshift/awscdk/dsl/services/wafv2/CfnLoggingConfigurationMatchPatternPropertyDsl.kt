@@ -11,6 +11,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 
+/**
+ * The patterns to look for in the JSON body.
+ *
+ * AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * MatchPatternProperty matchPatternProperty = MatchPatternProperty.builder()
+ * .all(all)
+ * .includedPaths(List.of("includedPaths"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-matchpattern.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationMatchPatternPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.MatchPatternProperty.Builder =

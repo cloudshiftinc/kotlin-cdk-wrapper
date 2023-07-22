@@ -8,6 +8,22 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnHttpApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
+ * MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-httpapi-mutualtlsauthentication.html)
+ */
 @CdkDslMarker
 public class CfnHttpApiMutualTlsAuthenticationPropertyDsl {
   private val cdkBuilder: CfnHttpApi.MutualTlsAuthenticationProperty.Builder =

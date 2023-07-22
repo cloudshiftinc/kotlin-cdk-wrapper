@@ -15,6 +15,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnImageBuilder
 import software.amazon.awscdk.services.appstream.CfnImageBuilderProps
 
+/**
+ * Properties for defining a `CfnImageBuilder`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnImageBuilderProps cfnImageBuilderProps = CfnImageBuilderProps.builder()
+ * .instanceType("instanceType")
+ * .name("name")
+ * // the properties below are optional
+ * .accessEndpoints(List.of(AccessEndpointProperty.builder()
+ * .endpointType("endpointType")
+ * .vpceId("vpceId")
+ * .build()))
+ * .appstreamAgentVersion("appstreamAgentVersion")
+ * .description("description")
+ * .displayName("displayName")
+ * .domainJoinInfo(DomainJoinInfoProperty.builder()
+ * .directoryName("directoryName")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .build())
+ * .enableDefaultInternetAccess(false)
+ * .iamRoleArn("iamRoleArn")
+ * .imageArn("imageArn")
+ * .imageName("imageName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-imagebuilder.html)
+ */
 @CdkDslMarker
 public class CfnImageBuilderPropsDsl {
   private val cdkBuilder: CfnImageBuilderProps.Builder = CfnImageBuilderProps.builder()

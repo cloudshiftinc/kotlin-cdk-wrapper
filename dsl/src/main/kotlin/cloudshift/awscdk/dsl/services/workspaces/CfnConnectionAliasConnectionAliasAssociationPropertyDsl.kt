@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.workspaces.CfnConnectionAlias
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.workspaces.*;
+ * ConnectionAliasAssociationProperty connectionAliasAssociationProperty =
+ * ConnectionAliasAssociationProperty.builder()
+ * .associatedAccountId("associatedAccountId")
+ * .associationStatus("associationStatus")
+ * .connectionIdentifier("connectionIdentifier")
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-workspaces-connectionalias-connectionaliasassociation.html)
+ */
 @CdkDslMarker
 public class CfnConnectionAliasConnectionAliasAssociationPropertyDsl {
   private val cdkBuilder: CfnConnectionAlias.ConnectionAliasAssociationProperty.Builder =

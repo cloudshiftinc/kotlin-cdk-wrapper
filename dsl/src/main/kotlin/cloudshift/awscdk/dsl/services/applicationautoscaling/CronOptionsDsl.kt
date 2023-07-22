@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.applicationautoscaling.CronOptions
 
+/**
+ * Options to configure a cron expression.
+ *
+ * All fields are strings so you can use complex expressions. Absence of
+ * a field implies '*' or '?', whichever one is appropriate.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * ApplicationLoadBalancedFargateService loadBalancedFargateService =
+ * ApplicationLoadBalancedFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(1024)
+ * .desiredCount(1)
+ * .cpu(512)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .build();
+ * ScalableTaskCount scalableTarget =
+ * loadBalancedFargateService.service.autoScaleTaskCount(EnableScalingProps.builder()
+ * .minCapacity(5)
+ * .maxCapacity(20)
+ * .build());
+ * scalableTarget.scaleOnSchedule("DaytimeScaleDown", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(1)
+ * .build());
+ * scalableTarget.scaleOnSchedule("EveningRushScaleUp", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(10)
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions)
+ */
 @CdkDslMarker
 public class CronOptionsDsl {
   private val cdkBuilder: CronOptions.Builder = CronOptions.builder()

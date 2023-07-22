@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * LookbackWindowProperty lookbackWindowProperty = LookbackWindowProperty.builder()
+ * .columnName("columnName")
+ * .size(123)
+ * .sizeUnit("sizeUnit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-lookbackwindow.html)
+ */
 @CdkDslMarker
 public class CfnDataSetLookbackWindowPropertyDsl {
   private val cdkBuilder: CfnDataSet.LookbackWindowProperty.Builder =

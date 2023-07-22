@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.transfer.CfnServer
 
+/**
+ * Required when `IdentityProviderType` is set to `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or
+ * `API_GATEWAY` .
+ *
+ * Accepts an array containing all of the information required to use a directory in
+ * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API Gateway
+ * URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * IdentityProviderDetailsProperty identityProviderDetailsProperty =
+ * IdentityProviderDetailsProperty.builder()
+ * .directoryId("directoryId")
+ * .function("function")
+ * .invocationRole("invocationRole")
+ * .sftpAuthenticationMethods("sftpAuthenticationMethods")
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-identityproviderdetails.html)
+ */
 @CdkDslMarker
 public class CfnServerIdentityProviderDetailsPropertyDsl {
   private val cdkBuilder: CfnServer.IdentityProviderDetailsProperty.Builder =

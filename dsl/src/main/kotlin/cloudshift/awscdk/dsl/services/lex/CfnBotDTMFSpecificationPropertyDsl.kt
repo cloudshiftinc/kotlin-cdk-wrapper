@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Specifies the DTMF input specifications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * DTMFSpecificationProperty dTMFSpecificationProperty = DTMFSpecificationProperty.builder()
+ * .deletionCharacter("deletionCharacter")
+ * .endCharacter("endCharacter")
+ * .endTimeoutMs(123)
+ * .maxLength(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-dtmfspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotDTMFSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.DTMFSpecificationProperty.Builder =

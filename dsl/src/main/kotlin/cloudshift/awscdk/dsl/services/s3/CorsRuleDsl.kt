@@ -10,6 +10,26 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.s3.CorsRule
 import software.amazon.awscdk.services.s3.HttpMethods
 
+/**
+ * Specifies a cross-origin access rule for an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * CorsRule corsRule = CorsRule.builder()
+ * .allowedMethods(List.of(HttpMethods.GET))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * // the properties below are optional
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .exposedHeaders(List.of("exposedHeaders"))
+ * .id("id")
+ * .maxAge(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CorsRuleDsl {
   private val cdkBuilder: CorsRule.Builder = CorsRule.builder()

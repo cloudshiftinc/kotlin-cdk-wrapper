@@ -13,6 +13,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps
 
+/**
+ * Properties for defining a `CfnComponent`.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplifyuibuilder-component.html)
+ */
 @CdkDslMarker
 public class CfnComponentPropsDsl {
   private val cdkBuilder: CfnComponentProps.Builder = CfnComponentProps.builder()

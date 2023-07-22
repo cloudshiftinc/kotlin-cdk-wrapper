@@ -7,6 +7,19 @@ import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.Activity
 import software.constructs.Construct
 
+/**
+ * Define a new Step Functions Activity.
+ *
+ * Example:
+ *
+ * ```
+ * Activity activity = new Activity(this, "Activity");
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .build();
+ * activity.grant(role, "states:SendTaskSuccess");
+ * ```
+ */
 @CdkDslMarker
 public class ActivityDsl(
   scope: Construct,

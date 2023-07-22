@@ -6,6 +6,55 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for the CDN of an HLS output.
+ *
+ * The parent of this entity is HlsGroupSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsCdnSettingsProperty hlsCdnSettingsProperty = HlsCdnSettingsProperty.builder()
+ * .hlsAkamaiSettings(HlsAkamaiSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .httpTransferMode("httpTransferMode")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .salt("salt")
+ * .token("token")
+ * .build())
+ * .hlsBasicPutSettings(HlsBasicPutSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build())
+ * .hlsMediaStoreSettings(HlsMediaStoreSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .mediaStoreStorageClass("mediaStoreStorageClass")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build())
+ * .hlsS3Settings(HlsS3SettingsProperty.builder()
+ * .cannedAcl("cannedAcl")
+ * .build())
+ * .hlsWebdavSettings(HlsWebdavSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .httpTransferMode("httpTransferMode")
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlscdnsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsCdnSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsCdnSettingsProperty.Builder =

@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Aggregated field wells of a tree map.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-treemapaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateTreeMapAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.TreeMapAggregatedFieldWellsProperty.Builder =

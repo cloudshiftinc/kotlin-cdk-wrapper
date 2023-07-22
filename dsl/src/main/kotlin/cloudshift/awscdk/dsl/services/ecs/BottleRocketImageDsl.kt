@@ -8,6 +8,20 @@ import software.amazon.awscdk.services.ec2.InstanceArchitecture
 import software.amazon.awscdk.services.ecs.BottleRocketImage
 import software.amazon.awscdk.services.ecs.BottlerocketEcsVariant
 
+/**
+ * Construct an Bottlerocket image from the latest AMI published in SSM.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.addCapacity("bottlerocket-asg", AddCapacityOptions.builder()
+ * .minCapacity(2)
+ * .instanceType(new InstanceType("c5.large"))
+ * .machineImage(new BottleRocketImage())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class BottleRocketImageDsl {
   private val cdkBuilder: BottleRocketImage.Builder = BottleRocketImage.Builder.create()

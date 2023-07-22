@@ -11,6 +11,25 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.GetContextValueOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * Object dummyValue;
+ * Object props;
+ * GetContextValueOptions getContextValueOptions = GetContextValueOptions.builder()
+ * .dummyValue(dummyValue)
+ * .provider("provider")
+ * // the properties below are optional
+ * .includeEnvironment(false)
+ * .props(Map.of(
+ * "propsKey", props))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GetContextValueOptionsDsl {
   private val cdkBuilder: GetContextValueOptions.Builder = GetContextValueOptions.builder()

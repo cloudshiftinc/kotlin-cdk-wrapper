@@ -8,6 +8,39 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 
+/**
+ * Specifies a single tag key and optional values that you can use to specify membership in a
+ * tag-based group.
+ *
+ * An AWS resource that doesn't have a matching tag key and value is rejected as a member of the
+ * group.
+ *
+ * A `TagFilter` object includes two properties: `Key` (a string) and `Values` (a list of strings).
+ * Only resources in the account that are tagged with a matching key-value pair are members of the
+ * group. The `Values` property of `TagFilter` is optional, but specifying it narrows the query
+ * results.
+ *
+ * As an example, suppose the `TagFilters` string is `[{"Key": "Stage", "Values": ["Test", "Beta"]},
+ * {"Key": "Storage"}]` . In this case, only resources with all of the following tags are members of
+ * the group:
+ *
+ * * `Stage` tag key with a value of either `Test` or `Beta`
+ * * `Storage` tag key with any value
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * TagFilterProperty tagFilterProperty = TagFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-tagfilter.html)
+ */
 @CdkDslMarker
 public class CfnGroupTagFilterPropertyDsl {
   private val cdkBuilder: CfnGroup.TagFilterProperty.Builder = CfnGroup.TagFilterProperty.builder()

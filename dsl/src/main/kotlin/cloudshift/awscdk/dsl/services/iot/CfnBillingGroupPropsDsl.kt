@@ -13,6 +13,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnBillingGroup
 import software.amazon.awscdk.services.iot.CfnBillingGroupProps
 
+/**
+ * Properties for defining a `CfnBillingGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnBillingGroupProps cfnBillingGroupProps = CfnBillingGroupProps.builder()
+ * .billingGroupName("billingGroupName")
+ * .billingGroupProperties(BillingGroupPropertiesProperty.builder()
+ * .billingGroupDescription("billingGroupDescription")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html)
+ */
 @CdkDslMarker
 public class CfnBillingGroupPropsDsl {
   private val cdkBuilder: CfnBillingGroupProps.Builder = CfnBillingGroupProps.builder()

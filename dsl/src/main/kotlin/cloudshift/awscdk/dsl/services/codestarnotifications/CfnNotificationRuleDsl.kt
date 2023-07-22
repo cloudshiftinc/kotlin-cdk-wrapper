@@ -12,6 +12,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule
 import software.constructs.Construct
 
+/**
+ * Creates a notification rule for a resource.
+ *
+ * The rule specifies the events you want notifications about and the targets (such as AWS Chatbot
+ * topics or AWS Chatbot clients configured for Slack) where you want to receive them.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarnotifications.*;
+ * CfnNotificationRule cfnNotificationRule = CfnNotificationRule.Builder.create(this,
+ * "MyCfnNotificationRule")
+ * .detailType("detailType")
+ * .eventTypeIds(List.of("eventTypeIds"))
+ * .name("name")
+ * .resource("resource")
+ * .targets(List.of(TargetProperty.builder()
+ * .targetAddress("targetAddress")
+ * .targetType("targetType")
+ * .build()))
+ * // the properties below are optional
+ * .createdBy("createdBy")
+ * .eventTypeId("eventTypeId")
+ * .status("status")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .targetAddress("targetAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarnotifications-notificationrule.html)
+ */
 @CdkDslMarker
 public class CfnNotificationRuleDsl(
   scope: Construct,

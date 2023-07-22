@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.PortOverride
 
+/**
+ * Override specific listener ports used to route traffic to endpoints that are part of an endpoint
+ * group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * PortOverride portOverride = PortOverride.builder()
+ * .endpointPort(123)
+ * .listenerPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PortOverrideDsl {
   private val cdkBuilder: PortOverride.Builder = PortOverride.builder()

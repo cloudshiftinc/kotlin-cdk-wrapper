@@ -7,6 +7,31 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget
 
+/**
+ * `SuspendedState` is a property of the
+ * [AWS::ApplicationAutoScaling::ScalableTarget](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html)
+ * resource that specifies whether the scaling activities for a scalable target are in a suspended
+ * state.
+ *
+ * For more information, see [Suspending and resuming
+ * scaling](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-suspend-resume-scaling.html)
+ * in the *Application Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * SuspendedStateProperty suspendedStateProperty = SuspendedStateProperty.builder()
+ * .dynamicScalingInSuspended(false)
+ * .dynamicScalingOutSuspended(false)
+ * .scheduledScalingSuspended(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalabletarget-suspendedstate.html)
+ */
 @CdkDslMarker
 public class CfnScalableTargetSuspendedStatePropertyDsl {
   private val cdkBuilder: CfnScalableTarget.SuspendedStateProperty.Builder =

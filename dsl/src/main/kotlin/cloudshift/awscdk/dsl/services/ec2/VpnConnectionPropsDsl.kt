@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.VpnConnectionProps
 import software.amazon.awscdk.services.ec2.VpnTunnelOption
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * SecretValue secretValue;
+ * Vpc vpc;
+ * VpnConnectionProps vpnConnectionProps = VpnConnectionProps.builder()
+ * .ip("ip")
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .asn(123)
+ * .staticRoutes(List.of("staticRoutes"))
+ * .tunnelOptions(List.of(VpnTunnelOption.builder()
+ * .preSharedKey("preSharedKey")
+ * .preSharedKeySecret(secretValue)
+ * .tunnelInsideCidr("tunnelInsideCidr")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpnConnectionPropsDsl {
   private val cdkBuilder: VpnConnectionProps.Builder = VpnConnectionProps.builder()

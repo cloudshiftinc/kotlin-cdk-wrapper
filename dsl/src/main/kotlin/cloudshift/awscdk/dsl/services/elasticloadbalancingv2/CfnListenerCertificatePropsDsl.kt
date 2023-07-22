@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps
 
+/**
+ * Properties for defining a `CfnListenerCertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnListenerCertificateProps cfnListenerCertificateProps = CfnListenerCertificateProps.builder()
+ * .certificates(List.of(CertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build()))
+ * .listenerArn("listenerArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenercertificate.html)
+ */
 @CdkDslMarker
 public class CfnListenerCertificatePropsDsl {
   private val cdkBuilder: CfnListenerCertificateProps.Builder =

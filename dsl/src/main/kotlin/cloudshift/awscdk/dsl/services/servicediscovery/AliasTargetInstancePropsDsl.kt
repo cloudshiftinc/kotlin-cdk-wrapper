@@ -8,6 +8,24 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps
 import software.amazon.awscdk.services.servicediscovery.IService
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * AliasTargetInstanceProps aliasTargetInstanceProps = AliasTargetInstanceProps.builder()
+ * .dnsName("dnsName")
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AliasTargetInstancePropsDsl {
   private val cdkBuilder: AliasTargetInstanceProps.Builder = AliasTargetInstanceProps.builder()

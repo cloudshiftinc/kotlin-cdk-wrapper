@@ -8,6 +8,29 @@ import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.KubectlProvider
 import software.constructs.Construct
 
+/**
+ * Implementation of Kubectl Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * IRole handlerRole = Role.fromRoleArn(this, "HandlerRole",
+ * "arn:aws:iam::123456789012:role/lambda-role");
+ * // get the serivceToken from the custom resource provider
+ * String functionArn = Function.fromFunctionName(this, "ProviderOnEventFunc",
+ * "ProviderframeworkonEvent-XXX").getFunctionArn();
+ * IKubectlProvider kubectlProvider = KubectlProvider.fromKubectlProviderAttributes(this,
+ * "KubectlProvider", KubectlProviderAttributes.builder()
+ * .functionArn(functionArn)
+ * .kubectlRoleArn("arn:aws:iam::123456789012:role/kubectl-role")
+ * .handlerRole(handlerRole)
+ * .build());
+ * ICluster cluster = Cluster.fromClusterAttributes(this, "Cluster", ClusterAttributes.builder()
+ * .clusterName("cluster")
+ * .kubectlProvider(kubectlProvider)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class KubectlProviderDsl(
   scope: Construct,

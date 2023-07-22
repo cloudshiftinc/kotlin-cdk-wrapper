@@ -11,6 +11,25 @@ import software.amazon.awscdk.services.ec2.IPeer
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.Port
 
+/**
+ * Properties to intialize a new Connections object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * IPeer peer;
+ * Port port;
+ * SecurityGroup securityGroup;
+ * ConnectionsProps connectionsProps = ConnectionsProps.builder()
+ * .defaultPort(port)
+ * .peer(peer)
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConnectionsPropsDsl {
   private val cdkBuilder: ConnectionsProps.Builder = ConnectionsProps.builder()

@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * Determines whether CloudFront includes the `Referrer-Policy` HTTP response header and the
+ * header's value.
+ *
+ * For more information about the `Referrer-Policy` HTTP response header, see
+ * [Referrer-Policy](https://docs.aws.amazon.com/https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+ * in the MDN Web Docs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * ReferrerPolicyProperty referrerPolicyProperty = ReferrerPolicyProperty.builder()
+ * .override(false)
+ * .referrerPolicy("referrerPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-referrerpolicy.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyReferrerPolicyPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.ReferrerPolicyProperty.Builder =

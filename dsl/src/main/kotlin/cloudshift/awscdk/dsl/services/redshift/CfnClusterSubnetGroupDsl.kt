@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.redshift.CfnClusterSubnetGroup
 import software.constructs.Construct
 
+/**
+ * Specifies an Amazon Redshift subnet group.
+ *
+ * You must provide a list of one or more subnets in your existing Amazon Virtual Private Cloud (
+ * Amazon VPC ) when creating Amazon Redshift subnet group.
+ *
+ * For information about subnet groups, go to [Amazon Redshift Cluster Subnet
+ * Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-cluster-subnet-groups.html) in
+ * the *Amazon Redshift Cluster Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnClusterSubnetGroup cfnClusterSubnetGroup = CfnClusterSubnetGroup.Builder.create(this,
+ * "MyCfnClusterSubnetGroup")
+ * .description("description")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnClusterSubnetGroupDsl(
   scope: Construct,

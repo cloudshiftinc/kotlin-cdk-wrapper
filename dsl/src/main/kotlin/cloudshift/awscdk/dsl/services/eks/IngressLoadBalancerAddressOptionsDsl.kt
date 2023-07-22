@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions
 
+/**
+ * Options for fetching an IngressLoadBalancerAddress.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.eks.*;
+ * IngressLoadBalancerAddressOptions ingressLoadBalancerAddressOptions =
+ * IngressLoadBalancerAddressOptions.builder()
+ * .namespace("namespace")
+ * .timeout(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IngressLoadBalancerAddressOptionsDsl {
   private val cdkBuilder: IngressLoadBalancerAddressOptions.Builder =

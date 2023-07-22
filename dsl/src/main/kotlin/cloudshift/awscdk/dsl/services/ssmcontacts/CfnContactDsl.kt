@@ -11,6 +11,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnContact
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSMContacts::Contact` resource specifies a contact or escalation plan.
+ *
+ * Incident Manager contacts are a subset of actions and data types that you can use for managing
+ * responder engagement and interaction.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnContact cfnContact = CfnContact.Builder.create(this, "MyCfnContact")
+ * .alias("alias")
+ * .displayName("displayName")
+ * .type("type")
+ * // the properties below are optional
+ * .plan(List.of(StageProperty.builder()
+ * .durationInMinutes(123)
+ * .rotationIds(List.of("rotationIds"))
+ * .targets(List.of(TargetsProperty.builder()
+ * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+ * .channelId("channelId")
+ * .retryIntervalInMinutes(123)
+ * .build())
+ * .contactTargetInfo(ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build())
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-contact.html)
+ */
 @CdkDslMarker
 public class CfnContactDsl(
   scope: Construct,

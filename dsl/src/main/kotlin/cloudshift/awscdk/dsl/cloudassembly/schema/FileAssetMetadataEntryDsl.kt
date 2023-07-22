@@ -6,6 +6,19 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry
 
+/**
+ * Metadata Entry spec for files.
+ *
+ * Example:
+ *
+ * ```
+ * Map&lt;String, String&gt; entry = Map.of(
+ * "packaging", "file",
+ * "s3BucketParameter", "bucket-parameter",
+ * "s3KeyParamenter", "key-parameter",
+ * "artifactHashParameter", "hash-parameter");
+ * ```
+ */
 @CdkDslMarker
 public class FileAssetMetadataEntryDsl {
   private val cdkBuilder: FileAssetMetadataEntry.Builder = FileAssetMetadataEntry.builder()

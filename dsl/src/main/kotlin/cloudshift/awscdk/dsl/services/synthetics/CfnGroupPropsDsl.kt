@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.synthetics.CfnGroupProps
 
+/**
+ * Properties for defining a `CfnGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.synthetics.*;
+ * CfnGroupProps cfnGroupProps = CfnGroupProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .resourceArns(List.of("resourceArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupPropsDsl {
   private val cdkBuilder: CfnGroupProps.Builder = CfnGroupProps.builder()

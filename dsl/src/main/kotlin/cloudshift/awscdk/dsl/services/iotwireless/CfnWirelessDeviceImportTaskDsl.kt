@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask
 import software.constructs.Construct
 
+/**
+ * Information about an import task for wireless devices.
+ *
+ * When creating the resource, either create a single wireless device import task using the Sidewalk
+ * manufacturing serial number (SMSN) of the wireless device, or create an import task for multiple
+ * devices by specifying both the `DeviceCreationFile` and the `Role` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnWirelessDeviceImportTask cfnWirelessDeviceImportTask =
+ * CfnWirelessDeviceImportTask.Builder.create(this, "MyCfnWirelessDeviceImportTask")
+ * .destinationName("destinationName")
+ * .sidewalk(SidewalkProperty.builder()
+ * .deviceCreationFile("deviceCreationFile")
+ * .deviceCreationFileList(List.of("deviceCreationFileList"))
+ * .role("role")
+ * .sidewalkManufacturingSn("sidewalkManufacturingSn")
+ * .build())
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-wirelessdeviceimporttask.html)
+ */
 @CdkDslMarker
 public class CfnWirelessDeviceImportTaskDsl(
   scope: Construct,

@@ -11,6 +11,69 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 import software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps
 
+/**
+ * Properties for defining a `CfnComputeEnvironment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnComputeEnvironmentProps cfnComputeEnvironmentProps = CfnComputeEnvironmentProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .computeEnvironmentName("computeEnvironmentName")
+ * .computeResources(ComputeResourcesProperty.builder()
+ * .maxvCpus(123)
+ * .subnets(List.of("subnets"))
+ * .type("type")
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .bidPercentage(123)
+ * .desiredvCpus(123)
+ * .ec2Configuration(List.of(Ec2ConfigurationObjectProperty.builder()
+ * .imageType("imageType")
+ * // the properties below are optional
+ * .imageIdOverride("imageIdOverride")
+ * .imageKubernetesVersion("imageKubernetesVersion")
+ * .build()))
+ * .ec2KeyPair("ec2KeyPair")
+ * .imageId("imageId")
+ * .instanceRole("instanceRole")
+ * .instanceTypes(List.of("instanceTypes"))
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build())
+ * .minvCpus(123)
+ * .placementGroup("placementGroup")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .spotIamFleetRole("spotIamFleetRole")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .updateToLatestImageVersion(false)
+ * .build())
+ * .eksConfiguration(EksConfigurationProperty.builder()
+ * .eksClusterArn("eksClusterArn")
+ * .kubernetesNamespace("kubernetesNamespace")
+ * .build())
+ * .replaceComputeEnvironment(false)
+ * .serviceRole("serviceRole")
+ * .state("state")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .unmanagedvCpus(123)
+ * .updatePolicy(UpdatePolicyProperty.builder()
+ * .jobExecutionTimeoutMinutes(123)
+ * .terminateJobsOnUpdate(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-computeenvironment.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentPropsDsl {
   private val cdkBuilder: CfnComputeEnvironmentProps.Builder = CfnComputeEnvironmentProps.builder()

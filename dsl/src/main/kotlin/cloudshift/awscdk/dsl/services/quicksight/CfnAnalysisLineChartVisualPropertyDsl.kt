@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A line chart.
+ *
+ * For more information, see [Using line
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/line-charts.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-linechartvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisLineChartVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LineChartVisualProperty.Builder =

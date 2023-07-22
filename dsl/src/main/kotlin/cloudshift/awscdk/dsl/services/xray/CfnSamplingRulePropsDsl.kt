@@ -12,6 +12,77 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnSamplingRule
 import software.amazon.awscdk.services.xray.CfnSamplingRuleProps
 
+/**
+ * Properties for defining a `CfnSamplingRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * Object tags;
+ * CfnSamplingRuleProps cfnSamplingRuleProps = CfnSamplingRuleProps.builder()
+ * .ruleName("ruleName")
+ * .samplingRule(SamplingRuleProperty.builder()
+ * .fixedRate(123)
+ * .host("host")
+ * .httpMethod("httpMethod")
+ * .priority(123)
+ * .reservoirSize(123)
+ * .resourceArn("resourceArn")
+ * .serviceName("serviceName")
+ * .serviceType("serviceType")
+ * .urlPath("urlPath")
+ * // the properties below are optional
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .ruleArn("ruleArn")
+ * .ruleName("ruleName")
+ * .version(123)
+ * .build())
+ * .samplingRuleRecord(SamplingRuleRecordProperty.builder()
+ * .createdAt("createdAt")
+ * .modifiedAt("modifiedAt")
+ * .samplingRule(SamplingRuleProperty.builder()
+ * .fixedRate(123)
+ * .host("host")
+ * .httpMethod("httpMethod")
+ * .priority(123)
+ * .reservoirSize(123)
+ * .resourceArn("resourceArn")
+ * .serviceName("serviceName")
+ * .serviceType("serviceType")
+ * .urlPath("urlPath")
+ * // the properties below are optional
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .ruleArn("ruleArn")
+ * .ruleName("ruleName")
+ * .version(123)
+ * .build())
+ * .build())
+ * .samplingRuleUpdate(SamplingRuleUpdateProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .fixedRate(123)
+ * .host("host")
+ * .httpMethod("httpMethod")
+ * .priority(123)
+ * .reservoirSize(123)
+ * .resourceArn("resourceArn")
+ * .ruleArn("ruleArn")
+ * .ruleName("ruleName")
+ * .serviceName("serviceName")
+ * .serviceType("serviceType")
+ * .urlPath("urlPath")
+ * .build())
+ * .tags(List.of(tags))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-samplingrule.html)
+ */
 @CdkDslMarker
 public class CfnSamplingRulePropsDsl {
   private val cdkBuilder: CfnSamplingRuleProps.Builder = CfnSamplingRuleProps.builder()

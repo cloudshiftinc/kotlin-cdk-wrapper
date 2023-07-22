@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The resource configuration of the initial capacity configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * WorkerConfigurationProperty workerConfigurationProperty = WorkerConfigurationProperty.builder()
+ * .cpu("cpu")
+ * .memory("memory")
+ * // the properties below are optional
+ * .disk("disk")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationWorkerConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.WorkerConfigurationProperty.Builder =

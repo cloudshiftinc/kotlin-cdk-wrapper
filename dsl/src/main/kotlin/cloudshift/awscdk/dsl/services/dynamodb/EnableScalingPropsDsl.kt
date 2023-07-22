@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.dynamodb.EnableScalingProps
 
+/**
+ * Properties for enabling DynamoDB capacity scaling.
+ *
+ * Example:
+ *
+ * ```
+ * Table globalTable = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
+ * .replicationRegions(List.of("us-east-1", "us-east-2", "us-west-2"))
+ * .billingMode(BillingMode.PROVISIONED)
+ * .build();
+ * globalTable.autoScaleWriteCapacity(EnableScalingProps.builder()
+ * .minCapacity(1)
+ * .maxCapacity(10)
+ * .build()).scaleOnUtilization(UtilizationScalingProps.builder().targetUtilizationPercent(75).build());
+ * ```
+ */
 @CdkDslMarker
 public class EnableScalingPropsDsl {
   private val cdkBuilder: EnableScalingProps.Builder = EnableScalingProps.builder()

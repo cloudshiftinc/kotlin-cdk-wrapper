@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnDomainConfiguration
 
+/**
+ * An object that specifies the authorization service for a domain.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AuthorizerConfigProperty authorizerConfigProperty = AuthorizerConfigProperty.builder()
+ * .allowAuthorizerOverride(false)
+ * .defaultAuthorizerName("defaultAuthorizerName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-authorizerconfig.html)
+ */
 @CdkDslMarker
 public class CfnDomainConfigurationAuthorizerConfigPropertyDsl {
   private val cdkBuilder: CfnDomainConfiguration.AuthorizerConfigProperty.Builder =

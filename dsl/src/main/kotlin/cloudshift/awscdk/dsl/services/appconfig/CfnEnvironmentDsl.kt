@@ -12,6 +12,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appconfig.CfnEnvironment
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppConfig::Environment` resource creates an environment, which is a logical deployment
+ * group of AWS AppConfig targets, such as applications in a `Beta` or `Production` environment.
+ *
+ * You define one or more environments for each AWS AppConfig application. You can also define
+ * environments for application subcomponents such as the `Web` , `Mobile` and `Back-end` components
+ * for your application. You can configure Amazon CloudWatch alarms for each environment. The system
+ * monitors alarms during a configuration deployment. If an alarm is triggered, the system rolls back
+ * the configuration.
+ *
+ * AWS AppConfig requires that you create resources and deploy a configuration in the following
+ * order:
+ *
+ * * Create an application
+ * * Create an environment
+ * * Create a configuration profile
+ * * Create a deployment strategy
+ * * Deploy the configuration
+ *
+ * For more information, see [AWS
+ * AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) in the
+ * *AWS AppConfig User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnEnvironment cfnEnvironment = CfnEnvironment.Builder.create(this, "MyCfnEnvironment")
+ * .applicationId("applicationId")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .monitors(List.of(MonitorsProperty.builder()
+ * .alarmArn("alarmArn")
+ * .alarmRoleArn("alarmRoleArn")
+ * .build()))
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentDsl(
   scope: Construct,

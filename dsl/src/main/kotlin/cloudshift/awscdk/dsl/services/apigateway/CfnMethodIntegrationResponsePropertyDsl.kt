@@ -8,6 +8,32 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnMethod
 
+/**
+ * `IntegrationResponse` is a property of the [Amazon API Gateway Method
+ * Integration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html)
+ * property type that specifies the response that API Gateway sends after a method's backend finishes
+ * processing a request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * IntegrationResponseProperty integrationResponseProperty = IntegrationResponseProperty.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentHandling("contentHandling")
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .selectionPattern("selectionPattern")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-method-integrationresponse.html)
+ */
 @CdkDslMarker
 public class CfnMethodIntegrationResponsePropertyDsl {
   private val cdkBuilder: CfnMethod.IntegrationResponseProperty.Builder =

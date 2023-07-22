@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.opsworks.CfnApp
 
+/**
+ * Contains the information required to retrieve an app or cookbook from a repository.
+ *
+ * For more information, see [Creating
+ * Apps](https://docs.aws.amazon.com/opsworks/latest/userguide/workingapps-creating.html) or [Custom
+ * Recipes and Cookbooks](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * SourceProperty sourceProperty = SourceProperty.builder()
+ * .password("password")
+ * .revision("revision")
+ * .sshKey("sshKey")
+ * .type("type")
+ * .url("url")
+ * .username("username")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-source.html)
+ */
 @CdkDslMarker
 public class CfnAppSourcePropertyDsl {
   private val cdkBuilder: CfnApp.SourceProperty.Builder = CfnApp.SourceProperty.builder()

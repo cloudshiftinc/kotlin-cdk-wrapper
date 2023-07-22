@@ -9,6 +9,25 @@ import software.amazon.awscdk.services.codepipeline.ArtifactPath
 import software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * CodePipeline action to connect to an existing ServiceCatalog product.
+ *
+ * **Note**: this class is still experimental, and may have breaking changes in the future!
+ *
+ * Example:
+ *
+ * ```
+ * Artifact cdkBuildOutput = new Artifact();
+ * ServiceCatalogDeployActionBeta1 serviceCatalogDeployAction =
+ * ServiceCatalogDeployActionBeta1.Builder.create()
+ * .actionName("ServiceCatalogDeploy")
+ * .templatePath(cdkBuildOutput.atPath("Sample.template.json"))
+ * .productVersionName("Version - " + Date.getNow().getToString())
+ * .productVersionDescription("This is a version from the pipeline with a new description.")
+ * .productId("prod-XXXXXXXX")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceCatalogDeployActionBeta1Dsl {
   private val cdkBuilder: ServiceCatalogDeployActionBeta1.Builder =

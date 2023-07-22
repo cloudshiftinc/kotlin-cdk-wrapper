@@ -13,6 +13,81 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnTable
 
+/**
+ * A structure used to define a table.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * Object skewedColumnValueLocationMaps;
+ * TableInputProperty tableInputProperty = TableInputProperty.builder()
+ * .description("description")
+ * .name("name")
+ * .owner("owner")
+ * .parameters(parameters)
+ * .partitionKeys(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .retention(123)
+ * .storageDescriptor(StorageDescriptorProperty.builder()
+ * .bucketColumns(List.of("bucketColumns"))
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .compressed(false)
+ * .inputFormat("inputFormat")
+ * .location("location")
+ * .numberOfBuckets(123)
+ * .outputFormat("outputFormat")
+ * .parameters(parameters)
+ * .schemaReference(SchemaReferenceProperty.builder()
+ * .schemaId(SchemaIdProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build())
+ * .schemaVersionId("schemaVersionId")
+ * .schemaVersionNumber(123)
+ * .build())
+ * .serdeInfo(SerdeInfoProperty.builder()
+ * .name("name")
+ * .parameters(parameters)
+ * .serializationLibrary("serializationLibrary")
+ * .build())
+ * .skewedInfo(SkewedInfoProperty.builder()
+ * .skewedColumnNames(List.of("skewedColumnNames"))
+ * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+ * .skewedColumnValues(List.of("skewedColumnValues"))
+ * .build())
+ * .sortColumns(List.of(OrderProperty.builder()
+ * .column("column")
+ * .sortOrder(123)
+ * .build()))
+ * .storedAsSubDirectories(false)
+ * .build())
+ * .tableType("tableType")
+ * .targetTable(TableIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .viewExpandedText("viewExpandedText")
+ * .viewOriginalText("viewOriginalText")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html)
+ */
 @CdkDslMarker
 public class CfnTableTableInputPropertyDsl {
   private val cdkBuilder: CfnTable.TableInputProperty.Builder =

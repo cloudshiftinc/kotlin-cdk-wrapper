@@ -9,6 +9,55 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Describes the setup to be used for the broker nodes in the cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * BrokerNodeGroupInfoProperty brokerNodeGroupInfoProperty = BrokerNodeGroupInfoProperty.builder()
+ * .clientSubnets(List.of("clientSubnets"))
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .brokerAzDistribution("brokerAzDistribution")
+ * .connectivityInfo(ConnectivityInfoProperty.builder()
+ * .publicAccess(PublicAccessProperty.builder()
+ * .type("type")
+ * .build())
+ * .vpcConnectivity(VpcConnectivityProperty.builder()
+ * .clientAuthentication(VpcConnectivityClientAuthenticationProperty.builder()
+ * .sasl(VpcConnectivitySaslProperty.builder()
+ * .iam(VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(VpcConnectivityScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(VpcConnectivityTlsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .storageInfo(StorageInfoProperty.builder()
+ * .ebsStorageInfo(EBSStorageInfoProperty.builder()
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .enabled(false)
+ * .volumeThroughput(123)
+ * .build())
+ * .volumeSize(123)
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-brokernodegroupinfo.html)
+ */
 @CdkDslMarker
 public class CfnClusterBrokerNodeGroupInfoPropertyDsl {
   private val cdkBuilder: CfnCluster.BrokerNodeGroupInfoProperty.Builder =

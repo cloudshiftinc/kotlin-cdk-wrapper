@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnCapacityProvider
 import software.amazon.awscdk.services.ecs.CfnCapacityProviderProps
 
+/**
+ * Properties for defining a `CfnCapacityProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * CfnCapacityProviderProps cfnCapacityProviderProps = CfnCapacityProviderProps.builder()
+ * .autoScalingGroupProvider(AutoScalingGroupProviderProperty.builder()
+ * .autoScalingGroupArn("autoScalingGroupArn")
+ * // the properties below are optional
+ * .managedScaling(ManagedScalingProperty.builder()
+ * .instanceWarmupPeriod(123)
+ * .maximumScalingStepSize(123)
+ * .minimumScalingStepSize(123)
+ * .status("status")
+ * .targetCapacity(123)
+ * .build())
+ * .managedTerminationProtection("managedTerminationProtection")
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html)
+ */
 @CdkDslMarker
 public class CfnCapacityProviderPropsDsl {
   private val cdkBuilder: CfnCapacityProviderProps.Builder = CfnCapacityProviderProps.builder()

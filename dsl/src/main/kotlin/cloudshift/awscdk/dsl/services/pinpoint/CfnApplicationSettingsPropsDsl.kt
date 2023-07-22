@@ -9,6 +9,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnApplicationSettings
 import software.amazon.awscdk.services.pinpoint.CfnApplicationSettingsProps
 
+/**
+ * Properties for defining a `CfnApplicationSettings`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnApplicationSettingsProps cfnApplicationSettingsProps = CfnApplicationSettingsProps.builder()
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .campaignHook(CampaignHookProperty.builder()
+ * .lambdaFunctionName("lambdaFunctionName")
+ * .mode("mode")
+ * .webUrl("webUrl")
+ * .build())
+ * .cloudWatchMetricsEnabled(false)
+ * .limits(LimitsProperty.builder()
+ * .daily(123)
+ * .maximumDuration(123)
+ * .messagesPerSecond(123)
+ * .total(123)
+ * .build())
+ * .quietTime(QuietTimeProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-applicationsettings.html)
+ */
 @CdkDslMarker
 public class CfnApplicationSettingsPropsDsl {
   private val cdkBuilder: CfnApplicationSettingsProps.Builder =

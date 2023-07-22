@@ -11,6 +11,27 @@ import software.amazon.awscdk.services.ec2.IConnectable
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerListener
 import software.amazon.awscdk.services.elasticloadbalancing.LoadBalancingProtocol
 
+/**
+ * Add a backend to the load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * IVpc vpc;
+ * AutoScalingGroup myAutoScalingGroup;
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .healthCheck(HealthCheck.builder()
+ * .port(80)
+ * .build())
+ * .build();
+ * lb.addTarget(myAutoScalingGroup);
+ * lb.addListener(LoadBalancerListener.builder()
+ * .externalPort(80)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerListenerDsl {
   private val cdkBuilder: LoadBalancerListener.Builder = LoadBalancerListener.builder()

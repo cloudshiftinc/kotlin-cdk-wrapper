@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnConfig
 
+/**
+ * Defines a uplink spectrum.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * UplinkSpectrumConfigProperty uplinkSpectrumConfigProperty =
+ * UplinkSpectrumConfigProperty.builder()
+ * .centerFrequency(FrequencyProperty.builder()
+ * .units("units")
+ * .value(123)
+ * .build())
+ * .polarization("polarization")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkspectrumconfig.html)
+ */
 @CdkDslMarker
 public class CfnConfigUplinkSpectrumConfigPropertyDsl {
   private val cdkBuilder: CfnConfig.UplinkSpectrumConfigProperty.Builder =

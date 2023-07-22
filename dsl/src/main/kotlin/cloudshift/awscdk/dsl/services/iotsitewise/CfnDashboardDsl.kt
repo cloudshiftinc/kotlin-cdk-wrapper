@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnDashboard
 import software.constructs.Construct
 
+/**
+ * Creates a dashboard in an AWS IoT SiteWise Monitor project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnDashboard cfnDashboard = CfnDashboard.Builder.create(this, "MyCfnDashboard")
+ * .dashboardDefinition("dashboardDefinition")
+ * .dashboardDescription("dashboardDescription")
+ * .dashboardName("dashboardName")
+ * // the properties below are optional
+ * .projectId("projectId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-dashboard.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDsl(
   scope: Construct,

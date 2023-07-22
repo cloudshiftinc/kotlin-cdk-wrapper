@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Indicates whether a slot can return multiple values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * MultipleValuesSettingProperty multipleValuesSettingProperty =
+ * MultipleValuesSettingProperty.builder()
+ * .allowMultipleValues(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-multiplevaluessetting.html)
+ */
 @CdkDslMarker
 public class CfnBotMultipleValuesSettingPropertyDsl {
   private val cdkBuilder: CfnBot.MultipleValuesSettingProperty.Builder =

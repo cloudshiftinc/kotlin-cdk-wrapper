@@ -11,6 +11,33 @@ import kotlin.Unit
 import software.amazon.awscdk.services.events.CfnArchive
 import software.constructs.Construct
 
+/**
+ * Creates an archive of events with the specified settings.
+ *
+ * When you create an archive, incoming events might not immediately start being sent to the
+ * archive. Allow a short period of time for changes to take effect. If you do not specify a pattern to
+ * filter events sent to the archive, all events are sent to the archive except replayed events.
+ * Replayed events are not sent to an archive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * Object eventPattern;
+ * CfnArchive cfnArchive = CfnArchive.Builder.create(this, "MyCfnArchive")
+ * .sourceArn("sourceArn")
+ * // the properties below are optional
+ * .archiveName("archiveName")
+ * .description("description")
+ * .eventPattern(eventPattern)
+ * .retentionDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html)
+ */
 @CdkDslMarker
 public class CfnArchiveDsl(
   scope: Construct,

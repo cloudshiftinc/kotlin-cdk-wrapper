@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.ec2.AclIcmp
 
+/**
+ * Properties to create Icmp.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclIcmp aclIcmp = AclIcmp.builder()
+ * .code(123)
+ * .type(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AclIcmpDsl {
   private val cdkBuilder: AclIcmp.Builder = AclIcmp.builder()

@@ -8,6 +8,23 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.elasticloadbalancingv2.BaseListenerLookupOptions
 
+/**
+ * Options for listener lookup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * BaseListenerLookupOptions baseListenerLookupOptions = BaseListenerLookupOptions.builder()
+ * .listenerPort(123)
+ * .loadBalancerArn("loadBalancerArn")
+ * .loadBalancerTags(Map.of(
+ * "loadBalancerTagsKey", "loadBalancerTags"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseListenerLookupOptionsDsl {
   private val cdkBuilder: BaseListenerLookupOptions.Builder = BaseListenerLookupOptions.builder()

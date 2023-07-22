@@ -12,6 +12,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnHostedZone
 import software.amazon.awscdk.services.route53.CfnHostedZoneProps
 
+/**
+ * Properties for defining a `CfnHostedZone`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnHostedZoneProps cfnHostedZoneProps = CfnHostedZoneProps.builder()
+ * .hostedZoneConfig(HostedZoneConfigProperty.builder()
+ * .comment("comment")
+ * .build())
+ * .hostedZoneTags(List.of(HostedZoneTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .queryLoggingConfig(QueryLoggingConfigProperty.builder()
+ * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+ * .build())
+ * .vpcs(List.of(VPCProperty.builder()
+ * .vpcId("vpcId")
+ * .vpcRegion("vpcRegion")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html)
+ */
 @CdkDslMarker
 public class CfnHostedZonePropsDsl {
   private val cdkBuilder: CfnHostedZoneProps.Builder = CfnHostedZoneProps.builder()

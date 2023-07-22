@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps
 
+/**
+ * Properties for defining a `CfnRecoveryGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnRecoveryGroupProps cfnRecoveryGroupProps = CfnRecoveryGroupProps.builder()
+ * .cells(List.of("cells"))
+ * .recoveryGroupName("recoveryGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-recoverygroup.html)
+ */
 @CdkDslMarker
 public class CfnRecoveryGroupPropsDsl {
   private val cdkBuilder: CfnRecoveryGroupProps.Builder = CfnRecoveryGroupProps.builder()

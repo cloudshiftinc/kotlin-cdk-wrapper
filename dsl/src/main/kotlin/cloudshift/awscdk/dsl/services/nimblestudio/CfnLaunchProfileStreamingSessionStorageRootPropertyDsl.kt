@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile
 
+/**
+ * The upload storage root location (folder) on streaming workstations where files are uploaded.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.nimblestudio.*;
+ * StreamingSessionStorageRootProperty streamingSessionStorageRootProperty =
+ * StreamingSessionStorageRootProperty.builder()
+ * .linux("linux")
+ * .windows("windows")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamingsessionstorageroot.html)
+ */
 @CdkDslMarker
 public class CfnLaunchProfileStreamingSessionStorageRootPropertyDsl {
   private val cdkBuilder: CfnLaunchProfile.StreamingSessionStorageRootProperty.Builder =

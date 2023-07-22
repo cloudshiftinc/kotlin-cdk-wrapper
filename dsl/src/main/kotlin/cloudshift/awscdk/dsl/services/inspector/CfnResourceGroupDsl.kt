@@ -11,6 +11,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.inspector.CfnResourceGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::Inspector::ResourceGroup` resource is used to create Amazon Inspector resource groups.
+ *
+ * A resource group defines a set of tags that, when queried, identify the AWS resources that make
+ * up the assessment target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.inspector.*;
+ * CfnResourceGroup cfnResourceGroup = CfnResourceGroup.Builder.create(this, "MyCfnResourceGroup")
+ * .resourceGroupTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html)
+ */
 @CdkDslMarker
 public class CfnResourceGroupDsl(
   scope: Construct,

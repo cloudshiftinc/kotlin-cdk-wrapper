@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation
 import software.constructs.Construct
 
+/**
+ * Associates the specified principal ARN with the specified portfolio.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolioPrincipalAssociation cfnPortfolioPrincipalAssociation =
+ * CfnPortfolioPrincipalAssociation.Builder.create(this, "MyCfnPortfolioPrincipalAssociation")
+ * .portfolioId("portfolioId")
+ * .principalArn("principalArn")
+ * .principalType("principalType")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioPrincipalAssociationDsl(
   scope: Construct,

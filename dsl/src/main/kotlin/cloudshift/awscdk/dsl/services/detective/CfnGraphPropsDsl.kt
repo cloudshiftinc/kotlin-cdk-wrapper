@@ -12,6 +12,26 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.detective.CfnGraphProps
 
+/**
+ * Properties for defining a `CfnGraph`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.detective.*;
+ * CfnGraphProps cfnGraphProps = CfnGraphProps.builder()
+ * .autoEnableMembers(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
+ */
 @CdkDslMarker
 public class CfnGraphPropsDsl {
   private val cdkBuilder: CfnGraphProps.Builder = CfnGraphProps.builder()

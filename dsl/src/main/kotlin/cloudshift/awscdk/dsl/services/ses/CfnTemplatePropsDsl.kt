@@ -7,6 +7,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnTemplate
 import software.amazon.awscdk.services.ses.CfnTemplateProps
 
+/**
+ * Properties for defining a `CfnTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnTemplateProps cfnTemplateProps = CfnTemplateProps.builder()
+ * .template(TemplateProperty.builder()
+ * .subjectPart("subjectPart")
+ * // the properties below are optional
+ * .htmlPart("htmlPart")
+ * .templateName("templateName")
+ * .textPart("textPart")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html)
+ */
 @CdkDslMarker
 public class CfnTemplatePropsDsl {
   private val cdkBuilder: CfnTemplateProps.Builder = CfnTemplateProps.builder()

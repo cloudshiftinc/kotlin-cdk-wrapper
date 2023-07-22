@@ -12,6 +12,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolClient
 import software.amazon.awscdk.services.cognito.CfnUserPoolClientProps
 
+/**
+ * Properties for defining a `CfnUserPoolClient`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolClientProps cfnUserPoolClientProps = CfnUserPoolClientProps.builder()
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .accessTokenValidity(123)
+ * .allowedOAuthFlows(List.of("allowedOAuthFlows"))
+ * .allowedOAuthFlowsUserPoolClient(false)
+ * .allowedOAuthScopes(List.of("allowedOAuthScopes"))
+ * .analyticsConfiguration(AnalyticsConfigurationProperty.builder()
+ * .applicationArn("applicationArn")
+ * .applicationId("applicationId")
+ * .externalId("externalId")
+ * .roleArn("roleArn")
+ * .userDataShared(false)
+ * .build())
+ * .authSessionValidity(123)
+ * .callbackUrLs(List.of("callbackUrLs"))
+ * .clientName("clientName")
+ * .defaultRedirectUri("defaultRedirectUri")
+ * .enablePropagateAdditionalUserContextData(false)
+ * .enableTokenRevocation(false)
+ * .explicitAuthFlows(List.of("explicitAuthFlows"))
+ * .generateSecret(false)
+ * .idTokenValidity(123)
+ * .logoutUrLs(List.of("logoutUrLs"))
+ * .preventUserExistenceErrors("preventUserExistenceErrors")
+ * .readAttributes(List.of("readAttributes"))
+ * .refreshTokenValidity(123)
+ * .supportedIdentityProviders(List.of("supportedIdentityProviders"))
+ * .tokenValidityUnits(TokenValidityUnitsProperty.builder()
+ * .accessToken("accessToken")
+ * .idToken("idToken")
+ * .refreshToken("refreshToken")
+ * .build())
+ * .writeAttributes(List.of("writeAttributes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolClientPropsDsl {
   private val cdkBuilder: CfnUserPoolClientProps.Builder = CfnUserPoolClientProps.builder()

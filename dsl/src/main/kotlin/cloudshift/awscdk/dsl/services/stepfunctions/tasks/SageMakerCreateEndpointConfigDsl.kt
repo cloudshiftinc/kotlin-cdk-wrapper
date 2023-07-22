@@ -22,6 +22,25 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant
 import software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to create a SageMaker endpoint configuration.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateEndpointConfig.Builder.create(this, "SagemakerEndpointConfig")
+ * .endpointConfigName("MyEndpointConfig")
+ * .productionVariants(List.of(ProductionVariant.builder()
+ * .initialInstanceCount(2)
+ * .instanceType(InstanceType.of(InstanceClass.M5, InstanceSize.XLARGE))
+ * .modelName("MyModel")
+ * .variantName("awesome-variant")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-sagemaker.html)
+ */
 @CdkDslMarker
 public class SageMakerCreateEndpointConfigDsl(
   scope: Construct,

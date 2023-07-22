@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ecs.Protocol
 import software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps
 
+/**
+ * Properties to define an application target group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * ApplicationTargetProps applicationTargetProps = ApplicationTargetProps.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .hostHeader("hostHeader")
+ * .listener("listener")
+ * .pathPattern("pathPattern")
+ * .priority(123)
+ * .protocol(Protocol.TCP)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationTargetPropsDsl {
   private val cdkBuilder: ApplicationTargetProps.Builder = ApplicationTargetProps.builder()

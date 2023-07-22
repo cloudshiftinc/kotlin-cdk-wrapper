@@ -11,6 +11,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information for crawling knowledge articles in the ServiceNow site.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ServiceNowKnowledgeArticleConfigurationProperty serviceNowKnowledgeArticleConfigurationProperty =
+ * ServiceNowKnowledgeArticleConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .crawlAttachments(false)
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .excludeAttachmentFilePatterns(List.of("excludeAttachmentFilePatterns"))
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .filterQuery("filterQuery")
+ * .includeAttachmentFilePatterns(List.of("includeAttachmentFilePatterns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-servicenowknowledgearticleconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceServiceNowKnowledgeArticleConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty.Builder =

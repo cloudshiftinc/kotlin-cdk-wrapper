@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * Determines the icon display configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ConditionalFormattingIconDisplayConfigurationProperty
+ * conditionalFormattingIconDisplayConfigurationProperty =
+ * ConditionalFormattingIconDisplayConfigurationProperty.builder()
+ * .iconDisplayOption("iconDisplayOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-conditionalformattingicondisplayconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateConditionalFormattingIconDisplayConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.ConditionalFormattingIconDisplayConfigurationProperty.Builder

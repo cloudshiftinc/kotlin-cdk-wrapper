@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appsync.CfnSourceApiAssociation
 import software.amazon.awscdk.services.appsync.CfnSourceApiAssociationProps
 
+/**
+ * Properties for defining a `CfnSourceApiAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnSourceApiAssociationProps cfnSourceApiAssociationProps =
+ * CfnSourceApiAssociationProps.builder()
+ * .description("description")
+ * .mergedApiIdentifier("mergedApiIdentifier")
+ * .sourceApiAssociationConfig(SourceApiAssociationConfigProperty.builder()
+ * .mergeType("mergeType")
+ * .build())
+ * .sourceApiIdentifier("sourceApiIdentifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-sourceapiassociation.html)
+ */
 @CdkDslMarker
 public class CfnSourceApiAssociationPropsDsl {
   private val cdkBuilder: CfnSourceApiAssociationProps.Builder =

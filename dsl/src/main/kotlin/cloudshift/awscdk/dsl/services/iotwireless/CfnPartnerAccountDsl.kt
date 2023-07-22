@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
 import software.constructs.Construct
 
+/**
+ * A partner account.
+ *
+ * If `PartnerAccountId` and `PartnerType` are `null` , returns all partner accounts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnPartnerAccount cfnPartnerAccount = CfnPartnerAccount.Builder.create(this,
+ * "MyCfnPartnerAccount")
+ * .accountLinked(false)
+ * .partnerAccountId("partnerAccountId")
+ * .partnerType("partnerType")
+ * .sidewalk(SidewalkAccountInfoProperty.builder()
+ * .appServerPrivateKey("appServerPrivateKey")
+ * .build())
+ * .sidewalkResponse(SidewalkAccountInfoWithFingerprintProperty.builder()
+ * .amazonId("amazonId")
+ * .arn("arn")
+ * .fingerprint("fingerprint")
+ * .build())
+ * .sidewalkUpdate(SidewalkUpdateAccountProperty.builder()
+ * .appServerPrivateKey("appServerPrivateKey")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-partneraccount.html)
+ */
 @CdkDslMarker
 public class CfnPartnerAccountDsl(
   scope: Construct,

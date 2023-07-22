@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * IntegerRangeProperty integerRangeProperty = IntegerRangeProperty.builder()
+ * .maximum(123)
+ * .minimum(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-integerrange.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupIntegerRangePropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.IntegerRangeProperty.Builder =

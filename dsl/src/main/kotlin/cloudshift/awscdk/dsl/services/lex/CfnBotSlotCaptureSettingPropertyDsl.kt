@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Settings used when Amazon Lex successfully captures a slot value from a user.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slotcapturesetting.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotCaptureSettingPropertyDsl {
   private val cdkBuilder: CfnBot.SlotCaptureSettingProperty.Builder =

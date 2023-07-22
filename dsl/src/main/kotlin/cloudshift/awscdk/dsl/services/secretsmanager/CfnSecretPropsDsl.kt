@@ -14,6 +14,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnSecret
 import software.amazon.awscdk.services.secretsmanager.CfnSecretProps
 
+/**
+ * Properties for defining a `CfnSecret`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * CfnSecretProps cfnSecretProps = CfnSecretProps.builder()
+ * .description("description")
+ * .generateSecretString(GenerateSecretStringProperty.builder()
+ * .excludeCharacters("excludeCharacters")
+ * .excludeLowercase(false)
+ * .excludeNumbers(false)
+ * .excludePunctuation(false)
+ * .excludeUppercase(false)
+ * .generateStringKey("generateStringKey")
+ * .includeSpace(false)
+ * .passwordLength(123)
+ * .requireEachIncludedType(false)
+ * .secretStringTemplate("secretStringTemplate")
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .name("name")
+ * .replicaRegions(List.of(ReplicaRegionProperty.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .kmsKeyId("kmsKeyId")
+ * .build()))
+ * .secretString("secretString")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html)
+ */
 @CdkDslMarker
 public class CfnSecretPropsDsl {
   private val cdkBuilder: CfnSecretProps.Builder = CfnSecretProps.builder()

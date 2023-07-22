@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace
 import software.constructs.Construct
 
+/**
+ * The `AWS::APS::RuleGroupsNamespace` resource creates or updates a rule groups namespace within a
+ * Amazon Managed Service for Prometheus workspace.
+ *
+ * For more information, see [Recording rules and alerting
+ * rules](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.aps.*;
+ * CfnRuleGroupsNamespace cfnRuleGroupsNamespace = CfnRuleGroupsNamespace.Builder.create(this,
+ * "MyCfnRuleGroupsNamespace")
+ * .data("data")
+ * .name("name")
+ * .workspace("workspace")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupsNamespaceDsl(
   scope: Construct,

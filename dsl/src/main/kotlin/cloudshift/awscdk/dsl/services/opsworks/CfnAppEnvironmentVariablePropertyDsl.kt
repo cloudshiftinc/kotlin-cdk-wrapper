@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnApp
 
+/**
+ * Represents an app's environment variable.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * EnvironmentVariableProperty environmentVariableProperty = EnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .secure(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-app-environmentvariable.html)
+ */
 @CdkDslMarker
 public class CfnAppEnvironmentVariablePropertyDsl {
   private val cdkBuilder: CfnApp.EnvironmentVariableProperty.Builder =

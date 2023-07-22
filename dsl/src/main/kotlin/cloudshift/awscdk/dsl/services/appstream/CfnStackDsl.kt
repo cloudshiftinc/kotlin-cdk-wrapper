@@ -15,6 +15,57 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnStack
 import software.constructs.Construct
 
+/**
+ * The `AWS::AppStream::Stack` resource creates a stack to start streaming applications to Amazon
+ * AppStream 2.0 users. A stack consists of an associated fleet, user access policies, and storage
+ * configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnStack cfnStack = CfnStack.Builder.create(this, "MyCfnStack")
+ * .accessEndpoints(List.of(AccessEndpointProperty.builder()
+ * .endpointType("endpointType")
+ * .vpceId("vpceId")
+ * .build()))
+ * .applicationSettings(ApplicationSettingsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .settingsGroup("settingsGroup")
+ * .build())
+ * .attributesToDelete(List.of("attributesToDelete"))
+ * .deleteStorageConnectors(false)
+ * .description("description")
+ * .displayName("displayName")
+ * .embedHostDomains(List.of("embedHostDomains"))
+ * .feedbackUrl("feedbackUrl")
+ * .name("name")
+ * .redirectUrl("redirectUrl")
+ * .storageConnectors(List.of(StorageConnectorProperty.builder()
+ * .connectorType("connectorType")
+ * // the properties below are optional
+ * .domains(List.of("domains"))
+ * .resourceIdentifier("resourceIdentifier")
+ * .build()))
+ * .streamingExperienceSettings(StreamingExperienceSettingsProperty.builder()
+ * .preferredProtocol("preferredProtocol")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userSettings(List.of(UserSettingProperty.builder()
+ * .action("action")
+ * .permission("permission")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-stack.html)
+ */
 @CdkDslMarker
 public class CfnStackDsl(
   scope: Construct,

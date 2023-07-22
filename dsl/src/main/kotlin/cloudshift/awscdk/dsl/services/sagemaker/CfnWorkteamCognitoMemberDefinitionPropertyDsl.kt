@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnWorkteam
 
+/**
+ * Identifies a Amazon Cognito user group.
+ *
+ * A user group can be used in on or more work teams.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CognitoMemberDefinitionProperty cognitoMemberDefinitionProperty =
+ * CognitoMemberDefinitionProperty.builder()
+ * .cognitoClientId("cognitoClientId")
+ * .cognitoUserGroup("cognitoUserGroup")
+ * .cognitoUserPool("cognitoUserPool")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-workteam-cognitomemberdefinition.html)
+ */
 @CdkDslMarker
 public class CfnWorkteamCognitoMemberDefinitionPropertyDsl {
   private val cdkBuilder: CfnWorkteam.CognitoMemberDefinitionProperty.Builder =

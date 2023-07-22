@@ -6,6 +6,40 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * The object that provides message text and its type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * MessageProperty messageProperty = MessageProperty.builder()
+ * .customPayload(CustomPayloadProperty.builder()
+ * .value("value")
+ * .build())
+ * .imageResponseCard(ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build())
+ * .plainTextMessage(PlainTextMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .ssmlMessage(SSMLMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-message.html)
+ */
 @CdkDslMarker
 public class CfnBotMessagePropertyDsl {
   private val cdkBuilder: CfnBot.MessageProperty.Builder = CfnBot.MessageProperty.builder()

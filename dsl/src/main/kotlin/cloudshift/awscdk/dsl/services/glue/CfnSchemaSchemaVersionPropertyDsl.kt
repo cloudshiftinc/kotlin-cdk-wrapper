@@ -8,6 +8,23 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnSchema
 
+/**
+ * Specifies the version of a schema.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * SchemaVersionProperty schemaVersionProperty = SchemaVersionProperty.builder()
+ * .isLatest(false)
+ * .versionNumber(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schema-schemaversion.html)
+ */
 @CdkDslMarker
 public class CfnSchemaSchemaVersionPropertyDsl {
   private val cdkBuilder: CfnSchema.SchemaVersionProperty.Builder =

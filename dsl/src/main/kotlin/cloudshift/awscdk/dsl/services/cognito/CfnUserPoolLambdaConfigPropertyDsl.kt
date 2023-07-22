@@ -7,6 +7,40 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * Specifies the configuration for AWS Lambda triggers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * LambdaConfigProperty lambdaConfigProperty = LambdaConfigProperty.builder()
+ * .createAuthChallenge("createAuthChallenge")
+ * .customEmailSender(CustomEmailSenderProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build())
+ * .customMessage("customMessage")
+ * .customSmsSender(CustomSMSSenderProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .lambdaVersion("lambdaVersion")
+ * .build())
+ * .defineAuthChallenge("defineAuthChallenge")
+ * .kmsKeyId("kmsKeyId")
+ * .postAuthentication("postAuthentication")
+ * .postConfirmation("postConfirmation")
+ * .preAuthentication("preAuthentication")
+ * .preSignUp("preSignUp")
+ * .preTokenGeneration("preTokenGeneration")
+ * .userMigration("userMigration")
+ * .verifyAuthChallengeResponse("verifyAuthChallengeResponse")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolLambdaConfigPropertyDsl {
   private val cdkBuilder: CfnUserPool.LambdaConfigProperty.Builder =

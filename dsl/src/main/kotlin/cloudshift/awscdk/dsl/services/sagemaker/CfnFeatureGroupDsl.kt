@@ -15,6 +15,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 import software.constructs.Construct
 
+/**
+ * Create a new `FeatureGroup` .
+ *
+ * A `FeatureGroup` is a group of `Features` defined in the `FeatureStore` to describe a `Record` .
+ *
+ * The `FeatureGroup` defines the schema and features contained in the FeatureGroup. A
+ * `FeatureGroup` definition is composed of a list of `Features` , a `RecordIdentifierFeatureName` , an
+ * `EventTimeFeatureName` and configurations for its `OnlineStore` and `OfflineStore` . Check [AWS
+ * service quotas](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) to see the
+ * `FeatureGroup` s quota for your AWS account.
+ *
+ *
+ * You must include at least one of `OnlineStoreConfig` and `OfflineStoreConfig` to create a
+ * `FeatureGroup` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object offlineStoreConfig;
+ * Object onlineStoreConfig;
+ * CfnFeatureGroup cfnFeatureGroup = CfnFeatureGroup.Builder.create(this, "MyCfnFeatureGroup")
+ * .eventTimeFeatureName("eventTimeFeatureName")
+ * .featureDefinitions(List.of(FeatureDefinitionProperty.builder()
+ * .featureName("featureName")
+ * .featureType("featureType")
+ * .build()))
+ * .featureGroupName("featureGroupName")
+ * .recordIdentifierFeatureName("recordIdentifierFeatureName")
+ * // the properties below are optional
+ * .description("description")
+ * .offlineStoreConfig(offlineStoreConfig)
+ * .onlineStoreConfig(onlineStoreConfig)
+ * .roleArn("roleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupDsl(
   scope: Construct,

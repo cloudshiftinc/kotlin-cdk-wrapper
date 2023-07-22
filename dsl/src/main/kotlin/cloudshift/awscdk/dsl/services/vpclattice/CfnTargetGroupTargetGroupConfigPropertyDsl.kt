@@ -8,6 +8,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 
+/**
+ * Describes the configuration of a target group.
+ *
+ * Lambda functions don't support target group configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * TargetGroupConfigProperty targetGroupConfigProperty = TargetGroupConfigProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .vpcIdentifier("vpcIdentifier")
+ * // the properties below are optional
+ * .healthCheck(HealthCheckConfigProperty.builder()
+ * .enabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .matcher(MatcherProperty.builder()
+ * .httpCode("httpCode")
+ * .build())
+ * .path("path")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .unhealthyThresholdCount(123)
+ * .build())
+ * .ipAddressType("ipAddressType")
+ * .protocolVersion("protocolVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-targetgroup-targetgroupconfig.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupTargetGroupConfigPropertyDsl {
   private val cdkBuilder: CfnTargetGroup.TargetGroupConfigProperty.Builder =

@@ -8,6 +8,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 import software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps
 
+/**
+ * Properties for defining a `CfnSecurityConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * CfnSecurityConfigurationProps cfnSecurityConfigurationProps =
+ * CfnSecurityConfigurationProps.builder()
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .cloudWatchEncryption(CloudWatchEncryptionProperty.builder()
+ * .cloudWatchEncryptionMode("cloudWatchEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .jobBookmarksEncryption(JobBookmarksEncryptionProperty.builder()
+ * .jobBookmarksEncryptionMode("jobBookmarksEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .s3Encryptions(List.of(S3EncryptionProperty.builder()
+ * .kmsKeyArn("kmsKeyArn")
+ * .s3EncryptionMode("s3EncryptionMode")
+ * .build()))
+ * .build())
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-securityconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationPropsDsl {
   private val cdkBuilder: CfnSecurityConfigurationProps.Builder =

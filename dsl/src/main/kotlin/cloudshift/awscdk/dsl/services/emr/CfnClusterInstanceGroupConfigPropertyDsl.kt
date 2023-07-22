@@ -11,6 +11,91 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * Use `InstanceGroupConfig` to define instance groups for an EMR cluster.
+ *
+ * A cluster can not use both instance groups and instance fleets. For more information, see [Create
+ * a Cluster with Instance Fleets or Uniform Instance
+ * Groups](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
+ * in the *Amazon EMR Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ConfigurationProperty configurationProperty_;
+ * InstanceGroupConfigProperty instanceGroupConfigProperty = InstanceGroupConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
+ * .constraints(ScalingConstraintsProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .rules(List.of(ScalingRuleProperty.builder()
+ * .action(ScalingActionProperty.builder()
+ * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
+ * .scalingAdjustment(123)
+ * // the properties below are optional
+ * .adjustmentType("adjustmentType")
+ * .coolDown(123)
+ * .build())
+ * // the properties below are optional
+ * .market("market")
+ * .build())
+ * .name("name")
+ * .trigger(ScalingTriggerProperty.builder()
+ * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .metricName("metricName")
+ * .period(123)
+ * .threshold(123)
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .evaluationPeriods(123)
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * .unit("unit")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build()))
+ * .build())
+ * .bidPrice("bidPrice")
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurationProperties(Map.of(
+ * "configurationPropertiesKey", "configurationProperties"))
+ * .configurations(List.of(configurationProperty_))
+ * .build()))
+ * .customAmiId("customAmiId")
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .market("market")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancegroupconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterInstanceGroupConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.InstanceGroupConfigProperty.Builder =

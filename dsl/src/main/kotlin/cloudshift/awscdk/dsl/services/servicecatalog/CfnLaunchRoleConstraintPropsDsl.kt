@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraintProps
 
+/**
+ * Properties for defining a `CfnLaunchRoleConstraint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnLaunchRoleConstraintProps cfnLaunchRoleConstraintProps =
+ * CfnLaunchRoleConstraintProps.builder()
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .localRoleName("localRoleName")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html)
+ */
 @CdkDslMarker
 public class CfnLaunchRoleConstraintPropsDsl {
   private val cdkBuilder: CfnLaunchRoleConstraintProps.Builder =

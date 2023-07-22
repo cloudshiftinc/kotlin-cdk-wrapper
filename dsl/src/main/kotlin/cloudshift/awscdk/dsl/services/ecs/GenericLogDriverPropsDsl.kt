@@ -8,6 +8,25 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.ecs.GenericLogDriverProps
 import software.amazon.awscdk.services.ecs.Secret
 
+/**
+ * The configuration to use when creating a log driver.
+ *
+ * Example:
+ *
+ * ```
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(GenericLogDriver.Builder.create()
+ * .logDriver("fluentd")
+ * .options(Map.of(
+ * "tag", "example-tag"))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GenericLogDriverPropsDsl {
   private val cdkBuilder: GenericLogDriverProps.Builder = GenericLogDriverProps.builder()

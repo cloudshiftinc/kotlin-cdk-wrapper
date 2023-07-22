@@ -7,6 +7,77 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * AmazonOpenSearchServerlessDestinationConfigurationProperty
+ * amazonOpenSearchServerlessDestinationConfigurationProperty =
+ * AmazonOpenSearchServerlessDestinationConfigurationProperty.builder()
+ * .indexName("indexName")
+ * .roleArn("roleArn")
+ * .s3Configuration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn("bucketArn")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .bufferingHints(BufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .compressionFormat("compressionFormat")
+ * .encryptionConfiguration(EncryptionConfigurationProperty.builder()
+ * .kmsEncryptionConfig(KMSEncryptionConfigProperty.builder()
+ * .awskmsKeyArn("awskmsKeyArn")
+ * .build())
+ * .noEncryptionConfig("noEncryptionConfig")
+ * .build())
+ * .errorOutputPrefix("errorOutputPrefix")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .bufferingHints(AmazonOpenSearchServerlessBufferingHintsProperty.builder()
+ * .intervalInSeconds(123)
+ * .sizeInMBs(123)
+ * .build())
+ * .cloudWatchLoggingOptions(CloudWatchLoggingOptionsProperty.builder()
+ * .enabled(false)
+ * .logGroupName("logGroupName")
+ * .logStreamName("logStreamName")
+ * .build())
+ * .collectionEndpoint("collectionEndpoint")
+ * .processingConfiguration(ProcessingConfigurationProperty.builder()
+ * .enabled(false)
+ * .processors(List.of(ProcessorProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .parameters(List.of(ProcessorParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .build()))
+ * .build())
+ * .retryOptions(AmazonOpenSearchServerlessRetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build())
+ * .s3BackupMode("s3BackupMode")
+ * .vpcConfiguration(VpcConfigurationProperty.builder()
+ * .roleArn("roleArn")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-amazonopensearchserverlessdestinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamAmazonOpenSearchServerlessDestinationConfigurationPropertyDsl {
   private val cdkBuilder:

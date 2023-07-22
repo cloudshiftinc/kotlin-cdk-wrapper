@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Settings requried for a slot type based on a grammar that you provide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * GrammarSlotTypeSettingProperty grammarSlotTypeSettingProperty =
+ * GrammarSlotTypeSettingProperty.builder()
+ * .source(GrammarSlotTypeSourceProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3ObjectKey("s3ObjectKey")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-grammarslottypesetting.html)
+ */
 @CdkDslMarker
 public class CfnBotGrammarSlotTypeSettingPropertyDsl {
   private val cdkBuilder: CfnBot.GrammarSlotTypeSettingProperty.Builder =

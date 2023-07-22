@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps
 
+/**
+ * Properties for defining a `CfnSlackChannelConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.chatbot.*;
+ * CfnSlackChannelConfigurationProps cfnSlackChannelConfigurationProps =
+ * CfnSlackChannelConfigurationProps.builder()
+ * .configurationName("configurationName")
+ * .iamRoleArn("iamRoleArn")
+ * .slackChannelId("slackChannelId")
+ * .slackWorkspaceId("slackWorkspaceId")
+ * // the properties below are optional
+ * .guardrailPolicies(List.of("guardrailPolicies"))
+ * .loggingLevel("loggingLevel")
+ * .snsTopicArns(List.of("snsTopicArns"))
+ * .userRoleRequired(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-slackchannelconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSlackChannelConfigurationPropsDsl {
   private val cdkBuilder: CfnSlackChannelConfigurationProps.Builder =

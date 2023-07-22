@@ -15,6 +15,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDatabase
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Database` resource specifies an Amazon Lightsail database.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnDatabase cfnDatabase = CfnDatabase.Builder.create(this, "MyCfnDatabase")
+ * .masterDatabaseName("masterDatabaseName")
+ * .masterUsername("masterUsername")
+ * .relationalDatabaseBlueprintId("relationalDatabaseBlueprintId")
+ * .relationalDatabaseBundleId("relationalDatabaseBundleId")
+ * .relationalDatabaseName("relationalDatabaseName")
+ * // the properties below are optional
+ * .availabilityZone("availabilityZone")
+ * .backupRetention(false)
+ * .caCertificateIdentifier("caCertificateIdentifier")
+ * .masterUserPassword("masterUserPassword")
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .relationalDatabaseParameters(List.of(RelationalDatabaseParameterProperty.builder()
+ * .allowedValues("allowedValues")
+ * .applyMethod("applyMethod")
+ * .applyType("applyType")
+ * .dataType("dataType")
+ * .description("description")
+ * .isModifiable(false)
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .rotateMasterUserPassword(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-database.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseDsl(
   scope: Construct,

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnFunction
 
+/**
+ * Details about the connection between a Lambda function and an [Amazon EFS file
+ * system](https://docs.aws.amazon.com/lambda/latest/dg/configuration-filesystem.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * FileSystemConfigProperty fileSystemConfigProperty = FileSystemConfigProperty.builder()
+ * .arn("arn")
+ * .localMountPath("localMountPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-filesystemconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionFileSystemConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.FileSystemConfigProperty.Builder =

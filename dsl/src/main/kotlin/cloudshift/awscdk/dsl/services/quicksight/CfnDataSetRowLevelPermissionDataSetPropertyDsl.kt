@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Information about a dataset that contains permissions for row-level security (RLS).
+ *
+ * The permissions dataset maps fields to users or groups. For more information, see [Using
+ * Row-Level Security (RLS) to Restrict Access to a
+ * Dataset](https://docs.aws.amazon.com/quicksight/latest/user/restrict-access-to-a-data-set-using-row-level-security.html)
+ * in the *Amazon QuickSight User Guide* .
+ *
+ * The option to deny permissions by setting `PermissionPolicy` to `DENY_ACCESS` is not supported
+ * for new RLS datasets.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * RowLevelPermissionDataSetProperty rowLevelPermissionDataSetProperty =
+ * RowLevelPermissionDataSetProperty.builder()
+ * .arn("arn")
+ * .permissionPolicy("permissionPolicy")
+ * // the properties below are optional
+ * .formatVersion("formatVersion")
+ * .namespace("namespace")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-rowlevelpermissiondataset.html)
+ */
 @CdkDslMarker
 public class CfnDataSetRowLevelPermissionDataSetPropertyDsl {
   private val cdkBuilder: CfnDataSet.RowLevelPermissionDataSetProperty.Builder =

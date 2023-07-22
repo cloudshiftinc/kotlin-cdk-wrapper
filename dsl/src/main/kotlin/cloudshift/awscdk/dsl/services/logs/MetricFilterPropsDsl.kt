@@ -11,6 +11,21 @@ import software.amazon.awscdk.services.logs.IFilterPattern
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.MetricFilterProps
 
+/**
+ * Properties for a MetricFilter.
+ *
+ * Example:
+ *
+ * ```
+ * MetricFilter.Builder.create(this, "MetricFilter")
+ * .logGroup(logGroup)
+ * .metricNamespace("MyApp")
+ * .metricName("Latency")
+ * .filterPattern(FilterPattern.exists("$.latency"))
+ * .metricValue("$.latency")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricFilterPropsDsl {
   private val cdkBuilder: MetricFilterProps.Builder = MetricFilterProps.builder()

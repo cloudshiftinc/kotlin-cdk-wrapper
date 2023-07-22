@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnFaq
 import software.constructs.Construct
 
+/**
+ * Creates an new set of frequently asked question (FAQ) questions and answers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * CfnFaq cfnFaq = CfnFaq.Builder.create(this, "MyCfnFaq")
+ * .indexId("indexId")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .s3Path(S3PathProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .fileFormat("fileFormat")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html)
+ */
 @CdkDslMarker
 public class CfnFaqDsl(
   scope: Construct,

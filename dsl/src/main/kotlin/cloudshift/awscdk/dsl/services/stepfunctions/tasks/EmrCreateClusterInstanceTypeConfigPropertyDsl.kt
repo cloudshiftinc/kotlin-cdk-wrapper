@@ -10,6 +10,49 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * An instance type configuration for each instance type in an instance fleet, which determines the
+ * EC2 instances Amazon EMR attempts to provision to fulfill On-Demand and Spot target capacities.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * ConfigurationProperty configurationProperty_;
+ * Size size;
+ * InstanceTypeConfigProperty instanceTypeConfigProperty = InstanceTypeConfigProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .bidPrice("bidPrice")
+ * .bidPriceAsPercentageOfOnDemandPrice(123)
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurations(List.of(configurationProperty_))
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .build()))
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .weightedCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_InstanceTypeConfig.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterInstanceTypeConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.InstanceTypeConfigProperty.Builder =

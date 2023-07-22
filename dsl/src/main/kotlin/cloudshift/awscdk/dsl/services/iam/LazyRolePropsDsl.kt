@@ -13,6 +13,34 @@ import software.amazon.awscdk.services.iam.IPrincipal
 import software.amazon.awscdk.services.iam.LazyRoleProps
 import software.amazon.awscdk.services.iam.PolicyDocument
 
+/**
+ * Properties for defining a LazyRole.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * ManagedPolicy managedPolicy;
+ * PolicyDocument policyDocument;
+ * IPrincipal principal;
+ * LazyRoleProps lazyRoleProps = LazyRoleProps.builder()
+ * .assumedBy(principal)
+ * // the properties below are optional
+ * .description("description")
+ * .externalIds(List.of("externalIds"))
+ * .inlinePolicies(Map.of(
+ * "inlinePoliciesKey", policyDocument))
+ * .managedPolicies(List.of(managedPolicy))
+ * .maxSessionDuration(Duration.minutes(30))
+ * .path("path")
+ * .permissionsBoundary(managedPolicy)
+ * .roleName("roleName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LazyRolePropsDsl {
   private val cdkBuilder: LazyRoleProps.Builder = LazyRoleProps.builder()

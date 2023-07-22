@@ -13,6 +13,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediapackage.CfnPackagingGroup
 import software.constructs.Construct
 
+/**
+ * Creates a packaging group.
+ *
+ * The packaging group holds one or more packaging configurations. When you create an asset, you
+ * specify the packaging group associated with the asset. The asset has playback endpoints for each
+ * packaging configuration within the group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediapackage.*;
+ * CfnPackagingGroup cfnPackagingGroup = CfnPackagingGroup.Builder.create(this,
+ * "MyCfnPackagingGroup")
+ * .id("id")
+ * // the properties below are optional
+ * .authorization(AuthorizationProperty.builder()
+ * .cdnIdentifierSecret("cdnIdentifierSecret")
+ * .secretsRoleArn("secretsRoleArn")
+ * .build())
+ * .egressAccessLogs(LogConfigurationProperty.builder()
+ * .logGroupName("logGroupName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackage-packaginggroup.html)
+ */
 @CdkDslMarker
 public class CfnPackagingGroupDsl(
   scope: Construct,

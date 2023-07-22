@@ -38,6 +38,29 @@ import software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateServic
 import software.amazon.awscdk.services.sqs.IQueue
 import software.constructs.Construct
 
+/**
+ * Class to create a queue processing Fargate service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * cluster.enableFargateCapacityProviders();
+ * QueueProcessingFargateService queueProcessingFargateService =
+ * QueueProcessingFargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(512)
+ * .image(ContainerImage.fromRegistry("test"))
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE_SPOT")
+ * .weight(2)
+ * .build(), CapacityProviderStrategy.builder()
+ * .capacityProvider("FARGATE")
+ * .weight(1)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueueProcessingFargateServiceDsl(
   scope: Construct,

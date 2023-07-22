@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a category filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicCategoryFilterProperty topicCategoryFilterProperty = TopicCategoryFilterProperty.builder()
+ * .categoryFilterFunction("categoryFilterFunction")
+ * .categoryFilterType("categoryFilterType")
+ * .constant(TopicCategoryFilterConstantProperty.builder()
+ * .collectiveConstant(CollectiveConstantProperty.builder()
+ * .valueList(List.of("valueList"))
+ * .build())
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .inverse(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccategoryfilter.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicCategoryFilterPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicCategoryFilterProperty.Builder =

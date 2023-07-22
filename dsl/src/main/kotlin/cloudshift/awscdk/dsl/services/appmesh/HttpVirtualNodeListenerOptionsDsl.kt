@@ -12,6 +12,35 @@ import software.amazon.awscdk.services.appmesh.HttpVirtualNodeListenerOptions
 import software.amazon.awscdk.services.appmesh.ListenerTlsOptions
 import software.amazon.awscdk.services.appmesh.OutlierDetection
 
+/**
+ * Represent the HTTP Node Listener property.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8081)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5)) // minimum
+ * .path("/health-check-path")
+ * .timeout(Duration.seconds(2)) // minimum
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .build())))
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpVirtualNodeListenerOptionsDsl {
   private val cdkBuilder: HttpVirtualNodeListenerOptions.Builder =

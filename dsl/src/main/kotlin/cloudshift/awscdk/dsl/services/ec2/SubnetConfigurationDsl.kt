@@ -9,6 +9,25 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.SubnetConfiguration
 import software.amazon.awscdk.services.ec2.SubnetType
 
+/**
+ * Specify configuration parameters for a single subnet group in a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SubnetConfiguration subnetConfiguration = SubnetConfiguration.builder()
+ * .name("name")
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * // the properties below are optional
+ * .cidrMask(123)
+ * .mapPublicIpOnLaunch(false)
+ * .reserved(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SubnetConfigurationDsl {
   private val cdkBuilder: SubnetConfiguration.Builder = SubnetConfiguration.builder()

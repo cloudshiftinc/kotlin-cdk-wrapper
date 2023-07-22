@@ -11,6 +11,121 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnScalingPolicy
 
+/**
+ * `PredictiveScalingConfiguration` is a property of the
+ * [AWS::AutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html)
+ * resource that specifies a predictive scaling policy for Amazon EC2 Auto Scaling.
+ *
+ * For more information, see [Predictive
+ * scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * PredictiveScalingConfigurationProperty predictiveScalingConfigurationProperty =
+ * PredictiveScalingConfigurationProperty.builder()
+ * .metricSpecifications(List.of(PredictiveScalingMetricSpecificationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetricProperty.builder()
+ * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .predefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedMetricPairSpecification(PredictiveScalingPredefinedMetricPairProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedScalingMetricSpecification(PredictiveScalingPredefinedScalingMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .maxCapacityBreachBehavior("maxCapacityBreachBehavior")
+ * .maxCapacityBuffer(123)
+ * .mode("mode")
+ * .schedulingBufferTime(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyPredictiveScalingConfigurationPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.PredictiveScalingConfigurationProperty.Builder =

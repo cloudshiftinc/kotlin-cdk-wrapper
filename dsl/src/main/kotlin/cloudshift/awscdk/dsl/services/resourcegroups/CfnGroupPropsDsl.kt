@@ -14,6 +14,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 import software.amazon.awscdk.services.resourcegroups.CfnGroupProps
 
+/**
+ * Properties for defining a `CfnGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * CfnGroupProps cfnGroupProps = CfnGroupProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .configuration(List.of(ConfigurationItemProperty.builder()
+ * .parameters(List.of(ConfigurationParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build()))
+ * .type("type")
+ * .build()))
+ * .description("description")
+ * .resourceQuery(ResourceQueryProperty.builder()
+ * .query(QueryProperty.builder()
+ * .resourceTypeFilters(List.of("resourceTypeFilters"))
+ * .stackIdentifier("stackIdentifier")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .type("type")
+ * .build())
+ * .resources(List.of("resources"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourcegroups-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupPropsDsl {
   private val cdkBuilder: CfnGroupProps.Builder = CfnGroupProps.builder()

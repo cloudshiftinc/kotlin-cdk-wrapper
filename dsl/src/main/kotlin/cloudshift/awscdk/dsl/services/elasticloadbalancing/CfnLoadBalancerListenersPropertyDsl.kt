@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 
+/**
+ * Specifies a listener for your Classic Load Balancer.
+ *
+ * Modifying any property replaces the listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * ListenersProperty listenersProperty = ListenersProperty.builder()
+ * .instancePort("instancePort")
+ * .loadBalancerPort("loadBalancerPort")
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .instanceProtocol("instanceProtocol")
+ * .policyNames(List.of("policyNames"))
+ * .sslCertificateId("sslCertificateId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-listeners.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerListenersPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.ListenersProperty.Builder =

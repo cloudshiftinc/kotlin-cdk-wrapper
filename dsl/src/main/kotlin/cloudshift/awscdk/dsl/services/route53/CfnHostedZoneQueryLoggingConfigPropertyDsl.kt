@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.route53.CfnHostedZone
 
+/**
+ * A complex type that contains information about a configuration for DNS query logging.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * QueryLoggingConfigProperty queryLoggingConfigProperty = QueryLoggingConfigProperty.builder()
+ * .cloudWatchLogsLogGroupArn("cloudWatchLogsLogGroupArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html)
+ */
 @CdkDslMarker
 public class CfnHostedZoneQueryLoggingConfigPropertyDsl {
   private val cdkBuilder: CfnHostedZone.QueryLoggingConfigProperty.Builder =

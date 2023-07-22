@@ -15,6 +15,87 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Specifies a cluster. A *cluster* is a fully managed data warehouse that consists of a set of
+ * compute nodes.
+ *
+ * To create a cluster in Virtual Private Cloud (VPC), you must provide a cluster subnet group name.
+ * The cluster subnet group identifies the subnets of your VPC that Amazon Redshift uses when creating
+ * the cluster. For more information about managing clusters, go to [Amazon Redshift
+ * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html) in the
+ * *Amazon Redshift Cluster Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .clusterType("clusterType")
+ * .dbName("dbName")
+ * .masterUsername("masterUsername")
+ * .masterUserPassword("masterUserPassword")
+ * .nodeType("nodeType")
+ * // the properties below are optional
+ * .allowVersionUpgrade(false)
+ * .aquaConfigurationStatus("aquaConfigurationStatus")
+ * .automatedSnapshotRetentionPeriod(123)
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneRelocation(false)
+ * .availabilityZoneRelocationStatus("availabilityZoneRelocationStatus")
+ * .classic(false)
+ * .clusterIdentifier("clusterIdentifier")
+ * .clusterParameterGroupName("clusterParameterGroupName")
+ * .clusterSecurityGroups(List.of("clusterSecurityGroups"))
+ * .clusterSubnetGroupName("clusterSubnetGroupName")
+ * .clusterVersion("clusterVersion")
+ * .deferMaintenance(false)
+ * .deferMaintenanceDuration(123)
+ * .deferMaintenanceEndTime("deferMaintenanceEndTime")
+ * .deferMaintenanceStartTime("deferMaintenanceStartTime")
+ * .destinationRegion("destinationRegion")
+ * .elasticIp("elasticIp")
+ * .encrypted(false)
+ * .endpoint(EndpointProperty.builder()
+ * .address("address")
+ * .port("port")
+ * .build())
+ * .enhancedVpcRouting(false)
+ * .hsmClientCertificateIdentifier("hsmClientCertificateIdentifier")
+ * .hsmConfigurationIdentifier("hsmConfigurationIdentifier")
+ * .iamRoles(List.of("iamRoles"))
+ * .kmsKeyId("kmsKeyId")
+ * .loggingProperties(LoggingPropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .s3KeyPrefix("s3KeyPrefix")
+ * .build())
+ * .maintenanceTrackName("maintenanceTrackName")
+ * .manualSnapshotRetentionPeriod(123)
+ * .numberOfNodes(123)
+ * .ownerAccount("ownerAccount")
+ * .port(123)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .resourceAction("resourceAction")
+ * .revisionTarget("revisionTarget")
+ * .rotateEncryptionKey(false)
+ * .snapshotClusterIdentifier("snapshotClusterIdentifier")
+ * .snapshotCopyGrantName("snapshotCopyGrantName")
+ * .snapshotCopyManual(false)
+ * .snapshotCopyRetentionPeriod(123)
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

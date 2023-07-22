@@ -8,6 +8,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeSource
 import software.amazon.awscdk.services.mediaconnect.CfnBridgeSourceProps
 
+/**
+ * Properties for defining a `CfnBridgeSource`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnBridgeSourceProps cfnBridgeSourceProps = CfnBridgeSourceProps.builder()
+ * .bridgeArn("bridgeArn")
+ * .name("name")
+ * // the properties below are optional
+ * .flowSource(BridgeFlowSourceProperty.builder()
+ * .flowArn("flowArn")
+ * // the properties below are optional
+ * .flowVpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .networkSource(BridgeNetworkSourceProperty.builder()
+ * .multicastIp("multicastIp")
+ * .networkName("networkName")
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-bridgesource.html)
+ */
 @CdkDslMarker
 public class CfnBridgeSourcePropsDsl {
   private val cdkBuilder: CfnBridgeSourceProps.Builder = CfnBridgeSourceProps.builder()

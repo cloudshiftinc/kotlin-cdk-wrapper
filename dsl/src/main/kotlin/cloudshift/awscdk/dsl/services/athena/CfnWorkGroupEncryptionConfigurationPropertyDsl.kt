@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.athena.CfnWorkGroup
 
+/**
+ * If query results are encrypted in Amazon S3, indicates the encryption option used (for example,
+ * `SSE_KMS` or `CSE_KMS` ) and key information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.athena.*;
+ * EncryptionConfigurationProperty encryptionConfigurationProperty =
+ * EncryptionConfigurationProperty.builder()
+ * .encryptionOption("encryptionOption")
+ * // the properties below are optional
+ * .kmsKey("kmsKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-athena-workgroup-encryptionconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnWorkGroupEncryptionConfigurationPropertyDsl {
   private val cdkBuilder: CfnWorkGroup.EncryptionConfigurationProperty.Builder =

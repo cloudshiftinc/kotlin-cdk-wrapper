@@ -9,6 +9,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The aggregated field wells for a geospatial map.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-geospatialmapaggregatedfieldwells.html)
+ */
 @CdkDslMarker
 public class CfnTemplateGeospatialMapAggregatedFieldWellsPropertyDsl {
   private val cdkBuilder: CfnTemplate.GeospatialMapAggregatedFieldWellsProperty.Builder =

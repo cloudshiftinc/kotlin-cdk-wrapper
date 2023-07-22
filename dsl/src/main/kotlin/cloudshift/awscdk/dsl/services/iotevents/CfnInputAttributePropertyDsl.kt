@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotevents.CfnInput
 
+/**
+ * The attributes from the JSON payload that are made available by the input.
+ *
+ * Inputs are derived from messages sent to the AWS IoT Events system using `BatchPutMessage` . Each
+ * such message contains a JSON payload. Those attributes (and their paired values) specified here are
+ * available for use in the `condition` expressions used by detectors.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * AttributeProperty attributeProperty = AttributeProperty.builder()
+ * .jsonPath("jsonPath")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-input-attribute.html)
+ */
 @CdkDslMarker
 public class CfnInputAttributePropertyDsl {
   private val cdkBuilder: CfnInput.AttributeProperty.Builder = CfnInput.AttributeProperty.builder()

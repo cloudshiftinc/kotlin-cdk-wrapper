@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer
 
+/**
+ * Specifies a policy for duration-based session stickiness for your Classic Load Balancer.
+ *
+ * To associate a policy with a listener, use the
+ * [PolicyNames](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-listener.html#cfn-ec2-elb-listener-policynames)
+ * property for the listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancing.*;
+ * LBCookieStickinessPolicyProperty lBCookieStickinessPolicyProperty =
+ * LBCookieStickinessPolicyProperty.builder()
+ * .cookieExpirationPeriod("cookieExpirationPeriod")
+ * .policyName("policyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancing-loadbalancer-lbcookiestickinesspolicy.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerLBCookieStickinessPolicyPropertyDsl {
   private val cdkBuilder: CfnLoadBalancer.LBCookieStickinessPolicyProperty.Builder =

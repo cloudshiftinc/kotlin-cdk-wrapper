@@ -8,6 +8,17 @@ import kotlin.String
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.sns.TopicProps
 
+/**
+ * Properties for a new SNS topic.
+ *
+ * Example:
+ *
+ * ```
+ * Topic topic = Topic.Builder.create(this, "Topic")
+ * .displayName("Customer subscription topic")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TopicPropsDsl {
   private val cdkBuilder: TopicProps.Builder = TopicProps.builder()

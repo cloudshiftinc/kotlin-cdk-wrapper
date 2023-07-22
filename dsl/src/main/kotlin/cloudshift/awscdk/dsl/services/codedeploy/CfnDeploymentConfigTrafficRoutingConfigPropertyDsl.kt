@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig
 
+/**
+ * The configuration that specifies how traffic is shifted from one version of a Lambda function to
+ * another version during an AWS Lambda deployment, or from one Amazon ECS task set to another during
+ * an Amazon ECS deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * TrafficRoutingConfigProperty trafficRoutingConfigProperty =
+ * TrafficRoutingConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .timeBasedCanary(TimeBasedCanaryProperty.builder()
+ * .canaryInterval(123)
+ * .canaryPercentage(123)
+ * .build())
+ * .timeBasedLinear(TimeBasedLinearProperty.builder()
+ * .linearInterval(123)
+ * .linearPercentage(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-trafficroutingconfig.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentConfigTrafficRoutingConfigPropertyDsl {
   private val cdkBuilder: CfnDeploymentConfig.TrafficRoutingConfigProperty.Builder =

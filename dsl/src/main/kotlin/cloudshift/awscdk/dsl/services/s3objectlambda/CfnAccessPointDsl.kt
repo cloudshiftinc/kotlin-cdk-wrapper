@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint
 import software.constructs.Construct
 
+/**
+ * The `AWS::S3ObjectLambda::AccessPoint` resource specifies an Object Lambda Access Point used to
+ * access a bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3objectlambda.*;
+ * Object contentTransformation;
+ * CfnAccessPoint cfnAccessPoint = CfnAccessPoint.Builder.create(this, "MyCfnAccessPoint")
+ * .objectLambdaConfiguration(ObjectLambdaConfigurationProperty.builder()
+ * .supportingAccessPoint("supportingAccessPoint")
+ * .transformationConfigurations(List.of(TransformationConfigurationProperty.builder()
+ * .actions(List.of("actions"))
+ * .contentTransformation(contentTransformation)
+ * .build()))
+ * // the properties below are optional
+ * .allowedFeatures(List.of("allowedFeatures"))
+ * .cloudWatchMetricsEnabled(false)
+ * .build())
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3objectlambda-accesspoint.html)
+ */
 @CdkDslMarker
 public class CfnAccessPointDsl(
   scope: Construct,

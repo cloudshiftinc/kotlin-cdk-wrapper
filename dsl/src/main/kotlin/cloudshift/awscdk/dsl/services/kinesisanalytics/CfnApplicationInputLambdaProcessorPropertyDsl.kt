@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplication
 
+/**
+ * An object that contains the Amazon Resource Name (ARN) of the [AWS
+ * Lambda](https://docs.aws.amazon.com/lambda/) function that is used to preprocess records in the
+ * stream, and the ARN of the IAM role that is used to access the AWS Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * InputLambdaProcessorProperty inputLambdaProcessorProperty =
+ * InputLambdaProcessorProperty.builder()
+ * .resourceArn("resourceArn")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputlambdaprocessor.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInputLambdaProcessorPropertyDsl {
   private val cdkBuilder: CfnApplication.InputLambdaProcessorProperty.Builder =

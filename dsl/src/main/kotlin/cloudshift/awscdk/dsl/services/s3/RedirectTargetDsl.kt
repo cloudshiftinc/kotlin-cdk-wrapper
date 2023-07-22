@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.s3.RedirectProtocol
 import software.amazon.awscdk.services.s3.RedirectTarget
 
+/**
+ * Specifies a redirect behavior of all requests to a website endpoint of a bucket.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket = Bucket.Builder.create(this, "MyRedirectedBucket")
+ * .websiteRedirect(RedirectTarget.builder().hostName("www.example.com").build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RedirectTargetDsl {
   private val cdkBuilder: RedirectTarget.Builder = RedirectTarget.builder()

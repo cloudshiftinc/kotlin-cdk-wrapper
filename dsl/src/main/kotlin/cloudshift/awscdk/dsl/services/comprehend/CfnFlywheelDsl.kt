@@ -13,6 +13,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 import software.constructs.Construct
 
+/**
+ * A flywheel is an AWS resource that orchestrates the ongoing training of a model for custom
+ * classification or custom entity recognition.
+ *
+ * You can create a flywheel to start with an existing trained model, or Comprehend can create and
+ * train a new model.
+ *
+ * When you create the flywheel, Comprehend creates a data lake in your account. The data lake holds
+ * the training data and test data for all versions of the model.
+ *
+ * To use a flywheel with an existing trained model, you specify the active model version.
+ * Comprehend copies the model's training data and test data into the flywheel's data lake.
+ *
+ * To use the flywheel with a new model, you need to provide a dataset for training data (and
+ * optional test data) when you create the flywheel.
+ *
+ * For more information about flywheels, see [Flywheel
+ * overview](https://docs.aws.amazon.com/comprehend/latest/dg/flywheels-about.html) in the *Amazon
+ * Comprehend Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * CfnFlywheel cfnFlywheel = CfnFlywheel.Builder.create(this, "MyCfnFlywheel")
+ * .dataAccessRoleArn("dataAccessRoleArn")
+ * .dataLakeS3Uri("dataLakeS3Uri")
+ * .flywheelName("flywheelName")
+ * // the properties below are optional
+ * .activeModelArn("activeModelArn")
+ * .dataSecurityConfig(DataSecurityConfigProperty.builder()
+ * .dataLakeKmsKeyId("dataLakeKmsKeyId")
+ * .modelKmsKeyId("modelKmsKeyId")
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build())
+ * .modelType("modelType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskConfig(TaskConfigProperty.builder()
+ * .languageCode("languageCode")
+ * // the properties below are optional
+ * .documentClassificationConfig(DocumentClassificationConfigProperty.builder()
+ * .mode("mode")
+ * // the properties below are optional
+ * .labels(List.of("labels"))
+ * .build())
+ * .entityRecognitionConfig(EntityRecognitionConfigProperty.builder()
+ * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-comprehend-flywheel.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelDsl(
   scope: Construct,

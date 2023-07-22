@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The retry strategy that's associated with a job.
+ *
+ * For more information, see [Automated job
+ * retries](https://docs.aws.amazon.com/batch/latest/userguide/job_retries.html) in the *AWS Batch User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * BatchRetryStrategyProperty batchRetryStrategyProperty = BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-batchretrystrategy.html)
+ */
 @CdkDslMarker
 public class CfnPipeBatchRetryStrategyPropertyDsl {
   private val cdkBuilder: CfnPipe.BatchRetryStrategyProperty.Builder =

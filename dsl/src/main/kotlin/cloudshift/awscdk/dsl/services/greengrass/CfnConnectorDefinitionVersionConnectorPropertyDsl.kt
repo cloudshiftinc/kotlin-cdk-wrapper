@@ -9,6 +9,35 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion
 
+/**
+ * Connectors are modules that provide built-in integration with local infrastructure, device
+ * protocols, AWS , and other cloud services.
+ *
+ * For more information, see [Integrate with Services and Protocols Using Greengrass
+ * Connectors](https://docs.aws.amazon.com/greengrass/latest/developerguide/connectors.html) in the
+ * *Developer Guide* .
+ *
+ * In an AWS CloudFormation template, the `Connectors` property of the
+ * [`AWS::Greengrass::ConnectorDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-connectordefinitionversion.html)
+ * resource contains a list of `Connector` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object parameters;
+ * ConnectorProperty connectorProperty = ConnectorProperty.builder()
+ * .connectorArn("connectorArn")
+ * .id("id")
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-connectordefinitionversion-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDefinitionVersionConnectorPropertyDsl {
   private val cdkBuilder: CfnConnectorDefinitionVersion.ConnectorProperty.Builder =

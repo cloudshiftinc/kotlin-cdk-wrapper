@@ -14,6 +14,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnCACertificate
 import software.amazon.awscdk.services.iot.CfnCACertificateProps
 
+/**
+ * Properties for defining a `CfnCACertificate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnCACertificateProps cfnCACertificateProps = CfnCACertificateProps.builder()
+ * .caCertificatePem("caCertificatePem")
+ * .status("status")
+ * // the properties below are optional
+ * .autoRegistrationStatus("autoRegistrationStatus")
+ * .certificateMode("certificateMode")
+ * .registrationConfig(RegistrationConfigProperty.builder()
+ * .roleArn("roleArn")
+ * .templateBody("templateBody")
+ * .templateName("templateName")
+ * .build())
+ * .removeAutoRegistration(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .verificationCertificatePem("verificationCertificatePem")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-cacertificate.html)
+ */
 @CdkDslMarker
 public class CfnCACertificatePropsDsl {
   private val cdkBuilder: CfnCACertificateProps.Builder = CfnCACertificateProps.builder()

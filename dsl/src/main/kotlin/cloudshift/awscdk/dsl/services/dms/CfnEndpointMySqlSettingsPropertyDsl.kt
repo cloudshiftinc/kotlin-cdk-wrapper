@@ -9,6 +9,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a MySQL endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Extra connection attributes when using MySQL as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.ConnectionAttrib)
+ * and [Extra connection attributes when using a MySQL-compatible database as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.MySQL.html#CHAP_Target.MySQL.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * MySqlSettingsProperty mySqlSettingsProperty = MySqlSettingsProperty.builder()
+ * .afterConnectScript("afterConnectScript")
+ * .cleanSourceMetadataOnMismatch(false)
+ * .eventsPollInterval(123)
+ * .maxFileSize(123)
+ * .parallelLoadThreads(123)
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .serverTimezone("serverTimezone")
+ * .targetDbType("targetDbType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-mysqlsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointMySqlSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.MySqlSettingsProperty.Builder =

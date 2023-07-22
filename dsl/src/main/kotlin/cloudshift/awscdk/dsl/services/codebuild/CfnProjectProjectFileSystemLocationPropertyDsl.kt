@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * Information about a file system created by Amazon Elastic File System (EFS).
+ *
+ * For more information, see [What Is Amazon Elastic File
+ * System?](https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ProjectFileSystemLocationProperty projectFileSystemLocationProperty =
+ * ProjectFileSystemLocationProperty.builder()
+ * .identifier("identifier")
+ * .location("location")
+ * .mountPoint("mountPoint")
+ * .type("type")
+ * // the properties below are optional
+ * .mountOptions("mountOptions")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectfilesystemlocation.html)
+ */
 @CdkDslMarker
 public class CfnProjectProjectFileSystemLocationPropertyDsl {
   private val cdkBuilder: CfnProject.ProjectFileSystemLocationProperty.Builder =

@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnIPAMAllocationProps
 
+/**
+ * Properties for defining a `CfnIPAMAllocation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMAllocationProps cfnIPAMAllocationProps = CfnIPAMAllocationProps.builder()
+ * .ipamPoolId("ipamPoolId")
+ * // the properties below are optional
+ * .cidr("cidr")
+ * .description("description")
+ * .netmaskLength(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamallocation.html)
+ */
 @CdkDslMarker
 public class CfnIPAMAllocationPropsDsl {
   private val cdkBuilder: CfnIPAMAllocationProps.Builder = CfnIPAMAllocationProps.builder()

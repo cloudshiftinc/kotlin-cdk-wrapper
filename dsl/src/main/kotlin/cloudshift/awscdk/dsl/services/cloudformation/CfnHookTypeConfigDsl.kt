@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnHookTypeConfig
 import software.constructs.Construct
 
+/**
+ * The `HookTypeConfig` resource specifies the configuration of a hook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnHookTypeConfig cfnHookTypeConfig = CfnHookTypeConfig.Builder.create(this,
+ * "MyCfnHookTypeConfig")
+ * .configuration("configuration")
+ * // the properties below are optional
+ * .configurationAlias("configurationAlias")
+ * .typeArn("typeArn")
+ * .typeName("typeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)
+ */
 @CdkDslMarker
 public class CfnHookTypeConfigDsl(
   scope: Construct,

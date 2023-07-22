@@ -10,6 +10,28 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.glue.CfnWorkflowProps
 
+/**
+ * Properties for defining a `CfnWorkflow`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object defaultRunProperties;
+ * Object tags;
+ * CfnWorkflowProps cfnWorkflowProps = CfnWorkflowProps.builder()
+ * .defaultRunProperties(defaultRunProperties)
+ * .description("description")
+ * .maxConcurrentRuns(123)
+ * .name("name")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowPropsDsl {
   private val cdkBuilder: CfnWorkflowProps.Builder = CfnWorkflowProps.builder()

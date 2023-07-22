@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP
 
+/**
+ * Specifies how DataSync can access a location using the NFS protocol.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * NfsMountOptionsProperty nfsMountOptionsProperty = NfsMountOptionsProperty.builder()
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationfsxontap-nfsmountoptions.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxONTAPNfsMountOptionsPropertyDsl {
   private val cdkBuilder: CfnLocationFSxONTAP.NfsMountOptionsProperty.Builder =

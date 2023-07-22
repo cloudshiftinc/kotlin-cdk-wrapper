@@ -11,6 +11,88 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Provides the configuration information to connect to Salesforce as your data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SalesforceConfigurationProperty salesforceConfigurationProperty =
+ * SalesforceConfigurationProperty.builder()
+ * .secretArn("secretArn")
+ * .serverUrl("serverUrl")
+ * // the properties below are optional
+ * .chatterFeedConfiguration(SalesforceChatterFeedConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .includeFilterTypes(List.of("includeFilterTypes"))
+ * .build())
+ * .crawlAttachments(false)
+ * .excludeAttachmentFilePatterns(List.of("excludeAttachmentFilePatterns"))
+ * .includeAttachmentFilePatterns(List.of("includeAttachmentFilePatterns"))
+ * .knowledgeArticleConfiguration(SalesforceKnowledgeArticleConfigurationProperty.builder()
+ * .includedStates(List.of("includedStates"))
+ * // the properties below are optional
+ * .customKnowledgeArticleTypeConfigurations(List.of(SalesforceCustomKnowledgeArticleTypeConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * .name("name")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build()))
+ * .standardKnowledgeArticleTypeConfiguration(SalesforceStandardKnowledgeArticleTypeConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .build())
+ * .standardObjectAttachmentConfiguration(SalesforceStandardObjectAttachmentConfigurationProperty.builder()
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build())
+ * .standardObjectConfigurations(List.of(SalesforceStandardObjectConfigurationProperty.builder()
+ * .documentDataFieldName("documentDataFieldName")
+ * .name("name")
+ * // the properties below are optional
+ * .documentTitleFieldName("documentTitleFieldName")
+ * .fieldMappings(List.of(DataSourceToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-salesforceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceSalesforceConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.SalesforceConfigurationProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration
 
+/**
+ * The S3DestinationConfiguration property type specifies an S3 location where chat logs will be
+ * stored.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * S3DestinationConfigurationProperty s3DestinationConfigurationProperty =
+ * S3DestinationConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-loggingconfiguration-s3destinationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationS3DestinationConfigurationPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.S3DestinationConfigurationProperty.Builder =

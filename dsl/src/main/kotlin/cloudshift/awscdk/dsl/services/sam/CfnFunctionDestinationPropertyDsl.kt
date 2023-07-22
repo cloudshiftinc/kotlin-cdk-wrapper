@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * DestinationProperty destinationProperty = DestinationProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-destination.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDestinationPropertyDsl {
   private val cdkBuilder: CfnFunction.DestinationProperty.Builder =

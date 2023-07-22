@@ -7,6 +7,25 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.docdb.ClusterParameterGroupProps
 
+/**
+ * Properties for a cluster parameter group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.docdb.*;
+ * ClusterParameterGroupProps clusterParameterGroupProps = ClusterParameterGroupProps.builder()
+ * .family("family")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * // the properties below are optional
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .description("description")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterParameterGroupPropsDsl {
   private val cdkBuilder: ClusterParameterGroupProps.Builder = ClusterParameterGroupProps.builder()

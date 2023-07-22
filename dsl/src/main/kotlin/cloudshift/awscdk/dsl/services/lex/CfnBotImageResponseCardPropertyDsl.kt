@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * A card that is shown to the user by a messaging platform.
+ *
+ * You define the contents of the card, the card is displayed by the platform.
+ *
+ * When you use a response card, the response from the user is constrained to the text associated
+ * with a button on the card.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * ImageResponseCardProperty imageResponseCardProperty = ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-imageresponsecard.html)
+ */
 @CdkDslMarker
 public class CfnBotImageResponseCardPropertyDsl {
   private val cdkBuilder: CfnBot.ImageResponseCardProperty.Builder =

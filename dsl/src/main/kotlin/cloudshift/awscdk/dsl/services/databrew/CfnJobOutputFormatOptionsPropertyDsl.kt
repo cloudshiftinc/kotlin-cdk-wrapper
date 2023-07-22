@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Represents a set of options that define the structure of comma-separated (CSV) job output.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * OutputFormatOptionsProperty outputFormatOptionsProperty = OutputFormatOptionsProperty.builder()
+ * .csv(CsvOutputOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-outputformatoptions.html)
+ */
 @CdkDslMarker
 public class CfnJobOutputFormatOptionsPropertyDsl {
   private val cdkBuilder: CfnJob.OutputFormatOptionsProperty.Builder =

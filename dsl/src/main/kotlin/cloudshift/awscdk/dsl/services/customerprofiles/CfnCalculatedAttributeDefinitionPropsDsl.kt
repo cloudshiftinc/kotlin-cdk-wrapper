@@ -13,6 +13,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition
 import software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinitionProps
 
+/**
+ * Properties for defining a `CfnCalculatedAttributeDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * CfnCalculatedAttributeDefinitionProps cfnCalculatedAttributeDefinitionProps =
+ * CfnCalculatedAttributeDefinitionProps.builder()
+ * .attributeDetails(AttributeDetailsProperty.builder()
+ * .attributes(List.of(AttributeItemProperty.builder()
+ * .name("name")
+ * .build()))
+ * .expression("expression")
+ * .build())
+ * .calculatedAttributeName("calculatedAttributeName")
+ * .domainName("domainName")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .conditions(ConditionsProperty.builder()
+ * .objectCount(123)
+ * .range(RangeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .threshold(ThresholdProperty.builder()
+ * .operator("operator")
+ * .value("value")
+ * .build())
+ * .build())
+ * .description("description")
+ * .displayName("displayName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-calculatedattributedefinition.html)
+ */
 @CdkDslMarker
 public class CfnCalculatedAttributeDefinitionPropsDsl {
   private val cdkBuilder: CfnCalculatedAttributeDefinitionProps.Builder =

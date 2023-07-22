@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnReceiptRule
 
+/**
+ * When included in a receipt rule, this action calls an AWS Lambda function and, optionally,
+ * publishes a notification to Amazon Simple Notification Service (Amazon SNS).
+ *
+ * To enable Amazon SES to call your AWS Lambda function or to publish to an Amazon SNS topic of
+ * another account, Amazon SES must have permission to access those resources. For information about
+ * giving permissions, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-permissions.html) .
+ *
+ * For information about using AWS Lambda actions in receipt rules, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-action-lambda.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * LambdaActionProperty lambdaActionProperty = LambdaActionProperty.builder()
+ * .functionArn("functionArn")
+ * // the properties below are optional
+ * .invocationType("invocationType")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-lambdaaction.html)
+ */
 @CdkDslMarker
 public class CfnReceiptRuleLambdaActionPropertyDsl {
   private val cdkBuilder: CfnReceiptRule.LambdaActionProperty.Builder =

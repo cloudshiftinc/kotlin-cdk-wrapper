@@ -8,6 +8,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition
 
+/**
+ * Docker container image configuration object for the model bias job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelBiasAppSpecificationProperty modelBiasAppSpecificationProperty =
+ * ModelBiasAppSpecificationProperty.builder()
+ * .configUri("configUri")
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelbiasjobdefinition-modelbiasappspecification.html)
+ */
 @CdkDslMarker
 public class CfnModelBiasJobDefinitionModelBiasAppSpecificationPropertyDsl {
   private val cdkBuilder: CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty.Builder =

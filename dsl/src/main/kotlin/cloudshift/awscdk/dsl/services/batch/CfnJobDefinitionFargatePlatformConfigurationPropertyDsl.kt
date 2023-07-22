@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * The platform configuration for jobs that are running on Fargate resources.
+ *
+ * Jobs that run on EC2 resources must not specify this parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * FargatePlatformConfigurationProperty fargatePlatformConfigurationProperty =
+ * FargatePlatformConfigurationProperty.builder()
+ * .platformVersion("platformVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-fargateplatformconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionFargatePlatformConfigurationPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.FargatePlatformConfigurationProperty.Builder =

@@ -11,6 +11,54 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnDeviceDefinition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::DeviceDefinition` resource represents a device definition for AWS IoT
+ * Greengrass .
+ *
+ * Device definitions are used to organize your device definition versions.
+ *
+ * Device definitions can reference multiple device definition versions. All device definition
+ * versions must be associated with a device definition. Each device definition version can contain one
+ * or more devices.
+ *
+ *
+ * When you create a device definition, you can optionally include an initial device definition
+ * version. To associate a device definition version later, create an
+ * [`AWS::Greengrass::DeviceDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinitionversion.html)
+ * resource and specify the ID of this device definition.
+ *
+ * After you create the device definition version that contains the devices you want to deploy, you
+ * must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnDeviceDefinition cfnDeviceDefinition = CfnDeviceDefinition.Builder.create(this,
+ * "MyCfnDeviceDefinition")
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(DeviceDefinitionVersionProperty.builder()
+ * .devices(List.of(DeviceProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDefinitionDsl(
   scope: Construct,

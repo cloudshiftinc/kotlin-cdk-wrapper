@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig
 import software.constructs.Construct
 
+/**
+ * Specifies a security configuration for OpenSearch Serverless.
+ *
+ * For more information, see [SAML authentication for Amazon OpenSearch
+ * Serverless](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/serverless-saml.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnSecurityConfig cfnSecurityConfig = CfnSecurityConfig.Builder.create(this,
+ * "MyCfnSecurityConfig")
+ * .description("description")
+ * .name("name")
+ * .samlOptions(SamlConfigOptionsProperty.builder()
+ * .metadata("metadata")
+ * // the properties below are optional
+ * .groupAttribute("groupAttribute")
+ * .sessionTimeout(123)
+ * .userAttribute("userAttribute")
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigDsl(
   scope: Construct,

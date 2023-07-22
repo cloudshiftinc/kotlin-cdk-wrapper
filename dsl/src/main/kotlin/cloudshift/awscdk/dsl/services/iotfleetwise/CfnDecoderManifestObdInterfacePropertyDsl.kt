@@ -6,6 +6,29 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * A network interface that specifies the On-board diagnostic (OBD) II network protocol.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * ObdInterfaceProperty obdInterfaceProperty = ObdInterfaceProperty.builder()
+ * .name("name")
+ * .requestMessageId("requestMessageId")
+ * // the properties below are optional
+ * .dtcRequestIntervalSeconds("dtcRequestIntervalSeconds")
+ * .hasTransmissionEcu("hasTransmissionEcu")
+ * .obdStandard("obdStandard")
+ * .pidRequestIntervalSeconds("pidRequestIntervalSeconds")
+ * .useExtendedIds("useExtendedIds")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestObdInterfacePropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.ObdInterfaceProperty.Builder =

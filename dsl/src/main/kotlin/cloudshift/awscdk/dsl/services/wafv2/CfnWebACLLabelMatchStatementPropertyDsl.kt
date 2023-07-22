@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * A rule statement to match against labels that have been added to the web request by rules that
+ * have already run in the web ACL.
+ *
+ * The label match statement provides the label or namespace string to search for. The label string
+ * can represent a part or all of the fully qualified label name that had been added to the web
+ * request. Fully qualified labels have a prefix, optional namespaces, and label name. The prefix
+ * identifies the rule group or web ACL context of the rule that added the label. If you do not provide
+ * the fully qualified name in your label match string, AWS WAF performs the search for labels that
+ * were added in the same context as the label match statement.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * LabelMatchStatementProperty labelMatchStatementProperty = LabelMatchStatementProperty.builder()
+ * .key("key")
+ * .scope("scope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-labelmatchstatement.html)
+ */
 @CdkDslMarker
 public class CfnWebACLLabelMatchStatementPropertyDsl {
   private val cdkBuilder: CfnWebACL.LabelMatchStatementProperty.Builder =

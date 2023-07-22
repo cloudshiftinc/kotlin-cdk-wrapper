@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * MaintenanceUpdateSettingsProperty maintenanceUpdateSettingsProperty =
+ * MaintenanceUpdateSettingsProperty.builder()
+ * .maintenanceDay("maintenanceDay")
+ * .maintenanceScheduledDate("maintenanceScheduledDate")
+ * .maintenanceStartTime("maintenanceStartTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-maintenanceupdatesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelMaintenanceUpdateSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.MaintenanceUpdateSettingsProperty.Builder =

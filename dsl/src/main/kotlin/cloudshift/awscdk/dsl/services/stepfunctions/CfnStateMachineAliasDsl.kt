@@ -11,6 +11,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
 import software.constructs.Construct
 
+/**
+ * Represents a state machine
+ * [alias](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-state-machine-alias.html) . An
+ * alias routes traffic to one or two versions of the same state machine.
+ *
+ * You can create up to 100 aliases for each state machine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CfnStateMachineAlias cfnStateMachineAlias = CfnStateMachineAlias.Builder.create(this,
+ * "MyCfnStateMachineAlias")
+ * .deploymentPreference(DeploymentPreferenceProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .type("type")
+ * // the properties below are optional
+ * .alarms(List.of("alarms"))
+ * .interval(123)
+ * .percentage(123)
+ * .build())
+ * .description("description")
+ * .name("name")
+ * .routingConfiguration(List.of(RoutingConfigurationVersionProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineAliasDsl(
   scope: Construct,

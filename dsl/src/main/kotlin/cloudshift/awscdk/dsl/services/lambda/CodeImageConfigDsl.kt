@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.CodeImageConfig
 
+/**
+ * Result of the bind when an ECR image is used.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CodeImageConfig codeImageConfig = CodeImageConfig.builder()
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .cmd(List.of("cmd"))
+ * .entrypoint(List.of("entrypoint"))
+ * .workingDirectory("workingDirectory")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeImageConfigDsl {
   private val cdkBuilder: CodeImageConfig.Builder = CodeImageConfig.builder()

@@ -9,6 +9,23 @@ import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.RequestValidator
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi restApi;
+ * RequestValidator requestValidator = RequestValidator.Builder.create(this, "MyRequestValidator")
+ * .restApi(restApi)
+ * // the properties below are optional
+ * .requestValidatorName("requestValidatorName")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RequestValidatorDsl(
   scope: Construct,

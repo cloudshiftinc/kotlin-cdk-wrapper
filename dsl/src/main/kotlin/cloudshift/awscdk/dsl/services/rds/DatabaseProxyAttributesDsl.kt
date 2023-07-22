@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.rds.DatabaseProxyAttributes
 
+/**
+ * Properties that describe an existing DB Proxy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * SecurityGroup securityGroup;
+ * DatabaseProxyAttributes databaseProxyAttributes = DatabaseProxyAttributes.builder()
+ * .dbProxyArn("dbProxyArn")
+ * .dbProxyName("dbProxyName")
+ * .endpoint("endpoint")
+ * .securityGroups(List.of(securityGroup))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseProxyAttributesDsl {
   private val cdkBuilder: DatabaseProxyAttributes.Builder = DatabaseProxyAttributes.builder()

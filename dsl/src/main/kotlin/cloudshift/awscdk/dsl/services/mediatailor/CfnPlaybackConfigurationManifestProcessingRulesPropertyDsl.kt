@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 
+/**
+ * The configuration for manifest processing rules.
+ *
+ * Manifest processing rules enable customization of the personalized manifests created by
+ * MediaTailor.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediatailor.*;
+ * ManifestProcessingRulesProperty manifestProcessingRulesProperty =
+ * ManifestProcessingRulesProperty.builder()
+ * .adMarkerPassthrough(AdMarkerPassthroughProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-manifestprocessingrules.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackConfigurationManifestProcessingRulesPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.ManifestProcessingRulesProperty.Builder =

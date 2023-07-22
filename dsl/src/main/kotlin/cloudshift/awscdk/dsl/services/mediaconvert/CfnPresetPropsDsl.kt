@@ -9,6 +9,29 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.mediaconvert.CfnPresetProps
 
+/**
+ * Properties for defining a `CfnPreset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * Object settingsJson;
+ * Object tags;
+ * CfnPresetProps cfnPresetProps = CfnPresetProps.builder()
+ * .settingsJson(settingsJson)
+ * // the properties below are optional
+ * .category("category")
+ * .description("description")
+ * .name("name")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html)
+ */
 @CdkDslMarker
 public class CfnPresetPropsDsl {
   private val cdkBuilder: CfnPresetProps.Builder = CfnPresetProps.builder()

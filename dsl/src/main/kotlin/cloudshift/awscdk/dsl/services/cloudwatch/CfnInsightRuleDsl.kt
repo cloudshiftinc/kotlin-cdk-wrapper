@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.cloudwatch.CfnInsightRule
 import software.constructs.Construct
 
+/**
+ * Creates or updates a Contributor Insights rule.
+ *
+ * Rules evaluate log events in a CloudWatch Logs log group, enabling you to find contributor data
+ * for the log events in that log group. For more information, see [Using Contributor Insights to
+ * Analyze High-Cardinality
+ * Data](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/ContributorInsights.html) in
+ * the *Amazon CloudWatch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * CfnInsightRule cfnInsightRule = CfnInsightRule.Builder.create(this, "MyCfnInsightRule")
+ * .ruleBody("ruleBody")
+ * .ruleName("ruleName")
+ * .ruleState("ruleState")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-insightrule.html)
+ */
 @CdkDslMarker
 public class CfnInsightRuleDsl(
   scope: Construct,

@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannelProps
 
+/**
+ * Properties for defining a `CfnAPNSVoipSandboxChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnAPNSVoipSandboxChannelProps cfnAPNSVoipSandboxChannelProps =
+ * CfnAPNSVoipSandboxChannelProps.builder()
+ * .applicationId("applicationId")
+ * // the properties below are optional
+ * .bundleId("bundleId")
+ * .certificate("certificate")
+ * .defaultAuthenticationMethod("defaultAuthenticationMethod")
+ * .enabled(false)
+ * .privateKey("privateKey")
+ * .teamId("teamId")
+ * .tokenKey("tokenKey")
+ * .tokenKeyId("tokenKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-apnsvoipsandboxchannel.html)
+ */
 @CdkDslMarker
 public class CfnAPNSVoipSandboxChannelPropsDsl {
   private val cdkBuilder: CfnAPNSVoipSandboxChannelProps.Builder =

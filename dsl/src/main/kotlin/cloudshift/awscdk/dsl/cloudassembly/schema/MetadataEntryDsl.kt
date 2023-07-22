@@ -12,6 +12,23 @@ import software.amazon.awscdk.cloudassembly.schema.FileAssetMetadataEntry
 import software.amazon.awscdk.cloudassembly.schema.MetadataEntry
 import software.amazon.awscdk.cloudassembly.schema.Tag
 
+/**
+ * A metadata entry in a cloud assembly artifact.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * MetadataEntry metadataEntry = MetadataEntry.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .trace(List.of("trace"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetadataEntryDsl {
   private val cdkBuilder: MetadataEntry.Builder = MetadataEntry.builder()

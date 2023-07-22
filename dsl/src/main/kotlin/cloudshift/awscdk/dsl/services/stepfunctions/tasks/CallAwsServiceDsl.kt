@@ -21,6 +21,24 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService
 import software.constructs.Construct
 
+/**
+ * A StepFunctions task to call an AWS service API.
+ *
+ * Example:
+ *
+ * ```
+ * CallAwsService detectLabels = CallAwsService.Builder.create(this, "DetectLabels")
+ * .service("rekognition")
+ * .action("detectLabels")
+ * .iamResources(List.of("*"))
+ * .additionalIamStatements(List.of(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("s3:getObject"))
+ * .resources(List.of("arn:aws:s3:::my-bucket/ *"))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CallAwsServiceDsl(
   scope: Construct,

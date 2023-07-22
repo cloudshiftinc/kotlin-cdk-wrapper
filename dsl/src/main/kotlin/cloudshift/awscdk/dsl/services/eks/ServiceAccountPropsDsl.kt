@@ -8,6 +8,28 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.eks.ServiceAccountProps
 
+/**
+ * Properties for defining service accounts.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * Cluster cluster;
+ * ServiceAccountProps serviceAccountProps = ServiceAccountProps.builder()
+ * .cluster(cluster)
+ * // the properties below are optional
+ * .annotations(Map.of(
+ * "annotationsKey", "annotations"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .name("name")
+ * .namespace("namespace")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceAccountPropsDsl {
   private val cdkBuilder: ServiceAccountProps.Builder = ServiceAccountProps.builder()

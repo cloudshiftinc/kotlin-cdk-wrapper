@@ -10,6 +10,22 @@ import kotlin.Unit
 import kotlin.collections.Map
 import software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig
 
+/**
+ * Configuration options for the ContainerDefinition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Object parameters;
+ * ContainerDefinitionConfig containerDefinitionConfig = ContainerDefinitionConfig.builder()
+ * .parameters(Map.of(
+ * "parametersKey", parameters))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerDefinitionConfigDsl {
   private val cdkBuilder: ContainerDefinitionConfig.Builder = ContainerDefinitionConfig.builder()

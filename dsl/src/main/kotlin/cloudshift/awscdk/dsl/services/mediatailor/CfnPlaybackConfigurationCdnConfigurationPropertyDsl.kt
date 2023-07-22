@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration
 
+/**
+ * The configuration for using a content delivery network (CDN), like Amazon CloudFront, for content
+ * and ad segment management.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediatailor.*;
+ * CdnConfigurationProperty cdnConfigurationProperty = CdnConfigurationProperty.builder()
+ * .adSegmentUrlPrefix("adSegmentUrlPrefix")
+ * .contentSegmentUrlPrefix("contentSegmentUrlPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediatailor-playbackconfiguration-cdnconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackConfigurationCdnConfigurationPropertyDsl {
   private val cdkBuilder: CfnPlaybackConfiguration.CdnConfigurationProperty.Builder =

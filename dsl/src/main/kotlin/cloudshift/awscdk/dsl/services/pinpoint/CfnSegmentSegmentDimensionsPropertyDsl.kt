@@ -9,6 +9,72 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
+/**
+ * Specifies the dimension settings for a segment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object attributes;
+ * Object metrics;
+ * Object userAttributes;
+ * SegmentDimensionsProperty segmentDimensionsProperty = SegmentDimensionsProperty.builder()
+ * .attributes(attributes)
+ * .behavior(BehaviorProperty.builder()
+ * .recency(RecencyProperty.builder()
+ * .duration("duration")
+ * .recencyType("recencyType")
+ * .build())
+ * .build())
+ * .demographic(DemographicProperty.builder()
+ * .appVersion(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .channel(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .deviceType(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .make(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .model(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .platform(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .build())
+ * .location(LocationProperty.builder()
+ * .country(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .gpsPoint(GPSPointProperty.builder()
+ * .coordinates(CoordinatesProperty.builder()
+ * .latitude(123)
+ * .longitude(123)
+ * .build())
+ * .rangeInKilometers(123)
+ * .build())
+ * .build())
+ * .metrics(metrics)
+ * .userAttributes(userAttributes)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-segmentdimensions.html)
+ */
 @CdkDslMarker
 public class CfnSegmentSegmentDimensionsPropertyDsl {
   private val cdkBuilder: CfnSegment.SegmentDimensionsProperty.Builder =

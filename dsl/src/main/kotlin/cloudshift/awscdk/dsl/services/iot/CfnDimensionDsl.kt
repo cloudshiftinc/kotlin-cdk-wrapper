@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnDimension
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::Dimension` to limit the scope of a metric used in a security profile for AWS
+ * IoT Device Defender .
+ *
+ * For example, using a `TOPIC_FILTER` dimension, you can narrow down the scope of the metric to
+ * only MQTT topics where the name matches the pattern specified in the dimension. For API reference,
+ * see [CreateDimension](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateDimension.html)
+ * and for general information, see [Scoping metrics in security profiles using
+ * dimensions](https://docs.aws.amazon.com/iot/latest/developerguide/scoping-security-behavior.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnDimension cfnDimension = CfnDimension.Builder.create(this, "MyCfnDimension")
+ * .stringValues(List.of("stringValues"))
+ * .type("type")
+ * // the properties below are optional
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-dimension.html)
+ */
 @CdkDslMarker
 public class CfnDimensionDsl(
   scope: Construct,

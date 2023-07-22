@@ -8,6 +8,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDatabase
 import software.amazon.awscdk.services.glue.CfnDatabaseProps
 
+/**
+ * Properties for defining a `CfnDatabase`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * CfnDatabaseProps cfnDatabaseProps = CfnDatabaseProps.builder()
+ * .catalogId("catalogId")
+ * .databaseInput(DatabaseInputProperty.builder()
+ * .createTableDefaultPermissions(List.of(PrincipalPrivilegesProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .federatedDatabase(FederatedDatabaseProperty.builder()
+ * .connectionName("connectionName")
+ * .identifier("identifier")
+ * .build())
+ * .locationUri("locationUri")
+ * .name("name")
+ * .parameters(parameters)
+ * .targetDatabase(DatabaseIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html)
+ */
 @CdkDslMarker
 public class CfnDatabasePropsDsl {
   private val cdkBuilder: CfnDatabaseProps.Builder = CfnDatabaseProps.builder()

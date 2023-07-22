@@ -7,6 +7,41 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnIndex
 
+/**
+ * Specifies the properties, such as relevance tuning and searchability, of an index field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * DocumentMetadataConfigurationProperty documentMetadataConfigurationProperty =
+ * DocumentMetadataConfigurationProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .relevance(RelevanceProperty.builder()
+ * .duration("duration")
+ * .freshness(false)
+ * .importance(123)
+ * .rankOrder("rankOrder")
+ * .valueImportanceItems(List.of(ValueImportanceItemProperty.builder()
+ * .key("key")
+ * .value(123)
+ * .build()))
+ * .build())
+ * .search(SearchProperty.builder()
+ * .displayable(false)
+ * .facetable(false)
+ * .searchable(false)
+ * .sortable(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-documentmetadataconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnIndexDocumentMetadataConfigurationPropertyDsl {
   private val cdkBuilder: CfnIndex.DocumentMetadataConfigurationProperty.Builder =

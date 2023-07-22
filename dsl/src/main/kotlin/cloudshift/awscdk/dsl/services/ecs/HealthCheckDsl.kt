@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecs.HealthCheck
 
+/**
+ * The health check command and associated configuration parameters for the container.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup securityGroup;
+ * QueueProcessingFargateService queueProcessingFargateService =
+ * QueueProcessingFargateService.Builder.create(this, "Service")
+ * .vpc(vpc)
+ * .memoryLimitMiB(512)
+ * .image(ContainerImage.fromRegistry("test"))
+ * .healthCheck(HealthCheck.builder()
+ * .command(List.of("CMD-SHELL", "curl -f http://localhost/ || exit 1"))
+ * // the properties below are optional
+ * .interval(Duration.minutes(30))
+ * .retries(123)
+ * .startPeriod(Duration.minutes(30))
+ * .timeout(Duration.minutes(30))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HealthCheckDsl {
   private val cdkBuilder: HealthCheck.Builder = HealthCheck.builder()

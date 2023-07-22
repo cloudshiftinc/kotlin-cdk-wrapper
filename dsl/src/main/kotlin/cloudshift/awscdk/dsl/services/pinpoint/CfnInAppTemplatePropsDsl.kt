@@ -12,6 +12,87 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnInAppTemplateProps
 
+/**
+ * Properties for defining a `CfnInAppTemplate`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object customConfig;
+ * Object tags;
+ * CfnInAppTemplateProps cfnInAppTemplateProps = CfnInAppTemplateProps.builder()
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .content(List.of(InAppMessageContentProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .bodyConfig(BodyConfigProperty.builder()
+ * .alignment("alignment")
+ * .body("body")
+ * .textColor("textColor")
+ * .build())
+ * .headerConfig(HeaderConfigProperty.builder()
+ * .alignment("alignment")
+ * .header("header")
+ * .textColor("textColor")
+ * .build())
+ * .imageUrl("imageUrl")
+ * .primaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .secondaryBtn(ButtonConfigProperty.builder()
+ * .android(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .defaultConfig(DefaultButtonConfigurationProperty.builder()
+ * .backgroundColor("backgroundColor")
+ * .borderRadius(123)
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .text("text")
+ * .textColor("textColor")
+ * .build())
+ * .ios(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .web(OverrideButtonConfigurationProperty.builder()
+ * .buttonAction("buttonAction")
+ * .link("link")
+ * .build())
+ * .build())
+ * .build()))
+ * .customConfig(customConfig)
+ * .layout("layout")
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-inapptemplate.html)
+ */
 @CdkDslMarker
 public class CfnInAppTemplatePropsDsl {
   private val cdkBuilder: CfnInAppTemplateProps.Builder = CfnInAppTemplateProps.builder()

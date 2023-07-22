@@ -10,6 +10,25 @@ import software.amazon.awscdk.services.events.EventBusPolicyProps
 import software.amazon.awscdk.services.events.IEventBus
 import software.amazon.awscdk.services.iam.PolicyStatement
 
+/**
+ * Properties to associate Event Buses with a policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * EventBus eventBus;
+ * PolicyStatement policyStatement;
+ * EventBusPolicyProps eventBusPolicyProps = EventBusPolicyProps.builder()
+ * .eventBus(eventBus)
+ * .statement(policyStatement)
+ * .statementId("statementId")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventBusPolicyPropsDsl {
   private val cdkBuilder: EventBusPolicyProps.Builder = EventBusPolicyProps.builder()

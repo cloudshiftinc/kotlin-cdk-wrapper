@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineAliasProps
 
+/**
+ * Properties for defining a `CfnStateMachineAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CfnStateMachineAliasProps cfnStateMachineAliasProps = CfnStateMachineAliasProps.builder()
+ * .deploymentPreference(DeploymentPreferenceProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .type("type")
+ * // the properties below are optional
+ * .alarms(List.of("alarms"))
+ * .interval(123)
+ * .percentage(123)
+ * .build())
+ * .description("description")
+ * .name("name")
+ * .routingConfiguration(List.of(RoutingConfigurationVersionProperty.builder()
+ * .stateMachineVersionArn("stateMachineVersionArn")
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachinealias.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineAliasPropsDsl {
   private val cdkBuilder: CfnStateMachineAliasProps.Builder = CfnStateMachineAliasProps.builder()

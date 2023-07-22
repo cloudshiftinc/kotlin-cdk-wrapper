@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnThingGroup
 import software.amazon.awscdk.services.iot.CfnThingGroupProps
 
+/**
+ * Properties for defining a `CfnThingGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnThingGroupProps cfnThingGroupProps = CfnThingGroupProps.builder()
+ * .parentGroupName("parentGroupName")
+ * .queryString("queryString")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .thingGroupName("thingGroupName")
+ * .thingGroupProperties(ThingGroupPropertiesProperty.builder()
+ * .attributePayload(AttributePayloadProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .build())
+ * .thingGroupDescription("thingGroupDescription")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html)
+ */
 @CdkDslMarker
 public class CfnThingGroupPropsDsl {
   private val cdkBuilder: CfnThingGroupProps.Builder = CfnThingGroupProps.builder()

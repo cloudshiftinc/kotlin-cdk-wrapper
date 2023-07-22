@@ -11,6 +11,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::LoadBalancerTlsCertificate` resource specifies a TLS certificate that can be
+ * used with a Lightsail load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnLoadBalancerTlsCertificate cfnLoadBalancerTlsCertificate =
+ * CfnLoadBalancerTlsCertificate.Builder.create(this, "MyCfnLoadBalancerTlsCertificate")
+ * .certificateDomainName("certificateDomainName")
+ * .certificateName("certificateName")
+ * .loadBalancerName("loadBalancerName")
+ * // the properties below are optional
+ * .certificateAlternativeNames(List.of("certificateAlternativeNames"))
+ * .httpsRedirectionEnabled(false)
+ * .isAttached(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancertlscertificate.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerTlsCertificateDsl(
   scope: Construct,

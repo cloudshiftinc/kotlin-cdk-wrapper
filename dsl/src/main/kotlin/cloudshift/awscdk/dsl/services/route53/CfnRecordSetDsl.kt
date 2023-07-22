@@ -12,6 +12,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnRecordSet
 import software.constructs.Construct
 
+/**
+ * Information about the record that you want to create.
+ *
+ * The `AWS::Route53::RecordSet` type can be used as a standalone resource or as an embedded
+ * property in the `AWS::Route53::RecordSetGroup` type. Note that some `AWS::Route53::RecordSet`
+ * properties are valid only when used within `AWS::Route53::RecordSetGroup` .
+ *
+ * For more information, see
+ * [ChangeResourceRecordSets](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)
+ * in the *Amazon Route 53 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnRecordSet cfnRecordSet = CfnRecordSet.Builder.create(this, "MyCfnRecordSet")
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .aliasTarget(AliasTargetProperty.builder()
+ * .dnsName("dnsName")
+ * .hostedZoneId("hostedZoneId")
+ * // the properties below are optional
+ * .evaluateTargetHealth(false)
+ * .build())
+ * .cidrRoutingConfig(CidrRoutingConfigProperty.builder()
+ * .collectionId("collectionId")
+ * .locationName("locationName")
+ * .build())
+ * .comment("comment")
+ * .failover("failover")
+ * .geoLocation(GeoLocationProperty.builder()
+ * .continentCode("continentCode")
+ * .countryCode("countryCode")
+ * .subdivisionCode("subdivisionCode")
+ * .build())
+ * .healthCheckId("healthCheckId")
+ * .hostedZoneId("hostedZoneId")
+ * .hostedZoneName("hostedZoneName")
+ * .multiValueAnswer(false)
+ * .region("region")
+ * .resourceRecords(List.of("resourceRecords"))
+ * .setIdentifier("setIdentifier")
+ * .ttl("ttl")
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordset.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetDsl(
   scope: Construct,

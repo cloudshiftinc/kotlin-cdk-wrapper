@@ -14,6 +14,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnUser
 import software.constructs.Construct
 
+/**
+ * Specifies a MemoryDB user.
+ *
+ * For more information, see [Authenticating users with Access Contol Lists
+ * (ACLs)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * Object authenticationMode;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .userName("userName")
+ * // the properties below are optional
+ * .accessString("accessString")
+ * .authenticationMode(authenticationMode)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

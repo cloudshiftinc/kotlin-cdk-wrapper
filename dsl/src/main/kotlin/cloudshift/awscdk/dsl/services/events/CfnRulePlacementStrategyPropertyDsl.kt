@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * The task placement strategy for a task or service.
+ *
+ * To learn more, see [Task Placement
+ * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html)
+ * in the Amazon Elastic Container Service Service Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * PlacementStrategyProperty placementStrategyProperty = PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-placementstrategy.html)
+ */
 @CdkDslMarker
 public class CfnRulePlacementStrategyPropertyDsl {
   private val cdkBuilder: CfnRule.PlacementStrategyProperty.Builder =

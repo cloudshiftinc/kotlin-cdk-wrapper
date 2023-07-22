@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes the settings for the health check that AWS App Runner performs to monitor the health of
+ * a service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * HealthCheckConfigurationProperty healthCheckConfigurationProperty =
+ * HealthCheckConfigurationProperty.builder()
+ * .healthyThreshold(123)
+ * .interval(123)
+ * .path("path")
+ * .protocol("protocol")
+ * .timeout(123)
+ * .unhealthyThreshold(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-healthcheckconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceHealthCheckConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.HealthCheckConfigurationProperty.Builder =

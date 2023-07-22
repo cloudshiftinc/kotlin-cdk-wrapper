@@ -11,6 +11,49 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using an AWS Batch job as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetBatchJobParametersProperty pipeTargetBatchJobParametersProperty =
+ * PipeTargetBatchJobParametersProperty.builder()
+ * .jobDefinition("jobDefinition")
+ * .jobName("jobName")
+ * // the properties below are optional
+ * .arrayProperties(BatchArrayPropertiesProperty.builder()
+ * .size(123)
+ * .build())
+ * .containerOverrides(BatchContainerOverridesProperty.builder()
+ * .command(List.of("command"))
+ * .environment(List.of(BatchEnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .instanceType("instanceType")
+ * .resourceRequirements(List.of(BatchResourceRequirementProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .dependsOn(List.of(BatchJobDependencyProperty.builder()
+ * .jobId("jobId")
+ * .type("type")
+ * .build()))
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .retryStrategy(BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetbatchjobparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetBatchJobParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetBatchJobParametersProperty.Builder =

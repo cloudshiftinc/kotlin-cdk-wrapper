@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 
+/**
+ * `CacheBehavior` is a property of the
+ * [AWS::Lightsail::Distribution](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-distribution.html)
+ * resource. It describes the default cache behavior of an Amazon Lightsail content delivery network
+ * (CDN) distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CacheBehaviorProperty cacheBehaviorProperty = CacheBehaviorProperty.builder()
+ * .behavior("behavior")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachebehavior.html)
+ */
 @CdkDslMarker
 public class CfnDistributionCacheBehaviorPropertyDsl {
   private val cdkBuilder: CfnDistribution.CacheBehaviorProperty.Builder =

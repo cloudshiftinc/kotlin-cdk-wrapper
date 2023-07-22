@@ -10,6 +10,71 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersionProps
 
+/**
+ * Properties for defining a `CfnResourceDefinitionVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * CfnResourceDefinitionVersionProps cfnResourceDefinitionVersionProps =
+ * CfnResourceDefinitionVersionProps.builder()
+ * .resourceDefinitionId("resourceDefinitionId")
+ * .resources(List.of(ResourceInstanceProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .resourceDataContainer(ResourceDataContainerProperty.builder()
+ * .localDeviceResourceData(LocalDeviceResourceDataProperty.builder()
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .localVolumeResourceData(LocalVolumeResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .groupOwnerSetting(GroupOwnerSettingProperty.builder()
+ * .autoAddGroupOwner(false)
+ * // the properties below are optional
+ * .groupOwner("groupOwner")
+ * .build())
+ * .build())
+ * .s3MachineLearningModelResourceData(S3MachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .sageMakerMachineLearningModelResourceData(SageMakerMachineLearningModelResourceDataProperty.builder()
+ * .destinationPath("destinationPath")
+ * .sageMakerJobArn("sageMakerJobArn")
+ * // the properties below are optional
+ * .ownerSetting(ResourceDownloadOwnerSettingProperty.builder()
+ * .groupOwner("groupOwner")
+ * .groupPermission("groupPermission")
+ * .build())
+ * .build())
+ * .secretsManagerSecretResourceData(SecretsManagerSecretResourceDataProperty.builder()
+ * .arn("arn")
+ * // the properties below are optional
+ * .additionalStagingLabelsToDownload(List.of("additionalStagingLabelsToDownload"))
+ * .build())
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-resourcedefinitionversion.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefinitionVersionPropsDsl {
   private val cdkBuilder: CfnResourceDefinitionVersionProps.Builder =

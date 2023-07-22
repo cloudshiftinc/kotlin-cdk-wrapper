@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.resourcegroups.CfnGroup
 
+/**
+ * One parameter for a group configuration item.
+ *
+ * For details about service configurations and how to construct them, see [Service configurations
+ * for resource groups](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html) in the
+ * *AWS Resource Groups User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourcegroups.*;
+ * ConfigurationParameterProperty configurationParameterProperty =
+ * ConfigurationParameterProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationparameter.html)
+ */
 @CdkDslMarker
 public class CfnGroupConfigurationParameterPropertyDsl {
   private val cdkBuilder: CfnGroup.ConfigurationParameterProperty.Builder =

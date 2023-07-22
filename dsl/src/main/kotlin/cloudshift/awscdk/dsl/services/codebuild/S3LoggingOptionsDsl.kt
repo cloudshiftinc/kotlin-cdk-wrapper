@@ -8,6 +8,21 @@ import kotlin.String
 import software.amazon.awscdk.services.codebuild.S3LoggingOptions
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Information about logs built to an S3 bucket for a build project.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .logging(LoggingOptions.builder()
+ * .s3(S3LoggingOptions.builder()
+ * .bucket(new Bucket(this, "LogBucket"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3LoggingOptionsDsl {
   private val cdkBuilder: S3LoggingOptions.Builder = S3LoggingOptions.builder()

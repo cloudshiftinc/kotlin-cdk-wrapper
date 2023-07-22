@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration for this Amazon FSx for NetApp ONTAP file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * OntapConfigurationProperty ontapConfigurationProperty = OntapConfigurationProperty.builder()
+ * .deploymentType("deploymentType")
+ * // the properties below are optional
+ * .automaticBackupRetentionDays(123)
+ * .dailyAutomaticBackupStartTime("dailyAutomaticBackupStartTime")
+ * .diskIopsConfiguration(DiskIopsConfigurationProperty.builder()
+ * .iops(123)
+ * .mode("mode")
+ * .build())
+ * .endpointIpAddressRange("endpointIpAddressRange")
+ * .fsxAdminPassword("fsxAdminPassword")
+ * .preferredSubnetId("preferredSubnetId")
+ * .routeTableIds(List.of("routeTableIds"))
+ * .throughputCapacity(123)
+ * .weeklyMaintenanceStartTime("weeklyMaintenanceStartTime")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-ontapconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemOntapConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.OntapConfigurationProperty.Builder =

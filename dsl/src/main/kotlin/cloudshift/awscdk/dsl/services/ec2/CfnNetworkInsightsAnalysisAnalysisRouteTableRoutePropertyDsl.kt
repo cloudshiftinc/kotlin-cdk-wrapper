@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a route table route.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisRouteTableRouteProperty analysisRouteTableRouteProperty =
+ * AnalysisRouteTableRouteProperty.builder()
+ * .destinationCidr("destinationCidr")
+ * .destinationPrefixListId("destinationPrefixListId")
+ * .egressOnlyInternetGatewayId("egressOnlyInternetGatewayId")
+ * .gatewayId("gatewayId")
+ * .instanceId("instanceId")
+ * .natGatewayId("natGatewayId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .origin("origin")
+ * .state("state")
+ * .transitGatewayId("transitGatewayId")
+ * .vpcPeeringConnectionId("vpcPeeringConnectionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisroutetableroute.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisRouteTableRoutePropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisRouteTableRouteProperty.Builder =

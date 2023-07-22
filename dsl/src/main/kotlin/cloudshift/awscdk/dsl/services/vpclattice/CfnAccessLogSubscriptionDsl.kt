@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription
 import software.constructs.Construct
 
+/**
+ * Enables access logs to be sent to Amazon CloudWatch, Amazon S3, and Amazon Kinesis Data Firehose.
+ *
+ * The service network owner can use the access logs to audit the services in the network. The
+ * service network owner will only see access logs from clients and services that are associated with
+ * their service network. Access log entries represent traffic originated from VPCs associated with
+ * that network. For more information, see [Access
+ * logs](https://docs.aws.amazon.com/vpc-lattice/latest/ug/monitoring-access-logs.html) in the *Amazon
+ * VPC Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnAccessLogSubscription cfnAccessLogSubscription = CfnAccessLogSubscription.Builder.create(this,
+ * "MyCfnAccessLogSubscription")
+ * .destinationArn("destinationArn")
+ * // the properties below are optional
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html)
+ */
 @CdkDslMarker
 public class CfnAccessLogSubscriptionDsl(
   scope: Construct,

@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.ecs.EnvironmentFileConfig
 import software.amazon.awscdk.services.ecs.EnvironmentFileType
 import software.amazon.awscdk.services.s3.Location
 
+/**
+ * Configuration for the environment file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * EnvironmentFileConfig environmentFileConfig = EnvironmentFileConfig.builder()
+ * .fileType(EnvironmentFileType.S3)
+ * .s3Location(Location.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnvironmentFileConfigDsl {
   private val cdkBuilder: EnvironmentFileConfig.Builder = EnvironmentFileConfig.builder()

@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ivs.CfnStreamKey
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVS::StreamKey` resource specifies an  stream key associated with the referenced
+ * channel.
+ *
+ * Use a stream key to initiate a live stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnStreamKey cfnStreamKey = CfnStreamKey.Builder.create(this, "MyCfnStreamKey")
+ * .channelArn("channelArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-streamkey.html)
+ */
 @CdkDslMarker
 public class CfnStreamKeyDsl(
   scope: Construct,

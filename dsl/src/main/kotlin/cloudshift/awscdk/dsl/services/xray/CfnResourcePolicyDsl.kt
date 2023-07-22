@@ -9,6 +9,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.xray.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Use `AWS::XRay::ResourcePolicy` to specify an X-Ray resource-based policy, which grants one or
+ * more AWS services and accounts permissions to access X-Ray .
+ *
+ * Each resource-based policy is associated with a specific AWS account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.xray.*;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policyDocument("policyDocument")
+ * .policyName("policyName")
+ * // the properties below are optional
+ * .bypassPolicyLockoutCheck(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

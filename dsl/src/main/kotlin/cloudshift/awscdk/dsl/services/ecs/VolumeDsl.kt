@@ -10,6 +10,31 @@ import software.amazon.awscdk.services.ecs.EfsVolumeConfiguration
 import software.amazon.awscdk.services.ecs.Host
 import software.amazon.awscdk.services.ecs.Volume
 
+/**
+ * A data volume used in a task definition.
+ *
+ * For tasks that use a Docker volume, specify a DockerVolumeConfiguration.
+ * For tasks that use a bind mount host volume, specify a host and optional sourcePath.
+ *
+ * For more information, see [Using Data Volumes in
+ * Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html).
+ *
+ * Example:
+ *
+ * ```
+ * FargateTaskDefinition fargateTaskDefinition = FargateTaskDefinition.Builder.create(this,
+ * "TaskDef")
+ * .memoryLimitMiB(512)
+ * .cpu(256)
+ * .build();
+ * Map&lt;String, Object&gt; volume = Map.of(
+ * // Use an Elastic FileSystem
+ * "name", "mydatavolume",
+ * "efsVolumeConfiguration", Map.of(
+ * "fileSystemId", "EFS"));
+ * void container = fargateTaskDefinition.addVolume(volume);
+ * ```
+ */
 @CdkDslMarker
 public class VolumeDsl {
   private val cdkBuilder: Volume.Builder = Volume.builder()

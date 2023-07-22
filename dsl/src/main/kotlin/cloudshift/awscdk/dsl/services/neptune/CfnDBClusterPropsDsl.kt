@@ -16,6 +16,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.neptune.CfnDBCluster
 import software.amazon.awscdk.services.neptune.CfnDBClusterProps
 
+/**
+ * Properties for defining a `CfnDBCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * CfnDBClusterProps cfnDBClusterProps = CfnDBClusterProps.builder()
+ * .associatedRoles(List.of(DBClusterRoleProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .featureName("featureName")
+ * .build()))
+ * .availabilityZones(List.of("availabilityZones"))
+ * .backupRetentionPeriod(123)
+ * .copyTagsToSnapshot(false)
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .deletionProtection(false)
+ * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .engineVersion("engineVersion")
+ * .iamAuthEnabled(false)
+ * .kmsKeyId("kmsKeyId")
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .restoreToTime("restoreToTime")
+ * .restoreType("restoreType")
+ * .serverlessScalingConfiguration(ServerlessScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .storageEncrypted(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useLatestRestorableTime(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterPropsDsl {
   private val cdkBuilder: CfnDBClusterProps.Builder = CfnDBClusterProps.builder()

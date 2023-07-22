@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
 
+/**
+ * Contains the topic ARN associated with an Amazon Simple Notification Service (Amazon SNS) event
+ * destination.
+ *
+ * Event destinations, such as Amazon SNS, are associated with configuration sets, which enable you
+ * to publish email sending events. For information about using configuration sets, see the [Amazon SES
+ * Developer Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * SnsDestinationProperty snsDestinationProperty = SnsDestinationProperty.builder()
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-snsdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationSnsDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.SnsDestinationProperty.Builder =

@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * A structure that represents a relative date filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TopicRelativeDateFilterProperty topicRelativeDateFilterProperty =
+ * TopicRelativeDateFilterProperty.builder()
+ * .constant(TopicSingularFilterConstantProperty.builder()
+ * .constantType("constantType")
+ * .singularConstant("singularConstant")
+ * .build())
+ * .relativeDateFilterFunction("relativeDateFilterFunction")
+ * .timeGranularity("timeGranularity")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topicrelativedatefilter.html)
+ */
 @CdkDslMarker
 public class CfnTopicTopicRelativeDateFilterPropertyDsl {
   private val cdkBuilder: CfnTopic.TopicRelativeDateFilterProperty.Builder =

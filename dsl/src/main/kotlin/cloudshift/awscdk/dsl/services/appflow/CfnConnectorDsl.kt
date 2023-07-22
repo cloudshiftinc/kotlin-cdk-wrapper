@@ -8,6 +8,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnConnector
 import software.constructs.Construct
 
+/**
+ * Creates a new connector profile associated with your AWS account .
+ *
+ * There is a soft quota of 100 connector profiles per AWS account . If you need more connector
+ * profiles than this quota allows, you can submit a request to the Amazon AppFlow team through the
+ * Amazon AppFlow support channel. In each connector profile that you create, you can provide the
+ * credentials and properties for only one connector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * CfnConnector cfnConnector = CfnConnector.Builder.create(this, "MyCfnConnector")
+ * .connectorProvisioningConfig(ConnectorProvisioningConfigProperty.builder()
+ * .lambda(LambdaConnectorProvisioningConfigProperty.builder()
+ * .lambdaArn("lambdaArn")
+ * .build())
+ * .build())
+ * .connectorProvisioningType("connectorProvisioningType")
+ * // the properties below are optional
+ * .connectorLabel("connectorLabel")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appflow-connector.html)
+ */
 @CdkDslMarker
 public class CfnConnectorDsl(
   scope: Construct,

@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * A `DeadLetterConfig` object that contains information about a dead-letter queue configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * DeadLetterConfigProperty deadLetterConfigProperty = DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-deadletterconfig.html)
+ */
 @CdkDslMarker
 public class CfnPipeDeadLetterConfigPropertyDsl {
   private val cdkBuilder: CfnPipe.DeadLetterConfigProperty.Builder =

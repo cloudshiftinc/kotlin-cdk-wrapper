@@ -9,6 +9,27 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigateway.ApiDefinitionConfig
 import software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location
 
+/**
+ * Post-Binding Configuration for a CDK construct.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Object inlineDefinition;
+ * ApiDefinitionConfig apiDefinitionConfig = ApiDefinitionConfig.builder()
+ * .inlineDefinition(inlineDefinition)
+ * .s3Location(ApiDefinitionS3Location.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApiDefinitionConfigDsl {
   private val cdkBuilder: ApiDefinitionConfig.Builder = ApiDefinitionConfig.builder()

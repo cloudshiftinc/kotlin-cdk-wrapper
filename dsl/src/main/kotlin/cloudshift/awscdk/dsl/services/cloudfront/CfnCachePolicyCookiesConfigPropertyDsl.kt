@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.CfnCachePolicy
 
+/**
+ * An object that determines whether any cookies in viewer requests (and if so, which cookies) are
+ * included in the cache key and in requests that CloudFront sends to the origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CookiesConfigProperty cookiesConfigProperty = CookiesConfigProperty.builder()
+ * .cookieBehavior("cookieBehavior")
+ * // the properties below are optional
+ * .cookies(List.of("cookies"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-cachepolicy-cookiesconfig.html)
+ */
 @CdkDslMarker
 public class CfnCachePolicyCookiesConfigPropertyDsl {
   private val cdkBuilder: CfnCachePolicy.CookiesConfigProperty.Builder =

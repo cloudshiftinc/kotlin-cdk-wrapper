@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.connect.CfnPhoneNumber
 import software.constructs.Construct
 
+/**
+ * Claims a phone number to the specified Amazon Connect instance or traffic distribution group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnPhoneNumber cfnPhoneNumber = CfnPhoneNumber.Builder.create(this, "MyCfnPhoneNumber")
+ * .countryCode("countryCode")
+ * .targetArn("targetArn")
+ * .type("type")
+ * // the properties below are optional
+ * .description("description")
+ * .prefix("prefix")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html)
+ */
 @CdkDslMarker
 public class CfnPhoneNumberDsl(
   scope: Construct,

@@ -14,6 +14,77 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 import software.constructs.Construct
 
+/**
+ * Creates an inference experiment using the configurations specified in the request.
+ *
+ * Use this API to setup and schedule an experiment to compare model variants on a Amazon SageMaker
+ * inference endpoint. For more information about inference experiments, see [Shadow
+ * tests](https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html) .
+ *
+ * Amazon SageMaker begins your experiment at the scheduled time and routes traffic to your
+ * endpoint's model variants based on your specified configuration.
+ *
+ * While the experiment is in progress or after it has concluded, you can view metrics that compare
+ * your model variants. For more information, see [View, monitor, and edit shadow
+ * tests](https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests-view-monitor-edit.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnInferenceExperiment cfnInferenceExperiment = CfnInferenceExperiment.Builder.create(this,
+ * "MyCfnInferenceExperiment")
+ * .endpointName("endpointName")
+ * .modelVariants(List.of(ModelVariantConfigProperty.builder()
+ * .infrastructureConfig(ModelInfrastructureConfigProperty.builder()
+ * .infrastructureType("infrastructureType")
+ * .realTimeInferenceConfig(RealTimeInferenceConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .build())
+ * .build())
+ * .modelName("modelName")
+ * .variantName("variantName")
+ * .build()))
+ * .name("name")
+ * .roleArn("roleArn")
+ * .type("type")
+ * // the properties below are optional
+ * .dataStorageConfig(DataStorageConfigProperty.builder()
+ * .destination("destination")
+ * // the properties below are optional
+ * .contentType(CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build())
+ * .kmsKey("kmsKey")
+ * .build())
+ * .description("description")
+ * .desiredState("desiredState")
+ * .kmsKey("kmsKey")
+ * .schedule(InferenceExperimentScheduleProperty.builder()
+ * .endTime("endTime")
+ * .startTime("startTime")
+ * .build())
+ * .shadowModeConfig(ShadowModeConfigProperty.builder()
+ * .shadowModelVariants(List.of(ShadowModelVariantConfigProperty.builder()
+ * .samplingPercentage(123)
+ * .shadowModelVariantName("shadowModelVariantName")
+ * .build()))
+ * .sourceModelVariantName("sourceModelVariantName")
+ * .build())
+ * .statusReason("statusReason")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferenceexperiment.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentDsl(
   scope: Construct,

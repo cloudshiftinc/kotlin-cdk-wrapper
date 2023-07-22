@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * The HTTP action header.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * HttpActionHeaderProperty httpActionHeaderProperty = HttpActionHeaderProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-httpactionheader.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleHttpActionHeaderPropertyDsl {
   private val cdkBuilder: CfnTopicRule.HttpActionHeaderProperty.Builder =

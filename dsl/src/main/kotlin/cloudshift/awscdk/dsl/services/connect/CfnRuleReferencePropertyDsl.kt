@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnRule
 
+/**
+ * Information about the reference when the `referenceType` is `URL` .
+ *
+ * Otherwise, null. (Supports variable injection in the `Value` field.)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * ReferenceProperty referenceProperty = ReferenceProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-rule-reference.html)
+ */
 @CdkDslMarker
 public class CfnRuleReferencePropertyDsl {
   private val cdkBuilder: CfnRule.ReferenceProperty.Builder = CfnRule.ReferenceProperty.builder()

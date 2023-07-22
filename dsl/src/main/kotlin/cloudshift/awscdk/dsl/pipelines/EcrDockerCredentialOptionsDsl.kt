@@ -9,6 +9,23 @@ import software.amazon.awscdk.pipelines.DockerCredentialUsage
 import software.amazon.awscdk.pipelines.EcrDockerCredentialOptions
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for defining access for a Docker Credential composed of ECR repos.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.pipelines.*;
+ * Role role;
+ * EcrDockerCredentialOptions ecrDockerCredentialOptions = EcrDockerCredentialOptions.builder()
+ * .assumeRole(role)
+ * .usages(List.of(DockerCredentialUsage.SYNTH))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EcrDockerCredentialOptionsDsl {
   private val cdkBuilder: EcrDockerCredentialOptions.Builder = EcrDockerCredentialOptions.builder()

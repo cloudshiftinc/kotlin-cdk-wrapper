@@ -10,6 +10,31 @@ import software.amazon.awscdk.services.cloudwatch.Unit
 import software.amazon.awscdk.services.logs.IFilterPattern
 import software.amazon.awscdk.services.logs.MetricFilterOptions
 
+/**
+ * Properties for a MetricFilter created from a LogGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * IFilterPattern filterPattern;
+ * MetricFilterOptions metricFilterOptions = MetricFilterOptions.builder()
+ * .filterPattern(filterPattern)
+ * .metricName("metricName")
+ * .metricNamespace("metricNamespace")
+ * // the properties below are optional
+ * .defaultValue(123)
+ * .dimensions(Map.of(
+ * "dimensionsKey", "dimensions"))
+ * .filterName("filterName")
+ * .metricValue("metricValue")
+ * .unit(Unit.SECONDS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricFilterOptionsDsl {
   private val cdkBuilder: MetricFilterOptions.Builder = MetricFilterOptions.builder()

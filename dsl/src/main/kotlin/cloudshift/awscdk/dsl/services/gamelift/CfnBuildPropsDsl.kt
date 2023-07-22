@@ -8,6 +8,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnBuild
 import software.amazon.awscdk.services.gamelift.CfnBuildProps
 
+/**
+ * Properties for defining a `CfnBuild`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnBuildProps cfnBuildProps = CfnBuildProps.builder()
+ * .name("name")
+ * .operatingSystem("operatingSystem")
+ * .serverSdkVersion("serverSdkVersion")
+ * .storageLocation(StorageLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html)
+ */
 @CdkDslMarker
 public class CfnBuildPropsDsl {
   private val cdkBuilder: CfnBuildProps.Builder = CfnBuildProps.builder()

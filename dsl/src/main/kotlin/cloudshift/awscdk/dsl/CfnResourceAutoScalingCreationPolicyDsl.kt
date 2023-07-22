@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy
 
+/**
+ * For an Auto Scaling group replacement update, specifies how many instances must signal success
+ * for the update to succeed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnResourceAutoScalingCreationPolicy cfnResourceAutoScalingCreationPolicy =
+ * CfnResourceAutoScalingCreationPolicy.builder()
+ * .minSuccessfulInstancesPercent(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnResourceAutoScalingCreationPolicyDsl {
   private val cdkBuilder: CfnResourceAutoScalingCreationPolicy.Builder =

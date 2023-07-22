@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
 
+/**
+ * The target resource that the Route 53 record points to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * TargetResourceProperty targetResourceProperty = TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53recoveryreadiness-resourceset-targetresource.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetTargetResourcePropertyDsl {
   private val cdkBuilder: CfnResourceSet.TargetResourceProperty.Builder =

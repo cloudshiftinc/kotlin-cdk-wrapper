@@ -14,6 +14,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.redshift.CfnClusterParameterGroup
 import software.constructs.Construct
 
+/**
+ * Describes a parameter group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnClusterParameterGroup cfnClusterParameterGroup = CfnClusterParameterGroup.Builder.create(this,
+ * "MyCfnClusterParameterGroup")
+ * .description("description")
+ * .parameterGroupFamily("parameterGroupFamily")
+ * // the properties below are optional
+ * .parameterGroupName("parameterGroupName")
+ * .parameters(List.of(ParameterProperty.builder()
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnClusterParameterGroupDsl(
   scope: Construct,

@@ -13,6 +13,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.refactorspaces.CfnService
 import software.constructs.Construct
 
+/**
+ * Creates an AWS Migration Hub Refactor Spaces service.
+ *
+ * The account owner of the service is always the environment owner, regardless of which account in
+ * the environment creates the service. Services have either a URL endpoint in a virtual private cloud
+ * (VPC), or a Lambda function endpoint.
+ *
+ *
+ * If an AWS resource is launched in a service VPC, and you want it to be accessible to all of an
+ * environment’s services with VPCs and routes, apply the `RefactorSpacesSecurityGroup` to the
+ * resource. Alternatively, to add more cross-account constraints, apply your own security group.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.refactorspaces.*;
+ * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
+ * .applicationIdentifier("applicationIdentifier")
+ * .endpointType("endpointType")
+ * .environmentIdentifier("environmentIdentifier")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .lambdaEndpoint(LambdaEndpointInputProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .urlEndpoint(UrlEndpointInputProperty.builder()
+ * .url("url")
+ * // the properties below are optional
+ * .healthUrl("healthUrl")
+ * .build())
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-service.html)
+ */
 @CdkDslMarker
 public class CfnServiceDsl(
   scope: Construct,

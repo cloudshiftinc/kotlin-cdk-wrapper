@@ -7,6 +7,34 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * ObdSignalDecoderProperty obdSignalDecoderProperty = ObdSignalDecoderProperty.builder()
+ * .fullyQualifiedName("fullyQualifiedName")
+ * .interfaceId("interfaceId")
+ * .obdSignal(ObdSignalProperty.builder()
+ * .byteLength("byteLength")
+ * .offset("offset")
+ * .pid("pid")
+ * .pidResponseLength("pidResponseLength")
+ * .scaling("scaling")
+ * .serviceMode("serviceMode")
+ * .startByte("startByte")
+ * // the properties below are optional
+ * .bitMaskLength("bitMaskLength")
+ * .bitRightShift("bitRightShift")
+ * .build())
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestObdSignalDecoderPropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.ObdSignalDecoderProperty.Builder =

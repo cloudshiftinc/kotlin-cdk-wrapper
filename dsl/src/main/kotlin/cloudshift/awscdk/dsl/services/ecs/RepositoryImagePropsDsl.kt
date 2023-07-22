@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.ecs.RepositoryImageProps
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * The properties for an image hosted in a public or private repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * RepositoryImageProps repositoryImageProps = RepositoryImageProps.builder()
+ * .credentials(secret)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryImagePropsDsl {
   private val cdkBuilder: RepositoryImageProps.Builder = RepositoryImageProps.builder()

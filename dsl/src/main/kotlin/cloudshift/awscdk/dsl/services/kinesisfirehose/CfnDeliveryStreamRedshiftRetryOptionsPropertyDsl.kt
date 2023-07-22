@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * Configures retry behavior in case Kinesis Data Firehose is unable to deliver documents to Amazon
+ * Redshift.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * RedshiftRetryOptionsProperty redshiftRetryOptionsProperty =
+ * RedshiftRetryOptionsProperty.builder()
+ * .durationInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftretryoptions.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamRedshiftRetryOptionsPropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.RedshiftRetryOptionsProperty.Builder =

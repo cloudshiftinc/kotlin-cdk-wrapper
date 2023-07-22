@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * The meta data of the Glue table which serves as data catalog for the `OfflineStore` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DataCatalogConfigProperty dataCatalogConfigProperty = DataCatalogConfigProperty.builder()
+ * .catalog("catalog")
+ * .database("database")
+ * .tableName("tableName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-datacatalogconfig.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupDataCatalogConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.DataCatalogConfigProperty.Builder =

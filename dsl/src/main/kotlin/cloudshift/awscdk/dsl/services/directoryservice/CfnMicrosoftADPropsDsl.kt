@@ -9,6 +9,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD
 import software.amazon.awscdk.services.directoryservice.CfnMicrosoftADProps
 
+/**
+ * Properties for defining a `CfnMicrosoftAD`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.directoryservice.*;
+ * CfnMicrosoftADProps cfnMicrosoftADProps = CfnMicrosoftADProps.builder()
+ * .name("name")
+ * .password("password")
+ * .vpcSettings(VpcSettingsProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .build())
+ * // the properties below are optional
+ * .createAlias(false)
+ * .edition("edition")
+ * .enableSso(false)
+ * .shortName("shortName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html)
+ */
 @CdkDslMarker
 public class CfnMicrosoftADPropsDsl {
   private val cdkBuilder: CfnMicrosoftADProps.Builder = CfnMicrosoftADProps.builder()

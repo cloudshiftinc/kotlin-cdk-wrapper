@@ -9,6 +9,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupSelection
 
+/**
+ * Contains information about which resources to include or exclude from a backup plan using their
+ * tags.
+ *
+ * Conditions are case sensitive.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * ConditionsProperty conditionsProperty = ConditionsProperty.builder()
+ * .stringEquals(List.of(ConditionParameterProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .stringLike(List.of(ConditionParameterProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .stringNotEquals(List.of(ConditionParameterProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .stringNotLike(List.of(ConditionParameterProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupselection-conditions.html)
+ */
 @CdkDslMarker
 public class CfnBackupSelectionConditionsPropertyDsl {
   private val cdkBuilder: CfnBackupSelection.ConditionsProperty.Builder =

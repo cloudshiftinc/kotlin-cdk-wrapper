@@ -11,6 +11,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 import software.amazon.awscdk.services.config.CfnConfigRuleProps
 
+/**
+ * Properties for defining a `CfnConfigRule`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * Object inputParameters;
+ * CfnConfigRuleProps cfnConfigRuleProps = CfnConfigRuleProps.builder()
+ * .source(SourceProperty.builder()
+ * .owner("owner")
+ * // the properties below are optional
+ * .customPolicyDetails(CustomPolicyDetailsProperty.builder()
+ * .enableDebugLogDelivery(false)
+ * .policyRuntime("policyRuntime")
+ * .policyText("policyText")
+ * .build())
+ * .sourceDetails(List.of(SourceDetailProperty.builder()
+ * .eventSource("eventSource")
+ * .messageType("messageType")
+ * // the properties below are optional
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .build()))
+ * .sourceIdentifier("sourceIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .configRuleName("configRuleName")
+ * .description("description")
+ * .inputParameters(inputParameters)
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .scope(ScopeProperty.builder()
+ * .complianceResourceId("complianceResourceId")
+ * .complianceResourceTypes(List.of("complianceResourceTypes"))
+ * .tagKey("tagKey")
+ * .tagValue("tagValue")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html)
+ */
 @CdkDslMarker
 public class CfnConfigRulePropsDsl {
   private val cdkBuilder: CfnConfigRuleProps.Builder = CfnConfigRuleProps.builder()

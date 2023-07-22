@@ -6,6 +6,36 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnListener
 
+/**
+ * The action for the default rule.
+ *
+ * Each listener has a default rule. Each rule consists of a priority, one or more actions, and one
+ * or more conditions. The default rule is the rule that's used if no other rules match. Each rule must
+ * include exactly one of the following types of actions: `forward` or `fixed-response` , and it must
+ * be the last action to be performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * DefaultActionProperty defaultActionProperty = DefaultActionProperty.builder()
+ * .fixedResponse(FixedResponseProperty.builder()
+ * .statusCode(123)
+ * .build())
+ * .forward(ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-listener-defaultaction.html)
+ */
 @CdkDslMarker
 public class CfnListenerDefaultActionPropertyDsl {
   private val cdkBuilder: CfnListener.DefaultActionProperty.Builder =

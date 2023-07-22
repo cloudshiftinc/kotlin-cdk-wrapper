@@ -7,6 +7,23 @@ import kotlin.Boolean
 import kotlin.Number
 import software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpointOptions
 
+/**
+ * Properties for a ApplicationLoadBalancerEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer alb;
+ * Listener listener;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * ApplicationLoadBalancerEndpoint.Builder.create(alb)
+ * .weight(128)
+ * .preserveClientIp(true)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerEndpointOptionsDsl {
   private val cdkBuilder: ApplicationLoadBalancerEndpointOptions.Builder =

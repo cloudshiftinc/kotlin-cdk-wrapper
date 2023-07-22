@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.events.CfnEventBus
 import software.amazon.awscdk.services.events.CfnEventBusProps
 
+/**
+ * Properties for defining a `CfnEventBus`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnEventBusProps cfnEventBusProps = CfnEventBusProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .eventSourceName("eventSourceName")
+ * .tags(List.of(TagEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html)
+ */
 @CdkDslMarker
 public class CfnEventBusPropsDsl {
   private val cdkBuilder: CfnEventBusProps.Builder = CfnEventBusProps.builder()

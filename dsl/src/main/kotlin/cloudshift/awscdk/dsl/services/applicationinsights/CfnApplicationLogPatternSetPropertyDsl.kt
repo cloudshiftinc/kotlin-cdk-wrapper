@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationinsights.CfnApplication
 
+/**
+ * The `AWS::ApplicationInsights::Application LogPatternSet` property type specifies the log pattern
+ * set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationinsights.*;
+ * LogPatternSetProperty logPatternSetProperty = LogPatternSetProperty.builder()
+ * .logPatterns(List.of(LogPatternProperty.builder()
+ * .pattern("pattern")
+ * .patternName("patternName")
+ * .rank(123)
+ * .build()))
+ * .patternSetName("patternSetName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-logpatternset.html)
+ */
 @CdkDslMarker
 public class CfnApplicationLogPatternSetPropertyDsl {
   private val cdkBuilder: CfnApplication.LogPatternSetProperty.Builder =

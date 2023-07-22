@@ -9,6 +9,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnWarmPool
 import software.constructs.Construct
 
+/**
+ * The `AWS::AutoScaling::WarmPool` resource creates a pool of pre-initialized EC2 instances that
+ * sits alongside the Auto Scaling group.
+ *
+ * Whenever your application needs to scale out, the Auto Scaling group can draw on the warm pool to
+ * meet its new desired capacity.
+ *
+ * When you create a warm pool, you can define a minimum size. When your Auto Scaling group scales
+ * out and the size of the warm pool shrinks, Amazon EC2 Auto Scaling launches new instances into the
+ * warm pool to maintain its minimum size.
+ *
+ * For more information, see [Warm pools for Amazon EC2 Auto
+ * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-warm-pools.html) in
+ * the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ *
+ * CloudFormation supports the `UpdatePolicy` attribute for Auto Scaling groups. During an update,
+ * if `UpdatePolicy` is set to `AutoScalingRollingUpdate` , CloudFormation replaces `InService`
+ * instances only. Instances in the warm pool are not replaced. The difference in which instances are
+ * replaced can potentially result in different instance configurations after the stack update
+ * completes. If `UpdatePolicy` is set to `AutoScalingReplacingUpdate` , you do not encounter this
+ * issue because CloudFormation replaces both the Auto Scaling group and the warm pool.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnWarmPool cfnWarmPool = CfnWarmPool.Builder.create(this, "MyCfnWarmPool")
+ * .autoScalingGroupName("autoScalingGroupName")
+ * // the properties below are optional
+ * .instanceReusePolicy(InstanceReusePolicyProperty.builder()
+ * .reuseOnScaleIn(false)
+ * .build())
+ * .maxGroupPreparedCapacity(123)
+ * .minSize(123)
+ * .poolState("poolState")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html)
+ */
 @CdkDslMarker
 public class CfnWarmPoolDsl(
   scope: Construct,

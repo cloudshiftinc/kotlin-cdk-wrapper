@@ -10,6 +10,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnComponent
 
+/**
+ * The `ComponentBindingPropertiesValueProperties` property specifies the data binding configuration
+ * for a specific property using data stored in AWS .
+ *
+ * For AWS connected properties, you can bind a property to data stored in an Amazon S3 bucket, an
+ * Amplify DataStore model or an authenticated user attribute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * PredicateProperty predicateProperty_;
+ * ComponentBindingPropertiesValuePropertiesProperty
+ * componentBindingPropertiesValuePropertiesProperty =
+ * ComponentBindingPropertiesValuePropertiesProperty.builder()
+ * .bucket("bucket")
+ * .defaultValue("defaultValue")
+ * .field("field")
+ * .key("key")
+ * .model("model")
+ * .predicates(List.of(PredicateProperty.builder()
+ * .and(List.of(predicateProperty_))
+ * .field("field")
+ * .operand("operand")
+ * .operator("operator")
+ * .or(List.of(predicateProperty_))
+ * .build()))
+ * .userAttribute("userAttribute")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-component-componentbindingpropertiesvalueproperties.html)
+ */
 @CdkDslMarker
 public class CfnComponentComponentBindingPropertiesValuePropertiesPropertyDsl {
   private val cdkBuilder: CfnComponent.ComponentBindingPropertiesValuePropertiesProperty.Builder =

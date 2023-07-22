@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
 
+/**
+ * The subnet and security groups that AWS DataSync uses to access your Amazon EFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * Ec2ConfigProperty ec2ConfigProperty = Ec2ConfigProperty.builder()
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .subnetArn("subnetArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationefs-ec2config.html)
+ */
 @CdkDslMarker
 public class CfnLocationEFSEc2ConfigPropertyDsl {
   private val cdkBuilder: CfnLocationEFS.Ec2ConfigProperty.Builder =

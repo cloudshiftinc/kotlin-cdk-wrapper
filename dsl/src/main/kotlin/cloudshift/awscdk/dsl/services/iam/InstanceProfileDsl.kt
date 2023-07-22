@@ -8,6 +8,22 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.InstanceProfile
 import software.constructs.Construct
 
+/**
+ * IAM Instance Profile.
+ *
+ * Example:
+ *
+ * ```
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("ec2.amazonaws.com"))
+ * .build();
+ * IInstanceProfile instanceProfile = InstanceProfile.fromInstanceProfileAttributes(this,
+ * "ImportedInstanceProfile", InstanceProfileAttributes.builder()
+ * .instanceProfileArn("arn:aws:iam::account-id:instance-profile/MyInstanceProfile")
+ * .role(role)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class InstanceProfileDsl(
   scope: Construct,

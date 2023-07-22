@@ -20,6 +20,24 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EksCallProps
 import software.amazon.awscdk.services.stepfunctions.tasks.HttpMethods
 
+/**
+ * Properties for calling a EKS endpoint with EksCall.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.eks.*;
+ * Cluster myEksCluster = Cluster.Builder.create(this, "my sample cluster")
+ * .version(KubernetesVersion.V1_18)
+ * .clusterName("myEksCluster")
+ * .build();
+ * EksCall.Builder.create(this, "Call a EKS Endpoint")
+ * .cluster(myEksCluster)
+ * .httpMethod(HttpMethods.GET)
+ * .httpPath("/api/v1/namespaces/default/pods")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EksCallPropsDsl {
   private val cdkBuilder: EksCallProps.Builder = EksCallProps.builder()

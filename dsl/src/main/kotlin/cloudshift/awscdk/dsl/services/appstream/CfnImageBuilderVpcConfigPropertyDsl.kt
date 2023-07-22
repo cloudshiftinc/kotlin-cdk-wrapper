@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appstream.CfnImageBuilder
 
+/**
+ * The VPC configuration for the image builder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * VpcConfigProperty vpcConfigProperty = VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appstream-imagebuilder-vpcconfig.html)
+ */
 @CdkDslMarker
 public class CfnImageBuilderVpcConfigPropertyDsl {
   private val cdkBuilder: CfnImageBuilder.VpcConfigProperty.Builder =

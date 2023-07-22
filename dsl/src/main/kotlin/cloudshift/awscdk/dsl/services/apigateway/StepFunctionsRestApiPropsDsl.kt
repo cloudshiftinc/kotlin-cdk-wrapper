@@ -28,6 +28,23 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.stepfunctions.IStateMachine
 
+/**
+ * Properties for StepFunctionsRestApi.
+ *
+ * Example:
+ *
+ * ```
+ * Pass stateMachineDefinition = new Pass(this, "PassState");
+ * IStateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
+ * .definition(stateMachineDefinition)
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .build();
+ * StepFunctionsRestApi.Builder.create(this, "StepFunctionsRestApi")
+ * .deploy(true)
+ * .stateMachine(stateMachine)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsRestApiPropsDsl {
   private val cdkBuilder: StepFunctionsRestApiProps.Builder = StepFunctionsRestApiProps.builder()

@@ -15,6 +15,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnAssociation
 import software.amazon.awscdk.services.ssm.CfnAssociationProps
 
+/**
+ * Properties for defining a `CfnAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object parameters;
+ * CfnAssociationProps cfnAssociationProps = CfnAssociationProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .applyOnlyAtCronInterval(false)
+ * .associationName("associationName")
+ * .automationTargetParameterName("automationTargetParameterName")
+ * .calendarNames(List.of("calendarNames"))
+ * .complianceSeverity("complianceSeverity")
+ * .documentVersion("documentVersion")
+ * .instanceId("instanceId")
+ * .maxConcurrency("maxConcurrency")
+ * .maxErrors("maxErrors")
+ * .outputLocation(InstanceAssociationOutputLocationProperty.builder()
+ * .s3Location(S3OutputLocationProperty.builder()
+ * .outputS3BucketName("outputS3BucketName")
+ * .outputS3KeyPrefix("outputS3KeyPrefix")
+ * .outputS3Region("outputS3Region")
+ * .build())
+ * .build())
+ * .parameters(parameters)
+ * .scheduleExpression("scheduleExpression")
+ * .scheduleOffset(123)
+ * .syncCompliance("syncCompliance")
+ * .targets(List.of(TargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .waitForSuccessTimeoutSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
+ */
 @CdkDslMarker
 public class CfnAssociationPropsDsl {
   private val cdkBuilder: CfnAssociationProps.Builder = CfnAssociationProps.builder()

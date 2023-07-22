@@ -25,6 +25,96 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codebuild.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * import software.amazon.awscdk.services.s3.*;
+ * Bucket bucket;
+ * IBuildImage buildImage;
+ * BuildSpec buildSpec;
+ * Cache cache;
+ * IFileSystemLocation fileSystemLocation;
+ * Key key;
+ * LogGroup logGroup;
+ * Role role;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Object value;
+ * Vpc vpc;
+ * CommonProjectProps commonProjectProps = CommonProjectProps.builder()
+ * .allowAllOutbound(false)
+ * .badge(false)
+ * .buildSpec(buildSpec)
+ * .cache(cache)
+ * .checkSecretsInPlainTextEnvVariables(false)
+ * .concurrentBuildLimit(123)
+ * .description("description")
+ * .encryptionKey(key)
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(buildImage)
+ * .certificate(BuildEnvironmentCertificate.builder()
+ * .bucket(bucket)
+ * .objectKey("objectKey")
+ * .build())
+ * .computeType(ComputeType.SMALL)
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", BuildEnvironmentVariable.builder()
+ * .value(value)
+ * // the properties below are optional
+ * .type(BuildEnvironmentVariableType.PLAINTEXT)
+ * .build()))
+ * .privileged(false)
+ * .build())
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", BuildEnvironmentVariable.builder()
+ * .value(value)
+ * // the properties below are optional
+ * .type(BuildEnvironmentVariableType.PLAINTEXT)
+ * .build()))
+ * .fileSystemLocations(List.of(fileSystemLocation))
+ * .grantReportGroupPermissions(false)
+ * .logging(LoggingOptions.builder()
+ * .cloudWatch(CloudWatchLoggingOptions.builder()
+ * .enabled(false)
+ * .logGroup(logGroup)
+ * .prefix("prefix")
+ * .build())
+ * .s3(S3LoggingOptions.builder()
+ * .bucket(bucket)
+ * // the properties below are optional
+ * .enabled(false)
+ * .encrypted(false)
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .projectName("projectName")
+ * .queuedTimeout(Duration.minutes(30))
+ * .role(role)
+ * .securityGroups(List.of(securityGroup))
+ * .ssmSessionPermissions(false)
+ * .subnetSelection(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .timeout(Duration.minutes(30))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonProjectPropsDsl {
   private val cdkBuilder: CommonProjectProps.Builder = CommonProjectProps.builder()

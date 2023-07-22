@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps
 
+/**
+ * Properties for defining a `CfnDefaultViewAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourceexplorer2.*;
+ * CfnDefaultViewAssociationProps cfnDefaultViewAssociationProps =
+ * CfnDefaultViewAssociationProps.builder()
+ * .viewArn("viewArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html)
+ */
 @CdkDslMarker
 public class CfnDefaultViewAssociationPropsDsl {
   private val cdkBuilder: CfnDefaultViewAssociationProps.Builder =

@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.RequestValidatorProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * RestApi restApi;
+ * RequestValidatorProps requestValidatorProps = RequestValidatorProps.builder()
+ * .restApi(restApi)
+ * // the properties below are optional
+ * .requestValidatorName("requestValidatorName")
+ * .validateRequestBody(false)
+ * .validateRequestParameters(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RequestValidatorPropsDsl {
   private val cdkBuilder: RequestValidatorProps.Builder = RequestValidatorProps.builder()

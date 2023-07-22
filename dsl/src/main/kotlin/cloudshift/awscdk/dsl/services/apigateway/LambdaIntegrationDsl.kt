@@ -19,6 +19,17 @@ import software.amazon.awscdk.services.apigateway.PassthroughBehavior
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Integrates an AWS Lambda function to an API Gateway method.
+ *
+ * Example:
+ *
+ * ```
+ * Resource resource;
+ * Function handler;
+ * resource.addMethod("GET", new LambdaIntegration(handler));
+ * ```
+ */
 @CdkDslMarker
 public class LambdaIntegrationDsl(
   handler: IFunction,

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog
 
+/**
+ * Information about the number of nodes and node types in a vehicle network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * NodeCountsProperty nodeCountsProperty = NodeCountsProperty.builder()
+ * .totalActuators(123)
+ * .totalAttributes(123)
+ * .totalBranches(123)
+ * .totalNodes(123)
+ * .totalSensors(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html)
+ */
 @CdkDslMarker
 public class CfnSignalCatalogNodeCountsPropertyDsl {
   private val cdkBuilder: CfnSignalCatalog.NodeCountsProperty.Builder =

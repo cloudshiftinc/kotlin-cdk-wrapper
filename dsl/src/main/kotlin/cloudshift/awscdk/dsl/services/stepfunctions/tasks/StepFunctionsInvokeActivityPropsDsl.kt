@@ -17,6 +17,18 @@ import software.amazon.awscdk.services.stepfunctions.IntegrationPattern
 import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivityProps
 
+/**
+ * Properties for invoking an Activity worker.
+ *
+ * Example:
+ *
+ * ```
+ * Activity submitJobActivity = new Activity(this, "SubmitJob");
+ * StepFunctionsInvokeActivity.Builder.create(this, "Submit Job")
+ * .activity(submitJobActivity)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsInvokeActivityPropsDsl {
   private val cdkBuilder: StepFunctionsInvokeActivityProps.Builder =

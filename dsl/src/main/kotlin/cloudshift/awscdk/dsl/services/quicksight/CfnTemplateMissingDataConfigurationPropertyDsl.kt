@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The configuration options that determine how missing data is treated during the rendering of a
+ * line chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * MissingDataConfigurationProperty missingDataConfigurationProperty =
+ * MissingDataConfigurationProperty.builder()
+ * .treatmentOption("treatmentOption")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-missingdataconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateMissingDataConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.MissingDataConfigurationProperty.Builder =

@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sam.CfnApi
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .version(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-api-s3location.html)
+ */
 @CdkDslMarker
 public class CfnApiS3LocationPropertyDsl {
   private val cdkBuilder: CfnApi.S3LocationProperty.Builder = CfnApi.S3LocationProperty.builder()

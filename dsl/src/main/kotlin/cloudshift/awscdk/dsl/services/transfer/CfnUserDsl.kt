@@ -14,6 +14,49 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnUser
 import software.constructs.Construct
 
+/**
+ * The `AWS::Transfer::User` resource creates a user and associates them with an existing server.
+ *
+ * You can only create and associate users with servers that have the `IdentityProviderType` set to
+ * `SERVICE_MANAGED` . Using parameters for `CreateUser` , you can specify the user name, set the home
+ * directory, store the user's public key, and assign the user's AWS Identity and Access Management
+ * (IAM) role. You can also optionally add a session policy, and assign metadata with tags that can be
+ * used to group and search for users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .role("role")
+ * .serverId("serverId")
+ * .userName("userName")
+ * // the properties below are optional
+ * .homeDirectory("homeDirectory")
+ * .homeDirectoryMappings(List.of(HomeDirectoryMapEntryProperty.builder()
+ * .entry("entry")
+ * .target("target")
+ * .build()))
+ * .homeDirectoryType("homeDirectoryType")
+ * .policy("policy")
+ * .posixProfile(PosixProfileProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * // the properties below are optional
+ * .secondaryGids(List.of(123))
+ * .build())
+ * .sshPublicKeys(List.of("sshPublicKeys"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

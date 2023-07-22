@@ -7,6 +7,24 @@ import kotlin.Number
 import software.amazon.awscdk.services.ecs.Ulimit
 import software.amazon.awscdk.services.ecs.UlimitName
 
+/**
+ * The ulimit settings to pass to the container.
+ *
+ * NOTE: Does not work for Windows containers.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * Ulimit ulimit = Ulimit.builder()
+ * .hardLimit(123)
+ * .name(UlimitName.CORE)
+ * .softLimit(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UlimitDsl {
   private val cdkBuilder: Ulimit.Builder = Ulimit.builder()

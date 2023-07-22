@@ -10,6 +10,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codepipeline.IAction
 import software.amazon.awscdk.services.codepipeline.StageProps
 
+/**
+ * Construction properties of a Pipeline Stage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * Action action;
+ * StageProps stageProps = StageProps.builder()
+ * .stageName("stageName")
+ * // the properties below are optional
+ * .actions(List.of(action))
+ * .transitionDisabledReason("transitionDisabledReason")
+ * .transitionToEnabled(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StagePropsDsl {
   private val cdkBuilder: StageProps.Builder = StageProps.builder()

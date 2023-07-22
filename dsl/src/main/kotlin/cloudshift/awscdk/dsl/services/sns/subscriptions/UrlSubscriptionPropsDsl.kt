@@ -12,6 +12,31 @@ import software.amazon.awscdk.services.sns.SubscriptionProtocol
 import software.amazon.awscdk.services.sns.subscriptions.UrlSubscriptionProps
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Options for URL subscriptions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.sns.subscriptions.*;
+ * import software.amazon.awscdk.services.sqs.*;
+ * FilterOrPolicy filterOrPolicy;
+ * Queue queue;
+ * SubscriptionFilter subscriptionFilter;
+ * UrlSubscriptionProps urlSubscriptionProps = UrlSubscriptionProps.builder()
+ * .deadLetterQueue(queue)
+ * .filterPolicy(Map.of(
+ * "filterPolicyKey", subscriptionFilter))
+ * .filterPolicyWithMessageBody(Map.of(
+ * "filterPolicyWithMessageBodyKey", filterOrPolicy))
+ * .protocol(SubscriptionProtocol.HTTP)
+ * .rawMessageDelivery(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UrlSubscriptionPropsDsl {
   private val cdkBuilder: UrlSubscriptionProps.Builder = UrlSubscriptionProps.builder()

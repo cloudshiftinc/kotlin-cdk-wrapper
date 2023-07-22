@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes a source image repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * ImageRepositoryProperty imageRepositoryProperty = ImageRepositoryProperty.builder()
+ * .imageIdentifier("imageIdentifier")
+ * .imageRepositoryType("imageRepositoryType")
+ * // the properties below are optional
+ * .imageConfiguration(ImageConfigurationProperty.builder()
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-imagerepository.html)
+ */
 @CdkDslMarker
 public class CfnServiceImageRepositoryPropertyDsl {
   private val cdkBuilder: CfnService.ImageRepositoryProperty.Builder =

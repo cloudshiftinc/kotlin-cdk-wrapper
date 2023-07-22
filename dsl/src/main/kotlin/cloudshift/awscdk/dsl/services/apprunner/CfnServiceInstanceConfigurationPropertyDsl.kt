@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes the runtime configuration of an AWS App Runner service instance (scaling unit).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * InstanceConfigurationProperty instanceConfigurationProperty =
+ * InstanceConfigurationProperty.builder()
+ * .cpu("cpu")
+ * .instanceRoleArn("instanceRoleArn")
+ * .memory("memory")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-instanceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceInstanceConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.InstanceConfigurationProperty.Builder =

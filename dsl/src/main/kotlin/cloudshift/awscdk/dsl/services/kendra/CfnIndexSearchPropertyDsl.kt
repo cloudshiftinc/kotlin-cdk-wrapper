@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnIndex
 
+/**
+ * Provides information about how a custom index field is used during a search.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * SearchProperty searchProperty = SearchProperty.builder()
+ * .displayable(false)
+ * .facetable(false)
+ * .searchable(false)
+ * .sortable(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-search.html)
+ */
 @CdkDslMarker
 public class CfnIndexSearchPropertyDsl {
   private val cdkBuilder: CfnIndex.SearchProperty.Builder = CfnIndex.SearchProperty.builder()

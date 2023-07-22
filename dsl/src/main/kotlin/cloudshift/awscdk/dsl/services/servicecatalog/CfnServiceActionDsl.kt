@@ -11,6 +11,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnServiceAction
 import software.constructs.Construct
 
+/**
+ * Creates a self-service action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnServiceAction cfnServiceAction = CfnServiceAction.Builder.create(this, "MyCfnServiceAction")
+ * .definition(List.of(DefinitionParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .definitionType("definitionType")
+ * .name("name")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-serviceaction.html)
+ */
 @CdkDslMarker
 public class CfnServiceActionDsl(
   scope: Construct,

@@ -11,6 +11,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnStateMachine
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * LoggingConfigurationProperty loggingConfigurationProperty =
+ * LoggingConfigurationProperty.builder()
+ * .destinations(List.of(LogDestinationProperty.builder()
+ * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .build()))
+ * .includeExecutionData(false)
+ * .level("level")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-statemachine-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnStateMachine.LoggingConfigurationProperty.Builder =

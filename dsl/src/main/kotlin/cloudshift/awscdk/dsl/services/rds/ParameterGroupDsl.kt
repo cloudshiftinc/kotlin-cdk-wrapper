@@ -9,6 +9,46 @@ import software.amazon.awscdk.services.rds.IEngine
 import software.amazon.awscdk.services.rds.ParameterGroup
 import software.constructs.Construct
 
+/**
+ * A parameter group.
+ *
+ * Represents both a cluster parameter group,
+ * and an instance parameter group.
+ *
+ * Example:
+ *
+ * ```
+ * BackupPlan plan;
+ * Vpc vpc;
+ * ITable myTable = Table.fromTableName(this, "Table", "myTableName");
+ * DatabaseInstance myDatabaseInstance = DatabaseInstance.Builder.create(this, "DatabaseInstance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_26).build()))
+ * .vpc(vpc)
+ * .build();
+ * DatabaseCluster myDatabaseCluster = DatabaseCluster.Builder.create(this, "DatabaseCluster")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .credentials(Credentials.fromGeneratedSecret("clusteradmin"))
+ * .instanceProps(InstanceProps.builder()
+ * .vpc(vpc)
+ * .build())
+ * .build();
+ * ServerlessCluster myServerlessCluster = ServerlessCluster.Builder.create(this,
+ * "ServerlessCluster")
+ * .engine(DatabaseClusterEngine.AURORA_POSTGRESQL)
+ * .parameterGroup(ParameterGroup.fromParameterGroupName(this, "ParameterGroup",
+ * "default.aurora-postgresql10"))
+ * .vpc(vpc)
+ * .build();
+ * Construct myCoolConstruct = new Construct(this, "MyCoolConstruct");
+ * plan.addSelection("Selection", BackupSelectionOptions.builder()
+ * .resources(List.of(BackupResource.fromDynamoDbTable(myTable),
+ * BackupResource.fromRdsDatabaseInstance(myDatabaseInstance),
+ * BackupResource.fromRdsDatabaseCluster(myDatabaseCluster),
+ * BackupResource.fromRdsServerlessCluster(myServerlessCluster), BackupResource.fromTag("stage",
+ * "prod"), BackupResource.fromConstruct(myCoolConstruct)))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ParameterGroupDsl(
   scope: Construct,

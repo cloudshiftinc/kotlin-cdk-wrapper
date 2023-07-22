@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies a cross-origin access rule for an Amazon S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * CorsRuleProperty corsRuleProperty = CorsRuleProperty.builder()
+ * .allowedMethods(List.of("allowedMethods"))
+ * .allowedOrigins(List.of("allowedOrigins"))
+ * // the properties below are optional
+ * .allowedHeaders(List.of("allowedHeaders"))
+ * .exposedHeaders(List.of("exposedHeaders"))
+ * .id("id")
+ * .maxAge(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-corsrule.html)
+ */
 @CdkDslMarker
 public class CfnBucketCorsRulePropertyDsl {
   private val cdkBuilder: CfnBucket.CorsRuleProperty.Builder = CfnBucket.CorsRuleProperty.builder()

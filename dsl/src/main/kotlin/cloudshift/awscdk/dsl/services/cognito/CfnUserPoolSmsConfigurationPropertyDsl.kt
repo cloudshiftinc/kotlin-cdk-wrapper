@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cognito.CfnUserPool
 
+/**
+ * The SMS configuration type that includes the settings the Cognito User Pool needs to call for the
+ * Amazon SNS service to send an SMS message from your AWS account .
+ *
+ * The Cognito User Pool makes the request to the Amazon SNS Service by using an IAM role that you
+ * provide for your AWS account .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * SmsConfigurationProperty smsConfigurationProperty = SmsConfigurationProperty.builder()
+ * .externalId("externalId")
+ * .snsCallerArn("snsCallerArn")
+ * .snsRegion("snsRegion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolSmsConfigurationPropertyDsl {
   private val cdkBuilder: CfnUserPool.SmsConfigurationProperty.Builder =

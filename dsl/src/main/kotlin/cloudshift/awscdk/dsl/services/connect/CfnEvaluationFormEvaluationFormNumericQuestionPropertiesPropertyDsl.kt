@@ -10,6 +10,37 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about properties for a numeric question in an evaluation form.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormNumericQuestionPropertiesProperty evaluationFormNumericQuestionPropertiesProperty =
+ * EvaluationFormNumericQuestionPropertiesProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automation(EvaluationFormNumericQuestionAutomationProperty.builder()
+ * .propertyValue(NumericQuestionPropertyValueAutomationProperty.builder()
+ * .label("label")
+ * .build())
+ * .build())
+ * .options(List.of(EvaluationFormNumericQuestionOptionProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionproperties.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormNumericQuestionPropertiesPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty.Builder

@@ -7,6 +7,24 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.certificatemanager.CfnAccount
 import software.amazon.awscdk.services.certificatemanager.CfnAccountProps
 
+/**
+ * Properties for defining a `CfnAccount`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * CfnAccountProps cfnAccountProps = CfnAccountProps.builder()
+ * .expiryEventsConfiguration(ExpiryEventsConfigurationProperty.builder()
+ * .daysBeforeExpiry(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html)
+ */
 @CdkDslMarker
 public class CfnAccountPropsDsl {
   private val cdkBuilder: CfnAccountProps.Builder = CfnAccountProps.builder()

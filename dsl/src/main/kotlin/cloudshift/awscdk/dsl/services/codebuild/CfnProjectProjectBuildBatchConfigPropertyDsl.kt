@@ -9,6 +9,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnProject
 
+/**
+ * Contains configuration information about a batch build project.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ProjectBuildBatchConfigProperty projectBuildBatchConfigProperty =
+ * ProjectBuildBatchConfigProperty.builder()
+ * .batchReportMode("batchReportMode")
+ * .combineArtifacts(false)
+ * .restrictions(BatchRestrictionsProperty.builder()
+ * .computeTypesAllowed(List.of("computeTypesAllowed"))
+ * .maximumBuildsAllowed(123)
+ * .build())
+ * .serviceRole("serviceRole")
+ * .timeoutInMins(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-projectbuildbatchconfig.html)
+ */
 @CdkDslMarker
 public class CfnProjectProjectBuildBatchConfigPropertyDsl {
   private val cdkBuilder: CfnProject.ProjectBuildBatchConfigProperty.Builder =

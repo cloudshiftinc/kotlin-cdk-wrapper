@@ -31,6 +31,105 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * The properties for the base ApplicationLoadBalancedEc2Service or
+ * ApplicationLoadBalancedFargateService service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * ApplicationLoadBalancer applicationLoadBalancer;
+ * Certificate certificate;
+ * Cluster cluster;
+ * ContainerDefinition containerDefinition;
+ * ContainerImage containerImage;
+ * HostedZone hostedZone;
+ * LogDriver logDriver;
+ * INamespace namespace;
+ * Role role;
+ * Secret secret;
+ * Vpc vpc;
+ * ApplicationLoadBalancedServiceBaseProps applicationLoadBalancedServiceBaseProps =
+ * ApplicationLoadBalancedServiceBaseProps.builder()
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .certificate(certificate)
+ * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .rollback(false)
+ * .build())
+ * .cloudMapOptions(CloudMapOptions.builder()
+ * .cloudMapNamespace(namespace)
+ * .container(containerDefinition)
+ * .containerPort(123)
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.minutes(30))
+ * .failureThreshold(123)
+ * .name("name")
+ * .build())
+ * .cluster(cluster)
+ * .deploymentController(DeploymentController.builder()
+ * .type(DeploymentControllerType.ECS)
+ * .build())
+ * .desiredCount(123)
+ * .domainName("domainName")
+ * .domainZone(hostedZone)
+ * .enableECSManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .healthCheckGracePeriod(Duration.minutes(30))
+ * .idleTimeout(Duration.minutes(30))
+ * .listenerPort(123)
+ * .loadBalancer(applicationLoadBalancer)
+ * .loadBalancerName("loadBalancerName")
+ * .maxHealthyPercent(123)
+ * .minHealthyPercent(123)
+ * .openListener(false)
+ * .propagateTags(PropagatedTagSource.SERVICE)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .protocolVersion(ApplicationProtocolVersion.GRPC)
+ * .publicLoadBalancer(false)
+ * .recordType(ApplicationLoadBalancedServiceRecordType.ALIAS)
+ * .redirectHTTP(false)
+ * .serviceName("serviceName")
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .targetProtocol(ApplicationProtocol.HTTP)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageOptions.builder()
+ * .image(containerImage)
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .containerName("containerName")
+ * .containerPort(123)
+ * .dockerLabels(Map.of(
+ * "dockerLabelsKey", "dockerLabels"))
+ * .enableLogging(false)
+ * .entryPoint(List.of("entryPoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .executionRole(role)
+ * .family("family")
+ * .logDriver(logDriver)
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .taskRole(role)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancedServiceBasePropsDsl {
   private val cdkBuilder: ApplicationLoadBalancedServiceBaseProps.Builder =

@@ -9,6 +9,30 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The OpenX SerDe.
+ *
+ * Used by Kinesis Data Firehose for deserializing data, which means converting it from the JSON
+ * format in preparation for serializing it to the Parquet or ORC format. This is one of two
+ * deserializers you can choose, depending on which one offers the functionality you need. The other
+ * option is the native Hive / HCatalog JsonSerDe.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * OpenXJsonSerDeProperty openXJsonSerDeProperty = OpenXJsonSerDeProperty.builder()
+ * .caseInsensitive(false)
+ * .columnToJsonKeyMappings(Map.of(
+ * "columnToJsonKeyMappingsKey", "columnToJsonKeyMappings"))
+ * .convertDotsInJsonKeysToUnderscores(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-openxjsonserde.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamOpenXJsonSerDePropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.OpenXJsonSerDeProperty.Builder =

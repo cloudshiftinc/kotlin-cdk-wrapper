@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Describes a session context that is activated when an intent is fulfilled.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * OutputContextProperty outputContextProperty = OutputContextProperty.builder()
+ * .name("name")
+ * .timeToLiveInSeconds(123)
+ * .turnsToLive(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-outputcontext.html)
+ */
 @CdkDslMarker
 public class CfnBotOutputContextPropertyDsl {
   private val cdkBuilder: CfnBot.OutputContextProperty.Builder =

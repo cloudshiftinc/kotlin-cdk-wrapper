@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnDomainName
 import software.constructs.Construct
 
+/**
+ * The `AWS::ApiGateway::DomainName` resource specifies a custom domain name for your API in API
+ * Gateway.
+ *
+ * You can use a custom domain name to provide a URL that's more intuitive and easier to recall. For
+ * more information about using custom domain names, see [Set up Custom Domain Name for an API in API
+ * Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html) in
+ * the *API Gateway Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * CfnDomainName cfnDomainName = CfnDomainName.Builder.create(this, "MyCfnDomainName")
+ * .certificateArn("certificateArn")
+ * .domainName("domainName")
+ * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .build())
+ * .mutualTlsAuthentication(MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion("truststoreVersion")
+ * .build())
+ * .ownershipVerificationCertificateArn("ownershipVerificationCertificateArn")
+ * .regionalCertificateArn("regionalCertificateArn")
+ * .securityPolicy("securityPolicy")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html)
+ */
 @CdkDslMarker
 public class CfnDomainNameDsl(
   scope: Construct,

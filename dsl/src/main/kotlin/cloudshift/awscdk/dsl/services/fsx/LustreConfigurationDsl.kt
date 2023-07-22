@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.fsx.LustreDataCompressionType
 import software.amazon.awscdk.services.fsx.LustreDeploymentType
 import software.amazon.awscdk.services.fsx.LustreMaintenanceTime
 
+/**
+ * The configuration for the Amazon FSx for Lustre file system.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.s3.*;
+ * Vpc vpc;
+ * Bucket bucket;
+ * Map&lt;String, Object&gt; lustreConfiguration = Map.of(
+ * "deploymentType", LustreDeploymentType.SCRATCH_2,
+ * "exportPath", bucket.s3UrlForObject(),
+ * "importPath", bucket.s3UrlForObject(),
+ * "autoImportPolicy", LustreAutoImportPolicy.NEW_CHANGED_DELETED);
+ * LustreFileSystem fs = LustreFileSystem.Builder.create(this, "FsxLustreFileSystem")
+ * .vpc(vpc)
+ * .vpcSubnet(vpc.getPrivateSubnets()[0])
+ * .storageCapacityGiB(1200)
+ * .lustreConfiguration(lustreConfiguration)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html)
+ */
 @CdkDslMarker
 public class LustreConfigurationDsl {
   private val cdkBuilder: LustreConfiguration.Builder = LustreConfiguration.builder()

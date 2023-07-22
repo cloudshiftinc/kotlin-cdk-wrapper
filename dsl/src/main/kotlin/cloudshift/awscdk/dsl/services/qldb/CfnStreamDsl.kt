@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnStream
 import software.constructs.Construct
 
+/**
+ * The `AWS::QLDB::Stream` resource specifies a journal stream for a given Amazon Quantum Ledger
+ * Database (Amazon QLDB) ledger.
+ *
+ * The stream captures every document revision that is committed to the ledger's journal and
+ * delivers the data to a specified Amazon Kinesis Data Streams resource.
+ *
+ * For more information, see
+ * [StreamJournalToKinesis](https://docs.aws.amazon.com/qldb/latest/developerguide/API_StreamJournalToKinesis.html)
+ * in the *Amazon QLDB API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.qldb.*;
+ * CfnStream cfnStream = CfnStream.Builder.create(this, "MyCfnStream")
+ * .inclusiveStartTime("inclusiveStartTime")
+ * .kinesisConfiguration(KinesisConfigurationProperty.builder()
+ * .aggregationEnabled(false)
+ * .streamArn("streamArn")
+ * .build())
+ * .ledgerName("ledgerName")
+ * .roleArn("roleArn")
+ * .streamName("streamName")
+ * // the properties below are optional
+ * .exclusiveEndTime("exclusiveEndTime")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-stream.html)
+ */
 @CdkDslMarker
 public class CfnStreamDsl(
   scope: Construct,

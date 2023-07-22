@@ -10,6 +10,21 @@ import software.amazon.awscdk.services.route53.AaaaRecordProps
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 
+/**
+ * Construction properties for a AaaaRecord.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * HostedZone myZone;
+ * CloudFrontWebDistribution distribution;
+ * AaaaRecord.Builder.create(this, "Alias")
+ * .zone(myZone)
+ * .target(RecordTarget.fromAlias(new CloudFrontTarget(distribution)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AaaaRecordPropsDsl {
   private val cdkBuilder: AaaaRecordProps.Builder = AaaaRecordProps.builder()

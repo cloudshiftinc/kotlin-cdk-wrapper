@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.transfer.CfnAgreementProps
 
+/**
+ * Properties for defining a `CfnAgreement`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * CfnAgreementProps cfnAgreementProps = CfnAgreementProps.builder()
+ * .accessRole("accessRole")
+ * .baseDirectory("baseDirectory")
+ * .localProfileId("localProfileId")
+ * .partnerProfileId("partnerProfileId")
+ * .serverId("serverId")
+ * // the properties below are optional
+ * .description("description")
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-agreement.html)
+ */
 @CdkDslMarker
 public class CfnAgreementPropsDsl {
   private val cdkBuilder: CfnAgreementProps.Builder = CfnAgreementProps.builder()

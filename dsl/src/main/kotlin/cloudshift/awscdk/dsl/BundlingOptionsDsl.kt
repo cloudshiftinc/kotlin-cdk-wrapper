@@ -15,6 +15,23 @@ import software.amazon.awscdk.DockerImage
 import software.amazon.awscdk.DockerVolume
 import software.amazon.awscdk.ILocalBundling
 
+/**
+ * Bundling options.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.*;
+ * Asset asset = Asset.Builder.create(this, "BundledAsset")
+ * .path("/path/to/asset")
+ * .bundling(BundlingOptions.builder()
+ * .image(DockerImage.fromRegistry("alpine"))
+ * .command(List.of("command-that-produces-an-archive.sh"))
+ * .outputType(BundlingOutput.NOT_ARCHIVED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BundlingOptionsDsl {
   private val cdkBuilder: BundlingOptions.Builder = BundlingOptions.builder()

@@ -8,6 +8,27 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about the option range used for scoring in numeric questions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormNumericQuestionOptionProperty evaluationFormNumericQuestionOptionProperty =
+ * EvaluationFormNumericQuestionOptionProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * // the properties below are optional
+ * .automaticFail(false)
+ * .score(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformnumericquestionoption.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormNumericQuestionOptionPropertyDsl {
   private val cdkBuilder: CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty.Builder =

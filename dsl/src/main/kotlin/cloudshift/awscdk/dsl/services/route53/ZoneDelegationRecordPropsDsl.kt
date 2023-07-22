@@ -11,6 +11,28 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.ZoneDelegationRecordProps
 
+/**
+ * Construction properties for a ZoneDelegationRecord.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * ZoneDelegationRecordProps zoneDelegationRecordProps = ZoneDelegationRecordProps.builder()
+ * .nameServers(List.of("nameServers"))
+ * .zone(hostedZone)
+ * // the properties below are optional
+ * .comment("comment")
+ * .deleteExisting(false)
+ * .recordName("recordName")
+ * .ttl(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ZoneDelegationRecordPropsDsl {
   private val cdkBuilder: ZoneDelegationRecordProps.Builder = ZoneDelegationRecordProps.builder()

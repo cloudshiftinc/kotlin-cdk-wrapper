@@ -8,6 +8,68 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlow
 
+/**
+ * The details of the sources of the flow.
+ *
+ * If you are creating a flow with a VPC source, you must first create the flow with a temporary
+ * standard source by doing the following:
+ *
+ * * Use CloudFormation to create a flow with a standard source that uses the flow’s public IP
+ * address.
+ * * Use CloudFormation to create the VPC interface to add to this flow. This can also be done as
+ * part of the previous step.
+ * * After CloudFormation has created the flow and the VPC interface, update the source to point to
+ * the VPC interface that you created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * SourceProperty sourceProperty = SourceProperty.builder()
+ * .decryption(EncryptionProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .algorithm("algorithm")
+ * .constantInitializationVector("constantInitializationVector")
+ * .deviceId("deviceId")
+ * .keyType("keyType")
+ * .region("region")
+ * .resourceId("resourceId")
+ * .secretArn("secretArn")
+ * .url("url")
+ * .build())
+ * .description("description")
+ * .entitlementArn("entitlementArn")
+ * .gatewayBridgeSource(GatewayBridgeSourceProperty.builder()
+ * .bridgeArn("bridgeArn")
+ * // the properties below are optional
+ * .vpcInterfaceAttachment(VpcInterfaceAttachmentProperty.builder()
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .build())
+ * .build())
+ * .ingestIp("ingestIp")
+ * .ingestPort(123)
+ * .maxBitrate(123)
+ * .maxLatency(123)
+ * .minLatency(123)
+ * .name("name")
+ * .protocol("protocol")
+ * .senderControlPort(123)
+ * .senderIpAddress("senderIpAddress")
+ * .sourceArn("sourceArn")
+ * .sourceIngestPort("sourceIngestPort")
+ * .sourceListenerAddress("sourceListenerAddress")
+ * .sourceListenerPort(123)
+ * .streamId("streamId")
+ * .vpcInterfaceName("vpcInterfaceName")
+ * .whitelistCidr("whitelistCidr")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html)
+ */
 @CdkDslMarker
 public class CfnFlowSourcePropertyDsl {
   private val cdkBuilder: CfnFlow.SourceProperty.Builder = CfnFlow.SourceProperty.builder()

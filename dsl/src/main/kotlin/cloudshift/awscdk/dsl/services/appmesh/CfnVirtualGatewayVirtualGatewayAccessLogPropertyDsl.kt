@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * The access log configuration for a virtual gateway.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayAccessLogProperty virtualGatewayAccessLogProperty =
+ * VirtualGatewayAccessLogProperty.builder()
+ * .file(VirtualGatewayFileAccessLogProperty.builder()
+ * .path("path")
+ * // the properties below are optional
+ * .format(LoggingFormatProperty.builder()
+ * .json(List.of(JsonFormatRefProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .text("text")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewayaccesslog.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayAccessLogPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayAccessLogProperty.Builder =

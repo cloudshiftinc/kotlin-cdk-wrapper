@@ -14,6 +14,39 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroupProps
 
+/**
+ * Properties for defining a `CfnFeatureGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object offlineStoreConfig;
+ * Object onlineStoreConfig;
+ * CfnFeatureGroupProps cfnFeatureGroupProps = CfnFeatureGroupProps.builder()
+ * .eventTimeFeatureName("eventTimeFeatureName")
+ * .featureDefinitions(List.of(FeatureDefinitionProperty.builder()
+ * .featureName("featureName")
+ * .featureType("featureType")
+ * .build()))
+ * .featureGroupName("featureGroupName")
+ * .recordIdentifierFeatureName("recordIdentifierFeatureName")
+ * // the properties below are optional
+ * .description("description")
+ * .offlineStoreConfig(offlineStoreConfig)
+ * .onlineStoreConfig(onlineStoreConfig)
+ * .roleArn("roleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-featuregroup.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupPropsDsl {
   private val cdkBuilder: CfnFeatureGroupProps.Builder = CfnFeatureGroupProps.builder()

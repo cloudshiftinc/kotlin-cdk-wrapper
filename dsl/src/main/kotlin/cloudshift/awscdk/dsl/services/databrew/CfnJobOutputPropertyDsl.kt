@@ -11,6 +11,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Represents options that specify how and where in Amazon S3 DataBrew writes the output generated
+ * by recipe jobs or profile jobs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * OutputProperty outputProperty = OutputProperty.builder()
+ * .location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .key("key")
+ * .build())
+ * // the properties below are optional
+ * .compressionFormat("compressionFormat")
+ * .format("format")
+ * .formatOptions(OutputFormatOptionsProperty.builder()
+ * .csv(CsvOutputOptionsProperty.builder()
+ * .delimiter("delimiter")
+ * .build())
+ * .build())
+ * .maxOutputFiles(123)
+ * .overwrite(false)
+ * .partitionColumns(List.of("partitionColumns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-output.html)
+ */
 @CdkDslMarker
 public class CfnJobOutputPropertyDsl {
   private val cdkBuilder: CfnJob.OutputProperty.Builder = CfnJob.OutputProperty.builder()

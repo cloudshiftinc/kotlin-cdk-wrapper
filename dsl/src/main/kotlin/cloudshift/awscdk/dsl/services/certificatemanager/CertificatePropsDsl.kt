@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.certificatemanager.CertificateProps
 import software.amazon.awscdk.services.certificatemanager.CertificateValidation
 
+/**
+ * Properties for your certificate.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone exampleCom = HostedZone.Builder.create(this, "ExampleCom")
+ * .zoneName("example.com")
+ * .build();
+ * HostedZone exampleNet = HostedZone.Builder.create(this, "ExampleNet")
+ * .zoneName("example.net")
+ * .build();
+ * Certificate cert = Certificate.Builder.create(this, "Certificate")
+ * .domainName("test.example.com")
+ * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net"))
+ * .validation(CertificateValidation.fromDnsMultiZone(Map.of(
+ * "test.example.com", exampleCom,
+ * "cool.example.com", exampleCom,
+ * "test.example.net", exampleNet)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CertificatePropsDsl {
   private val cdkBuilder: CertificateProps.Builder = CertificateProps.builder()

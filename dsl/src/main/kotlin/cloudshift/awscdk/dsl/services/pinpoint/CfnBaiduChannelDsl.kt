@@ -9,6 +9,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnBaiduChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * You can use the Baidu channel to send notifications to the Baidu Cloud Push notification service.
+ * Before you can use Amazon Pinpoint to send notifications to the Baidu Cloud Push service, you have
+ * to enable the Baidu channel for an Amazon Pinpoint application.
+ *
+ * The BaiduChannel resource represents the status and authentication settings of the Baidu channel
+ * for an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnBaiduChannel cfnBaiduChannel = CfnBaiduChannel.Builder.create(this, "MyCfnBaiduChannel")
+ * .apiKey("apiKey")
+ * .applicationId("applicationId")
+ * .secretKey("secretKey")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-baiduchannel.html)
+ */
 @CdkDslMarker
 public class CfnBaiduChannelDsl(
   scope: Construct,

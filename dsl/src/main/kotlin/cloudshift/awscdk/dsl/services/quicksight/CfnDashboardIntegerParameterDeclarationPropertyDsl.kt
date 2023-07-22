@@ -10,6 +10,51 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A parameter declaration for the `Integer` data type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * IntegerParameterDeclarationProperty integerParameterDeclarationProperty =
+ * IntegerParameterDeclarationProperty.builder()
+ * .name("name")
+ * .parameterValueType("parameterValueType")
+ * // the properties below are optional
+ * .defaultValues(IntegerDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .staticValues(List.of(123))
+ * .build())
+ * .mappedDataSetParameters(List.of(MappedDataSetParameterProperty.builder()
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .dataSetParameterName("dataSetParameterName")
+ * .build()))
+ * .valueWhenUnset(IntegerValueWhenUnsetConfigurationProperty.builder()
+ * .customValue(123)
+ * .valueWhenUnsetOption("valueWhenUnsetOption")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-integerparameterdeclaration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardIntegerParameterDeclarationPropertyDsl {
   private val cdkBuilder: CfnDashboard.IntegerParameterDeclarationProperty.Builder =

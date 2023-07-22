@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotfleetwise.CfnModelManifest
 import software.constructs.Construct
 
+/**
+ * Creates a vehicle model (model manifest) that specifies signals (attributes, branches, sensors,
+ * and actuators).
+ *
+ * For more information, see [Vehicle
+ * models](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/vehicle-models.html) in the
+ * *AWS IoT FleetWise Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnModelManifest cfnModelManifest = CfnModelManifest.Builder.create(this, "MyCfnModelManifest")
+ * .name("name")
+ * .signalCatalogArn("signalCatalogArn")
+ * // the properties below are optional
+ * .description("description")
+ * .nodes(List.of("nodes"))
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html)
+ */
 @CdkDslMarker
 public class CfnModelManifestDsl(
   scope: Construct,

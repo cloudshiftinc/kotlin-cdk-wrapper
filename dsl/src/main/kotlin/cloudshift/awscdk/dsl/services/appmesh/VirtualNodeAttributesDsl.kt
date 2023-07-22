@@ -7,6 +7,20 @@ import kotlin.String
 import software.amazon.awscdk.services.appmesh.IMesh
 import software.amazon.awscdk.services.appmesh.VirtualNodeAttributes
 
+/**
+ * Interface with properties necessary to import a reusable VirtualNode.
+ *
+ * Example:
+ *
+ * ```
+ * String virtualNodeName = "my-virtual-node";
+ * VirtualNode.fromVirtualNodeAttributes(this, "imported-virtual-node",
+ * VirtualNodeAttributes.builder()
+ * .mesh(Mesh.fromMeshName(this, "Mesh", "testMesh"))
+ * .virtualNodeName(virtualNodeName)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class VirtualNodeAttributesDsl {
   private val cdkBuilder: VirtualNodeAttributes.Builder = VirtualNodeAttributes.builder()

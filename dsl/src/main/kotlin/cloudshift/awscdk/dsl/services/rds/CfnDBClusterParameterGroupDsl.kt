@@ -14,6 +14,46 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnDBClusterParameterGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::DBClusterParameterGroup` resource creates a new Amazon RDS DB cluster parameter
+ * group.
+ *
+ * For information about configuring parameters for Amazon Aurora DB clusters, see [Working with
+ * parameter
+ * groups](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_WorkingWithParamGroups.html)
+ * in the *Amazon Aurora User Guide* .
+ *
+ *
+ * If you apply a parameter group to a DB cluster, then its DB instances might need to reboot. This
+ * can result in an outage while the DB instances are rebooting.
+ *
+ * If you apply a change to parameter group associated with a stopped DB cluster, then the update
+ * stack waits until the DB cluster is started.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * Object parameters;
+ * CfnDBClusterParameterGroup cfnDBClusterParameterGroup =
+ * CfnDBClusterParameterGroup.Builder.create(this, "MyCfnDBClusterParameterGroup")
+ * .description("description")
+ * .family("family")
+ * .parameters(parameters)
+ * // the properties below are optional
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbclusterparametergroup.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterParameterGroupDsl(
   scope: Construct,

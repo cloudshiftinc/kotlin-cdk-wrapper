@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.iam.InstanceProfileProps
 
+/**
+ * Properties of an Instance Profile.
+ *
+ * Example:
+ *
+ * ```
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("ec2.amazonaws.com"))
+ * .build();
+ * InstanceProfile instanceProfile = InstanceProfile.Builder.create(this, "InstanceProfile")
+ * .role(role)
+ * .instanceProfileName("MyInstanceProfile")
+ * .path("/sample/path/")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InstanceProfilePropsDsl {
   private val cdkBuilder: InstanceProfileProps.Builder = InstanceProfileProps.builder()

@@ -14,6 +14,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath
 import software.constructs.Construct
 
+/**
+ * Specifies a path to analyze for reachability.
+ *
+ * VPC Reachability Analyzer enables you to analyze and debug network reachability between two
+ * resources in your virtual private cloud (VPC). For more information, see the [Reachability Analyzer
+ * User Guide](https://docs.aws.amazon.com/vpc/latest/reachability/what-is-reachability-analyzer.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInsightsPath cfnNetworkInsightsPath = CfnNetworkInsightsPath.Builder.create(this,
+ * "MyCfnNetworkInsightsPath")
+ * .protocol("protocol")
+ * .source("source")
+ * // the properties below are optional
+ * .destination("destination")
+ * .destinationIp("destinationIp")
+ * .destinationPort(123)
+ * .filterAtDestination(PathFilterProperty.builder()
+ * .destinationAddress("destinationAddress")
+ * .destinationPortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .sourceAddress("sourceAddress")
+ * .sourcePortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build())
+ * .filterAtSource(PathFilterProperty.builder()
+ * .destinationAddress("destinationAddress")
+ * .destinationPortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .sourceAddress("sourceAddress")
+ * .sourcePortRange(FilterPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .build())
+ * .sourceIp("sourceIp")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightspath.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsPathDsl(
   scope: Construct,

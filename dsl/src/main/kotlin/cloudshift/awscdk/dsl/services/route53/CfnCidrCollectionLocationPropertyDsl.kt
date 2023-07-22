@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.route53.CfnCidrCollection
 
+/**
+ * Specifies the list of CIDR blocks for a CIDR location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * LocationProperty locationProperty = LocationProperty.builder()
+ * .cidrList(List.of("cidrList"))
+ * .locationName("locationName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html)
+ */
 @CdkDslMarker
 public class CfnCidrCollectionLocationPropertyDsl {
   private val cdkBuilder: CfnCidrCollection.LocationProperty.Builder =

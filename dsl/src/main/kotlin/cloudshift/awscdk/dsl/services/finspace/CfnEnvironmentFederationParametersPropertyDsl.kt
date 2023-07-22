@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.finspace.CfnEnvironment
 
+/**
+ * Configuration information when authentication mode is FEDERATED.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.finspace.*;
+ * FederationParametersProperty federationParametersProperty =
+ * FederationParametersProperty.builder()
+ * .applicationCallBackUrl("applicationCallBackUrl")
+ * .attributeMap(List.of(AttributeMapItemsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .federationProviderName("federationProviderName")
+ * .federationUrn("federationUrn")
+ * .samlMetadataDocument("samlMetadataDocument")
+ * .samlMetadataUrl("samlMetadataUrl")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-federationparameters.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentFederationParametersPropertyDsl {
   private val cdkBuilder: CfnEnvironment.FederationParametersProperty.Builder =

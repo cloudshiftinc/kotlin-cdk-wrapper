@@ -13,6 +13,49 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration
 import software.constructs.Construct
 
+/**
+ * Specify an AWS App Runner Automatic Scaling configuration by using the
+ * `AWS::AppRunner::AutoScalingConfiguration` resource in an AWS CloudFormation template.
+ *
+ * The `AWS::AppRunner::AutoScalingConfiguration` resource is an AWS App Runner resource type that
+ * specifies an App Runner automatic scaling configuration.
+ *
+ * App Runner requires this resource to set non-default auto scaling settings for instances used to
+ * process the web requests. You can share an auto scaling configuration across multiple services.
+ *
+ * Create multiple revisions of a configuration by calling this action multiple times using the same
+ * `AutoScalingConfigurationName` . The call returns incremental `AutoScalingConfigurationRevision`
+ * values. When you create a service and configure an auto scaling configuration resource, the service
+ * uses the latest active revision of the auto scaling configuration by default. You can optionally
+ * configure the service to use a specific revision.
+ *
+ * Configure a higher `MinSize` to increase the spread of your App Runner service over more
+ * Availability Zones in the AWS Region . The tradeoff is a higher minimal cost.
+ *
+ * Configure a lower `MaxSize` to control your cost. The tradeoff is lower responsiveness during
+ * peak demand.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnAutoScalingConfiguration cfnAutoScalingConfiguration =
+ * CfnAutoScalingConfiguration.Builder.create(this, "MyCfnAutoScalingConfiguration")
+ * .autoScalingConfigurationName("autoScalingConfigurationName")
+ * .maxConcurrency(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-autoscalingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingConfigurationDsl(
   scope: Construct,

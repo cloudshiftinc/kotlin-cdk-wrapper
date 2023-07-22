@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.signer.CfnProfilePermission
 import software.constructs.Construct
 
+/**
+ * Adds cross-account permissions to a signing profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * CfnProfilePermission cfnProfilePermission = CfnProfilePermission.Builder.create(this,
+ * "MyCfnProfilePermission")
+ * .action("action")
+ * .principal("principal")
+ * .profileName("profileName")
+ * .statementId("statementId")
+ * // the properties below are optional
+ * .profileVersion("profileVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-profilepermission.html)
+ */
 @CdkDslMarker
 public class CfnProfilePermissionDsl(
   scope: Construct,

@@ -9,6 +9,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnADMChannel
 import software.constructs.Construct
 
+/**
+ * A *channel* is a type of platform that you can deliver messages to.
+ *
+ * You can use the ADM channel to send push notifications through the Amazon Device Messaging (ADM)
+ * service to apps that run on Amazon devices, such as Kindle Fire tablets. Before you can use Amazon
+ * Pinpoint to send messages to Amazon devices, you have to enable the ADM channel for an Amazon
+ * Pinpoint application.
+ *
+ * The ADMChannel resource represents the status and authentication settings for the ADM channel for
+ * an application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnADMChannel cfnADMChannel = CfnADMChannel.Builder.create(this, "MyCfnADMChannel")
+ * .applicationId("applicationId")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * // the properties below are optional
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-admchannel.html)
+ */
 @CdkDslMarker
 public class CfnADMChannelDsl(
   scope: Construct,

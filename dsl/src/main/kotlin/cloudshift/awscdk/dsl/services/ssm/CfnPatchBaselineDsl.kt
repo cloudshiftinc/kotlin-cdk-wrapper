@@ -15,6 +15,67 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSM::PatchBaseline` resource defines the basic information for an AWS Systems Manager
+ * patch baseline.
+ *
+ * A patch baseline defines which patches are approved for installation on your instances.
+ *
+ * For more information, see
+ * [CreatePatchBaseline](https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreatePatchBaseline.html)
+ * in the *AWS Systems Manager API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * CfnPatchBaseline cfnPatchBaseline = CfnPatchBaseline.Builder.create(this, "MyCfnPatchBaseline")
+ * .name("name")
+ * // the properties below are optional
+ * .approvalRules(RuleGroupProperty.builder()
+ * .patchRules(List.of(RuleProperty.builder()
+ * .approveAfterDays(123)
+ * .approveUntilDate("approveUntilDate")
+ * .complianceLevel("complianceLevel")
+ * .enableNonSecurity(false)
+ * .patchFilterGroup(PatchFilterGroupProperty.builder()
+ * .patchFilters(List.of(PatchFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .build()))
+ * .build())
+ * .approvedPatches(List.of("approvedPatches"))
+ * .approvedPatchesComplianceLevel("approvedPatchesComplianceLevel")
+ * .approvedPatchesEnableNonSecurity(false)
+ * .description("description")
+ * .globalFilters(PatchFilterGroupProperty.builder()
+ * .patchFilters(List.of(PatchFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .operatingSystem("operatingSystem")
+ * .patchGroups(List.of("patchGroups"))
+ * .rejectedPatches(List.of("rejectedPatches"))
+ * .rejectedPatchesAction("rejectedPatchesAction")
+ * .sources(List.of(PatchSourceProperty.builder()
+ * .configuration("configuration")
+ * .name("name")
+ * .products(List.of("products"))
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
+ */
 @CdkDslMarker
 public class CfnPatchBaselineDsl(
   scope: Construct,

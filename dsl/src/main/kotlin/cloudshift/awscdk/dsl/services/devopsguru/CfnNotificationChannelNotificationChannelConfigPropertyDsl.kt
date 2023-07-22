@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.devopsguru.CfnNotificationChannel
 
+/**
+ * Information about notification channels you have configured with DevOps Guru.
+ *
+ * The one supported notification channel is Amazon Simple Notification Service (Amazon SNS).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.devopsguru.*;
+ * NotificationChannelConfigProperty notificationChannelConfigProperty =
+ * NotificationChannelConfigProperty.builder()
+ * .filters(NotificationFilterConfigProperty.builder()
+ * .messageTypes(List.of("messageTypes"))
+ * .severities(List.of("severities"))
+ * .build())
+ * .sns(SnsChannelConfigProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-devopsguru-notificationchannel-notificationchannelconfig.html)
+ */
 @CdkDslMarker
 public class CfnNotificationChannelNotificationChannelConfigPropertyDsl {
   private val cdkBuilder: CfnNotificationChannel.NotificationChannelConfigProperty.Builder =

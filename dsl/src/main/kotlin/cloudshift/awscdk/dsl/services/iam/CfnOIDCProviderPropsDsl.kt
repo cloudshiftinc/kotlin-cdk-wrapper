@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iam.CfnOIDCProviderProps
 
+/**
+ * Properties for defining a `CfnOIDCProvider`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnOIDCProviderProps cfnOIDCProviderProps = CfnOIDCProviderProps.builder()
+ * .thumbprintList(List.of("thumbprintList"))
+ * // the properties below are optional
+ * .clientIdList(List.of("clientIdList"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .url("url")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-oidcprovider.html)
+ */
 @CdkDslMarker
 public class CfnOIDCProviderPropsDsl {
   private val cdkBuilder: CfnOIDCProviderProps.Builder = CfnOIDCProviderProps.builder()

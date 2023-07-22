@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lambda.LayerVersionAttributes
 import software.amazon.awscdk.services.lambda.Runtime
 
+/**
+ * Properties necessary to import a LayerVersion.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * Runtime runtime;
+ * LayerVersionAttributes layerVersionAttributes = LayerVersionAttributes.builder()
+ * .layerVersionArn("layerVersionArn")
+ * // the properties below are optional
+ * .compatibleRuntimes(List.of(runtime))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LayerVersionAttributesDsl {
   private val cdkBuilder: LayerVersionAttributes.Builder = LayerVersionAttributes.builder()

@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * Information about how traffic is rerouted to instances in a replacement environment in a
+ * blue/green deployment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * DeploymentReadyOptionProperty deploymentReadyOptionProperty =
+ * DeploymentReadyOptionProperty.builder()
+ * .actionOnTimeout("actionOnTimeout")
+ * .waitTimeInMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentreadyoption.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupDeploymentReadyOptionPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.DeploymentReadyOptionProperty.Builder =

@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Configures inspection of the response status code. This is part of the `ResponseInspection`
+ * configuration for `AWSManagedRulesATPRuleSet` .
+ *
+ *
+ * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * ResponseInspectionStatusCodeProperty responseInspectionStatusCodeProperty =
+ * ResponseInspectionStatusCodeProperty.builder()
+ * .failureCodes(List.of(123))
+ * .successCodes(List.of(123))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-responseinspectionstatuscode.html)
+ */
 @CdkDslMarker
 public class CfnWebACLResponseInspectionStatusCodePropertyDsl {
   private val cdkBuilder: CfnWebACL.ResponseInspectionStatusCodeProperty.Builder =

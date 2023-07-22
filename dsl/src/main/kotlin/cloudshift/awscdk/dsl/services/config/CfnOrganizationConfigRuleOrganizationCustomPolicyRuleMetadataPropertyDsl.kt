@@ -8,6 +8,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.config.CfnOrganizationConfigRule
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * OrganizationCustomPolicyRuleMetadataProperty organizationCustomPolicyRuleMetadataProperty =
+ * OrganizationCustomPolicyRuleMetadataProperty.builder()
+ * .policyText("policyText")
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .debugLogDeliveryAccounts(List.of("debugLogDeliveryAccounts"))
+ * .description("description")
+ * .inputParameters("inputParameters")
+ * .maximumExecutionFrequency("maximumExecutionFrequency")
+ * .organizationConfigRuleTriggerTypes(List.of("organizationConfigRuleTriggerTypes"))
+ * .resourceIdScope("resourceIdScope")
+ * .resourceTypesScope(List.of("resourceTypesScope"))
+ * .tagKeyScope("tagKeyScope")
+ * .tagValueScope("tagValueScope")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-organizationconfigrule-organizationcustompolicyrulemetadata.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationConfigRuleOrganizationCustomPolicyRuleMetadataPropertyDsl {
   private val cdkBuilder:

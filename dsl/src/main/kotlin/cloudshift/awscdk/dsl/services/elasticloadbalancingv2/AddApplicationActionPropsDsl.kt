@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActi
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition
 
+/**
+ * Properties for adding a new action to a listener.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationListener listener;
+ * listener.addAction("Fixed", AddApplicationActionProps.builder()
+ * .priority(10)
+ * .conditions(List.of(ListenerCondition.pathPatterns(List.of("/ok"))))
+ * .action(ListenerAction.fixedResponse(200, FixedResponseOptions.builder()
+ * .contentType("text/plain")
+ * .messageBody("OK")
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddApplicationActionPropsDsl {
   private val cdkBuilder: AddApplicationActionProps.Builder = AddApplicationActionProps.builder()

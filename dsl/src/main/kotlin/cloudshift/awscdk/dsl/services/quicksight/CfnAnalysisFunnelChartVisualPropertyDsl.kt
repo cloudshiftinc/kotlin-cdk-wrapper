@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * A funnel chart.
+ *
+ * For more information, see [Using funnel
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/funnel-visual-content.html) in the
+ * *Amazon QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-funnelchartvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisFunnelChartVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.FunnelChartVisualProperty.Builder =

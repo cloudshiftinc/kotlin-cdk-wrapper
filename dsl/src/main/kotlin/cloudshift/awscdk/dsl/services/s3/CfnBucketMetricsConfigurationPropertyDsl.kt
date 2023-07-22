@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies a metrics configuration for the CloudWatch request metrics (specified by the metrics
+ * configuration ID) from an Amazon S3 bucket.
+ *
+ * If you're updating an existing metrics configuration, note that this is a full replacement of the
+ * existing metrics configuration. If you don't include the elements you want to keep, they are erased.
+ * For examples, see
+ * [AWS::S3::Bucket](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#aws-properties-s3-bucket--examples)
+ * . For more information, see [PUT Bucket
+ * metrics](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketPUTMetricConfiguration.html) in
+ * the *Amazon S3 API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * MetricsConfigurationProperty metricsConfigurationProperty =
+ * MetricsConfigurationProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accessPointArn("accessPointArn")
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-metricsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketMetricsConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.MetricsConfigurationProperty.Builder =

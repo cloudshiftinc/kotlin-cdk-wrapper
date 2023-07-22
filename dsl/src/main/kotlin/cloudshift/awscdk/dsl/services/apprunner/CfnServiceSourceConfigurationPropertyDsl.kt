@@ -7,6 +7,72 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes the source deployed to an AWS App Runner service.
+ *
+ * It can be a code or an image repository.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * SourceConfigurationProperty sourceConfigurationProperty = SourceConfigurationProperty.builder()
+ * .authenticationConfiguration(AuthenticationConfigurationProperty.builder()
+ * .accessRoleArn("accessRoleArn")
+ * .connectionArn("connectionArn")
+ * .build())
+ * .autoDeploymentsEnabled(false)
+ * .codeRepository(CodeRepositoryProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * .sourceCodeVersion(SourceCodeVersionProperty.builder()
+ * .type("type")
+ * .value("value")
+ * .build())
+ * // the properties below are optional
+ * .codeConfiguration(CodeConfigurationProperty.builder()
+ * .configurationSource("configurationSource")
+ * // the properties below are optional
+ * .codeConfigurationValues(CodeConfigurationValuesProperty.builder()
+ * .runtime("runtime")
+ * // the properties below are optional
+ * .buildCommand("buildCommand")
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build())
+ * .build())
+ * .imageRepository(ImageRepositoryProperty.builder()
+ * .imageIdentifier("imageIdentifier")
+ * .imageRepositoryType("imageRepositoryType")
+ * // the properties below are optional
+ * .imageConfiguration(ImageConfigurationProperty.builder()
+ * .port("port")
+ * .runtimeEnvironmentSecrets(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .runtimeEnvironmentVariables(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .startCommand("startCommand")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-sourceconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceSourceConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.SourceConfigurationProperty.Builder =

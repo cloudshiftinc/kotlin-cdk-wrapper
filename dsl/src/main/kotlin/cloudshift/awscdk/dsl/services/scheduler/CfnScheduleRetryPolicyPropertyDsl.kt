@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.scheduler.CfnSchedule
 
+/**
+ * A `RetryPolicy` object that includes information about the retry policy settings, including the
+ * maximum age of an event, and the maximum number of times EventBridge Scheduler will try to deliver
+ * the event to a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.scheduler.*;
+ * RetryPolicyProperty retryPolicyProperty = RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-scheduler-schedule-retrypolicy.html)
+ */
 @CdkDslMarker
 public class CfnScheduleRetryPolicyPropertyDsl {
   private val cdkBuilder: CfnSchedule.RetryPolicyProperty.Builder =

@@ -13,6 +13,26 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions
 import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 
+/**
+ * Options for creating Credentials from a username.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
+ * .credentials(Credentials.fromUsername("adminuser",
+ * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
+ * .instanceProps(InstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.X2G, InstanceSize.XLARGE))
+ * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
+ * .vpc(vpc)
+ * .build())
+ * .storageType(DBClusterStorageType.AURORA_IOPT1)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CredentialsFromUsernameOptionsDsl {
   private val cdkBuilder: CredentialsFromUsernameOptions.Builder =

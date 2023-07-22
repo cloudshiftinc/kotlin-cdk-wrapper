@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * The data-volume encryption details.
+ *
+ * You can't update encryption at rest settings for existing clusters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * EncryptionAtRestProperty encryptionAtRestProperty = EncryptionAtRestProperty.builder()
+ * .dataVolumeKmsKeyId("dataVolumeKmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-encryptionatrest.html)
+ */
 @CdkDslMarker
 public class CfnClusterEncryptionAtRestPropertyDsl {
   private val cdkBuilder: CfnCluster.EncryptionAtRestProperty.Builder =

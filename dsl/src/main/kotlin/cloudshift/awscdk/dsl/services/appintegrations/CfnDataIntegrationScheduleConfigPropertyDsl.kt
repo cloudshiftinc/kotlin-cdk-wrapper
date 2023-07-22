@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 
+/**
+ * The name of the data and how often it should be pulled from the source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appintegrations.*;
+ * ScheduleConfigProperty scheduleConfigProperty = ScheduleConfigProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .firstExecutionFrom("firstExecutionFrom")
+ * .object("object")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appintegrations-dataintegration-scheduleconfig.html)
+ */
 @CdkDslMarker
 public class CfnDataIntegrationScheduleConfigPropertyDsl {
   private val cdkBuilder: CfnDataIntegration.ScheduleConfigProperty.Builder =

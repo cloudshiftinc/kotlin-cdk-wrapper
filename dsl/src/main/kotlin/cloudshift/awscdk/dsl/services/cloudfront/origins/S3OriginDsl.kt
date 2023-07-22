@@ -12,6 +12,34 @@ import software.amazon.awscdk.services.cloudfront.IOriginAccessIdentity
 import software.amazon.awscdk.services.cloudfront.origins.S3Origin
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * An Origin that is backed by an S3 bucket.
+ *
+ * If the bucket is configured for website hosting, this origin will be configured to use the bucket
+ * as an
+ * HTTP server origin and will use the bucket's configured website redirects and error handling.
+ * Otherwise,
+ * the origin is created as a bucket origin and will use CloudFront's redirect and error handling.
+ *
+ * Example:
+ *
+ * ```
+ * // Adding an existing Lambda&#64;Edge function created in a different stack
+ * // to a CloudFront distribution.
+ * Bucket s3Bucket;
+ * IVersion functionVersion = Version.fromVersionArn(this, "Version",
+ * "arn:aws:lambda:us-east-1:123456789012:function:functionName:1");
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .edgeLambdas(List.of(EdgeLambda.builder()
+ * .functionVersion(functionVersion)
+ * .eventType(LambdaEdgeEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class S3OriginDsl(
   bucket: IBucket,

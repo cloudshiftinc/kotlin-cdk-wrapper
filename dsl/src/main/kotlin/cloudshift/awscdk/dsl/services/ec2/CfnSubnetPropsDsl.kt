@@ -15,6 +15,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSubnetProps
 
+/**
+ * Properties for defining a `CfnSubnet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object privateDnsNameOptionsOnLaunch;
+ * CfnSubnetProps cfnSubnetProps = CfnSubnetProps.builder()
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .assignIpv6AddressOnCreation(false)
+ * .availabilityZone("availabilityZone")
+ * .availabilityZoneId("availabilityZoneId")
+ * .cidrBlock("cidrBlock")
+ * .enableDns64(false)
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .ipv6Native(false)
+ * .mapPublicIpOnLaunch(false)
+ * .outpostArn("outpostArn")
+ * .privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html)
+ */
 @CdkDslMarker
 public class CfnSubnetPropsDsl {
   private val cdkBuilder: CfnSubnetProps.Builder = CfnSubnetProps.builder()

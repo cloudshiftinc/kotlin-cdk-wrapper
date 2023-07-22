@@ -11,6 +11,18 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.apigateway.CorsOptions
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi.Builder.create(this, "api")
+ * .defaultCorsPreflightOptions(CorsOptions.builder()
+ * .allowOrigins(Cors.ALL_ORIGINS)
+ * .allowMethods(Cors.ALL_METHODS)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CorsOptionsDsl {
   private val cdkBuilder: CorsOptions.Builder = CorsOptions.builder()

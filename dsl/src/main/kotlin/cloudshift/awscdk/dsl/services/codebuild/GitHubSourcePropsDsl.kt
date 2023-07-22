@@ -11,6 +11,21 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.codebuild.FilterGroup
 import software.amazon.awscdk.services.codebuild.GitHubSourceProps
 
+/**
+ * Construction properties for `GitHubSource` and `GitHubEnterpriseSource`.
+ *
+ * Example:
+ *
+ * ```
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromSourceFilename("my-buildspec.yml"))
+ * .source(Source.gitHub(GitHubSourceProps.builder()
+ * .owner("awslabs")
+ * .repo("aws-cdk")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourcePropsDsl {
   private val cdkBuilder: GitHubSourceProps.Builder = GitHubSourceProps.builder()

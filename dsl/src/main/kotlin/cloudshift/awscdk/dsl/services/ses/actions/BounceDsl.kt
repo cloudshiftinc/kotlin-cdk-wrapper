@@ -9,6 +9,27 @@ import software.amazon.awscdk.services.ses.actions.Bounce
 import software.amazon.awscdk.services.ses.actions.BounceTemplate
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * Rejects the received email by returning a bounce response to the sender and, optionally,
+ * publishes a notification to Amazon SNS.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * BounceTemplate bounceTemplate;
+ * Topic topic;
+ * Bounce bounce = Bounce.Builder.create()
+ * .sender("sender")
+ * .template(bounceTemplate)
+ * // the properties below are optional
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BounceDsl {
   private val cdkBuilder: Bounce.Builder = Bounce.Builder.create()

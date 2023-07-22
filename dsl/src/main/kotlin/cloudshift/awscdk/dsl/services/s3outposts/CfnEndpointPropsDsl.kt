@@ -8,6 +8,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3outposts.CfnEndpoint
 import software.amazon.awscdk.services.s3outposts.CfnEndpointProps
 
+/**
+ * Properties for defining a `CfnEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * CfnEndpointProps cfnEndpointProps = CfnEndpointProps.builder()
+ * .outpostId("outpostId")
+ * .securityGroupId("securityGroupId")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .accessType("accessType")
+ * .customerOwnedIpv4Pool("customerOwnedIpv4Pool")
+ * .failedReason(FailedReasonProperty.builder()
+ * .errorCode("errorCode")
+ * .message("message")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-endpoint.html)
+ */
 @CdkDslMarker
 public class CfnEndpointPropsDsl {
   private val cdkBuilder: CfnEndpointProps.Builder = CfnEndpointProps.builder()

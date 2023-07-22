@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnService
 
+/**
+ * A complex type that contains information about the Amazon Route 53 DNS records that you want AWS
+ * Cloud Map to create when you register an instance.
+ *
+ *
+ * The record types of a service can only be changed by deleting the service and recreating it with
+ * a new `Dnsconfig` .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * DnsConfigProperty dnsConfigProperty = DnsConfigProperty.builder()
+ * .dnsRecords(List.of(DnsRecordProperty.builder()
+ * .ttl(123)
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .namespaceId("namespaceId")
+ * .routingPolicy("routingPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsconfig.html)
+ */
 @CdkDslMarker
 public class CfnServiceDnsConfigPropertyDsl {
   private val cdkBuilder: CfnService.DnsConfigProperty.Builder =

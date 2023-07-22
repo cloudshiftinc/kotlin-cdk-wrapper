@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.codebuild.ReportGroupProps
 import software.amazon.awscdk.services.codebuild.ReportGroupType
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties for `ReportGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * Source source;
+ * // create a new ReportGroup
+ * ReportGroup reportGroup = ReportGroup.Builder.create(this, "ReportGroup")
+ * .type(ReportGroupType.CODE_COVERAGE)
+ * .build();
+ * Project project = Project.Builder.create(this, "Project")
+ * .source(source)
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * // ...
+ * "reports", Map.of(
+ * reportGroup.getReportGroupArn(), Map.of(
+ * "files", "**&#47;*",
+ * "base-directory", "build/coverage-report.xml",
+ * "file-format", "JACOCOXML")))))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReportGroupPropsDsl {
   private val cdkBuilder: ReportGroupProps.Builder = ReportGroupProps.builder()

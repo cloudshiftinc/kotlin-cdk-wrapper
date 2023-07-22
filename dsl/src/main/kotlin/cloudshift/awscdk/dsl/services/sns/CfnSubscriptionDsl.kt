@@ -12,6 +12,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sns.CfnSubscription
 import software.constructs.Construct
 
+/**
+ * The `AWS::SNS::Subscription` resource subscribes an endpoint to an Amazon SNS topic.
+ *
+ * For a subscription to be created, the owner of the endpoint must confirm the subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sns.*;
+ * Object deliveryPolicy;
+ * Object filterPolicy;
+ * Object redrivePolicy;
+ * CfnSubscription cfnSubscription = CfnSubscription.Builder.create(this, "MyCfnSubscription")
+ * .protocol("protocol")
+ * .topicArn("topicArn")
+ * // the properties below are optional
+ * .deliveryPolicy(deliveryPolicy)
+ * .endpoint("endpoint")
+ * .filterPolicy(filterPolicy)
+ * .filterPolicyScope("filterPolicyScope")
+ * .rawMessageDelivery(false)
+ * .redrivePolicy(redrivePolicy)
+ * .region("region")
+ * .subscriptionRoleArn("subscriptionRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-subscription.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionDsl(
   scope: Construct,

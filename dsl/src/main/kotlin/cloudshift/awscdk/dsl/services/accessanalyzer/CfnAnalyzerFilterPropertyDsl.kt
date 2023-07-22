@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer
 
+/**
+ * The criteria that defines the rule.
+ *
+ * To learn about filter keys that you can use to create an archive rule, see [filter
+ * keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-reference-filter-keys.html)
+ * in the *User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.accessanalyzer.*;
+ * FilterProperty filterProperty = FilterProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .contains(List.of("contains"))
+ * .eq(List.of("eq"))
+ * .exists(false)
+ * .neq(List.of("neq"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-filter.html)
+ */
 @CdkDslMarker
 public class CfnAnalyzerFilterPropertyDsl {
   private val cdkBuilder: CfnAnalyzer.FilterProperty.Builder = CfnAnalyzer.FilterProperty.builder()

@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * Formatting configuration for gradient color.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ConditionalFormattingGradientColorProperty conditionalFormattingGradientColorProperty =
+ * ConditionalFormattingGradientColorProperty.builder()
+ * .color(GradientColorProperty.builder()
+ * .stops(List.of(GradientStopProperty.builder()
+ * .gradientOffset(123)
+ * // the properties below are optional
+ * .color("color")
+ * .dataValue(123)
+ * .build()))
+ * .build())
+ * .expression("expression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-conditionalformattinggradientcolor.html)
+ */
 @CdkDslMarker
 public class CfnDashboardConditionalFormattingGradientColorPropertyDsl {
   private val cdkBuilder: CfnDashboard.ConditionalFormattingGradientColorProperty.Builder =

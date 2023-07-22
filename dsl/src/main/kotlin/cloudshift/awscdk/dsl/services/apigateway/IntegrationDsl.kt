@@ -11,6 +11,31 @@ import software.amazon.awscdk.services.apigateway.Integration
 import software.amazon.awscdk.services.apigateway.IntegrationOptions
 import software.amazon.awscdk.services.apigateway.IntegrationType
 
+/**
+ * Base class for backend integrations for an API Gateway method.
+ *
+ * Use one of the concrete classes such as `MockIntegration`, `AwsIntegration`, `LambdaIntegration`
+ * or implement on your own by specifying the set of props.
+ *
+ * Example:
+ *
+ * ```
+ * Resource books;
+ * User iamUser;
+ * Method getBooks = books.addMethod("GET", new HttpIntegration("http://amazon.com"),
+ * MethodOptions.builder()
+ * .authorizationType(AuthorizationType.IAM)
+ * .build());
+ * iamUser.attachInlinePolicy(Policy.Builder.create(this, "AllowBooks")
+ * .statements(List.of(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("execute-api:Invoke"))
+ * .effect(Effect.ALLOW)
+ * .resources(List.of(getBooks.getMethodArn()))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class IntegrationDsl {
   private val cdkBuilder: Integration.Builder = Integration.Builder.create()

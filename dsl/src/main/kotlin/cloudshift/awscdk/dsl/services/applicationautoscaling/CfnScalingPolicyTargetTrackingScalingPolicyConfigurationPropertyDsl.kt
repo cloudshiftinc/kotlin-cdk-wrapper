@@ -8,6 +8,52 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy
 
+/**
+ * `TargetTrackingScalingPolicyConfiguration` is a property of the
+ * [AWS::ApplicationAutoScaling::ScalingPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html)
+ * resource that specifies a target tracking scaling policy configuration for Application Auto Scaling.
+ * Use a target tracking scaling policy to adjust the capacity of the specified scalable target in
+ * response to actual workloads, so that resource utilization remains at or near the target utilization
+ * value.
+ *
+ * For more information, see [Target tracking scaling
+ * policies](https://docs.aws.amazon.com/autoscaling/application/userguide/application-auto-scaling-target-tracking.html)
+ * in the *Application Auto Scaling User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * TargetTrackingScalingPolicyConfigurationProperty targetTrackingScalingPolicyConfigurationProperty
+ * = TargetTrackingScalingPolicyConfigurationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedMetricSpecification(CustomizedMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build())
+ * .disableScaleIn(false)
+ * .predefinedMetricSpecification(PredefinedMetricSpecificationProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .scaleInCooldown(123)
+ * .scaleOutCooldown(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnScalingPolicyTargetTrackingScalingPolicyConfigurationPropertyDsl {
   private val cdkBuilder: CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty.Builder

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The color to be used in the heatmap point style.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GeospatialHeatmapDataColorProperty geospatialHeatmapDataColorProperty =
+ * GeospatialHeatmapDataColorProperty.builder()
+ * .color("color")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-geospatialheatmapdatacolor.html)
+ */
 @CdkDslMarker
 public class CfnTemplateGeospatialHeatmapDataColorPropertyDsl {
   private val cdkBuilder: CfnTemplate.GeospatialHeatmapDataColorProperty.Builder =

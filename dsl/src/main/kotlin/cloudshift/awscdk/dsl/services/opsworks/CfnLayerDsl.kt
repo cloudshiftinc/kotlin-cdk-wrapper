@@ -17,6 +17,97 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 import software.constructs.Construct
 
+/**
+ * Creates a layer. For more information, see [How to Create a
+ * Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-create.html) .
+ *
+ *
+ * You should use *CreateLayer* for noncustom layer types such as PHP App Server only if the stack
+ * does not have an existing layer of that type. A stack can have at most one instance of each
+ * noncustom layer; if you attempt to create a second instance, *CreateLayer* fails. A stack can have
+ * an arbitrary number of custom layers, so you can call *CreateLayer* as many times as you like for
+ * that layer type.
+ *
+ *
+ * *Required Permissions* : To use this action, an IAM user must have a Manage permissions level for
+ * the stack, or an attached policy that explicitly grants permissions. For more information on user
+ * permissions, see [Managing User
+ * Permissions](https://docs.aws.amazon.com/opsworks/latest/userguide/opsworks-security-users.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * Object customJson;
+ * CfnLayer cfnLayer = CfnLayer.Builder.create(this, "MyCfnLayer")
+ * .autoAssignElasticIps(false)
+ * .autoAssignPublicIps(false)
+ * .enableAutoHealing(false)
+ * .name("name")
+ * .shortname("shortname")
+ * .stackId("stackId")
+ * .type("type")
+ * // the properties below are optional
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .customInstanceProfileArn("customInstanceProfileArn")
+ * .customJson(customJson)
+ * .customRecipes(RecipesProperty.builder()
+ * .configure(List.of("configure"))
+ * .deploy(List.of("deploy"))
+ * .setup(List.of("setup"))
+ * .shutdown(List.of("shutdown"))
+ * .undeploy(List.of("undeploy"))
+ * .build())
+ * .customSecurityGroupIds(List.of("customSecurityGroupIds"))
+ * .installUpdatesOnBoot(false)
+ * .lifecycleEventConfiguration(LifecycleEventConfigurationProperty.builder()
+ * .shutdownEventConfiguration(ShutdownEventConfigurationProperty.builder()
+ * .delayUntilElbConnectionsDrained(false)
+ * .executionTimeout(123)
+ * .build())
+ * .build())
+ * .loadBasedAutoScaling(LoadBasedAutoScalingProperty.builder()
+ * .downScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .enable(false)
+ * .upScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .build())
+ * .packages(List.of("packages"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useEbsOptimizedInstances(false)
+ * .volumeConfigurations(List.of(VolumeConfigurationProperty.builder()
+ * .encrypted(false)
+ * .iops(123)
+ * .mountPoint("mountPoint")
+ * .numberOfDisks(123)
+ * .raidLevel(123)
+ * .size(123)
+ * .volumeType("volumeType")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html)
+ */
 @CdkDslMarker
 public class CfnLayerDsl(
   scope: Construct,

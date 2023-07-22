@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.elasticache.CfnReplicationGroup
 
+/**
+ * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource that
+ * configures an Amazon ElastiCache (ElastiCache) Redis cluster node group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * NodeGroupConfigurationProperty nodeGroupConfigurationProperty =
+ * NodeGroupConfigurationProperty.builder()
+ * .nodeGroupId("nodeGroupId")
+ * .primaryAvailabilityZone("primaryAvailabilityZone")
+ * .replicaAvailabilityZones(List.of("replicaAvailabilityZones"))
+ * .replicaCount(123)
+ * .slots("slots")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnReplicationGroupNodeGroupConfigurationPropertyDsl {
   private val cdkBuilder: CfnReplicationGroup.NodeGroupConfigurationProperty.Builder =

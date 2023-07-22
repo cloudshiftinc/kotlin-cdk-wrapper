@@ -10,6 +10,48 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 
+/**
+ * The input properties for training a document classifier.
+ *
+ * For more information on how the input file is formatted, see [Preparing training
+ * data](https://docs.aws.amazon.com/comprehend/latest/dg/prep-classifier-data.html) in the Comprehend
+ * Developer Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DocumentClassifierInputDataConfigProperty documentClassifierInputDataConfigProperty =
+ * DocumentClassifierInputDataConfigProperty.builder()
+ * .augmentedManifests(List.of(AugmentedManifestsListItemProperty.builder()
+ * .attributeNames(List.of("attributeNames"))
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .split("split")
+ * .build()))
+ * .dataFormat("dataFormat")
+ * .documentReaderConfig(DocumentReaderConfigProperty.builder()
+ * .documentReadAction("documentReadAction")
+ * // the properties below are optional
+ * .documentReadMode("documentReadMode")
+ * .featureTypes(List.of("featureTypes"))
+ * .build())
+ * .documents(DocumentClassifierDocumentsProperty.builder()
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .testS3Uri("testS3Uri")
+ * .build())
+ * .documentType("documentType")
+ * .labelDelimiter("labelDelimiter")
+ * .s3Uri("s3Uri")
+ * .testS3Uri("testS3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentclassifierinputdataconfig.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierDocumentClassifierInputDataConfigPropertyDsl {
   private val cdkBuilder: CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty.Builder =

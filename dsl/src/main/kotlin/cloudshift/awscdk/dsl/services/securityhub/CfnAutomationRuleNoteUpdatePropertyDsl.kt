@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * The updated note.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * Object updatedBy;
+ * NoteUpdateProperty noteUpdateProperty = NoteUpdateProperty.builder()
+ * .text("text")
+ * .updatedBy(updatedBy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-noteupdate.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleNoteUpdatePropertyDsl {
   private val cdkBuilder: CfnAutomationRule.NoteUpdateProperty.Builder =

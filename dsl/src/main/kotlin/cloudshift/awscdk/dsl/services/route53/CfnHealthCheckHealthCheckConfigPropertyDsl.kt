@@ -11,6 +11,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnHealthCheck
 
+/**
+ * A complex type that contains information about the health check.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * HealthCheckConfigProperty healthCheckConfigProperty = HealthCheckConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .alarmIdentifier(AlarmIdentifierProperty.builder()
+ * .name("name")
+ * .region("region")
+ * .build())
+ * .childHealthChecks(List.of("childHealthChecks"))
+ * .enableSni(false)
+ * .failureThreshold(123)
+ * .fullyQualifiedDomainName("fullyQualifiedDomainName")
+ * .healthThreshold(123)
+ * .insufficientDataHealthStatus("insufficientDataHealthStatus")
+ * .inverted(false)
+ * .ipAddress("ipAddress")
+ * .measureLatency(false)
+ * .port(123)
+ * .regions(List.of("regions"))
+ * .requestInterval(123)
+ * .resourcePath("resourcePath")
+ * .routingControlArn("routingControlArn")
+ * .searchString("searchString")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html)
+ */
 @CdkDslMarker
 public class CfnHealthCheckHealthCheckConfigPropertyDsl {
   private val cdkBuilder: CfnHealthCheck.HealthCheckConfigProperty.Builder =

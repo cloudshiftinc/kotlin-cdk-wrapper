@@ -7,6 +7,36 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * A list of volumes that are associated with the job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * VolumesProperty volumesProperty = VolumesProperty.builder()
+ * .efsVolumeConfiguration(EfsVolumeConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build())
+ * .host(VolumesHostProperty.builder()
+ * .sourcePath("sourcePath")
+ * .build())
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-volumes.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionVolumesPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.VolumesProperty.Builder =

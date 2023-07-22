@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties
 
+/**
+ * Artifact properties for nested cloud assemblies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * NestedCloudAssemblyProperties nestedCloudAssemblyProperties =
+ * NestedCloudAssemblyProperties.builder()
+ * .directoryName("directoryName")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NestedCloudAssemblyPropertiesDsl {
   private val cdkBuilder: NestedCloudAssemblyProperties.Builder =

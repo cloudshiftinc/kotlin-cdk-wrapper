@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 
+/**
+ * The specifications for a worker type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * WorkerTypeSpecificationInputProperty workerTypeSpecificationInputProperty =
+ * WorkerTypeSpecificationInputProperty.builder()
+ * .imageConfiguration(ImageConfigurationInputProperty.builder()
+ * .imageUri("imageUri")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workertypespecificationinput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationWorkerTypeSpecificationInputPropertyDsl {
   private val cdkBuilder: CfnApplication.WorkerTypeSpecificationInputProperty.Builder =

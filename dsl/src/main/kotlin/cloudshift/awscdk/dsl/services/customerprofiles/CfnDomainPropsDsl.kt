@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.customerprofiles.CfnDomainProps
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.customerprofiles.*;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .deadLetterQueueUrl("deadLetterQueueUrl")
+ * .defaultEncryptionKey("defaultEncryptionKey")
+ * .defaultExpirationDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()

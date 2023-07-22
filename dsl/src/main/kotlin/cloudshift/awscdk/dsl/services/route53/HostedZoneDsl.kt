@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.route53.HostedZone
 import software.constructs.Construct
 
+/**
+ * Container for records, and records contain information about how to route traffic for a specific
+ * domain, such as example.com and its subdomains (acme.example.com, zenith.example.com).
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone myHostedZone = HostedZone.Builder.create(this, "HostedZone")
+ * .zoneName("example.com")
+ * .build();
+ * Certificate.Builder.create(this, "Certificate")
+ * .domainName("hello.example.com")
+ * .certificateName("Hello World Service") // Optionally provide an certificate name
+ * .validation(CertificateValidation.fromDns(myHostedZone))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HostedZoneDsl(
   scope: Construct,

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The date configuration of the filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * AnchorDateConfigurationProperty anchorDateConfigurationProperty =
+ * AnchorDateConfigurationProperty.builder()
+ * .anchorOption("anchorOption")
+ * .parameterName("parameterName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-anchordateconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTemplateAnchorDateConfigurationPropertyDsl {
   private val cdkBuilder: CfnTemplate.AnchorDateConfigurationProperty.Builder =

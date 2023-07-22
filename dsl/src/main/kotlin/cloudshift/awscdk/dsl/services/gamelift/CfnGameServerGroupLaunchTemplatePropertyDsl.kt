@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnGameServerGroup
 
+/**
+ * *This data type is used with the GameLift FleetIQ and game server groups.*.
+ *
+ * An Amazon EC2 launch template that contains configuration settings and game server code to be
+ * deployed to all instances in a game server group. The launch template is specified when creating a
+ * new game server group with `GameServerGroup` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * LaunchTemplateProperty launchTemplateProperty = LaunchTemplateProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html)
+ */
 @CdkDslMarker
 public class CfnGameServerGroupLaunchTemplatePropertyDsl {
   private val cdkBuilder: CfnGameServerGroup.LaunchTemplateProperty.Builder =

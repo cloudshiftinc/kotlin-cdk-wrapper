@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnMitigationAction
 
+/**
+ * Defines the type of action and the parameters for that action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * ActionParamsProperty actionParamsProperty = ActionParamsProperty.builder()
+ * .addThingsToThingGroupParams(AddThingsToThingGroupParamsProperty.builder()
+ * .thingGroupNames(List.of("thingGroupNames"))
+ * // the properties below are optional
+ * .overrideDynamicGroups(false)
+ * .build())
+ * .enableIoTLoggingParams(EnableIoTLoggingParamsProperty.builder()
+ * .logLevel("logLevel")
+ * .roleArnForLogging("roleArnForLogging")
+ * .build())
+ * .publishFindingToSnsParams(PublishFindingToSnsParamsProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .replaceDefaultPolicyVersionParams(ReplaceDefaultPolicyVersionParamsProperty.builder()
+ * .templateName("templateName")
+ * .build())
+ * .updateCaCertificateParams(UpdateCACertificateParamsProperty.builder()
+ * .action("action")
+ * .build())
+ * .updateDeviceCertificateParams(UpdateDeviceCertificateParamsProperty.builder()
+ * .action("action")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-mitigationaction-actionparams.html)
+ */
 @CdkDslMarker
 public class CfnMitigationActionActionParamsPropertyDsl {
   private val cdkBuilder: CfnMitigationAction.ActionParamsProperty.Builder =

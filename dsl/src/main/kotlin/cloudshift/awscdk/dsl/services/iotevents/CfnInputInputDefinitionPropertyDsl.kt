@@ -9,6 +9,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnInput
 
+/**
+ * The definition of the input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * InputDefinitionProperty inputDefinitionProperty = InputDefinitionProperty.builder()
+ * .attributes(List.of(AttributeProperty.builder()
+ * .jsonPath("jsonPath")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-input-inputdefinition.html)
+ */
 @CdkDslMarker
 public class CfnInputInputDefinitionPropertyDsl {
   private val cdkBuilder: CfnInput.InputDefinitionProperty.Builder =

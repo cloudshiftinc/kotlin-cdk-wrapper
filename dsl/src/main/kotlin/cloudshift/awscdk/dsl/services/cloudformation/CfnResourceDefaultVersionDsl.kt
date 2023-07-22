@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudformation.CfnResourceDefaultVersion
 import software.constructs.Construct
 
+/**
+ * Specifies the default version of a resource.
+ *
+ * The default version of a resource will be used in CloudFormation operations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnResourceDefaultVersion cfnResourceDefaultVersion =
+ * CfnResourceDefaultVersion.Builder.create(this, "MyCfnResourceDefaultVersion")
+ * .typeName("typeName")
+ * .typeVersionArn("typeVersionArn")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-resourcedefaultversion.html)
+ */
 @CdkDslMarker
 public class CfnResourceDefaultVersionDsl(
   scope: Construct,

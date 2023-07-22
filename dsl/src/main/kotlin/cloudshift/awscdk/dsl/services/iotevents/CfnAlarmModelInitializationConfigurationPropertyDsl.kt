@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Specifies the default alarm state.
+ *
+ * The configuration applies to all alarms that were created based on this alarm model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * InitializationConfigurationProperty initializationConfigurationProperty =
+ * InitializationConfigurationProperty.builder()
+ * .disabledOnInitialization(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-initializationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelInitializationConfigurationPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.InitializationConfigurationProperty.Builder =

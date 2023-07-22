@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ecs.MountPoint
 
+/**
+ * The details of data volume mount points for a container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * MountPoint mountPoint = MountPoint.builder()
+ * .containerPath("containerPath")
+ * .readOnly(false)
+ * .sourceVolume("sourceVolume")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MountPointDsl {
   private val cdkBuilder: MountPoint.Builder = MountPoint.builder()

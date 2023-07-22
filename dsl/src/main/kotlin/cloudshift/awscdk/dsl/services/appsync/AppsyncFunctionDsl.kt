@@ -12,6 +12,25 @@ import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.appsync.MappingTemplate
 import software.constructs.Construct
 
+/**
+ * AppSync Functions are local functions that perform certain operations onto a backend data source.
+ *
+ * Developers can compose operations (Functions)
+ * and execute them in sequence with Pipeline Resolvers.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api;
+ * AppsyncFunction appsyncFunction = AppsyncFunction.Builder.create(this, "function")
+ * .name("appsync_function")
+ * .api(api)
+ * .dataSource(api.addNoneDataSource("none"))
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AppsyncFunctionDsl(
   scope: Construct,

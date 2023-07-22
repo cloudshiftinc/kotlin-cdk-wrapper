@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnEvaluationForm
 
+/**
+ * Information about the automation configuration in single select questions.
+ *
+ * Automation options are evaluated in order, and the first matched option is applied. If no
+ * automation option matches, and there is a default option, then the default option is applied.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * EvaluationFormSingleSelectQuestionAutomationProperty
+ * evaluationFormSingleSelectQuestionAutomationProperty =
+ * EvaluationFormSingleSelectQuestionAutomationProperty.builder()
+ * .options(List.of(EvaluationFormSingleSelectQuestionAutomationOptionProperty.builder()
+ * .ruleCategory(SingleSelectQuestionRuleCategoryAutomationProperty.builder()
+ * .category("category")
+ * .condition("condition")
+ * .optionRefId("optionRefId")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .defaultOptionRefId("defaultOptionRefId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-evaluationform-evaluationformsingleselectquestionautomation.html)
+ */
 @CdkDslMarker
 public class CfnEvaluationFormEvaluationFormSingleSelectQuestionAutomationPropertyDsl {
   private val cdkBuilder:

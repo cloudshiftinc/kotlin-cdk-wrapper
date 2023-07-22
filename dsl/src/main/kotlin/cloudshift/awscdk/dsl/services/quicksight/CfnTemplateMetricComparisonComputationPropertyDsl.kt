@@ -7,6 +7,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTemplate
 
+/**
+ * The metric comparison computation configuration.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-template-metriccomparisoncomputation.html)
+ */
 @CdkDslMarker
 public class CfnTemplateMetricComparisonComputationPropertyDsl {
   private val cdkBuilder: CfnTemplate.MetricComparisonComputationProperty.Builder =

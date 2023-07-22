@@ -30,6 +30,7 @@ internal object BuilderGenerator {
         if (builder.cdkBuilderClass.deprecated) {
             builderClassBuilder.addAnnotation(Annotations.Deprecated)
         }
+        builder.buildableClass.comment?.let { builderClassBuilder.addKdoc("%L", it) }
 
         if (builder.builderFactoryFunction.parameters.isNotEmpty()) {
             val constructorBuilder = FunSpec.constructorBuilder()

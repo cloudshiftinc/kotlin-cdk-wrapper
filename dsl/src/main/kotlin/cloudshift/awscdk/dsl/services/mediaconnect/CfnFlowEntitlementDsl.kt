@@ -11,6 +11,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaConnect::FlowEntitlement resource defines the permission that an AWS account grants
+ * to another AWS account to allow access to the content in a specific AWS Elemental MediaConnect flow.
+ *
+ * The content originator grants an entitlement to a specific AWS account (the subscriber). When an
+ * entitlement is granted, the subscriber can create a flow using the originator's flow as the source.
+ * Each flow can have up to 50 entitlements.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconnect.*;
+ * CfnFlowEntitlement cfnFlowEntitlement = CfnFlowEntitlement.Builder.create(this,
+ * "MyCfnFlowEntitlement")
+ * .description("description")
+ * .flowArn("flowArn")
+ * .name("name")
+ * .subscribers(List.of("subscribers"))
+ * // the properties below are optional
+ * .dataTransferSubscriberFeePercent(123)
+ * .encryption(EncryptionProperty.builder()
+ * .algorithm("algorithm")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .constantInitializationVector("constantInitializationVector")
+ * .deviceId("deviceId")
+ * .keyType("keyType")
+ * .region("region")
+ * .resourceId("resourceId")
+ * .secretArn("secretArn")
+ * .url("url")
+ * .build())
+ * .entitlementStatus("entitlementStatus")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowentitlement.html)
+ */
 @CdkDslMarker
 public class CfnFlowEntitlementDsl(
   scope: Construct,

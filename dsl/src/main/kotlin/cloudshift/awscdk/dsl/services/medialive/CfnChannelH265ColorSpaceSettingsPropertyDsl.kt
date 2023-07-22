@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * H265 Color Space Settings.
+ *
+ * The parent of this entity is H265Settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * H265ColorSpaceSettingsProperty h265ColorSpaceSettingsProperty =
+ * H265ColorSpaceSettingsProperty.builder()
+ * .colorSpacePassthroughSettings(ColorSpacePassthroughSettingsProperty.builder().build())
+ * .dolbyVision81Settings(DolbyVision81SettingsProperty.builder().build())
+ * .hdr10Settings(Hdr10SettingsProperty.builder()
+ * .maxCll(123)
+ * .maxFall(123)
+ * .build())
+ * .rec601Settings(Rec601SettingsProperty.builder().build())
+ * .rec709Settings(Rec709SettingsProperty.builder().build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265colorspacesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelH265ColorSpaceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.H265ColorSpaceSettingsProperty.Builder =

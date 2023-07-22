@@ -10,6 +10,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup
 
+/**
+ * The `AutoRollbackConfiguration` property type configures automatic rollback for an AWS CodeDeploy
+ * deployment group when a deployment is not completed successfully.
+ *
+ * For more information, see [Automatic
+ * Rollbacks](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-rollback-and-redeploy.html#deployments-rollback-and-redeploy-automatic-rollbacks)
+ * in the *AWS CodeDeploy User Guide* .
+ *
+ * `AutoRollbackConfiguration` is a property of the
+ * [DeploymentGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * AutoRollbackConfigurationProperty autoRollbackConfigurationProperty =
+ * AutoRollbackConfigurationProperty.builder()
+ * .enabled(false)
+ * .events(List.of("events"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentGroupAutoRollbackConfigurationPropertyDsl {
   private val cdkBuilder: CfnDeploymentGroup.AutoRollbackConfigurationProperty.Builder =

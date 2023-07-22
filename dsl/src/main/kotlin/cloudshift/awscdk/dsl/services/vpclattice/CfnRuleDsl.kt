@@ -14,6 +14,71 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnRule
 import software.constructs.Construct
 
+/**
+ * Creates a listener rule.
+ *
+ * Each listener has a default rule for checking connection requests, but you can define additional
+ * rules. Each rule consists of a priority, one or more actions, and one or more conditions. For more
+ * information, see [Listener
+ * rules](https://docs.aws.amazon.com/vpc-lattice/latest/ug/listeners.html#listener-rules) in the
+ * *Amazon VPC Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnRule cfnRule = CfnRule.Builder.create(this, "MyCfnRule")
+ * .action(ActionProperty.builder()
+ * .fixedResponse(FixedResponseProperty.builder()
+ * .statusCode(123)
+ * .build())
+ * .forward(ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build())
+ * .build())
+ * .match(MatchProperty.builder()
+ * .httpMatch(HttpMatchProperty.builder()
+ * .headerMatches(List.of(HeaderMatchProperty.builder()
+ * .match(HeaderMatchTypeProperty.builder()
+ * .contains("contains")
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .caseSensitive(false)
+ * .build()))
+ * .method("method")
+ * .pathMatch(PathMatchProperty.builder()
+ * .match(PathMatchTypeProperty.builder()
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build())
+ * // the properties below are optional
+ * .caseSensitive(false)
+ * .build())
+ * .build())
+ * .build())
+ * .priority(123)
+ * // the properties below are optional
+ * .listenerIdentifier("listenerIdentifier")
+ * .name("name")
+ * .serviceIdentifier("serviceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html)
+ */
 @CdkDslMarker
 public class CfnRuleDsl(
   scope: Construct,

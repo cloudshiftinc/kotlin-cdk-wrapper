@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.ReceiptFilterPolicy
 import software.amazon.awscdk.services.ses.ReceiptFilterProps
 
+/**
+ * Construction properties for a ReceiptFilter.
+ *
+ * Example:
+ *
+ * ```
+ * ReceiptFilter.Builder.create(this, "Filter")
+ * .ip("1.2.3.4/16")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptFilterPropsDsl {
   private val cdkBuilder: ReceiptFilterProps.Builder = ReceiptFilterProps.builder()

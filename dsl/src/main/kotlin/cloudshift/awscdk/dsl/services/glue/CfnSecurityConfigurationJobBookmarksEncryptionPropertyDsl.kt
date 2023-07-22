@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSecurityConfiguration
 
+/**
+ * Specifies how job bookmark data should be encrypted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * JobBookmarksEncryptionProperty jobBookmarksEncryptionProperty =
+ * JobBookmarksEncryptionProperty.builder()
+ * .jobBookmarksEncryptionMode("jobBookmarksEncryptionMode")
+ * .kmsKeyArn("kmsKeyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-securityconfiguration-jobbookmarksencryption.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationJobBookmarksEncryptionPropertyDsl {
   private val cdkBuilder: CfnSecurityConfiguration.JobBookmarksEncryptionProperty.Builder =

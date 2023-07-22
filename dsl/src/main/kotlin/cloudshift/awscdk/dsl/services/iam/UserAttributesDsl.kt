@@ -6,6 +6,17 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iam.UserAttributes
 
+/**
+ * Represents a user defined outside of this stack.
+ *
+ * Example:
+ *
+ * ```
+ * IUser user = User.fromUserAttributes(this, "MyImportedUserByAttributes", UserAttributes.builder()
+ * .userArn("arn:aws:iam::123456789012:user/johnsmith")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UserAttributesDsl {
   private val cdkBuilder: UserAttributes.Builder = UserAttributes.builder()

@@ -13,6 +13,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration
 import software.amazon.awscdk.services.apprunner.CfnObservabilityConfigurationProps
 
+/**
+ * Properties for defining a `CfnObservabilityConfiguration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnObservabilityConfigurationProps cfnObservabilityConfigurationProps =
+ * CfnObservabilityConfigurationProps.builder()
+ * .observabilityConfigurationName("observabilityConfigurationName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .traceConfiguration(TraceConfigurationProperty.builder()
+ * .vendor("vendor")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-observabilityconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnObservabilityConfigurationPropsDsl {
   private val cdkBuilder: CfnObservabilityConfigurationProps.Builder =

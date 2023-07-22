@@ -9,6 +9,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * Container for information about the SAML configuration for OpenSearch Dashboards.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * SAMLOptionsProperty sAMLOptionsProperty = SAMLOptionsProperty.builder()
+ * .enabled(false)
+ * .idp(IdpProperty.builder()
+ * .entityId("entityId")
+ * .metadataContent("metadataContent")
+ * .build())
+ * .masterBackendRole("masterBackendRole")
+ * .masterUserName("masterUserName")
+ * .rolesKey("rolesKey")
+ * .sessionTimeoutMinutes(123)
+ * .subjectKey("subjectKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-samloptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainSAMLOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.SAMLOptionsProperty.Builder =

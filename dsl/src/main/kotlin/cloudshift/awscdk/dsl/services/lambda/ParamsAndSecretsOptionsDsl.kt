@@ -9,6 +9,36 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.ParamsAndSecretsLogLevel
 import software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions
 
+/**
+ * Parameters and Secrets Extension configuration options.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * import software.amazon.awscdk.services.ssm.*;
+ * Secret secret = new Secret(this, "Secret");
+ * StringParameter parameter = StringParameter.Builder.create(this, "Parameter")
+ * .parameterName("mySsmParameterName")
+ * .stringValue("mySsmParameterValue")
+ * .build();
+ * ParamsAndSecretsLayerVersion paramsAndSecrets =
+ * ParamsAndSecretsLayerVersion.fromVersion(ParamsAndSecretsVersions.V1_0_103,
+ * ParamsAndSecretsOptions.builder()
+ * .cacheSize(500)
+ * .logLevel(ParamsAndSecretsLogLevel.DEBUG)
+ * .build());
+ * Function lambdaFunction = Function.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .architecture(Architecture.ARM_64)
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .paramsAndSecrets(paramsAndSecrets)
+ * .build();
+ * secret.grantRead(lambdaFunction);
+ * parameter.grantRead(lambdaFunction);
+ * ```
+ */
 @CdkDslMarker
 public class ParamsAndSecretsOptionsDsl {
   private val cdkBuilder: ParamsAndSecretsOptions.Builder = ParamsAndSecretsOptions.builder()

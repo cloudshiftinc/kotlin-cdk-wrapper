@@ -8,6 +8,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * Describes the constraints for a header match.
+ *
+ * Matches incoming requests with rule based on request header value before applying rule action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * HeaderMatchProperty headerMatchProperty = HeaderMatchProperty.builder()
+ * .match(HeaderMatchTypeProperty.builder()
+ * .contains("contains")
+ * .exact("exact")
+ * .prefix("prefix")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .caseSensitive(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-headermatch.html)
+ */
 @CdkDslMarker
 public class CfnRuleHeaderMatchPropertyDsl {
   private val cdkBuilder: CfnRule.HeaderMatchProperty.Builder =

@@ -8,6 +8,23 @@ import software.amazon.awscdk.services.codedeploy.ILambdaApplication
 import software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig
 import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupAttributes
 
+/**
+ * Properties of a reference to a CodeDeploy Lambda Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application;
+ * ILambdaDeploymentGroup deploymentGroup =
+ * LambdaDeploymentGroup.fromLambdaDeploymentGroupAttributes(this, "ExistingCodeDeployDeploymentGroup",
+ * LambdaDeploymentGroupAttributes.builder()
+ * .application(application)
+ * .deploymentGroupName("MyExistingDeploymentGroup")
+ * .build());
+ * ```
+ *
+ * [Documentation](LambdaDeploymentGroup#fromLambdaDeploymentGroupAttributes)
+ */
 @CdkDslMarker
 public class LambdaDeploymentGroupAttributesDsl {
   private val cdkBuilder: LambdaDeploymentGroupAttributes.Builder =

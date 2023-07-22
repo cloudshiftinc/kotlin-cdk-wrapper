@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * A number filter for querying findings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * NumberFilterProperty numberFilterProperty = NumberFilterProperty.builder()
+ * .eq(123)
+ * .gte(123)
+ * .lte(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-numberfilter.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleNumberFilterPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.NumberFilterProperty.Builder =

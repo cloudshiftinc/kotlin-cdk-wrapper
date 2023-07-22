@@ -10,6 +10,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lightsail.CfnDistribution
 
+/**
+ * `QueryStringObject` is a property of the
+ * [CacheSettings](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-cachesettings.html)
+ * property. It describes the query string parameters that an Amazon Lightsail content delivery network
+ * (CDN) distribution to bases caching on.
+ *
+ * For the query strings that you specify, your distribution caches separate versions of the
+ * specified content based on the query string values in viewer requests.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * QueryStringObjectProperty queryStringObjectProperty = QueryStringObjectProperty.builder()
+ * .option(false)
+ * .queryStringsAllowList(List.of("queryStringsAllowList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-distribution-querystringobject.html)
+ */
 @CdkDslMarker
 public class CfnDistributionQueryStringObjectPropertyDsl {
   private val cdkBuilder: CfnDistribution.QueryStringObjectProperty.Builder =

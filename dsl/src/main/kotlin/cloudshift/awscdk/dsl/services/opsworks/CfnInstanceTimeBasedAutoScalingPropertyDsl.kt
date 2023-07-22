@@ -8,6 +8,36 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnInstance
 
+/**
+ * Describes an instance's time-based auto scaling configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * TimeBasedAutoScalingProperty timeBasedAutoScalingProperty =
+ * TimeBasedAutoScalingProperty.builder()
+ * .friday(Map.of(
+ * "fridayKey", "friday"))
+ * .monday(Map.of(
+ * "mondayKey", "monday"))
+ * .saturday(Map.of(
+ * "saturdayKey", "saturday"))
+ * .sunday(Map.of(
+ * "sundayKey", "sunday"))
+ * .thursday(Map.of(
+ * "thursdayKey", "thursday"))
+ * .tuesday(Map.of(
+ * "tuesdayKey", "tuesday"))
+ * .wednesday(Map.of(
+ * "wednesdayKey", "wednesday"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-timebasedautoscaling.html)
+ */
 @CdkDslMarker
 public class CfnInstanceTimeBasedAutoScalingPropertyDsl {
   private val cdkBuilder: CfnInstance.TimeBasedAutoScalingProperty.Builder =

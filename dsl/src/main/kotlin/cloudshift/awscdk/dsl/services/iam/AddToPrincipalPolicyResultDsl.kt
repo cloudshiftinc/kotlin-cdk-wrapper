@@ -7,6 +7,24 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult
 import software.constructs.IDependable
 
+/**
+ * Result of calling `addToPrincipalPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.constructs.*;
+ * IDependable dependable;
+ * AddToPrincipalPolicyResult addToPrincipalPolicyResult = AddToPrincipalPolicyResult.builder()
+ * .statementAdded(false)
+ * // the properties below are optional
+ * .policyDependable(dependable)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AddToPrincipalPolicyResultDsl {
   private val cdkBuilder: AddToPrincipalPolicyResult.Builder = AddToPrincipalPolicyResult.builder()

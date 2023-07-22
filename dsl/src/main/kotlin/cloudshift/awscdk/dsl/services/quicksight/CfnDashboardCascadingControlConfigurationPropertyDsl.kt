@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The values that are displayed in a control can be configured to only show values that are valid
+ * based on what's selected in other controls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * CascadingControlConfigurationProperty cascadingControlConfigurationProperty =
+ * CascadingControlConfigurationProperty.builder()
+ * .sourceControls(List.of(CascadingControlSourceProperty.builder()
+ * .columnToMatch(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .sourceSheetControlId("sourceSheetControlId")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-cascadingcontrolconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardCascadingControlConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.CascadingControlConfigurationProperty.Builder =

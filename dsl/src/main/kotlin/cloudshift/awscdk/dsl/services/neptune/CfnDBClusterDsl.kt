@@ -16,6 +16,70 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.neptune.CfnDBCluster
 import software.constructs.Construct
 
+/**
+ * The `AWS::Neptune::DBCluster` resource creates an Amazon Neptune DB cluster. Neptune is a fully
+ * managed graph database.
+ *
+ *
+ * Currently, you can create this resource only in AWS Regions in which Amazon Neptune is supported.
+ *
+ *
+ * If no `DeletionPolicy` is set for `AWS::Neptune::DBCluster` resources, the default deletion
+ * behavior is that the entire volume will be deleted without a snapshot. To retain a backup of the
+ * volume, the `DeletionPolicy` should be set to `Snapshot` . For more information about how AWS
+ * CloudFormation deletes resources, see [DeletionPolicy
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * .
+ *
+ * You can use `AWS::Neptune::DBCluster.DeletionProtection` to help guard against unintended
+ * deletion of your DB cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * CfnDBCluster cfnDBCluster = CfnDBCluster.Builder.create(this, "MyCfnDBCluster")
+ * .associatedRoles(List.of(DBClusterRoleProperty.builder()
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .featureName("featureName")
+ * .build()))
+ * .availabilityZones(List.of("availabilityZones"))
+ * .backupRetentionPeriod(123)
+ * .copyTagsToSnapshot(false)
+ * .dbClusterIdentifier("dbClusterIdentifier")
+ * .dbClusterParameterGroupName("dbClusterParameterGroupName")
+ * .dbInstanceParameterGroupName("dbInstanceParameterGroupName")
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .deletionProtection(false)
+ * .enableCloudwatchLogsExports(List.of("enableCloudwatchLogsExports"))
+ * .engineVersion("engineVersion")
+ * .iamAuthEnabled(false)
+ * .kmsKeyId("kmsKeyId")
+ * .preferredBackupWindow("preferredBackupWindow")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .restoreToTime("restoreToTime")
+ * .restoreType("restoreType")
+ * .serverlessScalingConfiguration(ServerlessScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
+ * .snapshotIdentifier("snapshotIdentifier")
+ * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
+ * .storageEncrypted(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .useLatestRestorableTime(false)
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbcluster.html)
+ */
 @CdkDslMarker
 public class CfnDBClusterDsl(
   scope: Construct,

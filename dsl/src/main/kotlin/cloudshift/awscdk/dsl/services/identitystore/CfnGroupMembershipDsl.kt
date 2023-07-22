@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.identitystore.CfnGroupMembership
 import software.constructs.Construct
 
+/**
+ * Contains the identifiers for a group, a group member, and a `GroupMembership` object in the
+ * identity store.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.identitystore.*;
+ * CfnGroupMembership cfnGroupMembership = CfnGroupMembership.Builder.create(this,
+ * "MyCfnGroupMembership")
+ * .groupId("groupId")
+ * .identityStoreId("identityStoreId")
+ * .memberId(MemberIdProperty.builder()
+ * .userId("userId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html)
+ */
 @CdkDslMarker
 public class CfnGroupMembershipDsl(
   scope: Construct,

@@ -11,6 +11,27 @@ import software.amazon.awscdk.services.eks.AlbControllerProps
 import software.amazon.awscdk.services.eks.AlbControllerVersion
 import software.amazon.awscdk.services.eks.Cluster
 
+/**
+ * Properties for `AlbController`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * AlbControllerVersion albControllerVersion;
+ * Cluster cluster;
+ * Object policy;
+ * AlbControllerProps albControllerProps = AlbControllerProps.builder()
+ * .cluster(cluster)
+ * .version(albControllerVersion)
+ * // the properties below are optional
+ * .policy(policy)
+ * .repository("repository")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AlbControllerPropsDsl {
   private val cdkBuilder: AlbControllerProps.Builder = AlbControllerProps.builder()

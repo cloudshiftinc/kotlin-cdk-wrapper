@@ -8,6 +8,78 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for the H.264 codec in the output.
+ *
+ * The parent of this entity is VideoCodecSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * H264SettingsProperty h264SettingsProperty = H264SettingsProperty.builder()
+ * .adaptiveQuantization("adaptiveQuantization")
+ * .afdSignaling("afdSignaling")
+ * .bitrate(123)
+ * .bufFillPct(123)
+ * .bufSize(123)
+ * .colorMetadata("colorMetadata")
+ * .colorSpaceSettings(H264ColorSpaceSettingsProperty.builder()
+ * .colorSpacePassthroughSettings(ColorSpacePassthroughSettingsProperty.builder().build())
+ * .rec601Settings(Rec601SettingsProperty.builder().build())
+ * .rec709Settings(Rec709SettingsProperty.builder().build())
+ * .build())
+ * .entropyEncoding("entropyEncoding")
+ * .filterSettings(H264FilterSettingsProperty.builder()
+ * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
+ * .postFilterSharpening("postFilterSharpening")
+ * .strength("strength")
+ * .build())
+ * .build())
+ * .fixedAfd("fixedAfd")
+ * .flickerAq("flickerAq")
+ * .forceFieldPictures("forceFieldPictures")
+ * .framerateControl("framerateControl")
+ * .framerateDenominator(123)
+ * .framerateNumerator(123)
+ * .gopBReference("gopBReference")
+ * .gopClosedCadence(123)
+ * .gopNumBFrames(123)
+ * .gopSize(123)
+ * .gopSizeUnits("gopSizeUnits")
+ * .level("level")
+ * .lookAheadRateControl("lookAheadRateControl")
+ * .maxBitrate(123)
+ * .minIInterval(123)
+ * .numRefFrames(123)
+ * .parControl("parControl")
+ * .parDenominator(123)
+ * .parNumerator(123)
+ * .profile("profile")
+ * .qualityLevel("qualityLevel")
+ * .qvbrQualityLevel(123)
+ * .rateControlMode("rateControlMode")
+ * .scanType("scanType")
+ * .sceneChangeDetect("sceneChangeDetect")
+ * .slices(123)
+ * .softness(123)
+ * .spatialAq("spatialAq")
+ * .subgopLength("subgopLength")
+ * .syntax("syntax")
+ * .temporalAq("temporalAq")
+ * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+ * .fontSize("fontSize")
+ * .position("position")
+ * .prefix("prefix")
+ * .build())
+ * .timecodeInsertion("timecodeInsertion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelH264SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.H264SettingsProperty.Builder =

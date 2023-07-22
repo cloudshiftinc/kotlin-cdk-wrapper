@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerAttributes
 
+/**
+ * Properties to reference an existing listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * SecurityGroup securityGroup;
+ * ApplicationListenerAttributes applicationListenerAttributes =
+ * ApplicationListenerAttributes.builder()
+ * .listenerArn("listenerArn")
+ * .securityGroup(securityGroup)
+ * // the properties below are optional
+ * .defaultPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerAttributesDsl {
   private val cdkBuilder: ApplicationListenerAttributes.Builder =

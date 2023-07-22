@@ -9,6 +9,49 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnAlarm
 
+/**
+ * The `MetricDataQuery` property type specifies the metric data to return, and whether this call is
+ * just retrieving a batch set of data for one metric, or is performing a math expression on metric
+ * data.
+ *
+ * Any expression used must return a single time series. For more information, see [Metric Math
+ * Syntax and
+ * Functions](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax)
+ * in the *Amazon CloudWatch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricDataQueryProperty metricDataQueryProperty = MetricDataQueryProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .accountId("accountId")
+ * .expression("expression")
+ * .label("label")
+ * .metricStat(MetricStatProperty.builder()
+ * .metric(MetricProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .period(123)
+ * .stat("stat")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .period(123)
+ * .returnData(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-alarm-metricdataquery.html)
+ */
 @CdkDslMarker
 public class CfnAlarmMetricDataQueryPropertyDsl {
   private val cdkBuilder: CfnAlarm.MetricDataQueryProperty.Builder =

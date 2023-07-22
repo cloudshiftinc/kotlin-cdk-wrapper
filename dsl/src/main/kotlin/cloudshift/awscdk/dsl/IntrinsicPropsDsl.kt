@@ -7,6 +7,21 @@ import kotlin.Boolean
 import software.amazon.awscdk.IntrinsicProps
 import software.amazon.awscdk.ResolutionTypeHint
 
+/**
+ * Customization properties for an Intrinsic token.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * IntrinsicProps intrinsicProps = IntrinsicProps.builder()
+ * .stackTrace(false)
+ * .typeHint(ResolutionTypeHint.STRING)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IntrinsicPropsDsl {
   private val cdkBuilder: IntrinsicProps.Builder = IntrinsicProps.builder()

@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * An entity type within a labeled training dataset that Amazon Comprehend uses to train a custom
+ * entity recognizer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * EntityTypesListItemProperty entityTypesListItemProperty = EntityTypesListItemProperty.builder()
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entitytypeslistitem.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelEntityTypesListItemPropertyDsl {
   private val cdkBuilder: CfnFlywheel.EntityTypesListItemProperty.Builder =

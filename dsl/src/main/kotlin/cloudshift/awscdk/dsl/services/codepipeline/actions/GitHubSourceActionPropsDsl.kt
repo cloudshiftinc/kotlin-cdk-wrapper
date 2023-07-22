@@ -10,6 +10,29 @@ import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.GitHubSourceActionProps
 import software.amazon.awscdk.services.codepipeline.actions.GitHubTrigger
 
+/**
+ * Construction properties of the `GitHubSourceAction GitHub source action`.
+ *
+ * Example:
+ *
+ * ```
+ * // Read the secret from Secrets Manager
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Artifact sourceOutput = new Artifact();
+ * GitHubSourceAction sourceAction = GitHubSourceAction.Builder.create()
+ * .actionName("GitHub_Source")
+ * .owner("awslabs")
+ * .repo("aws-cdk")
+ * .oauthToken(SecretValue.secretsManager("my-github-token"))
+ * .output(sourceOutput)
+ * .branch("develop")
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GitHubSourceActionPropsDsl {
   private val cdkBuilder: GitHubSourceActionProps.Builder = GitHubSourceActionProps.builder()

@@ -11,6 +11,21 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 import software.constructs.Construct
 
+/**
+ * A DNS A record.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.apigateway.*;
+ * HostedZone zone;
+ * LambdaRestApi restApi;
+ * ARecord.Builder.create(this, "AliasRecord")
+ * .zone(zone)
+ * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ARecordDsl(
   scope: Construct,

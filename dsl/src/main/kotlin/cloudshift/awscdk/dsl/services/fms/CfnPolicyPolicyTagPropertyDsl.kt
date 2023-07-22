@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.fms.CfnPolicy
 
+/**
+ * A collection of key:value pairs associated with an AWS resource.
+ *
+ * The key:value pair can be anything you define. Typically, the tag key represents a category (such
+ * as "environment") and the tag value represents a specific value within that category (such as
+ * "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * PolicyTagProperty policyTagProperty = PolicyTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-policytag.html)
+ */
 @CdkDslMarker
 public class CfnPolicyPolicyTagPropertyDsl {
   private val cdkBuilder: CfnPolicy.PolicyTagProperty.Builder =

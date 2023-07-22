@@ -6,6 +6,70 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration
 
+/**
+ * The types of audit checks that can be performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AuditCheckConfigurationsProperty auditCheckConfigurationsProperty =
+ * AuditCheckConfigurationsProperty.builder()
+ * .authenticatedCognitoRoleOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .caCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .caCertificateKeyQualityCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .conflictingClientIdsCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateExpiringCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateKeyQualityCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .deviceCertificateSharedCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .intermediateCaRevokedForActiveDeviceCertificatesCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotPolicyOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .ioTPolicyPotentialMisConfigurationCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotRoleAliasAllowsAccessToUnusedServicesCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .iotRoleAliasOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .loggingDisabledCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .revokedCaCertificateStillActiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .revokedDeviceCertificateStillActiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .unauthenticatedCognitoRoleOverlyPermissiveCheck(AuditCheckConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
+ */
 @CdkDslMarker
 public class CfnAccountAuditConfigurationAuditCheckConfigurationsPropertyDsl {
   private val cdkBuilder: CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty.Builder =

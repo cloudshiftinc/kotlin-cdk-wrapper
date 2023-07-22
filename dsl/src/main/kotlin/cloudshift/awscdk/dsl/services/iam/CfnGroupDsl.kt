@@ -11,6 +11,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iam.CfnGroup
 import software.constructs.Construct
 
+/**
+ * Creates a new group.
+ *
+ * For information about the number of groups you can create, see [Limitations on IAM
+ * Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/LimitationsOnEntities.html) in the *IAM
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object policyDocument;
+ * CfnGroup cfnGroup = CfnGroup.Builder.create(this, "MyCfnGroup")
+ * .groupName("groupName")
+ * .managedPolicyArns(List.of("managedPolicyArns"))
+ * .path("path")
+ * .policies(List.of(PolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .policyName("policyName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupDsl(
   scope: Construct,

@@ -8,6 +8,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.YAxisProps
 
+/**
+ * Properties for a Y-Axis.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * Metric gaugeMetric;
+ * dashboard.addWidgets(GaugeWidget.Builder.create()
+ * .metrics(List.of(gaugeMetric))
+ * .leftYAxis(YAxisProps.builder()
+ * .min(0)
+ * .max(1000)
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class YAxisPropsDsl {
   private val cdkBuilder: YAxisProps.Builder = YAxisProps.builder()

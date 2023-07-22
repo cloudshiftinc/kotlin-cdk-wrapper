@@ -9,6 +9,24 @@ import software.amazon.awscdk.services.appmesh.GrpcGatewayRouteMatch
 import software.amazon.awscdk.services.appmesh.GrpcGatewayRouteSpecOptions
 import software.amazon.awscdk.services.appmesh.IVirtualService
 
+/**
+ * Properties specific for a gRPC GatewayRoute.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-grpc", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.grpc(GrpcGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(GrpcGatewayRouteMatch.builder()
+ * .hostname(GatewayRouteHostnameMatch.endsWith(".example.com"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class GrpcGatewayRouteSpecOptionsDsl {
   private val cdkBuilder: GrpcGatewayRouteSpecOptions.Builder =

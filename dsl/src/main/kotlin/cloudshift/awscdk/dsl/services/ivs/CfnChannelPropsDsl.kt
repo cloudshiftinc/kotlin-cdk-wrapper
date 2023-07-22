@@ -13,6 +13,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivs.CfnChannelProps
 
+/**
+ * Properties for defining a `CfnChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnChannelProps cfnChannelProps = CfnChannelProps.builder()
+ * .authorized(false)
+ * .insecureIngest(false)
+ * .latencyMode("latencyMode")
+ * .name("name")
+ * .preset("preset")
+ * .recordingConfigurationArn("recordingConfigurationArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-channel.html)
+ */
 @CdkDslMarker
 public class CfnChannelPropsDsl {
   private val cdkBuilder: CfnChannelProps.Builder = CfnChannelProps.builder()

@@ -9,6 +9,32 @@ import kotlin.Number
 import kotlin.Unit
 import software.amazon.awscdk.services.fis.CfnExperimentTemplate
 
+/**
+ * Specifies the configuration for experiment logging.
+ *
+ * For more information, see [Experiment
+ * logging](https://docs.aws.amazon.com/fis/latest/userguide/monitoring-logging.html) in the *AWS Fault
+ * Injection Simulator User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fis.*;
+ * Object cloudWatchLogsConfiguration;
+ * Object s3Configuration;
+ * ExperimentTemplateLogConfigurationProperty experimentTemplateLogConfigurationProperty =
+ * ExperimentTemplateLogConfigurationProperty.builder()
+ * .logSchemaVersion(123)
+ * // the properties below are optional
+ * .cloudWatchLogsConfiguration(cloudWatchLogsConfiguration)
+ * .s3Configuration(s3Configuration)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplatelogconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTemplateExperimentTemplateLogConfigurationPropertyDsl {
   private val cdkBuilder: CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.Builder =

@@ -13,6 +13,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnMulticastGroup
 import software.constructs.Construct
 
+/**
+ * A multicast group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnMulticastGroup cfnMulticastGroup = CfnMulticastGroup.Builder.create(this,
+ * "MyCfnMulticastGroup")
+ * .loRaWan(LoRaWANProperty.builder()
+ * .dlClass("dlClass")
+ * .rfRegion("rfRegion")
+ * // the properties below are optional
+ * .numberOfDevicesInGroup(123)
+ * .numberOfDevicesRequested(123)
+ * .build())
+ * // the properties below are optional
+ * .associateWirelessDevice("associateWirelessDevice")
+ * .description("description")
+ * .disassociateWirelessDevice("disassociateWirelessDevice")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-multicastgroup.html)
+ */
 @CdkDslMarker
 public class CfnMulticastGroupDsl(
   scope: Construct,

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.stepfunctions.FindStateOptions
 
+/**
+ * Options for finding reachable states.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * FindStateOptions findStateOptions = FindStateOptions.builder()
+ * .includeErrorHandlers(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FindStateOptionsDsl {
   private val cdkBuilder: FindStateOptions.Builder = FindStateOptions.builder()

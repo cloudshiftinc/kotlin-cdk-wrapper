@@ -8,6 +8,25 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.EventInvokeConfigOptions
 import software.amazon.awscdk.services.lambda.IDestination
 
+/**
+ * Options to add an EventInvokeConfig to a function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * IDestination destination;
+ * EventInvokeConfigOptions eventInvokeConfigOptions = EventInvokeConfigOptions.builder()
+ * .maxEventAge(Duration.minutes(30))
+ * .onFailure(destination)
+ * .onSuccess(destination)
+ * .retryAttempts(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EventInvokeConfigOptionsDsl {
   private val cdkBuilder: EventInvokeConfigOptions.Builder = EventInvokeConfigOptions.builder()

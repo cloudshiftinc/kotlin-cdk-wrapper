@@ -12,6 +12,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sqs.CfnQueuePolicy
 import software.constructs.Construct
 
+/**
+ * The `AWS::SQS::QueuePolicy` type applies a policy to Amazon SQS queues.
+ *
+ * For an example snippet, see [Declaring an Amazon SQS
+ * policy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-iam.html#scenario-sqs-policy)
+ * in the *AWS CloudFormation User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sqs.*;
+ * Object policyDocument;
+ * CfnQueuePolicy cfnQueuePolicy = CfnQueuePolicy.Builder.create(this, "MyCfnQueuePolicy")
+ * .policyDocument(policyDocument)
+ * .queues(List.of("queues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queuepolicy.html)
+ */
 @CdkDslMarker
 public class CfnQueuePolicyDsl(
   scope: Construct,

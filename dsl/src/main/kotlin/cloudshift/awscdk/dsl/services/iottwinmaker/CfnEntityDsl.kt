@@ -12,6 +12,65 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iottwinmaker.CfnEntity
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoTTwinMaker::Entity` resource to declare an entity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iottwinmaker.*;
+ * DataValueProperty dataValueProperty_;
+ * Object definition;
+ * Object error;
+ * Object relationshipValue;
+ * CfnEntity cfnEntity = CfnEntity.Builder.create(this, "MyCfnEntity")
+ * .entityName("entityName")
+ * .workspaceId("workspaceId")
+ * // the properties below are optional
+ * .components(Map.of(
+ * "componentsKey", ComponentProperty.builder()
+ * .componentName("componentName")
+ * .componentTypeId("componentTypeId")
+ * .definedIn("definedIn")
+ * .description("description")
+ * .properties(Map.of(
+ * "propertiesKey", PropertyProperty.builder()
+ * .definition(definition)
+ * .value(DataValueProperty.builder()
+ * .booleanValue(false)
+ * .doubleValue(123)
+ * .expression("expression")
+ * .integerValue(123)
+ * .listValue(List.of(dataValueProperty_))
+ * .longValue(123)
+ * .mapValue(Map.of(
+ * "mapValueKey", dataValueProperty_))
+ * .relationshipValue(relationshipValue)
+ * .stringValue("stringValue")
+ * .build())
+ * .build()))
+ * .propertyGroups(Map.of(
+ * "propertyGroupsKey", PropertyGroupProperty.builder()
+ * .groupType("groupType")
+ * .propertyNames(List.of("propertyNames"))
+ * .build()))
+ * .status(StatusProperty.builder()
+ * .error(error)
+ * .state("state")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .entityId("entityId")
+ * .parentEntityId("parentEntityId")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-entity.html)
+ */
 @CdkDslMarker
 public class CfnEntityDsl(
   scope: Construct,

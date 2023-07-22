@@ -9,6 +9,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation
 import software.constructs.Construct
 
+/**
+ * Enables a virtual private gateway (VGW) to propagate routes to the specified route table of a
+ * VPC.
+ *
+ * If you reference a VPN gateway that is in the same template as your VPN gateway route
+ * propagation, you must explicitly declare a dependency on the VPN gateway attachment. The
+ * `AWS::EC2::VPNGatewayRoutePropagation` resource cannot use the VPN gateway until it has successfully
+ * attached to the VPC. Add a [DependsOn
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-dependson.html)
+ * in the `AWS::EC2::VPNGatewayRoutePropagation` resource to explicitly declare a dependency on the VPN
+ * gateway attachment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPNGatewayRoutePropagation cfnVPNGatewayRoutePropagation =
+ * CfnVPNGatewayRoutePropagation.Builder.create(this, "MyCfnVPNGatewayRoutePropagation")
+ * .routeTableIds(List.of("routeTableIds"))
+ * .vpnGatewayId("vpnGatewayId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html)
+ */
 @CdkDslMarker
 public class CfnVPNGatewayRoutePropagationDsl(
   scope: Construct,

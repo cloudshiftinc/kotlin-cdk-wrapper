@@ -8,6 +8,20 @@ import software.amazon.awscdk.services.iam.AccessKeyProps
 import software.amazon.awscdk.services.iam.AccessKeyStatus
 import software.amazon.awscdk.services.iam.IUser
 
+/**
+ * Properties for defining an IAM access key.
+ *
+ * Example:
+ *
+ * ```
+ * // Creates a new IAM user, access and secret keys, and stores the secret access key in a Secret.
+ * User user = new User(this, "User");
+ * AccessKey accessKey = AccessKey.Builder.create(this, "AccessKey").user(user).build();
+ * Secret secret = Secret.Builder.create(this, "Secret")
+ * .secretStringValue(accessKey.getSecretAccessKey())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AccessKeyPropsDsl {
   private val cdkBuilder: AccessKeyProps.Builder = AccessKeyProps.builder()

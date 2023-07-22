@@ -13,6 +13,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayAttachmentProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object options;
+ * CfnTransitGatewayAttachmentProps cfnTransitGatewayAttachmentProps =
+ * CfnTransitGatewayAttachmentProps.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * .transitGatewayId("transitGatewayId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .options(options)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayattachment.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayAttachmentPropsDsl {
   private val cdkBuilder: CfnTransitGatewayAttachmentProps.Builder =

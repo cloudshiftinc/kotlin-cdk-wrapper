@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.events.CfnApiDestinationProps
 
+/**
+ * Properties for defining a `CfnApiDestination`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnApiDestinationProps cfnApiDestinationProps = CfnApiDestinationProps.builder()
+ * .connectionArn("connectionArn")
+ * .httpMethod("httpMethod")
+ * .invocationEndpoint("invocationEndpoint")
+ * // the properties below are optional
+ * .description("description")
+ * .invocationRateLimitPerSecond(123)
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-apidestination.html)
+ */
 @CdkDslMarker
 public class CfnApiDestinationPropsDsl {
   private val cdkBuilder: CfnApiDestinationProps.Builder = CfnApiDestinationProps.builder()

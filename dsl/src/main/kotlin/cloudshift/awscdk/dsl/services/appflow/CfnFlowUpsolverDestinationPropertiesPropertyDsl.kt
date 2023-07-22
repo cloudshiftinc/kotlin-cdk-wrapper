@@ -7,6 +7,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when Upsolver is used as a destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * UpsolverDestinationPropertiesProperty upsolverDestinationPropertiesProperty =
+ * UpsolverDestinationPropertiesProperty.builder()
+ * .bucketName("bucketName")
+ * .s3OutputFormatConfig(UpsolverS3OutputFormatConfigProperty.builder()
+ * .prefixConfig(PrefixConfigProperty.builder()
+ * .pathPrefixHierarchy(List.of("pathPrefixHierarchy"))
+ * .prefixFormat("prefixFormat")
+ * .prefixType("prefixType")
+ * .build())
+ * // the properties below are optional
+ * .aggregationConfig(AggregationConfigProperty.builder()
+ * .aggregationType("aggregationType")
+ * .targetFileSize(123)
+ * .build())
+ * .fileType("fileType")
+ * .build())
+ * // the properties below are optional
+ * .bucketPrefix("bucketPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-upsolverdestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowUpsolverDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.UpsolverDestinationPropertiesProperty.Builder =

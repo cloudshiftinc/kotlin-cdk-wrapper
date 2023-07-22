@@ -13,6 +13,47 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.m2.CfnEnvironment
 import software.constructs.Construct
 
+/**
+ * Specifies a runtime environment for a given runtime engine.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.m2.*;
+ * CfnEnvironment cfnEnvironment = CfnEnvironment.Builder.create(this, "MyCfnEnvironment")
+ * .engineType("engineType")
+ * .instanceType("instanceType")
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .engineVersion("engineVersion")
+ * .highAvailabilityConfig(HighAvailabilityConfigProperty.builder()
+ * .desiredCapacity(123)
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .storageConfigurations(List.of(StorageConfigurationProperty.builder()
+ * .efs(EfsStorageConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .mountPoint("mountPoint")
+ * .build())
+ * .fsx(FsxStorageConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .mountPoint("mountPoint")
+ * .build())
+ * .build()))
+ * .subnetIds(List.of("subnetIds"))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-environment.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentDsl(
   scope: Construct,

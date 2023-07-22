@@ -8,6 +8,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnRecordSetGroup
 
+/**
+ * *Alias records only:* Information about the AWS resource, such as a CloudFront distribution or an
+ * Amazon S3 bucket, that you want to route traffic to.
+ *
+ * When creating records for a private hosted zone, note the following:
+ *
+ * * Creating geolocation alias and latency alias records in a private hosted zone is allowed but
+ * not supported.
+ * * For information about creating failover records in a private hosted zone, see [Configuring
+ * Failover in a Private Hosted
+ * Zone](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-private-hosted-zones.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * AliasTargetProperty aliasTargetProperty = AliasTargetProperty.builder()
+ * .dnsName("dnsName")
+ * .hostedZoneId("hostedZoneId")
+ * // the properties below are optional
+ * .evaluateTargetHealth(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordsetgroup-aliastarget.html)
+ */
 @CdkDslMarker
 public class CfnRecordSetGroupAliasTargetPropertyDsl {
   private val cdkBuilder: CfnRecordSetGroup.AliasTargetProperty.Builder =

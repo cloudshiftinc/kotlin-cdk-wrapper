@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
+/**
+ * The native Hive / HCatalog JsonSerDe.
+ *
+ * Used by Kinesis Data Firehose for deserializing data, which means converting it from the JSON
+ * format in preparation for serializing it to the Parquet or ORC format. This is one of two
+ * deserializers you can choose, depending on which one offers the functionality you need. The other
+ * option is the OpenX SerDe.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisfirehose.*;
+ * HiveJsonSerDeProperty hiveJsonSerDeProperty = HiveJsonSerDeProperty.builder()
+ * .timestampFormats(List.of("timestampFormats"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-hivejsonserde.html)
+ */
 @CdkDslMarker
 public class CfnDeliveryStreamHiveJsonSerDePropertyDsl {
   private val cdkBuilder: CfnDeliveryStream.HiveJsonSerDeProperty.Builder =

@@ -18,6 +18,30 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBa
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupLoadBalancingAlgorithmType
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 
+/**
+ * Properties for defining an Application Target Group.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * // Target group with duration-based stickiness with load-balancer generated cookie
+ * ApplicationTargetGroup tg1 = ApplicationTargetGroup.Builder.create(this, "TG1")
+ * .targetType(TargetType.INSTANCE)
+ * .port(80)
+ * .stickinessCookieDuration(Duration.minutes(5))
+ * .vpc(vpc)
+ * .build();
+ * // Target group with application-based stickiness
+ * ApplicationTargetGroup tg2 = ApplicationTargetGroup.Builder.create(this, "TG2")
+ * .targetType(TargetType.INSTANCE)
+ * .port(80)
+ * .stickinessCookieDuration(Duration.minutes(5))
+ * .stickinessCookieName("MyDeliciousCookie")
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationTargetGroupPropsDsl {
   private val cdkBuilder: ApplicationTargetGroupProps.Builder =

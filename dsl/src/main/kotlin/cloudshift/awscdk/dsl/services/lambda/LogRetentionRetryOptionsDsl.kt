@@ -7,6 +7,22 @@ import kotlin.Number
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.LogRetentionRetryOptions
 
+/**
+ * Retry options for all AWS API calls.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * LogRetentionRetryOptions logRetentionRetryOptions = LogRetentionRetryOptions.builder()
+ * .base(Duration.minutes(30))
+ * .maxRetries(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogRetentionRetryOptionsDsl {
   private val cdkBuilder: LogRetentionRetryOptions.Builder = LogRetentionRetryOptions.builder()

@@ -10,6 +10,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTrafficRoute
 import software.amazon.awscdk.CfnTrafficRouting
 
+/**
+ * Type of the `CfnCodeDeployBlueGreenEcsAttributes.trafficRouting` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnTrafficRouting cfnTrafficRouting = CfnTrafficRouting.builder()
+ * .prodTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .targetGroups(List.of("targetGroups"))
+ * .testTrafficRoute(CfnTrafficRoute.builder()
+ * .logicalId("logicalId")
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnTrafficRoutingDsl {
   private val cdkBuilder: CfnTrafficRouting.Builder = CfnTrafficRouting.builder()

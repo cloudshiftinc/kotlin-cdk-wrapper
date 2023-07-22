@@ -12,6 +12,42 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.emr.CfnStudio
 import software.constructs.Construct
 
+/**
+ * The `AWS::EMR::Studio` resource specifies an Amazon EMR Studio.
+ *
+ * An EMR Studio is a web-based, integrated development environment for fully managed Jupyter
+ * notebooks that run on Amazon EMR clusters. For more information, see the [*Amazon EMR Management
+ * Guide*](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CfnStudio cfnStudio = CfnStudio.Builder.create(this, "MyCfnStudio")
+ * .authMode("authMode")
+ * .defaultS3Location("defaultS3Location")
+ * .engineSecurityGroupId("engineSecurityGroupId")
+ * .name("name")
+ * .serviceRole("serviceRole")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * .workspaceSecurityGroupId("workspaceSecurityGroupId")
+ * // the properties below are optional
+ * .description("description")
+ * .idpAuthUrl("idpAuthUrl")
+ * .idpRelayStateParameterName("idpRelayStateParameterName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userRole("userRole")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-studio.html)
+ */
 @CdkDslMarker
 public class CfnStudioDsl(
   scope: Construct,

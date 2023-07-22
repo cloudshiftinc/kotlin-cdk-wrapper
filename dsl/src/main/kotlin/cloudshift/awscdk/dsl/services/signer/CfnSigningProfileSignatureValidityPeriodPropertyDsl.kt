@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.signer.CfnSigningProfile
 
+/**
+ * The validity period for the signing job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * SignatureValidityPeriodProperty signatureValidityPeriodProperty =
+ * SignatureValidityPeriodProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-signer-signingprofile-signaturevalidityperiod.html)
+ */
 @CdkDslMarker
 public class CfnSigningProfileSignatureValidityPeriodPropertyDsl {
   private val cdkBuilder: CfnSigningProfile.SignatureValidityPeriodProperty.Builder =

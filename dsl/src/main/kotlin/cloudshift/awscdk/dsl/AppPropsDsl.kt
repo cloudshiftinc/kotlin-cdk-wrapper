@@ -15,6 +15,20 @@ import software.amazon.awscdk.AppProps
 import software.amazon.awscdk.IPolicyValidationPluginBeta1
 import software.amazon.awscdk.IReusableStackSynthesizer
 
+/**
+ * Initialization props for apps.
+ *
+ * Example:
+ *
+ * ```
+ * App app = App.Builder.create()
+ * .defaultStackSynthesizer(AppStagingSynthesizer.defaultResources(DefaultResourcesOptions.builder()
+ * .appId("my-app-id")
+ * .deploymentIdentities(DeploymentIdentities.cliCredentials())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AppPropsDsl {
   private val cdkBuilder: AppProps.Builder = AppProps.builder()

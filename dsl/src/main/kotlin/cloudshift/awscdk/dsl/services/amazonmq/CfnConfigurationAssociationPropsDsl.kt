@@ -8,6 +8,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation
 import software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps
 
+/**
+ * Properties for defining a `CfnConfigurationAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * CfnConfigurationAssociationProps cfnConfigurationAssociationProps =
+ * CfnConfigurationAssociationProps.builder()
+ * .broker("broker")
+ * .configuration(ConfigurationIdProperty.builder()
+ * .id("id")
+ * .revision(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationAssociationPropsDsl {
   private val cdkBuilder: CfnConfigurationAssociationProps.Builder =

@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The setup of SCTE-35 splice insert handling.
+ *
+ * The parent of this entity is AvailSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Scte35SpliceInsertProperty scte35SpliceInsertProperty = Scte35SpliceInsertProperty.builder()
+ * .adAvailOffset(123)
+ * .noRegionalBlackoutFlag("noRegionalBlackoutFlag")
+ * .webDeliveryAllowedFlag("webDeliveryAllowedFlag")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte35spliceinsert.html)
+ */
 @CdkDslMarker
 public class CfnChannelScte35SpliceInsertPropertyDsl {
   private val cdkBuilder: CfnChannel.Scte35SpliceInsertProperty.Builder =

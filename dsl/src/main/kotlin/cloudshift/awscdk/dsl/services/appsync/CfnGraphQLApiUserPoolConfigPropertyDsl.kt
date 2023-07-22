@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLApi
 
+/**
+ * The `UserPoolConfig` property type specifies the optional authorization configuration for using
+ * Amazon Cognito user pools with your GraphQL endpoint for an AWS AppSync GraphQL API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * UserPoolConfigProperty userPoolConfigProperty = UserPoolConfigProperty.builder()
+ * .appIdClientRegex("appIdClientRegex")
+ * .awsRegion("awsRegion")
+ * .defaultAction("defaultAction")
+ * .userPoolId("userPoolId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-userpoolconfig.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLApiUserPoolConfigPropertyDsl {
   private val cdkBuilder: CfnGraphQLApi.UserPoolConfigProperty.Builder =

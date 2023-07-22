@@ -7,6 +7,34 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a Redis target endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Specifying endpoint settings for Redis as a
+ * target](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Redis.html#CHAP_Target.Redis.EndpointSettings)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * RedisSettingsProperty redisSettingsProperty = RedisSettingsProperty.builder()
+ * .authPassword("authPassword")
+ * .authType("authType")
+ * .authUserName("authUserName")
+ * .port(123)
+ * .serverName("serverName")
+ * .sslCaCertificateArn("sslCaCertificateArn")
+ * .sslSecurityProtocol("sslSecurityProtocol")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-redissettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointRedisSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.RedisSettingsProperty.Builder =

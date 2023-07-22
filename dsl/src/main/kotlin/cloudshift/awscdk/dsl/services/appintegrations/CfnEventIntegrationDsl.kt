@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appintegrations.CfnEventIntegration
 import software.constructs.Construct
 
+/**
+ * Creates an event integration.
+ *
+ * You provide a name, description, and a reference to an Amazon EventBridge bus in your account and
+ * a partner event source that will push events to that bus. No objects are created in your account,
+ * only metadata that is persisted on the EventIntegration control plane.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appintegrations.*;
+ * CfnEventIntegration cfnEventIntegration = CfnEventIntegration.Builder.create(this,
+ * "MyCfnEventIntegration")
+ * .eventBridgeBus("eventBridgeBus")
+ * .eventFilter(EventFilterProperty.builder()
+ * .source("source")
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-eventintegration.html)
+ */
 @CdkDslMarker
 public class CfnEventIntegrationDsl(
   scope: Construct,

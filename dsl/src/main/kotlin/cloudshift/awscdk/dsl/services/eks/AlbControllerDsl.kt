@@ -12,6 +12,31 @@ import software.amazon.awscdk.services.eks.AlbControllerVersion
 import software.amazon.awscdk.services.eks.Cluster
 import software.constructs.Construct
 
+/**
+ * Construct for installing the AWS ALB Contoller on EKS clusters.
+ *
+ * Use the factory functions `get` and `getOrCreate` to obtain/create instances of this controller.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * AlbControllerVersion albControllerVersion;
+ * Cluster cluster;
+ * Object policy;
+ * AlbController albController = AlbController.Builder.create(this, "MyAlbController")
+ * .cluster(cluster)
+ * .version(albControllerVersion)
+ * // the properties below are optional
+ * .policy(policy)
+ * .repository("repository")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://kubernetes-sigs.github.io/aws-load-balancer-controller)
+ */
 @CdkDslMarker
 public class AlbControllerDsl(
   scope: Construct,

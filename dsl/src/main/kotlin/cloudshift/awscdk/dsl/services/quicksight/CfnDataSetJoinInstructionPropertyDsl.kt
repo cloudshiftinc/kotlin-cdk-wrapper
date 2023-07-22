@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * The instructions associated with a join.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * JoinInstructionProperty joinInstructionProperty = JoinInstructionProperty.builder()
+ * .leftOperand("leftOperand")
+ * .onClause("onClause")
+ * .rightOperand("rightOperand")
+ * .type("type")
+ * // the properties below are optional
+ * .leftJoinKeyProperties(JoinKeyPropertiesProperty.builder()
+ * .uniqueKey(false)
+ * .build())
+ * .rightJoinKeyProperties(JoinKeyPropertiesProperty.builder()
+ * .uniqueKey(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-joininstruction.html)
+ */
 @CdkDslMarker
 public class CfnDataSetJoinInstructionPropertyDsl {
   private val cdkBuilder: CfnDataSet.JoinInstructionProperty.Builder =

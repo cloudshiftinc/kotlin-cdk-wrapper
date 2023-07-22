@@ -9,6 +9,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnWarmPool
 import software.amazon.awscdk.services.autoscaling.CfnWarmPoolProps
 
+/**
+ * Properties for defining a `CfnWarmPool`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * CfnWarmPoolProps cfnWarmPoolProps = CfnWarmPoolProps.builder()
+ * .autoScalingGroupName("autoScalingGroupName")
+ * // the properties below are optional
+ * .instanceReusePolicy(InstanceReusePolicyProperty.builder()
+ * .reuseOnScaleIn(false)
+ * .build())
+ * .maxGroupPreparedCapacity(123)
+ * .minSize(123)
+ * .poolState("poolState")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-warmpool.html)
+ */
 @CdkDslMarker
 public class CfnWarmPoolPropsDsl {
   private val cdkBuilder: CfnWarmPoolProps.Builder = CfnWarmPoolProps.builder()

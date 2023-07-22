@@ -8,6 +8,23 @@ import kotlin.Any
 import kotlin.Unit
 import software.amazon.awscdk.services.events.targets.LogGroupTargetInputOptions
 
+/**
+ * Options used when creating a target input template.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * Rule rule;
+ * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
+ * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .timestamp(EventField.fromPath("$.time"))
+ * .message(EventField.fromPath("$.detail-type"))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class LogGroupTargetInputOptionsDsl {
   private val cdkBuilder: LogGroupTargetInputOptions.Builder = LogGroupTargetInputOptions.builder()

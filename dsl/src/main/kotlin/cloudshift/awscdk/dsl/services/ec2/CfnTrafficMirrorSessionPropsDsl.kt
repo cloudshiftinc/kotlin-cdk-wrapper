@@ -12,6 +12,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnTrafficMirrorSessionProps
 
+/**
+ * Properties for defining a `CfnTrafficMirrorSession`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTrafficMirrorSessionProps cfnTrafficMirrorSessionProps =
+ * CfnTrafficMirrorSessionProps.builder()
+ * .networkInterfaceId("networkInterfaceId")
+ * .sessionNumber(123)
+ * .trafficMirrorFilterId("trafficMirrorFilterId")
+ * .trafficMirrorTargetId("trafficMirrorTargetId")
+ * // the properties below are optional
+ * .description("description")
+ * .packetLength(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .virtualNetworkId(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-trafficmirrorsession.html)
+ */
 @CdkDslMarker
 public class CfnTrafficMirrorSessionPropsDsl {
   private val cdkBuilder: CfnTrafficMirrorSessionProps.Builder =

@@ -8,6 +8,125 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Provides information for updating the user on the progress of fulfilling an intent.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * FulfillmentUpdatesSpecificationProperty fulfillmentUpdatesSpecificationProperty =
+ * FulfillmentUpdatesSpecificationProperty.builder()
+ * .active(false)
+ * // the properties below are optional
+ * .startResponse(FulfillmentStartResponseSpecificationProperty.builder()
+ * .delayInSeconds(123)
+ * .messageGroups(List.of(MessageGroupProperty.builder()
+ * .message(MessageProperty.builder()
+ * .customPayload(CustomPayloadProperty.builder()
+ * .value("value")
+ * .build())
+ * .imageResponseCard(ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build())
+ * .plainTextMessage(PlainTextMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .ssmlMessage(SSMLMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .variations(List.of(MessageProperty.builder()
+ * .customPayload(CustomPayloadProperty.builder()
+ * .value("value")
+ * .build())
+ * .imageResponseCard(ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build())
+ * .plainTextMessage(PlainTextMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .ssmlMessage(SSMLMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .allowInterrupt(false)
+ * .build())
+ * .timeoutInSeconds(123)
+ * .updateResponse(FulfillmentUpdateResponseSpecificationProperty.builder()
+ * .frequencyInSeconds(123)
+ * .messageGroups(List.of(MessageGroupProperty.builder()
+ * .message(MessageProperty.builder()
+ * .customPayload(CustomPayloadProperty.builder()
+ * .value("value")
+ * .build())
+ * .imageResponseCard(ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build())
+ * .plainTextMessage(PlainTextMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .ssmlMessage(SSMLMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .variations(List.of(MessageProperty.builder()
+ * .customPayload(CustomPayloadProperty.builder()
+ * .value("value")
+ * .build())
+ * .imageResponseCard(ImageResponseCardProperty.builder()
+ * .title("title")
+ * // the properties below are optional
+ * .buttons(List.of(ButtonProperty.builder()
+ * .text("text")
+ * .value("value")
+ * .build()))
+ * .imageUrl("imageUrl")
+ * .subtitle("subtitle")
+ * .build())
+ * .plainTextMessage(PlainTextMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .ssmlMessage(SSMLMessageProperty.builder()
+ * .value("value")
+ * .build())
+ * .build()))
+ * .build()))
+ * // the properties below are optional
+ * .allowInterrupt(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-fulfillmentupdatesspecification.html)
+ */
 @CdkDslMarker
 public class CfnBotFulfillmentUpdatesSpecificationPropertyDsl {
   private val cdkBuilder: CfnBot.FulfillmentUpdatesSpecificationProperty.Builder =

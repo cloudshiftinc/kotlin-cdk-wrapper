@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.dynamodb.CfnTable
 
+/**
+ * Throughput for the specified table, which consists of values for `ReadCapacityUnits` and
+ * `WriteCapacityUnits` .
+ *
+ * For more information about the contents of a provisioned throughput structure, see [Amazon
+ * DynamoDB Table
+ * ProvisionedThroughput](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ProvisionedThroughput.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * ProvisionedThroughputProperty provisionedThroughputProperty =
+ * ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-provisionedthroughput.html)
+ */
 @CdkDslMarker
 public class CfnTableProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnTable.ProvisionedThroughputProperty.Builder =

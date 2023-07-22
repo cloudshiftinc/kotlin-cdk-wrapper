@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.codepipeline.IStage
 import software.amazon.awscdk.services.codepipeline.StagePlacement
 
+/**
+ * Allows you to control where to place a new Stage when it's added to the Pipeline.
+ *
+ * Note that you can provide only one of the below properties -
+ * specifying more than one will result in a validation error.
+ *
+ * Example:
+ *
+ * ```
+ * // Insert a new Stage at an arbitrary point
+ * Pipeline pipeline;
+ * IStage anotherStage;
+ * IStage yetAnotherStage;
+ * IStage someStage = pipeline.addStage(StageOptions.builder()
+ * .stageName("SomeStage")
+ * .placement(StagePlacement.builder()
+ * // note: you can only specify one of the below properties
+ * .rightBefore(anotherStage)
+ * .justAfter(yetAnotherStage)
+ * .build())
+ * .build());
+ * ```
+ *
+ * [Documentation]( #justAfter)
+ */
 @CdkDslMarker
 public class StagePlacementDsl {
   private val cdkBuilder: StagePlacement.Builder = StagePlacement.builder()

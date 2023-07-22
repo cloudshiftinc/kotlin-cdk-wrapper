@@ -11,6 +11,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCEndpointService
 import software.constructs.Construct
 
+/**
+ * Creates a VPC endpoint service configuration to which service consumers ( AWS accounts, users,
+ * and IAM roles) can connect.
+ *
+ * To create an endpoint service configuration, you must first create one of the following for your
+ * service:
+ *
+ * * A [Network Load
+ * Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) .
+ * Service consumers connect to your service using an interface endpoint.
+ * * A [Gateway Load
+ * Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/gateway/introduction.html) .
+ * Service consumers connect to your service using a Gateway Load Balancer endpoint.
+ *
+ * For more information, see the [AWS PrivateLink User
+ * Guide](https://docs.aws.amazon.com/vpc/latest/privatelink/) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCEndpointService cfnVPCEndpointService = CfnVPCEndpointService.Builder.create(this,
+ * "MyCfnVPCEndpointService")
+ * .acceptanceRequired(false)
+ * .contributorInsightsEnabled(false)
+ * .gatewayLoadBalancerArns(List.of("gatewayLoadBalancerArns"))
+ * .networkLoadBalancerArns(List.of("networkLoadBalancerArns"))
+ * .payerResponsibility("payerResponsibility")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpointservice.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointServiceDsl(
   scope: Construct,

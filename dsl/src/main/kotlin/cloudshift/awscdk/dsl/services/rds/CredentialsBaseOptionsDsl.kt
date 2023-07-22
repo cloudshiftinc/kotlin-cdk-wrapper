@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.rds.CredentialsBaseOptions
 import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 
+/**
+ * Base options for creating Credentials.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstance.Builder.create(this, "InstanceWithCustomizedSecret")
+ * .engine(engine)
+ * .vpc(vpc)
+ * .credentials(Credentials.fromGeneratedSecret("postgres", CredentialsBaseOptions.builder()
+ * .secretName("my-cool-name")
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CredentialsBaseOptionsDsl {
   private val cdkBuilder: CredentialsBaseOptions.Builder = CredentialsBaseOptions.builder()

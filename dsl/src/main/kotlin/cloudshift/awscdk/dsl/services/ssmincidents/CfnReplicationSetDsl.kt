@@ -15,6 +15,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmincidents.CfnReplicationSet
 import software.constructs.Construct
 
+/**
+ * The `AWS::SSMIncidents::ReplicationSet` resource specifies a set of Regions that Incident Manager
+ * data is replicated to and the KMS key used to encrypt the data.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmincidents.*;
+ * CfnReplicationSet cfnReplicationSet = CfnReplicationSet.Builder.create(this,
+ * "MyCfnReplicationSet")
+ * .regions(List.of(ReplicationRegionProperty.builder()
+ * .regionConfiguration(RegionConfigurationProperty.builder()
+ * .sseKmsKeyId("sseKmsKeyId")
+ * .build())
+ * .regionName("regionName")
+ * .build()))
+ * // the properties below are optional
+ * .deletionProtected(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmincidents-replicationset.html)
+ */
 @CdkDslMarker
 public class CfnReplicationSetDsl(
   scope: Construct,

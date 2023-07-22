@@ -11,6 +11,34 @@ import software.amazon.awscdk.services.cloudfront.CacheHeaderBehavior
 import software.amazon.awscdk.services.cloudfront.CachePolicyProps
 import software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior
 
+/**
+ * Properties for creating a Cache Policy.
+ *
+ * Example:
+ *
+ * ```
+ * // Creating a custom cache policy for a Distribution -- all parameters optional
+ * S3Origin bucketOrigin;
+ * CachePolicy myCachePolicy = CachePolicy.Builder.create(this, "myCachePolicy")
+ * .cachePolicyName("MyPolicy")
+ * .comment("A default policy")
+ * .defaultTtl(Duration.days(2))
+ * .minTtl(Duration.minutes(1))
+ * .maxTtl(Duration.days(10))
+ * .cookieBehavior(CacheCookieBehavior.all())
+ * .headerBehavior(CacheHeaderBehavior.allowList("X-CustomHeader"))
+ * .queryStringBehavior(CacheQueryStringBehavior.denyList("username"))
+ * .enableAcceptEncodingGzip(true)
+ * .enableAcceptEncodingBrotli(true)
+ * .build();
+ * Distribution.Builder.create(this, "myDistCustomPolicy")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(bucketOrigin)
+ * .cachePolicy(myCachePolicy)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CachePolicyPropsDsl {
   private val cdkBuilder: CachePolicyProps.Builder = CachePolicyProps.builder()

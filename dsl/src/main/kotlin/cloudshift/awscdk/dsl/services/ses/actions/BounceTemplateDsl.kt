@@ -6,6 +6,18 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.actions.BounceTemplate
 
+/**
+ * A bounce template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.actions.*;
+ * BounceTemplate bounceTemplate = BounceTemplate.MAILBOX_DOES_NOT_EXIST;
+ * ```
+ */
 @CdkDslMarker
 public class BounceTemplateDsl {
   private val cdkBuilder: BounceTemplate.Builder = BounceTemplate.Builder.create()

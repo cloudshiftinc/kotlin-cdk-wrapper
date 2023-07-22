@@ -15,6 +15,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegration
 import software.amazon.awscdk.services.appintegrations.CfnDataIntegrationProps
 
+/**
+ * Properties for defining a `CfnDataIntegration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appintegrations.*;
+ * Object filters;
+ * Object objectConfiguration;
+ * CfnDataIntegrationProps cfnDataIntegrationProps = CfnDataIntegrationProps.builder()
+ * .kmsKey("kmsKey")
+ * .name("name")
+ * .scheduleConfig(ScheduleConfigProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .firstExecutionFrom("firstExecutionFrom")
+ * .object("object")
+ * .build())
+ * .sourceUri("sourceUri")
+ * // the properties below are optional
+ * .description("description")
+ * .fileConfiguration(FileConfigurationProperty.builder()
+ * .folders(List.of("folders"))
+ * // the properties below are optional
+ * .filters(filters)
+ * .build())
+ * .objectConfiguration(objectConfiguration)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appintegrations-dataintegration.html)
+ */
 @CdkDslMarker
 public class CfnDataIntegrationPropsDsl {
   private val cdkBuilder: CfnDataIntegrationProps.Builder = CfnDataIntegrationProps.builder()

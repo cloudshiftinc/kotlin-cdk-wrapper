@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for normalizing video.
+ *
+ * The parent of this entity is AudioDescription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioNormalizationSettingsProperty audioNormalizationSettingsProperty =
+ * AudioNormalizationSettingsProperty.builder()
+ * .algorithm("algorithm")
+ * .algorithmControl("algorithmControl")
+ * .targetLkfs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audionormalizationsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioNormalizationSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioNormalizationSettingsProperty.Builder =

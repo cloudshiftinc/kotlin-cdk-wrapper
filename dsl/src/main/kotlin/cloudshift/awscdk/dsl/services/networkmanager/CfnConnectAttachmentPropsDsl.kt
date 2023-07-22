@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkmanager.CfnConnectAttachment
 import software.amazon.awscdk.services.networkmanager.CfnConnectAttachmentProps
 
+/**
+ * Properties for defining a `CfnConnectAttachment`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * CfnConnectAttachmentProps cfnConnectAttachmentProps = CfnConnectAttachmentProps.builder()
+ * .coreNetworkId("coreNetworkId")
+ * .edgeLocation("edgeLocation")
+ * .options(ConnectAttachmentOptionsProperty.builder()
+ * .protocol("protocol")
+ * .build())
+ * .transportAttachmentId("transportAttachmentId")
+ * // the properties below are optional
+ * .proposedSegmentChange(ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-connectattachment.html)
+ */
 @CdkDslMarker
 public class CfnConnectAttachmentPropsDsl {
   private val cdkBuilder: CfnConnectAttachmentProps.Builder = CfnConnectAttachmentProps.builder()

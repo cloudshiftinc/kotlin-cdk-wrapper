@@ -7,6 +7,20 @@ import kotlin.String
 import software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts
 import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps
 
+/**
+ * Construction properties of `ServerDeploymentConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * ServerDeploymentConfig deploymentConfig = ServerDeploymentConfig.Builder.create(this,
+ * "DeploymentConfiguration")
+ * .deploymentConfigName("MyDeploymentConfiguration") // optional property
+ * // one of these is required, but both cannot be specified at the same time
+ * .minimumHealthyHosts(MinimumHealthyHosts.count(2))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerDeploymentConfigPropsDsl {
   private val cdkBuilder: ServerDeploymentConfigProps.Builder =

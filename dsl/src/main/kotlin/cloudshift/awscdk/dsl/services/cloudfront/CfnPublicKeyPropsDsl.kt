@@ -7,6 +7,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnPublicKey
 import software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps
 
+/**
+ * Properties for defining a `CfnPublicKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CfnPublicKeyProps cfnPublicKeyProps = CfnPublicKeyProps.builder()
+ * .publicKeyConfig(PublicKeyConfigProperty.builder()
+ * .callerReference("callerReference")
+ * .encodedKey("encodedKey")
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html)
+ */
 @CdkDslMarker
 public class CfnPublicKeyPropsDsl {
   private val cdkBuilder: CfnPublicKeyProps.Builder = CfnPublicKeyProps.builder()

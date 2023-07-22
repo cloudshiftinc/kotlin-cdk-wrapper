@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 
+/**
+ * Provide the location for output data from a custom classifier job.
+ *
+ * This field is mandatory if you are training a native document model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * DocumentClassifierOutputDataConfigProperty documentClassifierOutputDataConfigProperty =
+ * DocumentClassifierOutputDataConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .s3Uri("s3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-documentclassifieroutputdataconfig.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierDocumentClassifierOutputDataConfigPropertyDsl {
   private val cdkBuilder: CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty.Builder =

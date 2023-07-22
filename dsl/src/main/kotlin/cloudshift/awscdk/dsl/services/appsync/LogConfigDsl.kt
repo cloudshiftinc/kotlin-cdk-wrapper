@@ -10,6 +10,24 @@ import software.amazon.awscdk.services.appsync.LogConfig
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * Logging configuration for AppSync.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.logs.*;
+ * LogConfig logConfig = LogConfig.builder()
+ * .retention(RetentionDays.ONE_WEEK)
+ * .build();
+ * GraphqlApi.Builder.create(this, "api")
+ * .authorizationConfig(AuthorizationConfig.builder().build())
+ * .name("myApi")
+ * .schema(SchemaFile.fromAsset(join(__dirname, "myApi.graphql")))
+ * .logConfig(logConfig)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogConfigDsl {
   private val cdkBuilder: LogConfig.Builder = LogConfig.builder()

@@ -10,6 +10,42 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * An asset property value entry containing the following information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * PutAssetPropertyValueEntryProperty putAssetPropertyValueEntryProperty =
+ * PutAssetPropertyValueEntryProperty.builder()
+ * .propertyValues(List.of(AssetPropertyValueProperty.builder()
+ * .timestamp(AssetPropertyTimestampProperty.builder()
+ * .timeInSeconds("timeInSeconds")
+ * // the properties below are optional
+ * .offsetInNanos("offsetInNanos")
+ * .build())
+ * .value(AssetPropertyVariantProperty.builder()
+ * .booleanValue("booleanValue")
+ * .doubleValue("doubleValue")
+ * .integerValue("integerValue")
+ * .stringValue("stringValue")
+ * .build())
+ * // the properties below are optional
+ * .quality("quality")
+ * .build()))
+ * // the properties below are optional
+ * .assetId("assetId")
+ * .entryId("entryId")
+ * .propertyAlias("propertyAlias")
+ * .propertyId("propertyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-putassetpropertyvalueentry.html)
+ */
 @CdkDslMarker
 public class CfnTopicRulePutAssetPropertyValueEntryPropertyDsl {
   private val cdkBuilder: CfnTopicRule.PutAssetPropertyValueEntryProperty.Builder =

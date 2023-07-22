@@ -8,6 +8,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnApplication
 import software.constructs.Construct
 
+/**
+ * Specify an AWS Elastic Beanstalk application by using the AWS::ElasticBeanstalk::Application
+ * resource in an AWS CloudFormation template.
+ *
+ * The AWS::ElasticBeanstalk::Application resource is an AWS Elastic Beanstalk Beanstalk resource
+ * type that specifies an Elastic Beanstalk application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .applicationName("applicationName")
+ * .description("description")
+ * .resourceLifecycleConfig(ApplicationResourceLifecycleConfigProperty.builder()
+ * .serviceRole("serviceRole")
+ * .versionLifecycleConfig(ApplicationVersionLifecycleConfigProperty.builder()
+ * .maxAgeRule(MaxAgeRuleProperty.builder()
+ * .deleteSourceFromS3(false)
+ * .enabled(false)
+ * .maxAgeInDays(123)
+ * .build())
+ * .maxCountRule(MaxCountRuleProperty.builder()
+ * .deleteSourceFromS3(false)
+ * .enabled(false)
+ * .maxCount(123)
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

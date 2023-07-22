@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Sends information about the detector model instance and the event that triggered the action to an
+ * Amazon Kinesis Data Firehose delivery stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * FirehoseProperty firehoseProperty = FirehoseProperty.builder()
+ * .deliveryStreamName("deliveryStreamName")
+ * // the properties below are optional
+ * .payload(PayloadProperty.builder()
+ * .contentExpression("contentExpression")
+ * .type("type")
+ * .build())
+ * .separator("separator")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-firehose.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelFirehosePropertyDsl {
   private val cdkBuilder: CfnAlarmModel.FirehoseProperty.Builder =

@@ -7,6 +7,29 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.mediaconvert.CfnJobTemplate
 
+/**
+ * Optional.
+ *
+ * Configuration for a destination queue to which the job can hop once a customer-defined minimum
+ * wait time has passed. For more information, see [Setting Up Queue Hopping to Avoid Long
+ * Waits](https://docs.aws.amazon.com/mediaconvert/latest/ug/setting-up-queue-hopping-to-avoid-long-waits.html)
+ * in the *AWS Elemental MediaConvert User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mediaconvert.*;
+ * HopDestinationProperty hopDestinationProperty = HopDestinationProperty.builder()
+ * .priority(123)
+ * .queue("queue")
+ * .waitMinutes(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconvert-jobtemplate-hopdestination.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateHopDestinationPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.HopDestinationProperty.Builder =

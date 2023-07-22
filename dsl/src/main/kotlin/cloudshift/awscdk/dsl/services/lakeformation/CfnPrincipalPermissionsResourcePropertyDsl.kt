@@ -9,6 +9,68 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
+/**
+ * A structure for the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object catalog;
+ * Object tableWildcard;
+ * ResourceProperty resourceProperty = ResourceProperty.builder()
+ * .catalog(catalog)
+ * .database(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .dataCellsFilter(DataCellsFilterResourceProperty.builder()
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableCatalogId("tableCatalogId")
+ * .tableName("tableName")
+ * .build())
+ * .dataLocation(DataLocationResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .resourceArn("resourceArn")
+ * .build())
+ * .lfTag(LFTagKeyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build())
+ * .lfTagPolicy(LFTagPolicyResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .expression(List.of(LFTagProperty.builder()
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build()))
+ * .resourceType("resourceType")
+ * .build())
+ * .table(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .name("name")
+ * .tableWildcard(tableWildcard)
+ * .build())
+ * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .name("name")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-resource.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsResourcePropertyDsl {
   private val cdkBuilder: CfnPrincipalPermissions.ResourceProperty.Builder =

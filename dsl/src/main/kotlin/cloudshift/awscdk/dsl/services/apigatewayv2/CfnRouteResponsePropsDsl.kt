@@ -11,6 +11,32 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnRouteResponseProps
 
+/**
+ * Properties for defining a `CfnRouteResponse`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object responseModels;
+ * CfnRouteResponseProps cfnRouteResponseProps = CfnRouteResponseProps.builder()
+ * .apiId("apiId")
+ * .routeId("routeId")
+ * .routeResponseKey("routeResponseKey")
+ * // the properties below are optional
+ * .modelSelectionExpression("modelSelectionExpression")
+ * .responseModels(responseModels)
+ * .responseParameters(Map.of(
+ * "responseParametersKey", ParameterConstraintsProperty.builder()
+ * .required(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-routeresponse.html)
+ */
 @CdkDslMarker
 public class CfnRouteResponsePropsDsl {
   private val cdkBuilder: CfnRouteResponseProps.Builder = CfnRouteResponseProps.builder()

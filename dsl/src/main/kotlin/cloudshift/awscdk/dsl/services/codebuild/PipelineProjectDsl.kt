@@ -26,6 +26,58 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * A convenience class for CodeBuild Projects that are used in CodePipeline.
+ *
+ * Example:
+ *
+ * ```
+ * // Create a Cloudfront Web Distribution
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * Distribution distribution;
+ * // Create the build project that will invalidate the cache
+ * PipelineProject invalidateBuildProject = PipelineProject.Builder.create(this,
+ * "InvalidateProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("aws cloudfront create-invalidation --distribution-id
+ * ${CLOUDFRONT_ID} --paths \"/ *\""))))))
+ * .environmentVariables(Map.of(
+ * "CLOUDFRONT_ID",
+ * BuildEnvironmentVariable.builder().value(distribution.getDistributionId()).build()))
+ * .build();
+ * // Add Cloudfront invalidation permissions to the project
+ * String distributionArn = String.format("arn:aws:cloudfront::%s:distribution/%s", this.account,
+ * distribution.getDistributionId());
+ * invalidateBuildProject.addToRolePolicy(PolicyStatement.Builder.create()
+ * .resources(List.of(distributionArn))
+ * .actions(List.of("cloudfront:CreateInvalidation"))
+ * .build());
+ * // Create the pipeline (here only the S3 deploy and Invalidate cache build)
+ * Bucket deployBucket = new Bucket(this, "DeployBucket");
+ * Artifact deployInput = new Artifact();
+ * Pipeline.Builder.create(this, "Pipeline")
+ * .stages(List.of(StageProps.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(
+ * S3DeployAction.Builder.create()
+ * .actionName("S3Deploy")
+ * .bucket(deployBucket)
+ * .input(deployInput)
+ * .runOrder(1)
+ * .build(),
+ * CodeBuildAction.Builder.create()
+ * .actionName("InvalidateCache")
+ * .project(invalidateBuildProject)
+ * .input(deployInput)
+ * .runOrder(2)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PipelineProjectDsl(
   scope: Construct,

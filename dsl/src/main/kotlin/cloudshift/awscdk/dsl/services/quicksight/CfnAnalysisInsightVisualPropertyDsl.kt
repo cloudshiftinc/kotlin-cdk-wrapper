@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * An insight visual.
+ *
+ * For more information, see [Working with
+ * insights](https://docs.aws.amazon.com/quicksight/latest/user/computational-insights.html) in the
+ * *Amazon QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-insightvisual.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisInsightVisualPropertyDsl {
   private val cdkBuilder: CfnAnalysis.InsightVisualProperty.Builder =

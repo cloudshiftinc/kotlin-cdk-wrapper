@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 
+/**
+ * A structure containing the catalog ID, tag key, and tag values of an LF-tag key-value pair.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * LFTagPairProperty lFTagPairProperty = LFTagPairProperty.builder()
+ * .catalogId("catalogId")
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-lftagpair.html)
+ */
 @CdkDslMarker
 public class CfnTagAssociationLFTagPairPropertyDsl {
   private val cdkBuilder: CfnTagAssociation.LFTagPairProperty.Builder =

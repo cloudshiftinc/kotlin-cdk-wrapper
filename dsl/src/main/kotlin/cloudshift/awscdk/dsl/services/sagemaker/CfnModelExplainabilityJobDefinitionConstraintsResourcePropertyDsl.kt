@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * Input object for the endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ConstraintsResourceProperty constraintsResourceProperty = ConstraintsResourceProperty.builder()
+ * .s3Uri("s3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-constraintsresource.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionConstraintsResourcePropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.ConstraintsResourceProperty.Builder =

@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.logs.DataProtectionPolicy
 import software.amazon.awscdk.services.logs.LogGroupProps
 import software.amazon.awscdk.services.logs.RetentionDays
 
+/**
+ * Properties for a LogGroup.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kinesisfirehose.alpha.*;
+ * import software.amazon.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
+ * .logGroupName("auditDestinationForCDK")
+ * .build();
+ * Bucket bucket = new Bucket(this, "audit-bucket");
+ * S3Bucket s3Destination = new S3Bucket(bucket);
+ * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
+ * .destinations(List.of(s3Destination))
+ * .build();
+ * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
+ * .name("data protection policy")
+ * .description("policy description")
+ * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US, new DataIdentifier("EmailAddress")))
+ * .logGroupAuditDestination(logGroupDestination)
+ * .s3BucketAuditDestination(bucket)
+ * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
+ * .build();
+ * LogGroup.Builder.create(this, "LogGroupLambda")
+ * .logGroupName("cdkIntegLogGroup")
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LogGroupPropsDsl {
   private val cdkBuilder: LogGroupProps.Builder = LogGroupProps.builder()

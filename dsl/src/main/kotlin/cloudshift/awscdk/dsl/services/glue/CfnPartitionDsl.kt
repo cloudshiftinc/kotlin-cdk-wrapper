@@ -8,6 +8,78 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnPartition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Partition` resource creates an AWS Glue partition, which represents a slice of
+ * table data.
+ *
+ * For more information, see [CreatePartition
+ * Action](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-CreatePartition)
+ * and [Partition
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-partitions.html#aws-glue-api-catalog-partitions-Partition)
+ * in the *AWS Glue Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * Object skewedColumnValueLocationMaps;
+ * CfnPartition cfnPartition = CfnPartition.Builder.create(this, "MyCfnPartition")
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .partitionInput(PartitionInputProperty.builder()
+ * .values(List.of("values"))
+ * // the properties below are optional
+ * .parameters(parameters)
+ * .storageDescriptor(StorageDescriptorProperty.builder()
+ * .bucketColumns(List.of("bucketColumns"))
+ * .columns(List.of(ColumnProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .comment("comment")
+ * .type("type")
+ * .build()))
+ * .compressed(false)
+ * .inputFormat("inputFormat")
+ * .location("location")
+ * .numberOfBuckets(123)
+ * .outputFormat("outputFormat")
+ * .parameters(parameters)
+ * .schemaReference(SchemaReferenceProperty.builder()
+ * .schemaId(SchemaIdProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build())
+ * .schemaVersionId("schemaVersionId")
+ * .schemaVersionNumber(123)
+ * .build())
+ * .serdeInfo(SerdeInfoProperty.builder()
+ * .name("name")
+ * .parameters(parameters)
+ * .serializationLibrary("serializationLibrary")
+ * .build())
+ * .skewedInfo(SkewedInfoProperty.builder()
+ * .skewedColumnNames(List.of("skewedColumnNames"))
+ * .skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+ * .skewedColumnValues(List.of("skewedColumnValues"))
+ * .build())
+ * .sortColumns(List.of(OrderProperty.builder()
+ * .column("column")
+ * // the properties below are optional
+ * .sortOrder(123)
+ * .build()))
+ * .storedAsSubDirectories(false)
+ * .build())
+ * .build())
+ * .tableName("tableName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html)
+ */
 @CdkDslMarker
 public class CfnPartitionDsl(
   scope: Construct,

@@ -8,6 +8,23 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnThingGroup
 
+/**
+ * The attribute payload.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AttributePayloadProperty attributePayloadProperty = AttributePayloadProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-attributepayload.html)
+ */
 @CdkDslMarker
 public class CfnThingGroupAttributePayloadPropertyDsl {
   private val cdkBuilder: CfnThingGroup.AttributePayloadProperty.Builder =

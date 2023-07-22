@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amazonmq.CfnBroker
 
+/**
+ * The list of broker users (persons or applications) who can access queues and topics.
+ *
+ * For Amazon MQ for RabbitMQ brokers, one and only one administrative user is accepted and created
+ * when a broker is first provisioned. All subsequent broker users are created via the RabbitMQ web
+ * console or by using the RabbitMQ management API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amazonmq.*;
+ * UserProperty userProperty = UserProperty.builder()
+ * .password("password")
+ * .username("username")
+ * // the properties below are optional
+ * .consoleAccess(false)
+ * .groups(List.of("groups"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html)
+ */
 @CdkDslMarker
 public class CfnBrokerUserPropertyDsl {
   private val cdkBuilder: CfnBroker.UserProperty.Builder = CfnBroker.UserProperty.builder()

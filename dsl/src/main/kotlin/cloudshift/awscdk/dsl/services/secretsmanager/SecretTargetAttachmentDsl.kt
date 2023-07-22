@@ -9,6 +9,24 @@ import software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget
 import software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment
 import software.constructs.Construct
 
+/**
+ * An attached secret.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * ISecretAttachmentTarget secretAttachmentTarget;
+ * SecretTargetAttachment secretTargetAttachment = SecretTargetAttachment.Builder.create(this,
+ * "MySecretTargetAttachment")
+ * .secret(secret)
+ * .target(secretAttachmentTarget)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretTargetAttachmentDsl(
   scope: Construct,

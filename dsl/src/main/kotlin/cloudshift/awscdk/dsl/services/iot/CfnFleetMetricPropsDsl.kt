@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnFleetMetric
 import software.amazon.awscdk.services.iot.CfnFleetMetricProps
 
+/**
+ * Properties for defining a `CfnFleetMetric`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnFleetMetricProps cfnFleetMetricProps = CfnFleetMetricProps.builder()
+ * .metricName("metricName")
+ * // the properties below are optional
+ * .aggregationField("aggregationField")
+ * .aggregationType(AggregationTypeProperty.builder()
+ * .name("name")
+ * .values(List.of("values"))
+ * .build())
+ * .description("description")
+ * .indexName("indexName")
+ * .period(123)
+ * .queryString("queryString")
+ * .queryVersion("queryVersion")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-fleetmetric.html)
+ */
 @CdkDslMarker
 public class CfnFleetMetricPropsDsl {
   private val cdkBuilder: CfnFleetMetricProps.Builder = CfnFleetMetricProps.builder()

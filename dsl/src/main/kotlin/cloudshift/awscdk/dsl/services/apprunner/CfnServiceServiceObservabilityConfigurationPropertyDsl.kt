@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnService
 
+/**
+ * Describes the observability configuration of an AWS App Runner service.
+ *
+ * These are additional observability features, like tracing, that you choose to enable. They're
+ * configured in a separate resource that you associate with your service.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * ServiceObservabilityConfigurationProperty serviceObservabilityConfigurationProperty =
+ * ServiceObservabilityConfigurationProperty.builder()
+ * .observabilityEnabled(false)
+ * // the properties below are optional
+ * .observabilityConfigurationArn("observabilityConfigurationArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apprunner-service-serviceobservabilityconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnServiceServiceObservabilityConfigurationPropertyDsl {
   private val cdkBuilder: CfnService.ServiceObservabilityConfigurationProperty.Builder =

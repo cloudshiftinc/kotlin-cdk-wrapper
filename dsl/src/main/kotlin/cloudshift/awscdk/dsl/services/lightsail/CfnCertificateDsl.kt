@@ -12,6 +12,36 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.lightsail.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::Lightsail::Certificate` resource specifies an SSL/TLS certificate that you can use with
+ * a content delivery network (CDN) distribution and a container service.
+ *
+ *
+ * For information about certificates that you can use with a load balancer, see
+ * [AWS::Lightsail::LoadBalancerTlsCertificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-loadbalancertlscertificate.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lightsail.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .certificateName("certificateName")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .subjectAlternativeNames(List.of("subjectAlternativeNames"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

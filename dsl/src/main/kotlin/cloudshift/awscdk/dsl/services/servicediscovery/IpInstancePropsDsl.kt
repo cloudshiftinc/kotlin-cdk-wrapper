@@ -9,6 +9,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.servicediscovery.IService
 import software.amazon.awscdk.services.servicediscovery.IpInstanceProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * Service service;
+ * IpInstanceProps ipInstanceProps = IpInstanceProps.builder()
+ * .service(service)
+ * // the properties below are optional
+ * .customAttributes(Map.of(
+ * "customAttributesKey", "customAttributes"))
+ * .instanceId("instanceId")
+ * .ipv4("ipv4")
+ * .ipv6("ipv6")
+ * .port(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IpInstancePropsDsl {
   private val cdkBuilder: IpInstanceProps.Builder = IpInstanceProps.builder()

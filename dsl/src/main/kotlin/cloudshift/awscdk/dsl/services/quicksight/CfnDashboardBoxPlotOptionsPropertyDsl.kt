@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options of a box plot visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * BoxPlotOptionsProperty boxPlotOptionsProperty = BoxPlotOptionsProperty.builder()
+ * .allDataPointsVisibility("allDataPointsVisibility")
+ * .outlierVisibility("outlierVisibility")
+ * .styleOptions(BoxPlotStyleOptionsProperty.builder()
+ * .fillStyle("fillStyle")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-boxplotoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardBoxPlotOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.BoxPlotOptionsProperty.Builder =

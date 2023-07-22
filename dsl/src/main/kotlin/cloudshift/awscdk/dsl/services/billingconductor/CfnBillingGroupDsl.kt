@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 import software.constructs.Construct
 
+/**
+ * Creates a billing group that resembles a consolidated billing family that AWS charges, based off
+ * of the predefined pricing plan computation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CfnBillingGroup cfnBillingGroup = CfnBillingGroup.Builder.create(this, "MyCfnBillingGroup")
+ * .accountGrouping(AccountGroupingProperty.builder()
+ * .linkedAccountIds(List.of("linkedAccountIds"))
+ * .build())
+ * .computationPreference(ComputationPreferenceProperty.builder()
+ * .pricingPlanArn("pricingPlanArn")
+ * .build())
+ * .name("name")
+ * .primaryAccountId("primaryAccountId")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-billingconductor-billinggroup.html)
+ */
 @CdkDslMarker
 public class CfnBillingGroupDsl(
   scope: Construct,

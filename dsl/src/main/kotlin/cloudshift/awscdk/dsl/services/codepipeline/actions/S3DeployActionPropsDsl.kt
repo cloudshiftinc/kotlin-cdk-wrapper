@@ -16,6 +16,31 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.s3.BucketAccessControl
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * Construction properties of the `S3DeployAction S3 deploy Action`.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.kms.*;
+ * Artifact sourceOutput = new Artifact();
+ * Bucket targetBucket = new Bucket(this, "MyBucket");
+ * IKey key = Key.Builder.create(this, "EnvVarEncryptKey")
+ * .description("sample key")
+ * .build();
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * S3DeployAction deployAction = S3DeployAction.Builder.create()
+ * .actionName("S3Deploy")
+ * .bucket(targetBucket)
+ * .input(sourceOutput)
+ * .encryptionKey(key)
+ * .build();
+ * IStage deployStage = pipeline.addStage(StageOptions.builder()
+ * .stageName("Deploy")
+ * .actions(List.of(deployAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class S3DeployActionPropsDsl {
   private val cdkBuilder: S3DeployActionProps.Builder = S3DeployActionProps.builder()

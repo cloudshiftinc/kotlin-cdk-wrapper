@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.quicksight.CfnTopic
 
+/**
+ * The order in which data is displayed for the column when it's used in a comparative context.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ComparativeOrderProperty comparativeOrderProperty = ComparativeOrderProperty.builder()
+ * .specifedOrder(List.of("specifedOrder"))
+ * .treatUndefinedSpecifiedValues("treatUndefinedSpecifiedValues")
+ * .useOrdering("useOrdering")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-comparativeorder.html)
+ */
 @CdkDslMarker
 public class CfnTopicComparativeOrderPropertyDsl {
   private val cdkBuilder: CfnTopic.ComparativeOrderProperty.Builder =

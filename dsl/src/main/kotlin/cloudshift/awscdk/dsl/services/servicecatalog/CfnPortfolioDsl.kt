@@ -12,6 +12,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolio
 import software.constructs.Construct
 
+/**
+ * Specifies a portfolio.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolio cfnPortfolio = CfnPortfolio.Builder.create(this, "MyCfnPortfolio")
+ * .displayName("displayName")
+ * .providerName("providerName")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioDsl(
   scope: Construct,

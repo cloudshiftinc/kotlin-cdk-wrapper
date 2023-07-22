@@ -11,6 +11,32 @@ import software.amazon.awscdk.services.docdb.IDatabaseCluster
 import software.amazon.awscdk.services.ec2.InstanceType
 import software.constructs.Construct
 
+/**
+ * A database instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.docdb.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * DatabaseCluster databaseCluster;
+ * InstanceType instanceType;
+ * DatabaseInstance databaseInstance = DatabaseInstance.Builder.create(this, "MyDatabaseInstance")
+ * .cluster(databaseCluster)
+ * .instanceType(instanceType)
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .dbInstanceName("dbInstanceName")
+ * .enablePerformanceInsights(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseInstanceDsl(
   scope: Construct,

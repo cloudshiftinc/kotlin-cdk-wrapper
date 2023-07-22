@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.eks.AwsAuthProps
 import software.amazon.awscdk.services.eks.Cluster
 
+/**
+ * Configuration props for the AwsAuth construct.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * Cluster cluster;
+ * AwsAuthProps awsAuthProps = AwsAuthProps.builder()
+ * .cluster(cluster)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AwsAuthPropsDsl {
   private val cdkBuilder: AwsAuthProps.Builder = AwsAuthProps.builder()

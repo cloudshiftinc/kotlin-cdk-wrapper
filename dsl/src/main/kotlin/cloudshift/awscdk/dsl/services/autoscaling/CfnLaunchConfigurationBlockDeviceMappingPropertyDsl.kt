@@ -8,6 +8,45 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration
 
+/**
+ * `BlockDeviceMapping` specifies a block device mapping for the `BlockDeviceMappings` property of
+ * the
+ * [AWS::AutoScaling::LaunchConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html)
+ * resource.
+ *
+ * Each instance that is launched has an associated root device volume, either an Amazon EBS volume
+ * or an instance store volume. You can use block device mappings to specify additional EBS volumes or
+ * instance store volumes to attach to an instance when it is launched.
+ *
+ * For more information, see [Example block device
+ * mapping](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html#block-device-mapping-ex)
+ * in the *Amazon EC2 User Guide for Linux Instances* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * BlockDeviceMappingProperty blockDeviceMappingProperty = BlockDeviceMappingProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .ebs(BlockDeviceProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build())
+ * .noDevice(false)
+ * .virtualName("virtualName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-launchconfiguration-blockdevicemapping.html)
+ */
 @CdkDslMarker
 public class CfnLaunchConfigurationBlockDeviceMappingPropertyDsl {
   private val cdkBuilder: CfnLaunchConfiguration.BlockDeviceMappingProperty.Builder =

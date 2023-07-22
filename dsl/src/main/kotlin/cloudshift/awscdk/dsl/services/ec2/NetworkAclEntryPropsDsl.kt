@@ -12,6 +12,30 @@ import software.amazon.awscdk.services.ec2.INetworkAcl
 import software.amazon.awscdk.services.ec2.NetworkAclEntryProps
 import software.amazon.awscdk.services.ec2.TrafficDirection
 
+/**
+ * Properties to create NetworkAclEntry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclCidr aclCidr;
+ * AclTraffic aclTraffic;
+ * NetworkAcl networkAcl;
+ * NetworkAclEntryProps networkAclEntryProps = NetworkAclEntryProps.builder()
+ * .cidr(aclCidr)
+ * .networkAcl(networkAcl)
+ * .ruleNumber(123)
+ * .traffic(aclTraffic)
+ * // the properties below are optional
+ * .direction(TrafficDirection.EGRESS)
+ * .networkAclEntryName("networkAclEntryName")
+ * .ruleAction(Action.ALLOW)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkAclEntryPropsDsl {
   private val cdkBuilder: NetworkAclEntryProps.Builder = NetworkAclEntryProps.builder()

@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.applicationinsights.CfnApplication
 
+/**
+ * The `AWS::ApplicationInsights::Application WindowsEvent` property type specifies a Windows Event
+ * to monitor for the component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.applicationinsights.*;
+ * WindowsEventProperty windowsEventProperty = WindowsEventProperty.builder()
+ * .eventLevels(List.of("eventLevels"))
+ * .eventName("eventName")
+ * .logGroupName("logGroupName")
+ * // the properties below are optional
+ * .patternSet("patternSet")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationinsights-application-windowsevent.html)
+ */
 @CdkDslMarker
 public class CfnApplicationWindowsEventPropertyDsl {
   private val cdkBuilder: CfnApplication.WindowsEventProperty.Builder =

@@ -14,6 +14,40 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.secretsmanager.ISecret
 import software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions
 
+/**
+ * Multi user hosted rotation options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * MultiUserHostedRotationOptions multiUserHostedRotationOptions =
+ * MultiUserHostedRotationOptions.builder()
+ * .masterSecret(secret)
+ * // the properties below are optional
+ * .excludeCharacters("excludeCharacters")
+ * .functionName("functionName")
+ * .securityGroups(List.of(securityGroup))
+ * .vpc(vpc)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MultiUserHostedRotationOptionsDsl {
   private val cdkBuilder: MultiUserHostedRotationOptions.Builder =

@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnLaunch
 
+/**
+ * Use this structure to specify different traffic splits for one or more audience *segments* .
+ *
+ * A segment is a portion of your audience that share one or more characteristics. Examples could be
+ * Chrome browser users, users in Europe, or Firefox browser users in Europe who also fit other
+ * criteria that your application collects, such as age.
+ *
+ * For more information, see [Use segments to focus your
+ * audience](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Evidently-segments.html)
+ * .
+ *
+ * This sructure is an array of up to six segment override objects. Each of these objects specifies
+ * a segment that you have already created, and defines the traffic split for that segment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * SegmentOverrideProperty segmentOverrideProperty = SegmentOverrideProperty.builder()
+ * .evaluationOrder(123)
+ * .segment("segment")
+ * .weights(List.of(GroupToWeightProperty.builder()
+ * .groupName("groupName")
+ * .splitWeight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-launch-segmentoverride.html)
+ */
 @CdkDslMarker
 public class CfnLaunchSegmentOverridePropertyDsl {
   private val cdkBuilder: CfnLaunch.SegmentOverrideProperty.Builder =

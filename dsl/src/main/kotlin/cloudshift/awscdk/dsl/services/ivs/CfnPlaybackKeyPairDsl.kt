@@ -12,6 +12,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVS::PlaybackKeyPair` resource specifies an  playback key pair.
+ *
+ * uses a public playback key to validate playback tokens that have been signed with the
+ * corresponding private key. For more information, see [Setting Up Private
+ * Channels](https://docs.aws.amazon.com/ivs/latest/userguide/private-channels.html) in the *Amazon
+ * Interactive Video Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivs.*;
+ * CfnPlaybackKeyPair cfnPlaybackKeyPair = CfnPlaybackKeyPair.Builder.create(this,
+ * "MyCfnPlaybackKeyPair")
+ * .name("name")
+ * .publicKeyMaterial("publicKeyMaterial")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-playbackkeypair.html)
+ */
 @CdkDslMarker
 public class CfnPlaybackKeyPairDsl(
   scope: Construct,

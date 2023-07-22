@@ -7,6 +7,28 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 
+/**
+ * Information about a collection scheme that uses a simple logical expression to recognize what
+ * data to collect.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * ConditionBasedCollectionSchemeProperty conditionBasedCollectionSchemeProperty =
+ * ConditionBasedCollectionSchemeProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .minimumTriggerIntervalMs(123)
+ * .triggerMode("triggerMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedcollectionscheme.html)
+ */
 @CdkDslMarker
 public class CfnCampaignConditionBasedCollectionSchemePropertyDsl {
   private val cdkBuilder: CfnCampaign.ConditionBasedCollectionSchemeProperty.Builder =

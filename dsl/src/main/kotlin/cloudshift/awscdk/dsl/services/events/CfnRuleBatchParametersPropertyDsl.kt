@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * The custom parameters to be used when the target is an AWS Batch job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * BatchParametersProperty batchParametersProperty = BatchParametersProperty.builder()
+ * .jobDefinition("jobDefinition")
+ * .jobName("jobName")
+ * // the properties below are optional
+ * .arrayProperties(BatchArrayPropertiesProperty.builder()
+ * .size(123)
+ * .build())
+ * .retryStrategy(BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-batchparameters.html)
+ */
 @CdkDslMarker
 public class CfnRuleBatchParametersPropertyDsl {
   private val cdkBuilder: CfnRule.BatchParametersProperty.Builder =

@@ -7,6 +7,33 @@ import kotlin.Number
 import kotlin.Unit
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster
 
+/**
+ * Configuration of requested EBS block device associated with the instance group with count of
+ * volumes that will be associated to every instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * Size size;
+ * EbsBlockDeviceConfigProperty ebsBlockDeviceConfigProperty =
+ * EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .volumeSize(size)
+ * .volumeType(EmrCreateCluster.getEbsBlockDeviceVolumeType().GP2)
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/emr/latest/APIReference/API_EbsBlockDeviceConfig.html)
+ */
 @CdkDslMarker
 public class EmrCreateClusterEbsBlockDeviceConfigPropertyDsl {
   private val cdkBuilder: EmrCreateCluster.EbsBlockDeviceConfigProperty.Builder =

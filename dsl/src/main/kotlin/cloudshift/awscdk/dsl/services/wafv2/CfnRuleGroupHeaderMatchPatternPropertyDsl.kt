@@ -11,6 +11,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * The filter to use to identify the subset of headers to inspect in a web request.
+ *
+ * You must specify exactly one setting: either `All` , `IncludedHeaders` , or `ExcludedHeaders` .
+ *
+ * Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * Object all;
+ * HeaderMatchPatternProperty headerMatchPatternProperty = HeaderMatchPatternProperty.builder()
+ * .all(all)
+ * .excludedHeaders(List.of("excludedHeaders"))
+ * .includedHeaders(List.of("includedHeaders"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-headermatchpattern.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupHeaderMatchPatternPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.HeaderMatchPatternProperty.Builder =

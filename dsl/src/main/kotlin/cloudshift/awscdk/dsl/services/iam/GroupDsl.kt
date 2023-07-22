@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.iam.Group
 import software.amazon.awscdk.services.iam.IManagedPolicy
 import software.constructs.Construct
 
+/**
+ * An IAM Group (collection of IAM users) lets you specify permissions for multiple users, which can
+ * make it easier to manage permissions for those users.
+ *
+ * Example:
+ *
+ * ```
+ * User user = new User(this, "MyUser"); // or User.fromUserName(this, 'User', 'johnsmith');
+ * Group group = new Group(this, "MyGroup"); // or Group.fromGroupArn(this, 'Group',
+ * 'arn:aws:iam::account-id:group/group-name');
+ * user.addToGroup(group);
+ * // or
+ * group.addUser(user);
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
+ */
 @CdkDslMarker
 public class GroupDsl(
   scope: Construct,

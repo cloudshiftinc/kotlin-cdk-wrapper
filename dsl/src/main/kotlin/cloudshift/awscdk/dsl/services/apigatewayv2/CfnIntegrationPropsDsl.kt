@@ -12,6 +12,45 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegration
 import software.amazon.awscdk.services.apigatewayv2.CfnIntegrationProps
 
+/**
+ * Properties for defining a `CfnIntegration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object requestParameters;
+ * Object requestTemplates;
+ * Object responseParameters;
+ * CfnIntegrationProps cfnIntegrationProps = CfnIntegrationProps.builder()
+ * .apiId("apiId")
+ * .integrationType("integrationType")
+ * // the properties below are optional
+ * .connectionId("connectionId")
+ * .connectionType("connectionType")
+ * .contentHandlingStrategy("contentHandlingStrategy")
+ * .credentialsArn("credentialsArn")
+ * .description("description")
+ * .integrationMethod("integrationMethod")
+ * .integrationSubtype("integrationSubtype")
+ * .integrationUri("integrationUri")
+ * .passthroughBehavior("passthroughBehavior")
+ * .payloadFormatVersion("payloadFormatVersion")
+ * .requestParameters(requestParameters)
+ * .requestTemplates(requestTemplates)
+ * .responseParameters(responseParameters)
+ * .templateSelectionExpression("templateSelectionExpression")
+ * .timeoutInMillis(123)
+ * .tlsConfig(TlsConfigProperty.builder()
+ * .serverNameToVerify("serverNameToVerify")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-integration.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationPropsDsl {
   private val cdkBuilder: CfnIntegrationProps.Builder = CfnIntegrationProps.builder()

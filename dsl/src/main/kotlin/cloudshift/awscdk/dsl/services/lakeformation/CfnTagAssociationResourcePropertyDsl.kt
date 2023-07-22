@@ -9,6 +9,41 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnTagAssociation
 
+/**
+ * A structure for the resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object catalog;
+ * Object tableWildcard;
+ * ResourceProperty resourceProperty = ResourceProperty.builder()
+ * .catalog(catalog)
+ * .database(DatabaseResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .name("name")
+ * .build())
+ * .table(TableResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * // the properties below are optional
+ * .name("name")
+ * .tableWildcard(tableWildcard)
+ * .build())
+ * .tableWithColumns(TableWithColumnsResourceProperty.builder()
+ * .catalogId("catalogId")
+ * .columnNames(List.of("columnNames"))
+ * .databaseName("databaseName")
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-tagassociation-resource.html)
+ */
 @CdkDslMarker
 public class CfnTagAssociationResourcePropertyDsl {
   private val cdkBuilder: CfnTagAssociation.ResourceProperty.Builder =

@@ -8,6 +8,59 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress
 import software.constructs.Construct
 
+/**
+ * Adds the specified egress rules to a security group.
+ *
+ * An outbound rule permits instances to send traffic to the specified destination IPv4 or IPv6 CIDR
+ * address ranges, or to the specified destination security groups for the same VPC.
+ *
+ * You specify a protocol for each rule (for example, TCP). For the TCP and UDP protocols, you must
+ * also specify the destination port or port range. For the ICMP protocol, you must also specify the
+ * ICMP type and code. You can use -1 for the type or code to mean all types or all codes.
+ *
+ * You must specify only one of the following properties: `CidrIp` , `CidrIpv6` ,
+ * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
+ *
+ * You must specify a destination security group ( `DestinationPrefixListId` or
+ * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ). If you do not specify one
+ * of these parameters, the stack will launch successfully but the rule will not be added to the
+ * security group.
+ *
+ * Rule changes are propagated to affected instances as quickly as possible. However, a small delay
+ * might occur.
+ *
+ * For more information about VPC security group limits, see [Amazon VPC
+ * Limits](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html) .
+ *
+ * Use `AWS::EC2::SecurityGroupIngress` and `AWS::EC2::SecurityGroupEgress` only when necessary,
+ * typically to allow security groups to reference each other in ingress and egress rules. Otherwise,
+ * use the embedded ingress and egress rules of the security group. For more information, see [Amazon
+ * EC2 Security
+ * Groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnSecurityGroupEgress cfnSecurityGroupEgress = CfnSecurityGroupEgress.Builder.create(this,
+ * "MyCfnSecurityGroupEgress")
+ * .groupId("groupId")
+ * .ipProtocol("ipProtocol")
+ * // the properties below are optional
+ * .cidrIp("cidrIp")
+ * .cidrIpv6("cidrIpv6")
+ * .description("description")
+ * .destinationPrefixListId("destinationPrefixListId")
+ * .destinationSecurityGroupId("destinationSecurityGroupId")
+ * .fromPort(123)
+ * .toPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupEgressDsl(
   scope: Construct,

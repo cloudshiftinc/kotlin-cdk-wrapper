@@ -7,6 +7,17 @@ import kotlin.String
 import software.amazon.awscdk.services.codedeploy.LambdaApplication
 import software.constructs.Construct
 
+/**
+ * A CodeDeploy Application that deploys to an AWS Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application = LambdaApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaApplicationDsl(
   scope: Construct,

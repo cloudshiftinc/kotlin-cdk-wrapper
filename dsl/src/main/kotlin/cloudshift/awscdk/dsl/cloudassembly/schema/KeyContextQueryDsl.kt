@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.KeyContextQuery
 
+/**
+ * Query input for looking up a KMS Key.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * KeyContextQuery keyContextQuery = KeyContextQuery.builder()
+ * .account("account")
+ * .aliasName("aliasName")
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class KeyContextQueryDsl {
   private val cdkBuilder: KeyContextQuery.Builder = KeyContextQuery.builder()

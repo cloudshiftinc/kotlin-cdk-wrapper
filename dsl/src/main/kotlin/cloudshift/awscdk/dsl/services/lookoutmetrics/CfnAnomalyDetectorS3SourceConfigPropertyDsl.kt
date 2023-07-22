@@ -9,6 +9,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector
 
+/**
+ * Contains information about the configuration of the S3 bucket that contains source files.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutmetrics.*;
+ * S3SourceConfigProperty s3SourceConfigProperty = S3SourceConfigProperty.builder()
+ * .fileFormatDescriptor(FileFormatDescriptorProperty.builder()
+ * .csvFormatDescriptor(CsvFormatDescriptorProperty.builder()
+ * .charset("charset")
+ * .containsHeader(false)
+ * .delimiter("delimiter")
+ * .fileCompression("fileCompression")
+ * .headerList(List.of("headerList"))
+ * .quoteSymbol("quoteSymbol")
+ * .build())
+ * .jsonFormatDescriptor(JsonFormatDescriptorProperty.builder()
+ * .charset("charset")
+ * .fileCompression("fileCompression")
+ * .build())
+ * .build())
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .historicalDataPathList(List.of("historicalDataPathList"))
+ * .templatedPathList(List.of("templatedPathList"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-anomalydetector-s3sourceconfig.html)
+ */
 @CdkDslMarker
 public class CfnAnomalyDetectorS3SourceConfigPropertyDsl {
   private val cdkBuilder: CfnAnomalyDetector.S3SourceConfigProperty.Builder =

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The options for configuring a donut chart or pie chart.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DonutOptionsProperty donutOptionsProperty = DonutOptionsProperty.builder()
+ * .arcOptions(ArcOptionsProperty.builder()
+ * .arcThickness("arcThickness")
+ * .build())
+ * .donutCenterOptions(DonutCenterOptionsProperty.builder()
+ * .labelVisibility("labelVisibility")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-donutoptions.html)
+ */
 @CdkDslMarker
 public class CfnDashboardDonutOptionsPropertyDsl {
   private val cdkBuilder: CfnDashboard.DonutOptionsProperty.Builder =

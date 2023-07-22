@@ -12,6 +12,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnServerlessCluster
 import software.constructs.Construct
 
+/**
+ * Resource Type definition for AWS::MSK::ServerlessCluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnServerlessCluster cfnServerlessCluster = CfnServerlessCluster.Builder.create(this,
+ * "MyCfnServerlessCluster")
+ * .clientAuthentication(ClientAuthenticationProperty.builder()
+ * .sasl(SaslProperty.builder()
+ * .iam(IamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build())
+ * .clusterName("clusterName")
+ * .vpcConfigs(List.of(VpcConfigProperty.builder()
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .build()))
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-serverlesscluster.html)
+ */
 @CdkDslMarker
 public class CfnServerlessClusterDsl(
   scope: Construct,

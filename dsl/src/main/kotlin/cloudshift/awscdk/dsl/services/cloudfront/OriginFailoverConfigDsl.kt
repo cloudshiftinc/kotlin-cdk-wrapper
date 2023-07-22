@@ -9,6 +9,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.cloudfront.IOrigin
 import software.amazon.awscdk.services.cloudfront.OriginFailoverConfig
 
+/**
+ * The failover configuration used for Origin Groups, returned in `OriginBindConfig.failoverConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * IOrigin origin;
+ * OriginFailoverConfig originFailoverConfig = OriginFailoverConfig.builder()
+ * .failoverOrigin(origin)
+ * // the properties below are optional
+ * .statusCodes(List.of(123))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OriginFailoverConfigDsl {
   private val cdkBuilder: OriginFailoverConfig.Builder = OriginFailoverConfig.builder()

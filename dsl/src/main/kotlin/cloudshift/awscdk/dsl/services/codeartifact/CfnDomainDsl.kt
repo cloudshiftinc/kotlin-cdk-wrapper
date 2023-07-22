@@ -14,6 +14,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codeartifact.CfnDomain
 import software.constructs.Construct
 
+/**
+ * The `AWS::CodeArtifact::Domain` resource creates an AWS CodeArtifact domain.
+ *
+ * CodeArtifact *domains* make it easier to manage multiple repositories across an organization. You
+ * can use a domain to apply permissions across many repositories owned by different AWS accounts. For
+ * more information about domains, see the [Domain concepts
+ * information](https://docs.aws.amazon.com/codeartifact/latest/ug/codeartifact-concepts.html#welcome-concepts-domain)
+ * in the *CodeArtifact User Guide* . For more information about the `CreateDomain` API, see
+ * [CreateDomain](https://docs.aws.amazon.com/codeartifact/latest/APIReference/API_CreateDomain.html)
+ * in the *CodeArtifact API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codeartifact.*;
+ * Object permissionsPolicyDocument;
+ * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .encryptionKey("encryptionKey")
+ * .permissionsPolicyDocument(permissionsPolicyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainDsl(
   scope: Construct,

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnInAppTemplate
 
+/**
+ * Specifies the configuration of the main body text of the in-app message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * BodyConfigProperty bodyConfigProperty = BodyConfigProperty.builder()
+ * .alignment("alignment")
+ * .body("body")
+ * .textColor("textColor")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-inapptemplate-bodyconfig.html)
+ */
 @CdkDslMarker
 public class CfnInAppTemplateBodyConfigPropertyDsl {
   private val cdkBuilder: CfnInAppTemplate.BodyConfigProperty.Builder =

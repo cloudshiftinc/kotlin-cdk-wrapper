@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnExperiment
 
+/**
+ * Use this structure to start and stop the experiment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * RunningStatusObjectProperty runningStatusObjectProperty = RunningStatusObjectProperty.builder()
+ * .status("status")
+ * // the properties below are optional
+ * .analysisCompleteTime("analysisCompleteTime")
+ * .desiredState("desiredState")
+ * .reason("reason")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-runningstatusobject.html)
+ */
 @CdkDslMarker
 public class CfnExperimentRunningStatusObjectPropertyDsl {
   private val cdkBuilder: CfnExperiment.RunningStatusObjectProperty.Builder =

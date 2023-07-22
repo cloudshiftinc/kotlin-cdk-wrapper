@@ -14,6 +14,33 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ram.CfnPermission
 import software.constructs.Construct
 
+/**
+ * Creates a customer managed permission for a specified resource type that you can attach to
+ * resource shares.
+ *
+ * It is created in the AWS Region in which you call the operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ram.*;
+ * Object policyTemplate;
+ * CfnPermission cfnPermission = CfnPermission.Builder.create(this, "MyCfnPermission")
+ * .name("name")
+ * .policyTemplate(policyTemplate)
+ * .resourceType("resourceType")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-permission.html)
+ */
 @CdkDslMarker
 public class CfnPermissionDsl(
   scope: Construct,

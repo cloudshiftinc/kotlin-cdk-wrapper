@@ -10,6 +10,35 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The configuration details for the App Mesh proxy.
+ *
+ * For tasks that use the EC2 launch type, the container instances require at least version 1.26.0
+ * of the container agent and at least version 1.26.0-1 of the `ecs-init` package to use a proxy
+ * configuration. If your container instances are launched from the Amazon ECS optimized AMI version
+ * `20190301` or later, then they contain the required versions of the container agent and `ecs-init` .
+ * For more information, see [Amazon ECS-optimized Linux
+ * AMI](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ProxyConfigurationProperty proxyConfigurationProperty = ProxyConfigurationProperty.builder()
+ * .containerName("containerName")
+ * // the properties below are optional
+ * .proxyConfigurationProperties(List.of(KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-proxyconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionProxyConfigurationPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.ProxyConfigurationProperty.Builder =

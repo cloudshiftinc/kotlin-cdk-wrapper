@@ -6,6 +6,62 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask
 
+/**
+ * The `TaskInvocationParameters` property type specifies the task execution parameters for a
+ * maintenance window task in AWS Systems Manager .
+ *
+ * `TaskInvocationParameters` is a property of the
+ * [AWS::SSM::MaintenanceWindowTask](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object parameters;
+ * TaskInvocationParametersProperty taskInvocationParametersProperty =
+ * TaskInvocationParametersProperty.builder()
+ * .maintenanceWindowAutomationParameters(MaintenanceWindowAutomationParametersProperty.builder()
+ * .documentVersion("documentVersion")
+ * .parameters(parameters)
+ * .build())
+ * .maintenanceWindowLambdaParameters(MaintenanceWindowLambdaParametersProperty.builder()
+ * .clientContext("clientContext")
+ * .payload("payload")
+ * .qualifier("qualifier")
+ * .build())
+ * .maintenanceWindowRunCommandParameters(MaintenanceWindowRunCommandParametersProperty.builder()
+ * .cloudWatchOutputConfig(CloudWatchOutputConfigProperty.builder()
+ * .cloudWatchLogGroupName("cloudWatchLogGroupName")
+ * .cloudWatchOutputEnabled(false)
+ * .build())
+ * .comment("comment")
+ * .documentHash("documentHash")
+ * .documentHashType("documentHashType")
+ * .documentVersion("documentVersion")
+ * .notificationConfig(NotificationConfigProperty.builder()
+ * .notificationArn("notificationArn")
+ * // the properties below are optional
+ * .notificationEvents(List.of("notificationEvents"))
+ * .notificationType("notificationType")
+ * .build())
+ * .outputS3BucketName("outputS3BucketName")
+ * .outputS3KeyPrefix("outputS3KeyPrefix")
+ * .parameters(parameters)
+ * .serviceRoleArn("serviceRoleArn")
+ * .timeoutSeconds(123)
+ * .build())
+ * .maintenanceWindowStepFunctionsParameters(MaintenanceWindowStepFunctionsParametersProperty.builder()
+ * .input("input")
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html)
+ */
 @CdkDslMarker
 public class CfnMaintenanceWindowTaskTaskInvocationParametersPropertyDsl {
   private val cdkBuilder: CfnMaintenanceWindowTask.TaskInvocationParametersProperty.Builder =

@@ -10,6 +10,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter
 import software.constructs.Construct
 
+/**
+ * A structure that represents a data cell filter with column-level, row-level, and/or cell-level
+ * security.
+ *
+ * Data cell filters belong to a specific table in a Data Catalog . During a stack operation, AWS
+ * CloudFormation calls the AWS Lake Formation `CreateDataCellsFilter` API operation to create a
+ * `DataCellsFilter` resource, and calls the `DeleteDataCellsFilter` API operation to delete it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * Object allRowsWildcard;
+ * CfnDataCellsFilter cfnDataCellsFilter = CfnDataCellsFilter.Builder.create(this,
+ * "MyCfnDataCellsFilter")
+ * .databaseName("databaseName")
+ * .name("name")
+ * .tableCatalogId("tableCatalogId")
+ * .tableName("tableName")
+ * // the properties below are optional
+ * .columnNames(List.of("columnNames"))
+ * .columnWildcard(ColumnWildcardProperty.builder()
+ * .excludedColumnNames(List.of("excludedColumnNames"))
+ * .build())
+ * .rowFilter(RowFilterProperty.builder()
+ * .allRowsWildcard(allRowsWildcard)
+ * .filterExpression("filterExpression")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lakeformation-datacellsfilter.html)
+ */
 @CdkDslMarker
 public class CfnDataCellsFilterDsl(
   scope: Construct,

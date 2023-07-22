@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.sso.CfnAssignment
 import software.constructs.Construct
 
+/**
+ * Assigns access to a Principal for a specified AWS account using a specified permission set.
+ *
+ *
+ * The term *principal* here refers to a user or group that is defined in IAM Identity Center .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sso.*;
+ * CfnAssignment cfnAssignment = CfnAssignment.Builder.create(this, "MyCfnAssignment")
+ * .instanceArn("instanceArn")
+ * .permissionSetArn("permissionSetArn")
+ * .principalId("principalId")
+ * .principalType("principalType")
+ * .targetId("targetId")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sso-assignment.html)
+ */
 @CdkDslMarker
 public class CfnAssignmentDsl(
   scope: Construct,

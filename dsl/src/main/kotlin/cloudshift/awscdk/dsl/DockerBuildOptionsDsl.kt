@@ -7,6 +7,27 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.DockerBuildOptions
 
+/**
+ * Docker build options.
+ *
+ * Example:
+ *
+ * ```
+ * Function.Builder.create(this, "Function")
+ * .code(Code.fromAsset("/path/to/handler", AssetOptions.builder()
+ * .bundling(BundlingOptions.builder()
+ * .image(DockerImage.fromBuild("/path/to/dir/with/DockerFile", DockerBuildOptions.builder()
+ * .buildArgs(Map.of(
+ * "ARG1", "value1"))
+ * .build()))
+ * .command(List.of("my", "cool", "command"))
+ * .build())
+ * .build()))
+ * .runtime(Runtime.PYTHON_3_9)
+ * .handler("index.handler")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerBuildOptionsDsl {
   private val cdkBuilder: DockerBuildOptions.Builder = DockerBuildOptions.builder()

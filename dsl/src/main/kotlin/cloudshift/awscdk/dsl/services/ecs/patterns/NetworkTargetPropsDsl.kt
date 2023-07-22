@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps
 
+/**
+ * Properties to define a network load balancer target group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * NetworkTargetProps networkTargetProps = NetworkTargetProps.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .listener("listener")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkTargetPropsDsl {
   private val cdkBuilder: NetworkTargetProps.Builder = NetworkTargetProps.builder()

@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnInstance
 
+/**
+ * Specifies the type of Elastic GPU.
+ *
+ * An Elastic GPU is a GPU resource that you can attach to your Amazon EC2 instance to accelerate
+ * the graphics performance of your applications. For more information, see [Amazon EC2 Elastic
+ * GPUs](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/elastic-graphics.html) in the *Amazon
+ * EC2 User Guide for Windows Instances* .
+ *
+ * `ElasticGpuSpecification` is a property of the
+ * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ElasticGpuSpecificationProperty elasticGpuSpecificationProperty =
+ * ElasticGpuSpecificationProperty.builder()
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-elasticgpuspecification.html)
+ */
 @CdkDslMarker
 public class CfnInstanceElasticGpuSpecificationPropertyDsl {
   private val cdkBuilder: CfnInstance.ElasticGpuSpecificationProperty.Builder =

@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The configuration for the infrastructure that the model will be deployed to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ModelInfrastructureConfigProperty modelInfrastructureConfigProperty =
+ * ModelInfrastructureConfigProperty.builder()
+ * .infrastructureType("infrastructureType")
+ * .realTimeInferenceConfig(RealTimeInferenceConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-modelinfrastructureconfig.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentModelInfrastructureConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.ModelInfrastructureConfigProperty.Builder =

@@ -8,6 +8,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolClient
 
+/**
+ * The Amazon Pinpoint analytics configuration necessary to collect metrics for a user pool.
+ *
+ *
+ * In Regions where Amazon Pinpoint isn't available, user pools only support sending events to
+ * Amazon Pinpoint projects in us-east-1. In Regions where Amazon Pinpoint is available, user pools
+ * support sending events to Amazon Pinpoint projects within that same Region.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * AnalyticsConfigurationProperty analyticsConfigurationProperty =
+ * AnalyticsConfigurationProperty.builder()
+ * .applicationArn("applicationArn")
+ * .applicationId("applicationId")
+ * .externalId("externalId")
+ * .roleArn("roleArn")
+ * .userDataShared(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolClientAnalyticsConfigurationPropertyDsl {
   private val cdkBuilder: CfnUserPoolClient.AnalyticsConfigurationProperty.Builder =

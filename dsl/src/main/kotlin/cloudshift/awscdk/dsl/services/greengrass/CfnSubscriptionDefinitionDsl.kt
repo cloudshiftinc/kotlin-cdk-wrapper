@@ -11,6 +11,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition
 import software.constructs.Construct
 
+/**
+ * The `AWS::Greengrass::SubscriptionDefinition` resource represents a subscription definition for
+ * AWS IoT Greengrass .
+ *
+ * Subscription definitions are used to organize your subscription definition versions.
+ *
+ * Subscription definitions can reference multiple subscription definition versions. All
+ * subscription definition versions must be associated with a subscription definition. Each
+ * subscription definition version can contain one or more subscriptions.
+ *
+ *
+ * When you create a subscription definition, you can optionally include an initial subscription
+ * definition version. To associate a subscription definition version later, create an
+ * [`AWS::Greengrass::SubscriptionDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinitionversion.html)
+ * resource and specify the ID of this subscription definition.
+ *
+ * After you create the subscription definition version that contains the subscriptions you want to
+ * deploy, you must add it to your group version. For more information, see
+ * [`AWS::Greengrass::Group`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnSubscriptionDefinition cfnSubscriptionDefinition =
+ * CfnSubscriptionDefinition.Builder.create(this, "MyCfnSubscriptionDefinition")
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(SubscriptionDefinitionVersionProperty.builder()
+ * .subscriptions(List.of(SubscriptionProperty.builder()
+ * .id("id")
+ * .source("source")
+ * .subject("subject")
+ * .target("target")
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-subscriptiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnSubscriptionDefinitionDsl(
   scope: Construct,

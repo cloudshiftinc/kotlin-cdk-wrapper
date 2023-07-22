@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.budgets.CfnBudget
 
+/**
+ * The `Subscriber` property type specifies who to notify for a Billing and Cost Management budget
+ * notification.
+ *
+ * The subscriber consists of a subscription type, and either an Amazon SNS topic or an email
+ * address.
+ *
+ * For example, an email subscriber would have the following parameters:
+ *
+ * * A `subscriptionType` of `EMAIL`
+ * * An `address` of `example&#64;example.com`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * SubscriberProperty subscriberProperty = SubscriberProperty.builder()
+ * .address("address")
+ * .subscriptionType("subscriptionType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-subscriber.html)
+ */
 @CdkDslMarker
 public class CfnBudgetSubscriberPropertyDsl {
   private val cdkBuilder: CfnBudget.SubscriberProperty.Builder =

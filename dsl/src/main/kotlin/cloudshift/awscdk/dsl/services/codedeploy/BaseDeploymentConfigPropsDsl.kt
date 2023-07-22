@@ -9,6 +9,26 @@ import software.amazon.awscdk.services.codedeploy.ComputePlatform
 import software.amazon.awscdk.services.codedeploy.MinimumHealthyHosts
 import software.amazon.awscdk.services.codedeploy.TrafficRouting
 
+/**
+ * Complete base deployment config properties that are required to be supplied by the implementation
+ * of the BaseDeploymentConfig class.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codedeploy.*;
+ * MinimumHealthyHosts minimumHealthyHosts;
+ * TrafficRouting trafficRouting;
+ * BaseDeploymentConfigProps baseDeploymentConfigProps = BaseDeploymentConfigProps.builder()
+ * .computePlatform(ComputePlatform.SERVER)
+ * .deploymentConfigName("deploymentConfigName")
+ * .minimumHealthyHosts(minimumHealthyHosts)
+ * .trafficRouting(trafficRouting)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseDeploymentConfigPropsDsl {
   private val cdkBuilder: BaseDeploymentConfigProps.Builder = BaseDeploymentConfigProps.builder()

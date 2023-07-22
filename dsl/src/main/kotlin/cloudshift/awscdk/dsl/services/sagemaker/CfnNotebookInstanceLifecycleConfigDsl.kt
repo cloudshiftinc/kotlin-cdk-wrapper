@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig
 import software.constructs.Construct
 
+/**
+ * The `AWS::SageMaker::NotebookInstanceLifecycleConfig` resource creates shell scripts that run
+ * when you create and/or start a notebook instance.
+ *
+ * For information about notebook instance lifecycle configurations, see [Customize a Notebook
+ * Instance](https://docs.aws.amazon.com/sagemaker/latest/dg/notebook-lifecycle-config.html) in the
+ * *Amazon SageMaker Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnNotebookInstanceLifecycleConfig cfnNotebookInstanceLifecycleConfig =
+ * CfnNotebookInstanceLifecycleConfig.Builder.create(this, "MyCfnNotebookInstanceLifecycleConfig")
+ * .notebookInstanceLifecycleConfigName("notebookInstanceLifecycleConfigName")
+ * .onCreate(List.of(NotebookInstanceLifecycleHookProperty.builder()
+ * .content("content")
+ * .build()))
+ * .onStart(List.of(NotebookInstanceLifecycleHookProperty.builder()
+ * .content("content")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html)
+ */
 @CdkDslMarker
 public class CfnNotebookInstanceLifecycleConfigDsl(
   scope: Construct,

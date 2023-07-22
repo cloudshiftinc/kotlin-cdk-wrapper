@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.detective.CfnOrganizationAdminProps
 
+/**
+ * Properties for defining a `CfnOrganizationAdmin`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.detective.*;
+ * CfnOrganizationAdminProps cfnOrganizationAdminProps = CfnOrganizationAdminProps.builder()
+ * .accountId("accountId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationAdminPropsDsl {
   private val cdkBuilder: CfnOrganizationAdminProps.Builder = CfnOrganizationAdminProps.builder()

@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.lambda.EnvironmentOptions
 
+/**
+ * Environment variables options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * EnvironmentOptions environmentOptions = EnvironmentOptions.builder()
+ * .removeInEdge(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnvironmentOptionsDsl {
   private val cdkBuilder: EnvironmentOptions.Builder = EnvironmentOptions.builder()

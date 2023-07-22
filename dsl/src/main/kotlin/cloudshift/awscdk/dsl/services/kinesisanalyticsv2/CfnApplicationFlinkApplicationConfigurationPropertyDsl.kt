@@ -6,6 +6,43 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication
 
+/**
+ * Describes configuration parameters for a Flink-based Kinesis Data Analytics application or a
+ * Studio notebook.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * FlinkApplicationConfigurationProperty flinkApplicationConfigurationProperty =
+ * FlinkApplicationConfigurationProperty.builder()
+ * .checkpointConfiguration(CheckpointConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .checkpointingEnabled(false)
+ * .checkpointInterval(123)
+ * .minPauseBetweenCheckpoints(123)
+ * .build())
+ * .monitoringConfiguration(MonitoringConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .logLevel("logLevel")
+ * .metricsLevel("metricsLevel")
+ * .build())
+ * .parallelismConfiguration(ParallelismConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .autoScalingEnabled(false)
+ * .parallelism(123)
+ * .parallelismPerKpu(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-flinkapplicationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationFlinkApplicationConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplication.FlinkApplicationConfigurationProperty.Builder =

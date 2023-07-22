@@ -6,6 +6,42 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A grid layout to define the placement of sheet control.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * SheetControlLayoutProperty sheetControlLayoutProperty = SheetControlLayoutProperty.builder()
+ * .configuration(SheetControlLayoutConfigurationProperty.builder()
+ * .gridLayout(GridLayoutConfigurationProperty.builder()
+ * .elements(List.of(GridLayoutElementProperty.builder()
+ * .columnSpan(123)
+ * .elementId("elementId")
+ * .elementType("elementType")
+ * .rowSpan(123)
+ * // the properties below are optional
+ * .columnIndex(123)
+ * .rowIndex(123)
+ * .build()))
+ * // the properties below are optional
+ * .canvasSizeOptions(GridLayoutCanvasSizeOptionsProperty.builder()
+ * .screenCanvasSizeOptions(GridLayoutScreenCanvasSizeOptionsProperty.builder()
+ * .resizeOption("resizeOption")
+ * // the properties below are optional
+ * .optimizedViewPortWidth("optimizedViewPortWidth")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-sheetcontrollayout.html)
+ */
 @CdkDslMarker
 public class CfnDashboardSheetControlLayoutPropertyDsl {
   private val cdkBuilder: CfnDashboard.SheetControlLayoutProperty.Builder =

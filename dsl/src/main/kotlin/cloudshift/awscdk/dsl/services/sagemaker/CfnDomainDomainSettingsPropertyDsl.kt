@@ -9,6 +9,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 
+/**
+ * A collection of settings that apply to the `SageMaker Domain` .
+ *
+ * These settings are specified through the `CreateDomain` API call.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DomainSettingsProperty domainSettingsProperty = DomainSettingsProperty.builder()
+ * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
+ * .domainExecutionRoleArn("domainExecutionRoleArn")
+ * // the properties below are optional
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .rStudioConnectUrl("rStudioConnectUrl")
+ * .rStudioPackageManagerUrl("rStudioPackageManagerUrl")
+ * .build())
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-domainsettings.html)
+ */
 @CdkDslMarker
 public class CfnDomainDomainSettingsPropertyDsl {
   private val cdkBuilder: CfnDomain.DomainSettingsProperty.Builder =

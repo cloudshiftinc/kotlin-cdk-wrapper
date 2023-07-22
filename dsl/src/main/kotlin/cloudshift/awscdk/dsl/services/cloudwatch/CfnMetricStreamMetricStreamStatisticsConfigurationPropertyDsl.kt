@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudwatch.CfnMetricStream
 
+/**
+ * This structure specifies a list of additional statistics to stream, and the metrics to stream
+ * those additional statistics for.
+ *
+ * All metrics that match the combination of metric name and namespace will be streamed with the
+ * additional statistics, no matter their dimensions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * MetricStreamStatisticsConfigurationProperty metricStreamStatisticsConfigurationProperty =
+ * MetricStreamStatisticsConfigurationProperty.builder()
+ * .additionalStatistics(List.of("additionalStatistics"))
+ * .includeMetrics(List.of(MetricStreamStatisticsMetricProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudwatch-metricstream-metricstreamstatisticsconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMetricStreamMetricStreamStatisticsConfigurationPropertyDsl {
   private val cdkBuilder: CfnMetricStream.MetricStreamStatisticsConfigurationProperty.Builder =

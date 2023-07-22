@@ -10,6 +10,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals
 import software.amazon.awscdk.services.autoscaling.common.ScalingInterval
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.common.*;
+ * ArbitraryIntervals arbitraryIntervals = ArbitraryIntervals.builder()
+ * .absolute(false)
+ * .intervals(List.of(ScalingInterval.builder()
+ * .change(123)
+ * // the properties below are optional
+ * .lower(123)
+ * .upper(123)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ArbitraryIntervalsDsl {
   private val cdkBuilder: ArbitraryIntervals.Builder = ArbitraryIntervals.builder()

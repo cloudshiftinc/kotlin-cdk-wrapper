@@ -7,6 +7,25 @@ import kotlin.String
 import software.amazon.awscdk.services.apigateway.MTLSConfig
 import software.amazon.awscdk.services.s3.IBucket
 
+/**
+ * The mTLS authentication configuration for a custom domain name.
+ *
+ * Example:
+ *
+ * ```
+ * Object acm;
+ * DomainName.Builder.create(this, "domain-name")
+ * .domainName("example.com")
+ * .certificate(acm.Certificate.fromCertificateArn(this, "cert",
+ * "arn:aws:acm:us-east-1:1111111:certificate/11-3336f1-44483d-adc7-9cd375c5169d"))
+ * .mtls(MTLSConfig.builder()
+ * .bucket(new Bucket(this, "bucket"))
+ * .key("truststore.pem")
+ * .version("version")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MTLSConfigDsl {
   private val cdkBuilder: MTLSConfig.Builder = MTLSConfig.builder()

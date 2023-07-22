@@ -9,6 +9,26 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.BaseStreamEventSourceProps
 
+/**
+ * The set of properties for streaming event sources shared by Dynamo, Kinesis and Kafka.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.*;
+ * BaseStreamEventSourceProps baseStreamEventSourceProps = BaseStreamEventSourceProps.builder()
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * // the properties below are optional
+ * .batchSize(123)
+ * .enabled(false)
+ * .maxBatchingWindow(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseStreamEventSourcePropsDsl {
   private val cdkBuilder: BaseStreamEventSourceProps.Builder = BaseStreamEventSourceProps.builder()

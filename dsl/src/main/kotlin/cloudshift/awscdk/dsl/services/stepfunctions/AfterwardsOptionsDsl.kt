@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.stepfunctions.AfterwardsOptions
 
+/**
+ * Options for selecting the choice paths.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * AfterwardsOptions afterwardsOptions = AfterwardsOptions.builder()
+ * .includeErrorHandlers(false)
+ * .includeOtherwise(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AfterwardsOptionsDsl {
   private val cdkBuilder: AfterwardsOptions.Builder = AfterwardsOptions.builder()

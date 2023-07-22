@@ -13,6 +13,29 @@ import software.amazon.awscdk.services.ses.IReceiptRuleAction
 import software.amazon.awscdk.services.ses.IReceiptRuleSet
 import software.amazon.awscdk.services.ses.TlsPolicy
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * ReceiptRule receiptRule;
+ * IReceiptRuleAction receiptRuleAction;
+ * ReceiptRuleSet receiptRuleSet;
+ * DropSpamReceiptRuleProps dropSpamReceiptRuleProps = DropSpamReceiptRuleProps.builder()
+ * .ruleSet(receiptRuleSet)
+ * // the properties below are optional
+ * .actions(List.of(receiptRuleAction))
+ * .after(receiptRule)
+ * .enabled(false)
+ * .receiptRuleName("receiptRuleName")
+ * .recipients(List.of("recipients"))
+ * .scanEnabled(false)
+ * .tlsPolicy(TlsPolicy.OPTIONAL)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DropSpamReceiptRulePropsDsl {
   private val cdkBuilder: DropSpamReceiptRuleProps.Builder = DropSpamReceiptRuleProps.builder()

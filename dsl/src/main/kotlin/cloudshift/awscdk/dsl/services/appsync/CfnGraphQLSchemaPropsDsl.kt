@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appsync.CfnGraphQLSchemaProps
 
+/**
+ * Properties for defining a `CfnGraphQLSchema`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * CfnGraphQLSchemaProps cfnGraphQLSchemaProps = CfnGraphQLSchemaProps.builder()
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .definition("definition")
+ * .definitionS3Location("definitionS3Location")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlschema.html)
+ */
 @CdkDslMarker
 public class CfnGraphQLSchemaPropsDsl {
   private val cdkBuilder: CfnGraphQLSchemaProps.Builder = CfnGraphQLSchemaProps.builder()

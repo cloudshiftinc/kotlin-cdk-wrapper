@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.DeviceTracking
 
+/**
+ * Device tracking settings.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .deviceTracking(DeviceTracking.builder()
+ * .challengeRequiredOnNewDevice(true)
+ * .deviceOnlyRememberedOnUserPrompt(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-device-tracking.html)
+ */
 @CdkDslMarker
 public class DeviceTrackingDsl {
   private val cdkBuilder: DeviceTracking.Builder = DeviceTracking.builder()

@@ -7,6 +7,25 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.SecretRotationApplication
 
+/**
+ * A secret rotation serverless application.
+ *
+ * Example:
+ *
+ * ```
+ * Secret myUserSecret;
+ * Secret myMasterSecret;
+ * IConnectable myDatabase;
+ * Vpc myVpc;
+ * SecretRotation.Builder.create(this, "SecretRotation")
+ * .application(SecretRotationApplication.MYSQL_ROTATION_MULTI_USER)
+ * .secret(myUserSecret) // The secret that will be rotated
+ * .masterSecret(myMasterSecret) // The secret used for the rotation
+ * .target(myDatabase)
+ * .vpc(myVpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SecretRotationApplicationDsl(
   applicationId: String,

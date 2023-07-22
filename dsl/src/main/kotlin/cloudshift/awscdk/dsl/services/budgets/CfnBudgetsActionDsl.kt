@@ -11,6 +11,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
 import software.constructs.Construct
 
+/**
+ * The `AWS::Budgets::BudgetsAction` resource enables you to take predefined actions that are
+ * initiated when a budget threshold has been exceeded.
+ *
+ * For more information, see [Managing Your Costs with
+ * Budgets](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html)
+ * in the *AWS Billing and Cost Management User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * CfnBudgetsAction cfnBudgetsAction = CfnBudgetsAction.Builder.create(this, "MyCfnBudgetsAction")
+ * .actionThreshold(ActionThresholdProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .actionType("actionType")
+ * .budgetName("budgetName")
+ * .definition(DefinitionProperty.builder()
+ * .iamActionDefinition(IamActionDefinitionProperty.builder()
+ * .policyArn("policyArn")
+ * // the properties below are optional
+ * .groups(List.of("groups"))
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build())
+ * .scpActionDefinition(ScpActionDefinitionProperty.builder()
+ * .policyId("policyId")
+ * .targetIds(List.of("targetIds"))
+ * .build())
+ * .ssmActionDefinition(SsmActionDefinitionProperty.builder()
+ * .instanceIds(List.of("instanceIds"))
+ * .region("region")
+ * .subtype("subtype")
+ * .build())
+ * .build())
+ * .executionRoleArn("executionRoleArn")
+ * .notificationType("notificationType")
+ * .subscribers(List.of(SubscriberProperty.builder()
+ * .address("address")
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .approvalModel("approvalModel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html)
+ */
 @CdkDslMarker
 public class CfnBudgetsActionDsl(
   scope: Construct,

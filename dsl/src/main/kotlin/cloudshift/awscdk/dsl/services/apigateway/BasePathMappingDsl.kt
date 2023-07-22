@@ -11,6 +11,28 @@ import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.Stage
 import software.constructs.Construct
 
+/**
+ * This resource creates a base path that clients who call your API must use in the invocation URL.
+ *
+ * Unless you're importing a domain with `DomainName.fromDomainNameAttributes()`,
+ * you can use `DomainName.addBasePathMapping()` to define mappings.
+ *
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * IDomainName domainName = DomainName.fromDomainNameAttributes(this, "DomainName",
+ * DomainNameAttributes.builder()
+ * .domainName("domainName")
+ * .domainNameAliasHostedZoneId("domainNameAliasHostedZoneId")
+ * .domainNameAliasTarget("domainNameAliasTarget")
+ * .build());
+ * BasePathMapping.Builder.create(this, "BasePathMapping")
+ * .domainName(domainName)
+ * .restApi(api)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BasePathMappingDsl(
   scope: Construct,

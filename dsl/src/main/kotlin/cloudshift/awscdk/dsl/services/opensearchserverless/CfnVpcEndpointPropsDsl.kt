@@ -8,6 +8,26 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps
 
+/**
+ * Properties for defining a `CfnVpcEndpoint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchserverless.*;
+ * CfnVpcEndpointProps cfnVpcEndpointProps = CfnVpcEndpointProps.builder()
+ * .name("name")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVpcEndpointPropsDsl {
   private val cdkBuilder: CfnVpcEndpointProps.Builder = CfnVpcEndpointProps.builder()

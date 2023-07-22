@@ -13,6 +13,34 @@ import software.amazon.awscdk.PermissionsBoundary
 import software.amazon.awscdk.Stage
 import software.constructs.Construct
 
+/**
+ * An abstract application modeling unit consisting of Stacks that should be deployed together.
+ *
+ * Derive a subclass of `Stage` and use it to model a single instance of your
+ * application.
+ *
+ * You can then instantiate your subclass multiple times to model multiple
+ * copies of your application which should be be deployed to different
+ * environments.
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline;
+ * MyApplicationStage preprod = new MyApplicationStage(this, "PreProd");
+ * MyApplicationStage prod = new MyApplicationStage(this, "Prod");
+ * pipeline.addStage(preprod, AddStageOpts.builder()
+ * .post(List.of(
+ * ShellStep.Builder.create("Validate Endpoint")
+ * .commands(List.of("curl -Ssf https://my.webservice.com/"))
+ * .build()))
+ * .build());
+ * pipeline.addStage(prod, AddStageOpts.builder()
+ * .pre(List.of(
+ * new ManualApprovalStep("PromoteToProd")))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StageDsl(
   scope: Construct,

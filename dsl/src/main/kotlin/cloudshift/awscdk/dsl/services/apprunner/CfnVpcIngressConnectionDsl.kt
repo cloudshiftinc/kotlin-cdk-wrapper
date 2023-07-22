@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection
 import software.constructs.Construct
 
+/**
+ * Specify an AWS App Runner VPC Ingress Connection by using the
+ * `AWS::AppRunner::VpcIngressConnection` resource in an AWS CloudFormation template.
+ *
+ * The `AWS::AppRunner::VpcIngressConnection` resource is an AWS App Runner resource type that
+ * specifies an App Runner VPC Ingress Connection.
+ *
+ * App Runner requires this resource when you want to associate your App Runner service to an Amazon
+ * VPC endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnVpcIngressConnection cfnVpcIngressConnection = CfnVpcIngressConnection.Builder.create(this,
+ * "MyCfnVpcIngressConnection")
+ * .ingressVpcConfiguration(IngressVpcConfigurationProperty.builder()
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build())
+ * .serviceArn("serviceArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcIngressConnectionName("vpcIngressConnectionName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcingressconnection.html)
+ */
 @CdkDslMarker
 public class CfnVpcIngressConnectionDsl(
   scope: Construct,

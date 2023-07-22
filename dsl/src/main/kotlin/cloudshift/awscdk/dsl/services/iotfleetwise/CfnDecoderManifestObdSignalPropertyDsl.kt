@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * Information about signal messages using the on-board diagnostics (OBD) II protocol in a vehicle.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * ObdSignalProperty obdSignalProperty = ObdSignalProperty.builder()
+ * .byteLength("byteLength")
+ * .offset("offset")
+ * .pid("pid")
+ * .pidResponseLength("pidResponseLength")
+ * .scaling("scaling")
+ * .serviceMode("serviceMode")
+ * .startByte("startByte")
+ * // the properties below are optional
+ * .bitMaskLength("bitMaskLength")
+ * .bitRightShift("bitRightShift")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestObdSignalPropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.ObdSignalProperty.Builder =

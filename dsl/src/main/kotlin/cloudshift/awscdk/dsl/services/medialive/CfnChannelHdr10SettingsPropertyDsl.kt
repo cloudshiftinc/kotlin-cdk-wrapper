@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Hdr10 Settings.
+ *
+ * The parents of this entity are H265ColorSpaceSettings (for color space settings in the output)
+ * and VideoSelectorColorSpaceSettings (for color space settings in the input).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Hdr10SettingsProperty hdr10SettingsProperty = Hdr10SettingsProperty.builder()
+ * .maxCll(123)
+ * .maxFall(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hdr10settings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHdr10SettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Hdr10SettingsProperty.Builder =

@@ -7,6 +7,25 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.ec2.DestinationOptions
 import software.amazon.awscdk.services.ec2.FlowLogFileFormat
 
+/**
+ * Options for writing logs to a destination.
+ *
+ * TODO: there are other destination options, currently they are
+ * only for s3 destinations (not sure if that will change)
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * DestinationOptions destinationOptions = DestinationOptions.builder()
+ * .fileFormat(FlowLogFileFormat.PLAIN_TEXT)
+ * .hiveCompatiblePartitions(false)
+ * .perHourPartition(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DestinationOptionsDsl {
   private val cdkBuilder: DestinationOptions.Builder = DestinationOptions.builder()

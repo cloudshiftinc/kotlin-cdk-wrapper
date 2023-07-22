@@ -14,6 +14,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnListener
 import software.amazon.awscdk.services.vpclattice.CfnListenerProps
 
+/**
+ * Properties for defining a `CfnListener`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnListenerProps cfnListenerProps = CfnListenerProps.builder()
+ * .defaultAction(DefaultActionProperty.builder()
+ * .fixedResponse(FixedResponseProperty.builder()
+ * .statusCode(123)
+ * .build())
+ * .forward(ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build())
+ * .build())
+ * .protocol("protocol")
+ * // the properties below are optional
+ * .name("name")
+ * .port(123)
+ * .serviceIdentifier("serviceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html)
+ */
 @CdkDslMarker
 public class CfnListenerPropsDsl {
   private val cdkBuilder: CfnListenerProps.Builder = CfnListenerProps.builder()

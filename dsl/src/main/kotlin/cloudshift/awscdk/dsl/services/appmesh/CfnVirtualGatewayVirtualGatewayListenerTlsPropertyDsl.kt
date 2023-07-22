@@ -7,6 +7,52 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualGateway
 
+/**
+ * An object that represents the Transport Layer Security (TLS) properties for a listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualGatewayListenerTlsProperty virtualGatewayListenerTlsProperty =
+ * VirtualGatewayListenerTlsProperty.builder()
+ * .certificate(VirtualGatewayListenerTlsCertificateProperty.builder()
+ * .acm(VirtualGatewayListenerTlsAcmCertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .file(VirtualGatewayListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(VirtualGatewayListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * .mode("mode")
+ * // the properties below are optional
+ * .validation(VirtualGatewayListenerTlsValidationContextProperty.builder()
+ * .trust(VirtualGatewayListenerTlsValidationContextTrustProperty.builder()
+ * .file(VirtualGatewayTlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(VirtualGatewayTlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+ * .match(SubjectAlternativeNameMatchersProperty.builder()
+ * .exact(List.of("exact"))
+ * .build())
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualgateway-virtualgatewaylistenertls.html)
+ */
 @CdkDslMarker
 public class CfnVirtualGatewayVirtualGatewayListenerTlsPropertyDsl {
   private val cdkBuilder: CfnVirtualGateway.VirtualGatewayListenerTlsProperty.Builder =

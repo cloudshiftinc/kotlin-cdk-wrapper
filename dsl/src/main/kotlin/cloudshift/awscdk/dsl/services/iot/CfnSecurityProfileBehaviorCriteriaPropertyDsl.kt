@@ -8,6 +8,39 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnSecurityProfile
 
+/**
+ * The criteria by which the behavior is determined to be normal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * BehaviorCriteriaProperty behaviorCriteriaProperty = BehaviorCriteriaProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .consecutiveDatapointsToAlarm(123)
+ * .consecutiveDatapointsToClear(123)
+ * .durationSeconds(123)
+ * .mlDetectionConfig(MachineLearningDetectionConfigProperty.builder()
+ * .confidenceLevel("confidenceLevel")
+ * .build())
+ * .statisticalThreshold(StatisticalThresholdProperty.builder()
+ * .statistic("statistic")
+ * .build())
+ * .value(MetricValueProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .count("count")
+ * .number(123)
+ * .numbers(List.of(123))
+ * .ports(List.of(123))
+ * .strings(List.of("strings"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-securityprofile-behaviorcriteria.html)
+ */
 @CdkDslMarker
 public class CfnSecurityProfileBehaviorCriteriaPropertyDsl {
   private val cdkBuilder: CfnSecurityProfile.BehaviorCriteriaProperty.Builder =

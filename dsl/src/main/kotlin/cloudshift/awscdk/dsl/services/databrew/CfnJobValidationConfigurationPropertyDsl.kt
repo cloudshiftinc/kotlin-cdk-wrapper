@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * Configuration for data quality validation.
+ *
+ * Used to select the Rulesets and Validation Mode to be used in the profile job. When
+ * ValidationConfiguration is null, the profile job will run without data quality validation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * ValidationConfigurationProperty validationConfigurationProperty =
+ * ValidationConfigurationProperty.builder()
+ * .rulesetArn("rulesetArn")
+ * // the properties below are optional
+ * .validationMode("validationMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-validationconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobValidationConfigurationPropertyDsl {
   private val cdkBuilder: CfnJob.ValidationConfigurationProperty.Builder =

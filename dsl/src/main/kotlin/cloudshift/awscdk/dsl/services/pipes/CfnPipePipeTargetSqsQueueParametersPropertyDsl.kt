@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a Amazon SQS stream as a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeTargetSqsQueueParametersProperty pipeTargetSqsQueueParametersProperty =
+ * PipeTargetSqsQueueParametersProperty.builder()
+ * .messageDeduplicationId("messageDeduplicationId")
+ * .messageGroupId("messageGroupId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipetargetsqsqueueparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeTargetSqsQueueParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeTargetSqsQueueParametersProperty.Builder =

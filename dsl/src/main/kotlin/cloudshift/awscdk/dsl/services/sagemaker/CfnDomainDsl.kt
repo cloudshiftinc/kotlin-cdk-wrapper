@@ -13,6 +13,164 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 import software.constructs.Construct
 
+/**
+ * Creates a `Domain` used by Amazon SageMaker Studio.
+ *
+ * A domain consists of an associated Amazon Elastic File System (EFS) volume, a list of authorized
+ * users, and a variety of security, application, policy, and Amazon Virtual Private Cloud (VPC)
+ * configurations. Users within a domain can share notebook files and other artifacts with each other.
+ *
+ * *EFS storage*
+ *
+ * When a domain is created, an EFS volume is created for use by all of the users within the domain.
+ * Each user receives a private home directory within the EFS volume for notebooks, Git repositories,
+ * and data files.
+ *
+ * SageMaker uses the AWS Key Management Service ( AWS KMS) to encrypt the EFS volume attached to
+ * the domain with an AWS managed key by default. For more control, you can specify a customer managed
+ * key. For more information, see [Protect Data at Rest Using
+ * Encryption](https://docs.aws.amazon.com/sagemaker/latest/dg/encryption-at-rest.html) .
+ *
+ * *VPC configuration*
+ *
+ * All SageMaker Studio traffic between the domain and the EFS volume is through the specified VPC
+ * and subnets. For other Studio traffic, you can specify the `AppNetworkAccessType` parameter.
+ * `AppNetworkAccessType` corresponds to the network access type that you choose when you onboard to
+ * Studio. The following options are available:
+ *
+ * * `PublicInternetOnly` - Non-EFS traffic goes through a VPC managed by Amazon SageMaker, which
+ * allows internet access. This is the default value.
+ * * `VpcOnly` - All Studio traffic is through the specified VPC and subnets. Internet access is
+ * disabled by default. To allow internet access, you must specify a NAT gateway.
+ *
+ * When internet access is disabled, you won't be able to run a Studio notebook or to train or host
+ * models unless your VPC has an interface endpoint to the SageMaker API and runtime or a NAT gateway
+ * and your security groups allow outbound connections.
+ *
+ *
+ * NFS traffic over TCP on port 2049 needs to be allowed in both inbound and outbound rules in order
+ * to launch a SageMaker Studio app successfully.
+ *
+ *
+ * For more information, see [Connect SageMaker Studio Notebooks to Resources in a
+ * VPC](https://docs.aws.amazon.com/sagemaker/latest/dg/studio-notebooks-and-internet-access.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDomain cfnDomain = CfnDomain.Builder.create(this, "MyCfnDomain")
+ * .authMode("authMode")
+ * .defaultUserSettings(UserSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * // the properties below are optional
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rSessionAppSettings(RSessionAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
+ * .accessStatus("accessStatus")
+ * .userGroup("userGroup")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .sharingSettings(SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * .build())
+ * .domainName("domainName")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .appNetworkAccessType("appNetworkAccessType")
+ * .appSecurityGroupManagement("appSecurityGroupManagement")
+ * .defaultSpaceSettings(DefaultSpaceSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * // the properties below are optional
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .domainSettings(DomainSettingsProperty.builder()
+ * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
+ * .domainExecutionRoleArn("domainExecutionRoleArn")
+ * // the properties below are optional
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .rStudioConnectUrl("rStudioConnectUrl")
+ * .rStudioPackageManagerUrl("rStudioPackageManagerUrl")
+ * .build())
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainDsl(
   scope: Construct,

@@ -9,6 +9,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.macie.CfnFindingsFilter
 import software.amazon.awscdk.services.macie.CfnFindingsFilterProps
 
+/**
+ * Properties for defining a `CfnFindingsFilter`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.macie.*;
+ * CfnFindingsFilterProps cfnFindingsFilterProps = CfnFindingsFilterProps.builder()
+ * .findingCriteria(FindingCriteriaProperty.builder()
+ * .criterion(Map.of(
+ * "criterionKey", CriterionAdditionalPropertiesProperty.builder()
+ * .eq(List.of("eq"))
+ * .gt(123)
+ * .gte(123)
+ * .lt(123)
+ * .lte(123)
+ * .neq(List.of("neq"))
+ * .build()))
+ * .build())
+ * .name("name")
+ * // the properties below are optional
+ * .action("action")
+ * .description("description")
+ * .position(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-macie-findingsfilter.html)
+ */
 @CdkDslMarker
 public class CfnFindingsFilterPropsDsl {
   private val cdkBuilder: CfnFindingsFilterProps.Builder = CfnFindingsFilterProps.builder()

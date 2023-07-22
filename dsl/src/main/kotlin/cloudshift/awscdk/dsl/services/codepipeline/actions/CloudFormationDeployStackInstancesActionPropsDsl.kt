@@ -10,6 +10,40 @@ import software.amazon.awscdk.services.codepipeline.actions.StackInstances
 import software.amazon.awscdk.services.codepipeline.actions.StackSetParameters
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for the CloudFormationDeployStackInstancesAction.
+ *
+ * Example:
+ *
+ * ```
+ * Pipeline pipeline;
+ * Artifact sourceOutput;
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("DeployStackSets")
+ * .actions(List.of(
+ * // First, update the StackSet itself with the newest template
+ * CloudFormationDeployStackSetAction.Builder.create()
+ * .actionName("UpdateStackSet")
+ * .runOrder(1)
+ * .stackSetName("MyStackSet")
+ * .template(StackSetTemplate.fromArtifactPath(sourceOutput.atPath("template.yaml")))
+ * // Change this to 'StackSetDeploymentModel.organizations()' if you want to deploy to OUs
+ * .deploymentModel(StackSetDeploymentModel.selfManaged())
+ * // This deploys to a set of accounts
+ * .stackInstances(StackInstances.inAccounts(List.of("111111111111"), List.of("us-east-1",
+ * "eu-west-1")))
+ * .build(),
+ * // Afterwards, update/create additional instances in other accounts
+ * CloudFormationDeployStackInstancesAction.Builder.create()
+ * .actionName("AddMoreInstances")
+ * .runOrder(2)
+ * .stackSetName("MyStackSet")
+ * .stackInstances(StackInstances.inAccounts(List.of("222222222222", "333333333333"),
+ * List.of("us-east-1", "eu-west-1")))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class CloudFormationDeployStackInstancesActionPropsDsl {
   private val cdkBuilder: CloudFormationDeployStackInstancesActionProps.Builder =

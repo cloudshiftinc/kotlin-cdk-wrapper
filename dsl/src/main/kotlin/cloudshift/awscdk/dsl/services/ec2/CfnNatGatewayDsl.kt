@@ -13,6 +13,47 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnNatGateway
 import software.constructs.Construct
 
+/**
+ * Specifies a network address translation (NAT) gateway in the specified subnet.
+ *
+ * You can create either a public NAT gateway or a private NAT gateway. The default is a public NAT
+ * gateway. If you create a public NAT gateway, you must specify an elastic IP address.
+ *
+ * With a NAT gateway, instances in a private subnet can connect to the internet, other AWS
+ * services, or an on-premises network using the IP address of the NAT gateway.
+ *
+ * If you add a default route ( `AWS::EC2::Route` resource) that points to a NAT gateway, specify
+ * the NAT gateway ID for the route's `NatGatewayId` property.
+ *
+ * For more information, see [NAT
+ * Gateways](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html) in the *Amazon VPC
+ * User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNatGateway cfnNatGateway = CfnNatGateway.Builder.create(this, "MyCfnNatGateway")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .allocationId("allocationId")
+ * .connectivityType("connectivityType")
+ * .maxDrainDurationSeconds(123)
+ * .privateIpAddress("privateIpAddress")
+ * .secondaryAllocationIds(List.of("secondaryAllocationIds"))
+ * .secondaryPrivateIpAddressCount(123)
+ * .secondaryPrivateIpAddresses(List.of("secondaryPrivateIpAddresses"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html)
+ */
 @CdkDslMarker
 public class CfnNatGatewayDsl(
   scope: Construct,

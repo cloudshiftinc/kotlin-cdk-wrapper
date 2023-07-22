@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.evidently.CfnExperiment
 
+/**
+ * A structure that defines one treatment in an experiment.
+ *
+ * A treatment is a variation of the feature that you are including in the experiment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * TreatmentObjectProperty treatmentObjectProperty = TreatmentObjectProperty.builder()
+ * .feature("feature")
+ * .treatmentName("treatmentName")
+ * .variation("variation")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-evidently-experiment-treatmentobject.html)
+ */
 @CdkDslMarker
 public class CfnExperimentTreatmentObjectPropertyDsl {
   private val cdkBuilder: CfnExperiment.TreatmentObjectProperty.Builder =

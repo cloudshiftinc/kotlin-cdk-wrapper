@@ -13,6 +13,42 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerProps
 
+/**
+ * Properties for defining a `CfnLoadBalancer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * CfnLoadBalancerProps cfnLoadBalancerProps = CfnLoadBalancerProps.builder()
+ * .ipAddressType("ipAddressType")
+ * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .name("name")
+ * .scheme("scheme")
+ * .securityGroups(List.of("securityGroups"))
+ * .subnetMappings(List.of(SubnetMappingProperty.builder()
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .allocationId("allocationId")
+ * .iPv6Address("iPv6Address")
+ * .privateIPv4Address("privateIPv4Address")
+ * .build()))
+ * .subnets(List.of("subnets"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html)
+ */
 @CdkDslMarker
 public class CfnLoadBalancerPropsDsl {
   private val cdkBuilder: CfnLoadBalancerProps.Builder = CfnLoadBalancerProps.builder()

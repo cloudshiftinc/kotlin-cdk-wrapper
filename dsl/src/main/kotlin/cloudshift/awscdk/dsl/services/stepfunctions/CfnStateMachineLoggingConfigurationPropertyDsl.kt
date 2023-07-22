@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachine
 
+/**
+ * Defines what execution history events are logged and where they are logged.
+ *
+ * Step Functions provides the log levels — `OFF` , `ALL` , `ERROR` , and `FATAL` . No event types
+ * log when set to `OFF` and all event types do when set to `ALL` .
+ *
+ *
+ * By default, the `level` is set to `OFF` . For more information see [Log
+ * Levels](https://docs.aws.amazon.com/step-functions/latest/dg/cloudwatch-log-level.html) in the AWS
+ * Step Functions User Guide.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * LoggingConfigurationProperty loggingConfigurationProperty =
+ * LoggingConfigurationProperty.builder()
+ * .destinations(List.of(LogDestinationProperty.builder()
+ * .cloudWatchLogsLogGroup(CloudWatchLogsLogGroupProperty.builder()
+ * .logGroupArn("logGroupArn")
+ * .build())
+ * .build()))
+ * .includeExecutionData(false)
+ * .level("level")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-stepfunctions-statemachine-loggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnStateMachine.LoggingConfigurationProperty.Builder =

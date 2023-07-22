@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * SageMaker training image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TrainingEnvironmentProperty trainingEnvironmentProperty = TrainingEnvironmentProperty.builder()
+ * .containerImage(List.of("containerImage"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingenvironment.html)
+ */
 @CdkDslMarker
 public class CfnModelCardTrainingEnvironmentPropertyDsl {
   private val cdkBuilder: CfnModelCard.TrainingEnvironmentProperty.Builder =

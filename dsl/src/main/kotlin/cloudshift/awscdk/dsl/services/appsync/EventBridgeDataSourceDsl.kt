@@ -10,6 +10,27 @@ import software.amazon.awscdk.services.events.IEventBus
 import software.amazon.awscdk.services.iam.IRole
 import software.constructs.Construct
 
+/**
+ * An AppSync datasource backed by EventBridge.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.events.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
+ * .name("EventBridgeApi")
+ * .schema(SchemaFile.fromAsset(join(__dirname, "appsync.eventbridge.graphql")))
+ * .build();
+ * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
+ * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
+ * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("emitEvent")
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class EventBridgeDataSourceDsl(
   scope: Construct,

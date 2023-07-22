@@ -8,6 +8,58 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplicationOutput
 import software.constructs.Construct
 
+/**
+ * Adds an external destination to your SQL-based Amazon Kinesis Data Analytics application.
+ *
+ * If you want Kinesis Data Analytics to deliver data from an in-application stream within your
+ * application to an external destination (such as an Kinesis data stream, a Kinesis Data Firehose
+ * delivery stream, or an Amazon Lambda function), you add the relevant configuration to your
+ * application using this operation. You can configure one or more outputs for your application. Each
+ * output configuration maps an in-application stream and an external destination.
+ *
+ * You can use one of the output configurations to deliver data from your in-application error
+ * stream to an external destination so that you can analyze the errors.
+ *
+ * Any configuration update, including adding a streaming source using this operation, results in a
+ * new version of the application. You can use the
+ * [DescribeApplication](https://docs.aws.amazon.com/kinesisanalytics/latest/apiv2/API_DescribeApplication.html)
+ * operation to find the current application version.
+ *
+ *
+ * Creation of multiple outputs should be sequential (use of DependsOn) to avoid a problem with a
+ * stale application version ( *ConcurrentModificationException* ).
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalyticsv2.*;
+ * CfnApplicationOutput cfnApplicationOutput = CfnApplicationOutput.Builder.create(this,
+ * "MyCfnApplicationOutput")
+ * .applicationName("applicationName")
+ * .output(OutputProperty.builder()
+ * .destinationSchema(DestinationSchemaProperty.builder()
+ * .recordFormatType("recordFormatType")
+ * .build())
+ * // the properties below are optional
+ * .kinesisFirehoseOutput(KinesisFirehoseOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .kinesisStreamsOutput(KinesisStreamsOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .lambdaOutput(LambdaOutputProperty.builder()
+ * .resourceArn("resourceArn")
+ * .build())
+ * .name("name")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html)
+ */
 @CdkDslMarker
 public class CfnApplicationOutputDsl(
   scope: Construct,

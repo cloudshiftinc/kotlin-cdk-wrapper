@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The window options of the geospatial map visual.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GeospatialWindowOptionsProperty geospatialWindowOptionsProperty =
+ * GeospatialWindowOptionsProperty.builder()
+ * .bounds(GeospatialCoordinateBoundsProperty.builder()
+ * .east(123)
+ * .north(123)
+ * .south(123)
+ * .west(123)
+ * .build())
+ * .mapZoomMode("mapZoomMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-geospatialwindowoptions.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisGeospatialWindowOptionsPropertyDsl {
   private val cdkBuilder: CfnAnalysis.GeospatialWindowOptionsProperty.Builder =

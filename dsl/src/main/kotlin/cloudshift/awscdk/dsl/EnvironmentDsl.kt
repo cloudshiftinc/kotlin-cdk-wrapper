@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.Environment
 
+/**
+ * The deployment environment for a stack.
+ *
+ * Example:
+ *
+ * ```
+ * // Passing a replication bucket created in a different stack.
+ * App app = new App();
+ * Stack replicationStack = Stack.Builder.create(app, "ReplicationStack")
+ * .env(Environment.builder()
+ * .region("us-west-1")
+ * .build())
+ * .build();
+ * Key key = new Key(replicationStack, "ReplicationKey");
+ * Bucket replicationBucket = Bucket.Builder.create(replicationStack, "ReplicationBucket")
+ * // like was said above - replication buckets need a set physical name
+ * .bucketName(PhysicalName.GENERATE_IF_NEEDED)
+ * .encryptionKey(key)
+ * .build();
+ * // later...
+ * // later...
+ * Pipeline.Builder.create(replicationStack, "Pipeline")
+ * .crossRegionReplicationBuckets(Map.of(
+ * "us-west-1", replicationBucket))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EnvironmentDsl {
   private val cdkBuilder: Environment.Builder = Environment.builder()

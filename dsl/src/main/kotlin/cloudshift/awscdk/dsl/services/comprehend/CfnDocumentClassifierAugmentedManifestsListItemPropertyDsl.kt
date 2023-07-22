@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.comprehend.CfnDocumentClassifier
 
+/**
+ * An augmented manifest file that provides training data for your custom model.
+ *
+ * An augmented manifest file is a labeled dataset that is produced by Amazon SageMaker Ground
+ * Truth.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * AugmentedManifestsListItemProperty augmentedManifestsListItemProperty =
+ * AugmentedManifestsListItemProperty.builder()
+ * .attributeNames(List.of("attributeNames"))
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .split("split")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-documentclassifier-augmentedmanifestslistitem.html)
+ */
 @CdkDslMarker
 public class CfnDocumentClassifierAugmentedManifestsListItemPropertyDsl {
   private val cdkBuilder: CfnDocumentClassifier.AugmentedManifestsListItemProperty.Builder =

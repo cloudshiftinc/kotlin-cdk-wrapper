@@ -10,6 +10,33 @@ import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.elasticsearch.IDomain
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * (deprecated) Properties for the Elasticsearch Data Source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.elasticsearch.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Domain domain;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * ElasticsearchDataSourceProps elasticsearchDataSourceProps =
+ * ElasticsearchDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .domain(domain)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ *
+ * * use `OpenSearchDataSourceProps` with `OpenSearchDataSource`
+ */
 @CdkDslMarker
 @Deprecated(message = "deprecated in CDK")
 public class ElasticsearchDataSourcePropsDsl {

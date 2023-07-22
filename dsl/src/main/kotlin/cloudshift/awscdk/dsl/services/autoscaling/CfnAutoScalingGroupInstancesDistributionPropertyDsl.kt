@@ -7,6 +7,37 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * Use this structure to specify the distribution of On-Demand Instances and Spot Instances and the
+ * allocation strategies used to fulfill On-Demand and Spot capacities for a mixed instances policy.
+ *
+ * For more information, see [Auto Scaling groups with multiple instance types and purchase
+ * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-mixed-instances-groups.html)
+ * in the *Amazon EC2 Auto Scaling User Guide* .
+ *
+ * `InstancesDistribution` is a property of the [AWS::AutoScaling::AutoScalingGroup
+ * MixedInstancesPolicy](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-mixedinstancespolicy.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * InstancesDistributionProperty instancesDistributionProperty =
+ * InstancesDistributionProperty.builder()
+ * .onDemandAllocationStrategy("onDemandAllocationStrategy")
+ * .onDemandBaseCapacity(123)
+ * .onDemandPercentageAboveBaseCapacity(123)
+ * .spotAllocationStrategy("spotAllocationStrategy")
+ * .spotInstancePools(123)
+ * .spotMaxPrice("spotMaxPrice")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancesdistribution.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupInstancesDistributionPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.InstancesDistributionProperty.Builder =

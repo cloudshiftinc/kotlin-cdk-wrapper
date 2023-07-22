@@ -14,6 +14,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet
 import software.constructs.Construct
 
+/**
+ * Creates a resource set in Amazon Route 53 Application Recovery Controller.
+ *
+ * A resource set is a set of resources of one type, such as Network Load Balancers, that span
+ * multiple cells. You can associate a resource set with a readiness check to have Route 53 ARC
+ * continually monitor the resources in the set for failover readiness.
+ *
+ * You typically create a resource set and a readiness check for each supported type of AWS resource
+ * in your application.
+ *
+ * For more information, see [Readiness checks, resource sets, and readiness
+ * scopes](https://docs.aws.amazon.com/r53recovery/latest/dg/recovery-readiness.recovery-groups.readiness-scope.html)
+ * in the Amazon Route 53 Application Recovery Controller Developer Guide.
+ *
+ * Route 53 ARC Readiness supports us-east-1 and us-west-2 AWS Regions only.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53recoveryreadiness.*;
+ * CfnResourceSet cfnResourceSet = CfnResourceSet.Builder.create(this, "MyCfnResourceSet")
+ * .resources(List.of(ResourceProperty.builder()
+ * .componentId("componentId")
+ * .dnsTargetResource(DNSTargetResourceProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneArn("hostedZoneArn")
+ * .recordSetId("recordSetId")
+ * .recordType("recordType")
+ * .targetResource(TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build())
+ * .build())
+ * .readinessScopes(List.of("readinessScopes"))
+ * .resourceArn("resourceArn")
+ * .build()))
+ * .resourceSetType("resourceSetType")
+ * // the properties below are optional
+ * .resourceSetName("resourceSetName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)
+ */
 @CdkDslMarker
 public class CfnResourceSetDsl(
   scope: Construct,

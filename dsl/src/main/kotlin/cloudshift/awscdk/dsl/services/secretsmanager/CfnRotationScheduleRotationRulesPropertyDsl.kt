@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule
 
+/**
+ * The rotation schedule and window.
+ *
+ * We recommend you use `ScheduleExpression` to set a cron or rate expression for the schedule and
+ * `Duration` to set the length of the rotation window.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * RotationRulesProperty rotationRulesProperty = RotationRulesProperty.builder()
+ * .automaticallyAfterDays(123)
+ * .duration("duration")
+ * .scheduleExpression("scheduleExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-rotationschedule-rotationrules.html)
+ */
 @CdkDslMarker
 public class CfnRotationScheduleRotationRulesPropertyDsl {
   private val cdkBuilder: CfnRotationSchedule.RotationRulesProperty.Builder =

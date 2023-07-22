@@ -11,6 +11,74 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * Use `InstanceFleetConfig` to define instance fleets for an EMR cluster.
+ *
+ * A cluster can not use both instance fleets and instance groups. For more information, see
+ * [Configure Instance
+ * Fleets](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
+ * in the *Amazon EMR Management Guide* .
+ *
+ *
+ * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+ * excluding 5.0.x versions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ConfigurationProperty configurationProperty_;
+ * InstanceFleetConfigProperty instanceFleetConfigProperty = InstanceFleetConfigProperty.builder()
+ * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .bidPrice("bidPrice")
+ * .bidPriceAsPercentageOfOnDemandPrice(123)
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurationProperties(Map.of(
+ * "configurationPropertiesKey", "configurationProperties"))
+ * .configurations(List.of(configurationProperty_))
+ * .build()))
+ * .customAmiId("customAmiId")
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .weightedCapacity(123)
+ * .build()))
+ * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+ * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .build())
+ * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+ * .timeoutAction("timeoutAction")
+ * .timeoutDurationMinutes(123)
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .blockDurationMinutes(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .targetOnDemandCapacity(123)
+ * .targetSpotCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html)
+ */
 @CdkDslMarker
 public class CfnClusterInstanceFleetConfigPropertyDsl {
   private val cdkBuilder: CfnCluster.InstanceFleetConfigProperty.Builder =

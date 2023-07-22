@@ -7,6 +7,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnVdmAttributes
 import software.amazon.awscdk.services.ses.CfnVdmAttributesProps
 
+/**
+ * Properties for defining a `CfnVdmAttributes`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CfnVdmAttributesProps cfnVdmAttributesProps = CfnVdmAttributesProps.builder()
+ * .dashboardAttributes(DashboardAttributesProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianAttributes(GuardianAttributesProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html)
+ */
 @CdkDslMarker
 public class CfnVdmAttributesPropsDsl {
   private val cdkBuilder: CfnVdmAttributesProps.Builder = CfnVdmAttributesProps.builder()

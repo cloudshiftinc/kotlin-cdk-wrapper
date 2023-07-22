@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps
 
+/**
+ * Properties for defining a `CfnLayerVersionPermission`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnLayerVersionPermissionProps cfnLayerVersionPermissionProps =
+ * CfnLayerVersionPermissionProps.builder()
+ * .action("action")
+ * .layerVersionArn("layerVersionArn")
+ * .principal("principal")
+ * // the properties below are optional
+ * .organizationId("organizationId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-layerversionpermission.html)
+ */
 @CdkDslMarker
 public class CfnLayerVersionPermissionPropsDsl {
   private val cdkBuilder: CfnLayerVersionPermissionProps.Builder =

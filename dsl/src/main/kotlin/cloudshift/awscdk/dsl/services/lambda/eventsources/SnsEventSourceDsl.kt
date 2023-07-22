@@ -11,6 +11,23 @@ import software.amazon.awscdk.services.sns.ITopic
 import software.amazon.awscdk.services.sns.SubscriptionFilter
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use an Amazon SNS topic as an event source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.sns.*;
+ * import software.amazon.awscdk.services.lambda.eventsources.SnsEventSource;
+ * Topic topic;
+ * Function fn;
+ * Queue deadLetterQueue = new Queue(this, "deadLetterQueue");
+ * fn.addEventSource(SnsEventSource.Builder.create(topic)
+ * .filterPolicy(Map.of())
+ * .deadLetterQueue(deadLetterQueue)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SnsEventSourceDsl(
   topic: ITopic,

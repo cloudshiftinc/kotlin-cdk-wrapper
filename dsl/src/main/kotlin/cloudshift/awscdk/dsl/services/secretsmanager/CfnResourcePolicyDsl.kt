@@ -12,6 +12,41 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.secretsmanager.CfnResourcePolicy
 import software.constructs.Construct
 
+/**
+ * Attaches a resource-based permission policy to a secret.
+ *
+ * A resource-based policy is optional. For more information, see [Authentication and access control
+ * for Secrets
+ * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html)
+ *
+ * For information about attaching a policy in the console, see [Attach a permissions policy to a
+ * secret](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_resource-based-policies.html)
+ * .
+ *
+ * *Required permissions:* `secretsmanager:PutResourcePolicy` . For more information, see [IAM
+ * policy actions for Secrets
+ * Manager](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html#awssecretsmanager-actions-as-permissions)
+ * and [Authentication and access control in Secrets
+ * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Object resourcePolicy;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .resourcePolicy(resourcePolicy)
+ * .secretId("secretId")
+ * // the properties below are optional
+ * .blockPublicPolicy(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyDsl(
   scope: Construct,

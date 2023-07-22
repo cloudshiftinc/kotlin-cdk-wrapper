@@ -14,6 +14,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.qldb.CfnLedger
 import software.constructs.Construct
 
+/**
+ * The `AWS::QLDB::Ledger` resource specifies a new Amazon Quantum Ledger Database (Amazon QLDB)
+ * ledger in your AWS account .
+ *
+ * Amazon QLDB is a fully managed ledger database that provides a transparent, immutable, and
+ * cryptographically verifiable transaction log owned by a central trusted authority. You can use QLDB
+ * to track all application data changes, and maintain a complete and verifiable history of changes
+ * over time.
+ *
+ * For more information, see
+ * [CreateLedger](https://docs.aws.amazon.com/qldb/latest/developerguide/API_CreateLedger.html) in the
+ * *Amazon QLDB API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.qldb.*;
+ * CfnLedger cfnLedger = CfnLedger.Builder.create(this, "MyCfnLedger")
+ * .permissionsMode("permissionsMode")
+ * // the properties below are optional
+ * .deletionProtection(false)
+ * .kmsKey("kmsKey")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qldb-ledger.html)
+ */
 @CdkDslMarker
 public class CfnLedgerDsl(
   scope: Construct,

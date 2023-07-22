@@ -17,6 +17,27 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.Alias
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Construction properties for `LambdaDeploymentGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication myApplication;
+ * Function func;
+ * Version version = func.getCurrentVersion();
+ * Alias version1Alias = Alias.Builder.create(this, "alias")
+ * .aliasName("prod")
+ * .version(version)
+ * .build();
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .application(myApplication) // optional property: one will be created for you if not provided
+ * .alias(version1Alias)
+ * .deploymentConfig(LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDeploymentGroupPropsDsl {
   private val cdkBuilder: LambdaDeploymentGroupProps.Builder = LambdaDeploymentGroupProps.builder()

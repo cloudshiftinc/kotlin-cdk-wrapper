@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.databrew.CfnJob
 
+/**
+ * A sample configuration for profile jobs only, which determines the number of rows on which the
+ * profile job is run.
+ *
+ * If a `JobSample` value isn't provided, the default is used. The default value is CUSTOM_ROWS for
+ * the mode parameter and 20,000 for the size parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * JobSampleProperty jobSampleProperty = JobSampleProperty.builder()
+ * .mode("mode")
+ * .size(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-job-jobsample.html)
+ */
 @CdkDslMarker
 public class CfnJobJobSamplePropertyDsl {
   private val cdkBuilder: CfnJob.JobSampleProperty.Builder = CfnJob.JobSampleProperty.builder()

@@ -7,6 +7,28 @@ import software.amazon.awscdk.services.autoscaling.NotificationConfiguration
 import software.amazon.awscdk.services.autoscaling.ScalingEvents
 import software.amazon.awscdk.services.sns.ITopic
 
+/**
+ * AutoScalingGroup fleet change notifications configurations.
+ *
+ * You can configure AutoScaling to send an SNS notification whenever your Auto Scaling group
+ * scales.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * import software.amazon.awscdk.services.sns.*;
+ * ScalingEvents scalingEvents;
+ * Topic topic;
+ * NotificationConfiguration notificationConfiguration = NotificationConfiguration.builder()
+ * .topic(topic)
+ * // the properties below are optional
+ * .scalingEvents(scalingEvents)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NotificationConfigurationDsl {
   private val cdkBuilder: NotificationConfiguration.Builder = NotificationConfiguration.builder()

@@ -15,6 +15,42 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appstream.CfnAppBlockBuilder
 import software.amazon.awscdk.services.appstream.CfnAppBlockBuilderProps
 
+/**
+ * Properties for defining a `CfnAppBlockBuilder`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnAppBlockBuilderProps cfnAppBlockBuilderProps = CfnAppBlockBuilderProps.builder()
+ * .instanceType("instanceType")
+ * .name("name")
+ * .platform("platform")
+ * .vpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * // the properties below are optional
+ * .accessEndpoints(List.of(AccessEndpointProperty.builder()
+ * .endpointType("endpointType")
+ * .vpceId("vpceId")
+ * .build()))
+ * .appBlockArns(List.of("appBlockArns"))
+ * .description("description")
+ * .displayName("displayName")
+ * .enableDefaultInternetAccess(false)
+ * .iamRoleArn("iamRoleArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblockbuilder.html)
+ */
 @CdkDslMarker
 public class CfnAppBlockBuilderPropsDsl {
   private val cdkBuilder: CfnAppBlockBuilderProps.Builder = CfnAppBlockBuilderProps.builder()

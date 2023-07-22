@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.imagebuilder.CfnImagePipeline
 
+/**
+ * A schedule configures how often and when a pipeline will automatically create a new image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+ * .pipelineExecutionStartCondition("pipelineExecutionStartCondition")
+ * .scheduleExpression("scheduleExpression")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagepipeline-schedule.html)
+ */
 @CdkDslMarker
 public class CfnImagePipelineSchedulePropertyDsl {
   private val cdkBuilder: CfnImagePipeline.ScheduleProperty.Builder =

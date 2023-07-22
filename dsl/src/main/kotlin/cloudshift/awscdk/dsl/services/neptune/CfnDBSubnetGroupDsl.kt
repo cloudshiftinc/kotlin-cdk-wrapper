@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.neptune.CfnDBSubnetGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::Neptune::DBSubnetGroup` type creates an Amazon Neptune DB subnet group.
+ *
+ * Subnet groups must contain at least two subnets in two different Availability Zones in the same
+ * AWS Region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.neptune.*;
+ * CfnDBSubnetGroup cfnDBSubnetGroup = CfnDBSubnetGroup.Builder.create(this, "MyCfnDBSubnetGroup")
+ * .dbSubnetGroupDescription("dbSubnetGroupDescription")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .dbSubnetGroupName("dbSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbsubnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnDBSubnetGroupDsl(
   scope: Construct,

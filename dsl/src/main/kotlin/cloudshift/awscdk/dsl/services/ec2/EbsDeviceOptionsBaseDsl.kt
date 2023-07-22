@@ -8,6 +8,22 @@ import kotlin.Number
 import software.amazon.awscdk.services.ec2.EbsDeviceOptionsBase
 import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 
+/**
+ * Base block device options for an EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * EbsDeviceOptionsBase ebsDeviceOptionsBase = EbsDeviceOptionsBase.builder()
+ * .deleteOnTermination(false)
+ * .iops(123)
+ * .volumeType(EbsDeviceVolumeType.STANDARD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDeviceOptionsBaseDsl {
   private val cdkBuilder: EbsDeviceOptionsBase.Builder = EbsDeviceOptionsBase.builder()

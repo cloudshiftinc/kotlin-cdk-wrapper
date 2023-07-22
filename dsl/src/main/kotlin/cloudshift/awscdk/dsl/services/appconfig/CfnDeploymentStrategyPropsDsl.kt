@@ -11,6 +11,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy
 import software.amazon.awscdk.services.appconfig.CfnDeploymentStrategyProps
 
+/**
+ * Properties for defining a `CfnDeploymentStrategy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * CfnDeploymentStrategyProps cfnDeploymentStrategyProps = CfnDeploymentStrategyProps.builder()
+ * .deploymentDurationInMinutes(123)
+ * .growthFactor(123)
+ * .name("name")
+ * .replicateTo("replicateTo")
+ * // the properties below are optional
+ * .description("description")
+ * .finalBakeTimeInMinutes(123)
+ * .growthType("growthType")
+ * .tags(List.of(TagsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deploymentstrategy.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentStrategyPropsDsl {
   private val cdkBuilder: CfnDeploymentStrategyProps.Builder = CfnDeploymentStrategyProps.builder()

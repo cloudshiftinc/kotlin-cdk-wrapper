@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.ecs.RepositoryImage
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * An image hosted in a public or private repository.
+ *
+ * For images hosted in Amazon ECR, see
+ * [EcrImage](https://docs.aws.amazon.com/AmazonECR/latest/userguide/images.html).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.assets.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * DockerImageAsset dockerImageAsset;
+ * ContainerImage repositoryImage = RepositoryImage.fromDockerImageAsset(dockerImageAsset);
+ * ```
+ */
 @CdkDslMarker
 public class RepositoryImageDsl(
   imageName: String,

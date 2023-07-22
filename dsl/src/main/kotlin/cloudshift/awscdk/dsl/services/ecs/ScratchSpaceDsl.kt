@@ -7,6 +7,23 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.ecs.ScratchSpace
 
+/**
+ * The temporary disk space mounted to the container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ScratchSpace scratchSpace = ScratchSpace.builder()
+ * .containerPath("containerPath")
+ * .name("name")
+ * .readOnly(false)
+ * .sourcePath("sourcePath")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScratchSpaceDsl {
   private val cdkBuilder: ScratchSpace.Builder = ScratchSpace.builder()

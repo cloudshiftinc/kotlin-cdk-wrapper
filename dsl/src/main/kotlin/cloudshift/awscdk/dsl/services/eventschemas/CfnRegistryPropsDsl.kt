@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eventschemas.CfnRegistry
 import software.amazon.awscdk.services.eventschemas.CfnRegistryProps
 
+/**
+ * Properties for defining a `CfnRegistry`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnRegistryProps cfnRegistryProps = CfnRegistryProps.builder()
+ * .description("description")
+ * .registryName("registryName")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html)
+ */
 @CdkDslMarker
 public class CfnRegistryPropsDsl {
   private val cdkBuilder: CfnRegistryProps.Builder = CfnRegistryProps.builder()

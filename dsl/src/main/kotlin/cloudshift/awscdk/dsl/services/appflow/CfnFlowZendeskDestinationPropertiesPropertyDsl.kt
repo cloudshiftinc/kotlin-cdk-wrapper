@@ -9,6 +9,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * The properties that are applied when Zendesk is used as a destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * ZendeskDestinationPropertiesProperty zendeskDestinationPropertiesProperty =
+ * ZendeskDestinationPropertiesProperty.builder()
+ * .object("object")
+ * // the properties below are optional
+ * .errorHandlingConfig(ErrorHandlingConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * .failOnFirstError(false)
+ * .build())
+ * .idFieldNames(List.of("idFieldNames"))
+ * .writeOperationType("writeOperationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-zendeskdestinationproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowZendeskDestinationPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.ZendeskDestinationPropertiesProperty.Builder =

@@ -13,6 +13,125 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDomain
 import software.amazon.awscdk.services.sagemaker.CfnDomainProps
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .authMode("authMode")
+ * .defaultUserSettings(UserSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * // the properties below are optional
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rSessionAppSettings(RSessionAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
+ * .accessStatus("accessStatus")
+ * .userGroup("userGroup")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .sharingSettings(SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * .build())
+ * .domainName("domainName")
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .appNetworkAccessType("appNetworkAccessType")
+ * .appSecurityGroupManagement("appSecurityGroupManagement")
+ * .defaultSpaceSettings(DefaultSpaceSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * // the properties below are optional
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .domainSettings(DomainSettingsProperty.builder()
+ * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
+ * .domainExecutionRoleArn("domainExecutionRoleArn")
+ * // the properties below are optional
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .lifecycleConfigArn("lifecycleConfigArn")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .rStudioConnectUrl("rStudioConnectUrl")
+ * .rStudioPackageManagerUrl("rStudioPackageManagerUrl")
+ * .build())
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .build())
+ * .kmsKeyId("kmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()

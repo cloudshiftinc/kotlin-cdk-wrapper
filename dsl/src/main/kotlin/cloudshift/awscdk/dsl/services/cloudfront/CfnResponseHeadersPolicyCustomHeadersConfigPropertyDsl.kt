@@ -9,6 +9,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A list of HTTP response header names and their values.
+ *
+ * CloudFront includes these headers in HTTP responses that it sends for requests that match a cache
+ * behavior that's associated with this response headers policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * CustomHeadersConfigProperty customHeadersConfigProperty = CustomHeadersConfigProperty.builder()
+ * .items(List.of(CustomHeaderProperty.builder()
+ * .header("header")
+ * .override(false)
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-customheadersconfig.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyCustomHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.CustomHeadersConfigProperty.Builder =

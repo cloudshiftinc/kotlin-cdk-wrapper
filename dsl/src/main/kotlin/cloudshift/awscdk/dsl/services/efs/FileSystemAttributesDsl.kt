@@ -7,6 +7,23 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.efs.FileSystemAttributes
 
+/**
+ * Properties that describe an existing EFS file system.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.iam.*;
+ * IFileSystem importedFileSystem = FileSystem.fromFileSystemAttributes(this, "existingFS",
+ * FileSystemAttributes.builder()
+ * .fileSystemId("fs-12345678") // You can also use fileSystemArn instead of fileSystemId.
+ * .securityGroup(SecurityGroup.fromSecurityGroupId(this, "SG", "sg-123456789",
+ * SecurityGroupImportOptions.builder()
+ * .allowAllOutbound(false)
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class FileSystemAttributesDsl {
   private val cdkBuilder: FileSystemAttributes.Builder = FileSystemAttributes.builder()

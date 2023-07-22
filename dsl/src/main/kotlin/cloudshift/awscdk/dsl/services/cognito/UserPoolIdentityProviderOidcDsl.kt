@@ -14,6 +14,58 @@ import software.amazon.awscdk.services.cognito.OidcEndpoints
 import software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidc
 import software.constructs.Construct
 
+/**
+ * Represents a identity provider that integrates with OpenID Connect.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * ProviderAttribute providerAttribute;
+ * UserPool userPool;
+ * UserPoolIdentityProviderOidc userPoolIdentityProviderOidc =
+ * UserPoolIdentityProviderOidc.Builder.create(this, "MyUserPoolIdentityProviderOidc")
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .issuerUrl("issuerUrl")
+ * .userPool(userPool)
+ * // the properties below are optional
+ * .attributeMapping(AttributeMapping.builder()
+ * .address(providerAttribute)
+ * .birthdate(providerAttribute)
+ * .custom(Map.of(
+ * "customKey", providerAttribute))
+ * .email(providerAttribute)
+ * .familyName(providerAttribute)
+ * .fullname(providerAttribute)
+ * .gender(providerAttribute)
+ * .givenName(providerAttribute)
+ * .lastUpdateTime(providerAttribute)
+ * .locale(providerAttribute)
+ * .middleName(providerAttribute)
+ * .nickname(providerAttribute)
+ * .phoneNumber(providerAttribute)
+ * .preferredUsername(providerAttribute)
+ * .profilePage(providerAttribute)
+ * .profilePicture(providerAttribute)
+ * .timezone(providerAttribute)
+ * .website(providerAttribute)
+ * .build())
+ * .attributeRequestMethod(OidcAttributeRequestMethod.GET)
+ * .endpoints(OidcEndpoints.builder()
+ * .authorization("authorization")
+ * .jwksUri("jwksUri")
+ * .token("token")
+ * .userInfo("userInfo")
+ * .build())
+ * .identifiers(List.of("identifiers"))
+ * .name("name")
+ * .scopes(List.of("scopes"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolIdentityProviderOidcDsl(
   scope: Construct,

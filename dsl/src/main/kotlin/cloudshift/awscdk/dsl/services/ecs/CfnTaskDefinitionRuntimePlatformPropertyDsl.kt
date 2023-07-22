@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * Information about the platform for the Amazon ECS service or task.
+ *
+ * For more information about `RuntimePlatform` , see
+ * [RuntimePlatform](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#runtime-platform)
+ * in the *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * RuntimePlatformProperty runtimePlatformProperty = RuntimePlatformProperty.builder()
+ * .cpuArchitecture("cpuArchitecture")
+ * .operatingSystemFamily("operatingSystemFamily")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-runtimeplatform.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionRuntimePlatformPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.RuntimePlatformProperty.Builder =

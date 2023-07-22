@@ -10,6 +10,30 @@ import kotlin.Unit
 import software.amazon.awscdk.services.pinpoint.CfnApp
 import software.constructs.Construct
 
+/**
+ * An *app* is an Amazon Pinpoint application, also referred to as a *project* .
+ *
+ * An application is a collection of related settings, customer information, segments, campaigns,
+ * and other types of Amazon Pinpoint resources.
+ *
+ * The App resource represents an Amazon Pinpoint application.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnApp cfnApp = CfnApp.Builder.create(this, "MyCfnApp")
+ * .name("name")
+ * // the properties below are optional
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)
+ */
 @CdkDslMarker
 public class CfnAppDsl(
   scope: Construct,

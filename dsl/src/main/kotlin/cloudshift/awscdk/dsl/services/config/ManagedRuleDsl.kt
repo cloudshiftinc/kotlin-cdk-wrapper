@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 import software.constructs.Construct
 
+/**
+ * A new managed rule.
+ *
+ * Example:
+ *
+ * ```
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * ManagedRule.Builder.create(this, "AccessKeysRotated")
+ * .identifier(ManagedRuleIdentifiers.ACCESS_KEYS_ROTATED)
+ * .inputParameters(Map.of(
+ * "maxAccessKeyAge", 60))
+ * // default is 24 hours
+ * .maximumExecutionFrequency(MaximumExecutionFrequency.TWELVE_HOURS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ManagedRuleDsl(
   scope: Construct,

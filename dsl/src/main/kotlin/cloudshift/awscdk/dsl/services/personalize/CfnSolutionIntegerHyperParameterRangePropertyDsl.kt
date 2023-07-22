@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.personalize.CfnSolution
 
+/**
+ * Provides the name and range of an integer-valued hyperparameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.personalize.*;
+ * IntegerHyperParameterRangeProperty integerHyperParameterRangeProperty =
+ * IntegerHyperParameterRangeProperty.builder()
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-personalize-solution-integerhyperparameterrange.html)
+ */
 @CdkDslMarker
 public class CfnSolutionIntegerHyperParameterRangePropertyDsl {
   private val cdkBuilder: CfnSolution.IntegerHyperParameterRangeProperty.Builder =

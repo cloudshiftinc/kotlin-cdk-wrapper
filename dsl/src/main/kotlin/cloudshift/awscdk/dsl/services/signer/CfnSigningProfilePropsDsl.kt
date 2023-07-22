@@ -13,6 +13,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.signer.CfnSigningProfile
 import software.amazon.awscdk.services.signer.CfnSigningProfileProps
 
+/**
+ * Properties for defining a `CfnSigningProfile`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.signer.*;
+ * CfnSigningProfileProps cfnSigningProfileProps = CfnSigningProfileProps.builder()
+ * .platformId("platformId")
+ * // the properties below are optional
+ * .signatureValidityPeriod(SignatureValidityPeriodProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-signer-signingprofile.html)
+ */
 @CdkDslMarker
 public class CfnSigningProfilePropsDsl {
   private val cdkBuilder: CfnSigningProfileProps.Builder = CfnSigningProfileProps.builder()

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnConfigurationProfile
 
+/**
+ * A validator provides a syntactic or semantic check to ensure the configuration that you want to
+ * deploy functions as intended.
+ *
+ * To validate your application configuration data, you provide a schema or an AWS Lambda function
+ * that runs against the configuration. The configuration deployment or update can only proceed when
+ * the configuration data is valid.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * ValidatorsProperty validatorsProperty = ValidatorsProperty.builder()
+ * .content("content")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-configurationprofile-validators.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationProfileValidatorsPropertyDsl {
   private val cdkBuilder: CfnConfigurationProfile.ValidatorsProperty.Builder =

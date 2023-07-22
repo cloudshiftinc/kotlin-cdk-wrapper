@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
+/**
+ * Configuration settings for the handling of the stateful rule groups in a firewall policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * StatefulEngineOptionsProperty statefulEngineOptionsProperty =
+ * StatefulEngineOptionsProperty.builder()
+ * .ruleOrder("ruleOrder")
+ * .streamExceptionPolicy("streamExceptionPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyStatefulEngineOptionsPropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder =

@@ -16,6 +16,73 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emrserverless.CfnApplication
 import software.constructs.Construct
 
+/**
+ * The `AWS::EMRServerless::Application` resource specifies an EMR Serverless application.
+ *
+ * An application uses open source analytics frameworks to run jobs that process data. To create an
+ * application, you must specify the release version for the open source framework version you want to
+ * use and the type of application you want, such as Apache Spark or Apache Hive. After you create an
+ * application, you can submit data processing jobs or interactive requests to it.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emrserverless.*;
+ * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .releaseLabel("releaseLabel")
+ * .type("type")
+ * // the properties below are optional
+ * .architecture("architecture")
+ * .autoStartConfiguration(AutoStartConfigurationProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .autoStopConfiguration(AutoStopConfigurationProperty.builder()
+ * .enabled(false)
+ * .idleTimeoutMinutes(123)
+ * .build())
+ * .imageConfiguration(ImageConfigurationInputProperty.builder()
+ * .imageUri("imageUri")
+ * .build())
+ * .initialCapacity(List.of(InitialCapacityConfigKeyValuePairProperty.builder()
+ * .key("key")
+ * .value(InitialCapacityConfigProperty.builder()
+ * .workerConfiguration(WorkerConfigurationProperty.builder()
+ * .cpu("cpu")
+ * .memory("memory")
+ * // the properties below are optional
+ * .disk("disk")
+ * .build())
+ * .workerCount(123)
+ * .build())
+ * .build()))
+ * .maximumCapacity(MaximumAllowedResourcesProperty.builder()
+ * .cpu("cpu")
+ * .memory("memory")
+ * // the properties below are optional
+ * .disk("disk")
+ * .build())
+ * .name("name")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .workerTypeSpecifications(Map.of(
+ * "workerTypeSpecificationsKey", WorkerTypeSpecificationInputProperty.builder()
+ * .imageConfiguration(ImageConfigurationInputProperty.builder()
+ * .imageUri("imageUri")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emrserverless-application.html)
+ */
 @CdkDslMarker
 public class CfnApplicationDsl(
   scope: Construct,

@@ -24,6 +24,19 @@ import software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem
 import software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression
 import software.constructs.Construct
 
+/**
+ * A StepFunctions task to call DynamoGetItem.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoGetItem.Builder.create(this, "Get Item")
+ * .key(Map.of("messageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DynamoGetItemDsl(
   scope: Construct,

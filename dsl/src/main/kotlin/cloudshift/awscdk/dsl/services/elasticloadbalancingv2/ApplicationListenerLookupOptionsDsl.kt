@@ -9,6 +9,20 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerLookupOptions
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 
+/**
+ * Options for ApplicationListener lookup.
+ *
+ * Example:
+ *
+ * ```
+ * IApplicationListener listener = ApplicationListener.fromLookup(this, "ALBListener",
+ * ApplicationListenerLookupOptions.builder()
+ * .loadBalancerArn("arn:aws:elasticloadbalancing:us-east-2:123456789012:loadbalancer/app/my-load-balancer/1234567890123456")
+ * .listenerProtocol(ApplicationProtocol.HTTPS)
+ * .listenerPort(443)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerLookupOptionsDsl {
   private val cdkBuilder: ApplicationListenerLookupOptions.Builder =

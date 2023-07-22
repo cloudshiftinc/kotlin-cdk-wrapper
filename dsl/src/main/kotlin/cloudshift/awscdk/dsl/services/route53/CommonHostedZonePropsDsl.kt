@@ -7,6 +7,24 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.services.route53.CommonHostedZoneProps
 
+/**
+ * Common properties to create a Route 53 hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CommonHostedZoneProps commonHostedZoneProps = CommonHostedZoneProps.builder()
+ * .zoneName("zoneName")
+ * // the properties below are optional
+ * .addTrailingDot(false)
+ * .comment("comment")
+ * .queryLogsLogGroupArn("queryLogsLogGroupArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonHostedZonePropsDsl {
   private val cdkBuilder: CommonHostedZoneProps.Builder = CommonHostedZoneProps.builder()

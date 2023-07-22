@@ -7,6 +7,21 @@ import kotlin.String
 import software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for configuring self-managed permissions.
+ *
+ * Example:
+ *
+ * ```
+ * IRole existingAdminRole = Role.fromRoleName(this, "AdminRole",
+ * "AWSCloudFormationStackSetAdministrationRole");
+ * StackSetDeploymentModel deploymentModel =
+ * StackSetDeploymentModel.selfManaged(SelfManagedDeploymentProps.builder()
+ * // Use an existing Role. Leave this out to create a new Role.
+ * .administrationRole(existingAdminRole)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SelfManagedDeploymentPropsDsl {
   private val cdkBuilder: SelfManagedDeploymentProps.Builder = SelfManagedDeploymentProps.builder()

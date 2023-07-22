@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnRule
 
+/**
+ * The forward action.
+ *
+ * Traffic that matches the rule is forwarded to the specified target groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * ForwardProperty forwardProperty = ForwardProperty.builder()
+ * .targetGroups(List.of(WeightedTargetGroupProperty.builder()
+ * .targetGroupIdentifier("targetGroupIdentifier")
+ * // the properties below are optional
+ * .weight(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-rule-forward.html)
+ */
 @CdkDslMarker
 public class CfnRuleForwardPropertyDsl {
   private val cdkBuilder: CfnRule.ForwardProperty.Builder = CfnRule.ForwardProperty.builder()

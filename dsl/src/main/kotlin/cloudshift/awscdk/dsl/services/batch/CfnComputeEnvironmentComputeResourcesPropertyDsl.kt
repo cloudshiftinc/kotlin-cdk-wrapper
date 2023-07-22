@@ -13,6 +13,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnComputeEnvironment
 
+/**
+ * Details about the compute resources managed by the compute environment.
+ *
+ * This parameter is required for managed compute environments. For more information, see [Compute
+ * Environments](https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html) in the
+ * *AWS Batch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * ComputeResourcesProperty computeResourcesProperty = ComputeResourcesProperty.builder()
+ * .maxvCpus(123)
+ * .subnets(List.of("subnets"))
+ * .type("type")
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .bidPercentage(123)
+ * .desiredvCpus(123)
+ * .ec2Configuration(List.of(Ec2ConfigurationObjectProperty.builder()
+ * .imageType("imageType")
+ * // the properties below are optional
+ * .imageIdOverride("imageIdOverride")
+ * .imageKubernetesVersion("imageKubernetesVersion")
+ * .build()))
+ * .ec2KeyPair("ec2KeyPair")
+ * .imageId("imageId")
+ * .instanceRole("instanceRole")
+ * .instanceTypes(List.of("instanceTypes"))
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .version("version")
+ * .build())
+ * .minvCpus(123)
+ * .placementGroup("placementGroup")
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .spotIamFleetRole("spotIamFleetRole")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .updateToLatestImageVersion(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-computeresources.html)
+ */
 @CdkDslMarker
 public class CfnComputeEnvironmentComputeResourcesPropertyDsl {
   private val cdkBuilder: CfnComputeEnvironment.ComputeResourcesProperty.Builder =

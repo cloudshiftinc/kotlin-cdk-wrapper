@@ -7,6 +7,46 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnTask
 
+/**
+ * Represents the options that are available to control the behavior of a
+ * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
+ * operation. This behavior includes preserving metadata, such as user ID (UID), group ID (GID), and
+ * file permissions; overwriting files in the destination; data integrity verification; and so on.
+ *
+ * A task has a set of default options associated with it. If you don't specify an option in
+ * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
+ * , the default value is used. You can override the default options on each task execution by
+ * specifying an overriding `Options` value to
+ * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * OptionsProperty optionsProperty = OptionsProperty.builder()
+ * .atime("atime")
+ * .bytesPerSecond(123)
+ * .gid("gid")
+ * .logLevel("logLevel")
+ * .mtime("mtime")
+ * .objectTags("objectTags")
+ * .overwriteMode("overwriteMode")
+ * .posixPermissions("posixPermissions")
+ * .preserveDeletedFiles("preserveDeletedFiles")
+ * .preserveDevices("preserveDevices")
+ * .securityDescriptorCopyFlags("securityDescriptorCopyFlags")
+ * .taskQueueing("taskQueueing")
+ * .transferMode("transferMode")
+ * .uid("uid")
+ * .verifyMode("verifyMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-options.html)
+ */
 @CdkDslMarker
 public class CfnTaskOptionsPropertyDsl {
   private val cdkBuilder: CfnTask.OptionsProperty.Builder = CfnTask.OptionsProperty.builder()

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.ResolveChangeContextOptions
 
+/**
+ * Options that can be changed while doing a recursive resolve.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * ResolveChangeContextOptions resolveChangeContextOptions = ResolveChangeContextOptions.builder()
+ * .allowIntrinsicKeys(false)
+ * .removeEmpty(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ResolveChangeContextOptionsDsl {
   private val cdkBuilder: ResolveChangeContextOptions.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.lambda.destinations.LambdaDestinationOptions
 
+/**
+ * Options for a Lambda destination.
+ *
+ * Example:
+ *
+ * ```
+ * // Auto-extract response payload with a lambda destination
+ * Function destinationFn;
+ * Function sourceFn = Function.Builder.create(this, "Source")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * // auto-extract on success
+ * .onSuccess(LambdaDestination.Builder.create(destinationFn)
+ * .responseOnly(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDestinationOptionsDsl {
   private val cdkBuilder: LambdaDestinationOptions.Builder = LambdaDestinationOptions.builder()

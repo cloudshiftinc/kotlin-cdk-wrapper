@@ -9,6 +9,32 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule
 
+/**
+ * Specifies information required when integrating with Amazon Cognito to authenticate users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * AuthenticateCognitoConfigProperty authenticateCognitoConfigProperty =
+ * AuthenticateCognitoConfigProperty.builder()
+ * .userPoolArn("userPoolArn")
+ * .userPoolClientId("userPoolClientId")
+ * .userPoolDomain("userPoolDomain")
+ * // the properties below are optional
+ * .authenticationRequestExtraParams(Map.of(
+ * "authenticationRequestExtraParamsKey", "authenticationRequestExtraParams"))
+ * .onUnauthenticatedRequest("onUnauthenticatedRequest")
+ * .scope("scope")
+ * .sessionCookieName("sessionCookieName")
+ * .sessionTimeout(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-authenticatecognitoconfig.html)
+ */
 @CdkDslMarker
 public class CfnListenerRuleAuthenticateCognitoConfigPropertyDsl {
   private val cdkBuilder: CfnListenerRule.AuthenticateCognitoConfigProperty.Builder =

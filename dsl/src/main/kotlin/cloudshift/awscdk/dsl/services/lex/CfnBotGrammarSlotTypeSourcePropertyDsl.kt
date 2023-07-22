@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Describes the Amazon S3 bucket name and location for the grammar that is the source for the slot
+ * type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * GrammarSlotTypeSourceProperty grammarSlotTypeSourceProperty =
+ * GrammarSlotTypeSourceProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3ObjectKey("s3ObjectKey")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-grammarslottypesource.html)
+ */
 @CdkDslMarker
 public class CfnBotGrammarSlotTypeSourcePropertyDsl {
   private val cdkBuilder: CfnBot.GrammarSlotTypeSourceProperty.Builder =

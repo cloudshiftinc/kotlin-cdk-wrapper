@@ -8,6 +8,32 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticbeanstalk.CfnApplication
 
+/**
+ * Use the `MaxAgeRule` property type to specify a max count rule to restrict the number of
+ * application versions that are retained for an AWS Elastic Beanstalk application when defining an
+ * AWS::ElasticBeanstalk::Application resource in an AWS CloudFormation template.
+ *
+ * A lifecycle rule that deletes the oldest application version when the maximum count is exceeded.
+ *
+ * `MaxCountRule` is a property of the
+ * [ApplicationVersionLifecycleConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html)
+ * property type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * MaxCountRuleProperty maxCountRuleProperty = MaxCountRuleProperty.builder()
+ * .deleteSourceFromS3(false)
+ * .enabled(false)
+ * .maxCount(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxcountrule.html)
+ */
 @CdkDslMarker
 public class CfnApplicationMaxCountRulePropertyDsl {
   private val cdkBuilder: CfnApplication.MaxCountRuleProperty.Builder =

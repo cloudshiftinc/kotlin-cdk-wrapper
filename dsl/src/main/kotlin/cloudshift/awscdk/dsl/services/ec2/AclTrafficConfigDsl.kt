@@ -9,6 +9,29 @@ import software.amazon.awscdk.services.ec2.AclIcmp
 import software.amazon.awscdk.services.ec2.AclPortRange
 import software.amazon.awscdk.services.ec2.AclTrafficConfig
 
+/**
+ * Acl Configuration for traffic.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AclTrafficConfig aclTrafficConfig = AclTrafficConfig.builder()
+ * .protocol(123)
+ * // the properties below are optional
+ * .icmp(AclIcmp.builder()
+ * .code(123)
+ * .type(123)
+ * .build())
+ * .portRange(AclPortRange.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AclTrafficConfigDsl {
   private val cdkBuilder: AclTrafficConfig.Builder = AclTrafficConfig.builder()

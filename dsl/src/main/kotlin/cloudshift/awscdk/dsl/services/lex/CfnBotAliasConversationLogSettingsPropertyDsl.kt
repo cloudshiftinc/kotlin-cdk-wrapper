@@ -9,6 +9,43 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBotAlias
 
+/**
+ * Configures conversation logging that saves audio, text, and metadata for the conversations with
+ * your users.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * ConversationLogSettingsProperty conversationLogSettingsProperty =
+ * ConversationLogSettingsProperty.builder()
+ * .audioLogSettings(List.of(AudioLogSettingProperty.builder()
+ * .destination(AudioLogDestinationProperty.builder()
+ * .s3Bucket(S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .textLogSettings(List.of(TextLogSettingProperty.builder()
+ * .destination(TextLogDestinationProperty.builder()
+ * .cloudWatch(CloudWatchLogGroupLogDestinationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .logPrefix("logPrefix")
+ * .build())
+ * .build())
+ * .enabled(false)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-conversationlogsettings.html)
+ */
 @CdkDslMarker
 public class CfnBotAliasConversationLogSettingsPropertyDsl {
   private val cdkBuilder: CfnBotAlias.ConversationLogSettingsProperty.Builder =

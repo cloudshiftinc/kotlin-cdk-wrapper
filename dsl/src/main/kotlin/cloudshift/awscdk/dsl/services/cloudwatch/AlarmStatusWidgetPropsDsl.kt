@@ -12,6 +12,20 @@ import software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps
 import software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetSortBy
 import software.amazon.awscdk.services.cloudwatch.IAlarm
 
+/**
+ * Properties for an Alarm Status Widget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Alarm errorAlarm;
+ * dashboard.addWidgets(
+ * AlarmStatusWidget.Builder.create()
+ * .alarms(List.of(errorAlarm))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AlarmStatusWidgetPropsDsl {
   private val cdkBuilder: AlarmStatusWidgetProps.Builder = AlarmStatusWidgetProps.builder()

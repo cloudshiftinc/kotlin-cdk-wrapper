@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup
 
+/**
+ * Contains information such as socket address and name that defines an endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.groundstation.*;
+ * DataflowEndpointProperty dataflowEndpointProperty = DataflowEndpointProperty.builder()
+ * .address(SocketAddressProperty.builder()
+ * .name("name")
+ * .port(123)
+ * .build())
+ * .mtu(123)
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-dataflowendpointgroup-dataflowendpoint.html)
+ */
 @CdkDslMarker
 public class CfnDataflowEndpointGroupDataflowEndpointPropertyDsl {
   private val cdkBuilder: CfnDataflowEndpointGroup.DataflowEndpointProperty.Builder =

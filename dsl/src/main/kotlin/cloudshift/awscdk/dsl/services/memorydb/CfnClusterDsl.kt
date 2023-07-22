@@ -15,6 +15,55 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.memorydb.CfnCluster
 import software.constructs.Construct
 
+/**
+ * Specifies a cluster .
+ *
+ * All nodes in the cluster run the same protocol-compliant engine software.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
+ * .aclName("aclName")
+ * .clusterName("clusterName")
+ * .nodeType("nodeType")
+ * // the properties below are optional
+ * .autoMinorVersionUpgrade(false)
+ * .clusterEndpoint(EndpointProperty.builder()
+ * .address("address")
+ * .port(123)
+ * .build())
+ * .dataTiering("dataTiering")
+ * .description("description")
+ * .engineVersion("engineVersion")
+ * .finalSnapshotName("finalSnapshotName")
+ * .kmsKeyId("kmsKeyId")
+ * .maintenanceWindow("maintenanceWindow")
+ * .numReplicasPerShard(123)
+ * .numShards(123)
+ * .parameterGroupName("parameterGroupName")
+ * .port(123)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .snapshotArns(List.of("snapshotArns"))
+ * .snapshotName("snapshotName")
+ * .snapshotRetentionLimit(123)
+ * .snapshotWindow("snapshotWindow")
+ * .snsTopicArn("snsTopicArn")
+ * .snsTopicStatus("snsTopicStatus")
+ * .subnetGroupName("subnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .tlsEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterDsl(
   scope: Construct,

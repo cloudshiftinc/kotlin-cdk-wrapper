@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.billingconductor.CfnCustomLineItem
 
+/**
+ * The charge details of a custom line item.
+ *
+ * It should contain only one of `Flat` or `Percentage` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * CustomLineItemFlatChargeDetailsProperty customLineItemFlatChargeDetailsProperty =
+ * CustomLineItemFlatChargeDetailsProperty.builder()
+ * .chargeValue(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-customlineitem-customlineitemflatchargedetails.html)
+ */
 @CdkDslMarker
 public class CfnCustomLineItemCustomLineItemFlatChargeDetailsPropertyDsl {
   private val cdkBuilder: CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty.Builder =

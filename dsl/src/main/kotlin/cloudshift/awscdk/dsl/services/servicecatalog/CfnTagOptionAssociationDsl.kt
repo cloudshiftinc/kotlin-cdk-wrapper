@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation
 import software.constructs.Construct
 
+/**
+ * Associate the specified TagOption with the specified portfolio or product.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnTagOptionAssociation cfnTagOptionAssociation = CfnTagOptionAssociation.Builder.create(this,
+ * "MyCfnTagOptionAssociation")
+ * .resourceId("resourceId")
+ * .tagOptionId("tagOptionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html)
+ */
 @CdkDslMarker
 public class CfnTagOptionAssociationDsl(
   scope: Construct,

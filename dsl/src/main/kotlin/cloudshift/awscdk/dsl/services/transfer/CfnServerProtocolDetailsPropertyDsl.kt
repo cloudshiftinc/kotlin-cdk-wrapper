@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.transfer.CfnServer
 
+/**
+ * The protocol settings that are configured for your server.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * ProtocolDetailsProperty protocolDetailsProperty = ProtocolDetailsProperty.builder()
+ * .as2Transports(List.of("as2Transports"))
+ * .passiveIp("passiveIp")
+ * .setStatOption("setStatOption")
+ * .tlsSessionResumptionMode("tlsSessionResumptionMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-protocoldetails.html)
+ */
 @CdkDslMarker
 public class CfnServerProtocolDetailsPropertyDsl {
   private val cdkBuilder: CfnServer.ProtocolDetailsProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.resiliencehub.CfnApp
 
+/**
+ * Defines a physical resource identifier.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * PhysicalResourceIdProperty physicalResourceIdProperty = PhysicalResourceIdProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * // the properties below are optional
+ * .awsAccountId("awsAccountId")
+ * .awsRegion("awsRegion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-app-physicalresourceid.html)
+ */
 @CdkDslMarker
 public class CfnAppPhysicalResourceIdPropertyDsl {
   private val cdkBuilder: CfnApp.PhysicalResourceIdProperty.Builder =

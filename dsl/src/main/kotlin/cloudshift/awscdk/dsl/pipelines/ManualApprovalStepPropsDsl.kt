@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.pipelines.ManualApprovalStepProps
 
+/**
+ * Construction properties for a `ManualApprovalStep`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.pipelines.*;
+ * ManualApprovalStepProps manualApprovalStepProps = ManualApprovalStepProps.builder()
+ * .comment("comment")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ManualApprovalStepPropsDsl {
   private val cdkBuilder: ManualApprovalStepProps.Builder = ManualApprovalStepProps.builder()

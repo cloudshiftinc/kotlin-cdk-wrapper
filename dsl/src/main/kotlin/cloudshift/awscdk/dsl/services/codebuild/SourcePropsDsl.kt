@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.SourceProps
 
+/**
+ * Properties common to all Source classes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * SourceProps sourceProps = SourceProps.builder()
+ * .identifier("identifier")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class SourcePropsDsl {
   private val cdkBuilder: SourceProps.Builder = SourceProps.builder()

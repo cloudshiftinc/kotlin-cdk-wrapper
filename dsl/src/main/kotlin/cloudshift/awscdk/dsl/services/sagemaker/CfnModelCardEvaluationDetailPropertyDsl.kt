@@ -11,6 +11,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * The evaluation details of the model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object value;
+ * EvaluationDetailProperty evaluationDetailProperty = EvaluationDetailProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .datasets(List.of("datasets"))
+ * .evaluationJobArn("evaluationJobArn")
+ * .evaluationObservation("evaluationObservation")
+ * .metadata(Map.of(
+ * "metadataKey", "metadata"))
+ * .metricGroups(List.of(MetricGroupProperty.builder()
+ * .metricData(List.of(MetricDataItemsProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .value(value)
+ * // the properties below are optional
+ * .notes("notes")
+ * .xAxisName(List.of("xAxisName"))
+ * .yAxisName(List.of("yAxisName"))
+ * .build()))
+ * .name("name")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-evaluationdetail.html)
+ */
 @CdkDslMarker
 public class CfnModelCardEvaluationDetailPropertyDsl {
   private val cdkBuilder: CfnModelCard.EvaluationDetailProperty.Builder =

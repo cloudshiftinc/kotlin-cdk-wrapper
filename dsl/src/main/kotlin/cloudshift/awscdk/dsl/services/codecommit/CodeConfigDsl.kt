@@ -7,6 +7,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.codecommit.CfnRepository
 import software.amazon.awscdk.services.codecommit.CodeConfig
 
+/**
+ * Represents the structure to pass into the underlying CfnRepository class.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codecommit.*;
+ * CodeConfig codeConfig = CodeConfig.builder()
+ * .code(CodeProperty.builder()
+ * .s3(S3Property.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * // the properties below are optional
+ * .branchName("branchName")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeConfigDsl {
   private val cdkBuilder: CodeConfig.Builder = CodeConfig.builder()

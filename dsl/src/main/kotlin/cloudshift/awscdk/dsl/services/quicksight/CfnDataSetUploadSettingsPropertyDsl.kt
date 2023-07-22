@@ -9,6 +9,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Information about the format for a source file or files.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * UploadSettingsProperty uploadSettingsProperty = UploadSettingsProperty.builder()
+ * .containsHeader(false)
+ * .delimiter("delimiter")
+ * .format("format")
+ * .startFromRow(123)
+ * .textQualifier("textQualifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-uploadsettings.html)
+ */
 @CdkDslMarker
 public class CfnDataSetUploadSettingsPropertyDsl {
   private val cdkBuilder: CfnDataSet.UploadSettingsProperty.Builder =

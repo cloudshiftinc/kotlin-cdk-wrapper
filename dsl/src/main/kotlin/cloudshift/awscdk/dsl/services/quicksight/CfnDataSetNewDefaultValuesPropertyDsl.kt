@@ -10,6 +10,23 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * NewDefaultValuesProperty newDefaultValuesProperty = NewDefaultValuesProperty.builder()
+ * .dateTimeStaticValues(List.of("dateTimeStaticValues"))
+ * .decimalStaticValues(List.of(123))
+ * .integerStaticValues(List.of(123))
+ * .stringStaticValues(List.of("stringStaticValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-newdefaultvalues.html)
+ */
 @CdkDslMarker
 public class CfnDataSetNewDefaultValuesPropertyDsl {
   private val cdkBuilder: CfnDataSet.NewDefaultValuesProperty.Builder =

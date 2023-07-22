@@ -7,6 +7,31 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * Use this to specify the AWS Key Management Service (KMS) Key ID, or `KMSKeyId` , for at rest data
+ * encryption.
+ *
+ * You can turn `OnlineStore` on or off by specifying the `EnableOnlineStore` flag at General
+ * Assembly.
+ *
+ * The default value is `False` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * OnlineStoreConfigProperty onlineStoreConfigProperty = OnlineStoreConfigProperty.builder()
+ * .enableOnlineStore(false)
+ * .securityConfig(OnlineStoreSecurityConfigProperty.builder()
+ * .kmsKeyId("kmsKeyId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-onlinestoreconfig.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupOnlineStoreConfigPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.OnlineStoreConfigProperty.Builder =

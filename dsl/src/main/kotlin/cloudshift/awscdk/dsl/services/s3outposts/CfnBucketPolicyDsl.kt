@@ -10,6 +10,42 @@ import kotlin.Unit
 import software.amazon.awscdk.services.s3outposts.CfnBucketPolicy
 import software.constructs.Construct
 
+/**
+ * This resource applies a bucket policy to an Amazon S3 on Outposts bucket.
+ *
+ * If you are using an identity other than the root user of the AWS account that owns the S3 on
+ * Outposts bucket, the calling identity must have the `s3-outposts:PutBucketPolicy` permissions on the
+ * specified Outposts bucket and belong to the bucket owner's account in order to use this resource.
+ *
+ * If you don't have `s3-outposts:PutBucketPolicy` permissions, S3 on Outposts returns a `403 Access
+ * Denied` error.
+ *
+ *
+ * The root user of the AWS account that owns an Outposts bucket can *always* use this resource,
+ * even if the policy explicitly denies the root user the ability to perform actions on this resource.
+ *
+ *
+ * For more information, see the AWS::IAM::Policy
+ * [PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
+ * resource description in this guide and [Access Policy Language
+ * Overview](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-policy-language-overview.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3outposts.*;
+ * Object policyDocument;
+ * CfnBucketPolicy cfnBucketPolicy = CfnBucketPolicy.Builder.create(this, "MyCfnBucketPolicy")
+ * .bucket("bucket")
+ * .policyDocument(policyDocument)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3outposts-bucketpolicy.html)
+ */
 @CdkDslMarker
 public class CfnBucketPolicyDsl(
   scope: Construct,

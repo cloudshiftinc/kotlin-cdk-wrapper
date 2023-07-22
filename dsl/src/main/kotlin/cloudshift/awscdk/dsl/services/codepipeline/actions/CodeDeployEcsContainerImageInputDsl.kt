@@ -7,6 +7,26 @@ import kotlin.String
 import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput
 
+/**
+ * Configuration for replacing a placeholder string in the ECS task definition template file with an
+ * image URI.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * Artifact artifact;
+ * CodeDeployEcsContainerImageInput codeDeployEcsContainerImageInput =
+ * CodeDeployEcsContainerImageInput.builder()
+ * .input(artifact)
+ * // the properties below are optional
+ * .taskDefinitionPlaceholder("taskDefinitionPlaceholder")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CodeDeployEcsContainerImageInputDsl {
   private val cdkBuilder: CodeDeployEcsContainerImageInput.Builder =

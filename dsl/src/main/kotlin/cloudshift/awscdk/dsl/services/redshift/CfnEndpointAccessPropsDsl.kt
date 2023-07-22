@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.redshift.CfnEndpointAccessProps
 
+/**
+ * Properties for defining a `CfnEndpointAccess`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.redshift.*;
+ * CfnEndpointAccessProps cfnEndpointAccessProps = CfnEndpointAccessProps.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .endpointName("endpointName")
+ * .subnetGroupName("subnetGroupName")
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * // the properties below are optional
+ * .resourceOwner("resourceOwner")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-endpointaccess.html)
+ */
 @CdkDslMarker
 public class CfnEndpointAccessPropsDsl {
   private val cdkBuilder: CfnEndpointAccessProps.Builder = CfnEndpointAccessProps.builder()

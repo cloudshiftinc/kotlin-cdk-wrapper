@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The limit configuration of the visual display for an axis.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ItemsLimitConfigurationProperty itemsLimitConfigurationProperty =
+ * ItemsLimitConfigurationProperty.builder()
+ * .itemsLimit(123)
+ * .otherCategories("otherCategories")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-itemslimitconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardItemsLimitConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.ItemsLimitConfigurationProperty.Builder =

@@ -8,6 +8,25 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.apigateway.ContentHandling
 import software.amazon.awscdk.services.apigateway.IntegrationResponse
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * IntegrationResponse integrationResponse = IntegrationResponse.builder()
+ * .statusCode("statusCode")
+ * // the properties below are optional
+ * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
+ * .responseParameters(Map.of(
+ * "responseParametersKey", "responseParameters"))
+ * .responseTemplates(Map.of(
+ * "responseTemplatesKey", "responseTemplates"))
+ * .selectionPattern("selectionPattern")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class IntegrationResponseDsl {
   private val cdkBuilder: IntegrationResponse.Builder = IntegrationResponse.builder()

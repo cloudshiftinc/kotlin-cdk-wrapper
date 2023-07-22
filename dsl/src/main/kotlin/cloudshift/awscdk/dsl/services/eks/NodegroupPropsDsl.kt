@@ -22,6 +22,67 @@ import software.amazon.awscdk.services.eks.NodegroupRemoteAccess
 import software.amazon.awscdk.services.eks.TaintSpec
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * NodeGroup properties interface.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.eks.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * Cluster cluster;
+ * InstanceType instanceType;
+ * Role role;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * NodegroupProps nodegroupProps = NodegroupProps.builder()
+ * .cluster(cluster)
+ * // the properties below are optional
+ * .amiType(NodegroupAmiType.AL2_X86_64)
+ * .capacityType(CapacityType.SPOT)
+ * .desiredSize(123)
+ * .diskSize(123)
+ * .forceUpdate(false)
+ * .instanceTypes(List.of(instanceType))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .launchTemplateSpec(LaunchTemplateSpec.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .version("version")
+ * .build())
+ * .maxSize(123)
+ * .minSize(123)
+ * .nodegroupName("nodegroupName")
+ * .nodeRole(role)
+ * .releaseVersion("releaseVersion")
+ * .remoteAccess(NodegroupRemoteAccess.builder()
+ * .sshKeyName("sshKeyName")
+ * // the properties below are optional
+ * .sourceSecurityGroups(List.of(securityGroup))
+ * .build())
+ * .subnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .taints(List.of(TaintSpec.builder()
+ * .effect(TaintEffect.NO_SCHEDULE)
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NodegroupPropsDsl {
   private val cdkBuilder: NodegroupProps.Builder = NodegroupProps.builder()

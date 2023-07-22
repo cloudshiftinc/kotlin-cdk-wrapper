@@ -15,6 +15,34 @@ import software.amazon.awscdk.services.lambda.StartingPosition
 import software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Use a MSK cluster as a streaming source for AWS Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.secretsmanager.Secret;
+ * import software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource;
+ * Function myFunction;
+ * // Your MSK cluster arn
+ * String clusterArn =
+ * "arn:aws:kafka:us-east-1:0123456789019:cluster/SalesCluster/abcd1234-abcd-cafe-abab-9876543210ab-4";
+ * // The Kafka topic you want to subscribe to
+ * String topic = "some-cool-topic";
+ * // The secret that allows access to your MSK cluster
+ * // You still have to make sure that it is associated with your cluster as described in the
+ * documentation
+ * Secret secret = Secret.Builder.create(this,
+ * "Secret").secretName("AmazonMSK_KafkaSecret").build();
+ * myFunction.addEventSource(ManagedKafkaEventSource.Builder.create()
+ * .clusterArn(clusterArn)
+ * .topic(topic)
+ * .secret(secret)
+ * .batchSize(100) // default
+ * .startingPosition(StartingPosition.TRIM_HORIZON)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ManagedKafkaEventSourceDsl {
   private val cdkBuilder: ManagedKafkaEventSource.Builder = ManagedKafkaEventSource.Builder.create()

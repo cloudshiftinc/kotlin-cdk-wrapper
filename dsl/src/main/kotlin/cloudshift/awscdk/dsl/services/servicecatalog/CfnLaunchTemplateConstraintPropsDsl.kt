@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraintProps
 
+/**
+ * Properties for defining a `CfnLaunchTemplateConstraint`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnLaunchTemplateConstraintProps cfnLaunchTemplateConstraintProps =
+ * CfnLaunchTemplateConstraintProps.builder()
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .rules("rules")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateConstraintPropsDsl {
   private val cdkBuilder: CfnLaunchTemplateConstraintProps.Builder =

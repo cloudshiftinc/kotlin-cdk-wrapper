@@ -23,6 +23,31 @@ import software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2ServiceProps
 import software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps
 
+/**
+ * The properties for the ApplicationMultipleTargetGroupsEc2Service service.
+ *
+ * Example:
+ *
+ * ```
+ * // One application load balancer with one listener and two target groups.
+ * Cluster cluster;
+ * ApplicationMultipleTargetGroupsEc2Service loadBalancedEc2Service =
+ * ApplicationMultipleTargetGroupsEc2Service.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .memoryLimitMiB(256)
+ * .taskImageOptions(ApplicationLoadBalancedTaskImageProps.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .build())
+ * .targetGroups(List.of(ApplicationTargetProps.builder()
+ * .containerPort(80)
+ * .build(), ApplicationTargetProps.builder()
+ * .containerPort(90)
+ * .pathPattern("a/b/c")
+ * .priority(10)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationMultipleTargetGroupsEc2ServicePropsDsl {
   private val cdkBuilder: ApplicationMultipleTargetGroupsEc2ServiceProps.Builder =

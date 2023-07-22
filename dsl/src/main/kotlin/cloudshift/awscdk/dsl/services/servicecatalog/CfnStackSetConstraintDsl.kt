@@ -9,6 +9,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.servicecatalog.CfnStackSetConstraint
 import software.constructs.Construct
 
+/**
+ * Specifies a StackSet constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnStackSetConstraint cfnStackSetConstraint = CfnStackSetConstraint.Builder.create(this,
+ * "MyCfnStackSetConstraint")
+ * .accountList(List.of("accountList"))
+ * .adminRole("adminRole")
+ * .description("description")
+ * .executionRole("executionRole")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .regionList(List.of("regionList"))
+ * .stackInstanceControl("stackInstanceControl")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-stacksetconstraint.html)
+ */
 @CdkDslMarker
 public class CfnStackSetConstraintDsl(
   scope: Construct,

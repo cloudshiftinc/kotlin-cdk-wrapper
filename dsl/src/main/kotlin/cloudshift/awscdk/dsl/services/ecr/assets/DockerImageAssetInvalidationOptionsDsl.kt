@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions
 
+/**
+ * Options to control invalidation of `DockerImageAsset` asset hashes.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.assets.DockerImageAsset;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .buildArgs(Map.of(
+ * "HTTP_PROXY", "http://10.20.30.2:1234"))
+ * .invalidation(DockerImageAssetInvalidationOptions.builder()
+ * .buildArgs(false)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerImageAssetInvalidationOptionsDsl {
   private val cdkBuilder: DockerImageAssetInvalidationOptions.Builder =

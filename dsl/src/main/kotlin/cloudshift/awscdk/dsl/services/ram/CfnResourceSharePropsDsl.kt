@@ -13,6 +13,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ram.CfnResourceShareProps
 
+/**
+ * Properties for defining a `CfnResourceShare`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ram.*;
+ * CfnResourceShareProps cfnResourceShareProps = CfnResourceShareProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .allowExternalPrincipals(false)
+ * .permissionArns(List.of("permissionArns"))
+ * .principals(List.of("principals"))
+ * .resourceArns(List.of("resourceArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+ */
 @CdkDslMarker
 public class CfnResourceSharePropsDsl {
   private val cdkBuilder: CfnResourceShareProps.Builder = CfnResourceShareProps.builder()

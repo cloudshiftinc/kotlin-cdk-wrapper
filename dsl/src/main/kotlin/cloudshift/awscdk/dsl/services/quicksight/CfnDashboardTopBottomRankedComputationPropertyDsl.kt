@@ -8,6 +8,16 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The top ranked and bottom ranked computation configuration.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-topbottomrankedcomputation.html)
+ */
 @CdkDslMarker
 public class CfnDashboardTopBottomRankedComputationPropertyDsl {
   private val cdkBuilder: CfnDashboard.TopBottomRankedComputationProperty.Builder =

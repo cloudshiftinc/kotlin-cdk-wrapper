@@ -8,6 +8,30 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.applicationautoscaling.BaseTargetTrackingProps
 
+/**
+ * Base interface for target tracking props.
+ *
+ * Contains the attributes that are common to target tracking policies,
+ * except the ones relating to the metric and to the scalable target.
+ *
+ * This interface is reused by more specific target tracking props objects
+ * in other services.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.applicationautoscaling.*;
+ * BaseTargetTrackingProps baseTargetTrackingProps = BaseTargetTrackingProps.builder()
+ * .disableScaleIn(false)
+ * .policyName("policyName")
+ * .scaleInCooldown(Duration.minutes(30))
+ * .scaleOutCooldown(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseTargetTrackingPropsDsl {
   private val cdkBuilder: BaseTargetTrackingProps.Builder = BaseTargetTrackingProps.builder()

@@ -12,6 +12,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnReportPlanProps
 
+/**
+ * Properties for defining a `CfnReportPlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object reportDeliveryChannel;
+ * Object reportSetting;
+ * CfnReportPlanProps cfnReportPlanProps = CfnReportPlanProps.builder()
+ * .reportDeliveryChannel(reportDeliveryChannel)
+ * .reportSetting(reportSetting)
+ * // the properties below are optional
+ * .reportPlanDescription("reportPlanDescription")
+ * .reportPlanName("reportPlanName")
+ * .reportPlanTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html)
+ */
 @CdkDslMarker
 public class CfnReportPlanPropsDsl {
   private val cdkBuilder: CfnReportPlanProps.Builder = CfnReportPlanProps.builder()

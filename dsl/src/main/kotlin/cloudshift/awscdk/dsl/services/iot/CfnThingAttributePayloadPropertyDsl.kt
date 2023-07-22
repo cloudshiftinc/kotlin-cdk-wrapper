@@ -8,6 +8,27 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnThing
 
+/**
+ * The AttributePayload property specifies up to three attributes for an AWS IoT as key-value pairs.
+ *
+ * AttributePayload is a property of the
+ * [AWS::IoT::Thing](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html)
+ * resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AttributePayloadProperty attributePayloadProperty = AttributePayloadProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thing-attributepayload.html)
+ */
 @CdkDslMarker
 public class CfnThingAttributePayloadPropertyDsl {
   private val cdkBuilder: CfnThing.AttributePayloadProperty.Builder =

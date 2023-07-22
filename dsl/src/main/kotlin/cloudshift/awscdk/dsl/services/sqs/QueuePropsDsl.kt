@@ -16,6 +16,25 @@ import software.amazon.awscdk.services.sqs.FifoThroughputLimit
 import software.amazon.awscdk.services.sqs.QueueEncryption
 import software.amazon.awscdk.services.sqs.QueueProps
 
+/**
+ * Properties for creating a new Queue.
+ *
+ * Example:
+ *
+ * ```
+ * Topic topic = new Topic(this, "Topic");
+ * Queue dlQueue = Queue.Builder.create(this, "DeadLetterQueue")
+ * .queueName("MySubscription_DLQ")
+ * .retentionPeriod(Duration.days(14))
+ * .build();
+ * Subscription.Builder.create(this, "Subscription")
+ * .endpoint("endpoint")
+ * .protocol(SubscriptionProtocol.LAMBDA)
+ * .topic(topic)
+ * .deadLetterQueue(dlQueue)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class QueuePropsDsl {
   private val cdkBuilder: QueueProps.Builder = QueueProps.builder()

@@ -12,6 +12,38 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iot.CfnScheduledAudit
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::ScheduledAudit` resource to create a scheduled audit that is run at a
+ * specified time interval.
+ *
+ * For API reference, see
+ * [CreateScheduleAudit](https://docs.aws.amazon.com/iot/latest/apireference/API_CreateScheduledAudit.html)
+ * and for general information, see
+ * [Audit](https://docs.aws.amazon.com/iot/latest/developerguide/device-defender-audit.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnScheduledAudit cfnScheduledAudit = CfnScheduledAudit.Builder.create(this,
+ * "MyCfnScheduledAudit")
+ * .frequency("frequency")
+ * .targetCheckNames(List.of("targetCheckNames"))
+ * // the properties below are optional
+ * .dayOfMonth("dayOfMonth")
+ * .dayOfWeek("dayOfWeek")
+ * .scheduledAuditName("scheduledAuditName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-scheduledaudit.html)
+ */
 @CdkDslMarker
 public class CfnScheduledAuditDsl(
   scope: Construct,

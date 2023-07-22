@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.comprehend.CfnFlywheel
 
+/**
+ * Configuration required for an entity recognition model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.comprehend.*;
+ * EntityRecognitionConfigProperty entityRecognitionConfigProperty =
+ * EntityRecognitionConfigProperty.builder()
+ * .entityTypes(List.of(EntityTypesListItemProperty.builder()
+ * .type("type")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-comprehend-flywheel-entityrecognitionconfig.html)
+ */
 @CdkDslMarker
 public class CfnFlywheelEntityRecognitionConfigPropertyDsl {
   private val cdkBuilder: CfnFlywheel.EntityRecognitionConfigProperty.Builder =

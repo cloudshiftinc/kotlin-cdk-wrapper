@@ -9,6 +9,22 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * TypographyProperty typographyProperty = TypographyProperty.builder()
+ * .fontFamilies(List.of(FontProperty.builder()
+ * .fontFamily("fontFamily")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-typography.html)
+ */
 @CdkDslMarker
 public class CfnThemeTypographyPropertyDsl {
   private val cdkBuilder: CfnTheme.TypographyProperty.Builder =

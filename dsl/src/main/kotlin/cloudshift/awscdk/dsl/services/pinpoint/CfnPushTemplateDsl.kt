@@ -11,6 +11,76 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnPushTemplate
 import software.constructs.Construct
 
+/**
+ * Creates a message template that you can use in messages that are sent through a push notification
+ * channel.
+ *
+ * A *message template* is a set of content and settings that you can define, save, and reuse in
+ * messages for any of your Amazon Pinpoint applications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnPushTemplate cfnPushTemplate = CfnPushTemplate.Builder.create(this, "MyCfnPushTemplate")
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .adm(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .apns(APNSPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .mediaUrl("mediaUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .baidu(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .default(DefaultPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .defaultSubstitutions("defaultSubstitutions")
+ * .gcm(AndroidPushNotificationTemplateProperty.builder()
+ * .action("action")
+ * .body("body")
+ * .imageIconUrl("imageIconUrl")
+ * .imageUrl("imageUrl")
+ * .smallImageIconUrl("smallImageIconUrl")
+ * .sound("sound")
+ * .title("title")
+ * .url("url")
+ * .build())
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-pushtemplate.html)
+ */
 @CdkDslMarker
 public class CfnPushTemplateDsl(
   scope: Construct,

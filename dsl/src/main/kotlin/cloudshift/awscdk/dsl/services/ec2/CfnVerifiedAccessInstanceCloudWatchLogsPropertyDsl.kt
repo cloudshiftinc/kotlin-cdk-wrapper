@@ -8,6 +8,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
+/**
+ * Options for CloudWatch Logs as a logging destination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CloudWatchLogsProperty cloudWatchLogsProperty = CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * .logGroup("logGroup")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-cloudwatchlogs.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceCloudWatchLogsPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.CloudWatchLogsProperty.Builder =

@@ -8,6 +8,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codepipeline.CfnCustomActionType
 
+/**
+ * The configuration properties for the custom action.
+ *
+ *
+ * You can refer to a name in the configuration properties of the custom action within the URL
+ * templates by following the format of {Config:name}, as long as the configuration property is both
+ * required and not secret. For more information, see [Create a Custom Action for a
+ * Pipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/how-to-create-custom-action.html)
+ * .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * ConfigurationPropertiesProperty configurationPropertiesProperty =
+ * ConfigurationPropertiesProperty.builder()
+ * .key(false)
+ * .name("name")
+ * .required(false)
+ * .secret(false)
+ * // the properties below are optional
+ * .description("description")
+ * .queryable(false)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-configurationproperties.html)
+ */
 @CdkDslMarker
 public class CfnCustomActionTypeConfigurationPropertiesPropertyDsl {
   private val cdkBuilder: CfnCustomActionType.ConfigurationPropertiesProperty.Builder =

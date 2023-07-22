@@ -11,6 +11,39 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssmcontacts.CfnPlan
 import software.constructs.Construct
 
+/**
+ * Information about the stages and on-call rotation teams associated with an escalation plan or
+ * engagement plan.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssmcontacts.*;
+ * CfnPlan cfnPlan = CfnPlan.Builder.create(this, "MyCfnPlan")
+ * .contactId("contactId")
+ * // the properties below are optional
+ * .rotationIds(List.of("rotationIds"))
+ * .stages(List.of(StageProperty.builder()
+ * .durationInMinutes(123)
+ * // the properties below are optional
+ * .targets(List.of(TargetsProperty.builder()
+ * .channelTargetInfo(ChannelTargetInfoProperty.builder()
+ * .channelId("channelId")
+ * .retryIntervalInMinutes(123)
+ * .build())
+ * .contactTargetInfo(ContactTargetInfoProperty.builder()
+ * .contactId("contactId")
+ * .isEssential(false)
+ * .build())
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-plan.html)
+ */
 @CdkDslMarker
 public class CfnPlanDsl(
   scope: Construct,

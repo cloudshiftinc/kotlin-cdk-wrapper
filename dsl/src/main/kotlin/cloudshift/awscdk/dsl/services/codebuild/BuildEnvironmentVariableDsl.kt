@@ -9,6 +9,38 @@ import kotlin.Unit
 import software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable
 import software.amazon.awscdk.services.codebuild.BuildEnvironmentVariableType
 
+/**
+ * Example:
+ *
+ * ```
+ * // later:
+ * PipelineProject project;
+ * Artifact sourceOutput = new Artifact();
+ * CodeBuildAction buildAction = CodeBuildAction.Builder.create()
+ * .actionName("Build1")
+ * .input(sourceOutput)
+ * .project(PipelineProject.Builder.create(this, "Project")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "env", Map.of(
+ * "exported-variables", List.of("MY_VAR")),
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", "export MY_VAR=\"some value\"")))))
+ * .build())
+ * .variablesNamespace("MyNamespace")
+ * .build();
+ * CodeBuildAction.Builder.create()
+ * .actionName("CodeBuild")
+ * .project(project)
+ * .input(sourceOutput)
+ * .environmentVariables(Map.of(
+ * "MyVar", BuildEnvironmentVariable.builder()
+ * .value(buildAction.variable("MY_VAR"))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BuildEnvironmentVariableDsl {
   private val cdkBuilder: BuildEnvironmentVariable.Builder = BuildEnvironmentVariable.builder()

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModel
 
+/**
+ * Specifies an authentication configuration for the private docker registry where your model image
+ * is hosted.
+ *
+ * Specify a value for this property only if you specified `Vpc` as the value for the
+ * `RepositoryAccessMode` field of the `ImageConfig` object that you passed to a call to `CreateModel`
+ * and the private Docker registry where the model image is hosted requires authentication.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * RepositoryAuthConfigProperty repositoryAuthConfigProperty =
+ * RepositoryAuthConfigProperty.builder()
+ * .repositoryCredentialsProviderArn("repositoryCredentialsProviderArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-repositoryauthconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelRepositoryAuthConfigPropertyDsl {
   private val cdkBuilder: CfnModel.RepositoryAuthConfigProperty.Builder =

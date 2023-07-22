@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnEIPAssociationProps
 
+/**
+ * Properties for defining a `CfnEIPAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnEIPAssociationProps cfnEIPAssociationProps = CfnEIPAssociationProps.builder()
+ * .allocationId("allocationId")
+ * .eip("eip")
+ * .instanceId("instanceId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .privateIpAddress("privateIpAddress")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eipassociation.html)
+ */
 @CdkDslMarker
 public class CfnEIPAssociationPropsDsl {
   private val cdkBuilder: CfnEIPAssociationProps.Builder = CfnEIPAssociationProps.builder()

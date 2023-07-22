@@ -9,6 +9,25 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy
 
+/**
+ * A list of HTTP header names that CloudFront removes from HTTP responses to requests that match
+ * the cache behavior that this response headers policy is attached to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * RemoveHeadersConfigProperty removeHeadersConfigProperty = RemoveHeadersConfigProperty.builder()
+ * .items(List.of(RemoveHeaderProperty.builder()
+ * .header("header")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-responseheaderspolicy-removeheadersconfig.html)
+ */
 @CdkDslMarker
 public class CfnResponseHeadersPolicyRemoveHeadersConfigPropertyDsl {
   private val cdkBuilder: CfnResponseHeadersPolicy.RemoveHeadersConfigProperty.Builder =

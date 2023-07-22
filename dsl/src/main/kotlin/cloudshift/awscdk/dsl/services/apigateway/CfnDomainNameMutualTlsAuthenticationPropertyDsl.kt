@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.apigateway.CfnDomainName
 
+/**
+ * The mutual TLS authentication configuration for a custom domain name.
+ *
+ * If specified, API Gateway performs two-way authentication between the client and the server.
+ * Clients must present a trusted certificate to access your API.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * MutualTlsAuthenticationProperty mutualTlsAuthenticationProperty =
+ * MutualTlsAuthenticationProperty.builder()
+ * .truststoreUri("truststoreUri")
+ * .truststoreVersion("truststoreVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-domainname-mutualtlsauthentication.html)
+ */
 @CdkDslMarker
 public class CfnDomainNameMutualTlsAuthenticationPropertyDsl {
   private val cdkBuilder: CfnDomainName.MutualTlsAuthenticationProperty.Builder =

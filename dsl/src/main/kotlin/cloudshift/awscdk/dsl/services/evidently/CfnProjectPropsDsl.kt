@@ -13,6 +13,40 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.evidently.CfnProject
 import software.amazon.awscdk.services.evidently.CfnProjectProps
 
+/**
+ * Properties for defining a `CfnProject`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.evidently.*;
+ * CfnProjectProps cfnProjectProps = CfnProjectProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .appConfigResource(AppConfigResourceObjectProperty.builder()
+ * .applicationId("applicationId")
+ * .environmentId("environmentId")
+ * .build())
+ * .dataDelivery(DataDeliveryObjectProperty.builder()
+ * .logGroup("logGroup")
+ * .s3(S3DestinationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-evidently-project.html)
+ */
 @CdkDslMarker
 public class CfnProjectPropsDsl {
   private val cdkBuilder: CfnProjectProps.Builder = CfnProjectProps.builder()

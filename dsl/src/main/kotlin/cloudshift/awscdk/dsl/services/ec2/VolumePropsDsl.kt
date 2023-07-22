@@ -12,6 +12,22 @@ import software.amazon.awscdk.services.ec2.EbsDeviceVolumeType
 import software.amazon.awscdk.services.ec2.VolumeProps
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties of an EBS Volume.
+ *
+ * Example:
+ *
+ * ```
+ * Instance instance;
+ * Role role;
+ * Volume volume = Volume.Builder.create(this, "Volume")
+ * .availabilityZone("us-west-2a")
+ * .size(Size.gibibytes(500))
+ * .encrypted(true)
+ * .build();
+ * volume.grantAttachVolume(role, List.of(instance));
+ * ```
+ */
 @CdkDslMarker
 public class VolumePropsDsl {
   private val cdkBuilder: VolumeProps.Builder = VolumeProps.builder()

@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnTagOptionProps
 
+/**
+ * Properties for defining a `CfnTagOption`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnTagOptionProps cfnTagOptionProps = CfnTagOptionProps.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .active(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoption.html)
+ */
 @CdkDslMarker
 public class CfnTagOptionPropsDsl {
   private val cdkBuilder: CfnTagOptionProps.Builder = CfnTagOptionProps.builder()

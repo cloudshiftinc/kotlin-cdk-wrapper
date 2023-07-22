@@ -8,6 +8,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnDatabase
 import software.constructs.Construct
 
+/**
+ * The `AWS::Glue::Database` resource specifies a logical grouping of tables in AWS Glue .
+ *
+ * For more information, see [Defining a Database in Your Data
+ * Catalog](https://docs.aws.amazon.com/glue/latest/dg/define-database.html) and [Database
+ * Structure](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-databases.html#aws-glue-api-catalog-databases-Database)
+ * in the *AWS Glue Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object parameters;
+ * CfnDatabase cfnDatabase = CfnDatabase.Builder.create(this, "MyCfnDatabase")
+ * .catalogId("catalogId")
+ * .databaseInput(DatabaseInputProperty.builder()
+ * .createTableDefaultPermissions(List.of(PrincipalPrivilegesProperty.builder()
+ * .permissions(List.of("permissions"))
+ * .principal(DataLakePrincipalProperty.builder()
+ * .dataLakePrincipalIdentifier("dataLakePrincipalIdentifier")
+ * .build())
+ * .build()))
+ * .description("description")
+ * .federatedDatabase(FederatedDatabaseProperty.builder()
+ * .connectionName("connectionName")
+ * .identifier("identifier")
+ * .build())
+ * .locationUri("locationUri")
+ * .name("name")
+ * .parameters(parameters)
+ * .targetDatabase(DatabaseIdentifierProperty.builder()
+ * .catalogId("catalogId")
+ * .databaseName("databaseName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html)
+ */
 @CdkDslMarker
 public class CfnDatabaseDsl(
   scope: Construct,

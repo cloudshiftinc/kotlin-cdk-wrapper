@@ -7,6 +7,21 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.logs.ColumnRestriction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * ColumnRestriction columnRestriction = ColumnRestriction.builder()
+ * .comparison("comparison")
+ * // the properties below are optional
+ * .numberValue(123)
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ColumnRestrictionDsl {
   private val cdkBuilder: ColumnRestriction.Builder = ColumnRestriction.builder()

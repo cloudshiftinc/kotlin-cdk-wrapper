@@ -13,6 +13,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotwireless.CfnServiceProfile
 import software.constructs.Construct
 
+/**
+ * Creates a new service profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * CfnServiceProfile cfnServiceProfile = CfnServiceProfile.Builder.create(this,
+ * "MyCfnServiceProfile")
+ * .loRaWan(LoRaWANServiceProfileProperty.builder()
+ * .addGwMetadata(false)
+ * .channelMask("channelMask")
+ * .devStatusReqFreq(123)
+ * .dlBucketSize(123)
+ * .dlRate(123)
+ * .dlRatePolicy("dlRatePolicy")
+ * .drMax(123)
+ * .drMin(123)
+ * .hrAllowed(false)
+ * .minGwDiversity(123)
+ * .nwkGeoLoc(false)
+ * .prAllowed(false)
+ * .raAllowed(false)
+ * .reportDevStatusBattery(false)
+ * .reportDevStatusMargin(false)
+ * .targetPer(123)
+ * .ulBucketSize(123)
+ * .ulRate(123)
+ * .ulRatePolicy("ulRatePolicy")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotwireless-serviceprofile.html)
+ */
 @CdkDslMarker
 public class CfnServiceProfileDsl(
   scope: Construct,

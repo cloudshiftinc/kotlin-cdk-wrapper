@@ -7,6 +7,30 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnMLTransform
 
+/**
+ * The algorithm-specific parameters that are associated with the machine learning transform.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * TransformParametersProperty transformParametersProperty = TransformParametersProperty.builder()
+ * .transformType("transformType")
+ * // the properties below are optional
+ * .findMatchesParameters(FindMatchesParametersProperty.builder()
+ * .primaryKeyColumnName("primaryKeyColumnName")
+ * // the properties below are optional
+ * .accuracyCostTradeoff(123)
+ * .enforceProvidedLabels(false)
+ * .precisionRecallTradeoff(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-mltransform-transformparameters.html)
+ */
 @CdkDslMarker
 public class CfnMLTransformTransformParametersPropertyDsl {
   private val cdkBuilder: CfnMLTransform.TransformParametersProperty.Builder =

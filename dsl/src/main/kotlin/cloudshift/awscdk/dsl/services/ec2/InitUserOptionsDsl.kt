@@ -9,6 +9,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.InitUserOptions
 
+/**
+ * Optional parameters used when creating a user.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InitUserOptions initUserOptions = InitUserOptions.builder()
+ * .groups(List.of("groups"))
+ * .homeDir("homeDir")
+ * .userId(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InitUserOptionsDsl {
   private val cdkBuilder: InitUserOptions.Builder = InitUserOptions.builder()

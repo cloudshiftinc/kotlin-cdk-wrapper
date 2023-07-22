@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.CfnWebACL
 
+/**
+ * The `ActivatedRule` object in an `UpdateWebACL` request specifies a `Rule` that you want to
+ * insert or delete, the priority of the `Rule` in the `WebACL` , and the action that you want AWS WAF
+ * to take when a web request matches the `Rule` ( `ALLOW` , `BLOCK` , or `COUNT` ).
+ *
+ * To specify whether to insert or delete a `Rule` , use the `Action` parameter in the
+ * `WebACLUpdate` data type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.*;
+ * ActivatedRuleProperty activatedRuleProperty = ActivatedRuleProperty.builder()
+ * .priority(123)
+ * .ruleId("ruleId")
+ * // the properties below are optional
+ * .action(WafActionProperty.builder()
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-webacl-activatedrule.html)
+ */
 @CdkDslMarker
 public class CfnWebACLActivatedRulePropertyDsl {
   private val cdkBuilder: CfnWebACL.ActivatedRuleProperty.Builder =

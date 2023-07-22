@@ -12,6 +12,34 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.elasticache.CfnSubnetGroup
 import software.constructs.Construct
 
+/**
+ * Creates a cache subnet group.
+ *
+ * For more information about cache subnet groups, go to Cache Subnet Groups in the *Amazon
+ * ElastiCache User Guide* or go to
+ * [CreateCacheSubnetGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSubnetGroup.html)
+ * in the *Amazon ElastiCache API Reference Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnSubnetGroup cfnSubnetGroup = CfnSubnetGroup.Builder.create(this, "MyCfnSubnetGroup")
+ * .description("description")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .cacheSubnetGroupName("cacheSubnetGroupName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-subnetgroup.html)
+ */
 @CdkDslMarker
 public class CfnSubnetGroupDsl(
   scope: Construct,

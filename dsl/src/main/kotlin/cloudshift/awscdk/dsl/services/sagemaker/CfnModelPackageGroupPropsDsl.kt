@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.sagemaker.CfnModelPackageGroupProps
 
+/**
+ * Properties for defining a `CfnModelPackageGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * Object modelPackageGroupPolicy;
+ * CfnModelPackageGroupProps cfnModelPackageGroupProps = CfnModelPackageGroupProps.builder()
+ * .modelPackageGroupName("modelPackageGroupName")
+ * // the properties below are optional
+ * .modelPackageGroupDescription("modelPackageGroupDescription")
+ * .modelPackageGroupPolicy(modelPackageGroupPolicy)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-modelpackagegroup.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageGroupPropsDsl {
   private val cdkBuilder: CfnModelPackageGroupProps.Builder = CfnModelPackageGroupProps.builder()

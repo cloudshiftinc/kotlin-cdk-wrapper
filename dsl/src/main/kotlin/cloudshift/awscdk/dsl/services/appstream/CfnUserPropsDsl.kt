@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appstream.CfnUserProps
 
+/**
+ * Properties for defining a `CfnUser`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appstream.*;
+ * CfnUserProps cfnUserProps = CfnUserProps.builder()
+ * .authenticationType("authenticationType")
+ * .userName("userName")
+ * // the properties below are optional
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .messageAction("messageAction")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-user.html)
+ */
 @CdkDslMarker
 public class CfnUserPropsDsl {
   private val cdkBuilder: CfnUserProps.Builder = CfnUserProps.builder()

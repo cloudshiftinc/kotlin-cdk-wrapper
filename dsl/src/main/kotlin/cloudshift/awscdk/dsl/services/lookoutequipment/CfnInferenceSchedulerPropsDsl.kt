@@ -14,6 +14,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps
 
+/**
+ * Properties for defining a `CfnInferenceScheduler`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lookoutequipment.*;
+ * Object dataInputConfiguration;
+ * Object dataOutputConfiguration;
+ * CfnInferenceSchedulerProps cfnInferenceSchedulerProps = CfnInferenceSchedulerProps.builder()
+ * .dataInputConfiguration(dataInputConfiguration)
+ * .dataOutputConfiguration(dataOutputConfiguration)
+ * .dataUploadFrequency("dataUploadFrequency")
+ * .modelName("modelName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .dataDelayOffsetInMinutes(123)
+ * .inferenceSchedulerName("inferenceSchedulerName")
+ * .serverSideKmsKeyId("serverSideKmsKeyId")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutequipment-inferencescheduler.html)
+ */
 @CdkDslMarker
 public class CfnInferenceSchedulerPropsDsl {
   private val cdkBuilder: CfnInferenceSchedulerProps.Builder = CfnInferenceSchedulerProps.builder()

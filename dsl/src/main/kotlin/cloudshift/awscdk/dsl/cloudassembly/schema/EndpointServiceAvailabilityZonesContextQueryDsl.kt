@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery
 
+/**
+ * Query to endpoint service context provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * EndpointServiceAvailabilityZonesContextQuery endpointServiceAvailabilityZonesContextQuery =
+ * EndpointServiceAvailabilityZonesContextQuery.builder()
+ * .account("account")
+ * .region("region")
+ * .serviceName("serviceName")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EndpointServiceAvailabilityZonesContextQueryDsl {
   private val cdkBuilder: EndpointServiceAvailabilityZonesContextQuery.Builder =

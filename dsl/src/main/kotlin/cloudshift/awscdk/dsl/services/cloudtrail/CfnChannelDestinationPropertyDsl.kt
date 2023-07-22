@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudtrail.CfnChannel
 
+/**
+ * Contains information about the destination receiving events.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * DestinationProperty destinationProperty = DestinationProperty.builder()
+ * .location("location")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-channel-destination.html)
+ */
 @CdkDslMarker
 public class CfnChannelDestinationPropertyDsl {
   private val cdkBuilder: CfnChannel.DestinationProperty.Builder =

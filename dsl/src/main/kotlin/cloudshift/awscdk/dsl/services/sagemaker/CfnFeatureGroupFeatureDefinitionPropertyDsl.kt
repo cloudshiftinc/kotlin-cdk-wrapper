@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnFeatureGroup
 
+/**
+ * A list of features.
+ *
+ * You must include `FeatureName` and `FeatureType` . Valid feature `FeatureType` s are `Integral` ,
+ * `Fractional` and `String` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * FeatureDefinitionProperty featureDefinitionProperty = FeatureDefinitionProperty.builder()
+ * .featureName("featureName")
+ * .featureType("featureType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-featuregroup-featuredefinition.html)
+ */
 @CdkDslMarker
 public class CfnFeatureGroupFeatureDefinitionPropertyDsl {
   private val cdkBuilder: CfnFeatureGroup.FeatureDefinitionProperty.Builder =

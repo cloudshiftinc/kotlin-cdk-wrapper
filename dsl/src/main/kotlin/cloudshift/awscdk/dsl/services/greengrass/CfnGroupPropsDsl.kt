@@ -11,6 +11,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnGroup
 import software.amazon.awscdk.services.greengrass.CfnGroupProps
 
+/**
+ * Properties for defining a `CfnGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnGroupProps cfnGroupProps = CfnGroupProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(GroupVersionProperty.builder()
+ * .connectorDefinitionVersionArn("connectorDefinitionVersionArn")
+ * .coreDefinitionVersionArn("coreDefinitionVersionArn")
+ * .deviceDefinitionVersionArn("deviceDefinitionVersionArn")
+ * .functionDefinitionVersionArn("functionDefinitionVersionArn")
+ * .loggerDefinitionVersionArn("loggerDefinitionVersionArn")
+ * .resourceDefinitionVersionArn("resourceDefinitionVersionArn")
+ * .subscriptionDefinitionVersionArn("subscriptionDefinitionVersionArn")
+ * .build())
+ * .roleArn("roleArn")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-group.html)
+ */
 @CdkDslMarker
 public class CfnGroupPropsDsl {
   private val cdkBuilder: CfnGroupProps.Builder = CfnGroupProps.builder()

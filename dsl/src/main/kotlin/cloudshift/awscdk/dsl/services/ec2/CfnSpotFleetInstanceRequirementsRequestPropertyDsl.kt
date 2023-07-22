@@ -11,6 +11,100 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * The attributes for the instance types.
+ *
+ * When you specify instance attributes, Amazon EC2 will identify instance types with these
+ * attributes.
+ *
+ * When you specify multiple attributes, you get instance types that satisfy all of the specified
+ * attributes. If you specify multiple values for an attribute, you get instance types that satisfy any
+ * of the specified values.
+ *
+ * To limit the list of instance types from which Amazon EC2 can identify matching instance types,
+ * you can use one of the following parameters, but not both in the same request:
+ *
+ * * `AllowedInstanceTypes` - The instance types to include in the list. All other instance types
+ * are ignored, even if they match your specified attributes.
+ * * `ExcludedInstanceTypes` - The instance types to exclude from the list, even if they match your
+ * specified attributes.
+ *
+ *
+ * You must specify `VCpuCount` and `MemoryMiB` . All other attributes are optional. Any unspecified
+ * optional attribute is set to its default.
+ *
+ *
+ * For more information, see [Attribute-based instance type selection for EC2
+ * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
+ * , [Attribute-based instance type selection for Spot
+ * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
+ * , and [Spot placement
+ * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the *Amazon
+ * EC2 User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * InstanceRequirementsRequestProperty instanceRequirementsRequestProperty =
+ * InstanceRequirementsRequestProperty.builder()
+ * .acceleratorCount(AcceleratorCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorManufacturers(List.of("acceleratorManufacturers"))
+ * .acceleratorNames(List.of("acceleratorNames"))
+ * .acceleratorTotalMemoryMiB(AcceleratorTotalMemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .acceleratorTypes(List.of("acceleratorTypes"))
+ * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
+ * .bareMetal("bareMetal")
+ * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .burstablePerformance("burstablePerformance")
+ * .cpuManufacturers(List.of("cpuManufacturers"))
+ * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
+ * .instanceGenerations(List.of("instanceGenerations"))
+ * .localStorage("localStorage")
+ * .localStorageTypes(List.of("localStorageTypes"))
+ * .memoryGiBPerVCpu(MemoryGiBPerVCpuRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .memoryMiB(MemoryMiBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkBandwidthGbps(NetworkBandwidthGbpsRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .networkInterfaceCount(NetworkInterfaceCountRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .onDemandMaxPricePercentageOverLowestPrice(123)
+ * .requireHibernateSupport(false)
+ * .spotMaxPricePercentageOverLowestPrice(123)
+ * .totalLocalStorageGb(TotalLocalStorageGBRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .vCpuCount(VCpuCountRangeRequestProperty.builder()
+ * .max(123)
+ * .min(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancerequirementsrequest.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetInstanceRequirementsRequestPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.InstanceRequirementsRequestProperty.Builder =

@@ -10,6 +10,36 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a header.
+ *
+ * Reflects any changes made by a component as traffic passes through. The fields of an inbound
+ * header are null except for the first component of a path.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisPacketHeaderProperty analysisPacketHeaderProperty =
+ * AnalysisPacketHeaderProperty.builder()
+ * .destinationAddresses(List.of("destinationAddresses"))
+ * .destinationPortRanges(List.of(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build()))
+ * .protocol("protocol")
+ * .sourceAddresses(List.of("sourceAddresses"))
+ * .sourcePortRanges(List.of(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysispacketheader.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisPacketHeaderPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty.Builder =

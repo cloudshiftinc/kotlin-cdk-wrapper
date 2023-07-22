@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Complete these fields only if you want to insert watermarks of type Nielsen NAES II (N2) and
+ * Nielsen NAES VI (NW).
+ *
+ * The parent of this entity is NielsenWatermarksSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * NielsenNaesIiNwProperty nielsenNaesIiNwProperty = NielsenNaesIiNwProperty.builder()
+ * .checkDigitString("checkDigitString")
+ * .sid(123)
+ * .timezone("timezone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-nielsennaesiinw.html)
+ */
 @CdkDslMarker
 public class CfnChannelNielsenNaesIiNwPropertyDsl {
   private val cdkBuilder: CfnChannel.NielsenNaesIiNwProperty.Builder =

@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.ses.VdmAttributesProps
 
+/**
+ * Properties for the Virtual Deliverablity Manager (VDM) attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * VdmAttributesProps vdmAttributesProps = VdmAttributesProps.builder()
+ * .engagementMetrics(false)
+ * .optimizedSharedDelivery(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VdmAttributesPropsDsl {
   private val cdkBuilder: VdmAttributesProps.Builder = VdmAttributesProps.builder()

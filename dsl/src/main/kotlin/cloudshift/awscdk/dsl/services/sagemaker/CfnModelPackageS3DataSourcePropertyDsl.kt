@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Describes the S3 data source.
+ *
+ * Your input bucket must be in the same AWS region as your training job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * S3DataSourceProperty s3DataSourceProperty = S3DataSourceProperty.builder()
+ * .s3DataType("s3DataType")
+ * .s3Uri("s3Uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-s3datasource.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageS3DataSourcePropertyDsl {
   private val cdkBuilder: CfnModelPackage.S3DataSourceProperty.Builder =

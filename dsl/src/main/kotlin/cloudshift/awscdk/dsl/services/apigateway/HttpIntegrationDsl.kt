@@ -9,6 +9,33 @@ import kotlin.Unit
 import software.amazon.awscdk.services.apigateway.HttpIntegration
 import software.amazon.awscdk.services.apigateway.IntegrationOptions
 
+/**
+ * You can integrate an API method with an HTTP endpoint using the HTTP proxy integration or the
+ * HTTP custom integration,.
+ *
+ * With the proxy integration, the setup is simple. You only need to set the
+ * HTTP method and the HTTP endpoint URI, according to the backend requirements,
+ * if you are not concerned with content encoding or caching.
+ *
+ * With the custom integration, the setup is more involved. In addition to the
+ * proxy integration setup steps, you need to specify how the incoming request
+ * data is mapped to the integration request and how the resulting integration
+ * response data is mapped to the method response.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * RequestAuthorizer auth = RequestAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization")))
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpIntegrationDsl(
   url: String,

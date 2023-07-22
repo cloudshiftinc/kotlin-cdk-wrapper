@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions
 
+/**
+ * The LF-tag key and values attached to a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lakeformation.*;
+ * LFTagProperty lFTagProperty = LFTagProperty.builder()
+ * .tagKey("tagKey")
+ * .tagValues(List.of("tagValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lakeformation-principalpermissions-lftag.html)
+ */
 @CdkDslMarker
 public class CfnPrincipalPermissionsLFTagPropertyDsl {
   private val cdkBuilder: CfnPrincipalPermissions.LFTagProperty.Builder =

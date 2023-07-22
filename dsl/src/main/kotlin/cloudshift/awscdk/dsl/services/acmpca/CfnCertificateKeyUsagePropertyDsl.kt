@@ -7,6 +7,32 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 
+/**
+ * Defines one or more purposes for which the key contained in the certificate can be used.
+ *
+ * Default value for each option is false.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * KeyUsageProperty keyUsageProperty = KeyUsageProperty.builder()
+ * .crlSign(false)
+ * .dataEncipherment(false)
+ * .decipherOnly(false)
+ * .digitalSignature(false)
+ * .encipherOnly(false)
+ * .keyAgreement(false)
+ * .keyCertSign(false)
+ * .keyEncipherment(false)
+ * .nonRepudiation(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificate-keyusage.html)
+ */
 @CdkDslMarker
 public class CfnCertificateKeyUsagePropertyDsl {
   private val cdkBuilder: CfnCertificate.KeyUsageProperty.Builder =

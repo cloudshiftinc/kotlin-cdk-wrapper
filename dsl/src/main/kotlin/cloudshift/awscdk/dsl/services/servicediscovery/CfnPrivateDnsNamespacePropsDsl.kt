@@ -13,6 +13,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
 import software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespaceProps
 
+/**
+ * Properties for defining a `CfnPrivateDnsNamespace`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * CfnPrivateDnsNamespaceProps cfnPrivateDnsNamespaceProps = CfnPrivateDnsNamespaceProps.builder()
+ * .name("name")
+ * .vpc("vpc")
+ * // the properties below are optional
+ * .description("description")
+ * .properties(PropertiesProperty.builder()
+ * .dnsProperties(PrivateDnsPropertiesMutableProperty.builder()
+ * .soa(SOAProperty.builder()
+ * .ttl(123)
+ * .build())
+ * .build())
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html)
+ */
 @CdkDslMarker
 public class CfnPrivateDnsNamespacePropsDsl {
   private val cdkBuilder: CfnPrivateDnsNamespaceProps.Builder =

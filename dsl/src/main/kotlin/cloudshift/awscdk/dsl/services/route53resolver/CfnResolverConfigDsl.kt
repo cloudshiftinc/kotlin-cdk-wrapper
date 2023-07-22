@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.route53resolver.CfnResolverConfig
 import software.constructs.Construct
 
+/**
+ * A complex type that contains information about a Resolver configuration for a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53resolver.*;
+ * CfnResolverConfig cfnResolverConfig = CfnResolverConfig.Builder.create(this,
+ * "MyCfnResolverConfig")
+ * .autodefinedReverseFlag("autodefinedReverseFlag")
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverconfig.html)
+ */
 @CdkDslMarker
 public class CfnResolverConfigDsl(
   scope: Construct,

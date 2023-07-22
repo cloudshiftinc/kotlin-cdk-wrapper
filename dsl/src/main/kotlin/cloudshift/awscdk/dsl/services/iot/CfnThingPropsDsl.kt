@@ -8,6 +8,26 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnThing
 import software.amazon.awscdk.services.iot.CfnThingProps
 
+/**
+ * Properties for defining a `CfnThing`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnThingProps cfnThingProps = CfnThingProps.builder()
+ * .attributePayload(AttributePayloadProperty.builder()
+ * .attributes(Map.of(
+ * "attributesKey", "attributes"))
+ * .build())
+ * .thingName("thingName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html)
+ */
 @CdkDslMarker
 public class CfnThingPropsDsl {
   private val cdkBuilder: CfnThingProps.Builder = CfnThingProps.builder()

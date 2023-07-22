@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnApp
 import software.amazon.awscdk.services.sagemaker.CfnAppProps
 
+/**
+ * Properties for defining a `CfnApp`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnAppProps cfnAppProps = CfnAppProps.builder()
+ * .appName("appName")
+ * .appType("appType")
+ * .domainId("domainId")
+ * .userProfileName("userProfileName")
+ * // the properties below are optional
+ * .resourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-app.html)
+ */
 @CdkDslMarker
 public class CfnAppPropsDsl {
   private val cdkBuilder: CfnAppProps.Builder = CfnAppProps.builder()

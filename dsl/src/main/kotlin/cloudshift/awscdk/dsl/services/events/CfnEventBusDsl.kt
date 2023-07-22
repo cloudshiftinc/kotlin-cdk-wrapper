@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.events.CfnEventBus
 import software.constructs.Construct
 
+/**
+ * Creates a new event bus within your account.
+ *
+ * This can be a custom event bus which you can use to receive events from your custom applications
+ * and services, or it can be a partner event bus which can be matched to a partner event source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnEventBus cfnEventBus = CfnEventBus.Builder.create(this, "MyCfnEventBus")
+ * .name("name")
+ * // the properties below are optional
+ * .eventSourceName("eventSourceName")
+ * .tags(List.of(TagEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-eventbus.html)
+ */
 @CdkDslMarker
 public class CfnEventBusDsl(
   scope: Construct,

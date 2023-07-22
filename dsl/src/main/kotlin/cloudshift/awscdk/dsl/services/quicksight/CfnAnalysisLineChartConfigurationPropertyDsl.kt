@@ -10,6 +10,16 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The configuration of a line chart.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-linechartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisLineChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnAnalysis.LineChartConfigurationProperty.Builder =

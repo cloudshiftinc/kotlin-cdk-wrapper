@@ -12,6 +12,33 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnEndpointConfig
 
+/**
+ * Specifies the configuration of your endpoint for model monitor data capture.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * DataCaptureConfigProperty dataCaptureConfigProperty = DataCaptureConfigProperty.builder()
+ * .captureOptions(List.of(CaptureOptionProperty.builder()
+ * .captureMode("captureMode")
+ * .build()))
+ * .destinationS3Uri("destinationS3Uri")
+ * .initialSamplingPercentage(123)
+ * // the properties below are optional
+ * .captureContentTypeHeader(CaptureContentTypeHeaderProperty.builder()
+ * .csvContentTypes(List.of("csvContentTypes"))
+ * .jsonContentTypes(List.of("jsonContentTypes"))
+ * .build())
+ * .enableCapture(false)
+ * .kmsKeyId("kmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-endpointconfig-datacaptureconfig.html)
+ */
 @CdkDslMarker
 public class CfnEndpointConfigDataCaptureConfigPropertyDsl {
   private val cdkBuilder: CfnEndpointConfig.DataCaptureConfigProperty.Builder =

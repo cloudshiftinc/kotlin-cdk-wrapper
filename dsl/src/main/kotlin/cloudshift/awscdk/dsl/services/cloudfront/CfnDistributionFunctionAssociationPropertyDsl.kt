@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A CloudFront function that is associated with a cache behavior in a CloudFront distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * FunctionAssociationProperty functionAssociationProperty = FunctionAssociationProperty.builder()
+ * .eventType("eventType")
+ * .functionArn("functionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-functionassociation.html)
+ */
 @CdkDslMarker
 public class CfnDistributionFunctionAssociationPropertyDsl {
   private val cdkBuilder: CfnDistribution.FunctionAssociationProperty.Builder =

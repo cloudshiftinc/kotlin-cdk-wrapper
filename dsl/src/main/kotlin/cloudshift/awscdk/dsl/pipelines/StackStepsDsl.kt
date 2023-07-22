@@ -9,6 +9,27 @@ import software.amazon.awscdk.Stack
 import software.amazon.awscdk.pipelines.StackSteps
 import software.amazon.awscdk.pipelines.Step
 
+/**
+ * Instructions for additional steps that are run at stack level.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.pipelines.*;
+ * Stack stack;
+ * Step step;
+ * StackSteps stackSteps = StackSteps.builder()
+ * .stack(stack)
+ * // the properties below are optional
+ * .changeSet(List.of(step))
+ * .post(List.of(step))
+ * .pre(List.of(step))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StackStepsDsl {
   private val cdkBuilder: StackSteps.Builder = StackSteps.builder()

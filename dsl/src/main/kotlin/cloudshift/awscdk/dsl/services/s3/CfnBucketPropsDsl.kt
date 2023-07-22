@@ -15,6 +15,24 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 import software.amazon.awscdk.services.s3.CfnBucketProps
 
+/**
+ * Properties for defining a `CfnBucket`.
+ *
+ * Example:
+ *
+ * ```
+ * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
+ * // -or-
+ * CfnBucket rawBucketAlt = (CfnBucket)myBucket.getNode().getDefaultChild();
+ * // then
+ * rawBucket.getCfnOptions().getCondition() = CfnCondition.Builder.create(this,
+ * "EnableBucket").build();
+ * rawBucket.getCfnOptions().getMetadata() = Map.of(
+ * "metadataKey", "MetadataValue");
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html)
+ */
 @CdkDslMarker
 public class CfnBucketPropsDsl {
   private val cdkBuilder: CfnBucketProps.Builder = CfnBucketProps.builder()

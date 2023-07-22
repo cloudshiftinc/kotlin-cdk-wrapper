@@ -9,6 +9,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.auditmanager.CfnAssessment
 
+/**
+ * The `Scope` property type specifies the wrapper that contains the AWS accounts and services that
+ * are in scope for the assessment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.auditmanager.*;
+ * ScopeProperty scopeProperty = ScopeProperty.builder()
+ * .awsAccounts(List.of(AWSAccountProperty.builder()
+ * .emailAddress("emailAddress")
+ * .id("id")
+ * .name("name")
+ * .build()))
+ * .awsServices(List.of(AWSServiceProperty.builder()
+ * .serviceName("serviceName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentScopePropertyDsl {
   private val cdkBuilder: CfnAssessment.ScopeProperty.Builder =

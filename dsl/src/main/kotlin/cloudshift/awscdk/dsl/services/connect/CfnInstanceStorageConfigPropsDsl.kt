@@ -8,6 +8,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps
 
+/**
+ * Properties for defining a `CfnInstanceStorageConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnInstanceStorageConfigProps cfnInstanceStorageConfigProps =
+ * CfnInstanceStorageConfigProps.builder()
+ * .instanceArn("instanceArn")
+ * .resourceType("resourceType")
+ * .storageType("storageType")
+ * // the properties below are optional
+ * .kinesisFirehoseConfig(KinesisFirehoseConfigProperty.builder()
+ * .firehoseArn("firehoseArn")
+ * .build())
+ * .kinesisStreamConfig(KinesisStreamConfigProperty.builder()
+ * .streamArn("streamArn")
+ * .build())
+ * .kinesisVideoStreamConfig(KinesisVideoStreamConfigProperty.builder()
+ * .prefix("prefix")
+ * .retentionPeriodHours(123)
+ * // the properties below are optional
+ * .encryptionConfig(EncryptionConfigProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .build())
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketName("bucketName")
+ * .bucketPrefix("bucketPrefix")
+ * // the properties below are optional
+ * .encryptionConfig(EncryptionConfigProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-instancestorageconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceStorageConfigPropsDsl {
   private val cdkBuilder: CfnInstanceStorageConfigProps.Builder =

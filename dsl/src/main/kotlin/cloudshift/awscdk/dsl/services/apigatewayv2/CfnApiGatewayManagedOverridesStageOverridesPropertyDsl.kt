@@ -11,6 +11,40 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides
 
+/**
+ * The `StageOverrides` property overrides the stage configuration for an API Gateway-managed stage.
+ *
+ * If you remove this property, API Gateway restores the default values.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigatewayv2.*;
+ * Object routeSettings;
+ * Object stageVariables;
+ * StageOverridesProperty stageOverridesProperty = StageOverridesProperty.builder()
+ * .accessLogSettings(AccessLogSettingsProperty.builder()
+ * .destinationArn("destinationArn")
+ * .format("format")
+ * .build())
+ * .autoDeploy(false)
+ * .defaultRouteSettings(RouteSettingsProperty.builder()
+ * .dataTraceEnabled(false)
+ * .detailedMetricsEnabled(false)
+ * .loggingLevel("loggingLevel")
+ * .throttlingBurstLimit(123)
+ * .throttlingRateLimit(123)
+ * .build())
+ * .description("description")
+ * .routeSettings(routeSettings)
+ * .stageVariables(stageVariables)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-apigatewaymanagedoverrides-stageoverrides.html)
+ */
 @CdkDslMarker
 public class CfnApiGatewayManagedOverridesStageOverridesPropertyDsl {
   private val cdkBuilder: CfnApiGatewayManagedOverrides.StageOverridesProperty.Builder =

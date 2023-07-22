@@ -14,6 +14,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnIdentityPool
 import software.constructs.Construct
 
+/**
+ * The `AWS::Cognito::IdentityPool` resource creates an Amazon Cognito identity pool.
+ *
+ * To avoid deleting the resource accidentally from AWS CloudFormation , use [DeletionPolicy
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-deletionpolicy.html)
+ * and the [UpdateReplacePolicy
+ * Attribute](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatereplacepolicy.html)
+ * to retain the resource on deletion or replacement.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cognito.*;
+ * OpenIdConnectProvider myProvider;
+ * CfnIdentityPool.Builder.create(this, "IdentityPool")
+ * .openIdConnectProviderArns(List.of(myProvider.getOpenIdConnectProviderArn()))
+ * // And the other properties for your identity pool
+ * .allowUnauthenticatedIdentities(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html)
+ */
 @CdkDslMarker
 public class CfnIdentityPoolDsl(
   scope: Construct,

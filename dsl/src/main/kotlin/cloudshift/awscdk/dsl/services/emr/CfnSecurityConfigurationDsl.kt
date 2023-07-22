@@ -10,6 +10,32 @@ import kotlin.Unit
 import software.amazon.awscdk.services.emr.CfnSecurityConfiguration
 import software.constructs.Construct
 
+/**
+ * Use a `SecurityConfiguration` resource to configure data encryption, Kerberos authentication
+ * (available in Amazon EMR release version 5.10.0 and later), and Amazon S3 authorization for EMRFS
+ * (available in EMR 5.10.0 and later). You can re-use a security configuration for any number of
+ * clusters in your account. For more information and example security configuration JSON objects, see
+ * [Create a Security
+ * Configuration](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-create-security-configuration.html)
+ * in the *Amazon EMR Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * Object securityConfiguration;
+ * CfnSecurityConfiguration cfnSecurityConfiguration = CfnSecurityConfiguration.Builder.create(this,
+ * "MyCfnSecurityConfiguration")
+ * .securityConfiguration(securityConfiguration)
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnSecurityConfigurationDsl(
   scope: Construct,

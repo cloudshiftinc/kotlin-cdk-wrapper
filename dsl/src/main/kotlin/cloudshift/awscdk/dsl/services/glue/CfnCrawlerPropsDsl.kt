@@ -13,6 +13,77 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnCrawler
 import software.amazon.awscdk.services.glue.CfnCrawlerProps
 
+/**
+ * Properties for defining a `CfnCrawler`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object tags;
+ * CfnCrawlerProps cfnCrawlerProps = CfnCrawlerProps.builder()
+ * .role("role")
+ * .targets(TargetsProperty.builder()
+ * .catalogTargets(List.of(CatalogTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .databaseName("databaseName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .tables(List.of("tables"))
+ * .build()))
+ * .deltaTargets(List.of(DeltaTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .createNativeDeltaTable(false)
+ * .deltaTables(List.of("deltaTables"))
+ * .writeManifest(false)
+ * .build()))
+ * .dynamoDbTargets(List.of(DynamoDBTargetProperty.builder()
+ * .path("path")
+ * .build()))
+ * .jdbcTargets(List.of(JdbcTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .build()))
+ * .mongoDbTargets(List.of(MongoDBTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .path("path")
+ * .build()))
+ * .s3Targets(List.of(S3TargetProperty.builder()
+ * .connectionName("connectionName")
+ * .dlqEventQueueArn("dlqEventQueueArn")
+ * .eventQueueArn("eventQueueArn")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .sampleSize(123)
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .classifiers(List.of("classifiers"))
+ * .configuration("configuration")
+ * .crawlerSecurityConfiguration("crawlerSecurityConfiguration")
+ * .databaseName("databaseName")
+ * .description("description")
+ * .name("name")
+ * .recrawlPolicy(RecrawlPolicyProperty.builder()
+ * .recrawlBehavior("recrawlBehavior")
+ * .build())
+ * .schedule(ScheduleProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * .build())
+ * .schemaChangePolicy(SchemaChangePolicyProperty.builder()
+ * .deleteBehavior("deleteBehavior")
+ * .updateBehavior("updateBehavior")
+ * .build())
+ * .tablePrefix("tablePrefix")
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerPropsDsl {
   private val cdkBuilder: CfnCrawlerProps.Builder = CfnCrawlerProps.builder()

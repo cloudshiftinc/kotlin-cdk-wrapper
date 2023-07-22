@@ -7,6 +7,28 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudfront.FunctionCode
 import software.amazon.awscdk.services.cloudfront.FunctionProps
 
+/**
+ * Properties for creating a CloudFront Function.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionPropsDsl {
   private val cdkBuilder: FunctionProps.Builder = FunctionProps.builder()

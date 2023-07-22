@@ -9,6 +9,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnRecipe
 
+/**
+ * Represents a single step from a DataBrew recipe to be performed.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * RecipeStepProperty recipeStepProperty = RecipeStepProperty.builder()
+ * .action(ActionProperty.builder()
+ * .operation("operation")
+ * // the properties below are optional
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .build())
+ * // the properties below are optional
+ * .conditionExpressions(List.of(ConditionExpressionProperty.builder()
+ * .condition("condition")
+ * .targetColumn("targetColumn")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-recipe-recipestep.html)
+ */
 @CdkDslMarker
 public class CfnRecipeRecipeStepPropertyDsl {
   private val cdkBuilder: CfnRecipe.RecipeStepProperty.Builder =

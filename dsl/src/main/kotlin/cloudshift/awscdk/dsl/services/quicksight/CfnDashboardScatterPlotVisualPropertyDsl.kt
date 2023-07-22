@@ -10,6 +10,20 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A scatter plot.
+ *
+ * For more information, see [Using scatter
+ * plots](https://docs.aws.amazon.com/quicksight/latest/user/scatter-plot.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-scatterplotvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardScatterPlotVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.ScatterPlotVisualProperty.Builder =

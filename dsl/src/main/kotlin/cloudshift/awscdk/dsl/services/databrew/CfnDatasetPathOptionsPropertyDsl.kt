@@ -9,6 +9,57 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents a set of options that define how DataBrew selects files for a given Amazon S3 path in
+ * a dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * PathOptionsProperty pathOptionsProperty = PathOptionsProperty.builder()
+ * .filesLimit(FilesLimitProperty.builder()
+ * .maxFiles(123)
+ * // the properties below are optional
+ * .order("order")
+ * .orderedBy("orderedBy")
+ * .build())
+ * .lastModifiedDateCondition(FilterExpressionProperty.builder()
+ * .expression("expression")
+ * .valuesMap(List.of(FilterValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .build())
+ * .parameters(List.of(PathParameterProperty.builder()
+ * .datasetParameter(DatasetParameterProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .createColumn(false)
+ * .datetimeOptions(DatetimeOptionsProperty.builder()
+ * .format("format")
+ * // the properties below are optional
+ * .localeCode("localeCode")
+ * .timezoneOffset("timezoneOffset")
+ * .build())
+ * .filter(FilterExpressionProperty.builder()
+ * .expression("expression")
+ * .valuesMap(List.of(FilterValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .build())
+ * .build())
+ * .pathParameterName("pathParameterName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-pathoptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetPathOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.PathOptionsProperty.Builder =

@@ -7,6 +7,35 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudget
 
+/**
+ * The types of cost that are included in a `COST` budget, such as tax and subscriptions.
+ *
+ * `USAGE` , `RI_UTILIZATION` , `RI_COVERAGE` , `SAVINGS_PLANS_UTILIZATION` , and
+ * `SAVINGS_PLANS_COVERAGE` budgets don't have `CostTypes` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * CostTypesProperty costTypesProperty = CostTypesProperty.builder()
+ * .includeCredit(false)
+ * .includeDiscount(false)
+ * .includeOtherSubscription(false)
+ * .includeRecurring(false)
+ * .includeRefund(false)
+ * .includeSubscription(false)
+ * .includeSupport(false)
+ * .includeTax(false)
+ * .includeUpfront(false)
+ * .useAmortized(false)
+ * .useBlended(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-costtypes.html)
+ */
 @CdkDslMarker
 public class CfnBudgetCostTypesPropertyDsl {
   private val cdkBuilder: CfnBudget.CostTypesProperty.Builder =

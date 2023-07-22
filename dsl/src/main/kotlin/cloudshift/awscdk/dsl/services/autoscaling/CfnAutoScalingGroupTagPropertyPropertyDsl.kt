@@ -8,6 +8,38 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup
 
+/**
+ * A structure that specifies a tag for the `Tags` property of
+ * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html)
+ * resource.
+ *
+ * For more information, see [Tag Auto Scaling groups and
+ * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-tagging.html) in the
+ * *Amazon EC2 Auto Scaling User Guide* . You can find a sample template snippet in the
+ * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-group.html#aws-properties-as-group--examples)
+ * section of the `AWS::AutoScaling::AutoScalingGroup` resource.
+ *
+ * CloudFormation adds the following tags to all Auto Scaling groups and associated instances:
+ *
+ * * aws:cloudformation:stack-name
+ * * aws:cloudformation:stack-id
+ * * aws:cloudformation:logical-id
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscaling.*;
+ * TagPropertyProperty tagPropertyProperty = TagPropertyProperty.builder()
+ * .key("key")
+ * .propagateAtLaunch(false)
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-tagproperty.html)
+ */
 @CdkDslMarker
 public class CfnAutoScalingGroupTagPropertyPropertyDsl {
   private val cdkBuilder: CfnAutoScalingGroup.TagPropertyProperty.Builder =

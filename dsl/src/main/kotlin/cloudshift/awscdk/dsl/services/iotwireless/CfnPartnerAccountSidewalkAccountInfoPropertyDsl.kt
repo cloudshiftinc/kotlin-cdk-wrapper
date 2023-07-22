@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotwireless.CfnPartnerAccount
 
+/**
+ * Information about a Sidewalk account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotwireless.*;
+ * SidewalkAccountInfoProperty sidewalkAccountInfoProperty = SidewalkAccountInfoProperty.builder()
+ * .appServerPrivateKey("appServerPrivateKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-partneraccount-sidewalkaccountinfo.html)
+ */
 @CdkDslMarker
 public class CfnPartnerAccountSidewalkAccountInfoPropertyDsl {
   private val cdkBuilder: CfnPartnerAccount.SidewalkAccountInfoProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment
 
+/**
+ * Describes the VPC attachment options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * OptionsProperty optionsProperty = OptionsProperty.builder()
+ * .applianceModeSupport("applianceModeSupport")
+ * .dnsSupport("dnsSupport")
+ * .ipv6Support("ipv6Support")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayvpcattachment-options.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayVpcAttachmentOptionsPropertyDsl {
   private val cdkBuilder: CfnTransitGatewayVpcAttachment.OptionsProperty.Builder =

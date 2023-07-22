@@ -10,6 +10,41 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.opensearchservice.IDomain
 import software.constructs.Construct
 
+/**
+ * An Appsync datasource backed by OpenSearch.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * GraphqlApi api;
+ * User user = new User(this, "User");
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_2_3)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .fineGrainedAccessControl(AdvancedSecurityOptions.builder().masterUserArn(user.getUserArn()).build())
+ * .encryptionAtRest(EncryptionAtRestOptions.builder().enabled(true).build())
+ * .nodeToNodeEncryption(true)
+ * .enforceHttps(true)
+ * .build();
+ * OpenSearchDataSource ds = api.addOpenSearchDataSource("ds", domain);
+ * ds.createResolver("QueryGetTestsResolver", BaseResolverProps.builder()
+ * .typeName("Query")
+ * .fieldName("getTests")
+ * .requestMappingTemplate(MappingTemplate.fromString(JSON.stringify(Map.of(
+ * "version", "2017-02-28",
+ * "operation", "GET",
+ * "path", "/id/post/_search",
+ * "params", Map.of(
+ * "headers", Map.of(),
+ * "queryString", Map.of(),
+ * "body", Map.of("from", 0, "size", 50))))))
+ * .responseMappingTemplate(MappingTemplate.fromString("[\n    #foreach($entry in
+ * $context.result.hits.hits)\n    #if( $velocityCount &gt; 1 ) , #end\n   
+ * $utils.toJson($entry.get(\"_source\"))\n    #end\n  ]"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class OpenSearchDataSourceDsl(
   scope: Construct,

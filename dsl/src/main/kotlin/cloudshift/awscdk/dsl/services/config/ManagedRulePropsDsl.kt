@@ -12,6 +12,23 @@ import software.amazon.awscdk.services.config.ManagedRuleProps
 import software.amazon.awscdk.services.config.MaximumExecutionFrequency
 import software.amazon.awscdk.services.config.RuleScope
 
+/**
+ * Construction properties for a ManagedRule.
+ *
+ * Example:
+ *
+ * ```
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * ManagedRule.Builder.create(this, "AccessKeysRotated")
+ * .identifier(ManagedRuleIdentifiers.ACCESS_KEYS_ROTATED)
+ * .inputParameters(Map.of(
+ * "maxAccessKeyAge", 60))
+ * // default is 24 hours
+ * .maximumExecutionFrequency(MaximumExecutionFrequency.TWELVE_HOURS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ManagedRulePropsDsl {
   private val cdkBuilder: ManagedRuleProps.Builder = ManagedRuleProps.builder()

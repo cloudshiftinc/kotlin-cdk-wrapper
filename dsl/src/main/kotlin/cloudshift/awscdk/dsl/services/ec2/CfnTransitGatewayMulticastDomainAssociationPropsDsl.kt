@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastDomainAssociationProps
 
+/**
+ * Properties for defining a `CfnTransitGatewayMulticastDomainAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayMulticastDomainAssociationProps cfnTransitGatewayMulticastDomainAssociationProps
+ * = CfnTransitGatewayMulticastDomainAssociationProps.builder()
+ * .subnetId("subnetId")
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .transitGatewayMulticastDomainId("transitGatewayMulticastDomainId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewaymulticastdomainassociation.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayMulticastDomainAssociationPropsDsl {
   private val cdkBuilder: CfnTransitGatewayMulticastDomainAssociationProps.Builder =

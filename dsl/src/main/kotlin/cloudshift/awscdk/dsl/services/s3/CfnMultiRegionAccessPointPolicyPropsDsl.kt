@@ -9,6 +9,25 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps
 
+/**
+ * Properties for defining a `CfnMultiRegionAccessPointPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * Object policy;
+ * CfnMultiRegionAccessPointPolicyProps cfnMultiRegionAccessPointPolicyProps =
+ * CfnMultiRegionAccessPointPolicyProps.builder()
+ * .mrapName("mrapName")
+ * .policy(policy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-multiregionaccesspointpolicy.html)
+ */
 @CdkDslMarker
 public class CfnMultiRegionAccessPointPolicyPropsDsl {
   private val cdkBuilder: CfnMultiRegionAccessPointPolicyProps.Builder =

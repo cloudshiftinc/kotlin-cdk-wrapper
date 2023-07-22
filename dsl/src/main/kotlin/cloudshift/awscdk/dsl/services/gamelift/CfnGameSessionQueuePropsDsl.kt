@@ -15,6 +15,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueue
 import software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps
 
+/**
+ * Properties for defining a `CfnGameSessionQueue`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnGameSessionQueueProps cfnGameSessionQueueProps = CfnGameSessionQueueProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .customEventData("customEventData")
+ * .destinations(List.of(DestinationProperty.builder()
+ * .destinationArn("destinationArn")
+ * .build()))
+ * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .allowedLocations(List.of("allowedLocations"))
+ * .build())
+ * .notificationTarget("notificationTarget")
+ * .playerLatencyPolicies(List.of(PlayerLatencyPolicyProperty.builder()
+ * .maximumIndividualPlayerLatencyMilliseconds(123)
+ * .policyDurationSeconds(123)
+ * .build()))
+ * .priorityConfiguration(PriorityConfigurationProperty.builder()
+ * .locationOrder(List.of("locationOrder"))
+ * .priorityOrder(List.of("priorityOrder"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .timeoutInSeconds(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html)
+ */
 @CdkDslMarker
 public class CfnGameSessionQueuePropsDsl {
   private val cdkBuilder: CfnGameSessionQueueProps.Builder = CfnGameSessionQueueProps.builder()

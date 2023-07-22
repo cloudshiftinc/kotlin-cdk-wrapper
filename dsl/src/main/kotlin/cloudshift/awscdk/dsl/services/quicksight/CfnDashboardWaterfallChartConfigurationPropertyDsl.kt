@@ -6,6 +6,16 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * The configuration for a waterfall visual.
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-waterfallchartconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDashboardWaterfallChartConfigurationPropertyDsl {
   private val cdkBuilder: CfnDashboard.WaterfallChartConfigurationProperty.Builder =

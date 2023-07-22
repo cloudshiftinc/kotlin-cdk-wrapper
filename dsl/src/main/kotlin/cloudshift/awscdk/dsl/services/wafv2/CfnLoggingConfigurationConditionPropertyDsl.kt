@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration
 
+/**
+ * A single match condition for a log filter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * ConditionProperty conditionProperty = ConditionProperty.builder()
+ * .actionCondition(ActionConditionProperty.builder()
+ * .action("action")
+ * .build())
+ * .labelNameCondition(LabelNameConditionProperty.builder()
+ * .labelName("labelName")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-loggingconfiguration-condition.html)
+ */
 @CdkDslMarker
 public class CfnLoggingConfigurationConditionPropertyDsl {
   private val cdkBuilder: CfnLoggingConfiguration.ConditionProperty.Builder =

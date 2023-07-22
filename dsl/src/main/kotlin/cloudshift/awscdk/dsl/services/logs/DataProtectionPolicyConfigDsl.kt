@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.logs.DataProtectionPolicyConfig
 
+/**
+ * Interface representing a data protection policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * Object statement;
+ * DataProtectionPolicyConfig dataProtectionPolicyConfig = DataProtectionPolicyConfig.builder()
+ * .description("description")
+ * .name("name")
+ * .statement(statement)
+ * .version("version")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DataProtectionPolicyConfigDsl {
   private val cdkBuilder: DataProtectionPolicyConfig.Builder = DataProtectionPolicyConfig.builder()

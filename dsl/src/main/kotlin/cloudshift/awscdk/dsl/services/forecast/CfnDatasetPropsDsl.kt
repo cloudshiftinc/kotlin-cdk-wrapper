@@ -12,6 +12,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.forecast.CfnDataset
 import software.amazon.awscdk.services.forecast.CfnDatasetProps
 
+/**
+ * Properties for defining a `CfnDataset`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.forecast.*;
+ * Object encryptionConfig;
+ * Object schema;
+ * CfnDatasetProps cfnDatasetProps = CfnDatasetProps.builder()
+ * .datasetName("datasetName")
+ * .datasetType("datasetType")
+ * .domain("domain")
+ * .schema(schema)
+ * // the properties below are optional
+ * .dataFrequency("dataFrequency")
+ * .encryptionConfig(encryptionConfig)
+ * .tags(List.of(TagsItemsProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-dataset.html)
+ */
 @CdkDslMarker
 public class CfnDatasetPropsDsl {
   private val cdkBuilder: CfnDatasetProps.Builder = CfnDatasetProps.builder()

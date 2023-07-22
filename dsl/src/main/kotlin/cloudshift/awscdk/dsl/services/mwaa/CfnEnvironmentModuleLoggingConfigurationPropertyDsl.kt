@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.mwaa.CfnEnvironment
 
+/**
+ * Defines the type of logs to send for the Apache Airflow log type (e.g. `DagProcessingLogs` ).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mwaa.*;
+ * ModuleLoggingConfigurationProperty moduleLoggingConfigurationProperty =
+ * ModuleLoggingConfigurationProperty.builder()
+ * .cloudWatchLogGroupArn("cloudWatchLogGroupArn")
+ * .enabled(false)
+ * .logLevel("logLevel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-moduleloggingconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentModuleLoggingConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.ModuleLoggingConfigurationProperty.Builder =

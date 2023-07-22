@@ -15,6 +15,46 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps
 
+/**
+ * Properties for defining a `CfnEventDataStore`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudtrail.*;
+ * CfnEventDataStoreProps cfnEventDataStoreProps = CfnEventDataStoreProps.builder()
+ * .advancedEventSelectors(List.of(AdvancedEventSelectorProperty.builder()
+ * .fieldSelectors(List.of(AdvancedFieldSelectorProperty.builder()
+ * .field("field")
+ * // the properties below are optional
+ * .endsWith(List.of("endsWith"))
+ * .equalTo(List.of("equalTo"))
+ * .notEndsWith(List.of("notEndsWith"))
+ * .notEquals(List.of("notEquals"))
+ * .notStartsWith(List.of("notStartsWith"))
+ * .startsWith(List.of("startsWith"))
+ * .build()))
+ * // the properties below are optional
+ * .name("name")
+ * .build()))
+ * .ingestionEnabled(false)
+ * .kmsKeyId("kmsKeyId")
+ * .multiRegionEnabled(false)
+ * .name("name")
+ * .organizationEnabled(false)
+ * .retentionPeriod(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .terminationProtectionEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-eventdatastore.html)
+ */
 @CdkDslMarker
 public class CfnEventDataStorePropsDsl {
   private val cdkBuilder: CfnEventDataStoreProps.Builder = CfnEventDataStoreProps.builder()

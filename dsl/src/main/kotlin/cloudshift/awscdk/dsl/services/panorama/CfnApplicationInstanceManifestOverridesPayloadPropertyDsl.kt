@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.panorama.CfnApplicationInstance
 
+/**
+ * Parameter overrides for an application instance.
+ *
+ * This is a JSON document that has a single key ( `PayloadData` ) where the value is an escaped
+ * string representation of the overrides document.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * ManifestOverridesPayloadProperty manifestOverridesPayloadProperty =
+ * ManifestOverridesPayloadProperty.builder()
+ * .payloadData("payloadData")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-panorama-applicationinstance-manifestoverridespayload.html)
+ */
 @CdkDslMarker
 public class CfnApplicationInstanceManifestOverridesPayloadPropertyDsl {
   private val cdkBuilder: CfnApplicationInstance.ManifestOverridesPayloadProperty.Builder =

@@ -13,6 +13,30 @@ import software.amazon.awscdk.services.appmesh.HttpRoutePathMatch
 import software.amazon.awscdk.services.appmesh.HttpRouteProtocol
 import software.amazon.awscdk.services.appmesh.QueryParameterMatch
 
+/**
+ * The criterion for determining a request match for this Route.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-http", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.http(HttpRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder()
+ * .virtualNode(node)
+ * .weight(50)
+ * .build(), WeightedTarget.builder()
+ * .virtualNode(node)
+ * .weight(50)
+ * .build()))
+ * .match(HttpRouteMatch.builder()
+ * .path(HttpRoutePathMatch.startsWith("/path-to-app"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class HttpRouteMatchDsl {
   private val cdkBuilder: HttpRouteMatch.Builder = HttpRouteMatch.builder()

@@ -15,6 +15,25 @@ import software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.constructs.Construct
 
+/**
+ * A interface VPC endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InterfaceVpcEndpoint.Builder.create(this, "VPC Endpoint")
+ * .vpc(vpc)
+ * .service(new
+ * InterfaceVpcEndpointService("com.amazonaws.vpce.us-east-1.vpce-svc-uuddlrlrbastrtsvc", 443))
+ * // Choose which availability zones to place the VPC endpoint in, based on
+ * // available AZs
+ * .subnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("us-east-1a", "us-east-1c"))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class InterfaceVpcEndpointDsl(
   scope: Construct,

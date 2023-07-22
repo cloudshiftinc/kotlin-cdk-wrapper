@@ -7,6 +7,52 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * The `Volume` property specifies a data volume used in a task definition.
+ *
+ * For tasks that use a Docker volume, specify a `DockerVolumeConfiguration` . For tasks that use a
+ * bind mount host volume, specify a `host` and optional `sourcePath` . For more information about
+ * `host` and optional `sourcePath` , see
+ * [Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#volumes)
+ * and [Using Data Volumes in
+ * Tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_data_volumes.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * VolumeProperty volumeProperty = VolumeProperty.builder()
+ * .dockerVolumeConfiguration(DockerVolumeConfigurationProperty.builder()
+ * .autoprovision(false)
+ * .driver("driver")
+ * .driverOpts(Map.of(
+ * "driverOptsKey", "driverOpts"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .scope("scope")
+ * .build())
+ * .efsVolumeConfiguration(EFSVolumeConfigurationProperty.builder()
+ * .filesystemId("filesystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build())
+ * .host(HostVolumePropertiesProperty.builder()
+ * .sourcePath("sourcePath")
+ * .build())
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionVolumePropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.VolumeProperty.Builder =

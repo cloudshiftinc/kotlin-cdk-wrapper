@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.servicediscovery.CfnService
 
+/**
+ * A complex type that contains information about the Route 53 DNS records that you want AWS Cloud
+ * Map to create when you register an instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * DnsRecordProperty dnsRecordProperty = DnsRecordProperty.builder()
+ * .ttl(123)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-service-dnsrecord.html)
+ */
 @CdkDslMarker
 public class CfnServiceDnsRecordPropertyDsl {
   private val cdkBuilder: CfnService.DnsRecordProperty.Builder =

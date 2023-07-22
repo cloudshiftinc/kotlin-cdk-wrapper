@@ -7,6 +7,27 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.datasync.CfnLocationHDFS
 
+/**
+ * The NameNode of the Hadoop Distributed File System (HDFS).
+ *
+ * The NameNode manages the file system's namespace and performs operations such as opening,
+ * closing, and renaming files and directories. The NameNode also contains the information to map
+ * blocks of data to the DataNodes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * NameNodeProperty nameNodeProperty = NameNodeProperty.builder()
+ * .hostname("hostname")
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationhdfs-namenode.html)
+ */
 @CdkDslMarker
 public class CfnLocationHDFSNameNodePropertyDsl {
   private val cdkBuilder: CfnLocationHDFS.NameNodeProperty.Builder =

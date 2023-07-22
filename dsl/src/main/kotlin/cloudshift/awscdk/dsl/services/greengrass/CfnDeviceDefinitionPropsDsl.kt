@@ -11,6 +11,34 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnDeviceDefinition
 import software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionProps
 
+/**
+ * Properties for defining a `CfnDeviceDefinition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * Object tags;
+ * CfnDeviceDefinitionProps cfnDeviceDefinitionProps = CfnDeviceDefinitionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .initialVersion(DeviceDefinitionVersionProperty.builder()
+ * .devices(List.of(DeviceProperty.builder()
+ * .certificateArn("certificateArn")
+ * .id("id")
+ * .thingArn("thingArn")
+ * // the properties below are optional
+ * .syncShadow(false)
+ * .build()))
+ * .build())
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-devicedefinition.html)
+ */
 @CdkDslMarker
 public class CfnDeviceDefinitionPropsDsl {
   private val cdkBuilder: CfnDeviceDefinitionProps.Builder = CfnDeviceDefinitionProps.builder()

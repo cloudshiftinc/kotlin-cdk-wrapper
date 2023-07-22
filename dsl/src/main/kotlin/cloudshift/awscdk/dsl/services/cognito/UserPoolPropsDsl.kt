@@ -27,6 +27,24 @@ import software.amazon.awscdk.services.cognito.UserVerificationConfig
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Props for the UserPool construct.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .selfSignUpEnabled(true)
+ * .userVerification(UserVerificationConfig.builder()
+ * .emailSubject("Verify your email for our awesome app!")
+ * .emailBody("Thanks for signing up to our awesome app! Your verification code is {####}")
+ * .emailStyle(VerificationEmailStyle.CODE)
+ * .smsMessage("Thanks for signing up to our awesome app! Your verification code is {####}")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolPropsDsl {
   private val cdkBuilder: UserPoolProps.Builder = UserPoolProps.builder()

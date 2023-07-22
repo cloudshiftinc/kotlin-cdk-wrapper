@@ -8,6 +8,37 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that describes an Amazon Kinesis Data Stream endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For more information about other available settings,
+ * see [Using object mapping to migrate data to a Kinesis data
+ * stream](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.Kinesis.html#CHAP_Target.Kinesis.ObjectMapping)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * KinesisSettingsProperty kinesisSettingsProperty = KinesisSettingsProperty.builder()
+ * .includeControlDetails(false)
+ * .includeNullAndEmpty(false)
+ * .includePartitionValue(false)
+ * .includeTableAlterOperations(false)
+ * .includeTransactionDetails(false)
+ * .messageFormat("messageFormat")
+ * .noHexPrefix(false)
+ * .partitionIncludeSchemaTable(false)
+ * .serviceAccessRoleArn("serviceAccessRoleArn")
+ * .streamArn("streamArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-kinesissettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointKinesisSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.KinesisSettingsProperty.Builder =

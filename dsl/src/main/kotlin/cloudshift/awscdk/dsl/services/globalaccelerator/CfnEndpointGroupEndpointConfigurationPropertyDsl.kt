@@ -9,6 +9,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup
 
+/**
+ * A complex type for endpoints.
+ *
+ * A resource must be valid and active when you add it as an endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * EndpointConfigurationProperty endpointConfigurationProperty =
+ * EndpointConfigurationProperty.builder()
+ * .endpointId("endpointId")
+ * // the properties below are optional
+ * .clientIpPreservationEnabled(false)
+ * .weight(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEndpointGroupEndpointConfigurationPropertyDsl {
   private val cdkBuilder: CfnEndpointGroup.EndpointConfigurationProperty.Builder =

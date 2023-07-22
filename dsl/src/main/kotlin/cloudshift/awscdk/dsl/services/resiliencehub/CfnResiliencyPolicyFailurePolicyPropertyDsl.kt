@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy
 
+/**
+ * Defines a failure policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resiliencehub.*;
+ * FailurePolicyProperty failurePolicyProperty = FailurePolicyProperty.builder()
+ * .rpoInSecs(123)
+ * .rtoInSecs(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resiliencehub-resiliencypolicy-failurepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResiliencyPolicyFailurePolicyPropertyDsl {
   private val cdkBuilder: CfnResiliencyPolicy.FailurePolicyProperty.Builder =

@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lex.CfnBotAlias
 
+/**
+ * Specifies a Lambda function that verifies requests to a bot or fulfills the user's request to a
+ * bot.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * LambdaCodeHookProperty lambdaCodeHookProperty = LambdaCodeHookProperty.builder()
+ * .codeHookInterfaceVersion("codeHookInterfaceVersion")
+ * .lambdaArn("lambdaArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-lambdacodehook.html)
+ */
 @CdkDslMarker
 public class CfnBotAliasLambdaCodeHookPropertyDsl {
   private val cdkBuilder: CfnBotAlias.LambdaCodeHookProperty.Builder =

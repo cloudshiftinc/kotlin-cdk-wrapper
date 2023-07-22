@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents the AWS Cloud Map service discovery information for your virtual node.
+ *
+ *
+ * AWS Cloud Map is not available in the eu-south-1 Region.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * AwsCloudMapServiceDiscoveryProperty awsCloudMapServiceDiscoveryProperty =
+ * AwsCloudMapServiceDiscoveryProperty.builder()
+ * .namespaceName("namespaceName")
+ * .serviceName("serviceName")
+ * // the properties below are optional
+ * .attributes(List.of(AwsCloudMapInstanceAttributeProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .ipPreference("ipPreference")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-awscloudmapservicediscovery.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeAwsCloudMapServiceDiscoveryPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.Builder =

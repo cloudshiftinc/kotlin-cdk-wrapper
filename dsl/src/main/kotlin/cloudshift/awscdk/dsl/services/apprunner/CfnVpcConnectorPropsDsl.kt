@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps
 
+/**
+ * Properties for defining a `CfnVpcConnector`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apprunner.*;
+ * CfnVpcConnectorProps cfnVpcConnectorProps = CfnVpcConnectorProps.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConnectorName("vpcConnectorName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html)
+ */
 @CdkDslMarker
 public class CfnVpcConnectorPropsDsl {
   private val cdkBuilder: CfnVpcConnectorProps.Builder = CfnVpcConnectorProps.builder()

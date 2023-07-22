@@ -6,6 +6,37 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
 
+/**
+ * The definition is where you specify all of the type-specific parameters.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * DefinitionProperty definitionProperty = DefinitionProperty.builder()
+ * .iamActionDefinition(IamActionDefinitionProperty.builder()
+ * .policyArn("policyArn")
+ * // the properties below are optional
+ * .groups(List.of("groups"))
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build())
+ * .scpActionDefinition(ScpActionDefinitionProperty.builder()
+ * .policyId("policyId")
+ * .targetIds(List.of("targetIds"))
+ * .build())
+ * .ssmActionDefinition(SsmActionDefinitionProperty.builder()
+ * .instanceIds(List.of("instanceIds"))
+ * .region("region")
+ * .subtype("subtype")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budgetsaction-definition.html)
+ */
 @CdkDslMarker
 public class CfnBudgetsActionDefinitionPropertyDsl {
   private val cdkBuilder: CfnBudgetsAction.DefinitionProperty.Builder =

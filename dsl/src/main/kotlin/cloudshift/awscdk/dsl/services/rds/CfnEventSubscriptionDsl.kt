@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.rds.CfnEventSubscription
 import software.constructs.Construct
 
+/**
+ * The `AWS::RDS::EventSubscription` resource allows you to receive notifications for Amazon
+ * Relational Database Service events through the Amazon Simple Notification Service (Amazon SNS).
+ *
+ * For more information, see [Using Amazon RDS Event
+ * Notification](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.html) in the
+ * *Amazon RDS User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnEventSubscription cfnEventSubscription = CfnEventSubscription.Builder.create(this,
+ * "MyCfnEventSubscription")
+ * .snsTopicArn("snsTopicArn")
+ * // the properties below are optional
+ * .enabled(false)
+ * .eventCategories(List.of("eventCategories"))
+ * .sourceIds(List.of("sourceIds"))
+ * .sourceType("sourceType")
+ * .subscriptionName("subscriptionName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-eventsubscription.html)
+ */
 @CdkDslMarker
 public class CfnEventSubscriptionDsl(
   scope: Construct,

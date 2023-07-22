@@ -13,6 +13,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotsitewise.CfnPortalProps
 
+/**
+ * Properties for defining a `CfnPortal`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * Object alarms;
+ * CfnPortalProps cfnPortalProps = CfnPortalProps.builder()
+ * .portalContactEmail("portalContactEmail")
+ * .portalName("portalName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .alarms(alarms)
+ * .notificationSenderEmail("notificationSenderEmail")
+ * .portalAuthMode("portalAuthMode")
+ * .portalDescription("portalDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html)
+ */
 @CdkDslMarker
 public class CfnPortalPropsDsl {
   private val cdkBuilder: CfnPortalProps.Builder = CfnPortalProps.builder()

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.eks.CfnCluster
 
+/**
+ * The placement configuration for all the control plane instances of your local Amazon EKS cluster
+ * on an AWS Outpost.
+ *
+ * For more information, see [Capacity
+ * considerations](https://docs.aws.amazon.com/eks/latest/userguide/eks-outposts-capacity-considerations.html)
+ * in the Amazon EKS User Guide.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * ControlPlanePlacementProperty controlPlanePlacementProperty =
+ * ControlPlanePlacementProperty.builder()
+ * .groupName("groupName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-controlplaneplacement.html)
+ */
 @CdkDslMarker
 public class CfnClusterControlPlanePlacementPropertyDsl {
   private val cdkBuilder: CfnCluster.ControlPlanePlacementProperty.Builder =

@@ -14,6 +14,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ivschat.CfnRoom
 import software.constructs.Construct
 
+/**
+ * The `AWS::IVSChat::Room` resource specifies an  room that allows clients to connect and pass
+ * messages.
+ *
+ * For more information, see
+ * [CreateRoom](https://docs.aws.amazon.com/ivs/latest/ChatAPIReference/API_CreateRoom.html) in the
+ * *Amazon Interactive Video Service Chat API Reference* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * CfnRoom cfnRoom = CfnRoom.Builder.create(this, "MyCfnRoom")
+ * .loggingConfigurationIdentifiers(List.of("loggingConfigurationIdentifiers"))
+ * .maximumMessageLength(123)
+ * .maximumMessageRatePerSecond(123)
+ * .messageReviewHandler(MessageReviewHandlerProperty.builder()
+ * .fallbackResult("fallbackResult")
+ * .uri("uri")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivschat-room.html)
+ */
 @CdkDslMarker
 public class CfnRoomDsl(
   scope: Construct,

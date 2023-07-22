@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.networkfirewall.CfnRuleGroup
 
+/**
+ * A custom action to use in stateless rule actions settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * ActionDefinitionProperty actionDefinitionProperty = ActionDefinitionProperty.builder()
+ * .publishMetricAction(PublishMetricActionProperty.builder()
+ * .dimensions(List.of(DimensionProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-rulegroup-actiondefinition.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupActionDefinitionPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.ActionDefinitionProperty.Builder =

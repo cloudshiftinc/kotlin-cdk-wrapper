@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnService
 
+/**
+ * The deployment controller to use for the service.
+ *
+ * For more information, see [Amazon ECS deployment
+ * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the
+ * *Amazon Elastic Container Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * DeploymentControllerProperty deploymentControllerProperty =
+ * DeploymentControllerProperty.builder()
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentcontroller.html)
+ */
 @CdkDslMarker
 public class CfnServiceDeploymentControllerPropertyDsl {
   private val cdkBuilder: CfnService.DeploymentControllerProperty.Builder =

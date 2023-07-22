@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment
 
+/**
+ * The infrastructure configuration for deploying the model to a real-time inference endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * RealTimeInferenceConfigProperty realTimeInferenceConfigProperty =
+ * RealTimeInferenceConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferenceexperiment-realtimeinferenceconfig.html)
+ */
 @CdkDslMarker
 public class CfnInferenceExperimentRealTimeInferenceConfigPropertyDsl {
   private val cdkBuilder: CfnInferenceExperiment.RealTimeInferenceConfigProperty.Builder =

@@ -8,6 +8,26 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action that writes data to an Amazon Kinesis Firehose stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * FirehoseActionProperty firehoseActionProperty = FirehoseActionProperty.builder()
+ * .deliveryStreamName("deliveryStreamName")
+ * .roleArn("roleArn")
+ * // the properties below are optional
+ * .batchMode(false)
+ * .separator("separator")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-firehoseaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleFirehoseActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.FirehoseActionProperty.Builder =

@@ -13,6 +13,43 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnIdentityProviderConfig
 import software.amazon.awscdk.services.eks.CfnIdentityProviderConfigProps
 
+/**
+ * Properties for defining a `CfnIdentityProviderConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnIdentityProviderConfigProps cfnIdentityProviderConfigProps =
+ * CfnIdentityProviderConfigProps.builder()
+ * .clusterName("clusterName")
+ * .type("type")
+ * // the properties below are optional
+ * .identityProviderConfigName("identityProviderConfigName")
+ * .oidc(OidcIdentityProviderConfigProperty.builder()
+ * .clientId("clientId")
+ * .issuerUrl("issuerUrl")
+ * // the properties below are optional
+ * .groupsClaim("groupsClaim")
+ * .groupsPrefix("groupsPrefix")
+ * .requiredClaims(List.of(RequiredClaimProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .usernameClaim("usernameClaim")
+ * .usernamePrefix("usernamePrefix")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-identityproviderconfig.html)
+ */
 @CdkDslMarker
 public class CfnIdentityProviderConfigPropsDsl {
   private val cdkBuilder: CfnIdentityProviderConfigProps.Builder =

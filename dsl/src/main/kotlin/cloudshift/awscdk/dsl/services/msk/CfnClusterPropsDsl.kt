@@ -10,6 +10,126 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 import software.amazon.awscdk.services.msk.CfnClusterProps
 
+/**
+ * Properties for defining a `CfnCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
+ * .brokerNodeGroupInfo(BrokerNodeGroupInfoProperty.builder()
+ * .clientSubnets(List.of("clientSubnets"))
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .brokerAzDistribution("brokerAzDistribution")
+ * .connectivityInfo(ConnectivityInfoProperty.builder()
+ * .publicAccess(PublicAccessProperty.builder()
+ * .type("type")
+ * .build())
+ * .vpcConnectivity(VpcConnectivityProperty.builder()
+ * .clientAuthentication(VpcConnectivityClientAuthenticationProperty.builder()
+ * .sasl(VpcConnectivitySaslProperty.builder()
+ * .iam(VpcConnectivityIamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(VpcConnectivityScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(VpcConnectivityTlsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .storageInfo(StorageInfoProperty.builder()
+ * .ebsStorageInfo(EBSStorageInfoProperty.builder()
+ * .provisionedThroughput(ProvisionedThroughputProperty.builder()
+ * .enabled(false)
+ * .volumeThroughput(123)
+ * .build())
+ * .volumeSize(123)
+ * .build())
+ * .build())
+ * .build())
+ * .clusterName("clusterName")
+ * .kafkaVersion("kafkaVersion")
+ * .numberOfBrokerNodes(123)
+ * // the properties below are optional
+ * .clientAuthentication(ClientAuthenticationProperty.builder()
+ * .sasl(SaslProperty.builder()
+ * .iam(IamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(ScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(TlsProperty.builder()
+ * .certificateAuthorityArnList(List.of("certificateAuthorityArnList"))
+ * .enabled(false)
+ * .build())
+ * .unauthenticated(UnauthenticatedProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .configurationInfo(ConfigurationInfoProperty.builder()
+ * .arn("arn")
+ * .revision(123)
+ * .build())
+ * .currentVersion("currentVersion")
+ * .encryptionInfo(EncryptionInfoProperty.builder()
+ * .encryptionAtRest(EncryptionAtRestProperty.builder()
+ * .dataVolumeKmsKeyId("dataVolumeKmsKeyId")
+ * .build())
+ * .encryptionInTransit(EncryptionInTransitProperty.builder()
+ * .clientBroker("clientBroker")
+ * .inCluster(false)
+ * .build())
+ * .build())
+ * .enhancedMonitoring("enhancedMonitoring")
+ * .loggingInfo(LoggingInfoProperty.builder()
+ * .brokerLogs(BrokerLogsProperty.builder()
+ * .cloudWatchLogs(CloudWatchLogsProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .logGroup("logGroup")
+ * .build())
+ * .firehose(FirehoseProperty.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .s3(S3Property.builder()
+ * .enabled(false)
+ * // the properties below are optional
+ * .bucket("bucket")
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * .build())
+ * .openMonitoring(OpenMonitoringProperty.builder()
+ * .prometheus(PrometheusProperty.builder()
+ * .jmxExporter(JmxExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .nodeExporter(NodeExporterProperty.builder()
+ * .enabledInBroker(false)
+ * .build())
+ * .build())
+ * .build())
+ * .storageMode("storageMode")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-cluster.html)
+ */
 @CdkDslMarker
 public class CfnClusterPropsDsl {
   private val cdkBuilder: CfnClusterProps.Builder = CfnClusterProps.builder()

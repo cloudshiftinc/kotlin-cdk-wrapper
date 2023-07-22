@@ -7,6 +7,31 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.DefaultStackSynthesizer
 
+/**
+ * Uses conventionally named roles and asset storage locations.
+ *
+ * This synthesizer:
+ *
+ * * Supports cross-account deployments (the CLI can have credentials to one
+ * account, and you can still deploy to another account by assuming roles with
+ * well-known names in the other account).
+ * * Supports the **CDK Pipelines** library.
+ *
+ * Requires the environment to have been bootstrapped with Bootstrap Stack V2
+ * (also known as "modern bootstrap stack"). The synthesizer adds a version
+ * check to the template, to make sure the bootstrap stack is recent enough
+ * to support all features expected by this synthesizer.
+ *
+ * Example:
+ *
+ * ```
+ * MyStack.Builder.create(app, "MyStack")
+ * .synthesizer(DefaultStackSynthesizer.Builder.create()
+ * .fileAssetsBucketName("my-orgs-asset-bucket")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DefaultStackSynthesizerDsl {
   private val cdkBuilder: DefaultStackSynthesizer.Builder = DefaultStackSynthesizer.Builder.create()

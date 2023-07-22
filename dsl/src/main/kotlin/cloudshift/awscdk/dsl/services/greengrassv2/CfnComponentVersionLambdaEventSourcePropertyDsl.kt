@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.greengrassv2.CfnComponentVersion
 
+/**
+ * Contains information about an event source for an AWS Lambda function.
+ *
+ * The event source defines the topics on which this Lambda function subscribes to receive messages
+ * that run the function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * LambdaEventSourceProperty lambdaEventSourceProperty = LambdaEventSourceProperty.builder()
+ * .topic("topic")
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-componentversion-lambdaeventsource.html)
+ */
 @CdkDslMarker
 public class CfnComponentVersionLambdaEventSourcePropertyDsl {
   private val cdkBuilder: CfnComponentVersion.LambdaEventSourceProperty.Builder =

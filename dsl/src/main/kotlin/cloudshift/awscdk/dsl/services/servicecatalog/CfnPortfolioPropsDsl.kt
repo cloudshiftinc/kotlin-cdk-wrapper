@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.servicecatalog.CfnPortfolioProps
 
+/**
+ * Properties for defining a `CfnPortfolio`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnPortfolioProps cfnPortfolioProps = CfnPortfolioProps.builder()
+ * .displayName("displayName")
+ * .providerName("providerName")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolio.html)
+ */
 @CdkDslMarker
 public class CfnPortfolioPropsDsl {
   private val cdkBuilder: CfnPortfolioProps.Builder = CfnPortfolioProps.builder()

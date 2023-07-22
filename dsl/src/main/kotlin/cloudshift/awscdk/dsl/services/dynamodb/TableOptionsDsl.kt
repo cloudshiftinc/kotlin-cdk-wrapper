@@ -19,6 +19,48 @@ import software.amazon.awscdk.services.dynamodb.TableEncryption
 import software.amazon.awscdk.services.dynamodb.TableOptions
 import software.amazon.awscdk.services.kms.IKey
 
+/**
+ * Properties of a DynamoDB Table.
+ *
+ * Use `TableProps` for all table properties
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.dynamodb.*;
+ * import software.amazon.awscdk.services.kms.*;
+ * Key key;
+ * TableOptions tableOptions = TableOptions.builder()
+ * .partitionKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * // the properties below are optional
+ * .billingMode(BillingMode.PAY_PER_REQUEST)
+ * .contributorInsightsEnabled(false)
+ * .deletionProtection(false)
+ * .encryption(TableEncryption.DEFAULT)
+ * .encryptionKey(key)
+ * .pointInTimeRecovery(false)
+ * .readCapacity(123)
+ * .removalPolicy(RemovalPolicy.DESTROY)
+ * .replicationRegions(List.of("replicationRegions"))
+ * .replicationTimeout(Duration.minutes(30))
+ * .sortKey(Attribute.builder()
+ * .name("name")
+ * .type(AttributeType.BINARY)
+ * .build())
+ * .stream(StreamViewType.NEW_IMAGE)
+ * .tableClass(TableClass.STANDARD)
+ * .timeToLiveAttribute("timeToLiveAttribute")
+ * .waitForReplicationToFinish(false)
+ * .writeCapacity(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TableOptionsDsl {
   private val cdkBuilder: TableOptions.Builder = TableOptions.builder()

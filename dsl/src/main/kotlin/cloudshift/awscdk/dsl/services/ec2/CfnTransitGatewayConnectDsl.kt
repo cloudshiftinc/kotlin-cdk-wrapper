@@ -13,6 +13,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect
 import software.constructs.Construct
 
+/**
+ * Creates a Connect attachment from a specified transit gateway attachment.
+ *
+ * A Connect attachment is a GRE-based tunnel attachment that you can use to establish a connection
+ * between a transit gateway and an appliance.
+ *
+ * A Connect attachment uses an existing VPC or AWS Direct Connect attachment as the underlying
+ * transport mechanism.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnTransitGatewayConnect cfnTransitGatewayConnect = CfnTransitGatewayConnect.Builder.create(this,
+ * "MyCfnTransitGatewayConnect")
+ * .options(TransitGatewayConnectOptionsProperty.builder()
+ * .protocol("protocol")
+ * .build())
+ * .transportTransitGatewayAttachmentId("transportTransitGatewayAttachmentId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html)
+ */
 @CdkDslMarker
 public class CfnTransitGatewayConnectDsl(
   scope: Construct,

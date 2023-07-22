@@ -10,6 +10,30 @@ import software.amazon.awscdk.services.ec2.AmazonLinuxCpuType
 import software.amazon.awscdk.services.ec2.AmazonLinuxEdition
 import software.amazon.awscdk.services.ec2.UserData
 
+/**
+ * Properties specific to al2023 images.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Instance.Builder.create(this, "LatestAl2023")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
+ * .machineImage(MachineImage.latestAmazonLinux2023(AmazonLinux2023ImageSsmParameterProps.builder()
+ * .cachedInContext(true)
+ * .build()))
+ * .build();
+ * // or
+ * // or
+ * Instance.Builder.create(this, "LatestAl2023")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
+ * // context cache is turned on by default
+ * .machineImage(new AmazonLinux2023ImageSsmParameter())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AmazonLinux2023ImageSsmParameterPropsDsl {
   private val cdkBuilder: AmazonLinux2023ImageSsmParameterProps.Builder =

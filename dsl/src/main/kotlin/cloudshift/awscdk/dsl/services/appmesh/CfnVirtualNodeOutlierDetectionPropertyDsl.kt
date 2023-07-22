@@ -7,6 +7,31 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents the outlier detection for a virtual node's listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * OutlierDetectionProperty outlierDetectionProperty = OutlierDetectionProperty.builder()
+ * .baseEjectionDuration(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .interval(DurationProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .maxEjectionPercent(123)
+ * .maxServerErrors(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-outlierdetection.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeOutlierDetectionPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.OutlierDetectionProperty.Builder =

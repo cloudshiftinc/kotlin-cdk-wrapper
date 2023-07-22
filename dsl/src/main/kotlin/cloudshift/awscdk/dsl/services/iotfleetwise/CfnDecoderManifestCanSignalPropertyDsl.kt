@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest
 
+/**
+ * (Optional) Information about a single controller area network (CAN) signal and the messages it
+ * receives and transmits.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CanSignalProperty canSignalProperty = CanSignalProperty.builder()
+ * .factor("factor")
+ * .isBigEndian("isBigEndian")
+ * .isSigned("isSigned")
+ * .length("length")
+ * .messageId("messageId")
+ * .offset("offset")
+ * .startBit("startBit")
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html)
+ */
 @CdkDslMarker
 public class CfnDecoderManifestCanSignalPropertyDsl {
   private val cdkBuilder: CfnDecoderManifest.CanSignalProperty.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelPackage
 
+/**
+ * Metadata properties of the tracking entity, trial, or trial component.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * MetadataPropertiesProperty metadataPropertiesProperty = MetadataPropertiesProperty.builder()
+ * .commitId("commitId")
+ * .generatedBy("generatedBy")
+ * .projectId("projectId")
+ * .repository("repository")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelpackage-metadataproperties.html)
+ */
 @CdkDslMarker
 public class CfnModelPackageMetadataPropertiesPropertyDsl {
   private val cdkBuilder: CfnModelPackage.MetadataPropertiesProperty.Builder =

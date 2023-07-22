@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskDefinition
 
+/**
+ * A key-value pair object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * KeyValuePairProperty keyValuePairProperty = KeyValuePairProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-keyvaluepair.html)
+ */
 @CdkDslMarker
 public class CfnTaskDefinitionKeyValuePairPropertyDsl {
   private val cdkBuilder: CfnTaskDefinition.KeyValuePairProperty.Builder =

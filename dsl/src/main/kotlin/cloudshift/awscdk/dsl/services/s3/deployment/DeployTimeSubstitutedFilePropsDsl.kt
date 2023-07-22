@@ -8,6 +8,21 @@ import kotlin.collections.Map
 import software.amazon.awscdk.services.s3.IBucket
 import software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFileProps
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function myLambdaFunction;
+ * Bucket destinationBucket;
+ * DeployTimeSubstitutedFile.Builder.create(this, "MyFile")
+ * .source("my-file.yaml")
+ * .destinationBucket(destinationBucket)
+ * .substitutions(Map.of(
+ * "variableName", myLambdaFunction.getFunctionName()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DeployTimeSubstitutedFilePropsDsl {
   private val cdkBuilder: DeployTimeSubstitutedFileProps.Builder =

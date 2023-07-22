@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnSegment
 
+/**
+ * Specifies location-based criteria, such as region or GPS coordinates, for the segment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * LocationProperty locationProperty = LocationProperty.builder()
+ * .country(SetDimensionProperty.builder()
+ * .dimensionType("dimensionType")
+ * .values(List.of("values"))
+ * .build())
+ * .gpsPoint(GPSPointProperty.builder()
+ * .coordinates(CoordinatesProperty.builder()
+ * .latitude(123)
+ * .longitude(123)
+ * .build())
+ * .rangeInKilometers(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-segment-location.html)
+ */
 @CdkDslMarker
 public class CfnSegmentLocationPropertyDsl {
   private val cdkBuilder: CfnSegment.LocationProperty.Builder =

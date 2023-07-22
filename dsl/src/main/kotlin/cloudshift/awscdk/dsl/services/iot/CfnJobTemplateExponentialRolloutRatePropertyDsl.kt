@@ -7,6 +7,28 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 
+/**
+ * Allows you to create an exponential rate of rollout for a job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * ExponentialRolloutRateProperty exponentialRolloutRateProperty =
+ * ExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(RateIncreaseCriteriaProperty.builder()
+ * .numberOfNotifiedThings(123)
+ * .numberOfSucceededThings(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-exponentialrolloutrate.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateExponentialRolloutRatePropertyDsl {
   private val cdkBuilder: CfnJobTemplate.ExponentialRolloutRateProperty.Builder =

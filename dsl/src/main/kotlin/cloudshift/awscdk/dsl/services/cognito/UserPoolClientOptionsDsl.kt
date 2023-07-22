@@ -15,6 +15,25 @@ import software.amazon.awscdk.services.cognito.OAuthSettings
 import software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider
 import software.amazon.awscdk.services.cognito.UserPoolClientOptions
 
+/**
+ * Options to create a UserPoolClient.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * pool.addClient("app-client", UserPoolClientOptions.builder()
+ * .oAuth(OAuthSettings.builder()
+ * .flows(OAuthFlows.builder()
+ * .authorizationCodeGrant(true)
+ * .build())
+ * .scopes(List.of(OAuthScope.OPENID))
+ * .callbackUrls(List.of("https://my-app-domain.com/welcome"))
+ * .logoutUrls(List.of("https://my-app-domain.com/signin"))
+ * .build())
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolClientOptionsDsl {
   private val cdkBuilder: UserPoolClientOptions.Builder = UserPoolClientOptions.builder()

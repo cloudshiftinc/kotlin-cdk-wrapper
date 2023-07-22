@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.rds.CfnDBInstance
 
+/**
+ * The `ProcessorFeature` property type specifies the processor features of a DB instance class
+ * status.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * ProcessorFeatureProperty processorFeatureProperty = ProcessorFeatureProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbinstance-processorfeature.html)
+ */
 @CdkDslMarker
 public class CfnDBInstanceProcessorFeaturePropertyDsl {
   private val cdkBuilder: CfnDBInstance.ProcessorFeatureProperty.Builder =

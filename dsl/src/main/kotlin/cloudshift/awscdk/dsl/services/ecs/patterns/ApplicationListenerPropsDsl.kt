@@ -10,6 +10,28 @@ import software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import software.amazon.awscdk.services.elasticloadbalancingv2.SslPolicy
 
+/**
+ * Properties to define an application listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Certificate certificate;
+ * ApplicationListenerProps applicationListenerProps = ApplicationListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .certificate(certificate)
+ * .port(123)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationListenerPropsDsl {
   private val cdkBuilder: ApplicationListenerProps.Builder = ApplicationListenerProps.builder()

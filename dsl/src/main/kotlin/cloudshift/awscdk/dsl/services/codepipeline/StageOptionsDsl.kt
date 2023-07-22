@@ -12,6 +12,27 @@ import software.amazon.awscdk.services.codepipeline.IAction
 import software.amazon.awscdk.services.codepipeline.StageOptions
 import software.amazon.awscdk.services.codepipeline.StagePlacement
 
+/**
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * Pipeline pipeline = new Pipeline(this, "MyPipeline");
+ * Pass startState = new Pass(this, "StartState");
+ * StateMachine simpleStateMachine = StateMachine.Builder.create(this, "SimpleStateMachine")
+ * .definition(startState)
+ * .build();
+ * StepFunctionInvokeAction stepFunctionAction = StepFunctionInvokeAction.Builder.create()
+ * .actionName("Invoke")
+ * .stateMachine(simpleStateMachine)
+ * .stateMachineInput(StateMachineInput.literal(Map.of("IsHelloWorldExample", true)))
+ * .build();
+ * pipeline.addStage(StageOptions.builder()
+ * .stageName("StepFunctions")
+ * .actions(List.of(stepFunctionAction))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class StageOptionsDsl {
   private val cdkBuilder: StageOptions.Builder = StageOptions.builder()

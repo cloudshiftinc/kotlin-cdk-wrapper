@@ -8,6 +8,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobDefinition
 
+/**
+ * This is used when you're using an Amazon Elastic File System file system for job storage.
+ *
+ * For more information, see [Amazon EFS
+ * Volumes](https://docs.aws.amazon.com/batch/latest/userguide/efs-volumes.html) in the *AWS Batch User
+ * Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * EfsVolumeConfigurationProperty efsVolumeConfigurationProperty =
+ * EfsVolumeConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfigProperty.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-efsvolumeconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnJobDefinitionEfsVolumeConfigurationPropertyDsl {
   private val cdkBuilder: CfnJobDefinition.EfsVolumeConfigurationProperty.Builder =

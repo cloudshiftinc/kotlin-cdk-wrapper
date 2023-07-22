@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnCarrierGateway
 import software.constructs.Construct
 
+/**
+ * Creates a carrier gateway.
+ *
+ * For more information about carrier gateways, see [Carrier
+ * gateways](https://docs.aws.amazon.com/wavelength/latest/developerguide/how-wavelengths-work.html#wavelength-carrier-gateway)
+ * in the *AWS Wavelength Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnCarrierGateway cfnCarrierGateway = CfnCarrierGateway.Builder.create(this,
+ * "MyCfnCarrierGateway")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-carriergateway.html)
+ */
 @CdkDslMarker
 public class CfnCarrierGatewayDsl(
   scope: Construct,

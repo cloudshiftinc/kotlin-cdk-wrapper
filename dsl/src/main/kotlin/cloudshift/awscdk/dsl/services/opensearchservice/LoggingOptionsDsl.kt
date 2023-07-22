@@ -7,6 +7,32 @@ import kotlin.Boolean
 import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.opensearchservice.LoggingOptions
 
+/**
+ * Configures log settings for the domain.
+ *
+ * Example:
+ *
+ * ```
+ * Domain prodDomain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .capacity(CapacityConfig.builder()
+ * .masterNodes(5)
+ * .dataNodes(20)
+ * .build())
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(20)
+ * .build())
+ * .zoneAwareness(ZoneAwarenessConfig.builder()
+ * .availabilityZoneCount(3)
+ * .build())
+ * .logging(LoggingOptions.builder()
+ * .slowSearchLogEnabled(true)
+ * .appLogEnabled(true)
+ * .slowIndexLogEnabled(true)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LoggingOptionsDsl {
   private val cdkBuilder: LoggingOptions.Builder = LoggingOptions.builder()

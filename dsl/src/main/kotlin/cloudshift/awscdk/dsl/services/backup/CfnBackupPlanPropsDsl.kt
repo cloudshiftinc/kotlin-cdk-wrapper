@@ -9,6 +9,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupPlan
 import software.amazon.awscdk.services.backup.CfnBackupPlanProps
 
+/**
+ * Properties for defining a `CfnBackupPlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object backupOptions;
+ * CfnBackupPlanProps cfnBackupPlanProps = CfnBackupPlanProps.builder()
+ * .backupPlan(BackupPlanResourceTypeProperty.builder()
+ * .backupPlanName("backupPlanName")
+ * .backupPlanRule(List.of(BackupRuleResourceTypeProperty.builder()
+ * .ruleName("ruleName")
+ * .targetBackupVault("targetBackupVault")
+ * // the properties below are optional
+ * .completionWindowMinutes(123)
+ * .copyActions(List.of(CopyActionResourceTypeProperty.builder()
+ * .destinationBackupVaultArn("destinationBackupVaultArn")
+ * // the properties below are optional
+ * .lifecycle(LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build())
+ * .build()))
+ * .enableContinuousBackup(false)
+ * .lifecycle(LifecycleResourceTypeProperty.builder()
+ * .deleteAfterDays(123)
+ * .moveToColdStorageAfterDays(123)
+ * .build())
+ * .recoveryPointTags(Map.of(
+ * "recoveryPointTagsKey", "recoveryPointTags"))
+ * .scheduleExpression("scheduleExpression")
+ * .startWindowMinutes(123)
+ * .build()))
+ * // the properties below are optional
+ * .advancedBackupSettings(List.of(AdvancedBackupSettingResourceTypeProperty.builder()
+ * .backupOptions(backupOptions)
+ * .resourceType("resourceType")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .backupPlanTags(Map.of(
+ * "backupPlanTagsKey", "backupPlanTags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html)
+ */
 @CdkDslMarker
 public class CfnBackupPlanPropsDsl {
   private val cdkBuilder: CfnBackupPlanProps.Builder = CfnBackupPlanProps.builder()

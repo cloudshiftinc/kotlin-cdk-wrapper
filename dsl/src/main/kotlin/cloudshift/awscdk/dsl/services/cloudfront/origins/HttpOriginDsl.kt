@@ -14,6 +14,29 @@ import software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy
 import software.amazon.awscdk.services.cloudfront.OriginSslPolicy
 import software.amazon.awscdk.services.cloudfront.origins.HttpOrigin
 
+/**
+ * An Origin for an HTTP server or S3 bucket configured for website hosting.
+ *
+ * Example:
+ *
+ * ```
+ * // Validating signed URLs or signed cookies with Trusted Key Groups
+ * // public key in PEM format
+ * String publicKey;
+ * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
+ * .encodedKey(publicKey)
+ * .build();
+ * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
+ * .items(List.of(pubKey))
+ * .build();
+ * Distribution.Builder.create(this, "Dist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("www.example.com"))
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpOriginDsl(
   domainName: String,

@@ -7,6 +7,23 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnDataset
 
+/**
+ * Represents the JSON-specific options that define how input is to be interpreted by AWS Glue
+ * DataBrew .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * JsonOptionsProperty jsonOptionsProperty = JsonOptionsProperty.builder()
+ * .multiLine(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-dataset-jsonoptions.html)
+ */
 @CdkDslMarker
 public class CfnDatasetJsonOptionsPropertyDsl {
   private val cdkBuilder: CfnDataset.JsonOptionsProperty.Builder =

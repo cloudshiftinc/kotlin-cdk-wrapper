@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.managedblockchain.CfnMember
 
+/**
+ * Configuration properties relevant to the network for the blockchain framework that the network
+ * uses.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.managedblockchain.*;
+ * NetworkFrameworkConfigurationProperty networkFrameworkConfigurationProperty =
+ * NetworkFrameworkConfigurationProperty.builder()
+ * .networkFabricConfiguration(NetworkFabricConfigurationProperty.builder()
+ * .edition("edition")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-managedblockchain-member-networkframeworkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnMemberNetworkFrameworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnMember.NetworkFrameworkConfigurationProperty.Builder =

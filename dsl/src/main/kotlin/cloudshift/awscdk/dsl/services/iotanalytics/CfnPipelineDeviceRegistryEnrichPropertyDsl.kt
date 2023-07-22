@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnPipeline
 
+/**
+ * An activity that adds data from the AWS IoT device registry to your message.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * DeviceRegistryEnrichProperty deviceRegistryEnrichProperty =
+ * DeviceRegistryEnrichProperty.builder()
+ * .attribute("attribute")
+ * .name("name")
+ * .roleArn("roleArn")
+ * .thingName("thingName")
+ * // the properties below are optional
+ * .next("next")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-pipeline-deviceregistryenrich.html)
+ */
 @CdkDslMarker
 public class CfnPipelineDeviceRegistryEnrichPropertyDsl {
   private val cdkBuilder: CfnPipeline.DeviceRegistryEnrichProperty.Builder =

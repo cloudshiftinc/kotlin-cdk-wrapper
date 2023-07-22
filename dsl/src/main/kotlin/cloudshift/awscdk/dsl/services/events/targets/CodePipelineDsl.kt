@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.events.targets.CodePipeline
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Allows the pipeline to be used as an EventBridge rule target.
+ *
+ * Example:
+ *
+ * ```
+ * // A pipeline being used as a target for a CloudWatch event rule.
+ * import software.amazon.awscdk.services.events.targets.*;
+ * import software.amazon.awscdk.services.events.*;
+ * Pipeline pipeline;
+ * // kick off the pipeline every day
+ * Rule rule = Rule.Builder.create(this, "Daily")
+ * .schedule(Schedule.rate(Duration.days(1)))
+ * .build();
+ * rule.addTarget(new CodePipeline(pipeline));
+ * ```
+ */
 @CdkDslMarker
 public class CodePipelineDsl(
   pipeline: IPipeline,

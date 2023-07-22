@@ -10,6 +10,54 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBot
 
+/**
+ * Describes a slot type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * SlotTypeProperty slotTypeProperty = SlotTypeProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .externalSourceSetting(ExternalSourceSettingProperty.builder()
+ * .grammarSlotTypeSetting(GrammarSlotTypeSettingProperty.builder()
+ * .source(GrammarSlotTypeSourceProperty.builder()
+ * .s3BucketName("s3BucketName")
+ * .s3ObjectKey("s3ObjectKey")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build())
+ * .build())
+ * .parentSlotTypeSignature("parentSlotTypeSignature")
+ * .slotTypeValues(List.of(SlotTypeValueProperty.builder()
+ * .sampleValue(SampleValueProperty.builder()
+ * .value("value")
+ * .build())
+ * // the properties below are optional
+ * .synonyms(List.of(SampleValueProperty.builder()
+ * .value("value")
+ * .build()))
+ * .build()))
+ * .valueSelectionSetting(SlotValueSelectionSettingProperty.builder()
+ * .resolutionStrategy("resolutionStrategy")
+ * // the properties below are optional
+ * .advancedRecognitionSetting(AdvancedRecognitionSettingProperty.builder()
+ * .audioRecognitionStrategy("audioRecognitionStrategy")
+ * .build())
+ * .regexFilter(SlotValueRegexFilterProperty.builder()
+ * .pattern("pattern")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-bot-slottype.html)
+ */
 @CdkDslMarker
 public class CfnBotSlotTypePropertyDsl {
   private val cdkBuilder: CfnBot.SlotTypeProperty.Builder = CfnBot.SlotTypeProperty.builder()

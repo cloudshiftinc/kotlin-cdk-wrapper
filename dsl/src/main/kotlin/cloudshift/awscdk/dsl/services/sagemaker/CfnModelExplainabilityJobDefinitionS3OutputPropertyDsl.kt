@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition
 
+/**
+ * The Amazon S3 storage location where the results of a monitoring job are saved.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * S3OutputProperty s3OutputProperty = S3OutputProperty.builder()
+ * .localPath("localPath")
+ * .s3Uri("s3Uri")
+ * // the properties below are optional
+ * .s3UploadMode("s3UploadMode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelexplainabilityjobdefinition-s3output.html)
+ */
 @CdkDslMarker
 public class CfnModelExplainabilityJobDefinitionS3OutputPropertyDsl {
   private val cdkBuilder: CfnModelExplainabilityJobDefinition.S3OutputProperty.Builder =

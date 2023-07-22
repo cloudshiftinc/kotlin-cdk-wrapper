@@ -8,6 +8,17 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ses.AllowListReceiptFilterProps
 
+/**
+ * Construction properties for am AllowListReceiptFilter.
+ *
+ * Example:
+ *
+ * ```
+ * AllowListReceiptFilter.Builder.create(this, "AllowList")
+ * .ips(List.of("10.0.0.0/16", "1.2.3.4/16"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AllowListReceiptFilterPropsDsl {
   private val cdkBuilder: AllowListReceiptFilterProps.Builder =

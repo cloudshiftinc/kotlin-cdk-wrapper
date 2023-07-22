@@ -8,6 +8,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecr.CfnPublicRepository
 
+/**
+ * The details about the repository that are publicly visible in the Amazon ECR Public Gallery.
+ *
+ * For more information, see [Amazon ECR Public repository catalog
+ * data](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repository-catalog-data.html) in
+ * the *Amazon ECR Public User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * RepositoryCatalogDataProperty repositoryCatalogDataProperty =
+ * RepositoryCatalogDataProperty.builder()
+ * .aboutText("aboutText")
+ * .architectures(List.of("architectures"))
+ * .operatingSystems(List.of("operatingSystems"))
+ * .repositoryDescription("repositoryDescription")
+ * .usageText("usageText")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecr-publicrepository-repositorycatalogdata.html)
+ */
 @CdkDslMarker
 public class CfnPublicRepositoryRepositoryCatalogDataPropertyDsl {
   private val cdkBuilder: CfnPublicRepository.RepositoryCatalogDataProperty.Builder =

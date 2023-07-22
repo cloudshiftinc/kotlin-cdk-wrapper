@@ -13,6 +13,43 @@ import software.amazon.awscdk.services.ecs.Cluster
 import software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration
 import software.constructs.Construct
 
+/**
+ * A regional grouping of one or more container instances on which you can run tasks and services.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
+ * .build();
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.micro"))
+ * .machineImage(EcsOptimizedImage.amazonLinux2())
+ * .minCapacity(0)
+ * .maxCapacity(100)
+ * .build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .memoryReservationMiB(256)
+ * .build());
+ * Ec2Service.Builder.create(this, "EC2Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
+ * .capacityProvider(capacityProvider.getCapacityProviderName())
+ * .weight(1)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ClusterDsl(
   scope: Construct,

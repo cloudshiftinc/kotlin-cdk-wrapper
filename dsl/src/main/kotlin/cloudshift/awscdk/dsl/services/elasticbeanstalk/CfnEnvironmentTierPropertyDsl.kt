@@ -6,6 +6,32 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment
 
+/**
+ * Use the `Tier` property type to specify the environment tier for an AWS Elastic Beanstalk
+ * environment when defining an AWS::ElasticBeanstalk::Environment resource in an AWS CloudFormation
+ * template.
+ *
+ * Describes the environment tier for an
+ * [AWS::ElasticBeanstalk::Environment](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-environment.html)
+ * resource. For more information, see [Environment
+ * Tiers](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/using-features-managing-env-tiers.html)
+ * in the *AWS Elastic Beanstalk Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticbeanstalk.*;
+ * TierProperty tierProperty = TierProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-environment-tier.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentTierPropertyDsl {
   private val cdkBuilder: CfnEnvironment.TierProperty.Builder =

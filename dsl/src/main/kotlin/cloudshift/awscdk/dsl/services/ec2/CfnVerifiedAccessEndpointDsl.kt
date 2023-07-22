@@ -14,6 +14,52 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint
 import software.constructs.Construct
 
+/**
+ * An AWS Verified Access endpoint specifies the application that AWS Verified Access provides
+ * access to.
+ *
+ * It must be attached to an AWS Verified Access group. An AWS Verified Access endpoint must also
+ * have an attached access policy before you attached it to a group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVerifiedAccessEndpoint cfnVerifiedAccessEndpoint =
+ * CfnVerifiedAccessEndpoint.Builder.create(this, "MyCfnVerifiedAccessEndpoint")
+ * .applicationDomain("applicationDomain")
+ * .attachmentType("attachmentType")
+ * .domainCertificateArn("domainCertificateArn")
+ * .endpointDomainPrefix("endpointDomainPrefix")
+ * .endpointType("endpointType")
+ * .verifiedAccessGroupId("verifiedAccessGroupId")
+ * // the properties below are optional
+ * .description("description")
+ * .loadBalancerOptions(LoadBalancerOptionsProperty.builder()
+ * .loadBalancerArn("loadBalancerArn")
+ * .port(123)
+ * .protocol("protocol")
+ * .subnetIds(List.of("subnetIds"))
+ * .build())
+ * .networkInterfaceOptions(NetworkInterfaceOptionsProperty.builder()
+ * .networkInterfaceId("networkInterfaceId")
+ * .port(123)
+ * .protocol("protocol")
+ * .build())
+ * .policyDocument("policyDocument")
+ * .policyEnabled(false)
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-verifiedaccessendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessEndpointDsl(
   scope: Construct,

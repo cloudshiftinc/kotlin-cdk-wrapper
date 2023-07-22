@@ -11,6 +11,38 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.BaseTargetGroupPro
 import software.amazon.awscdk.services.elasticloadbalancingv2.HealthCheck
 import software.amazon.awscdk.services.elasticloadbalancingv2.TargetType
 
+/**
+ * Basic properties of both Application and Network Target Groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.elasticloadbalancingv2.*;
+ * Vpc vpc;
+ * BaseTargetGroupProps baseTargetGroupProps = BaseTargetGroupProps.builder()
+ * .deregistrationDelay(Duration.minutes(30))
+ * .healthCheck(HealthCheck.builder()
+ * .enabled(false)
+ * .healthyGrpcCodes("healthyGrpcCodes")
+ * .healthyHttpCodes("healthyHttpCodes")
+ * .healthyThresholdCount(123)
+ * .interval(Duration.minutes(30))
+ * .path("path")
+ * .port("port")
+ * .protocol(Protocol.HTTP)
+ * .timeout(Duration.minutes(30))
+ * .unhealthyThresholdCount(123)
+ * .build())
+ * .targetGroupName("targetGroupName")
+ * .targetType(TargetType.INSTANCE)
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BaseTargetGroupPropsDsl {
   private val cdkBuilder: BaseTargetGroupProps.Builder = BaseTargetGroupProps.builder()

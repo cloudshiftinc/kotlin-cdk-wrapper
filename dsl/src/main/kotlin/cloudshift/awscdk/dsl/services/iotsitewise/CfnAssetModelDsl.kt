@@ -14,6 +14,133 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotsitewise.CfnAssetModel
 import software.constructs.Construct
 
+/**
+ * Creates an asset model from specified property and hierarchy definitions.
+ *
+ * You create assets from asset models. With asset models, you can easily create assets of the same
+ * type that have standardized definitions. Each asset created from a model inherits the asset model's
+ * property and hierarchy definitions. For more information, see [Defining asset
+ * models](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/define-models.html) in the *AWS
+ * IoT SiteWise User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotsitewise.*;
+ * CfnAssetModel cfnAssetModel = CfnAssetModel.Builder.create(this, "MyCfnAssetModel")
+ * .assetModelName("assetModelName")
+ * // the properties below are optional
+ * .assetModelCompositeModels(List.of(AssetModelCompositeModelProperty.builder()
+ * .name("name")
+ * .type("type")
+ * // the properties below are optional
+ * .compositeModelProperties(List.of(AssetModelPropertyProperty.builder()
+ * .dataType("dataType")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .type(PropertyTypeProperty.builder()
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .attribute(AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build())
+ * .metric(MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build())
+ * .transform(TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .dataTypeSpec("dataTypeSpec")
+ * .unit("unit")
+ * .build()))
+ * .description("description")
+ * .build()))
+ * .assetModelDescription("assetModelDescription")
+ * .assetModelHierarchies(List.of(AssetModelHierarchyProperty.builder()
+ * .childAssetModelId("childAssetModelId")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .build()))
+ * .assetModelProperties(List.of(AssetModelPropertyProperty.builder()
+ * .dataType("dataType")
+ * .logicalId("logicalId")
+ * .name("name")
+ * .type(PropertyTypeProperty.builder()
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .attribute(AttributeProperty.builder()
+ * .defaultValue("defaultValue")
+ * .build())
+ * .metric(MetricProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .window(MetricWindowProperty.builder()
+ * .tumbling(TumblingWindowProperty.builder()
+ * .interval("interval")
+ * // the properties below are optional
+ * .offset("offset")
+ * .build())
+ * .build())
+ * .build())
+ * .transform(TransformProperty.builder()
+ * .expression("expression")
+ * .variables(List.of(ExpressionVariableProperty.builder()
+ * .name("name")
+ * .value(VariableValueProperty.builder()
+ * .propertyLogicalId("propertyLogicalId")
+ * // the properties below are optional
+ * .hierarchyLogicalId("hierarchyLogicalId")
+ * .build())
+ * .build()))
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .dataTypeSpec("dataTypeSpec")
+ * .unit("unit")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html)
+ */
 @CdkDslMarker
 public class CfnAssetModelDsl(
   scope: Construct,

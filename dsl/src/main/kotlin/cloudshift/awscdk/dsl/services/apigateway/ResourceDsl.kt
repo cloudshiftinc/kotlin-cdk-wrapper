@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.apigateway.MethodOptions
 import software.amazon.awscdk.services.apigateway.Resource
 import software.constructs.Construct
 
+/**
+ * Example:
+ *
+ * ```
+ * LambdaIntegration booksBackend;
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .defaultIntegration(booksBackend)
+ * .build();
+ * Resource books = api.root.addResource("books");
+ * books.addMethod("GET"); // integrated with `booksBackend`
+ * books.addMethod("POST"); // integrated with `booksBackend`
+ * Resource book = books.addResource("{book_id}");
+ * book.addMethod("GET");
+ * ```
+ */
 @CdkDslMarker
 public class ResourceDsl(
   scope: Construct,

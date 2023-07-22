@@ -9,6 +9,57 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `FieldInputConfig` property specifies the configuration for the default input values to
+ * display for a field.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FieldInputConfigProperty fieldInputConfigProperty = FieldInputConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .defaultChecked(false)
+ * .defaultCountryCode("defaultCountryCode")
+ * .defaultValue("defaultValue")
+ * .descriptiveText("descriptiveText")
+ * .fileUploaderConfig(FileUploaderFieldConfigProperty.builder()
+ * .acceptedFileTypes(List.of("acceptedFileTypes"))
+ * .accessLevel("accessLevel")
+ * // the properties below are optional
+ * .isResumable(false)
+ * .maxFileCount(123)
+ * .maxSize(123)
+ * .showThumbnails(false)
+ * .build())
+ * .isArray(false)
+ * .maxValue(123)
+ * .minValue(123)
+ * .name("name")
+ * .placeholder("placeholder")
+ * .readOnly(false)
+ * .required(false)
+ * .step(123)
+ * .value("value")
+ * .valueMappings(ValueMappingsProperty.builder()
+ * .values(List.of(ValueMappingProperty.builder()
+ * .value(FormInputValuePropertyProperty.builder()
+ * .value("value")
+ * .build())
+ * // the properties below are optional
+ * .displayValue(FormInputValuePropertyProperty.builder()
+ * .value("value")
+ * .build())
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-fieldinputconfig.html)
+ */
 @CdkDslMarker
 public class CfnFormFieldInputConfigPropertyDsl {
   private val cdkBuilder: CfnForm.FieldInputConfigProperty.Builder =

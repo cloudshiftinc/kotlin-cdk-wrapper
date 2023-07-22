@@ -13,6 +13,30 @@ import software.amazon.awscdk.services.cloudfront.CustomOriginConfig
 import software.amazon.awscdk.services.cloudfront.OriginProtocolPolicy
 import software.amazon.awscdk.services.cloudfront.OriginSslPolicy
 
+/**
+ * A custom origin configuration.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket;
+ * OriginAccessIdentity oai;
+ * CloudFrontWebDistribution.Builder.create(this, "MyCfWebDistribution")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(sourceBucket)
+ * .originAccessIdentity(oai)
+ * .build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build(), SourceConfiguration.builder()
+ * .customOriginSource(CustomOriginConfig.builder()
+ * .domainName("MYALIAS")
+ * .build())
+ * .behaviors(List.of(Behavior.builder().pathPattern("/somewhere").build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CustomOriginConfigDsl {
   private val cdkBuilder: CustomOriginConfig.Builder = CustomOriginConfig.builder()

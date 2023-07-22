@@ -8,6 +8,26 @@ import kotlin.collections.Map
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Additional information about the model.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * AdditionalInformationProperty additionalInformationProperty =
+ * AdditionalInformationProperty.builder()
+ * .caveatsAndRecommendations("caveatsAndRecommendations")
+ * .customDetails(Map.of(
+ * "customDetailsKey", "customDetails"))
+ * .ethicalConsiderations("ethicalConsiderations")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-additionalinformation.html)
+ */
 @CdkDslMarker
 public class CfnModelCardAdditionalInformationPropertyDsl {
   private val cdkBuilder: CfnModelCard.AdditionalInformationProperty.Builder =

@@ -12,6 +12,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment
 
+/**
+ * Describes a proposed segment change.
+ *
+ * In some cases, the segment change must first be evaluated and accepted.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkmanager.*;
+ * ProposedSegmentChangeProperty proposedSegmentChangeProperty =
+ * ProposedSegmentChangeProperty.builder()
+ * .attachmentPolicyRuleNumber(123)
+ * .segmentName("segmentName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkmanager-sitetositevpnattachment-proposedsegmentchange.html)
+ */
 @CdkDslMarker
 public class CfnSiteToSiteVpnAttachmentProposedSegmentChangePropertyDsl {
   private val cdkBuilder: CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty.Builder =

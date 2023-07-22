@@ -12,6 +12,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.resourceexplorer2.CfnView
 import software.amazon.awscdk.services.resourceexplorer2.CfnViewProps
 
+/**
+ * Properties for defining a `CfnView`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.resourceexplorer2.*;
+ * CfnViewProps cfnViewProps = CfnViewProps.builder()
+ * .viewName("viewName")
+ * // the properties below are optional
+ * .filters(FiltersProperty.builder()
+ * .filterString("filterString")
+ * .build())
+ * .includedProperties(List.of(IncludedPropertyProperty.builder()
+ * .name("name")
+ * .build()))
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html)
+ */
 @CdkDslMarker
 public class CfnViewPropsDsl {
   private val cdkBuilder: CfnViewProps.Builder = CfnViewProps.builder()

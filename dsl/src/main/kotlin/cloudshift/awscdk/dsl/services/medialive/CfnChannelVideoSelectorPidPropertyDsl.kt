@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Selects a specific PID from within a video source.
+ *
+ * The parent of this entity is VideoSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * VideoSelectorPidProperty videoSelectorPidProperty = VideoSelectorPidProperty.builder()
+ * .pid(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videoselectorpid.html)
+ */
 @CdkDslMarker
 public class CfnChannelVideoSelectorPidPropertyDsl {
   private val cdkBuilder: CfnChannel.VideoSelectorPidProperty.Builder =

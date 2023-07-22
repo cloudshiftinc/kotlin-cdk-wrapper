@@ -12,6 +12,56 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.glue.CfnJob
 import software.amazon.awscdk.services.glue.CfnJobProps
 
+/**
+ * Properties for defining a `CfnJob`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * Object defaultArguments;
+ * Object nonOverridableArguments;
+ * Object tags;
+ * CfnJobProps cfnJobProps = CfnJobProps.builder()
+ * .command(JobCommandProperty.builder()
+ * .name("name")
+ * .pythonVersion("pythonVersion")
+ * .runtime("runtime")
+ * .scriptLocation("scriptLocation")
+ * .build())
+ * .role("role")
+ * // the properties below are optional
+ * .allocatedCapacity(123)
+ * .connections(ConnectionsListProperty.builder()
+ * .connections(List.of("connections"))
+ * .build())
+ * .defaultArguments(defaultArguments)
+ * .description("description")
+ * .executionClass("executionClass")
+ * .executionProperty(ExecutionPropertyProperty.builder()
+ * .maxConcurrentRuns(123)
+ * .build())
+ * .glueVersion("glueVersion")
+ * .logUri("logUri")
+ * .maxCapacity(123)
+ * .maxRetries(123)
+ * .name("name")
+ * .nonOverridableArguments(nonOverridableArguments)
+ * .notificationProperty(NotificationPropertyProperty.builder()
+ * .notifyDelayAfter(123)
+ * .build())
+ * .numberOfWorkers(123)
+ * .securityConfiguration("securityConfiguration")
+ * .tags(tags)
+ * .timeout(123)
+ * .workerType("workerType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html)
+ */
 @CdkDslMarker
 public class CfnJobPropsDsl {
   private val cdkBuilder: CfnJobProps.Builder = CfnJobProps.builder()

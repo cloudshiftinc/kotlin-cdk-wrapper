@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.iotfleetwise.CfnFleetProps
 
+/**
+ * Properties for defining a `CfnFleet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnFleetProps cfnFleetProps = CfnFleetProps.builder()
+ * .id("id")
+ * .signalCatalogArn("signalCatalogArn")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html)
+ */
 @CdkDslMarker
 public class CfnFleetPropsDsl {
   private val cdkBuilder: CfnFleetProps.Builder = CfnFleetProps.builder()

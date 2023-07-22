@@ -9,6 +9,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.panorama.CfnPackageVersion
 import software.constructs.Construct
 
+/**
+ * Registers a package version.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.panorama.*;
+ * CfnPackageVersion cfnPackageVersion = CfnPackageVersion.Builder.create(this,
+ * "MyCfnPackageVersion")
+ * .packageId("packageId")
+ * .packageVersion("packageVersion")
+ * .patchVersion("patchVersion")
+ * // the properties below are optional
+ * .markLatest(false)
+ * .ownerAccount("ownerAccount")
+ * .updatedLatestPatchVersion("updatedLatestPatchVersion")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-panorama-packageversion.html)
+ */
 @CdkDslMarker
 public class CfnPackageVersionDsl(
   scope: Construct,

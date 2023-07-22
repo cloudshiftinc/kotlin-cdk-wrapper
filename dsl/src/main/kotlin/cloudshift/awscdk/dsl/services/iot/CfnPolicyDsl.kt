@@ -10,6 +10,29 @@ import kotlin.Unit
 import software.amazon.awscdk.services.iot.CfnPolicy
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::IoT::Policy` resource to declare an AWS IoT policy.
+ *
+ * For more information about working with AWS IoT policies, see
+ * [Authorization](https://docs.aws.amazon.com/iot/latest/developerguide/authorization.html) in the
+ * *AWS IoT Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * Object policyDocument;
+ * CfnPolicy cfnPolicy = CfnPolicy.Builder.create(this, "MyCfnPolicy")
+ * .policyDocument(policyDocument)
+ * // the properties below are optional
+ * .policyName("policyName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyDsl(
   scope: Construct,

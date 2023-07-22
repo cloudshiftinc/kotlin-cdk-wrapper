@@ -7,6 +7,33 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.appflow.CfnFlow
 
+/**
+ * Specifies the configuration details of a schedule-triggered flow as defined by the user.
+ *
+ * Currently, these settings only apply to the `Scheduled` trigger type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appflow.*;
+ * ScheduledTriggerPropertiesProperty scheduledTriggerPropertiesProperty =
+ * ScheduledTriggerPropertiesProperty.builder()
+ * .scheduleExpression("scheduleExpression")
+ * // the properties below are optional
+ * .dataPullMode("dataPullMode")
+ * .firstExecutionFrom(123)
+ * .flowErrorDeactivationThreshold(123)
+ * .scheduleEndTime(123)
+ * .scheduleOffset(123)
+ * .scheduleStartTime(123)
+ * .timeZone("timeZone")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-scheduledtriggerproperties.html)
+ */
 @CdkDslMarker
 public class CfnFlowScheduledTriggerPropertiesPropertyDsl {
   private val cdkBuilder: CfnFlow.ScheduledTriggerPropertiesProperty.Builder =

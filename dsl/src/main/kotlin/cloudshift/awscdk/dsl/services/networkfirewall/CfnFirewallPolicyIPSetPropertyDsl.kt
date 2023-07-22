@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy
 
+/**
+ * A list of IP addresses and address ranges, in CIDR notation.
+ *
+ * This is part of a `RuleVariables` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.networkfirewall.*;
+ * IPSetProperty iPSetProperty = Map.of(
+ * "definition", List.of("definition"));
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-ipset.html)
+ */
 @CdkDslMarker
 public class CfnFirewallPolicyIPSetPropertyDsl {
   private val cdkBuilder: CfnFirewallPolicy.IPSetProperty.Builder =

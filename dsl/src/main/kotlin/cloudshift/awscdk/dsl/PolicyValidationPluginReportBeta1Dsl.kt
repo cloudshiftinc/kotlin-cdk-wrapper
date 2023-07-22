@@ -12,6 +12,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.PolicyValidationPluginReportBeta1
 import software.amazon.awscdk.PolicyViolationBeta1
 
+/**
+ * The report emitted by the plugin after evaluation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * PolicyValidationPluginReportBeta1 policyValidationPluginReportBeta1 =
+ * PolicyValidationPluginReportBeta1.builder()
+ * .success(false)
+ * .violations(List.of(PolicyViolationBeta1.builder()
+ * .description("description")
+ * .ruleName("ruleName")
+ * .violatingResources(List.of(PolicyViolatingResourceBeta1.builder()
+ * .locations(List.of("locations"))
+ * .resourceLogicalId("resourceLogicalId")
+ * .templatePath("templatePath")
+ * .build()))
+ * // the properties below are optional
+ * .fix("fix")
+ * .ruleMetadata(Map.of(
+ * "ruleMetadataKey", "ruleMetadata"))
+ * .severity("severity")
+ * .build()))
+ * // the properties below are optional
+ * .metadata(Map.of(
+ * "metadataKey", "metadata"))
+ * .pluginVersion("pluginVersion")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PolicyValidationPluginReportBeta1Dsl {
   private val cdkBuilder: PolicyValidationPluginReportBeta1.Builder =

@@ -9,6 +9,23 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnFunction
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * SQSEventProperty sQSEventProperty = SQSEventProperty.builder()
+ * .queue("queue")
+ * // the properties below are optional
+ * .batchSize(123)
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-serverless-function-sqsevent.html)
+ */
 @CdkDslMarker
 public class CfnFunctionSQSEventPropertyDsl {
   private val cdkBuilder: CfnFunction.SQSEventProperty.Builder =

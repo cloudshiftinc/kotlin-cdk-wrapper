@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps
 
+/**
+ * Properties for defining a `CfnStateMachineVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.*;
+ * CfnStateMachineVersionProps cfnStateMachineVersionProps = CfnStateMachineVersionProps.builder()
+ * .stateMachineArn("stateMachineArn")
+ * // the properties below are optional
+ * .description("description")
+ * .stateMachineRevisionId("stateMachineRevisionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachineversion.html)
+ */
 @CdkDslMarker
 public class CfnStateMachineVersionPropsDsl {
   private val cdkBuilder: CfnStateMachineVersionProps.Builder =

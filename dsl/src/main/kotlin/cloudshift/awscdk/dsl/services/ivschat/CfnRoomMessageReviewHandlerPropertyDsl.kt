@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ivschat.CfnRoom
 
+/**
+ * The MessageReviewHandler property type specifies configuration information for optional message
+ * review.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ivschat.*;
+ * MessageReviewHandlerProperty messageReviewHandlerProperty =
+ * MessageReviewHandlerProperty.builder()
+ * .fallbackResult("fallbackResult")
+ * .uri("uri")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivschat-room-messagereviewhandler.html)
+ */
 @CdkDslMarker
 public class CfnRoomMessageReviewHandlerPropertyDsl {
   private val cdkBuilder: CfnRoom.MessageReviewHandlerProperty.Builder =

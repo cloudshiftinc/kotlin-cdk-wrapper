@@ -9,6 +9,25 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.pinpoint.CfnAppProps
 
+/**
+ * Properties for defining a `CfnApp`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnAppProps cfnAppProps = CfnAppProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .tags(tags)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-app.html)
+ */
 @CdkDslMarker
 public class CfnAppPropsDsl {
   private val cdkBuilder: CfnAppProps.Builder = CfnAppProps.builder()

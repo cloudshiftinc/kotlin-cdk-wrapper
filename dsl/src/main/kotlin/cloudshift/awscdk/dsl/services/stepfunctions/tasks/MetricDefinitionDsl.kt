@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition
 
+/**
+ * Specifies the metric name and regular expressions used to parse algorithm logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * MetricDefinition metricDefinition = MetricDefinition.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricDefinitionDsl {
   private val cdkBuilder: MetricDefinition.Builder = MetricDefinition.builder()

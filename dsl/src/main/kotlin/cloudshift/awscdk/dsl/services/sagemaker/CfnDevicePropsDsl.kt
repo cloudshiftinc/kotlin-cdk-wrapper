@@ -13,6 +13,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnDevice
 import software.amazon.awscdk.services.sagemaker.CfnDeviceProps
 
+/**
+ * Properties for defining a `CfnDevice`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnDeviceProps cfnDeviceProps = CfnDeviceProps.builder()
+ * .deviceFleetName("deviceFleetName")
+ * // the properties below are optional
+ * .device(DeviceProperty.builder()
+ * .deviceName("deviceName")
+ * // the properties below are optional
+ * .description("description")
+ * .iotThingName("iotThingName")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-device.html)
+ */
 @CdkDslMarker
 public class CfnDevicePropsDsl {
   private val cdkBuilder: CfnDeviceProps.Builder = CfnDeviceProps.builder()

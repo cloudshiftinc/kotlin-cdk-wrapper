@@ -6,6 +6,33 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.LayerVersionPermission
 
+/**
+ * Identification of an account (or organization) that is allowed to access a Lambda Layer Version.
+ *
+ * Example:
+ *
+ * ```
+ * LayerVersion layer = LayerVersion.Builder.create(stack, "MyLayer")
+ * .code(Code.fromAsset(join(__dirname, "layer-code")))
+ * .compatibleRuntimes(List.of(Runtime.NODEJS_14_X))
+ * .license("Apache-2.0")
+ * .description("A layer to test the L2 construct")
+ * .build();
+ * // To grant usage by other AWS accounts
+ * layer.addPermission("remote-account-grant",
+ * LayerVersionPermission.builder().accountId(awsAccountId).build());
+ * // To grant usage to all accounts in some AWS Ogranization
+ * // layer.grantUsage({ accountId: '*', organizationId });
+ * // To grant usage to all accounts in some AWS Ogranization
+ * // layer.grantUsage({ accountId: '*', organizationId });
+ * Function.Builder.create(stack, "MyLayeredLambda")
+ * .code(new InlineCode("foo"))
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_14_X)
+ * .layers(List.of(layer))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LayerVersionPermissionDsl {
   private val cdkBuilder: LayerVersionPermission.Builder = LayerVersionPermission.builder()

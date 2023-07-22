@@ -12,6 +12,35 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion
 import software.constructs.Construct
 
+/**
+ * Creates a custom DB engine version (CEV).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.rds.*;
+ * CfnCustomDBEngineVersion cfnCustomDBEngineVersion = CfnCustomDBEngineVersion.Builder.create(this,
+ * "MyCfnCustomDBEngineVersion")
+ * .databaseInstallationFilesS3BucketName("databaseInstallationFilesS3BucketName")
+ * .engine("engine")
+ * .engineVersion("engineVersion")
+ * // the properties below are optional
+ * .databaseInstallationFilesS3Prefix("databaseInstallationFilesS3Prefix")
+ * .description("description")
+ * .kmsKeyId("kmsKeyId")
+ * .manifest("manifest")
+ * .status("status")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html)
+ */
 @CdkDslMarker
 public class CfnCustomDBEngineVersionDsl(
   scope: Construct,

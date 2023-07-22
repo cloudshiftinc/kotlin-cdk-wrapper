@@ -12,6 +12,31 @@ import software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps
 import software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancerProps
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Properties to define an network load balancer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * NetworkLoadBalancerProps networkLoadBalancerProps = NetworkLoadBalancerProps.builder()
+ * .listeners(List.of(NetworkListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .port(123)
+ * .build()))
+ * .name("name")
+ * // the properties below are optional
+ * .domainName("domainName")
+ * .domainZone(hostedZone)
+ * .publicLoadBalancer(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NetworkLoadBalancerPropsDsl {
   private val cdkBuilder: NetworkLoadBalancerProps.Builder = NetworkLoadBalancerProps.builder()

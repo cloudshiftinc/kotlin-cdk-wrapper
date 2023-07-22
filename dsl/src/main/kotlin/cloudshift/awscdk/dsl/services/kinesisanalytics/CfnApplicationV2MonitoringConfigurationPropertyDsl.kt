@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2
 
+/**
+ * Describes configuration parameters for Amazon CloudWatch logging for a Java-based Kinesis Data
+ * Analytics application.
+ *
+ * For more information about CloudWatch logging, see
+ * [Monitoring](https://docs.aws.amazon.com/kinesisanalytics/latest/java/monitoring-overview) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisanalytics.*;
+ * MonitoringConfigurationProperty monitoringConfigurationProperty =
+ * MonitoringConfigurationProperty.builder()
+ * .configurationType("configurationType")
+ * // the properties below are optional
+ * .logLevel("logLevel")
+ * .metricsLevel("metricsLevel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-monitoringconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnApplicationV2MonitoringConfigurationPropertyDsl {
   private val cdkBuilder: CfnApplicationV2.MonitoringConfigurationProperty.Builder =

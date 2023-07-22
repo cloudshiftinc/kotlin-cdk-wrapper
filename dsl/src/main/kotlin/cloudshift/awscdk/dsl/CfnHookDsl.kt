@@ -11,6 +11,20 @@ import kotlin.collections.Map
 import software.amazon.awscdk.CfnHook
 import software.constructs.Construct
 
+/**
+ * Represents a CloudFormation resource.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * // mutating the hook
+ * Role myRole;
+ * CfnHook hook = cfnTemplate.getHook("MyOutput");
+ * CfnCodeDeployBlueGreenHook codeDeployHook = (CfnCodeDeployBlueGreenHook)hook;
+ * codeDeployHook.getServiceRole() = myRole.getRoleArn();
+ * ```
+ */
 @CdkDslMarker
 public class CfnHookDsl(
   scope: Construct,

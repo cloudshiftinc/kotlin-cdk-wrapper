@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.logs.CfnLogStreamProps
 
+/**
+ * Properties for defining a `CfnLogStream`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * CfnLogStreamProps cfnLogStreamProps = CfnLogStreamProps.builder()
+ * .logGroupName("logGroupName")
+ * // the properties below are optional
+ * .logStreamName("logStreamName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html)
+ */
 @CdkDslMarker
 public class CfnLogStreamPropsDsl {
   private val cdkBuilder: CfnLogStreamProps.Builder = CfnLogStreamProps.builder()

@@ -9,6 +9,31 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 
+/**
+ * The image recipe EBS instance block device specification includes the Amazon EBS-specific block
+ * device mapping specifications for the image.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * EbsInstanceBlockDeviceSpecificationProperty ebsInstanceBlockDeviceSpecificationProperty =
+ * EbsInstanceBlockDeviceSpecificationProperty.builder()
+ * .deleteOnTermination(false)
+ * .encrypted(false)
+ * .iops(123)
+ * .kmsKeyId("kmsKeyId")
+ * .snapshotId("snapshotId")
+ * .throughput(123)
+ * .volumeSize(123)
+ * .volumeType("volumeType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-ebsinstanceblockdevicespecification.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipeEbsInstanceBlockDeviceSpecificationPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.EbsInstanceBlockDeviceSpecificationProperty.Builder =

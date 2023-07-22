@@ -10,6 +10,29 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.cloudwatch.IMetric
 import software.amazon.awscdk.services.ecs.TrackCustomMetricProps
 
+/**
+ * The properties for enabling target tracking scaling based on a custom CloudWatch metric.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * import software.amazon.awscdk.services.ecs.*;
+ * Metric metric;
+ * TrackCustomMetricProps trackCustomMetricProps = TrackCustomMetricProps.builder()
+ * .metric(metric)
+ * .targetValue(123)
+ * // the properties below are optional
+ * .disableScaleIn(false)
+ * .policyName("policyName")
+ * .scaleInCooldown(Duration.minutes(30))
+ * .scaleOutCooldown(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TrackCustomMetricPropsDsl {
   private val cdkBuilder: TrackCustomMetricProps.Builder = TrackCustomMetricProps.builder()

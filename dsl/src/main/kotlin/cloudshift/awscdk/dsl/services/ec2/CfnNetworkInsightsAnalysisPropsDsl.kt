@@ -11,6 +11,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysisProps
 
+/**
+ * Properties for defining a `CfnNetworkInsightsAnalysis`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkInsightsAnalysisProps cfnNetworkInsightsAnalysisProps =
+ * CfnNetworkInsightsAnalysisProps.builder()
+ * .networkInsightsPathId("networkInsightsPathId")
+ * // the properties below are optional
+ * .additionalAccounts(List.of("additionalAccounts"))
+ * .filterInArns(List.of("filterInArns"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsanalysis.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisPropsDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysisProps.Builder =

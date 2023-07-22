@@ -8,6 +8,32 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.wafv2.CfnWebACL
 
+/**
+ * Configures inspection of the response JSON.
+ *
+ * AWS WAF can inspect the first 65,536 bytes (64 KB) of the response JSON. This is part of the
+ * `ResponseInspection` configuration for `AWSManagedRulesATPRuleSet` .
+ *
+ *
+ * Response inspection is available only in web ACLs that protect Amazon CloudFront distributions.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * ResponseInspectionJsonProperty responseInspectionJsonProperty =
+ * ResponseInspectionJsonProperty.builder()
+ * .failureValues(List.of("failureValues"))
+ * .identifier("identifier")
+ * .successValues(List.of("successValues"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-responseinspectionjson.html)
+ */
 @CdkDslMarker
 public class CfnWebACLResponseInspectionJsonPropertyDsl {
   private val cdkBuilder: CfnWebACL.ResponseInspectionJsonProperty.Builder =

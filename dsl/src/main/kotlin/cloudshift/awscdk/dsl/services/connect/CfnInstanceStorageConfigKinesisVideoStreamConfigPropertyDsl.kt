@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnInstanceStorageConfig
 
+/**
+ * Configuration information of a Kinesis video stream.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * KinesisVideoStreamConfigProperty kinesisVideoStreamConfigProperty =
+ * KinesisVideoStreamConfigProperty.builder()
+ * .prefix("prefix")
+ * .retentionPeriodHours(123)
+ * // the properties below are optional
+ * .encryptionConfig(EncryptionConfigProperty.builder()
+ * .encryptionType("encryptionType")
+ * .keyId("keyId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-instancestorageconfig-kinesisvideostreamconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceStorageConfigKinesisVideoStreamConfigPropertyDsl {
   private val cdkBuilder: CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty.Builder =

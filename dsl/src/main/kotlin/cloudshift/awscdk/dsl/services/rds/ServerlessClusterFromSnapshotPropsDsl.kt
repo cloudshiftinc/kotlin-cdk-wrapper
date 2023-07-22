@@ -21,6 +21,20 @@ import software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshotProps
 import software.amazon.awscdk.services.rds.ServerlessScalingOptions
 import software.amazon.awscdk.services.rds.SnapshotCredentials
 
+/**
+ * Properties for `ServerlessClusterFromSnapshot`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * ServerlessClusterFromSnapshot.Builder.create(this, "Cluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServerlessClusterFromSnapshotPropsDsl {
   private val cdkBuilder: ServerlessClusterFromSnapshotProps.Builder =

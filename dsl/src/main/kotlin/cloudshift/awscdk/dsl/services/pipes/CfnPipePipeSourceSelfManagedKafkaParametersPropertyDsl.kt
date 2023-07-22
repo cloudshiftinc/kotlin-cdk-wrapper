@@ -10,6 +10,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pipes.CfnPipe
 
+/**
+ * The parameters for using a self-managed Apache Kafka stream as a source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pipes.*;
+ * PipeSourceSelfManagedKafkaParametersProperty pipeSourceSelfManagedKafkaParametersProperty =
+ * PipeSourceSelfManagedKafkaParametersProperty.builder()
+ * .topicName("topicName")
+ * // the properties below are optional
+ * .additionalBootstrapServers(List.of("additionalBootstrapServers"))
+ * .batchSize(123)
+ * .consumerGroupId("consumerGroupId")
+ * .credentials(SelfManagedKafkaAccessConfigurationCredentialsProperty.builder()
+ * .basicAuth("basicAuth")
+ * .clientCertificateTlsAuth("clientCertificateTlsAuth")
+ * .saslScram256Auth("saslScram256Auth")
+ * .saslScram512Auth("saslScram512Auth")
+ * .build())
+ * .maximumBatchingWindowInSeconds(123)
+ * .serverRootCaCertificate("serverRootCaCertificate")
+ * .startingPosition("startingPosition")
+ * .vpc(SelfManagedKafkaAccessConfigurationVpcProperty.builder()
+ * .securityGroup(List.of("securityGroup"))
+ * .subnets(List.of("subnets"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourceselfmanagedkafkaparameters.html)
+ */
 @CdkDslMarker
 public class CfnPipePipeSourceSelfManagedKafkaParametersPropertyDsl {
   private val cdkBuilder: CfnPipe.PipeSourceSelfManagedKafkaParametersProperty.Builder =

@@ -9,6 +9,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.omics.CfnReferenceStore
 import software.amazon.awscdk.services.omics.CfnReferenceStoreProps
 
+/**
+ * Properties for defining a `CfnReferenceStore`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.omics.*;
+ * CfnReferenceStoreProps cfnReferenceStoreProps = CfnReferenceStoreProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .sseConfig(SseConfigProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .keyArn("keyArn")
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-referencestore.html)
+ */
 @CdkDslMarker
 public class CfnReferenceStorePropsDsl {
   private val cdkBuilder: CfnReferenceStoreProps.Builder = CfnReferenceStoreProps.builder()

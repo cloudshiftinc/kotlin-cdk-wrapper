@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.elasticloadbalancingv2.AuthenticateOidcOp
 import software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction
 import software.amazon.awscdk.services.elasticloadbalancingv2.UnauthenticatedAction
 
+/**
+ * Options for `ListenerAction.authenciateOidc()`.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationListener listener;
+ * ApplicationTargetGroup myTargetGroup;
+ * listener.addAction("DefaultAction", AddApplicationActionProps.builder()
+ * .action(ListenerAction.authenticateOidc(AuthenticateOidcOptions.builder()
+ * .authorizationEndpoint("https://example.com/openid")
+ * // Other OIDC properties here
+ * .clientId("...")
+ * .clientSecret(SecretValue.secretsManager("..."))
+ * .issuer("...")
+ * .tokenEndpoint("...")
+ * .userInfoEndpoint("...")
+ * // Next
+ * .next(ListenerAction.forward(List.of(myTargetGroup)))
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AuthenticateOidcOptionsDsl {
   private val cdkBuilder: AuthenticateOidcOptions.Builder = AuthenticateOidcOptions.builder()

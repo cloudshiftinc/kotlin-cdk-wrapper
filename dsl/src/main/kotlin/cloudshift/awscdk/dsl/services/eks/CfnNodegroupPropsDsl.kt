@@ -14,6 +14,61 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnNodegroup
 import software.amazon.awscdk.services.eks.CfnNodegroupProps
 
+/**
+ * Properties for defining a `CfnNodegroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * CfnNodegroupProps cfnNodegroupProps = CfnNodegroupProps.builder()
+ * .clusterName("clusterName")
+ * .nodeRole("nodeRole")
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .amiType("amiType")
+ * .capacityType("capacityType")
+ * .diskSize(123)
+ * .forceUpdateEnabled(false)
+ * .instanceTypes(List.of("instanceTypes"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
+ * .id("id")
+ * .name("name")
+ * .version("version")
+ * .build())
+ * .nodegroupName("nodegroupName")
+ * .releaseVersion("releaseVersion")
+ * .remoteAccess(RemoteAccessProperty.builder()
+ * .ec2SshKey("ec2SshKey")
+ * // the properties below are optional
+ * .sourceSecurityGroups(List.of("sourceSecurityGroups"))
+ * .build())
+ * .scalingConfig(ScalingConfigProperty.builder()
+ * .desiredSize(123)
+ * .maxSize(123)
+ * .minSize(123)
+ * .build())
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .taints(List.of(TaintProperty.builder()
+ * .effect("effect")
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .updateConfig(UpdateConfigProperty.builder()
+ * .maxUnavailable(123)
+ * .maxUnavailablePercentage(123)
+ * .build())
+ * .version("version")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html)
+ */
 @CdkDslMarker
 public class CfnNodegroupPropsDsl {
   private val cdkBuilder: CfnNodegroupProps.Builder = CfnNodegroupProps.builder()

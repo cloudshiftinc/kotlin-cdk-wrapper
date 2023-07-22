@@ -10,6 +10,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkAclEntry
 import software.amazon.awscdk.services.ec2.CfnNetworkAclEntryProps
 
+/**
+ * Properties for defining a `CfnNetworkAclEntry`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnNetworkAclEntryProps cfnNetworkAclEntryProps = CfnNetworkAclEntryProps.builder()
+ * .networkAclId("networkAclId")
+ * .protocol(123)
+ * .ruleAction("ruleAction")
+ * .ruleNumber(123)
+ * // the properties below are optional
+ * .cidrBlock("cidrBlock")
+ * .egress(false)
+ * .icmp(IcmpProperty.builder()
+ * .code(123)
+ * .type(123)
+ * .build())
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkaclentry.html)
+ */
 @CdkDslMarker
 public class CfnNetworkAclEntryPropsDsl {
   private val cdkBuilder: CfnNetworkAclEntryProps.Builder = CfnNetworkAclEntryProps.builder()

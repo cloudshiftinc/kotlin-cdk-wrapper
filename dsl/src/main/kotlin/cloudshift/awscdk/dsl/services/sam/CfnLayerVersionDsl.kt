@@ -10,6 +10,27 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sam.CfnLayerVersion
 import software.constructs.Construct
 
+/**
+ * Definition of AWS::Serverless::LayerVersion.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sam.*;
+ * CfnLayerVersion cfnLayerVersion = CfnLayerVersion.Builder.create(this, "MyCfnLayerVersion")
+ * .compatibleRuntimes(List.of("compatibleRuntimes"))
+ * .contentUri("contentUri")
+ * .description("description")
+ * .layerName("layerName")
+ * .licenseInfo("licenseInfo")
+ * .retentionPolicy("retentionPolicy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-serverless-layerversion.html)
+ */
 @CdkDslMarker
 public class CfnLayerVersionDsl(
   scope: Construct,

@@ -8,6 +8,27 @@ import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials
 import software.constructs.Construct
 
+/**
+ * The source credentials used when contacting the GitHub Enterprise API.
+ *
+ * **Note**: CodeBuild only allows a single credential for GitHub Enterprise
+ * to be saved in a given AWS account in a given region -
+ * any attempt to add more than one will result in an error.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.codebuild.*;
+ * SecretValue secretValue;
+ * GitHubEnterpriseSourceCredentials gitHubEnterpriseSourceCredentials =
+ * GitHubEnterpriseSourceCredentials.Builder.create(this, "MyGitHubEnterpriseSourceCredentials")
+ * .accessToken(secretValue)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GitHubEnterpriseSourceCredentialsDsl(
   scope: Construct,

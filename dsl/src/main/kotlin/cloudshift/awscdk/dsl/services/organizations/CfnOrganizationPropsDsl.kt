@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.organizations.CfnOrganizationProps
 
+/**
+ * Properties for defining a `CfnOrganization`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * CfnOrganizationProps cfnOrganizationProps = CfnOrganizationProps.builder()
+ * .featureSet("featureSet")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organization.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationPropsDsl {
   private val cdkBuilder: CfnOrganizationProps.Builder = CfnOrganizationProps.builder()

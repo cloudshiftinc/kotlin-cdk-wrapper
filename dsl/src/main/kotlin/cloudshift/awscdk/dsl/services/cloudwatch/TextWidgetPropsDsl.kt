@@ -8,6 +8,18 @@ import kotlin.String
 import software.amazon.awscdk.services.cloudwatch.TextWidgetBackground
 import software.amazon.awscdk.services.cloudwatch.TextWidgetProps
 
+/**
+ * Properties for a Text widget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(TextWidget.Builder.create()
+ * .markdown("# Key Performance Indicators")
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class TextWidgetPropsDsl {
   private val cdkBuilder: TextWidgetProps.Builder = TextWidgetProps.builder()

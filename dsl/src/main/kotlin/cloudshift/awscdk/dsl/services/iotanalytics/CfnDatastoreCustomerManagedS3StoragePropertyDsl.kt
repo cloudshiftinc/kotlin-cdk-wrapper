@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iotanalytics.CfnDatastore
 
+/**
+ * Amazon S3 -customer-managed;
+ *
+ * When you choose customer-managed storage, the `retentionPeriod` parameter is ignored. You can't
+ * change the choice of Amazon S3 storage after your data store is created.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotanalytics.*;
+ * CustomerManagedS3StorageProperty customerManagedS3StorageProperty =
+ * CustomerManagedS3StorageProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .keyPrefix("keyPrefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotanalytics-datastore-customermanageds3storage.html)
+ */
 @CdkDslMarker
 public class CfnDatastoreCustomerManagedS3StoragePropertyDsl {
   private val cdkBuilder: CfnDatastore.CustomerManagedS3StorageProperty.Builder =

@@ -11,6 +11,21 @@ import software.amazon.awscdk.services.route53.IHostedZone
 import software.amazon.awscdk.services.route53.RecordTarget
 import software.constructs.Construct
 
+/**
+ * A DNS AAAA record.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * HostedZone myZone;
+ * CloudFrontWebDistribution distribution;
+ * AaaaRecord.Builder.create(this, "Alias")
+ * .zone(myZone)
+ * .target(RecordTarget.fromAlias(new CloudFrontTarget(distribution)))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AaaaRecordDsl(
   scope: Construct,

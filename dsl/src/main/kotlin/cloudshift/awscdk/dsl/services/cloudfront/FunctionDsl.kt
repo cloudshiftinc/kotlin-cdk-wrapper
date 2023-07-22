@@ -8,6 +8,28 @@ import software.amazon.awscdk.services.cloudfront.Function
 import software.amazon.awscdk.services.cloudfront.FunctionCode
 import software.constructs.Construct
 
+/**
+ * A CloudFront Function.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class FunctionDsl(
   scope: Construct,

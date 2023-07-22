@@ -8,6 +8,32 @@ import kotlin.Unit
 import software.amazon.awscdk.services.appmesh.CfnGatewayRoute
 import software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatchConfig
 
+/**
+ * The type returned from the `bind()` method in `HttpGatewayRoutePathMatch`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * HttpGatewayRoutePathMatchConfig httpGatewayRoutePathMatchConfig =
+ * HttpGatewayRoutePathMatchConfig.builder()
+ * .prefixPathMatch("prefixPathMatch")
+ * .prefixPathRewrite(HttpGatewayRoutePrefixRewriteProperty.builder()
+ * .defaultPrefix("defaultPrefix")
+ * .value("value")
+ * .build())
+ * .wholePathMatch(HttpPathMatchProperty.builder()
+ * .exact("exact")
+ * .regex("regex")
+ * .build())
+ * .wholePathRewrite(HttpGatewayRoutePathRewriteProperty.builder()
+ * .exact("exact")
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HttpGatewayRoutePathMatchConfigDsl {
   private val cdkBuilder: HttpGatewayRoutePathMatchConfig.Builder =

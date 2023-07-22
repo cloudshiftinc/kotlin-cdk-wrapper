@@ -12,6 +12,33 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eventschemas.CfnDiscoverer
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::EventSchemas::Discoverer` resource to specify a *discoverer* that is associated
+ * with an event bus.
+ *
+ * A discoverer allows the Amazon EventBridge Schema Registry to automatically generate schemas
+ * based on events on an event bus.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnDiscoverer cfnDiscoverer = CfnDiscoverer.Builder.create(this, "MyCfnDiscoverer")
+ * .sourceArn("sourceArn")
+ * // the properties below are optional
+ * .crossAccount(false)
+ * .description("description")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-discoverer.html)
+ */
 @CdkDslMarker
 public class CfnDiscovererDsl(
   scope: Construct,

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.gamelift.CfnAlias
 
+/**
+ * The routing configuration for a fleet alias.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * RoutingStrategyProperty routingStrategyProperty = RoutingStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .fleetId("fleetId")
+ * .message("message")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-alias-routingstrategy.html)
+ */
 @CdkDslMarker
 public class CfnAliasRoutingStrategyPropertyDsl {
   private val cdkBuilder: CfnAlias.RoutingStrategyProperty.Builder =

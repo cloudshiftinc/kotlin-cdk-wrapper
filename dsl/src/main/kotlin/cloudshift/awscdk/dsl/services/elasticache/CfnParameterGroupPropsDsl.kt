@@ -13,6 +13,30 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnParameterGroupProps
 
+/**
+ * Properties for defining a `CfnParameterGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnParameterGroupProps cfnParameterGroupProps = CfnParameterGroupProps.builder()
+ * .cacheParameterGroupFamily("cacheParameterGroupFamily")
+ * .description("description")
+ * // the properties below are optional
+ * .properties(Map.of(
+ * "propertiesKey", "properties"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-parametergroup.html)
+ */
 @CdkDslMarker
 public class CfnParameterGroupPropsDsl {
   private val cdkBuilder: CfnParameterGroupProps.Builder = CfnParameterGroupProps.builder()

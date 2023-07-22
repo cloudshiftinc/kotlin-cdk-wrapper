@@ -7,6 +7,32 @@ import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration
 import software.amazon.awscdk.services.stepfunctions.tasks.EncryptionOption
 
+/**
+ * Encryption Configuration of the S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
+ * "Start Athena Query")
+ * .queryString(JsonPath.stringAt("$.queryString"))
+ * .queryExecutionContext(QueryExecutionContext.builder()
+ * .databaseName("mydatabase")
+ * .build())
+ * .resultConfiguration(ResultConfiguration.builder()
+ * .encryptionConfiguration(EncryptionConfiguration.builder()
+ * .encryptionOption(EncryptionOption.S3_MANAGED)
+ * .build())
+ * .outputLocation(Location.builder()
+ * .bucketName("query-results-bucket")
+ * .objectKey("folder")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/athena/latest/APIReference/API_EncryptionConfiguration.html)
+ */
 @CdkDslMarker
 public class EncryptionConfigurationDsl {
   private val cdkBuilder: EncryptionConfiguration.Builder = EncryptionConfiguration.builder()

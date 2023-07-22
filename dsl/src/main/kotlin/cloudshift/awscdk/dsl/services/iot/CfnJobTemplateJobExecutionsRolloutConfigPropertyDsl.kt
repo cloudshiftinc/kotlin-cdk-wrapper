@@ -7,6 +7,31 @@ import kotlin.Number
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnJobTemplate
 
+/**
+ * Allows you to create a staged rollout of a job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * JobExecutionsRolloutConfigProperty jobExecutionsRolloutConfigProperty =
+ * JobExecutionsRolloutConfigProperty.builder()
+ * .exponentialRolloutRate(ExponentialRolloutRateProperty.builder()
+ * .baseRatePerMinute(123)
+ * .incrementFactor(123)
+ * .rateIncreaseCriteria(RateIncreaseCriteriaProperty.builder()
+ * .numberOfNotifiedThings(123)
+ * .numberOfSucceededThings(123)
+ * .build())
+ * .build())
+ * .maximumPerMinute(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-jobtemplate-jobexecutionsrolloutconfig.html)
+ */
 @CdkDslMarker
 public class CfnJobTemplateJobExecutionsRolloutConfigPropertyDsl {
   private val cdkBuilder: CfnJobTemplate.JobExecutionsRolloutConfigProperty.Builder =

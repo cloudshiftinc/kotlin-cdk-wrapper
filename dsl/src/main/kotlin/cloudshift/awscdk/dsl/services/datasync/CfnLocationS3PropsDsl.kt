@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationS3
 import software.amazon.awscdk.services.datasync.CfnLocationS3Props
 
+/**
+ * Properties for defining a `CfnLocationS3`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationS3Props cfnLocationS3Props = CfnLocationS3Props.builder()
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketAccessRoleArn("bucketAccessRoleArn")
+ * .build())
+ * // the properties below are optional
+ * .s3BucketArn("s3BucketArn")
+ * .s3StorageClass("s3StorageClass")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locations3.html)
+ */
 @CdkDslMarker
 public class CfnLocationS3PropsDsl {
   private val cdkBuilder: CfnLocationS3Props.Builder = CfnLocationS3Props.builder()

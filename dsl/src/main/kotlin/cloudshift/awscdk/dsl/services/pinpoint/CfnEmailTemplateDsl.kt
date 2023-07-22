@@ -10,6 +10,33 @@ import kotlin.Unit
 import software.amazon.awscdk.services.pinpoint.CfnEmailTemplate
 import software.constructs.Construct
 
+/**
+ * Creates a message template that you can use in messages that are sent through the email channel.
+ *
+ * A *message template* is a set of content and settings that you can define, save, and reuse in
+ * messages for any of your Amazon Pinpoint applications.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * Object tags;
+ * CfnEmailTemplate cfnEmailTemplate = CfnEmailTemplate.Builder.create(this, "MyCfnEmailTemplate")
+ * .subject("subject")
+ * .templateName("templateName")
+ * // the properties below are optional
+ * .defaultSubstitutions("defaultSubstitutions")
+ * .htmlPart("htmlPart")
+ * .tags(tags)
+ * .templateDescription("templateDescription")
+ * .textPart("textPart")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailtemplate.html)
+ */
 @CdkDslMarker
 public class CfnEmailTemplateDsl(
   scope: Construct,

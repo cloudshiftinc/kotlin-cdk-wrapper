@@ -9,6 +9,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnAnalysis
 
+/**
+ * The default values of the `DecimalParameterDeclaration` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * DecimalDefaultValuesProperty decimalDefaultValuesProperty =
+ * DecimalDefaultValuesProperty.builder()
+ * .dynamicValue(DynamicDefaultValueProperty.builder()
+ * .defaultValueColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * // the properties below are optional
+ * .groupNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .userNameColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .build())
+ * .staticValues(List.of(123))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-analysis-decimaldefaultvalues.html)
+ */
 @CdkDslMarker
 public class CfnAnalysisDecimalDefaultValuesPropertyDsl {
   private val cdkBuilder: CfnAnalysis.DecimalDefaultValuesProperty.Builder =

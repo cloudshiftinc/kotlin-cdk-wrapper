@@ -8,6 +8,28 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.cloudassembly.schema.VpcContextQuery
 
+/**
+ * Query input for looking up a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * VpcContextQuery vpcContextQuery = VpcContextQuery.builder()
+ * .account("account")
+ * .filter(Map.of(
+ * "filterKey", "filter"))
+ * .region("region")
+ * // the properties below are optional
+ * .lookupRoleArn("lookupRoleArn")
+ * .returnAsymmetricSubnets(false)
+ * .returnVpnGateways(false)
+ * .subnetGroupNameTag("subnetGroupNameTag")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcContextQueryDsl {
   private val cdkBuilder: VpcContextQuery.Builder = VpcContextQuery.builder()

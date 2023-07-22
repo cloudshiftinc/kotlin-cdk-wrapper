@@ -8,6 +8,29 @@ import kotlin.Number
 import software.amazon.awscdk.services.autoscaling.EbsDeviceOptions
 import software.amazon.awscdk.services.autoscaling.EbsDeviceVolumeType
 
+/**
+ * Block device options for an EBS volume.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("gp3-volume")
+ * .volume(BlockDeviceVolume.ebs(15, EbsDeviceOptions.builder()
+ * .volumeType(EbsDeviceVolumeType.GP3)
+ * .throughput(125)
+ * .build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EbsDeviceOptionsDsl {
   private val cdkBuilder: EbsDeviceOptions.Builder = EbsDeviceOptions.builder()

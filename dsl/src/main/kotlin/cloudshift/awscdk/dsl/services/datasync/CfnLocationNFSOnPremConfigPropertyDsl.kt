@@ -8,6 +8,22 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.datasync.CfnLocationNFS
 
+/**
+ * A list of Amazon Resource Names (ARNs) of agents to use for a Network File System (NFS) location.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * OnPremConfigProperty onPremConfigProperty = OnPremConfigProperty.builder()
+ * .agentArns(List.of("agentArns"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-locationnfs-onpremconfig.html)
+ */
 @CdkDslMarker
 public class CfnLocationNFSOnPremConfigPropertyDsl {
   private val cdkBuilder: CfnLocationNFS.OnPremConfigProperty.Builder =

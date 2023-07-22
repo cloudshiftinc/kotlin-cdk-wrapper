@@ -7,6 +7,29 @@ import kotlin.String
 import software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint
 import software.constructs.Construct
 
+/**
+ * Specifies a launch constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnLaunchRoleConstraint cfnLaunchRoleConstraint = CfnLaunchRoleConstraint.Builder.create(this,
+ * "MyCfnLaunchRoleConstraint")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .localRoleName("localRoleName")
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchroleconstraint.html)
+ */
 @CdkDslMarker
 public class CfnLaunchRoleConstraintDsl(
   scope: Construct,

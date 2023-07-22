@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * TimecodeBurninSettingsProperty timecodeBurninSettingsProperty =
+ * TimecodeBurninSettingsProperty.builder()
+ * .fontSize("fontSize")
+ * .position("position")
+ * .prefix("prefix")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-timecodeburninsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelTimecodeBurninSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.TimecodeBurninSettingsProperty.Builder =

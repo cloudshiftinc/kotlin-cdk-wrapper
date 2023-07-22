@@ -8,6 +8,24 @@ import kotlin.String
 import software.amazon.awscdk.CfnPublisherProps
 import software.amazon.awscdk.IResolvable
 
+/**
+ * Properties for defining a `CfnPublisher`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnPublisherProps cfnPublisherProps = CfnPublisherProps.builder()
+ * .acceptTermsAndConditions(false)
+ * // the properties below are optional
+ * .connectionArn("connectionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-publisher.html)
+ */
 @CdkDslMarker
 public class CfnPublisherPropsDsl {
   private val cdkBuilder: CfnPublisherProps.Builder = CfnPublisherProps.builder()

@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.codebuild.CfnReportGroup
 
+/**
+ * Information about the location where the run of a report is exported.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codebuild.*;
+ * ReportExportConfigProperty reportExportConfigProperty = ReportExportConfigProperty.builder()
+ * .exportConfigType("exportConfigType")
+ * // the properties below are optional
+ * .s3Destination(S3ReportExportConfigProperty.builder()
+ * .bucket("bucket")
+ * // the properties below are optional
+ * .bucketOwner("bucketOwner")
+ * .encryptionDisabled(false)
+ * .encryptionKey("encryptionKey")
+ * .packaging("packaging")
+ * .path("path")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-reportgroup-reportexportconfig.html)
+ */
 @CdkDslMarker
 public class CfnReportGroupReportExportConfigPropertyDsl {
   private val cdkBuilder: CfnReportGroup.ReportExportConfigProperty.Builder =

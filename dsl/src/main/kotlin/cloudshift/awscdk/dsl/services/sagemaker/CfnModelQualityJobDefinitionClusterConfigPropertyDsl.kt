@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelQualityJobDefinition
 
+/**
+ * The configuration for the cluster of resources used to run the processing job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * ClusterConfigProperty clusterConfigProperty = ClusterConfigProperty.builder()
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .volumeSizeInGb(123)
+ * // the properties below are optional
+ * .volumeKmsKeyId("volumeKmsKeyId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelqualityjobdefinition-clusterconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelQualityJobDefinitionClusterConfigPropertyDsl {
   private val cdkBuilder: CfnModelQualityJobDefinition.ClusterConfigProperty.Builder =

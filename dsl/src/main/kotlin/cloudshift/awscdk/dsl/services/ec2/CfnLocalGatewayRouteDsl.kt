@@ -7,6 +7,31 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute
 import software.constructs.Construct
 
+/**
+ * Creates a static route for the specified local gateway route table. You must specify one of the
+ * following targets:.
+ *
+ * * `LocalGatewayVirtualInterfaceGroupId`
+ * * `NetworkInterfaceId`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnLocalGatewayRoute cfnLocalGatewayRoute = CfnLocalGatewayRoute.Builder.create(this,
+ * "MyCfnLocalGatewayRoute")
+ * .destinationCidrBlock("destinationCidrBlock")
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * // the properties below are optional
+ * .localGatewayVirtualInterfaceGroupId("localGatewayVirtualInterfaceGroupId")
+ * .networkInterfaceId("networkInterfaceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroute.html)
+ */
 @CdkDslMarker
 public class CfnLocalGatewayRouteDsl(
   scope: Construct,

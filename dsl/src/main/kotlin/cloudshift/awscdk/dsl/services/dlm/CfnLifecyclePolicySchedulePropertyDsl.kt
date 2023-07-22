@@ -11,6 +11,84 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dlm.CfnLifecyclePolicy
 
+/**
+ * *[Snapshot and AMI policies only]* Specifies a schedule for a snapshot or AMI lifecycle policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dlm.*;
+ * ScheduleProperty scheduleProperty = ScheduleProperty.builder()
+ * .archiveRule(ArchiveRuleProperty.builder()
+ * .retainRule(ArchiveRetainRuleProperty.builder()
+ * .retentionArchiveTier(RetentionArchiveTierProperty.builder()
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .build())
+ * .build())
+ * .copyTags(false)
+ * .createRule(CreateRuleProperty.builder()
+ * .cronExpression("cronExpression")
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .location("location")
+ * .times(List.of("times"))
+ * .build())
+ * .crossRegionCopyRules(List.of(CrossRegionCopyRuleProperty.builder()
+ * .encrypted(false)
+ * // the properties below are optional
+ * .cmkArn("cmkArn")
+ * .copyTags(false)
+ * .deprecateRule(CrossRegionCopyDeprecateRuleProperty.builder()
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .retainRule(CrossRegionCopyRetainRuleProperty.builder()
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .target("target")
+ * .targetRegion("targetRegion")
+ * .build()))
+ * .deprecateRule(DeprecateRuleProperty.builder()
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .fastRestoreRule(FastRestoreRuleProperty.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .name("name")
+ * .retainRule(RetainRuleProperty.builder()
+ * .count(123)
+ * .interval(123)
+ * .intervalUnit("intervalUnit")
+ * .build())
+ * .shareRules(List.of(ShareRuleProperty.builder()
+ * .targetAccounts(List.of("targetAccounts"))
+ * .unshareInterval(123)
+ * .unshareIntervalUnit("unshareIntervalUnit")
+ * .build()))
+ * .tagsToAdd(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .variableTags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dlm-lifecyclepolicy-schedule.html)
+ */
 @CdkDslMarker
 public class CfnLifecyclePolicySchedulePropertyDsl {
   private val cdkBuilder: CfnLifecyclePolicy.ScheduleProperty.Builder =

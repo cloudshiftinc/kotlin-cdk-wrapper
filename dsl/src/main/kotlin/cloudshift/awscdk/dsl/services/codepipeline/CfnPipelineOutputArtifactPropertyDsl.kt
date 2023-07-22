@@ -6,6 +6,22 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codepipeline.CfnPipeline
 
+/**
+ * Represents information about the output of an action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.*;
+ * OutputArtifactProperty outputArtifactProperty = OutputArtifactProperty.builder()
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html)
+ */
 @CdkDslMarker
 public class CfnPipelineOutputArtifactPropertyDsl {
   private val cdkBuilder: CfnPipeline.OutputArtifactProperty.Builder =

@@ -10,6 +10,64 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudget
 
+/**
+ * Represents the output of the `CreateBudget` operation.
+ *
+ * The content consists of the detailed metadata and data file information, and the current status
+ * of the `budget` object.
+ *
+ * This is the Amazon Resource Name (ARN) pattern for a budget:
+ *
+ * `arn:aws:budgets::AccountId:budget/budgetName`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * Object costFilters;
+ * Object plannedBudgetLimits;
+ * BudgetDataProperty budgetDataProperty = BudgetDataProperty.builder()
+ * .budgetType("budgetType")
+ * .timeUnit("timeUnit")
+ * // the properties below are optional
+ * .autoAdjustData(AutoAdjustDataProperty.builder()
+ * .autoAdjustType("autoAdjustType")
+ * // the properties below are optional
+ * .historicalOptions(HistoricalOptionsProperty.builder()
+ * .budgetAdjustmentPeriod(123)
+ * .build())
+ * .build())
+ * .budgetLimit(SpendProperty.builder()
+ * .amount(123)
+ * .unit("unit")
+ * .build())
+ * .budgetName("budgetName")
+ * .costFilters(costFilters)
+ * .costTypes(CostTypesProperty.builder()
+ * .includeCredit(false)
+ * .includeDiscount(false)
+ * .includeOtherSubscription(false)
+ * .includeRecurring(false)
+ * .includeRefund(false)
+ * .includeSubscription(false)
+ * .includeSupport(false)
+ * .includeTax(false)
+ * .includeUpfront(false)
+ * .useAmortized(false)
+ * .useBlended(false)
+ * .build())
+ * .plannedBudgetLimits(plannedBudgetLimits)
+ * .timePeriod(TimePeriodProperty.builder()
+ * .end("end")
+ * .start("start")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html)
+ */
 @CdkDslMarker
 public class CfnBudgetBudgetDataPropertyDsl {
   private val cdkBuilder: CfnBudget.BudgetDataProperty.Builder =

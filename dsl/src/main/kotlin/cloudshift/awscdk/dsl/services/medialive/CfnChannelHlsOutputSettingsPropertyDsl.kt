@@ -7,6 +7,66 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The settings for an HLS output.
+ *
+ * The parent of this entity is OutputSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsOutputSettingsProperty hlsOutputSettingsProperty = HlsOutputSettingsProperty.builder()
+ * .h265PackagingType("h265PackagingType")
+ * .hlsSettings(HlsSettingsProperty.builder()
+ * .audioOnlyHlsSettings(AudioOnlyHlsSettingsProperty.builder()
+ * .audioGroupId("audioGroupId")
+ * .audioOnlyImage(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .audioTrackType("audioTrackType")
+ * .segmentType("segmentType")
+ * .build())
+ * .fmp4HlsSettings(Fmp4HlsSettingsProperty.builder()
+ * .audioRenditionSets("audioRenditionSets")
+ * .nielsenId3Behavior("nielsenId3Behavior")
+ * .timedMetadataBehavior("timedMetadataBehavior")
+ * .build())
+ * .frameCaptureHlsSettings(FrameCaptureHlsSettingsProperty.builder().build())
+ * .standardHlsSettings(StandardHlsSettingsProperty.builder()
+ * .audioRenditionSets("audioRenditionSets")
+ * .m3U8Settings(M3u8SettingsProperty.builder()
+ * .audioFramesPerPes(123)
+ * .audioPids("audioPids")
+ * .ecmPid("ecmPid")
+ * .nielsenId3Behavior("nielsenId3Behavior")
+ * .patInterval(123)
+ * .pcrControl("pcrControl")
+ * .pcrPeriod(123)
+ * .pcrPid("pcrPid")
+ * .pmtInterval(123)
+ * .pmtPid("pmtPid")
+ * .programNum(123)
+ * .scte35Behavior("scte35Behavior")
+ * .scte35Pid("scte35Pid")
+ * .timedMetadataBehavior("timedMetadataBehavior")
+ * .timedMetadataPid("timedMetadataPid")
+ * .transportStreamId(123)
+ * .videoPid("videoPid")
+ * .build())
+ * .build())
+ * .build())
+ * .nameModifier("nameModifier")
+ * .segmentModifier("segmentModifier")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsoutputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsOutputSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsOutputSettingsProperty.Builder =

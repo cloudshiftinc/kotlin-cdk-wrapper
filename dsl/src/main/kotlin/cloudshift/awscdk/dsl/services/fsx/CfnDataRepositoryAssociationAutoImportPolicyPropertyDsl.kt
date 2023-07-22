@@ -8,6 +8,29 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation
 
+/**
+ * Describes the data repository association's automatic import policy.
+ *
+ * The AutoImportPolicy defines how Amazon FSx keeps your file metadata and directory listings up to
+ * date by importing changes to your Amazon FSx for Lustre file system as you modify objects in a
+ * linked S3 bucket.
+ *
+ * The `AutoImportPolicy` is only supported on Amazon FSx for Lustre file systems with a data
+ * repository association.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * AutoImportPolicyProperty autoImportPolicyProperty = AutoImportPolicyProperty.builder()
+ * .events(List.of("events"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-datarepositoryassociation-autoimportpolicy.html)
+ */
 @CdkDslMarker
 public class CfnDataRepositoryAssociationAutoImportPolicyPropertyDsl {
   private val cdkBuilder: CfnDataRepositoryAssociation.AutoImportPolicyProperty.Builder =

@@ -10,6 +10,28 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.events.CfnArchiveProps
 
+/**
+ * Properties for defining a `CfnArchive`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * Object eventPattern;
+ * CfnArchiveProps cfnArchiveProps = CfnArchiveProps.builder()
+ * .sourceArn("sourceArn")
+ * // the properties below are optional
+ * .archiveName("archiveName")
+ * .description("description")
+ * .eventPattern(eventPattern)
+ * .retentionDays(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-archive.html)
+ */
 @CdkDslMarker
 public class CfnArchivePropsDsl {
   private val cdkBuilder: CfnArchiveProps.Builder = CfnArchiveProps.builder()

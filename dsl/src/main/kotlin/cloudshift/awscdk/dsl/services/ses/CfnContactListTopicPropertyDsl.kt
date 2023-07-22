@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ses.CfnContactList
 
+/**
+ * An interest group, theme, or label within a list.
+ *
+ * Lists can have multiple topics.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * TopicProperty topicProperty = TopicProperty.builder()
+ * .defaultSubscriptionStatus("defaultSubscriptionStatus")
+ * .displayName("displayName")
+ * .topicName("topicName")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-contactlist-topic.html)
+ */
 @CdkDslMarker
 public class CfnContactListTopicPropertyDsl {
   private val cdkBuilder: CfnContactList.TopicProperty.Builder =

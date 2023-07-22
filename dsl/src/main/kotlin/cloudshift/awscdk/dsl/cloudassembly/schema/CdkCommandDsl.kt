@@ -7,6 +7,22 @@ import kotlin.Boolean
 import kotlin.String
 import software.amazon.awscdk.cloudassembly.schema.CdkCommand
 
+/**
+ * Represents a cdk command i.e. `synth`, `deploy`, &amp; `destroy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cloudassembly.schema.*;
+ * CdkCommand cdkCommand = CdkCommand.builder()
+ * .enabled(false)
+ * .expectedMessage("expectedMessage")
+ * .expectError(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CdkCommandDsl {
   private val cdkBuilder: CdkCommand.Builder = CdkCommand.builder()

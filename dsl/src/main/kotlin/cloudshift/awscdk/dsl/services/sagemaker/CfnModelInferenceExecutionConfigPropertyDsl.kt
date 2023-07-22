@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModel
 
+/**
+ * Specifies details about how containers in a multi-container endpoint are run.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * InferenceExecutionConfigProperty inferenceExecutionConfigProperty =
+ * InferenceExecutionConfigProperty.builder()
+ * .mode("mode")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-inferenceexecutionconfig.html)
+ */
 @CdkDslMarker
 public class CfnModelInferenceExecutionConfigPropertyDsl {
   private val cdkBuilder: CfnModel.InferenceExecutionConfigProperty.Builder =

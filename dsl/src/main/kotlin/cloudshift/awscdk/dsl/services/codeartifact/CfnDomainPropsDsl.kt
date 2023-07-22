@@ -13,6 +13,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codeartifact.CfnDomainProps
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codeartifact.*;
+ * Object permissionsPolicyDocument;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .domainName("domainName")
+ * // the properties below are optional
+ * .encryptionKey("encryptionKey")
+ * .permissionsPolicyDocument(permissionsPolicyDocument)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-domain.html)
+ */
 @CdkDslMarker
 public class CfnDomainPropsDsl {
   private val cdkBuilder: CfnDomainProps.Builder = CfnDomainProps.builder()

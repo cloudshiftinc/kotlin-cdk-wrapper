@@ -13,6 +13,37 @@ import software.amazon.awscdk.services.appmesh.IMesh
 import software.amazon.awscdk.services.appmesh.VirtualGatewayListener
 import software.amazon.awscdk.services.appmesh.VirtualGatewayProps
 
+/**
+ * Properties used when creating a new VirtualGateway.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * String certificateAuthorityArn =
+ * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012";
+ * VirtualGateway gateway = VirtualGateway.Builder.create(this, "gateway")
+ * .mesh(mesh)
+ * .listeners(List.of(VirtualGatewayListener.http(HttpGatewayListenerOptions.builder()
+ * .port(443)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .interval(Duration.seconds(10))
+ * .build()))
+ * .build())))
+ * .backendDefaults(BackendDefaults.builder()
+ * .tlsClientPolicy(TlsClientPolicy.builder()
+ * .ports(List.of(8080, 8081))
+ * .validation(TlsValidation.builder()
+ * .trust(TlsValidationTrust.acm(List.of(CertificateAuthority.fromCertificateAuthorityArn(this,
+ * "certificate", certificateAuthorityArn))))
+ * .build())
+ * .build())
+ * .build())
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .virtualGatewayName("virtualGateway")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VirtualGatewayPropsDsl {
   private val cdkBuilder: VirtualGatewayProps.Builder = VirtualGatewayProps.builder()

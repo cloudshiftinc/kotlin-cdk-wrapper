@@ -17,6 +17,26 @@ import software.amazon.awscdk.services.cognito.UserPoolClient
 import software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider
 import software.constructs.Construct
 
+/**
+ * Define a UserPool App Client.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * UserPoolIdentityProviderAmazon provider = UserPoolIdentityProviderAmazon.Builder.create(this,
+ * "Amazon")
+ * .userPool(pool)
+ * .clientId("amzn-client-id")
+ * .clientSecret("amzn-client-secret")
+ * .build();
+ * UserPoolClient client = pool.addClient("app-client", UserPoolClientOptions.builder()
+ * // ...
+ * .supportedIdentityProviders(List.of(UserPoolClientIdentityProvider.AMAZON))
+ * .build());
+ * client.node.addDependency(provider);
+ * ```
+ */
 @CdkDslMarker
 public class UserPoolClientDsl(
   scope: Construct,

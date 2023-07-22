@@ -14,6 +14,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.globalaccelerator.CfnAccelerator
 import software.constructs.Construct
 
+/**
+ * The `AWS::GlobalAccelerator::Accelerator` resource is a Global Accelerator resource type that
+ * contains information about how you create an accelerator.
+ *
+ * An accelerator includes one or more listeners that process inbound connections and direct traffic
+ * to one or more endpoint groups, each of which includes endpoints, such as Application Load
+ * Balancers, Network Load Balancers, and Amazon EC2 instances.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.globalaccelerator.*;
+ * CfnAccelerator cfnAccelerator = CfnAccelerator.Builder.create(this, "MyCfnAccelerator")
+ * .name("name")
+ * // the properties below are optional
+ * .enabled(false)
+ * .ipAddresses(List.of("ipAddresses"))
+ * .ipAddressType("ipAddressType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-accelerator.html)
+ */
 @CdkDslMarker
 public class CfnAcceleratorDsl(
   scope: Construct,

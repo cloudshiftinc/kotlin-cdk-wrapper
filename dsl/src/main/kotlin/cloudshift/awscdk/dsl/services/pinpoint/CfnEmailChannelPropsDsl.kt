@@ -8,6 +8,28 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.pinpoint.CfnEmailChannelProps
 
+/**
+ * Properties for defining a `CfnEmailChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CfnEmailChannelProps cfnEmailChannelProps = CfnEmailChannelProps.builder()
+ * .applicationId("applicationId")
+ * .fromAddress("fromAddress")
+ * .identity("identity")
+ * // the properties below are optional
+ * .configurationSet("configurationSet")
+ * .enabled(false)
+ * .roleArn("roleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html)
+ */
 @CdkDslMarker
 public class CfnEmailChannelPropsDsl {
   private val cdkBuilder: CfnEmailChannelProps.Builder = CfnEmailChannelProps.builder()

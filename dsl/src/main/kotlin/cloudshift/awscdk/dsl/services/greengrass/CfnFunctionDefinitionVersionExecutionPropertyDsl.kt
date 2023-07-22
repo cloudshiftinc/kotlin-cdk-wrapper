@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion
 
+/**
+ * Configuration settings for the Lambda execution environment on the AWS IoT Greengrass core.
+ *
+ * In an AWS CloudFormation template, `Execution` is a property of the
+ * [`DefaultConfig`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-defaultconfig.html)
+ * property type for a function definition version and the
+ * [`Environment`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-environment.html)
+ * property type for a function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrass.*;
+ * ExecutionProperty executionProperty = ExecutionProperty.builder()
+ * .isolationMode("isolationMode")
+ * .runAs(RunAsProperty.builder()
+ * .gid(123)
+ * .uid(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-functiondefinitionversion-execution.html)
+ */
 @CdkDslMarker
 public class CfnFunctionDefinitionVersionExecutionPropertyDsl {
   private val cdkBuilder: CfnFunctionDefinitionVersion.ExecutionProperty.Builder =

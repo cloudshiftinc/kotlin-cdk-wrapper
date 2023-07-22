@@ -10,6 +10,23 @@ import software.amazon.awscdk.services.apigateway.IDomainName
 import software.amazon.awscdk.services.apigateway.IRestApi
 import software.amazon.awscdk.services.apigateway.Stage
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi api;
+ * IDomainName domainName = DomainName.fromDomainNameAttributes(this, "DomainName",
+ * DomainNameAttributes.builder()
+ * .domainName("domainName")
+ * .domainNameAliasHostedZoneId("domainNameAliasHostedZoneId")
+ * .domainNameAliasTarget("domainNameAliasTarget")
+ * .build());
+ * BasePathMapping.Builder.create(this, "BasePathMapping")
+ * .domainName(domainName)
+ * .restApi(api)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BasePathMappingPropsDsl {
   private val cdkBuilder: BasePathMappingProps.Builder = BasePathMappingProps.builder()

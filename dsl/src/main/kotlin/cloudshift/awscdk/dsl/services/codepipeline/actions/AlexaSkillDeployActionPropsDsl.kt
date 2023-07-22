@@ -9,6 +9,29 @@ import software.amazon.awscdk.SecretValue
 import software.amazon.awscdk.services.codepipeline.Artifact
 import software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps
 
+/**
+ * Construction properties of the `AlexaSkillDeployAction Alexa deploy Action`.
+ *
+ * Example:
+ *
+ * ```
+ * // Read the secrets from ParameterStore
+ * SecretValue clientId = SecretValue.secretsManager("AlexaClientId");
+ * SecretValue clientSecret = SecretValue.secretsManager("AlexaClientSecret");
+ * SecretValue refreshToken = SecretValue.secretsManager("AlexaRefreshToken");
+ * // Add deploy action
+ * Artifact sourceOutput = new Artifact();
+ * AlexaSkillDeployAction.Builder.create()
+ * .actionName("DeploySkill")
+ * .runOrder(1)
+ * .input(sourceOutput)
+ * .clientId(clientId.toString())
+ * .clientSecret(clientSecret)
+ * .refreshToken(refreshToken)
+ * .skillId("amzn1.ask.skill.12345678-1234-1234-1234-123456789012")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AlexaSkillDeployActionPropsDsl {
   private val cdkBuilder: AlexaSkillDeployActionProps.Builder =

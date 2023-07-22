@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.pinpoint.CfnCampaign
 
+/**
+ * Specifies the content and "From" address for an email message that's sent to recipients of a
+ * campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.pinpoint.*;
+ * CampaignEmailMessageProperty campaignEmailMessageProperty =
+ * CampaignEmailMessageProperty.builder()
+ * .body("body")
+ * .fromAddress("fromAddress")
+ * .htmlBody("htmlBody")
+ * .title("title")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-campaignemailmessage.html)
+ */
 @CdkDslMarker
 public class CfnCampaignCampaignEmailMessagePropertyDsl {
   private val cdkBuilder: CfnCampaign.CampaignEmailMessageProperty.Builder =

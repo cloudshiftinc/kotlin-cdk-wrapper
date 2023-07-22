@@ -8,6 +8,21 @@ import kotlin.Number
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig
 import software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 
+/**
+ * Properties for a redirection config.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer lb;
+ * lb.addRedirect(ApplicationLoadBalancerRedirectConfig.builder()
+ * .sourceProtocol(ApplicationProtocol.HTTPS)
+ * .sourcePort(8443)
+ * .targetProtocol(ApplicationProtocol.HTTP)
+ * .targetPort(8080)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ApplicationLoadBalancerRedirectConfigDsl {
   private val cdkBuilder: ApplicationLoadBalancerRedirectConfig.Builder =

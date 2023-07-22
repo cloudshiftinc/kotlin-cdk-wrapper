@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnAssociation
 
+/**
+ * `Target` is a property of the
+ * [AWS::SSM::Association](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html)
+ * resource that specifies the targets for an SSM document in Systems Manager . You can target all
+ * instances in an AWS account by specifying the `InstanceIds` key with a value of `*` . To view a JSON
+ * and a YAML example that targets all instances, see "Create an association for all managed instances
+ * in an AWS account " on the Examples page.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * TargetProperty targetProperty = TargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html)
+ */
 @CdkDslMarker
 public class CfnAssociationTargetPropertyDsl {
   private val cdkBuilder: CfnAssociation.TargetProperty.Builder =

@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnJob
 
+/**
+ * Specifies code executed when a job is run.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * JobCommandProperty jobCommandProperty = JobCommandProperty.builder()
+ * .name("name")
+ * .pythonVersion("pythonVersion")
+ * .runtime("runtime")
+ * .scriptLocation("scriptLocation")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-job-jobcommand.html)
+ */
 @CdkDslMarker
 public class CfnJobJobCommandPropertyDsl {
   private val cdkBuilder: CfnJob.JobCommandProperty.Builder = CfnJob.JobCommandProperty.builder()

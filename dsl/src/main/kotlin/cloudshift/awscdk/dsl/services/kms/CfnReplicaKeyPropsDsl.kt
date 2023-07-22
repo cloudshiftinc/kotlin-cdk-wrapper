@@ -16,6 +16,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kms.CfnReplicaKeyProps
 
+/**
+ * Properties for defining a `CfnReplicaKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * Object keyPolicy;
+ * CfnReplicaKeyProps cfnReplicaKeyProps = CfnReplicaKeyProps.builder()
+ * .keyPolicy(keyPolicy)
+ * .primaryKeyArn("primaryKeyArn")
+ * // the properties below are optional
+ * .description("description")
+ * .enabled(false)
+ * .pendingWindowInDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-replicakey.html)
+ */
 @CdkDslMarker
 public class CfnReplicaKeyPropsDsl {
   private val cdkBuilder: CfnReplicaKeyProps.Builder = CfnReplicaKeyProps.builder()

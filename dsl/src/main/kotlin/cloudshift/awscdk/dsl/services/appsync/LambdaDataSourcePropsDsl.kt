@@ -9,6 +9,30 @@ import software.amazon.awscdk.services.appsync.LambdaDataSourceProps
 import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.lambda.IFunction
 
+/**
+ * Properties for an AppSync Lambda datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.lambda.*;
+ * Function function_;
+ * GraphqlApi graphqlApi;
+ * Role role;
+ * LambdaDataSourceProps lambdaDataSourceProps = LambdaDataSourceProps.builder()
+ * .api(graphqlApi)
+ * .lambdaFunction(function_)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .serviceRole(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class LambdaDataSourcePropsDsl {
   private val cdkBuilder: LambdaDataSourceProps.Builder = LambdaDataSourceProps.builder()

@@ -8,6 +8,26 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.identitystore.CfnGroupMembership
 import software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps
 
+/**
+ * Properties for defining a `CfnGroupMembership`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.identitystore.*;
+ * CfnGroupMembershipProps cfnGroupMembershipProps = CfnGroupMembershipProps.builder()
+ * .groupId("groupId")
+ * .identityStoreId("identityStoreId")
+ * .memberId(MemberIdProperty.builder()
+ * .userId("userId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html)
+ */
 @CdkDslMarker
 public class CfnGroupMembershipPropsDsl {
   private val cdkBuilder: CfnGroupMembershipProps.Builder = CfnGroupMembershipProps.builder()

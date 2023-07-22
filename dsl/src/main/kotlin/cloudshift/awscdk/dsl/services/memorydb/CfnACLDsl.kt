@@ -12,6 +12,31 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.memorydb.CfnACL
 import software.constructs.Construct
 
+/**
+ * Specifies an Access Control List.
+ *
+ * For more information, see [Authenticating users with Access Contol Lists
+ * (ACLs)](https://docs.aws.amazon.com/memorydb/latest/devguide/clusters.acls.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.memorydb.*;
+ * CfnACL cfnACL = CfnACL.Builder.create(this, "MyCfnACL")
+ * .aclName("aclName")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userNames(List.of("userNames"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-acl.html)
+ */
 @CdkDslMarker
 public class CfnACLDsl(
   scope: Construct,

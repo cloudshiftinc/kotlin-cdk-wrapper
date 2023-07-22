@@ -18,6 +18,18 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.EmrSetClusterTerminationProtection
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to to set Termination Protection on an EMR Cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrSetClusterTerminationProtection.Builder.create(this, "Task")
+ * .clusterId("ClusterId")
+ * .terminationProtected(false)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EmrSetClusterTerminationProtectionDsl(
   scope: Construct,

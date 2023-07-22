@@ -14,6 +14,24 @@ import software.amazon.awscdk.services.eks.HelmChartProps
 import software.amazon.awscdk.services.eks.ICluster
 import software.amazon.awscdk.services.s3.assets.Asset
 
+/**
+ * Helm Chart properties.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * // option 1: use a construct
+ * // option 1: use a construct
+ * HelmChart.Builder.create(this, "MyOCIChart")
+ * .cluster(cluster)
+ * .chart("some-chart")
+ * .repository("oci://${ACCOUNT_ID}.dkr.ecr.${ACCOUNT_REGION}.amazonaws.com/${REPO_NAME}")
+ * .namespace("oci")
+ * .version("0.0.1")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HelmChartPropsDsl {
   private val cdkBuilder: HelmChartProps.Builder = HelmChartProps.builder()

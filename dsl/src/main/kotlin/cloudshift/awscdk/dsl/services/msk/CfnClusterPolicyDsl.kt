@@ -10,6 +10,24 @@ import kotlin.Unit
 import software.amazon.awscdk.services.msk.CfnClusterPolicy
 import software.constructs.Construct
 
+/**
+ * Create or update cluster policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * Object policy;
+ * CfnClusterPolicy cfnClusterPolicy = CfnClusterPolicy.Builder.create(this, "MyCfnClusterPolicy")
+ * .clusterArn("clusterArn")
+ * .policy(policy)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-msk-clusterpolicy.html)
+ */
 @CdkDslMarker
 public class CfnClusterPolicyDsl(
   scope: Construct,

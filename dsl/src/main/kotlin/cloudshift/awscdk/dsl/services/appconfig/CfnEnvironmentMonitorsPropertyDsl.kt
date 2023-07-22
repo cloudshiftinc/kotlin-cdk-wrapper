@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.appconfig.CfnEnvironment
 
+/**
+ * Amazon CloudWatch alarms to monitor during the deployment process.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appconfig.*;
+ * MonitorsProperty monitorsProperty = MonitorsProperty.builder()
+ * .alarmArn("alarmArn")
+ * .alarmRoleArn("alarmRoleArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-environment-monitors.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentMonitorsPropertyDsl {
   private val cdkBuilder: CfnEnvironment.MonitorsProperty.Builder =

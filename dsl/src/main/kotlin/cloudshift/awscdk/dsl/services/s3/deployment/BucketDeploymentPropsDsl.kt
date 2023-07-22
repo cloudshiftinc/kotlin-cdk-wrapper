@@ -26,6 +26,22 @@ import software.amazon.awscdk.services.s3.deployment.ISource
 import software.amazon.awscdk.services.s3.deployment.ServerSideEncryption
 import software.amazon.awscdk.services.s3.deployment.StorageClass
 
+/**
+ * Properties for `BucketDeployment`.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket websiteBucket;
+ * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployWebsite")
+ * .sources(List.of(Source.asset(join(__dirname, "my-website"))))
+ * .destinationBucket(websiteBucket)
+ * .build();
+ * new ConstructThatReadsFromTheBucket(this, "Consumer", Map.of(
+ * // Use 'deployment.deployedBucket' instead of 'websiteBucket' here
+ * "bucket", deployment.getDeployedBucket()));
+ * ```
+ */
 @CdkDslMarker
 public class BucketDeploymentPropsDsl {
   private val cdkBuilder: BucketDeploymentProps.Builder = BucketDeploymentProps.builder()

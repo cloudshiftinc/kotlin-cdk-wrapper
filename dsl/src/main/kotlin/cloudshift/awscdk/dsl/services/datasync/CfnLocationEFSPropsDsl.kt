@@ -13,6 +13,35 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.datasync.CfnLocationEFS
 import software.amazon.awscdk.services.datasync.CfnLocationEFSProps
 
+/**
+ * Properties for defining a `CfnLocationEFS`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationEFSProps cfnLocationEFSProps = CfnLocationEFSProps.builder()
+ * .ec2Config(Ec2ConfigProperty.builder()
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .subnetArn("subnetArn")
+ * .build())
+ * // the properties below are optional
+ * .accessPointArn("accessPointArn")
+ * .efsFilesystemArn("efsFilesystemArn")
+ * .fileSystemAccessRoleArn("fileSystemAccessRoleArn")
+ * .inTransitEncryption("inTransitEncryption")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationefs.html)
+ */
 @CdkDslMarker
 public class CfnLocationEFSPropsDsl {
   private val cdkBuilder: CfnLocationEFSProps.Builder = CfnLocationEFSProps.builder()

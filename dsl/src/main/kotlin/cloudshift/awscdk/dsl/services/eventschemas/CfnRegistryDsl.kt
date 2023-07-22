@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.eventschemas.CfnRegistry
 import software.constructs.Construct
 
+/**
+ * Use the `AWS::EventSchemas::Registry` to specify a schema registry.
+ *
+ * Schema registries are containers for Schemas. Registries collect and organize schemas so that
+ * your schemas are in logical groups.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eventschemas.*;
+ * CfnRegistry cfnRegistry = CfnRegistry.Builder.create(this, "MyCfnRegistry")
+ * .description("description")
+ * .registryName("registryName")
+ * .tags(List.of(TagsEntryProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html)
+ */
 @CdkDslMarker
 public class CfnRegistryDsl(
   scope: Construct,

@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.kms.IKey
 import software.amazon.awscdk.services.secretsmanager.ReplicaRegion
 
+/**
+ * Secret replica region.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kms.*;
+ * import software.amazon.awscdk.services.secretsmanager.*;
+ * Key key;
+ * ReplicaRegion replicaRegion = ReplicaRegion.builder()
+ * .region("region")
+ * // the properties below are optional
+ * .encryptionKey(key)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ReplicaRegionDsl {
   private val cdkBuilder: ReplicaRegion.Builder = ReplicaRegion.builder()

@@ -6,6 +6,28 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnFunction
 
+/**
+ * Sets the runtime management configuration for a function's version.
+ *
+ * For more information, see [Runtime
+ * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * RuntimeManagementConfigProperty runtimeManagementConfigProperty =
+ * RuntimeManagementConfigProperty.builder()
+ * .updateRuntimeOn("updateRuntimeOn")
+ * // the properties below are optional
+ * .runtimeVersionArn("runtimeVersionArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-runtimemanagementconfig.html)
+ */
 @CdkDslMarker
 public class CfnFunctionRuntimeManagementConfigPropertyDsl {
   private val cdkBuilder: CfnFunction.RuntimeManagementConfigProperty.Builder =

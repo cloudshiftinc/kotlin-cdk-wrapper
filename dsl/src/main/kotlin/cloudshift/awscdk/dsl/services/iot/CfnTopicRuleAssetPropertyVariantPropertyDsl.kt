@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Contains an asset property value (of a single type).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * AssetPropertyVariantProperty assetPropertyVariantProperty =
+ * AssetPropertyVariantProperty.builder()
+ * .booleanValue("booleanValue")
+ * .doubleValue("doubleValue")
+ * .integerValue("integerValue")
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-assetpropertyvariant.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleAssetPropertyVariantPropertyDsl {
   private val cdkBuilder: CfnTopicRule.AssetPropertyVariantProperty.Builder =

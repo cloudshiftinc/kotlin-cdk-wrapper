@@ -8,6 +8,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.backup.CfnBackupSelection
 import software.amazon.awscdk.services.backup.CfnBackupSelectionProps
 
+/**
+ * Properties for defining a `CfnBackupSelection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * Object conditions;
+ * CfnBackupSelectionProps cfnBackupSelectionProps = CfnBackupSelectionProps.builder()
+ * .backupPlanId("backupPlanId")
+ * .backupSelection(BackupSelectionResourceTypeProperty.builder()
+ * .iamRoleArn("iamRoleArn")
+ * .selectionName("selectionName")
+ * // the properties below are optional
+ * .conditions(conditions)
+ * .listOfTags(List.of(ConditionResourceTypeProperty.builder()
+ * .conditionKey("conditionKey")
+ * .conditionType("conditionType")
+ * .conditionValue("conditionValue")
+ * .build()))
+ * .notResources(List.of("notResources"))
+ * .resources(List.of("resources"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupselection.html)
+ */
 @CdkDslMarker
 public class CfnBackupSelectionPropsDsl {
   private val cdkBuilder: CfnBackupSelectionProps.Builder = CfnBackupSelectionProps.builder()

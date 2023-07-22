@@ -10,6 +10,34 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDataSet
 
+/**
+ * A physical table type for an S3 data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * S3SourceProperty s3SourceProperty = S3SourceProperty.builder()
+ * .dataSourceArn("dataSourceArn")
+ * .inputColumns(List.of(InputColumnProperty.builder()
+ * .name("name")
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .uploadSettings(UploadSettingsProperty.builder()
+ * .containsHeader(false)
+ * .delimiter("delimiter")
+ * .format("format")
+ * .startFromRow(123)
+ * .textQualifier("textQualifier")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-s3source.html)
+ */
 @CdkDslMarker
 public class CfnDataSetS3SourcePropertyDsl {
   private val cdkBuilder: CfnDataSet.S3SourceProperty.Builder =

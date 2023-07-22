@@ -8,6 +8,25 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnStackSet
 
+/**
+ * The AWS OrganizationalUnitIds or Accounts for which to create stack instances in the specified
+ * Regions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DeploymentTargetsProperty deploymentTargetsProperty = DeploymentTargetsProperty.builder()
+ * .accountFilterType("accountFilterType")
+ * .accounts(List.of("accounts"))
+ * .organizationalUnitIds(List.of("organizationalUnitIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudformation-stackset-deploymenttargets.html)
+ */
 @CdkDslMarker
 public class CfnStackSetDeploymentTargetsPropertyDsl {
   private val cdkBuilder: CfnStackSet.DeploymentTargetsProperty.Builder =

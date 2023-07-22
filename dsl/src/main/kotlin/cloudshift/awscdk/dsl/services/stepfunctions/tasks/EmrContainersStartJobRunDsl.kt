@@ -25,6 +25,36 @@ import software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel
 import software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput
 import software.constructs.Construct
 
+/**
+ * Starts a job run.
+ *
+ * A job is a unit of work that you submit to Amazon EMR on EKS for execution.
+ * The work performed by the job can be defined by a Spark jar, PySpark script, or SparkSQL query.
+ * A job run is an execution of the job on the virtual cluster.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersStartJobRun.Builder.create(this, "EMR Containers Start Job Run")
+ * .virtualCluster(VirtualClusterInput.fromVirtualClusterId("de92jdei2910fwedz"))
+ * .releaseLabel(ReleaseLabel.EMR_6_2_0)
+ * .jobName("EMR-Containers-Job")
+ * .jobDriver(JobDriver.builder()
+ * .sparkSubmitJobDriver(SparkSubmitJobDriver.builder()
+ * .entryPoint(TaskInput.fromText("local:///usr/lib/spark/examples/src/main/python/pi.py"))
+ * .build())
+ * .build())
+ * .applicationConfig(List.of(ApplicationConfiguration.builder()
+ * .classification(Classification.SPARK_DEFAULTS)
+ * .properties(Map.of(
+ * "spark.executor.instances", "1",
+ * "spark.executor.memory", "512M"))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-emr-eks.html)
+ */
 @CdkDslMarker
 public class EmrContainersStartJobRunDsl(
   scope: Construct,

@@ -14,6 +14,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ecr.CfnPublicRepository
 import software.constructs.Construct
 
+/**
+ * The `AWS::ECR::PublicRepository` resource specifies an Amazon Elastic Container Registry Public
+ * (Amazon ECR Public) repository, where users can push and pull Docker images, Open Container
+ * Initiative (OCI) images, and OCI compatible artifacts.
+ *
+ * For more information, see [Amazon ECR public
+ * repositories](https://docs.aws.amazon.com/AmazonECR/latest/public/public-repositories.html) in the
+ * *Amazon ECR Public User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecr.*;
+ * Object repositoryCatalogData;
+ * Object repositoryPolicyText;
+ * CfnPublicRepository cfnPublicRepository = CfnPublicRepository.Builder.create(this,
+ * "MyCfnPublicRepository")
+ * .repositoryCatalogData(repositoryCatalogData)
+ * .repositoryName("repositoryName")
+ * .repositoryPolicyText(repositoryPolicyText)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-publicrepository.html)
+ */
 @CdkDslMarker
 public class CfnPublicRepositoryDsl(
   scope: Construct,

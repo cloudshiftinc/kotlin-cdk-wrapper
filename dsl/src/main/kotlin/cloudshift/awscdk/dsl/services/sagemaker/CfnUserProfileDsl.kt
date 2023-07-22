@@ -13,6 +13,80 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnUserProfile
 import software.constructs.Construct
 
+/**
+ * Creates a user profile.
+ *
+ * A user profile represents a single user within a domain, and is the main way to reference a
+ * "person" for the purposes of sharing, reporting, and other user-oriented features. This entity is
+ * created when a user onboards to Amazon SageMaker Studio. If an administrator invites a person by
+ * email or imports them from IAM Identity Center , a user profile is automatically created. A user
+ * profile is the primary holder of settings for an individual user and has a reference to the user's
+ * private Amazon Elastic File System (EFS) home directory.
+ *
+ *
+ * If you're using IAM Identity Center authentication, a user in IAM Identity Center , or a group in
+ * IAM Identity Center containing that user, must be assigned to the Amazon SageMaker Studio
+ * application from the IAM Identity Center Console to create a user profile. For more information
+ * about application assignment, see [Assign user
+ * access](https://docs.aws.amazon.com/singlesignon/latest/userguide/assignuserstoapp.html) . After
+ * assignment is complete, a user profile can be created for that user in IAM Identity Center with AWS
+ * CloudFormation.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * CfnUserProfile cfnUserProfile = CfnUserProfile.Builder.create(this, "MyCfnUserProfile")
+ * .domainId("domainId")
+ * .userProfileName("userProfileName")
+ * // the properties below are optional
+ * .singleSignOnUserIdentifier("singleSignOnUserIdentifier")
+ * .singleSignOnUserValue("singleSignOnUserValue")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .userSettings(UserSettingsProperty.builder()
+ * .executionRole("executionRole")
+ * .jupyterServerAppSettings(JupyterServerAppSettingsProperty.builder()
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .kernelGatewayAppSettings(KernelGatewayAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
+ * .defaultResourceSpec(ResourceSpecProperty.builder()
+ * .instanceType("instanceType")
+ * .sageMakerImageArn("sageMakerImageArn")
+ * .sageMakerImageVersionArn("sageMakerImageVersionArn")
+ * .build())
+ * .build())
+ * .rStudioServerProAppSettings(RStudioServerProAppSettingsProperty.builder()
+ * .accessStatus("accessStatus")
+ * .userGroup("userGroup")
+ * .build())
+ * .securityGroups(List.of("securityGroups"))
+ * .sharingSettings(SharingSettingsProperty.builder()
+ * .notebookOutputOption("notebookOutputOption")
+ * .s3KmsKeyId("s3KmsKeyId")
+ * .s3OutputPath("s3OutputPath")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-userprofile.html)
+ */
 @CdkDslMarker
 public class CfnUserProfileDsl(
   scope: Construct,

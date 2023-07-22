@@ -13,6 +13,21 @@ import software.amazon.awscdk.services.events.EventPattern
 import software.amazon.awscdk.services.events.IRuleTarget
 import software.constructs.Construct
 
+/**
+ * Options for the onCommit() method.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.codecommit.*;
+ * import software.amazon.awscdk.services.events.targets.*;
+ * Repository repo;
+ * Topic myTopic = new Topic(this, "Topic");
+ * repo.onCommit("OnCommit", OnCommitOptions.builder()
+ * .target(new SnsTopic(myTopic))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class OnCommitOptionsDsl {
   private val cdkBuilder: OnCommitOptions.Builder = OnCommitOptions.builder()

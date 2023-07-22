@@ -18,6 +18,50 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.apigateway.CfnRestApi
 import software.amazon.awscdk.services.apigateway.CfnRestApiProps
 
+/**
+ * Properties for defining a `CfnRestApi`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.apigateway.*;
+ * Object body;
+ * Object policy;
+ * CfnRestApiProps cfnRestApiProps = CfnRestApiProps.builder()
+ * .apiKeySourceType("apiKeySourceType")
+ * .binaryMediaTypes(List.of("binaryMediaTypes"))
+ * .body(body)
+ * .bodyS3Location(S3LocationProperty.builder()
+ * .bucket("bucket")
+ * .eTag("eTag")
+ * .key("key")
+ * .version("version")
+ * .build())
+ * .cloneFrom("cloneFrom")
+ * .description("description")
+ * .disableExecuteApiEndpoint(false)
+ * .endpointConfiguration(EndpointConfigurationProperty.builder()
+ * .types(List.of("types"))
+ * .vpcEndpointIds(List.of("vpcEndpointIds"))
+ * .build())
+ * .failOnWarnings(false)
+ * .minimumCompressionSize(123)
+ * .mode("mode")
+ * .name("name")
+ * .parameters(Map.of(
+ * "parametersKey", "parameters"))
+ * .policy(policy)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html)
+ */
 @CdkDslMarker
 public class CfnRestApiPropsDsl {
   private val cdkBuilder: CfnRestApiProps.Builder = CfnRestApiProps.builder()

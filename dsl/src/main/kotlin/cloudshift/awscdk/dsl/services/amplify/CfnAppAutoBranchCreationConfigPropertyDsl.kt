@@ -11,6 +11,41 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplify.CfnApp
 
+/**
+ * Use the AutoBranchCreationConfig property type to automatically create branches that match a
+ * certain pattern.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * AutoBranchCreationConfigProperty autoBranchCreationConfigProperty =
+ * AutoBranchCreationConfigProperty.builder()
+ * .autoBranchCreationPatterns(List.of("autoBranchCreationPatterns"))
+ * .basicAuthConfig(BasicAuthConfigProperty.builder()
+ * .enableBasicAuth(false)
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .buildSpec("buildSpec")
+ * .enableAutoBranchCreation(false)
+ * .enableAutoBuild(false)
+ * .enablePerformanceMode(false)
+ * .enablePullRequestPreview(false)
+ * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .framework("framework")
+ * .pullRequestEnvironmentName("pullRequestEnvironmentName")
+ * .stage("stage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-app-autobranchcreationconfig.html)
+ */
 @CdkDslMarker
 public class CfnAppAutoBranchCreationConfigPropertyDsl {
   private val cdkBuilder: CfnApp.AutoBranchCreationConfigProperty.Builder =

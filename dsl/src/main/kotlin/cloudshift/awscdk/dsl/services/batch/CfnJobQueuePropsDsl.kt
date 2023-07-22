@@ -12,6 +12,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.batch.CfnJobQueueProps
 
+/**
+ * Properties for defining a `CfnJobQueue`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.batch.*;
+ * CfnJobQueueProps cfnJobQueueProps = CfnJobQueueProps.builder()
+ * .computeEnvironmentOrder(List.of(ComputeEnvironmentOrderProperty.builder()
+ * .computeEnvironment("computeEnvironment")
+ * .order(123)
+ * .build()))
+ * .priority(123)
+ * // the properties below are optional
+ * .jobQueueName("jobQueueName")
+ * .schedulingPolicyArn("schedulingPolicyArn")
+ * .state("state")
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html)
+ */
 @CdkDslMarker
 public class CfnJobQueuePropsDsl {
   private val cdkBuilder: CfnJobQueueProps.Builder = CfnJobQueueProps.builder()

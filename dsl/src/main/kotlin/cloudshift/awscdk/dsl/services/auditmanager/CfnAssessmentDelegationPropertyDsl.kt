@@ -7,6 +7,33 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.auditmanager.CfnAssessment
 
+/**
+ * The `Delegation` property type specifies the assignment of a control set to a delegate for
+ * review.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.auditmanager.*;
+ * DelegationProperty delegationProperty = DelegationProperty.builder()
+ * .assessmentId("assessmentId")
+ * .assessmentName("assessmentName")
+ * .comment("comment")
+ * .controlSetId("controlSetId")
+ * .createdBy("createdBy")
+ * .creationTime(123)
+ * .id("id")
+ * .lastUpdated(123)
+ * .roleArn("roleArn")
+ * .roleType("roleType")
+ * .status("status")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html)
+ */
 @CdkDslMarker
 public class CfnAssessmentDelegationPropertyDsl {
   private val cdkBuilder: CfnAssessment.DelegationProperty.Builder =

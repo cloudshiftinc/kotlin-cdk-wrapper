@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Settings for the fMP4 containers.
+ *
+ * The parent of this entity is HlsSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Fmp4HlsSettingsProperty fmp4HlsSettingsProperty = Fmp4HlsSettingsProperty.builder()
+ * .audioRenditionSets("audioRenditionSets")
+ * .nielsenId3Behavior("nielsenId3Behavior")
+ * .timedMetadataBehavior("timedMetadataBehavior")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-fmp4hlssettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelFmp4HlsSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Fmp4HlsSettingsProperty.Builder =

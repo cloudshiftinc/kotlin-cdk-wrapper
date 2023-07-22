@@ -10,6 +10,46 @@ import kotlin.Unit
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.transfer.CfnWorkflow
 
+/**
+ * The basic building block of a workflow.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * Object copyStepDetails;
+ * Object customStepDetails;
+ * Object deleteStepDetails;
+ * Object tagStepDetails;
+ * WorkflowStepProperty workflowStepProperty = WorkflowStepProperty.builder()
+ * .copyStepDetails(copyStepDetails)
+ * .customStepDetails(customStepDetails)
+ * .decryptStepDetails(DecryptStepDetailsProperty.builder()
+ * .destinationFileLocation(InputFileLocationProperty.builder()
+ * .efsFileLocation(EfsInputFileLocationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .path("path")
+ * .build())
+ * .s3FileLocation(S3InputFileLocationProperty.builder()
+ * .bucket("bucket")
+ * .key("key")
+ * .build())
+ * .build())
+ * .name("name")
+ * .overwriteExisting("overwriteExisting")
+ * .sourceFileLocation("sourceFileLocation")
+ * .type("type")
+ * .build())
+ * .deleteStepDetails(deleteStepDetails)
+ * .tagStepDetails(tagStepDetails)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html)
+ */
 @CdkDslMarker
 public class CfnWorkflowWorkflowStepPropertyDsl {
   private val cdkBuilder: CfnWorkflow.WorkflowStepProperty.Builder =

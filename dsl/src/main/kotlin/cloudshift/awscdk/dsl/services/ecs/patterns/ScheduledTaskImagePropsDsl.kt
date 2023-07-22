@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.ecs.LogDriver
 import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.patterns.ScheduledTaskImageProps
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.ecs.patterns.*;
+ * ContainerImage containerImage;
+ * LogDriver logDriver;
+ * Secret secret;
+ * ScheduledTaskImageProps scheduledTaskImageProps = ScheduledTaskImageProps.builder()
+ * .image(containerImage)
+ * // the properties below are optional
+ * .command(List.of("command"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .logDriver(logDriver)
+ * .secrets(Map.of(
+ * "secretsKey", secret))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ScheduledTaskImagePropsDsl {
   private val cdkBuilder: ScheduledTaskImageProps.Builder = ScheduledTaskImageProps.builder()

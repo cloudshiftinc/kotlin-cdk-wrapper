@@ -8,6 +8,38 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.alexa.ask.CfnSkill
 import software.amazon.awscdk.alexa.ask.CfnSkillProps
 
+/**
+ * Properties for defining a `CfnSkill`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.alexa.ask.*;
+ * Object manifest;
+ * CfnSkillProps cfnSkillProps = CfnSkillProps.builder()
+ * .authenticationConfiguration(AuthenticationConfigurationProperty.builder()
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .refreshToken("refreshToken")
+ * .build())
+ * .skillPackage(SkillPackageProperty.builder()
+ * .s3Bucket("s3Bucket")
+ * .s3Key("s3Key")
+ * // the properties below are optional
+ * .overrides(OverridesProperty.builder()
+ * .manifest(manifest)
+ * .build())
+ * .s3BucketRole("s3BucketRole")
+ * .s3ObjectVersion("s3ObjectVersion")
+ * .build())
+ * .vendorId("vendorId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html)
+ */
 @CdkDslMarker
 public class CfnSkillPropsDsl {
   private val cdkBuilder: CfnSkillProps.Builder = CfnSkillProps.builder()

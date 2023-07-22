@@ -13,6 +13,31 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendraranking.CfnExecutionPlan
 import software.amazon.awscdk.services.kendraranking.CfnExecutionPlanProps
 
+/**
+ * Properties for defining a `CfnExecutionPlan`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendraranking.*;
+ * CfnExecutionPlanProps cfnExecutionPlanProps = CfnExecutionPlanProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .capacityUnits(CapacityUnitsConfigurationProperty.builder()
+ * .rescoreCapacityUnits(123)
+ * .build())
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendraranking-executionplan.html)
+ */
 @CdkDslMarker
 public class CfnExecutionPlanPropsDsl {
   private val cdkBuilder: CfnExecutionPlanProps.Builder = CfnExecutionPlanProps.builder()

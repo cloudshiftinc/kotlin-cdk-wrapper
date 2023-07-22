@@ -13,6 +13,32 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnInputSecurityGroup
 import software.constructs.Construct
 
+/**
+ * The AWS::MediaLive::InputSecurityGroup is a MediaLive resource type that creates an input
+ * security group.
+ *
+ * A MediaLive input security group is associated with a MediaLive input. The input security group
+ * is an "allow list" of IP addresses that controls whether an external IP address can push content to
+ * the associated MediaLive input.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Object tags;
+ * CfnInputSecurityGroup cfnInputSecurityGroup = CfnInputSecurityGroup.Builder.create(this,
+ * "MyCfnInputSecurityGroup")
+ * .tags(tags)
+ * .whitelistRules(List.of(InputWhitelistRuleCidrProperty.builder()
+ * .cidr("cidr")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html)
+ */
 @CdkDslMarker
 public class CfnInputSecurityGroupDsl(
   scope: Construct,

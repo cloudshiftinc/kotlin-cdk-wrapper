@@ -8,6 +8,34 @@ import software.amazon.awscdk.services.iam.IRole
 import software.amazon.awscdk.services.logs.CrossAccountDestination
 import software.constructs.Construct
 
+/**
+ * A new CloudWatch Logs Destination for use in cross-account scenarios.
+ *
+ * CrossAccountDestinations are used to subscribe a Kinesis stream in a
+ * different account to a CloudWatch Subscription.
+ *
+ * Consumers will hardly ever need to use this class. Instead, directly
+ * subscribe a Kinesis stream using the integration class in the
+ * `&#64;aws-cdk/aws-logs-destinations` package; if necessary, a
+ * `CrossAccountDestination` will be created automatically.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * import software.amazon.awscdk.services.logs.*;
+ * Role role;
+ * CrossAccountDestination crossAccountDestination = CrossAccountDestination.Builder.create(this,
+ * "MyCrossAccountDestination")
+ * .role(role)
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .destinationName("destinationName")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CrossAccountDestinationDsl(
   scope: Construct,

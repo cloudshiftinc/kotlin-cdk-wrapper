@@ -14,6 +14,66 @@ import software.amazon.awscdk.IgnoreMode
 import software.amazon.awscdk.SymlinkFollowMode
 import software.constructs.Construct
 
+/**
+ * Stages a file or directory from a location on the file system into a staging directory.
+ *
+ * This is controlled by the context key 'aws:cdk:asset-staging' and enabled
+ * by the CLI by default in order to ensure that when the CDK app exists, all
+ * assets are available for deployment. Otherwise, if an app references assets
+ * in temporary locations, those will not be available when it exists (see
+ * https://github.com/aws/aws-cdk/issues/1716).
+ *
+ * The `stagedPath` property is a stringified token that represents the location
+ * of the file or directory after staging. It will be resolved only during the
+ * "prepare" stage and may be either the original path or the staged path
+ * depending on the context setting.
+ *
+ * The file/directory are staged based on their content hash (fingerprint). This
+ * means that only if content was changed, copy will happen.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * DockerImage dockerImage;
+ * ILocalBundling localBundling;
+ * AssetStaging assetStaging = AssetStaging.Builder.create(this, "MyAssetStaging")
+ * .sourcePath("sourcePath")
+ * // the properties below are optional
+ * .assetHash("assetHash")
+ * .assetHashType(AssetHashType.SOURCE)
+ * .bundling(BundlingOptions.builder()
+ * .image(dockerImage)
+ * // the properties below are optional
+ * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
+ * .command(List.of("command"))
+ * .entrypoint(List.of("entrypoint"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .local(localBundling)
+ * .network("network")
+ * .outputType(BundlingOutput.ARCHIVED)
+ * .platform("platform")
+ * .securityOpt("securityOpt")
+ * .user("user")
+ * .volumes(List.of(DockerVolume.builder()
+ * .containerPath("containerPath")
+ * .hostPath("hostPath")
+ * // the properties below are optional
+ * .consistency(DockerVolumeConsistency.CONSISTENT)
+ * .build()))
+ * .volumesFrom(List.of("volumesFrom"))
+ * .workingDirectory("workingDirectory")
+ * .build())
+ * .exclude(List.of("exclude"))
+ * .extraHash("extraHash")
+ * .follow(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AssetStagingDsl(
   scope: Construct,

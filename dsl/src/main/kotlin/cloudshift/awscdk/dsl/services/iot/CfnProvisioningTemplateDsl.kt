@@ -14,6 +14,37 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnProvisioningTemplate
 import software.constructs.Construct
 
+/**
+ * Creates a fleet provisioning template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * CfnProvisioningTemplate cfnProvisioningTemplate = CfnProvisioningTemplate.Builder.create(this,
+ * "MyCfnProvisioningTemplate")
+ * .provisioningRoleArn("provisioningRoleArn")
+ * .templateBody("templateBody")
+ * // the properties below are optional
+ * .description("description")
+ * .enabled(false)
+ * .preProvisioningHook(ProvisioningHookProperty.builder()
+ * .payloadVersion("payloadVersion")
+ * .targetArn("targetArn")
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .templateName("templateName")
+ * .templateType("templateType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-provisioningtemplate.html)
+ */
 @CdkDslMarker
 public class CfnProvisioningTemplateDsl(
   scope: Construct,

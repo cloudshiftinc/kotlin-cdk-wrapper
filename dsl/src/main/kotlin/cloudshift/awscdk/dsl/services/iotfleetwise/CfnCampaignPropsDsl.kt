@@ -15,6 +15,70 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaign
 import software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps
 
+/**
+ * Properties for defining a `CfnCampaign`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotfleetwise.*;
+ * CfnCampaignProps cfnCampaignProps = CfnCampaignProps.builder()
+ * .action("action")
+ * .collectionScheme(CollectionSchemeProperty.builder()
+ * .conditionBasedCollectionScheme(ConditionBasedCollectionSchemeProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .minimumTriggerIntervalMs(123)
+ * .triggerMode("triggerMode")
+ * .build())
+ * .timeBasedCollectionScheme(TimeBasedCollectionSchemeProperty.builder()
+ * .periodMs(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .signalCatalogArn("signalCatalogArn")
+ * .targetArn("targetArn")
+ * // the properties below are optional
+ * .compression("compression")
+ * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
+ * .s3Config(S3ConfigProperty.builder()
+ * .bucketArn("bucketArn")
+ * // the properties below are optional
+ * .dataFormat("dataFormat")
+ * .prefix("prefix")
+ * .storageCompressionFormat("storageCompressionFormat")
+ * .build())
+ * .timestreamConfig(TimestreamConfigProperty.builder()
+ * .executionRoleArn("executionRoleArn")
+ * .timestreamTableArn("timestreamTableArn")
+ * .build())
+ * .build()))
+ * .dataExtraDimensions(List.of("dataExtraDimensions"))
+ * .description("description")
+ * .diagnosticsMode("diagnosticsMode")
+ * .expiryTime("expiryTime")
+ * .postTriggerCollectionDuration(123)
+ * .priority(123)
+ * .signalsToCollect(List.of(SignalInformationProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .maxSampleCount(123)
+ * .minimumSamplingIntervalMs(123)
+ * .build()))
+ * .spoolingMode("spoolingMode")
+ * .startTime("startTime")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html)
+ */
 @CdkDslMarker
 public class CfnCampaignPropsDsl {
   private val cdkBuilder: CfnCampaignProps.Builder = CfnCampaignProps.builder()

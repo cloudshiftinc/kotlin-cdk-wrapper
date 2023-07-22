@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule
 
+/**
+ * The Json format.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * JsonProperty jsonProperty = JsonProperty.builder()
+ * .line(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-monitoringschedule-json.html)
+ */
 @CdkDslMarker
 public class CfnMonitoringScheduleJsonPropertyDsl {
   private val cdkBuilder: CfnMonitoringSchedule.JsonProperty.Builder =

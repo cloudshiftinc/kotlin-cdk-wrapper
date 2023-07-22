@@ -8,8 +8,8 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
 
-internal class AsmClassAdapter(className: ClassName, private val delegate: ClassNode, private val sourceClass: CdkSourceClass?) : CdkClass {
-    override val className: ClassName = className
+internal class AsmClassAdapter(override val className: ClassName, private val delegate: ClassNode, private val sourceClass: CdkSourceClass?) : CdkClass {
+    override val comment: String? = sourceClass?.comment
 
     private val annotations: List<ClassName> by lazy(
         LazyThreadSafetyMode.NONE

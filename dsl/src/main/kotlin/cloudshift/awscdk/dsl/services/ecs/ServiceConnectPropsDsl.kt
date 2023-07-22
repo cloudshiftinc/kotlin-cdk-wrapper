@@ -11,6 +11,36 @@ import software.amazon.awscdk.services.ecs.LogDriver
 import software.amazon.awscdk.services.ecs.ServiceConnectProps
 import software.amazon.awscdk.services.ecs.ServiceConnectService
 
+/**
+ * Interface for Service Connect configuration.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * ContainerDefinitionOptions containerOptions;
+ * ContainerDefinition container = taskDefinition.addContainer("MyContainer", containerOptions);
+ * container.addPortMappings(PortMapping.builder()
+ * .name("api")
+ * .containerPort(8080)
+ * .build());
+ * cluster.addDefaultCloudMapNamespace(CloudMapNamespaceOptions.builder()
+ * .name("local")
+ * .build());
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .serviceConnectConfiguration(ServiceConnectProps.builder()
+ * .services(List.of(ServiceConnectService.builder()
+ * .portMappingName("api")
+ * .dnsName("http-api")
+ * .port(80)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ServiceConnectPropsDsl {
   private val cdkBuilder: ServiceConnectProps.Builder = ServiceConnectProps.builder()

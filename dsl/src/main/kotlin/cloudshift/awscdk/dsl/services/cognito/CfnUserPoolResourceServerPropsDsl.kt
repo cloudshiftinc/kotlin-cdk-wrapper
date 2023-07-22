@@ -10,6 +10,30 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolResourceServerProps
 
+/**
+ * Properties for defining a `CfnUserPoolResourceServer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * CfnUserPoolResourceServerProps cfnUserPoolResourceServerProps =
+ * CfnUserPoolResourceServerProps.builder()
+ * .identifier("identifier")
+ * .name("name")
+ * .userPoolId("userPoolId")
+ * // the properties below are optional
+ * .scopes(List.of(ResourceServerScopeTypeProperty.builder()
+ * .scopeDescription("scopeDescription")
+ * .scopeName("scopeName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolresourceserver.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolResourceServerPropsDsl {
   private val cdkBuilder: CfnUserPoolResourceServerProps.Builder =

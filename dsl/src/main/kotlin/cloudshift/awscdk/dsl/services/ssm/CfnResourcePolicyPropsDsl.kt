@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.ssm.CfnResourcePolicyProps
 
+/**
+ * Properties for defining a `CfnResourcePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * Object policy;
+ * CfnResourcePolicyProps cfnResourcePolicyProps = CfnResourcePolicyProps.builder()
+ * .policy(policy)
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html)
+ */
 @CdkDslMarker
 public class CfnResourcePolicyPropsDsl {
   private val cdkBuilder: CfnResourcePolicyProps.Builder = CfnResourcePolicyProps.builder()

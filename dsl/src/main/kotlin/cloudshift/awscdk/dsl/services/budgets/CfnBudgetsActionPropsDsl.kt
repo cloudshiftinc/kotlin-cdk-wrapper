@@ -11,6 +11,53 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.budgets.CfnBudgetsAction
 import software.amazon.awscdk.services.budgets.CfnBudgetsActionProps
 
+/**
+ * Properties for defining a `CfnBudgetsAction`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.budgets.*;
+ * CfnBudgetsActionProps cfnBudgetsActionProps = CfnBudgetsActionProps.builder()
+ * .actionThreshold(ActionThresholdProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .actionType("actionType")
+ * .budgetName("budgetName")
+ * .definition(DefinitionProperty.builder()
+ * .iamActionDefinition(IamActionDefinitionProperty.builder()
+ * .policyArn("policyArn")
+ * // the properties below are optional
+ * .groups(List.of("groups"))
+ * .roles(List.of("roles"))
+ * .users(List.of("users"))
+ * .build())
+ * .scpActionDefinition(ScpActionDefinitionProperty.builder()
+ * .policyId("policyId")
+ * .targetIds(List.of("targetIds"))
+ * .build())
+ * .ssmActionDefinition(SsmActionDefinitionProperty.builder()
+ * .instanceIds(List.of("instanceIds"))
+ * .region("region")
+ * .subtype("subtype")
+ * .build())
+ * .build())
+ * .executionRoleArn("executionRoleArn")
+ * .notificationType("notificationType")
+ * .subscribers(List.of(SubscriberProperty.builder()
+ * .address("address")
+ * .type("type")
+ * .build()))
+ * // the properties below are optional
+ * .approvalModel("approvalModel")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budgetsaction.html)
+ */
 @CdkDslMarker
 public class CfnBudgetsActionPropsDsl {
   private val cdkBuilder: CfnBudgetsActionProps.Builder = CfnBudgetsActionProps.builder()

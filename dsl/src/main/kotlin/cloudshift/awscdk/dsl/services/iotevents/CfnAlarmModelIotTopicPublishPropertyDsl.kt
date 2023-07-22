@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iotevents.CfnAlarmModel
 
+/**
+ * Information required to publish the MQTT message through the AWS IoT message broker.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iotevents.*;
+ * IotTopicPublishProperty iotTopicPublishProperty = IotTopicPublishProperty.builder()
+ * .mqttTopic("mqttTopic")
+ * // the properties below are optional
+ * .payload(PayloadProperty.builder()
+ * .contentExpression("contentExpression")
+ * .type("type")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotevents-alarmmodel-iottopicpublish.html)
+ */
 @CdkDslMarker
 public class CfnAlarmModelIotTopicPublishPropertyDsl {
   private val cdkBuilder: CfnAlarmModel.IotTopicPublishProperty.Builder =

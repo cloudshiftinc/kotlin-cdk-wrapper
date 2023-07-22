@@ -8,6 +8,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of channel behavior when the input is lost.
+ *
+ * The parent of this entity is GlobalConfiguration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * InputLossBehaviorProperty inputLossBehaviorProperty = InputLossBehaviorProperty.builder()
+ * .blackFrameMsec(123)
+ * .inputLossImageColor("inputLossImageColor")
+ * .inputLossImageSlate(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .inputLossImageType("inputLossImageType")
+ * .repeatFrameMsec(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputlossbehavior.html)
+ */
 @CdkDslMarker
 public class CfnChannelInputLossBehaviorPropertyDsl {
   private val cdkBuilder: CfnChannel.InputLossBehaviorProperty.Builder =

@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.simspaceweaver.CfnSimulation
 
+/**
+ * A location in Amazon Simple Storage Service ( Amazon S3 ) where SimSpace Weaver stores simulation
+ * data, such as your app .zip files and schema file. For more information about Amazon S3 , see the
+ * [*Amazon Simple Storage Service User
+ * Guide*](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.simspaceweaver.*;
+ * S3LocationProperty s3LocationProperty = S3LocationProperty.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simspaceweaver-simulation-s3location.html)
+ */
 @CdkDslMarker
 public class CfnSimulationS3LocationPropertyDsl {
   private val cdkBuilder: CfnSimulation.S3LocationProperty.Builder =

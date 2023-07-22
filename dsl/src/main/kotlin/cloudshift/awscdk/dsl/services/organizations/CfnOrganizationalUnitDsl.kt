@@ -12,6 +12,43 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.organizations.CfnOrganizationalUnit
 import software.constructs.Construct
 
+/**
+ * Creates an organizational unit (OU) within a root or parent OU.
+ *
+ * An OU is a container for accounts that enables you to organize your accounts to apply policies
+ * according to your business requirements. The number of levels deep that you can nest OUs is
+ * dependent upon the policy types enabled for that root. For service control policies, the limit is
+ * five.
+ *
+ * For more information about OUs, see [Managing Organizational
+ * Units](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html) in the *AWS
+ * Organizations User Guide.*
+ *
+ * If the request includes tags, then the requester must have the `organizations:TagResource`
+ * permission.
+ *
+ * This operation can be called only from the organization's management account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.organizations.*;
+ * CfnOrganizationalUnit cfnOrganizationalUnit = CfnOrganizationalUnit.Builder.create(this,
+ * "MyCfnOrganizationalUnit")
+ * .name("name")
+ * .parentId("parentId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-organizations-organizationalunit.html)
+ */
 @CdkDslMarker
 public class CfnOrganizationalUnitDsl(
   scope: Construct,

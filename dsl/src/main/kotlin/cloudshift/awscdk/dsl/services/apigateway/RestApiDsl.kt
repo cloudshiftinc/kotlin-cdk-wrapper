@@ -26,6 +26,27 @@ import software.amazon.awscdk.services.apigateway.StageOptions
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.constructs.Construct
 
+/**
+ * Represents a REST API in Amazon API Gateway.
+ *
+ * Use `addResource` and `addMethod` to configure the API model.
+ *
+ * By default, the API will automatically be deployed and accessible from a
+ * public endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
+ * .build();
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
+ * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+ * ```
+ */
 @CdkDslMarker
 public class RestApiDsl(
   scope: Construct,

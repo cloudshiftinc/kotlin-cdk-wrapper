@@ -8,6 +8,29 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis
 
+/**
+ * Describes a load balancer target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * AnalysisLoadBalancerTargetProperty analysisLoadBalancerTargetProperty =
+ * AnalysisLoadBalancerTargetProperty.builder()
+ * .address("address")
+ * .availabilityZone("availabilityZone")
+ * .instance(AnalysisComponentProperty.builder()
+ * .arn("arn")
+ * .id("id")
+ * .build())
+ * .port(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsanalysis-analysisloadbalancertarget.html)
+ */
 @CdkDslMarker
 public class CfnNetworkInsightsAnalysisAnalysisLoadBalancerTargetPropertyDsl {
   private val cdkBuilder: CfnNetworkInsightsAnalysis.AnalysisLoadBalancerTargetProperty.Builder =

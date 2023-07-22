@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connectcampaigns.CfnCampaign
 
+/**
+ * Contains dialer configuration for an outbound campaign.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connectcampaigns.*;
+ * DialerConfigProperty dialerConfigProperty = DialerConfigProperty.builder()
+ * .predictiveDialerConfig(PredictiveDialerConfigProperty.builder()
+ * .bandwidthAllocation(123)
+ * .build())
+ * .progressiveDialerConfig(ProgressiveDialerConfigProperty.builder()
+ * .bandwidthAllocation(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-dialerconfig.html)
+ */
 @CdkDslMarker
 public class CfnCampaignDialerConfigPropertyDsl {
   private val cdkBuilder: CfnCampaign.DialerConfigProperty.Builder =

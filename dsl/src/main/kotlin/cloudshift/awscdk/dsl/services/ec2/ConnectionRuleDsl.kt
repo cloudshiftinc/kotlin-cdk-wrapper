@@ -7,6 +7,22 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.ConnectionRule
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * ConnectionRule connectionRule = ConnectionRule.builder()
+ * .fromPort(123)
+ * // the properties below are optional
+ * .description("description")
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ConnectionRuleDsl {
   private val cdkBuilder: ConnectionRule.Builder = ConnectionRule.builder()

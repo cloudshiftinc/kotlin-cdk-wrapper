@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies options for Spot Instances.
+ *
+ * `SpotOptions` is a property of [AWS::EC2::LaunchTemplate
+ * InstanceMarketOptions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SpotOptionsProperty spotOptionsProperty = SpotOptionsProperty.builder()
+ * .blockDurationMinutes(123)
+ * .instanceInterruptionBehavior("instanceInterruptionBehavior")
+ * .maxPrice("maxPrice")
+ * .spotInstanceType("spotInstanceType")
+ * .validUntil("validUntil")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-spotoptions.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateSpotOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.SpotOptionsProperty.Builder =

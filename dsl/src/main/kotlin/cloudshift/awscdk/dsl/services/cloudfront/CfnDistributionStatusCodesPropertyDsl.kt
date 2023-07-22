@@ -9,6 +9,24 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * A complex data type for the status codes that you specify that, when returned by a primary
+ * origin, trigger CloudFront to failover to a second origin.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * StatusCodesProperty statusCodesProperty = StatusCodesProperty.builder()
+ * .items(List.of(123))
+ * .quantity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-statuscodes.html)
+ */
 @CdkDslMarker
 public class CfnDistributionStatusCodesPropertyDsl {
   private val cdkBuilder: CfnDistribution.StatusCodesProperty.Builder =

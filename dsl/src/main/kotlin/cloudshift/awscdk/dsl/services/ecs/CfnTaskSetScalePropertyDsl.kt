@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ecs.CfnTaskSet
 
+/**
+ * A floating-point percentage of the desired number of tasks to place and keep running in the task
+ * set.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * ScaleProperty scaleProperty = ScaleProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-scale.html)
+ */
 @CdkDslMarker
 public class CfnTaskSetScalePropertyDsl {
   private val cdkBuilder: CfnTaskSet.ScaleProperty.Builder = CfnTaskSet.ScaleProperty.builder()

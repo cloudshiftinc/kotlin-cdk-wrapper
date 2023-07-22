@@ -9,6 +9,35 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 
+/**
+ * The `Rule` property type specifies an approval rule for a Systems Manager patch baseline.
+ *
+ * The `PatchRules` property of the
+ * [RuleGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html)
+ * property type contains a list of `Rule` property types.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * RuleProperty ruleProperty = RuleProperty.builder()
+ * .approveAfterDays(123)
+ * .approveUntilDate("approveUntilDate")
+ * .complianceLevel("complianceLevel")
+ * .enableNonSecurity(false)
+ * .patchFilterGroup(PatchFilterGroupProperty.builder()
+ * .patchFilters(List.of(PatchFilterProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html)
+ */
 @CdkDslMarker
 public class CfnPatchBaselineRulePropertyDsl {
   private val cdkBuilder: CfnPatchBaseline.RuleProperty.Builder =

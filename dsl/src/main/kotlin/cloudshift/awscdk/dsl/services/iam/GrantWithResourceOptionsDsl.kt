@@ -12,6 +12,31 @@ import software.amazon.awscdk.services.iam.GrantWithResourceOptions
 import software.amazon.awscdk.services.iam.IGrantable
 import software.amazon.awscdk.services.iam.IResourceWithPolicy
 
+/**
+ * Options for a grant operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iam.*;
+ * Object conditions;
+ * IGrantable grantable;
+ * IResourceWithPolicy resourceWithPolicy;
+ * GrantWithResourceOptions grantWithResourceOptions = GrantWithResourceOptions.builder()
+ * .actions(List.of("actions"))
+ * .grantee(grantable)
+ * .resource(resourceWithPolicy)
+ * .resourceArns(List.of("resourceArns"))
+ * // the properties below are optional
+ * .conditions(Map.of(
+ * "conditionsKey", Map.of(
+ * "conditionsKey", conditions)))
+ * .resourceSelfArns(List.of("resourceSelfArns"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GrantWithResourceOptionsDsl {
   private val cdkBuilder: GrantWithResourceOptions.Builder = GrantWithResourceOptions.builder()

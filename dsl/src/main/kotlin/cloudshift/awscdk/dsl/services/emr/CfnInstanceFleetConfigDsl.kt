@@ -12,6 +12,86 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig
 import software.constructs.Construct
 
+/**
+ * Use `InstanceFleetConfig` to define instance fleets for an EMR cluster.
+ *
+ * A cluster can not use both instance fleets and instance groups. For more information, see
+ * [Configure Instance
+ * Fleets](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-instance-group-configuration.html)
+ * in the *Amazon EMR Management Guide* .
+ *
+ *
+ * The instance fleet configuration is available only in Amazon EMR versions 4.8.0 and later,
+ * excluding 5.0.x versions. &gt; You can currently only add a task instance fleet to a cluster with
+ * this resource. If you use this resource, CloudFormation waits for the cluster launch to complete
+ * before adding the task instance fleet to the cluster. In order to add a task instance fleet to the
+ * cluster as part of the cluster launch and minimize delays in provisioning task nodes, use the
+ * `TaskInstanceFleets` subproperty for the [AWS::EMR::Cluster
+ * JobFlowInstancesConfig](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html)
+ * property instead. To use this subproperty, see
+ * [AWS::EMR::Cluster](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html)
+ * for examples.
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ConfigurationProperty configurationProperty_;
+ * CfnInstanceFleetConfig cfnInstanceFleetConfig = CfnInstanceFleetConfig.Builder.create(this,
+ * "MyCfnInstanceFleetConfig")
+ * .clusterId("clusterId")
+ * .instanceFleetType("instanceFleetType")
+ * // the properties below are optional
+ * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
+ * .instanceType("instanceType")
+ * // the properties below are optional
+ * .bidPrice("bidPrice")
+ * .bidPriceAsPercentageOfOnDemandPrice(123)
+ * .configurations(List.of(ConfigurationProperty.builder()
+ * .classification("classification")
+ * .configurationProperties(Map.of(
+ * "configurationPropertiesKey", "configurationProperties"))
+ * .configurations(List.of(configurationProperty_))
+ * .build()))
+ * .customAmiId("customAmiId")
+ * .ebsConfiguration(EbsConfigurationProperty.builder()
+ * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
+ * .volumeSpecification(VolumeSpecificationProperty.builder()
+ * .sizeInGb(123)
+ * .volumeType("volumeType")
+ * // the properties below are optional
+ * .iops(123)
+ * .build())
+ * // the properties below are optional
+ * .volumesPerInstance(123)
+ * .build()))
+ * .ebsOptimized(false)
+ * .build())
+ * .weightedCapacity(123)
+ * .build()))
+ * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
+ * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .build())
+ * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
+ * .timeoutAction("timeoutAction")
+ * .timeoutDurationMinutes(123)
+ * // the properties below are optional
+ * .allocationStrategy("allocationStrategy")
+ * .blockDurationMinutes(123)
+ * .build())
+ * .build())
+ * .name("name")
+ * .targetOnDemandCapacity(123)
+ * .targetSpotCapacity(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html)
+ */
 @CdkDslMarker
 public class CfnInstanceFleetConfigDsl(
   scope: Construct,

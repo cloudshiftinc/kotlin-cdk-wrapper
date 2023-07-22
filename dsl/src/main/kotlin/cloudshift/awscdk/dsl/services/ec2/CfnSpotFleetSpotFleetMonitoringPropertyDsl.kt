@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnSpotFleet
 
+/**
+ * Describes whether monitoring is enabled.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * SpotFleetMonitoringProperty spotFleetMonitoringProperty = SpotFleetMonitoringProperty.builder()
+ * .enabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetmonitoring.html)
+ */
 @CdkDslMarker
 public class CfnSpotFleetSpotFleetMonitoringPropertyDsl {
   private val cdkBuilder: CfnSpotFleet.SpotFleetMonitoringProperty.Builder =

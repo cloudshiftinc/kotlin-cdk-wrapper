@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.connect.CfnIntegrationAssociationProps
 
+/**
+ * Properties for defining a `CfnIntegrationAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnIntegrationAssociationProps cfnIntegrationAssociationProps =
+ * CfnIntegrationAssociationProps.builder()
+ * .instanceId("instanceId")
+ * .integrationArn("integrationArn")
+ * .integrationType("integrationType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-integrationassociation.html)
+ */
 @CdkDslMarker
 public class CfnIntegrationAssociationPropsDsl {
   private val cdkBuilder: CfnIntegrationAssociationProps.Builder =

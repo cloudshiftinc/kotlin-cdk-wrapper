@@ -6,6 +6,26 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.glue.CfnSchemaVersion
 
+/**
+ * A wrapper structure to contain schema identity fields.
+ *
+ * Either `SchemaArn` , or `SchemaName` and `RegistryName` has to be provided.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * SchemaProperty schemaProperty = SchemaProperty.builder()
+ * .registryName("registryName")
+ * .schemaArn("schemaArn")
+ * .schemaName("schemaName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-schemaversion-schema.html)
+ */
 @CdkDslMarker
 public class CfnSchemaVersionSchemaPropertyDsl {
   private val cdkBuilder: CfnSchemaVersion.SchemaProperty.Builder =

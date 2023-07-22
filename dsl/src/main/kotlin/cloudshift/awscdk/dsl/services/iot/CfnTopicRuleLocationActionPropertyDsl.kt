@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.iot.CfnTopicRule
 
+/**
+ * Describes an action to send device location updates from an MQTT message to an Amazon Location
+ * tracker resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * LocationActionProperty locationActionProperty = LocationActionProperty.builder()
+ * .deviceId("deviceId")
+ * .latitude("latitude")
+ * .longitude("longitude")
+ * .roleArn("roleArn")
+ * .trackerName("trackerName")
+ * // the properties below are optional
+ * .timestamp(TimestampProperty.builder()
+ * .value("value")
+ * // the properties below are optional
+ * .unit("unit")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-locationaction.html)
+ */
 @CdkDslMarker
 public class CfnTopicRuleLocationActionPropertyDsl {
   private val cdkBuilder: CfnTopicRule.LocationActionProperty.Builder =

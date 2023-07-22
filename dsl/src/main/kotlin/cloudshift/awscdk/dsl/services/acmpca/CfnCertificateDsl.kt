@@ -8,6 +8,129 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificate
 import software.constructs.Construct
 
+/**
+ * The `AWS::ACMPCA::Certificate` resource is used to issue a certificate using your private
+ * certificate authority.
+ *
+ * For more information, see the
+ * [IssueCertificate](https://docs.aws.amazon.com/privateca/latest/APIReference/API_IssueCertificate.html)
+ * action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * CfnCertificate cfnCertificate = CfnCertificate.Builder.create(this, "MyCfnCertificate")
+ * .certificateAuthorityArn("certificateAuthorityArn")
+ * .certificateSigningRequest("certificateSigningRequest")
+ * .signingAlgorithm("signingAlgorithm")
+ * .validity(ValidityProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * // the properties below are optional
+ * .apiPassthrough(ApiPassthroughProperty.builder()
+ * .extensions(ExtensionsProperty.builder()
+ * .certificatePolicies(List.of(PolicyInformationProperty.builder()
+ * .certPolicyId("certPolicyId")
+ * // the properties below are optional
+ * .policyQualifiers(List.of(PolicyQualifierInfoProperty.builder()
+ * .policyQualifierId("policyQualifierId")
+ * .qualifier(QualifierProperty.builder()
+ * .cpsUri("cpsUri")
+ * .build())
+ * .build()))
+ * .build()))
+ * .customExtensions(List.of(CustomExtensionProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * // the properties below are optional
+ * .critical(false)
+ * .build()))
+ * .extendedKeyUsage(List.of(ExtendedKeyUsageProperty.builder()
+ * .extendedKeyUsageObjectIdentifier("extendedKeyUsageObjectIdentifier")
+ * .extendedKeyUsageType("extendedKeyUsageType")
+ * .build()))
+ * .keyUsage(KeyUsageProperty.builder()
+ * .crlSign(false)
+ * .dataEncipherment(false)
+ * .decipherOnly(false)
+ * .digitalSignature(false)
+ * .encipherOnly(false)
+ * .keyAgreement(false)
+ * .keyCertSign(false)
+ * .keyEncipherment(false)
+ * .nonRepudiation(false)
+ * .build())
+ * .subjectAlternativeNames(List.of(GeneralNameProperty.builder()
+ * .directoryName(SubjectProperty.builder()
+ * .commonName("commonName")
+ * .country("country")
+ * .customAttributes(List.of(CustomAttributeProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * .build()))
+ * .distinguishedNameQualifier("distinguishedNameQualifier")
+ * .generationQualifier("generationQualifier")
+ * .givenName("givenName")
+ * .initials("initials")
+ * .locality("locality")
+ * .organization("organization")
+ * .organizationalUnit("organizationalUnit")
+ * .pseudonym("pseudonym")
+ * .serialNumber("serialNumber")
+ * .state("state")
+ * .surname("surname")
+ * .title("title")
+ * .build())
+ * .dnsName("dnsName")
+ * .ediPartyName(EdiPartyNameProperty.builder()
+ * .nameAssigner("nameAssigner")
+ * .partyName("partyName")
+ * .build())
+ * .ipAddress("ipAddress")
+ * .otherName(OtherNameProperty.builder()
+ * .typeId("typeId")
+ * .value("value")
+ * .build())
+ * .registeredId("registeredId")
+ * .rfc822Name("rfc822Name")
+ * .uniformResourceIdentifier("uniformResourceIdentifier")
+ * .build()))
+ * .build())
+ * .subject(SubjectProperty.builder()
+ * .commonName("commonName")
+ * .country("country")
+ * .customAttributes(List.of(CustomAttributeProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * .build()))
+ * .distinguishedNameQualifier("distinguishedNameQualifier")
+ * .generationQualifier("generationQualifier")
+ * .givenName("givenName")
+ * .initials("initials")
+ * .locality("locality")
+ * .organization("organization")
+ * .organizationalUnit("organizationalUnit")
+ * .pseudonym("pseudonym")
+ * .serialNumber("serialNumber")
+ * .state("state")
+ * .surname("surname")
+ * .title("title")
+ * .build())
+ * .build())
+ * .templateArn("templateArn")
+ * .validityNotBefore(ValidityProperty.builder()
+ * .type("type")
+ * .value(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-acmpca-certificate.html)
+ */
 @CdkDslMarker
 public class CfnCertificateDsl(
   scope: Construct,

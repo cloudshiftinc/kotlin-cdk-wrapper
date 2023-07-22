@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.iot.CfnThingType
 
+/**
+ * The ThingTypeProperties contains information about the thing type including: a thing type
+ * description, and a list of searchable thing attribute names.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.iot.*;
+ * ThingTypePropertiesProperty thingTypePropertiesProperty = ThingTypePropertiesProperty.builder()
+ * .searchableAttributes(List.of("searchableAttributes"))
+ * .thingTypeDescription("thingTypeDescription")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thingtype-thingtypeproperties.html)
+ */
 @CdkDslMarker
 public class CfnThingTypeThingTypePropertiesPropertyDsl {
   private val cdkBuilder: CfnThingType.ThingTypePropertiesProperty.Builder =

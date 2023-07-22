@@ -7,6 +7,26 @@ import kotlin.String
 import kotlin.collections.Map
 import software.amazon.awscdk.services.lambda.DockerBuildAssetOptions
 
+/**
+ * Options when creating an asset from a Docker build.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * DockerBuildAssetOptions dockerBuildAssetOptions = DockerBuildAssetOptions.builder()
+ * .buildArgs(Map.of(
+ * "buildArgsKey", "buildArgs"))
+ * .file("file")
+ * .imagePath("imagePath")
+ * .outputPath("outputPath")
+ * .platform("platform")
+ * .targetStage("targetStage")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class DockerBuildAssetOptionsDsl {
   private val cdkBuilder: DockerBuildAssetOptions.Builder = DockerBuildAssetOptions.builder()

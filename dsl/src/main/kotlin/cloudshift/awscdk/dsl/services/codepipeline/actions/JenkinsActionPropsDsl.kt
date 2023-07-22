@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.codepipeline.actions.IJenkinsProvider
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps
 import software.amazon.awscdk.services.codepipeline.actions.JenkinsActionType
 
+/**
+ * Construction properties of `JenkinsAction`.
+ *
+ * Example:
+ *
+ * ```
+ * JenkinsProvider jenkinsProvider;
+ * JenkinsAction buildAction = JenkinsAction.Builder.create()
+ * .actionName("JenkinsBuild")
+ * .jenkinsProvider(jenkinsProvider)
+ * .projectName("MyProject")
+ * .type(JenkinsActionType.BUILD)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class JenkinsActionPropsDsl {
   private val cdkBuilder: JenkinsActionProps.Builder = JenkinsActionProps.builder()

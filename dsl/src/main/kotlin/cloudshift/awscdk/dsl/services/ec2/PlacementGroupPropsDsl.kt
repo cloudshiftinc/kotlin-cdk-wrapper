@@ -9,6 +9,23 @@ import software.amazon.awscdk.services.ec2.PlacementGroupProps
 import software.amazon.awscdk.services.ec2.PlacementGroupSpreadLevel
 import software.amazon.awscdk.services.ec2.PlacementGroupStrategy
 
+/**
+ * Props for a PlacementGroup.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PlacementGroupProps placementGroupProps = PlacementGroupProps.builder()
+ * .partitions(123)
+ * .placementGroupName("placementGroupName")
+ * .spreadLevel(PlacementGroupSpreadLevel.HOST)
+ * .strategy(PlacementGroupStrategy.CLUSTER)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PlacementGroupPropsDsl {
   private val cdkBuilder: PlacementGroupProps.Builder = PlacementGroupProps.builder()

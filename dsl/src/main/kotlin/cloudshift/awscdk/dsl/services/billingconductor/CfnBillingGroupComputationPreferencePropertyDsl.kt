@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.billingconductor.CfnBillingGroup
 
+/**
+ * The preferences and settings that will be used to compute the AWS charges for a billing group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.billingconductor.*;
+ * ComputationPreferenceProperty computationPreferenceProperty =
+ * ComputationPreferenceProperty.builder()
+ * .pricingPlanArn("pricingPlanArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-billingconductor-billinggroup-computationpreference.html)
+ */
 @CdkDslMarker
 public class CfnBillingGroupComputationPreferencePropertyDsl {
   private val cdkBuilder: CfnBillingGroup.ComputationPreferenceProperty.Builder =

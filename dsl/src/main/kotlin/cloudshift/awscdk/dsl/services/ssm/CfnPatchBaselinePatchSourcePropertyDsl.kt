@@ -8,6 +8,30 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ssm.CfnPatchBaseline
 
+/**
+ * `PatchSource` is the property type for the `Sources` resource of the
+ * [AWS::SSM::PatchBaseline](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html)
+ * resource.
+ *
+ * The AWS CloudFormation `AWS::SSM::PatchSource` resource is used to provide information about the
+ * patches to use to update target instances, including target operating systems and source repository.
+ * Applies to Linux instances only.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ssm.*;
+ * PatchSourceProperty patchSourceProperty = PatchSourceProperty.builder()
+ * .configuration("configuration")
+ * .name("name")
+ * .products(List.of("products"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html)
+ */
 @CdkDslMarker
 public class CfnPatchBaselinePatchSourcePropertyDsl {
   private val cdkBuilder: CfnPatchBaseline.PatchSourceProperty.Builder =

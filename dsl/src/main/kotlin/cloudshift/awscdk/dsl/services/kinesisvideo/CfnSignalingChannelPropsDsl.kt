@@ -12,6 +12,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps
 
+/**
+ * Properties for defining a `CfnSignalingChannel`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kinesisvideo.*;
+ * CfnSignalingChannelProps cfnSignalingChannelProps = CfnSignalingChannelProps.builder()
+ * .messageTtlSeconds(123)
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html)
+ */
 @CdkDslMarker
 public class CfnSignalingChannelPropsDsl {
   private val cdkBuilder: CfnSignalingChannelProps.Builder = CfnSignalingChannelProps.builder()

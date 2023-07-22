@@ -9,6 +9,43 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnEndpoint
 
+/**
+ * Provides information that defines a PostgreSQL endpoint.
+ *
+ * This information includes the output format of records applied to the endpoint and details of
+ * transaction and control table data information. For information about other available settings, see
+ * [Extra connection attributes when using PostgreSQL as a source for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.PostgreSQL.html#CHAP_Source.PostgreSQL.ConnectionAttrib)
+ * and [Extra connection attributes when using PostgreSQL as a target for AWS
+ * DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.PostgreSQL.html#CHAP_Target.PostgreSQL.ConnectionAttrib)
+ * in the *AWS Database Migration Service User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
+ * .afterConnectScript("afterConnectScript")
+ * .captureDdls(false)
+ * .ddlArtifactsSchema("ddlArtifactsSchema")
+ * .executeTimeout(123)
+ * .failTasksOnLobTruncation(false)
+ * .heartbeatEnable(false)
+ * .heartbeatFrequency(123)
+ * .heartbeatSchema("heartbeatSchema")
+ * .mapBooleanAsBoolean(false)
+ * .maxFileSize(123)
+ * .pluginName("pluginName")
+ * .secretsManagerAccessRoleArn("secretsManagerAccessRoleArn")
+ * .secretsManagerSecretId("secretsManagerSecretId")
+ * .slotName("slotName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html)
+ */
 @CdkDslMarker
 public class CfnEndpointPostgreSqlSettingsPropertyDsl {
   private val cdkBuilder: CfnEndpoint.PostgreSqlSettingsProperty.Builder =

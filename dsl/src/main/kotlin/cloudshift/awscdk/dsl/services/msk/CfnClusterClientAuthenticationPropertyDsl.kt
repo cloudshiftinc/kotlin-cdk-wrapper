@@ -6,6 +6,37 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.msk.CfnCluster
 
+/**
+ * Includes all client authentication information.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.msk.*;
+ * ClientAuthenticationProperty clientAuthenticationProperty =
+ * ClientAuthenticationProperty.builder()
+ * .sasl(SaslProperty.builder()
+ * .iam(IamProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .scram(ScramProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
+ * .tls(TlsProperty.builder()
+ * .certificateAuthorityArnList(List.of("certificateAuthorityArnList"))
+ * .enabled(false)
+ * .build())
+ * .unauthenticated(UnauthenticatedProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-cluster-clientauthentication.html)
+ */
 @CdkDslMarker
 public class CfnClusterClientAuthenticationPropertyDsl {
   private val cdkBuilder: CfnCluster.ClientAuthenticationProperty.Builder =

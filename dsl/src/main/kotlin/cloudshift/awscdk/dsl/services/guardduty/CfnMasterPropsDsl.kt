@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.guardduty.CfnMasterProps
 
+/**
+ * Properties for defining a `CfnMaster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.guardduty.*;
+ * CfnMasterProps cfnMasterProps = CfnMasterProps.builder()
+ * .detectorId("detectorId")
+ * .masterId("masterId")
+ * // the properties below are optional
+ * .invitationId("invitationId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html)
+ */
 @CdkDslMarker
 public class CfnMasterPropsDsl {
   private val cdkBuilder: CfnMasterProps.Builder = CfnMasterProps.builder()

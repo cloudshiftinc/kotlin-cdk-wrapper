@@ -8,6 +8,29 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudformation.CfnHookVersion
 import software.amazon.awscdk.services.cloudformation.CfnHookVersionProps
 
+/**
+ * Properties for defining a `CfnHookVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudformation.*;
+ * CfnHookVersionProps cfnHookVersionProps = CfnHookVersionProps.builder()
+ * .schemaHandlerPackage("schemaHandlerPackage")
+ * .typeName("typeName")
+ * // the properties below are optional
+ * .executionRoleArn("executionRoleArn")
+ * .loggingConfig(LoggingConfigProperty.builder()
+ * .logGroupName("logGroupName")
+ * .logRoleArn("logRoleArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html)
+ */
 @CdkDslMarker
 public class CfnHookVersionPropsDsl {
   private val cdkBuilder: CfnHookVersionProps.Builder = CfnHookVersionProps.builder()

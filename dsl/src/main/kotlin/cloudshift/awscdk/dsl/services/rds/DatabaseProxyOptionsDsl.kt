@@ -19,6 +19,24 @@ import software.amazon.awscdk.services.rds.DatabaseProxyOptions
 import software.amazon.awscdk.services.rds.SessionPinningFilter
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Options for a new DatabaseProxy.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup securityGroup;
+ * Secret[] secrets;
+ * DatabaseInstance dbInstance;
+ * DatabaseProxy proxy = dbInstance.addProxy("proxy", DatabaseProxyOptions.builder()
+ * .borrowTimeout(Duration.seconds(30))
+ * .maxConnectionsPercent(50)
+ * .secrets(secrets)
+ * .vpc(vpc)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class DatabaseProxyOptionsDsl {
   private val cdkBuilder: DatabaseProxyOptions.Builder = DatabaseProxyOptions.builder()

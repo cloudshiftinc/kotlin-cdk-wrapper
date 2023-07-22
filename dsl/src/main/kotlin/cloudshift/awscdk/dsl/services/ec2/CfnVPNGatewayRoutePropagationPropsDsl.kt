@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagationProps
 
+/**
+ * Properties for defining a `CfnVPNGatewayRoutePropagation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPNGatewayRoutePropagationProps cfnVPNGatewayRoutePropagationProps =
+ * CfnVPNGatewayRoutePropagationProps.builder()
+ * .routeTableIds(List.of("routeTableIds"))
+ * .vpnGatewayId("vpnGatewayId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpngatewayroutepropagation.html)
+ */
 @CdkDslMarker
 public class CfnVPNGatewayRoutePropagationPropsDsl {
   private val cdkBuilder: CfnVPNGatewayRoutePropagationProps.Builder =

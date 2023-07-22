@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * Information about the user who created or modified an experiment, trial, trial component, lineage
+ * group, project, or model card.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * UserContextProperty userContextProperty = UserContextProperty.builder()
+ * .domainId("domainId")
+ * .userProfileArn("userProfileArn")
+ * .userProfileName("userProfileName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-usercontext.html)
+ */
 @CdkDslMarker
 public class CfnModelCardUserContextPropertyDsl {
   private val cdkBuilder: CfnModelCard.UserContextProperty.Builder =

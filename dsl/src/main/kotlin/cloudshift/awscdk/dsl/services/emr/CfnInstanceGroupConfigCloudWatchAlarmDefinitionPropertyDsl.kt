@@ -11,6 +11,38 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig
 
+/**
+ * `CloudWatchAlarmDefinition` is a subproperty of the `ScalingTrigger` property, which determines
+ * when to trigger an automatic scaling activity.
+ *
+ * Scaling activity begins when you satisfy the defined alarm conditions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * CloudWatchAlarmDefinitionProperty cloudWatchAlarmDefinitionProperty =
+ * CloudWatchAlarmDefinitionProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .metricName("metricName")
+ * .period(123)
+ * .threshold(123)
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .evaluationPeriods(123)
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-instancegroupconfig-cloudwatchalarmdefinition.html)
+ */
 @CdkDslMarker
 public class CfnInstanceGroupConfigCloudWatchAlarmDefinitionPropertyDsl {
   private val cdkBuilder: CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Builder =

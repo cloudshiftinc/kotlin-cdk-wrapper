@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.finspace.CfnEnvironment
 
+/**
+ * Configuration information for the superuser.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.finspace.*;
+ * SuperuserParametersProperty superuserParametersProperty = SuperuserParametersProperty.builder()
+ * .emailAddress("emailAddress")
+ * .firstName("firstName")
+ * .lastName("lastName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-finspace-environment-superuserparameters.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentSuperuserParametersPropertyDsl {
   private val cdkBuilder: CfnEnvironment.SuperuserParametersProperty.Builder =

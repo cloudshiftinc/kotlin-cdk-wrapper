@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.appmesh.RouteSpecOptionsBase
 
+/**
+ * Base options for all route specs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * RouteSpecOptionsBase routeSpecOptionsBase = RouteSpecOptionsBase.builder()
+ * .priority(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class RouteSpecOptionsBaseDsl {
   private val cdkBuilder: RouteSpecOptionsBase.Builder = RouteSpecOptionsBase.builder()

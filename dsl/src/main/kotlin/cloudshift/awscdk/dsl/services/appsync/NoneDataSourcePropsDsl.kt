@@ -7,6 +7,24 @@ import kotlin.String
 import software.amazon.awscdk.services.appsync.IGraphqlApi
 import software.amazon.awscdk.services.appsync.NoneDataSourceProps
 
+/**
+ * Properties for an AppSync dummy datasource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appsync.*;
+ * GraphqlApi graphqlApi;
+ * NoneDataSourceProps noneDataSourceProps = NoneDataSourceProps.builder()
+ * .api(graphqlApi)
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class NoneDataSourcePropsDsl {
   private val cdkBuilder: NoneDataSourceProps.Builder = NoneDataSourceProps.builder()

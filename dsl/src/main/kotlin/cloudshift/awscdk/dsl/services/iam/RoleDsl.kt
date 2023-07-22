@@ -14,6 +14,26 @@ import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.Role
 import software.constructs.Construct
 
+/**
+ * IAM Role.
+ *
+ * Defines an IAM role. The role is created with an assume policy document associated with
+ * the specified AWS service principal defined in `serviceAssumeRole`.
+ *
+ * Example:
+ *
+ * ```
+ * Role lambdaRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .description("Example role...")
+ * .build();
+ * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .build();
+ * // give lambda permissions to read stream
+ * stream.grantRead(lambdaRole);
+ * ```
+ */
 @CdkDslMarker
 public class RoleDsl(
   scope: Construct,

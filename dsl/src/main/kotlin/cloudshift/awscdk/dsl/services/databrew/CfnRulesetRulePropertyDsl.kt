@@ -11,6 +11,40 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.databrew.CfnRuleset
 
+/**
+ * Represents a single data quality requirement that should be validated in the scope of this
+ * dataset.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.databrew.*;
+ * RuleProperty ruleProperty = RuleProperty.builder()
+ * .checkExpression("checkExpression")
+ * .name("name")
+ * // the properties below are optional
+ * .columnSelectors(List.of(ColumnSelectorProperty.builder()
+ * .name("name")
+ * .regex("regex")
+ * .build()))
+ * .disabled(false)
+ * .substitutionMap(List.of(SubstitutionValueProperty.builder()
+ * .value("value")
+ * .valueReference("valueReference")
+ * .build()))
+ * .threshold(ThresholdProperty.builder()
+ * .value(123)
+ * // the properties below are optional
+ * .type("type")
+ * .unit("unit")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-databrew-ruleset-rule.html)
+ */
 @CdkDslMarker
 public class CfnRulesetRulePropertyDsl {
   private val cdkBuilder: CfnRuleset.RuleProperty.Builder = CfnRuleset.RuleProperty.builder()

@@ -13,6 +13,23 @@ import software.amazon.awscdk.services.iam.IPrincipal
 import software.amazon.awscdk.services.iam.PolicyDocument
 import software.amazon.awscdk.services.iam.RoleProps
 
+/**
+ * Properties for defining an IAM Role.
+ *
+ * Example:
+ *
+ * ```
+ * Role lambdaRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .description("Example role...")
+ * .build();
+ * Stream stream = Stream.Builder.create(this, "MyEncryptedStream")
+ * .encryption(StreamEncryption.KMS)
+ * .build();
+ * // give lambda permissions to read stream
+ * stream.grantRead(lambdaRole);
+ * ```
+ */
 @CdkDslMarker
 public class RolePropsDsl {
   private val cdkBuilder: RoleProps.Builder = RoleProps.builder()

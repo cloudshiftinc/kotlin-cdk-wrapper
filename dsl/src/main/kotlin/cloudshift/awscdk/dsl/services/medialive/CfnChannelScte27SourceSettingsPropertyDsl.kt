@@ -7,6 +7,26 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * Information about the SCTE-27 captions to extract from the input.
+ *
+ * The parent of this entity is CaptionSelectorSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * Scte27SourceSettingsProperty scte27SourceSettingsProperty =
+ * Scte27SourceSettingsProperty.builder()
+ * .ocrLanguage("ocrLanguage")
+ * .pid(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-scte27sourcesettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelScte27SourceSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.Scte27SourceSettingsProperty.Builder =

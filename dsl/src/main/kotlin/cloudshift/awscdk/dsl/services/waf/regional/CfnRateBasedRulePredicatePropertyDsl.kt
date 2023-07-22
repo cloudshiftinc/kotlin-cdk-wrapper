@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.waf.regional.CfnRateBasedRule
 
+/**
+ * Specifies the `ByteMatchSet` , `IPSet` , `SqlInjectionMatchSet` , `XssMatchSet` , `RegexMatchSet`
+ * , `GeoMatchSet` , and `SizeConstraintSet` objects that you want to add to a `Rule` and, for each
+ * object, indicates whether you want to negate the settings, for example, requests that do NOT
+ * originate from the IP address 192.0.2.44.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.waf.regional.*;
+ * PredicateProperty predicateProperty = PredicateProperty.builder()
+ * .dataId("dataId")
+ * .negated(false)
+ * .type("type")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-ratebasedrule-predicate.html)
+ */
 @CdkDslMarker
 public class CfnRateBasedRulePredicatePropertyDsl {
   private val cdkBuilder: CfnRateBasedRule.PredicateProperty.Builder =

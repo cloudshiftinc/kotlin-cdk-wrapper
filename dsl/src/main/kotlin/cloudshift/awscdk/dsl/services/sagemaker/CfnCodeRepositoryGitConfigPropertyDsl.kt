@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnCodeRepository
 
+/**
+ * Specifies configuration details for a Git repository in your AWS account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * GitConfigProperty gitConfigProperty = GitConfigProperty.builder()
+ * .repositoryUrl("repositoryUrl")
+ * // the properties below are optional
+ * .branch("branch")
+ * .secretArn("secretArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-coderepository-gitconfig.html)
+ */
 @CdkDslMarker
 public class CfnCodeRepositoryGitConfigPropertyDsl {
   private val cdkBuilder: CfnCodeRepository.GitConfigProperty.Builder =

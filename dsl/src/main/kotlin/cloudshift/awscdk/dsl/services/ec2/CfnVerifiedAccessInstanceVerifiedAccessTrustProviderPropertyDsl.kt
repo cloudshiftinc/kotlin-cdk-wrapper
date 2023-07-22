@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance
 
+/**
+ * Describes a Verified Access trust provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * VerifiedAccessTrustProviderProperty verifiedAccessTrustProviderProperty =
+ * VerifiedAccessTrustProviderProperty.builder()
+ * .description("description")
+ * .deviceTrustProviderType("deviceTrustProviderType")
+ * .trustProviderType("trustProviderType")
+ * .userTrustProviderType("userTrustProviderType")
+ * .verifiedAccessTrustProviderId("verifiedAccessTrustProviderId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-verifiedaccessinstance-verifiedaccesstrustprovider.html)
+ */
 @CdkDslMarker
 public class CfnVerifiedAccessInstanceVerifiedAccessTrustProviderPropertyDsl {
   private val cdkBuilder: CfnVerifiedAccessInstance.VerifiedAccessTrustProviderProperty.Builder =

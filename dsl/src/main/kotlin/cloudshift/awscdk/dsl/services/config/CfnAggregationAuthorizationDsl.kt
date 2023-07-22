@@ -12,6 +12,29 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.config.CfnAggregationAuthorization
 import software.constructs.Construct
 
+/**
+ * An object that represents the authorizations granted to aggregator accounts and regions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnAggregationAuthorization cfnAggregationAuthorization =
+ * CfnAggregationAuthorization.Builder.create(this, "MyCfnAggregationAuthorization")
+ * .authorizedAccountId("authorizedAccountId")
+ * .authorizedAwsRegion("authorizedAwsRegion")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-aggregationauthorization.html)
+ */
 @CdkDslMarker
 public class CfnAggregationAuthorizationDsl(
   scope: Construct,

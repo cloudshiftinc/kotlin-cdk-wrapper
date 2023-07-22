@@ -8,6 +8,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.mwaa.CfnEnvironment
 
+/**
+ * The VPC networking components used to secure and enable network traffic between the AWS resources
+ * for your environment.
+ *
+ * To learn more, see [About networking on Amazon
+ * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.mwaa.*;
+ * NetworkConfigurationProperty networkConfigurationProperty =
+ * NetworkConfigurationProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mwaa-environment-networkconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnEnvironmentNetworkConfigurationPropertyDsl {
   private val cdkBuilder: CfnEnvironment.NetworkConfigurationProperty.Builder =

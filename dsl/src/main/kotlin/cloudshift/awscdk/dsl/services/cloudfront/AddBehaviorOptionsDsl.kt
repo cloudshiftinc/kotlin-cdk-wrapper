@@ -18,6 +18,21 @@ import software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy
 import software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 
+/**
+ * Options for adding a new behavior to a Distribution.
+ *
+ * Example:
+ *
+ * ```
+ * // Add a behavior to a Distribution after initial creation.
+ * Bucket myBucket;
+ * Distribution myWebDistribution;
+ * myWebDistribution.addBehavior("/images/ *.jpg", new S3Origin(myBucket),
+ * AddBehaviorOptions.builder()
+ * .viewerProtocolPolicy(ViewerProtocolPolicy.REDIRECT_TO_HTTPS)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AddBehaviorOptionsDsl {
   private val cdkBuilder: AddBehaviorOptions.Builder = AddBehaviorOptions.builder()

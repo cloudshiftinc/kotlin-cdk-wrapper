@@ -7,6 +7,34 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies the placement of an instance.
+ *
+ * `Placement` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * PlacementProperty placementProperty = PlacementProperty.builder()
+ * .affinity("affinity")
+ * .availabilityZone("availabilityZone")
+ * .groupId("groupId")
+ * .groupName("groupName")
+ * .hostId("hostId")
+ * .hostResourceGroupArn("hostResourceGroupArn")
+ * .partitionNumber(123)
+ * .spreadDomain("spreadDomain")
+ * .tenancy("tenancy")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-placement.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplatePlacementPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.PlacementProperty.Builder =

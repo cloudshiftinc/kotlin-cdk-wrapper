@@ -7,6 +7,22 @@ import kotlin.String
 import software.amazon.awscdk.services.ses.CloudWatchDimension
 import software.amazon.awscdk.services.ses.CloudWatchDimensionSource
 
+/**
+ * A CloudWatch dimension upon which to categorize your emails.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * CloudWatchDimension cloudWatchDimension = CloudWatchDimension.builder()
+ * .defaultValue("defaultValue")
+ * .name("name")
+ * .source(CloudWatchDimensionSource.EMAIL_HEADER)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudWatchDimensionDsl {
   private val cdkBuilder: CloudWatchDimension.Builder = CloudWatchDimension.builder()

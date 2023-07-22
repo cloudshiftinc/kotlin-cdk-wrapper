@@ -18,6 +18,20 @@ import software.amazon.awscdk.services.stepfunctions.Timeout
 import software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity
 import software.constructs.Construct
 
+/**
+ * A Step Functions Task to invoke an Activity worker.
+ *
+ * An Activity can be used directly as a Resource.
+ *
+ * Example:
+ *
+ * ```
+ * Activity submitJobActivity = new Activity(this, "SubmitJob");
+ * StepFunctionsInvokeActivity.Builder.create(this, "Submit Job")
+ * .activity(submitJobActivity)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class StepFunctionsInvokeActivityDsl(
   scope: Construct,

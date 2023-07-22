@@ -8,6 +8,87 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnConnection
 import software.constructs.Construct
 
+/**
+ * Creates a connection.
+ *
+ * A connection defines the authorization type and credentials to use for authorization with an API
+ * destination HTTP endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * CfnConnection cfnConnection = CfnConnection.Builder.create(this, "MyCfnConnection")
+ * .authorizationType("authorizationType")
+ * .authParameters(AuthParametersProperty.builder()
+ * .apiKeyAuthParameters(ApiKeyAuthParametersProperty.builder()
+ * .apiKeyName("apiKeyName")
+ * .apiKeyValue("apiKeyValue")
+ * .build())
+ * .basicAuthParameters(BasicAuthParametersProperty.builder()
+ * .password("password")
+ * .username("username")
+ * .build())
+ * .invocationHttpParameters(ConnectionHttpParametersProperty.builder()
+ * .bodyParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .headerParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .queryStringParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .build())
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .authorizationEndpoint("authorizationEndpoint")
+ * .clientParameters(ClientParametersProperty.builder()
+ * .clientId("clientId")
+ * .clientSecret("clientSecret")
+ * .build())
+ * .httpMethod("httpMethod")
+ * // the properties below are optional
+ * .oAuthHttpParameters(ConnectionHttpParametersProperty.builder()
+ * .bodyParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .headerParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .queryStringParameters(List.of(ParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * // the properties below are optional
+ * .isValueSecret(false)
+ * .build()))
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html)
+ */
 @CdkDslMarker
 public class CfnConnectionDsl(
   scope: Construct,

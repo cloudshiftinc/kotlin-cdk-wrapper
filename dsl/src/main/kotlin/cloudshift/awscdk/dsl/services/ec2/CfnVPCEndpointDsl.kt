@@ -14,6 +14,51 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnVPCEndpoint
 import software.constructs.Construct
 
+/**
+ * Specifies a VPC endpoint.
+ *
+ * A VPC endpoint provides a private connection between your VPC and an endpoint service. You can
+ * use an endpoint service provided by AWS , an AWS Marketplace Partner, or another AWS accounts in
+ * your organization. For more information, see the [AWS PrivateLink User
+ * Guide](https://docs.aws.amazon.com/vpc/latest/privatelink/) .
+ *
+ * An endpoint of type `Interface` establishes connections between the subnets in your VPC and an
+ * AWS service , your own service, or a service hosted by another AWS account . With an interface VPC
+ * endpoint, you specify the subnets in which to create the endpoint and the security groups to
+ * associate with the endpoint network interfaces.
+ *
+ * An endpoint of type `gateway` serves as a target for a route in your route table for traffic
+ * destined for Amazon S3 or DynamoDB . You can specify an endpoint policy for the endpoint, which
+ * controls access to the service from your VPC. You can also specify the VPC route tables that use the
+ * endpoint. For more information about connectivity to Amazon S3 , see [Why can't I connect to an S3
+ * bucket using a gateway VPC
+ * endpoint?](https://docs.aws.amazon.com/premiumsupport/knowledge-center/connect-s3-vpc-endpoint)
+ *
+ * An endpoint of type `GatewayLoadBalancer` provides private connectivity between your VPC and
+ * virtual appliances from a service provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * Object policyDocument;
+ * CfnVPCEndpoint cfnVPCEndpoint = CfnVPCEndpoint.Builder.create(this, "MyCfnVPCEndpoint")
+ * .serviceName("serviceName")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .policyDocument(policyDocument)
+ * .privateDnsEnabled(false)
+ * .routeTableIds(List.of("routeTableIds"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcEndpointType("vpcEndpointType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html)
+ */
 @CdkDslMarker
 public class CfnVPCEndpointDsl(
   scope: Construct,

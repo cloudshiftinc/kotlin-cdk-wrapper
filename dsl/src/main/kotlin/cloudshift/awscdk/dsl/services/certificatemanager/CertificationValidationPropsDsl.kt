@@ -9,6 +9,28 @@ import software.amazon.awscdk.services.certificatemanager.CertificationValidatio
 import software.amazon.awscdk.services.certificatemanager.ValidationMethod
 import software.amazon.awscdk.services.route53.IHostedZone
 
+/**
+ * Properties for certificate validation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.certificatemanager.*;
+ * import software.amazon.awscdk.services.route53.*;
+ * HostedZone hostedZone;
+ * CertificationValidationProps certificationValidationProps =
+ * CertificationValidationProps.builder()
+ * .hostedZone(hostedZone)
+ * .hostedZones(Map.of(
+ * "hostedZonesKey", hostedZone))
+ * .method(ValidationMethod.EMAIL)
+ * .validationDomains(Map.of(
+ * "validationDomainsKey", "validationDomains"))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CertificationValidationPropsDsl {
   private val cdkBuilder: CertificationValidationProps.Builder =

@@ -12,6 +12,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.wafv2.CfnRegexPatternSet
 import software.constructs.Construct
 
+/**
+ * This is the latest version of *AWS WAF* , named AWS WAF V2, released in November, 2019.
+ *
+ * For information, including how to migrate your AWS WAF resources from the prior release, see the
+ * [AWS WAF Developer Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
+ *
+ * Use an `RegexPatternSet` to have AWS WAF inspect a web request component for a specific set of
+ * regular expression patterns.
+ *
+ * You use a regex pattern set by providing its Amazon Resource Name (ARN) to the rule statement
+ * `RegexPatternSetReferenceStatement` , when you add a rule to a rule group or web ACL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CfnRegexPatternSet cfnRegexPatternSet = CfnRegexPatternSet.Builder.create(this,
+ * "MyCfnRegexPatternSet")
+ * .regularExpressionList(List.of("regularExpressionList"))
+ * .scope("scope")
+ * // the properties below are optional
+ * .description("description")
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-regexpatternset.html)
+ */
 @CdkDslMarker
 public class CfnRegexPatternSetDsl(
   scope: Construct,

@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of HLS Basic Put Settings.
+ *
+ * The parent of this entity is HlsCdnSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * HlsBasicPutSettingsProperty hlsBasicPutSettingsProperty = HlsBasicPutSettingsProperty.builder()
+ * .connectionRetryInterval(123)
+ * .filecacheDuration(123)
+ * .numRetries(123)
+ * .restartDelay(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-hlsbasicputsettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelHlsBasicPutSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.HlsBasicPutSettingsProperty.Builder =

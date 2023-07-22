@@ -8,6 +8,30 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.gamelift.CfnAlias
 import software.amazon.awscdk.services.gamelift.CfnAliasProps
 
+/**
+ * Properties for defining a `CfnAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.gamelift.*;
+ * CfnAliasProps cfnAliasProps = CfnAliasProps.builder()
+ * .name("name")
+ * .routingStrategy(RoutingStrategyProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .fleetId("fleetId")
+ * .message("message")
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-alias.html)
+ */
 @CdkDslMarker
 public class CfnAliasPropsDsl {
   private val cdkBuilder: CfnAliasProps.Builder = CfnAliasProps.builder()

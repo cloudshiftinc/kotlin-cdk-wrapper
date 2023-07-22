@@ -13,6 +13,38 @@ import software.amazon.awscdk.services.ec2.ISecurityGroup
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.rds.CommonRotationUserOptions
 
+/**
+ * Properties common to single-user and multi-user rotation options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.rds.*;
+ * InterfaceVpcEndpoint interfaceVpcEndpoint;
+ * SecurityGroup securityGroup;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * CommonRotationUserOptions commonRotationUserOptions = CommonRotationUserOptions.builder()
+ * .automaticallyAfter(Duration.minutes(30))
+ * .endpoint(interfaceVpcEndpoint)
+ * .excludeCharacters("excludeCharacters")
+ * .rotateImmediatelyOnUpdate(false)
+ * .securityGroup(securityGroup)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build())
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CommonRotationUserOptionsDsl {
   private val cdkBuilder: CommonRotationUserOptions.Builder = CommonRotationUserOptions.builder()

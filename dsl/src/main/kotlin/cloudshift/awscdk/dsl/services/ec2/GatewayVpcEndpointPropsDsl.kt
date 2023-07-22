@@ -11,6 +11,34 @@ import software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService
 import software.amazon.awscdk.services.ec2.IVpc
 import software.amazon.awscdk.services.ec2.SubnetSelection
 
+/**
+ * Construction properties for a GatewayVpcEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * IGatewayVpcEndpointService gatewayVpcEndpointService;
+ * Subnet subnet;
+ * SubnetFilter subnetFilter;
+ * Vpc vpc;
+ * GatewayVpcEndpointProps gatewayVpcEndpointProps = GatewayVpcEndpointProps.builder()
+ * .service(gatewayVpcEndpointService)
+ * .vpc(vpc)
+ * // the properties below are optional
+ * .subnets(List.of(SubnetSelection.builder()
+ * .availabilityZones(List.of("availabilityZones"))
+ * .onePerAz(false)
+ * .subnetFilters(List.of(subnetFilter))
+ * .subnetGroupName("subnetGroupName")
+ * .subnets(List.of(subnet))
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class GatewayVpcEndpointPropsDsl {
   private val cdkBuilder: GatewayVpcEndpointProps.Builder = GatewayVpcEndpointProps.builder()

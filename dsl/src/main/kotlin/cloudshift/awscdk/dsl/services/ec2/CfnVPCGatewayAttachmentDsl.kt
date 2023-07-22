@@ -7,6 +7,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment
 import software.constructs.Construct
 
+/**
+ * Attaches an internet gateway, or a virtual private gateway to a VPC, enabling connectivity
+ * between the internet and the VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnVPCGatewayAttachment cfnVPCGatewayAttachment = CfnVPCGatewayAttachment.Builder.create(this,
+ * "MyCfnVPCGatewayAttachment")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .internetGatewayId("internetGatewayId")
+ * .vpnGatewayId("vpnGatewayId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcgatewayattachment.html)
+ */
 @CdkDslMarker
 public class CfnVPCGatewayAttachmentDsl(
   scope: Construct,

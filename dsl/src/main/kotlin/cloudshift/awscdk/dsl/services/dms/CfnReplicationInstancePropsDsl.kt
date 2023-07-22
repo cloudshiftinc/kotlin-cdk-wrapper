@@ -14,6 +14,40 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.dms.CfnReplicationInstanceProps
 
+/**
+ * Properties for defining a `CfnReplicationInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.dms.*;
+ * CfnReplicationInstanceProps cfnReplicationInstanceProps = CfnReplicationInstanceProps.builder()
+ * .replicationInstanceClass("replicationInstanceClass")
+ * // the properties below are optional
+ * .allocatedStorage(123)
+ * .allowMajorVersionUpgrade(false)
+ * .autoMinorVersionUpgrade(false)
+ * .availabilityZone("availabilityZone")
+ * .engineVersion("engineVersion")
+ * .kmsKeyId("kmsKeyId")
+ * .multiAz(false)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .publiclyAccessible(false)
+ * .replicationInstanceIdentifier("replicationInstanceIdentifier")
+ * .replicationSubnetGroupIdentifier("replicationSubnetGroupIdentifier")
+ * .resourceIdentifier("resourceIdentifier")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcSecurityGroupIds(List.of("vpcSecurityGroupIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html)
+ */
 @CdkDslMarker
 public class CfnReplicationInstancePropsDsl {
   private val cdkBuilder: CfnReplicationInstanceProps.Builder =

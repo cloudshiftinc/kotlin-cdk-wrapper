@@ -12,6 +12,32 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation
 import software.constructs.Construct
 
+/**
+ * An IPAM resource discovery association.
+ *
+ * An associated resource discovery is a resource discovery that has been associated with an IPAM.
+ * IPAM aggregates the resource CIDRs discovered by the associated resource discovery.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * CfnIPAMResourceDiscoveryAssociation cfnIPAMResourceDiscoveryAssociation =
+ * CfnIPAMResourceDiscoveryAssociation.Builder.create(this, "MyCfnIPAMResourceDiscoveryAssociation")
+ * .ipamId("ipamId")
+ * .ipamResourceDiscoveryId("ipamResourceDiscoveryId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-ipamresourcediscoveryassociation.html)
+ */
 @CdkDslMarker
 public class CfnIPAMResourceDiscoveryAssociationDsl(
   scope: Construct,

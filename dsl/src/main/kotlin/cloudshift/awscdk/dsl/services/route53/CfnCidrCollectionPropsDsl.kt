@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.route53.CfnCidrCollectionProps
 
+/**
+ * Properties for defining a `CfnCidrCollection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.route53.*;
+ * CfnCidrCollectionProps cfnCidrCollectionProps = CfnCidrCollectionProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .locations(List.of(LocationProperty.builder()
+ * .cidrList(List.of("cidrList"))
+ * .locationName("locationName")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html)
+ */
 @CdkDslMarker
 public class CfnCidrCollectionPropsDsl {
   private val cdkBuilder: CfnCidrCollectionProps.Builder = CfnCidrCollectionProps.builder()

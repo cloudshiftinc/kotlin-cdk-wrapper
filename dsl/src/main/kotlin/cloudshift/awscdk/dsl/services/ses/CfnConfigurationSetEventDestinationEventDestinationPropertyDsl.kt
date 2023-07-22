@@ -10,6 +10,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination
 
+/**
+ * Contains information about an event destination.
+ *
+ *
+ * When you create or update an event destination, you must provide one, and only one, destination.
+ * The destination can be Amazon CloudWatch, Amazon Kinesis Firehose or Amazon Simple Notification
+ * Service (Amazon SNS).
+ *
+ *
+ * Event destinations are associated with configuration sets, which enable you to publish email
+ * sending events to Amazon CloudWatch, Amazon Kinesis Firehose, or Amazon Simple Notification Service
+ * (Amazon SNS). For information about using configuration sets, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/monitor-sending-activity.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ses.*;
+ * EventDestinationProperty eventDestinationProperty = EventDestinationProperty.builder()
+ * .matchingEventTypes(List.of("matchingEventTypes"))
+ * // the properties below are optional
+ * .cloudWatchDestination(CloudWatchDestinationProperty.builder()
+ * .dimensionConfigurations(List.of(DimensionConfigurationProperty.builder()
+ * .defaultDimensionValue("defaultDimensionValue")
+ * .dimensionName("dimensionName")
+ * .dimensionValueSource("dimensionValueSource")
+ * .build()))
+ * .build())
+ * .enabled(false)
+ * .kinesisFirehoseDestination(KinesisFirehoseDestinationProperty.builder()
+ * .deliveryStreamArn("deliveryStreamArn")
+ * .iamRoleArn("iamRoleArn")
+ * .build())
+ * .name("name")
+ * .snsDestination(SnsDestinationProperty.builder()
+ * .topicArn("topicArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-eventdestination.html)
+ */
 @CdkDslMarker
 public class CfnConfigurationSetEventDestinationEventDestinationPropertyDsl {
   private val cdkBuilder: CfnConfigurationSetEventDestination.EventDestinationProperty.Builder =

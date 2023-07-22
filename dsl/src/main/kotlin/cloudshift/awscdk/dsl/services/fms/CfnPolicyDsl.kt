@@ -13,6 +13,83 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.fms.CfnPolicy
 import software.constructs.Construct
 
+/**
+ * An AWS Firewall Manager policy.
+ *
+ * Firewall Manager provides the following types of policies:
+ *
+ * * An AWS Shield Advanced policy, which applies Shield Advanced protection to specified accounts
+ * and resources.
+ * * An AWS WAF policy (type WAFV2), which defines rule groups to run first in the corresponding AWS
+ * WAF web ACL and rule groups to run last in the web ACL.
+ * * An AWS WAF Classic policy, which defines a rule group. AWS WAF Classic doesn't support rule
+ * groups in Amazon CloudFront , so, to create AWS WAF Classic policies through CloudFront , you first
+ * need to create your rule groups outside of CloudFront .
+ * * A security group policy, which manages VPC security groups across your AWS organization.
+ * * An AWS Network Firewall policy, which provides firewall rules to filter network traffic in
+ * specified Amazon VPCs.
+ * * A DNS Firewall policy, which provides Amazon Route 53 Resolver DNS Firewall rules to filter DNS
+ * queries for specified Amazon VPCs.
+ * * A third-party firewall policy, which manages a third-party firewall service such as the Palo
+ * Alto Networks Cloud Next-Generation Firewall.
+ *
+ * Each policy is specific to one of the types. If you want to enforce more than one policy type
+ * across accounts, create multiple policies. You can create multiple policies for each type.
+ *
+ * These policies require some setup to use. For more information, see the sections on prerequisites
+ * and getting started under [AWS Firewall
+ * Manager](https://docs.aws.amazon.com/waf/latest/developerguide/fms-prereq.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fms.*;
+ * CfnPolicy cfnPolicy = CfnPolicy.Builder.create(this, "MyCfnPolicy")
+ * .excludeResourceTags(false)
+ * .policyName("policyName")
+ * .remediationEnabled(false)
+ * .securityServicePolicyData(SecurityServicePolicyDataProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .managedServiceData("managedServiceData")
+ * .policyOption(PolicyOptionProperty.builder()
+ * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .thirdPartyFirewallPolicy(ThirdPartyFirewallPolicyProperty.builder()
+ * .firewallDeploymentModel("firewallDeploymentModel")
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .deleteAllPolicyResources(false)
+ * .excludeMap(Map.of(
+ * "account", List.of("account"),
+ * "orgunit", List.of("orgunit")))
+ * .includeMap(Map.of(
+ * "account", List.of("account"),
+ * "orgunit", List.of("orgunit")))
+ * .policyDescription("policyDescription")
+ * .resourcesCleanUp(false)
+ * .resourceSetIds(List.of("resourceSetIds"))
+ * .resourceTags(List.of(ResourceTagProperty.builder()
+ * .key("key")
+ * // the properties below are optional
+ * .value("value")
+ * .build()))
+ * .resourceType("resourceType")
+ * .resourceTypeList(List.of("resourceTypeList"))
+ * .tags(List.of(PolicyTagProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html)
+ */
 @CdkDslMarker
 public class CfnPolicyDsl(
   scope: Construct,

@@ -7,6 +7,32 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.ec2.CfnLaunchTemplate
 
+/**
+ * Specifies whether your instance is configured for hibernation.
+ *
+ * This parameter is valid only if the instance meets the [hibernation
+ * prerequisites](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html#hibernating-prerequisites)
+ * . For more information, see [Hibernate Your
+ * Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html) in the *Amazon EC2
+ * User Guide* .
+ *
+ * `HibernationOptions` is a property of [AWS::EC2::LaunchTemplate
+ * LaunchTemplateData](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * HibernationOptionsProperty hibernationOptionsProperty = HibernationOptionsProperty.builder()
+ * .configured(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-hibernationoptions.html)
+ */
 @CdkDslMarker
 public class CfnLaunchTemplateHibernationOptionsPropertyDsl {
   private val cdkBuilder: CfnLaunchTemplate.HibernationOptionsProperty.Builder =

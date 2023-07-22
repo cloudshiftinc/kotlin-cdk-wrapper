@@ -14,6 +14,48 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct
 import software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProductProps
 
+/**
+ * Properties for defining a `CfnCloudFormationProvisionedProduct`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicecatalog.*;
+ * CfnCloudFormationProvisionedProductProps cfnCloudFormationProvisionedProductProps =
+ * CfnCloudFormationProvisionedProductProps.builder()
+ * .acceptLanguage("acceptLanguage")
+ * .notificationArns(List.of("notificationArns"))
+ * .pathId("pathId")
+ * .pathName("pathName")
+ * .productId("productId")
+ * .productName("productName")
+ * .provisionedProductName("provisionedProductName")
+ * .provisioningArtifactId("provisioningArtifactId")
+ * .provisioningArtifactName("provisioningArtifactName")
+ * .provisioningParameters(List.of(ProvisioningParameterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .provisioningPreferences(ProvisioningPreferencesProperty.builder()
+ * .stackSetAccounts(List.of("stackSetAccounts"))
+ * .stackSetFailureToleranceCount(123)
+ * .stackSetFailureTolerancePercentage(123)
+ * .stackSetMaxConcurrencyCount(123)
+ * .stackSetMaxConcurrencyPercentage(123)
+ * .stackSetOperationType("stackSetOperationType")
+ * .stackSetRegions(List.of("stackSetRegions"))
+ * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-cloudformationprovisionedproduct.html)
+ */
 @CdkDslMarker
 public class CfnCloudFormationProvisionedProductPropsDsl {
   private val cdkBuilder: CfnCloudFormationProvisionedProductProps.Builder =

@@ -6,6 +6,30 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.lambda.CfnPermissionProps
 
+/**
+ * Properties for defining a `CfnPermission`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lambda.*;
+ * CfnPermissionProps cfnPermissionProps = CfnPermissionProps.builder()
+ * .action("action")
+ * .functionName("functionName")
+ * .principal("principal")
+ * // the properties below are optional
+ * .eventSourceToken("eventSourceToken")
+ * .functionUrlAuthType("functionUrlAuthType")
+ * .principalOrgId("principalOrgId")
+ * .sourceAccount("sourceAccount")
+ * .sourceArn("sourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html)
+ */
 @CdkDslMarker
 public class CfnPermissionPropsDsl {
   private val cdkBuilder: CfnPermissionProps.Builder = CfnPermissionProps.builder()

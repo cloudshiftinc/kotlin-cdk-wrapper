@@ -7,6 +7,22 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnTheme
 
+/**
+ * The display options for gutter spacing between tiles on a sheet.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * GutterStyleProperty gutterStyleProperty = GutterStyleProperty.builder()
+ * .show(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-gutterstyle.html)
+ */
 @CdkDslMarker
 public class CfnThemeGutterStylePropertyDsl {
   private val cdkBuilder: CfnTheme.GutterStyleProperty.Builder =

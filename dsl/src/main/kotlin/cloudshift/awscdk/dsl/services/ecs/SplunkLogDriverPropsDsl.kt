@@ -12,6 +12,27 @@ import software.amazon.awscdk.services.ecs.Secret
 import software.amazon.awscdk.services.ecs.SplunkLogDriverProps
 import software.amazon.awscdk.services.ecs.SplunkLogFormat
 
+/**
+ * Specifies the splunk log driver configuration options.
+ *
+ * [Source](https://docs.docker.com/config/containers/logging/splunk/)
+ *
+ * Example:
+ *
+ * ```
+ * Secret secret;
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.splunk(SplunkLogDriverProps.builder()
+ * .secretToken(secret)
+ * .url("my-splunk-url")
+ * .build()))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class SplunkLogDriverPropsDsl {
   private val cdkBuilder: SplunkLogDriverProps.Builder = SplunkLogDriverProps.builder()

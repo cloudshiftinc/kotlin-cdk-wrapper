@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.backup.LockConfiguration
 
+/**
+ * Configuration for AWS Backup Vault Lock.
+ *
+ * Example:
+ *
+ * ```
+ * BackupVault.Builder.create(this, "Vault")
+ * .lockConfiguration(LockConfiguration.builder()
+ * .minRetention(Duration.days(30))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html)
+ */
 @CdkDslMarker
 public class LockConfigurationDsl {
   private val cdkBuilder: LockConfiguration.Builder = LockConfiguration.builder()

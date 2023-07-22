@@ -19,6 +19,51 @@ import software.amazon.awscdk.services.cloudfront.ViewerCertificate
 import software.amazon.awscdk.services.cloudfront.ViewerProtocolPolicy
 import software.constructs.Construct
 
+/**
+ * Amazon CloudFront is a global content delivery network (CDN) service that securely delivers data,
+ * videos, applications, and APIs to your viewers with low latency and high transfer speeds.
+ *
+ * CloudFront fronts user provided content and caches it at edge locations across the world.
+ *
+ * Here's how you can use this construct:
+ *
+ * ```
+ * Bucket sourceBucket = new Bucket(this, "Bucket");
+ * CloudFrontWebDistribution distribution = CloudFrontWebDistribution.Builder.create(this,
+ * "MyDistribution")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(sourceBucket)
+ * .build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * This will create a CloudFront distribution that uses your S3Bucket as it's origin.
+ *
+ * You can customize the distribution using additional properties from the
+ * CloudFrontWebDistributionProps interface.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket sourceBucket;
+ * ViewerCertificate viewerCertificate = ViewerCertificate.fromIamCertificate("MYIAMROLEIDENTIFIER",
+ * ViewerCertificateOptions.builder()
+ * .aliases(List.of("MYALIAS"))
+ * .build());
+ * CloudFrontWebDistribution.Builder.create(this, "MyCfWebDistribution")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder()
+ * .s3BucketSource(sourceBucket)
+ * .build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build()))
+ * .viewerCertificate(viewerCertificate)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CloudFrontWebDistributionDsl(
   scope: Construct,

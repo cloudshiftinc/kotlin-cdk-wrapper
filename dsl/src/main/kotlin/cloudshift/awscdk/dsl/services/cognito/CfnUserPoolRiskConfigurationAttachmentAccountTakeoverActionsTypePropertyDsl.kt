@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment
 
+/**
+ * Account takeover actions type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cognito.*;
+ * AccountTakeoverActionsTypeProperty accountTakeoverActionsTypeProperty =
+ * AccountTakeoverActionsTypeProperty.builder()
+ * .highAction(AccountTakeoverActionTypeProperty.builder()
+ * .eventAction("eventAction")
+ * .notify(false)
+ * .build())
+ * .lowAction(AccountTakeoverActionTypeProperty.builder()
+ * .eventAction("eventAction")
+ * .notify(false)
+ * .build())
+ * .mediumAction(AccountTakeoverActionTypeProperty.builder()
+ * .eventAction("eventAction")
+ * .notify(false)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolriskconfigurationattachment-accounttakeoveractionstype.html)
+ */
 @CdkDslMarker
 public class CfnUserPoolRiskConfigurationAttachmentAccountTakeoverActionsTypePropertyDsl {
   private val cdkBuilder:

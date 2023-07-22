@@ -6,6 +6,21 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps
 import software.amazon.awscdk.services.codepipeline.actions.StackSetOrganizationsAutoDeployment
 
+/**
+ * Properties for configuring service-managed (Organizations) permissions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codepipeline.actions.*;
+ * OrganizationsDeploymentProps organizationsDeploymentProps =
+ * OrganizationsDeploymentProps.builder()
+ * .autoDeployment(StackSetOrganizationsAutoDeployment.ENABLED)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class OrganizationsDeploymentPropsDsl {
   private val cdkBuilder: OrganizationsDeploymentProps.Builder =

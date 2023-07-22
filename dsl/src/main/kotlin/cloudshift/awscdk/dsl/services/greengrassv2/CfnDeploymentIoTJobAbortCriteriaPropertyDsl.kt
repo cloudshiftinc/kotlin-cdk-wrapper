@@ -7,6 +7,30 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.greengrassv2.CfnDeployment
 
+/**
+ * Contains criteria that define when and how to cancel a job.
+ *
+ * The deployment stops if the following conditions are true:
+ *
+ * * The number of things that receive the deployment exceeds the `minNumberOfExecutedThings` .
+ * * The percentage of failures with type `failureType` exceeds the `thresholdPercentage` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.greengrassv2.*;
+ * IoTJobAbortCriteriaProperty ioTJobAbortCriteriaProperty = IoTJobAbortCriteriaProperty.builder()
+ * .action("action")
+ * .failureType("failureType")
+ * .minNumberOfExecutedThings(123)
+ * .thresholdPercentage(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrassv2-deployment-iotjobabortcriteria.html)
+ */
 @CdkDslMarker
 public class CfnDeploymentIoTJobAbortCriteriaPropertyDsl {
   private val cdkBuilder: CfnDeployment.IoTJobAbortCriteriaProperty.Builder =

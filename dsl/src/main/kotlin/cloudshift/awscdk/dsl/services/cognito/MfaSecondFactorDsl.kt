@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import software.amazon.awscdk.services.cognito.MfaSecondFactor
 
+/**
+ * The different ways in which a user pool can obtain their MFA token for sign in.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .mfa(Mfa.REQUIRED)
+ * .mfaSecondFactor(MfaSecondFactor.builder()
+ * .sms(true)
+ * .otp(true)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-mfa.html)
+ */
 @CdkDslMarker
 public class MfaSecondFactorDsl {
   private val cdkBuilder: MfaSecondFactor.Builder = MfaSecondFactor.builder()

@@ -10,6 +10,52 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * A reference to an object that represents a Transport Layer Security (TLS) client policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * ClientPolicyTlsProperty clientPolicyTlsProperty = ClientPolicyTlsProperty.builder()
+ * .validation(TlsValidationContextProperty.builder()
+ * .trust(TlsValidationContextTrustProperty.builder()
+ * .acm(TlsValidationContextAcmTrustProperty.builder()
+ * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+ * .build())
+ * .file(TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .subjectAlternativeNames(SubjectAlternativeNamesProperty.builder()
+ * .match(SubjectAlternativeNameMatchersProperty.builder()
+ * .exact(List.of("exact"))
+ * .build())
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .certificate(ClientTlsCertificateProperty.builder()
+ * .file(ListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(ListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * .enforce(false)
+ * .ports(List.of(123))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-clientpolicytls.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeClientPolicyTlsPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.ClientPolicyTlsProperty.Builder =

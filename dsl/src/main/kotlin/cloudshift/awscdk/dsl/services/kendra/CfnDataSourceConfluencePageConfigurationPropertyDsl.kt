@@ -9,6 +9,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.kendra.CfnDataSource
 
+/**
+ * Configuration of the page settings for the Confluence data source.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.kendra.*;
+ * ConfluencePageConfigurationProperty confluencePageConfigurationProperty =
+ * ConfluencePageConfigurationProperty.builder()
+ * .pageFieldMappings(List.of(ConfluencePageToIndexFieldMappingProperty.builder()
+ * .dataSourceFieldName("dataSourceFieldName")
+ * .indexFieldName("indexFieldName")
+ * // the properties below are optional
+ * .dateFieldFormat("dateFieldFormat")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-confluencepageconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnDataSourceConfluencePageConfigurationPropertyDsl {
   private val cdkBuilder: CfnDataSource.ConfluencePageConfigurationProperty.Builder =

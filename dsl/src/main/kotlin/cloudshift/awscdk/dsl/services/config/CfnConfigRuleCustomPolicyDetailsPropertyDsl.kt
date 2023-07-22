@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnConfigRule
 
+/**
+ * Provides the runtime system, policy definition, and whether debug logging enabled.
+ *
+ * You can specify the following CustomPolicyDetails parameter values only for AWS Config Custom
+ * Policy rules.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CustomPolicyDetailsProperty customPolicyDetailsProperty = CustomPolicyDetailsProperty.builder()
+ * .enableDebugLogDelivery(false)
+ * .policyRuntime("policyRuntime")
+ * .policyText("policyText")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configrule-custompolicydetails.html)
+ */
 @CdkDslMarker
 public class CfnConfigRuleCustomPolicyDetailsPropertyDsl {
   private val cdkBuilder: CfnConfigRule.CustomPolicyDetailsProperty.Builder =

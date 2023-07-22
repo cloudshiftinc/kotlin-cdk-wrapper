@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.appmesh.CfnVirtualNode
 
+/**
+ * An object that represents a type of connection pool.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.appmesh.*;
+ * VirtualNodeHttpConnectionPoolProperty virtualNodeHttpConnectionPoolProperty =
+ * VirtualNodeHttpConnectionPoolProperty.builder()
+ * .maxConnections(123)
+ * // the properties below are optional
+ * .maxPendingRequests(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualnode-virtualnodehttpconnectionpool.html)
+ */
 @CdkDslMarker
 public class CfnVirtualNodeVirtualNodeHttpConnectionPoolPropertyDsl {
   private val cdkBuilder: CfnVirtualNode.VirtualNodeHttpConnectionPoolProperty.Builder =

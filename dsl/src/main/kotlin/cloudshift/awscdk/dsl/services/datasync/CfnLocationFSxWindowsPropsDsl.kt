@@ -11,6 +11,32 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.datasync.CfnLocationFSxWindowsProps
 
+/**
+ * Properties for defining a `CfnLocationFSxWindows`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.datasync.*;
+ * CfnLocationFSxWindowsProps cfnLocationFSxWindowsProps = CfnLocationFSxWindowsProps.builder()
+ * .securityGroupArns(List.of("securityGroupArns"))
+ * .user("user")
+ * // the properties below are optional
+ * .domain("domain")
+ * .fsxFilesystemArn("fsxFilesystemArn")
+ * .password("password")
+ * .subdirectory("subdirectory")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-locationfsxwindows.html)
+ */
 @CdkDslMarker
 public class CfnLocationFSxWindowsPropsDsl {
   private val cdkBuilder: CfnLocationFSxWindowsProps.Builder = CfnLocationFSxWindowsProps.builder()

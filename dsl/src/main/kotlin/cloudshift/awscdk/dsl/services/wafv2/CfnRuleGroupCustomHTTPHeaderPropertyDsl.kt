@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.wafv2.CfnRuleGroup
 
+/**
+ * A custom header for custom request and response handling.
+ *
+ * This is used in `CustomResponse` and `CustomRequestHandling`
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.wafv2.*;
+ * CustomHTTPHeaderProperty customHTTPHeaderProperty = CustomHTTPHeaderProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-rulegroup-customhttpheader.html)
+ */
 @CdkDslMarker
 public class CfnRuleGroupCustomHTTPHeaderPropertyDsl {
   private val cdkBuilder: CfnRuleGroup.CustomHTTPHeaderProperty.Builder =

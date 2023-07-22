@@ -8,6 +8,27 @@ import kotlin.String
 import software.amazon.awscdk.services.ecs.LoadBalancerTargetOptions
 import software.amazon.awscdk.services.ecs.Protocol
 
+/**
+ * Properties for defining an ECS target.
+ *
+ * The port mapping for it must already have been created through addPortMapping().
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * Ec2Service service = Ec2Service.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * LoadBalancer lb = LoadBalancer.Builder.create(this, "LB").vpc(vpc).build();
+ * lb.addListener(LoadBalancerListener.builder().externalPort(80).build());
+ * lb.addTarget(service.loadBalancerTarget(LoadBalancerTargetOptions.builder()
+ * .containerName("MyContainer")
+ * .containerPort(80)
+ * .build()));
+ * ```
+ */
 @CdkDslMarker
 public class LoadBalancerTargetOptionsDsl {
   private val cdkBuilder: LoadBalancerTargetOptions.Builder = LoadBalancerTargetOptions.builder()

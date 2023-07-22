@@ -12,6 +12,21 @@ import software.amazon.awscdk.services.logs.ILogGroup
 import software.amazon.awscdk.services.logs.MetricFilter
 import software.constructs.Construct
 
+/**
+ * A filter that extracts information from CloudWatch Logs and emits to CloudWatch Metrics.
+ *
+ * Example:
+ *
+ * ```
+ * MetricFilter.Builder.create(this, "MetricFilter")
+ * .logGroup(logGroup)
+ * .metricNamespace("MyApp")
+ * .metricName("Latency")
+ * .filterPattern(FilterPattern.exists("$.latency"))
+ * .metricValue("$.latency")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class MetricFilterDsl(
   scope: Construct,

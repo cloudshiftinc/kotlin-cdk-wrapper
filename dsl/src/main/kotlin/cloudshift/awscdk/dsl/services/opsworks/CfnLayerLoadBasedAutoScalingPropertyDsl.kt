@@ -7,6 +7,39 @@ import kotlin.Boolean
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.opsworks.CfnLayer
 
+/**
+ * Describes a layer's load-based auto scaling configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opsworks.*;
+ * LoadBasedAutoScalingProperty loadBasedAutoScalingProperty =
+ * LoadBasedAutoScalingProperty.builder()
+ * .downScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .enable(false)
+ * .upScaling(AutoScalingThresholdsProperty.builder()
+ * .cpuThreshold(123)
+ * .ignoreMetricsTime(123)
+ * .instanceCount(123)
+ * .loadThreshold(123)
+ * .memoryThreshold(123)
+ * .thresholdsWaitTime(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html)
+ */
 @CdkDslMarker
 public class CfnLayerLoadBasedAutoScalingPropertyDsl {
   private val cdkBuilder: CfnLayer.LoadBasedAutoScalingProperty.Builder =

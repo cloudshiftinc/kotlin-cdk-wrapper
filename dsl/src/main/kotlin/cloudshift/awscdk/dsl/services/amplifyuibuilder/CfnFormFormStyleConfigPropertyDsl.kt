@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.amplifyuibuilder.CfnForm
 
+/**
+ * The `FormStyleConfig` property specifies the configuration settings for the form's style
+ * properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplifyuibuilder.*;
+ * FormStyleConfigProperty formStyleConfigProperty = FormStyleConfigProperty.builder()
+ * .tokenReference("tokenReference")
+ * .value("value")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplifyuibuilder-form-formstyleconfig.html)
+ */
 @CdkDslMarker
 public class CfnFormFormStyleConfigPropertyDsl {
   private val cdkBuilder: CfnForm.FormStyleConfigProperty.Builder =

@@ -8,6 +8,28 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.location.CfnMap
 import software.amazon.awscdk.services.location.CfnMapProps
 
+/**
+ * Properties for defining a `CfnMap`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.location.*;
+ * CfnMapProps cfnMapProps = CfnMapProps.builder()
+ * .configuration(MapConfigurationProperty.builder()
+ * .style("style")
+ * .build())
+ * .mapName("mapName")
+ * // the properties below are optional
+ * .description("description")
+ * .pricingPlan("pricingPlan")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-map.html)
+ */
 @CdkDslMarker
 public class CfnMapPropsDsl {
   private val cdkBuilder: CfnMapProps.Builder = CfnMapProps.builder()

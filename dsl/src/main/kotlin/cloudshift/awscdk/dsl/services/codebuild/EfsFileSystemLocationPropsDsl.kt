@@ -6,6 +6,24 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.codebuild.EfsFileSystemLocationProps
 
+/**
+ * Construction properties for `EfsFileSystemLocation`.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * .fileSystemLocations(List.of(FileSystemLocation.efs(EfsFileSystemLocationProps.builder()
+ * .identifier("myidentifier2")
+ * .location("myclodation.mydnsroot.com:/loc")
+ * .mountPoint("/media")
+ * .mountOptions("opts")
+ * .build())))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class EfsFileSystemLocationPropsDsl {
   private val cdkBuilder: EfsFileSystemLocationProps.Builder = EfsFileSystemLocationProps.builder()

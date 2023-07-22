@@ -7,6 +7,24 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.CfnWaitConditionProps
 
+/**
+ * Properties for defining a `CfnWaitCondition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnWaitConditionProps cfnWaitConditionProps = CfnWaitConditionProps.builder()
+ * .count(123)
+ * .handle("handle")
+ * .timeout("timeout")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitcondition.html)
+ */
 @CdkDslMarker
 public class CfnWaitConditionPropsDsl {
   private val cdkBuilder: CfnWaitConditionProps.Builder = CfnWaitConditionProps.builder()

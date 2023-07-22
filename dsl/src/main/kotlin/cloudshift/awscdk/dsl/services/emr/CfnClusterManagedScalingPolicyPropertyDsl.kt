@@ -6,6 +6,34 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.emr.CfnCluster
 
+/**
+ * Managed scaling policy for an Amazon EMR cluster.
+ *
+ * The policy specifies the limits for resources that can be added or terminated from a cluster. The
+ * policy only applies to the core and task nodes. The master node cannot be scaled after initial
+ * configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.emr.*;
+ * ManagedScalingPolicyProperty managedScalingPolicyProperty =
+ * ManagedScalingPolicyProperty.builder()
+ * .computeLimits(ComputeLimitsProperty.builder()
+ * .maximumCapacityUnits(123)
+ * .minimumCapacityUnits(123)
+ * .unitType("unitType")
+ * // the properties below are optional
+ * .maximumCoreCapacityUnits(123)
+ * .maximumOnDemandCapacityUnits(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-managedscalingpolicy.html)
+ */
 @CdkDslMarker
 public class CfnClusterManagedScalingPolicyPropertyDsl {
   private val cdkBuilder: CfnCluster.ManagedScalingPolicyProperty.Builder =

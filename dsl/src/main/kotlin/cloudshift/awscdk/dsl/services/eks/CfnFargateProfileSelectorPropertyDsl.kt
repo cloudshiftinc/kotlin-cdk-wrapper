@@ -10,6 +10,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.eks.CfnFargateProfile
 
+/**
+ * An object representing an AWS Fargate profile selector.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.eks.*;
+ * SelectorProperty selectorProperty = SelectorProperty.builder()
+ * .namespace("namespace")
+ * // the properties below are optional
+ * .labels(List.of(LabelProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-fargateprofile-selector.html)
+ */
 @CdkDslMarker
 public class CfnFargateProfileSelectorPropertyDsl {
   private val cdkBuilder: CfnFargateProfile.SelectorProperty.Builder =

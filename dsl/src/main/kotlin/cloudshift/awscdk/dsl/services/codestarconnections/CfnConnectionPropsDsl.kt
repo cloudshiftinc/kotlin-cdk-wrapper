@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.codestarconnections.CfnConnectionProps
 
+/**
+ * Properties for defining a `CfnConnection`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.codestarconnections.*;
+ * CfnConnectionProps cfnConnectionProps = CfnConnectionProps.builder()
+ * .connectionName("connectionName")
+ * // the properties below are optional
+ * .hostArn("hostArn")
+ * .providerType("providerType")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-connection.html)
+ */
 @CdkDslMarker
 public class CfnConnectionPropsDsl {
   private val cdkBuilder: CfnConnectionProps.Builder = CfnConnectionProps.builder()

@@ -12,6 +12,29 @@ import software.amazon.awscdk.services.backup.BackupSelectionProps
 import software.amazon.awscdk.services.backup.IBackupPlan
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Properties for a BackupSelection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.backup.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * BackupPlan backupPlan;
+ * BackupResource backupResource;
+ * Role role;
+ * BackupSelectionProps backupSelectionProps = BackupSelectionProps.builder()
+ * .backupPlan(backupPlan)
+ * .resources(List.of(backupResource))
+ * // the properties below are optional
+ * .allowRestores(false)
+ * .backupSelectionName("backupSelectionName")
+ * .role(role)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class BackupSelectionPropsDsl {
   private val cdkBuilder: BackupSelectionProps.Builder = BackupSelectionProps.builder()

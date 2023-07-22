@@ -13,6 +13,55 @@ import software.amazon.awscdk.services.ecs.ProxyConfiguration
 import software.amazon.awscdk.services.ecs.Volume
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * The properties for a task definition run on an External cluster.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * ProxyConfiguration proxyConfiguration;
+ * Role role;
+ * ExternalTaskDefinitionProps externalTaskDefinitionProps = ExternalTaskDefinitionProps.builder()
+ * .executionRole(role)
+ * .family("family")
+ * .networkMode(NetworkMode.NONE)
+ * .proxyConfiguration(proxyConfiguration)
+ * .taskRole(role)
+ * .volumes(List.of(Volume.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .dockerVolumeConfiguration(DockerVolumeConfiguration.builder()
+ * .driver("driver")
+ * .scope(Scope.TASK)
+ * // the properties below are optional
+ * .autoprovision(false)
+ * .driverOpts(Map.of(
+ * "driverOptsKey", "driverOpts"))
+ * .labels(Map.of(
+ * "labelsKey", "labels"))
+ * .build())
+ * .efsVolumeConfiguration(EfsVolumeConfiguration.builder()
+ * .fileSystemId("fileSystemId")
+ * // the properties below are optional
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .accessPointId("accessPointId")
+ * .iam("iam")
+ * .build())
+ * .rootDirectory("rootDirectory")
+ * .transitEncryption("transitEncryption")
+ * .transitEncryptionPort(123)
+ * .build())
+ * .host(Host.builder()
+ * .sourcePath("sourcePath")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ExternalTaskDefinitionPropsDsl {
   private val cdkBuilder: ExternalTaskDefinitionProps.Builder =

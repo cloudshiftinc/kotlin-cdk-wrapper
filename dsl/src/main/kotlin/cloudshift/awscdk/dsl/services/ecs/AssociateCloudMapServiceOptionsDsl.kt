@@ -8,6 +8,19 @@ import software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions
 import software.amazon.awscdk.services.ecs.ContainerDefinition
 import software.amazon.awscdk.services.servicediscovery.IService
 
+/**
+ * The options for using a cloudmap service.
+ *
+ * Example:
+ *
+ * ```
+ * Service cloudMapService;
+ * FargateService ecsService;
+ * ecsService.associateCloudMapService(AssociateCloudMapServiceOptions.builder()
+ * .service(cloudMapService)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class AssociateCloudMapServiceOptionsDsl {
   private val cdkBuilder: AssociateCloudMapServiceOptions.Builder =

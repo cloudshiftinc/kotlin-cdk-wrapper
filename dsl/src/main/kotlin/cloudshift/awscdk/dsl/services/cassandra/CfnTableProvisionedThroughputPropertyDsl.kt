@@ -6,6 +6,25 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.cassandra.CfnTable
 
+/**
+ * The provisioned throughput for the table, which consists of `ReadCapacityUnits` and
+ * `WriteCapacityUnits` .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cassandra.*;
+ * ProvisionedThroughputProperty provisionedThroughputProperty =
+ * ProvisionedThroughputProperty.builder()
+ * .readCapacityUnits(123)
+ * .writeCapacityUnits(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cassandra-table-provisionedthroughput.html)
+ */
 @CdkDslMarker
 public class CfnTableProvisionedThroughputPropertyDsl {
   private val cdkBuilder: CfnTable.ProvisionedThroughputProperty.Builder =

@@ -9,6 +9,23 @@ import kotlin.String
 import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.dynamodb.UtilizationScalingProps
 
+/**
+ * Properties for enabling DynamoDB utilization tracking.
+ *
+ * Example:
+ *
+ * ```
+ * Table globalTable = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
+ * .replicationRegions(List.of("us-east-1", "us-east-2", "us-west-2"))
+ * .billingMode(BillingMode.PROVISIONED)
+ * .build();
+ * globalTable.autoScaleWriteCapacity(EnableScalingProps.builder()
+ * .minCapacity(1)
+ * .maxCapacity(10)
+ * .build()).scaleOnUtilization(UtilizationScalingProps.builder().targetUtilizationPercent(75).build());
+ * ```
+ */
 @CdkDslMarker
 public class UtilizationScalingPropsDsl {
   private val cdkBuilder: UtilizationScalingProps.Builder = UtilizationScalingProps.builder()

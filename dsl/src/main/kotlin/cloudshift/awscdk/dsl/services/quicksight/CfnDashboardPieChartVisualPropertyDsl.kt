@@ -10,6 +10,31 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A pie or donut chart.
+ *
+ * The `PieChartVisual` structure describes a visual that is a member of the pie chart family.
+ *
+ * The following charts can be described by using this structure:
+ *
+ * * Pie charts
+ * * Donut charts
+ *
+ * For more information, see [Using pie
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/pie-chart.html) in the *Amazon QuickSight
+ * User Guide* .
+ *
+ * For more information, see [Using donut
+ * charts](https://docs.aws.amazon.com/quicksight/latest/user/donut-chart.html) in the *Amazon
+ * QuickSight User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-piechartvisual.html)
+ */
 @CdkDslMarker
 public class CfnDashboardPieChartVisualPropertyDsl {
   private val cdkBuilder: CfnDashboard.PieChartVisualProperty.Builder =

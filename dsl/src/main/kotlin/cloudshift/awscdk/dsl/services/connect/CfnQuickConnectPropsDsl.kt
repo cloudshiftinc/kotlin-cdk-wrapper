@@ -13,6 +13,44 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.connect.CfnQuickConnect
 import software.amazon.awscdk.services.connect.CfnQuickConnectProps
 
+/**
+ * Properties for defining a `CfnQuickConnect`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.connect.*;
+ * CfnQuickConnectProps cfnQuickConnectProps = CfnQuickConnectProps.builder()
+ * .instanceArn("instanceArn")
+ * .name("name")
+ * .quickConnectConfig(QuickConnectConfigProperty.builder()
+ * .quickConnectType("quickConnectType")
+ * // the properties below are optional
+ * .phoneConfig(PhoneNumberQuickConnectConfigProperty.builder()
+ * .phoneNumber("phoneNumber")
+ * .build())
+ * .queueConfig(QueueQuickConnectConfigProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .queueArn("queueArn")
+ * .build())
+ * .userConfig(UserQuickConnectConfigProperty.builder()
+ * .contactFlowArn("contactFlowArn")
+ * .userArn("userArn")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-quickconnect.html)
+ */
 @CdkDslMarker
 public class CfnQuickConnectPropsDsl {
   private val cdkBuilder: CfnQuickConnectProps.Builder = CfnQuickConnectProps.builder()

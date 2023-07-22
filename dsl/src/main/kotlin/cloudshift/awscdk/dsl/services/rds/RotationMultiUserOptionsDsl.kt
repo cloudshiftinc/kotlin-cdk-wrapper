@@ -14,6 +14,19 @@ import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.rds.RotationMultiUserOptions
 import software.amazon.awscdk.services.secretsmanager.ISecret
 
+/**
+ * Options to add the multi user rotation.
+ *
+ * Example:
+ *
+ * ```
+ * DatabaseInstance instance;
+ * DatabaseSecret myImportedSecret;
+ * instance.addRotationMultiUser("MyUser", RotationMultiUserOptions.builder()
+ * .secret(myImportedSecret)
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class RotationMultiUserOptionsDsl {
   private val cdkBuilder: RotationMultiUserOptions.Builder = RotationMultiUserOptions.builder()

@@ -12,6 +12,20 @@ import software.amazon.awscdk.services.sns.SubscriptionProtocol
 import software.amazon.awscdk.services.sns.subscriptions.UrlSubscription
 import software.amazon.awscdk.services.sqs.IQueue
 
+/**
+ * Use a URL as a subscription target.
+ *
+ * The message will be POSTed to the given URL.
+ *
+ * Example:
+ *
+ * ```
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * myTopic.addSubscription(new UrlSubscription("https://foobar.com/"));
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-http-https-endpoint-as-subscriber.html)
+ */
 @CdkDslMarker
 public class UrlSubscriptionDsl(
   url: String,

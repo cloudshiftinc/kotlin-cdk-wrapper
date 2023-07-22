@@ -11,6 +11,17 @@ import software.amazon.awscdk.Duration
 import software.amazon.awscdk.services.ecr.LifecycleRule
 import software.amazon.awscdk.services.ecr.TagStatus
 
+/**
+ * An ECR life cycle rule.
+ *
+ * Example:
+ *
+ * ```
+ * Repository repository;
+ * repository.addLifecycleRule(LifecycleRule.builder().tagPrefixList(List.of("prod")).maxImageCount(9999).build());
+ * repository.addLifecycleRule(LifecycleRule.builder().maxImageAge(Duration.days(30)).build());
+ * ```
+ */
 @CdkDslMarker
 public class LifecycleRuleDsl {
   private val cdkBuilder: LifecycleRule.Builder = LifecycleRule.builder()

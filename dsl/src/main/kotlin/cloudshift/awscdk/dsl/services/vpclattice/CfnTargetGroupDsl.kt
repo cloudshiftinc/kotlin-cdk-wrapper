@@ -14,6 +14,62 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.vpclattice.CfnTargetGroup
 import software.constructs.Construct
 
+/**
+ * Creates a target group.
+ *
+ * A target group is a collection of targets, or compute resources, that run your application or
+ * service. A target group can only be used by a single service.
+ *
+ * For more information, see [Target
+ * groups](https://docs.aws.amazon.com/vpc-lattice/latest/ug/target-groups.html) in the *Amazon VPC
+ * Lattice User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.vpclattice.*;
+ * CfnTargetGroup cfnTargetGroup = CfnTargetGroup.Builder.create(this, "MyCfnTargetGroup")
+ * .type("type")
+ * // the properties below are optional
+ * .config(TargetGroupConfigProperty.builder()
+ * .port(123)
+ * .protocol("protocol")
+ * .vpcIdentifier("vpcIdentifier")
+ * // the properties below are optional
+ * .healthCheck(HealthCheckConfigProperty.builder()
+ * .enabled(false)
+ * .healthCheckIntervalSeconds(123)
+ * .healthCheckTimeoutSeconds(123)
+ * .healthyThresholdCount(123)
+ * .matcher(MatcherProperty.builder()
+ * .httpCode("httpCode")
+ * .build())
+ * .path("path")
+ * .port(123)
+ * .protocol("protocol")
+ * .protocolVersion("protocolVersion")
+ * .unhealthyThresholdCount(123)
+ * .build())
+ * .ipAddressType("ipAddressType")
+ * .protocolVersion("protocolVersion")
+ * .build())
+ * .name("name")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .targets(List.of(TargetProperty.builder()
+ * .id("id")
+ * // the properties below are optional
+ * .port(123)
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-targetgroup.html)
+ */
 @CdkDslMarker
 public class CfnTargetGroupDsl(
   scope: Construct,

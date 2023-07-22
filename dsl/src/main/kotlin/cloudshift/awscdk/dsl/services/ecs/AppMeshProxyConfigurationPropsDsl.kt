@@ -9,6 +9,28 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps
 
+/**
+ * Interface for setting the properties of proxy configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ecs.*;
+ * AppMeshProxyConfigurationProps appMeshProxyConfigurationProps =
+ * AppMeshProxyConfigurationProps.builder()
+ * .appPorts(List.of(123))
+ * .proxyEgressPort(123)
+ * .proxyIngressPort(123)
+ * // the properties below are optional
+ * .egressIgnoredIPs(List.of("egressIgnoredIPs"))
+ * .egressIgnoredPorts(List.of(123))
+ * .ignoredGID(123)
+ * .ignoredUID(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AppMeshProxyConfigurationPropsDsl {
   private val cdkBuilder: AppMeshProxyConfigurationProps.Builder =

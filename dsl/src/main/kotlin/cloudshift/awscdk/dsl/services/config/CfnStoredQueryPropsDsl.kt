@@ -11,6 +11,29 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.config.CfnStoredQueryProps
 
+/**
+ * Properties for defining a `CfnStoredQuery`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * CfnStoredQueryProps cfnStoredQueryProps = CfnStoredQueryProps.builder()
+ * .queryExpression("queryExpression")
+ * .queryName("queryName")
+ * // the properties below are optional
+ * .queryDescription("queryDescription")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-storedquery.html)
+ */
 @CdkDslMarker
 public class CfnStoredQueryPropsDsl {
   private val cdkBuilder: CfnStoredQueryProps.Builder = CfnStoredQueryProps.builder()

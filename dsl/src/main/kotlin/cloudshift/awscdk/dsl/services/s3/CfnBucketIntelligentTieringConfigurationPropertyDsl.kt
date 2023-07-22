@@ -10,6 +10,39 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.s3.CfnBucket
 
+/**
+ * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
+ *
+ * For information about the S3 Intelligent-Tiering storage class, see [Storage class for
+ * automatically optimizing frequently and infrequently accessed
+ * objects](https://docs.aws.amazon.com/AmazonS3/latest/dev/storage-class-intro.html#sc-dynamic-data-access)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.s3.*;
+ * IntelligentTieringConfigurationProperty intelligentTieringConfigurationProperty =
+ * IntelligentTieringConfigurationProperty.builder()
+ * .id("id")
+ * .status("status")
+ * .tierings(List.of(TieringProperty.builder()
+ * .accessTier("accessTier")
+ * .days(123)
+ * .build()))
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .tagFilters(List.of(TagFilterProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-intelligenttieringconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnBucketIntelligentTieringConfigurationPropertyDsl {
   private val cdkBuilder: CfnBucket.IntelligentTieringConfigurationProperty.Builder =

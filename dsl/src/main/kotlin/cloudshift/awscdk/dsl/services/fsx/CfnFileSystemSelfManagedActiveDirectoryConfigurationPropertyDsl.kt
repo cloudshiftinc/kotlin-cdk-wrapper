@@ -8,6 +8,34 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.fsx.CfnFileSystem
 
+/**
+ * The configuration that Amazon FSx uses to join a FSx for Windows File Server file system or an
+ * FSx for ONTAP storage virtual machine (SVM) to a self-managed (including on-premises) Microsoft
+ * Active Directory (AD) directory.
+ *
+ * For more information, see [Using Amazon FSx for Windows with your self-managed Microsoft Active
+ * Directory](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/self-managed-AD.html) or [Managing
+ * FSx for ONTAP SVMs](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.fsx.*;
+ * SelfManagedActiveDirectoryConfigurationProperty selfManagedActiveDirectoryConfigurationProperty =
+ * SelfManagedActiveDirectoryConfigurationProperty.builder()
+ * .dnsIps(List.of("dnsIps"))
+ * .domainName("domainName")
+ * .fileSystemAdministratorsGroup("fileSystemAdministratorsGroup")
+ * .organizationalUnitDistinguishedName("organizationalUnitDistinguishedName")
+ * .password("password")
+ * .userName("userName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-selfmanagedactivedirectoryconfiguration.html)
+ */
 @CdkDslMarker
 public class CfnFileSystemSelfManagedActiveDirectoryConfigurationPropertyDsl {
   private val cdkBuilder: CfnFileSystem.SelfManagedActiveDirectoryConfigurationProperty.Builder =

@@ -16,6 +16,26 @@ import software.amazon.awscdk.services.config.RuleScope
 import software.amazon.awscdk.services.sns.ITopic
 import software.constructs.Construct
 
+/**
+ * Checks whether your CloudFormation stacks are sending event notifications to a SNS topic.
+ *
+ * Optionally checks whether specified SNS topics are used.
+ *
+ * Example:
+ *
+ * ```
+ * // topics to which CloudFormation stacks may send event notifications
+ * Topic topic1 = new Topic(this, "AllowedTopic1");
+ * Topic topic2 = new Topic(this, "AllowedTopic2");
+ * // non-compliant if CloudFormation stack does not send notifications to 'topic1' or 'topic2'
+ * // non-compliant if CloudFormation stack does not send notifications to 'topic1' or 'topic2'
+ * CloudFormationStackNotificationCheck.Builder.create(this, "NotificationCheck")
+ * .topics(List.of(topic1, topic2))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/cloudformation-stack-notification-check.html)
+ */
 @CdkDslMarker
 public class CloudFormationStackNotificationCheckDsl(
   scope: Construct,

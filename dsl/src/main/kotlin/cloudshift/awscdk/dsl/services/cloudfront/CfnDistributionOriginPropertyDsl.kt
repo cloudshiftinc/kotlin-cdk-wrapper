@@ -11,6 +11,65 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.cloudfront.CfnDistribution
 
+/**
+ * An origin.
+ *
+ * An origin is the location where content is stored, and from which CloudFront gets content to
+ * serve to viewers. To specify an origin:
+ *
+ * * Use `S3OriginConfig` to specify an Amazon S3 bucket that is not configured with static website
+ * hosting.
+ * * Use `CustomOriginConfig` to specify all other kinds of origins, including:
+ * * An Amazon S3 bucket that is configured with static website hosting
+ * * An Elastic Load Balancing load balancer
+ * * An AWS Elemental MediaPackage endpoint
+ * * An AWS Elemental MediaStore container
+ * * Any other HTTP server, running on an Amazon EC2 instance or any other kind of host
+ *
+ * For the current maximum number of origins that you can specify per distribution, see [General
+ * Quotas on Web
+ * Distributions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-limits.html#limits-web-distributions)
+ * in the *Amazon CloudFront Developer Guide* (quotas were formerly referred to as limits).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.cloudfront.*;
+ * OriginProperty originProperty = OriginProperty.builder()
+ * .domainName("domainName")
+ * .id("id")
+ * // the properties below are optional
+ * .connectionAttempts(123)
+ * .connectionTimeout(123)
+ * .customOriginConfig(CustomOriginConfigProperty.builder()
+ * .originProtocolPolicy("originProtocolPolicy")
+ * // the properties below are optional
+ * .httpPort(123)
+ * .httpsPort(123)
+ * .originKeepaliveTimeout(123)
+ * .originReadTimeout(123)
+ * .originSslProtocols(List.of("originSslProtocols"))
+ * .build())
+ * .originAccessControlId("originAccessControlId")
+ * .originCustomHeaders(List.of(OriginCustomHeaderProperty.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build()))
+ * .originPath("originPath")
+ * .originShield(OriginShieldProperty.builder()
+ * .enabled(false)
+ * .originShieldRegion("originShieldRegion")
+ * .build())
+ * .s3OriginConfig(S3OriginConfigProperty.builder()
+ * .originAccessIdentity("originAccessIdentity")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html)
+ */
 @CdkDslMarker
 public class CfnDistributionOriginPropertyDsl {
   private val cdkBuilder: CfnDistribution.OriginProperty.Builder =

@@ -6,6 +6,31 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.config.CfnRemediationConfiguration
 
+/**
+ * The value is either a dynamic (resource) value or a static value.
+ *
+ * You must select either a dynamic value or a static value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.config.*;
+ * RemediationParameterValueProperty remediationParameterValueProperty =
+ * RemediationParameterValueProperty.builder()
+ * .resourceValue(ResourceValueProperty.builder()
+ * .value("value")
+ * .build())
+ * .staticValue(StaticValueProperty.builder()
+ * .value(List.of("value"))
+ * .values(List.of("values"))
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-remediationconfiguration-remediationparametervalue.html)
+ */
 @CdkDslMarker
 public class CfnRemediationConfigurationRemediationParameterValuePropertyDsl {
   private val cdkBuilder: CfnRemediationConfiguration.RemediationParameterValueProperty.Builder =

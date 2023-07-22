@@ -6,6 +6,27 @@ import cloudshift.awscdk.common.CdkDslMarker
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.lex.CfnBotAlias
 
+/**
+ * Specifies the S3 bucket location where audio logs are stored.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.lex.*;
+ * AudioLogDestinationProperty audioLogDestinationProperty = AudioLogDestinationProperty.builder()
+ * .s3Bucket(S3BucketLogDestinationProperty.builder()
+ * .logPrefix("logPrefix")
+ * .s3BucketArn("s3BucketArn")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lex-botalias-audiologdestination.html)
+ */
 @CdkDslMarker
 public class CfnBotAliasAudioLogDestinationPropertyDsl {
   private val cdkBuilder: CfnBotAlias.AudioLogDestinationProperty.Builder =

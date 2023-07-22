@@ -10,6 +10,38 @@ import software.amazon.awscdk.services.iam.IPrincipal
 import software.amazon.awscdk.services.route53.PublicHostedZone
 import software.constructs.Construct
 
+/**
+ * Create a Route53 public hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * Stack stack1 = Stack.Builder.create(app, "Stack1")
+ * .env(Environment.builder()
+ * .region("us-east-1")
+ * .build())
+ * .crossRegionReferences(true)
+ * .build();
+ * Certificate cert = Certificate.Builder.create(stack1, "Cert")
+ * .domainName("*.example.com")
+ * .validation(CertificateValidation.fromDns(PublicHostedZone.fromHostedZoneId(stack1, "Zone",
+ * "Z0329774B51CGXTDQV3X")))
+ * .build();
+ * Stack stack2 = Stack.Builder.create(app, "Stack2")
+ * .env(Environment.builder()
+ * .region("us-east-2")
+ * .build())
+ * .crossRegionReferences(true)
+ * .build();
+ * Distribution.Builder.create(stack2, "Distribution")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("example.com"))
+ * .build())
+ * .domainNames(List.of("dev.example.com"))
+ * .certificate(cert)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class PublicHostedZoneDsl(
   scope: Construct,

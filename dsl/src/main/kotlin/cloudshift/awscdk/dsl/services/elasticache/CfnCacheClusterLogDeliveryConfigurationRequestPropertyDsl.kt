@@ -7,6 +7,33 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnCacheCluster
 
+/**
+ * Specifies the destination, format and type of the logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * LogDeliveryConfigurationRequestProperty logDeliveryConfigurationRequestProperty =
+ * LogDeliveryConfigurationRequestProperty.builder()
+ * .destinationDetails(DestinationDetailsProperty.builder()
+ * .cloudWatchLogsDetails(CloudWatchLogsDestinationDetailsProperty.builder()
+ * .logGroup("logGroup")
+ * .build())
+ * .kinesisFirehoseDetails(KinesisFirehoseDestinationDetailsProperty.builder()
+ * .deliveryStream("deliveryStream")
+ * .build())
+ * .build())
+ * .destinationType("destinationType")
+ * .logFormat("logFormat")
+ * .logType("logType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-cachecluster-logdeliveryconfigurationrequest.html)
+ */
 @CdkDslMarker
 public class CfnCacheClusterLogDeliveryConfigurationRequestPropertyDsl {
   private val cdkBuilder: CfnCacheCluster.LogDeliveryConfigurationRequestProperty.Builder =

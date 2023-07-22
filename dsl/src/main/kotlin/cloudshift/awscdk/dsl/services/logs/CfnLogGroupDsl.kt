@@ -15,6 +15,41 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.logs.CfnLogGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::Logs::LogGroup` resource specifies a log group.
+ *
+ * A log group defines common properties for log streams, such as their retention and access control
+ * rules. Each log stream must belong to one log group.
+ *
+ * You can create up to 1,000,000 log groups per Region per account. You must use the following
+ * guidelines when naming a log group:
+ *
+ * * Log group names must be unique within a Region for an AWS account.
+ * * Log group names can be between 1 and 512 characters long.
+ * * Log group names consist of the following characters: a-z, A-Z, 0-9, '_' (underscore), '-'
+ * (hyphen), '/' (forward slash), and '.' (period).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.logs.*;
+ * Object dataProtectionPolicy;
+ * CfnLogGroup cfnLogGroup = CfnLogGroup.Builder.create(this, "MyCfnLogGroup")
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .kmsKeyId("kmsKeyId")
+ * .logGroupName("logGroupName")
+ * .retentionInDays(123)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html)
+ */
 @CdkDslMarker
 public class CfnLogGroupDsl(
   scope: Construct,

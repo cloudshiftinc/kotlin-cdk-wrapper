@@ -6,6 +6,18 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.String
 import software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps
 
+/**
+ * Options for TarballImageAsset.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.ecr.assets.TarballImageAsset;
+ * TarballImageAsset asset = TarballImageAsset.Builder.create(this, "MyBuildImage")
+ * .tarballFile("local-image.tar")
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TarballImageAssetPropsDsl {
   private val cdkBuilder: TarballImageAssetProps.Builder = TarballImageAssetProps.builder()

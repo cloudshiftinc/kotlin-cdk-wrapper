@@ -8,6 +8,23 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.imagebuilder.CfnImageRecipe
 
+/**
+ * Contains a key/value pair that sets the named component parameter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.imagebuilder.*;
+ * ComponentParameterProperty componentParameterProperty = ComponentParameterProperty.builder()
+ * .name("name")
+ * .value(List.of("value"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-imagerecipe-componentparameter.html)
+ */
 @CdkDslMarker
 public class CfnImageRecipeComponentParameterPropertyDsl {
   private val cdkBuilder: CfnImageRecipe.ComponentParameterProperty.Builder =

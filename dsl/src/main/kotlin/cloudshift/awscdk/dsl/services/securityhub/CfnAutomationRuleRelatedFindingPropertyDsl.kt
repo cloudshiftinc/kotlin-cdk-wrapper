@@ -9,6 +9,24 @@ import kotlin.String
 import kotlin.Unit
 import software.amazon.awscdk.services.securityhub.CfnAutomationRule
 
+/**
+ * Provides details about a list of findings that the current finding relates to.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.securityhub.*;
+ * Object id;
+ * RelatedFindingProperty relatedFindingProperty = RelatedFindingProperty.builder()
+ * .id(id)
+ * .productArn("productArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-relatedfinding.html)
+ */
 @CdkDslMarker
 public class CfnAutomationRuleRelatedFindingPropertyDsl {
   private val cdkBuilder: CfnAutomationRule.RelatedFindingProperty.Builder =

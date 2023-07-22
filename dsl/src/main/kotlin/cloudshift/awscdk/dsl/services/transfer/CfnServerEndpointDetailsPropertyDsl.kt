@@ -8,6 +8,31 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.transfer.CfnServer
 
+/**
+ * The virtual private cloud (VPC) endpoint settings that are configured for your server.
+ *
+ * When you host your endpoint within your VPC, you can make your endpoint accessible only to
+ * resources within your VPC, or you can attach Elastic IP addresses and make your endpoint accessible
+ * to clients over the internet. Your VPC's default security groups are automatically assigned to your
+ * endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.transfer.*;
+ * EndpointDetailsProperty endpointDetailsProperty = EndpointDetailsProperty.builder()
+ * .addressAllocationIds(List.of("addressAllocationIds"))
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .vpcEndpointId("vpcEndpointId")
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-server-endpointdetails.html)
+ */
 @CdkDslMarker
 public class CfnServerEndpointDetailsPropertyDsl {
   private val cdkBuilder: CfnServer.EndpointDetailsProperty.Builder =

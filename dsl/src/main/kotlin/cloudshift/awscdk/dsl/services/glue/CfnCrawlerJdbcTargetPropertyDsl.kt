@@ -8,6 +8,24 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.glue.CfnCrawler
 
+/**
+ * Specifies a JDBC data store to crawl.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.glue.*;
+ * JdbcTargetProperty jdbcTargetProperty = JdbcTargetProperty.builder()
+ * .connectionName("connectionName")
+ * .exclusions(List.of("exclusions"))
+ * .path("path")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-jdbctarget.html)
+ */
 @CdkDslMarker
 public class CfnCrawlerJdbcTargetPropertyDsl {
   private val cdkBuilder: CfnCrawler.JdbcTargetProperty.Builder =

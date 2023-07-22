@@ -7,6 +7,25 @@ import kotlin.Number
 import kotlin.String
 import software.amazon.awscdk.services.sagemaker.CfnModelCard
 
+/**
+ * A result from a SageMaker training job.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.sagemaker.*;
+ * TrainingMetricProperty trainingMetricProperty = TrainingMetricProperty.builder()
+ * .name("name")
+ * .value(123)
+ * // the properties below are optional
+ * .notes("notes")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-modelcard-trainingmetric.html)
+ */
 @CdkDslMarker
 public class CfnModelCardTrainingMetricPropertyDsl {
   private val cdkBuilder: CfnModelCard.TrainingMetricProperty.Builder =

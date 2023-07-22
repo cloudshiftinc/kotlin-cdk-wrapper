@@ -9,6 +9,27 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.quicksight.CfnDashboard
 
+/**
+ * A list of selectable values that are used in a control.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.quicksight.*;
+ * ParameterSelectableValuesProperty parameterSelectableValuesProperty =
+ * ParameterSelectableValuesProperty.builder()
+ * .linkToDataSetColumn(ColumnIdentifierProperty.builder()
+ * .columnName("columnName")
+ * .dataSetIdentifier("dataSetIdentifier")
+ * .build())
+ * .values(List.of("values"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dashboard-parameterselectablevalues.html)
+ */
 @CdkDslMarker
 public class CfnDashboardParameterSelectableValuesPropertyDsl {
   private val cdkBuilder: CfnDashboard.ParameterSelectableValuesProperty.Builder =

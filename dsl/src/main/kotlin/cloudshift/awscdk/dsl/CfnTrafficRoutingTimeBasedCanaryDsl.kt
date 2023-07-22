@@ -6,6 +6,23 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.CfnTrafficRoutingTimeBasedCanary
 
+/**
+ * The traffic routing configuration if `CfnTrafficRoutingConfig.type` is
+ * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * CfnTrafficRoutingTimeBasedCanary cfnTrafficRoutingTimeBasedCanary =
+ * CfnTrafficRoutingTimeBasedCanary.builder()
+ * .bakeTimeMins(123)
+ * .stepPercentage(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class CfnTrafficRoutingTimeBasedCanaryDsl {
   private val cdkBuilder: CfnTrafficRoutingTimeBasedCanary.Builder =

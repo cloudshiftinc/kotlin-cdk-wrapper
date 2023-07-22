@@ -11,6 +11,30 @@ import software.amazon.awscdk.cxapi.VpcSubnet
 import software.amazon.awscdk.cxapi.VpcSubnetGroup
 import software.amazon.awscdk.cxapi.VpcSubnetGroupType
 
+/**
+ * A group of subnets returned by the VPC provider.
+ *
+ * The included subnets do NOT have to be symmetric!
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.cxapi.*;
+ * VpcSubnetGroup vpcSubnetGroup = VpcSubnetGroup.builder()
+ * .name("name")
+ * .subnets(List.of(VpcSubnet.builder()
+ * .availabilityZone("availabilityZone")
+ * .routeTableId("routeTableId")
+ * .subnetId("subnetId")
+ * // the properties below are optional
+ * .cidr("cidr")
+ * .build()))
+ * .type(VpcSubnetGroupType.PUBLIC)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class VpcSubnetGroupDsl {
   private val cdkBuilder: VpcSubnetGroup.Builder = VpcSubnetGroup.builder()

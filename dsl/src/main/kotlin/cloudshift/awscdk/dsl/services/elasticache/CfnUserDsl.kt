@@ -16,6 +16,36 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticache.CfnUser
 import software.constructs.Construct
 
+/**
+ * For Redis engine version 6.0 onwards: Creates a Redis user. For more information, see [Using Role
+ * Based Access Control
+ * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * Object authenticationMode;
+ * CfnUser cfnUser = CfnUser.Builder.create(this, "MyCfnUser")
+ * .engine("engine")
+ * .userId("userId")
+ * .userName("userName")
+ * // the properties below are optional
+ * .accessString("accessString")
+ * .authenticationMode(authenticationMode)
+ * .noPasswordRequired(false)
+ * .passwords(List.of("passwords"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html)
+ */
 @CdkDslMarker
 public class CfnUserDsl(
   scope: Construct,

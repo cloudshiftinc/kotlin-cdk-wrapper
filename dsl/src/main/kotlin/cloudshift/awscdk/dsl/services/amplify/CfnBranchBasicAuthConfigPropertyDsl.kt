@@ -8,6 +8,25 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplify.CfnBranch
 
+/**
+ * Use the BasicAuthConfig property type to set password protection for a specific branch.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * BasicAuthConfigProperty basicAuthConfigProperty = BasicAuthConfigProperty.builder()
+ * .password("password")
+ * .username("username")
+ * // the properties below are optional
+ * .enableBasicAuth(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amplify-branch-basicauthconfig.html)
+ */
 @CdkDslMarker
 public class CfnBranchBasicAuthConfigPropertyDsl {
   private val cdkBuilder: CfnBranch.BasicAuthConfigProperty.Builder =

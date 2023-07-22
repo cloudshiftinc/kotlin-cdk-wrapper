@@ -13,6 +13,35 @@ import software.amazon.awscdk.services.ec2.OperatingSystemType
 import software.amazon.awscdk.services.ec2.UserData
 import software.amazon.awscdk.services.iam.IRole
 
+/**
+ * Options for attaching a CloudFormationInit to a resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.*;
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.iam.*;
+ * CfnResource cfnResource;
+ * Role role;
+ * UserData userData;
+ * AttachInitOptions attachInitOptions = AttachInitOptions.builder()
+ * .instanceRole(role)
+ * .platform(OperatingSystemType.LINUX)
+ * .userData(userData)
+ * // the properties below are optional
+ * .configSets(List.of("configSets"))
+ * .embedFingerprint(false)
+ * .ignoreFailures(false)
+ * .includeRole(false)
+ * .includeUrl(false)
+ * .printLog(false)
+ * .signalResource(cfnResource)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class AttachInitOptionsDsl {
   private val cdkBuilder: AttachInitOptions.Builder = AttachInitOptions.builder()

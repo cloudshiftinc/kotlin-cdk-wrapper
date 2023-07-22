@@ -21,6 +21,27 @@ import software.amazon.awscdk.services.kinesis.IStream
 import software.amazon.awscdk.services.kms.IKey
 import software.constructs.Construct
 
+/**
+ * Provides a DynamoDB table.
+ *
+ * Example:
+ *
+ * ```
+ * import software.amazon.awscdk.services.cloudwatch.*;
+ * Table table = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("id").type(AttributeType.STRING).build())
+ * .build();
+ * IMetric metric = table.metricThrottledRequestsForOperations(OperationsMetricOptions.builder()
+ * .operations(List.of(Operation.PUT_ITEM))
+ * .period(Duration.minutes(1))
+ * .build());
+ * Alarm.Builder.create(this, "Alarm")
+ * .metric(metric)
+ * .evaluationPeriods(1)
+ * .threshold(1)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class TableDsl(
   scope: Construct,

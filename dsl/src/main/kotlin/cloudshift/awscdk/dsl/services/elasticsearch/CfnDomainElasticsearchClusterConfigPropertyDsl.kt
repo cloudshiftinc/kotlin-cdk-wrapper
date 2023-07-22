@@ -9,6 +9,53 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.elasticsearch.CfnDomain
 
+/**
+ * The cluster configuration for the OpenSearch Service domain.
+ *
+ * You can specify options such as the instance type and the number of instances. For more
+ * information, see [Creating and managing Amazon OpenSearch Service
+ * domains](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/createupdatedomains.html)
+ * in the *Amazon OpenSearch Service Developer Guide* .
+ *
+ *
+ * The `AWS::Elasticsearch::Domain` resource is being replaced by the
+ * [AWS::OpenSearchService::Domain](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html)
+ * resource. While the legacy Elasticsearch resource and options are still supported, we recommend
+ * modifying your existing Cloudformation templates to use the new OpenSearch Service resource, which
+ * supports both OpenSearch and Elasticsearch. For more information about the service rename, see [New
+ * resource
+ * types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/rename.html#rename-resource)
+ * in the *Amazon OpenSearch Service Developer Guide* .
+ *
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticsearch.*;
+ * ElasticsearchClusterConfigProperty elasticsearchClusterConfigProperty =
+ * ElasticsearchClusterConfigProperty.builder()
+ * .coldStorageOptions(ColdStorageOptionsProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .dedicatedMasterCount(123)
+ * .dedicatedMasterEnabled(false)
+ * .dedicatedMasterType("dedicatedMasterType")
+ * .instanceCount(123)
+ * .instanceType("instanceType")
+ * .warmCount(123)
+ * .warmEnabled(false)
+ * .warmType("warmType")
+ * .zoneAwarenessConfig(ZoneAwarenessConfigProperty.builder()
+ * .availabilityZoneCount(123)
+ * .build())
+ * .zoneAwarenessEnabled(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html)
+ */
 @CdkDslMarker
 public class CfnDomainElasticsearchClusterConfigPropertyDsl {
   private val cdkBuilder: CfnDomain.ElasticsearchClusterConfigProperty.Builder =

@@ -12,6 +12,18 @@ import software.amazon.awscdk.services.ses.IReceiptRuleAction
 import software.amazon.awscdk.services.ses.ReceiptRuleOptions
 import software.amazon.awscdk.services.ses.TlsPolicy
 
+/**
+ * Options to add a receipt rule to a receipt rule set.
+ *
+ * Example:
+ *
+ * ```
+ * ReceiptRuleSet ruleSet = new ReceiptRuleSet(this, "RuleSet");
+ * ReceiptRule awsRule = ruleSet.addRule("Aws", ReceiptRuleOptions.builder()
+ * .recipients(List.of("aws.com"))
+ * .build());
+ * ```
+ */
 @CdkDslMarker
 public class ReceiptRuleOptionsDsl {
   private val cdkBuilder: ReceiptRuleOptions.Builder = ReceiptRuleOptions.builder()

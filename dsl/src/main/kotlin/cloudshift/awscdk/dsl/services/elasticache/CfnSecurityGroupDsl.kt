@@ -12,6 +12,37 @@ import software.amazon.awscdk.CfnTag
 import software.amazon.awscdk.services.elasticache.CfnSecurityGroup
 import software.constructs.Construct
 
+/**
+ * The `AWS::ElastiCache::SecurityGroup` resource creates a cache security group.
+ *
+ * For more information about cache security groups, go to
+ * [CacheSecurityGroups](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/VPCs.html) in the
+ * *Amazon ElastiCache User Guide* or go to
+ * [CreateCacheSecurityGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSecurityGroup.html)
+ * in the *Amazon ElastiCache API Reference Guide* .
+ *
+ * For more information, see
+ * [CreateCacheSubnetGroup](https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateCacheSubnetGroup.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.elasticache.*;
+ * CfnSecurityGroup cfnSecurityGroup = CfnSecurityGroup.Builder.create(this, "MyCfnSecurityGroup")
+ * .description("description")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-securitygroup.html)
+ */
 @CdkDslMarker
 public class CfnSecurityGroupDsl(
   scope: Construct,

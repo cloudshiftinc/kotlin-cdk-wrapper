@@ -9,6 +9,73 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.acmpca.CfnCertificateAuthority
 
+/**
+ * Describes the certificate extensions to be added to the certificate signing request (CSR).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.acmpca.*;
+ * CsrExtensionsProperty csrExtensionsProperty = CsrExtensionsProperty.builder()
+ * .keyUsage(KeyUsageProperty.builder()
+ * .crlSign(false)
+ * .dataEncipherment(false)
+ * .decipherOnly(false)
+ * .digitalSignature(false)
+ * .encipherOnly(false)
+ * .keyAgreement(false)
+ * .keyCertSign(false)
+ * .keyEncipherment(false)
+ * .nonRepudiation(false)
+ * .build())
+ * .subjectInformationAccess(List.of(AccessDescriptionProperty.builder()
+ * .accessLocation(GeneralNameProperty.builder()
+ * .directoryName(SubjectProperty.builder()
+ * .commonName("commonName")
+ * .country("country")
+ * .customAttributes(List.of(CustomAttributeProperty.builder()
+ * .objectIdentifier("objectIdentifier")
+ * .value("value")
+ * .build()))
+ * .distinguishedNameQualifier("distinguishedNameQualifier")
+ * .generationQualifier("generationQualifier")
+ * .givenName("givenName")
+ * .initials("initials")
+ * .locality("locality")
+ * .organization("organization")
+ * .organizationalUnit("organizationalUnit")
+ * .pseudonym("pseudonym")
+ * .serialNumber("serialNumber")
+ * .state("state")
+ * .surname("surname")
+ * .title("title")
+ * .build())
+ * .dnsName("dnsName")
+ * .ediPartyName(EdiPartyNameProperty.builder()
+ * .nameAssigner("nameAssigner")
+ * .partyName("partyName")
+ * .build())
+ * .ipAddress("ipAddress")
+ * .otherName(OtherNameProperty.builder()
+ * .typeId("typeId")
+ * .value("value")
+ * .build())
+ * .registeredId("registeredId")
+ * .rfc822Name("rfc822Name")
+ * .uniformResourceIdentifier("uniformResourceIdentifier")
+ * .build())
+ * .accessMethod(AccessMethodProperty.builder()
+ * .accessMethodType("accessMethodType")
+ * .customObjectIdentifier("customObjectIdentifier")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-csrextensions.html)
+ */
 @CdkDslMarker
 public class CfnCertificateAuthorityCsrExtensionsPropertyDsl {
   private val cdkBuilder: CfnCertificateAuthority.CsrExtensionsProperty.Builder =

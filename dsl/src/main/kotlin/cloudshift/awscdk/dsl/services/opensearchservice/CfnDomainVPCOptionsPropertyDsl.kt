@@ -8,6 +8,27 @@ import kotlin.collections.Collection
 import kotlin.collections.MutableList
 import software.amazon.awscdk.services.opensearchservice.CfnDomain
 
+/**
+ * The virtual private cloud (VPC) configuration for the OpenSearch Service domain.
+ *
+ * For more information, see [Launching your Amazon OpenSearch Service domains using a
+ * VPC](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/vpc.html) in the *Amazon
+ * OpenSearch Service Developer Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.opensearchservice.*;
+ * VPCOptionsProperty vPCOptionsProperty = VPCOptionsProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnetIds(List.of("subnetIds"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-vpcoptions.html)
+ */
 @CdkDslMarker
 public class CfnDomainVPCOptionsPropertyDsl {
   private val cdkBuilder: CfnDomain.VPCOptionsProperty.Builder =

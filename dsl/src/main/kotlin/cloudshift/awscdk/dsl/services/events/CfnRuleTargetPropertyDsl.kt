@@ -7,6 +7,133 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.events.CfnRule
 
+/**
+ * Targets are the resources to be invoked when a rule is triggered.
+ *
+ * For a complete list of services and resources that can be set as a target, see
+ * [PutTargets](https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutTargets.html) .
+ *
+ * If you are setting the event bus of another account as the target, and that account granted
+ * permission to your account through an organization instead of directly by the account ID, then you
+ * must specify a `RoleArn` with proper permissions in the `Target` structure. For more information,
+ * see [Sending and Receiving Events Between AWS
+ * Accounts](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-cross-account-event-delivery.html)
+ * in the *Amazon EventBridge User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.events.*;
+ * TargetProperty targetProperty = TargetProperty.builder()
+ * .arn("arn")
+ * .id("id")
+ * // the properties below are optional
+ * .batchParameters(BatchParametersProperty.builder()
+ * .jobDefinition("jobDefinition")
+ * .jobName("jobName")
+ * // the properties below are optional
+ * .arrayProperties(BatchArrayPropertiesProperty.builder()
+ * .size(123)
+ * .build())
+ * .retryStrategy(BatchRetryStrategyProperty.builder()
+ * .attempts(123)
+ * .build())
+ * .build())
+ * .deadLetterConfig(DeadLetterConfigProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .ecsParameters(EcsParametersProperty.builder()
+ * .taskDefinitionArn("taskDefinitionArn")
+ * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .capacityProvider("capacityProvider")
+ * // the properties below are optional
+ * .base(123)
+ * .weight(123)
+ * .build()))
+ * .enableEcsManagedTags(false)
+ * .enableExecuteCommand(false)
+ * .group("group")
+ * .launchType("launchType")
+ * .networkConfiguration(NetworkConfigurationProperty.builder()
+ * .awsVpcConfiguration(AwsVpcConfigurationProperty.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .assignPublicIp("assignPublicIp")
+ * .securityGroups(List.of("securityGroups"))
+ * .build())
+ * .build())
+ * .placementConstraints(List.of(PlacementConstraintProperty.builder()
+ * .expression("expression")
+ * .type("type")
+ * .build()))
+ * .placementStrategies(List.of(PlacementStrategyProperty.builder()
+ * .field("field")
+ * .type("type")
+ * .build()))
+ * .platformVersion("platformVersion")
+ * .propagateTags("propagateTags")
+ * .referenceId("referenceId")
+ * .tagList(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .taskCount(123)
+ * .build())
+ * .httpParameters(HttpParametersProperty.builder()
+ * .headerParameters(Map.of(
+ * "headerParametersKey", "headerParameters"))
+ * .pathParameterValues(List.of("pathParameterValues"))
+ * .queryStringParameters(Map.of(
+ * "queryStringParametersKey", "queryStringParameters"))
+ * .build())
+ * .input("input")
+ * .inputPath("inputPath")
+ * .inputTransformer(InputTransformerProperty.builder()
+ * .inputTemplate("inputTemplate")
+ * // the properties below are optional
+ * .inputPathsMap(Map.of(
+ * "inputPathsMapKey", "inputPathsMap"))
+ * .build())
+ * .kinesisParameters(KinesisParametersProperty.builder()
+ * .partitionKeyPath("partitionKeyPath")
+ * .build())
+ * .redshiftDataParameters(RedshiftDataParametersProperty.builder()
+ * .database("database")
+ * .sql("sql")
+ * // the properties below are optional
+ * .dbUser("dbUser")
+ * .secretManagerArn("secretManagerArn")
+ * .statementName("statementName")
+ * .withEvent(false)
+ * .build())
+ * .retryPolicy(RetryPolicyProperty.builder()
+ * .maximumEventAgeInSeconds(123)
+ * .maximumRetryAttempts(123)
+ * .build())
+ * .roleArn("roleArn")
+ * .runCommandParameters(RunCommandParametersProperty.builder()
+ * .runCommandTargets(List.of(RunCommandTargetProperty.builder()
+ * .key("key")
+ * .values(List.of("values"))
+ * .build()))
+ * .build())
+ * .sageMakerPipelineParameters(SageMakerPipelineParametersProperty.builder()
+ * .pipelineParameterList(List.of(SageMakerPipelineParameterProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .sqsParameters(SqsParametersProperty.builder()
+ * .messageGroupId("messageGroupId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html)
+ */
 @CdkDslMarker
 public class CfnRuleTargetPropertyDsl {
   private val cdkBuilder: CfnRule.TargetProperty.Builder = CfnRule.TargetProperty.builder()

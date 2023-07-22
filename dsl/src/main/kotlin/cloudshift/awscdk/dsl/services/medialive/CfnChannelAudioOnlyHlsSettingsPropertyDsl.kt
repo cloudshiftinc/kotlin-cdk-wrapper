@@ -7,6 +7,32 @@ import kotlin.String
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.medialive.CfnChannel
 
+/**
+ * The configuration of an audio-only HLS output.
+ *
+ * The parent of this entity is HlsSettings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.medialive.*;
+ * AudioOnlyHlsSettingsProperty audioOnlyHlsSettingsProperty =
+ * AudioOnlyHlsSettingsProperty.builder()
+ * .audioGroupId("audioGroupId")
+ * .audioOnlyImage(InputLocationProperty.builder()
+ * .passwordParam("passwordParam")
+ * .uri("uri")
+ * .username("username")
+ * .build())
+ * .audioTrackType("audioTrackType")
+ * .segmentType("segmentType")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audioonlyhlssettings.html)
+ */
 @CdkDslMarker
 public class CfnChannelAudioOnlyHlsSettingsPropertyDsl {
   private val cdkBuilder: CfnChannel.AudioOnlyHlsSettingsProperty.Builder =

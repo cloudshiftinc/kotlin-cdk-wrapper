@@ -11,6 +11,28 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.services.ec2.InstanceType
 import software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverrides
 
+/**
+ * The overrides that should be sent to a container.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.ec2.*;
+ * import software.amazon.awscdk.services.stepfunctions.tasks.*;
+ * InstanceType instanceType;
+ * ContainerOverrides containerOverrides = ContainerOverrides.builder()
+ * .command(List.of("command"))
+ * .environment(Map.of(
+ * "environmentKey", "environment"))
+ * .gpuCount(123)
+ * .instanceType(instanceType)
+ * .memory(123)
+ * .vcpus(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class ContainerOverridesDsl {
   private val cdkBuilder: ContainerOverrides.Builder = ContainerOverrides.builder()

@@ -10,6 +10,50 @@ import kotlin.collections.MutableList
 import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan
 
+/**
+ * `CustomizedScalingMetricSpecification` is a subproperty of
+ * [TargetTrackingConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-targettrackingconfiguration.html)
+ * that specifies a customized scaling metric for a target tracking configuration to use with AWS Auto
+ * Scaling ( Auto Scaling Plans ).
+ *
+ * To create your customized scaling metric specification:
+ *
+ * * Add values for each required property from CloudWatch. You can use an existing metric, or a new
+ * metric that you create. To use your own metric, you must first publish the metric to CloudWatch. For
+ * more information, see [Publish Custom
+ * Metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html) in
+ * the *Amazon CloudWatch User Guide* .
+ * * Choose a metric that changes proportionally with capacity. The value of the metric should
+ * increase or decrease in inverse proportion to the number of capacity units. That is, the value of
+ * the metric should decrease when capacity increases.
+ *
+ * For information about terminology, available metrics, or how to publish new metrics, see [Amazon
+ * CloudWatch
+ * Concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
+ * in the *Amazon CloudWatch User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.autoscalingplans.*;
+ * CustomizedScalingMetricSpecificationProperty customizedScalingMetricSpecificationProperty =
+ * CustomizedScalingMetricSpecificationProperty.builder()
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .statistic("statistic")
+ * // the properties below are optional
+ * .dimensions(List.of(MetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .unit("unit")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-customizedscalingmetricspecification.html)
+ */
 @CdkDslMarker
 public class CfnScalingPlanCustomizedScalingMetricSpecificationPropertyDsl {
   private val cdkBuilder: CfnScalingPlan.CustomizedScalingMetricSpecificationProperty.Builder =

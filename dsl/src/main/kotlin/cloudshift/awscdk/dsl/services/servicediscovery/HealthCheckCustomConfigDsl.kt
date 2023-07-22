@@ -6,6 +6,20 @@ import cloudshift.awscdk.common.CdkDslMarker
 import kotlin.Number
 import software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig
 
+/**
+ * Specifies information about an optional custom health check.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.servicediscovery.*;
+ * HealthCheckCustomConfig healthCheckCustomConfig = HealthCheckCustomConfig.builder()
+ * .failureThreshold(123)
+ * .build();
+ * ```
+ */
 @CdkDslMarker
 public class HealthCheckCustomConfigDsl {
   private val cdkBuilder: HealthCheckCustomConfig.Builder = HealthCheckCustomConfig.builder()

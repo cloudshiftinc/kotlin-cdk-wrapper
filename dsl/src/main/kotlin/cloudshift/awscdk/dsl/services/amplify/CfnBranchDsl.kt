@@ -15,6 +15,46 @@ import software.amazon.awscdk.IResolvable
 import software.amazon.awscdk.services.amplify.CfnBranch
 import software.constructs.Construct
 
+/**
+ * The AWS::Amplify::Branch resource specifies a new branch within an app.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import software.amazon.awscdk.services.amplify.*;
+ * CfnBranch cfnBranch = CfnBranch.Builder.create(this, "MyCfnBranch")
+ * .appId("appId")
+ * .branchName("branchName")
+ * // the properties below are optional
+ * .basicAuthConfig(BasicAuthConfigProperty.builder()
+ * .password("password")
+ * .username("username")
+ * // the properties below are optional
+ * .enableBasicAuth(false)
+ * .build())
+ * .buildSpec("buildSpec")
+ * .description("description")
+ * .enableAutoBuild(false)
+ * .enablePerformanceMode(false)
+ * .enablePullRequestPreview(false)
+ * .environmentVariables(List.of(EnvironmentVariableProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .framework("framework")
+ * .pullRequestEnvironmentName("pullRequestEnvironmentName")
+ * .stage("stage")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-branch.html)
+ */
 @CdkDslMarker
 public class CfnBranchDsl(
   scope: Construct,
