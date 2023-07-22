@@ -27,6 +27,11 @@ internal interface CdkClass {
             val name: String
             val type: TypeName
             val nullable: Boolean
+
+            fun typeName(): TypeName = when (nullable) {
+                true -> type.copy(nullable = true)
+                else -> type
+            }
         }
     }
 }

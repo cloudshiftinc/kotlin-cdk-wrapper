@@ -45,7 +45,7 @@ internal class NamespaceObjectGenerator {
         }
 
         builder.builderFactoryFunction.parameters.forEach {
-            funSpecBuilder.addParameter(it.name, it.type.copy(nullable = it.nullable))
+            funSpecBuilder.addParameter(it.name, it.typeName())
         }
 
         val dslBuilderClass = builder.dslBuilderClass

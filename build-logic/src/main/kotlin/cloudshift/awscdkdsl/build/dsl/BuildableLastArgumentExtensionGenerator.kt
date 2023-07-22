@@ -91,7 +91,7 @@ internal class BuildableLastArgumentExtensionGenerator {
         val args = mutableListOf<String>()
         method.parameters.dropLast(1)
             .forEach {
-                builder.addParameter(it.name, it.type.copy(nullable = it.nullable))
+                builder.addParameter(it.name, it.typeName())
                 args.add(it.name)
             }
         args.add("builder.build()")
