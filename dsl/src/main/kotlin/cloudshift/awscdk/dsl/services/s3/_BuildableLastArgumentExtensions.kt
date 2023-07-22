@@ -196,14 +196,14 @@ public inline fun IBucket.onCloudTrailWriteObject(arg0: String,
   return onCloudTrailWriteObject(arg0, builder.build())
 }
 
-public inline fun IBucket.transferAccelerationUrlForObject(arg0: String,
+public inline fun IBucket.transferAccelerationUrlForObject(arg0: String?,
     block: TransferAccelerationUrlOptionsDsl.() -> Unit = {}): String {
   val builder = TransferAccelerationUrlOptionsDsl()
   builder.apply(block)
   return transferAccelerationUrlForObject(arg0, builder.build())
 }
 
-public inline fun IBucket.virtualHostedUrlForObject(arg0: String,
+public inline fun IBucket.virtualHostedUrlForObject(arg0: String?,
     block: VirtualHostedStyleUrlOptionsDsl.() -> Unit = {}): String {
   val builder = VirtualHostedStyleUrlOptionsDsl()
   builder.apply(block)
@@ -286,14 +286,14 @@ public inline fun BucketBase.onCloudTrailWriteObject(id: String,
   return onCloudTrailWriteObject(id, builder.build())
 }
 
-public inline fun BucketBase.transferAccelerationUrlForObject(key: String,
+public inline fun BucketBase.transferAccelerationUrlForObject(key: String?,
     block: TransferAccelerationUrlOptionsDsl.() -> Unit = {}): String {
   val builder = TransferAccelerationUrlOptionsDsl()
   builder.apply(block)
   return transferAccelerationUrlForObject(key, builder.build())
 }
 
-public inline fun BucketBase.virtualHostedUrlForObject(key: String,
+public inline fun BucketBase.virtualHostedUrlForObject(key: String?,
     block: VirtualHostedStyleUrlOptionsDsl.() -> Unit = {}): String {
   val builder = VirtualHostedStyleUrlOptionsDsl()
   builder.apply(block)

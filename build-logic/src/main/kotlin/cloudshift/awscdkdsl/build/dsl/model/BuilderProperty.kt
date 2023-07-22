@@ -5,6 +5,7 @@ import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.LIST
 import com.squareup.kotlinpoet.MAP
 import com.squareup.kotlinpoet.ParameterizedTypeName
+import com.squareup.kotlinpoet.STAR
 import com.squareup.kotlinpoet.STRING
 import com.squareup.kotlinpoet.TypeName
 
@@ -14,9 +15,13 @@ internal data class BuilderProperty(
     val deprecated: Boolean,
     val builderClass: CdkClass?,
     val methodSignature: String,
-    val comment: String?
+    val comment: String?,
+    val nullable: Boolean
 ) {
-    fun typeName(): TypeName = type
+    fun typeName(): TypeName = when (nullable) {
+        false -> type
+        true -> type.copy(nullable = true)
+    }
 
     fun isList(): Boolean {
         return when (type) {
@@ -35,5 +40,5 @@ internal data class BuilderProperty(
         }
     }
 
-    fun isObject() = type == ANY
+    fun isObject() = type == ANY || type == STAR
 }

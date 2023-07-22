@@ -102,7 +102,13 @@ private fun findBuilderProperties(builderClass: CdkClass, buildersForBuildable: 
         val propertyBuilderClass = buildersForBuildable[actualType]
 
         "${method.name}/${parameter.type}" to BuilderProperty(
-            name = parameter.name, type = parameter.type, builderClass = propertyBuilderClass, methodSignature = method.signature, deprecated = method.deprecated, comment = method.comment
+            name = parameter.name,
+            type = parameter.type,
+            nullable = parameter.nullable,
+            builderClass = propertyBuilderClass,
+            methodSignature = method.signature,
+            deprecated = method.deprecated,
+            comment = method.comment
         )
     }
         .sortedBy { it.first }

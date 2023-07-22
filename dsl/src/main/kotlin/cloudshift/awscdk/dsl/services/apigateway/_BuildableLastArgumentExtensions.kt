@@ -98,7 +98,7 @@ public inline fun IResource.addCorsPreflight(block: CorsOptionsDsl.() -> Unit = 
 
 public inline fun IResource.addMethod(
   arg0: String,
-  arg1: Integration,
+  arg1: Integration?,
   block: MethodOptionsDsl.() -> Unit = {},
 ): Method {
   val builder = MethodOptionsDsl()
@@ -311,7 +311,7 @@ public inline
 
 public inline fun ProxyResource.addMethod(
   httpMethod: String,
-  integration: Integration,
+  integration: Integration?,
   block: MethodOptionsDsl.() -> Unit = {},
 ): Method {
   val builder = MethodOptionsDsl()
@@ -415,7 +415,7 @@ public inline fun ResourceBase.addCorsPreflight(block: CorsOptionsDsl.() -> Unit
 
 public inline fun ResourceBase.addMethod(
   httpMethod: String,
-  integration: Integration,
+  integration: Integration?,
   block: MethodOptionsDsl.() -> Unit = {},
 ): Method {
   val builder = MethodOptionsDsl()

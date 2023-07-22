@@ -185,7 +185,7 @@ internal object BuilderGenerator {
         builderClassBuilder: TypeSpec.Builder,
         buildFnBuilder: FunSpec.Builder
     ) {
-        val type = prop.type as ParameterizedTypeName
+        val type = prop.typeName() as ParameterizedTypeName
         val collectionName = "_${prop.name}"
         builderClassBuilder.addProperty(
             PropertySpec.builder(collectionName, MUTABLE_LIST.parameterizedBy(type.typeArguments), KModifier.PRIVATE)

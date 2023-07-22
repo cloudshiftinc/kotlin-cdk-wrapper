@@ -65,8 +65,20 @@ internal class AsmMethodAdapter(private val delegate: MethodNode, sourceMethod: 
 
             // TODO - there don't appear to be any builder methods that use nullability annotations
             //   if we find a use for these annotations we have them...
+            val visibleAnnotations = delegate.visibleParameterAnnotations?.get(index) ?: emptyList()
+            val invisibleAnnotations = delegate.invisibleParameterAnnotations?.get(index) ?: emptyList()
+            val allAnnotations = (visibleAnnotations + invisibleAnnotations).map {
+                Type.getType(it.desc)
+                    .toTypeName()
+            }
 
-            AsmParameterAdapter(name = parameterName, type = theType)
+            val nullable = allAnnotations.any { it.toString().lowercase().contains("nullable") }
+
+            AsmParameterAdapter(
+                name = parameterName,
+                type = theType,
+                nullable = nullable
+            )
         }
     }
 

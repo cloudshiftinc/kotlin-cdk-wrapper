@@ -346,7 +346,7 @@ public inline
   return setLoggingConfig(builder.build())
 }
 
-public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy,
+public inline fun CfnResource.applyRemovalPolicy(policy: RemovalPolicy?,
     block: RemovalPolicyOptionsDsl.() -> Unit = {}) {
   val builder = RemovalPolicyOptionsDsl()
   builder.apply(block)

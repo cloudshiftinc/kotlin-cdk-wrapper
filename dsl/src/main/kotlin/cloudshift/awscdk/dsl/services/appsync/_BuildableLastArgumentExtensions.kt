@@ -104,7 +104,7 @@ public inline fun GraphqlApiBase.addRdsDataSource(
   id: String,
   serverlessCluster: IServerlessCluster,
   secretStore: ISecret,
-  databaseName: String,
+  databaseName: String?,
   block: DataSourceOptionsDsl.() -> Unit = {},
 ): RdsDataSource {
   val builder = DataSourceOptionsDsl()
@@ -282,7 +282,7 @@ public inline fun IGraphqlApi.addRdsDataSource(
   arg0: String,
   arg1: IServerlessCluster,
   arg2: ISecret,
-  arg3: String,
+  arg3: String?,
   block: DataSourceOptionsDsl.() -> Unit = {},
 ): RdsDataSource {
   val builder = DataSourceOptionsDsl()

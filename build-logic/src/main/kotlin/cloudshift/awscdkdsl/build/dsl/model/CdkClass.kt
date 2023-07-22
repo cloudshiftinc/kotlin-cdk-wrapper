@@ -26,6 +26,7 @@ internal interface CdkClass {
         interface Parameter {
             val name: String
             val type: TypeName
+            val nullable: Boolean
         }
     }
 }

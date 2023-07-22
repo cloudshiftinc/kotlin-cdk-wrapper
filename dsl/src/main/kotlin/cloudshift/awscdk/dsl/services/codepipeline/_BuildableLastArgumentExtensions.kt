@@ -35,7 +35,7 @@ public inline fun IAction.bind(
 
 public inline fun IAction.onStateChange(
   arg0: String,
-  arg1: IRuleTarget,
+  arg1: IRuleTarget?,
   block: RulePropsDsl.() -> Unit = {},
 ): Rule {
   val builder = RulePropsDsl()
@@ -115,7 +115,7 @@ public inline fun CfnPipeline.setArtifactStore(block: CfnPipelineArtifactStorePr
 
 public inline fun IStage.onStateChange(
   arg0: String,
-  arg1: IRuleTarget,
+  arg1: IRuleTarget?,
   block: RulePropsDsl.() -> Unit = {},
 ): Rule {
   val builder = RulePropsDsl()
@@ -135,7 +135,7 @@ public inline fun Action.bind(
 
 public inline fun Action.onStateChange(
   name: String,
-  target: IRuleTarget,
+  target: IRuleTarget?,
   block: RulePropsDsl.() -> Unit = {},
 ): Rule {
   val builder = RulePropsDsl()
