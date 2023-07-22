@@ -1,4 +1,0 @@
-[*.{kt,kts}]
-
-# disable ktlint on generated code to simplify comparison & improve performance
-ktlint_standard = disabled
